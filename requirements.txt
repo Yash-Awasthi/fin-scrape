@@ -1,0 +1,7 @@
+requests
+feedparser
+yfinance
+python-dotenv
+python-dateutil
+httpx[http2]>=0.27.0
+beautifulsoup4

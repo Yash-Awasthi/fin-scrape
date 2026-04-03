@@ -1,0 +1,15 @@
+# Environment secrets
+.env
+
+# Local state and data
+data/*.json
+app.log
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# IDE settings
+.vscode/
+.idea/
