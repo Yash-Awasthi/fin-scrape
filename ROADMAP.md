@@ -53,6 +53,20 @@ Integrate with trading platforms (Interactive Brokers, Alpaca, MetaTrader).
 
 ---
 
+## 🏛️ Phase 4: Multi-Agent AI Council Integration
+
+### 🤖 Deliberation Engine Integration
+Integrate the [AI Council](https://github.com/Yash-Awasthi/ai-council) to process scraped financial data through multi-agent deliberation.
+- **Goal**: Generate robust, synthesized market analysis instead of relying on a single model's interpretation.
+- **Benefit**: Reduces hallucinations and identifies blind spots in financial news interpretation by enforcing interactive peer feedback loops.
+
+### 🎭 Diverse Market Personas
+Implement council archetypes representing different market participants with varying conditions and capital constraints.
+- **Personas**: E.g., The Institutional Whale (high capital, risk-averse), The Retail Day Trader (low capital, high risk), The Contrarian (looks for market overreactions).
+- **Benefit**: Simulates real-world market dynamics where different players interpret the same news differently based on their constraints and goals.
+
+---
+
 ## 📊 Summary of Planned Integrations
 
 | Feature | Category | Purpose | Priority |
@@ -60,6 +74,7 @@ Integrate with trading platforms (Interactive Brokers, Alpaca, MetaTrader).
 | **Scrapling** | Ingestion | Anti-bot bypass & Self-healing | **High** |
 | **Apify** | Scalability | Distributed crawling | **Medium** |
 | **SERP API** | Discovery | Proactive news surface | **Medium** |
+| **AI Council** | Intelligence | Multi-Agent Deliberation | **Medium** |
 | **TinyFish AI** | Models | Local/Edge processing | **Low** |
 | **Trading APIs**| Ecosystem | Automated Execution | **Low** |
 
