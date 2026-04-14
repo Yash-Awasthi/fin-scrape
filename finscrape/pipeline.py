@@ -14,6 +14,11 @@ from finscrape.scrapers.bloomberg import BloombergScraper
 from finscrape.scrapers.reuters import ReutersScraper
 from finscrape.scrapers.cnbc import CNBCScraper
 from finscrape.scrapers.rss import RSSScraperSource
+from finscrape.scrapers.marketwatch import MarketWatchScraper
+from finscrape.scrapers.seekingalpha import SeekingAlphaScraper
+from finscrape.scrapers.benzinga import BenzingaScraper
+from finscrape.scrapers.investingcom import InvestingComScraper
+from finscrape.scrapers.ft import FTScraper
 from finscrape.analysis.ai_client import call_ai
 from finscrape.analysis.validator import calculate_heuristic_score, check_divergence, clean_tickers
 from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
@@ -37,6 +42,11 @@ class FinScrapePipeline:
         "reuters": ReutersScraper,
         "cnbc": CNBCScraper,
         "rss": RSSScraperSource,
+        "marketwatch": MarketWatchScraper,
+        "seekingalpha": SeekingAlphaScraper,
+        "benzinga": BenzingaScraper,
+        "investingcom": InvestingComScraper,
+        "ft": FTScraper,
     }
 
     def __init__(

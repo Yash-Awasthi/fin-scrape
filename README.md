@@ -61,16 +61,22 @@ python main.py
 fin-scrape/
 ├── main.py                    # Entry point
 ├── finscrape/                 # Core package
-│   ├── engine/                # Internal scraping engine (zero external deps)
-│   │   ├── page.py            # Unified Page/Element with CSS selectors
-│   │   ├── fetcher.py         # Fast HTTP with stealth headers + retry
-│   │   ├── stealth.py         # Playwright + anti-detection (Cloudflare, etc.)
-│   │   └── dynamic.py         # Playwright for JS-heavy pages
-│   ├── scrapers/              # Source-specific news scrapers
+│   ├── engine/                # Vendored Scrapling v0.4.6 engine
+│   │   └── scrapling/         # Full Scrapling source (lxml, curl_cffi, patchright)
+│   │       ├── parser.py      # C-speed HTML parsing (lxml + cssselect)
+│   │       ├── fetchers/      # Fetcher, StealthyFetcher, DynamicFetcher
+│   │       ├── engines/       # curl_cffi TLS fingerprinting, patchright stealth
+│   │       └── core/          # Custom types, orjson, browserforge headers
+│   ├── scrapers/              # Source-specific news scrapers (10 sources)
 │   │   ├── yahoo.py           # Yahoo Finance
 │   │   ├── bloomberg.py       # Bloomberg (stealth mode)
-│   │   ├── reuters.py         # Reuters
+│   │   ├── reuters.py         # Reuters (stealth mode)
 │   │   ├── cnbc.py            # CNBC
+│   │   ├── marketwatch.py     # MarketWatch
+│   │   ├── seekingalpha.py    # Seeking Alpha (stealth mode)
+│   │   ├── benzinga.py        # Benzinga
+│   │   ├── investingcom.py    # Investing.com
+│   │   ├── ft.py              # Financial Times (stealth mode)
 │   │   └── rss.py             # Generic RSS feeds
 │   ├── analysis/              # AI + heuristic processing
 │   │   ├── ai_client.py       # LLM inference (OpenRouter)
@@ -90,7 +96,7 @@ fin-scrape/
 ## How the Pipeline Works
 
 ### 1. Ingestion
-The built-in scraping engine handles anti-bot detection, Cloudflare bypasses, stealth headers, and TLS fingerprint spoofing. Three fetch modes: fast HTTP, stealth browser, and dynamic JS rendering. Each news source has a dedicated scraper.
+The vendored Scrapling engine (v0.4.6) provides C-speed HTML parsing via lxml, TLS fingerprint impersonation via curl_cffi, and stealth browser automation via patchright with Cloudflare Turnstile solving. Ten news sources supported: Yahoo Finance, Bloomberg, Reuters, CNBC, MarketWatch, Seeking Alpha, Benzinga, Investing.com, Financial Times, and generic RSS feeds.
 
 ### 2. AI Analysis
 Articles go to an LLM (DeepSeek via OpenRouter) with a financial extraction prompt. Returns structured JSON: event type, affected tickers, sentiment, impact score, confidence.
