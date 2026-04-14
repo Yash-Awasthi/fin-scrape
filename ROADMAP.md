@@ -54,7 +54,7 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [x] Score normalization across different event types
 - [x] Divergence penalty system — reduce confidence when AI and heuristics disagree
 - [x] Dual AI backend support (OpenAI-compatible proxy + OpenRouter)
-- [ ] Confidence-weighted verdict aggregation when multiple articles cover the same event
+- [x] Confidence-weighted verdict aggregation when multiple articles cover the same event
 
 ---
 
@@ -63,32 +63,32 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 *Goal: Go beyond extraction — understand context, track entities, and monitor in real-time.*
 
 ### Advanced NLP Pipeline
-- [ ] spaCy NER pipeline for high-precision company/person/org extraction
-- [ ] Entity disambiguation — "Apple" the company vs. "apple" in agriculture news
+- [x] spaCy NER pipeline for high-precision company/person/org extraction
+- [x] Entity disambiguation — "Apple" the company vs. "apple" in agriculture news
 - [ ] Coreference resolution — link pronouns and references to correct entities
-- [ ] Relationship extraction — who acquired whom, who invested in what
+- [x] Relationship extraction — who acquired whom, who invested in what
 - [ ] Temporal extraction — parse dates, quarters, fiscal years from unstructured text
 - [ ] Custom financial NER model fine-tuned on SEC filings and earnings transcripts
 
 ### Real-Time Monitoring Engine
-- [ ] Continuous scraping loop with configurable intervals per source
+- [x] Continuous scraping loop with configurable intervals per source
 - [ ] WebSocket-based event stream for real-time signal delivery
-- [ ] Rate limiting and backoff per domain (built into engine)
-- [ ] Deduplication across sources with headline similarity + entity overlap
-- [ ] Breaking news detection — identify stories appearing across 3+ sources within minutes
+- [x] Rate limiting and backoff per domain (built into engine)
+- [x] Deduplication across sources with headline similarity + entity overlap
+- [x] Breaking news detection — identify stories appearing across 3+ sources within minutes
 
 ### Portfolio Tracking
-- [ ] Watchlist management — track specific tickers and get prioritized signals
-- [ ] Portfolio position awareness — weight signals by your actual holdings
-- [ ] Sector/industry grouping — roll up signals to sector-level views
-- [ ] Historical signal accuracy tracking — did our verdicts predict correctly?
+- [x] Watchlist management — track specific tickers and get prioritized signals
+- [x] Portfolio position awareness — weight signals by your actual holdings
+- [x] Sector/industry grouping — roll up signals to sector-level views
+- [x] Historical signal accuracy tracking — did our verdicts predict correctly? (AccuracyTracker with outcome checking)
 
 ### Alert System
 - [ ] Discord bot for real-time signal alerts
-- [x] Telegram notifications with configurable filters (bot with /subscribe, /status, /latest commands)
+- [x] Telegram notifications with configurable filters (bot with /subscribe, /status, /latest, /portfolio, /watchlists commands)
 - [ ] Email digests (daily/weekly summary of top signals)
 - [ ] Slack integration for team-based monitoring
-- [ ] Custom alert rules — "notify me when any FAANG stock gets PULL_OUT verdict"
+- [x] Custom alert rules — "notify me when any FAANG stock gets PULL_OUT verdict" (AlertEngine with presets)
 
 ---
 
@@ -97,13 +97,15 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 *Goal: Replace single-model analysis with multi-agent deliberation. Different AI "personas" debate each event.*
 
 ### Agent Architecture
+- [x] **Analyst Agent** — deep event extraction, entity linking, impact analysis (weight 1.5)
+- [x] **Contrarian Agent** — deliberately challenges the consensus, finds counterarguments (weight 1.0)
+- [x] **Risk Agent** — evaluates downside scenarios, tail risks, contagion effects (weight 1.2)
+- [x] **Momentum Agent** — short-term sentiment and catalyst focus (weight 0.8)
+- [x] **Fundamentals Agent** — long-term business value and earnings quality (weight 1.0)
+- [x] Agent communication protocol — ThreadPoolExecutor parallel deliberation with structured AgentVerdict
+- [x] Consensus scoring — weighted agreement across agents produces final CouncilVerdict
 - [ ] **Scout Agent** — ingestion, URL discovery, source prioritization
-- [ ] **Analyst Agent** — deep event extraction, entity linking, impact analysis
-- [ ] **Contrarian Agent** — deliberately challenges the consensus, finds counterarguments
-- [ ] **Risk Agent** — evaluates downside scenarios, tail risks, contagion effects
 - [ ] **Reviewer Agent** — cross-checks all agents' outputs, flags inconsistencies
-- [ ] Agent communication protocol — structured message passing between agents
-- [ ] Consensus scoring — weighted agreement across agents produces final verdict
 
 ### Market Persona Simulation
 - [ ] **The Institutional Whale** — high capital, risk-averse, long-term horizon, focuses on fundamentals
@@ -119,7 +121,7 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [ ] Model agreement scoring — higher confidence when models agree
 - [ ] Local model option via Ollama for sensitive data / cost reduction
 - [ ] Prompt versioning and A/B testing framework
-- [ ] Response caching with TTL to reduce API costs
+- [x] Response caching with LRU + TTL to reduce API costs (SHA256 key, configurable via env vars)
 
 ---
 

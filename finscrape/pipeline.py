@@ -32,6 +32,7 @@ from finscrape.storage import StateManager
 from finscrape.market_data import get_market_data, calculate_market_boost
 from finscrape.models import ScrapedArticle, FinEvent, Verdict
 from finscrape.dashboard import DashboardClient
+from finscrape.agents import AgentCouncil, DEFAULT_AGENTS
 
 logger = logging.getLogger(__name__)
 
@@ -62,10 +63,13 @@ class FinScrapePipeline:
         sources: list[str] | None = None,
         max_articles_per_source: int = 10,
         data_dir: str | None = None,
+        use_council: bool = False,
     ):
         self.state = StateManager(data_dir=data_dir)
         self.dashboard = DashboardClient()
         self.nlp = FinancialNLP()
+        self.use_council = use_council
+        self.council = AgentCouncil(agents=DEFAULT_AGENTS) if use_council else None
 
         # Default: only yahoo (most reliable). Add others as needed.
         source_names = sources or ["yahoo"]
@@ -150,13 +154,11 @@ class FinScrapePipeline:
     def _analyze_article(self, source_name: str, article: ScrapedArticle) -> FinEvent | None:
         """Run AI analysis + heuristic validation on a single article."""
 
-        # AI Analysis
-        prompt = (
-            ANALYSIS_PROMPT
-            .replace("{{title}}", article.title)
-            .replace("{{article_text}}", article.text)
-        )
-        result = call_ai(prompt, SYSTEM_PROMPT)
+        # Choose analysis mode: multi-agent council or single AI call
+        if self.council:
+            result, council_verdict = self._analyze_with_council(source_name, article)
+        else:
+            result, council_verdict = self._analyze_with_single_ai(article), None
 
         if not result:
             print(f"    [ERROR] AI analysis failed")
@@ -281,6 +283,61 @@ class FinScrapePipeline:
                 print(f"           Reasoning: {event.reasoning[:80]}...")
             self.state.add_event(event.to_dict())
             return event
+
+    def _analyze_with_single_ai(self, article: ScrapedArticle) -> dict | None:
+        """Standard single-AI analysis."""
+        prompt = (
+            ANALYSIS_PROMPT
+            .replace("{{title}}", article.title)
+            .replace("{{article_text}}", article.text)
+        )
+        return call_ai(prompt, SYSTEM_PROMPT)
+
+    def _analyze_with_council(self, source_name: str, article: ScrapedArticle) -> tuple[dict | None, dict | None]:
+        """Multi-agent council analysis. Returns (result_dict, council_verdict_dict)."""
+        metadata = {"source": source_name, "age_hours": f"{article.age_hours:.1f}"}
+        cv = self.council.deliberate(article.title, article.text, metadata)
+
+        # If no individual verdicts produced anything useful, fail
+        if cv.consensus_confidence < 0.05:
+            return None, None
+
+        # Convert council verdict into the standard result dict format
+        # so downstream ticker/NLP/validation code works unchanged
+        result = {
+            "relevant": True,
+            "event_type": "other",
+            "tickers": [],
+            "impact_direction": "positive" if cv.consensus_score > 0 else ("negative" if cv.consensus_score < 0 else "neutral"),
+            "signal_score": round(cv.consensus_score),
+            "confidence": cv.consensus_confidence,
+            "subject": article.title,
+            "reasoning": f"Council verdict ({cv.agreement_level:.0%} agreement): " + "; ".join(
+                f"{v.agent_name}={v.signal_score}" for v in cv.individual_verdicts
+            ),
+            "magnitude": "medium",
+            "novelty": "standard",
+            "actionability": "medium",
+            "affected_entities": [],
+            "second_order_effects": [],
+            "sector_impact": "",
+            "key_metrics": {},
+        }
+
+        # Merge tickers from all agents
+        all_tickers = []
+        for v in cv.individual_verdicts:
+            all_tickers.extend(v.tickers)
+        result["tickers"] = list(set(all_tickers))
+
+        # Add council-specific metadata
+        council_dict = cv.to_dict()
+        council_dict.pop("individual_verdicts", None)  # too large for storage
+        result["council"] = council_dict
+        result["key_risks"] = cv.key_risks[:5]
+        result["key_opportunities"] = cv.key_opportunities[:5]
+
+        return result, council_dict
 
     def _normalize_subject(self, s: str) -> str:
         s = s.lower()

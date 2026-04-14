@@ -9,15 +9,18 @@ Features:
   - Retry with exponential backoff (1 retry on failure)
   - Response validation (required fields, value ranges)
   - Batch analysis for processing multiple articles in one call
+  - LRU + TTL response cache to reduce API costs
 """
 
 from __future__ import annotations
 
+import hashlib
 import json
 import logging
 import os
 import re
 import time
+import threading
 
 import requests
 from dotenv import load_dotenv
@@ -41,6 +44,90 @@ DEFAULT_MODEL = os.getenv("FINSCRAPE_MODEL", "deepseek/deepseek-chat")
 MAX_RETRIES = 1
 RETRY_BASE_DELAY = 2.0  # seconds
 
+# Cache configuration
+CACHE_TTL = int(os.getenv("FINSCRAPE_CACHE_TTL", "3600"))  # 1 hour default
+CACHE_MAX_SIZE = int(os.getenv("FINSCRAPE_CACHE_MAX_SIZE", "500"))
+
+
+# ---------------------------------------------------------------------------
+# Response Cache
+# ---------------------------------------------------------------------------
+
+class _ResponseCache:
+    """Thread-safe LRU + TTL cache for AI responses."""
+
+    def __init__(self, max_size: int = CACHE_MAX_SIZE, ttl: int = CACHE_TTL):
+        self._cache: dict[str, tuple[float, dict]] = {}  # key -> (expires_at, response)
+        self._access_order: list[str] = []  # LRU tracking
+        self._lock = threading.Lock()
+        self.max_size = max_size
+        self.ttl = ttl
+        self.hits = 0
+        self.misses = 0
+
+    def _make_key(self, prompt: str, system_prompt: str) -> str:
+        """Generate cache key from prompt content."""
+        content = f"{system_prompt}||{prompt}"
+        return hashlib.sha256(content.encode()).hexdigest()[:32]
+
+    def get(self, prompt: str, system_prompt: str) -> dict | None:
+        """Get cached response if available and not expired."""
+        key = self._make_key(prompt, system_prompt)
+        with self._lock:
+            if key in self._cache:
+                expires_at, response = self._cache[key]
+                if time.time() < expires_at:
+                    self.hits += 1
+                    # Move to end for LRU
+                    if key in self._access_order:
+                        self._access_order.remove(key)
+                    self._access_order.append(key)
+                    return response
+                else:
+                    # Expired
+                    del self._cache[key]
+                    if key in self._access_order:
+                        self._access_order.remove(key)
+            self.misses += 1
+            return None
+
+    def put(self, prompt: str, system_prompt: str, response: dict) -> None:
+        """Store response in cache."""
+        key = self._make_key(prompt, system_prompt)
+        with self._lock:
+            # Evict oldest if at capacity
+            while len(self._cache) >= self.max_size and self._access_order:
+                oldest = self._access_order.pop(0)
+                self._cache.pop(oldest, None)
+
+            self._cache[key] = (time.time() + self.ttl, response)
+            if key in self._access_order:
+                self._access_order.remove(key)
+            self._access_order.append(key)
+
+    def clear(self) -> None:
+        with self._lock:
+            self._cache.clear()
+            self._access_order.clear()
+            self.hits = 0
+            self.misses = 0
+
+    @property
+    def stats(self) -> dict:
+        total = self.hits + self.misses
+        return {
+            "size": len(self._cache),
+            "max_size": self.max_size,
+            "ttl": self.ttl,
+            "hits": self.hits,
+            "misses": self.misses,
+            "hit_rate": round(self.hits / total, 2) if total > 0 else 0.0,
+        }
+
+
+# Global cache instance
+_cache = _ResponseCache()
+
 
 # ---------------------------------------------------------------------------
 # Public API
@@ -54,7 +141,14 @@ def call_ai(prompt: str, system_prompt: str, model: str | None = None) -> dict |
     Retries once on failure with exponential backoff.
     Validates required fields in the response.
     Returns None on any failure (network, parsing, invalid response).
+    Results are cached with TTL to reduce API costs.
     """
+    # Check cache first
+    cached = _cache.get(prompt, system_prompt)
+    if cached is not None:
+        logger.debug("Cache hit (hits=%d, rate=%.0f%%)", _cache.hits, _cache.stats["hit_rate"] * 100)
+        return cached
+
     if OPENAI_BASE_URL:
         raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, model)
     elif OPENROUTER_API_KEY:
@@ -67,7 +161,23 @@ def call_ai(prompt: str, system_prompt: str, model: str | None = None) -> dict |
         return None
 
     # Validate and normalize the response
-    return _validate_response(raw)
+    result = _validate_response(raw)
+
+    # Cache successful responses
+    if result is not None:
+        _cache.put(prompt, system_prompt, result)
+
+    return result
+
+
+def get_cache_stats() -> dict:
+    """Return cache statistics."""
+    return _cache.stats
+
+
+def clear_cache() -> None:
+    """Clear the response cache."""
+    _cache.clear()
 
 
 def analyze_batch(

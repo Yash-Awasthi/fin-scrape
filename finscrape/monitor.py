@@ -107,11 +107,13 @@ class Monitor:
         max_articles_per_source: int = 10,
         data_dir: Optional[str] = None,
         min_domain_delay: float = MIN_DOMAIN_DELAY,
+        use_council: bool = False,
     ):
         self._sources = sources
         self._max_articles = max_articles_per_source
         self._data_dir = data_dir
         self._min_domain_delay = min_domain_delay
+        self._use_council = use_council
 
         # Merge caller overrides with defaults.
         merged_intervals = dict(DEFAULT_INTERVALS)
@@ -240,6 +242,7 @@ class Monitor:
                 sources=[source_name],
                 max_articles_per_source=self._max_articles,
                 data_dir=self._data_dir,
+                use_council=self._use_council,
             )
             events = pipeline.run()
             elapsed = time.monotonic() - cycle_start
