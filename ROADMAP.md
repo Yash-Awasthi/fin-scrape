@@ -21,33 +21,40 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [x] Define proper data models with dataclasses for events, signals, and verdicts
 - [x] Implement a plugin-based scraper system — add new sources without touching core pipeline
 - [x] Build internal scraping engine (`finscrape/engine/`) — zero external framework dependencies
-- [ ] Replace JSON file storage with SQLite for proper querying, indexing, and historical analysis
-- [ ] Add structured logging with context (source, ticker, pipeline stage)
+- [x] Vendor Scrapling v0.4.6 source code (lxml, curl_cffi, patchright, browserforge, orjson)
+- [x] Replace JSON file storage with SQLite for proper querying, indexing, and historical analysis
+- [x] Add structured logging with context (source, ticker, pipeline stage)
+- [x] Centralized config system — all tunable parameters via environment variables
+- [x] Write test suite (88 tests — models, storage, validator, config)
 - [ ] Set up CI/CD with GitHub Actions (lint, test, type-check)
 
 ### Internal Scraping Engine
-- [x] `Fetcher` — Fast HTTP with stealth headers, User-Agent rotation, retry + backoff
-- [x] `StealthFetcher` — Playwright with anti-detection (Cloudflare bypass, webdriver flag removal, fingerprint normalization)
-- [x] `DynamicFetcher` — Playwright for JS-heavy pages with network idle detection and auto-scroll
-- [x] Unified `Page`/`Element` API with CSS selectors across all fetchers
+- [x] `Fetcher` — curl_cffi with TLS fingerprint impersonation, browserforge headers
+- [x] `StealthyFetcher` — patchright with Cloudflare Turnstile solver, fingerprint normalization
+- [x] `DynamicFetcher` — patchright for JS-heavy pages with network idle detection
+- [x] Unified `Response`/`Selector` API with CSS/XPath selectors across all fetchers
 - [ ] Implement session management for sites requiring cookies/auth
 - [ ] Add adaptive selector tracking — survive site redesigns without code changes
 
-### Multi-Source Scraping
+### Multi-Source Scraping (11 sources)
 - [x] Yahoo Finance (HTTP + RSS)
 - [x] Bloomberg (stealth browser mode)
-- [x] Reuters (HTTP scraper)
+- [x] Reuters (stealth browser mode)
 - [x] CNBC (HTTP scraper)
 - [x] Generic RSS engine for any financial feed
-- [ ] Seeking Alpha (free-tier analysis)
-- [ ] SEC EDGAR (8-K, 10-Q filings — machine-readable XBRL)
-- [ ] Generic RSS engine for any financial feed
+- [x] Seeking Alpha (stealth browser mode)
+- [x] MarketWatch (HTTP listing + stealth articles)
+- [x] Benzinga (HTTP scraper)
+- [x] Investing.com (HTTP scraper)
+- [x] Financial Times (stealth browser mode)
+- [x] SEC EDGAR (8-K filings via full-text search API)
 
 ### Investment Verdict System
 - [x] Implement clear verdict categories: INVEST, PULL_OUT, OBSERVE, CAUTIOUS
 - [x] Score normalization across different event types
+- [x] Divergence penalty system — reduce confidence when AI and heuristics disagree
+- [x] Dual AI backend support (OpenAI-compatible proxy + OpenRouter)
 - [ ] Confidence-weighted verdict aggregation when multiple articles cover the same event
-- [ ] Divergence penalty system — reduce confidence when AI and heuristics disagree
 
 ---
 

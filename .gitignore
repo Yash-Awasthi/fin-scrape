@@ -3,6 +3,8 @@
 
 # Local state and data
 data/*.json
+data/*.json.bak
+data/*.db
 app.log
 
 # Python cache

@@ -19,6 +19,7 @@ from finscrape.scrapers.seekingalpha import SeekingAlphaScraper
 from finscrape.scrapers.benzinga import BenzingaScraper
 from finscrape.scrapers.investingcom import InvestingComScraper
 from finscrape.scrapers.ft import FTScraper
+from finscrape.scrapers.edgar import EdgarScraper
 from finscrape.analysis.ai_client import call_ai
 from finscrape.analysis.validator import calculate_heuristic_score, check_divergence, clean_tickers
 from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
@@ -47,6 +48,7 @@ class FinScrapePipeline:
         "benzinga": BenzingaScraper,
         "investingcom": InvestingComScraper,
         "ft": FTScraper,
+        "edgar": EdgarScraper,
     }
 
     def __init__(
@@ -206,11 +208,17 @@ class FinScrapePipeline:
         matched = self._find_duplicate(event)
         if matched:
             print(f"    [MERGE] Merging with: {matched.get('subject', '')[:50]}")
-            if article.url not in matched.get("articles", []):
-                matched["articles"].append(article.url)
-            if source_name not in matched.get("sources", []):
-                matched["sources"].append(source_name)
-            self.state.save_events()
+            articles_list = matched.get("articles", [])
+            sources_list = matched.get("sources", [])
+            updated = {}
+            if article.url not in articles_list:
+                articles_list.append(article.url)
+                updated["articles"] = articles_list
+            if source_name not in sources_list:
+                sources_list.append(source_name)
+                updated["sources"] = sources_list
+            if updated and matched.get("id"):
+                self.state.update_event(matched["id"], **updated)
             return None
         else:
             print(f"    [{event.verdict:8s}] {event.subject}")

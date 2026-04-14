@@ -35,7 +35,7 @@ def main():
         nargs="+",
         default=["yahoo"],
         choices=["yahoo", "bloomberg", "reuters", "cnbc", "rss",
-                 "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft"],
+                 "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft", "edgar"],
         help="News sources to scrape (default: yahoo)",
     )
     parser.add_argument(

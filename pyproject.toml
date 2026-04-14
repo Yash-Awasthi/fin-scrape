@@ -1,26 +1,32 @@
 [project]
 name = "fin-scrape"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.3.0"
+description = "AI-powered financial news intelligence engine with vendored Scrapling"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
-    "beautifulsoup4>=4.14.3",
-    "browserforge>=1.2.4",
-    "cssselect>=1.4.0",
-    "curl-cffi>=0.15.0",
-    "feedparser>=6.0.12",
-    "httpx[http2]>=0.28.1",
-    "lxml>=6.0.4",
-    "msgspec>=0.21.1",
-    "orjson>=3.11.8",
-    "patchright>=1.58.2",
-    "python-dateutil>=2.9.0.post0",
-    "python-dotenv>=1.2.2",
-    "requests>=2.33.1",
-    "scrapling>=0.4.6",
-    "tld>=0.13.2",
-    "typing-extensions>=4.15.0",
-    "w3lib>=2.4.1",
-    "yfinance>=1.2.2",
+    # Vendored Scrapling engine dependencies
+    "lxml>=5.0.0",
+    "cssselect>=1.2.0",
+    "curl-cffi>=0.7.0",
+    "orjson>=3.9.0",
+    "w3lib>=2.1.0",
+    "tld>=0.13.0",
+    "browserforge>=1.1.0",
+    "patchright>=1.0.0",
+    "msgspec>=0.18.0",
+    "typing-extensions>=4.0.0",
+    # Core
+    "python-dotenv>=1.0.0",
+    "python-dateutil>=2.9.0",
+    "requests>=2.31.0",
+    # RSS parsing
+    "feedparser>=6.0.0",
+    # Financial data
+    "yfinance>=0.2.30",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
 ]

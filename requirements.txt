@@ -1,6 +1,7 @@
 # Core
 python-dotenv>=1.0.0
 python-dateutil>=2.9.0
+requests>=2.31.0
 
 # Vendored Scrapling dependencies (lxml C parser, TLS fingerprinting, stealth browser)
 lxml>=5.0.0

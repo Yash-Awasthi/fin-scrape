@@ -25,8 +25,6 @@ class Verdict(str, Enum):
             return cls.OBSERVE
         elif score >= -1:
             return cls.CAUTIOUS
-        elif score >= -3:
-            return cls.CAUTIOUS
         else:
             return cls.PULL_OUT
 
