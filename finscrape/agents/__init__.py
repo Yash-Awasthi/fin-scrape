@@ -19,7 +19,17 @@ from finscrape.agents.personas import (
     RiskAgent,
     MomentumAgent,
     FundamentalsAgent,
+    ScoutAgent,
+    ReviewerAgent,
     DEFAULT_AGENTS,
+)
+from finscrape.agents.market_personas import (
+    InstitutionalWhaleAgent,
+    RetailDayTraderAgent,
+    ContrarianInvestorAgent,
+    QuantAgent,
+    ESGInvestorAgent,
+    MARKET_PERSONAS,
 )
 
 __all__ = [
@@ -32,5 +42,13 @@ __all__ = [
     "RiskAgent",
     "MomentumAgent",
     "FundamentalsAgent",
+    "ScoutAgent",
+    "ReviewerAgent",
     "DEFAULT_AGENTS",
+    "InstitutionalWhaleAgent",
+    "RetailDayTraderAgent",
+    "ContrarianInvestorAgent",
+    "QuantAgent",
+    "ESGInvestorAgent",
+    "MARKET_PERSONAS",
 ]

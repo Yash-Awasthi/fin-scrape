@@ -274,6 +274,17 @@ def main():
 
     # --- Accuracy command ---
     accuracy_parser = subparsers.add_parser("accuracy", help="Signal accuracy tracking")
+
+    # --- Digest command ---
+    digest_parser = subparsers.add_parser("digest", help="Send email digests")
+    digest_sub = digest_parser.add_subparsers(dest="digest_cmd")
+    digest_sub.add_parser("daily", help="Send daily digest email")
+    digest_sub.add_parser("weekly", help="Send weekly digest email")
+    digest_preview = digest_sub.add_parser("preview", help="Preview digest HTML (write to file)")
+    digest_preview.add_argument("--type", choices=["daily", "weekly"], default="daily")
+    digest_preview.add_argument("--output", default="/mnt/user-outputs/digest_preview.html")
+
+    # --- Accuracy command ---
     accuracy_sub = accuracy_parser.add_subparsers(dest="accuracy_cmd")
 
     acc_check = accuracy_sub.add_parser("check", help="Check outcomes for past signals")
@@ -359,6 +370,12 @@ def main():
             return
         handle_accuracy(args)
 
+    elif args.command == "digest":
+        if not args.digest_cmd:
+            digest_parser.print_help()
+            return
+        handle_digest(args)
+
 
 def handle_alerts(args):
     """Handle alerts subcommands."""
@@ -406,6 +423,54 @@ def handle_alerts(args):
         print(f"Disabled rule {args.rule_id}")
 
     engine.close()
+
+
+def handle_digest(args):
+    """Handle digest subcommands."""
+    from finscrape.digest import EmailDigest, DigestBuilder
+    from finscrape.storage import StateManager
+    from datetime import datetime, timezone, timedelta
+
+    if args.digest_cmd == "daily":
+        digest = EmailDigest()
+        if not digest.is_configured:
+            print("Email digest not configured. Set RESEND_PROXY_URL and FINSCRAPE_DIGEST_TO env vars.")
+            return
+        result = digest.send_daily()
+        if result.get("ok"):
+            print(f"Daily digest sent to {digest.to_email}")
+        else:
+            print(f"Failed: {result}")
+
+    elif args.digest_cmd == "weekly":
+        digest = EmailDigest()
+        if not digest.is_configured:
+            print("Email digest not configured. Set RESEND_PROXY_URL and FINSCRAPE_DIGEST_TO env vars.")
+            return
+        result = digest.send_weekly()
+        if result.get("ok"):
+            print(f"Weekly digest sent to {digest.to_email}")
+        else:
+            print(f"Failed: {result}")
+
+    elif args.digest_cmd == "preview":
+        state = StateManager()
+        cutoff = datetime.now(timezone.utc) - timedelta(days=7 if args.type == "weekly" else 1)
+        cutoff_str = cutoff.isoformat()
+        events = [e for e in state.events if e.get("timestamp", "") >= cutoff_str]
+
+        builder = DigestBuilder()
+        if args.type == "weekly":
+            subject, html = builder.build_weekly(events)
+        else:
+            subject, html = builder.build_daily(events)
+
+        output = args.output
+        with open(output, "w") as f:
+            f.write(html)
+        print(f"Preview written to {output}")
+        print(f"Subject: {subject}")
+        print(f"Events included: {len(events)}")
 
 
 if __name__ == "__main__":

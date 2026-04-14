@@ -182,7 +182,7 @@ class TestAgentVerdict:
 class TestPersonas:
 
     def test_all_default_agents_exist(self):
-        assert len(DEFAULT_AGENTS) == 5
+        assert len(DEFAULT_AGENTS) == 7
 
     def test_agent_names_are_unique(self):
         names = [a.name for a in DEFAULT_AGENTS]
@@ -511,6 +511,12 @@ class TestCouncilIntegration:
             "fundamentals": {"verdict": "INVEST", "signal_score": 3, "confidence": 0.75,
                              "reasoning": "Improving margins.", "tickers": ["AAPL"],
                              "risk_factors": [], "key_insights": ["Margin expansion"]},
+            "scout": {"verdict": "OBSERVE", "signal_score": 2, "confidence": 0.7,
+                      "reasoning": "Credible source, novel info.", "tickers": ["AAPL"],
+                      "risk_factors": [], "key_insights": ["Primary source"]},
+            "reviewer": {"verdict": "INVEST", "signal_score": 3, "confidence": 0.8,
+                         "reasoning": "Claims verified.", "tickers": ["AAPL"],
+                         "risk_factors": [], "key_insights": ["Verifiable data"]},
         }
 
         # Map unique phrases from each agent's system prompt to response keys.
@@ -520,6 +526,8 @@ class TestCouncilIntegration:
             ("risk-focused financial analyst", "risk"),
             ("momentum-focused financial analyst", "momentum"),
             ("fundamentals-focused financial analyst", "fundamentals"),
+            ("scout analyst", "scout"),
+            ("reviewer analyst", "reviewer"),
             ("senior financial analyst specializing", "analyst"),
         ]
 
@@ -538,7 +546,7 @@ class TestCouncilIntegration:
                 metadata={"source": "reuters"},
             )
 
-        assert len(result.individual_verdicts) == 5
+        assert len(result.individual_verdicts) == 7
         assert -5 <= result.consensus_score <= 5
         assert 0.0 <= result.consensus_confidence <= 1.0
         assert 0.0 <= result.agreement_level <= 1.0

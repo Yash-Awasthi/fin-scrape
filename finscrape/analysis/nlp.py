@@ -15,7 +15,14 @@ from __future__ import annotations
 import logging
 import re
 from dataclasses import dataclass, field
+from datetime import datetime
 from typing import Optional
+
+from finscrape.analysis.temporal import (
+    TemporalExtractor,
+    TemporalReference,
+    get_next_catalyst_date,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -126,6 +133,7 @@ class NLPResult:
     entities: list[ExtractedEntity] = field(default_factory=list)
     metrics: list[FinancialMetric] = field(default_factory=list)
     relations: list[EntityRelation] = field(default_factory=list)
+    temporal_refs: list[TemporalReference] = field(default_factory=list)
     tickers: list[str] = field(default_factory=list)
     primary_company: str = ""
     primary_ticker: str = ""
@@ -143,6 +151,7 @@ class FinancialNLP:
                           from the storage layer. Supplements the built-in map.
         """
         self._custom_index = entity_index or {}
+        self._temporal_extractor = TemporalExtractor()
 
     def analyze(self, title: str, text: str) -> NLPResult:
         """Run the full NLP pipeline on a headline + article text."""
@@ -179,6 +188,9 @@ class FinancialNLP:
 
         # Step 7: Breaking news indicators
         result.has_breaking_indicators = self._check_breaking_indicators(full_text)
+
+        # Step 8: Temporal extraction
+        result.temporal_refs = self._temporal_extractor.extract(full_text)
 
         return result
 
@@ -490,6 +502,12 @@ class FinancialNLP:
         ]
         text_lower = text.lower()
         return any(re.search(p, text_lower) for p in breaking_patterns)
+
+    def get_next_catalyst_date(
+        self, nlp_result: NLPResult, reference_date: datetime | None = None
+    ) -> str | None:
+        """Return the nearest future date from the temporal refs in an NLPResult."""
+        return get_next_catalyst_date(nlp_result.temporal_refs, reference_date)
 
 
 # Convenience function

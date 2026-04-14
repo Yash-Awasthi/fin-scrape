@@ -67,12 +67,12 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [x] Entity disambiguation — "Apple" the company vs. "apple" in agriculture news
 - [ ] Coreference resolution — link pronouns and references to correct entities
 - [x] Relationship extraction — who acquired whom, who invested in what
-- [ ] Temporal extraction — parse dates, quarters, fiscal years from unstructured text
+- [x] Temporal extraction — parse dates, quarters, fiscal years from unstructured text
 - [ ] Custom financial NER model fine-tuned on SEC filings and earnings transcripts
 
 ### Real-Time Monitoring Engine
 - [x] Continuous scraping loop with configurable intervals per source
-- [ ] WebSocket-based event stream for real-time signal delivery
+- [x] WebSocket-based event stream for real-time signal delivery
 - [x] Rate limiting and backoff per domain (built into engine)
 - [x] Deduplication across sources with headline similarity + entity overlap
 - [x] Breaking news detection — identify stories appearing across 3+ sources within minutes
@@ -86,7 +86,7 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 ### Alert System
 - [ ] Discord bot for real-time signal alerts
 - [x] Telegram notifications with configurable filters (bot with /subscribe, /status, /latest, /portfolio, /watchlists commands)
-- [ ] Email digests (daily/weekly summary of top signals)
+- [x] Email digests (daily/weekly summary of top signals via Resend proxy)
 - [ ] Slack integration for team-based monitoring
 - [x] Custom alert rules — "notify me when any FAANG stock gets PULL_OUT verdict" (AlertEngine with presets)
 
@@ -104,17 +104,17 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [x] **Fundamentals Agent** — long-term business value and earnings quality (weight 1.0)
 - [x] Agent communication protocol — ThreadPoolExecutor parallel deliberation with structured AgentVerdict
 - [x] Consensus scoring — weighted agreement across agents produces final CouncilVerdict
-- [ ] **Scout Agent** — ingestion, URL discovery, source prioritization
-- [ ] **Reviewer Agent** — cross-checks all agents' outputs, flags inconsistencies
+- [x] **Scout Agent** — source reliability, novelty detection, clickbait filtering (weight 0.7)
+- [x] **Reviewer Agent** — cross-checks claims, information completeness, market pricing (weight 1.4)
 
 ### Market Persona Simulation
-- [ ] **The Institutional Whale** — high capital, risk-averse, long-term horizon, focuses on fundamentals
-- [ ] **The Retail Day Trader** — low capital, high risk tolerance, momentum-driven
-- [ ] **The Contrarian** — bets against market overreactions, looks for mean reversion
-- [ ] **The Quant** — purely data-driven, ignores narrative, focuses on statistical patterns
-- [ ] **The ESG Investor** — weighs environmental, social, governance factors heavily
-- [ ] Each persona produces independent verdicts → aggregate into "market consensus"
-- [ ] Divergence between personas = high uncertainty signal
+- [x] **The Institutional Whale** — high capital, risk-averse, long-term horizon, focuses on fundamentals (weight 1.3)
+- [x] **The Retail Day Trader** — low capital, high risk tolerance, momentum-driven (weight 0.6)
+- [x] **The Contrarian** — bets against market overreactions, looks for mean reversion (weight 0.9)
+- [x] **The Quant** — purely data-driven, ignores narrative, focuses on statistical patterns (weight 1.1)
+- [x] **The ESG Investor** — weighs environmental, social, governance factors heavily (weight 0.7)
+- [x] Each persona produces independent verdicts → aggregate into "market consensus"
+- [x] Divergence between personas = high uncertainty signal
 
 ### LLM Infrastructure
 - [ ] Multi-model support — run the same prompt through DeepSeek, Claude, GPT, Llama
