@@ -6,10 +6,21 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "beautifulsoup4>=4.14.3",
+    "browserforge>=1.2.4",
+    "cssselect>=1.4.0",
+    "curl-cffi>=0.15.0",
     "feedparser>=6.0.12",
     "httpx[http2]>=0.28.1",
+    "lxml>=6.0.4",
+    "msgspec>=0.21.1",
+    "orjson>=3.11.8",
+    "patchright>=1.58.2",
     "python-dateutil>=2.9.0.post0",
     "python-dotenv>=1.2.2",
     "requests>=2.33.1",
+    "scrapling>=0.4.6",
+    "tld>=0.13.2",
+    "typing-extensions>=4.15.0",
+    "w3lib>=2.4.1",
     "yfinance>=1.2.2",
 ]
