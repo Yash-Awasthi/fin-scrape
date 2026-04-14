@@ -25,16 +25,16 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [x] Replace JSON file storage with SQLite for proper querying, indexing, and historical analysis
 - [x] Add structured logging with context (source, ticker, pipeline stage)
 - [x] Centralized config system — all tunable parameters via environment variables
-- [x] Write test suite (88 tests — models, storage, validator, config)
-- [ ] Set up CI/CD with GitHub Actions (lint, test, type-check)
+- [x] Write test suite (112 tests — models, storage, validator, config, sessions, selectors)
+- [x] Set up CI/CD with GitHub Actions (lint, test, type-check)
 
 ### Internal Scraping Engine
 - [x] `Fetcher` — curl_cffi with TLS fingerprint impersonation, browserforge headers
 - [x] `StealthyFetcher` — patchright with Cloudflare Turnstile solver, fingerprint normalization
 - [x] `DynamicFetcher` — patchright for JS-heavy pages with network idle detection
 - [x] Unified `Response`/`Selector` API with CSS/XPath selectors across all fetchers
-- [ ] Implement session management for sites requiring cookies/auth
-- [ ] Add adaptive selector tracking — survive site redesigns without code changes
+- [x] Implement session management for sites requiring cookies/auth
+- [x] Add adaptive selector tracking — survive site redesigns without code changes
 
 ### Multi-Source Scraping (11 sources)
 - [x] Yahoo Finance (HTTP + RSS)
@@ -85,7 +85,7 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 
 ### Alert System
 - [ ] Discord bot for real-time signal alerts
-- [ ] Telegram notifications with configurable filters
+- [x] Telegram notifications with configurable filters (bot with /subscribe, /status, /latest commands)
 - [ ] Email digests (daily/weekly summary of top signals)
 - [ ] Slack integration for team-based monitoring
 - [ ] Custom alert rules — "notify me when any FAANG stock gets PULL_OUT verdict"
@@ -209,7 +209,7 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [ ] OpenAPI spec and auto-generated docs
 
 ### Web Dashboard
-- [ ] Real-time signal feed with filtering and search
+- [x] Real-time signal feed with filtering and search (Cloudflare Workers + React Router 7 + Durable Objects)
 - [ ] Portfolio tracker with P&L visualization
 - [ ] Signal accuracy leaderboard — which sources/agents are most accurate?
 - [ ] Custom watchlist with configurable alert thresholds

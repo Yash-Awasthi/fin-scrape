@@ -26,6 +26,7 @@ from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
 from finscrape.storage import StateManager
 from finscrape.market_data import get_market_data, calculate_market_boost
 from finscrape.models import ScrapedArticle, FinEvent, Verdict
+from finscrape.dashboard import DashboardClient
 
 logger = logging.getLogger(__name__)
 
@@ -58,6 +59,7 @@ class FinScrapePipeline:
         data_dir: str | None = None,
     ):
         self.state = StateManager(data_dir=data_dir)
+        self.dashboard = DashboardClient()
 
         # Default: only yahoo (most reliable). Add others as needed.
         source_names = sources or ["yahoo"]
@@ -94,6 +96,11 @@ class FinScrapePipeline:
         print(f"\n{'='*60}")
         print(f"  Pipeline Complete — {len(all_events)} new events extracted")
         print(f"{'='*60}\n")
+
+        # Push to dashboard
+        if all_events and self.dashboard.is_configured:
+            result = self.dashboard.push_events([e.to_dict() for e in all_events])
+            print(f"  Dashboard: {result}")
 
         # Print summary
         for event in all_events:

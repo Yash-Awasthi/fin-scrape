@@ -24,6 +24,7 @@ dependencies = [
     "feedparser>=6.0.0",
     # Financial data
     "yfinance>=0.2.30",
+    "pytest>=9.0.3",
 ]
 
 [dependency-groups]
