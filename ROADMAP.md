@@ -1,84 +1,262 @@
-# 🗺️ Project Roadmap: FinIntelligence
+# FinScrape Roadmap
 
-> **[Back to README.md](README.md)**
+> 2-year strategic plan: from financial news scraper to autonomous market intelligence platform.
 
-This roadmap outlines the strategic direction and future enhancements for the FinIntelligence engine.
-
----
-
-## 🏗️ Phase 1: High-Performance Ingestion (Next Steps)
-
-### 🦎 Scrapling Integration
-Migrate current BeautifulSoup-based scrapers to [Scrapling](https://github.com/D4Vinci/Scrapling), an adaptive, anti-bot bypass framework. 
-- **Goal**: Zero-maintenance scraping with self-healing selectors.
-- **Benefit**: Bypass Cloudflare/Turnstile and handle front-end structural changes automatically.
-
-### 🌐 SERP API Integration
-Incorporate Search Engine Results Page (SERP) results for proactive news discovery.
-- **Sources**: Google Search, Bing, and DuckDuckGo via SerpApi or similar.
-- **Benefit**: Detect "breaking news" that hasn't yet appeared on major finance portals.
-
-### 🤖 Apify Actors
-Offload heavy or distributed scraping tasks to [Apify](https://apify.com/).
-- **Use Case**: Deep crawling of corporate press release IR portals or social media signals (X/Twitter).
-- **Benefit**: Highly scalable and distributed ingestion without IP blocking.
+**[Back to README.md](README.md)**
 
 ---
 
-## 🧠 Phase 2: Intelligence & Advanced Models
+## Vision
 
-### 🐟 TinyFish AI
-Integration of [TinyFish](https://github.com/TinyFish-AI) or similar lightweight local LLMs.
-- **Goal**: Edge processing for sensitive data or initial "relevance" filtering without cloud API costs.
-- **Benefit**: Reduced latency and offline capability for Tier-1 event filtering.
-
-### 📈 Multi-Agent Orchestration
-Evolve the current pipeline into a multi-agent "Council" (AI Council).
-- **Agent 1 (Scout)**: Ingestion & URL Discovery.
-- **Agent 2 (Analyst)**: Event Extraction & Entity Linking.
-- **Agent 3 (Reviewer)**: Heuristic Cross-Check & Divergence Flagging.
+FinScrape starts as a news scraper but ends as an **autonomous market intelligence system** — one that doesn't just tell you what happened, but simulates how different types of investors would react, predicts cascading market effects, and eventually acts on high-confidence signals. The end state is a platform where AI agents with different investment philosophies debate market events and produce consensus-weighted trading signals.
 
 ---
 
-## ⚙️ Phase 3: Automation & Ecosystem
+## Phase 1: Foundation Overhaul (Q2 2026)
 
-### 🛡️ Autonomous News Hunting
-Scheduled "Hunters" that monitor specific keywords or sectors 24/7.
-- **Feature**: Real-time push notifications (Discord/Telegram/Slack) for high-impact (>0.85) signals.
+*Goal: Replace the prototype with production-grade architecture and multi-source scraping.*
 
-### 💰 Automated Trading Signal Bridge
-Integrate with trading platforms (Interactive Brokers, Alpaca, MetaTrader).
-- **Goal**: One-click or fully automated trade execution based on high-confidence earnings or M&A signals.
-- **Safety**: Human-in-the-loop mandatory for orders > $X.
+### Architecture Rebuild
+- [ ] Consolidate `src/`, `backend/`, and `aiwebscrape/` into a single unified `finscrape/` package
+- [ ] Define proper data models with dataclasses/Pydantic for events, signals, and verdicts
+- [ ] Implement a plugin-based scraper system — add new sources without touching core pipeline
+- [ ] Replace JSON file storage with SQLite for proper querying, indexing, and historical analysis
+- [ ] Add structured logging with context (source, ticker, pipeline stage)
+- [ ] Set up CI/CD with GitHub Actions (lint, test, type-check)
 
----
+### Scrapling Integration
+- [ ] Migrate Yahoo Finance scraper from BeautifulSoup to Scrapling
+- [ ] Use `StealthyFetcher` for sites with anti-bot protection (Bloomberg, WSJ)
+- [ ] Use `DynamicFetcher` for JS-heavy sites that require rendering
+- [ ] Use `Fetcher` for simple sites and RSS feed content extraction
+- [ ] Implement session management for sites requiring cookies/auth
+- [ ] Add adaptive selector tracking — survive site redesigns without code changes
 
-## 🏛️ Phase 4: Multi-Agent AI Council Integration
+### Multi-Source Scraping
+- [ ] Bloomberg (stealth mode — article extraction from free-tier pages)
+- [ ] Reuters (article feed + breaking news)
+- [ ] CNBC (market news + pre-market movers)
+- [ ] Financial Times (free-tier content)
+- [ ] MarketWatch
+- [ ] Seeking Alpha (free-tier analysis)
+- [ ] SEC EDGAR (8-K, 10-Q filings — machine-readable XBRL)
+- [ ] Generic RSS engine for any financial feed
 
-### 🤖 Deliberation Engine Integration
-Integrate the [AI Council](https://github.com/Yash-Awasthi/ai-council) to process scraped financial data through multi-agent deliberation.
-- **Goal**: Generate robust, synthesized market analysis instead of relying on a single model's interpretation.
-- **Benefit**: Reduces hallucinations and identifies blind spots in financial news interpretation by enforcing interactive peer feedback loops.
-
-### 🎭 Diverse Market Personas
-Implement council archetypes representing different market participants with varying conditions and capital constraints.
-- **Personas**: E.g., The Institutional Whale (high capital, risk-averse), The Retail Day Trader (low capital, high risk), The Contrarian (looks for market overreactions).
-- **Benefit**: Simulates real-world market dynamics where different players interpret the same news differently based on their constraints and goals.
-
----
-
-## 📊 Summary of Planned Integrations
-
-| Feature | Category | Purpose | Priority |
-| :--- | :--- | :--- | :--- |
-| **Scrapling** | Ingestion | Anti-bot bypass & Self-healing | **High** |
-| **Apify** | Scalability | Distributed crawling | **Medium** |
-| **SERP API** | Discovery | Proactive news surface | **Medium** |
-| **AI Council** | Intelligence | Multi-Agent Deliberation | **Medium** |
-| **TinyFish AI** | Models | Local/Edge processing | **Low** |
-| **Trading APIs**| Ecosystem | Automated Execution | **Low** |
+### Investment Verdict System
+- [ ] Implement clear verdict categories: INVEST, PULL_OUT, OBSERVE, CAUTIOUS
+- [ ] Score normalization across different event types
+- [ ] Confidence-weighted verdict aggregation when multiple articles cover the same event
+- [ ] Divergence penalty system — reduce confidence when AI and heuristics disagree
 
 ---
 
-> [!TIP]
-> We are committed to an open-source, modular ecosystem. If you'd like to contribute a new scraper or analysis model, please open a PR!
+## Phase 2: Intelligence Layer (Q3 2026)
+
+*Goal: Go beyond extraction — understand context, track entities, and monitor in real-time.*
+
+### Advanced NLP Pipeline
+- [ ] spaCy NER pipeline for high-precision company/person/org extraction
+- [ ] Entity disambiguation — "Apple" the company vs. "apple" in agriculture news
+- [ ] Coreference resolution — link pronouns and references to correct entities
+- [ ] Relationship extraction — who acquired whom, who invested in what
+- [ ] Temporal extraction — parse dates, quarters, fiscal years from unstructured text
+- [ ] Custom financial NER model fine-tuned on SEC filings and earnings transcripts
+
+### Real-Time Monitoring Engine
+- [ ] Continuous scraping loop with configurable intervals per source
+- [ ] WebSocket-based event stream for real-time signal delivery
+- [ ] Rate limiting and backoff per domain (respect robots.txt via Scrapling)
+- [ ] Deduplication across sources with headline similarity + entity overlap
+- [ ] Breaking news detection — identify stories appearing across 3+ sources within minutes
+
+### Portfolio Tracking
+- [ ] Watchlist management — track specific tickers and get prioritized signals
+- [ ] Portfolio position awareness — weight signals by your actual holdings
+- [ ] Sector/industry grouping — roll up signals to sector-level views
+- [ ] Historical signal accuracy tracking — did our verdicts predict correctly?
+
+### Alert System
+- [ ] Discord bot for real-time signal alerts
+- [ ] Telegram notifications with configurable filters
+- [ ] Email digests (daily/weekly summary of top signals)
+- [ ] Slack integration for team-based monitoring
+- [ ] Custom alert rules — "notify me when any FAANG stock gets PULL_OUT verdict"
+
+---
+
+## Phase 3: Multi-Agent AI Council (Q4 2026)
+
+*Goal: Replace single-model analysis with multi-agent deliberation. Different AI "personas" debate each event.*
+
+### Agent Architecture
+- [ ] **Scout Agent** — ingestion, URL discovery, source prioritization
+- [ ] **Analyst Agent** — deep event extraction, entity linking, impact analysis
+- [ ] **Contrarian Agent** — deliberately challenges the consensus, finds counterarguments
+- [ ] **Risk Agent** — evaluates downside scenarios, tail risks, contagion effects
+- [ ] **Reviewer Agent** — cross-checks all agents' outputs, flags inconsistencies
+- [ ] Agent communication protocol — structured message passing between agents
+- [ ] Consensus scoring — weighted agreement across agents produces final verdict
+
+### Market Persona Simulation
+- [ ] **The Institutional Whale** — high capital, risk-averse, long-term horizon, focuses on fundamentals
+- [ ] **The Retail Day Trader** — low capital, high risk tolerance, momentum-driven
+- [ ] **The Contrarian** — bets against market overreactions, looks for mean reversion
+- [ ] **The Quant** — purely data-driven, ignores narrative, focuses on statistical patterns
+- [ ] **The ESG Investor** — weighs environmental, social, governance factors heavily
+- [ ] Each persona produces independent verdicts → aggregate into "market consensus"
+- [ ] Divergence between personas = high uncertainty signal
+
+### LLM Infrastructure
+- [ ] Multi-model support — run the same prompt through DeepSeek, Claude, GPT, Llama
+- [ ] Model agreement scoring — higher confidence when models agree
+- [ ] Local model option via Ollama for sensitive data / cost reduction
+- [ ] Prompt versioning and A/B testing framework
+- [ ] Response caching with TTL to reduce API costs
+
+---
+
+## Phase 4: Alternative Data & Social Sentiment (H1 2027)
+
+*Goal: Go beyond news articles. Incorporate social media, insider trading data, options flow, and macroeconomic indicators.*
+
+### Social Sentiment Engine
+- [ ] Twitter/X financial sentiment scraping (FinTwit)
+- [ ] Reddit sentiment analysis (r/wallstreetbets, r/investing, r/stocks)
+- [ ] StockTwits integration
+- [ ] Sentiment aggregation with bot/spam filtering
+- [ ] Influencer tracking — weight opinions by historical accuracy
+- [ ] Viral detection — identify rapidly spreading narratives before they move markets
+
+### Alternative Data Sources
+- [ ] SEC EDGAR deep integration — parse 10-K, 10-Q, 8-K, DEF 14A, 13-F filings
+- [ ] Insider trading tracker (SEC Form 4) — flag unusual insider buying/selling
+- [ ] Options flow analysis — unusual options activity as leading indicator
+- [ ] Earnings call transcript analysis — tone, language changes, hedge words
+- [ ] Patent filings — track innovation signals
+- [ ] Job postings — hiring surges/freezes as leading indicators
+- [ ] Satellite data proxies — foot traffic, shipping activity (via public APIs)
+- [ ] App store rankings — consumer product momentum
+
+### Macroeconomic Layer
+- [ ] Fed Funds rate tracking and impact modeling
+- [ ] CPI/PPI/employment data integration
+- [ ] Yield curve analysis
+- [ ] Currency correlation signals
+- [ ] Commodity price feeds
+- [ ] Geopolitical risk scoring
+
+### Cross-Asset Correlation Engine
+- [ ] Detect when news about Company A historically moves Company B
+- [ ] Sector rotation signals — money flowing out of tech into healthcare
+- [ ] Supply chain mapping — if a supplier gets hit, flag downstream companies
+- [ ] Competitor impact modeling — good news for AAPL may be bad news for SMSN
+
+---
+
+## Phase 5: Autonomous Trading Signals (H2 2027)
+
+*Goal: From "here's what happened" to "here's what to do about it" — with paper trading validation.*
+
+### Signal Generation Engine
+- [ ] Composite signal scoring: news + social + alternative data + technicals
+- [ ] Entry/exit point suggestions with confidence intervals
+- [ ] Position sizing recommendations based on signal strength and portfolio context
+- [ ] Multi-timeframe signals — day trade vs. swing vs. long-term hold
+- [ ] Sector allocation recommendations
+- [ ] Risk-adjusted return projections
+
+### Paper Trading & Backtesting
+- [ ] Paper trading engine — simulate trades based on historical signals
+- [ ] Backtesting framework — run signals against historical market data
+- [ ] Sharpe ratio, max drawdown, win rate tracking
+- [ ] Signal decay analysis — how quickly do our signals lose alpha?
+- [ ] Monte Carlo simulation for portfolio stress testing
+- [ ] Benchmark comparison — are we beating SPY?
+
+### Trading Platform Integration
+- [ ] Alpaca API integration (paper + live)
+- [ ] Interactive Brokers bridge
+- [ ] Human-in-the-loop mandatory for live orders above configurable threshold
+- [ ] Order book aware execution — avoid moving the market on small-cap trades
+- [ ] Portfolio rebalancing recommendations
+
+### Risk Management
+- [ ] Maximum position size limits per ticker and sector
+- [ ] Drawdown circuit breaker — pause trading if portfolio drops X%
+- [ ] Correlation-aware position sizing — don't over-concentrate in correlated bets
+- [ ] Volatility-adjusted signals — scale position size inversely with VIX
+- [ ] Black swan detection — identify when models are likely unreliable
+
+---
+
+## Phase 6: Platform & API (2028)
+
+*Goal: Open FinScrape as a platform. Others build on top of it.*
+
+### REST API
+- [ ] Public API for signal access (free tier + paid)
+- [ ] WebSocket streaming API for real-time signals
+- [ ] Webhook system — push signals to user-defined endpoints
+- [ ] API key management and rate limiting
+- [ ] OpenAPI spec and auto-generated docs
+
+### Web Dashboard
+- [ ] Real-time signal feed with filtering and search
+- [ ] Portfolio tracker with P&L visualization
+- [ ] Signal accuracy leaderboard — which sources/agents are most accurate?
+- [ ] Custom watchlist with configurable alert thresholds
+- [ ] Historical signal explorer with backtest charts
+
+### Plugin Ecosystem
+- [ ] Scraper plugins — community-contributed source scrapers
+- [ ] Analysis plugins — custom scoring models
+- [ ] Alert plugins — new notification channels
+- [ ] Trading plugins — additional broker integrations
+- [ ] Plugin marketplace and versioning
+
+### Global Market Coverage
+- [ ] European markets (LSE, Euronext, XETRA)
+- [ ] Asian markets (TSE, HKEX, SSE, BSE/NSE)
+- [ ] Crypto markets (BTC, ETH, top 50 by market cap)
+- [ ] Forex signals for major pairs
+- [ ] Commodity-specific news tracking (oil, gold, agricultural)
+- [ ] Multi-language article processing (Chinese, Japanese, Hindi, German)
+
+### Institutional Features
+- [ ] Multi-user access with role-based permissions
+- [ ] Audit trail for all signal generation and trading decisions
+- [ ] Compliance reporting — MiFID II, SEC record-keeping
+- [ ] Custom model training on proprietary data
+- [ ] On-premise deployment option
+- [ ] SLA-backed uptime guarantees
+
+---
+
+## Milestone Summary
+
+| Quarter | Milestone | Metric |
+|:--------|:----------|:-------|
+| Q2 2026 | Multi-source scraping with Scrapling | 8+ news sources active |
+| Q3 2026 | Real-time monitoring + alerts | < 5 min latency from publish to signal |
+| Q4 2026 | Multi-agent AI council | 5+ AI personas generating independent verdicts |
+| Q1 2027 | Social sentiment integration | Twitter + Reddit + StockTwits live |
+| Q2 2027 | Alternative data (SEC, options, insider) | 10+ alternative data sources |
+| Q3 2027 | Paper trading validation | 6-month backtest with positive Sharpe ratio |
+| Q4 2027 | Live trading integration | Alpaca + IB connected with safety rails |
+| Q1 2028 | Public API launch | Beta users on free tier |
+| Q2 2028 | Web dashboard | Full-featured UI with portfolio tracking |
+| H2 2028 | Global markets + institutional | Multi-market, multi-language coverage |
+
+---
+
+## Principles
+
+1. **Accuracy over speed** — A wrong signal is worse than a late one. Always validate.
+2. **Hybrid intelligence** — AI + heuristics + human review. No single point of failure.
+3. **Transparency** — Every verdict must be explainable. Show the reasoning chain.
+4. **Safety first** — Human-in-the-loop for any real money decisions. Paper trade first.
+5. **Open core** — Core engine stays open source. Premium features fund development.
+
+---
+
+> This is a living document. Priorities will shift as the market and technology evolve.

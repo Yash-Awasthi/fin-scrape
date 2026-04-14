@@ -13,3 +13,13 @@ __pycache__/
 # IDE settings
 .vscode/
 .idea/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Distribution
+*.egg-info/
+dist/
+build/
