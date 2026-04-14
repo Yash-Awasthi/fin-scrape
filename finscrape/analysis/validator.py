@@ -1,59 +1,430 @@
 """
-Heuristic validation layer.
+Advanced validation layer with NLP-informed scoring.
 
-Provides keyword-based sentiment scoring as a sanity check
-against AI model output.
+Replaces naive keyword bag-of-words with:
+  - Sentence-level sentiment with negation handling
+  - Financial magnitude extraction from actual numbers
+  - Source credibility weighting
+  - Recency-based confidence decay
+  - Multi-signal aggregation across articles covering the same event
 """
 
 from __future__ import annotations
 
 import math
 import re
+from datetime import datetime, timezone
+from typing import Optional
 
 from finscrape.analysis.constants import (
     POSITIVE_STRONG, POSITIVE_WEAK,
     NEGATIVE_STRONG, NEGATIVE_WEAK,
     MAGNITUDE_WORDS, EVENT_BASE_IMPACT,
     TICKER_STOPWORDS,
+    NEGATION_WORDS, NEGATION_WINDOW,
+    SOURCE_CREDIBILITY,
+    RECENCY_DECAY_RATE, RECENCY_MAX_AGE_HOURS,
+    MAGNITUDE_THRESHOLDS,
 )
 
 
+# ---------------------------------------------------------------------------
+# Sentence-level sentiment with negation awareness
+# ---------------------------------------------------------------------------
+
+def _tokenize_sentences(text: str) -> list[str]:
+    """Split text into rough sentences."""
+    return re.split(r'(?<=[.!?])\s+', text)
+
+
+def _check_negation(words: list[str], pos: int) -> bool:
+    """Check if a word at position `pos` is negated by a preceding negation word."""
+    start = max(0, pos - NEGATION_WINDOW)
+    window = words[start:pos]
+    window_text = " ".join(window).lower()
+    for neg in NEGATION_WORDS:
+        if neg in window_text:
+            return True
+    return False
+
+
+def _score_sentence(sentence: str) -> float:
+    """
+    Score a single sentence for sentiment.
+    Returns a float: positive values = bullish, negative = bearish.
+    Handles negation: "not profitable" flips the positive signal.
+    """
+    sent_lower = sentence.lower()
+    words = sent_lower.split()
+    score = 0.0
+
+    # Check multi-word phrases first (strong signals)
+    for phrase in POSITIVE_STRONG:
+        if " " in phrase and phrase in sent_lower:
+            # Check if the phrase region is negated
+            idx = sent_lower.find(phrase)
+            word_pos = len(sent_lower[:idx].split())
+            if _check_negation(words, word_pos):
+                score -= 2.0  # negated strong positive = strong negative
+            else:
+                score += 2.0
+
+    for phrase in NEGATIVE_STRONG:
+        if " " in phrase and phrase in sent_lower:
+            idx = sent_lower.find(phrase)
+            word_pos = len(sent_lower[:idx].split())
+            if _check_negation(words, word_pos):
+                score += 2.0  # negated strong negative = strong positive
+            else:
+                score -= 2.0
+
+    for phrase in POSITIVE_WEAK:
+        if " " in phrase and phrase in sent_lower:
+            idx = sent_lower.find(phrase)
+            word_pos = len(sent_lower[:idx].split())
+            if _check_negation(words, word_pos):
+                score -= 1.0
+            else:
+                score += 1.0
+
+    for phrase in NEGATIVE_WEAK:
+        if " " in phrase and phrase in sent_lower:
+            idx = sent_lower.find(phrase)
+            word_pos = len(sent_lower[:idx].split())
+            if _check_negation(words, word_pos):
+                score += 1.0
+            else:
+                score -= 1.0
+
+    # Single-word checks with position-aware negation
+    for i, word in enumerate(words):
+        # Skip multi-word phrases already counted
+        if any(word in phrase and " " in phrase for phrase in
+               POSITIVE_STRONG | NEGATIVE_STRONG | POSITIVE_WEAK | NEGATIVE_WEAK):
+            # Only skip if this word was part of a matched multi-word phrase
+            pass
+
+        negated = _check_negation(words, i)
+
+        if word in {w for w in POSITIVE_STRONG if " " not in w}:
+            score += -2.0 if negated else 2.0
+        elif word in {w for w in NEGATIVE_STRONG if " " not in w}:
+            score += 2.0 if negated else -2.0
+        elif word in {w for w in POSITIVE_WEAK if " " not in w}:
+            score += -1.0 if negated else 1.0
+        elif word in {w for w in NEGATIVE_WEAK if " " not in w}:
+            score += 1.0 if negated else -1.0
+
+    return score
+
+
+def calculate_sentence_sentiment(text: str) -> tuple[str, float]:
+    """
+    Compute sentence-level sentiment with negation handling.
+
+    Returns: (sentiment_label, raw_score)
+        sentiment_label: "positive", "negative", or "neutral"
+        raw_score: unbounded float, magnitude indicates strength
+    """
+    sentences = _tokenize_sentences(text)
+    total_score = sum(_score_sentence(s) for s in sentences)
+
+    if total_score >= 2.0:
+        return "positive", total_score
+    elif total_score <= -2.0:
+        return "negative", total_score
+    else:
+        return "neutral", total_score
+
+
+# ---------------------------------------------------------------------------
+# Financial magnitude extraction
+# ---------------------------------------------------------------------------
+
+def extract_financial_magnitudes(text: str) -> dict:
+    """
+    Parse actual financial figures from text and categorize their magnitude.
+
+    Returns dict with keys like:
+        {"dollar_amount": 4.2e9, "dollar_magnitude": "high",
+         "percentage_beat": 12.0, "percentage_magnitude": "high",
+         "layoff_count": 50000, "layoff_magnitude": "high"}
+    """
+    results = {}
+    text_lower = text.lower()
+
+    # Dollar amounts — billions
+    billion_patterns = [
+        r'\$\s*([\d,.]+)\s*(?:billion|b|bn)\b',
+        r'([\d,.]+)\s*billion\s*(?:dollars?|\$)',
+    ]
+    for pat in billion_patterns:
+        match = re.search(pat, text_lower)
+        if match:
+            try:
+                val = float(match.group(1).replace(",", ""))
+                results["dollar_amount"] = val * 1e9
+                thresholds = MAGNITUDE_THRESHOLDS["dollar_billions"]
+                if val >= thresholds["high"]:
+                    results["dollar_magnitude"] = "high"
+                elif val >= thresholds["medium"]:
+                    results["dollar_magnitude"] = "medium"
+                else:
+                    results["dollar_magnitude"] = "low"
+                break
+            except ValueError:
+                pass
+
+    # Dollar amounts — millions
+    if "dollar_amount" not in results:
+        million_patterns = [
+            r'\$\s*([\d,.]+)\s*(?:million|m|mn)\b',
+            r'([\d,.]+)\s*million\s*(?:dollars?|\$)',
+        ]
+        for pat in million_patterns:
+            match = re.search(pat, text_lower)
+            if match:
+                try:
+                    val = float(match.group(1).replace(",", ""))
+                    results["dollar_amount"] = val * 1e6
+                    thresholds = MAGNITUDE_THRESHOLDS["dollar_millions"]
+                    if val >= thresholds["high"]:
+                        results["dollar_magnitude"] = "high"
+                    elif val >= thresholds["medium"]:
+                        results["dollar_magnitude"] = "medium"
+                    else:
+                        results["dollar_magnitude"] = "low"
+                    break
+                except ValueError:
+                    pass
+
+    # Percentage beats/misses
+    pct_patterns = [
+        r'(?:beat|exceeded|topped|surpassed|missed)\s+(?:by\s+)?([\d,.]+)\s*%',
+        r'([\d,.]+)\s*%\s+(?:beat|above|below|miss)',
+        r'(?:up|down|rose|fell|gained|lost|jumped|dropped)\s+([\d,.]+)\s*%',
+    ]
+    for pat in pct_patterns:
+        match = re.search(pat, text_lower)
+        if match:
+            try:
+                val = float(match.group(1).replace(",", ""))
+                results["percentage_value"] = val
+                thresholds = MAGNITUDE_THRESHOLDS["percentage_beat"]
+                if val >= thresholds["high"]:
+                    results["percentage_magnitude"] = "high"
+                elif val >= thresholds["medium"]:
+                    results["percentage_magnitude"] = "medium"
+                else:
+                    results["percentage_magnitude"] = "low"
+                break
+            except ValueError:
+                pass
+
+    # Layoff counts
+    layoff_patterns = [
+        r'(?:lay\s*off|cut|eliminate|reduce)\s*(?:up\s+to\s+)?([\d,]+)\s*(?:jobs?|employees?|workers?|positions?|staff)',
+        r'([\d,]+)\s*(?:jobs?|employees?|workers?|positions?)\s*(?:cut|eliminated|lost|laid off)',
+    ]
+    for pat in layoff_patterns:
+        match = re.search(pat, text_lower)
+        if match:
+            try:
+                val = int(match.group(1).replace(",", ""))
+                results["layoff_count"] = val
+                thresholds = MAGNITUDE_THRESHOLDS["layoff_count"]
+                if val >= thresholds["high"]:
+                    results["layoff_magnitude"] = "high"
+                elif val >= thresholds["medium"]:
+                    results["layoff_magnitude"] = "medium"
+                else:
+                    results["layoff_magnitude"] = "low"
+                break
+            except ValueError:
+                pass
+
+    # Overall magnitude (highest of any extracted)
+    mag_order = {"high": 3, "medium": 2, "low": 1}
+    best_mag = "low"
+    for key in results:
+        if key.endswith("_magnitude"):
+            if mag_order.get(results[key], 0) > mag_order.get(best_mag, 0):
+                best_mag = results[key]
+    results["overall_magnitude"] = best_mag
+
+    return results
+
+
+# ---------------------------------------------------------------------------
+# Source credibility weighting
+# ---------------------------------------------------------------------------
+
+def get_source_credibility(source_name: str) -> float:
+    """
+    Return credibility weight for a news source (0.0–1.0).
+    Higher = more trustworthy.
+    """
+    return SOURCE_CREDIBILITY.get(
+        source_name.lower(),
+        SOURCE_CREDIBILITY["_default"],
+    )
+
+
+def apply_source_credibility(confidence: float, source_name: str) -> float:
+    """
+    Adjust AI confidence based on source credibility.
+    High-credibility sources get a small boost; low-credibility sources get a penalty.
+    """
+    credibility = get_source_credibility(source_name)
+    # Blend: 70% AI confidence, 30% source credibility influence
+    adjusted = confidence * 0.7 + confidence * credibility * 0.3
+    return round(min(1.0, max(0.0, adjusted)), 2)
+
+
+# ---------------------------------------------------------------------------
+# Recency decay
+# ---------------------------------------------------------------------------
+
+def calculate_recency_multiplier(age_hours: Optional[float]) -> float:
+    """
+    Compute a time-based confidence multiplier.
+    Fresh articles (< 1h) get ~1.0; older articles decay exponentially.
+    Returns a multiplier in (0.0, 1.0].
+    """
+    if age_hours is None:
+        return 0.85  # unknown age = moderate discount
+    age_hours = min(max(0.0, age_hours), RECENCY_MAX_AGE_HOURS)
+    return math.exp(-RECENCY_DECAY_RATE * age_hours)
+
+
+def apply_recency_decay(confidence: float, age_hours: Optional[float]) -> float:
+    """Apply recency decay to a confidence score."""
+    multiplier = calculate_recency_multiplier(age_hours)
+    return round(confidence * multiplier, 2)
+
+
+# ---------------------------------------------------------------------------
+# Multi-signal aggregation
+# ---------------------------------------------------------------------------
+
+def aggregate_signals(events: list[dict]) -> dict:
+    """
+    When multiple articles cover the same event, aggregate their signals.
+
+    Takes a list of analysis dicts for the same event and returns
+    a merged signal with boosted confidence and averaged scores.
+    """
+    if not events:
+        return {}
+    if len(events) == 1:
+        return events[0]
+
+    # Use the highest-confidence analysis as the base
+    base = max(events, key=lambda e: e.get("confidence", 0))
+    result = dict(base)
+
+    # Confidence boost: each additional source increases confidence
+    # Diminishing returns: +0.05 per extra source, capped at 1.0
+    n_extra = len(events) - 1
+    confidence_boost = min(0.15, n_extra * 0.05)
+    result["confidence"] = min(1.0, result.get("confidence", 0.5) + confidence_boost)
+
+    # Merge tickers from all analyses
+    all_tickers = set()
+    for e in events:
+        all_tickers.update(e.get("tickers", []))
+    result["tickers"] = list(all_tickers)
+
+    # Merge affected entities (deduplicate by name)
+    seen_entities = set()
+    merged_entities = []
+    for e in events:
+        for entity in e.get("affected_entities", []):
+            name = entity.get("name", "")
+            if name and name not in seen_entities:
+                seen_entities.add(name)
+                merged_entities.append(entity)
+    result["affected_entities"] = merged_entities
+
+    # Merge second-order effects (deduplicate)
+    all_effects = set()
+    for e in events:
+        all_effects.update(e.get("second_order_effects", []))
+    result["second_order_effects"] = list(all_effects)
+
+    # Merge sources and articles
+    all_sources = set()
+    all_articles = set()
+    for e in events:
+        all_sources.update(e.get("sources", []))
+        all_articles.update(e.get("articles", []))
+    result["sources"] = list(all_sources)
+    result["articles"] = list(all_articles)
+
+    # Average signal score (weighted by confidence)
+    total_weight = sum(e.get("confidence", 0.5) for e in events)
+    if total_weight > 0:
+        weighted_score = sum(
+            e.get("signal_score", 0) * e.get("confidence", 0.5)
+            for e in events
+        ) / total_weight
+        result["signal_score"] = round(weighted_score)
+
+    # Merge key_metrics (union)
+    merged_metrics = {}
+    for e in events:
+        merged_metrics.update(e.get("key_metrics", {}))
+    result["key_metrics"] = merged_metrics
+
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Legacy-compatible heuristic score (updated with negation support)
+# ---------------------------------------------------------------------------
+
 def calculate_heuristic_score(text: str, event_type: str) -> tuple[str, float]:
     """
-    Calculate a heuristic sentiment and impact score from text.
+    Calculate heuristic sentiment and impact score from text.
+
+    Now uses sentence-level sentiment with negation awareness
+    instead of simple bag-of-words.
 
     Returns: (sentiment_label, impact_score)
         sentiment_label: "positive", "negative", or "neutral"
         impact_score: float in [0, 1]
     """
+    # Sentence-level sentiment with negation
+    sentiment, raw_score = calculate_sentence_sentiment(text)
+
+    # Impact calculation (logistic weighting) — enhanced with magnitude extraction
+    base_impact = EVENT_BASE_IMPACT.get(event_type, 0.3)
     text_lower = text.lower()
 
-    sp = sum(1 for w in POSITIVE_STRONG if w in text_lower)
-    wp = sum(1 for w in POSITIVE_WEAK if w in text_lower)
-    sn = sum(1 for w in NEGATIVE_STRONG if w in text_lower)
-    wn = sum(1 for w in NEGATIVE_WEAK if w in text_lower)
-
-    raw_sentiment = (2 * sp + wp) - (2 * sn + wn)
-
-    if raw_sentiment >= 2:
-        sentiment = "positive"
-    elif raw_sentiment <= -2:
-        sentiment = "negative"
-    else:
-        sentiment = "neutral"
-
-    # Impact calculation (logistic weighting)
-    base_impact = EVENT_BASE_IMPACT.get(event_type, 0.3)
     mag_boost = sum(1 for w in MAGNITUDE_WORDS if w in text_lower) * 0.1
 
-    dollar_boost = 0.0
-    if re.search(r'\$\d+\s*(?:billion|b|bn)', text_lower):
-        dollar_boost = 0.3
-    elif re.search(r'\$\d+\s*(?:million|m|mn)', text_lower):
-        dollar_boost = 0.1
+    # Extract actual financial figures for more precise boosting
+    magnitudes = extract_financial_magnitudes(text)
+    figure_boost = 0.0
+    if magnitudes.get("dollar_magnitude") == "high":
+        figure_boost = 0.35
+    elif magnitudes.get("dollar_magnitude") == "medium":
+        figure_boost = 0.15
+    elif magnitudes.get("dollar_magnitude") == "low":
+        figure_boost = 0.05
+
+    if magnitudes.get("percentage_magnitude") == "high":
+        figure_boost = max(figure_boost, 0.25)
+    elif magnitudes.get("percentage_magnitude") == "medium":
+        figure_boost = max(figure_boost, 0.1)
+
+    if magnitudes.get("layoff_magnitude") == "high":
+        figure_boost = max(figure_boost, 0.3)
+    elif magnitudes.get("layoff_magnitude") == "medium":
+        figure_boost = max(figure_boost, 0.15)
 
     logit_base = math.log(base_impact / (1.0 - base_impact + 1e-9))
-    total_log = math.log(base_impact) + mag_boost + dollar_boost
+    total_log = math.log(base_impact) + mag_boost + figure_boost
     heuristic_impact = 1.0 / (1.0 + math.exp(-(total_log + logit_base)))
 
     return sentiment, round(heuristic_impact, 2)
@@ -62,6 +433,9 @@ def calculate_heuristic_score(text: str, event_type: str) -> tuple[str, float]:
 def check_divergence(ai_sentiment: str, heuristic_sentiment: str) -> bool:
     """Flag if AI and heuristics disagree on polarity."""
     if ai_sentiment == "neutral" or heuristic_sentiment == "neutral":
+        return False
+    # "mixed" from AI is not a divergence
+    if ai_sentiment == "mixed":
         return False
     return ai_sentiment != heuristic_sentiment
 

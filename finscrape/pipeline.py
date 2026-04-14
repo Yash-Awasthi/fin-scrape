@@ -21,8 +21,13 @@ from finscrape.scrapers.investingcom import InvestingComScraper
 from finscrape.scrapers.ft import FTScraper
 from finscrape.scrapers.edgar import EdgarScraper
 from finscrape.analysis.ai_client import call_ai
-from finscrape.analysis.validator import calculate_heuristic_score, check_divergence, clean_tickers
+from finscrape.analysis.validator import (
+    calculate_heuristic_score, check_divergence, clean_tickers,
+    apply_source_credibility, apply_recency_decay,
+    extract_financial_magnitudes,
+)
 from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
+from finscrape.analysis.nlp import FinancialNLP
 from finscrape.storage import StateManager
 from finscrape.market_data import get_market_data, calculate_market_boost
 from finscrape.models import ScrapedArticle, FinEvent, Verdict
@@ -60,6 +65,7 @@ class FinScrapePipeline:
     ):
         self.state = StateManager(data_dir=data_dir)
         self.dashboard = DashboardClient()
+        self.nlp = FinancialNLP()
 
         # Default: only yahoo (most reliable). Add others as needed.
         source_names = sources or ["yahoo"]
@@ -160,12 +166,24 @@ class FinScrapePipeline:
             print(f"    [SKIP] Not market-relevant")
             return None
 
-        # Ticker processing — combine AI, entity index, and regex extraction
+        # NLP analysis — entity extraction, metrics, sector, breaking news
+        full_text = article.title + " " + article.text
+        nlp_result = self.nlp.analyze(article.title, article.text)
+
+        # Ticker processing — combine AI, NLP, entity index, and regex extraction
         ai_tickers = result.get("tickers", [])
-        entity_tickers = self.state.resolve_entity_tickers(article.title + " " + article.text)
+        nlp_tickers = nlp_result.tickers
+        entity_tickers = self.state.resolve_entity_tickers(full_text)
         regex_tickers = article.raw_tickers
 
-        all_symbols = set(ai_tickers + entity_tickers + regex_tickers)
+        # Also extract tickers from affected_entities
+        entity_obj_tickers = [
+            e.get("ticker", "")
+            for e in result.get("affected_entities", [])
+            if e.get("ticker")
+        ]
+
+        all_symbols = set(ai_tickers + nlp_tickers + entity_tickers + regex_tickers + entity_obj_tickers)
         valid_tickers = clean_tickers([
             t for t in all_symbols
             if isinstance(t, str) and 1 < len(t) <= 5 and t.isupper()
@@ -180,7 +198,6 @@ class FinScrapePipeline:
         market_boost = calculate_market_boost(market_data)
 
         # Heuristic validation
-        full_text = article.title + " " + article.text
         h_sentiment, h_impact = calculate_heuristic_score(full_text, result.get("event_type", ""))
         divergence = check_divergence(result.get("impact_direction", "neutral"), h_sentiment)
 
@@ -193,7 +210,29 @@ class FinScrapePipeline:
         if divergence:
             confidence = max(0.0, confidence - 0.15)
 
-        # Build event
+        # Apply source credibility weighting
+        confidence = apply_source_credibility(confidence, source_name)
+
+        # Apply recency decay
+        confidence = apply_recency_decay(confidence, article.age_hours)
+
+        # Boost confidence if NLP detects breaking news indicators
+        if nlp_result.has_breaking_indicators:
+            confidence = min(1.0, confidence + 0.10)
+
+        # Use NLP sector as fallback if AI didn't provide one
+        sector = result.get("sector_impact", "") or nlp_result.sector
+
+        # Merge NLP-extracted metrics into key_metrics
+        nlp_metrics = {}
+        for m in nlp_result.metrics:
+            nlp_metrics[m.metric_type] = {"value": m.value, "raw": m.raw_text}
+        key_metrics = result.get("key_metrics", {})
+        for k, v in nlp_metrics.items():
+            if k not in key_metrics:
+                key_metrics[k] = v
+
+        # Build event with enriched fields
         subject = self._normalize_subject(result.get("subject", article.title))
         verdict = Verdict.from_score(final_score)
 
@@ -209,6 +248,15 @@ class FinScrapePipeline:
             divergence_flag=divergence,
             sources=[source_name],
             articles=[article.url],
+            # New enriched fields from chain-of-thought analysis
+            reasoning=result.get("reasoning", ""),
+            magnitude=result.get("magnitude", "medium"),
+            novelty=result.get("novelty", "standard"),
+            actionability=result.get("actionability", "medium"),
+            affected_entities=result.get("affected_entities", []),
+            second_order_effects=result.get("second_order_effects", []),
+            sector_impact=sector,
+            key_metrics=key_metrics,
         )
 
         # Deduplication
@@ -229,6 +277,8 @@ class FinScrapePipeline:
             return None
         else:
             print(f"    [{event.verdict:8s}] {event.subject}")
+            if event.reasoning:
+                print(f"           Reasoning: {event.reasoning[:80]}...")
             self.state.add_event(event.to_dict())
             return event
 

@@ -25,6 +25,7 @@ dependencies = [
     # Financial data
     "yfinance>=0.2.30",
     "pytest>=9.0.3",
+    "spacy>=3.8.14",
 ]
 
 [dependency-groups]

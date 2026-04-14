@@ -52,7 +52,7 @@ class FinEvent:
     subject: str
     event_type: str
     tickers: list[str]
-    impact_direction: str  # positive, negative, neutral
+    impact_direction: str  # positive, negative, mixed, neutral
     signal_score: int  # -5 to +5
     confidence: float  # 0.0 to 1.0
     verdict: str  # Verdict enum value
@@ -61,6 +61,15 @@ class FinEvent:
     sources: list[str] = field(default_factory=list)
     articles: list[str] = field(default_factory=list)
     timestamp: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    # --- New enriched analysis fields ---
+    reasoning: str = ""
+    magnitude: str = "medium"  # low / medium / high
+    novelty: str = "standard"  # breaking / standard / follow_up / rehash
+    actionability: str = "medium"  # low / medium / high
+    affected_entities: list = field(default_factory=list)
+    second_order_effects: list = field(default_factory=list)
+    sector_impact: str = ""
+    key_metrics: dict = field(default_factory=dict)
 
     def to_dict(self) -> dict:
         return asdict(self)
