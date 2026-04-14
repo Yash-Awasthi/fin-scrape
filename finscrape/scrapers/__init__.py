@@ -54,9 +54,9 @@ class BaseScraper(ABC):
         """
         try:
             if dynamic:
-                return DynamicFetcher.get(url)
+                return DynamicFetcher.fetch(url)
             elif stealthy:
-                return StealthyFetcher.get(url)
+                return StealthyFetcher.fetch(url)
             else:
                 return Fetcher.get(url)
         except Exception as e:

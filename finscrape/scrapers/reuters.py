@@ -21,6 +21,9 @@ class ReutersScraper(BaseScraper):
         "https://www.reuters.com/technology/",
     ]
 
+    # Reuters blocks plain HTTP — use stealthy browser mode
+    USE_STEALTHY = True
+
     def scrape_news(self) -> list[ScrapedArticle]:
         urls = self._collect_article_urls()
         logger.info("[%s] Collected %d article URLs", self.name, len(urls))
@@ -39,7 +42,7 @@ class ReutersScraper(BaseScraper):
         seen = set()
 
         for seed_url in self.SEED_URLS:
-            page = self.fetch_page(seed_url)
+            page = self.fetch_page(seed_url, stealthy=self.USE_STEALTHY)
             if not page:
                 continue
 
@@ -76,7 +79,7 @@ class ReutersScraper(BaseScraper):
         return list(dict.fromkeys(collected))
 
     def _scrape_article(self, url: str) -> ScrapedArticle | None:
-        page = self.fetch_page(url)
+        page = self.fetch_page(url, stealthy=self.USE_STEALTHY)
         if not page:
             return None
 
