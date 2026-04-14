@@ -1,5 +1,5 @@
 """
-RSS feed scraper using Scrapling for content extraction.
+RSS feed scraper with full-text enrichment.
 
 Handles Yahoo Finance RSS, CNBC RSS, and any generic financial RSS feed.
 """

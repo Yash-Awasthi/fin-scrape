@@ -3,7 +3,7 @@
 AI-powered financial news intelligence engine. Scrapes news from multiple sources, runs AI inference to extract market signals, and produces actionable investment verdicts.
 
 ```
-News Sources → Scrapling Engine → AI Analysis → Heuristic Validation → Investment Signals
+News Sources → Scraping Engine → AI Analysis → Heuristic Validation → Investment Signals
 ```
 
 ---
@@ -12,7 +12,7 @@ News Sources → Scrapling Engine → AI Analysis → Heuristic Validation → I
 
 FinScrape monitors financial news across the web, extracts structured market events, and tells you what matters:
 
-- **Scrapes** news from Yahoo Finance, Bloomberg, Reuters, CNBC, and more using [Scrapling](https://github.com/D4Vinci/Scrapling) for anti-bot resilience and stealth browsing
+- **Scrapes** news from Yahoo Finance, Bloomberg, Reuters, CNBC, and more with a built-in stealth scraping engine (anti-bot, Cloudflare bypass, TLS fingerprinting)
 - **Analyzes** articles with LLMs to extract event types, affected tickers, sentiment, and confidence
 - **Validates** AI output against a 200+ keyword financial lexicon to catch hallucinations
 - **Scores** each event with a hybrid signal combining AI inference, heuristic analysis, and live market data
@@ -27,7 +27,7 @@ cd fin-scrape
 
 # Install
 pip install -r requirements.txt
-playwright install chromium  # Required for Scrapling stealth/dynamic fetchers
+playwright install chromium  # Required for stealth/dynamic fetchers
 
 # Configure
 cp .env.example .env
@@ -61,22 +61,25 @@ python main.py
 fin-scrape/
 ├── main.py                    # Entry point
 ├── finscrape/                 # Core package
-│   ├── scrapers/              # Scrapling-powered news scrapers
-│   │   ├── base.py            # Base scraper with shared logic
+│   ├── engine/                # Internal scraping engine (zero external deps)
+│   │   ├── page.py            # Unified Page/Element with CSS selectors
+│   │   ├── fetcher.py         # Fast HTTP with stealth headers + retry
+│   │   ├── stealth.py         # Playwright + anti-detection (Cloudflare, etc.)
+│   │   └── dynamic.py         # Playwright for JS-heavy pages
+│   ├── scrapers/              # Source-specific news scrapers
 │   │   ├── yahoo.py           # Yahoo Finance
-│   │   ├── bloomberg.py       # Bloomberg
+│   │   ├── bloomberg.py       # Bloomberg (stealth mode)
 │   │   ├── reuters.py         # Reuters
 │   │   ├── cnbc.py            # CNBC
 │   │   └── rss.py             # Generic RSS feeds
 │   ├── analysis/              # AI + heuristic processing
 │   │   ├── ai_client.py       # LLM inference (OpenRouter)
 │   │   ├── validator.py       # Keyword-based validation
-│   │   ├── signal_scorer.py   # Hybrid signal scoring
+│   │   ├── constants.py       # Financial lexicons & weights
 │   │   └── prompts.py         # System & analysis prompts
-│   ├── models/                # Data models
-│   │   ├── events.py          # Event & signal dataclasses
-│   │   └── verdicts.py        # Investment verdict logic
+│   ├── models/                # Data models (dataclasses)
 │   ├── pipeline.py            # Orchestration pipeline
+│   ├── market_data.py         # yfinance integration
 │   └── storage.py             # State persistence
 ├── data/                      # Runtime data (gitignored)
 ├── tests/                     # Test suite
@@ -87,7 +90,7 @@ fin-scrape/
 ## How the Pipeline Works
 
 ### 1. Ingestion
-Scrapling handles anti-bot detection, Cloudflare bypasses, stealth headers, and TLS fingerprint spoofing. Each source has a dedicated scraper that extracts article content reliably.
+The built-in scraping engine handles anti-bot detection, Cloudflare bypasses, stealth headers, and TLS fingerprint spoofing. Three fetch modes: fast HTTP, stealth browser, and dynamic JS rendering. Each news source has a dedicated scraper.
 
 ### 2. AI Analysis
 Articles go to an LLM (DeepSeek via OpenRouter) with a financial extraction prompt. Returns structured JSON: event type, affected tickers, sentiment, impact score, confidence.
@@ -128,21 +131,24 @@ MARKETAUX_API_KEY=optional     # Additional news source
 
 | Source | Method | Status |
 |:-------|:-------|:------:|
-| Yahoo Finance | Scrapling + RSS | Active |
-| Bloomberg | Scrapling Stealth | In Progress |
-| Reuters | Scrapling | In Progress |
-| CNBC | RSS + Scrapling | In Progress |
+| Yahoo Finance | HTTP + RSS | Active |
+| Bloomberg | Stealth Browser | In Progress |
+| Reuters | HTTP | In Progress |
+| CNBC | HTTP + RSS | In Progress |
 | Finnhub API | REST API | Optional |
 | MarketAux API | REST API | Optional |
 
 ## Tech Stack
 
 - **Python 3.10+**
-- **[Scrapling](https://github.com/D4Vinci/Scrapling)** — Adaptive web scraping with anti-bot evasion
+- **httpx** — HTTP/2 client with stealth headers
+- **BeautifulSoup** — HTML parsing and CSS selectors
+- **Playwright** — Browser automation for anti-bot and JS rendering
 - **OpenRouter** — LLM gateway (DeepSeek, Claude, GPT)
 - **yfinance** — Live market data
 - **feedparser** — RSS feed parsing
-- **spaCy** — Named entity recognition (optional enrichment)
+
+Zero external scraping framework dependencies. The engine is fully self-contained.
 
 ---
 
@@ -150,7 +156,7 @@ MARKETAUX_API_KEY=optional     # Additional news source
 
 See **[ROADMAP.md](ROADMAP.md)** for the full 2-year plan. Key milestones:
 
-- **Q2 2026** — Scrapling integration, multi-source scraping, architecture overhaul
+- **Q2 2026** — Multi-source scraping, architecture overhaul, internal engine
 - **Q3 2026** — Real-time monitoring, portfolio tracking, alerts
 - **Q4 2026** — Multi-agent AI council, advanced NLP pipeline
 - **H1 2027** — Social sentiment, alternative data, autonomous trading signals

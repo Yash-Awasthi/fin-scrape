@@ -4,16 +4,15 @@ httpx[http2]>=0.27.0
 python-dotenv>=1.0.0
 python-dateutil>=2.9.0
 
-# Scraping
-scrapling>=0.2
-feedparser>=6.0.0
+# Scraping — internal engine, no external frameworks
 beautifulsoup4>=4.12.0
+feedparser>=6.0.0
+
+# Browser automation (stealth + dynamic fetchers)
+playwright>=1.40.0
 
 # Financial data
 yfinance>=0.2.30
 
 # NLP (optional — for entity extraction)
 # spacy>=3.7.0
-
-# Playwright (required by Scrapling's StealthyFetcher/DynamicFetcher)
-# Install separately: playwright install chromium

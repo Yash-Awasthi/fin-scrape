@@ -17,34 +17,35 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 *Goal: Replace the prototype with production-grade architecture and multi-source scraping.*
 
 ### Architecture Rebuild
-- [ ] Consolidate `src/`, `backend/`, and `aiwebscrape/` into a single unified `finscrape/` package
-- [ ] Define proper data models with dataclasses/Pydantic for events, signals, and verdicts
-- [ ] Implement a plugin-based scraper system — add new sources without touching core pipeline
+- [x] Consolidate `src/`, `backend/`, and `aiwebscrape/` into a single unified `finscrape/` package
+- [x] Define proper data models with dataclasses for events, signals, and verdicts
+- [x] Implement a plugin-based scraper system — add new sources without touching core pipeline
+- [x] Build internal scraping engine (`finscrape/engine/`) — zero external framework dependencies
 - [ ] Replace JSON file storage with SQLite for proper querying, indexing, and historical analysis
 - [ ] Add structured logging with context (source, ticker, pipeline stage)
 - [ ] Set up CI/CD with GitHub Actions (lint, test, type-check)
 
-### Scrapling Integration
-- [ ] Migrate Yahoo Finance scraper from BeautifulSoup to Scrapling
-- [ ] Use `StealthyFetcher` for sites with anti-bot protection (Bloomberg, WSJ)
-- [ ] Use `DynamicFetcher` for JS-heavy sites that require rendering
-- [ ] Use `Fetcher` for simple sites and RSS feed content extraction
+### Internal Scraping Engine
+- [x] `Fetcher` — Fast HTTP with stealth headers, User-Agent rotation, retry + backoff
+- [x] `StealthFetcher` — Playwright with anti-detection (Cloudflare bypass, webdriver flag removal, fingerprint normalization)
+- [x] `DynamicFetcher` — Playwright for JS-heavy pages with network idle detection and auto-scroll
+- [x] Unified `Page`/`Element` API with CSS selectors across all fetchers
 - [ ] Implement session management for sites requiring cookies/auth
 - [ ] Add adaptive selector tracking — survive site redesigns without code changes
 
 ### Multi-Source Scraping
-- [ ] Bloomberg (stealth mode — article extraction from free-tier pages)
-- [ ] Reuters (article feed + breaking news)
-- [ ] CNBC (market news + pre-market movers)
-- [ ] Financial Times (free-tier content)
-- [ ] MarketWatch
+- [x] Yahoo Finance (HTTP + RSS)
+- [x] Bloomberg (stealth browser mode)
+- [x] Reuters (HTTP scraper)
+- [x] CNBC (HTTP scraper)
+- [x] Generic RSS engine for any financial feed
 - [ ] Seeking Alpha (free-tier analysis)
 - [ ] SEC EDGAR (8-K, 10-Q filings — machine-readable XBRL)
 - [ ] Generic RSS engine for any financial feed
 
 ### Investment Verdict System
-- [ ] Implement clear verdict categories: INVEST, PULL_OUT, OBSERVE, CAUTIOUS
-- [ ] Score normalization across different event types
+- [x] Implement clear verdict categories: INVEST, PULL_OUT, OBSERVE, CAUTIOUS
+- [x] Score normalization across different event types
 - [ ] Confidence-weighted verdict aggregation when multiple articles cover the same event
 - [ ] Divergence penalty system — reduce confidence when AI and heuristics disagree
 
@@ -65,7 +66,7 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 ### Real-Time Monitoring Engine
 - [ ] Continuous scraping loop with configurable intervals per source
 - [ ] WebSocket-based event stream for real-time signal delivery
-- [ ] Rate limiting and backoff per domain (respect robots.txt via Scrapling)
+- [ ] Rate limiting and backoff per domain (built into engine)
 - [ ] Deduplication across sources with headline similarity + entity overlap
 - [ ] Breaking news detection — identify stories appearing across 3+ sources within minutes
 
@@ -236,7 +237,7 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 
 | Quarter | Milestone | Metric |
 |:--------|:----------|:-------|
-| Q2 2026 | Multi-source scraping with Scrapling | 8+ news sources active |
+| Q2 2026 | Multi-source scraping with internal engine | 8+ news sources active |
 | Q3 2026 | Real-time monitoring + alerts | < 5 min latency from publish to signal |
 | Q4 2026 | Multi-agent AI council | 5+ AI personas generating independent verdicts |
 | Q1 2027 | Social sentiment integration | Twitter + Reddit + StockTwits live |

@@ -1,5 +1,5 @@
 """
-CNBC scraper using Scrapling + RSS feeds.
+CNBC scraper with RSS feed support.
 """
 
 from __future__ import annotations

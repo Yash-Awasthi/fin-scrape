@@ -1,5 +1,5 @@
 """
-Yahoo Finance scraper using Scrapling.
+Yahoo Finance scraper.
 """
 
 from __future__ import annotations
@@ -7,7 +7,7 @@ from __future__ import annotations
 import logging
 import re
 
-from finscrape.scrapers import BaseScraper, Fetcher
+from finscrape.scrapers import BaseScraper
 from finscrape.models import ScrapedArticle
 
 logger = logging.getLogger(__name__)

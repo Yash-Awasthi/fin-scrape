@@ -1,5 +1,5 @@
 """
-Reuters scraper using Scrapling.
+Reuters scraper.
 """
 
 from __future__ import annotations

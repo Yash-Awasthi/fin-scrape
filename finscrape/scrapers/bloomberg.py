@@ -1,8 +1,8 @@
 """
-Bloomberg scraper using Scrapling's StealthyFetcher.
+Bloomberg scraper using StealthFetcher for anti-bot bypass.
 
-Bloomberg has strong anti-bot protection. We use StealthyFetcher
-which handles Cloudflare and other WAFs automatically.
+Bloomberg has strong anti-bot protection. We use StealthFetcher
+which handles Cloudflare and other WAFs via Playwright stealth.
 """
 
 from __future__ import annotations

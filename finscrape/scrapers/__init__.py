@@ -1,5 +1,5 @@
 """
-Base scraper class using Scrapling.
+Base scraper class using FinScrape's internal engine.
 
 All source-specific scrapers inherit from BaseScraper and implement
 the `scrape_news()` method.
@@ -14,8 +14,7 @@ import datetime
 from abc import ABC, abstractmethod
 from typing import Optional
 
-from scrapling.fetchers import Fetcher, StealthyFetcher, DynamicFetcher
-
+from finscrape.engine import Fetcher, StealthFetcher, DynamicFetcher, Page
 from finscrape.models import ScrapedArticle
 
 logger = logging.getLogger(__name__)
@@ -34,32 +33,37 @@ class BaseScraper(ABC):
 
     def __init__(self, max_articles: int = 20):
         self.max_articles = max_articles
-        self._fetcher = Fetcher(auto_match=False)
+        self._fetcher = Fetcher()
+        self._stealth_fetcher: StealthFetcher | None = None
+        self._dynamic_fetcher: DynamicFetcher | None = None
 
     @abstractmethod
     def scrape_news(self) -> list[ScrapedArticle]:
         """Scrape and return a list of articles."""
         ...
 
-    def fetch_page(self, url: str, stealthy: bool = False, dynamic: bool = False) -> Optional[object]:
-        """Fetch a page using the appropriate Scrapling fetcher."""
+    def fetch_page(self, url: str, stealthy: bool = False, dynamic: bool = False) -> Optional[Page]:
+        """Fetch a page using the appropriate fetcher."""
         try:
             if dynamic:
-                page = DynamicFetcher.fetch(url, headless=True, network_idle=True)
+                if self._dynamic_fetcher is None:
+                    self._dynamic_fetcher = DynamicFetcher()
+                return self._dynamic_fetcher.get(url)
             elif stealthy:
-                page = StealthyFetcher.fetch(url, headless=True)
+                if self._stealth_fetcher is None:
+                    self._stealth_fetcher = StealthFetcher()
+                return self._stealth_fetcher.get(url)
             else:
-                page = Fetcher.fetch(url, stealthy_headers=True)
-            return page
+                return self._fetcher.get(url)
         except Exception as e:
             logger.warning("[%s] Failed to fetch %s: %s", self.name, url, e)
             return None
 
-    def extract_article_text(self, page, max_paragraphs: int = MAX_PARAGRAPHS) -> str:
-        """Extract article text from a Scrapling page response."""
-        article = page.css("article")
-        if article:
-            paragraphs = article[0].css("p")
+    def extract_article_text(self, page: Page, max_paragraphs: int = MAX_PARAGRAPHS) -> str:
+        """Extract article text from a page."""
+        article_els = page.css("article")
+        if article_els:
+            paragraphs = article_els[0].css("p")
         else:
             paragraphs = page.css("p")
 
@@ -78,7 +82,7 @@ class BaseScraper(ABC):
         words = text.split()[:MAX_WORDS]
         return " ".join(words)
 
-    def extract_title(self, page) -> str:
+    def extract_title(self, page: Page) -> str:
         """Extract article title from meta tags or <title>."""
         # Try og:title first
         meta = page.css('meta[property="og:title"]')
@@ -95,7 +99,7 @@ class BaseScraper(ABC):
 
         return ""
 
-    def extract_publish_date(self, page) -> tuple[Optional[str], Optional[float]]:
+    def extract_publish_date(self, page: Page) -> tuple[Optional[str], Optional[float]]:
         """Extract publication date and calculate age in hours."""
         pub_str = None
 
@@ -148,3 +152,11 @@ class BaseScraper(ABC):
         tickers.update(re.findall(r'(\^[A-Z]{2,5})\b', text))
 
         return [t for t in tickers if t not in TICKER_STOPWORDS and 2 <= len(t) <= 5]
+
+    def close(self):
+        """Clean up fetcher resources."""
+        self._fetcher.close()
+        if self._stealth_fetcher:
+            self._stealth_fetcher.close()
+        if self._dynamic_fetcher:
+            self._dynamic_fetcher.close()
