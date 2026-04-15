@@ -1,0 +1,30 @@
+# Environment secrets
+.env
+
+# Local state and data
+data/*.json
+data/*.json.bak
+data/*.db
+app.log
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# uv / venv
+uv.lock
+
+# IDE settings
+.vscode/
+.idea/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Distribution
+*.egg-info/
+dist/
+build/
