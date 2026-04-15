@@ -23,6 +23,8 @@ from finscrape.scrapers.benzinga import BenzingaScraper
 from finscrape.scrapers.investingcom import InvestingComScraper
 from finscrape.scrapers.ft import FTScraper
 from finscrape.scrapers.edgar import EdgarScraper
+from finscrape.scrapers.google_news import GoogleNewsScraper
+from finscrape.scrapers.google_serp import GoogleSerpScraper
 from finscrape.analysis.ai_client import call_ai
 from finscrape.analysis.validator import (
     calculate_heuristic_score, check_divergence, clean_tickers,
@@ -121,6 +123,8 @@ class FinScrapePipeline:
         "investingcom": InvestingComScraper,
         "ft": FTScraper,
         "edgar": EdgarScraper,
+        "google_news": GoogleNewsScraper,
+        "google_serp": GoogleSerpScraper,
     }
 
     def __init__(

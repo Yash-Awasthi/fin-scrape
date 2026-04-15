@@ -8,23 +8,53 @@ negation patterns, and constants for the validation layer.
 # ---------------------------------------------------------------------------
 
 TICKER_STOPWORDS = frozenset({
+    # Common English words (uppercase in headlines/text)
     "A", "AN", "AND", "AS", "AT", "BE", "BUT", "BY", "DO", "FOR",
     "IF", "IN", "IS", "IT", "NO", "OF", "ON", "OR", "THE", "TO",
     "ARE", "CAN", "HAS", "HAD", "HAVE", "MAY", "NOT", "WAS", "WERE",
-    "WILL", "BEEN", "ALSO", "BOTH", "EVEN", "FROM", "LAST", "MANY", "MOST", "MUCH",
-    "NEXT", "NOW", "ONE", "OUT", "OVER", "SAID", "SAYS", "SUCH",
-    "THAN", "THAT", "THIS", "TOLD", "TWO", "WITH", "ALL", "BANK", "BILL", "BOND",
-    "CASH", "COST", "DATA", "DEAL", "DEBT", "FIRM", "FUND", "GAIN", "GO", "GOAL",
-    "GOVT", "LOSS", "LAW", "MODEL", "NEW", "PLAN", "POWER", "RATE", "RISK", "ROLE",
-    "SALE", "STOCK", "TEAM", "TECH", "TRADE", "UNIT", "UP", "VALUE", "YEAR",
+    "WILL", "BEEN", "ALSO", "BOTH", "EVEN", "FROM", "JUST", "LAST", "MANY", "MOST", "MUCH",
+    "NEXT", "NOW", "ONE", "OUT", "OVER", "SAID", "SAYS", "SUCH", "SOME", "SAME",
+    "THAN", "THAT", "THIS", "TOLD", "TWO", "WITH", "ALL", "WHAT", "WHEN", "WHERE",
+    "WHO", "WHY", "HOW", "MORE", "LESS", "ONLY", "VERY", "EACH", "AFTER", "ABOUT",
+    "INTO", "BACK", "DOWN", "DOES", "HERE", "JUST", "LIKE", "MAKE", "MADE",
+    "THEM", "THEN", "THEY", "WELL", "WENT", "WHAT", "WHEN", "COME", "COULD",
+    "BEEN", "BEING", "BELOW", "ABOVE", "FIRST", "STILL", "WHILE", "WOULD",
+    "THEIR", "THESE", "THOSE", "SINCE", "OTHER", "AFTER", "WHICH", "COULD",
+    "SHOULD", "UNDER", "UNTIL", "EVERY", "AMONG",
+    # Headline words
+    "NEW", "BIG", "TOP", "KEY", "SET", "HIT", "SAY", "SEE", "GET", "PUT",
+    "RUN", "TRY", "END", "OWN", "ADD", "AID", "ASK", "BAD", "BAN", "BET",
+    "BIT", "CUT", "DID", "DUE", "FAR", "FEW", "GOT", "HIS", "HER", "ITS",
+    "LET", "LOW", "MET", "OLD", "PAY", "PER", "RED", "RAN", "RAW", "WAR",
+    "WAY", "WIN", "WON", "YET", "MIX", "NET", "OFF", "OUR",
+    # Finance / business terms (not tickers)
+    "BANK", "BILL", "BOND", "CASH", "COST", "DATA", "DEAL", "DEBT", "FIRM", "FUND",
+    "GAIN", "GOAL", "GOVT", "LOSS", "LAW", "MODEL", "PLAN", "POWER", "RATE", "RISK",
+    "ROLE", "SALE", "STOCK", "TEAM", "TECH", "TRADE", "UNIT", "UP", "VALUE", "YEAR",
+    "MOVE", "DROP", "RISE", "JUMP", "FALL", "PUSH", "PULL", "HOLD", "PICK", "SHOW",
+    "LEAD", "GROW", "LIFT", "NEAR", "HIGH", "FLAT", "CALL", "PART", "HALF",
+    "EDGE", "EASE", "FACE", "FILE", "HELP", "KEEP", "LONG", "LOOK", "MARK",
+    "OPEN", "PASS", "POST", "SIGN", "STEP", "TAKE", "TEST", "TURN", "VIEW", "VOTE",
+    "WORK", "AHEAD", "AMID", "EARLY", "MAJOR", "RALLY", "SHARP", "SHORT",
+    "SURGE", "WATCH", "MIXED", "BOOST", "BROAD", "CLOSE", "FOCUS", "FRESH",
+    "PRICE", "SHARE", "SHIFT", "SLIDE", "SOLID", "THINK", "TRACK", "WORLD",
+    "MARKET", "SECTOR", "INDEX",
+    # Financial metrics
     "EPS", "PE", "PB", "ROE", "ROA", "YOY", "QOQ", "MOM", "YTD",
     "TTM", "GAAP", "EBIT", "EBITDA", "FCF", "OCF", "CAPEX", "DPS",
     "NAV", "NIM", "NPL", "FY", "FQ", "IPO", "ETF", "OTC", "DOW", "NYSE", "NASDAQ",
     "CBOE", "FED", "FOMC", "FDIC", "ECB", "IMF", "IRS", "SEC", "GDP", "CPI", "PMI",
+    # Executive titles
     "CEO", "CFO", "COO", "CTO", "CMO", "CRO", "EVP", "SVP", "VP",
+    # Company suffixes / legal
     "AG", "INC", "LLC", "LP", "LTD", "NV", "PLC", "SA", "AI", "EU", "UK", "UN", "US", "USA", "UAE",
+    # Time zones
     "EST", "EDT", "PST", "PDT", "UTC", "GMT",
-    "FREE", "GTA", "VI", "SHRM", "ARR", "ET",
+    # Misc false positives
+    "FREE", "GTA", "VI", "SHRM", "ARR", "ET", "GO",
+    "CEO", "ANY", "FEE", "MAP", "OIL", "GAS", "TAX", "ERA",
+    "BREAK", "CHINA", "JAPAN", "INDIA", "KOREA", "TRUMP",
+    "BIDEN", "WHITE", "BLACK", "NORTH", "SOUTH", "EAST", "WEST",
 })
 
 # ---------------------------------------------------------------------------
