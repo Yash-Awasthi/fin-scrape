@@ -74,8 +74,10 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [x] Continuous scraping loop with configurable intervals per source
 - [x] WebSocket-based event stream for real-time signal delivery
 - [x] Rate limiting and backoff per domain (built into engine)
-- [x] Deduplication across sources with headline similarity + entity overlap
+- [x] Deduplication across sources with URL + subject matching on ingestion
 - [x] Breaking news detection — identify stories appearing across 3+ sources within minutes
+- [x] 30-minute auto-refresh with visible countdown timer
+- [x] Google News Business topic scraping via Scrapling
 
 ### Portfolio Tracking
 - [x] Watchlist management — track specific tickers and get prioritized signals
@@ -212,7 +214,12 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 
 ### Web Dashboard
 - [x] Real-time signal feed with filtering and search (Cloudflare Workers + React Router 7 + Durable Objects)
-- [ ] Portfolio tracker with P&L visualization
+- [x] Date-based pagination with calendar navigation and day-by-day browsing
+- [x] Sortable columns (score, confidence, time) with ascending/descending toggle
+- [x] AI-powered event expansion — click any row for summary, ticker impacts, verdict reasoning
+- [x] Portfolio tracker with P&L and watchlists (API + Telegram integration)
+- [x] URL and subject-based deduplication on event ingestion
+- [x] Heuristic scoring bypass for zero-cost operation without AI API keys
 - [ ] Signal accuracy leaderboard — which sources/agents are most accurate?
 - [ ] Custom watchlist with configurable alert thresholds
 - [ ] Historical signal explorer with backtest charts
@@ -244,18 +251,20 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 
 ## Milestone Summary
 
-| Quarter | Milestone | Metric |
-|:--------|:----------|:-------|
-| Q2 2026 | Multi-source scraping with internal engine | 8+ news sources active |
-| Q3 2026 | Real-time monitoring + alerts | < 5 min latency from publish to signal |
-| Q4 2026 | Multi-agent AI council | 5+ AI personas generating independent verdicts |
-| Q1 2027 | Social sentiment integration | Twitter + Reddit + StockTwits live |
-| Q2 2027 | Alternative data (SEC, options, insider) | 10+ alternative data sources |
-| Q3 2027 | Paper trading validation | 6-month backtest with positive Sharpe ratio |
-| Q4 2027 | Live trading integration | Alpaca + IB connected with safety rails |
-| Q1 2028 | Public API launch | Beta users on free tier |
-| Q2 2028 | Web dashboard | Full-featured UI with portfolio tracking |
-| H2 2028 | Global markets + institutional | Multi-market, multi-language coverage |
+| Quarter | Milestone | Metric | Status |
+|:--------|:----------|:-------|:------:|
+| Q2 2026 | Multi-source scraping with internal engine | 11 news sources active | Done |
+| Q2 2026 | Live dashboard with real-time feed | WebSocket + 30-min auto-refresh | Done |
+| Q2 2026 | Telegram bot alerts | /subscribe, /status, /latest, /portfolio | Done |
+| Q3 2026 | Real-time monitoring + NLP pipeline | < 5 min latency from publish to signal | In Progress |
+| Q4 2026 | Multi-agent AI council | 7 AI agents + 5 market personas | Planned |
+| Q1 2027 | Social sentiment integration | Twitter + Reddit + StockTwits live | Planned |
+| Q2 2027 | Alternative data (SEC, options, insider) | 10+ alternative data sources | Planned |
+| Q3 2027 | Paper trading validation | 6-month backtest with positive Sharpe ratio | Planned |
+| Q4 2027 | Live trading integration | Alpaca + IB connected with safety rails | Planned |
+| Q1 2028 | Public API launch | Beta users on free tier | Planned |
+| Q2 2028 | Full web dashboard | Portfolio viz + signal accuracy tracking | Planned |
+| H2 2028 | Global markets + institutional | Multi-market, multi-language coverage | Planned |
 
 ---
 

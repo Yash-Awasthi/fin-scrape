@@ -60,8 +60,11 @@ class BloombergScraper(BaseScraper):
                 if "bloomberg.com" not in href:
                     continue
 
-                # Bloomberg article URLs contain /news/ or /opinion/
-                if not any(p in href for p in ["/news/", "/opinion/", "/articles/"]):
+                # Bloomberg article URLs contain /news/ or /articles/
+                # Skip /opinion/ — these are editorial, not news
+                if "/opinion/" in href:
+                    continue
+                if not any(p in href for p in ["/news/", "/articles/"]):
                     continue
 
                 collected.append(href)
