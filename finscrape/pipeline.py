@@ -1,11 +1,14 @@
 """
 FinScrape Pipeline — orchestrates scraping, AI analysis, validation, and event storage.
+
+Flow: scrape → analyze → validate → score → store → alert → track accuracy
 """
 
 from __future__ import annotations
 
 import logging
 import re
+import time
 from datetime import datetime, timezone
 from difflib import SequenceMatcher
 
@@ -33,15 +36,77 @@ from finscrape.market_data import get_market_data, calculate_market_boost
 from finscrape.models import ScrapedArticle, FinEvent, Verdict
 from finscrape.dashboard import DashboardClient
 from finscrape.agents import AgentCouncil, DEFAULT_AGENTS
+from finscrape.alerts import AlertEngine
+from finscrape.accuracy import AccuracyTracker
+from finscrape.portfolio import PortfolioManager
 
 logger = logging.getLogger(__name__)
 
 
+class PipelineStats:
+    """Tracks per-run pipeline performance metrics."""
+
+    __slots__ = ("started_at", "articles_seen", "articles_skipped",
+                 "articles_analyzed", "articles_failed", "events_created",
+                 "alerts_fired", "signals_recorded", "stage_timings")
+
+    def __init__(self):
+        self.started_at: float = time.monotonic()
+        self.articles_seen: int = 0
+        self.articles_skipped: int = 0
+        self.articles_analyzed: int = 0
+        self.articles_failed: int = 0
+        self.events_created: int = 0
+        self.alerts_fired: int = 0
+        self.signals_recorded: int = 0
+        self.stage_timings: dict[str, float] = {}
+
+    def time_stage(self, name: str) -> "_StageTimer":
+        return _StageTimer(self, name)
+
+    @property
+    def elapsed(self) -> float:
+        return time.monotonic() - self.started_at
+
+    def summary(self) -> dict:
+        return {
+            "elapsed_s": round(self.elapsed, 2),
+            "articles_seen": self.articles_seen,
+            "articles_skipped": self.articles_skipped,
+            "articles_analyzed": self.articles_analyzed,
+            "articles_failed": self.articles_failed,
+            "events_created": self.events_created,
+            "alerts_fired": self.alerts_fired,
+            "signals_recorded": self.signals_recorded,
+            "stage_timings": {k: round(v, 3) for k, v in self.stage_timings.items()},
+        }
+
+
+class _StageTimer:
+    """Context manager for timing pipeline stages."""
+
+    def __init__(self, stats: PipelineStats, name: str):
+        self._stats = stats
+        self._name = name
+        self._start = 0.0
+
+    def __enter__(self):
+        self._start = time.monotonic()
+        return self
+
+    def __exit__(self, *exc):
+        elapsed = time.monotonic() - self._start
+        self._stats.stage_timings[self._name] = (
+            self._stats.stage_timings.get(self._name, 0.0) + elapsed
+        )
+
+
 class FinScrapePipeline:
     """
-    Main pipeline: scrape → analyze → validate → score → store.
+    Main pipeline: scrape → analyze → validate → score → store → alert → track.
 
     Sources are pluggable. Enable/disable via the `sources` parameter.
+    Integrates alerts engine, portfolio weighting, and accuracy tracking.
     """
 
     AVAILABLE_SCRAPERS = {
@@ -64,12 +129,39 @@ class FinScrapePipeline:
         max_articles_per_source: int = 10,
         data_dir: str | None = None,
         use_council: bool = False,
+        enable_alerts: bool = True,
+        enable_accuracy: bool = True,
+        enable_portfolio: bool = True,
     ):
         self.state = StateManager(data_dir=data_dir)
         self.dashboard = DashboardClient()
         self.nlp = FinancialNLP()
         self.use_council = use_council
         self.council = AgentCouncil(agents=DEFAULT_AGENTS) if use_council else None
+
+        # Alert engine integration
+        self.alert_engine: AlertEngine | None = None
+        if enable_alerts:
+            try:
+                self.alert_engine = AlertEngine()
+            except Exception as e:
+                logger.warning("Could not initialize alert engine: %s", e)
+
+        # Accuracy tracker integration
+        self.accuracy: AccuracyTracker | None = None
+        if enable_accuracy:
+            try:
+                self.accuracy = AccuracyTracker(data_dir=data_dir)
+            except Exception as e:
+                logger.warning("Could not initialize accuracy tracker: %s", e)
+
+        # Portfolio manager integration
+        self.portfolio: PortfolioManager | None = None
+        if enable_portfolio:
+            try:
+                self.portfolio = PortfolioManager()
+            except Exception as e:
+                logger.warning("Could not initialize portfolio manager: %s", e)
 
         # Default: only yahoo (most reliable). Add others as needed.
         source_names = sources or ["yahoo"]
@@ -84,6 +176,8 @@ class FinScrapePipeline:
 
     def run(self) -> list[FinEvent]:
         """Run the full pipeline across all configured sources."""
+        stats = PipelineStats()
+
         print(f"\n{'='*60}")
         print(f"  FinScrape Pipeline — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"  Sources: {', '.join(self.scrapers.keys())}")
@@ -94,23 +188,39 @@ class FinScrapePipeline:
         for source_name, scraper in self.scrapers.items():
             print(f"[{source_name.upper()}] Scraping...")
             try:
-                articles = scraper.scrape_news()
+                with stats.time_stage(f"scrape_{source_name}"):
+                    articles = scraper.scrape_news()
                 print(f"[{source_name.upper()}] Got {len(articles)} articles")
-                events = self._process_articles(source_name, articles)
+                with stats.time_stage(f"process_{source_name}"):
+                    events = self._process_articles(source_name, articles, stats)
                 all_events.extend(events)
             except Exception as e:
-                logger.error("[%s] Scraper failed: %s", source_name, e)
+                logger.error("[%s] Scraper failed: %s", source_name, e, exc_info=True)
                 print(f"[{source_name.upper()}] Error: {e}")
                 continue
 
+        stats.events_created = len(all_events)
+
+        # --- Post-processing: alerts, portfolio, accuracy ---
+        with stats.time_stage("post_processing"):
+            self._post_process_events(all_events, stats)
+
         print(f"\n{'='*60}")
         print(f"  Pipeline Complete — {len(all_events)} new events extracted")
+        print(f"  Time: {stats.elapsed:.1f}s | Analyzed: {stats.articles_analyzed} | Failed: {stats.articles_failed}")
+        if stats.alerts_fired:
+            print(f"  Alerts fired: {stats.alerts_fired}")
+        if stats.signals_recorded:
+            print(f"  Signals recorded for accuracy: {stats.signals_recorded}")
         print(f"{'='*60}\n")
 
         # Push to dashboard
         if all_events and self.dashboard.is_configured:
-            result = self.dashboard.push_events([e.to_dict() for e in all_events])
-            print(f"  Dashboard: {result}")
+            try:
+                result = self.dashboard.push_events([e.to_dict() for e in all_events])
+                print(f"  Dashboard: {result}")
+            except Exception as e:
+                logger.error("Dashboard push failed: %s", e)
 
         # Print summary
         for event in all_events:
@@ -119,33 +229,106 @@ class FinScrapePipeline:
             print(f"           Tickers: {', '.join(event.tickers)} | Confidence: {event.confidence:.0%}")
             print()
 
+        logger.info("Pipeline stats: %s", stats.summary())
         return all_events
 
-    def _process_articles(self, source_name: str, articles: list[ScrapedArticle]) -> list[FinEvent]:
+    def _post_process_events(self, events: list[FinEvent], stats: PipelineStats) -> None:
+        """Run alerts, portfolio weighting, and accuracy recording on new events."""
+        for event in events:
+            event_dict = event.to_dict()
+
+            # --- Alert evaluation ---
+            if self.alert_engine:
+                try:
+                    matches = self.alert_engine.evaluate(event_dict)
+                    for rule, actions in matches:
+                        logger.info("Alert rule '%s' matched event: %s", rule.name, event.subject)
+                        self.alert_engine.execute_actions(event_dict, actions)
+                        stats.alerts_fired += 1
+                except Exception as e:
+                    logger.error("Alert evaluation failed for event %s: %s", event.subject[:50], e)
+
+            # --- Portfolio alerts ---
+            if self.portfolio:
+                try:
+                    portfolio_alerts = self.portfolio.check_and_alert([event_dict])
+                    if portfolio_alerts:
+                        logger.info("Portfolio alerts: %d for event %s",
+                                    len(portfolio_alerts), event.subject[:50])
+                except Exception as e:
+                    logger.error("Portfolio alert check failed: %s", e)
+
+            # --- Accuracy tracking: record signal for later verification ---
+            if self.accuracy:
+                try:
+                    self._record_for_accuracy(event, stats)
+                except Exception as e:
+                    logger.error("Accuracy recording failed for event %s: %s", event.subject[:50], e)
+
+    def _record_for_accuracy(self, event: FinEvent, stats: PipelineStats) -> None:
+        """Record signal with current price for accuracy tracking."""
+        if event.verdict not in ("INVEST", "PULL_OUT"):
+            return  # Only track actionable verdicts
+
+        market_data = get_market_data(event.tickers)
+        price_map = {md["ticker"]: md["price"] for md in market_data}
+
+        for ticker in event.tickers:
+            price = price_map.get(ticker)
+            if price and price > 0:
+                self.accuracy.record_signal(
+                    event_id=hash(event.timestamp + ticker) % (2**31),
+                    ticker=ticker,
+                    signal_score=event.signal_score,
+                    confidence=event.confidence,
+                    verdict=event.verdict,
+                    price_at_signal=price,
+                    source=event.sources[0] if event.sources else "",
+                    event_type=event.event_type,
+                )
+                stats.signals_recorded += 1
+
+    def _process_articles(self, source_name: str, articles: list[ScrapedArticle],
+                          stats: PipelineStats) -> list[FinEvent]:
         """Process a batch of scraped articles through the AI + validation pipeline."""
         events = []
         visited = self.state.get_visited(source_name)
 
         for i, article in enumerate(articles):
+            stats.articles_seen += 1
             print(f"  [{i+1}/{len(articles)}] {article.url[:80]}...")
 
             if article.url in visited:
                 print(f"    [SKIP] Already visited")
+                stats.articles_skipped += 1
                 continue
 
             if not article.has_content:
                 print(f"    [SKIP] Insufficient content")
+                stats.articles_skipped += 1
                 self.state.add_visited(source_name, article.url)
                 continue
 
             if not article.is_fresh:
-                print(f"    [SKIP] Too old ({article.age_hours:.1f}h)")
+                age = article.age_hours if article.age_hours is not None else 0
+                print(f"    [SKIP] Too old ({age:.1f}h)")
+                stats.articles_skipped += 1
                 self.state.add_visited(source_name, article.url)
                 continue
 
-            event = self._analyze_article(source_name, article)
-            if event:
-                events.append(event)
+            try:
+                with stats.time_stage("ai_analysis"):
+                    event = self._analyze_article(source_name, article)
+                if event:
+                    events.append(event)
+                    stats.articles_analyzed += 1
+                else:
+                    stats.articles_analyzed += 1  # analyzed but no event produced
+            except Exception as e:
+                stats.articles_failed += 1
+                logger.error("[%s] Article analysis failed for %s: %s",
+                             source_name, article.url[:80], e, exc_info=True)
+                print(f"    [ERROR] Analysis failed: {e}")
 
             self.state.add_visited(source_name, article.url)
 
@@ -228,7 +411,7 @@ class FinScrapePipeline:
         # Merge NLP-extracted metrics into key_metrics
         nlp_metrics = {}
         for m in nlp_result.metrics:
-            nlp_metrics[m.metric_type] = {"value": m.value, "raw": m.raw_text}
+            nlp_metrics[m.metric_type] = {"value": m.value, "raw": m.context}
         key_metrics = result.get("key_metrics", {})
         for k, v in nlp_metrics.items():
             if k not in key_metrics:

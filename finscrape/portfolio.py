@@ -143,7 +143,19 @@ class PortfolioManager:
 
     def add_position(self, ticker: str, shares: float, avg_cost: float,
                      current_price: float = 0.0, tags: list[str] | None = None) -> None:
-        """Add or update a position."""
+        """Add or update a position.
+
+        Raises ValueError if shares or avg_cost are negative.
+        """
+        if shares < 0:
+            raise ValueError(f"shares must be >= 0, got {shares}")
+        if avg_cost < 0:
+            raise ValueError(f"avg_cost must be >= 0, got {avg_cost}")
+        if current_price < 0:
+            raise ValueError(f"current_price must be >= 0, got {current_price}")
+        ticker = ticker.strip().upper()
+        if not ticker or len(ticker) > 10:
+            raise ValueError(f"Invalid ticker: {ticker!r}")
         self._conn.execute(
             """INSERT INTO positions (ticker, shares, avg_cost, current_price, tags, updated_at)
                VALUES (?, ?, ?, ?, ?, datetime('now'))

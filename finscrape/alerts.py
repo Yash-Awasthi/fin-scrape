@@ -18,6 +18,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import requests
+
 logger = logging.getLogger(__name__)
 
 
@@ -288,39 +290,157 @@ class AlertEngine:
                 matches.append((rule, rule.actions))
         return matches
 
-    def execute_actions(self, event: dict, actions: list[Action]) -> None:
+    def execute_actions(self, event: dict, actions: list[Action]) -> list[dict]:
         """Fire the given actions for *event*.
 
-        Currently only the ``log`` action is fully implemented.
-        Telegram, webhook, and dashboard_push are stubs that log intent.
+        Returns a list of result dicts with action_type and status.
         """
+        results = []
         for action in actions:
-            if action.action_type == "log":
-                logger.info(
-                    "ALERT [log]: event matched — %s | verdict=%s tickers=%s",
-                    event.get("subject", "?"),
-                    event.get("verdict", "?"),
-                    event.get("tickers", []),
-                )
-            elif action.action_type == "telegram":
-                chat_id = action.config.get("chat_id", "?")
-                logger.info(
-                    "ALERT [telegram stub]: would send to chat_id=%s — %s",
-                    chat_id,
-                    event.get("subject", "?"),
-                )
-            elif action.action_type == "webhook":
-                url = action.config.get("url", "?")
-                logger.info(
-                    "ALERT [webhook stub]: would POST to %s — %s",
-                    url,
-                    event.get("subject", "?"),
-                )
-            elif action.action_type == "dashboard_push":
-                logger.info(
-                    "ALERT [dashboard_push stub]: would push event — %s",
-                    event.get("subject", "?"),
-                )
+            try:
+                result = self._execute_single_action(event, action)
+                results.append(result)
+            except Exception as e:
+                logger.error("Action %s failed: %s", action.action_type, e)
+                results.append({"action_type": action.action_type, "status": "error", "error": str(e)})
+
+            # Record in alert history
+            self._record_alert_fired(event, action)
+
+        return results
+
+    def _execute_single_action(self, event: dict, action: Action) -> dict:
+        """Execute a single action. Returns result dict."""
+        if action.action_type == "log":
+            logger.info(
+                "ALERT [log]: event matched — %s | verdict=%s tickers=%s",
+                event.get("subject", "?"),
+                event.get("verdict", "?"),
+                event.get("tickers", []),
+            )
+            return {"action_type": "log", "status": "ok"}
+
+        elif action.action_type == "telegram":
+            return self._send_telegram_alert(event, action)
+
+        elif action.action_type == "webhook":
+            return self._send_webhook_alert(event, action)
+
+        elif action.action_type == "dashboard_push":
+            return self._send_dashboard_alert(event, action)
+
+        return {"action_type": action.action_type, "status": "unknown_type"}
+
+    def _send_telegram_alert(self, event: dict, action: Action) -> dict:
+        """Send alert via Telegram Bot API."""
+        import os
+        bot_token = action.config.get("bot_token") or os.getenv("TELEGRAM_BOT_TOKEN", "")
+        chat_id = action.config.get("chat_id") or os.getenv("TELEGRAM_CHAT_ID", "")
+
+        if not bot_token or not chat_id:
+            logger.warning("Telegram alert: missing bot_token or chat_id")
+            return {"action_type": "telegram", "status": "skipped", "reason": "missing config"}
+
+        verdict = event.get("verdict", "?")
+        tickers = ", ".join(event.get("tickers", []))
+        score = event.get("signal_score", 0)
+        confidence = event.get("confidence", 0)
+        subject = event.get("subject", "Unknown event")
+        reasoning = event.get("reasoning", "")[:200]
+
+        arrow = "+" if score >= 0 else ""
+        text = (
+            f"🚨 *Alert Triggered*\n\n"
+            f"*{verdict}* ({arrow}{score}) — {confidence:.0%} confidence\n"
+            f"Tickers: `{tickers}`\n"
+            f"Subject: {subject}\n"
+        )
+        if reasoning:
+            text += f"\n_{reasoning}_"
+
+        try:
+            resp = requests.post(
+                f"https://api.telegram.org/bot{bot_token}/sendMessage",
+                json={"chat_id": chat_id, "text": text, "parse_mode": "Markdown"},
+                timeout=10,
+            )
+            if resp.status_code == 200:
+                logger.info("Telegram alert sent to chat_id=%s", chat_id)
+                return {"action_type": "telegram", "status": "ok"}
+            else:
+                logger.warning("Telegram API error %d: %s", resp.status_code, resp.text[:200])
+                return {"action_type": "telegram", "status": "error", "http_status": resp.status_code}
+        except requests.RequestException as e:
+            logger.error("Telegram request failed: %s", e)
+            return {"action_type": "telegram", "status": "error", "error": str(e)}
+
+    def _send_webhook_alert(self, event: dict, action: Action) -> dict:
+        """POST event data to a webhook URL."""
+        url = action.config.get("url", "")
+        if not url:
+            return {"action_type": "webhook", "status": "skipped", "reason": "no url"}
+
+        headers = {"Content-Type": "application/json"}
+        # Allow custom headers
+        if action.config.get("headers"):
+            headers.update(action.config["headers"])
+
+        payload = {
+            "alert_type": "finscrape",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "event": {
+                "subject": event.get("subject", ""),
+                "verdict": event.get("verdict", ""),
+                "signal_score": event.get("signal_score", 0),
+                "confidence": event.get("confidence", 0),
+                "tickers": event.get("tickers", []),
+                "event_type": event.get("event_type", ""),
+                "reasoning": event.get("reasoning", "")[:500],
+            },
+        }
+
+        try:
+            resp = requests.post(url, json=payload, headers=headers, timeout=10)
+            logger.info("Webhook POST to %s: HTTP %d", url, resp.status_code)
+            return {"action_type": "webhook", "status": "ok", "http_status": resp.status_code}
+        except requests.RequestException as e:
+            logger.error("Webhook POST failed: %s", e)
+            return {"action_type": "webhook", "status": "error", "error": str(e)}
+
+    def _send_dashboard_alert(self, event: dict, action: Action) -> dict:
+        """Push alert event to dashboard."""
+        from finscrape.dashboard import DashboardClient
+        client = DashboardClient()
+        if not client.is_configured:
+            return {"action_type": "dashboard_push", "status": "skipped", "reason": "not configured"}
+
+        alert_event = dict(event)
+        alert_event["alert_triggered"] = True
+        result = client.push_events([alert_event])
+        return {"action_type": "dashboard_push", "status": "ok", "result": result}
+
+    def _record_alert_fired(self, event: dict, action: Action) -> None:
+        """Record that an alert was fired for deduplication tracking."""
+        try:
+            self._conn.execute(
+                """CREATE TABLE IF NOT EXISTS alert_history (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    rule_id TEXT,
+                    action_type TEXT NOT NULL,
+                    event_subject TEXT,
+                    event_tickers TEXT,
+                    fired_at TEXT NOT NULL DEFAULT (datetime('now'))
+                )"""
+            )
+            self._conn.execute(
+                "INSERT INTO alert_history (action_type, event_subject, event_tickers, fired_at) "
+                "VALUES (?, ?, ?, datetime('now'))",
+                (action.action_type, event.get("subject", "")[:200],
+                 json.dumps(event.get("tickers", []))),
+            )
+            self._conn.commit()
+        except Exception as e:
+            logger.debug("Could not record alert history: %s", e)
 
     # -- presets (class methods) ---------------------------------------------
 

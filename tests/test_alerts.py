@@ -310,19 +310,26 @@ class TestEngineEvaluate:
             )
         assert "ALERT [log]" in caplog.text
 
-    def test_execute_actions_stubs(self, engine, caplog):
-        """Stub actions log their intent."""
+    def test_execute_actions_real(self, engine, caplog):
+        """Real actions execute (telegram/webhook skip without proper config)."""
         import logging
         actions = [
             Action(action_type="telegram", config={"chat_id": "123"}),
-            Action(action_type="webhook", config={"url": "https://hook.example.com"}),
+            Action(action_type="webhook", config={}),
             Action(action_type="dashboard_push"),
         ]
-        with caplog.at_level(logging.INFO, logger="finscrape.alerts"):
-            engine.execute_actions(_sample_event(), actions)
-        assert "telegram stub" in caplog.text
-        assert "webhook stub" in caplog.text
-        assert "dashboard_push stub" in caplog.text
+        with caplog.at_level(logging.WARNING, logger="finscrape.alerts"):
+            results = engine.execute_actions(_sample_event(), actions)
+        assert len(results) == 3
+        # Telegram skips without bot_token
+        assert results[0]["action_type"] == "telegram"
+        assert results[0]["status"] == "skipped"
+        # Webhook skips without url
+        assert results[1]["action_type"] == "webhook"
+        assert results[1]["status"] == "skipped"
+        # Dashboard skips if not configured
+        assert results[2]["action_type"] == "dashboard_push"
+        assert results[2]["status"] == "skipped"
 
     def test_add_rule_default_log_action(self, engine):
         """add_rule without explicit actions defaults to log."""
