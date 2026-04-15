@@ -38,7 +38,7 @@ Real-time signal feed deployed on Cloudflare Workers with Durable Objects + SQLi
 - **Responsive design** — mobile-first with progressive column disclosure and 3D card effects
 - **Telegram alerts** — subscribe to INVEST/PULL_OUT signals with `/subscribe`
 
-**Dashboard repo:** [finscrape-dashboard](https://github.com/Yash-Awasthi/finscrape-dashboard)
+**Dashboard code:** [`dashboard/`](./dashboard/) — see [`dashboard/README.md`](./dashboard/README.md) for full docs
 
 ## Quick Start
 
@@ -118,6 +118,11 @@ fin-scrape/
 │   ├── pipeline.py            # Orchestration pipeline
 │   ├── market_data.py         # yfinance integration
 │   └── storage.py             # SQLite state persistence
+├── dashboard/                 # Real-time web dashboard (Cloudflare Workers)
+│   ├── app/routes/home.tsx    # Main dashboard UI
+│   ├── workers/app.ts         # Worker entry + API routes + Telegram bot
+│   ├── workers/signals-do.ts  # Durable Object with SQLite + WebSocket
+│   └── wrangler.jsonc         # Cloudflare config
 ├── tests/                     # Test suite (112+ tests)
 ├── data/                      # Runtime data (gitignored)
 ├── requirements.txt
@@ -172,7 +177,7 @@ Final score combines:
 
 ## Dashboard Architecture
 
-The dashboard is a separate Cloudflare Workers application ([repo](https://github.com/Yash-Awasthi/finscrape-dashboard)):
+The dashboard lives in [`dashboard/`](./dashboard/) (full docs in [`dashboard/README.md`](./dashboard/README.md)):
 
 - **Frontend**: React 19 + React Router 7 (SSR) + Tailwind CSS 4 + shadcn/ui
 - **Backend**: Cloudflare Workers + Durable Objects with SQLite storage
