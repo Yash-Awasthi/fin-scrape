@@ -30,9 +30,15 @@ Real-time signal feed deployed on Cloudflare Workers with Durable Objects + SQLi
 - **Date-based pagination** — navigate by day with calendar picker
 - **Sortable columns** — sort by score, confidence, or time
 - **Filterable feed** — by verdict, event type, or ticker
-- **AI-powered expansion** — click any row for AI summary, ticker impact analysis, and verdict reasoning
-- **Auto-refresh** — 30-minute countdown timer with manual refresh
-- **Deduplication** — URL and subject-based filtering prevents duplicate entries
+- **AI-powered expansion** — click any row for AI summary, ticker impact analysis, and verdict reasoning (free via Workers AI)
+- **Dynamic ticker detection** — AI analysis identifies tickers missed by heuristic scraping, merges into feed live
+- **Background AI pipeline** — new events are auto-analyzed on ingest, results cached in SQLite
+- **Auto-refresh** — 30-minute countdown timer with manual refresh, WebSocket real-time updates
+- **Deduplication** — URL-based (`instr()`) and subject-based filtering prevents duplicate entries
+- **Responsive design** — mobile-first with progressive column disclosure and 3D card effects
+- **Telegram alerts** — subscribe to INVEST/PULL_OUT signals with `/subscribe`
+
+**Dashboard repo:** [finscrape-dashboard](https://github.com/Yash-Awasthi/finscrape-dashboard)
 
 ## Quick Start
 
@@ -166,14 +172,16 @@ Final score combines:
 
 ## Dashboard Architecture
 
-The dashboard is a separate Cloudflare Workers application:
+The dashboard is a separate Cloudflare Workers application ([repo](https://github.com/Yash-Awasthi/finscrape-dashboard)):
 
 - **Frontend**: React 19 + React Router 7 (SSR) + Tailwind CSS 4 + shadcn/ui
 - **Backend**: Cloudflare Workers + Durable Objects with SQLite storage
 - **Real-time**: WebSocket streaming via Durable Objects + 30-min polling fallback
-- **AI Analysis**: Workers AI for on-demand event analysis with caching
+- **AI Analysis**: Workers AI (free) for on-demand event analysis — generates summaries, ticker impacts, verdict reasoning. Cached in SQLite after first request. Background analysis on ingest via `ctx.waitUntil()`.
+- **Dynamic Tickers**: AI-detected tickers merge back into the events table and appear in the feed without page reload
 - **Alerts**: Telegram Bot API with `/subscribe`, `/status`, `/latest`, `/portfolio` commands
-- **Deduplication**: URL-based + subject-based duplicate filtering on ingestion
+- **Deduplication**: URL-based (`instr()` SQL) + subject-based duplicate filtering on ingestion
+- **Responsive**: Mobile-first with progressive column disclosure, 3D hover effects
 
 ### Dashboard API
 
@@ -216,7 +224,7 @@ The `push_to_dashboard.py` script works without any API keys — it uses heurist
 
 See **[ROADMAP.md](ROADMAP.md)** for the full strategic plan. Key milestones:
 
-- **Q2 2026** — Multi-source scraping, internal engine, live dashboard, Telegram alerts *(Done)*
+- **Q2 2026** — Multi-source scraping, internal engine, live dashboard, Telegram alerts, AI-powered analysis *(Done)*
 - **Q3 2026** — Real-time monitoring, NLP pipeline, portfolio tracking *(In Progress)*
 - **Q4 2026** — Multi-agent AI council, market persona simulation
 - **H1 2027** — Social sentiment, alternative data, autonomous trading signals
