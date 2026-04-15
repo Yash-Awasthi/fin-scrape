@@ -155,7 +155,7 @@ class FilingParser:
         txn_type = self._extract_form4_transaction_type(text, clean)
         shares = self._extract_form4_shares(text, clean)
         price = self._extract_form4_price(text, clean)
-        total_value = round(shares * price, 2) if shares and price else None
+        total_value = round(shares * price, 2) if shares is not None and price is not None else None
         is_10b5 = self._detect_10b5_plan(text, clean)
 
         return {
