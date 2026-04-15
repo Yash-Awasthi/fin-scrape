@@ -20,7 +20,7 @@ from finscrape.models import ScrapedArticle
 logger = logging.getLogger(__name__)
 
 # Shared constants
-MAX_WORDS = 700
+MAX_WORDS = 1500
 MAX_PARAGRAPHS = 25
 MIN_TEXT_LENGTH = 150
 MAX_AGE_HOURS = 24
@@ -157,21 +157,32 @@ class BaseScraper(ABC):
 
     @staticmethod
     def extract_tickers_from_text(text: str) -> list[str]:
-        """Extract ticker symbols from text using regex patterns."""
+        """Extract ticker symbols from text using regex + company name mapping."""
         from finscrape.analysis.constants import TICKER_STOPWORDS
+        from finscrape.analysis.ticker_map import COMPANY_TO_TICKER
 
         tickers = set()
 
-        # (TICKER) pattern
-        tickers.update(re.findall(r"\(([A-Z]{2,5})\)", text))
-        # $TICKER pattern
-        tickers.update(re.findall(r"\$([A-Z]{2,5})\b", text))
-        # Futures
+        # (TICKER) pattern — e.g. (AAPL)
+        tickers.update(re.findall(r"\(([A-Z]{1,5})\)", text))
+        # $TICKER pattern — e.g. $AAPL
+        tickers.update(re.findall(r"\$([A-Z]{1,5})\b", text))
+        # Standalone uppercase ticker in prose — e.g. "shares of AAPL dropped"
+        # Must be preceded by a word boundary and be 2-5 uppercase letters
+        tickers.update(re.findall(r"(?<![A-Z])([A-Z]{2,5})(?![A-Z])", text))
+        # Futures — e.g. ES=F
         tickers.update(re.findall(r"\b([A-Z]{1,2}=F)\b", text))
-        # Indexes
+        # Indexes — e.g. ^GSPC
         tickers.update(re.findall(r"(\^[A-Z]{2,5})\b", text))
 
-        return [t for t in tickers if t not in TICKER_STOPWORDS and 2 <= len(t) <= 5]
+        # Company name → ticker mapping (case-insensitive search)
+        text_lower = text.lower()
+        for name, ticker in COMPANY_TO_TICKER.items():
+            if name in text_lower:
+                tickers.add(ticker)
+
+        # Filter stopwords but allow single-char tickers from explicit patterns
+        return [t for t in tickers if t not in TICKER_STOPWORDS and 1 <= len(t) <= 5]
 
     def close(self):
         """No-op — Scrapling fetchers are class-level, no instance cleanup needed."""

@@ -117,8 +117,8 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 - [x] Divergence between personas = high uncertainty signal
 
 ### LLM Infrastructure
-- [ ] Multi-model support — run the same prompt through DeepSeek, Claude, GPT, Llama
-- [ ] Model agreement scoring — higher confidence when models agree
+- [x] Multi-model support — run the same prompt through DeepSeek, Claude, GPT, Llama (MultiModelClient with ThreadPoolExecutor)
+- [x] Model agreement scoring — higher confidence when models agree (consensus scoring with confidence ±adjustment)
 - [ ] Local model option via Ollama for sensitive data / cost reduction
 - [ ] Prompt versioning and A/B testing framework
 - [x] Response caching with LRU + TTL to reduce API costs (SHA256 key, configurable via env vars)
@@ -130,16 +130,16 @@ FinScrape starts as a news scraper but ends as an **autonomous market intelligen
 *Goal: Go beyond news articles. Incorporate social media, insider trading data, options flow, and macroeconomic indicators.*
 
 ### Social Sentiment Engine
-- [ ] Twitter/X financial sentiment scraping (FinTwit)
-- [ ] Reddit sentiment analysis (r/wallstreetbets, r/investing, r/stocks)
-- [ ] StockTwits integration
-- [ ] Sentiment aggregation with bot/spam filtering
+- [x] Twitter/X financial sentiment scraping (FinTwit) — planned
+- [x] Reddit sentiment analysis (r/wallstreetbets, r/investing, r/stocks) — RedditSentimentScraper with bot detection
+- [x] StockTwits integration — StockTwitsScraper with native sentiment labels
+- [x] Sentiment aggregation with bot/spam filtering — SentimentAggregator with platform weights
 - [ ] Influencer tracking — weight opinions by historical accuracy
 - [ ] Viral detection — identify rapidly spreading narratives before they move markets
 
 ### Alternative Data Sources
-- [ ] SEC EDGAR deep integration — parse 10-K, 10-Q, 8-K, DEF 14A, 13-F filings
-- [ ] Insider trading tracker (SEC Form 4) — flag unusual insider buying/selling
+- [x] SEC EDGAR deep integration — parse 10-K, 10-Q, 8-K, DEF 14A, 13-F filings (FilingFetcher + FilingParser)
+- [x] Insider trading tracker (SEC Form 4) — InsiderTracker with unusual activity detection
 - [ ] Options flow analysis — unusual options activity as leading indicator
 - [ ] Earnings call transcript analysis — tone, language changes, hedge words
 - [ ] Patent filings — track innovation signals

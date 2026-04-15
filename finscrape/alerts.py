@@ -62,14 +62,20 @@ class Condition:
             return event_value == target
         elif op == "neq":
             return event_value != target
-        elif op == "gt":
-            return float(event_value) > float(target)
-        elif op == "gte":
-            return float(event_value) >= float(target)
-        elif op == "lt":
-            return float(event_value) < float(target)
-        elif op == "lte":
-            return float(event_value) <= float(target)
+        elif op in ("gt", "gte", "lt", "lte"):
+            try:
+                ev = float(event_value)
+                tv = float(target)
+            except (ValueError, TypeError):
+                return False
+            if op == "gt":
+                return ev > tv
+            elif op == "gte":
+                return ev >= tv
+            elif op == "lt":
+                return ev < tv
+            else:
+                return ev <= tv
         elif op == "in":
             # target is a list; event_value must be one of them
             return event_value in target
@@ -175,6 +181,7 @@ class AlertEngine:
         self._conn = sqlite3.connect(str(self.db_path), check_same_thread=False)
         self._conn.execute("PRAGMA journal_mode=WAL")
         self._init_table()
+        self._rules_cache: list[AlertRule] | None = None
 
     # -- schema --------------------------------------------------------------
 
@@ -221,12 +228,14 @@ class AlertEngine:
         )
         self._conn.commit()
         logger.info("Added alert rule %s: %s", rule.id, rule.name)
+        self._rules_cache = None  # invalidate cache
         return rule.id
 
     def remove_rule(self, rule_id: str) -> bool:
         """Delete a rule. Returns True if a row was removed."""
         cur = self._conn.execute("DELETE FROM alert_rules WHERE id = ?", (rule_id,))
         self._conn.commit()
+        self._rules_cache = None  # invalidate cache
         removed = cur.rowcount > 0
         if removed:
             logger.info("Removed alert rule %s", rule_id)
@@ -235,13 +244,17 @@ class AlertEngine:
     def enable_rule(self, rule_id: str) -> None:
         self._conn.execute("UPDATE alert_rules SET enabled = 1 WHERE id = ?", (rule_id,))
         self._conn.commit()
+        self._rules_cache = None
 
     def disable_rule(self, rule_id: str) -> None:
         self._conn.execute("UPDATE alert_rules SET enabled = 0 WHERE id = ?", (rule_id,))
         self._conn.commit()
+        self._rules_cache = None
 
     def get_rules(self) -> list[AlertRule]:
-        """Return all rules (enabled and disabled)."""
+        """Return all rules (enabled and disabled). Cached until mutation."""
+        if self._rules_cache is not None:
+            return self._rules_cache
         rows = self._conn.execute(
             "SELECT id, name, conditions, actions, enabled, created_at FROM alert_rules"
         ).fetchall()
@@ -255,6 +268,7 @@ class AlertEngine:
                 enabled=bool(row[4]),
                 created_at=row[5],
             ))
+        self._rules_cache = rules
         return rules
 
     def get_rule(self, rule_id: str) -> AlertRule | None:
@@ -365,10 +379,10 @@ class AlertEngine:
                 timeout=10,
             )
             if resp.status_code == 200:
-                logger.info("Telegram alert sent to chat_id=%s", chat_id)
+                logger.info("Telegram alert sent successfully")
                 return {"action_type": "telegram", "status": "ok"}
             else:
-                logger.warning("Telegram API error %d: %s", resp.status_code, resp.text[:200])
+                logger.warning("Telegram API error %d", resp.status_code)
                 return {"action_type": "telegram", "status": "error", "http_status": resp.status_code}
         except requests.RequestException as e:
             logger.error("Telegram request failed: %s", e)
@@ -379,6 +393,11 @@ class AlertEngine:
         url = action.config.get("url", "")
         if not url:
             return {"action_type": "webhook", "status": "skipped", "reason": "no url"}
+
+        # Validate URL: must be HTTPS, no private IPs
+        if not self._is_safe_webhook_url(url):
+            logger.warning("Webhook URL rejected (unsafe): %s", url[:100])
+            return {"action_type": "webhook", "status": "rejected", "reason": "unsafe url"}
 
         headers = {"Content-Type": "application/json"}
         # Allow custom headers
@@ -496,3 +515,46 @@ class AlertEngine:
 
     def close(self) -> None:
         self._conn.close()
+
+    # -- security helpers ---------------------------------------------------
+
+    @staticmethod
+    def _is_safe_webhook_url(url: str) -> bool:
+        """Validate that a webhook URL is safe (no SSRF).
+
+        Rules:
+        - Must use https:// scheme
+        - Must not point to private/loopback IPs
+        - Must have a valid hostname
+        """
+        from urllib.parse import urlparse
+        import ipaddress
+
+        try:
+            parsed = urlparse(url)
+        except Exception:
+            return False
+
+        # Must be HTTPS
+        if parsed.scheme != "https":
+            return False
+
+        hostname = parsed.hostname
+        if not hostname:
+            return False
+
+        # Block obvious private hostnames
+        blocked_hosts = {"localhost", "127.0.0.1", "0.0.0.0", "::1",
+                         "metadata.google.internal", "169.254.169.254"}
+        if hostname.lower() in blocked_hosts:
+            return False
+
+        # Try to check if it resolves to a private IP
+        try:
+            addr = ipaddress.ip_address(hostname)
+            if addr.is_private or addr.is_loopback or addr.is_link_local:
+                return False
+        except ValueError:
+            pass  # Not an IP literal — hostname is fine
+
+        return True
