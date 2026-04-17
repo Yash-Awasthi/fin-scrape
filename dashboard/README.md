@@ -2,7 +2,7 @@
 
 Real-time financial signal intelligence dashboard powered by AI. Ingests news from 13+ sources, scores market impact with hybrid AI+heuristic analysis, and streams actionable investment signals with on-demand AI reasoning — all deployed on Cloudflare's edge network.
 
-**Live:** [finscrape-dashboard.camelai.app](https://finscrape-dashboard-qhuij2.camelai.app)
+> This is the `dashboard/` subdirectory of the [fin-scrape](https://github.com/Yash-Awasthi/fin-scrape) monorepo. See the [root README](../README.md) for the full project overview and deployment guide.
 
 ---
 
@@ -107,7 +107,7 @@ Click any signal row to expand it with on-demand AI analysis (free, via Cloudfla
 | **Real-time** | Native WebSocket (Durable Object hibernation API) |
 | **Alerts** | Telegram Bot API with webhook |
 | **Package Manager** | Bun |
-| **Data Pipeline** | [fin-scrape](https://github.com/Yash-Awasthi/fin-scrape) (Python) |
+| **Data Pipeline** | [fin-scrape](https://github.com/Yash-Awasthi/fin-scrape) (Python, parent repo) |
 
 ---
 
@@ -239,10 +239,37 @@ finscrape-dashboard/
 
 ## Deployment
 
+> For the complete step-by-step guide (including pipeline setup, connecting scraper to dashboard, Telegram alerts, and cron automation), see the [root Deployment Guide](../README.md#deployment-guide).
+
+### Quick Deploy
+
+```bash
+# From the repository root
+cd dashboard
+
+# Install dependencies
+bun install
+
+# Login to Cloudflare (first time only)
+wrangler login
+
+# Set secrets
+wrangler secret put API_KEY              # Auth key for event ingestion
+wrangler secret put TELEGRAM_BOT_TOKEN   # Optional: for Telegram alerts
+
+# Build and deploy
+bun run build
+wrangler deploy
+```
+
+Your dashboard will be live at `https://finscrape-dashboard.<your-subdomain>.workers.dev`
+
+**Workers AI is free** — the AI binding in `wrangler.jsonc` uses Cloudflare's built-in Workers AI. No separate API key or billing needed.
+
 ### Prerequisites
 - [Bun](https://bun.sh) runtime installed
-- [Wrangler](https://developers.cloudflare.com/workers/wrangler/) CLI (globally installed or via `bunx wrangler`)
-- A Cloudflare account
+- [Wrangler](https://developers.cloudflare.com/workers/wrangler/) CLI (`bun add -g wrangler`)
+- A [Cloudflare account](https://dash.cloudflare.com/sign-up) (free tier works)
 
 ### Environment Variables
 
@@ -258,8 +285,8 @@ Set these in `wrangler.jsonc` under `vars`, or use `wrangler secret put` for sen
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Yash-Awasthi/finscrape-dashboard.git
-cd finscrape-dashboard
+git clone https://github.com/Yash-Awasthi/fin-scrape.git
+cd fin-scrape/dashboard
 
 # 2. Install dependencies
 bun install
@@ -315,7 +342,7 @@ Note: Workers AI (`env.AI`) requires deployment to Cloudflare — it's not avail
 
 ## Related Projects
 
-- **[fin-scrape](https://github.com/Yash-Awasthi/fin-scrape)** — The Python backend powering this dashboard. 11+ news scrapers with stealth anti-bot bypass, AI+heuristic signal scoring, SEC EDGAR integration, NLP entity extraction, and multi-agent AI council.
+- **[fin-scrape](https://github.com/Yash-Awasthi/fin-scrape)** — The Python backend powering this dashboard (parent repo). 11+ news scrapers with stealth anti-bot bypass, AI+heuristic signal scoring, SEC EDGAR integration, and multi-agent AI council.
 
 ## License
 

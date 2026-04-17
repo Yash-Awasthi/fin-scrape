@@ -225,6 +225,187 @@ SERPER_API_KEY=your_key        # Optional — Google SERP news (rate-limited)
 
 The `push_to_dashboard.py` script works without any API keys — it uses heuristic scoring.
 
+---
+
+## Deployment Guide
+
+### System Requirements
+
+| Component | Requirement |
+|-----------|-------------|
+| **Python** | 3.10+ |
+| **Node.js** | 18+ (for dashboard) |
+| **Bun** | 1.0+ (package manager for dashboard) |
+| **Playwright** | Chromium (for stealth scrapers) |
+| **Cloudflare Account** | Free tier sufficient |
+
+### Part 1: Deploy the Scraping Pipeline
+
+The Python pipeline runs on any server, VPS, or locally.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Yash-Awasthi/fin-scrape.git
+cd fin-scrape
+
+# 2. Create virtual environment
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+# venv\Scripts\activate    # Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Install browser for stealth scrapers
+playwright install chromium
+
+# 5. Configure environment
+cp .env.example .env
+# Edit .env — add your OPENROUTER_API_KEY
+```
+
+**Run the full AI pipeline:**
+```bash
+python main.py
+```
+
+**Run heuristic-only mode (no AI key needed):**
+```bash
+python push_to_dashboard.py
+```
+
+#### Pipeline Environment Variables
+
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `OPENROUTER_API_KEY` | For AI mode | — | OpenRouter API key for LLM inference |
+| `SERPER_API_KEY` | No | — | Google SERP API for additional news |
+| `FINSCRAPE_MODEL` | No | `deepseek/deepseek-chat` | LLM model to use |
+| `FINSCRAPE_AI_TEMP` | No | `0.1` | LLM temperature |
+| `FINSCRAPE_AI_TIMEOUT` | No | `60` | API timeout in seconds |
+| `FINSCRAPE_MAX_ARTICLES` | No | `10` | Max articles per source |
+| `FINSCRAPE_MAX_AGE_HOURS` | No | `24.0` | Skip articles older than this |
+| `FINSCRAPE_INVEST_THRESHOLD` | No | `3` | Score >= 3 → INVEST verdict |
+| `FINSCRAPE_DEDUP_SIMILARITY` | No | `0.85` | Headline dedup similarity threshold |
+
+### Part 2: Deploy the Dashboard
+
+The dashboard runs on Cloudflare Workers (edge deployment, globally distributed). **Workers AI is free** and included with your Cloudflare account — no separate AI key needed.
+
+**Prerequisites:**
+- [Bun](https://bun.sh) installed (`curl -fsSL https://bun.sh/install | bash`)
+- [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) (`bun add -g wrangler`)
+- A [Cloudflare account](https://dash.cloudflare.com/sign-up) (free tier works)
+
+```bash
+# 1. Navigate to dashboard
+cd dashboard
+
+# 2. Install dependencies
+bun install
+
+# 3. Login to Cloudflare
+wrangler login
+
+# 4. Configure secrets
+wrangler secret put API_KEY              # Your chosen API key for event ingestion
+wrangler secret put TELEGRAM_BOT_TOKEN   # Optional: Telegram bot token
+
+# 5. Build and deploy
+bun run build
+wrangler deploy
+```
+
+After deployment, Wrangler outputs your URL:
+`https://finscrape-dashboard.<your-subdomain>.workers.dev`
+
+#### What's Free on Cloudflare
+
+| Resource | Free Allowance |
+|----------|---------------|
+| Worker requests | 100,000/day |
+| Durable Object requests | 1,000,000/month |
+| Durable Object storage | 1 GB |
+| Workers AI inference | 10,000 neurons/day |
+| WebSocket connections | Included |
+
+More than sufficient for personal use. No credit card required.
+
+#### Dashboard Environment Variables
+
+Set in `wrangler.jsonc` under `vars` or via `wrangler secret put`:
+
+| Variable | Required | Default | Description |
+|----------|----------|---------|-------------|
+| `API_KEY` | Yes | `finscrape-default-key` | Auth key for `/api/events` POST endpoint |
+| `TELEGRAM_BOT_TOKEN` | No | — | Telegram Bot API token for alerts |
+| `AI_VIRTUAL_MODEL` | No | `auto` | Workers AI model route |
+
+### Part 3: Connect Pipeline to Dashboard
+
+Once both are deployed, point the scraper at your dashboard:
+
+```bash
+python push_to_dashboard.py \
+  --url https://your-dashboard.workers.dev \
+  --api-key YOUR_API_KEY
+```
+
+Or set environment variables:
+```bash
+export DASHBOARD_URL=https://your-dashboard.workers.dev
+export DASHBOARD_API_KEY=YOUR_API_KEY
+python push_to_dashboard.py
+```
+
+#### Manual Event Push (Testing)
+```bash
+curl -X POST https://your-dashboard.workers.dev/api/events \
+  -H "X-API-Key: YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "events": [{
+      "subject": "Test: Apple beats Q1 expectations",
+      "verdict": "INVEST",
+      "signal_score": 4,
+      "confidence": 0.85,
+      "event_type": "earnings",
+      "tickers": ["AAPL"],
+      "impact_direction": "positive",
+      "heuristic_impact": 3,
+      "divergence_flag": false,
+      "sources": ["manual"],
+      "articles": [],
+      "timestamp": "2026-04-15T12:00:00Z"
+    }]
+  }'
+```
+
+### Part 4: Telegram Alerts (Optional)
+
+1. Create a bot via [@BotFather](https://t.me/BotFather) on Telegram
+2. Copy the bot token
+3. Set it: `wrangler secret put TELEGRAM_BOT_TOKEN`
+4. Register the webhook:
+   ```bash
+   curl "https://api.telegram.org/bot<TOKEN>/setWebhook?url=https://your-dashboard.workers.dev/api/telegram"
+   ```
+5. Message your bot `/subscribe` to receive INVEST/PULL_OUT alerts
+
+### Automation (Cron)
+
+Run the scraper on a schedule:
+
+```bash
+# crontab -e
+# Run every 30 minutes
+*/30 * * * * cd /path/to/fin-scrape && /path/to/venv/bin/python push_to_dashboard.py >> /var/log/finscrape.log 2>&1
+```
+
+Or use systemd timers, GitHub Actions, or any task scheduler.
+
+---
+
 ## Roadmap
 
 See **[ROADMAP.md](ROADMAP.md)** for the full strategic plan. Key milestones:
