@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "finscrape-dashboard",
+	"name": "fin-scrape",
 	"compatibility_date": "2026-02-28",
 	"compatibility_flags": ["nodejs_compat"],
 	"main": "./workers/app.ts",
@@ -85,6 +85,6 @@
 	 * - DATA_PROXY: locally binds to LocalDataProxyService; virtualized on camelAI deploy
 	 */
 	"services": [
-		{ "binding": "DATA_PROXY", "service": "finscrape-dashboard", "entrypoint": "LocalDataProxyService" }
+		{ "binding": "DATA_PROXY", "service": "fin-scrape", "entrypoint": "LocalDataProxyService" }
 	]
 }
