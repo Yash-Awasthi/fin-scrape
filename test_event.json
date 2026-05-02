@@ -1,0 +1,18 @@
+{
+  "events": [
+    {
+      "subject": "Manual Test Signal",
+      "verdict": "INVEST",
+      "signal_score": 5,
+      "confidence": 0.9,
+      "event_type": "market_movement",
+      "tickers": ["TEST"],
+      "impact_direction": "positive",
+      "heuristic_impact": 5,
+      "divergence_flag": false,
+      "sources": ["manual"],
+      "articles": [],
+      "timestamp": "2026-05-03T00:00:00Z"
+    }
+  ]
+}

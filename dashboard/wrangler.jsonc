@@ -28,8 +28,13 @@
 			{ "name": "SIGNALS_DO", "class_name": "SignalsDO" }
 		]
 	},
-	"migrations": [
-		{ "tag": "v1", "new_sqlite_classes": ["SignalsDO"] }
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "fin-scrape-db",
+			"database_id": "REPLACE_WITH_YOUR_D1_ID",
+			"migrations_dir": "migrations"
+		}
 	],
 
 	/**

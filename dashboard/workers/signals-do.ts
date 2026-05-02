@@ -49,88 +49,10 @@ export interface AIAnalysis {
 }
 
 export class SignalsDO extends DurableObject<Env> {
-  private sql: SqlStorage;
   private wsClients: Set<WebSocket> = new Set();
 
   constructor(ctx: DurableObjectState, env: Env) {
     super(ctx, env);
-    this.sql = ctx.storage.sql;
-
-    this.sql.exec(`
-      CREATE TABLE IF NOT EXISTS events (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        subject TEXT NOT NULL,
-        event_type TEXT NOT NULL DEFAULT 'other',
-        tickers TEXT NOT NULL DEFAULT '[]',
-        impact_direction TEXT NOT NULL DEFAULT 'neutral',
-        signal_score INTEGER NOT NULL DEFAULT 0,
-        confidence REAL NOT NULL DEFAULT 0.5,
-        verdict TEXT NOT NULL DEFAULT 'OBSERVE',
-        heuristic_impact REAL NOT NULL DEFAULT 0.0,
-        divergence_flag INTEGER NOT NULL DEFAULT 0,
-        sources TEXT NOT NULL DEFAULT '[]',
-        articles TEXT NOT NULL DEFAULT '[]',
-        timestamp TEXT NOT NULL DEFAULT (datetime('now')),
-        created_at TEXT NOT NULL DEFAULT (datetime('now')),
-        reasoning TEXT NOT NULL DEFAULT '',
-        magnitude TEXT NOT NULL DEFAULT '',
-        novelty TEXT NOT NULL DEFAULT '',
-        actionability TEXT NOT NULL DEFAULT '',
-        sector_impact TEXT NOT NULL DEFAULT ''
-      );
-      CREATE INDEX IF NOT EXISTS idx_events_verdict ON events(verdict);
-      CREATE INDEX IF NOT EXISTS idx_events_timestamp ON events(timestamp);
-      CREATE INDEX IF NOT EXISTS idx_events_event_type ON events(event_type);
-    `);
-
-    // Add enriched columns if missing (safe for existing tables)
-    const cols = new Set(
-      this.sql.exec<{ name: string }>("PRAGMA table_info(events)").toArray().map(r => r.name)
-    );
-    const enrichedCols: [string, string][] = [
-      ["reasoning", "TEXT NOT NULL DEFAULT ''"],
-      ["magnitude", "TEXT NOT NULL DEFAULT ''"],
-      ["novelty", "TEXT NOT NULL DEFAULT ''"],
-      ["actionability", "TEXT NOT NULL DEFAULT ''"],
-      ["sector_impact", "TEXT NOT NULL DEFAULT ''"],
-    ];
-    for (const [col, def] of enrichedCols) {
-      if (!cols.has(col)) {
-        this.sql.exec(`ALTER TABLE events ADD COLUMN ${col} ${def}`);
-      }
-    }
-
-    this.sql.exec(`
-      CREATE TABLE IF NOT EXISTS telegram_chats (
-        chat_id TEXT PRIMARY KEY,
-        added_at TEXT NOT NULL DEFAULT (datetime('now')),
-        filters TEXT NOT NULL DEFAULT '{}'
-      );
-
-      CREATE TABLE IF NOT EXISTS portfolio_positions (
-        ticker TEXT PRIMARY KEY,
-        shares REAL NOT NULL DEFAULT 0,
-        avg_cost REAL NOT NULL DEFAULT 0,
-        current_price REAL NOT NULL DEFAULT 0,
-        tags TEXT NOT NULL DEFAULT '[]',
-        updated_at TEXT NOT NULL DEFAULT (datetime('now'))
-      );
-
-      CREATE TABLE IF NOT EXISTS portfolio_watchlists (
-        name TEXT PRIMARY KEY,
-        tickers TEXT NOT NULL DEFAULT '[]',
-        description TEXT NOT NULL DEFAULT '',
-        created_at TEXT NOT NULL DEFAULT (datetime('now'))
-      );
-
-      CREATE TABLE IF NOT EXISTS ai_analysis_cache (
-        event_id INTEGER PRIMARY KEY,
-        summary TEXT NOT NULL DEFAULT '',
-        ticker_impacts TEXT NOT NULL DEFAULT '[]',
-        verdict_reason TEXT NOT NULL DEFAULT '',
-        created_at TEXT NOT NULL DEFAULT (datetime('now'))
-      );
-    `);
   }
 
   async ingestEvents(events: SignalEvent[]): Promise<{ inserted: number; duplicates: number; insertedIds: number[] }> {
@@ -138,68 +60,71 @@ export class SignalsDO extends DurableObject<Env> {
     let duplicates = 0;
     const insertedEvents: SignalEvent[] = [];
     const insertedIds: number[] = [];
-    this.ctx.storage.transactionSync(() => {
-      for (const ev of events) {
-        // Deduplicate by first article URL
-        const articles = ev.articles || [];
-        if (articles.length > 0) {
-          const firstUrl = articles[0];
-          const existing = this.sql.exec<{ c: number }>(
-            "SELECT COUNT(*) as c FROM events WHERE instr(articles, ?) > 0",
-            firstUrl
-          ).one();
-          if (existing && existing.c > 0) {
-            duplicates++;
-            continue;
-          }
-        }
 
-        // Deduplicate by exact subject match on same day
-        if (ev.subject) {
-          const ts = ev.timestamp || new Date().toISOString();
-          const day = ts.split("T")[0];
-          const dayStart = day + "T00:00:00Z";
-          const dayEnd = day + "T23:59:59Z";
-          const subjectDup = this.sql.exec<{ c: number }>(
-            "SELECT COUNT(*) as c FROM events WHERE subject = ? AND timestamp >= ? AND timestamp <= ?",
-            ev.subject, dayStart, dayEnd
-          ).one();
-          if (subjectDup && subjectDup.c > 0) {
-            duplicates++;
-            continue;
-          }
+    for (const ev of events) {
+      // Deduplicate by first article URL
+      const articles = ev.articles || [];
+      if (articles.length > 0) {
+        const firstUrl = articles[0];
+        const existing = await this.env.DB.prepare(
+          "SELECT COUNT(*) as c FROM events WHERE instr(articles, ?) > 0"
+        ).bind(firstUrl).first<{ c: number }>();
+        
+        if (existing && existing.c > 0) {
+          duplicates++;
+          continue;
         }
+      }
 
-        this.sql.exec(
-          `INSERT INTO events
-           (subject, event_type, tickers, impact_direction, signal_score,
-            confidence, verdict, heuristic_impact, divergence_flag,
-            sources, articles, timestamp, reasoning, magnitude, novelty, actionability, sector_impact)
-           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-          ev.subject,
-          ev.event_type || "other",
-          JSON.stringify(ev.tickers || []),
-          ev.impact_direction || "neutral",
-          ev.signal_score || 0,
-          ev.confidence || 0.5,
-          ev.verdict || "OBSERVE",
-          ev.heuristic_impact || 0.0,
-          ev.divergence_flag ? 1 : 0,
-          JSON.stringify(ev.sources || []),
-          JSON.stringify(ev.articles || []),
-          ev.timestamp || new Date().toISOString(),
-          ev.reasoning || "",
-          ev.magnitude || "",
-          ev.novelty || "",
-          ev.actionability || "",
-          ev.sector_impact || ""
-        );
-        const lastId = this.sql.exec<{ id: number }>("SELECT last_insert_rowid() as id").one();
-        if (lastId) insertedIds.push(lastId.id);
-        insertedEvents.push(ev);
+      // Deduplicate by exact subject match on same day
+      if (ev.subject) {
+        const ts = ev.timestamp || new Date().toISOString();
+        const day = ts.split("T")[0];
+        const dayStart = day + "T00:00:00Z";
+        const dayEnd = day + "T23:59:59Z";
+        const subjectDup = await this.env.DB.prepare(
+          "SELECT COUNT(*) as c FROM events WHERE subject = ? AND timestamp >= ? AND timestamp <= ?"
+        ).bind(ev.subject, dayStart, dayEnd).first<{ c: number }>();
+        
+        if (subjectDup && subjectDup.c > 0) {
+          duplicates++;
+          continue;
+        }
+      }
+
+      const result = await this.env.DB.prepare(
+        `INSERT INTO events
+         (subject, event_type, tickers, impact_direction, signal_score,
+          confidence, verdict, heuristic_impact, divergence_flag,
+          sources, articles, timestamp, reasoning, magnitude, novelty, actionability, sector_impact)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      ).bind(
+        ev.subject,
+        ev.event_type || "other",
+        JSON.stringify(ev.tickers || []),
+        ev.impact_direction || "neutral",
+        ev.signal_score || 0,
+        ev.confidence || 0.5,
+        ev.verdict || "OBSERVE",
+        ev.heuristic_impact || 0.0,
+        ev.divergence_flag ? 1 : 0,
+        JSON.stringify(ev.sources || []),
+        JSON.stringify(ev.articles || []),
+        ev.timestamp || new Date().toISOString(),
+        ev.reasoning || "",
+        ev.magnitude || "",
+        ev.novelty || "",
+        ev.actionability || "",
+        ev.sector_impact || ""
+      ).run();
+
+      if (result.success && result.meta.last_row_id) {
+        const lastId = result.meta.last_row_id;
+        insertedIds.push(lastId);
+        insertedEvents.push({ ...ev, id: lastId });
         inserted++;
       }
-    });
+    }
 
     // Broadcast new events to all connected WebSocket clients
     if (insertedEvents.length > 0) {
@@ -220,9 +145,9 @@ export class SignalsDO extends DurableObject<Env> {
     source?: string;
     event_type?: string;
     offset?: number;
-    date?: string; // YYYY-MM-DD — filter to a single UTC day
-    sort_by?: string; // timestamp | signal_score | confidence
-    sort_dir?: string; // asc | desc
+    date?: string; 
+    sort_by?: string; 
+    sort_dir?: string; 
   } = {}): Promise<SignalEvent[]> {
     const limit = opts.limit || 100;
     const offset = opts.offset || 0;
@@ -230,7 +155,6 @@ export class SignalsDO extends DurableObject<Env> {
     const params: unknown[] = [];
 
     if (opts.date) {
-      // Filter to a specific UTC day
       const dayStart = opts.date + "T00:00:00Z";
       const d = new Date(dayStart);
       d.setUTCDate(d.getUTCDate() + 1);
@@ -258,7 +182,6 @@ export class SignalsDO extends DurableObject<Env> {
 
     const where = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";
 
-    // Sorting — whitelist allowed columns
     const allowedSorts: Record<string, string> = {
       timestamp: "timestamp",
       signal_score: "signal_score",
@@ -268,48 +191,43 @@ export class SignalsDO extends DurableObject<Env> {
     const sortCol = allowedSorts[opts.sort_by || ""] || "id";
     const sortDir = opts.sort_dir === "asc" ? "ASC" : "DESC";
 
-    params.push(limit, offset);
+    const { results } = await this.env.DB.prepare(
+      `SELECT * FROM events ${where} ORDER BY ${sortCol} ${sortDir} LIMIT ? OFFSET ?`
+    ).bind(...params, limit, offset).all<Record<string, unknown>>();
 
-    const rows = this.sql.exec<Record<string, unknown>>(
-      `SELECT * FROM events ${where} ORDER BY ${sortCol} ${sortDir} LIMIT ? OFFSET ?`,
-      ...params
-    ).toArray();
-
-    return rows.map(this.rowToEvent);
+    return results.map(this.rowToEvent);
   }
 
   async getAvailableDates(): Promise<Array<{ day: string; count: number }>> {
-    const rows = this.sql.exec<{ day: string; c: number }>(
+    const { results } = await this.env.DB.prepare(
       `SELECT DATE(timestamp) as day, COUNT(*) as c FROM events GROUP BY day ORDER BY day DESC LIMIT 90`
-    ).toArray();
-    return rows.map(r => ({ day: r.day, count: r.c as number }));
+    ).all<{ day: string; c: number }>();
+    return results.map(r => ({ day: r.day, count: r.c as number }));
   }
 
   async getStats(): Promise<DashboardStats> {
-    const total = this.sql.exec<{ c: number }>("SELECT COUNT(*) as c FROM events").one();
-    const invest = this.sql.exec<{ c: number }>("SELECT COUNT(*) as c FROM events WHERE verdict = 'INVEST'").one();
-    const observe = this.sql.exec<{ c: number }>("SELECT COUNT(*) as c FROM events WHERE verdict = 'OBSERVE'").one();
-    const cautious = this.sql.exec<{ c: number }>("SELECT COUNT(*) as c FROM events WHERE verdict = 'CAUTIOUS'").one();
-    const pullOut = this.sql.exec<{ c: number }>("SELECT COUNT(*) as c FROM events WHERE verdict = 'PULL_OUT'").one();
-    const lastRow = this.sql.exec<{ timestamp: string }>(
-      "SELECT timestamp FROM events ORDER BY id DESC LIMIT 1"
-    ).toArray();
+    const total = await this.env.DB.prepare("SELECT COUNT(*) as c FROM events").first<{ c: number }>();
+    const invest = await this.env.DB.prepare("SELECT COUNT(*) as c FROM events WHERE verdict = 'INVEST'").first<{ c: number }>();
+    const observe = await this.env.DB.prepare("SELECT COUNT(*) as c FROM events WHERE verdict = 'OBSERVE'").first<{ c: number }>();
+    const cautious = await this.env.DB.prepare("SELECT COUNT(*) as c FROM events WHERE verdict = 'CAUTIOUS'").first<{ c: number }>();
+    const pullOut = await this.env.DB.prepare("SELECT COUNT(*) as c FROM events WHERE verdict = 'PULL_OUT'").first<{ c: number }>();
+    const lastRow = await this.env.DB.prepare("SELECT timestamp FROM events ORDER BY id DESC LIMIT 1").first<{ timestamp: string }>();
 
-    // Count unique tickers by scanning all ticker arrays
-    const allTickers = this.sql.exec<{ tickers: string }>("SELECT DISTINCT tickers FROM events").toArray();
+    // Count unique tickers
+    const { results: allTickers } = await this.env.DB.prepare("SELECT DISTINCT tickers FROM events").all<{ tickers: string }>();
     const tickerSet = new Set<string>();
     for (const row of allTickers) {
       try {
-        const arr = JSON.parse(row.tickers as string);
+        const arr = JSON.parse(row.tickers);
         if (Array.isArray(arr)) arr.forEach((t: string) => tickerSet.add(t));
       } catch {}
     }
 
-    const allSources = this.sql.exec<{ sources: string }>("SELECT DISTINCT sources FROM events").toArray();
+    const { results: allSources } = await this.env.DB.prepare("SELECT DISTINCT sources FROM events").all<{ sources: string }>();
     const sourceSet = new Set<string>();
     for (const row of allSources) {
       try {
-        const arr = JSON.parse(row.sources as string);
+        const arr = JSON.parse(row.sources);
         if (Array.isArray(arr)) arr.forEach((s: string) => sourceSet.add(s));
       } catch {}
     }
@@ -322,36 +240,34 @@ export class SignalsDO extends DurableObject<Env> {
       pull_out_count: pullOut?.c || 0,
       unique_tickers: tickerSet.size,
       sources_active: sourceSet.size,
-      last_update: lastRow.length > 0 ? (lastRow[0].timestamp as string) : null,
+      last_update: lastRow?.timestamp || null,
     };
   }
 
   async registerTelegramChat(chatId: string, filters: Record<string, string> = {}): Promise<void> {
-    this.sql.exec(
-      `INSERT OR REPLACE INTO telegram_chats (chat_id, filters) VALUES (?, ?)`,
-      chatId,
-      JSON.stringify(filters)
-    );
+    await this.env.DB.prepare(
+      `INSERT OR REPLACE INTO telegram_chats (chat_id, filters) VALUES (?, ?)`
+    ).bind(chatId, JSON.stringify(filters)).run();
   }
 
   async getTelegramChats(): Promise<Array<{ chat_id: string; filters: Record<string, string> }>> {
-    const rows = this.sql.exec<{ chat_id: string; filters: string }>(
+    const { results } = await this.env.DB.prepare(
       "SELECT chat_id, filters FROM telegram_chats"
-    ).toArray();
-    return rows.map(r => ({
+    ).all<{ chat_id: string; filters: string }>();
+    return results.map(r => ({
       chat_id: r.chat_id,
-      filters: JSON.parse(r.filters as string),
+      filters: JSON.parse(r.filters),
     }));
   }
 
   async removeTelegramChat(chatId: string): Promise<void> {
-    this.sql.exec("DELETE FROM telegram_chats WHERE chat_id = ?", chatId);
+    await this.env.DB.prepare("DELETE FROM telegram_chats WHERE chat_id = ?").bind(chatId).run();
   }
 
   // --- Portfolio ---
 
   async setPosition(pos: PortfolioPosition): Promise<void> {
-    this.sql.exec(
+    await this.env.DB.prepare(
       `INSERT INTO portfolio_positions (ticker, shares, avg_cost, current_price, tags, updated_at)
        VALUES (?, ?, ?, ?, ?, datetime('now'))
        ON CONFLICT(ticker) DO UPDATE SET
@@ -359,21 +275,19 @@ export class SignalsDO extends DurableObject<Env> {
          avg_cost = excluded.avg_cost,
          current_price = excluded.current_price,
          tags = excluded.tags,
-         updated_at = datetime('now')`,
-      pos.ticker.toUpperCase(), pos.shares, pos.avg_cost,
-      pos.current_price, JSON.stringify(pos.tags || [])
-    );
+         updated_at = datetime('now')`
+    ).bind(pos.ticker.toUpperCase(), pos.shares, pos.avg_cost, pos.current_price, JSON.stringify(pos.tags || [])).run();
   }
 
   async removePosition(ticker: string): Promise<void> {
-    this.sql.exec("DELETE FROM portfolio_positions WHERE ticker = ?", ticker.toUpperCase());
+    await this.env.DB.prepare("DELETE FROM portfolio_positions WHERE ticker = ?").bind(ticker.toUpperCase()).run();
   }
 
   async getPositions(): Promise<PortfolioPosition[]> {
-    const rows = this.sql.exec<Record<string, unknown>>(
+    const { results } = await this.env.DB.prepare(
       "SELECT ticker, shares, avg_cost, current_price, tags FROM portfolio_positions ORDER BY ticker"
-    ).toArray();
-    return rows.map(r => ({
+    ).all<Record<string, unknown>>();
+    return results.map(r => ({
       ticker: r.ticker as string,
       shares: r.shares as number,
       avg_cost: r.avg_cost as number,
@@ -383,19 +297,18 @@ export class SignalsDO extends DurableObject<Env> {
   }
 
   async setWatchlist(name: string, tickers: string[], description: string = ""): Promise<void> {
-    this.sql.exec(
+    await this.env.DB.prepare(
       `INSERT INTO portfolio_watchlists (name, tickers, description)
        VALUES (?, ?, ?)
-       ON CONFLICT(name) DO UPDATE SET tickers = excluded.tickers, description = excluded.description`,
-      name, JSON.stringify(tickers.map(t => t.toUpperCase())), description
-    );
+       ON CONFLICT(name) DO UPDATE SET tickers = excluded.tickers, description = excluded.description`
+    ).bind(name, JSON.stringify(tickers.map(t => t.toUpperCase())), description).run();
   }
 
   async getWatchlists(): Promise<Array<{ name: string; tickers: string[]; description: string }>> {
-    const rows = this.sql.exec<Record<string, unknown>>(
+    const { results } = await this.env.DB.prepare(
       "SELECT name, tickers, description FROM portfolio_watchlists ORDER BY name"
-    ).toArray();
-    return rows.map(r => ({
+    ).all<Record<string, unknown>>();
+    return results.map(r => ({
       name: r.name as string,
       tickers: JSON.parse(r.tickers as string),
       description: r.description as string,
@@ -403,7 +316,7 @@ export class SignalsDO extends DurableObject<Env> {
   }
 
   async deleteWatchlist(name: string): Promise<void> {
-    this.sql.exec("DELETE FROM portfolio_watchlists WHERE name = ?", name);
+    await this.env.DB.prepare("DELETE FROM portfolio_watchlists WHERE name = ?").bind(name).run();
   }
 
   async getPortfolioSummary(): Promise<{
@@ -427,50 +340,45 @@ export class SignalsDO extends DurableObject<Env> {
   // --- AI Analysis Cache ---
 
   async getEventById(eventId: number): Promise<SignalEvent | null> {
-    const rows = this.sql.exec<Record<string, unknown>>(
-      "SELECT * FROM events WHERE id = ? LIMIT 1", eventId
-    ).toArray();
-    if (rows.length === 0) return null;
-    return this.rowToEvent(rows[0]);
+    const row = await this.env.DB.prepare(
+      "SELECT * FROM events WHERE id = ? LIMIT 1"
+    ).bind(eventId).first<Record<string, unknown>>();
+    if (!row) return null;
+    return this.rowToEvent(row);
   }
 
   async getAIAnalysis(eventId: number): Promise<AIAnalysis | null> {
-    const rows = this.sql.exec<Record<string, unknown>>(
-      "SELECT summary, ticker_impacts, verdict_reason FROM ai_analysis_cache WHERE event_id = ?",
-      eventId
-    ).toArray();
-    if (rows.length === 0) return null;
+    const row = await this.env.DB.prepare(
+      "SELECT summary, ticker_impacts, verdict_reason FROM ai_analysis_cache WHERE event_id = ?"
+    ).bind(eventId).first<Record<string, unknown>>();
+    if (!row) return null;
     return {
-      summary: rows[0].summary as string,
-      ticker_impacts: JSON.parse(rows[0].ticker_impacts as string),
-      verdict_reason: rows[0].verdict_reason as string,
+      summary: row.summary as string,
+      ticker_impacts: JSON.parse(row.ticker_impacts as string),
+      verdict_reason: row.verdict_reason as string,
     };
   }
 
   async saveAIAnalysis(eventId: number, analysis: AIAnalysis): Promise<void> {
-    this.sql.exec(
+    await this.env.DB.prepare(
       `INSERT OR REPLACE INTO ai_analysis_cache (event_id, summary, ticker_impacts, verdict_reason)
-       VALUES (?, ?, ?, ?)`,
-      eventId,
-      analysis.summary,
-      JSON.stringify(analysis.ticker_impacts),
-      analysis.verdict_reason
-    );
+       VALUES (?, ?, ?, ?)`
+    ).bind(eventId, analysis.summary, JSON.stringify(analysis.ticker_impacts), analysis.verdict_reason).run();
 
     // Update event tickers from AI-detected ticker_impacts
     if (analysis.ticker_impacts && analysis.ticker_impacts.length > 0) {
-      const existingRow = this.sql.exec<{ tickers: string }>(
-        "SELECT tickers FROM events WHERE id = ?", eventId
-      ).toArray();
-      if (existingRow.length > 0) {
-        const existingTickers: string[] = JSON.parse(existingRow[0].tickers as string);
+      const existingRow = await this.env.DB.prepare(
+        "SELECT tickers FROM events WHERE id = ?"
+      ).bind(eventId).first<{ tickers: string }>();
+      
+      if (existingRow) {
+        const existingTickers: string[] = JSON.parse(existingRow.tickers);
         const aiTickers = analysis.ticker_impacts.map(t => t.ticker).filter(t => t && t.length <= 6);
         const merged = [...new Set([...existingTickers, ...aiTickers])];
         if (merged.length > existingTickers.length) {
-          this.sql.exec(
-            "UPDATE events SET tickers = ? WHERE id = ?",
-            JSON.stringify(merged), eventId
-          );
+          await this.env.DB.prepare(
+            "UPDATE events SET tickers = ? WHERE id = ?"
+          ).bind(JSON.stringify(merged), eventId).run();
         }
       }
     }
@@ -514,7 +422,6 @@ export class SignalsDO extends DurableObject<Env> {
   }
 
   webSocketMessage(ws: WebSocket, message: string | ArrayBuffer) {
-    // Handle client messages (ping/pong, filter subscriptions)
     try {
       const data = JSON.parse(typeof message === "string" ? message : new TextDecoder().decode(message));
       if (data.type === "ping") {

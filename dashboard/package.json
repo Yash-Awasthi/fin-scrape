@@ -7,7 +7,7 @@
 		"build": "react-router build",
 		"cf-typegen": "bun wrangler types",
 		"postinstall": "bun run cf-typegen",
-		"deploy": "bun run build && bun wrangler deploy --dispatch-namespace chiridion",
+		"deploy": "bun run build && bun wrangler deploy",
 		"dev": "react-router dev",
 		"preview": "bun run build && vite preview",
 		"test": "vitest",
