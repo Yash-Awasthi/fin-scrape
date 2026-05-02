@@ -36,6 +36,9 @@
 			"migrations_dir": "migrations"
 		}
 	],
+	"migrations": [
+		{ "tag": "v1", "new_classes": ["SignalsDO"] }
+	],
 
 	/**
 	 * R2 Object Storage
