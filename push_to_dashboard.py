@@ -1,9 +1,10 @@
-"""Scrape news from all sources and push to the dashboard as events.
-
-AI scoring is bypassed — events get a basic heuristic score instead.
+"""
+FinScrape -> Dashboard Push Script
+Scrapes news from all sources and pushes them directly to the dashboard API.
+AI scoring is bypassed -- events get a basic heuristic score instead.
 """
 
-import sys, os, logging, json
+import sys, os, logging, json, argparse
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -22,8 +23,9 @@ from finscrape.scrapers.google_news import GoogleNewsScraper
 from finscrape.analysis.validator import calculate_heuristic_score
 import requests
 
-DASHBOARD_URL = "https://finscrape-dashboard-qhuij2.apps.camelai.dev"
-API_KEY = "finscrape-default-key"
+# Defaults
+DEFAULT_URL = os.getenv("FINSCRAPE_DASHBOARD_URL", "https://fin-scrape-qhuij2.apps.camelai.dev")
+DEFAULT_KEY = os.getenv("FINSCRAPE_API_KEY", "finscrape-default-key")
 
 SOURCES = [
     ("bloomberg", BloombergScraper),
@@ -36,7 +38,6 @@ SOURCES = [
     ("cnbc", CNBCScraper),
     ("benzinga", BenzingaScraper),
     ("google_news", GoogleNewsScraper),
-    # NOTE: google_serp is NOT here — rate-limited to 3/hr, scheduled only
 ]
 
 def heuristic_verdict(score):
@@ -108,15 +109,24 @@ def article_to_event(article, source_name):
 
 
 def main():
-    print(f"\nFinScrape → Dashboard Push — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"Dashboard: {DASHBOARD_URL}\n")
+    parser = argparse.ArgumentParser(description="FinScrape -> Dashboard Push")
+    parser.add_argument("--url", default=DEFAULT_URL, help=f"Dashboard URL (default: {DEFAULT_URL})")
+    parser.add_argument("--api-key", default=DEFAULT_KEY, help="API Key for ingestion")
+    parser.add_argument("--limit", type=int, default=8, help="Max articles per source")
+    args = parser.parse_args()
+
+    dashboard_url = args.url.rstrip("/")
+    api_key = args.api_key
+
+    print(f"\nFinScrape -> Dashboard Push -- {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"Dashboard: {dashboard_url}\n")
 
     all_events = []
 
     for source_name, Cls in SOURCES:
         try:
             print(f"  Scraping {source_name}...", end=" ", flush=True)
-            articles = Cls(max_articles=8).scrape_news()
+            articles = Cls(max_articles=args.limit).scrape_news()
             print(f"{len(articles)} articles")
 
             for a in articles:
@@ -136,11 +146,11 @@ def main():
     print(f"  Pushing to dashboard...", end=" ", flush=True)
     try:
         resp = requests.post(
-            f"{DASHBOARD_URL}/api/events",
+            f"{dashboard_url}/api/events",
             json={"events": all_events},
             headers={
                 "Content-Type": "application/json",
-                "X-API-Key": API_KEY,
+                "X-API-Key": api_key,
             },
             timeout=30,
         )
@@ -152,7 +162,7 @@ def main():
     # Print summary
     print(f"\n{'='*60}")
     for ev in sorted(all_events, key=lambda e: e["timestamp"], reverse=True)[:10]:
-        tickers = ", ".join(ev["tickers"]) if ev["tickers"] else "—"
+        tickers = ", ".join(ev["tickers"]) if ev["tickers"] else "---"
         arrow = "+" if ev["signal_score"] >= 0 else ""
         print(f"  [{ev['verdict']:8s}] {arrow}{ev['signal_score']} | {ev['subject'][:70]}")
         print(f"           {ev['sources'][0]:12s} | {tickers}")
