@@ -78,7 +78,7 @@
 	 * Worker Loaders (required for @cloudflare/codemode)
 	 * Enables DynamicWorkerExecutor to run LLM-generated code in ephemeral isolates.
 	 */
-	"worker_loaders": [{ "binding": "LOADER" }],
+	/**"worker_loaders": [{ "binding": "LOADER" }],*/
 
 	/**
 	 * Service bindings
