@@ -4,6 +4,7 @@ Data models for FinScrape events and signals.
 
 from __future__ import annotations
 
+import os
 import re
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
@@ -92,10 +93,11 @@ class ScrapedArticle:
 
     @property
     def is_fresh(self) -> bool:
-        """Article is less than 24 hours old."""
+        """Article is within the configured max age window (FINSCRAPE_MAX_AGE_HOURS, default 2)."""
         if self.age_hours is None:
             return True  # assume fresh if unknown
-        return self.age_hours <= 24.0
+        max_age = float(os.getenv("FINSCRAPE_MAX_AGE_HOURS", "2.0"))
+        return self.age_hours <= max_age
 
     @property
     def has_content(self) -> bool:

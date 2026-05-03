@@ -3,7 +3,6 @@ import { createWorkersAI } from "workers-ai-provider";
 import { generateText } from "ai";
 
 export { SignalsDO } from "./signals-do";
-export { LocalDataProxyService } from "./data-proxy";
 
 declare module "react-router" {
   export interface AppLoadContext {

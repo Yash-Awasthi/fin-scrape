@@ -112,7 +112,9 @@ def main():
     parser = argparse.ArgumentParser(description="FinScrape -> Dashboard Push")
     parser.add_argument("--url", default=DEFAULT_URL, help=f"Dashboard URL (default: {DEFAULT_URL})")
     parser.add_argument("--api-key", default=DEFAULT_KEY, help="API Key for ingestion")
-    parser.add_argument("--limit", type=int, default=8, help="Max articles per source")
+    parser.add_argument("--limit", type=int, default=30, help="Max articles per source (default: 30)")
+    parser.add_argument("--age-hours", type=float, default=2.0,
+                        help="Only include articles published in the last N hours (default: 2.0)")
     args = parser.parse_args()
 
     dashboard_url = args.url.rstrip("/")
@@ -127,9 +129,11 @@ def main():
         try:
             print(f"  Scraping {source_name}...", end=" ", flush=True)
             articles = Cls(max_articles=args.limit).scrape_news()
-            print(f"{len(articles)} articles")
+            # Filter to the requested age window
+            fresh = [a for a in articles if a.age_hours is None or a.age_hours <= args.age_hours]
+            print(f"{len(articles)} articles, {len(fresh)} within {args.age_hours:.0f}h window")
 
-            for a in articles:
+            for a in fresh:
                 event = article_to_event(a, source_name)
                 if event["subject"]:  # skip empty
                     all_events.append(event)
