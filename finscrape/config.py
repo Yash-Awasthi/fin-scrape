@@ -23,8 +23,8 @@ class Config:
     ai_retry_base_delay: float = 2.0
 
     # Scraping
-    max_articles_per_source: int = 10
-    max_article_age_hours: float = 24.0
+    max_articles_per_source: int = 30
+    max_article_age_hours: float = 2.0
     max_paragraphs: int = 25
     max_words: int = 700
     min_text_length: int = 150
@@ -58,8 +58,8 @@ class Config:
             ai_timeout=int(os.getenv("FINSCRAPE_AI_TIMEOUT", "60")),
             ai_max_retries=int(os.getenv("FINSCRAPE_AI_MAX_RETRIES", "1")),
             ai_retry_base_delay=float(os.getenv("FINSCRAPE_AI_RETRY_DELAY", "2.0")),
-            max_articles_per_source=int(os.getenv("FINSCRAPE_MAX_ARTICLES", "10")),
-            max_article_age_hours=float(os.getenv("FINSCRAPE_MAX_AGE_HOURS", "24.0")),
+            max_articles_per_source=int(os.getenv("FINSCRAPE_MAX_ARTICLES", "30")),
+            max_article_age_hours=float(os.getenv("FINSCRAPE_MAX_AGE_HOURS", "2.0")),
             max_paragraphs=int(os.getenv("FINSCRAPE_MAX_PARAGRAPHS", "25")),
             max_words=int(os.getenv("FINSCRAPE_MAX_WORDS", "700")),
             min_text_length=int(os.getenv("FINSCRAPE_MIN_TEXT_LENGTH", "150")),

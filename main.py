@@ -184,9 +184,11 @@ def main():
     scrape_parser.add_argument(
         "--sources", nargs="+", default=["yahoo"],
         choices=["yahoo", "bloomberg", "reuters", "cnbc", "rss",
-                 "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft", "edgar"],
+                 "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft", "google_news", "edgar"],
     )
-    scrape_parser.add_argument("--max-articles", type=int, default=10)
+    scrape_parser.add_argument("--max-articles", type=int, default=30)
+    scrape_parser.add_argument("--age-hours", type=float, default=2.0,
+                               help="Only include articles within last N hours (default: 2)")
     scrape_parser.add_argument("--council", action="store_true",
                                help="Use multi-agent AI council for analysis")
 
@@ -195,9 +197,11 @@ def main():
     monitor_parser.add_argument(
         "--sources", nargs="+", default=["yahoo"],
         choices=["yahoo", "bloomberg", "reuters", "cnbc", "rss",
-                 "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft", "edgar"],
+                 "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft", "google_news", "edgar"],
     )
-    monitor_parser.add_argument("--max-articles", type=int, default=10)
+    monitor_parser.add_argument("--max-articles", type=int, default=30)
+    monitor_parser.add_argument("--age-hours", type=float, default=2.0,
+                                help="Only include articles within last N hours (default: 2)")
     monitor_parser.add_argument("--interval", type=int, default=None)
     monitor_parser.add_argument("--council", action="store_true",
                                 help="Use multi-agent AI council for analysis")
@@ -322,10 +326,14 @@ def main():
         # Default: single scrape
         args.command = "scrape"
         args.sources = ["yahoo"]
-        args.max_articles = 10
+        args.max_articles = 30
+        args.age_hours = 2.0
         args.council = False
 
     if args.command == "scrape":
+        # Set age window before pipeline construction (scrapers read from env)
+        age_hours = getattr(args, "age_hours", 2.0)
+        os.environ["FINSCRAPE_MAX_AGE_HOURS"] = str(age_hours)
         pipeline = FinScrapePipeline(
             sources=args.sources,
             max_articles_per_source=args.max_articles,

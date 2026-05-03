@@ -46,18 +46,10 @@
 	},
 	"vars": {
 		"AI_VIRTUAL_MODEL": "auto",
-		"TELEGRAM_BOT_TOKEN": "8659918375:AAEnpPYbr5EHHi2I5JisJty7T3csX93f9CI",
 		"API_KEY": "finscrape-default-key"
 	},
 	"assets": {
 		"directory": "./public/",
 		"binding": "ASSETS"
-	},
-	"services": [
-		{
-			"binding": "DATA_PROXY",
-			"service": "fin-scrape",
-			"entrypoint": "LocalDataProxyService"
-		}
-	]
+	}
 }
