@@ -357,7 +357,7 @@ def _call_openai_proxy(prompt: str, system_prompt: str, model: str | None = None
                 "Content-Type": "application/json",
             },
             json={
-                "model": model or "auto",
+                "model": model or DEFAULT_MODEL,
                 "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": prompt},
