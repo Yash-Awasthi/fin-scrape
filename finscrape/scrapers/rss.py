@@ -69,14 +69,32 @@ class RSSScraperSource(BaseScraper):
 
         tickers = self.extract_tickers_from_text(f"{title} {summary}")
 
-        return ScrapedArticle(
+        # Compute age_hours from feedparser's parsed time struct
+        age_hours: float | None = None
+        pub_str: str | None = published if published else None
+        parsed_time = entry.get("published_parsed")
+        if parsed_time:
+            import calendar, datetime as _dt
+            epoch = calendar.timegm(parsed_time)
+            dt = _dt.datetime.fromtimestamp(epoch, tz=_dt.timezone.utc)
+            age_hours = round(
+                (_dt.datetime.now(_dt.timezone.utc) - dt).total_seconds() / 3600, 1
+            )
+
+        article = ScrapedArticle(
             url=url,
             title=title,
             text=summary,
             source=f"{self.name}/{feed_name}",
-            published_at=published if published else None,
+            published_at=pub_str,
+            age_hours=age_hours,
             raw_tickers=tickers,
         )
+
+        if not article.is_fresh:
+            return None
+
+        return article
 
     def _enrich_with_full_text(self, article: ScrapedArticle) -> ScrapedArticle:
         """Fetch full article text if the RSS summary is too short."""
