@@ -8,6 +8,7 @@ the `scrape_news()` method.
 from __future__ import annotations
 
 import logging
+import os
 import re
 import json
 import datetime
@@ -23,7 +24,7 @@ logger = logging.getLogger(__name__)
 MAX_WORDS = 1500
 MAX_PARAGRAPHS = 25
 MIN_TEXT_LENGTH = 150
-MAX_AGE_HOURS = 24
+MAX_AGE_HOURS = float(os.getenv("FINSCRAPE_MAX_AGE_HOURS", "2.0"))
 
 
 class BaseScraper(ABC):

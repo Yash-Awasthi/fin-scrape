@@ -33,7 +33,7 @@ class GoogleNewsScraper(BaseScraper):
         articles = []
         for url in urls[: self.max_articles]:
             article = self._scrape_article(url)
-            if article and article.has_content:
+            if article and article.has_content and article.is_fresh:
                 articles.append(article)
 
         logger.info("[%s] Scraped %d valid articles", self.name, len(articles))

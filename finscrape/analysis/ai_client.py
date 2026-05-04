@@ -2,14 +2,16 @@
 AI client for LLM-based financial event extraction.
 
 Supports two backends:
-  1. OpenRouter (set OPENROUTER_API_KEY in .env)
-  2. Local OpenAI-compatible proxy (set OPENAI_BASE_URL env var)
+1. OpenRouter (set OPENROUTER_API_KEY in .env)
+2. Local OpenAI-compatible proxy (set OPENAI_BASE_URL env var) — Ollama fits here
 
 Features:
-  - Retry with exponential backoff (1 retry on failure)
-  - Response validation (required fields, value ranges)
-  - Batch analysis for processing multiple articles in one call
-  - LRU + TTL response cache to reduce API costs
+- Retry with exponential backoff (1 retry on failure)
+- Response validation (required fields, value ranges)
+- Batch analysis for processing multiple articles in one call
+- LRU + TTL response cache to reduce API costs
+- Qwen 2.5 compatibility: <think> block stripping, string→int coercion,
+  model-aware cache keys, native Ollama format field
 """
 
 from __future__ import annotations
@@ -21,10 +23,9 @@ import os
 import re
 import time
 import threading
-
 import requests
-from dotenv import load_dotenv
 
+from dotenv import load_dotenv
 from finscrape.analysis.constants import (
     VALID_EVENT_TYPES, VALID_IMPACT_DIRECTIONS,
     VALID_MAGNITUDES, VALID_NOVELTIES, VALID_ACTIONABILITIES,
@@ -36,18 +37,17 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
-OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "proxy")
-DEFAULT_MODEL = os.getenv("FINSCRAPE_MODEL", "deepseek/deepseek-chat")
+OPENAI_BASE_URL    = os.getenv("OPENAI_BASE_URL", "")
+OPENAI_API_KEY     = os.getenv("OPENAI_API_KEY", "proxy")
+DEFAULT_MODEL      = os.getenv("FINSCRAPE_MODEL", "deepseek/deepseek-chat")
 
 # Retry configuration
-MAX_RETRIES = 1
+MAX_RETRIES      = 1
 RETRY_BASE_DELAY = 2.0  # seconds
 
 # Cache configuration
-CACHE_TTL = int(os.getenv("FINSCRAPE_CACHE_TTL", "3600"))  # 1 hour default
+CACHE_TTL      = int(os.getenv("FINSCRAPE_CACHE_TTL",      "3600"))
 CACHE_MAX_SIZE = int(os.getenv("FINSCRAPE_CACHE_MAX_SIZE", "500"))
-
 
 # ---------------------------------------------------------------------------
 # Response Cache
@@ -57,49 +57,44 @@ class _ResponseCache:
     """Thread-safe LRU + TTL cache for AI responses."""
 
     def __init__(self, max_size: int = CACHE_MAX_SIZE, ttl: int = CACHE_TTL):
-        self._cache: dict[str, tuple[float, dict]] = {}  # key -> (expires_at, response)
-        self._access_order: list[str] = []  # LRU tracking
+        self._cache: dict[str, tuple[float, dict]] = {}
+        self._access_order: list[str] = []
         self._lock = threading.Lock()
         self.max_size = max_size
         self.ttl = ttl
         self.hits = 0
         self.misses = 0
 
-    def _make_key(self, prompt: str, system_prompt: str) -> str:
-        """Generate cache key from prompt content."""
-        content = f"{system_prompt}||{prompt}"
+    # FIX #4: model name included in cache key so qwen2.5:3b and qwen2.5:7b
+    # never share a cached response.
+    def _make_key(self, prompt: str, system_prompt: str, model: str = "") -> str:
+        content = f"{model}||{system_prompt}||{prompt}"
         return hashlib.sha256(content.encode()).hexdigest()[:32]
 
-    def get(self, prompt: str, system_prompt: str) -> dict | None:
-        """Get cached response if available and not expired."""
-        key = self._make_key(prompt, system_prompt)
+    def get(self, prompt: str, system_prompt: str, model: str = "") -> dict | None:
+        key = self._make_key(prompt, system_prompt, model)
         with self._lock:
             if key in self._cache:
                 expires_at, response = self._cache[key]
                 if time.time() < expires_at:
                     self.hits += 1
-                    # Move to end for LRU
                     if key in self._access_order:
                         self._access_order.remove(key)
                     self._access_order.append(key)
                     return response
                 else:
-                    # Expired
                     del self._cache[key]
                     if key in self._access_order:
                         self._access_order.remove(key)
             self.misses += 1
             return None
 
-    def put(self, prompt: str, system_prompt: str, response: dict) -> None:
-        """Store response in cache."""
-        key = self._make_key(prompt, system_prompt)
+    def put(self, prompt: str, system_prompt: str, response: dict, model: str = "") -> None:
+        key = self._make_key(prompt, system_prompt, model)
         with self._lock:
-            # Evict oldest if at capacity
             while len(self._cache) >= self.max_size and self._access_order:
                 oldest = self._access_order.pop(0)
                 self._cache.pop(oldest, None)
-
             self._cache[key] = (time.time() + self.ttl, response)
             if key in self._access_order:
                 self._access_order.remove(key)
@@ -116,11 +111,11 @@ class _ResponseCache:
     def stats(self) -> dict:
         total = self.hits + self.misses
         return {
-            "size": len(self._cache),
+            "size":     len(self._cache),
             "max_size": self.max_size,
-            "ttl": self.ttl,
-            "hits": self.hits,
-            "misses": self.misses,
+            "ttl":      self.ttl,
+            "hits":     self.hits,
+            "misses":   self.misses,
             "hit_rate": round(self.hits / total, 2) if total > 0 else 0.0,
         }
 
@@ -137,22 +132,26 @@ def call_ai(prompt: str, system_prompt: str, model: str | None = None) -> dict |
     """
     Send a prompt to the LLM and return parsed JSON response.
 
-    Uses local OpenAI proxy if available, falls back to OpenRouter.
+    Uses local OpenAI proxy (Ollama) if OPENAI_BASE_URL is set,
+    falls back to OpenRouter if OPENROUTER_API_KEY is set.
+
     Retries once on failure with exponential backoff.
     Validates required fields in the response.
     Returns None on any failure (network, parsing, invalid response).
     Results are cached with TTL to reduce API costs.
     """
+    effective_model = model or DEFAULT_MODEL
+
     # Check cache first
-    cached = _cache.get(prompt, system_prompt)
+    cached = _cache.get(prompt, system_prompt, effective_model)
     if cached is not None:
         logger.debug("Cache hit (hits=%d, rate=%.0f%%)", _cache.hits, _cache.stats["hit_rate"] * 100)
         return cached
 
     if OPENAI_BASE_URL:
-        raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, model)
+        raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, effective_model)
     elif OPENROUTER_API_KEY:
-        raw = _call_with_retry(_call_openrouter, prompt, system_prompt, model)
+        raw = _call_with_retry(_call_openrouter, prompt, system_prompt, effective_model)
     else:
         logger.error("No AI backend configured. Set OPENROUTER_API_KEY or OPENAI_BASE_URL.")
         return None
@@ -160,23 +159,19 @@ def call_ai(prompt: str, system_prompt: str, model: str | None = None) -> dict |
     if raw is None:
         return None
 
-    # Validate and normalize the response
     result = _validate_response(raw)
 
-    # Cache successful responses
     if result is not None:
-        _cache.put(prompt, system_prompt, result)
+        _cache.put(prompt, system_prompt, result, effective_model)
 
     return result
 
 
 def get_cache_stats() -> dict:
-    """Return cache statistics."""
     return _cache.stats
 
 
 def clear_cache() -> None:
-    """Clear the response cache."""
     _cache.clear()
 
 
@@ -188,16 +183,13 @@ def analyze_batch(
 ) -> list[dict | None]:
     """
     Process multiple articles in a single LLM call for efficiency.
-
     Each article dict should have "title" and "text" keys.
     Returns a list of analysis dicts (or None for failures), one per article.
-
     Falls back to individual calls if the batch call fails.
     """
     if not articles:
         return []
 
-    # Build the articles block
     articles_block_parts = []
     for i, article in enumerate(articles):
         articles_block_parts.append(
@@ -206,13 +198,14 @@ def analyze_batch(
             f"ARTICLE: {article.get('text', '')}\n"
         )
     articles_block = "\n".join(articles_block_parts)
-
     prompt = batch_prompt_template.replace("{{articles_block}}", articles_block)
 
+    effective_model = model or DEFAULT_MODEL
+
     if OPENAI_BASE_URL:
-        raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, model)
+        raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, effective_model)
     elif OPENROUTER_API_KEY:
-        raw = _call_with_retry(_call_openrouter, prompt, system_prompt, model)
+        raw = _call_with_retry(_call_openrouter, prompt, system_prompt, effective_model)
     else:
         logger.error("No AI backend configured for batch analysis.")
         return [None] * len(articles)
@@ -221,7 +214,6 @@ def analyze_batch(
         logger.warning("Batch call failed; falling back to individual calls.")
         return [None] * len(articles)
 
-    # Extract the analyses array
     analyses = raw.get("analyses", [])
     if not isinstance(analyses, list) or len(analyses) != len(articles):
         logger.warning(
@@ -229,7 +221,6 @@ def analyze_batch(
             len(analyses) if isinstance(analyses, list) else 0,
             len(articles),
         )
-        # Try to salvage what we can
         if isinstance(analyses, list):
             results = []
             for i in range(len(articles)):
@@ -248,7 +239,6 @@ def analyze_batch(
 # ---------------------------------------------------------------------------
 
 def _call_with_retry(fn, prompt, system_prompt, model):
-    """Call an API function with up to MAX_RETRIES retries on failure."""
     for attempt in range(MAX_RETRIES + 1):
         result = fn(prompt, system_prompt, model)
         if result is not None:
@@ -267,21 +257,16 @@ def _call_with_retry(fn, prompt, system_prompt, model):
 def _validate_response(data: dict) -> dict | None:
     """
     Validate and normalize an AI analysis response.
-
-    Checks required fields exist and values are in valid ranges.
-    Fills in defaults for missing optional fields.
-    Returns None if the response is fundamentally broken.
+    Handles Qwen 2.5 quirks: null signal_score, string signal_score.
     """
     if not isinstance(data, dict):
         logger.error("AI response is not a dict: %s", type(data))
         return None
 
-    # "relevant" is the one truly required field
     if "relevant" not in data:
         logger.warning("AI response missing 'relevant' field; defaulting to False")
         data["relevant"] = False
 
-    # If not relevant, return early with minimal structure
     if not data.get("relevant", False):
         return data
 
@@ -295,8 +280,17 @@ def _validate_response(data: dict) -> dict | None:
     if direction not in VALID_IMPACT_DIRECTIONS:
         data["impact_direction"] = "neutral"
 
-    # Clamp signal_score to [-5, 5]
+    # FIX #3a: handle null signal_score (Qwen sometimes returns null at temp=0.1)
+    if data.get("signal_score") is None:
+        data["signal_score"] = 0
+
+    # FIX #3b: coerce string signal_score → int (Qwen quirk: returns "3" not 3)
     score = data.get("signal_score", 0)
+    if isinstance(score, str):
+        try:
+            score = int(score)
+        except ValueError:
+            score = 0
     if isinstance(score, (int, float)):
         data["signal_score"] = max(-5, min(5, int(score)))
     else:
@@ -304,6 +298,13 @@ def _validate_response(data: dict) -> dict | None:
 
     # Clamp confidence to [0.0, 1.0]
     conf = data.get("confidence", 0.5)
+    if conf is None:
+        conf = 0.5
+    if isinstance(conf, str):
+        try:
+            conf = float(conf)
+        except ValueError:
+            conf = 0.5
     if isinstance(conf, (int, float)):
         data["confidence"] = max(0.0, min(1.0, float(conf)))
     else:
@@ -334,7 +335,6 @@ def _validate_response(data: dict) -> dict | None:
     if not isinstance(data.get("key_metrics"), dict):
         data["key_metrics"] = {}
 
-    # Ensure strings exist
     data.setdefault("subject", "")
     data.setdefault("reasoning", "")
     data.setdefault("sector_impact", "")
@@ -348,25 +348,32 @@ def _validate_response(data: dict) -> dict | None:
 # ---------------------------------------------------------------------------
 
 def _call_openai_proxy(prompt: str, system_prompt: str, model: str | None = None) -> dict | None:
-    """Call local OpenAI-compatible proxy."""
+    """
+    Call local OpenAI-compatible proxy (Ollama or any other).
+
+    FIX #1: Adds Ollama-native `format: "json"` alongside `response_format`
+    for more reliable JSON output from Qwen 2.5. Other providers ignore
+    the extra field.
+    """
     try:
         response = requests.post(
             f"{OPENAI_BASE_URL}/chat/completions",
             headers={
                 "Authorization": f"Bearer {OPENAI_API_KEY}",
-                "Content-Type": "application/json",
+                "Content-Type":  "application/json",
             },
             json={
-                "model": model or "auto",
+                "model":    model or DEFAULT_MODEL,
                 "messages": [
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt},
+                    {"role": "user",   "content": prompt},
                 ],
-                "temperature": 0.1,
-                "max_tokens": 800,
+                "temperature":     float(os.getenv("FINSCRAPE_AI_TEMP", "0.1")),
+                "max_tokens":      800,
                 "response_format": {"type": "json_object"},
+                "format":          "json",  # Ollama-native; ignored by other providers
             },
-            timeout=60,
+            timeout=int(os.getenv("FINSCRAPE_AI_TIMEOUT", "60")),
         )
 
         if response.status_code != 200:
@@ -387,19 +394,19 @@ def _call_openrouter(prompt: str, system_prompt: str, model: str | None = None) 
             "https://openrouter.ai/api/v1/chat/completions",
             headers={
                 "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                "Content-Type": "application/json",
+                "Content-Type":  "application/json",
             },
             json={
-                "model": model or DEFAULT_MODEL,
+                "model":    model or DEFAULT_MODEL,
                 "messages": [
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": prompt},
+                    {"role": "user",   "content": prompt},
                 ],
-                "temperature": 0.1,
-                "max_tokens": 800,
+                "temperature":     float(os.getenv("FINSCRAPE_AI_TEMP", "0.1")),
+                "max_tokens":      800,
                 "response_format": {"type": "json_object"},
             },
-            timeout=45,
+            timeout=int(os.getenv("FINSCRAPE_AI_TIMEOUT", "45")),
         )
 
         if response.status_code != 200:
@@ -417,15 +424,24 @@ def _call_openrouter(prompt: str, system_prompt: str, model: str | None = None) 
 
 
 def _parse_response(data: dict) -> dict | None:
-    """Extract and parse JSON from LLM response."""
+    """
+    Extract and parse JSON from LLM response.
+
+    FIX #2: Strips Qwen 2.5 <think>...</think> chain-of-thought blocks
+    before attempting JSON extraction. These blocks are present when Qwen
+    uses its built-in reasoning mode and would otherwise break the JSON
+    regex.
+    """
     if "choices" not in data:
         logger.error("AI response missing 'choices' key")
         return None
 
     content = data["choices"][0]["message"]["content"]
 
+    # Strip Qwen chain-of-thought wrapper before JSON extraction
+    content = re.sub(r"<think>[\s\S]*?</think>", "", content, flags=re.IGNORECASE).strip()
+
     try:
-        # Extract JSON from response (may be wrapped in markdown)
         match = re.search(r'\{[\s\S]*\}', content)
         if match:
             return json.loads(match.group(0))
