@@ -191,6 +191,12 @@ def main():
                                help="Only include articles within last N hours (default: 2)")
     scrape_parser.add_argument("--council", action="store_true",
                                help="Use multi-agent AI council for analysis")
+    scrape_parser.add_argument("--ollama", action="store_true",
+                               help="Use local Ollama instead of cloud API (auto-sets OPENAI_BASE_URL)")
+    scrape_parser.add_argument("--ollama-model", default="qwen2.5:7b",
+                               help="Ollama model to use (default: qwen2.5:7b)")
+    scrape_parser.add_argument("--smoke-test", action="store_true",
+                               help="Run one article end-to-end, print JSON result, then exit")
 
     # --- Monitor command ---
     monitor_parser = subparsers.add_parser("monitor", help="Run continuous monitoring")
@@ -329,8 +335,33 @@ def main():
         args.max_articles = 30
         args.age_hours = 2.0
         args.council = False
+        args.ollama = False
+        args.ollama_model = "qwen2.5:7b"
+        args.smoke_test = False
 
     if args.command == "scrape":
+        # Wire Ollama if requested — must happen before any ai_client import
+        if getattr(args, "ollama", False):
+            os.environ["OPENAI_BASE_URL"]  = "http://localhost:11434/v1"
+            os.environ["OPENAI_API_KEY"]   = "ollama"
+            os.environ["FINSCRAPE_MODEL"]  = getattr(args, "ollama_model", "qwen2.5:7b")
+            os.environ.setdefault("FINSCRAPE_AI_TIMEOUT", "180")
+            os.environ.pop("OPENROUTER_API_KEY", None)  # force proxy branch
+            print(f"[Ollama] Using {os.environ['FINSCRAPE_MODEL']} at {os.environ['OPENAI_BASE_URL']}")
+
+        # Smoke-test: run one article and exit
+        if getattr(args, "smoke_test", False):
+            import json as _json
+            from finscrape.analysis.ai_client import call_ai
+            from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
+            test_text = "Apple Inc. reported record Q1 earnings, beating estimates by 12%. EPS $2.40 vs $2.14 expected."
+            prompt = ANALYSIS_PROMPT.replace("{{title}}", "Apple Q1 earnings beat").replace("{{article_text}}", test_text)
+            print("\n[Smoke test] Sending one article to AI...")
+            result = call_ai(prompt, SYSTEM_PROMPT)
+            print("[Smoke test] Result:")
+            print(_json.dumps(result, indent=2))
+            return
+
         # Set age window before pipeline construction (scrapers read from env)
         age_hours = getattr(args, "age_hours", 2.0)
         os.environ["FINSCRAPE_MAX_AGE_HOURS"] = str(age_hours)
