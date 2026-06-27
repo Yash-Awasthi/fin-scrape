@@ -1,6 +1,9 @@
 # Environment secrets
 .env
 
+# Local-only checkpoint ledger (never push)
+progress/
+
 # Local state and data
 data/*.json
 data/*.json.bak

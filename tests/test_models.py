@@ -129,7 +129,7 @@ class TestScrapedArticle:
             title="Title",
             text="x" * 200,
             source="test",
-            age_hours=12.0,
+            age_hours=1.0,  # within the 2hr news window
         )
         assert art.is_fresh is True
 
@@ -139,7 +139,7 @@ class TestScrapedArticle:
             title="Title",
             text="x" * 200,
             source="test",
-            age_hours=24.0,
+            age_hours=2.0,  # boundary of the default 2hr window (inclusive)
         )
         assert art.is_fresh is True
 

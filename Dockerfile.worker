@@ -1,0 +1,23 @@
+# WorldFin ingestion worker (Phase 3). Heavier than the api image — it needs the full
+# finscrape brain (scrapling engine, feedparser, yfinance, spacy). Hardening is Phase 10.
+FROM python:3.13-slim
+
+WORKDIR /app
+
+# System libs lxml/curl_cffi need at build/runtime.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential libxml2-dev libxslt1-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt \
+    && pip install --no-cache-dir asyncpg "pydantic>=2.6" "pydantic-settings>=2.2" "apscheduler>=3.10"
+
+# Optional but recommended for full NER; the worker degrades gracefully without it.
+RUN python -m spacy download en_core_web_sm || true
+
+COPY finscrape/ ./finscrape/
+COPY server/ ./server/
+COPY worker/ ./worker/
+
+CMD ["python", "-m", "worker.main"]

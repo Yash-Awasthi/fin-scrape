@@ -408,7 +408,7 @@ Or use systemd timers, GitHub Actions, or any task scheduler.
 
 ## Roadmap
 
-See **[ROADMAP.md](ROADMAP.md)** for the full strategic plan. Key milestones:
+See **[PLAN.md](PLAN.md)** for the full strategic plan and the WorldFin build plan. Key milestones:
 
 - **Q2 2026** — Multi-source scraping, internal engine, live dashboard, Telegram alerts, AI-powered analysis *(Done)*
 - **Q3 2026** — Real-time monitoring, NLP pipeline, portfolio tracking *(In Progress)*

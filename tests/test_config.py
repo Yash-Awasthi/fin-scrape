@@ -24,11 +24,12 @@ class TestConfigDefaults:
 
     def test_default_max_articles(self):
         cfg = Config.from_env()
-        assert cfg.max_articles_per_source == 10
+        assert cfg.max_articles_per_source == 30
 
     def test_default_max_age_hours(self):
         cfg = Config.from_env()
-        assert cfg.max_article_age_hours == 24.0
+        # Default is the "2hr news window" (see config.py); env can widen it.
+        assert cfg.max_article_age_hours == 2.0
 
     def test_default_invest_threshold(self):
         cfg = Config.from_env()

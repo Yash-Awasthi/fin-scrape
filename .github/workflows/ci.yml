@@ -1,48 +1,41 @@
 name: CI
 
+# Repo default branch is master; WorldFin work lands via feat/** branches.
 on:
   push:
-    branches: [main]
+    branches: [master, "feat/**"]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install ruff
-      - name: Lint
-        run: ruff check finscrape/ tests/
-      - name: Format check
-        run: ruff format --check finscrape/ tests/
-
-  typecheck:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install pyright python-dotenv python-dateutil
-      - name: Type check
-        run: pyright finscrape/models/ finscrape/config.py finscrape/storage.py
-        continue-on-error: true
-
+  # Single uv-based job covering finscrape + WorldFin (server/worker). A Postgres
+  # service lets the skip-ready DB integration tests actually run (no LLM needed).
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.11", "3.12", "3.13"]
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: worldfin
+          POSTGRES_PASSWORD: worldfin
+          POSTGRES_DB: worldfin
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U worldfin"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      # point the integration tests at the service (spacy has no 3.14 wheel → 3.13)
+      WORLDFIN_DATABASE_URL: postgresql://worldfin:worldfin@localhost:5432/worldfin
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install test dependencies
-        run: pip install pytest python-dotenv python-dateutil
-      - name: Run tests
-        run: pytest tests/ -v --tb=short
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install 3.13
+      - name: Lint new code (ruff)
+        run: make lint
+      - name: Format check new code (ruff)
+        run: make fmt-check
+      - name: Phase 0 self-check
+        run: make selfcheck
+      - name: Tests (finscrape + server + worker, incl. DB integration)
+        run: make test
