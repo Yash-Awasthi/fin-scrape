@@ -39,3 +39,33 @@ async def analyze(id: int = Query(...)) -> dict:
             )
         )
     return result
+
+
+@router.get("/api/ai/council")
+async def council(id: int = Query(...)) -> dict:
+    """Explainability: multi-agent council verdict + dissent for an event. Behind the
+    WORLDFIN_ENABLE_COUNCIL flag; needs an LLM backend (runs in a thread)."""
+    if not get_settings().enable_council:
+        raise HTTPException(status_code=404, detail="council disabled")
+    event = await queries.get_event_by_id(db.pool(), id)
+    if not event:
+        raise HTTPException(status_code=404, detail="Event not found")
+
+    def run() -> dict:
+        from finscrape.agents.council import AgentCouncil
+
+        verdict = AgentCouncil().deliberate(
+            event["subject"],
+            event.get("reasoning") or event["subject"],
+            {"source": (event.get("sources") or [None])[0]},
+        )
+        return {
+            "consensus_verdict": verdict.consensus_verdict,
+            "consensus_score": verdict.consensus_score,
+            "agreement_level": verdict.agreement_level,
+            "dissenting_agents": verdict.dissenting_agents,
+            "key_risks": verdict.key_risks,
+            "key_opportunities": verdict.key_opportunities,
+        }
+
+    return await asyncio.to_thread(run)

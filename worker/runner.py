@@ -119,6 +119,26 @@ class Worker:
         )
         await self.run_correlations()
 
+    async def run_backtest(self) -> int:
+        """Score matured directional verdicts vs realized price moves (Phase 7).
+        Uses finscrape market_data as the price fetcher; runs the blocking fetch in a
+        thread. Returns rows written to accuracy_outcomes."""
+        from server.accuracy import backtest
+
+        def price_fetcher(tickers: list[str]) -> float | None:
+            from finscrape.market_data import get_market_data
+
+            data = get_market_data(tickers)
+            changes = [
+                d.get("change_pct", d.get("change_percent"))
+                for d in data
+                if isinstance(d, dict)
+            ]
+            changes = [c for c in changes if isinstance(c, (int, float))]
+            return sum(changes) / len(changes) if changes else None
+
+        return await backtest(self.pool, lambda t: None if not t else price_fetcher(t))
+
     async def run_correlations(self, lookback_hours: int = 24) -> int:
         """Cluster recent events + flag corroboration/divergence; persist signals.
         First call seeds the snapshot and emits nothing (Appendix A). Returns count."""
