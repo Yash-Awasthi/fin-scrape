@@ -11,7 +11,9 @@ RUN pip install --no-cache-dir \
     "uvicorn[standard]>=0.29" \
     "asyncpg>=0.29" \
     "pydantic>=2.6" \
-    "pydantic-settings>=2.2"
+    "pydantic-settings>=2.2" \
+    "requests>=2.31" \
+    "feedparser>=6.0"
 
 COPY server/ ./server/
 COPY finscrape/ ./finscrape/

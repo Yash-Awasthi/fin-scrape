@@ -15,8 +15,10 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
 from server import db, queries
+from server.routes import accuracy as accuracy_routes
 from server.routes import ai as ai_routes
 from server.routes import correlations as correlations_routes
+from server.routes import data as data_routes
 from server.routes import events as events_routes
 from server.routes import health as health_routes
 from server.schemas import HealthResponse
@@ -70,6 +72,8 @@ def create_app() -> FastAPI:
     app.include_router(ai_routes.router)
     app.include_router(health_routes.router)
     app.include_router(correlations_routes.router)
+    app.include_router(data_routes.router)
+    app.include_router(accuracy_routes.router)
 
     @app.websocket("/api/ws")
     async def ws(websocket: WebSocket) -> None:

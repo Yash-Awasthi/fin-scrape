@@ -1,0 +1,171 @@
+// Typed REST client. Shapes mirror the FastAPI contract in server/schemas.py.
+
+export type Verdict = "INVEST" | "OBSERVE" | "CAUTIOUS" | "PULL_OUT";
+
+export interface AffectedEntity {
+  name: string;
+  ticker?: string;
+  role?: string;
+  impact?: string;
+}
+
+export interface EventOut {
+  id: number;
+  subject: string;
+  event_type: string;
+  verdict: string;
+  impact_direction: string;
+  signal_score: number;
+  confidence: number;
+  reasoning: string;
+  magnitude: string;
+  novelty: string;
+  actionability: string;
+  sector_impact: string;
+  tickers: string[];
+  sources: string[];
+  articles: string[];
+  affected_entities: AffectedEntity[];
+  second_order_effects: unknown[];
+  key_metrics: Record<string, unknown>;
+  lat: number | null;
+  lon: number | null;
+  timestamp: string | null;
+  created_at: string;
+}
+
+export interface DashboardStats {
+  total_events: number;
+  by_verdict: Record<string, number>;
+  last_update: string | null;
+}
+
+export interface DateCount {
+  day: string;
+  count: number;
+}
+
+export interface SourceHealth {
+  source: string;
+  status: string;
+  fetched_at: string | null;
+  record_count: number;
+}
+
+export interface HealthResponse {
+  status: string;
+  db: boolean;
+  llm: boolean;
+  sources: SourceHealth[];
+}
+
+export interface Correlation {
+  signal_type: string;
+  confidence: number;
+  payload: Record<string, unknown>;
+  detected_at: string;
+}
+
+export interface CryptoCoin {
+  symbol: string;
+  name: string;
+  price: number | null;
+  change_24h: number | null;
+}
+
+export interface RssItem {
+  title: string;
+  link: string;
+  published: string;
+}
+
+export interface FeedInfo {
+  key: string;
+  name: string;
+  tier: string;
+  region: string;
+}
+
+export interface MarketTicker {
+  ticker: string;
+  mentions: number;
+  avg_score: number;
+}
+
+export interface Accuracy {
+  total: number;
+  scored: number;
+  hits: number;
+  hit_rate: number;
+  by_verdict: Record<string, { hits: number; total: number; hit_rate: number }>;
+  equity_curve: number[];
+}
+
+export interface AIAnalysis {
+  summary: string;
+  ticker_impacts: Array<{ ticker: string; direction: string; estimated_pct: string; reason: string }>;
+  verdict_reason: string;
+}
+
+export interface EventQuery {
+  limit?: number;
+  offset?: number;
+  date?: string;
+  verdict?: string;
+  ticker?: string;
+  source?: string;
+  event_type?: string;
+  sort?: string;
+  dir?: string;
+}
+
+async function getJSON<T>(path: string): Promise<T> {
+  const res = await fetch(path, { headers: { Accept: "application/json" } });
+  if (!res.ok) throw new Error(`GET ${path} → ${res.status}`);
+  return res.json() as Promise<T>;
+}
+
+function qs(params: Record<string, unknown>): string {
+  const sp = new URLSearchParams();
+  for (const [k, v] of Object.entries(params)) {
+    if (v !== undefined && v !== null && v !== "") sp.set(k, String(v));
+  }
+  const s = sp.toString();
+  return s ? `?${s}` : "";
+}
+
+export const api = {
+  events: (q: EventQuery = {}) =>
+    getJSON<{ events: EventOut[] }>(`/api/events${qs(q as Record<string, unknown>)}`).then(
+      (r) => r.events,
+    ),
+  stats: () => getJSON<DashboardStats>("/api/stats"),
+  dates: () => getJSON<{ dates: DateCount[] }>("/api/dates").then((r) => r.dates),
+  correlations: (date?: string) =>
+    getJSON<{ correlations: Correlation[] }>(`/api/correlations${qs({ date })}`).then(
+      (r) => r.correlations,
+    ),
+  health: () => getJSON<HealthResponse>("/api/health"),
+  analyze: (id: number) => getJSON<AIAnalysis>(`/api/ai/analyze${qs({ id })}`),
+  crypto: (limit = 20) =>
+    getJSON<{ coins: CryptoCoin[] }>(`/api/crypto${qs({ limit })}`).then((r) => r.coins),
+  markets: (limit = 20) =>
+    getJSON<{ tickers: MarketTicker[] }>(`/api/markets${qs({ limit })}`).then((r) => r.tickers),
+  feeds: () => getJSON<{ feeds: FeedInfo[] }>("/api/feeds").then((r) => r.feeds),
+  rss: (feed: string, limit = 20) =>
+    getJSON<{ feed: string; name: string; tier: string; items: RssItem[] }>(
+      `/api/rss-proxy${qs({ feed, limit })}`,
+    ),
+  accuracy: () => getJSON<Accuracy>("/api/accuracy"),
+};
+
+export const VERDICT_COLOR: Record<string, string> = {
+  INVEST: "#16c784",
+  OBSERVE: "#3b82f6",
+  CAUTIOUS: "#f5a623",
+  PULL_OUT: "#ea3943",
+};
+
+export function verdictColor(verdict: string): string {
+  return VERDICT_COLOR[verdict] ?? "#8a8f98";
+}

@@ -368,50 +368,68 @@ inside a time window, and flag news↔market divergence.* Full spec in
       persisted signals (verified vs postgres:16 via podman). **Globe rendering** of the signals is
       Phase 5.
 
-## Phase 5 — Frontend foundation (SPA shell, globe, panel system)  `[ ]`
+## Phase 5 — Frontend foundation (SPA shell, globe, panel system)  `[~]` (code-complete; live render = browser/E2E)
 
 *Goal: the vanilla-TS shell. Reimplement WM's good parts **minimally** — do NOT copy its 3.7k-line
 GlobeMap.*
 
-- [ ] **Panel base class** (~100 LOC): debounced `setContent`, event-delegation, grid position/size
-      persisted to localStorage; `PanelLayoutManager` (CSS grid, drag-resize).
-- [ ] **Globe** = thin `globe.gl` wrapper: plot events by lat/lon, color by verdict, hover/click →
-      SignalModal; auto-rotate-on-idle; correlation arcs.
-- [ ] **App shell:** header (live clock, connection dot, refresh), command palette (⌘K) stub,
-      responsive layout, dark theme matching the finance aesthetic.
-- [ ] `web/src/api.ts` + `ws.ts`: typed client; WS live updates with reconnect/backoff (port
-      `dashboard/app/lib/use-realtime.ts`, de-React'd); SSE fallback.
-- [ ] **Verify:** `make up` → `localhost:8080`; globe renders live event points; panels
-      dock/resize/persist; WS dot is green.
+- [x] **Panel base class** (`web/src/panels/panel.ts`): debounced `setContent` (rAF), grid
+      position/size persisted to localStorage (`loadConfig`/`saveConfig`), pointer-drag resize;
+      `PanelLayoutManager` (`layout.ts`, CSS grid host).
+- [x] **Globe** (`web/src/globe/`): thin `globe.gl` wrapper — points by lat/lon, color by verdict,
+      click → SignalModal, auto-rotate-on-idle. Pure `toPoints` extracted + unit-tested. (Correlation
+      arcs deferred — `correlations` payload has no geo endpoints yet.)
+- [x] **App shell** (`web/src/app/shell.ts`): header (live UTC clock, WS connection dot, refresh),
+      ⌘K command-palette stub, dark theme (`styles.css`).
+- [x] `web/src/api.ts` + `ws.ts` + `state.ts`: typed REST client matching `server/schemas.py`;
+      `RealtimeClient` with exponential backoff+jitter reconnect + ping keep-alive; tiny reactive
+      store. (SSE fallback is a noted seam — backend exposes only WS today.)
+- [x] `SignalFeedPanel` + `SignalModal` (on-demand `/api/ai/analyze`) prove the data pipe.
+      `web/Dockerfile` (multi-stage → nginx, proxies `/api`) + compose `web` service (`:8080`).
+- [~] **Verify:** `tsc` typecheck clean; **vitest 10/10** (store dedup, ws backoff/reconnect,
+      toPoints, panel persistence); `vite build` succeeds. **PENDING (needs browser + running stack):**
+      live globe render + panel drag/persist + green WS dot — Phase 10 Playwright E2E + a manual `make up`.
 
-## Phase 6 — Panels (the product surface)  `[ ]`
+## Phase 6 — Panels (the product surface)  `[~]` (code-complete; live render = browser/E2E)
 
 *Goal: the panels the demo actually shows. Each fed by the API.*
 
-- [ ] **SignalFeedPanel** — table (verdict/score/subject/tickers/confidence/source/time); expand →
-      AI reasoning + affected-entities + second-order effects (port the existing `home.tsx` expand UX).
-- [ ] **GlobePanel**, **CorrelationPanel**, **BreakingNewsBanner**.
-- [ ] **MarketsPanel** (tickers from events; quotes via `market_data.py`/yfinance proxy),
-      **CryptoPanel** (CoinGecko), **CalendarPanel** (date nav + earnings/econ calendar),
-      **WorldNewsPanel** (RSS via `/api/rss-proxy`), **LiveTVPanel/YouTubePanel** (curated iframe
-      list — reference WM `LiveNewsPanel.ts`), **SentimentPanel** (reuse `finscrape/sentiment/`).
-- [ ] **Variant presets** (like WM): "World", "Finance", "Crypto" default panel/layer sets,
-      switchable in UI.
-- [ ] **Verify:** every panel populates with live data; variant switch reflows layout; clicking a
-      geopolitical event walks event→affected tickers→judged impact end to end.
+- [x] **SignalFeedPanel** (table) + **SignalModal** — click a row → AI reasoning + affected-entities
+      + on-demand `/api/ai/analyze`. The event→tickers→judged-impact walk lives here.
+- [x] **GlobePanel**, **CorrelationPanel** (`/api/correlations`), **BreakingNewsBanner** (fires on
+      convergence/triangulation).
+- [x] **CryptoPanel** (`/api/crypto` — CoinGecko passthrough, cached), **CalendarPanel**
+      (`/api/dates`, click → load that day), **WorldNewsPanel** (`/api/rss-proxy`),
+      **LiveTVPanel** (curated YouTube channel iframes, `web/src/data/channels.ts`),
+      **MarketsPanel** (`/api/markets` — most-mentioned tickers from events).
+- [x] New backend (`server/routes/data.py`): `/api/crypto`, `/api/rss-proxy` (**SSRF-guarded** by the
+      feed-registry allowlist — unknown key → 400), `/api/feeds`, `/api/markets` (jsonb ticker rollup).
+- [x] **Variant presets** (`web/src/app/variants.ts`): World / Finance / Crypto switch the visible
+      panels (persisted) and lazy-load only that variant's data.
+- [~] **Verify:** all new endpoints confirmed live vs postgres:16 (feeds=14, markets jsonb SQL,
+      rss-proxy unknown→400, crypto→live BTC/ETH); web tsc/vitest(10)/build green; py lint + 642 pass.
+      **PENDING (browser, Phase 10 E2E):** panels render + variant reflow on screen.
+- [ ] **Deferred:** **SentimentPanel** (reuse `finscrape/sentiment/` — network/auth-flaky) and **live
+      Markets price quotes** (yfinance hot-path, RISKS R1 → Phase 8). Clean seams left for both.
 
-## Phase 7 — Trust layer: accuracy proof & explainability (the demo differentiator)  `[ ]`
+## Phase 7 — Trust layer: accuracy proof & explainability (the demo differentiator)  `[~]` (code-complete; live backtest/council = LLM/market data)
 
 *Goal: prove the calls are real. This is what convinces a company.*
 
-- [ ] **AccuracyPanel / `/api/accuracy`**: reuse `finscrape/accuracy.py` — backtest past verdicts
-      against realized price moves (via `market_data.py`); show hit-rate by verdict/source/sector, a
-      leaderboard, and an equity curve.
-- [ ] **Explainability:** each signal exposes the reasoning chain + dissent (reuse
-      `finscrape/agents/council.py` + `multi_model.py` model-agreement) behind a feature flag —
-      "why this call, and who disagreed".
-- [ ] **Verify:** AccuracyPanel renders hit-rate over a seeded historical window; an event shows
-      council agreement/dissent.
+- [x] **`/api/accuracy` + AccuracyPanel** (`server/accuracy.py`, `server/routes/accuracy.py`): ports
+      finscrape's correctness rule (`verdict_outcome`: INVEST right if ≥+1%, PULL_OUT if ≤−1%,
+      OBSERVE/CAUTIOUS neutral); `aggregate` → hit-rate overall + by-verdict + cumulative equity curve.
+      AccuracyPanel shows the big hit-rate, by-verdict breakdown, and an inline-SVG equity sparkline.
+- [x] **Backtest** (`server/accuracy.backtest`, injectable `price_fetcher`; `Worker.run_backtest`
+      uses `finscrape/market_data.py`): scores matured directional events into `accuracy_outcomes`,
+      idempotent. Pure helpers unit-tested with a stub fetcher; **live run deferred (needs market data)**.
+- [x] **Explainability:** `GET /api/ai/council?id=` (reuse `finscrape/agents/council.py`) returns
+      consensus verdict + `agreement_level` + `dissenting_agents` + risks/opportunities, **behind the
+      `WORLDFIN_ENABLE_COUNCIL` flag** (off → 404). **Live run deferred (needs LLM).**
+- [~] **Verify:** `verdict_outcome` + `aggregate` unit-tested (4); `/api/accuracy` live → valid empty
+      aggregate; `/api/ai/council` flag-off → 404; web tsc/vitest(10)/build green; py 646 pass.
+      **PENDING:** AccuracyPanel over a seeded window + council dissent on an event — needs a backtest
+      run (market data) + LLM.
 
 ## Phase 8 — Hardening: security, performance, resilience  `[ ]`
 
