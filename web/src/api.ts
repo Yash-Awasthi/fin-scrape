@@ -145,8 +145,11 @@ export interface Portfolio {
   summary: Record<string, unknown>;
 }
 
+// Empty = same-origin (dev proxy / nginx). Set VITE_API_BASE for split hosting.
+export const API_BASE = (import.meta.env.VITE_API_BASE ?? "").replace(/\/$/, "");
+
 async function getJSON<T>(path: string): Promise<T> {
-  const res = await fetch(path, { headers: { Accept: "application/json" } });
+  const res = await fetch(API_BASE + path, { headers: { Accept: "application/json" } });
   if (!res.ok) throw new Error(`GET ${path} → ${res.status}`);
   return res.json() as Promise<T>;
 }

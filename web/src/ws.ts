@@ -94,6 +94,9 @@ export class RealtimeClient {
 }
 
 export function wsUrl(path = "/api/ws"): string {
+  // Split hosting: derive the WS origin from the API base (https→wss, http→ws).
+  const base = (import.meta.env.VITE_API_BASE ?? "").replace(/\/$/, "");
+  if (base) return base.replace(/^http/, "ws") + path;
   const proto = location.protocol === "https:" ? "wss" : "ws";
   return `${proto}://${location.host}${path}`;
 }

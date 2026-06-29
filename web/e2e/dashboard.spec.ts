@@ -80,7 +80,7 @@ async function mockBackend(page: import("@playwright/test").Page) {
 
 test.beforeEach(async ({ page }) => {
   await mockBackend(page);
-  await page.goto("/");
+  await page.goto("/app/");
 });
 
 test("dashboard shell + globe panel render", async ({ page }) => {

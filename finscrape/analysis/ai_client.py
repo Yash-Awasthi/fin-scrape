@@ -40,6 +40,9 @@ OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 OPENAI_BASE_URL    = os.getenv("OPENAI_BASE_URL", "")
 OPENAI_API_KEY     = os.getenv("OPENAI_API_KEY", "proxy")
 DEFAULT_MODEL      = os.getenv("FINSCRAPE_MODEL", "deepseek/deepseek-chat")
+# Wire format for the OPENAI_BASE_URL backend: "chat" (chat/completions, default) or
+# "responses" (OpenAI Responses API — e.g. freemodel.dev's free GPT-5.x).
+LLM_WIRE_API       = os.getenv("FINSCRAPE_WIRE_API", "chat").lower()
 
 # Retry configuration
 MAX_RETRIES      = 1
@@ -148,7 +151,9 @@ def call_ai(prompt: str, system_prompt: str, model: str | None = None) -> dict |
         logger.debug("Cache hit (hits=%d, rate=%.0f%%)", _cache.hits, _cache.stats["hit_rate"] * 100)
         return cached
 
-    if OPENAI_BASE_URL:
+    if OPENAI_BASE_URL and LLM_WIRE_API == "responses":
+        raw = _call_with_retry(_call_responses_api, prompt, system_prompt, effective_model)
+    elif OPENAI_BASE_URL:
         raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, effective_model)
     elif OPENROUTER_API_KEY:
         raw = _call_with_retry(_call_openrouter, prompt, system_prompt, effective_model)
@@ -202,7 +207,9 @@ def analyze_batch(
 
     effective_model = model or DEFAULT_MODEL
 
-    if OPENAI_BASE_URL:
+    if OPENAI_BASE_URL and LLM_WIRE_API == "responses":
+        raw = _call_with_retry(_call_responses_api, prompt, system_prompt, effective_model)
+    elif OPENAI_BASE_URL:
         raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, effective_model)
     elif OPENROUTER_API_KEY:
         raw = _call_with_retry(_call_openrouter, prompt, system_prompt, effective_model)
@@ -423,29 +430,63 @@ def _call_openrouter(prompt: str, system_prompt: str, model: str | None = None) 
         return None
 
 
-def _parse_response(data: dict) -> dict | None:
-    """
-    Extract and parse JSON from LLM response.
-
-    FIX #2: Strips Qwen 2.5 <think>...</think> chain-of-thought blocks
-    before attempting JSON extraction. These blocks are present when Qwen
-    uses its built-in reasoning mode and would otherwise break the JSON
-    regex.
-    """
-    if "choices" not in data:
-        logger.error("AI response missing 'choices' key")
-        return None
-
-    content = data["choices"][0]["message"]["content"]
-
-    # Strip Qwen chain-of-thought wrapper before JSON extraction
-    content = re.sub(r"<think>[\s\S]*?</think>", "", content, flags=re.IGNORECASE).strip()
-
+def _extract_json_from_text(content: str) -> dict | None:
+    """Strip <think> reasoning blocks then pull the JSON object out of the text."""
+    content = re.sub(r"<think>[\s\S]*?</think>", "", content or "", flags=re.IGNORECASE).strip()
     try:
-        match = re.search(r'\{[\s\S]*\}', content)
+        match = re.search(r"\{[\s\S]*\}", content)
         if match:
             return json.loads(match.group(0))
         return json.loads(content)
     except json.JSONDecodeError as e:
         logger.error("AI JSON parse error: %s | Content: %s", e, content[:200])
         return None
+
+
+def _responses_text(data: dict) -> str:
+    """Pull the assistant text out of an OpenAI Responses-API payload."""
+    if data.get("output_text"):
+        return data["output_text"]
+    parts: list[str] = []
+    for item in data.get("output", []):
+        for c in item.get("content", []) if isinstance(item, dict) else []:
+            if c.get("type") in ("output_text", "text") and c.get("text"):
+                parts.append(c["text"])
+    return "\n".join(parts)
+
+
+def _call_responses_api(prompt: str, system_prompt: str, model: str | None = None) -> dict | None:
+    """Call an OpenAI Responses-API backend (freemodel.dev) — system→instructions,
+    user→input. Reasoning models need output-token headroom."""
+    try:
+        response = requests.post(
+            f"{OPENAI_BASE_URL.rstrip('/')}/responses",
+            headers={
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": model or DEFAULT_MODEL,
+                "instructions": system_prompt,
+                "input": prompt,
+                "store": False,
+                "max_output_tokens": int(os.getenv("FINSCRAPE_AI_MAX_TOKENS", "3000")),
+                "reasoning": {"effort": os.getenv("FINSCRAPE_AI_EFFORT", "low")},
+            },
+            timeout=int(os.getenv("FINSCRAPE_AI_TIMEOUT", "90")),
+        )
+        if response.status_code != 200:
+            logger.error("AI responses HTTP %d: %s", response.status_code, response.text[:200])
+            return None
+        return _extract_json_from_text(_responses_text(response.json()))
+    except Exception as e:
+        logger.error("AI responses error: %s", e)
+        return None
+
+
+def _parse_response(data: dict) -> dict | None:
+    """Extract + parse JSON from a chat/completions response (Qwen <think> aware)."""
+    if "choices" not in data:
+        logger.error("AI response missing 'choices' key")
+        return None
+    return _extract_json_from_text(data["choices"][0]["message"]["content"])
