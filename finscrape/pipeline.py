@@ -35,6 +35,7 @@ from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
 from finscrape.analysis.nlp import FinancialNLP
 from finscrape.storage import StateManager
 from finscrape.market_data import get_market_data, calculate_market_boost
+from finscrape.entity_map import resolve_tickers
 from finscrape.models import ScrapedArticle, FinEvent, Verdict
 from finscrape.dashboard import DashboardClient
 from finscrape.agents import AgentCouncil, DEFAULT_AGENTS
@@ -359,11 +360,14 @@ class FinScrapePipeline:
         full_text = article.title + " " + article.text
         nlp_result = self.nlp.analyze(article.title, article.text)
 
-        # Ticker processing — combine AI, NLP, entity index, and regex extraction
+        # Ticker processing — combine AI, NLP, entity index, regex, and sector-map
         ai_tickers = result.get("tickers", [])
         nlp_tickers = nlp_result.tickers
         entity_tickers = self.state.resolve_entity_tickers(full_text)
         regex_tickers = article.raw_tickers
+        # Sector/geopolitics keyword → tickers (Phase 12): rescues world headlines that
+        # name a sector/region but no company, where the LLM left tickers blank.
+        sector_tickers = resolve_tickers(full_text)
 
         # Also extract tickers from affected_entities
         entity_obj_tickers = [
@@ -372,7 +376,14 @@ class FinScrapePipeline:
             if e.get("ticker")
         ]
 
-        all_symbols = set(ai_tickers + nlp_tickers + entity_tickers + regex_tickers + entity_obj_tickers)
+        all_symbols = set(
+            ai_tickers
+            + nlp_tickers
+            + entity_tickers
+            + regex_tickers
+            + entity_obj_tickers
+            + sector_tickers
+        )
         valid_tickers = clean_tickers([
             t for t in all_symbols
             if isinstance(t, str) and 1 < len(t) <= 5 and t.isupper()
@@ -472,13 +483,19 @@ class FinScrapePipeline:
             return event
 
     def _analyze_with_single_ai(self, article: ScrapedArticle) -> dict | None:
-        """Standard single-AI analysis."""
-        prompt = (
-            ANALYSIS_PROMPT
-            .replace("{{title}}", article.title)
-            .replace("{{article_text}}", article.text)
+        """Standard single-AI analysis. Picks a prompt variant (A/B, opt-in) and stamps
+        it into key_metrics so accuracy can be compared per variant."""
+        from finscrape.analysis.prompt_registry import get_prompts, pick_variant
+
+        variant = pick_variant(article.title)
+        system_prompt, analysis_prompt = get_prompts(variant)
+        prompt = analysis_prompt.replace("{{title}}", article.title).replace(
+            "{{article_text}}", article.text
         )
-        return call_ai(prompt, SYSTEM_PROMPT)
+        result = call_ai(prompt, system_prompt)
+        if result is not None:
+            result.setdefault("key_metrics", {})["prompt_variant"] = variant
+        return result
 
     def _analyze_with_council(self, source_name: str, article: ScrapedArticle) -> tuple[dict | None, dict | None]:
         """Multi-agent council analysis. Returns (result_dict, council_verdict_dict)."""

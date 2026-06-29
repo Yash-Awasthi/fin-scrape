@@ -1,0 +1,299 @@
+{
+  "_comment": "Curated WorldFin demo dataset. Timestamps are RELATIVE (days_ago/hour) and resolved to absolute UTC at load time, so the dashboard is full of fresh signal on every launch. lat/lon are baked (no geocode dependency). Events flagged with `accuracy` seed accuracy_outcomes; `correlations` seed the breaking-news/correlation panels. Facts are illustrative, not real market calls.",
+  "events": [
+    {
+      "days_ago": 0, "hour": 8,
+      "subject": "Iran closes the Strait of Hormuz after naval confrontation",
+      "event_type": "geopolitical_event", "verdict": "PULL_OUT", "impact_direction": "negative",
+      "signal_score": -4, "confidence": 0.82, "magnitude": "high", "novelty": "breaking",
+      "sector_impact": "energy, shipping, defense, insurance",
+      "tickers": ["XOM", "CVX", "SHEL", "RTX"], "sources": ["reuters", "ap"],
+      "articles": ["https://example.com/hormuz-closure"],
+      "lat": 26.57, "lon": 56.25,
+      "reasoning": "Closure of the world's most important oil chokepoint halts ~20% of seaborne crude; war-risk premiums spike and tankers reroute around the Arabian peninsula.",
+      "affected_entities": [
+        {"name": "Oil majors", "ticker": "XOM", "role": "primary", "impact": "positive"},
+        {"name": "Shipping lines", "ticker": "", "role": "supplier", "impact": "negative"},
+        {"name": "Defense contractors", "ticker": "RTX", "role": "competitor", "impact": "positive"},
+        {"name": "Marine insurers", "ticker": "", "role": "regulator", "impact": "negative"}
+      ],
+      "second_order_effects": [
+        "War-risk insurance premiums surge for Gulf transits",
+        "European refiners scramble for alternative crude grades",
+        "LNG spot prices rise on rerouting delays"
+      ]
+    },
+    {
+      "days_ago": 0, "hour": 12,
+      "subject": "Nvidia raises data-center guidance on sovereign-AI demand",
+      "event_type": "guidance", "verdict": "INVEST", "impact_direction": "positive",
+      "signal_score": 4, "confidence": 0.78, "magnitude": "high", "novelty": "notable",
+      "sector_impact": "semiconductors, cloud, power",
+      "tickers": ["NVDA", "TSM", "AVGO"], "sources": ["cnbc", "bloomberg"],
+      "articles": ["https://example.com/nvda-guidance"],
+      "lat": 37.37, "lon": -121.96,
+      "reasoning": "Raised guidance driven by sovereign-AI buildouts; supply-chain pull-through for foundry and networking.",
+      "affected_entities": [
+        {"name": "Nvidia", "ticker": "NVDA", "role": "primary", "impact": "positive"},
+        {"name": "TSMC", "ticker": "TSM", "role": "supplier", "impact": "positive"},
+        {"name": "Broadcom", "ticker": "AVGO", "role": "supplier", "impact": "positive"}
+      ],
+      "second_order_effects": ["Data-center power demand tightens regional grids", "Memory makers see order uplift"]
+    },
+    {
+      "days_ago": 1, "hour": 14,
+      "subject": "Taiwan reports record incursions near strait; chip supply jitters",
+      "event_type": "geopolitical_event", "verdict": "CAUTIOUS", "impact_direction": "negative",
+      "signal_score": -2, "confidence": 0.64, "magnitude": "medium", "novelty": "notable",
+      "sector_impact": "semiconductors, defense",
+      "tickers": ["TSM", "INTC"], "sources": ["reuters", "afp"],
+      "articles": ["https://example.com/taiwan-strait"],
+      "lat": 24.0, "lon": 121.0,
+      "reasoning": "Escalation risk around the world's leading-edge foundry hub raises a tail risk for global chip supply.",
+      "affected_entities": [
+        {"name": "TSMC", "ticker": "TSM", "role": "primary", "impact": "negative"},
+        {"name": "Intel", "ticker": "INTC", "role": "competitor", "impact": "positive"}
+      ],
+      "second_order_effects": ["Buyers accelerate inventory builds", "Foundry diversification to US/Japan accelerates"],
+      "accuracy": {"price_move_pct": -1.8, "correct": true}
+    },
+    {
+      "days_ago": 1, "hour": 9,
+      "subject": "Apple beats on services, guides revenue above consensus",
+      "event_type": "earnings", "verdict": "INVEST", "impact_direction": "positive",
+      "signal_score": 3, "confidence": 0.75, "magnitude": "medium", "novelty": "standard",
+      "sector_impact": "consumer tech",
+      "tickers": ["AAPL"], "sources": ["bloomberg", "cnbc"],
+      "articles": ["https://example.com/aapl-earnings"],
+      "lat": 37.33, "lon": -122.03,
+      "reasoning": "Services margin expansion offsets hardware softness; buyback raised.",
+      "affected_entities": [
+        {"name": "Apple", "ticker": "AAPL", "role": "primary", "impact": "positive"},
+        {"name": "Suppliers", "ticker": "", "role": "supplier", "impact": "positive"}
+      ],
+      "second_order_effects": ["App Store ecosystem strength supports developers"],
+      "accuracy": {"price_move_pct": 2.6, "correct": true}
+    },
+    {
+      "days_ago": 2, "hour": 18,
+      "subject": "Federal Reserve holds rates, signals one cut later this year",
+      "event_type": "macro", "verdict": "OBSERVE", "impact_direction": "neutral",
+      "signal_score": 1, "confidence": 0.6, "magnitude": "high", "novelty": "notable",
+      "sector_impact": "rates, financials, housing",
+      "tickers": ["JPM", "XLF"], "sources": ["reuters", "ap"],
+      "articles": ["https://example.com/fed-hold"],
+      "lat": 38.9, "lon": -77.04,
+      "reasoning": "Dovish hold; dot-plot trims cuts. Mixed read for banks (NIM vs credit).",
+      "affected_entities": [
+        {"name": "Money-center banks", "ticker": "JPM", "role": "primary", "impact": "neutral"},
+        {"name": "Homebuilders", "ticker": "", "role": "customer", "impact": "positive"}
+      ],
+      "second_order_effects": ["Mortgage rates ease modestly", "USD softens vs majors"]
+    },
+    {
+      "days_ago": 2, "hour": 11,
+      "subject": "Red Sea drone attack disrupts container shipping lane",
+      "event_type": "geopolitical_event", "verdict": "PULL_OUT", "impact_direction": "negative",
+      "signal_score": -3, "confidence": 0.7, "magnitude": "high", "novelty": "breaking",
+      "sector_impact": "shipping, retail, energy",
+      "tickers": ["MAERSK", "FDX"], "sources": ["reuters", "afp"],
+      "articles": ["https://example.com/red-sea"],
+      "lat": 15.5, "lon": 41.5,
+      "reasoning": "Carriers divert around the Cape, adding ~10 days and freight cost; retail import timing at risk.",
+      "affected_entities": [
+        {"name": "Container lines", "ticker": "", "role": "primary", "impact": "negative"},
+        {"name": "Retailers", "ticker": "", "role": "customer", "impact": "negative"},
+        {"name": "Bunker fuel suppliers", "ticker": "", "role": "supplier", "impact": "positive"}
+      ],
+      "second_order_effects": ["Container spot rates spike", "Holiday retail inventory risk rises"],
+      "accuracy": {"price_move_pct": -2.4, "correct": true}
+    },
+    {
+      "days_ago": 3, "hour": 13,
+      "subject": "Bitcoin surges past prior range on spot-ETF inflows",
+      "event_type": "market_movement", "verdict": "INVEST", "impact_direction": "positive",
+      "signal_score": 3, "confidence": 0.66, "magnitude": "medium", "novelty": "notable",
+      "sector_impact": "crypto, exchanges, miners",
+      "tickers": ["COIN", "MSTR"], "sources": ["coindesk", "bloomberg"],
+      "articles": ["https://example.com/btc-surge"],
+      "lat": 40.71, "lon": -74.01,
+      "reasoning": "Record ETF inflows drive a breakout; reflexive strength in exchanges and treasuries holders.",
+      "affected_entities": [
+        {"name": "Coinbase", "ticker": "COIN", "role": "primary", "impact": "positive"},
+        {"name": "MicroStrategy", "ticker": "MSTR", "role": "customer", "impact": "positive"}
+      ],
+      "second_order_effects": ["Miner economics improve", "Altcoin beta rallies"],
+      "accuracy": {"price_move_pct": 4.1, "correct": true}
+    },
+    {
+      "days_ago": 3, "hour": 16,
+      "subject": "Tesla recalls vehicles over software defect; deliveries cut",
+      "event_type": "regulatory", "verdict": "PULL_OUT", "impact_direction": "negative",
+      "signal_score": -3, "confidence": 0.72, "magnitude": "medium", "novelty": "standard",
+      "sector_impact": "autos, EV supply",
+      "tickers": ["TSLA"], "sources": ["reuters", "cnbc"],
+      "articles": ["https://example.com/tsla-recall"],
+      "lat": 30.22, "lon": -97.62,
+      "reasoning": "Recall plus a delivery cut pressures the quarter; margin and demand questions resurface.",
+      "affected_entities": [
+        {"name": "Tesla", "ticker": "TSLA", "role": "primary", "impact": "negative"},
+        {"name": "Battery suppliers", "ticker": "", "role": "supplier", "impact": "negative"}
+      ],
+      "second_order_effects": ["EV competitors gain share narrative"],
+      "accuracy": {"price_move_pct": 1.2, "correct": false}
+    },
+    {
+      "days_ago": 4, "hour": 10,
+      "subject": "Major earthquake strikes off the coast of Japan",
+      "event_type": "geopolitical_event", "verdict": "CAUTIOUS", "impact_direction": "negative",
+      "signal_score": -2, "confidence": 0.58, "magnitude": "high", "novelty": "breaking",
+      "sector_impact": "insurance, autos, electronics",
+      "tickers": ["TM", "SONY"], "sources": ["usgs", "nhk"],
+      "articles": ["https://example.com/japan-quake"],
+      "lat": 38.3, "lon": 142.4,
+      "reasoning": "Supply-chain and reinsurance exposure for auto and electronics manufacturing clusters.",
+      "affected_entities": [
+        {"name": "Toyota", "ticker": "TM", "role": "primary", "impact": "negative"},
+        {"name": "Reinsurers", "ticker": "", "role": "regulator", "impact": "negative"}
+      ],
+      "second_order_effects": ["Component lead times extend", "Catastrophe-bond spreads widen"],
+      "accuracy": {"price_move_pct": -0.6, "correct": null}
+    },
+    {
+      "days_ago": 4, "hour": 15,
+      "subject": "OpenAI-scale data-center deal lifts power and cooling names",
+      "event_type": "product_launch", "verdict": "INVEST", "impact_direction": "positive",
+      "signal_score": 3, "confidence": 0.69, "magnitude": "medium", "novelty": "notable",
+      "sector_impact": "power, industrials, semis",
+      "tickers": ["VRT", "ETN"], "sources": ["bloomberg", "theinformation"],
+      "articles": ["https://example.com/ai-datacenter"],
+      "lat": 45.5, "lon": -122.6,
+      "reasoning": "Hyperscale capex pull-through for power distribution and thermal management vendors.",
+      "affected_entities": [
+        {"name": "Vertiv", "ticker": "VRT", "role": "primary", "impact": "positive"},
+        {"name": "Eaton", "ticker": "ETN", "role": "competitor", "impact": "positive"}
+      ],
+      "second_order_effects": ["Grid-interconnect queues lengthen"],
+      "accuracy": {"price_move_pct": 3.3, "correct": true}
+    },
+    {
+      "days_ago": 5, "hour": 9,
+      "subject": "EU opens antitrust probe into big-tech ad practices",
+      "event_type": "regulatory", "verdict": "CAUTIOUS", "impact_direction": "negative",
+      "signal_score": -2, "confidence": 0.61, "magnitude": "medium", "novelty": "standard",
+      "sector_impact": "internet, advertising",
+      "tickers": ["GOOGL", "META"], "sources": ["reuters", "ft"],
+      "articles": ["https://example.com/eu-antitrust"],
+      "lat": 50.85, "lon": 4.35,
+      "reasoning": "Regulatory overhang on ad-tech monetization; remedy risk over multi-year horizon.",
+      "affected_entities": [
+        {"name": "Alphabet", "ticker": "GOOGL", "role": "primary", "impact": "negative"},
+        {"name": "Meta", "ticker": "META", "role": "competitor", "impact": "negative"}
+      ],
+      "second_order_effects": ["Ad-budget reallocation to alternative platforms"],
+      "accuracy": {"price_move_pct": -1.5, "correct": true}
+    },
+    {
+      "days_ago": 5, "hour": 17,
+      "subject": "Saudi output cut extension tightens global oil balances",
+      "event_type": "macro", "verdict": "INVEST", "impact_direction": "positive",
+      "signal_score": 2, "confidence": 0.63, "magnitude": "medium", "novelty": "standard",
+      "sector_impact": "energy",
+      "tickers": ["XOM", "OXY"], "sources": ["reuters", "bloomberg"],
+      "articles": ["https://example.com/opec-cut"],
+      "lat": 24.71, "lon": 46.68,
+      "reasoning": "Extended voluntary cuts support crude; favorable for US E&P cash flows.",
+      "affected_entities": [
+        {"name": "ExxonMobil", "ticker": "XOM", "role": "primary", "impact": "positive"},
+        {"name": "Occidental", "ticker": "OXY", "role": "competitor", "impact": "positive"}
+      ],
+      "second_order_effects": ["Gasoline crack spreads widen"],
+      "accuracy": {"price_move_pct": 2.0, "correct": true}
+    },
+    {
+      "days_ago": 6, "hour": 12,
+      "subject": "US jobs report comes in hot; rate-cut bets pared",
+      "event_type": "macro", "verdict": "CAUTIOUS", "impact_direction": "negative",
+      "signal_score": -1, "confidence": 0.55, "magnitude": "medium", "novelty": "standard",
+      "sector_impact": "rates, growth equities",
+      "tickers": ["QQQ", "TLT"], "sources": ["bls", "cnbc"],
+      "articles": ["https://example.com/jobs-report"],
+      "lat": 38.9, "lon": -77.04,
+      "reasoning": "Strong payrolls push yields up; pressure on long-duration growth and bonds.",
+      "affected_entities": [
+        {"name": "Growth equities", "ticker": "QQQ", "role": "primary", "impact": "negative"},
+        {"name": "Long-duration bonds", "ticker": "TLT", "role": "competitor", "impact": "negative"}
+      ],
+      "second_order_effects": ["USD strengthens", "EM assets soften"],
+      "accuracy": {"price_move_pct": -0.9, "correct": null}
+    },
+    {
+      "days_ago": 6, "hour": 8,
+      "subject": "Ethereum upgrade cuts fees; L2 activity jumps",
+      "event_type": "product_launch", "verdict": "OBSERVE", "impact_direction": "positive",
+      "signal_score": 1, "confidence": 0.52, "magnitude": "low", "novelty": "standard",
+      "sector_impact": "crypto infrastructure",
+      "tickers": ["ETH"], "sources": ["coindesk"],
+      "articles": ["https://example.com/eth-upgrade"],
+      "lat": 1.35, "lon": 103.82,
+      "reasoning": "Lower fees expand L2 throughput; modest near-term price effect.",
+      "affected_entities": [
+        {"name": "Ethereum", "ticker": "ETH", "role": "primary", "impact": "positive"}
+      ],
+      "second_order_effects": ["Rollup ecosystems see usage uplift"]
+    },
+    {
+      "days_ago": 2, "hour": 7,
+      "subject": "Pipeline cyberattack briefly halts fuel flows in the southeast",
+      "event_type": "geopolitical_event", "verdict": "CAUTIOUS", "impact_direction": "negative",
+      "signal_score": -2, "confidence": 0.6, "magnitude": "medium", "novelty": "breaking",
+      "sector_impact": "energy infrastructure, cybersecurity",
+      "tickers": ["CRWD", "PANW"], "sources": ["reuters", "wsj"],
+      "articles": ["https://example.com/pipeline-cyber"],
+      "lat": 33.75, "lon": -84.39,
+      "reasoning": "Operational disruption with a tailwind for cybersecurity demand.",
+      "affected_entities": [
+        {"name": "Pipeline operators", "ticker": "", "role": "primary", "impact": "negative"},
+        {"name": "CrowdStrike", "ticker": "CRWD", "role": "competitor", "impact": "positive"},
+        {"name": "Palo Alto Networks", "ticker": "PANW", "role": "competitor", "impact": "positive"}
+      ],
+      "second_order_effects": ["Regional fuel prices tick up", "OT-security budgets accelerate"],
+      "accuracy": {"price_move_pct": 1.7, "correct": true}
+    },
+    {
+      "days_ago": 1, "hour": 20,
+      "subject": "Large-cap pharma reports positive late-stage trial result",
+      "event_type": "earnings", "verdict": "INVEST", "impact_direction": "positive",
+      "signal_score": 3, "confidence": 0.71, "magnitude": "medium", "novelty": "notable",
+      "sector_impact": "pharma, biotech",
+      "tickers": ["LLY", "PFE"], "sources": ["bloomberg", "statnews"],
+      "articles": ["https://example.com/pharma-trial"],
+      "lat": 39.77, "lon": -86.16,
+      "reasoning": "Positive Phase 3 readout expands addressable market; competitor pressure.",
+      "affected_entities": [
+        {"name": "Eli Lilly", "ticker": "LLY", "role": "primary", "impact": "positive"},
+        {"name": "Pfizer", "ticker": "PFE", "role": "competitor", "impact": "negative"}
+      ],
+      "second_order_effects": ["CDMO capacity demand rises"],
+      "accuracy": {"price_move_pct": 3.0, "correct": true}
+    }
+  ],
+  "correlations": [
+    {
+      "signal_type": "convergence", "confidence": 0.84,
+      "payload": {
+        "title": "Hormuz closure corroborated across wire, gov, and intel sources",
+        "source_types": ["wire", "gov", "intel"], "member_count": 5,
+        "lat": 26.57, "lon": 56.25, "window_minutes": 47
+      }
+    },
+    {
+      "signal_type": "triangulation", "confidence": 0.9,
+      "payload": {
+        "title": "Red Sea shipping disruption confirmed by three independent tiers",
+        "source_types": ["wire", "gov", "intel"], "member_count": 4,
+        "lat": 15.5, "lon": 41.5, "window_minutes": 62
+      }
+    }
+  ]
+}

@@ -111,6 +111,32 @@ SCHEMA (follow exactly):
   "temporal_context": "breaking/confirmation/escalation/resolution/rehash"
 }
 
+EXAMPLE (geopolitical headline → resolved tickers; ALWAYS put a real symbol in each
+entity's "ticker" — never leave it blank when a liquid proxy exists):
+HEADLINE: "Iran closes the Strait of Hormuz after naval clash"
+{
+  "relevant": true,
+  "event_type": "geopolitical_event",
+  "subject": "Iran closes Strait of Hormuz",
+  "impact_direction": "negative",
+  "tickers": ["XOM", "CVX", "RTX", "ZIM"],
+  "affected_entities": [
+    {"name": "ExxonMobil", "ticker": "XOM", "role": "primary", "impact": "positive"},
+    {"name": "Chevron", "ticker": "CVX", "role": "primary", "impact": "positive"},
+    {"name": "Raytheon (defense)", "ticker": "RTX", "role": "competitor", "impact": "positive"},
+    {"name": "ZIM shipping", "ticker": "ZIM", "role": "supplier", "impact": "negative"}
+  ],
+  "signal_score": -4, "confidence": 0.8, "magnitude": "high",
+  "novelty": "breaking", "actionability": "high",
+  "reasoning": "Closure of the chief oil chokepoint spikes crude and war-risk premiums.",
+  "sector_impact": "energy",
+  "second_order_effects": ["Tanker rerouting raises freight + insurance costs", "LNG spot prices rise"],
+  "temporal_context": "breaking"
+}
+
+Other mappings to imitate: Taiwan tension → TSM/NVDA/AMD; Red Sea/Suez disruption →
+FDX/UPS/ZIM; OPEC cut → XOM/OXY; major cyberattack → CRWD/PANW.
+
 HEADLINE: {{title}}
 ARTICLE: {{article_text}}
 """

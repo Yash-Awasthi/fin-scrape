@@ -25,3 +25,25 @@ async def accuracy() -> dict:
             for r in rows
         ]
     )
+
+
+@router.get("/api/accuracy/by-variant")
+async def accuracy_by_variant() -> dict:
+    """Hit-rate split by prompt A/B variant (Phase 13). Variant is read from the event's
+    key_metrics; outcomes from variant-less events fall under 'v1'."""
+    rows = await db.pool().fetch(
+        "SELECT a.verdict, a.correct, a.checked_at, "
+        "COALESCE(e.key_metrics->>'prompt_variant', 'v1') AS variant "
+        "FROM accuracy_outcomes a JOIN events e ON a.event_id = e.id "
+        "ORDER BY a.checked_at"
+    )
+    by_variant: dict[str, list[dict]] = {}
+    for r in rows:
+        by_variant.setdefault(r["variant"], []).append(
+            {
+                "verdict": r["verdict"],
+                "correct": r["correct"],
+                "checked_at": r["checked_at"].isoformat() if r["checked_at"] else "",
+            }
+        )
+    return {variant: aggregate(rs) for variant, rs in by_variant.items()}

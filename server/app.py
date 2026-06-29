@@ -7,6 +7,7 @@ a real DB by monkeypatching db.connect.
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from contextlib import asynccontextmanager
 
@@ -14,7 +15,7 @@ from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
-from server import db, queries
+from server import db, pubsub, queries
 from server.middleware import configure_hardening
 from server.obs import install_observability
 from server.routes import accuracy as accuracy_routes
@@ -23,6 +24,9 @@ from server.routes import correlations as correlations_routes
 from server.routes import data as data_routes
 from server.routes import events as events_routes
 from server.routes import health as health_routes
+from server.routes import portfolio as portfolio_routes
+from server.routes import sentiment as sentiment_routes
+from server.routes import telegram as telegram_routes
 from server.schemas import HealthResponse
 from server.settings import get_settings
 from server.ws import hub
@@ -36,9 +40,12 @@ async def lifespan(app: FastAPI):
     p = await db.connect(s.database_url, min_size=s.db_pool_min, max_size=s.db_pool_max)
     if s.run_migrations_on_startup:
         await db.run_migrations(p)
+    # Forward worker-published new_events to this process's WS clients (no-op without Redis).
+    sub_task = asyncio.create_task(pubsub.subscribe_forever(hub.broadcast))
     try:
         yield
     finally:
+        sub_task.cancel()
         await db.disconnect()
 
 
@@ -94,6 +101,9 @@ def create_app() -> FastAPI:
     app.include_router(correlations_routes.router)
     app.include_router(data_routes.router)
     app.include_router(accuracy_routes.router)
+    app.include_router(sentiment_routes.router)
+    app.include_router(portfolio_routes.router)
+    app.include_router(telegram_routes.router)
 
     @app.websocket("/api/ws")
     async def ws(websocket: WebSocket) -> None:

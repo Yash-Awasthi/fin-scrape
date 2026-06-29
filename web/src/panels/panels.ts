@@ -7,6 +7,8 @@ import {
   type CryptoCoin,
   type DateCount,
   type MarketTicker,
+  type Portfolio,
+  type Sentiment,
 } from "../api";
 import { CHANNELS, embedUrl } from "../data/channels";
 import { escapeHtml, fmtPct } from "../util";
@@ -177,6 +179,91 @@ function sparkline(curve: number[]): string {
     })
     .join(" ");
   return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="#16c784" stroke-width="2"/></svg>`;
+}
+
+export class SentimentPanel extends Panel {
+  private ticker = "AAPL";
+  constructor() {
+    super({ id: "sentiment", title: "Social Sentiment", col: 5, row: 10, w: 4, h: 3 });
+  }
+  async load(): Promise<void> {
+    const wrap = document.createElement("div");
+    wrap.className = "senti";
+    wrap.innerHTML =
+      `<form class="senti-form"><input class="senti-tk" value="${escapeHtml(this.ticker)}" maxlength="10" />` +
+      `<button type="submit">Load</button></form><div class="senti-body"><p class="muted">Enter a ticker.</p></div>`;
+    const body = wrap.querySelector<HTMLElement>(".senti-body")!;
+    const input = wrap.querySelector<HTMLInputElement>(".senti-tk")!;
+    wrap.querySelector("form")!.addEventListener("submit", (e) => {
+      e.preventDefault();
+      this.ticker = input.value.toUpperCase().trim() || this.ticker;
+      void this.fetch(body, this.ticker);
+    });
+    this.setContent(wrap);
+    void this.fetch(body, this.ticker);
+  }
+  private async fetch(body: HTMLElement, ticker: string): Promise<void> {
+    body.innerHTML = '<p class="muted">Loading…</p>';
+    try {
+      this.render(body, await api.sentiment(ticker));
+    } catch {
+      body.innerHTML = '<p class="empty">Sentiment unavailable.</p>';
+    }
+  }
+  private render(body: HTMLElement, s: Sentiment): void {
+    if (!s.total_posts) {
+      body.innerHTML = `<p class="empty">No social posts for ${escapeHtml(s.ticker)}.</p>`;
+      return;
+    }
+    const cls = s.sentiment_score >= 0 ? "up" : "down";
+    const posts = s.top_posts
+      .slice(0, 5)
+      .map(
+        (p) =>
+          `<li><a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">${escapeHtml(p.text.slice(0, 90))}</a> <span class="muted">${escapeHtml(p.platform)}</span></li>`,
+      )
+      .join("");
+    body.innerHTML =
+      `<div class="senti-score ${cls}">${s.sentiment_score >= 0 ? "+" : ""}${s.sentiment_score.toFixed(2)}` +
+      ` <span class="muted">${Math.round(s.bullish_pct * 100)}% bullish · ${s.total_posts} posts${s.volume_spike ? " · 🔥 spike" : ""}</span></div>` +
+      `<div class="muted">bull ${s.bullish_count} · bear ${s.bearish_count} · neut ${s.neutral_count} · ${escapeHtml(s.platforms.join(", ") || "—")}</div>` +
+      `<ul class="news">${posts}</ul>`;
+  }
+}
+
+export class PortfolioPanel extends Panel {
+  constructor() {
+    super({ id: "portfolio", title: "Portfolio", col: 9, row: 10, w: 4, h: 3 });
+  }
+  async load(): Promise<void> {
+    try {
+      this.render(await api.portfolio());
+    } catch {
+      this.setContent('<p class="empty">Portfolio unavailable.</p>');
+    }
+  }
+  private render(p: Portfolio): void {
+    const positions = p.positions.length
+      ? p.positions
+          .map(
+            (pos) =>
+              `<tr><td>${escapeHtml(pos.ticker)}</td><td>${pos.shares}</td><td>$${pos.avg_cost}</td></tr>`,
+          )
+          .join("")
+      : '<tr><td colspan="3" class="muted">No positions.</td></tr>';
+    const watch = p.watchlists.length
+      ? p.watchlists
+          .map(
+            (w) =>
+              `<li><b>${escapeHtml(w.name)}</b>: ${escapeHtml((w.tickers || []).join(", ")) || "—"}</li>`,
+          )
+          .join("")
+      : '<li class="muted">No watchlists.</li>';
+    this.setContent(
+      `<table class="feed"><thead><tr><th>Ticker</th><th>Shares</th><th>Cost</th></tr></thead><tbody>${positions}</tbody></table>` +
+        `<ul class="news">${watch}</ul>`,
+    );
+  }
 }
 
 export class LiveTVPanel extends Panel {

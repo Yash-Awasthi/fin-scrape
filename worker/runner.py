@@ -14,11 +14,13 @@ import uuid
 import asyncpg
 
 from finscrape.logging_config import correlation_id
+from finscrape.market_data import get_market_data
 from finscrape.pipeline import FinScrapePipeline
-from server.correlate import NewsItem, analyze_correlations
+from server.correlate import Market, NewsItem, analyze_correlations
 from server.geocode import geocode_event
 from server.ingest import ingest_events
 from server.obs import record_ingest
+from server.pubsub import publish
 from server.settings import get_settings
 from worker.health import (
     finish_scrape_run,
@@ -98,6 +100,16 @@ class Worker:
             await record_source_health(self.pool, name, len(items), status)
             await finish_scrape_run(self.pool, run_id, "ok", result["inserted"])
             record_ingest(name, result["inserted"], result["duplicates"], status)
+            if result["inserted_ids"]:
+                # Push to API WS clients across processes (no-op unless Redis enabled).
+                await publish(
+                    {
+                        "type": "new_events",
+                        "source": name,
+                        "count": result["inserted"],
+                        "events": result["inserted_rows"],
+                    }
+                )
             log.info(
                 "[%s] %d fetched, %d inserted, %d dup",
                 name,
@@ -145,6 +157,27 @@ class Worker:
 
         return await backtest(self.pool, lambda t: None if not t else price_fetcher(t))
 
+    async def _recent_markets(self, lookback_hours: int) -> list[Market]:
+        """Price moves for the most-mentioned recent tickers → feeds detect_market
+        (explained_market_move / silent_divergence). Market fetch is cached + batched
+        (finscrape.market_data) and runs off the event loop."""
+        rows = await self.pool.fetch(
+            "SELECT jsonb_array_elements_text(tickers) AS t, count(*) AS c FROM events "
+            "WHERE timestamp >= now() - ($1 || ' hours')::interval "
+            "AND jsonb_array_length(tickers) > 0 "
+            "GROUP BY t ORDER BY c DESC LIMIT 25",
+            str(lookback_hours),
+        )
+        tickers = [r["t"] for r in rows if r["t"]]
+        if not tickers:
+            return []
+        data = await asyncio.to_thread(get_market_data, tickers)
+        return [
+            Market(symbol=d["ticker"], change=float(d.get("change_percent", 0.0)))
+            for d in data
+            if isinstance(d, dict) and d.get("ticker")
+        ]
+
     async def run_correlations(self, lookback_hours: int = 24) -> int:
         """Cluster recent events + flag corroboration/divergence; persist signals.
         First call seeds the snapshot and emits nothing (Appendix A). Returns count."""
@@ -167,8 +200,12 @@ class Worker:
             )
             for r in rows
         ]
+        markets = await self._recent_markets(lookback_hours)
         signals, snapshot = analyze_correlations(
-            items, prev_snapshot=self._corr_snapshot, seen=self._corr_seen
+            items,
+            markets=markets,
+            prev_snapshot=self._corr_snapshot,
+            seen=self._corr_seen,
         )
         self._corr_snapshot = snapshot
         await persist_correlations(self.pool, signals)
