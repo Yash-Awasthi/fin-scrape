@@ -7,6 +7,7 @@ Flow: scrape → analyze → validate → score → store → alert → track ac
 from __future__ import annotations
 
 import logging
+import os
 import re
 import time
 from datetime import datetime, timezone
@@ -349,8 +350,14 @@ class FinScrapePipeline:
             result, council_verdict = self._analyze_with_single_ai(article), None
 
         if not result:
-            print(f"    [ERROR] AI analysis failed")
-            return None
+            # Zero-cost mode: LLM unavailable / budget-capped → heuristic + entity-map
+            # tickers so ingestion never stalls (opt-in: FINSCRAPE_HEURISTIC_FALLBACK).
+            # The event lands with a heuristic verdict, enrichable on demand (/api/ai/analyze).
+            if os.getenv("FINSCRAPE_HEURISTIC_FALLBACK", "").lower() in ("1", "true", "yes"):
+                result = self._heuristic_only(article)
+            if not result:
+                print(f"    [ERROR] AI analysis failed")
+                return None
 
         if not result.get("relevant", False):
             print(f"    [SKIP] Not market-relevant")
@@ -481,6 +488,36 @@ class FinScrapePipeline:
                 print(f"           Reasoning: {event.reasoning[:80]}...")
             self.state.add_event(event.to_dict())
             return event
+
+    def _heuristic_only(self, article: ScrapedArticle) -> dict | None:
+        """LLM-free analysis (zero-cost mode): heuristic verdict + entity-map/regex tickers,
+        shaped like a call_ai result. Returns None when no tickers resolve (can't place it).
+        Tagged key_metrics.prompt_variant='heuristic' so it's distinguishable + enrichable."""
+        full_text = article.title + " " + article.text
+        symbols = sorted(set(resolve_tickers(full_text) + list(article.raw_tickers or [])))
+        tickers = [t for t in symbols if isinstance(t, str) and 1 < len(t) <= 5 and t.isupper()]
+        if not tickers:
+            return None
+        sentiment, impact = calculate_heuristic_score(full_text, "")
+        mag = round(impact * 5)
+        score = mag if sentiment == "positive" else -mag if sentiment == "negative" else 0
+        return {
+            "relevant": True,
+            "event_type": "other",
+            "subject": article.title[:120],
+            "impact_direction": sentiment if sentiment in ("positive", "negative") else "neutral",
+            "tickers": tickers,
+            "affected_entities": [],
+            "signal_score": int(max(-5, min(5, score))),
+            "confidence": 0.4,
+            "magnitude": "high" if impact >= 0.66 else "low" if impact < 0.33 else "medium",
+            "novelty": "standard",
+            "actionability": "low",
+            "reasoning": "Heuristic analysis (LLM unavailable) — click to enrich with AI.",
+            "key_metrics": {"prompt_variant": "heuristic"},
+            "sector_impact": "",
+            "second_order_effects": [],
+        }
 
     def _analyze_with_single_ai(self, article: ScrapedArticle) -> dict | None:
         """Standard single-AI analysis. Picks a prompt variant (A/B, opt-in) and stamps

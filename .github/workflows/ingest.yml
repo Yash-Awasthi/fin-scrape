@@ -1,0 +1,37 @@
+name: ingest
+
+# Free no-host worker: a scheduled runner does ONE ingest cycle (scrape -> LLM ->
+# ingest -> correlate -> backtest) against Neon, then exits. Replaces an always-on
+# worker process. Unlimited minutes on public repos. Off-peak minutes (:13/:43)
+# reduce GitHub's start-of-hour scheduling delay.
+on:
+  schedule:
+    - cron: "13,43 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      WORLDFIN_DATABASE_URL: ${{ secrets.WORLDFIN_DATABASE_URL }}
+      # Free GPT-5.x via freemodel.dev (OpenAI Responses API). Heuristic fallback (below)
+      # still covers any LLM outage so events always land.
+      OPENAI_BASE_URL: https://api.freemodel.dev
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      FINSCRAPE_WIRE_API: responses
+      FINSCRAPE_MODEL: gpt-5.4-mini
+      FINSCRAPE_HEURISTIC_FALLBACK: "true"
+      WORLDFIN_WORKER_MAX_ARTICLES: "6"
+      WORLDFIN_ENABLE_CORRELATION: "true"
+      FINSCRAPE_MARKET_TTL: "900"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install 3.13
+      - name: Run one ingest cycle
+        run: uv run -p 3.13 --group server python -m worker.main --once

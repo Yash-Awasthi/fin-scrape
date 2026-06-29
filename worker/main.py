@@ -73,5 +73,27 @@ async def main() -> None:
         await db.disconnect()
 
 
+async def run_once() -> None:
+    """One ingestion cycle (every source + correlate + backtest) then exit. Drives the
+    free no-host deploy: a scheduled GitHub Action calls `python -m worker.main --once`
+    against Neon instead of an always-on worker process."""
+    s = get_settings()
+    setup_logging(level=s.log_level, json_format=s.log_json)
+    pool = await db.connect(
+        s.database_url, min_size=s.db_pool_min, max_size=s.db_pool_max
+    )
+    await db.run_migrations(pool)
+    worker = Worker(pool, max_articles=s.worker_max_articles)
+    await worker.run_all_once()  # all sources once + correlate
+    try:
+        wrote = await worker.run_backtest()
+        log.info("one-shot backtest scored %d outcomes", wrote)
+    except Exception as exc:  # pragma: no cover - market data flaky
+        log.warning("one-shot backtest skipped: %s", exc)
+    await db.disconnect()
+
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    import sys
+
+    asyncio.run(run_once() if "--once" in sys.argv else main())

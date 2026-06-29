@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from functools import lru_cache
 
-from pydantic import Field
+from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -66,7 +66,10 @@ class Settings(BaseSettings):
 
     # --- Server ---
     host: str = Field(default="0.0.0.0", validation_alias="WORLDFIN_HOST")
-    port: int = Field(default=8000, validation_alias="WORLDFIN_PORT")
+    # PaaS hosts (Render/Koyeb/Fly) inject $PORT — bind whatever they assign.
+    port: int = Field(
+        default=8000, validation_alias=AliasChoices("WORLDFIN_PORT", "PORT")
+    )
     cors_origins: str = Field(default="*", validation_alias="WORLDFIN_CORS_ORIGINS")
 
     # --- Hardening (Phase 8) ---
