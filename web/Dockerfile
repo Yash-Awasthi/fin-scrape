@@ -2,7 +2,8 @@
 FROM node:22-slim AS build
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm install
+# Reproducible install from the lockfile (fails loudly if they drift).
+RUN npm ci
 COPY . .
 RUN npm run build
 

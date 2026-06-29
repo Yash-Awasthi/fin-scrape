@@ -11,7 +11,7 @@ NEW_DIRS := server worker finscrape/scrapers/world finscrape/ingestors \
 	tests/server tests/test_world_phase2.py tests/test_worker_phase3.py \
 	tests/test_correlate_phase4.py
 
-.PHONY: help up down logs seed demo test lint fmt fmt-check selfcheck
+.PHONY: help up down logs seed demo test lint fmt fmt-check typecheck selfcheck ci web-ci e2e
 
 help: ## Show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | sort | \
@@ -45,5 +45,16 @@ fmt: ## Auto-format new WorldFin code
 fmt-check: ## Check formatting of new WorldFin code (CI gate)
 	$(PY) ruff format --check $(NEW_DIRS)
 
+typecheck: ## Type-check the WorldFin backend (pyright, scoped to server/ + worker/)
+	$(PY) pyright
+
 selfcheck: ## Docker-free Phase 0 checks (settings/schemas/migration SQL)
 	$(PY) python -m tests.server.selfcheck
+
+web-ci: ## Web gates: typecheck + Vitest + build
+	cd web && npm ci && npm run typecheck && npm run test && npm run build
+
+e2e: ## Playwright E2E against the built SPA (REST + WS mocked)
+	cd web && npm ci && npx playwright install chromium && npx playwright test
+
+ci: lint fmt-check typecheck selfcheck test web-ci e2e ## Reproduce the CI pipeline locally

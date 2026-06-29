@@ -52,9 +52,9 @@ async def council(id: int = Query(...)) -> dict:
         raise HTTPException(status_code=404, detail="Event not found")
 
     def run() -> dict:
-        from finscrape.agents.council import AgentCouncil
+        from finscrape.agents import DEFAULT_AGENTS, AgentCouncil
 
-        verdict = AgentCouncil().deliberate(
+        verdict = AgentCouncil(agents=DEFAULT_AGENTS).deliberate(
             event["subject"],
             event.get("reasoning") or event["subject"],
             {"source": (event.get("sources") or [None])[0]},

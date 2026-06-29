@@ -65,6 +65,25 @@ class Settings(BaseSettings):
     port: int = Field(default=8000, validation_alias="WORLDFIN_PORT")
     cors_origins: str = Field(default="*", validation_alias="WORLDFIN_CORS_ORIGINS")
 
+    # --- Hardening (Phase 8) ---
+    # Per-IP sliding-window rate limit. 0 disables (handy in tests).
+    rate_limit_per_min: int = Field(
+        default=120, validation_alias="WORLDFIN_RATE_LIMIT_PER_MIN"
+    )
+    # Add HSTS only when the API is served over TLS (off by default; nginx/dev is http).
+    enable_hsts: bool = Field(default=False, validation_alias="WORLDFIN_ENABLE_HSTS")
+    # Emit weak ETags + honor If-None-Match (304) on GET JSON. On by default.
+    enable_etag: bool = Field(default=True, validation_alias="WORLDFIN_ENABLE_ETAG")
+
+    # --- Observability (Phase 9) ---
+    # Emit one-line JSON logs instead of the human format (set on in containers so
+    # promtail/Loki get structured records). Off by default for readable local dev.
+    log_json: bool = Field(default=False, validation_alias="WORLDFIN_LOG_JSON")
+    log_level: str = Field(default="INFO", validation_alias="WORLDFIN_LOG_LEVEL")
+    # Port the worker exposes its Prometheus /metrics on (the API serves /metrics on
+    # its own HTTP port). 0 disables the worker metrics server.
+    metrics_port: int = Field(default=9100, validation_alias="WORLDFIN_METRICS_PORT")
+
     @property
     def has_llm(self) -> bool:
         """True if any LLM backend is configured (Ollama proxy or OpenRouter BYOK)."""

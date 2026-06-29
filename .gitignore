@@ -31,3 +31,9 @@ env/
 *.egg-info/
 dist/
 build/
+
+# Node / web build + test artifacts
+node_modules/
+web/test-results/
+web/playwright-report/
+web/.playwright/

@@ -15,6 +15,7 @@ import re
 
 import requests
 
+from server.obs import time_llm
 from server.settings import get_settings
 
 log = logging.getLogger("worldfin.ai")
@@ -88,30 +89,35 @@ def _chat(prompt: str) -> str | None:
     """One OpenAI-compatible chat call to whichever backend is configured."""
     s = get_settings()
     if s.openai_base_url:
-        base, key = s.openai_base_url.rstrip("/"), "ollama"
+        base, key, backend = s.openai_base_url.rstrip("/"), "ollama", "ollama"
     elif s.openrouter_api_key:
-        base, key = "https://openrouter.ai/api/v1", s.openrouter_api_key
+        base, key, backend = (
+            "https://openrouter.ai/api/v1",
+            s.openrouter_api_key,
+            "openrouter",
+        )
     else:
         return None
     try:
-        resp = requests.post(
-            f"{base}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {key}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": s.ai_model,
-                "messages": [
-                    {"role": "system", "content": _SYSTEM},
-                    {"role": "user", "content": prompt},
-                ],
-                "temperature": 0.1,
-            },
-            timeout=_TIMEOUT,
-        )
-        resp.raise_for_status()
-        return resp.json()["choices"][0]["message"]["content"]
+        with time_llm(backend):
+            resp = requests.post(
+                f"{base}/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {key}",
+                    "Content-Type": "application/json",
+                },
+                json={
+                    "model": s.ai_model,
+                    "messages": [
+                        {"role": "system", "content": _SYSTEM},
+                        {"role": "user", "content": prompt},
+                    ],
+                    "temperature": 0.1,
+                },
+                timeout=_TIMEOUT,
+            )
+            resp.raise_for_status()
+            return resp.json()["choices"][0]["message"]["content"]
     except (requests.RequestException, KeyError, IndexError, ValueError) as exc:
         log.warning("ai chat failed: %s", exc)
         return None

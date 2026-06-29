@@ -1,22 +1,34 @@
-# WorldFin API image (Phase 0). Multi-stage hardening (non-root, slim) is Phase 10;
-# this is the minimal correct version that boots the FastAPI app.
-FROM python:3.13-slim
-
-WORKDIR /app
-
-# Server deps only — the finscrape brain is importable from the mounted source.
-# Keeping this list explicit (not the full finscrape extras) keeps the image lean.
+# WorldFin API image — multi-stage, non-root, slim (Phase 10).
+# Builder installs deps into a venv; the runtime stage copies only the venv + app,
+# so build tools never ship. Server deps only (not the full finscrape extras) keep
+# the image lean.
+FROM python:3.13-slim AS build
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install --no-cache-dir \
     "fastapi>=0.110" \
     "uvicorn[standard]>=0.29" \
     "asyncpg>=0.29" \
     "pydantic>=2.6" \
     "pydantic-settings>=2.2" \
+    "prometheus-client>=0.20" \
     "requests>=2.31" \
+    "python-dateutil>=2.9" \
     "feedparser>=6.0"
 
+FROM python:3.13-slim
+ENV PATH="/opt/venv/bin:$PATH" \
+    PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1
+COPY --from=build /opt/venv /opt/venv
+
+# Non-root runtime user (uid fixed so volume perms are predictable).
+RUN useradd --create-home --uid 10001 app
+WORKDIR /app
 COPY server/ ./server/
+COPY worker/ ./worker/
 COPY finscrape/ ./finscrape/
+USER app
 
 EXPOSE 8000
 CMD ["python", "-m", "server.main"]

@@ -11,19 +11,22 @@ import asyncio
 import logging
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from prometheus_client import start_http_server
 
+from finscrape.logging_config import setup_logging
 from server import db
 from server.settings import get_settings
 from worker.runner import Worker
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s"
-)
 log = logging.getLogger("worldfin.worker.main")
 
 
 async def main() -> None:
     s = get_settings()
+    setup_logging(level=s.log_level, json_format=s.log_json)
+    if s.metrics_port:
+        start_http_server(s.metrics_port)
+        log.info("worker metrics on :%d/metrics", s.metrics_port)
     pool = await db.connect(
         s.database_url, min_size=s.db_pool_min, max_size=s.db_pool_max
     )

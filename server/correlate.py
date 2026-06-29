@@ -269,7 +269,7 @@ def _build_cluster(members: list[NewsItem]) -> Cluster:
     for m in members:
         if m.lat is not None and m.lon is not None:
             geo_counts[(m.lat, m.lon)] = geo_counts.get((m.lat, m.lon), 0) + 1
-    geo = max(geo_counts, key=geo_counts.get) if geo_counts else (None, None)
+    geo = max(geo_counts, key=lambda k: geo_counts[k]) if geo_counts else (None, None)
     threat = sum(_TIER_WEIGHT.get(m.source_type, 0.3) for m in members)
     return Cluster(
         members=members,

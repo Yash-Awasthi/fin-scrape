@@ -4,34 +4,28 @@ Network calls (CoinGecko, RSS) run in a threadpool with a short in-memory cache 
 they don't block the event loop or hammer upstreams. The RSS proxy is SSRF-guarded:
 it only fetches URLs from the world feed registry (no arbitrary user URLs).
 """
+
 from __future__ import annotations
 
 import asyncio
-import time
 
 import requests
 from fastapi import APIRouter, HTTPException, Query
 
 from finscrape.scrapers.world.feeds import FEEDS, get_feed
-from server import db
+from server import cache, db
+from server.circuit import CircuitBreaker, CircuitOpen
+from server.ssrf import assert_public_url
 
 router = APIRouter()
 
 _HEADERS = {"User-Agent": "finscrape-worldfin/0.1"}
 _TIMEOUT = 15
 
-# tiny TTL cache: key -> (expires_at, value)
-_cache: dict[str, tuple[float, object]] = {}
-
-
-def _cached(key: str, ttl: float, produce):
-    hit = _cache.get(key)
-    now = time.time()
-    if hit and hit[0] > now:
-        return hit[1]
-    value = produce()
-    _cache[key] = (now + ttl, value)
-    return value
+# Per-upstream breakers: a dead host fails fast instead of burning a thread + 15s timeout
+# on every request until its TTL cache entry would refill.
+_crypto_cb = CircuitBreaker("coingecko")
+_rss_cb = CircuitBreaker("rss")
 
 
 # --- crypto (CoinGecko passthrough) ---
@@ -66,9 +60,13 @@ def _fetch_crypto(per_page: int) -> list[dict]:
 async def crypto(limit: int = Query(20, ge=1, le=100)) -> dict:
     try:
         coins = await asyncio.to_thread(
-            lambda: _cached(f"crypto:{limit}", 60, lambda: _fetch_crypto(limit))
+            lambda: cache.get_or_set(
+                f"crypto:{limit}",
+                cache.FAST,
+                lambda: _crypto_cb.call(lambda: _fetch_crypto(limit)),
+            )
         )
-    except requests.RequestException:
+    except (requests.RequestException, CircuitOpen):
         coins = []
     return {"coins": coins}
 
@@ -79,7 +77,15 @@ async def crypto(limit: int = Query(20, ge=1, le=100)) -> dict:
 def _fetch_rss(url: str, limit: int) -> list[dict]:
     import feedparser
 
-    feed = feedparser.parse(url)
+    # SSRF guard: validate before fetch, then re-validate every redirect hop so a
+    # registry host that 302s to a private address is still rejected. We fetch the
+    # bytes ourselves (requests) instead of letting feedparser open the socket.
+    assert_public_url(url)
+    resp = requests.get(url, headers=_HEADERS, timeout=_TIMEOUT, stream=False)
+    for hop in (*resp.history, resp):
+        assert_public_url(hop.url)
+    resp.raise_for_status()
+    feed = feedparser.parse(resp.content)
     items = []
     for e in feed.entries[:limit]:
         items.append(
@@ -93,14 +99,20 @@ def _fetch_rss(url: str, limit: int) -> list[dict]:
 
 
 @router.get("/api/rss-proxy")
-async def rss_proxy(feed: str = Query(...), limit: int = Query(20, ge=1, le=50)) -> dict:
+async def rss_proxy(
+    feed: str = Query(...), limit: int = Query(20, ge=1, le=50)
+) -> dict:
     f = get_feed(feed)
     if f is None:
         # only registry feeds are proxied — blocks arbitrary-URL SSRF
         raise HTTPException(status_code=400, detail="unknown feed key")
     try:
         items = await asyncio.to_thread(
-            lambda: _cached(f"rss:{feed}:{limit}", 120, lambda: _fetch_rss(f.url, limit))
+            lambda: cache.get_or_set(
+                f"rss:{feed}:{limit}",
+                cache.MEDIUM,
+                lambda: _rss_cb.call(lambda: _fetch_rss(f.url, limit)),
+            )
         )
     except Exception:
         items = []
@@ -112,7 +124,8 @@ async def feeds() -> dict:
     """The world feed registry (for the WorldNews panel's source picker)."""
     return {
         "feeds": [
-            {"key": f.key, "name": f.name, "tier": f.tier, "region": f.region} for f in FEEDS
+            {"key": f.key, "name": f.name, "tier": f.tier, "region": f.region}
+            for f in FEEDS
         ]
     }
 
@@ -136,7 +149,11 @@ async def markets(limit: int = Query(20, ge=1, le=100)) -> dict:
     )
     return {
         "tickers": [
-            {"ticker": r["ticker"], "mentions": r["mentions"], "avg_score": round(r["avg_score"], 2)}
+            {
+                "ticker": r["ticker"],
+                "mentions": r["mentions"],
+                "avg_score": round(r["avg_score"], 2),
+            }
             for r in rows
         ]
     }
