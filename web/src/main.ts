@@ -5,7 +5,7 @@ import { Shell } from "./app/shell";
 import { loadVariant, saveVariant, type Variant, VARIANTS } from "./app/variants";
 import { BreakingNewsBanner } from "./components/banner";
 import { SignalModal } from "./components/modal";
-import { GlobeView } from "./globe/globe";
+import type { GlobeView } from "./globe/globe";
 import { PanelLayoutManager } from "./panels/layout";
 import { Panel } from "./panels/panel";
 import {
@@ -64,18 +64,26 @@ shell.bannerSlot.append(banner.el);
 layout.mount(shell.content);
 app.append(modal.el);
 
-const globe = new GlobeView(globePanel.body, (e) => store.select(e));
+// globe.gl (+three.js) is ~1.8MB — load it as its own lazy chunk so the shell and
+// panels paint immediately, then pop the globe in and feed it the current events.
+let globe: GlobeView | null = null;
 function sizeGlobe(): void {
+  if (!globe) return;
   const r = globePanel.body.getBoundingClientRect();
   if (r.width && r.height) globe.resize(r.width, r.height);
 }
 window.addEventListener("resize", sizeGlobe);
+void import("./globe/globe").then(({ GlobeView }) => {
+  globe = new GlobeView(globePanel.body, (e) => store.select(e));
+  sizeGlobe();
+  globe.setEvents(store.get().events);
+});
 
 let lastSelected: number | null = null;
 store.subscribe((s) => {
   shell.setConnection(s.connection);
   feedPanel.update(s.events);
-  globe.setEvents(s.events);
+  globe?.setEvents(s.events);
   correlationPanel.update(s.correlations);
   banner.update(s.correlations);
   if (s.selected && s.selected.id !== lastSelected) {

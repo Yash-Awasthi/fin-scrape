@@ -6,6 +6,7 @@ non-directional (neutral). The pure helpers (verdict_outcome, aggregate) are uni
 `backtest` takes an injectable price_fetcher so it runs offline in tests and against
 finscrape market_data in the worker.
 """
+
 from __future__ import annotations
 
 from collections.abc import Callable

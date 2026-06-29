@@ -9,13 +9,16 @@ from __future__ import annotations
 
 import asyncio
 import logging
+import uuid
 
 import asyncpg
 
+from finscrape.logging_config import correlation_id
 from finscrape.pipeline import FinScrapePipeline
 from server.correlate import NewsItem, analyze_correlations
 from server.geocode import geocode_event
 from server.ingest import ingest_events
+from server.obs import record_ingest
 from server.settings import get_settings
 from worker.health import (
     finish_scrape_run,
@@ -85,6 +88,7 @@ class Worker:
 
     async def run_source(self, name: str) -> dict:
         """Run one source end to end. Returns the ingest result (or zeros on failure)."""
+        correlation_id.set(uuid.uuid4().hex[:16])  # one id per cycle → traceable logs
         run_id = await start_scrape_run(self.pool, name)
         try:
             items = await asyncio.to_thread(self.sources[name])
@@ -93,6 +97,7 @@ class Worker:
             status = "OK" if items else "EMPTY"
             await record_source_health(self.pool, name, len(items), status)
             await finish_scrape_run(self.pool, run_id, "ok", result["inserted"])
+            record_ingest(name, result["inserted"], result["duplicates"], status)
             log.info(
                 "[%s] %d fetched, %d inserted, %d dup",
                 name,
@@ -105,6 +110,7 @@ class Worker:
             log.exception("[%s] cycle failed", name)
             await record_source_health(self.pool, name, 0, "WARN", str(exc))
             await finish_scrape_run(self.pool, run_id, "failed", 0)
+            record_ingest(name, 0, 0, "WARN")
             return {
                 "inserted": 0,
                 "duplicates": 0,

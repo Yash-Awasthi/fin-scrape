@@ -13,10 +13,12 @@ import re
 import json
 import datetime
 from abc import ABC, abstractmethod
-from typing import Optional
+from typing import TYPE_CHECKING, Optional
 
-from finscrape.engine import Fetcher, StealthyFetcher, DynamicFetcher, Response
 from finscrape.models import ScrapedArticle
+
+if TYPE_CHECKING:
+    from finscrape.engine import Response
 
 logger = logging.getLogger(__name__)
 
@@ -53,6 +55,10 @@ class BaseScraper(ABC):
 
         Returns a Response object (extends Selector) with .css() and .xpath().
         """
+        # Engine import is deferred so light consumers (e.g. the API importing
+        # finscrape.scrapers.world.feeds) don't drag in curl_cffi/scrapling.
+        from finscrape.engine import DynamicFetcher, Fetcher, StealthyFetcher
+
         try:
             if dynamic:
                 return DynamicFetcher.fetch(url)

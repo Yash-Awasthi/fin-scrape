@@ -33,7 +33,7 @@ router = APIRouter()
     dependencies=[Depends(require_api_key)],
 )
 async def ingest(
-    payload: dict = Body(...), background: BackgroundTasks = None
+    background: BackgroundTasks, payload: dict = Body(...)
 ) -> IngestResponse:
     raw = payload.get("events")
     if not isinstance(raw, list):
@@ -62,7 +62,7 @@ async def ingest(
         )
         # Background AI expansion of just the NEW events (alert/analyze on insertedIds,
         # never raw input — fixes the re-alert-dupes bug). Non-blocking.
-        if get_settings().has_llm and background is not None:
+        if get_settings().has_llm:
             background.add_task(_background_ai, result["inserted_ids"])
 
     return IngestResponse(
@@ -129,4 +129,4 @@ async def stats() -> DashboardStats:
 
 @router.get("/api/dates", response_model=DatesResponse)
 async def dates() -> DatesResponse:
-    return DatesResponse(dates=await queries.get_dates(db.pool()))
+    return DatesResponse.model_validate({"dates": await queries.get_dates(db.pool())})

@@ -32,6 +32,7 @@ services:
       FINSCRAPE_MODEL: ${FINSCRAPE_MODEL:-auto}
       FINSCRAPE_API_KEY: ${FINSCRAPE_API_KEY:-local-dev-key}
       WORLDFIN_REDIS_URL: ${WORLDFIN_REDIS_URL:-}
+      WORLDFIN_LOG_JSON: ${WORLDFIN_LOG_JSON:-true}
     depends_on:
       postgres:
         condition: service_healthy
@@ -62,6 +63,10 @@ services:
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
       FINSCRAPE_MODEL: ${FINSCRAPE_MODEL:-auto}
       WORLDFIN_WORKER_INTERVAL_MIN: ${WORLDFIN_WORKER_INTERVAL_MIN:-15}
+      WORLDFIN_LOG_JSON: ${WORLDFIN_LOG_JSON:-true}
+      WORLDFIN_METRICS_PORT: ${WORLDFIN_METRICS_PORT:-9100}
+    expose:
+      - "9100"
     depends_on:
       postgres:
         condition: service_healthy

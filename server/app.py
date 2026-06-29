@@ -10,11 +10,13 @@ from __future__ import annotations
 import logging
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
 from server import db, queries
+from server.middleware import configure_hardening
+from server.obs import install_observability
 from server.routes import accuracy as accuracy_routes
 from server.routes import ai as ai_routes
 from server.routes import correlations as correlations_routes
@@ -53,8 +55,14 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
+    configure_hardening(app)
+    # Registered after hardening → outermost: stamps a correlation id on every
+    # request (incl. error paths) and times them. Also mounts /metrics.
+    install_observability(app, stale_after_min=s.source_stale_after_minutes)
+
     @app.get("/health", response_model=HealthResponse)
     async def health() -> HealthResponse:
+        """Liveness: the process is up. Always 200 (degraded if DB is unreachable)."""
         db_ok = True
         try:
             await db.pool().fetchval("SELECT 1")
@@ -67,6 +75,18 @@ def create_app() -> FastAPI:
             llm=s.has_llm,
             sources=[],
         )
+
+    @app.get("/ready")
+    async def ready(response: Response) -> dict:
+        """Readiness: 200 only when the DB pool answers; 503 otherwise so an
+        orchestrator (compose healthcheck / k8s) stops routing to a half-open replica."""
+        try:
+            await db.pool().fetchval("SELECT 1")
+        except Exception as exc:  # pragma: no cover - exercised only on a broken DB
+            log.warning("ready: db check failed: %s", exc)
+            response.status_code = 503
+            return {"ready": False}
+        return {"ready": True}
 
     app.include_router(events_routes.router)
     app.include_router(ai_routes.router)
