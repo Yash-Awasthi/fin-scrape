@@ -40,6 +40,10 @@ class Settings(BaseSettings):
 
     # --- Optional infra ---
     redis_url: str = Field(default="", validation_alias="WORLDFIN_REDIS_URL")
+    # Writable dir for the SQLite-backed portfolio/watchlist store (Phase 13).
+    data_dir: str = Field(default="data", validation_alias="WORLDFIN_DATA_DIR")
+    # Telegram bot token for outbound alerts + the inbound webhook (Phase 13).
+    telegram_bot_token: str = Field(default="", validation_alias="TELEGRAM_BOT_TOKEN")
 
     # --- Feature flags (default off; flip on as phases land) ---
     enable_council: bool = Field(

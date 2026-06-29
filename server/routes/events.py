@@ -14,6 +14,7 @@ from server import db, queries
 from server.ai import analyze_event
 from server.auth import require_api_key
 from server.ingest import ingest_events
+from server.routes.telegram import notify_new_events
 from server.schemas import (
     DashboardStats,
     DatesResponse,
@@ -64,6 +65,9 @@ async def ingest(
         # never raw input — fixes the re-alert-dupes bug). Non-blocking.
         if get_settings().has_llm:
             background.add_task(_background_ai, result["inserted_ids"])
+        # Telegram alerts on the freshly inserted rows (sync fn → threadpool; no-op
+        # without a bot token + subscribers). Alerts on insertedIds, never raw input.
+        background.add_task(notify_new_events, result["inserted_rows"])
 
     return IngestResponse(
         inserted=result["inserted"],

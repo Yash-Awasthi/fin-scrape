@@ -119,6 +119,32 @@ export interface EventQuery {
   dir?: string;
 }
 
+export interface Sentiment {
+  ticker: string;
+  sentiment_score: number;
+  bullish_count: number;
+  bearish_count: number;
+  neutral_count: number;
+  total_posts: number;
+  bullish_pct: number;
+  volume_spike: boolean;
+  platforms: string[];
+  top_posts: { text: string; author: string; platform: string; url: string }[];
+}
+
+export interface Position {
+  ticker: string;
+  shares: number;
+  avg_cost: number;
+  [k: string]: unknown;
+}
+
+export interface Portfolio {
+  positions: Position[];
+  watchlists: { name: string; tickers: string[] }[];
+  summary: Record<string, unknown>;
+}
+
 async function getJSON<T>(path: string): Promise<T> {
   const res = await fetch(path, { headers: { Accept: "application/json" } });
   if (!res.ok) throw new Error(`GET ${path} → ${res.status}`);
@@ -157,6 +183,8 @@ export const api = {
       `/api/rss-proxy${qs({ feed, limit })}`,
     ),
   accuracy: () => getJSON<Accuracy>("/api/accuracy"),
+  sentiment: (ticker: string) => getJSON<Sentiment>(`/api/sentiment${qs({ ticker })}`),
+  portfolio: () => getJSON<Portfolio>("/api/portfolio"),
 };
 
 export const VERDICT_COLOR: Record<string, string> = {

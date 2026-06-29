@@ -9,11 +9,20 @@ export const VARIANTS: Record<Variant, { label: string; panels: string[] }> = {
   },
   finance: {
     label: "Finance",
-    panels: ["feed", "globe", "markets", "correlations", "accuracy", "calendar"],
+    panels: [
+      "feed",
+      "globe",
+      "markets",
+      "correlations",
+      "accuracy",
+      "calendar",
+      "sentiment",
+      "portfolio",
+    ],
   },
   crypto: {
     label: "Crypto",
-    panels: ["feed", "globe", "crypto", "correlations"],
+    panels: ["feed", "globe", "crypto", "correlations", "sentiment"],
   },
 };
 

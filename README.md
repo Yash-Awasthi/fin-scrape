@@ -23,7 +23,23 @@ FinScrape monitors financial news across the web, extracts structured market eve
 - **Streams** signals to a live dashboard with WebSocket updates, date navigation, sorting, and filtering
 - **Alerts** via Telegram bot with configurable filters and portfolio tracking
 
-## Live Dashboard
+## WorldFin dashboard (new)
+
+The next-generation dashboard — a **worldmonitor-style global intelligence** product:
+geopolitics + world news → which tickers/sectors it moves → judged first- and second-order
+impact on a **live globe** → with an **accuracy panel that proves the calls were right**.
+Postgres-backed FastAPI + a vanilla-TS SPA, all dockerized.
+
+```bash
+cp .env.example .env     # defaults work — no API key needed for the seeded demo
+make demo                # build + start the stack, then seed it full of signal
+# → dashboard http://localhost:8080   ·   api docs http://localhost:8000/docs
+```
+
+Full 5-minute walkthrough + cloud-deploy guide: **[`docs/DEMO.md`](docs/DEMO.md)**.
+Plan & living spec: [`PLAN.md`](PLAN.md).
+
+## Live Dashboard (legacy — Cloudflare)
 
 Real-time signal feed deployed on Cloudflare Workers with Durable Objects + SQLite:
 

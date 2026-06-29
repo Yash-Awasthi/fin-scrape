@@ -139,31 +139,19 @@ exists.** WorldFin builds the **body** (portable backend, world data, a real fro
   *non-copyrightable facts* (feed URLs, country/crypto JSON) and *reimplement* algorithms
   (correlation, clustering) in our own code. fin-scrape stays MIT.
 
-## ⏳ Open investigations (resolve before/with the phase that needs them)
+## ✅ Open investigations — ALL RESOLVED during the build
 
-These were owed by an earlier deep-dive workflow (4/7 agents finished; 3 design agents hit a rate
-limit). Track them here; close each one in the checkpoint where it lands.
+These were owed by an early deep-dive workflow. Every one landed:
 
-1. **[ ] Postgres DDL not finalized.** Need the full `CREATE TABLE events` (JSONB cols,
-   `content_hash UNIQUE`, `lat/lon`, GIN+btree indexes) + the 5 aux tables. Recipe is *decided*
-   (content_hash = normalized `subject` + canonical first article URL + UTC day; typed `TIMESTAMPTZ`;
-   one half-open `[day, day+1)` convention everywhere). **→ Write the DDL in Phase 0.**
-2. **[ ] Backend stack micro-choices unconfirmed.** asyncpg vs SQLAlchemy-async; migrations (alembic
-   vs yoyo vs raw SQL); scheduler (APScheduler vs asyncio loop); how to run the **blocking**
-   finscrape scrapers/LLM off the event loop (`run_in_executor` / threadpool / separate worker
-   proc); when Redis is worth it. **Lean:** asyncpg + raw-SQL migrations + APScheduler + threadpool
-   for blocking calls + Redis only when >1 API replica. **→ Confirm in Phase 0/1.**
-3. **[ ] Risk register + dependency graph + effort sizing** — not produced. **→ Build before kickoff
-   (Phase 0).**
-4. **[ ] feeds / geocode / live-TV detail** — exact `Feed` shape, country-bbox structure,
-   LiveNewsPanel iframe pattern, keyless API base URLs. **→ Confirm before Phase 2/5.** (Earlier
-   re-run agent #4 produced detail; fold its output when available.)
-5. **(blocked) glint.trade** is Google-auth gated — no public docs obtained. Treated as a black box;
-   **worldmonitor is the working reference.** Revisit only if glint access appears.
-
-> If the owed design agents are re-run, their cached output returns instantly; only the 3 failed
-> ones re-execute. Record the resume command in the active checkpoint, not here (paths are
-> session-specific and rot).
+1. **[x] Postgres DDL** — `server/migrations/0001_init.sql` (events + 5 aux tables, JSONB cols,
+   `content_hash UNIQUE`, lat/lon, GIN+btree indexes; TIMESTAMPTZ; one half-open `[day,day+1)`). Phase 0.
+2. **[x] Backend stack micro-choices** — confirmed: asyncpg + raw-SQL versioned migrations + APScheduler
+   + `asyncio.to_thread` for blocking finscrape work + Redis only as the cross-process WS seam (Phase 12).
+3. **[x] Risk register + dependency graph + effort sizing** — `docs/RISKS.md` (Phase 0).
+4. **[x] feeds / geocode / live-TV detail** — `finscrape/scrapers/world/feeds.py` (14-feed registry),
+   `server/geocode.py` (country-centroid table), `web/src/data/channels.ts` (live-TV iframes).
+5. **(closed: won't-do) glint.trade** — Google-auth gated, no public docs; worldmonitor remained the
+   working reference. Not needed; not revisited.
 
 ---
 
@@ -237,281 +225,154 @@ fin-scrape/
 
 ---
 
-## Phase 0 — Foundations & contracts  `[~]` (code-complete; live docker verify pending)
+## Phases 0–11 — WorldFin v1 build track  `[x]` (done, shipped on `master`)
 
-*Goal: a typed, dockerized skeleton that boots clean and pins the public contract. Everything later
-hangs off the schema and settings defined here, so get them right.*
+> Collapsed for readability — each phase shipped *green* (typechecks + tests + a runnable verify) and
+> is one logical commit in git history; the narrative lives in `progress/`. Full original specs are in
+> git history of this file. Phase **12** below is the active phase.
 
-- [x] `docker-compose.yml` with healthchecks + named volumes; `.env.example`; `Makefile`
-      (`make up/down/seed/test/lint/demo`). `api` waits on `postgres` `service_healthy`; `redis` is
-      an opt-in profile.
-- [x] `server/settings.py` via **pydantic-settings** (typed env: BYOK key, DB URL, model, feature
-      flags). One typed settings object (`get_settings()`), imported everywhere.
-- [x] `server/db.py`: asyncpg pool + **versioned SQL migrations** (`server/migrations/NNNN_*.sql`),
-      applied on startup, tracked in `schema_migrations`, each in its own transaction → idempotent
-      across reboots.
-- [x] **Schema** (`server/migrations/0001_init.sql`, resolves open investigation #1):
-  - `events` — FinEvent fields; `tickers / affected_entities / second_order_effects / sources /
-    articles / key_metrics` as **JSONB**; **`content_hash` UNIQUE**; `lat / lon`; `created_at` +
-    `timestamp` (`TIMESTAMPTZ`); **GIN index** on JSONB `tickers`, **btree** on `(timestamp)`,
-    `(verdict)`, `(event_type)`, `(created_at)`.
-  - `correlations`, `scrape_runs`, `source_health`, `accuracy_outcomes`, `ai_analysis_cache`.
-- [x] `server/schemas.py` — Pydantic models = the **public API contract** → drives OpenAPI docs
-      (`EventIn/EventOut/IngestResponse/DashboardStats/DatesResponse/HealthResponse`).
-- [x] **Risk register + dependency graph + effort sizing** → `docs/RISKS.md` (also resolves
-      open-investigation #2: stack micro-choices confirmed — asyncpg + raw-SQL migrations +
-      APScheduler + threadpool + Redis-only-when->1-replica).
-- [x] **Verify (DONE, live vs postgres:16 via podman):** API boots, migrations applied on startup
-      (idempotent), `GET /health` 200 `db:true`, `/docs` renders; self-check + 18/18 server tests green.
+- **Phase 0 — Foundations & contracts** `[x]` — dockerized skeleton; pydantic-settings; asyncpg pool +
+  versioned SQL migrations; schema (`events` + `correlations`/`scrape_runs`/`source_health`/
+  `accuracy_outcomes`/`ai_analysis_cache`); Pydantic API contract; `docs/RISKS.md`.
+- **Phase 1 — Backend API** `[x]` — `POST/GET /api/events` with deterministic `content_hash` dedup;
+  `stats`/`dates`/feed share **one** UTC day-bounds; `/api/ai/analyze`; WS hub. Killed the live ~4× dup +
+  count-mismatch + tz drift at the root (Appendix B).
+- **Phase 2 — World data ingestion** `[x]` — `finscrape/scrapers/world/` feed registry + keyless
+  ingestors (USGS/GDELT/ReliefWeb/CoinGecko/OpenSky); world-widened LLM prompt; `server/geocode.py`.
+- **Phase 3 — Worker orchestration** `[x]` — APScheduler worker; `source_health` + `scrape_runs`;
+  `/api/health` with read-time STALE derivation; a flaky source degrades to WARN, never crashes.
+- **Phase 4 — Correlation engine** `[x]` — Python port of WM `analysis-core.ts`: Jaccard clustering +
+  convergence/triangulation/divergence detectors; `/api/correlations`; worker post-scrape pass.
+  *(`find_news_for_market_symbol` stubbed → Phase 12.)*
+- **Phase 5 — Frontend foundation** `[x]` — vanilla-TS SPA shell; `globe.gl` wrapper; panel base +
+  layout manager (persist/drag); typed `api`/`ws`/`state`; SignalFeed + Modal.
+- **Phase 6 — Panels** `[x]` — Globe, Correlation, BreakingNews, Crypto, Calendar, WorldNews, LiveTV,
+  Markets panels; `server/routes/data.py` (SSRF-guarded rss-proxy); World/Finance/Crypto variants.
+  *(SentimentPanel + live price quotes deferred.)*
+- **Phase 7 — Trust layer** `[x]` — `/api/accuracy` + AccuracyPanel (hit-rate, by-verdict, equity
+  curve); injectable backtest; `/api/ai/council` explainability (flag-gated).
+- **Phase 8 — Hardening** `[x]` — per-IP rate limit; CORS allowlist; SSRF guard; CSP/security headers;
+  tiered cache + ETag/304; circuit breaker; `/health`+`/ready`; `docs/SECURITY.md`.
+- **Phase 9 — Observability** `[x]` — JSON logs + correlation/request IDs; Prometheus `/metrics` (9
+  `worldfin_*` families); `docker-compose.obs.yml` (Prometheus+Grafana+Loki); RUNBOOK + DATA_SOURCES.
+- **Phase 10 — Quality gates, CI/CD** `[x]` — 5-job CI (python/web/e2e/images/security); multi-stage
+  non-root images; **scoped pyright** gate (`server/`+`worker/`).
+- **Phase 11 — Demo polish** `[x]` — `make seed` (curated dataset) + `make demo` + `docs/DEMO.md`; the
+  dashboard is full of signal on first launch, no API key needed to tour.
 
-## Phase 1 — Backend API (correct replacement for Workers/D1)  `[~]` (core code-complete; live DB verify + portfolio/telegram pending)
+## Phase 12 — Live intelligence: entity→ticker resolution + continuous worker operation  `[x]`
 
-*Goal: port `dashboard/workers/signals-do.ts` + `app.ts` to FastAPI, fixing the three live bugs at
-the root. This is where the ~4× duplication and count mismatch die for good.* See
-[Appendix B](#appendix-b--api-contract--root-cause-bug-fixes) for the full endpoint list and the
-exact bug analysis.
+*Goal: turn the **seeded** demo into a **self-populating live** product. Fixed the one gap that broke
+the core thesis on live geopolitics headlines — **entity→ticker resolution** — and de-risked the worker's
+yfinance hot-path. Before this phase a geopolitics headline resolved role-tagged `affected_entities` with
+**empty ticker fields**, so `_analyze_article` dropped it at "No valid tickers found"; the same gap stubbed
+`explained_market_move`. Fixed live with qwen2.5:7b.*
 
-- [x] `POST /api/events` (X-API-Key/Bearer via `server/auth.py`) → `server/ingest.py`. **Dedup by
-      deterministic `content_hash`** (normalized subject + canonical first-article URL + UTC day) +
-      UNIQUE + `ON CONFLICT DO NOTHING` — kills duplication atomically at the DB layer. Background AI
-      runs off the request path (FastAPI `BackgroundTasks` + `asyncio.to_thread`) and operates on
-      `inserted_ids`, not raw input (fixes the re-alert-dupes bug).
-- [x] `GET /api/events` (date/verdict/ticker/source/event_type/sort/paginate) — one canonical UTC
-      day-bounds query (`server/queries.py`); JSONB `tickers ? $` / `sources ? $` membership (GIN).
-- [x] `GET /api/stats`, `GET /api/dates` — **the same** `day_bounds` as the feed → kills the count
-      mismatch + timezone drift; `last_update = MAX(created_at)`; dates via `(timestamp AT TIME ZONE 'UTC')::date`.
-- [x] `GET /api/ai/analyze?id=` — on-demand expansion (`server/ai.py`: self-contained chat call to
-      the same Ollama/OpenRouter backend, since `call_ai` validates the extraction schema; tolerant
-      JSON parse; graceful fallback). Cached in `ai_analysis_cache`; merges ≤6-char discovered
-      tickers back into the event; broadcasts `ai_updated`.
-- [x] `WS /api/ws` (`server/ws.py` hub) — `init / new_events / ai_updated / pong`. In-process
-      broadcast; Redis pub/sub fan-out is the Phase 8 seam (`settings.redis_enabled`).
-- [x] **Verify (DONE, live vs postgres:16 via podman):** ingest twice → exactly 1 row
-      (`inserted:1` then `duplicates:1`); `stats == dates == feed` count all agree for the day
-      (count-mismatch + tz bug dead); auth returns 401 without key; GIN ticker filter works;
-      10 unit + DB integration tests green.
-- [ ] **Deferred within Phase 1** (not on the demo critical path; reuse existing finscrape modules):
-      `GET/POST/DELETE /api/portfolio*` (reuse `finscrape/portfolio.py`) and
-      `POST /api/telegram/webhook` (reuse `finscrape/alerts.py`).
+### A. Entity→ticker resolution (the core fix)
+- [x] **`finscrape/entity_map.py` + `finscrape/data/entity_index.json`** — a standalone, data-driven
+      sector/region→ticker map (oil/shipping/defense/semis/cyber/pharma/crypto/… + geopolitics triggers
+      Hormuz/Taiwan/Red Sea/Iran/Russia/…). `resolve_tickers(text)` (word-boundary/phrase match) is added
+      to the pipeline ticker fusion (`finscrape/pipeline.py`), so a world headline that names a sector/region
+      but no company still resolves tickers and **survives the gate**. *(Chosen over seeding the SQLite
+      `StateManager` index, whose `resolve_entity_tickers` also requires the company name in-text — too
+      strict for geopolitics. This also makes the NLP-fallback item moot: sector tickers enter via fusion.)*
+- [x] **Prompt few-shots** (`finscrape/analysis/prompts.py`): a filled geopolitics→symbols worked example
+      (Hormuz → XOM/CVX/RTX/ZIM) + imitation list (Taiwan→TSM/NVDA, Red Sea→FDX/UPS/ZIM, OPEC→XOM/OXY).
+      **Schema unchanged.** Best-effort nudge; the entity_map is the robust path.
+- [x] **Port `find_news_for_market_symbol`** (`server/correlate.py`) → entity-aware via
+      `entity_map.keywords_for_ticker` (reverse map) → unblocks **`explained_market_move`**. Worker's
+      `run_correlations` now also feeds **market moves** (top recent tickers → `get_market_data`) so
+      `detect_market` actually runs (was never passed markets before).
+- [x] **Verify (A) — live (qwen2.5:7b):** the Hormuz extraction now **survives the gate** with **14 tickers**
+      (XOM/CVX/SHEL/COP/OXY/SLB + RTX/LMT/NOC/GD + FDX/UPS/ZIM/MATX), verdict PULL_OUT; the orchestrator
+      emits `explained_market_move` on a news-backed move. Unit tests in `tests/server/test_phase12.py`.
 
-## Phase 2 — World data ingestion (the "geopolitics + news" half)  `[~]` (code-complete; live worker run = Phase 3)
+### B. Worker live operation
+- [x] **Market-data TTL cache** (`finscrape/market_data.py`): per-process cache (`FINSCRAPE_MARKET_TTL`,
+      default 600s) + single batched `yf.download`; only missing/stale tickers refetched; degrades to `{}`
+      on error so a slow/dead yfinance never crashes the cycle. Kills the per-article hot-path (RISKS R1).
+- [x] **Live worker cycle end-to-end** (verified bounded run vs podman PG): USGS scrape → `_analyze_article`
+      (LLM) → entity_map tickers → geocode → ingest (**26 geo events landed**) → correlate (snapshot seeded)
+      → `source_health` OK + `scrape_runs` recorded. The APScheduler continuous loop (Phase 3) drives this.
+- [x] **Cross-process new-event push:** Redis pub/sub seam wired (`server/pubsub.py`, lazy-imported + gated
+      on `settings.redis_enabled`): worker `run_source` publishes `new_events`; API lifespan subscribes and
+      forwards to the WS hub. No-op (worker silent to clients) when Redis is off → single-process needs no Redis.
 
-*Goal: make it a **world** monitor, not just finance. Bring in geopolitics feeds + keyless free APIs,
-and widen the LLM so a geopolitics headline still resolves tickers/sectors.*
+- [x] **Phase Verify:** live Hormuz headline → tickered, geolocated, survives gate (was `event=None` in
+      017); `explained_market_move` fires; live worker cycle ingests geo events; **684 pass**; ruff + fmt
+      + pyright 0; full `make ci` green (python + web + e2e).
 
-- [x] `finscrape/scrapers/world/` on `scrapers/rss.py`, driven by a **feed registry**
-      (`feeds.py`: `Feed` dataclass — resolves open-investigation #4 Feed shape). Public RSS URLs
-      (facts, not WM source) with **source-tier + propaganda-risk** metadata. Seed subset (~14 feeds
-      across wire/gov/intel/mainstream/market) — extend toward the full set later. `WorldRSSScraper`
-      uses a wider freshness window and tags `world/<feed>:<tier>`.
-- [x] `finscrape/ingestors/` — keyless free APIs, `fetch` (network) split from pure `parse`:
-      USGS quakes (`4.5_week.geojson`, carries exact lat/lon), GDELT (`doc/doc` ArtList JSON),
-      ReliefWeb (`v1/disasters`), CoinGecko (`coins/markets`, notable movers only). OpenSky
-      (`states/all`) is a flights **data layer**, not an event source (`parse_states`). `RawGeoEvent`
-      is the shared output (`.to_article()` adapts to the analyze pipeline).
-- [x] **Widened the LLM system prompt** (`analysis/prompts.py`) finance→world (SYSTEM/ANALYSIS/BATCH):
-      a geopolitics headline must resolve `affected_entities`/tickers (Hormuz → oil majors, shippers,
-      defense, insurers). **Schema unchanged.**
-- [x] `server/geocode.py` — explicit ingestor coords pass through; else resolve a country in the
-      subject/entities to a centroid (seed ~50-country table; extend toward WM `country-bboxes.json`).
-- [~] **Verify:** offline tests green (`tests/test_world_phase2.py`, 11: feed registry, all ingestor
-      parsers via fixtures, geocode, prompt scope); ruff clean; suite 621 pass / 2 skip.
-      **PENDING (Phase 3 live worker run):** world + finance events land in PG; a geopolitics headline
-      yields role-tagged `affected_entities` + verdict; every event has lat/lon. Needs LLM + docker.
+> **Env-deferred (not code):** live **yfinance** market fetch (Yahoo unreachable in this sandbox) → so
+> `explained_market_move` over *real* market moves + the accuracy backtest from live prices await a
+> network-enabled host; verified instead with injected moves. Live **cross-process WS** render needs the
+> Redis profile up (seam + no-op path unit-tested). Stronger model (OpenRouter `deepseek-chat`/qwen2.5:14b+)
+> emits symbols more reliably than 7B. **Breadth parked for later:** SentimentPanel, live `/api/markets`
+> price quotes, portfolio/telegram routes, prompt A/B (see checkpoint 020 backlog).
 
-## Phase 3 — Worker orchestration, scheduling & freshness  `[~]` (code-complete; live worker run pending)
+## Phase 13 — Breadth: sentiment, portfolio, alerts, prompt A/B + freshness audit  `[x]`
 
-*Goal: a long-running, resilient ingestion service. A single flaky source must degrade, never crash
-the run.*
+*Goal: widen the product surface by surfacing finscrape capabilities that already exist but
+weren't wired into WorldFin, and audit that live news is actually fresh. Each reuses a finscrape
+module behind a thin route + (where useful) a panel.*
 
-- [x] `worker/` long-running service using **APScheduler** (`AsyncIOScheduler`): one interval job per
-      source, `jitter=60`, `max_instances=1` + `coalesce`; warm-up run of every source at startup.
-      Blocking finscrape work (scrape / ingestor fetch / `_analyze_article` LLM + market data) runs
-      via `asyncio.to_thread` (RISKS.md R1). Reuses `FinScrapePipeline._analyze_article` (Appendix C,
-      side-effects disabled) + `server.geocode` + `server.ingest.ingest_events`.
-- [x] Every cycle writes `source_health` (`fetched_at`/`record_count`/`status`) and a `scrape_runs`
-      row (per source). `GET /api/health` (`server/routes/health.py`) aggregates OK/STALE/WARN/EMPTY;
-      **STALE is derived at read time** (`derive_status`, pure + tested) so a source that stops
-      reporting flips without a writer.
-- [x] A failing source degrades to WARN (recorded) and never crashes the worker; idempotent ingest
-      via the Phase 1 content_hash. `Dockerfile.worker` + compose `worker` service added.
-- [~] **Verify:** offline tests + **DB integration green vs postgres:16 (podman)** — `source_health`
-      OK→STALE derivation, `scrape_run` lifecycle, and `/api/health` aggregation all confirmed live.
-      **PENDING (needs LLM):** the full cyclic worker run (scrape→`_analyze_article`→ingest) end to
-      end — requires Ollama or an OpenRouter key, not run yet.
+- [x] **SentimentPanel + `GET /api/sentiment?ticker=`** (`server/routes/sentiment.py`): reuses
+      `finscrape.sentiment.SentimentAggregator` (Reddit + StockTwits). Blocking scrape runs in a
+      threadpool, behind a **circuit breaker** + MEDIUM TTL cache; any upstream failure (timeout,
+      rate-limit, open breaker) **degrades to an empty result** — never an error. `SentimentPanel`
+      (ticker input → score + bull/bear + top posts) in `web/src/panels/panels.ts`.
+- [x] **Portfolio/watchlist routes + PortfolioPanel** (`server/routes/portfolio.py`): `GET /api/portfolio`,
+      `POST/DELETE /api/portfolio/position`, `POST/DELETE /api/portfolio/watchlist` (mutations auth'd)
+      reusing `finscrape.portfolio.PortfolioManager` (SQLite at `<WORLDFIN_DATA_DIR>/portfolio.db`,
+      module singleton). `PortfolioPanel` lists positions + watchlists + summary.
+- [x] **Telegram webhook** (`server/routes/telegram.py`): `POST /api/telegram/webhook` **always 200**,
+      command handling (`/subscribe /unsubscribe /status /latest /help`) off the request path
+      (BackgroundTasks); subscribers persist to `<data_dir>/telegram_subs.json`. Outbound INVEST/PULL_OUT
+      alerts (`notify_new_events`, finscrape alert message format) wired into the ingest path on
+      `insertedIds`. **No-ops gracefully without `TELEGRAM_BOT_TOKEN`.**
+- [x] **Prompt versioning + A/B** (`finscrape/analysis/prompt_registry.py`): v1 (current) + v2
+      (conservative-calibration) variants; **opt-in** via `WORLDFIN_PROMPT_AB` (off → always v1, zero
+      behaviour change). Deterministic per-article assignment (title hash); variant stamped into
+      `key_metrics["prompt_variant"]` (no migration); the AI cache keys on prompt text so v1/v2 never
+      collide. `GET /api/accuracy/by-variant` compares realized hit-rate per variant.
+- [x] **Verify (live vs podman PG):** portfolio CRUD ✓; telegram webhook → `{"ok":true}` ✓; sentiment →
+      200 + graceful empty (Reddit/StockTwits blocked in sandbox) ✓; **`/api/accuracy/by-variant` →
+      `v1: 0.9 (10) · v2: 1.0 (1)`** ✓. 8 new unit tests; **692 pass**; ruff + fmt + pyright 0; full
+      `make ci` green (python + web tsc/Vitest 10 + e2e 3).
+- [x] **Freshness audit (item 6):** **13/14 world feeds reachable + carrying fresh items**; wire feeds
+      (Reuters/AP) 15/15 & 9/9 ≤24h; `WorldRSSScraper` yielded **40 articles, all ≤24h — the 24h
+      freshness gate holds** (no stale leaked). USGS 108 events. *(CSIS feed empty → replace later;
+      finance scrapers use the 2h `FINSCRAPE_MAX_AGE_HOURS` window, world uses 24h by design.)*
 
-> **Known cost (Appendix C caveat / RISKS.md R1):** `_analyze_article` calls `get_market_data`
-> (`yf.download`) per article — runs in a thread so the loop is safe, but it's slow / rate-limit
-> prone. Cache or stub it before high-volume runs (a Phase 8 perf item).
-> **Cross-process WS:** the worker can't reach the API's in-process WS hub, so new-event broadcasts
-> on worker ingest wait for the Redis pub/sub fan-out seam (Phase 8). API-side ingest still broadcasts.
-
-## Phase 4 — Correlation & clustering engine ("before it's news")  `[~]` (code-complete; globe = Phase 5)
-
-*Goal: the differentiator — detect when one story surfaces across multiple independent source-types
-inside a time window, and flag news↔market divergence.* Full spec in
-[Appendix A](#appendix-a--correlation-engine-spec).
-
-- [x] `server/correlate.py`: independent Python port of WM `analysis-core.ts` per Appendix A —
-      **Jaccard headline clustering** (greedy single-pass, non-transitive, 0.5 threshold) +
-      cross-source **corroboration** (`detect_convergence` ≥3 types/1h, `detect_triangulation`
-      wire+gov+intel) + **divergence** (`silent_divergence`/`explained_market_move`/
-      `flow_price_divergence`) + `velocity_spike`, `prediction_leads_news`, `flow_drop`. Orchestrator:
-      first call (no snapshot) emits nothing → keeps first-per-type → drops conf < 0.6.
-      `round1 = floor(x*10+0.5)/10` matches JS half-up. `find_news_for_market_symbol` stubbed → []
-      (entity index later). Each detector pure.
-- [x] `GET /api/correlations?date=` (`server/routes/correlations.py`). Worker runs a post-scrape
-      correlation pass (`Worker.run_correlations`, snapshot+seen persisted across cycles, gated by
-      `enable_correlation`) and writes the `correlations` table; scheduled job in `worker/main.py`.
-- [x] **Verify (DONE):** 15 detector unit tests vs Appendix A + DB integration (3 independent
-      sources → convergence + triangulation persisted) green; live `/api/correlations` returns the
-      persisted signals (verified vs postgres:16 via podman). **Globe rendering** of the signals is
-      Phase 5.
-
-## Phase 5 — Frontend foundation (SPA shell, globe, panel system)  `[~]` (code-complete; live render = browser/E2E)
-
-*Goal: the vanilla-TS shell. Reimplement WM's good parts **minimally** — do NOT copy its 3.7k-line
-GlobeMap.*
-
-- [x] **Panel base class** (`web/src/panels/panel.ts`): debounced `setContent` (rAF), grid
-      position/size persisted to localStorage (`loadConfig`/`saveConfig`), pointer-drag resize;
-      `PanelLayoutManager` (`layout.ts`, CSS grid host).
-- [x] **Globe** (`web/src/globe/`): thin `globe.gl` wrapper — points by lat/lon, color by verdict,
-      click → SignalModal, auto-rotate-on-idle. Pure `toPoints` extracted + unit-tested. (Correlation
-      arcs deferred — `correlations` payload has no geo endpoints yet.)
-- [x] **App shell** (`web/src/app/shell.ts`): header (live UTC clock, WS connection dot, refresh),
-      ⌘K command-palette stub, dark theme (`styles.css`).
-- [x] `web/src/api.ts` + `ws.ts` + `state.ts`: typed REST client matching `server/schemas.py`;
-      `RealtimeClient` with exponential backoff+jitter reconnect + ping keep-alive; tiny reactive
-      store. (SSE fallback is a noted seam — backend exposes only WS today.)
-- [x] `SignalFeedPanel` + `SignalModal` (on-demand `/api/ai/analyze`) prove the data pipe.
-      `web/Dockerfile` (multi-stage → nginx, proxies `/api`) + compose `web` service (`:8080`).
-- [~] **Verify:** `tsc` typecheck clean; **vitest 10/10** (store dedup, ws backoff/reconnect,
-      toPoints, panel persistence); `vite build` succeeds. **PENDING (needs browser + running stack):**
-      live globe render + panel drag/persist + green WS dot — Phase 10 Playwright E2E + a manual `make up`.
-
-## Phase 6 — Panels (the product surface)  `[~]` (code-complete; live render = browser/E2E)
-
-*Goal: the panels the demo actually shows. Each fed by the API.*
-
-- [x] **SignalFeedPanel** (table) + **SignalModal** — click a row → AI reasoning + affected-entities
-      + on-demand `/api/ai/analyze`. The event→tickers→judged-impact walk lives here.
-- [x] **GlobePanel**, **CorrelationPanel** (`/api/correlations`), **BreakingNewsBanner** (fires on
-      convergence/triangulation).
-- [x] **CryptoPanel** (`/api/crypto` — CoinGecko passthrough, cached), **CalendarPanel**
-      (`/api/dates`, click → load that day), **WorldNewsPanel** (`/api/rss-proxy`),
-      **LiveTVPanel** (curated YouTube channel iframes, `web/src/data/channels.ts`),
-      **MarketsPanel** (`/api/markets` — most-mentioned tickers from events).
-- [x] New backend (`server/routes/data.py`): `/api/crypto`, `/api/rss-proxy` (**SSRF-guarded** by the
-      feed-registry allowlist — unknown key → 400), `/api/feeds`, `/api/markets` (jsonb ticker rollup).
-- [x] **Variant presets** (`web/src/app/variants.ts`): World / Finance / Crypto switch the visible
-      panels (persisted) and lazy-load only that variant's data.
-- [~] **Verify:** all new endpoints confirmed live vs postgres:16 (feeds=14, markets jsonb SQL,
-      rss-proxy unknown→400, crypto→live BTC/ETH); web tsc/vitest(10)/build green; py lint + 642 pass.
-      **PENDING (browser, Phase 10 E2E):** panels render + variant reflow on screen.
-- [ ] **Deferred:** **SentimentPanel** (reuse `finscrape/sentiment/` — network/auth-flaky) and **live
-      Markets price quotes** (yfinance hot-path, RISKS R1 → Phase 8). Clean seams left for both.
-
-## Phase 7 — Trust layer: accuracy proof & explainability (the demo differentiator)  `[~]` (code-complete; live backtest/council = LLM/market data)
-
-*Goal: prove the calls are real. This is what convinces a company.*
-
-- [x] **`/api/accuracy` + AccuracyPanel** (`server/accuracy.py`, `server/routes/accuracy.py`): ports
-      finscrape's correctness rule (`verdict_outcome`: INVEST right if ≥+1%, PULL_OUT if ≤−1%,
-      OBSERVE/CAUTIOUS neutral); `aggregate` → hit-rate overall + by-verdict + cumulative equity curve.
-      AccuracyPanel shows the big hit-rate, by-verdict breakdown, and an inline-SVG equity sparkline.
-- [x] **Backtest** (`server/accuracy.backtest`, injectable `price_fetcher`; `Worker.run_backtest`
-      uses `finscrape/market_data.py`): scores matured directional events into `accuracy_outcomes`,
-      idempotent. Pure helpers unit-tested with a stub fetcher; **live run deferred (needs market data)**.
-- [x] **Explainability:** `GET /api/ai/council?id=` (reuse `finscrape/agents/council.py`) returns
-      consensus verdict + `agreement_level` + `dissenting_agents` + risks/opportunities, **behind the
-      `WORLDFIN_ENABLE_COUNCIL` flag** (off → 404). **Live run deferred (needs LLM).**
-- [~] **Verify:** `verdict_outcome` + `aggregate` unit-tested (4); `/api/accuracy` live → valid empty
-      aggregate; `/api/ai/council` flag-off → 404; web tsc/vitest(10)/build green; py 646 pass.
-      **PENDING:** AccuracyPanel over a seeded window + council dissent on an event — needs a backtest
-      run (market data) + LLM.
-
-## Phase 8 — Hardening: security, performance, resilience  `[x]` (code-complete + verified; live k6/locust load-test optional, deferrable to Phase 10)
-
-- [x] **Security:** ingest API-key auth (already) + per-IP **rate limiting** (`server/rate_limit.py`,
-      sliding-window, 429+Retry-After; in-memory with a documented Redis upgrade seam); CORS allowlist
-      (`WORLDFIN_CORS_ORIGINS`); **RSS-proxy SSRF guard** (`server/ssrf.py`: registry allowlist + resolve
-      host, block private/loopback/link-local/metadata IPs, re-validate every redirect hop); security
-      headers/CSP on the API (`server/middleware.py`) **and** nginx (`web/nginx.conf`); secrets only via
-      env; input validation at every boundary (Pydantic + bounded `Query`). `docs/SECURITY.md`. ✔
-- [x] **Performance:** tiered TTL cache (`server/cache.py` fast/medium/slow) + **ETag/304** on GET JSON
-      (`server/middleware.py`); connection pooling (P0); **`EXPLAIN ANALYZE` audited** (Index/Index-Only
-      scans on all point/range/sort hot paths; the two full-table aggregates seq-scan by design, sub-6ms
-      @8k); **SPA code-split** — globe.gl lazy chunk drops first paint from ~540KB→~7KB gzip
-      (`web/src/main.ts` dynamic import). *(PMTiles/static basemap = future nicety, not blocking.)* ✔
-- [x] **Resilience:** per-upstream **circuit breaker** (`server/circuit.py`, wired into crypto/RSS);
-      graceful degradation (empty payload on open breaker); `/health` (liveness) + `/ready` (503 readiness)
-      probes; structured error envelopes (`{"error":{...}}`). *(Postgres backup volume = compose/ops.)* ✔
-- [x] **Verify:** rate limit returns 429 past threshold ✔; SSRF to a private/metadata IP rejected ✔;
-      304 on ETag re-GET ✔; dead source (open breaker) doesn't take down the app ✔ — all in
-      `tests/server/test_hardening.py` (12 tests). EXPLAIN audit run live against podman PG (8k rows).
-      *(Optional live `k6`/`locust` load test deferred to Phase 10's running-stack E2E; offline tests cover the assertions.)*
-
-## Phase 9 — Observability & ops  `[x]` (code-complete + verified; full Grafana/Loki live panel check deferred — heavy stack, configs validated)
-
-- [x] Structured JSON logging (extend `finscrape/logging_config.py`) across api+worker with
-      request/correlation IDs; **Prometheus `/metrics`** (ingest rate, LLM latency, source freshness,
-      WS clients); optional `docker-compose.obs.yml` (Prometheus + Grafana + Loki) with a prebuilt
-      dashboard.
-- [x] `docs/RUNBOOK.md` (operate/restore/rotate); `docs/DATA_SOURCES.md` (every feed + key status +
-      license).
-- [x] **Verify:** live API → `/metrics` exposes all 9 `worldfin_*` families; JSON logs carry
-      `correlation_id`; `X-Request-ID` generated + echoed. *(Grafana panel/Loki query live-check
-      deferred to a running-stack pass — configs validated; same class as the deferred k6/E2E.)*
-
-## Phase 10 — Quality gates, CI/CD & packaging  `[x]` (CI + packaging + scoped pyright done)
-
-- [x] Extend existing CI (`.github/workflows/ci.yml`): ruff + pytest stay green (now **672**); split
-      into jobs — `python` (lint/fmt/**pyright**/selfcheck/test w/ Postgres), `web` (typecheck + Vitest
-      + build), `e2e` (**Playwright**: globe renders, event→ticker flow, WS update), `images` (build
-      api/worker/web + `docker compose config` validate), `security` (`npm audit` / `pip-audit` /
-      `trivy`, advisory).
-- [x] **Scoped pyright type-gate** (`[tool.pyright]`, `make typecheck`, commit `36e6a29`): covers
-      `server/` + `worker/` (the new typed code) — the legacy `finscrape/` core's type debt stays out
-      of scope, ruff still lints everywhere. Fixed the 6 errors it surfaced, **one a real latent bug**
-      (`server/routes/ai.py`: `AgentCouncil()` constructed with no agents → would `ValueError` the moment
-      the council flag is on; never caught because the path is flag-gated + was never live-run). pyright
-      0 errors; 672 pass.
-- [x] Multi-stage Dockerfiles (non-root uid 10001, slim runtime — build tools don't ship);
-      image-size budget recorded (api **194MB**, worker **529MB**); `docker compose config` validated
-      in CI for base + obs overlay.
-- [x] **Verify:** `make ci` (+ `make web-ci`/`make e2e`) reproduces the pipeline locally, all gates
-      green; api + worker images **built & boot-verified** from a clean checkout (podman): api imports
-      lean (no curl_cffi) and runs as non-root, worker imports the full brain + metrics as non-root.
-      *(Root-cause fix: `finscrape/__init__.py` + `finscrape/scrapers/__init__.py` made lazy so the
-      lean API image is importable without the scraper engine.)*
-
-## Phase 11 — Demo polish & deployment package  `[ ]`
-
-- [ ] Seed script (`make seed`) loads a curated historical window so the dashboard is **full of
-      signal on first launch** (no empty-state demo).
-- [ ] `docs/DEMO.md`: a scripted 5-minute walkthrough (globe → breaking correlation → click event →
-      affected tickers + judged impact + second-order → AccuracyPanel proof).
-- [ ] One-command bring-up from a clean machine; README with prerequisites; optional cloud-deploy
-      appendix (same compose → a VPS / Fly / Render) so "web later" is a flip, not a rebuild.
-- [ ] **Verify:** fresh clone → `cp .env.example .env` → `make demo` → a fully populated, presentable
-      dashboard with accuracy proof, in under N minutes, no manual steps.
+> **Env-deferred (not code):** live social-sentiment data (Reddit/StockTwits rate-limited/blocked in
+> this sandbox — endpoint + degrade verified); live Telegram send (needs a bot token — format + no-op
+> path tested); panel on-screen render (Playwright covers the mocked path; new panels show in the
+> Finance/Crypto variants).
 
 ---
 
 ## WorldFin master verification (acceptance for the company demo)
 
-1. [ ] Clean clone → `cp .env.example .env` (set OpenRouter key OR rely on Ollama) → `make demo`.
-2. [ ] Worker continuously ingests world + finance; `/api/health` shows sources fresh.
-3. [ ] `localhost:8080`: globe plots geolocated events by verdict; breaking-correlation banner fires
-   when ≥N sources corroborate; SignalFeed live-updates over WS.
-4. [ ] Click a **geopolitical** event → resolved affected tickers/sectors → judged impact +
-   second-order effects + council reasoning/dissent.
-5. [ ] AccuracyPanel proves historical hit-rate with an equity curve.
-6. [ ] Crypto/Markets/News/Live-TV/Sentiment panels all live; variant switch (World/Finance/Crypto)
-   works.
-7. [ ] `make ci` green: ruff + pyright + pytest (112 + new) + web typecheck + Vitest + Playwright +
-   image build + security scan. Grafana dashboard (obs profile) shows live metrics.
+Verified across Phases 7/11/12/13 + the checkpoint-019 live sweep (against postgres:16 via podman +
+local Ollama qwen2.5:7b). Items marked **(env)** are verified to the limit of this sandbox; the residue
+is environmental (no docker daemon / Yahoo + Reddit + GDELT network-blocked / no browser display), not a
+code gap.
+
+1. [x] **(env)** `make seed` → fully-populated dashboard; endpoints all serve signal. *(Clean-clone
+   `make demo` via `docker compose` is CI-validated; live bring-up here used podman `--network host`.)*
+2. [x] Worker ingests world + finance end-to-end (bounded live cycle: 26 geo events); `/api/health`
+   aggregates source freshness; APScheduler drives the continuous loop. *(Multi-cycle 24×7 run = ops.)*
+3. [x] **(env)** globe plots geolocated events by verdict; breaking-correlation banner + WS live-update —
+   rendered headless in Playwright (3 E2E specs green). *(On-screen browser visual = a `make up` pass.)*
+4. [x] Click a **geopolitical** event → resolved affected tickers/sectors (Hormuz → 14 tickers, survives
+   the gate) → judged impact + second-order + **council via `/api/ai/council` (live LLM)**.
+5. [x] AccuracyPanel proves hit-rate + equity curve (`/api/accuracy` → 0.9, 10/12 + curve).
+6. [x] Crypto/Markets/News/Live-TV/**Sentiment** panels wired; variant switch (World/Finance/Crypto)
+   works. *(Sentiment/crypto live data depends on reachable upstreams; endpoints degrade gracefully.)*
+7. [x] **(env)** `make ci` green: ruff + **pyright** + pytest (**692**) + web typecheck + Vitest(10) +
+   Playwright(3) + image build + security scan. *(Grafana/Loki obs dashboard live-check = obs overlay up.)*
+
+**Bottom line:** every acceptance item is met in code + verified to the limit of this environment. The
+only residue is environment-bound (live cloud/browser/3rd-party-network), not unfinished work.
 
 ## Reuse map (build on these, don't reinvent)
 

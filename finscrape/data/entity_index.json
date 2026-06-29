@@ -1,0 +1,106 @@
+{
+  "_comment": "Sector / geopolitics keyword -> affected US-listed tickers. Used by finscrape.entity_map: (1) resolve_tickers(text) feeds the pipeline ticker-fusion so a geopolitics headline that names a sector/region but no company still resolves tickers (and survives the _analyze_article ticker gate); (2) keywords_for_ticker(symbol) is the reverse map that powers server.correlate.find_news_for_market_symbol -> explained_market_move. Keywords are matched word-boundary (single tokens) or as substrings (phrases), case-insensitive. Tickers are illustrative liquid proxies, not investment advice. Keep symbols 2-5 chars, uppercase (the pipeline's clean_tickers gate requires it).",
+
+  "oil": ["XOM", "CVX", "COP", "OXY", "SLB"],
+  "crude": ["XOM", "CVX", "COP", "OXY"],
+  "petroleum": ["XOM", "CVX", "COP"],
+  "opec": ["XOM", "CVX", "OXY"],
+  "refiner": ["VLO", "MPC", "PSX"],
+  "refinery": ["VLO", "MPC", "PSX"],
+  "gasoline": ["VLO", "MPC", "XOM"],
+  "natural gas": ["LNG", "CTRA", "EQT"],
+  "lng": ["LNG", "CTRA", "EQT"],
+
+  "strait of hormuz": ["XOM", "CVX", "COP", "RTX", "LMT"],
+  "hormuz": ["XOM", "CVX", "COP", "RTX"],
+  "red sea": ["FDX", "UPS", "ZIM", "MATX"],
+  "suez": ["FDX", "UPS", "ZIM"],
+  "pipeline": ["XOM", "KMI", "WMB"],
+
+  "shipping": ["FDX", "UPS", "ZIM", "MATX"],
+  "tanker": ["XOM", "CVX", "ZIM"],
+  "freight": ["FDX", "UPS", "ODFL"],
+  "container": ["ZIM", "MATX", "FDX"],
+  "logistics": ["FDX", "UPS", "XPO"],
+
+  "defense": ["RTX", "LMT", "NOC", "GD", "BA"],
+  "military": ["RTX", "LMT", "NOC", "GD"],
+  "missile": ["RTX", "LMT", "NOC"],
+  "weapons": ["RTX", "LMT", "GD"],
+  "war": ["RTX", "LMT", "NOC", "XOM"],
+  "conflict": ["RTX", "LMT", "XOM"],
+
+  "insurance": ["AIG", "CB", "TRV"],
+  "insurer": ["AIG", "CB", "TRV"],
+  "reinsurance": ["AIG", "RNR"],
+
+  "semiconductor": ["TSM", "NVDA", "AMD", "INTC", "AVGO"],
+  "semiconductors": ["TSM", "NVDA", "AMD", "INTC", "AVGO"],
+  "chip": ["TSM", "NVDA", "AMD", "INTC"],
+  "chips": ["TSM", "NVDA", "AMD", "INTC"],
+  "foundry": ["TSM", "INTC", "GFS"],
+  "lithography": ["ASML", "AMAT", "LRCX"],
+
+  "cyber": ["CRWD", "PANW", "ZS", "FTNT"],
+  "cyberattack": ["CRWD", "PANW", "ZS", "FTNT"],
+  "ransomware": ["CRWD", "PANW", "ZS"],
+  "hacking": ["CRWD", "PANW", "FTNT"],
+  "breach": ["CRWD", "PANW", "ZS"],
+
+  "bitcoin": ["COIN", "MSTR", "MARA"],
+  "crypto": ["COIN", "MSTR", "MARA"],
+  "cryptocurrency": ["COIN", "MSTR", "MARA"],
+  "ethereum": ["COIN", "MSTR"],
+
+  "bank": ["JPM", "BAC", "WFC"],
+  "banking": ["JPM", "BAC", "WFC", "GS"],
+  "fed": ["JPM", "BAC", "GS"],
+  "federal reserve": ["JPM", "BAC", "GS"],
+  "interest rate": ["JPM", "BAC", "TLT"],
+  "rate cut": ["JPM", "QQQ", "TLT"],
+  "rate hike": ["TLT", "JPM"],
+
+  "airline": ["DAL", "UAL", "AAL", "LUV"],
+  "aviation": ["DAL", "UAL", "BA"],
+  "airlines": ["DAL", "UAL", "AAL"],
+
+  "pharma": ["LLY", "PFE", "MRK", "JNJ"],
+  "pharmaceutical": ["LLY", "PFE", "MRK"],
+  "drug": ["LLY", "PFE", "MRK"],
+  "vaccine": ["PFE", "MRNA", "NVAX"],
+  "fda": ["LLY", "PFE", "MRK"],
+
+  "automaker": ["GM", "TM"],
+  "automobile": ["GM", "TM"],
+  "electric vehicle": ["TSLA", "RIVN", "GM"],
+
+  "wheat": ["ADM", "BG"],
+  "grain": ["ADM", "BG"],
+  "agriculture": ["ADM", "BG", "DE"],
+  "fertilizer": ["NTR", "MOS", "CF"],
+
+  "gold": ["GLD", "NEM", "GOLD"],
+  "uranium": ["CCJ", "UEC"],
+  "nuclear": ["CCJ", "CEG"],
+  "rare earth": ["MP"],
+  "copper": ["FCX", "SCCO"],
+
+  "solar": ["FSLR", "ENPH", "RUN"],
+  "renewable": ["FSLR", "ENPH", "NEE"],
+
+  "data center": ["NVDA", "VRT", "ETN", "SMCI"],
+  "artificial intelligence": ["NVDA", "MSFT", "GOOGL"],
+
+  "iran": ["XOM", "CVX", "RTX", "LMT"],
+  "israel": ["RTX", "LMT", "XOM"],
+  "gaza": ["RTX", "LMT", "XOM"],
+  "middle east": ["XOM", "CVX", "RTX", "LMT"],
+  "russia": ["XOM", "RTX", "LMT", "ADM"],
+  "ukraine": ["RTX", "LMT", "ADM", "XOM"],
+  "sanctions": ["XOM", "RTX", "JPM"],
+  "taiwan": ["TSM", "NVDA", "AMD", "INTC"],
+  "china": ["BABA", "PDD", "FXI"],
+  "venezuela": ["XOM", "CVX"],
+  "saudi": ["XOM", "CVX", "OXY"],
+  "japan": ["TM", "SONY"]
+}

@@ -20,6 +20,8 @@ import re
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 
+from finscrape.entity_map import keywords_for_ticker
+
 # --- constants (Appendix A) ---
 SIMILARITY_THRESHOLD = 0.5
 MARKET_MOVE_THRESHOLD = 2.0
@@ -420,9 +422,15 @@ def _topic_mentions_for_symbol(symbol: str, topics: dict[str, dict]) -> int:
 
 
 def find_news_for_market_symbol(symbol: str, items: list[NewsItem]) -> list[NewsItem]:
-    """v1 stub → [] (needs the WM entity index). Forces all market moves down
-    silent_divergence; port the entity index later for explained_market_move."""
-    return []
+    """Entity-aware (Phase 12): news items whose title mentions a sector/region keyword
+    mapped to `symbol` via finscrape.entity_map. Non-empty → detect_market emits
+    explained_market_move instead of collapsing the move to silent_divergence."""
+    keywords = keywords_for_ticker(symbol)
+    if not keywords:
+        return []
+    return [
+        it for it in items if any(contains_topic_keyword(it.title, k) for k in keywords)
+    ]
 
 
 def analyze_correlations(

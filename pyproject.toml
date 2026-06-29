@@ -44,6 +44,7 @@ server = [
     "pydantic-settings>=2.2",
     "apscheduler>=3.10",
     "prometheus-client>=0.20",
+    "redis>=5.0",
 ]
 
 # Scoped to the WorldFin backend only. The legacy finscrape/ core (~24k LOC) carries

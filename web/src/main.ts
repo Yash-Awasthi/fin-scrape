@@ -15,6 +15,8 @@ import {
   CryptoPanel,
   LiveTVPanel,
   MarketsPanel,
+  PortfolioPanel,
+  SentimentPanel,
   WorldNewsPanel,
 } from "./panels/panels";
 import { SignalFeedPanel } from "./panels/signal-feed";
@@ -43,6 +45,8 @@ const worldNewsPanel = new WorldNewsPanel();
 const liveTVPanel = new LiveTVPanel();
 const accuracyPanel = new AccuracyPanel();
 const calendarPanel = new CalendarPanel((day) => void loadDay(day));
+const sentimentPanel = new SentimentPanel();
+const portfolioPanel = new PortfolioPanel();
 
 for (const p of [
   feedPanel,
@@ -54,6 +58,8 @@ for (const p of [
   liveTVPanel,
   accuracyPanel,
   calendarPanel,
+  sentimentPanel,
+  portfolioPanel,
 ]) {
   layout.add(p);
 }
@@ -128,6 +134,8 @@ async function loadVariantData(): Promise<void> {
   if (shown.has("crypto")) jobs.push(cryptoPanel.load());
   if (shown.has("worldnews")) jobs.push(worldNewsPanel.load());
   if (shown.has("accuracy")) jobs.push(accuracyPanel.load());
+  if (shown.has("sentiment")) jobs.push(sentimentPanel.load());
+  if (shown.has("portfolio")) jobs.push(portfolioPanel.load());
   if (shown.has("livetv")) liveTVPanel.render();
   await Promise.allSettled(jobs);
 }

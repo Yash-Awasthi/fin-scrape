@@ -27,11 +27,12 @@ down: ## Stop the stack (keep volumes)
 logs: ## Tail api + postgres logs
 	$(COMPOSE) logs -f api postgres
 
-seed: ## Load demo data (placeholder until Phase 11 seed script lands)
-	@echo "seed: not implemented yet — Phase 11. Use POST /api/events for now."
+seed: ## Load the curated demo dataset (events + accuracy + correlations)
+	$(PY) python -m server.seed
 
-demo: up ## Bring up the full demo (Phase 11 will populate it)
-	@echo "demo: stack up. Full seeded walkthrough arrives in Phase 11 (docs/DEMO.md)."
+demo: up seed ## Bring up the stack, then seed it — a populated dashboard in one command
+	@echo "demo ready → web http://localhost:8080  ·  api http://localhost:8000/docs"
+	@echo "walkthrough: docs/DEMO.md"
 
 test: ## Run the test suite (pytest)
 	$(PY) pytest -q
