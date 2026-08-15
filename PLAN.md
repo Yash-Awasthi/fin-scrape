@@ -40,6 +40,43 @@ Do these **before** writing any new code or plan. They cost a minute and save a 
 
 ---
 
+## 🪓 Repo housekeeping — 2026-08-16 audit
+
+Man checked git bone-pile. Here what man find, here what man do.
+
+- **README count: 3, no fight.** Root `README.md` boss doc. `dashboard/README.md` already point up
+  at root as boss (see its own top line). `progress/README.md` not README fight at all — it protocol
+  doc for checkpoint ledger, different job. No merge needed, no rewrite needed.
+- **PLAN.md fresh, one ghost SHA.** Checkboxes, phases, latest checkpoint (`progress/progress-023.md`)
+  all agree work done + shipped. Checkpoint 023 name HEAD `577d203` — that SHA gone now, squashed into
+  `e6355e6` (same session, same diff, just squash after checkpoint written). Not real drift, just
+  stale pointer. Note here so next reader not confused hunting dead SHA.
+- **deploy.sh dirty diff: throw back.** Working tree showed mode-only diff (755→644), zero content
+  change. Windows filesystem exec-bit noise, not real work. Fixed local `core.filemode=false` so git
+  stop flagging it. Nothing to keep, nothing lost.
+- **Branch `local-dirty`: stale ghost, kept not folded.** 0 ahead/0 behind master except one junk
+  commit (`ee32fcc`, snapshot of the same mode-flip + a stray `.directory` file not present in tree
+  now). No unique work. Recommend delete once man confirms — not deleted here (no branch deletion
+  this session).
+- **Branch `backup-pre-squash`: 8 ahead / 61 behind master, tree IDENTICAL to master.** Those 8
+  commits are the unsquashed version of what `e6355e6` squashed in — `git diff master
+  backup-pre-squash` empty. Zero unique work to merge. Recommend delete once man confirms — not
+  deleted here.
+- **No merge fight, no conflict marker.** Checked both branches clean against master.
+
+**Next concrete steps (real feature work, not hygiene):**
+1. Rotate the secrets pasted in chat (Neon, freemodel, OpenRouter, AgentRouter, Render, Cloudflare +
+   R2) — still open from checkpoint 023, still unrotated.
+2. Live WS push from worker needs Redis — worker writes Neon directly today, dashboard only updates
+   on manual refresh.
+3. Optional keep-warm GH Action ping for Render free tier (cold start ~30–50s after 15 min idle).
+4. Landing page polish pending user feedback; new `.senti-*` panel CSS still light/unstyled.
+5. Custom domain not wired (apex → landing, `app.` → app subdomain).
+6. Once man confirms, delete `local-dirty` and `backup-pre-squash` — both dead weight, zero unique
+   commits between them.
+
+---
+
 ## How to use this document
 
 - **Status legend** (used on every phase header and milestone):
