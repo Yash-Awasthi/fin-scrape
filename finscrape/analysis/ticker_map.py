@@ -1,9 +1,23 @@
 """
 Company name → ticker symbol mapping for extracting tickers from article text.
 
-Covers major US-listed companies by market cap and trading volume.
-Names are lowercase for case-insensitive matching.
+The one map. Every caller that turns a company name into a ticker reads this
+dict through `resolve_company_tickers`, which reuses the word-boundary match
+from `finscrape.entity_map._matches` so a single alnum name like "arm" or
+"target" cannot fire on a substring buried in an unrelated word ("pharma",
+"price target"). Multi-word phrases still match as substrings, same as
+entity_map's own keyword map.
+
+Names are lowercase for case-insensitive matching. Deliberately keeps risky
+common-English-word company names ("arm", "target", "block", "meta",
+"berkshire", "3m") out as bare keys — those live under their fuller legal
+name ("arm holdings", "target corp", ...) so an ordinary sentence never
+mints a false ticker.
 """
+
+from __future__ import annotations
+
+from finscrape.entity_map import _matches
 
 # Map of company name fragments (lowercase) → ticker symbol
 # Use the shortest unambiguous form of the company name
@@ -16,6 +30,7 @@ COMPANY_TO_TICKER: dict[str, str] = {
     "amazon": "AMZN",
     "nvidia": "NVDA",
     "meta platforms": "META",
+    "facebook": "META",
     "tesla": "TSLA",
     "broadcom": "AVGO",
     "taiwan semiconductor": "TSM",
@@ -31,6 +46,8 @@ COMPANY_TO_TICKER: dict[str, str] = {
     "cisco": "CSCO",
     "oracle": "ORCL",
     "ibm": "IBM",
+    "texas instruments": "TXN",
+    "cloudflare": "NET",
     "servicenow": "NOW",
     "intuit": "INTU",
     "uber": "UBER",
@@ -52,6 +69,7 @@ COMPANY_TO_TICKER: dict[str, str] = {
     "block inc": "SQ",
     "square": "SQ",
     "paypal": "PYPL",
+    "sofi": "SOFI",
     "micron": "MU",
     "arm holdings": "ARM",
     "asml": "ASML",
@@ -70,6 +88,7 @@ COMPANY_TO_TICKER: dict[str, str] = {
     "wells fargo": "WFC",
     "goldman sachs": "GS",
     "morgan stanley": "MS",
+    "j.p. morgan": "JPM",
     "citigroup": "C",
     "charles schwab": "SCHW",
     "blackrock": "BLK",
@@ -111,6 +130,7 @@ COMPANY_TO_TICKER: dict[str, str] = {
     # Energy
     "exxon": "XOM",
     "exxonmobil": "XOM",
+    "exxon mobil": "XOM",
     "chevron": "CVX",
     "conocophillips": "COP",
     "schlumberger": "SLB",
@@ -192,6 +212,7 @@ COMPANY_TO_TICKER: dict[str, str] = {
     "cleveland-cliffs": "CLF",
     # Chinese ADRs
     "alibaba": "BABA",
+    "tencent": "TCEHY",
     "baidu": "BIDU",
     "jd.com": "JD",
     "pinduoduo": "PDD",
@@ -203,3 +224,15 @@ COMPANY_TO_TICKER: dict[str, str] = {
     "marathon digital": "MARA",
     "riot platforms": "RIOT",
 }
+
+
+def resolve_company_tickers(text: str) -> list[str]:
+    """Company names present in `text`, resolved to tickers. Sorted, unique."""
+    text_lower = (text or "").lower()
+    if not text_lower:
+        return []
+    found = {
+        ticker for name, ticker in COMPANY_TO_TICKER.items()
+        if _matches(name, text_lower)
+    }
+    return sorted(found)
