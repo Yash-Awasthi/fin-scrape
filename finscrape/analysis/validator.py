@@ -273,7 +273,8 @@ def get_source_credibility(source_name: str) -> float:
 def apply_source_credibility(confidence: float, source_name: str) -> float:
     """
     Adjust AI confidence based on source credibility.
-    High-credibility sources get a small boost; low-credibility sources get a penalty.
+    Multiplier is confidence * (0.7 + 0.3 * credibility), which is <= 1.0 always —
+    this can only discount confidence, never boost it above the input.
     """
     credibility = get_source_credibility(source_name)
     # Blend: 70% AI confidence, 30% source credibility influence
@@ -301,6 +302,28 @@ def apply_recency_decay(confidence: float, age_hours: Optional[float]) -> float:
     """Apply recency decay to a confidence score."""
     multiplier = calculate_recency_multiplier(age_hours)
     return round(confidence * multiplier, 2)
+
+
+def fuse_confidence(
+    base: float,
+    source: str,
+    age_hours: Optional[float],
+    divergence: bool,
+    breaking: bool,
+) -> float:
+    """
+    Combine all confidence adjustments in one place.
+    Multipliers (source credibility, recency) apply first; additive
+    penalty/boost (divergence, breaking) apply last on the multiplied result,
+    so a -0.15 divergence penalty always costs 0.15, not a fraction of it.
+    """
+    confidence = apply_source_credibility(base, source)
+    confidence = apply_recency_decay(confidence, age_hours)
+    if divergence:
+        confidence -= 0.15
+    if breaking:
+        confidence += 0.10
+    return round(min(1.0, max(0.0, confidence)), 2)
 
 
 # ---------------------------------------------------------------------------
@@ -424,8 +447,7 @@ def calculate_heuristic_score(text: str, event_type: str) -> tuple[str, float]:
         figure_boost = max(figure_boost, 0.15)
 
     logit_base = math.log(base_impact / (1.0 - base_impact + 1e-9))
-    total_log = math.log(base_impact) + mag_boost + figure_boost
-    heuristic_impact = 1.0 / (1.0 + math.exp(-(total_log + logit_base)))
+    heuristic_impact = 1.0 / (1.0 + math.exp(-(logit_base + mag_boost + figure_boost)))
 
     return sentiment, round(heuristic_impact, 2)
 
@@ -440,6 +462,12 @@ def check_divergence(ai_sentiment: str, heuristic_sentiment: str) -> bool:
     return ai_sentiment != heuristic_sentiment
 
 
-def clean_tickers(tickers: list[str]) -> list[str]:
-    """Remove noise tickers using the stopword list."""
-    return [t for t in tickers if t.upper() not in TICKER_STOPWORDS]
+def clean_tickers(tickers: list[str], text: str = "") -> list[str]:
+    """Remove noise tickers using the stopword list.
+
+    A stopword written as explicit trader shorthand ($NOW, (NOW)) in `text`
+    is real signal, not bare prose picking up an English word — keep it.
+    """
+    protected = set(re.findall(r"\$([A-Z]{1,5})\b", text))
+    protected.update(re.findall(r"\(([A-Z]{1,5})\)", text))
+    return [t for t in tickers if t.upper() in protected or t.upper() not in TICKER_STOPWORDS]

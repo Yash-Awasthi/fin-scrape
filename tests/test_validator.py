@@ -6,6 +6,9 @@ from finscrape.analysis.validator import (
     calculate_heuristic_score,
     check_divergence,
     clean_tickers,
+    fuse_confidence,
+    apply_source_credibility,
+    apply_recency_decay,
 )
 
 
@@ -63,6 +66,45 @@ class TestCalculateHeuristicScore:
     def test_unknown_event_type_uses_default(self):
         sentiment, impact = calculate_heuristic_score("neutral text", "nonexistent_type")
         assert 0.0 <= impact <= 1.0
+
+
+# ---------------------------------------------------------------------------
+# calculate_heuristic_score — zero boost must return base_impact exactly
+# ---------------------------------------------------------------------------
+
+class TestZeroBoostGivesBackBaseImpact:
+    @pytest.mark.parametrize(
+        "event_type, plain_text, expected_impact",
+        [
+            ("other", "The company held its quarterly meeting on schedule", 0.30),
+            ("merger_acquisition", "The company announced a deal", 0.90),
+        ],
+    )
+    def test_zero_boost_matches_base_impact(self, event_type, plain_text, expected_impact):
+        _, impact = calculate_heuristic_score(plain_text, event_type)
+        assert impact == pytest.approx(expected_impact, abs=0.005)
+
+    def test_boosted_impact_matches_expected(self):
+        text = "The deal is valued at $50 billion"
+        _, impact = calculate_heuristic_score(text, "other")
+        assert impact == pytest.approx(0.38, abs=0.005)
+
+    def test_boost_rises_monotonically(self):
+        base_text = "The company announced results"
+        _, impact_none = calculate_heuristic_score(base_text, "other")
+        _, impact_low = calculate_heuristic_score(base_text + " worth $5 million", "other")
+        _, impact_medium = calculate_heuristic_score(base_text + " worth $100 million", "other")
+        _, impact_high = calculate_heuristic_score(base_text + " worth $50 billion", "other")
+        assert impact_none < impact_low < impact_medium < impact_high
+
+    def test_impact_always_between_zero_and_one(self):
+        for event_type, text in [
+            ("bankrupt", "The firm filed for bankruptcy worth $50 billion massive historic"),
+            ("other", "Nothing happened"),
+            ("merger_acquisition", "Deal worth $50 billion, biggest ever, unprecedented"),
+        ]:
+            _, impact = calculate_heuristic_score(text, event_type)
+            assert 0.0 < impact < 1.0
 
 
 # ---------------------------------------------------------------------------
@@ -126,3 +168,49 @@ class TestCleanTickers:
         assert "EPS" not in cleaned
         assert "IPO" not in cleaned
         assert "SEC" not in cleaned
+
+
+# ---------------------------------------------------------------------------
+# fuse_confidence
+# ---------------------------------------------------------------------------
+
+class TestFuseConfidence:
+    def test_divergence_penalty_costs_full_015(self):
+        # Multipliers apply first, so the additive -0.15 lands on the
+        # already-multiplied value instead of being shrunk by it.
+        no_divergence = fuse_confidence(0.9, "cnbc", 24, divergence=False, breaking=False)
+        with_divergence = fuse_confidence(0.9, "cnbc", 24, divergence=True, breaking=False)
+        assert round(no_divergence - with_divergence, 2) == 0.15
+
+    def test_breaking_boost_survives_intact(self):
+        no_breaking = fuse_confidence(0.5, "cnbc", 0, divergence=False, breaking=False)
+        with_breaking = fuse_confidence(0.5, "cnbc", 0, divergence=False, breaking=True)
+        assert round(with_breaking - no_breaking, 2) == 0.10
+
+    def test_result_clamped_to_zero_one_on_high_end(self):
+        result = fuse_confidence(1.0, "bloomberg", 0, divergence=False, breaking=True)
+        assert result == 1.0
+
+    def test_result_clamped_to_zero_one_on_low_end(self):
+        result = fuse_confidence(0.0, "cnbc", 24, divergence=True, breaking=False)
+        assert result == 0.0
+
+    def test_result_always_in_bounds(self):
+        for base in [0.0, 0.3, 0.5, 0.8, 1.0]:
+            for divergence in [True, False]:
+                for breaking in [True, False]:
+                    result = fuse_confidence(base, "cnbc", 12, divergence, breaking)
+                    assert 0.0 <= result <= 1.0
+
+    def test_unknown_age_still_uses_085_multiplier(self):
+        result = fuse_confidence(0.6, "cnbc", None, divergence=False, breaking=False)
+        expected = apply_recency_decay(apply_source_credibility(0.6, "cnbc"), None)
+        assert result == expected
+
+    def test_reuses_source_credibility_and_recency_decay(self):
+        # No divergence/breaking means fuse_confidence is exactly the
+        # composition of the two existing adjustment functions.
+        base, source, age = 0.7, "reuters", 6
+        expected = apply_recency_decay(apply_source_credibility(base, source), age)
+        result = fuse_confidence(base, source, age, divergence=False, breaking=False)
+        assert result == expected
