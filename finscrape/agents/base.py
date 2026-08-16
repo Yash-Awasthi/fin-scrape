@@ -31,6 +31,7 @@ class AgentVerdict:
     tickers: list[str] = field(default_factory=list)
     risk_factors: list[str] = field(default_factory=list)
     key_insights: list[str] = field(default_factory=list)
+    error: bool = False
 
     def __post_init__(self):
         """Validate and clamp fields to valid ranges."""
@@ -149,6 +150,7 @@ class BaseAgent(ABC):
                 signal_score=0,
                 confidence=0.1,
                 reasoning=f"Agent '{self.name}' failed to produce analysis.",
+                error=True,
             )
 
         return self._parse_response(raw)
@@ -174,4 +176,5 @@ class BaseAgent(ABC):
                 signal_score=0,
                 confidence=0.1,
                 reasoning=f"Agent '{self.name}' produced unparseable response.",
+                error=True,
             )

@@ -70,6 +70,29 @@ def _make_verdict(
     )
 
 
+class CrashingAgent(BaseAgent):
+    """An agent whose analyze() always raises, simulating a dead agent."""
+
+    def __init__(self, weight: float = 1.0, agent_name: str = "crasher"):
+        super().__init__(weight=weight)
+        self._name = agent_name
+
+    @property
+    def name(self) -> str:
+        return self._name
+
+    @property
+    def role(self) -> str:
+        return "Test agent that crashes"
+
+    @property
+    def system_prompt(self) -> str:
+        return "You are a test agent."
+
+    def analyze(self, title, text, metadata=None):
+        raise RuntimeError("simulated agent crash")
+
+
 class DummyAgent(BaseAgent):
     """A simple concrete agent for testing that returns a fixed response."""
 
@@ -407,6 +430,50 @@ class TestCouncilConsensus:
     def test_empty_council_raises(self):
         with pytest.raises(ValueError):
             AgentCouncil(agents=[])
+
+
+# ===================================================================
+# Crashed agent exclusion from consensus math
+# ===================================================================
+
+class TestCrashedAgentExclusion:
+
+    def test_crashed_agent_excluded_from_consensus_math(self):
+        """A crashed agent's sentinel verdict must not pull the weighted average."""
+        survivors = [
+            DummyAgent(
+                fixed_response={
+                    "verdict": "INVEST", "signal_score": 4, "confidence": 0.9,
+                    "reasoning": "r", "tickers": [], "risk_factors": [], "key_insights": [],
+                },
+                weight=1.0, agent_name=f"survivor_{i}",
+            )
+            for i in range(2)
+        ]
+        agents = survivors + [CrashingAgent(weight=1.0, agent_name="crasher")]
+        council = AgentCouncil(agents=agents)
+        result = council.deliberate("Test", "Test body")
+
+        assert len(result.individual_verdicts) == 3
+        assert result.failed_agents == 1
+        crashed = next(v for v in result.individual_verdicts if v.agent_name == "crasher")
+        assert crashed.error is True
+
+        # If the crashed sentinel (score=0) had been folded into the weighted
+        # average, the result would be (4+4+0)/3 = 2.67, not 4.0.
+        assert result.consensus_score == 4.0
+        assert "crasher" not in result.dissenting_agents
+
+    def test_all_agents_crashed_forces_zero_confidence(self):
+        """An all-crashed council must not launder its sentinel votes into a calm neutral consensus."""
+        agents = [CrashingAgent(weight=1.0, agent_name=f"crasher_{i}") for i in range(3)]
+        council = AgentCouncil(agents=agents)
+        result = council.deliberate("Test", "Test body")
+
+        assert len(result.individual_verdicts) == 3
+        assert result.failed_agents == 3
+        assert result.consensus_confidence == 0.0
+        assert result.consensus_score == 0.0
 
 
 # ===================================================================

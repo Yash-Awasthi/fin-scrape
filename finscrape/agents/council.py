@@ -42,6 +42,7 @@ class CouncilVerdict:
     dissenting_agents: list[str] = field(default_factory=list)
     key_risks: list[str] = field(default_factory=list)
     key_opportunities: list[str] = field(default_factory=list)
+    failed_agents: int = 0
 
     def to_dict(self) -> dict:
         d = asdict(self)
@@ -125,6 +126,7 @@ class AgentCouncil:
                         signal_score=0,
                         confidence=0.1,
                         reasoning=f"Agent '{agent.name}' failed with error: {e}",
+                        error=True,
                     ))
 
         return verdicts
@@ -134,13 +136,19 @@ class AgentCouncil:
         if not verdicts:
             return CouncilVerdict()
 
+        failed_agents = sum(1 for v in verdicts if v.error)
+        survivors = [v for v in verdicts if not v.error]
+
+        if not survivors:
+            return CouncilVerdict(individual_verdicts=verdicts, failed_agents=failed_agents)
+
         # Build a mapping of agent name -> weight for the agents in the council
         agent_weights = {agent.name: agent.weight for agent in self.agents}
 
         # --- Weighted average score ---
         total_weight = 0.0
         weighted_score_sum = 0.0
-        for v in verdicts:
+        for v in survivors:
             w = agent_weights.get(v.agent_name, 1.0)
             weighted_score_sum += v.signal_score * w
             total_weight += w
@@ -148,13 +156,13 @@ class AgentCouncil:
         consensus_score = weighted_score_sum / total_weight if total_weight > 0 else 0.0
 
         # --- Agreement level: 1 - (std_dev / max_possible_std_dev) ---
-        scores = [v.signal_score for v in verdicts]
+        scores = [v.signal_score for v in survivors]
         agreement_level = self._calculate_agreement(scores)
 
         # --- Consensus confidence ---
         # Start with weighted average confidence, then adjust by agreement
         weighted_conf_sum = 0.0
-        for v in verdicts:
+        for v in survivors:
             w = agent_weights.get(v.agent_name, 1.0)
             weighted_conf_sum += v.confidence * w
 
@@ -171,7 +179,7 @@ class AgentCouncil:
 
         # --- Dissenting agents ---
         dissenting = [
-            v.agent_name for v in verdicts
+            v.agent_name for v in survivors
             if abs(v.signal_score - consensus_score) > DISSENT_THRESHOLD
         ]
 
@@ -181,7 +189,7 @@ class AgentCouncil:
         seen_risks: set[str] = set()
         seen_opps: set[str] = set()
 
-        for v in verdicts:
+        for v in survivors:
             for risk in v.risk_factors:
                 normalized = risk.strip().lower()
                 if normalized and normalized not in seen_risks:
@@ -202,6 +210,7 @@ class AgentCouncil:
             dissenting_agents=dissenting,
             key_risks=key_risks,
             key_opportunities=key_opportunities,
+            failed_agents=failed_agents,
         )
 
     @staticmethod
