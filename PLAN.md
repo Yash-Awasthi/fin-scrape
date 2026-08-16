@@ -138,6 +138,50 @@ fixes, and found and fixed several real bugs. Net changes:
 
 Full detail on the analysis pipeline as it stands now is in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
+## Council deliberation + quant layer — 2026-08-16
+
+Follow-on pass on top of the hardening above: the council can now debate instead of voting once
+blind, a judge reads the full transcript, agents anchor to real computed numbers instead of
+inventing them, and the judge gets to see the team's own track record. Net changes:
+
+- **Multi-round rebuttal.** `AgentCouncil(rounds=...)` (env `FINSCRAPE_COUNCIL_ROUNDS`, default `1`)
+  runs round 1 blind as before, then for each further round every agent sees a fenced transcript of
+  every other surviving agent's prior-round score/verdict/one-line stance and re-answers, one
+  parallel `ThreadPoolExecutor` dispatch per round. `CouncilVerdict.score_history` records one
+  `{agent_name: score}` snapshot per round. `rounds=1` (the default) produces the exact same prompt
+  as before this pass — no transcript block is built, nothing changes for existing callers.
+- **Judge.** `AgentCouncil(judge=True)` (on by default for the pipeline's council) adds one more LLM
+  call after deliberation: `finscrape/agents/judge.py:judge_debate` reads every agent's full verdict
+  and reasoning plus the arithmetic consensus (`consensus_score_raw`, `agreement_level`,
+  `dissenting_agents`) and can agree with or override the arithmetic mean, explaining why in its
+  rationale. `CouncilVerdict.consensus_score_raw` always holds the untouched arithmetic mean; a
+  failed or unparseable judge call returns `None` and the council falls back to that mean unchanged
+  (`CouncilVerdict.judged` records which happened).
+- **Real numbers, not invented ones.** `finscrape/market_data.py:compute_indicators` computes RSI14,
+  SMA20/50, ATR%, 5-day return, and % off the 52-week high from plain price lists (no TA-Lib); `
+  get_indicators(tickers)` fetches and TTL-caches them from one batched 6-month `yf.download`, same
+  pattern as the existing `get_market_data`. The pipeline resolves tickers before deliberation
+  (reusing `resolve_tickers`) and hands the indicators to the council as `market_facts`; the council
+  itself fetches nothing. Every agent's prompt renders these as a GROUND TRUTH block instructing it
+  to anchor to the given numbers and flag a conflict instead of inventing its own; after parsing,
+  `finscrape/analysis/validator.py:check_number_conflicts` regexes the agent's own reasoning for a
+  stated indicator value that disagrees with what was actually computed, flags
+  `AgentVerdict.number_conflict`, and the council discounts `consensus_confidence` per flagged
+  survivor. Known ceiling: the regex only catches the `"NAME ... number"` shape within a short
+  window, so indirect phrasing slips through and a short alias like "atr" can false-positive; real
+  number-linking (NER over the reasoning) is the upgrade path if that starts costing real accuracy.
+- **The council remembers being wrong.** `finscrape/accuracy.py:AccuracyTracker.get_lessons` is a
+  read-only SQL query over the existing `signal_outcomes` table (no new table, no migration) that
+  returns per-ticker/per-source hit rate, average realized move, and the last few incorrect calls
+  for the article's tickers and source — `{}` on a cold or no-match database. The pipeline fetches
+  this and passes it into `deliberate(..., lessons=...)`, which forwards it to the judge only
+  (`finscrape/agents/judge.py:format_lessons_block`); the debating agents never see it, so past
+  misses inform the judge's ruling without biasing the independent per-agent scores.
+
+Tests: `tests/test_debate.py`, `tests/test_judge.py`, `tests/test_indicators.py`,
+`tests/test_lessons.py` — all offline, AI client stubbed, no network calls. Full suite: 737 tests,
+5 skip without a live Postgres (`make up`).
+
 ---
 
 ## How to use this document
@@ -798,7 +842,12 @@ caveat:** `get_market_data` calls `yf.download` per article in the hot path — 
 worker doesn't block on Yahoo. Council (`use_council=True`) gives `CouncilVerdict{consensus_score,
 agreement_level, dissenting_agents, key_risks/opportunities, failed_agents}` for the Phase-7
 explainability panel; verdicts flagged `AgentVerdict.error=True` (agent raised, or its response
-failed to parse) are excluded from every consensus computation, not just tallied as neutral.
+failed to parse) are excluded from every consensus computation, not just tallied as neutral. The
+council also carries `consensus_score_raw` (the untouched arithmetic mean), `judged`/`judge_rationale`
+(set when `AgentCouncil(judge=True)`'s judge call overrides the mean after reading the full debate),
+and `score_history` (one round-by-round `{agent: score}` snapshot when `rounds > 1` via
+`FINSCRAPE_COUNCIL_ROUNDS`). See [Council deliberation + quant layer](#council-deliberation--quant-layer--2026-08-16)
+above and `docs/ARCHITECTURE.md` for the full mechanics.
 
 ---
 

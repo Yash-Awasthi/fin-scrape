@@ -34,7 +34,13 @@ chain of second-order effects (war-risk premiums, rerouting, LNG spillover).
 - **Live globe** — every event geolocated, colored by verdict (INVEST / PULL_OUT / OBSERVE / CAUTIOUS).
 - **Event → ticker resolution** — one company↔ticker map (word-boundary matched, so "arm" or "target"
   can't fire on "pharma" or "price target") + a sector/region map for geopolitics, plus the LLM.
-- **Multi-agent AI council** — 7 analyst personas deliberate; surfaces consensus *and* dissent. A
+- **Multi-agent AI council** — 7 analyst personas score an article independently, then (opt-in, via
+  `FINSCRAPE_COUNCIL_ROUNDS`) rebut each other's reasoning for one or more further rounds before a
+  judge model reads the full transcript and hands down a final verdict — falling straight back to
+  the arithmetic weighted-average consensus if the judge call fails. Real technical indicators
+  (RSI, SMA20/50, ATR%, 5-day return, % off the 52-week high) are computed and handed to every
+  agent as ground truth, and any agent whose reasoning states a conflicting number gets flagged and
+  discounted. Past hit-rate and recent wrong calls are read back into the judge's prompt only. A
   crashed agent is excluded from the consensus math, not silently counted as a neutral vote.
 - **Accuracy proof** — backtested hit-rate, by-verdict breakdown, equity-curve sparkline,
   confidence-calibration (Brier score + buckets).
@@ -65,7 +71,8 @@ chain of second-order effects (war-risk premiums, rerouting, LNG spillover).
   old dashboard's dup/count/timezone bugs (deterministic `content_hash` dedup, one UTC day-bounds).
 - **Worker:** one ingest cycle per run (`worker.main --once`), driven by a scheduled GitHub Action.
 - **Frontend:** vanilla-TS Vite SPA (globe.gl, panel grid) + a hand-coded landing page.
-- **Quality:** 692 tests, ruff + pyright + Vitest + Playwright, multi-stage non-root Docker images, CI.
+- **Quality:** 737 tests (5 skip without a live Postgres), ruff + pyright + Vitest + Playwright,
+  multi-stage non-root Docker images, CI.
 
 Full design + the 2-year roadmap live in **[PLAN.md](PLAN.md)**.
 
@@ -101,6 +108,8 @@ All via env (`.env.example`). Key ones:
 | `OPENROUTER_API_KEY` + `FINSCRAPE_MODEL` | BYOK LLM alternative |
 | `FINSCRAPE_HEURISTIC_FALLBACK` | ingest with heuristics when the LLM is unavailable |
 | `WORLDFIN_ENABLE_COUNCIL` | multi-agent explainability |
+| `FINSCRAPE_COUNCIL_ROUNDS` | council debate rounds (default `1`, blind single pass) |
+| `FINSCRAPE_JUDGE_MODEL` | model the council's judge uses (defaults to the standard LLM backend) |
 | `TELEGRAM_BOT_TOKEN` | outbound alerts + `/api/telegram/webhook` |
 
 ## Tech stack
