@@ -11,44 +11,47 @@ Quick start:
     verdict = council.deliberate(title, text, metadata)
 """
 
-from finscrape.agents.base import BaseAgent, AgentVerdict
+from finscrape.agents.base import AgentVerdict, BaseAgent
 from finscrape.agents.council import AgentCouncil, CouncilVerdict
+from finscrape.agents.judge import JudgeVerdict, judge_debate
+from finscrape.agents.market_personas import (
+    MARKET_PERSONAS,
+    ContrarianInvestorAgent,
+    ESGInvestorAgent,
+    InstitutionalWhaleAgent,
+    QuantAgent,
+    RetailDayTraderAgent,
+)
 from finscrape.agents.personas import (
+    DEFAULT_AGENTS,
     AnalystAgent,
     ContrarianAgent,
-    RiskAgent,
-    MomentumAgent,
     FundamentalsAgent,
-    ScoutAgent,
+    MomentumAgent,
     ReviewerAgent,
-    DEFAULT_AGENTS,
-)
-from finscrape.agents.market_personas import (
-    InstitutionalWhaleAgent,
-    RetailDayTraderAgent,
-    ContrarianInvestorAgent,
-    QuantAgent,
-    ESGInvestorAgent,
-    MARKET_PERSONAS,
+    RiskAgent,
+    ScoutAgent,
 )
 
 __all__ = [
-    "BaseAgent",
-    "AgentVerdict",
-    "AgentCouncil",
-    "CouncilVerdict",
-    "AnalystAgent",
-    "ContrarianAgent",
-    "RiskAgent",
-    "MomentumAgent",
-    "FundamentalsAgent",
-    "ScoutAgent",
-    "ReviewerAgent",
     "DEFAULT_AGENTS",
-    "InstitutionalWhaleAgent",
-    "RetailDayTraderAgent",
-    "ContrarianInvestorAgent",
-    "QuantAgent",
-    "ESGInvestorAgent",
     "MARKET_PERSONAS",
+    "AgentCouncil",
+    "AgentVerdict",
+    "AnalystAgent",
+    "BaseAgent",
+    "ContrarianAgent",
+    "ContrarianInvestorAgent",
+    "CouncilVerdict",
+    "ESGInvestorAgent",
+    "FundamentalsAgent",
+    "InstitutionalWhaleAgent",
+    "JudgeVerdict",
+    "MomentumAgent",
+    "QuantAgent",
+    "RetailDayTraderAgent",
+    "ReviewerAgent",
+    "RiskAgent",
+    "ScoutAgent",
+    "judge_debate",
 ]

@@ -13,20 +13,22 @@ from __future__ import annotations
 
 import math
 import re
-from datetime import datetime, timezone
-from typing import Optional
 
 from finscrape.analysis.constants import (
-    POSITIVE_STRONG, POSITIVE_WEAK,
-    NEGATIVE_STRONG, NEGATIVE_WEAK,
-    MAGNITUDE_WORDS, EVENT_BASE_IMPACT,
-    TICKER_STOPWORDS,
-    NEGATION_WORDS, NEGATION_WINDOW,
-    SOURCE_CREDIBILITY,
-    RECENCY_DECAY_RATE, RECENCY_MAX_AGE_HOURS,
+    EVENT_BASE_IMPACT,
     MAGNITUDE_THRESHOLDS,
+    MAGNITUDE_WORDS,
+    NEGATION_WINDOW,
+    NEGATION_WORDS,
+    NEGATIVE_STRONG,
+    NEGATIVE_WEAK,
+    POSITIVE_STRONG,
+    POSITIVE_WEAK,
+    RECENCY_DECAY_RATE,
+    RECENCY_MAX_AGE_HOURS,
+    SOURCE_CREDIBILITY,
+    TICKER_STOPWORDS,
 )
-
 
 # ---------------------------------------------------------------------------
 # Sentence-level sentiment with negation awareness
@@ -286,7 +288,7 @@ def apply_source_credibility(confidence: float, source_name: str) -> float:
 # Recency decay
 # ---------------------------------------------------------------------------
 
-def calculate_recency_multiplier(age_hours: Optional[float]) -> float:
+def calculate_recency_multiplier(age_hours: float | None) -> float:
     """
     Compute a time-based confidence multiplier.
     Fresh articles (< 1h) get ~1.0; older articles decay exponentially.
@@ -298,7 +300,7 @@ def calculate_recency_multiplier(age_hours: Optional[float]) -> float:
     return math.exp(-RECENCY_DECAY_RATE * age_hours)
 
 
-def apply_recency_decay(confidence: float, age_hours: Optional[float]) -> float:
+def apply_recency_decay(confidence: float, age_hours: float | None) -> float:
     """Apply recency decay to a confidence score."""
     multiplier = calculate_recency_multiplier(age_hours)
     return round(confidence * multiplier, 2)
@@ -307,7 +309,7 @@ def apply_recency_decay(confidence: float, age_hours: Optional[float]) -> float:
 def fuse_confidence(
     base: float,
     source: str,
-    age_hours: Optional[float],
+    age_hours: float | None,
     divergence: bool,
     breaking: bool,
 ) -> float:
@@ -460,6 +462,49 @@ def check_divergence(ai_sentiment: str, heuristic_sentiment: str) -> bool:
     if ai_sentiment == "mixed":
         return False
     return ai_sentiment != heuristic_sentiment
+
+
+# ---------------------------------------------------------------------------
+# Deterministic anti-hallucination: reasoning vs. computed indicator facts
+# ---------------------------------------------------------------------------
+
+# Only indicator keys market_data.compute_indicators actually emits — never
+# extend this to free-form claims, that needs real number-linking, not regex.
+_INDICATOR_ALIASES = {
+    "rsi14": ("rsi",),
+    "sma20": ("sma20", "sma 20", "20-day sma", "20 day sma"),
+    "sma50": ("sma50", "sma 50", "50-day sma", "50 day sma"),
+    "atr_pct": ("atr",),
+    "ret_5d": ("5-day return", "5 day return", "5d return"),
+    "pct_from_52w_high": ("52-week high", "52 week high", "52w high"),
+}
+
+
+def check_number_conflicts(reasoning: str, facts: dict) -> list[str]:
+    """Flag reasoning that states a number for a computed indicator that does not
+    match what we actually computed.
+
+    ponytail: regex only catches the "NAME ... number" shape within a short window
+    (e.g. "RSI is 82"), not indirect phrasing or numbers separated across sentences.
+    Ceiling: false negatives on phrasing we don't match, occasional false positive on
+    short aliases like "atr" inside an unrelated word. Upgrade path: real number-linking
+    (NER over the reasoning) if either starts costing real accuracy.
+    """
+    if not reasoning or not facts:
+        return []
+    text_lower = reasoning.lower()
+    conflicts = []
+    for key, value in facts.items():
+        if value is None or key not in _INDICATOR_ALIASES:
+            continue
+        for alias in _INDICATOR_ALIASES[key]:
+            pattern = r"\b" + re.escape(alias) + r"[^\d\n]{0,15}(-?\d+(?:\.\d+)?)"
+            for match in re.finditer(pattern, text_lower):
+                stated = float(match.group(1))
+                tolerance = max(0.5, abs(float(value)) * 0.05)
+                if abs(stated - float(value)) > tolerance:
+                    conflicts.append(f"{key}: reasoning says {stated}, computed {value}")
+    return conflicts
 
 
 def clean_tickers(tickers: list[str], text: str = "") -> list[str]:
