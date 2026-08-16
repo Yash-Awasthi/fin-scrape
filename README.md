@@ -32,9 +32,12 @@ chain of second-order effects (war-risk premiums, rerouting, LNG spillover).
 
 ### Features
 - **Live globe** — every event geolocated, colored by verdict (INVEST / PULL_OUT / OBSERVE / CAUTIOUS).
-- **Event → ticker resolution** — entity-map + LLM resolve world events to real symbols.
-- **Multi-agent AI council** — 7 analyst personas deliberate; surfaces consensus *and* dissent.
-- **Accuracy proof** — backtested hit-rate, by-verdict breakdown, equity-curve sparkline.
+- **Event → ticker resolution** — one company↔ticker map (word-boundary matched, so "arm" or "target"
+  can't fire on "pharma" or "price target") + a sector/region map for geopolitics, plus the LLM.
+- **Multi-agent AI council** — 7 analyst personas deliberate; surfaces consensus *and* dissent. A
+  crashed agent is excluded from the consensus math, not silently counted as a neutral vote.
+- **Accuracy proof** — backtested hit-rate, by-verdict breakdown, equity-curve sparkline,
+  confidence-calibration (Brier score + buckets).
 - **Correlation engine** — fires when 3+ independent source-types corroborate a story; flags
   news↔market divergence ("before it's news").
 - **Breaking-news triangulation**, **social sentiment** (Reddit + StockTwits), **portfolio + watchlists**,

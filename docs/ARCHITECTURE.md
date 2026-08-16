@@ -71,6 +71,61 @@ LLM is **BYOK or local Ollama**, shared with finscrape via env (`OPENAI_BASE_URL
 | keyless ingestors | `finscrape/ingestors/` |
 | correlation algorithm | `server/correlate.py` (independent port; spec = PLAN Appendix A) |
 
+## Analysis pipeline (the finscrape brain)
+
+`finscrape/pipeline.py:FinScrapePipeline._analyze_article` is the fusion entry point (see the Reuse
+map above). Per article: scrape → freshness gate → `call_ai` (or council) → relevance gate → NLP
+enrich → ticker fusion → market data → heuristic score → divergence check → confidence fuse. The
+subsections below describe the pieces that changed in the 2026-08-16 analysis-layer hardening pass;
+see [`../PLAN.md`](../PLAN.md) for that pass's full change list.
+
+**Ticker resolution.** `finscrape/analysis/ticker_map.py` is the single company-name-to-ticker map;
+`finscrape/entity_map.py` is the separate sector/region-to-ticker map used for geopolitics headlines
+that name no company. Both share the word-boundary matcher in `entity_map._matches`, so a bare name
+like "arm" or "target" cannot fire on a substring inside "pharma" or "price target". The resolved
+ticker list is filtered through `finscrape/analysis/validator.py:clean_tickers(tickers, text=...)`,
+which only lets a stopword-listed word (`NOW`, `ALL`, `IT`, `AI`, `KEY`, `GO`, `ONE`, …) through when
+the source text carries it as an explicit `$TICK` or `(TICK)` marker; both `finscrape/pipeline.py`
+and `push_to_dashboard.py` pass the article text into this call.
+
+**Market boost.** `finscrape/market_data.py:calculate_market_boost` picks the single biggest mover
+(by absolute percent change) across the resolved tickers and returns a boost signed to match that
+mover's direction: `±1` at `≥5%`, `±2` at `≥10%`, `0` below that. `finscrape/pipeline.py` adds this
+to the AI's `signal_score` and clamps the result to `[-5, 5]`.
+
+**Confidence fusion.** `finscrape/analysis/validator.py:fuse_confidence` is the single place all
+confidence adjustments combine, called from `finscrape/pipeline.py`. The two multiplicative steps
+(`apply_source_credibility`, then `apply_recency_decay`) run before the two additive steps (a `-0.15`
+divergence penalty, a `+0.10` breaking-news bonus); the result then clamps to `[0, 1]`. Running the
+multipliers first means the divergence penalty always costs exactly `0.15`, regardless of how much
+the multipliers already discounted the base confidence.
+
+**Heuristic impact score.** `finscrape/analysis/validator.py:calculate_heuristic_score` converts the
+event type's base impact to log-odds (`logit_base = log(base / (1 - base))`), adds magnitude-word and
+extracted-figure boosts, and runs the sum through a sigmoid. A zero boost returns the base impact
+unchanged — there is no double-counting.
+
+**Council crash handling.** `finscrape/agents/base.py:AgentVerdict` carries an `error` flag, set
+whenever an agent raises or its response fails to parse. `finscrape/agents/council.py`'s
+`_build_consensus` computes every consensus number — score, agreement, confidence, dissent,
+risks/opportunities — only from verdicts with `error=False`; a council where every agent crashed
+reports `consensus_confidence=0.0` and a `failed_agents` count instead of folding a crashed agent's
+implicit verdict into the average.
+
+**Prompt template safety.** `finscrape/analysis/prompts.py:render_prompt` fences the article body
+between literal markers, strips any `{{`/`}}` from it, and substitutes it before the title, so
+neither the body nor the title can forge a placeholder that hijacks the other slot.
+`EVENT_TYPES_PIPE` is built once from `constants.VALID_EVENT_TYPES` at import time, so the prompt's
+allowed event types and the validator's accepted set cannot drift apart. Both prompt-registry
+variants (`finscrape/analysis/prompt_registry.py`, v1/v2 for the accuracy A/B split) reuse this same
+prompt and render path.
+
+**Not present:** `finscrape/analysis/multi_model.py` (cross-provider agreement scoring) was removed;
+nothing in the pipeline called it. Relationship extraction and coreference resolution are not
+implemented in `finscrape/analysis/nlp.py` despite earlier documentation claiming otherwise —
+`nlp.py` does NER, entity disambiguation, ticker resolution, and financial metric extraction only.
+`temporal.py` shares a single spaCy parse with `nlp.py` rather than re-parsing the article.
+
 ## Testing
 
 - Pure logic is unit-tested offline (dedup/timezone, geocode, ingestor parsers, correlation

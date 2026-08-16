@@ -77,6 +77,69 @@ Man checked git bone-pile. Here what man find, here what man do.
 
 ---
 
+## Analysis-layer hardening — 2026-08-16
+
+A review pass went through `finscrape`'s analysis layer end to end, confirmed several already-correct
+fixes, and found and fixed several real bugs. Net changes:
+
+- **Market boost regains its sign.** `finscrape/market_data.py:calculate_market_boost` used to take
+  `abs()` of the price change before comparing it to the threshold, so a crash and a rally of the same
+  size produced the same (always-positive) boost. It now finds the single biggest mover by magnitude
+  and returns a boost signed to match that mover's direction (`-2..+2`). The downstream clamp in
+  `finscrape/pipeline.py` (`max(-5, min(5, base_score + market_boost))`) was already sign-safe and is
+  unchanged. Tests: `tests/test_market_boost.py`.
+- **Confidence fusion consolidated and reordered.** The five-step confidence adjustment (source
+  credibility, recency decay, divergence penalty, breaking-news bonus, clamp) is now one function,
+  `finscrape/analysis/validator.py:fuse_confidence`, called from `finscrape/pipeline.py`. The two
+  multiplicative steps now run before the two additive steps, so the `-0.15` divergence penalty always
+  costs exactly `0.15` — previously it could apply before the multipliers and be partially absorbed by
+  them. `push_to_dashboard.py` still calls the two sub-functions directly for its own display path;
+  that path is unchanged and was out of scope for this pass.
+- **Heuristic impact score no longer double-counts the base impact.** `calculate_heuristic_score`
+  converts `base_impact` to log-odds and adds magnitude/figure boosts through a sigmoid; a zero boost
+  now returns `base_impact` unchanged. A stray extra `math.log(base_impact)` term that had crept back
+  into the calculation (reintroducing the exact bug this pass was meant to fix) was found and removed
+  a second time.
+- **Ticker resolution consolidated onto one map.** `finscrape/analysis/ticker_map.py` is now the
+  single company-name-to-ticker map; it reuses the word-boundary matcher from
+  `finscrape/entity_map.py` so a bare name like "arm" or "target" cannot fire on a substring inside
+  "pharma" or "price target". `finscrape/analysis/nlp.py` no longer keeps its own copy of this map.
+- **Ticker stopword protection now actually reaches production.** Seven short words (`NOW`, `ALL`,
+  `IT`, `AI`, `KEY`, `GO`, `ONE`) had been dropped from `TICKER_STOPWORDS` while a text-aware
+  `clean_tickers(tickers, text=...)` was added to protect them — but `extract_tickers_from_text` never
+  called the text-aware path, and the two production callers (`finscrape/pipeline.py`,
+  `push_to_dashboard.py`) called `clean_tickers` without `text=`, so the new protection never ran
+  outside of tests. The words are back in the stopword set, `extract_tickers_from_text` now filters
+  through `clean_tickers`, and both production callers pass the article text through.
+- **Crashed council agents no longer vote.** `finscrape/agents/base.py`'s `AgentVerdict` gained an
+  `error` flag, set whenever an agent raises or its response fails to parse. `council.py`'s
+  `_build_consensus` now computes every consensus number — score, agreement, confidence, dissent,
+  risks/opportunities — only from verdicts with `error=False`; a council where every agent crashed
+  reports `consensus_confidence=0.0` and a `failed_agents` count instead of folding the crashed
+  sentinel's implicit score into the average.
+- **Prompt template injection defenses.** `render_prompt` fences the article body between literal
+  markers, strips any `{{`/`}}` from it, and substitutes it before the title, so neither the body nor
+  the title can forge a placeholder that hijacks the other slot. `EVENT_TYPES_PIPE` is now built once
+  from `constants.VALID_EVENT_TYPES` at import time, keeping the prompt's allowed event types and the
+  validator's accepted set from drifting apart.
+- **Dead multi-model surface removed.** `finscrape/analysis/multi_model.py` (`MultiModelClient`,
+  `analyze_batch`, batch-mode prompts) is deleted; nothing in the pipeline called it.
+  `tests/test_no_multi_model.py` guards against it coming back.
+- **Server-side accuracy calibration was silently dead.** `server/routes/accuracy.py`'s
+  `/api/accuracy` and `/api/accuracy/by-variant` queries did not select `events.confidence`, so the
+  calibration block in `server/accuracy.py:aggregate()` always received rows without confidence and
+  returned `brier: None` with empty buckets — a passing test suite hid this because the test fed
+  `aggregate()` confidence directly. Both queries now join `events.confidence` in.
+- **`nlp.py`'s docstring no longer claims features it doesn't have.** It previously mentioned
+  relationship extraction and coreference resolution; neither is implemented (`temporal.py` shares a
+  single spaCy parse with `nlp.py`, but no code outside `nlp.py` reads `.relations` or
+  `primary_company`). The docstring now describes only NER, entity disambiguation, ticker resolution,
+  and financial metric extraction; the R-Phase 2 checklist below is corrected to match.
+
+Full detail on the analysis pipeline as it stands now is in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+
+---
+
 ## How to use this document
 
 - **Status legend** (used on every phase header and milestone):
@@ -420,7 +483,6 @@ only residue is environment-bound (live cloud/browser/3rd-party-network), not un
 | Data model (`affected_entities`, `second_order_effects`) | reuse as-is | `finscrape/models/events.py` |
 | Heuristic score + dedup helpers | reuse | `finscrape/analysis/validator.py` |
 | Multi-agent council + market personas | reuse (explainability/dissent) | `finscrape/agents/*` |
-| Multi-model agreement | reuse | `finscrape/analysis/multi_model.py` |
 | Continuous monitor loop | port intent → APScheduler worker | `finscrape/monitor.py` |
 | Accuracy backtesting | reuse → AccuracyPanel | `finscrape/accuracy.py` |
 | Reddit/StockTwits sentiment | reuse → SentimentPanel | `finscrape/sentiment/*` |
@@ -493,8 +555,10 @@ the asset WorldFin builds on.*
 Phases 2–4 advance much of this.*
 
 ### Advanced NLP
-- [x] spaCy NER (company/person/org); entity disambiguation; relationship extraction; temporal extraction
-- [ ] Coreference resolution — link pronouns/references to entities
+- [x] spaCy NER (company/person/org); entity disambiguation; temporal extraction (`temporal.py`
+      shares a single spaCy parse with `nlp.py` rather than re-parsing the article)
+- [ ] Relationship extraction; coreference resolution — link pronouns/references to entities. Not
+      implemented; `nlp.py`'s docstring previously claimed both, corrected 2026-08-16.
 - [ ] Custom financial NER fine-tuned on SEC filings + earnings transcripts
   - *Extrapolated:* start from the spaCy pipeline; weak-label from existing extractions to bootstrap a training set before any manual annotation.
 
@@ -528,8 +592,11 @@ as the explainability/dissent layer.*
 - [x] Independent persona verdicts → "market consensus"; persona divergence = uncertainty signal
 
 ### LLM infrastructure
-- [x] Multi-model support (DeepSeek/Claude/GPT/Llama via `MultiModelClient`); model-agreement scoring;
-      LRU+TTL response cache (SHA256 key)
+- (removed) Multi-model support (DeepSeek/Claude/GPT/Llama via `MultiModelClient`) with
+      model-agreement scoring was built, then deleted 2026-08-16 as unused surface area — nothing in
+      the pipeline called it. `finscrape/analysis/multi_model.py` is gone, guarded against returning
+      by `tests/test_no_multi_model.py`. The SHA256 LRU+TTL response cache lives on in the
+      single-model `call_ai` path (Appendix C).
 - [x] Local model via Ollama (BYOK/Ollama dual backend) — *landed; powers WorldFin's keyless default*
 - [ ] Prompt versioning + A/B testing framework
   - *Extrapolated:* version prompts in `analysis/prompts.py` with a registry + hash; A/B by routing a
@@ -713,17 +780,25 @@ side-effects (bg AI batches of 3 + Telegram for INVEST/PULL_OUT) must not block 
 Reuse `FinScrapePipeline._analyze_article` as the fusion unit (construct with
 `enable_alerts/accuracy/portfolio=False`). Per-article order: scrape→freshness gate→`call_ai` (or
 council)→relevance gate→NLP enrich→ticker fusion→market data→heuristic→divergence→fuse. **Score:**
-`final = clamp(-5,5, ai_score + market_boost)` where `market_boost`∈{0,1,2} from `abs(change%)≥5→1,
-≥10→2` (only ever raises). **Confidence, order is load-bearing:** `conf` → if divergence `−0.15` →
+`final = clamp(-5,5, ai_score + market_boost)` where `market_boost`
+(`finscrape/market_data.py:calculate_market_boost`) picks the single biggest mover among the resolved
+tickers by `abs(change%)` and returns a boost signed to match that mover's direction: `±1` at `≥5%`,
+`±2` at `≥10%`, else `0` — it can raise or lower the score. **Confidence fusion**
+(`finscrape/analysis/validator.py:fuse_confidence`), order is load-bearing: `conf` →
 `apply_source_credibility` (`conf*0.7+conf*cred*0.3`; bloomberg/reuters 1.0…rss/default 0.5) →
-`apply_recency_decay` (`*exp(-0.05*age_h)`, age None→`*0.85`, clamp 48h) → if breaking `+0.10`.
+`apply_recency_decay` (`*exp(-0.05*age_h)`, age None→`*0.85`, clamp 48h) → if divergence `−0.15` → if
+breaking `+0.10` → clamp `[0,1]`. The multipliers run first so the divergence penalty always costs
+exactly `0.15`, regardless of how much the multipliers already discounted the base confidence.
 `Verdict.from_score`: ≥3 INVEST, ≥1 OBSERVE, ≥−1 CAUTIOUS, else PULL_OUT. `calculate_heuristic_score`
-logistic intentionally double-counts base_impact — match exactly. **`call_ai(prompt, system_prompt,
+converts `base_impact` to log-odds and adds magnitude/figure boosts through a sigmoid — a zero boost
+returns `base_impact` unchanged, no double-counting. **`call_ai(prompt, system_prompt,
 model=None)`** picks backend: `OPENAI_BASE_URL` (Ollama) → else `OPENROUTER_API_KEY` (BYOK) → else
 None; strips `<think>`, regex `{...}`, validates + clamps; sha256 model-aware LRU+TTL cache. **Worker
 caveat:** `get_market_data` calls `yf.download` per article in the hot path — cache/stub it so the
 worker doesn't block on Yahoo. Council (`use_council=True`) gives `CouncilVerdict{consensus_score,
-agreement_level, dissenting_agents, key_risks/opportunities}` for the Phase-7 explainability panel.
+agreement_level, dissenting_agents, key_risks/opportunities, failed_agents}` for the Phase-7
+explainability panel; verdicts flagged `AgentVerdict.error=True` (agent raised, or its response
+failed to parse) are excluded from every consensus computation, not just tallied as neutral.
 
 ---
 
