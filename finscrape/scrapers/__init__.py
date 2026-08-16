@@ -165,8 +165,8 @@ class BaseScraper(ABC):
     @staticmethod
     def extract_tickers_from_text(text: str) -> list[str]:
         """Extract ticker symbols from text using regex + company name mapping."""
-        from finscrape.analysis.constants import TICKER_STOPWORDS
-        from finscrape.analysis.ticker_map import COMPANY_TO_TICKER
+        from finscrape.analysis.ticker_map import resolve_company_tickers
+        from finscrape.analysis.validator import clean_tickers
 
         tickers = set()
 
@@ -182,14 +182,11 @@ class BaseScraper(ABC):
         # Indexes — e.g. ^GSPC
         tickers.update(re.findall(r"(\^[A-Z]{2,5})\b", text))
 
-        # Company name → ticker mapping (case-insensitive search)
-        text_lower = text.lower()
-        for name, ticker in COMPANY_TO_TICKER.items():
-            if name in text_lower:
-                tickers.add(ticker)
+        # Company name → ticker mapping (word-boundary match, the one map)
+        tickers.update(resolve_company_tickers(text))
 
-        # Filter stopwords but allow single-char tickers from explicit patterns
-        return [t for t in tickers if t not in TICKER_STOPWORDS and 1 <= len(t) <= 5]
+        # Drop stopwords, except real tickers written as explicit $TICK/(TICK) shorthand
+        return [t for t in clean_tickers(list(tickers), text=text) if 1 <= len(t) <= 5]
 
     def close(self):
         """No-op — Scrapling fetchers are class-level, no instance cleanup needed."""
