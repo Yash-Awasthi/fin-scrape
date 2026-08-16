@@ -16,6 +16,32 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 
+def calibration(rows: list[dict]) -> dict[str, Any]:
+    """Brier score + calibration buckets for confidence vs. actual correctness.
+
+    rows: dicts with 'confidence' (0..1) and 'correct' (bool). Rows missing
+    either key are skipped.
+    """
+    scored = [r for r in rows if r.get("confidence") is not None and r.get("correct") is not None]
+    buckets = {"0-.25": 0, ".25-.5": 0, ".5-.75": 0, ".75-1": 0}
+    if not scored:
+        return {"brier": None, "buckets": buckets}
+
+    brier = sum((r["confidence"] - (1.0 if r["correct"] else 0.0)) ** 2 for r in scored) / len(scored)
+    for r in scored:
+        conf = r["confidence"]
+        if conf < 0.25:
+            buckets["0-.25"] += 1
+        elif conf < 0.5:
+            buckets[".25-.5"] += 1
+        elif conf < 0.75:
+            buckets[".5-.75"] += 1
+        else:
+            buckets[".75-1"] += 1
+
+    return {"brier": round(brier, 4), "buckets": buckets}
+
+
 def _project_root() -> Path:
     """Find project root by looking for main.py or .git."""
     current = Path(__file__).resolve().parent
@@ -318,6 +344,13 @@ class AccuracyTracker:
             "SELECT AVG(confidence) FROM signal_outcomes WHERE outcome = 'incorrect'"
         ).fetchone()[0]
 
+        calib_rows = self._conn.execute(
+            "SELECT confidence, outcome FROM signal_outcomes WHERE outcome IN ('correct', 'incorrect')"
+        ).fetchall()
+        calib = calibration(
+            [{"confidence": conf, "correct": outcome == "correct"} for conf, outcome in calib_rows]
+        )
+
         return {
             "overall_accuracy": round(overall_accuracy, 2),
             "total_scored": total_scored,
@@ -328,6 +361,7 @@ class AccuracyTracker:
             "worst_sources": worst_sources[:5],
             "avg_confidence_when_correct": round(conf_correct, 4) if conf_correct else None,
             "avg_confidence_when_incorrect": round(conf_incorrect, 4) if conf_incorrect else None,
+            "calibration": calib,
         }
 
     def get_ticker_accuracy(self, ticker: str) -> dict[str, Any]:

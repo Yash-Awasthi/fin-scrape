@@ -2,6 +2,9 @@
 
 The backtest DB path (server.accuracy.backtest) is covered by the docker integration run.
 """
+import pytest
+
+from finscrape.accuracy import calibration
 from server.accuracy import aggregate, verdict_outcome
 
 
@@ -37,3 +40,50 @@ def test_aggregate_hit_rate_and_equity_curve():
 def test_aggregate_empty():
     agg = aggregate([])
     assert agg["hit_rate"] == 0.0 and agg["equity_curve"] == []
+
+
+def test_calibration_all_correct_high_confidence():
+    rows = [{"confidence": 0.9, "correct": True} for _ in range(10)]
+    calib = calibration(rows)
+    assert calib["brier"] == pytest.approx(0.01, abs=1e-6)
+
+
+def test_calibration_all_wrong_high_confidence():
+    rows = [{"confidence": 0.9, "correct": False} for _ in range(10)]
+    calib = calibration(rows)
+    assert calib["brier"] == pytest.approx(0.81, abs=1e-6)
+
+
+def test_calibration_half_confidence_always_025_brier():
+    correct_rows = [{"confidence": 0.5, "correct": True} for _ in range(5)]
+    wrong_rows = [{"confidence": 0.5, "correct": False} for _ in range(5)]
+    assert calibration(correct_rows)["brier"] == 0.25
+    assert calibration(wrong_rows)["brier"] == 0.25
+
+
+def test_calibration_bucket_counts_sum_to_rows():
+    rows = [
+        {"confidence": 0.1, "correct": True},
+        {"confidence": 0.3, "correct": False},
+        {"confidence": 0.6, "correct": True},
+        {"confidence": 0.9, "correct": True},
+        {"confidence": 0.99, "correct": False},
+    ]
+    calib = calibration(rows)
+    assert sum(calib["buckets"].values()) == len(rows)
+
+
+def test_calibration_empty():
+    calib = calibration([])
+    assert calib["brier"] is None
+    assert sum(calib["buckets"].values()) == 0
+
+
+def test_aggregate_includes_calibration():
+    rows = [
+        {"verdict": "INVEST", "correct": True, "checked_at": "2026-01-01T00:00:00", "confidence": 0.9},
+        {"verdict": "PULL_OUT", "correct": False, "checked_at": "2026-01-02T00:00:00", "confidence": 0.9},
+    ]
+    agg = aggregate(rows)
+    assert agg["calibration"]["brier"] == pytest.approx((0.01 + 0.81) / 2, abs=1e-6)
+    assert sum(agg["calibration"]["buckets"].values()) == 2
