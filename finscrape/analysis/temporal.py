@@ -17,21 +17,6 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
-# Lazy spaCy loader (shared with nlp.py)
-_nlp = None
-
-
-def _get_nlp():
-    global _nlp
-    if _nlp is None:
-        try:
-            import spacy
-            _nlp = spacy.load("en_core_web_sm")
-        except OSError:
-            return None
-    return _nlp
-
-
 MONTH_NAMES = {
     "january": 1, "february": 2, "march": 3, "april": 4,
     "may": 5, "june": 6, "july": 7, "august": 8,
@@ -160,6 +145,7 @@ class TemporalExtractor:
         self,
         text: str,
         reference_date: datetime | None = None,
+        doc=None,
     ) -> list[TemporalReference]:
         """
         Extract all temporal references from the given text.
@@ -167,6 +153,9 @@ class TemporalExtractor:
         Args:
             text: The financial text to analyze.
             reference_date: Anchor for resolving relative dates. Defaults to now.
+            doc: An already-parsed spaCy doc for this text. Pass this when the
+                 caller already ran spaCy NER, to avoid parsing the same text twice.
+                 Falls back to parsing `text` itself when not given.
 
         Returns:
             A deduplicated list of TemporalReference objects.
@@ -325,12 +314,14 @@ class TemporalExtractor:
             ))
 
         # 12. Supplement with spaCy DATE entities (non-overlapping only)
-        nlp = _get_nlp()
-        if nlp:
-            doc = nlp(text[:10000])
+        if doc is None:
+            from finscrape.analysis.nlp import _get_nlp
+            nlp = _get_nlp()
+            if nlp:
+                doc = nlp(text[:10000])
+        if doc is not None:
             for ent in doc.ents:
                 if ent.label_ == "DATE":
-                    span_key = (ent.start_char, ent.end_char)
                     # Skip if overlaps with any already-seen span
                     overlaps = any(
                         not (ent.end_char <= s or ent.start_char >= e)

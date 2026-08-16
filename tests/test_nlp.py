@@ -90,23 +90,6 @@ class TestMetricExtraction:
         assert deals[0].value > 60_000_000_000
 
 
-class TestRelationExtraction:
-    def test_acquisition(self, nlp):
-        result = nlp.analyze("M&A", "Microsoft to acquire Activision Blizzard for $69 billion.")
-        acquires = [r for r in result.relations if r.relation == "acquires"]
-        assert len(acquires) >= 1
-
-    def test_upgrade(self, nlp):
-        result = nlp.analyze("Upgrade", "Goldman Sachs upgrades Apple to Buy rating.")
-        upgrades = [r for r in result.relations if r.relation == "upgrades"]
-        assert len(upgrades) >= 1
-
-    def test_downgrade(self, nlp):
-        result = nlp.analyze("Downgrade", "Morgan Stanley downgrades Tesla to Underweight rating.")
-        downgrades = [r for r in result.relations if r.relation == "downgrades"]
-        assert len(downgrades) >= 1
-
-
 class TestSectorDetection:
     def test_tech_sector(self, nlp):
         result = nlp.analyze("Tech", "Nvidia announces new AI chip for data center workloads.")

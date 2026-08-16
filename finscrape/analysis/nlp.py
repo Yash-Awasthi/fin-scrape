@@ -1,13 +1,12 @@
 """
-Advanced NLP pipeline — spaCy-based entity extraction, disambiguation,
-coreference resolution, and relationship extraction for financial text.
+Advanced NLP pipeline — spaCy-based entity extraction and disambiguation
+for financial text.
 
 Replaces the naive regex ticker extraction with proper NLP:
 - Named Entity Recognition (NER) for ORG, PERSON, MONEY, DATE, PERCENT
 - Entity disambiguation (Apple Inc vs. apple fruit)
 - Company→ticker resolution via entity index + fuzzy matching
 - Financial metric extraction (revenue, EPS, price targets)
-- Relationship extraction (acquirer→target, analyst→company)
 """
 
 from __future__ import annotations
@@ -23,6 +22,8 @@ from finscrape.analysis.temporal import (
     TemporalReference,
     get_next_catalyst_date,
 )
+from finscrape.analysis.ticker_map import COMPANY_TO_TICKER
+from finscrape.entity_map import _matches
 
 logger = logging.getLogger(__name__)
 
@@ -44,48 +45,8 @@ def _get_nlp():
 
 
 # --- Well-known financial entity mappings ---
-
-COMPANY_TICKER_MAP: dict[str, str] = {
-    "apple": "AAPL", "microsoft": "MSFT", "google": "GOOGL", "alphabet": "GOOGL",
-    "amazon": "AMZN", "meta": "META", "facebook": "META", "meta platforms": "META",
-    "nvidia": "NVDA", "tesla": "TSLA", "netflix": "NFLX", "amd": "AMD",
-    "advanced micro devices": "AMD", "intel": "INTC", "ibm": "IBM",
-    "salesforce": "CRM", "adobe": "ADBE", "oracle": "ORCL", "cisco": "CSCO",
-    "qualcomm": "QCOM", "broadcom": "AVGO", "texas instruments": "TXN",
-    "jpmorgan": "JPM", "jp morgan": "JPM", "j.p. morgan": "JPM",
-    "goldman sachs": "GS", "morgan stanley": "MS", "bank of america": "BAC",
-    "citigroup": "C", "wells fargo": "WFC", "blackrock": "BLK",
-    "berkshire hathaway": "BRK.B", "berkshire": "BRK.B",
-    "walmart": "WMT", "target": "TGT", "costco": "COST", "home depot": "HD",
-    "disney": "DIS", "walt disney": "DIS", "comcast": "CMCSA", "verizon": "VZ",
-    "at&t": "T", "t-mobile": "TMUS", "uber": "UBER", "airbnb": "ABNB",
-    "paypal": "PYPL", "visa": "V", "mastercard": "MA", "square": "SQ", "block": "SQ",
-    "coca-cola": "KO", "pepsi": "PEP", "pepsico": "PEP",
-    "johnson & johnson": "JNJ", "pfizer": "PFE", "unitedhealth": "UNH",
-    "procter & gamble": "PG", "exxon mobil": "XOM", "exxon": "XOM", "chevron": "CVX",
-    "boeing": "BA", "lockheed martin": "LMT", "raytheon": "RTX",
-    "caterpillar": "CAT", "3m": "MMM", "honeywell": "HON",
-    "samsung": "SSNLF", "tsmc": "TSM", "taiwan semiconductor": "TSM",
-    "alibaba": "BABA", "tencent": "TCEHY", "baidu": "BIDU",
-    "shopify": "SHOP", "snowflake": "SNOW", "palantir": "PLTR",
-    "coinbase": "COIN", "robinhood": "HOOD", "sofi": "SOFI",
-    "rivian": "RIVN", "lucid": "LCID", "nio": "NIO",
-    "crowdstrike": "CRWD", "datadog": "DDOG", "cloudflare": "NET",
-    "arm": "ARM", "arm holdings": "ARM",
-    "openai": "", "federal reserve": "", "fed": "", "sec": "", "ftc": "",
-    "european central bank": "", "ecb": "",
-}
-
-# Analyst/bank names that appear as actors in financial news
-ANALYST_ENTITIES = frozenset({
-    "goldman sachs", "morgan stanley", "jpmorgan", "jp morgan", "j.p. morgan",
-    "bank of america", "merrill lynch", "citigroup", "citi", "barclays",
-    "deutsche bank", "ubs", "credit suisse", "hsbc", "wells fargo",
-    "raymond james", "piper sandler", "jefferies", "cowen", "needham",
-    "wedbush", "oppenheimer", "bernstein", "rbc", "bmo", "canaccord",
-    "stifel", "wolfe research", "evercore", "truist", "mizuho",
-    "keybanc", "loop capital", "rosenblatt", "susquehanna",
-})
+# Company name -> ticker lives in finscrape.analysis.ticker_map (the one map,
+# shared with the scrapers' regex extractor). Imported above as COMPANY_TO_TICKER.
 
 # Words that indicate "Apple" is the company, not the fruit
 APPLE_COMPANY_CONTEXT = frozenset({
@@ -101,7 +62,7 @@ class ExtractedEntity:
     name: str
     entity_type: str  # ORG, PERSON, MONEY, DATE, PERCENT, GPE, PRODUCT
     ticker: str = ""
-    role: str = "mentioned"  # primary, competitor, analyst, regulator, mentioned
+    role: str = "mentioned"
     impact: str = "neutral"  # positive, negative, neutral
     confidence: float = 0.5
     span_start: int = 0
@@ -119,20 +80,10 @@ class FinancialMetric:
 
 
 @dataclass
-class EntityRelation:
-    """A relationship between two entities."""
-    subject: str
-    relation: str  # acquires, invests_in, upgrades, downgrades, sues, partners_with
-    object: str
-    confidence: float = 0.5
-
-
-@dataclass
 class NLPResult:
     """Complete NLP analysis of a financial text."""
     entities: list[ExtractedEntity] = field(default_factory=list)
     metrics: list[FinancialMetric] = field(default_factory=list)
-    relations: list[EntityRelation] = field(default_factory=list)
     temporal_refs: list[TemporalReference] = field(default_factory=list)
     tickers: list[str] = field(default_factory=list)
     primary_company: str = ""
@@ -158,8 +109,9 @@ class FinancialNLP:
         full_text = f"{title}. {text}" if title else text
         result = NLPResult()
 
-        # Step 1: spaCy NER
+        # Step 1: spaCy NER — parse once, reuse the doc for temporal extraction below
         nlp = _get_nlp()
+        doc = None
         if nlp:
             doc = nlp(full_text[:10000])  # Cap to avoid memory issues
             result.entities = self._extract_entities(doc, full_text)
@@ -169,13 +121,10 @@ class FinancialNLP:
         # Step 2: Financial metric extraction (regex-based, doesn't need spaCy)
         result.metrics = self._extract_metrics(full_text)
 
-        # Step 3: Relationship extraction
-        result.relations = self._extract_relations(full_text)
-
-        # Step 4: Resolve tickers
+        # Step 3: Resolve tickers
         result.tickers = self._resolve_all_tickers(result.entities, full_text)
 
-        # Step 5: Identify primary company
+        # Step 4: Identify primary company
         if result.tickers:
             result.primary_ticker = result.tickers[0]
             for ent in result.entities:
@@ -183,14 +132,14 @@ class FinancialNLP:
                     result.primary_company = ent.name
                     break
 
-        # Step 6: Sector detection
+        # Step 5: Sector detection
         result.sector = self._detect_sector(full_text, result.tickers)
 
-        # Step 7: Breaking news indicators
+        # Step 6: Breaking news indicators
         result.has_breaking_indicators = self._check_breaking_indicators(full_text)
 
-        # Step 8: Temporal extraction
-        result.temporal_refs = self._temporal_extractor.extract(full_text)
+        # Step 7: Temporal extraction
+        result.temporal_refs = self._temporal_extractor.extract(full_text, doc=doc)
 
         return result
 
@@ -222,13 +171,6 @@ class FinancialNLP:
                 if ticker:
                     extracted.ticker = ticker
 
-                # Determine role
-                name_lower = name.lower()
-                if name_lower in ANALYST_ENTITIES or any(a in name_lower for a in ANALYST_ENTITIES):
-                    extracted.role = "analyst"
-                else:
-                    extracted.role = "primary"
-
             entities.append(extracted)
 
         return entities
@@ -238,13 +180,12 @@ class FinancialNLP:
         entities = []
         text_lower = text.lower()
 
-        for name, ticker in COMPANY_TICKER_MAP.items():
-            if name in text_lower and ticker:
+        for name, ticker in COMPANY_TO_TICKER.items():
+            if _matches(name, text_lower):
                 entities.append(ExtractedEntity(
                     name=name.title(),
                     entity_type="ORG",
                     ticker=ticker,
-                    role="primary",
                 ))
 
         return entities
@@ -261,15 +202,11 @@ class FinancialNLP:
             # In financial news, default to company
             return "AAPL"
 
-        # Direct lookup
-        if name_lower in COMPANY_TICKER_MAP:
-            return COMPANY_TICKER_MAP[name_lower]
-
-        # Partial match (e.g., "Apple Inc." → "apple")
-        for key, ticker in COMPANY_TICKER_MAP.items():
-            if key in name_lower or name_lower in key:
-                if ticker:
-                    return ticker
+        # Word-boundary lookup — catches "Apple Inc." via the "apple" key
+        # without matching "arm" inside "pharma" or "target" inside "targeting"
+        for key, ticker in COMPANY_TO_TICKER.items():
+            if _matches(key, name_lower):
+                return ticker
 
         # Custom entity index lookup
         for keyword, entries in self._custom_index.items():
@@ -373,72 +310,6 @@ class FinancialNLP:
             ))
 
         return metrics
-
-    def _extract_relations(self, text: str) -> list[EntityRelation]:
-        """Extract entity relationships from financial text."""
-        relations = []
-        text_lower = text.lower()
-
-        # Acquisition patterns
-        for m in re.finditer(
-            r'(\b[A-Z][a-zA-Z& .]+?)\s+(?:to acquire|acquires|acquired|buying|to buy|buys|bought)\s+(\b[A-Z][a-zA-Z& .]+?)(?:\s|,|\.)',
-            text
-        ):
-            relations.append(EntityRelation(
-                subject=m.group(1).strip(),
-                relation="acquires",
-                object=m.group(2).strip(),
-                confidence=0.8,
-            ))
-
-        # Upgrade/downgrade patterns
-        for m in re.finditer(
-            r'(\b[A-Z][a-zA-Z& .]+?)\s+(?:upgrades?|raised?)\s+(\b[A-Z][a-zA-Z& .]+?)\s+(?:to|rating)',
-            text
-        ):
-            relations.append(EntityRelation(
-                subject=m.group(1).strip(),
-                relation="upgrades",
-                object=m.group(2).strip(),
-                confidence=0.7,
-            ))
-
-        for m in re.finditer(
-            r'(\b[A-Z][a-zA-Z& .]+?)\s+(?:downgrades?|cut|cuts)\s+(\b[A-Z][a-zA-Z& .]+?)\s+(?:to|rating)',
-            text
-        ):
-            relations.append(EntityRelation(
-                subject=m.group(1).strip(),
-                relation="downgrades",
-                object=m.group(2).strip(),
-                confidence=0.7,
-            ))
-
-        # Investment patterns
-        for m in re.finditer(
-            r'(\b[A-Z][a-zA-Z& .]+?)\s+(?:invests?|invested)\s+(?:\$[\d,.]+\s*(?:billion|million|B|M)\s+)?(?:in)\s+(\b[A-Z][a-zA-Z& .]+)',
-            text
-        ):
-            relations.append(EntityRelation(
-                subject=m.group(1).strip(),
-                relation="invests_in",
-                object=m.group(2).strip(),
-                confidence=0.7,
-            ))
-
-        # Partnership
-        for m in re.finditer(
-            r'(\b[A-Z][a-zA-Z& .]+?)\s+(?:partners? with|partnering with|collaborat\w+ with)\s+(\b[A-Z][a-zA-Z& .]+)',
-            text
-        ):
-            relations.append(EntityRelation(
-                subject=m.group(1).strip(),
-                relation="partners_with",
-                object=m.group(2).strip(),
-                confidence=0.6,
-            ))
-
-        return relations
 
     def _resolve_all_tickers(self, entities: list[ExtractedEntity], text: str) -> list[str]:
         """Resolve all tickers from entities + regex patterns, deduplicated."""
