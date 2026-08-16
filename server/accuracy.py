@@ -4,7 +4,8 @@ Ports the correctness rule from finscrape/accuracy.py (_determine_outcome): an I
 right if price rose ≥1%, a PULL_OUT is right if it fell ≥1%; OBSERVE/CAUTIOUS are
 non-directional (neutral). The pure helpers (verdict_outcome, aggregate) are unit-tested;
 `backtest` takes an injectable price_fetcher so it runs offline in tests and against
-finscrape market_data in the worker.
+finscrape market_data in the worker. `calibration` (Brier score + confidence buckets)
+is shared with finscrape/accuracy.py rather than duplicated.
 """
 
 from __future__ import annotations
@@ -12,6 +13,8 @@ from __future__ import annotations
 from collections.abc import Callable
 
 import asyncpg
+
+from finscrape.accuracy import calibration
 
 THRESHOLD_PCT = 1.0
 DIRECTIONAL = ("INVEST", "PULL_OUT")
@@ -65,6 +68,7 @@ def aggregate(rows: list[dict]) -> dict:
         "hit_rate": round(hits / len(scored), 3) if scored else 0.0,
         "by_verdict": by_verdict,
         "equity_curve": equity,
+        "calibration": calibration(scored),
     }
 
 

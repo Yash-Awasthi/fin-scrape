@@ -13,20 +13,22 @@ from __future__ import annotations
 
 import math
 import re
-from datetime import datetime, timezone
-from typing import Optional
 
 from finscrape.analysis.constants import (
-    POSITIVE_STRONG, POSITIVE_WEAK,
-    NEGATIVE_STRONG, NEGATIVE_WEAK,
-    MAGNITUDE_WORDS, EVENT_BASE_IMPACT,
-    TICKER_STOPWORDS,
-    NEGATION_WORDS, NEGATION_WINDOW,
-    SOURCE_CREDIBILITY,
-    RECENCY_DECAY_RATE, RECENCY_MAX_AGE_HOURS,
+    EVENT_BASE_IMPACT,
     MAGNITUDE_THRESHOLDS,
+    MAGNITUDE_WORDS,
+    NEGATION_WINDOW,
+    NEGATION_WORDS,
+    NEGATIVE_STRONG,
+    NEGATIVE_WEAK,
+    POSITIVE_STRONG,
+    POSITIVE_WEAK,
+    RECENCY_DECAY_RATE,
+    RECENCY_MAX_AGE_HOURS,
+    SOURCE_CREDIBILITY,
+    TICKER_STOPWORDS,
 )
-
 
 # ---------------------------------------------------------------------------
 # Sentence-level sentiment with negation awareness
@@ -273,7 +275,8 @@ def get_source_credibility(source_name: str) -> float:
 def apply_source_credibility(confidence: float, source_name: str) -> float:
     """
     Adjust AI confidence based on source credibility.
-    High-credibility sources get a small boost; low-credibility sources get a penalty.
+    Multiplier is confidence * (0.7 + 0.3 * credibility), which is <= 1.0 always —
+    this can only discount confidence, never boost it above the input.
     """
     credibility = get_source_credibility(source_name)
     # Blend: 70% AI confidence, 30% source credibility influence
@@ -285,7 +288,7 @@ def apply_source_credibility(confidence: float, source_name: str) -> float:
 # Recency decay
 # ---------------------------------------------------------------------------
 
-def calculate_recency_multiplier(age_hours: Optional[float]) -> float:
+def calculate_recency_multiplier(age_hours: float | None) -> float:
     """
     Compute a time-based confidence multiplier.
     Fresh articles (< 1h) get ~1.0; older articles decay exponentially.
@@ -297,10 +300,32 @@ def calculate_recency_multiplier(age_hours: Optional[float]) -> float:
     return math.exp(-RECENCY_DECAY_RATE * age_hours)
 
 
-def apply_recency_decay(confidence: float, age_hours: Optional[float]) -> float:
+def apply_recency_decay(confidence: float, age_hours: float | None) -> float:
     """Apply recency decay to a confidence score."""
     multiplier = calculate_recency_multiplier(age_hours)
     return round(confidence * multiplier, 2)
+
+
+def fuse_confidence(
+    base: float,
+    source: str,
+    age_hours: float | None,
+    divergence: bool,
+    breaking: bool,
+) -> float:
+    """
+    Combine all confidence adjustments in one place.
+    Multipliers (source credibility, recency) apply first; additive
+    penalty/boost (divergence, breaking) apply last on the multiplied result,
+    so a -0.15 divergence penalty always costs 0.15, not a fraction of it.
+    """
+    confidence = apply_source_credibility(base, source)
+    confidence = apply_recency_decay(confidence, age_hours)
+    if divergence:
+        confidence -= 0.15
+    if breaking:
+        confidence += 0.10
+    return round(min(1.0, max(0.0, confidence)), 2)
 
 
 # ---------------------------------------------------------------------------
@@ -424,8 +449,7 @@ def calculate_heuristic_score(text: str, event_type: str) -> tuple[str, float]:
         figure_boost = max(figure_boost, 0.15)
 
     logit_base = math.log(base_impact / (1.0 - base_impact + 1e-9))
-    total_log = math.log(base_impact) + mag_boost + figure_boost
-    heuristic_impact = 1.0 / (1.0 + math.exp(-(total_log + logit_base)))
+    heuristic_impact = 1.0 / (1.0 + math.exp(-(logit_base + mag_boost + figure_boost)))
 
     return sentiment, round(heuristic_impact, 2)
 
@@ -440,6 +464,55 @@ def check_divergence(ai_sentiment: str, heuristic_sentiment: str) -> bool:
     return ai_sentiment != heuristic_sentiment
 
 
-def clean_tickers(tickers: list[str]) -> list[str]:
-    """Remove noise tickers using the stopword list."""
-    return [t for t in tickers if t.upper() not in TICKER_STOPWORDS]
+# ---------------------------------------------------------------------------
+# Deterministic anti-hallucination: reasoning vs. computed indicator facts
+# ---------------------------------------------------------------------------
+
+# Only indicator keys market_data.compute_indicators actually emits — never
+# extend this to free-form claims, that needs real number-linking, not regex.
+_INDICATOR_ALIASES = {
+    "rsi14": ("rsi",),
+    "sma20": ("sma20", "sma 20", "20-day sma", "20 day sma"),
+    "sma50": ("sma50", "sma 50", "50-day sma", "50 day sma"),
+    "atr_pct": ("atr",),
+    "ret_5d": ("5-day return", "5 day return", "5d return"),
+    "pct_from_52w_high": ("52-week high", "52 week high", "52w high"),
+}
+
+
+def check_number_conflicts(reasoning: str, facts: dict) -> list[str]:
+    """Flag reasoning that states a number for a computed indicator that does not
+    match what we actually computed.
+
+    ponytail: regex only catches the "NAME ... number" shape within a short window
+    (e.g. "RSI is 82"), not indirect phrasing or numbers separated across sentences.
+    Ceiling: false negatives on phrasing we don't match, occasional false positive on
+    short aliases like "atr" inside an unrelated word. Upgrade path: real number-linking
+    (NER over the reasoning) if either starts costing real accuracy.
+    """
+    if not reasoning or not facts:
+        return []
+    text_lower = reasoning.lower()
+    conflicts = []
+    for key, value in facts.items():
+        if value is None or key not in _INDICATOR_ALIASES:
+            continue
+        for alias in _INDICATOR_ALIASES[key]:
+            pattern = r"\b" + re.escape(alias) + r"[^\d\n]{0,15}(-?\d+(?:\.\d+)?)"
+            for match in re.finditer(pattern, text_lower):
+                stated = float(match.group(1))
+                tolerance = max(0.5, abs(float(value)) * 0.05)
+                if abs(stated - float(value)) > tolerance:
+                    conflicts.append(f"{key}: reasoning says {stated}, computed {value}")
+    return conflicts
+
+
+def clean_tickers(tickers: list[str], text: str = "") -> list[str]:
+    """Remove noise tickers using the stopword list.
+
+    A stopword written as explicit trader shorthand ($NOW, (NOW)) in `text`
+    is real signal, not bare prose picking up an English word — keep it.
+    """
+    protected = set(re.findall(r"\$([A-Z]{1,5})\b", text))
+    protected.update(re.findall(r"\(([A-Z]{1,5})\)", text))
+    return [t for t in tickers if t.upper() in protected or t.upper() not in TICKER_STOPWORDS]

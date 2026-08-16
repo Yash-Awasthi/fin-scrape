@@ -359,3 +359,42 @@ class TestNLPIntegration:
         nlp = FinancialNLP()
         result = nlp.analyze("", "No financial content here at all.")
         assert isinstance(result.temporal_refs, list)
+
+
+# ---------- Single parse per analyze() call ----------
+
+class TestSingleParsePerAnalyze:
+    """
+    analyze() used to parse the article text twice: once for entity extraction
+    (via nlp.py's loader) and once more for temporal extraction (via a second,
+    independent loader that temporal.py kept for itself). Both loaders now share
+    one spaCy model, and analyze() parses the text once and passes that same doc
+    into TemporalExtractor.extract().
+    """
+
+    def test_model_loaded_once_and_doc_built_once(self, monkeypatch):
+        get_nlp_calls = {"count": 0}
+        doc_build_calls = {"count": 0}
+
+        class FakeDoc:
+            ents = []
+
+        def fake_model(text):
+            doc_build_calls["count"] += 1
+            return FakeDoc()
+
+        def fake_get_nlp():
+            get_nlp_calls["count"] += 1
+            return fake_model
+
+        import finscrape.analysis.nlp as nlp_module
+        monkeypatch.setattr(nlp_module, "_get_nlp", fake_get_nlp)
+
+        nlp = FinancialNLP()
+        nlp.analyze(
+            "Apple Q1 2026 earnings beat",
+            "Apple reported Q1 2026 earnings of $1.50 per share, beating estimates.",
+        )
+
+        assert get_nlp_calls["count"] == 1
+        assert doc_build_calls["count"] == 1

@@ -192,7 +192,7 @@ def article_to_event(article, source_name: str, use_ai: bool = True) -> dict | N
 
         # Merge AI tickers with regex-extracted tickers from scraper
         raw = article.raw_tickers or []
-        tickers = clean_tickers(list(set(raw + ai_tickers)))
+        tickers = clean_tickers(list(set(raw + ai_tickers)), text=full_text)
 
     else:
         # ── Graceful fallback: heuristic-only ──────────────────────────
@@ -211,7 +211,7 @@ def article_to_event(article, source_name: str, use_ai: bool = True) -> dict | N
         confidence = apply_source_credibility(confidence, source_name)
         confidence = apply_recency_decay(confidence, article.age_hours or 0)
 
-        tickers    = clean_tickers(article.raw_tickers or [])
+        tickers    = clean_tickers(article.raw_tickers or [], text=full_text)
         divergence = False
         magnitude  = "high" if h_impact > 0.7 else "medium" if h_impact > 0.3 else "low"
         sector     = ""

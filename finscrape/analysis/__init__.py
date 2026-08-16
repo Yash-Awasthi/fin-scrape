@@ -1,4 +1,4 @@
-from finscrape.analysis.ai_client import call_ai, analyze_batch
+from finscrape.analysis.ai_client import call_ai
 from finscrape.analysis.validator import (
     calculate_heuristic_score,
     calculate_sentence_sentiment,
@@ -11,10 +11,7 @@ from finscrape.analysis.validator import (
     apply_recency_decay,
     aggregate_signals,
 )
-from finscrape.analysis.prompts import (
-    SYSTEM_PROMPT, ANALYSIS_PROMPT,
-    BATCH_SYSTEM_PROMPT, BATCH_ANALYSIS_PROMPT,
-)
+from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
 from finscrape.analysis.constants import (
     TICKER_STOPWORDS, EVENT_BASE_IMPACT,
     SOURCE_CREDIBILITY, MAGNITUDE_THRESHOLDS,
