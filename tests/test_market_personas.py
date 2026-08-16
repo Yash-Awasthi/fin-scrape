@@ -34,6 +34,10 @@ from finscrape.agents.market_personas import (
 )
 from finscrape.agents.personas import DEFAULT_AGENTS
 
+# Drop the stub so later test modules importing the real ai_client don't
+# inherit this MagicMock-only module from sys.modules.
+del sys.modules["finscrape.analysis.ai_client"]
+
 
 # ===================================================================
 # Persona property tests

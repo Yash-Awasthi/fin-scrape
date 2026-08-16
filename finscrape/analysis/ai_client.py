@@ -280,6 +280,7 @@ def _validate_response(data: dict) -> dict | None:
     # Normalize event_type
     et = data.get("event_type", "other")
     if et not in VALID_EVENT_TYPES:
+        logger.warning("AI returned unknown event_type %r; coercing to 'other'", et)
         data["event_type"] = "other"
 
     # Normalize impact_direction
