@@ -10,39 +10,44 @@ import logging
 import os
 import re
 import time
-from datetime import datetime, timezone
+from datetime import datetime
 from difflib import SequenceMatcher
 
-from finscrape.scrapers.yahoo import YahooScraper
-from finscrape.scrapers.bloomberg import BloombergScraper
-from finscrape.scrapers.reuters import ReutersScraper
-from finscrape.scrapers.cnbc import CNBCScraper
-from finscrape.scrapers.rss import RSSScraperSource
-from finscrape.scrapers.marketwatch import MarketWatchScraper
-from finscrape.scrapers.seekingalpha import SeekingAlphaScraper
+from finscrape.accuracy import AccuracyTracker
+from finscrape.agents import DEFAULT_AGENTS, AgentCouncil
+from finscrape.alerts import AlertEngine
+from finscrape.analysis.ai_client import call_ai
+from finscrape.analysis.nlp import FinancialNLP
+from finscrape.analysis.prompts import render_prompt
+from finscrape.analysis.validator import (
+    calculate_heuristic_score,
+    check_divergence,
+    clean_tickers,
+    fuse_confidence,
+)
+from finscrape.dashboard import DashboardClient
+from finscrape.entity_map import resolve_tickers
+from finscrape.market_data import (
+    calculate_market_boost,
+    get_indicators,
+    get_market_data,
+)
+from finscrape.models import FinEvent, ScrapedArticle, Verdict
+from finscrape.portfolio import PortfolioManager
 from finscrape.scrapers.benzinga import BenzingaScraper
-from finscrape.scrapers.investingcom import InvestingComScraper
-from finscrape.scrapers.ft import FTScraper
+from finscrape.scrapers.bloomberg import BloombergScraper
+from finscrape.scrapers.cnbc import CNBCScraper
 from finscrape.scrapers.edgar import EdgarScraper
+from finscrape.scrapers.ft import FTScraper
 from finscrape.scrapers.google_news import GoogleNewsScraper
 from finscrape.scrapers.google_serp import GoogleSerpScraper
-from finscrape.analysis.ai_client import call_ai
-from finscrape.analysis.validator import (
-    calculate_heuristic_score, check_divergence, clean_tickers,
-    fuse_confidence,
-    extract_financial_magnitudes,
-)
-from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT, render_prompt
-from finscrape.analysis.nlp import FinancialNLP
+from finscrape.scrapers.investingcom import InvestingComScraper
+from finscrape.scrapers.marketwatch import MarketWatchScraper
+from finscrape.scrapers.reuters import ReutersScraper
+from finscrape.scrapers.rss import RSSScraperSource
+from finscrape.scrapers.seekingalpha import SeekingAlphaScraper
+from finscrape.scrapers.yahoo import YahooScraper
 from finscrape.storage import StateManager
-from finscrape.market_data import get_market_data, calculate_market_boost
-from finscrape.entity_map import resolve_tickers
-from finscrape.models import ScrapedArticle, FinEvent, Verdict
-from finscrape.dashboard import DashboardClient
-from finscrape.agents import AgentCouncil, DEFAULT_AGENTS
-from finscrape.alerts import AlertEngine
-from finscrape.accuracy import AccuracyTracker
-from finscrape.portfolio import PortfolioManager
 
 logger = logging.getLogger(__name__)
 
@@ -50,9 +55,17 @@ logger = logging.getLogger(__name__)
 class PipelineStats:
     """Tracks per-run pipeline performance metrics."""
 
-    __slots__ = ("started_at", "articles_seen", "articles_skipped",
-                 "articles_analyzed", "articles_failed", "events_created",
-                 "alerts_fired", "signals_recorded", "stage_timings")
+    __slots__ = (
+        "alerts_fired",
+        "articles_analyzed",
+        "articles_failed",
+        "articles_seen",
+        "articles_skipped",
+        "events_created",
+        "signals_recorded",
+        "stage_timings",
+        "started_at",
+    )
 
     def __init__(self):
         self.started_at: float = time.monotonic()
@@ -65,7 +78,7 @@ class PipelineStats:
         self.signals_recorded: int = 0
         self.stage_timings: dict[str, float] = {}
 
-    def time_stage(self, name: str) -> "_StageTimer":
+    def time_stage(self, name: str) -> _StageTimer:
         return _StageTimer(self, name)
 
     @property
@@ -143,7 +156,7 @@ class FinScrapePipeline:
         self.dashboard = DashboardClient()
         self.nlp = FinancialNLP()
         self.use_council = use_council
-        self.council = AgentCouncil(agents=DEFAULT_AGENTS) if use_council else None
+        self.council = AgentCouncil(agents=DEFAULT_AGENTS, judge=True) if use_council else None
 
         # Alert engine integration
         self.alert_engine: AlertEngine | None = None
@@ -305,12 +318,12 @@ class FinScrapePipeline:
             print(f"  [{i+1}/{len(articles)}] {article.url[:80]}...")
 
             if article.url in visited:
-                print(f"    [SKIP] Already visited")
+                print("    [SKIP] Already visited")
                 stats.articles_skipped += 1
                 continue
 
             if not article.has_content:
-                print(f"    [SKIP] Insufficient content")
+                print("    [SKIP] Insufficient content")
                 stats.articles_skipped += 1
                 self.state.add_visited(source_name, article.url)
                 continue
@@ -356,11 +369,11 @@ class FinScrapePipeline:
             if os.getenv("FINSCRAPE_HEURISTIC_FALLBACK", "").lower() in ("1", "true", "yes"):
                 result = self._heuristic_only(article)
             if not result:
-                print(f"    [ERROR] AI analysis failed")
+                print("    [ERROR] AI analysis failed")
                 return None
 
         if not result.get("relevant", False):
-            print(f"    [SKIP] Not market-relevant")
+            print("    [SKIP] Not market-relevant")
             return None
 
         # NLP analysis — entity extraction, metrics, sector, breaking news
@@ -397,7 +410,7 @@ class FinScrapePipeline:
         ], text=full_text)
 
         if not valid_tickers:
-            print(f"    [SKIP] No valid tickers found")
+            print("    [SKIP] No valid tickers found")
             return None
 
         # Market data
@@ -525,9 +538,26 @@ class FinScrapePipeline:
         return result
 
     def _analyze_with_council(self, source_name: str, article: ScrapedArticle) -> tuple[dict | None, dict | None]:
-        """Multi-agent council analysis. Returns (result_dict, council_verdict_dict)."""
+        """Multi-agent council analysis. Returns (result_dict, council_verdict_dict).
+
+        Tickers resolve before deliberation (same resolve_tickers used by
+        _heuristic_only) so real computed indicators can go into the council as
+        GROUND TRUTH facts — the council itself fetches nothing, stays pure.
+        """
         metadata = {"source": source_name, "age_hours": f"{article.age_hours:.1f}"}
-        cv = self.council.deliberate(article.title, article.text, metadata)
+        full_text = article.title + " " + article.text
+        tickers = resolve_tickers(full_text)
+        market_facts = get_indicators(tickers) if tickers else {}
+
+        # Grounded past performance for the judge only — debators stay naive.
+        lessons: dict = {}
+        if self.accuracy:
+            try:
+                lessons = self.accuracy.get_lessons(tickers=tickers, source=source_name)
+            except Exception as e:
+                logger.warning("Could not fetch lessons for judge: %s", e)
+
+        cv = self.council.deliberate(article.title, article.text, metadata, market_facts, lessons)
 
         # If no individual verdicts produced anything useful, fail
         if cv.consensus_confidence < 0.05:
@@ -535,6 +565,12 @@ class FinScrapePipeline:
 
         # Convert council verdict into the standard result dict format
         # so downstream ticker/NLP/validation code works unchanged
+        reasoning = f"Council verdict ({cv.agreement_level:.0%} agreement): " + "; ".join(
+            f"{v.agent_name}={v.signal_score}" for v in cv.individual_verdicts
+        )
+        if cv.judged:
+            reasoning += f" | Judge override (raw mean {cv.consensus_score_raw}): {cv.judge_rationale}"
+
         result = {
             "relevant": True,
             "event_type": "other",
@@ -543,9 +579,7 @@ class FinScrapePipeline:
             "signal_score": round(cv.consensus_score),
             "confidence": cv.consensus_confidence,
             "subject": article.title,
-            "reasoning": f"Council verdict ({cv.agreement_level:.0%} agreement): " + "; ".join(
-                f"{v.agent_name}={v.signal_score}" for v in cv.individual_verdicts
-            ),
+            "reasoning": reasoning,
             "magnitude": "medium",
             "novelty": "standard",
             "actionability": "medium",

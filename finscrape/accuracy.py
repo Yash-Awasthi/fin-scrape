@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import logging
 import sqlite3
-from datetime import datetime, timezone, timedelta
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -126,7 +126,7 @@ class AccuracyTracker:
 
         Returns the ID of the inserted signal_outcomes row.
         """
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         cur = self._conn.execute(
             """INSERT INTO signal_outcomes
                (event_id, ticker, verdict_at, signal_score, confidence, verdict,
@@ -140,7 +140,7 @@ class AccuracyTracker:
 
     def get_pending_signals(self, older_than_hours: float = 24) -> list[dict]:
         """Get signals that are pending and were recorded at least `older_than_hours` ago."""
-        cutoff = (datetime.now(timezone.utc) - timedelta(hours=older_than_hours)).isoformat()
+        cutoff = (datetime.now(UTC) - timedelta(hours=older_than_hours)).isoformat()
         rows = self._conn.execute(
             """SELECT id, event_id, ticker, verdict_at, signal_score, confidence,
                       verdict, price_at_signal, source, event_type
@@ -174,7 +174,7 @@ class AccuracyTracker:
         market_data = price_fetcher(tickers)
         price_map = {md["ticker"]: md["price"] for md in market_data}
 
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
         results = []
 
         for signal in pending:
@@ -243,7 +243,7 @@ class AccuracyTracker:
 
     def update_accuracy_stats(self) -> None:
         """Recalculate per-source, per-event_type, per-verdict accuracy stats."""
-        now = datetime.now(timezone.utc).isoformat()
+        now = datetime.now(UTC).isoformat()
 
         # Clear existing stats
         self._conn.execute("DELETE FROM accuracy_stats")
@@ -461,6 +461,88 @@ class AccuracyTracker:
             "avg_price_move": round(avg_move, 4) if avg_move is not None else None,
             "avg_confidence": round(avg_conf, 4) if avg_conf is not None else None,
             "per_verdict": per_verdict,
+        }
+
+    def get_lessons(
+        self,
+        tickers: list[str] | None = None,
+        source: str = "",
+        event_type: str = "",
+        limit: int = 5,
+    ) -> dict[str, Any]:
+        """Read back scored signal_outcomes as grounded stats for the judge.
+
+        Hit rate per ticker and per source, average realized move, and the
+        last `limit` wrong calls (verdict + actual %) among the rows matching
+        the given filters. Returns {} when nothing scored matches yet, so a
+        cold DB yields no lessons at all.
+
+        ponytail: grounded stats, not natural-language reflection — upgrade
+        path is one LLM call over wrong_calls below if the stats prove too blunt.
+        """
+        where = ["outcome IN ('correct', 'incorrect')"]
+        params: list[Any] = []
+        if tickers:
+            placeholders = ",".join("?" * len(tickers))
+            where.append(f"ticker IN ({placeholders})")
+            params.extend(t.upper() for t in tickers)
+        if source:
+            where.append("source = ?")
+            params.append(source)
+        if event_type:
+            where.append("event_type = ?")
+            params.append(event_type)
+        clause = " AND ".join(where)
+
+        total, avg_move = self._conn.execute(
+            f"SELECT COUNT(*), AVG(price_change_pct) FROM signal_outcomes WHERE {clause}",
+            params,
+        ).fetchone()
+        if not total:
+            return {}
+
+        ticker_rows = self._conn.execute(
+            f"""SELECT ticker, COUNT(*), SUM(CASE WHEN outcome = 'correct' THEN 1 ELSE 0 END)
+                FROM signal_outcomes WHERE {clause} GROUP BY ticker""",
+            params,
+        ).fetchall()
+        source_rows = self._conn.execute(
+            f"""SELECT source, COUNT(*), SUM(CASE WHEN outcome = 'correct' THEN 1 ELSE 0 END)
+                FROM signal_outcomes WHERE {clause} GROUP BY source""",
+            params,
+        ).fetchall()
+        wrong_rows = self._conn.execute(
+            f"""SELECT ticker, verdict, price_change_pct, source, event_type, verdict_at
+                FROM signal_outcomes WHERE {clause} AND outcome = 'incorrect'
+                ORDER BY verdict_at DESC LIMIT ?""",
+            params + [limit],
+        ).fetchall()
+
+        def _hit_rate(rows):
+            return {
+                key: {
+                    "total": n,
+                    "correct": c or 0,
+                    "hit_rate_pct": round((c or 0) / n * 100, 2) if n else 0.0,
+                }
+                for key, n, c in rows
+            }
+
+        return {
+            "tickers": _hit_rate(ticker_rows),
+            "sources": _hit_rate(source_rows),
+            "avg_realized_move_pct": round(avg_move, 2) if avg_move is not None else None,
+            "wrong_calls": [
+                {
+                    "ticker": ticker,
+                    "verdict": verdict,
+                    "price_change_pct": round(pct, 2) if pct is not None else None,
+                    "source": source,
+                    "event_type": event_type,
+                    "verdict_at": verdict_at,
+                }
+                for ticker, verdict, pct, source, event_type, verdict_at in wrong_rows
+            ],
         }
 
     def close(self) -> None:
