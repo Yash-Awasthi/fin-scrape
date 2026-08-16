@@ -8,7 +8,6 @@ Supports two backends:
 Features:
 - Retry with exponential backoff (1 retry on failure)
 - Response validation (required fields, value ranges)
-- Batch analysis for processing multiple articles in one call
 - LRU + TTL response cache to reduce API costs
 - Qwen 2.5 compatibility: <think> block stripping, string→int coercion,
   model-aware cache keys, native Ollama format field
@@ -178,67 +177,6 @@ def get_cache_stats() -> dict:
 
 def clear_cache() -> None:
     _cache.clear()
-
-
-def analyze_batch(
-    articles: list[dict],
-    system_prompt: str,
-    batch_prompt_template: str,
-    model: str | None = None,
-) -> list[dict | None]:
-    """
-    Process multiple articles in a single LLM call for efficiency.
-    Each article dict should have "title" and "text" keys.
-    Returns a list of analysis dicts (or None for failures), one per article.
-    Falls back to individual calls if the batch call fails.
-    """
-    if not articles:
-        return []
-
-    articles_block_parts = []
-    for i, article in enumerate(articles):
-        articles_block_parts.append(
-            f"--- ARTICLE {i+1} ---\n"
-            f"HEADLINE: {article.get('title', '')}\n"
-            f"ARTICLE: {article.get('text', '')}\n"
-        )
-    articles_block = "\n".join(articles_block_parts)
-    prompt = batch_prompt_template.replace("{{articles_block}}", articles_block)
-
-    effective_model = model or DEFAULT_MODEL
-
-    if OPENAI_BASE_URL and LLM_WIRE_API == "responses":
-        raw = _call_with_retry(_call_responses_api, prompt, system_prompt, effective_model)
-    elif OPENAI_BASE_URL:
-        raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, effective_model)
-    elif OPENROUTER_API_KEY:
-        raw = _call_with_retry(_call_openrouter, prompt, system_prompt, effective_model)
-    else:
-        logger.error("No AI backend configured for batch analysis.")
-        return [None] * len(articles)
-
-    if raw is None:
-        logger.warning("Batch call failed; falling back to individual calls.")
-        return [None] * len(articles)
-
-    analyses = raw.get("analyses", [])
-    if not isinstance(analyses, list) or len(analyses) != len(articles):
-        logger.warning(
-            "Batch response had %d analyses for %d articles; returning raw results.",
-            len(analyses) if isinstance(analyses, list) else 0,
-            len(articles),
-        )
-        if isinstance(analyses, list):
-            results = []
-            for i in range(len(articles)):
-                if i < len(analyses):
-                    results.append(_validate_response(analyses[i]))
-                else:
-                    results.append(None)
-            return results
-        return [None] * len(articles)
-
-    return [_validate_response(a) for a in analyses]
 
 
 # ---------------------------------------------------------------------------

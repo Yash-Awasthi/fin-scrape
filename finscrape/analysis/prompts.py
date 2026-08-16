@@ -165,48 +165,6 @@ ARTICLE: {{article_text}}
 """
 ANALYSIS_PROMPT = ANALYSIS_PROMPT.replace("%%EVENT_TYPES%%", EVENT_TYPES_PIPE)
 
-# Batch analysis prompt for processing multiple articles in a single call
-BATCH_SYSTEM_PROMPT = """
-You are a senior global macro and financial analyst and event extraction engine.
-You will receive multiple news articles (financial AND geopolitical / world events)
-and must analyze each one independently. For world events, always resolve the
-affected companies/tickers/sectors (first- and second-order).
-Return a JSON object with an "analyses" array containing one analysis object per article,
-in the same order as the input articles.
-Apply the same rigorous multi-step analysis (extract, analyze, contextualize, score) to each.
-You only return valid JSON — no markdown, no explanation.
-"""
-
-BATCH_ANALYSIS_PROMPT = """
-Analyze each of the following financial news articles independently.
-Return a JSON object: {{"analyses": [<analysis1>, <analysis2>, ...]}}
-
-Each analysis object must follow this schema:
-{{
-  "relevant": boolean,
-  "event_type": "earnings|guidance|price_target_change|analyst_upgrade|analyst_downgrade|merger_acquisition|regulatory_decision|product_launch|management_change|market_movement|investment_activity|geopolitical_event|bankrupt|ipo|other",
-  "subject": "max 12 words",
-  "impact_direction": "positive/negative/mixed/neutral",
-  "tickers": ["TICK"],
-  "affected_entities": [{{"name": "...", "ticker": "...", "role": "primary/competitor/supplier/regulator/analyst/customer", "impact": "positive/negative/neutral"}}],
-  "signal_score": integer -5 to 5,
-  "confidence": float 0.0 to 1.0,
-  "magnitude": "low/medium/high",
-  "novelty": "breaking/standard/follow_up/rehash",
-  "actionability": "low/medium/high",
-  "reasoning": "2-3 sentences",
-  "key_metrics": {{}},
-  "sector_impact": "sector name",
-  "second_order_effects": ["effect1", "effect2"],
-  "temporal_context": "breaking/confirmation/escalation/resolution/rehash"
-}}
-
-If an article has no financial event, set "relevant": false with default values.
-
-ARTICLES:
-{{articles_block}}
-"""
-
 
 def render_prompt(template: str, title: str, text: str) -> str:
     """Fill an analysis prompt template's {{title}}/{{article_text}} slots.
