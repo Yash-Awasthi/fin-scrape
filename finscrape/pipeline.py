@@ -29,10 +29,10 @@ from finscrape.scrapers.google_serp import GoogleSerpScraper
 from finscrape.analysis.ai_client import call_ai
 from finscrape.analysis.validator import (
     calculate_heuristic_score, check_divergence, clean_tickers,
-    apply_source_credibility, apply_recency_decay,
+    fuse_confidence,
     extract_financial_magnitudes,
 )
-from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT
+from finscrape.analysis.prompts import SYSTEM_PROMPT, ANALYSIS_PROMPT, render_prompt
 from finscrape.analysis.nlp import FinancialNLP
 from finscrape.storage import StateManager
 from finscrape.market_data import get_market_data, calculate_market_boost
@@ -394,7 +394,7 @@ class FinScrapePipeline:
         valid_tickers = clean_tickers([
             t for t in all_symbols
             if isinstance(t, str) and 1 < len(t) <= 5 and t.isupper()
-        ])
+        ], text=full_text)
 
         if not valid_tickers:
             print(f"    [SKIP] No valid tickers found")
@@ -411,21 +411,13 @@ class FinScrapePipeline:
         # Final scoring
         base_score = result.get("signal_score", 0)
         final_score = max(-5, min(5, base_score + market_boost))
-        confidence = result.get("confidence", 0.5)
-
-        # Apply divergence penalty
-        if divergence:
-            confidence = max(0.0, confidence - 0.15)
-
-        # Apply source credibility weighting
-        confidence = apply_source_credibility(confidence, source_name)
-
-        # Apply recency decay
-        confidence = apply_recency_decay(confidence, article.age_hours)
-
-        # Boost confidence if NLP detects breaking news indicators
-        if nlp_result.has_breaking_indicators:
-            confidence = min(1.0, confidence + 0.10)
+        confidence = fuse_confidence(
+            result.get("confidence", 0.5),
+            source_name,
+            article.age_hours,
+            divergence,
+            nlp_result.has_breaking_indicators,
+        )
 
         # Use NLP sector as fallback if AI didn't provide one
         sector = result.get("sector_impact", "") or nlp_result.sector
@@ -526,9 +518,7 @@ class FinScrapePipeline:
 
         variant = pick_variant(article.title)
         system_prompt, analysis_prompt = get_prompts(variant)
-        prompt = analysis_prompt.replace("{{title}}", article.title).replace(
-            "{{article_text}}", article.text
-        )
+        prompt = render_prompt(analysis_prompt, article.title, article.text)
         result = call_ai(prompt, system_prompt)
         if result is not None:
             result.setdefault("key_metrics", {})["prompt_variant"] = variant
