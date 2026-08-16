@@ -159,7 +159,7 @@ inventing them, and the judge gets to see the team's own track record. Net chang
   (`CouncilVerdict.judged` records which happened).
 - **Real numbers, not invented ones.** `finscrape/market_data.py:compute_indicators` computes RSI14,
   SMA20/50, ATR%, 5-day return, and % off the 52-week high from plain price lists (no TA-Lib); `
-  get_indicators(tickers)` fetches and TTL-caches them from one batched 6-month `yf.download`, same
+  get_indicators(tickers)` fetches and TTL-caches them from one batched 1-year `yf.download`, same
   pattern as the existing `get_market_data`. The pipeline resolves tickers before deliberation
   (reusing `resolve_tickers`) and hands the indicators to the council as `market_facts`; the council
   itself fetches nothing. Every agent's prompt renders these as a GROUND TRUTH block instructing it

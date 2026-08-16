@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 # Keyed by ticker → (result_dict, monotonic_ts). TTL via FINSCRAPE_MARKET_TTL (seconds).
 _cache: dict[str, tuple[dict, float]] = {}
 
-# Separate TTL cache for indicator facts (6mo history per ticker, pricier fetch
+# Separate TTL cache for indicator facts (1y history per ticker, pricier fetch
 # than the 2-day quote above) — same ticker → (result_dict, monotonic_ts) shape.
 _indicator_cache: dict[str, tuple[dict, float]] = {}
 
@@ -156,12 +156,15 @@ def compute_indicators(closes: list[float], highs: list[float], lows: list[float
 
 
 def _fetch_indicators(tickers: list[str]) -> dict[str, dict]:
-    """One batched 6mo yfinance call for `tickers` → {ticker: indicator_dict}. Degrades
-    to {} on any error, same as `_fetch`, so a dead yfinance never crashes the council."""
+    """One batched 1y yfinance call for `tickers` → {ticker: indicator_dict}. Degrades
+    to {} on any error, same as `_fetch`, so a dead yfinance never crashes the council.
+
+    Needs the full 1y so `pct_from_52w_high` covers an actual 52 weeks, not a 6mo window
+    wearing a 52-week label."""
     out: dict[str, dict] = {}
     try:
         df = yf.download(
-            tickers=" ".join(tickers), period="6mo", interval="1d", progress=False
+            tickers=" ".join(tickers), period="1y", interval="1d", progress=False
         )
         if df is None or df.empty or "Close" not in df.columns:
             return out

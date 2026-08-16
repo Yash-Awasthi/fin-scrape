@@ -138,7 +138,7 @@ to the arithmetic consensus unchanged — `CouncilVerdict.judged` records which 
 **Quant ground truth.** `finscrape/market_data.py:compute_indicators(closes, highs, lows)` is pure
 list arithmetic (no TA-Lib, no pandas) computing `rsi14`, `sma20`/`sma50`, `atr_pct`, `ret_5d`, and
 `pct_from_52w_high`; it returns `{}` on fewer than `MIN_INDICATOR_BARS` (50) bars rather than emit a
-partial/misleading result. `get_indicators(tickers)` wraps it with one batched 6-month
+partial/misleading result. `get_indicators(tickers)` wraps it with one batched 1-year
 `yf.download` per call and the same TTL-cache pattern as `get_market_data`, degrading to `{}` on any
 fetch error. `finscrape/pipeline.py:_analyze_with_council` resolves tickers with the same
 `resolve_tickers` used by `_heuristic_only`, fetches their indicators, and passes the result to

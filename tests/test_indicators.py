@@ -13,7 +13,22 @@ import sys
 import types
 from unittest.mock import MagicMock, patch
 
-from finscrape.market_data import compute_indicators
+from finscrape.market_data import compute_indicators, get_indicators, clear_indicator_cache
+
+# ---------------------------------------------------------------------------
+# get_indicators — must fetch a real 52-week window, not a 6mo window wearing
+# the 52-week label (compute_indicators takes max(closes) as the high water
+# mark over whatever period it's handed).
+# ---------------------------------------------------------------------------
+
+class TestIndicatorFetchWindow:
+    def test_fetches_1y_not_6mo(self):
+        clear_indicator_cache()
+        with patch("finscrape.market_data.yf.download") as mock_download:
+            mock_download.return_value = MagicMock(empty=True)
+            get_indicators(["AAPL"])
+        assert mock_download.call_args.kwargs["period"] == "1y"
+
 
 # ---------------------------------------------------------------------------
 # compute_indicators — pure math over synthetic price lists
