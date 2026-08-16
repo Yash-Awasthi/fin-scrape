@@ -92,12 +92,20 @@ def get_market_data(tickers: list[str]) -> list[dict]:
 
 
 def calculate_market_boost(market_data: list[dict]) -> int:
-    """Calculate a score boost based on recent price movement."""
-    boost = 0
+    """Calculate a score boost based on recent price movement.
+
+    Sign follows the biggest mover: a crash pushes the boost negative,
+    a rally pushes it positive.
+    """
+    biggest = 0
     for md in market_data:
-        change = abs(md.get("change_percent", 0))
-        if change >= 10:
-            boost = max(boost, 2)
-        elif change >= 5:
-            boost = max(boost, 1)
-    return boost
+        change = md.get("change_percent", 0)
+        if abs(change) > abs(biggest):
+            biggest = change
+
+    magnitude = abs(biggest)
+    if magnitude >= 10:
+        return 2 if biggest > 0 else -2
+    if magnitude >= 5:
+        return 1 if biggest > 0 else -1
+    return 0
