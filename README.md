@@ -149,6 +149,8 @@ The council is WorldFin's explainability layer:
 
 **Standalone package:** The council is also available as an independent library — [`pip install worldfin-council`](finscrape/council/README.md). Zero dependencies, bring your own LLM client via the `AiClient` protocol.
 
+**Interactive demo:** See the council in action — [🌐 Open Council Dashboard](web/council.html) (mock data, runs in browser).
+
 ---
 
 ## 📊 Accuracy Backtesting
