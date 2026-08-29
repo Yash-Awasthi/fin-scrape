@@ -5,7 +5,7 @@ const FEATURES: [string, string, string][] = [
   ["🌍", "Live globe", "Every event geolocated, colored by verdict. Click a point for the full reasoning chain."],
   ["🎯", "Event → ticker resolution", "A Strait-of-Hormuz headline becomes XOM, CVX, RTX, ZIM — with per-entity impact."],
   ["🔗", "Second-order effects", "The knock-on chain: war-risk premiums, rerouting, LNG spillover, insurer exposure."],
-  ["⚖️", "Multi-agent AI council", "Seven analyst personas deliberate each call and surface consensus and dissent."],
+  ["⚖️", "Multi-agent AI council", "Eight analyst personas deliberate each call and surface consensus and dissent."],
   ["📈", "Accuracy proof", "Historical hit-rate, by-verdict breakdown, and an equity-curve sparkline you can audit."],
   ["🛰️", "Correlation engine", "Flags when 3+ independent source-types corroborate a story — before it's news."],
   ["⚡", "Breaking-news detection", "Wire + gov + intel triangulation fires a banner the moment a story converges."],

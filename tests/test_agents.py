@@ -209,7 +209,7 @@ class TestAgentVerdict:
 class TestPersonas:
 
     def test_all_default_agents_exist(self):
-        assert len(DEFAULT_AGENTS) == 7
+        assert len(DEFAULT_AGENTS) == 8
 
     def test_agent_names_are_unique(self):
         names = [a.name for a in DEFAULT_AGENTS]
@@ -617,7 +617,7 @@ class TestCouncilIntegration:
                 metadata={"source": "reuters"},
             )
 
-        assert len(result.individual_verdicts) == 7
+        assert len(result.individual_verdicts) == 8
         assert -5 <= result.consensus_score <= 5
         assert 0.0 <= result.consensus_confidence <= 1.0
         assert 0.0 <= result.agreement_level <= 1.0
