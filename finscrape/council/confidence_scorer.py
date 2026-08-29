@@ -13,6 +13,7 @@ Features:
 from dataclasses import dataclass
 from typing import List, Dict, Optional, Tuple
 from enum import Enum
+from collections import Counter
 import time
 import math
 
@@ -259,7 +260,6 @@ class ConfidenceScorer:
         agreement_score = 1 - (len(unique_predictions) - 1) / max(1, len(predictions) - 1)
         
         # Find consensus prediction (most common)
-        from collections import Counter
         prediction_counts = Counter(predictions_list)
         consensus_prediction = prediction_counts.most_common(1)[0][0]
         

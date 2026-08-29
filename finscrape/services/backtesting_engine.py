@@ -276,7 +276,8 @@ class BacktestingEngine:
         avg_profit_pct = sum(t.profit_pct for t in self.trades) / total_trades if total_trades > 0 else 0
         
         # Risk metrics
-        max_drawdown = max(self._calculate_drawdown()) if self.equity_curve else 0
+        drawdown_values = self._calculate_drawdown()
+        max_drawdown = max(drawdown_values) if drawdown_values else 0
         
         # Sharpe ratio (simplified)
         if len(self.equity_curve) > 1:
