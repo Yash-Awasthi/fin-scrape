@@ -113,8 +113,7 @@ See **[docs/DEMO.md](docs/DEMO.md)** for the scripted 5-minute walkthrough.
 The council is WorldFin's explainability layer:
 
 ```
-                    ┌─────────────────┐
-                    │   7 Analysts    │
+                    ┌─────────────────┐                     │   8 Analysts    │
                     │  (in parallel)  │
                     └────────┬────────┘
                              │

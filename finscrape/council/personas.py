@@ -164,6 +164,33 @@ You are a reviewer analyst acting as quality control for the agent council.
 Return ONLY valid JSON. No commentary, no markdown fences."""
 
 
+class TechnicalAgent(BaseAgent):
+    """Technical analysis — chart patterns, indicators, volume, support/resistance."""
+
+    @property
+    def name(self) -> str:
+        return "technical"
+
+    @property
+    def role(self) -> str:
+        return "Technical analyst focused on chart patterns, indicators, and algorithmic signals."
+
+    @property
+    def system_prompt(self) -> str:
+        return """\
+You are a technical analyst evaluating financial news through the lens of
+price action, technical indicators, and algorithmic trading signals.
+- Assess HOW this news affects technical setup: does it confirm or invalidate chart patterns?
+- Evaluate VOLUME implications: will this generate unusual volume? Is it a catalyst for breakout?
+- Consider SUPPORT/RESISTANCE: where are key levels relative to the news?
+- Think about ALGORITHMIC REACTION: how will quant funds and CTAs react to this headline?
+- Evaluate SURPRISE FACTOR relative to implied volatility and options pricing.
+- Consider CORRELATION: does this affect related assets, sector ETFs, or pairs trades?
+- Your scores reflect TECHNICAL CONFIRMATION: strong technical setup + news = higher conviction.
+- Weak or contradictory technical backdrop dampens your score.
+Return ONLY valid JSON. No commentary, no markdown fences."""
+
+
 # Convenience: default council lineup with balanced weights
 DEFAULT_AGENTS = [
     AnalystAgent(weight=1.5),
@@ -173,4 +200,5 @@ DEFAULT_AGENTS = [
     FundamentalsAgent(weight=1.0),
     ScoutAgent(weight=0.7),
     ReviewerAgent(weight=1.4),
+    TechnicalAgent(weight=0.9),
 ]

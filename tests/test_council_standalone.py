@@ -12,7 +12,7 @@ def test_council_package_imports():
     assert CouncilVerdict is not None
     assert BaseAgent is not None
     assert AgentVerdict is not None
-    assert len(DEFAULT_AGENTS) == 7
+    assert len(DEFAULT_AGENTS) == 8
 
 
 def test_agent_verdict_clamping():

@@ -162,7 +162,7 @@ class TestReviewerAgent:
 class TestDefaultAgents:
 
     def test_default_agents_has_seven_members(self):
-        assert len(DEFAULT_AGENTS) == 7
+        assert len(DEFAULT_AGENTS) == 8
 
     def test_scout_in_default_agents(self):
         names = [a.name for a in DEFAULT_AGENTS]
@@ -259,7 +259,7 @@ class TestCouncilWithNewAgents:
                 metadata={"source": "reuters"},
             )
 
-        assert len(result.individual_verdicts) == 7
+        assert len(result.individual_verdicts) == 8
         assert -5 <= result.consensus_score <= 5
         assert 0.0 <= result.consensus_confidence <= 1.0
         assert 0.0 <= result.agreement_level <= 1.0

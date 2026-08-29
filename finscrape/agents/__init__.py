@@ -31,6 +31,7 @@ from finscrape.agents.personas import (
     ReviewerAgent,
     RiskAgent,
     ScoutAgent,
+    TechnicalAgent,
 )
 
 __all__ = [

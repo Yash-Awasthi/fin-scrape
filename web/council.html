@@ -80,7 +80,7 @@ header p{color:var(--muted);font-size:0.9rem}
 <body>
 <header>
   <h1>🌐 <span class="accent">WorldFin Council</span> — Live Deliberation</h1>
-  <p>7 AI analysts debate market events in real-time</p>
+  <p>8 AI analysts debate market events in real-time</p>
   <div style="margin-top:12px;display:flex;justify-content:center;gap:8px">
     <span class="badge badge-live" id="statusBadge">● DEMO</span>
     <span class="badge badge-count" id="roundBadge">Round 0/3</span>
@@ -135,6 +135,7 @@ const AGENTS = [
   { id:'fundamentals', name:'Fundamentals', icon:'🏛️', color:'#8b5cf6', weight:1.0, role:'Long-term value' },
   { id:'scout', name:'Scout', icon:'🔍', color:'#06b6d4', weight:0.7, role:'Source reliability' },
   { id:'reviewer', name:'Reviewer', icon:'✅', color:'#10b981', weight:1.4, role:'Quality control' },
+  { id:'technical', name:'Technical', icon:'📈', color:'#e879f9', weight:0.9, role:'Chart patterns & indicators' },
 ];
 
 const MOCK_EVENTS = [
@@ -151,9 +152,9 @@ const MOCK_QUOTES = [
 
 // Simulated verdicts per agent
 const MOCK_VERDICTS = [
-  { analyst:3, contrarian:-1, risk:-2, momentum:2, fundamentals:1, scout:2, reviewer:1 },
-  { analyst:2, contrarian:-2, risk:-3, momentum:1, fundamentals:0, scout:1, reviewer:0 },
-  { analyst:4, contrarian:-1, risk:-1, momentum:3, fundamentals:2, scout:2, reviewer:1 },
+  { analyst:3, contrarian:-1, risk:-2, momentum:2, fundamentals:1, scout:2, reviewer:1, technical:2 },
+  { analyst:2, contrarian:-2, risk:-3, momentum:1, fundamentals:0, scout:1, reviewer:0, technical:-1 },
+  { analyst:4, contrarian:-1, risk:-1, momentum:3, fundamentals:2, scout:2, reviewer:1, technical:3 },
 ];
 
 let state = { round:0, agentIdx:0, running:false, scores:{} };
