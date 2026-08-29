@@ -123,6 +123,30 @@ from worldfin_council.personas import DEFAULT_AGENTS
 council = AgentCouncil(agents=DEFAULT_AGENTS, ai_client=my_client)
 ```
 
+## Examples
+
+See `examples/` in the package:
+
+- **[basic_usage.py](examples/basic_usage.py)** — Simple 3-agent council with mock LLM
+- **[custom_persona.py](examples/custom_persona.py)** — Creating domain-specific analyst personas
+
+Run any example:
+```bash
+python -m finscrape.council.examples.basic_usage
+python -m finscrape.council.examples.custom_persona
+```
+
+## Changelog
+
+### v0.1.0 (2026-08-29)
+
+- Initial release
+- `AgentCouncil` with parallel deliberation and weighted consensus
+- `AiClient` protocol for LLM abstraction
+- 7 built-in financial analyst personas
+- Judge model for transcript-based override
+- Standalone package with zero dependencies
+
 ## License
 
 MIT
