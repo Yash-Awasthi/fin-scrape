@@ -147,6 +147,8 @@ The council is WorldFin's explainability layer:
 
 **Real numbers, not invented ones:** RSI14, SMA20/50, ATR%, 5-day return, % off 52-week high are computed and handed to every agent as ground truth. Conflicting numbers get flagged and discounted.
 
+**Standalone package:** The council is also available as an independent library — [`pip install worldfin-council`](finscrape/council/README.md). Zero dependencies, bring your own LLM client via the `AiClient` protocol.
+
 ---
 
 ## 📊 Accuracy Backtesting
