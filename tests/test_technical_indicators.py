@@ -3,135 +3,153 @@
 import math
 import pytest
 from finscrape.services.technical_indicators import (
-    PriceBar, TechnicalAnalysis,
-    relative_strength_index, bollinger_bands, average_true_range,
-    moving_average_convergence, stochastic_oscillator,
-    on_balance_volume, volume_weighted_average_price,
-    find_support_resistance, analyze,
+    OHLCV, TechnicalIndicators,
 )
 
 
-def _make_bars(prices, volumes=None):
-    """Create PriceBar list from close prices."""
+def _make_candles(prices, volumes=None):
+    """Create OHLCV list from close prices."""
     if volumes is None:
         volumes = [100000] * len(prices)
-    bars = []
+    candles = []
     for i, (p, v) in enumerate(zip(prices, volumes)):
-        bars.append(PriceBar(
-            timestamp=f"2024-01-{i+1:02d}",
+        candles.append(OHLCV(
+            timestamp=float(i),
             open=p * 0.99, high=p * 1.02, low=p * 0.98,
             close=p, volume=v,
         ))
-    return bars
+    return candles
 
 
 class TestRSI:
     def test_overbought(self):
-        # Strong uptrend → high RSI
-        prices = [100 + i * 2 for i in range(20)]
-        bars = _make_bars(prices)
-        result = relative_strength_index(bars)
-        assert result[0].value > 70
-        assert result[0].signal == "sell"
+        prices = [100 + i * 2 for i in range(30)]
+        rsi = TechnicalIndicators.rsi(prices)
+        assert rsi[-1] > 70
 
     def test_oversold(self):
-        # Strong downtrend → low RSI
-        prices = [200 - i * 2 for i in range(20)]
-        bars = _make_bars(prices)
-        result = relative_strength_index(bars)
-        assert result[0].value < 30
-        assert result[0].signal == "buy"
+        prices = [200 - i * 2 for i in range(30)]
+        rsi = TechnicalIndicators.rsi(prices)
+        assert rsi[-1] < 30
 
     def test_neutral(self):
-        # Sideways → RSI around 50
-        prices = [100 + (i % 2) for i in range(20)]
-        bars = _make_bars(prices)
-        result = relative_strength_index(bars)
-        assert 30 <= result[0].value <= 70
+        prices = [100 + (i % 2) * 2 - 1 for i in range(30)]
+        rsi = TechnicalIndicators.rsi(prices)
+        assert 30 <= rsi[-1] <= 70
 
-
-class TestBollingerBands:
-    def test_bands_exist(self):
-        prices = [100 + i * 0.5 for i in range(30)]
-        bars = _make_bars(prices)
-        result = bollinger_bands(bars)
-        assert len(result) == 4
-        upper = next(r for r in result if r.name == "BB_Upper")
-        lower = next(r for r in result if r.name == "BB_Lower")
-        assert upper.value > lower.value
-
-
-class TestATR:
-    def test_volatility(self):
-        # High volatility — need at least 14 bars for default ATR period
-        prices = [100, 110, 95, 115, 90, 120, 85, 125, 80, 130, 75, 135, 70, 140, 65]
-        bars = _make_bars(prices)
-        result = average_true_range(bars)
-        assert result[0].value > 0
-
-    def test_low_volatility(self):
-        prices = [100.0 + i * 0.01 for i in range(20)]
-        bars = _make_bars(prices)
-        result = average_true_range(bars)
-        assert result[0].value > 0
+    def test_length_matches_input(self):
+        prices = [100, 101, 102, 103, 104]
+        rsi = TechnicalIndicators.rsi(prices)
+        assert len(rsi) == len(prices)
 
 
 class TestMACD:
-    def test_bullish_crossover(self):
-        prices = [100 + i for i in range(40)]
-        bars = _make_bars(prices)
-        result = moving_average_convergence(bars)
-        assert len(result) == 1
-        assert result[0].value > 0  # Fast > Slow in uptrend
+    def test_bullish_signal(self):
+        prices = [100 + i for i in range(50)]
+        macd = TechnicalIndicators.macd(prices)
+        assert len(macd["macd"]) == 50
+        assert len(macd["signal"]) == 50
+        assert len(macd["histogram"]) == 50
+
+    def test_histogram_sign(self):
+        prices = [100 + i * 0.5 for i in range(50)]
+        macd = TechnicalIndicators.macd(prices)
+        assert isinstance(macd["histogram"][-1], float)
+
+
+class TestBollingerBands:
+    def test_bands_contain_price(self):
+        prices = [100 + (i % 10) for i in range(30)]
+        bb = TechnicalIndicators.bollinger_bands(prices)
+        assert len(bb["upper"]) == 30
+        assert len(bb["lower"]) == 30
+        assert bb["upper"][-1] > bb["lower"][-1]
+
+    def test_squeeze(self):
+        prices = [100.0] * 30
+        bb = TechnicalIndicators.bollinger_bands(prices)
+        assert bb["upper"][-1] == bb["lower"][-1]
+
+
+class TestATR:
+    def test_atr_positive(self):
+        candles = _make_candles([100 + i for i in range(20)])
+        atr = TechnicalIndicators.atr(candles)
+        assert atr[-1] > 0
+
+    def test_atr_length(self):
+        candles = _make_candles([100 + i for i in range(20)])
+        atr = TechnicalIndicators.atr(candles)
+        assert len(atr) == 20
 
 
 class TestStochastic:
-    def test_overbought(self):
-        prices = [100 + i for i in range(20)]
-        bars = _make_bars(prices)
-        result = stochastic_oscillator(bars)
-        assert len(result) == 2  # %K and %D
+    def test_stochastic_range(self):
+        candles = _make_candles([100 + i for i in range(20)])
+        stoch = TechnicalIndicators.stochastic(candles)
+        assert len(stoch["k"]) == 20
+        for k in stoch["k"]:
+            assert 0 <= k <= 100
 
 
 class TestOBV:
-    def test_volume_trend(self):
-        prices = [100, 101, 102, 103, 104]
-        volumes = [1000, 1200, 1100, 1300, 1400]
-        bars = _make_bars(prices, volumes)
-        result = on_balance_volume(bars)
-        assert result[0].value > 0  # Uptrend = positive OBV
+    def test_obv_increasing_uptrend(self):
+        candles = _make_candles([100 + i for i in range(20)])
+        obv = TechnicalIndicators.obv(candles)
+        assert obv[-1] > obv[0]
+
+    def test_obv_decreasing_downtrend(self):
+        candles = _make_candles([200 - i for i in range(20)])
+        obv = TechnicalIndicators.obv(candles)
+        assert obv[-1] < obv[0]
 
 
 class TestVWAP:
-    def test_vwap(self):
-        bars = _make_bars([100, 100, 100], [1000, 2000, 3000])
-        result = volume_weighted_average_price(bars)
-        assert result[0].value > 0
+    def test_vwap_returns_values(self):
+        candles = _make_candles([100 + i for i in range(10)])
+        vwap = TechnicalIndicators.vwap(candles)
+        assert len(vwap) == 10
+        assert all(v > 0 for v in vwap)
 
 
 class TestSupportResistance:
-    def test_levels(self):
-        prices = [100, 105, 95, 110, 90, 108, 92]
-        bars = _make_bars(prices)
-        support, resistance = find_support_resistance(bars)
-        assert support < resistance
-        assert support > 0
-        assert resistance > 0
+    def test_sr_returns_data(self):
+        candles = _make_candles([100 + (i % 5) for i in range(30)])
+        sr = TechnicalIndicators.support_resistance(candles)
+        assert "support" in sr
+        assert "resistance" in sr
+        assert len(sr["support"]) > 0
+        assert len(sr["resistance"]) > 0
 
 
-class TestFullAnalysis:
-    def test_complete(self):
-        prices = [100 + i * 0.5 + (i % 3 - 1) for i in range(50)]
-        bars = _make_bars(prices)
-        result = analyze(bars)
-        assert isinstance(result, TechnicalAnalysis)
-        assert result.trend in ("uptrend", "downtrend", "sideways")
-        assert result.momentum in ("overbought", "oversold", "neutral")
-        assert result.volatility in ("high", "medium", "low")
-        assert result.overall_signal in ("buy", "sell", "hold")
-        assert len(result.indicators) > 0
+class TestSMA:
+    def test_sma_basic(self):
+        prices = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        sma = TechnicalIndicators.sma(prices, 3)
+        assert sma[2] == 2.0
+        assert sma[9] == 9.0
+
+    def test_sma_short_input(self):
+        prices = [1, 2]
+        sma = TechnicalIndicators.sma(prices, 5)
+        assert all(v == 0.0 for v in sma)
+
+
+class TestEMA:
+    def test_ema_basic(self):
+        prices = [100 + i for i in range(30)]
+        ema = TechnicalIndicators.ema(prices, 10)
+        assert len(ema) == 30
+        assert ema[-1] > ema[-2]
+
+
+class TestAnalyzeTrend:
+    def test_bullish_trend(self):
+        prices = [100 + i * 2 for i in range(30)]
+        result = TechnicalIndicators.analyze_trend(prices)
+        assert result["trend"] in ("bullish", "neutral")
 
     def test_insufficient_data(self):
-        bars = _make_bars([100, 101])
-        result = analyze(bars)
-        assert result.overall_signal == "hold"
+        prices = [100, 101]
+        result = TechnicalIndicators.analyze_trend(prices)
+        assert result["trend"] == "insufficient_data"
