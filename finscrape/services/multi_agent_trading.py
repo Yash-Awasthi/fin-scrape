@@ -1,320 +1,235 @@
-"""Multi-Agent Trading Orchestration.
+"""
+Multi-Agent Trading System — 15 specialized agents for trading analysis.
 
-Extracted from alpacatradingagent (inspiration).
-Agent roles (analyst, researcher, trader, risk manager), consensus building,
-and structured trading decisions.
-
-All pure functions — no DB, no async.
+Inspired by TradingAgents-MCPmode.
+Provides multi-agent collaboration, parallel analysis, and debate mechanisms.
 """
 
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass, field
-from typing import Optional
+from datetime import datetime
+from typing import Dict, List, Optional
 
 
 @dataclass
-class AgentReport:
-    """Report from a single agent."""
-    agent_name: str
-    agent_role: str  # "analyst", "researcher", "trader", "risk_manager"
-    ticker: str
-    recommendation: str  # "bullish", "bearish", "neutral"
-    confidence: float  # 0-1
-    reasoning: str
-    timestamp: str = ""
+class Agent:
+    """Represents a trading agent."""
+    id: str
+    name: str
+    role: str  # analyst, researcher, risk_manager, etc.
+    specialty: str
+    isActive: bool = True
+    analysisCount: int = 0
+    accuracy: float = 0.0
 
 
 @dataclass
-class TradingDecision:
-    """Final trading decision with all supporting data."""
+class Analysis:
+    """An analysis result from an agent."""
+    agentId: str
     ticker: str
-    action: str  # "BUY", "HOLD", "SELL", "LONG", "SHORT", "NEUTRAL"
+    recommendation: str  # buy, sell, hold
     confidence: float
     reasoning: str
-    agent_reports: list[AgentReport] = field(default_factory=list)
-    risk_assessment: Optional[dict] = None
-    position_size_pct: float = 0.0
+    metrics: Dict[str, float]
+    timestamp: datetime = field(default_factory=datetime.now)
 
 
 @dataclass
-class RiskLimits:
-    """Risk management constraints."""
-    max_position_pct: float = 0.10
-    max_daily_trades: int = 10
-    max_drawdown_pct: float = 0.15
-    stop_loss_pct: float = 0.05
-    take_profit_pct: float = 0.10
-    max_correlated_positions: int = 3
-    min_confidence: float = 0.6
+class Debate:
+    """A debate between bull and bear researchers."""
+    id: str
+    ticker: str
+    bullArguments: List[str]
+    bearArguments: List[str]
+    rounds: int
+    consensus: Optional[str] = None
+    confidence: float = 0.0
+    timestamp: datetime = field(default_factory=datetime.now)
 
 
-# --- Agent Roles ---
-
-ANALYST_AGENTS = [
-    {"name": "Market Analyst", "role": "analyst", "focus": "overall market conditions and trends"},
-    {"name": "Social Sentiment Analyst", "role": "analyst", "focus": "social media sentiment and public opinion"},
-    {"name": "News Analyst", "role": "analyst", "focus": "financial news and events"},
-    {"name": "Fundamentals Analyst", "role": "analyst", "focus": "company financials and intrinsic value"},
-    {"name": "Macro Analyst", "role": "analyst", "focus": "macroeconomic indicators and Fed data"},
-]
-
-RESEARCH_AGENTS = [
-    {"name": "Bull Researcher", "role": "researcher", "focus": "bullish case and upside catalysts"},
-    {"name": "Bear Researcher", "role": "researcher", "focus": "bearish case and downside risks"},
-    {"name": "Research Manager", "role": "researcher", "focus": "synthesize bull and bear cases"},
-]
-
-TRADING_AGENTS = [
-    {"name": "Trader", "role": "trader", "focus": "execute trading strategy"},
-]
-
-RISK_AGENTS = [
-    {"name": "Risky Analyst", "role": "risk_manager", "focus": "aggressive risk tolerance"},
-    {"name": "Neutral Analyst", "role": "risk_manager", "focus": "balanced risk approach"},
-    {"name": "Safe Analyst", "role": "risk_manager", "focus": "conservative risk approach"},
-]
+@dataclass
+class RiskAssessment:
+    """Risk assessment result."""
+    agentId: str
+    ticker: str
+    riskLevel: str  # low, medium, high, extreme
+    riskFactors: List[str]
+    mitigationSuggestions: List[str]
+    confidence: float
+    timestamp: datetime = field(default_factory=datetime.now)
 
 
-def get_agent_roles() -> dict:
-    """Get all agent roles and their descriptions."""
-    return {
-        "analysts": ANALYST_AGENTS,
-        "researchers": RESEARCH_AGENTS,
-        "traders": TRADING_AGENTS,
-        "risk_managers": RISK_AGENTS,
-    }
+# ============================================================================
+# Multi-Agent Trading Manager
+# ============================================================================
 
+class MultiAgentTradingManager:
+    def __init__(self):
+        self.agents: Dict[str, Agent] = {}
+        self.analyses: Dict[str, List[Analysis]] = {}
+        self.debates: Dict[str, Debate] = {}
+        self.riskAssessments: Dict[str, List[RiskAssessment]] = {}
 
-# --- Consensus Building ---
+    def register_agent(self, name: str, role: str, specialty: str) -> Agent:
+        """Register a new trading agent."""
+        import uuid
+        agent = Agent(
+            id=str(uuid.uuid4())[:8],
+            name=name,
+            role=role,
+            specialty=specialty,
+        )
+        self.agents[agent.id] = agent
+        return agent
 
-def build_consensus(reports: list[AgentReport]) -> dict:
-    """Build consensus from multiple agent reports.
+    def submit_analysis(self, agent_id: str, ticker: str, recommendation: str,
+                       confidence: float, reasoning: str, metrics: Dict[str, float]) -> Analysis:
+        """Submit an analysis from an agent."""
+        agent = self.agents.get(agent_id)
+        if not agent:
+            raise ValueError(f"Agent {agent_id} not found")
 
-    Uses weighted voting based on agent role and confidence.
+        analysis = Analysis(
+            agentId=agent_id,
+            ticker=ticker,
+            recommendation=recommendation,
+            confidence=confidence,
+            reasoning=reasoning,
+            metrics=metrics,
+        )
 
-    Args:
-        reports: List of agent reports
+        agent.analysisCount += 1
+        if ticker not in self.analyses:
+            self.analyses[ticker] = []
+        self.analyses[ticker].append(analysis)
+        return analysis
 
-    Returns:
-        Consensus result with recommendation, confidence, and breakdown
-    """
-    if not reports:
-        return {"recommendation": "neutral", "confidence": 0.0, "votes": {}}
+    def get_consensus(self, ticker: str) -> Dict:
+        """Get consensus recommendation for a ticker."""
+        analyses = self.analyses.get(ticker, [])
+        if not analyses:
+            return {"ticker": ticker, "consensus": "no_data", "confidence": 0}
 
-    # Role weights
-    role_weights = {
-        "analyst": 1.0,
-        "researcher": 1.5,  # Research has more weight
-        "trader": 2.0,      # Trader has highest weight
-        "risk_manager": 1.2,
-    }
+        buy_count = sum(1 for a in analyses if a.recommendation == "buy")
+        sell_count = sum(1 for a in analyses if a.recommendation == "sell")
+        hold_count = sum(1 for a in analyses if a.recommendation == "hold")
 
-    # Count weighted votes
-    votes = {"bullish": 0.0, "bearish": 0.0, "neutral": 0.0}
-    for report in reports:
-        weight = role_weights.get(report.agent_role, 1.0) * report.confidence
-        rec = report.recommendation.lower()
-        if rec in votes:
-            votes[rec] += weight
+        total = len(analyses)
+        avg_confidence = sum(a.confidence for a in analyses) / total
 
-    total = sum(votes.values())
-    if total == 0:
-        return {"recommendation": "neutral", "confidence": 0.0, "votes": votes}
-
-    # Normalize
-    normalized = {k: v / total for k, v in votes.items()}
-
-    # Find winner
-    winner = max(normalized, key=normalized.get)
-    vote_confidence = normalized[winner]
-
-    # Factor in average report confidence
-    avg_report_confidence = sum(r.confidence for r in reports) / len(reports)
-    confidence = vote_confidence * avg_report_confidence
-
-    return {
-        "recommendation": winner,
-        "confidence": round(confidence, 3),
-        "votes": {k: round(v, 3) for k, v in normalized.items()},
-        "total_reports": len(reports),
-    }
-
-
-# --- Risk Assessment ---
-
-def assess_risk(
-    ticker: str,
-    consensus: dict,
-    reports: list[AgentReport],
-    limits: RiskLimits = RiskLimits(),
-) -> dict:
-    """Assess risk for a trading decision.
-
-    Args:
-        ticker: Stock ticker
-        consensus: Consensus result
-        reports: Agent reports
-        limits: Risk limits
-
-    Returns:
-        Risk assessment with factors and score
-    """
-    risk_factors = []
-
-    # Confidence risk
-    if consensus["confidence"] < limits.min_confidence:
-        risk_factors.append({
-            "factor": "low_confidence",
-            "severity": "high",
-            "description": f"Consensus confidence {consensus['confidence']:.2f} below minimum {limits.min_confidence}",
-        })
-
-    # Disagreement risk
-    bullish_count = sum(1 for r in reports if r.recommendation == "bullish")
-    bearish_count = sum(1 for r in reports if r.recommendation == "bearish")
-    total = len(reports)
-
-    if total > 0:
-        disagreement = abs(bullish_count - bearish_count) / total
-        if disagreement < 0.3:
-            risk_factors.append({
-                "factor": "high_disagreement",
-                "severity": "medium",
-                "description": f"Agents disagree: {bullish_count} bullish vs {bearish_count} bearish",
-            })
-
-    # Role-specific risks
-    risk_reports = [r for r in reports if r.agent_role == "risk_manager"]
-    if risk_reports:
-        risk_confidence = sum(r.confidence for r in risk_reports) / len(risk_reports)
-        if risk_confidence < 0.5:
-            risk_factors.append({
-                "factor": "risk_managers_concerned",
-                "severity": "high",
-                "description": "Risk management agents have low confidence",
-            })
-
-    # Calculate overall risk score (0 = low risk, 1 = high risk)
-    severity_map = {"low": 0.2, "medium": 0.5, "high": 0.8, "critical": 1.0}
-    if risk_factors:
-        risk_score = sum(severity_map.get(f["severity"], 0.5) for f in risk_factors) / len(risk_factors)
-    else:
-        risk_score = 0.1
-
-    return {
-        "ticker": ticker,
-        "risk_score": round(risk_score, 3),
-        "risk_level": "low" if risk_score < 0.3 else "medium" if risk_score < 0.6 else "high",
-        "factors": risk_factors,
-        "passes_limits": risk_score < 0.7 and consensus["confidence"] >= limits.min_confidence,
-    }
-
-
-# --- Position Sizing ---
-
-def calculate_position_size(
-    capital: float,
-    confidence: float,
-    risk_score: float,
-    limits: RiskLimits = RiskLimits(),
-) -> float:
-    """Calculate position size based on confidence and risk.
-
-    Uses Kelly-inspired sizing with risk adjustment.
-
-    Args:
-        capital: Available capital
-        confidence: Consensus confidence (0-1)
-        risk_score: Overall risk score (0-1)
-        limits: Risk limits
-
-    Returns:
-        Position size as percentage of capital
-    """
-    if confidence < limits.min_confidence:
-        return 0.0
-
-    # Kelly-inspired sizing
-    win_rate = confidence
-    avg_win = limits.take_profit_pct
-    avg_loss = limits.stop_loss_pct
-
-    if avg_loss == 0:
-        return 0.0
-
-    kelly = (win_rate * avg_win - (1 - win_rate) * avg_loss) / avg_win
-    kelly = max(0, min(kelly, 1.0))
-
-    # Risk adjustment
-    risk_adjustment = 1.0 - (risk_score * 0.5)
-
-    # Apply limits
-    position_pct = kelly * risk_adjustment * limits.max_position_pct
-    position_pct = min(position_pct, limits.max_position_pct)
-
-    return round(position_pct, 4)
-
-
-# --- Decision Generation ---
-
-def generate_decision(
-    ticker: str,
-    reports: list[AgentReport],
-    capital: float,
-    limits: RiskLimits = RiskLimits(),
-) -> TradingDecision:
-    """Generate a complete trading decision from agent reports.
-
-    Args:
-        ticker: Stock ticker
-        reports: List of agent reports
-        capital: Available capital
-        limits: Risk limits
-
-    Returns:
-        Complete trading decision
-    """
-    # Build consensus
-    consensus = build_consensus(reports)
-
-    # Assess risk
-    risk = assess_risk(ticker, consensus, reports, limits)
-
-    # Determine action
-    if not risk["passes_limits"]:
-        action = "HOLD"
-        confidence = 0.0
-        reasoning = f"Risk assessment failed: {risk['risk_level']} risk"
-    elif consensus["recommendation"] == "bullish":
-        if consensus["confidence"] > 0.7:
-            action = "BUY"
+        if buy_count > sell_count and buy_count > hold_count:
+            consensus = "buy"
+        elif sell_count > buy_count and sell_count > hold_count:
+            consensus = "sell"
         else:
-            action = "LONG"
-        confidence = consensus["confidence"]
-        reasoning = f"Bullish consensus with {confidence:.0%} confidence"
-    elif consensus["recommendation"] == "bearish":
-        if consensus["confidence"] > 0.7:
-            action = "SELL"
+            consensus = "hold"
+
+        return {
+            "ticker": ticker,
+            "consensus": consensus,
+            "confidence": avg_confidence,
+            "buyVotes": buy_count,
+            "sellVotes": sell_count,
+            "holdVotes": hold_count,
+            "totalAnalyses": total,
+        }
+
+    def start_debate(self, ticker: str, bull_agent_id: str, bear_agent_id: str, rounds: int = 3) -> Debate:
+        """Start a bull vs bear debate."""
+        import uuid
+        debate = Debate(
+            id=str(uuid.uuid4())[:8],
+            ticker=ticker,
+            bullArguments=[],
+            bearArguments=[],
+            rounds=rounds,
+        )
+        self.debates[debate.id] = debate
+        return debate
+
+    def add_bull_argument(self, debate_id: str, argument: str) -> None:
+        """Add a bull argument to a debate."""
+        debate = self.debates.get(debate_id)
+        if debate:
+            debate.bullArguments.append(argument)
+
+    def add_bear_argument(self, debate_id: str, argument: str) -> None:
+        """Add a bear argument to a debate."""
+        debate = self.debates.get(debate_id)
+        if debate:
+            debate.bearArguments.append(argument)
+
+    def resolve_debate(self, debate_id: str, consensus: str, confidence: float) -> None:
+        """Resolve a debate with a consensus."""
+        debate = self.debates.get(debate_id)
+        if debate:
+            debate.consensus = consensus
+            debate.confidence = confidence
+
+    def submit_risk_assessment(self, agent_id: str, ticker: str, risk_level: str,
+                              risk_factors: List[str], mitigation: List[str], confidence: float) -> RiskAssessment:
+        """Submit a risk assessment."""
+        assessment = RiskAssessment(
+            agentId=agent_id,
+            ticker=ticker,
+            riskLevel=risk_level,
+            riskFactors=risk_factors,
+            mitigationSuggestions=mitigation,
+            confidence=confidence,
+        )
+
+        if ticker not in self.riskAssessments:
+            self.riskAssessments[ticker] = []
+        self.riskAssessments[ticker].append(assessment)
+        return assessment
+
+    def get_risk_summary(self, ticker: str) -> Dict:
+        """Get risk summary for a ticker."""
+        assessments = self.risk_assessments.get(ticker, [])
+        if not assessments:
+            return {"ticker": ticker, "riskLevel": "unknown", "confidence": 0}
+
+        risk_levels = {"low": 1, "medium": 2, "high": 3, "extreme": 4}
+        avg_risk = sum(risk_levels.get(a.riskLevel, 0) for a in assessments) / len(assessments)
+        avg_confidence = sum(a.confidence for a in assessments) / len(assessments)
+
+        if avg_risk <= 1.5:
+            risk_level = "low"
+        elif avg_risk <= 2.5:
+            risk_level = "medium"
+        elif avg_risk <= 3.5:
+            risk_level = "high"
         else:
-            action = "SHORT"
-        confidence = consensus["confidence"]
-        reasoning = f"Bearish consensus with {confidence:.0%} confidence"
-    else:
-        action = "HOLD"
-        confidence = consensus["confidence"]
-        reasoning = "Neutral consensus"
+            risk_level = "extreme"
 
-    # Calculate position size
-    position_size = calculate_position_size(capital, confidence, risk["risk_score"], limits)
+        return {
+            "ticker": ticker,
+            "riskLevel": risk_level,
+            "confidence": avg_confidence,
+            "totalAssessments": len(assessments),
+        }
 
-    return TradingDecision(
-        ticker=ticker,
-        action=action,
-        confidence=round(confidence, 3),
-        reasoning=reasoning,
-        agent_reports=reports,
-        risk_assessment=risk,
-        position_size_pct=position_size,
-    )
+    def get_agent_performance(self) -> List[Dict]:
+        """Get performance metrics for all agents."""
+        return [
+            {
+                "id": agent.id,
+                "name": agent.name,
+                "role": agent.role,
+                "analyses": agent.analysisCount,
+                "accuracy": agent.accuracy,
+            }
+            for agent in self.agents.values()
+        ]
+
+    def get_dashboard_data(self) -> Dict:
+        """Get dashboard data for all tickers."""
+        return {
+            "tickers": list(self.analyses.keys()),
+            "totalAnalyses": sum(len(a) for a in self.analyses.values()),
+            "totalDebates": len(self.debates),
+            "totalRiskAssessments": sum(len(r) for r in self.riskAssessments.values()),
+            "activeAgents": sum(1 for a in self.agents.values() if a.isActive),
+        }
