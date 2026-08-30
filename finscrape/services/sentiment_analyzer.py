@@ -1,198 +1,126 @@
 """
-Sentiment Analyzer — Financial text sentiment analysis
-Inspired by Stock-News-Analysis-with-BERT, FinNews-Sentiment
+Sentiment analyzer from praw — social media sentiment patterns.
 """
-
-import math
-import re
-from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass
-from enum import Enum
-
-
-class Sentiment(Enum):
-    VERY_BEARISH = "very_bearish"
-    BEARISH = "bearish"
-    NEUTRAL = "neutral"
-    BULLISH = "bullish"
-    VERY_BULLISH = "very_bullish"
+from typing import List, Dict
+import math
 
 
 @dataclass
 class SentimentResult:
     text: str
-    sentiment: Sentiment
-    score: float
-    confidence: float
-    positive_words: List[str]
-    negative_words: List[str]
-    word_count: int
+    polarity: float  # -1 to 1
+    subjectivity: float  # 0 to 1
+    label: str  # positive, negative, neutral
 
 
 @dataclass
-class SentimentTrend:
-    period: str
-    avg_score: float
-    sentiment_distribution: Dict[str, int]
-    trend_direction: str
-    volatility: float
+class SocialSentiment:
+    platform: str
+    topic: str
+    total_mentions: int
+    avg_sentiment: float
+    positive_count: int
+    negative_count: int
+    neutral_count: int
+    top_keywords: List[str]
+    trend: str  # rising, falling, stable
 
 
-class SentimentAnalyzer:
-    """Pure function sentiment analysis for financial text."""
+POSITIVE_WORDS = {
+    "good", "great", "excellent", "amazing", "wonderful", "fantastic", "love",
+    "best", "awesome", "perfect", "brilliant", "outstanding", "superb", "happy",
+    "joy", "success", "win", "profit", "gain", "rise", "surge", "bullish",
+}
 
-    POSITIVE_WORDS = {
-        "gain", "gains", "profit", "profits", "profitable", "growth", "growing",
-        "increase", "increased", "rising", "rise", "rises", "surge", "surges",
-        "surging", "soar", "soars", "soaring", "rally", "rallies", "bullish",
-        "outperform", "outperforms", "upgrade", "upgrades", "beat", "beats",
-        "exceed", "exceeds", "exceeded", "strong", "stronger", "robust",
-        "positive", "optimistic", "recovery", "recovering", "improvement",
-        "improving", "record", "innovation", "breakthrough", "milestone",
-        "dividend", "buyback", "expansion", "expanding", "opportunity",
-        "momentum", "acceleration", "accelerating", "boom", "thriving",
+NEGATIVE_WORDS = {
+    "bad", "terrible", "awful", "horrible", "worst", "hate", "poor", "fail",
+    "loss", "crash", "drop", "bearish", "decline", "recession", "crisis",
+    "panic", "fear", "risk", "danger", "threat", "problem", "issue", "bug",
+}
+
+INTENSIFIERS = {"very": 1.5, "extremely": 2.0, "incredibly": 2.0, "slightly": 0.5, "barely": 0.3}
+
+NEGATORS = {"not", "no", "never", "neither", "nobody", "nothing", "nowhere", "nor", "cannot", "can't", "won't", "don't"}
+
+
+def analyze_sentiment(text: str) -> SentimentResult:
+    words = text.lower().split()
+    score = 0.0
+    negated = False
+    intensifier = 1.0
+
+    for i, word in enumerate(words):
+        if word in NEGATORS:
+            negated = True
+            continue
+        if word in INTENSIFIERS:
+            intensifier = INTENSIFIERS[word]
+            continue
+
+        word_score = 0.0
+        if word in POSITIVE_WORDS:
+            word_score = 1.0
+        elif word in NEGATIVE_WORDS:
+            word_score = -1.0
+
+        if negated:
+            word_score *= -0.7
+            negated = False
+        if intensifier != 1.0:
+            word_score *= intensifier
+            intensifier = 1.0
+
+        score += word_score
+
+    avg = score / max(1, len(words))
+    polarity = max(-1.0, min(1.0, avg))
+    subjectivity = min(1.0, abs(avg) * 2)
+
+    if polarity > 0.1:
+        label = "positive"
+    elif polarity < -0.1:
+        label = "negative"
+    else:
+        label = "neutral"
+
+    return SentimentResult(text=text, polarity=polarity, subjectivity=subjectivity, label=label)
+
+
+def batch_analyze(texts: List[str]) -> Dict:
+    results = [analyze_sentiment(t) for t in texts]
+    positive = sum(1 for r in results if r.label == "positive")
+    negative = sum(1 for r in results if r.label == "negative")
+    neutral = sum(1 for r in results if r.label == "neutral")
+    avg_polarity = sum(r.polarity for r in results) / len(results) if results else 0
+
+    words = []
+    for text in texts:
+        words.extend(text.lower().split())
+    word_freq = {}
+    for w in words:
+        if len(w) > 3:
+            word_freq[w] = word_freq.get(w, 0) + 1
+    top_words = sorted(word_freq.keys(), key=lambda x: -word_freq[x])[:10]
+
+    return {
+        "total": len(results),
+        "positive": positive,
+        "negative": negative,
+        "neutral": neutral,
+        "avg_polarity": avg_polarity,
+        "top_keywords": top_words,
     }
 
-    NEGATIVE_WORDS = {
-        "loss", "losses", "lose", "loses", "decline", "declines", "declining",
-        "decrease", "decreased", "drop", "drops", "dropping", "fall", "falls",
-        "falling", "crash", "crashes", "plunge", "plunges", "bearish",
-        "underperform", "underperforms", "downgrade", "downgrades", "miss",
-        "misses", "missed", "weak", "weaker", "weakness", "negative",
-        "pessimistic", "recession", "recessionary", "crisis", "risk", "risks",
-        "risky", "volatile", "volatility", "uncertainty", "uncertain",
-        "concern", "concerns", "worrisome", "warning", "debt", "deficit",
-        "bankruptcy", "default", "layoff", "layoffs", "restructuring",
-        "downturn", "slowdown", "inflation", "deflation", "stagnation",
-    }
 
-    INTENSIFIERS = {
-        "very", "extremely", "significantly", "substantially", "dramatically",
-        "sharply", "massive", "huge", "massively", "tremendously",
-    }
-
-    NEGATORS = {
-        "not", "no", "never", "neither", "nor", "barely", "hardly",
-        "doesn't", "don't", "didn't", "wasn't", "weren't", "won't",
-    }
-
-    @classmethod
-    def analyze_text(cls, text: str) -> SentimentResult:
-        words = re.findall(r'\b\w+\b', text.lower())
-        positive_found = []
-        negative_found = []
-        score = 0.0
-        negate = False
-        intensify = 1.0
-        for word in words:
-            if word in cls.NEGATORS:
-                negate = True
-                continue
-            if word in cls.INTENSIFIERS:
-                intensify = 1.5
-                continue
-            if word in cls.POSITIVE_WORDS:
-                if negate:
-                    negative_found.append(f"not_{word}")
-                    score -= 0.1 * intensify
-                else:
-                    positive_found.append(word)
-                    score += 0.1 * intensify
-                negate = False
-                intensify = 1.0
-            elif word in cls.NEGATIVE_WORDS:
-                if negate:
-                    positive_found.append(f"not_{word}")
-                    score += 0.05 * intensify
-                else:
-                    negative_found.append(word)
-                    score -= 0.1 * intensify
-                negate = False
-                intensify = 1.0
-            else:
-                negate = False
-                intensify = 1.0
-        if score > 0.3:
-            sentiment = Sentiment.VERY_BULLISH
-        elif score > 0.1:
-            sentiment = Sentiment.BULLISH
-        elif score < -0.3:
-            sentiment = Sentiment.VERY_BEARISH
-        elif score < -0.1:
-            sentiment = Sentiment.BEARISH
-        else:
-            sentiment = Sentiment.NEUTRAL
-        total_sentiment_words = len(positive_found) + len(negative_found)
-        confidence = min(1.0, total_sentiment_words / max(len(words) * 0.1, 1))
-        return SentimentResult(
-            text=text[:200],
-            sentiment=sentiment,
-            score=round(max(-1.0, min(1.0, score)), 3),
-            confidence=round(confidence, 3),
-            positive_words=positive_found,
-            negative_words=negative_found,
-            word_count=len(words),
-        )
-
-    @classmethod
-    def analyze_headline(cls, headline: str) -> SentimentResult:
-        result = cls.analyze_text(headline)
-        if any(w in headline.lower() for w in ["surges", "soars", "record high"]):
-            result.score = min(1.0, result.score + 0.2)
-        elif any(w in headline.lower() for w in ["crashes", "plunges", "record low"]):
-            result.score = max(-1.0, result.score - 0.2)
-        return result
-
-    @staticmethod
-    def calculate_sentiment_trend(results: List[SentimentResult],
-                                   period_label: str = "period") -> SentimentTrend:
-        if not results:
-            return SentimentTrend(
-                period=period_label,
-                avg_score=0.0,
-                sentiment_distribution={},
-                trend_direction="neutral",
-                volatility=0.0,
-            )
-        scores = [r.score for r in results]
-        avg_score = sum(scores) / len(scores)
-        distribution = {}
-        for r in results:
-            s = r.sentiment.value
-            distribution[s] = distribution.get(s, 0) + 1
-        if len(scores) >= 2:
-            first_half = scores[:len(scores) // 2]
-            second_half = scores[len(scores) // 2:]
-            avg_first = sum(first_half) / len(first_half)
-            avg_second = sum(second_half) / len(second_half)
-            diff = avg_second - avg_first
-            if diff > 0.1:
-                trend = "improving"
-            elif diff < -0.1:
-                trend = "declining"
-            else:
-                trend = "stable"
-        else:
-            trend = "insufficient_data"
-        variance = sum((s - avg_score) ** 2 for s in scores) / len(scores)
-        volatility = math.sqrt(variance)
-        return SentimentTrend(
-            period=period_label,
-            avg_score=round(avg_score, 3),
-            sentiment_distribution=distribution,
-            trend_direction=trend,
-            volatility=round(volatility, 3),
-        )
-
-    @staticmethod
-    def extract_sentiment_keywords(text: str, top_n: int = 5) -> List[Tuple[str, float]]:
-        words = re.findall(r'\b\w+\b', text.lower())
-        word_scores = {}
-        all_sentiment = SentimentAnalyzer.POSITIVE_WORDS | SentimentAnalyzer.NEGATIVE_WORDS
-        for word in words:
-            if word in all_sentiment:
-                if word not in word_scores:
-                    word_scores[word] = 0
-                word_scores[word] += 1
-        sorted_words = sorted(word_scores.items(), key=lambda x: -x[1])
-        return sorted_words[:top_n]
+def compute_sentiment_trend(sentiments: List[float], window: int = 5) -> str:
+    if len(sentiments) < window * 2:
+        return "stable"
+    recent = sum(sentiments[-window:]) / window
+    earlier = sum(sentiments[-window * 2:-window]) / window
+    diff = recent - earlier
+    if diff > 0.1:
+        return "rising"
+    elif diff < -0.1:
+        return "falling"
+    return "stable"
