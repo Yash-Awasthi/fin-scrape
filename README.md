@@ -212,6 +212,22 @@ pytest tests/test_accuracy.py  # Accuracy backtesting tests
 
 ---
 
+## 📈 Live Market Dashboard
+
+Real-time market visualization with:
+- Live price ticker with real-time updates
+- Candlestick chart (CSS-only)
+- Market sentiment gauge
+- News feed with sentiment-colored borders
+- Technical indicators (RSI, MACD, Bollinger, VWAP)
+- 8-agent council consensus visualization
+- Alert feed with triggered alerts
+- Dark financial terminal aesthetic
+
+**Open:** [dashboard.html](web/dashboard.html) (runs in browser, no server needed)
+
+---
+
 ## 📂 Project Structure
 
 ```
