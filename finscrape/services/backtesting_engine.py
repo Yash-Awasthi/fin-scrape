@@ -1,25 +1,25 @@
 """
-Backtesting Engine
-Extracted from freqtrade's backtesting framework
-
-Features:
-- Historical data replay
-- Signal generation and evaluation
-- Performance metrics calculation
-- Trade simulation
-- Risk management
+Backtesting Engine — Inspired by Freqtrade
+Event-driven backtesting with broker simulation, order management, and performance analytics
 """
 
-from dataclasses import dataclass
-from typing import List, Dict, Any, Optional, Callable
-from enum import Enum
-import time
 import math
+from typing import List, Dict, Optional, Tuple, Callable
+from dataclasses import dataclass, field
+from enum import Enum
+from collections import defaultdict
 
 
 class OrderSide(Enum):
     BUY = "buy"
     SELL = "sell"
+
+
+class OrderType(Enum):
+    MARKET = "market"
+    LIMIT = "limit"
+    STOP = "stop"
+    STOP_LIMIT = "stop_limit"
 
 
 class OrderStatus(Enum):
@@ -29,9 +29,14 @@ class OrderStatus(Enum):
     REJECTED = "rejected"
 
 
+class Signal(Enum):
+    BUY = 1
+    SELL = -1
+    HOLD = 0
+
+
 @dataclass
 class Candle:
-    """OHLCV candle data"""
     timestamp: float
     open: float
     high: float
@@ -41,285 +46,394 @@ class Candle:
 
 
 @dataclass
-class Signal:
-    """Trading signal"""
-    timestamp: float
-    side: OrderSide
-    price: float
-    strength: float  # 0-1
-    metadata: Dict[str, Any]
-
-
-@dataclass
 class Order:
-    """Trade order"""
-    id: str
+    order_id: str
     side: OrderSide
+    order_type: OrderType
     price: float
     amount: float
-    status: OrderStatus
-    timestamp: float
-    filled_at: Optional[float]
-    filled_price: Optional[float]
+    status: OrderStatus = OrderStatus.PENDING
+    filled_price: float = 0.0
+    filled_amount: float = 0.0
+    timestamp: float = 0.0
+    fee: float = 0.0
 
 
 @dataclass
 class Position:
-    """Open position"""
-    id: str
+    symbol: str
     side: OrderSide
     entry_price: float
     amount: float
     entry_time: float
-    stop_loss: Optional[float]
-    take_profit: Optional[float]
-    metadata: Dict[str, Any]
+    stop_loss: float = 0.0
+    take_profit: float = 0.0
+    pnl: float = 0.0
+    pnl_pct: float = 0.0
+
+    def update_pnl(self, current_price: float):
+        if self.side == OrderSide.BUY:
+            self.pnl = (current_price - self.entry_price) * self.amount
+            self.pnl_pct = ((current_price - self.entry_price) / self.entry_price * 100
+                           if self.entry_price > 0 else 0)
+        else:
+            self.pnl = (self.entry_price - current_price) * self.amount
+            self.pnl_pct = ((self.entry_price - current_price) / self.entry_price * 100
+                           if self.entry_price > 0 else 0)
 
 
 @dataclass
-class Trade:
-    """Completed trade"""
-    id: str
+class TradeResult:
+    symbol: str
     side: OrderSide
     entry_price: float
     exit_price: float
     amount: float
     entry_time: float
     exit_time: float
-    profit: float
-    profit_pct: float
-    fees: float
-    metadata: Dict[str, Any]
+    pnl: float
+    pnl_pct: float
+    fee: float
+    duration_seconds: float
 
 
 @dataclass
 class BacktestResult:
-    """Backtest results"""
-    trades: List[Trade]
-    equity_curve: List[float]
-    metrics: Dict[str, Any]
-    drawdown: List[float]
-    timestamps: List[float]
+    trades: List[TradeResult]
+    total_pnl: float
+    total_pnl_pct: float
+    win_rate: float
+    profit_factor: float
+    sharpe_ratio: float
+    max_drawdown: float
+    max_drawdown_pct: float
+    total_trades: int
+    winning_trades: int
+    losing_trades: int
+    avg_win: float
+    avg_loss: float
+    best_trade: float
+    worst_trade: float
+    avg_trade_duration: float
+    starting_balance: float
+    ending_balance: float
+    return_pct: float
+    calmar_ratio: float
+    sortino_ratio: float
 
 
-class BacktestingEngine:
-    """
-    Backtesting engine extracted from freqtrade
-    """
-    
-    def __init__(self, initial_capital: float = 10000.0):
-        self.initial_capital = initial_capital
-        self.capital = initial_capital
+class BacktestBroker:
+    """Simulates a broker for backtesting."""
+
+    def __init__(self, initial_balance: float = 10000.0, fee_rate: float = 0.001,
+                 slippage: float = 0.0005):
+        self.balance = initial_balance
+        self.initial_balance = initial_balance
+        self.fee_rate = fee_rate
+        self.slippage = slippage
         self.positions: List[Position] = []
-        self.trades: List[Trade] = []
-        self.equity_curve: List[float] = []
+        self.orders: List[Order] = []
+        self.trades: List[TradeResult] = []
         self.order_counter = 0
-    
-    def run_backtest(
-        self,
-        candles: List[Candle],
-        strategy: Callable[[List[Candle], int], Optional[Signal]],
-        config: Dict[str, Any] = None
-    ) -> BacktestResult:
-        """
-        Run backtest on historical data
-        
-        Args:
-            candles: Historical OHLCV data
-            strategy: Signal generation function
-            config: Backtest configuration
-        
-        Returns:
-            BacktestResult with trades and metrics
-        """
-        if config is None:
-            config = {}
-        
-        lookback = config.get('lookback', 50)
-        
-        for i in range(lookback, len(candles)):
-            current_candle = candles[i]
-            historical_candles = candles[i-lookback:i]
-            
-            # Generate signal
-            signal = strategy(historical_candles, i)
-            
-            # Execute signal
-            if signal:
-                self._execute_signal(signal, current_candle)
-            
-            # Update equity curve
-            equity = self._calculate_equity(current_candle.close)
-            self.equity_curve.append(equity)
-            
-            # Check stop loss and take profit
-            self._check_exits(current_candle)
-        
-        # Close any remaining positions
-        self._close_all_positions(candles[-1])
-        
-        # Calculate metrics
-        metrics = self._calculate_metrics()
-        
-        return BacktestResult(
-            trades=self.trades,
-            equity_curve=self.equity_curve,
-            metrics=metrics,
-            drawdown=self._calculate_drawdown(),
-            timestamps=[c.timestamp for c in candles[lookback:]]
+
+    def create_order(self, side: OrderSide, price: float, amount: float,
+                     order_type: OrderType = OrderType.MARKET) -> Order:
+        self.order_counter += 1
+        order = Order(
+            order_id=f"order_{self.order_counter}",
+            side=side,
+            order_type=order_type,
+            price=price,
+            amount=amount,
+            timestamp=0.0
         )
-    
-    def _execute_signal(self, signal: Signal, candle: Candle):
-        """Execute a trading signal"""
-        if signal.side == OrderSide.BUY and not self.positions:
-            # Open long position
+        self.orders.append(order)
+        return order
+
+    def fill_order(self, order: Order, current_price: float, timestamp: float) -> bool:
+        if order.status != OrderStatus.PENDING:
+            return False
+        if order.order_type == OrderType.MARKET:
+            fill_price = current_price * (1 + self.slippage if order.side == OrderSide.BUY
+                                          else 1 - self.slippage)
+        elif order.order_type == OrderType.LIMIT:
+            if order.side == OrderSide.BUY and current_price > order.price:
+                return False
+            if order.side == OrderSide.SELL and current_price < order.price:
+                return False
+            fill_price = order.price
+        elif order.order_type == OrderType.STOP:
+            if order.side == OrderSide.BUY and current_price < order.price:
+                return False
+            if order.side == OrderSide.SELL and current_price > order.price:
+                return False
+            fill_price = current_price
+        else:
+            fill_price = current_price
+        fee = fill_price * order.amount * self.fee_rate
+        cost = fill_price * order.amount + fee if order.side == OrderSide.BUY else 0
+        if cost > self.balance:
+            order.status = OrderStatus.REJECTED
+            return False
+        self.balance -= cost
+        order.status = OrderStatus.FILLED
+        order.filled_price = fill_price
+        order.filled_amount = order.amount
+        order.timestamp = timestamp
+        order.fee = fee
+        if order.side == OrderSide.BUY:
             position = Position(
-                id=f"pos_{len(self.positions)}",
+                symbol="BTC/USDT",
                 side=OrderSide.BUY,
-                entry_price=signal.price,
-                amount=self.capital / signal.price,
-                entry_time=signal.timestamp,
-                stop_loss=signal.metadata.get('stop_loss'),
-                take_profit=signal.metadata.get('take_profit'),
-                metadata=signal.metadata
+                entry_price=fill_price,
+                amount=order.amount,
+                entry_time=timestamp
             )
             self.positions.append(position)
-            self.capital = 0
-        
-        elif signal.side == OrderSide.SELL and self.positions:
-            # Close long position
-            for position in self.positions[:]:
-                if position.side == OrderSide.BUY:
-                    self._close_position(position, signal.price, signal.timestamp)
-    
-    def _check_exits(self, candle: Candle):
-        """Check stop loss and take profit"""
-        for position in self.positions[:]:
-            if position.side == OrderSide.BUY:
-                # Check stop loss
-                if position.stop_loss and candle.low <= position.stop_loss:
-                    self._close_position(position, position.stop_loss, candle.timestamp)
-                
-                # Check take profit
-                elif position.take_profit and candle.high >= position.take_profit:
-                    self._close_position(position, position.take_profit, candle.timestamp)
-    
-    def _close_position(self, position: Position, exit_price: float, exit_time: float):
-        """Close a position and record trade"""
-        profit = (exit_price - position.entry_price) * position.amount
-        profit_pct = (exit_price / position.entry_price - 1) * 100
-        fees = exit_price * position.amount * 0.001  # 0.1% fee
-        
-        trade = Trade(
-            id=f"trade_{len(self.trades)}",
-            side=position.side,
-            entry_price=position.entry_price,
-            exit_price=exit_price,
-            amount=position.amount,
-            entry_time=position.entry_time,
-            exit_time=exit_time,
-            profit=profit - fees,
-            profit_pct=profit_pct,
-            fees=fees,
-            metadata=position.metadata
-        )
-        
-        self.trades.append(trade)
-        self.capital = exit_price * position.amount - fees
-        self.positions.remove(position)
-    
-    def _close_all_positions(self, candle: Candle):
-        """Close all remaining positions"""
-        for position in self.positions[:]:
-            self._close_position(position, candle.close, candle.timestamp)
-    
-    def _calculate_equity(self, current_price: float) -> float:
-        """Calculate current equity"""
-        equity = self.capital
-        for position in self.positions:
-            equity += position.amount * current_price
-        return equity
-    
-    def _calculate_drawdown(self) -> List[float]:
-        """Calculate drawdown curve"""
-        if not self.equity_curve:
-            return []
-        
-        peak = self.equity_curve[0]
-        drawdown = []
-        
-        for equity in self.equity_curve:
-            if equity > peak:
-                peak = equity
-            dd = (peak - equity) / peak * 100
-            drawdown.append(dd)
-        
-        return drawdown
-    
-    def _calculate_metrics(self) -> Dict[str, Any]:
-        """Calculate backtest metrics"""
-        if not self.trades:
-            return {}
-        
-        # Basic metrics
-        total_trades = len(self.trades)
-        winning_trades = sum(1 for t in self.trades if t.profit > 0)
-        losing_trades = sum(1 for t in self.trades if t.profit < 0)
-        
-        win_rate = winning_trades / total_trades if total_trades > 0 else 0
-        
-        # Profit metrics
-        total_profit = sum(t.profit for t in self.trades)
-        total_fees = sum(t.fees for t in self.trades)
-        
-        avg_profit = total_profit / total_trades if total_trades > 0 else 0
-        avg_profit_pct = sum(t.profit_pct for t in self.trades) / total_trades if total_trades > 0 else 0
-        
-        # Risk metrics
-        drawdown_values = self._calculate_drawdown()
-        max_drawdown = max(drawdown_values) if drawdown_values else 0
-        
-        # Sharpe ratio (simplified)
-        if len(self.equity_curve) > 1:
-            returns = [(self.equity_curve[i] - self.equity_curve[i-1]) / self.equity_curve[i-1] 
-                      for i in range(1, len(self.equity_curve))]
-            avg_return = sum(returns) / len(returns) if returns else 0
-            std_return = math.sqrt(sum((r - avg_return) ** 2 for r in returns) / len(returns)) if returns else 1
-            sharpe_ratio = avg_return / std_return * math.sqrt(252) if std_return > 0 else 0
         else:
-            sharpe_ratio = 0
-        
-        # Profit factor
-        gross_profit = sum(t.profit for t in self.trades if t.profit > 0)
-        gross_loss = abs(sum(t.profit for t in self.trades if t.profit < 0))
+            for pos in self.positions[:]:
+                if pos.side == OrderSide.BUY:
+                    pnl = (fill_price - pos.entry_price) * pos.amount
+                    trade = TradeResult(
+                        symbol=pos.symbol,
+                        side=pos.side,
+                        entry_price=pos.entry_price,
+                        exit_price=fill_price,
+                        amount=pos.amount,
+                        entry_time=pos.entry_time,
+                        exit_time=timestamp,
+                        pnl=pnl - fee,
+                        pnl_pct=((fill_price - pos.entry_price) / pos.entry_price * 100
+                                if pos.entry_price > 0 else 0),
+                        fee=fee + pos.amount * pos.entry_price * self.fee_rate,
+                        duration_seconds=timestamp - pos.entry_time
+                    )
+                    self.trades.append(trade)
+                    self.positions.remove(pos)
+                    self.balance += fill_price * pos.amount - fee
+                    break
+        return True
+
+    def get_balance(self) -> float:
+        return self.balance
+
+    def get_positions(self) -> List[Position]:
+        return self.positions.copy()
+
+    def get_portfolio_value(self, current_price: float) -> float:
+        value = self.balance
+        for pos in self.positions:
+            pos.update_pnl(current_price)
+            value += pos.entry_price * pos.amount + pos.pnl
+        return value
+
+    def cancel_all_orders(self):
+        for order in self.orders:
+            if order.status == OrderStatus.PENDING:
+                order.status = OrderStatus.CANCELLED
+
+
+class BacktestEngine:
+    """Event-driven backtesting engine."""
+
+    def __init__(self, broker: Optional[BacktestBroker] = None):
+        self.broker = broker or BacktestBroker()
+        self.candles: List[Candle] = []
+        self.strategy: Optional[Callable] = None
+        self.results: Optional[BacktestResult] = None
+
+    def load_candles(self, candles: List[Candle]):
+        self.candles = sorted(candles, key=lambda c: c.timestamp)
+
+    def set_strategy(self, strategy: Callable):
+        self.strategy = strategy
+
+    def run(self, initial_balance: float = 10000.0) -> BacktestResult:
+        if not self.candles:
+            raise ValueError("No candles loaded")
+        if not self.strategy:
+            raise ValueError("No strategy set")
+        self.broker = BacktestBroker(initial_balance=initial_balance)
+        portfolio_values = [initial_balance]
+        for i, candle in enumerate(self.candles):
+            context = {
+                "candle": candle,
+                "candles": self.candles[:i + 1],
+                "index": i,
+                "balance": self.broker.get_balance(),
+                "positions": self.broker.get_positions()
+            }
+            signal = self.strategy(context)
+            if signal == Signal.BUY and not self.broker.get_positions():
+                amount = (self.broker.get_balance() * 0.95) / candle.close
+                order = self.broker.create_order(OrderSide.BUY, candle.close, amount)
+                self.broker.fill_order(order, candle.close, candle.timestamp)
+            elif signal == Signal.SELL and self.broker.get_positions():
+                for pos in self.broker.get_positions():
+                    order = self.broker.create_order(OrderSide.SELL, candle.close, pos.amount)
+                    self.broker.fill_order(order, candle.close, candle.timestamp)
+            portfolio_values.append(self.broker.get_portfolio_value(candle.close))
+        self.broker.cancel_all_orders()
+        self.results = self._calculate_results(portfolio_values, initial_balance)
+        return self.results
+
+    def _calculate_results(self, portfolio_values: List[float],
+                           initial_balance: float) -> BacktestResult:
+        trades = self.broker.trades
+        if not trades:
+            return BacktestResult(
+                trades=[], total_pnl=0, total_pnl_pct=0, win_rate=0,
+                profit_factor=0, sharpe_ratio=0, max_drawdown=0,
+                max_drawdown_pct=0, total_trades=0, winning_trades=0,
+                losing_trades=0, avg_win=0, avg_loss=0, best_trade=0,
+                worst_trade=0, avg_trade_duration=0, starting_balance=initial_balance,
+                ending_balance=initial_balance, return_pct=0, calmar_ratio=0,
+                sortino_ratio=0
+            )
+        total_pnl = sum(t.pnl for t in trades)
+        winning = [t for t in trades if t.pnl > 0]
+        losing = [t for t in trades if t.pnl <= 0]
+        win_rate = len(winning) / len(trades) if trades else 0
+        gross_profit = sum(t.pnl for t in winning)
+        gross_loss = abs(sum(t.pnl for t in losing))
         profit_factor = gross_profit / gross_loss if gross_loss > 0 else float('inf')
-        
+        returns = []
+        for i in range(1, len(portfolio_values)):
+            if portfolio_values[i - 1] > 0:
+                returns.append((portfolio_values[i] - portfolio_values[i - 1]) / portfolio_values[i - 1])
+        avg_return = sum(returns) / len(returns) if returns else 0
+        std_return = (sum((r - avg_return) ** 2 for r in returns) / len(returns)) ** 0.5 if returns else 1
+        sharpe = (avg_return / std_return * (252 ** 0.5)) if std_return > 0 else 0
+        peak = portfolio_values[0]
+        max_dd = 0
+        max_dd_pct = 0
+        for v in portfolio_values:
+            if v > peak:
+                peak = v
+            dd = peak - v
+            dd_pct = dd / peak if peak > 0 else 0
+            if dd > max_dd:
+                max_dd = dd
+            if dd_pct > max_dd_pct:
+                max_dd_pct = dd_pct
+        downside_returns = [r for r in returns if r < 0]
+        downside_std = (sum(r ** 2 for r in downside_returns) / len(downside_returns)) ** 0.5 if downside_returns else 1
+        sortino = (avg_return / downside_std * (252 ** 0.5)) if downside_std > 0 else 0
+        calmar = (total_pnl / initial_balance * 252) / max_dd_pct if max_dd_pct > 0 else 0
+        return BacktestResult(
+            trades=trades,
+            total_pnl=round(total_pnl, 2),
+            total_pnl_pct=round(total_pnl / initial_balance * 100, 2),
+            win_rate=round(win_rate, 3),
+            profit_factor=round(profit_factor, 2),
+            sharpe_ratio=round(sharpe, 2),
+            max_drawdown=round(max_dd, 2),
+            max_drawdown_pct=round(max_dd_pct * 100, 2),
+            total_trades=len(trades),
+            winning_trades=len(winning),
+            losing_trades=len(losing),
+            avg_win=round(sum(t.pnl for t in winning) / len(winning), 2) if winning else 0,
+            avg_loss=round(sum(t.pnl for t in losing) / len(losing), 2) if losing else 0,
+            best_trade=round(max(t.pnl for t in trades), 2),
+            worst_trade=round(min(t.pnl for t in trades), 2),
+            avg_trade_duration=round(sum(t.duration_seconds for t in trades) / len(trades), 0),
+            starting_balance=initial_balance,
+            ending_balance=round(self.broker.get_balance(), 2),
+            return_pct=round(total_pnl / initial_balance * 100, 2),
+            calmar_ratio=round(calmar, 2),
+            sortino_ratio=round(sortino, 2)
+        )
+
+    @staticmethod
+    def compare_results(results: List[BacktestResult], names: List[str]) -> Dict:
+        if not results:
+            return {"error": "No results to compare"}
+        comparison = []
+        for result, name in zip(results, names):
+            comparison.append({
+                "name": name,
+                "return_pct": result.return_pct,
+                "win_rate": result.win_rate,
+                "sharpe_ratio": result.sharpe_ratio,
+                "max_drawdown_pct": result.max_drawdown_pct,
+                "profit_factor": result.profit_factor,
+                "total_trades": result.total_trades
+            })
+        best_return = max(comparison, key=lambda x: x["return_pct"])
+        best_sharpe = max(comparison, key=lambda x: x["sharpe_ratio"])
+        lowest_dd = min(comparison, key=lambda x: x["max_drawdown_pct"])
         return {
-            'total_trades': total_trades,
-            'winning_trades': winning_trades,
-            'losing_trades': losing_trades,
-            'win_rate': win_rate,
-            'total_profit': total_profit,
-            'total_fees': total_fees,
-            'net_profit': total_profit - total_fees,
-            'avg_profit': avg_profit,
-            'avg_profit_pct': avg_profit_pct,
-            'max_drawdown': max_drawdown,
-            'sharpe_ratio': sharpe_ratio,
-            'profit_factor': profit_factor,
-            'final_equity': self.equity_curve[-1] if self.equity_curve else self.initial_capital,
-            'return_pct': ((self.equity_curve[-1] / self.initial_capital) - 1) * 100 if self.equity_curve else 0
+            "strategies": comparison,
+            "best_return": best_return["name"],
+            "best_sharpe": best_sharpe["name"],
+            "lowest_drawdown": lowest_dd["name"]
         }
 
 
-def create_backtesting_engine(initial_capital: float = 10000.0) -> BacktestingEngine:
-    """
-    Create a backtesting engine
-    
-    Args:
-        initial_capital: Starting capital
-    
-    Returns:
-        BacktestingEngine instance
-    """
-    return BacktestingEngine(initial_capital)
+class StrategyBase:
+    """Base class for backtesting strategies."""
+
+    def __init__(self):
+        self.position = None
+        self.entry_price = 0.0
+        self.trade_count = 0
+
+    def on_candle(self, candle: Candle, candles: List[Candle], index: int) -> Signal:
+        raise NotImplementedError
+
+    def sma(self, candles: List[Candle], period: int, index: int) -> float:
+        if index < period - 1:
+            return 0.0
+        return sum(c.close for c in candles[index - period + 1:index + 1]) / period
+
+    def ema(self, candles: List[Candle], period: int, index: int) -> float:
+        if index < period - 1:
+            return self.sma(candles, period, index)
+        multiplier = 2 / (period + 1)
+        ema_val = self.sma(candles, period, period - 1)
+        for i in range(period, index + 1):
+            ema_val = (candles[i].close - ema_val) * multiplier + ema_val
+        return ema_val
+
+    def rsi(self, candles: List[Candle], period: int, index: int) -> float:
+        if index < period:
+            return 50.0
+        gains = []
+        losses = []
+        for i in range(index - period + 1, index + 1):
+            change = candles[i].close - candles[i - 1].close
+            if change > 0:
+                gains.append(change)
+                losses.append(0)
+            else:
+                gains.append(0)
+                losses.append(abs(change))
+        avg_gain = sum(gains) / period
+        avg_loss = sum(losses) / period
+        if avg_loss == 0:
+            return 100.0
+        rs = avg_gain / avg_loss
+        return 100 - (100 / (1 + rs))
+
+    def bollinger_bands(self, candles: List[Candle], period: int,
+                        index: int, std_dev: float = 2.0) -> Tuple[float, float, float]:
+        if index < period - 1:
+            mid = candles[index].close
+            return mid, mid, mid
+        closes = [candles[i].close for i in range(index - period + 1, index + 1)]
+        mid = sum(closes) / period
+        variance = sum((c - mid) ** 2 for c in closes) / period
+        std = variance ** 0.5
+        return mid - std_dev * std, mid, mid + std_dev * std
+
+    def atr(self, candles: List[Candle], period: int, index: int) -> float:
+        if index < period:
+            return 0.0
+        trs = []
+        for i in range(index - period + 1, index + 1):
+            high = candles[i].high
+            low = candles[i].low
+            prev_close = candles[i - 1].close
+            tr = max(high - low, abs(high - prev_close), abs(low - prev_close))
+            trs.append(tr)
+        return sum(trs) / period
