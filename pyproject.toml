@@ -27,6 +27,7 @@ dependencies = [
     "pytest>=9.0.3",
     "spacy>=3.8.14",
     "trafilatura>=2.2.0",
+    "scipy>=1.17.1",
 ]
 
 [dependency-groups]
