@@ -1,23 +1,23 @@
-import { beforeEach, describe, expect, it } from "vitest";
-import { loadConfig, type PanelConfig, saveConfig } from "./panel";
+import { describe, expect, it } from "vitest";
+import { Panel, type PanelConfig } from "./panel";
 
-const base: PanelConfig = { id: "t", title: "T", col: 1, row: 1, w: 4, h: 3 };
+const base: PanelConfig = { id: "t", title: "T", w: 4, h: 3 };
 
-describe("panel config persistence", () => {
-  beforeEach(() => localStorage.clear());
-
-  it("returns fallback when nothing saved", () => {
-    expect(loadConfig("t", base)).toEqual(base);
+describe("deterministic panel grid", () => {
+  it("spans its declared width/height", () => {
+    const p = new Panel(base);
+    expect(p.el.style.gridColumn).toBe("span 4");
+    expect(p.el.style.gridRow).toBe("span 3");
   });
 
-  it("round-trips saved size/position and keeps id", () => {
-    saveConfig({ ...base, w: 6, h: 5, col: 3 });
-    const loaded = loadConfig("t", base);
-    expect(loaded).toMatchObject({ id: "t", w: 6, h: 5, col: 3 });
+  it("caps the span at the 12-column grid", () => {
+    const p = new Panel({ id: "t2", title: "T2", w: 16, h: 2 });
+    expect(p.el.style.gridColumn).toBe("span 12");
   });
 
-  it("falls back on corrupt storage", () => {
-    localStorage.setItem("worldfin.panel.t", "{not json");
-    expect(loadConfig("t", base)).toEqual(base);
+  it("is layout-deterministic: same config, same placement", () => {
+    const a = new Panel(base);
+    const b = new Panel(base);
+    expect(a.el.style.cssText).toBe(b.el.style.cssText);
   });
 });

@@ -1,6 +1,9 @@
-// PanelLayoutManager: a CSS-grid host that mounts panels at their saved positions.
+// PanelLayoutManager: a deterministic CSS-grid host.
+// Variant switch shows exactly the requested panels, in that order, each
+// spanning its declared w/h — no freeform dragging, no persisted overrides.
 
 import { Panel } from "./panel";
+import type { PanelSlot } from "../app/variants";
 
 export class PanelLayoutManager {
   readonly el: HTMLElement;
@@ -22,11 +25,21 @@ export class PanelLayoutManager {
     return this.panels.get(id);
   }
 
-  /** Show only the panels whose id is in `ids`; hide the rest (variant switch). */
-  applyVariant(ids: string[]): void {
-    const want = new Set(ids);
+  /** Show only the listed panels — in order, spanning the exact w/h the variant
+   *  prescribes. Deterministic: same variant, same layout, every time. */
+  applyVariant(slots: PanelSlot[]): void {
+    const want = new Set(slots.map((s) => s.id));
+    let order = 0;
+    for (const slot of slots) {
+      const panel = this.panels.get(slot.id);
+      if (!panel) continue;
+      panel.el.style.display = "";
+      panel.el.style.order = String(order++);
+      panel.el.style.gridColumn = `span ${Math.min(slot.w, 12)}`;
+      panel.el.style.gridRow = `span ${slot.h}`;
+    }
     for (const [id, panel] of this.panels) {
-      panel.el.style.display = want.has(id) ? "" : "none";
+      if (!want.has(id)) panel.el.style.display = "none";
     }
   }
 

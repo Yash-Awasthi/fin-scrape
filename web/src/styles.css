@@ -46,6 +46,8 @@ body {
   display: grid;
   grid-template-columns: repeat(var(--cols, 12), 1fr);
   grid-auto-rows: 90px;
+  grid-auto-flow: row dense;
+  grid-auto-flow: row dense;
   gap: 12px;
 }
 
@@ -165,3 +167,84 @@ body {
 .acc-by { list-style: none; margin: 8px 0; padding: 0; font-size: 13px; }
 .acc-by li { padding: 3px 0; }
 .spark { width: 100%; height: 48px; margin-top: 8px; }
+
+/* ── Stats panel: verdict bar chart ── */
+.stat-total { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+.stat-total .muted { font-size: 13px; font-weight: 400; }
+.stat-row { display: grid; grid-template-columns: 84px 1fr 36px; align-items: center; gap: 8px; padding: 3px 0; }
+.stat-label { font-size: 12px; color: #8a8f98; }
+.stat-bar { display: block; height: 12px; background: #161a23; border-radius: 6px; overflow: hidden; }
+.stat-bar i { display: block; height: 100%; border-radius: 6px; transition: width 0.4s ease; }
+.stat-n { font-size: 12px; text-align: right; color: #c9ced6; }
+
+/* ── Suggestions panel ── */
+.sug-list { display: flex; flex-direction: column; gap: 6px; }
+.sug-row { display: grid; grid-template-columns: 10px 64px 1fr auto; grid-template-areas: "dot tk meta score" ". . sub sub"; align-items: center; column-gap: 8px; padding: 5px 6px; background: #11141b; border: 1px solid #1e2430; border-radius: 6px; }
+.sug-dot { grid-area: dot; width: 8px; height: 8px; border-radius: 50%; }
+.sug-row b { grid-area: tk; font-size: 14px; }
+.sug-row .muted { font-size: 12px; }
+.sug-row .sug-sub { grid-area: sub; margin-top: 2px; }
+.sug-score { grid-area: score; font-weight: 800; color: #16c784; }
+
+/* ── News lobby ── */
+.lobby-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.lobby-tab { background: #161a23; color: #c9ced6; border: 1px solid #232a37; border-radius: 14px; padding: 3px 12px; font-size: 12px; cursor: pointer; }
+.lobby-tab.active { background: #2f81f7; color: #fff; border-color: #2f81f7; }
+.lobby-body { max-height: 340px; overflow-y: auto; }
+.lobby-list li { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px solid #1a1f2a; }
+.lobby-list li a { color: #e6e9ee; text-decoration: none; }
+.lobby-list li a:hover { color: #2f81f7; }
+.lobby-time { white-space: nowrap; font-size: 11px; }
+
+/* ── Ticker tape (always-on live strip) ── */
+.tape { overflow: hidden; background: #0d1017; border-bottom: 1px solid #1a1f2a; white-space: nowrap; }
+.tape-track { display: inline-flex; gap: 28px; padding: 5px 0; animation: tape-scroll 60s linear infinite; }
+.tape:hover .tape-track { animation-play-state: paused; }
+.tape-item { font-size: 12.5px; font-family: ui-monospace, monospace; color: #c9ced6; }
+.tape-item b { color: #e6e9ee; margin-right: 4px; }
+.tape-item.up { color: #16c784; } .tape-item.down { color: #ea3943; } .tape-item.flat { color: #8a8f98; }
+@keyframes tape-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── Markets Live quote cards ── */
+.ml-region { margin-bottom: 10px; }
+.ml-region h4 { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #8a8f98; }
+.ml-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 6px; }
+.ml-card { background: #11141b; border: 1px solid #1e2430; border-radius: 6px; padding: 7px 9px; }
+.ml-sym { font-size: 11.5px; color: #8a8f98; }
+.ml-price { font-size: 16px; font-weight: 700; font-family: ui-monospace, monospace; }
+.ml-change { font-size: 12px; font-family: ui-monospace, monospace; }
+.ml-change.up { color: #16c784; } .ml-change.down { color: #ea3943; } .ml-change.flat { color: #8a8f98; }
+.ml-src { font-size: 10px; color: #4a5160; }
+
+/* ── Watchlist ── */
+.wl-form { display: flex; gap: 6px; margin-bottom: 8px; }
+.wl-input { flex: 1; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 5px 9px; font-size: 13px; }
+.wl-remove { background: none; border: none; color: #ea3943; cursor: pointer; font-size: 14px; }
+
+/* ── Live TV: 2-up scrollable channel grid ── */
+.tv-scroll { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-height: 420px; overflow-y: auto; }
+.tv-card { display: flex; flex-direction: column; gap: 4px; }
+.tv-name { font-size: 11px; color: #8a8f98; }
+.tv-card .tv-frame { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 6px; background: #000; }
+
+/* ── Live TV: country filter + 2-up scroll ── */
+.tv-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.tv-filter { background: #161a23; color: #e6e9ee; border: 1px solid #232a37; border-radius: 6px; padding: 4px 8px; font-size: 12.5px; }
+.tv-count { font-size: 12px; }
+
+/* ── Compact signal feed rows ── */
+.feed.compact td { padding: 6px 8px; vertical-align: top; }
+.feed.compact .dot { margin-right: 5px; }
+.feed.compact b { font-family: ui-monospace, monospace; }
+.feed.compact .subj { font-size: 13px; }
+.feed.compact .subj a { color: #e6e9ee; text-decoration: none; }
+.feed.compact .subj a:hover { color: #2f81f7; }
+.row-meta { display: inline-block; margin-left: 8px; font-size: 11px; color: #8a8f98; }
+.row-reasoning { font-size: 12px; color: #8a8f98; margin-top: 3px; line-height: 1.35; }
+
+/* ── interaction polish ── */
+.panel-body { overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; }
+.feed.compact tbody tr { cursor: pointer; }
+.feed.compact tbody tr:hover { background: #141824; }
+.tv-scroll { overscroll-behavior: contain; scrollbar-width: thin; }
+.lobby-body { overscroll-behavior: contain; scrollbar-width: thin; }

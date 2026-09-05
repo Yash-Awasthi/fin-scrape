@@ -25,3 +25,4 @@ describe("toPoints", () => {
     expect(p.event.id).toBe(1);
   });
 });
+
