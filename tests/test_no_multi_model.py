@@ -10,7 +10,12 @@ def test_no_multi_model_references_in_source():
     result = subprocess.run(
         [
             "grep", "-rn", "multi_model\\|analyze_batch\\|BATCH_ANALYSIS",
-            "--include=*.py", ".",
+            "--include=*.py",
+            # first-party source only — vendored/reference trees have their own rules
+            "--exclude-dir=.venv", "--exclude-dir=.git",
+            "--exclude-dir=reference", "--exclude-dir=absorbed",
+            "--exclude-dir=node_modules",
+            ".",
         ],
         cwd=REPO_ROOT,
         capture_output=True,

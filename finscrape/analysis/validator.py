@@ -124,19 +124,78 @@ def calculate_sentence_sentiment(text: str) -> tuple[str, float]:
     """
     Compute sentence-level sentiment with negation handling.
 
+    Blends two engines: the phrase-list scorer below (strong/weak financial
+    phrases, negation window) and the finance-aware lexicon engine from
+    services.sentiment_analyzer (intensifiers, financial-context boost).
+    Their disagreement dampens the combined score instead of trusting either.
+
     Returns: (sentiment_label, raw_score)
         sentiment_label: "positive", "negative", or "neutral"
         raw_score: unbounded float, magnitude indicates strength
     """
     sentences = _tokenize_sentences(text)
-    total_score = sum(_score_sentence(s) for s in sentences)
+    legacy_score = sum(_score_sentence(s) for s in sentences)
 
-    if total_score >= 2.0:
-        return "positive", total_score
-    elif total_score <= -2.0:
-        return "negative", total_score
+    try:
+        from finscrape.services.sentiment_analyzer import SentimentAnalyzer
+
+        engine_score = SentimentAnalyzer.analyze_text(text).score  # -1..1
+        combined = 0.5 * legacy_score + 2.0 * engine_score
+    except Exception:  # noqa: BLE001 — engine unavailable: legacy score only
+        combined = legacy_score
+
+    if combined >= 1.5:
+        return "positive", combined
+    elif combined <= -1.5:
+        return "negative", combined
     else:
-        return "neutral", total_score
+        return "neutral", combined
+
+
+# ---------------------------------------------------------------------------
+# Market-relevance gate
+# ---------------------------------------------------------------------------
+
+# Lifestyle/clickbait patterns that should never become market events.
+_OFF_TOPIC_PATTERNS = (
+    r"\brecipes?\b", r"\bnutrition\w*\b", r"\banti[- ]inflammatory\b",
+    r"\bworkout\w*\b", r"\bhoroscope\b", r"\bcelebrit\w*\b",
+    r"\bmovie review\b", r"\bnetflix series\b", r"\bdating\b",
+    r"\b(i |we )?(swear by|swears by)\b", r"\bessential foods\b",
+    r"\bbest (restaurants|vacation|haircut|skincare)\b",
+)
+
+# Transient event briefs (quakes, storms) that only matter when a MARKET angle
+# is present — insurers, commodities, macro damage figures.
+_TRANSIENT_EVENT_PATTERNS = (
+    r"\bm\s?\d+(\.\d+)?\s+earthquake\b", r"\bearthquake\b", r"\bquake\b",
+    r"\bmagnitude[- ]?\d", r"\btropical (storm|depression)\b",
+    r"\bhurricane \w+ (forms|approaches|makes landfall)\b",
+    r"\bvolcan\w+ erupt\w*\b", r"\btsunami (warning|alert)\b",
+)
+
+_MARKET_ANGLE_PATTERNS = (
+    r"\binsurer\w*\b", r"\b(re)?insurance\b", r"\bcommodit\w+\b",
+    r"\b(oil|gas|copper|wheat|coffee) price\w*\b", r"\bsupply chain\w*\b",
+    r"\beconom\w+\b", r"\b(export|import)s?\b", r"\bdamage\w*\b",
+    r"\b\$\s?\d+(\.\d+)?\s?(billion|million|bn)\b", r"\bgdp\b",
+    r"\bmarkets?\b", r"\bstocks?\b", r"\bshares?\b", r"\b(bond|yield)s?\b",
+    r"\binflation\b", r"\breconstruction\b",
+)
+
+
+def is_market_relevant(title: str, text: str) -> bool:
+    """Cheap pre-LLM gate: False for off-topic lifestyle pieces and transient
+    event briefs (minor quakes, forming storms) that carry no market angle.
+
+    Runs before any AI call so junk never costs tokens or lands in the DB.
+    """
+    combined = f"{title}. {text}".lower()
+    if any(re.search(p, combined) for p in _OFF_TOPIC_PATTERNS):
+        return False
+    if any(re.search(p, combined) for p in _TRANSIENT_EVENT_PATTERNS):
+        return any(re.search(p, combined) for p in _MARKET_ANGLE_PATTERNS)
+    return True
 
 
 # ---------------------------------------------------------------------------

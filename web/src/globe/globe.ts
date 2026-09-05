@@ -1,4 +1,5 @@
-// Thin globe.gl wrapper: plot events by lat/lon, colored by verdict, click → select.
+// Thin globe.gl wrapper: events as colored 3D columns by lat/lon —
+// altitude from |signal_score|, color from verdict, click → select.
 
 import Globe, { type GlobeInstance } from "globe.gl";
 import type { EventOut } from "../api";
@@ -14,8 +15,9 @@ export class GlobeView {
       .pointLat("lat")
       .pointLng("lng")
       .pointColor("color")
+      // points render as 3D columns: altitude IS the bar height
       .pointAltitude("size")
-      .pointRadius(0.4)
+      .pointRadius(0.45)
       .pointLabel("label")
       .onPointClick((p: object) => onSelect((p as GlobePoint).event));
 

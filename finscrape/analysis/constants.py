@@ -48,6 +48,9 @@ TICKER_STOPWORDS = frozenset({
     "CEO", "CFO", "COO", "CTO", "CMO", "CRO", "EVP", "SVP", "VP",
     # Company suffixes / legal
     "AG", "INC", "LLC", "LP", "LTD", "NV", "PLC", "SA", "AI", "EU", "UK", "UN", "US", "USA", "UAE",
+    # Media / source names (attribution noise in text: "CNBC reports", "FT writes")
+    "CNBC", "FT", "WSJ", "BBC", "CNN", "MSNBC", "NYT", "REUTERS", "BLOOMBERG",
+    "YAHOO", "GOOGLE", "BARRONS", "AP", "AFP", "SKYNEWS",
     # Time zones
     "EST", "EDT", "PST", "PDT", "UTC", "GMT",
     # Misc false positives

@@ -1,6 +1,5 @@
-// App shell: header (live clock, connection dot, refresh) + ⌘K palette stub.
+// App shell: header (brand, live clock, connection dot, refresh) + banner slot.
 
-import { type Variant, VARIANTS } from "./variants";
 import type { WSStatus } from "../ws";
 
 export class Shell {
@@ -9,9 +8,8 @@ export class Shell {
   readonly bannerSlot: HTMLElement;
   private dot: HTMLElement;
   private clock: HTMLElement;
-  private variantBtns = new Map<Variant, HTMLButtonElement>();
 
-  constructor(onRefresh: () => void, onVariant: (v: Variant) => void) {
+  constructor(onRefresh: () => void) {
     this.root = document.createElement("div");
     this.root.className = "app";
 
@@ -21,16 +19,6 @@ export class Shell {
     const brand = document.createElement("div");
     brand.className = "brand";
     brand.textContent = "WorldFin";
-
-    const variants = document.createElement("nav");
-    variants.className = "variants";
-    for (const [key, def] of Object.entries(VARIANTS)) {
-      const b = document.createElement("button");
-      b.textContent = def.label;
-      b.addEventListener("click", () => onVariant(key as Variant));
-      this.variantBtns.set(key as Variant, b);
-      variants.append(b);
-    }
 
     this.clock = document.createElement("time");
     this.clock.className = "clock";
@@ -47,7 +35,7 @@ export class Shell {
 
     const left = document.createElement("div");
     left.className = "head-left";
-    left.append(brand, variants);
+    left.append(brand);
 
     const right = document.createElement("div");
     right.className = "head-right";
@@ -67,12 +55,6 @@ export class Shell {
 
   setConnection(status: WSStatus): void {
     this.dot.dataset.status = status;
-  }
-
-  setVariant(active: Variant): void {
-    for (const [key, btn] of this.variantBtns) {
-      btn.classList.toggle("active", key === active);
-    }
   }
 
   private startClock(): void {

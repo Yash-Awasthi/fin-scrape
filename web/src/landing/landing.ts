@@ -12,7 +12,7 @@ const FEATURES: [string, string, string][] = [
   ["💬", "Social sentiment", "Reddit + StockTwits bullish/bearish and volume spikes, per ticker."],
   ["💼", "Portfolio & watchlists", "Track positions and get position-aware signal weighting."],
   ["🔔", "Telegram alerts", "Push INVEST / PULL_OUT signals straight to your phone."],
-  ["🪙", "Crypto + markets panels", "Most-mentioned tickers and live crypto movers, side by side."],
+  ["📊", "Markets Live", "Live quotes across 28 exchanges — US, India, China, Europe, Asia — with a watchlist and a scrolling tape."],
   ["⏱️", "Freshness guaranteed", "Only news ≤24h old, with per-source health monitoring."],
 ];
 

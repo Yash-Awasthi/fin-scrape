@@ -1,4 +1,4 @@
-// SignalModal: event detail + on-demand AI expansion.
+// SignalModal: event detail + automatic AI expansion when reasoning is missing.
 
 import { api, type EventOut, verdictColor } from "../api";
 
@@ -44,7 +44,7 @@ export class SignalModal {
 
     const reasoning = document.createElement("p");
     reasoning.className = "modal-reasoning";
-    reasoning.textContent = ev.reasoning || "(no reasoning)";
+    reasoning.textContent = ev.reasoning || "";
 
     const entities = document.createElement("ul");
     entities.className = "modal-entities";
@@ -54,25 +54,39 @@ export class SignalModal {
       entities.append(li);
     }
 
-    const aiBtn = document.createElement("button");
-    aiBtn.className = "ai-btn";
-    aiBtn.textContent = "AI analysis";
     const aiOut = document.createElement("div");
     aiOut.className = "ai-out";
-    aiBtn.addEventListener("click", async () => {
+    const aiBtn = document.createElement("button");
+    aiBtn.className = "ai-btn";
+    aiBtn.textContent = "↻ Re-run AI analysis";
+
+    const runAnalysis = async (): Promise<void> => {
       aiBtn.disabled = true;
-      aiOut.textContent = "analyzing…";
+      aiOut.textContent = "AI is analyzing… (local model, a few seconds)";
       try {
         const a = await api.analyze(ev.id);
-        aiOut.textContent = `${a.summary}\n\n${a.verdict_reason}`;
-      } catch {
-        aiOut.textContent = "AI analysis unavailable.";
+        const impacts = a.ticker_impacts
+          .map((t) => `${t.ticker}: ${t.direction} ${t.estimated_pct} — ${t.reason}`)
+          .join("\n");
+        aiOut.textContent =
+          [a.summary, impacts, a.verdict_reason].filter(Boolean).join("\n\n") ||
+          "No analysis returned.";
+      } catch (err) {
+        aiOut.textContent =
+          err instanceof Error && err.message.includes("503")
+            ? "AI backend unavailable — start Ollama, then: main.py devtools on"
+            : "AI analysis unavailable.";
       } finally {
         aiBtn.disabled = false;
       }
-    });
+    };
+    aiBtn.addEventListener("click", () => void runAnalysis());
 
     this.box.append(close, badge, h, meta, reasoning, entities, aiBtn, aiOut);
     this.el.classList.remove("hidden");
+
+    // Reasoning must never sit blank: events created without the LLM are
+    // analyzed automatically the moment they're opened.
+    if (!ev.reasoning) void runAnalysis();
   }
 }

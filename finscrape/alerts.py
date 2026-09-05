@@ -104,10 +104,10 @@ class Condition:
 class Action:
     """An action to fire when a rule matches."""
 
-    action_type: str  # telegram, dashboard_push, log, webhook
+    action_type: str  # telegram, discord, slack, dashboard_push, log, webhook
     config: dict = field(default_factory=dict)
 
-    VALID_TYPES = frozenset({"telegram", "dashboard_push", "log", "webhook"})
+    VALID_TYPES = frozenset({"telegram", "discord", "slack", "dashboard_push", "log", "webhook"})
 
     def __post_init__(self) -> None:
         if self.action_type not in self.VALID_TYPES:
@@ -337,6 +337,12 @@ class AlertEngine:
         elif action.action_type == "telegram":
             return self._send_telegram_alert(event, action)
 
+        elif action.action_type == "discord":
+            return self._send_discord_alert(event, action)
+
+        elif action.action_type == "slack":
+            return self._send_slack_alert(event, action)
+
         elif action.action_type == "webhook":
             return self._send_webhook_alert(event, action)
 
@@ -511,10 +517,177 @@ class AlertEngine:
         actions = [Action(action_type="log")]
         return conditions, actions
 
+    @classmethod
+    def preset_discord_high_confidence(cls) -> tuple[list[Condition], list[Action]]:
+        """INVEST verdict with confidence >= 0.75, pushed to Discord."""
+        conditions = [
+            Condition(field="verdict", operator="eq", value="INVEST"),
+            Condition(field="confidence", operator="gte", value=0.75),
+        ]
+        actions = [Action(action_type="discord", config={})]
+        return conditions, actions
+
+    @classmethod
+    def preset_slack_pullout(cls) -> tuple[list[Condition], list[Action]]:
+        """PULL_OUT verdict on any ticker, pushed to Slack."""
+        conditions = [
+            Condition(field="verdict", operator="eq", value="PULL_OUT"),
+        ]
+        actions = [Action(action_type="slack", config={})]
+        return conditions, actions
+
+    @classmethod
+    def preset_multi_channel_high_impact(cls) -> tuple[list[Condition], list[Action]]:
+        """|signal_score| >= 4, broadcast to Discord + Slack + Telegram."""
+        conditions = [
+            Condition(field="signal_score", operator="gte", value=4),
+        ]
+        actions = [
+            Action(action_type="discord", config={}),
+            Action(action_type="slack", config={}),
+            Action(action_type="telegram", config={}),
+        ]
+        return conditions, actions
+
     # -- lifecycle -----------------------------------------------------------
 
     def close(self) -> None:
         self._conn.close()
+
+    # -- Discord / Slack alert senders --------------------------------------
+
+    def _build_alert_summary(self, event: dict) -> dict:
+        """Build a common summary dict used by Discord and Slack payloads."""
+        verdict = event.get("verdict", "?")
+        score = event.get("signal_score", 0)
+        confidence = event.get("confidence", 0)
+        tickers = ", ".join(event.get("tickers", [])) or "—"
+        subject = event.get("subject", "Unknown event")
+        reasoning = event.get("reasoning", "")[:300]
+        event_type = event.get("event_type", "")
+        sector = event.get("sector_impact", "")
+        sources = event.get("sources", [])
+        source_str = ", ".join(sources) if isinstance(sources, list) else str(sources)
+        arrow = "📈" if score >= 0 else "📉"
+        verdict_emoji = {
+            "INVEST": "🟢", "PULL_OUT": "🔴", "OBSERVE": "🟡", "CAUTIOUS": "🟠",
+        }.get(verdict, "⚪")
+        return {
+            "verdict": verdict, "score": score, "confidence": confidence,
+            "tickers": tickers, "subject": subject, "reasoning": reasoning,
+            "event_type": event_type, "sector": sector, "source_str": source_str,
+            "arrow": arrow, "verdict_emoji": verdict_emoji,
+        }
+
+    def _send_discord_alert(self, event: dict, action: Action) -> dict:
+        """Send a rich-embed alert to a Discord channel webhook.
+
+        Config:
+            url (required): Discord webhook URL (https://discord.com/api/webhooks/...)
+            username (optional): override bot display name
+            avatar_url (optional): override bot avatar
+        Env fallback: DISCORD_WEBHOOK_URL
+        """
+        import os
+        url = action.config.get("url") or os.getenv("DISCORD_WEBHOOK_URL", "")
+        if not url:
+            logger.warning("Discord alert: missing webhook url")
+            return {"action_type": "discord", "status": "skipped", "reason": "missing config"}
+        if not self._is_safe_webhook_url(url):
+            logger.warning("Discord webhook URL rejected (unsafe): %s", url[:100])
+            return {"action_type": "discord", "status": "rejected", "reason": "unsafe url"}
+
+        s = self._build_alert_summary(event)
+        color = {"INVEST": 3066993, "PULL_OUT": 15158332, "OBSERVE": 15844335,
+                 "CAUTIOUS": 15105570}.get(s["verdict"], 7506394)  # green/red/yellow/orange/grey
+
+        embed = {
+            "title": f"{s['verdict_emoji']} {s['verdict']} — {s['tickers']}",
+            "description": f"**{s['subject']}**\n\n{s['reasoning']}" if s["reasoning"] else f"**{s['subject']}**",
+            "color": color,
+            "fields": [
+                {"name": "Signal Score", "value": f"{s['arrow']} {s['score']:+d}", "inline": True},
+                {"name": "Confidence", "value": f"{s['confidence']:.0%}", "inline": True},
+                {"name": "Event Type", "value": s["event_type"] or "—", "inline": True},
+                {"name": "Sector Impact", "value": s["sector"] or "—", "inline": True},
+                {"name": "Sources", "value": s["source_str"] or "—", "inline": False},
+            ],
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "footer": {"text": "WorldFin Signal Alert"},
+        }
+        payload: dict[str, Any] = {"embeds": [embed]}
+        if action.config.get("username"):
+            payload["username"] = action.config["username"]
+        if action.config.get("avatar_url"):
+            payload["avatar_url"] = action.config["avatar_url"]
+
+        try:
+            resp = requests.post(url, json=payload, timeout=10)
+            if resp.status_code in (200, 204):
+                logger.info("Discord alert sent successfully")
+                return {"action_type": "discord", "status": "ok"}
+            logger.warning("Discord webhook error %d: %s", resp.status_code, resp.text[:200])
+            return {"action_type": "discord", "status": "error", "http_status": resp.status_code}
+        except requests.RequestException as e:
+            logger.error("Discord request failed: %s", e)
+            return {"action_type": "discord", "status": "error", "error": str(e)}
+
+    def _send_slack_alert(self, event: dict, action: Action) -> dict:
+        """Send a rich-block alert to a Slack incoming webhook.
+
+        Config:
+            url (required): Slack webhook URL (https://hooks.slack.com/services/...)
+            channel (optional): override channel (#general or @user)
+            icon_emoji (optional): override bot icon
+        Env fallback: SLACK_WEBHOOK_URL
+        """
+        import os
+        url = action.config.get("url") or os.getenv("SLACK_WEBHOOK_URL", "")
+        if not url:
+            logger.warning("Slack alert: missing webhook url")
+            return {"action_type": "slack", "status": "skipped", "reason": "missing config"}
+        if not self._is_safe_webhook_url(url):
+            logger.warning("Slack webhook URL rejected (unsafe): %s", url[:100])
+            return {"action_type": "slack", "status": "rejected", "reason": "unsafe url"}
+
+        s = self._build_alert_summary(event)
+        verdict_color = {"INVEST": "#2eb67d", "PULL_OUT": "#e01e5a",
+                         "OBSERVE": "#ecb22e", "CAUTIOUS": "#e07610"}.get(s["verdict"], "#6b6b6b")
+
+        blocks = [
+            {"type": "header", "text": {"type": "plain_text",
+               "text": f"{s['verdict_emoji']} {s['verdict']} — {s['tickers']}"}},
+            {"type": "section", "text": {"type": "mrkdwn",
+               "text": f"*{s['subject']}*"}},
+            {"type": "section", "fields": [
+                {"type": "mrkdwn", "text": f"*Score:*\n{s['arrow']} {s['score']:+d}"},
+                {"type": "mrkdwn", "text": f"*Confidence:*\n{s['confidence']:.0%}"},
+                {"type": "mrkdwn", "text": f"*Event Type:*\n{s['event_type'] or '—'}"},
+                {"type": "mrkdwn", "text": f"*Sector:*\n{s['sector'] or '—'}"},
+            ]},
+        ]
+        if s["reasoning"]:
+            blocks.append({"type": "section", "text": {"type": "mrkdwn",
+                              "text": f"_{s['reasoning']}_"}})
+        blocks.append({"type": "context", "elements": [{"type": "mrkdwn",
+                          "text": f":worldfin: Sources: {s['source_str'] or '—'}"}]})
+
+        payload: dict[str, Any] = {"blocks": blocks, "attachments": [{"color": verdict_color, "blocks": []}]}
+        if action.config.get("channel"):
+            payload["channel"] = action.config["channel"]
+        if action.config.get("icon_emoji"):
+            payload["icon_emoji"] = action.config["icon_emoji"]
+
+        try:
+            resp = requests.post(url, json=payload, timeout=10)
+            if resp.status_code == 200:
+                logger.info("Slack alert sent successfully")
+                return {"action_type": "slack", "status": "ok"}
+            logger.warning("Slack webhook error %d: %s", resp.status_code, resp.text[:200])
+            return {"action_type": "slack", "status": "error", "http_status": resp.status_code}
+        except requests.RequestException as e:
+            logger.error("Slack request failed: %s", e)
+            return {"action_type": "slack", "status": "error", "error": str(e)}
 
     # -- security helpers ---------------------------------------------------
 

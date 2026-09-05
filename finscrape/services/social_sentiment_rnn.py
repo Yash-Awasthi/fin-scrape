@@ -150,7 +150,7 @@ def build_lstm_model(vocabulary_size: int, max_words: int = 100, embedding_size:
 
 # ─── Batch Analysis ────────────────────────────────────────────────────
 
-def analyze_batch(messages: list[dict], source: str = "social") -> list[SentimentPrediction]:
+def batch_analyze(messages: list[dict], source: str = "social") -> list[SentimentPrediction]:
     """Analyze a batch of social media messages."""
     predictions = []
     for msg in messages:

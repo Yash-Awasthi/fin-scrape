@@ -49,7 +49,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Run linter
         run: |
@@ -65,7 +65,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install build tools
         run: pip install build
@@ -74,13 +74,32 @@ jobs:
         run: |
           cd council
           python -m build
-          echo "✅ Package built successfully"
+          echo "Package built successfully"
 
       - name: Count modules
         run: |
-          echo "📊 Services:"
+          echo "Services:"
           find finscrape/services -name "*.py" 2>/dev/null | wc -l || echo "0"
-          echo "📊 Council modules:"
+          echo "Council modules:"
           find finscrape/council -name "*.py" | wc -l
-          echo "📊 Tests:"
+          echo "Tests:"
           find tests -name "*.py" | wc -l
+
+  container-scan:
+    runs-on: ubuntu-latest
+    needs: [test, lint]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build API Docker image
+        run: docker build -f Dockerfile.api -t fin-scrape-api:scan .
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: fin-scrape-api:scan
+          format: table
+          exit-code: 1
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true

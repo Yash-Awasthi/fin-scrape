@@ -11,9 +11,15 @@ Two consumers:
   - `keywords_for_ticker(symbol)` — reverse map, powers
     `server.correlate.find_news_for_market_symbol` → `explained_market_move`.
 
-Pure + data-driven (finscrape/data/entity_index.json); no network, no DB. Matching is
-case-insensitive: single alnum tokens match on word boundaries, multi-word phrases as
-substrings.
+Plus company-name resolution (Phase 13 wiring, data from the absorbed
+company_name_to_ticker repo — the official SEC company_tickers.json):
+  - `resolve_company_tickers(text)` — matches full legal company names
+    ("NVIDIA CORP", "Alphabet Inc.") in the text and returns their tickers.
+    Complements the keyword map: catches articles that name the company outright.
+
+Pure + data-driven (finscrape/data/entity_index.json + SEC company_tickers.json);
+no network, no DB. Matching is case-insensitive: single alnum tokens match on word
+boundaries, multi-word phrases as substrings.
 """
 
 from __future__ import annotations
@@ -24,6 +30,14 @@ import re
 from pathlib import Path
 
 _DATA_FILE = Path(__file__).with_name("data") / "entity_index.json"
+# Official SEC company→ticker list, absorbed from company_name_to_ticker (768 KB,
+# ~10k companies). Kept in the absorbed tree so it stays next to its provenance.
+_COMPANY_FILE = (
+    Path(__file__).with_name("absorbed")
+    / "market_data"
+    / "company_name_to_ticker"
+    / "company_tickers.json"
+)
 
 
 @functools.lru_cache(maxsize=1)
@@ -72,3 +86,48 @@ def resolve_tickers(text: str) -> list[str]:
 def keywords_for_ticker(symbol: str) -> list[str]:
     """Keywords/phrases associated with a ticker — the reverse of resolve_tickers."""
     return list(_reverse().get((symbol or "").upper(), ()))
+
+
+# ── Company-name resolution (SEC company_tickers.json) ────────────────────────
+
+@functools.lru_cache(maxsize=1)
+def _company_names() -> dict[str, str]:
+    """lowercased company name → ticker. Names < 5 chars skipped (false-positive
+    bait: "arm", "it"); share-class variants collapse to their first ticker."""
+    try:
+        raw = json.loads(_COMPANY_FILE.read_text(encoding="utf-8"))
+    except OSError:
+        return {}
+    out: dict[str, str] = {}
+    for row in raw.values():
+        if not isinstance(row, dict):
+            continue
+        name = str(row.get("title") or row.get("name") or "").strip().lower()
+        ticker = str(row.get("ticker") or "").strip().upper()
+        if len(name) >= 5 and len(ticker) <= 5:
+            out.setdefault(name, ticker)
+    return out
+
+
+@functools.lru_cache(maxsize=1)
+def _company_regex() -> re.Pattern | None:
+    """One alternation over all company names, longest-first so
+    'alphabet inc. class a capital stock' wins over its 'alphabet inc.' prefix."""
+    names = sorted(_company_names(), key=len, reverse=True)
+    if not names:
+        return None
+    return re.compile(r"(?<![a-z0-9])(?:" + "|".join(re.escape(n) for n in names) + r")(?![a-z0-9])")
+
+
+def resolve_company_tickers(text: str) -> list[str]:
+    """Tickers for any full company name present in `text`. Sorted, unique.
+
+    Word-boundary anchored (no alnum neighbors) so "NVIDIA CORP" matches but
+    "nvidia" alone does not — the keyword map handles short names.
+    """
+    text_lower = (text or "").lower()
+    rx = _company_regex()
+    if not text_lower or rx is None:
+        return []
+    names = _company_names()
+    return sorted({names[m.group(0)] for m in rx.finditer(text_lower)})

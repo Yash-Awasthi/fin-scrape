@@ -66,13 +66,6 @@ export interface Correlation {
   detected_at: string;
 }
 
-export interface CryptoCoin {
-  symbol: string;
-  name: string;
-  price: number | null;
-  change_24h: number | null;
-}
-
 export interface RssItem {
   title: string;
   link: string;
@@ -132,6 +125,28 @@ export interface Sentiment {
   top_posts: { text: string; author: string; platform: string; url: string }[];
 }
 
+export interface Suggestion {
+  ticker: string;
+  score: number;
+  mentions: number;
+  avg_score: number;
+  avg_confidence: number;
+  trust: number;
+  latest_subject: string | null;
+  latest_verdict: string | null;
+  sector: string | null;
+  last_seen: string | null;
+}
+
+export interface Quote {
+  symbol: string;
+  price: number | null;
+  change_pct: number | null;
+  name?: string | null;
+  currency?: string | null;
+  source: string;
+}
+
 export interface Position {
   ticker: string;
   shares: number;
@@ -176,8 +191,14 @@ export const api = {
     ),
   health: () => getJSON<HealthResponse>("/api/health"),
   analyze: (id: number) => getJSON<AIAnalysis>(`/api/ai/analyze${qs({ id })}`),
-  crypto: (limit = 20) =>
-    getJSON<{ coins: CryptoCoin[] }>(`/api/crypto${qs({ limit })}`).then((r) => r.coins),
+  suggestions: (limit = 10) =>
+    getJSON<{ suggestions: Suggestion[] }>(`/api/suggestions${qs({ limit })}`).then(
+      (r) => r.suggestions,
+    ),
+  quotes: (symbols: string[]) =>
+    getJSON<{ quotes: Quote[] }>(`/api/quotes${qs({ symbols: symbols.join(",") })}`).then(
+      (r) => r.quotes,
+    ),
   markets: (limit = 20) =>
     getJSON<{ tickers: MarketTicker[] }>(`/api/markets${qs({ limit })}`).then((r) => r.tickers),
   feeds: () => getJSON<{ feeds: FeedInfo[] }>("/api/feeds").then((r) => r.feeds),

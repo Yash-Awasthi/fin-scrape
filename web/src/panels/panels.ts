@@ -4,19 +4,24 @@ import {
   type Accuracy,
   api,
   type Correlation,
-  type CryptoCoin,
+  type DashboardStats,
   type DateCount,
+  type FeedInfo,
   type MarketTicker,
   type Portfolio,
+  type RssItem,
   type Sentiment,
+  type Suggestion,
 } from "../api";
-import { CHANNELS, embedUrl } from "../data/channels";
-import { escapeHtml, fmtPct } from "../util";
+import { CHANNELS, countries, embedUrl } from "../data/channels";
+import { escapeHtml } from "../util";
+import type { Quote } from "../api";
+import { verdictColor } from "../api";
 import { Panel } from "./panel";
 
 export class CorrelationPanel extends Panel {
   constructor() {
-    super({ id: "correlations", title: "Correlations", col: 1, row: 5, w: 4, h: 3 });
+    super({ id: "correlations", title: "Correlations", w: 4, h: 3 });
   }
   update(signals: Correlation[]): void {
     if (!signals.length) {
@@ -35,7 +40,7 @@ export class CorrelationPanel extends Panel {
 
 export class MarketsPanel extends Panel {
   constructor() {
-    super({ id: "markets", title: "Most-mentioned tickers", col: 5, row: 5, w: 4, h: 3 });
+    super({ id: "markets", title: "Most-mentioned tickers", w: 4, h: 3 });
   }
   async load(): Promise<void> {
     try {
@@ -58,34 +63,282 @@ export class MarketsPanel extends Panel {
   }
 }
 
-export class CryptoPanel extends Panel {
+export class StatsPanel extends Panel {
   constructor() {
-    super({ id: "crypto", title: "Crypto", col: 9, row: 5, w: 4, h: 3 });
+    super({ id: "stats", title: "Stats", w: 4, h: 3 });
+  }
+  update(stats: DashboardStats): void {
+    const verdicts = Object.entries(stats.by_verdict);
+    const max = Math.max(1, ...verdicts.map(([, n]) => n));
+    const bars = verdicts
+      .map(([verdict, n]) => {
+        const color = verdictColor(verdict);
+        return (
+          `<div class="stat-row"><span class="stat-label">${escapeHtml(verdict)}</span>` +
+          `<span class="stat-bar"><i style="width:${Math.round((n / max) * 100)}%;background:${color}"></i></span>` +
+          `<span class="stat-n">${n}</span></div>`
+        );
+      })
+      .join("");
+    const updated = stats.last_update ? new Date(stats.last_update).toLocaleTimeString() : "—";
+    this.setContent(
+      `<div class="stat-total">${stats.total_events}<span class="muted"> events · updated ${escapeHtml(updated)}</span></div>` +
+        (bars || '<p class="empty">No verdicts yet.</p>'),
+    );
+  }
+}
+
+export class SuggestionsPanel extends Panel {
+  constructor() {
+    super({ id: "suggestions", title: "Suggestions", w: 4, h: 3 });
   }
   async load(): Promise<void> {
     try {
-      this.render(await api.crypto(20));
+      this.render(await api.suggestions(10));
     } catch {
-      this.setContent('<p class="empty">Crypto unavailable.</p>');
+      this.setContent('<p class="empty">Suggestions unavailable.</p>');
     }
   }
-  private render(coins: CryptoCoin[]): void {
-    if (!coins.length) return this.setContent('<p class="empty">No crypto data.</p>');
-    const rows = coins
-      .map((c) => {
-        const cls = (c.change_24h ?? 0) >= 0 ? "up" : "down";
-        return `<tr><td>${escapeHtml(c.symbol)}</td><td>$${c.price ?? "—"}</td><td class="${cls}">${fmtPct(c.change_24h)}</td></tr>`;
+  private render(sugs: Suggestion[]): void {
+    if (!sugs.length) return this.setContent('<p class="empty">No suggestions yet — ingest more events.</p>');
+    const rows = sugs
+      .map((s) => {
+        const color = s.latest_verdict ? verdictColor(s.latest_verdict) : "#8a8f98";
+        return (
+          `<div class="sug-row">` +
+          `<span class="sug-dot" style="background:${color}"></span>` +
+          `<b>${escapeHtml(s.ticker)}</b>` +
+          `<span class="muted">${s.mentions} events · avg ${s.avg_score >= 0 ? "+" : ""}${s.avg_score}` +
+          ` · trust ${Math.round(s.trust * 100)}%</span>` +
+          `<span class="sug-score">+${s.score.toFixed(1)}</span>` +
+          (s.latest_subject ? `<div class="muted sug-sub">${escapeHtml(s.latest_subject.slice(0, 80))}</div>` : "") +
+          `</div>`
+        );
       })
       .join("");
-    this.setContent(
-      `<table class="feed"><thead><tr><th>Sym</th><th>Price</th><th>24h</th></tr></thead><tbody>${rows}</tbody></table>`,
+    this.setContent(`<div class="sug-list">${rows}</div>`);
+  }
+}
+
+export class NewsLobbyPanel extends Panel {
+  private feeds: FeedInfo[] = [];
+  private activeFeed = "";
+  constructor() {
+    super({ id: "lobby", title: "News Lobby", w: 12, h: 4 });
+  }
+  async load(): Promise<void> {
+    try {
+      if (!this.feeds.length) {
+        this.feeds = await api.feeds();
+        this.activeFeed = this.feeds[0]?.key ?? "";
+      }
+      await this.renderFeed();
+    } catch {
+      this.setContent('<p class="empty">Lobby unavailable.</p>');
+    }
+  }
+  private async renderFeed(): Promise<void> {
+    const tabs = this.feeds
+      .map(
+        (f) =>
+          `<button class="lobby-tab${f.key === this.activeFeed ? " active" : ""}" data-feed="${f.key}">` +
+          `${escapeHtml(f.name)}</button>`,
+      )
+      .join("");
+    const body = document.createElement("div");
+    body.className = "lobby";
+    body.innerHTML = `<div class="lobby-tabs">${tabs}</div><div class="lobby-body"><p class="muted">Loading…</p></div>`;
+    body.addEventListener("click", (e) => {
+      const feed = (e.target as HTMLElement).closest<HTMLElement>(".lobby-tab")?.dataset.feed;
+      if (feed && feed !== this.activeFeed) {
+        this.activeFeed = feed;
+        void this.load();
+      }
+    });
+    const list = body.querySelector<HTMLElement>(".lobby-body")!;
+    this.setContent(body);
+    try {
+      const res = await api.rss(this.activeFeed, 30);
+      list.innerHTML = this.renderItems(res.items);
+    } catch {
+      list.innerHTML = '<p class="empty">Feed unavailable.</p>';
+    }
+  }
+  private renderItems(items: RssItem[]): string {
+    if (!items.length) return '<p class="empty">No items.</p>';
+    return (
+      '<ul class="news lobby-list">' +
+      items
+        .map(
+          (i) =>
+            `<li><a href="${escapeHtml(i.link)}" target="_blank" rel="noopener">${escapeHtml(i.title)}</a>` +
+            `<span class="muted lobby-time">${escapeHtml(i.published)}</span></li>`,
+        )
+        .join("") +
+      "</ul>"
     );
+  }
+}
+
+export class MarketsLivePanel extends Panel {
+  private symbols = [
+    // US
+    "AAPL", "MSFT", "NVDA", "JPM", "XOM",
+    // India
+    "RELIANCE.NS", "TCS.NS", "INFY.NS", "HDFCBANK.NS",
+    // China
+    "600519.SS", "601398.SS", "300750.SZ",
+    // Europe
+    "SHEL.L", "SAP.DE", "MC.PA", "ASML.AS",
+    // Asia-Pacific
+    "7203.T", "0700.HK", "005930.KS", "BHP.AX",
+  ];
+
+  constructor() {
+    super({ id: "markets-live", title: "Markets Live", w: 8, h: 5 });
+  }
+
+  async load(): Promise<void> {
+    await this.refresh();
+  }
+
+  async refresh(): Promise<void> {
+    try {
+      this.render(await api.quotes(this.symbols));
+    } catch {
+      // keep last known prices on the screen
+    }
+  }
+
+  private render(quotes: Quote[]): void {
+    const groups: Record<string, Quote[]> = { Americas: [], Asia: [], Europe: [] };
+    for (const q of quotes) {
+      groups[regionOf(q.symbol)].push(q);
+    }
+    const cards = Object.entries(groups)
+      .filter(([, qs]) => qs.length)
+      .map(
+        ([region, qs]) =>
+          `<div class="ml-region"><h4>${region}</h4><div class="ml-cards">` +
+          qs.map((q) => quoteCard(q)).join("") +
+          `</div></div>`,
+      )
+      .join("");
+    this.setContent(
+      cards ||
+        '<p class="empty">No quotes yet — the quotes API needs a moment.</p>',
+    );
+  }
+}
+
+function quoteCard(q: Quote): string {
+  const up = (q.change_pct ?? 0) > 0;
+  const down = (q.change_pct ?? 0) < 0;
+  const cls = up ? "up" : down ? "down" : "flat";
+  const arrow = up ? "▲" : down ? "▼" : "·";
+  const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
+  const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
+  return (
+    `<div class="ml-card"><div class="ml-sym">${escapeHtml(q.symbol)}</div>` +
+    `<div class="ml-price">${price}</div>` +
+    `<div class="ml-change ${cls}">${arrow} ${change}</div>` +
+    `<div class="ml-src">${escapeHtml(q.source)}</div></div>`
+  );
+}
+
+function regionOf(symbol: string): string {
+  const suffix = symbol.includes(".") ? symbol.split(".").pop()! : "";
+  if (["NS", "BO", "SS", "SZ", "HK", "T", "KS", "KQ", "TW", "SI", "AX", "JK", "BK"].includes(suffix)) return "Asia";
+  if (["L", "DE", "PA", "AS", "BR", "MC", "MI", "SW", "SR", "IS"].includes(suffix)) return "Europe";
+  return "Americas";
+}
+
+const WATCHLIST_KEY = "worldfin.watchlist";
+
+export class WatchlistPanel extends Panel {
+  private symbols: string[];
+
+  constructor() {
+    super({ id: "watchlist", title: "Watchlist", w: 4, h: 5 });
+    try {
+      this.symbols = JSON.parse(localStorage.getItem(WATCHLIST_KEY) ?? "[]");
+    } catch {
+      this.symbols = [];
+    }
+    if (!this.symbols.length) this.symbols = ["NVDA", "RELIANCE.NS", "600519.SS"];
+  }
+
+  private persist(): void {
+    try {
+      localStorage.setItem(WATCHLIST_KEY, JSON.stringify(this.symbols));
+    } catch {
+      /* ignore */
+    }
+  }
+
+  async load(): Promise<void> {
+    await this.refresh();
+  }
+
+  async refresh(): Promise<void> {
+    if (!this.symbols.length) {
+      this.setContent('<p class="empty">Add symbols: AAPL, RELIANCE.NS, 600519.SS …</p>');
+      return;
+    }
+    try {
+      const quotes = await api.quotes(this.symbols);
+      this.render(quotes);
+    } catch {
+      // keep last known prices
+    }
+  }
+
+  private render(quotes: Quote[]): void {
+    const rows = quotes
+      .map((q) => {
+        const up = (q.change_pct ?? 0) > 0;
+        const down = (q.change_pct ?? 0) < 0;
+        const cls = up ? "up" : down ? "down" : "flat";
+        const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
+        const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
+        return (
+          `<tr><td>${escapeHtml(q.symbol)}</td><td>${price}</td>` +
+          `<td class="${cls}">${change}</td>` +
+          `<td><button class="wl-remove" data-sym="${escapeHtml(q.symbol)}" title="remove">×</button></td></tr>`
+        );
+      })
+      .join("");
+    const wrap = document.createElement("div");
+    wrap.className = "watchlist";
+    wrap.innerHTML =
+      `<form class="wl-form"><input class="wl-input" placeholder="add symbol…" maxlength="16" />` +
+      `<button type="submit">+</button></form>` +
+      `<table class="feed"><thead><tr><th>Symbol</th><th>Price</th><th>Chg</th><th></th></tr></thead>` +
+      `<tbody>${rows}</tbody></table>`;
+    wrap.querySelector("form")!.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = wrap.querySelector<HTMLInputElement>(".wl-input")!;
+      const symbol = input.value.toUpperCase().trim();
+      if (symbol && !this.symbols.includes(symbol)) this.symbols.push(symbol);
+      input.value = "";
+      this.persist();
+      void this.refresh();
+    });
+    wrap.addEventListener("click", (e) => {
+      const sym = (e.target as HTMLElement).closest<HTMLElement>(".wl-remove")?.dataset.sym;
+      if (sym) {
+        this.symbols = this.symbols.filter((s) => s !== sym);
+        this.persist();
+        void this.refresh();
+      }
+    });
+    this.setContent(wrap);
   }
 }
 
 export class CalendarPanel extends Panel {
   constructor(private readonly onPick: (day: string) => void) {
-    super({ id: "calendar", title: "Dates", col: 1, row: 8, w: 4, h: 2 });
+    super({ id: "calendar", title: "Dates", w: 4, h: 2 });
   }
   update(dates: DateCount[]): void {
     if (!dates.length) return this.setContent('<p class="empty">No dates.</p>');
@@ -110,7 +363,7 @@ export class CalendarPanel extends Panel {
 export class WorldNewsPanel extends Panel {
   private feedKey = "reuters_world_gnews";
   constructor() {
-    super({ id: "worldnews", title: "World News", col: 5, row: 8, w: 4, h: 2 });
+    super({ id: "worldnews", title: "World News", w: 4, h: 2 });
   }
   async load(): Promise<void> {
     try {
@@ -132,7 +385,7 @@ export class WorldNewsPanel extends Panel {
 
 export class AccuracyPanel extends Panel {
   constructor() {
-    super({ id: "accuracy", title: "Accuracy", col: 1, row: 10, w: 5, h: 3 });
+    super({ id: "accuracy", title: "Accuracy", w: 5, h: 3 });
   }
   async load(): Promise<void> {
     try {
@@ -184,7 +437,7 @@ function sparkline(curve: number[]): string {
 export class SentimentPanel extends Panel {
   private ticker = "AAPL";
   constructor() {
-    super({ id: "sentiment", title: "Social Sentiment", col: 5, row: 10, w: 4, h: 3 });
+    super({ id: "sentiment", title: "Social Sentiment", w: 4, h: 3 });
   }
   async load(): Promise<void> {
     const wrap = document.createElement("div");
@@ -233,7 +486,7 @@ export class SentimentPanel extends Panel {
 
 export class PortfolioPanel extends Panel {
   constructor() {
-    super({ id: "portfolio", title: "Portfolio", col: 9, row: 10, w: 4, h: 3 });
+    super({ id: "portfolio", title: "Portfolio", w: 4, h: 3 });
   }
   async load(): Promise<void> {
     try {
@@ -267,23 +520,40 @@ export class PortfolioPanel extends Panel {
 }
 
 export class LiveTVPanel extends Panel {
+  private country = "All";
+
   constructor() {
-    super({ id: "livetv", title: "Live TV", col: 9, row: 8, w: 4, h: 2 });
+    super({ id: "livetv", title: "Live TV — world news channels", w: 8, h: 6 });
   }
   render(): void {
-    const tabs = CHANNELS.map(
-      (c, i) => `<button class="tv-tab" data-i="${i}">${escapeHtml(c.name)}</button>`,
-    ).join("");
+    // Two channels visible side by side; scroll for more. Country filter narrows.
     const wrap = document.createElement("div");
     wrap.className = "tv";
-    wrap.innerHTML = `<div class="tv-tabs">${tabs}</div><iframe class="tv-frame" allowfullscreen src="${embedUrl(CHANNELS[0].channelId)}"></iframe>`;
-    wrap.addEventListener("click", (e) => {
-      const i = (e.target as HTMLElement).closest<HTMLElement>(".tv-tab")?.dataset.i;
-      if (i != null) {
-        const frame = wrap.querySelector<HTMLIFrameElement>(".tv-frame");
-        if (frame) frame.src = embedUrl(CHANNELS[Number(i)].channelId);
-      }
+    wrap.innerHTML =
+      `<div class="tv-controls"><select class="tv-filter">` +
+      `<option value="All">All countries</option>` +
+      countries().map((c) => `<option${c === this.country ? " selected" : ""}>${escapeHtml(c)}</option>`).join("") +
+      `</select><span class="muted tv-count"></span></div>` +
+      `<div class="tv-scroll"></div>`;
+
+    const scroll = wrap.querySelector<HTMLElement>(".tv-scroll")!;
+    const count = wrap.querySelector<HTMLElement>(".tv-count")!;
+    const fill = (): void => {
+      const list = this.country === "All" ? CHANNELS : CHANNELS.filter((c) => c.country === this.country);
+      count.textContent = `${list.length} channel${list.length === 1 ? "" : "s"}`;
+      scroll.innerHTML = list
+        .map(
+          (c) =>
+            `<div class="tv-card"><div class="tv-name">${escapeHtml(c.name)} · ${escapeHtml(c.country)}</div>` +
+            `<iframe class="tv-frame" loading="lazy" allowfullscreen src="${embedUrl(c.channelId)}"></iframe></div>`,
+        )
+        .join("");
+    };
+    wrap.querySelector(".tv-filter")!.addEventListener("change", (e) => {
+      this.country = (e.target as HTMLSelectElement).value;
+      fill();
     });
+    fill();
     this.setContent(wrap);
   }
 }

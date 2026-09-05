@@ -21,7 +21,8 @@ export function toPoints(events: EventOut[]): GlobePoint[] {
       lng: e.lon as number,
       color: verdictColor(e.verdict),
       label: `${e.verdict} ${e.signal_score >= 0 ? "+" : ""}${e.signal_score} — ${e.subject}`,
-      size: 0.15 + Math.min(0.5, Math.abs(e.signal_score) / 10),
+      // bar height: stronger signals rise higher; zero-score events stay nubs
+      size: 0.015 + Math.min(0.35, Math.abs(e.signal_score) / 12),
       event: e,
     }));
 }

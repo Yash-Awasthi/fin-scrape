@@ -87,9 +87,10 @@ class TestSocialProcessor:
     def test_trending_detection(self):
         proc = SocialProcessor()
         now = time.time()
-        # Older signals (in previous window)
+        # Older signals — mid previous-window (not on the boundary; a boundary
+        # timestamp flake-fails whenever suite load shifts the internal clock)
         for _ in range(20):
-            proc.ingest(SocialSignal("reddit", "TSLA", 0.5, 50, now - 120))
+            proc.ingest(SocialSignal("reddit", "TSLA", 0.5, 50, now - 90))
         # Recent signals (high volume, within window)
         for _ in range(50):
             proc.ingest(SocialSignal("reddit", "TSLA", 0.5, 100, now - 5))

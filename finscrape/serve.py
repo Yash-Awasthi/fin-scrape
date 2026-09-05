@@ -1,0 +1,512 @@
+"""WorldFin local server — the whole product on localhost, no Postgres.
+
+Serves the built SPA (web/dist) and the same /api contract the production
+server exposes, backed by SQLite (data/finscrape.db) and the live global
+quotes layer (finscrape.exchanges). See docs/FRONTEND_DESIGN.md.
+
+Run:
+    python main.py serve --port 8080
+    → http://localhost:8080
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import sqlite3
+from pathlib import Path
+
+from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+from finscrape.exchanges import get_global_quotes
+
+app = FastAPI(title="WorldFin Local", version="0.1.0")
+app.add_middleware(
+    CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"]
+)
+
+_ROOT = Path(__file__).resolve().parent.parent
+_DB = _ROOT / "data" / "finscrape.db"
+_DIST = _ROOT / "web" / "dist"
+
+
+def _db() -> sqlite3.Connection:
+    conn = sqlite3.connect(_DB)
+    conn.row_factory = sqlite3.Row
+    return conn
+
+
+def _require_db() -> sqlite3.Connection:
+    if not _DB.exists():
+        raise HTTPException(status_code=503, detail="no local DB yet — run: main.py scrape")
+    return _db()
+
+
+# ── quotes (the live market feed) ────────────────────────────────────────────
+
+
+@app.get("/api/quotes")
+async def quotes(symbols: str = Query(..., description="comma-separated Yahoo symbols")) -> dict:
+    """Live quotes for the given symbols. Symbols carry their Yahoo suffix
+    ('RELIANCE.NS', '600519.SS'); bare 6-digit codes are inferred as China
+    A-shares; other bare symbols are treated as US."""
+    wanted = []
+    for raw in symbols.split(","):
+        symbol = raw.strip().upper()
+        if not symbol:
+            continue
+        if "." in symbol:
+            # already suffixed — exchanges.resolve_symbol passes it through,
+            # and China suffixes still route to the native adapters
+            wanted.append(("", symbol))
+        elif re.fullmatch(r"[045689]\d{5}", symbol):
+            # bare 6-digit → China A-share (SSE: 6/5/9, SZSE: 0/3, BSE-share of 4/8 → SZSE bucket)
+            code = "SSE" if symbol.startswith(("5", "6", "9")) else "SZSE"
+            wanted.append((code, symbol))
+        else:
+            wanted.append(("", symbol))
+    quotes = get_global_quotes(wanted)
+    return {"quotes": list(quotes.values()), "as_of": None}
+
+
+# ── events / stats / suggestions (SQLite) ────────────────────────────────────
+
+
+@app.get("/api/events")
+async def events(limit: int = Query(200, ge=1, le=500)) -> dict:
+    conn = _require_db()
+    rows = conn.execute(
+        "SELECT * FROM events ORDER BY id DESC LIMIT ?", (limit,)
+    ).fetchall()
+    return {"events": [_event_row(r) for r in rows]}
+
+
+# Coarse keyword → coordinates for globe bars (city/region-level precision is a
+# production-geocoder concern; this makes the local globe meaningful).
+_GEO_KEYWORDS: list[tuple[str, float, float]] = [
+    ("ukraine", 48.4, 31.2), ("russia", 55.8, 37.6), ("moscow", 55.8, 37.6),
+    ("kyiv", 50.5, 30.5), ("israel", 31.8, 35.2), ("gaza", 31.5, 34.5),
+    ("iran", 35.7, 51.4), ("tehran", 35.7, 51.4), ("iraq", 33.3, 44.4),
+    ("taiwan", 25.0, 121.5), ("china", 39.9, 116.4), ("beijing", 39.9, 116.4),
+    ("japan", 35.7, 139.7), ("tokyo", 35.7, 139.7), ("korea", 37.6, 127.0),
+    ("india", 28.6, 77.2), ("delhi", 28.6, 77.2), ("mumbai", 19.1, 72.9),
+    ("pakistan", 33.7, 73.1), ("afghanistan", 34.5, 69.2),
+    ("germany", 52.5, 13.4), ("berlin", 52.5, 13.4), ("france", 48.9, 2.35),
+    ("paris", 48.9, 2.35), ("london", 51.5, -0.13), ("britain", 51.5, -0.13),
+    ("uk ", 51.5, -0.13), ("europe", 50.1, 8.7), ("brussels", 50.9, 4.4),
+    ("italy", 41.9, 12.5), ("rome", 41.9, 12.5), ("spain", 40.4, -3.7),
+    ("switzerland", 46.9, 7.4), ("netherlands", 52.4, 4.9),
+    ("brazil", -15.8, -47.9), ("mexico", 19.4, -99.1), ("canada", 45.4, -75.7),
+    ("ottawa", 45.4, -75.7), ("washington", 38.9, -77.0), ("u.s.", 38.9, -77.0),
+    ("united states", 38.9, -77.0), ("white house", 38.9, -77.0),
+    ("new york", 40.7, -74.0), ("wall street", 40.7, -74.0),
+    ("nigeria", 9.1, 7.4), ("south africa", -25.7, 28.2), ("egypt", 30.0, 31.2),
+    ("saudi", 24.7, 46.7), ("turkey", 39.9, 32.9), ("indonesia", -6.2, 106.8),
+    ("australia", -35.3, 149.1), ("singapore", 1.35, 103.8),
+    ("greenland", 64.2, -51.7), ("venezuela", 10.5, -66.9),
+    ("philippines", 14.6, 121.0), ("thailand", 13.8, 100.5),
+    ("vietnam", 21.0, 105.8), ("poland", 52.2, 21.0), ("sweden", 59.3, 18.1),
+]
+
+
+def _derive_geo(row: dict) -> tuple[float | None, float | None]:
+    """Best-effort lat/lon from the event subject when the pipeline had none."""
+    if row.get("lat") is not None and row.get("lon") is not None:
+        return row["lat"], row["lon"]
+    subject = (row.get("subject") or "").lower()
+    for keyword, lat, lon in _GEO_KEYWORDS:
+        if keyword in subject:
+            return lat, lon
+    return None, None
+
+
+def _event_row(r: sqlite3.Row) -> dict:
+    d = dict(r)
+    for key in ("tickers", "sources", "articles", "affected_entities", "second_order_effects"):
+        if key in d and isinstance(d[key], str):
+            try:
+                d[key] = json.loads(d[key])
+            except ValueError:
+                d[key] = []
+    d.setdefault("lat", None)
+    d.setdefault("lon", None)
+    d.setdefault("reasoning", "")
+    d.setdefault("novelty", "standard")
+    d.setdefault("actionability", "low")
+    d.setdefault("key_metrics", {})
+    d.setdefault("sector_impact", "")
+    lat, lon = _derive_geo(d)
+    d["lat"], d["lon"] = lat, lon
+    return d
+
+
+@app.get("/api/stats")
+async def stats() -> dict:
+    conn = _require_db()
+    total = conn.execute("SELECT COUNT(*) FROM events").fetchone()[0]
+    verdicts = dict(
+        conn.execute("SELECT verdict, COUNT(*) FROM events GROUP BY verdict").fetchall()
+    )
+    last = conn.execute("SELECT MAX(created_at) FROM events").fetchone()[0]
+    return {"total_events": total, "by_verdict": verdicts, "last_update": last}
+
+
+@app.get("/api/dates")
+async def dates() -> dict:
+    """Day → event-count buckets (the Dates calendar panel)."""
+    conn = _require_db()
+    rows = conn.execute(
+        "SELECT SUBSTR(COALESCE(created_at, timestamp), 1, 10) AS day, COUNT(*) AS n "
+        "FROM events GROUP BY day ORDER BY day DESC LIMIT 60"
+    ).fetchall()
+    return {
+        "dates": [
+            {"day": r["day"], "count": r["n"]}
+            for r in rows
+            if r["day"]
+        ]
+    }
+
+
+
+@app.get("/api/suggestions")
+async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
+    """Same suggestion contract as server/, computed over SQLite."""
+    conn = _require_db()
+    rows = conn.execute(
+        """
+        SELECT e.tickers, e.signal_score, e.confidence, e.verdict, e.subject, e.timestamp
+        FROM events e WHERE e.id > (
+            SELECT COALESCE(MAX(id), 0) - 300 FROM events
+        ) ORDER BY e.id DESC
+        """
+    ).fetchall()
+
+    stats: dict[str, dict] = {}
+    for r in rows:
+        try:
+            tickers = json.loads(r["tickers"]) if isinstance(r["tickers"], str) else (r["tickers"] or [])
+        except ValueError:
+            continue
+        weight = 0.5 + 0.5 * float(r["confidence"] or 0)
+        directional = 1.0 if r["verdict"] in ("INVEST", "PULL_OUT") else 0.4
+        for t in tickers:
+            s = stats.setdefault(
+                t, {"mentions": 0, "score_sum": 0.0, "trust_sum": 0.0, "latest": None, "verdict": None}
+            )
+            s["mentions"] += 1
+            s["score_sum"] += float(r["signal_score"] or 0) * weight
+            s["trust_sum"] += directional * weight
+            if s["latest"] is None:
+                s["latest"], s["verdict"] = r["subject"], r["verdict"]
+
+    def score(s: dict) -> float:
+        avg = s["score_sum"] / s["mentions"]
+        trust = s["trust_sum"] / s["mentions"]
+        return round(s["mentions"] * (0.5 + abs(avg) / 10) * (0.5 + trust) * 10, 2)
+
+    ranked = sorted(stats.items(), key=lambda kv: -score(kv[1]))[:limit]
+    return {
+        "suggestions": [
+            {
+                "ticker": t,
+                "score": score(s),
+                "mentions": s["mentions"],
+                "avg_score": round(s["score_sum"] / s["mentions"], 2),
+                "trust": round(s["trust_sum"] / s["mentions"], 2),
+                "latest_subject": s["latest"],
+                "latest_verdict": s["verdict"],
+                "sector": None,
+                "last_seen": None,
+            }
+            for t, s in ranked
+        ]
+    }
+
+
+# ── world feeds (RSS proxy, registry-allowlisted) ────────────────────────────
+
+
+@app.get("/api/feeds")
+async def feeds() -> dict:
+    from finscrape.scrapers.world.feeds import FEEDS
+
+    return {
+        "feeds": [
+            {"key": f.key, "name": f.name, "tier": f.tier, "region": f.region} for f in FEEDS
+        ]
+    }
+
+
+@app.get("/api/rss-proxy")
+async def rss_proxy(feed: str, limit: int = Query(20, ge=1, le=50)) -> dict:
+    import feedparser
+
+    from finscrape.scrapers.fastfetch import fast_get
+    from finscrape.scrapers.world.feeds import get_feed
+
+    f = get_feed(feed)
+    if f is None:
+        raise HTTPException(status_code=400, detail="unknown feed key")
+    raw = fast_get(f.url)
+    parsed = feedparser.parse(raw) if raw else None
+    items = [
+        {
+            "title": (e.get("title") or "").strip(),
+            "link": (e.get("link") or "").strip(),
+            "published": e.get("published", ""),
+        }
+        for e in (parsed.entries if parsed else [])[:limit]
+    ]
+    return {"feed": feed, "name": f.name, "tier": f.tier, "items": items}
+
+
+@app.get("/api/correlations")
+async def correlations(date: str | None = Query(None)) -> dict:
+    """Lightweight local correlation: same ticker covered by 2+ independent
+    sources within 48h (multi-source corroboration), newest first."""
+    conn = _require_db()
+    rows = conn.execute(
+        """
+        SELECT e.id, e.subject, e.verdict, e.signal_score, e.tickers, e.sources, e.timestamp
+        FROM events e
+        WHERE e.timestamp >= datetime('now', '-2 days')
+        ORDER BY e.id DESC LIMIT 200
+        """
+    ).fetchall()
+    import json as _json
+
+    by_ticker: dict[str, list[sqlite3.Row]] = {}
+    for r in rows:
+        try:
+            tickers = _json.loads(r["tickers"]) if isinstance(r["tickers"], str) else []
+        except ValueError:
+            continue
+        for t in tickers:
+            by_ticker.setdefault(t, []).append(r)
+
+    signals = []
+    for ticker, evs in by_ticker.items():
+        if len(evs) < 2:
+            continue
+        seen_sources: set[str] = set()
+        for ev in evs:
+            try:
+                srcs = _json.loads(ev["sources"]) if isinstance(ev["sources"], str) else []
+            except ValueError:
+                srcs = []
+            seen_sources.update(srcs.split("/")[-1] if "/" in s else s for s in srcs)
+        if len(seen_sources) < 2:
+            continue
+        confidence = min(0.95, 0.4 + 0.15 * len(seen_sources) + 0.05 * min(3, len(evs)))
+        signals.append({
+            "signal_type": "multi_source_corroboration",
+            "confidence": round(confidence, 2),
+            "payload": {"ticker": ticker, "subject": evs[0]["subject"], "sources": sorted(seen_sources)},
+            "detected_at": evs[0]["timestamp"],
+        })
+    signals.sort(key=lambda s: s["detected_at"] or "", reverse=True)
+    return {"correlations": signals[:20]}
+
+
+@app.get("/api/accuracy")
+async def accuracy() -> dict:
+    """Hit-rate over recorded signal outcomes (finscrape accuracy tracker tables)."""
+    conn = _require_db()
+    has = conn.execute(
+        "SELECT name FROM sqlite_master WHERE name='signal_outcomes'"
+    ).fetchone()
+    if not has:
+        return {"total": 0, "scored": 0, "hits": 0, "hit_rate": 0, "by_verdict": {}, "equity_curve": []}
+
+    rows = conn.execute(
+        "SELECT verdict, outcome, checked_at FROM signal_outcomes "
+        "WHERE outcome IS NOT NULL ORDER BY checked_at"
+    ).fetchall()
+    scored = len(rows)
+    hits = sum(1 for r in rows if r["outcome"] == "correct")
+    by_verdict: dict[str, dict] = {}
+    for r in rows:
+        b = by_verdict.setdefault(r["verdict"], {"hits": 0, "total": 0})
+        b["total"] += 1
+        if r["outcome"] == "correct":
+            b["hits"] += 1
+    for b in by_verdict.values():
+        b["hit_rate"] = round(b["hits"] / b["total"], 3) if b["total"] else 0.0
+
+    equity, cum = [], 0
+    for r in rows:
+        cum += 1 if r["outcome"] == "correct" else -1
+        equity.append(cum)
+
+    return {
+        "total": scored,
+        "scored": scored,
+        "hits": hits,
+        "hit_rate": round(hits / scored, 3) if scored else 0.0,
+        "by_verdict": by_verdict,
+        "equity_curve": equity,
+    }
+
+
+@app.get("/api/sentiment")
+async def sentiment(ticker: str = Query(...)) -> dict:
+    """Sentiment for a ticker, derived from our own stored events mentioning it
+    (finance-lexicon scored) — the local stand-in for the social scrape."""
+    conn = _require_db()
+    rows = conn.execute(
+        "SELECT subject, tickers, articles, timestamp FROM events ORDER BY id DESC LIMIT 300"
+    ).fetchall()
+    from finscrape.services.sentiment_analyzer import SentimentAnalyzer
+
+    bull = bear = neut = 0
+    total_score = 0.0
+    posts: list[dict] = []
+    t = ticker.strip().upper()
+    for r in rows:
+        try:
+            tickers = json.loads(r["tickers"]) if isinstance(r["tickers"], str) else []
+        except ValueError:
+            tickers = []
+        mention = t in [str(x).upper() for x in tickers]
+        if not mention:
+            continue
+        result = SentimentAnalyzer.analyze_text(r["subject"])
+        total_score += result.score
+        if result.score > 0.05:
+            bull += 1
+        elif result.score < -0.05:
+            bear += 1
+        else:
+            neut += 1
+        try:
+            links = json.loads(r["articles"]) if isinstance(r["articles"], str) else []
+        except ValueError:
+            links = []
+        posts.append({"text": r["subject"], "author": "news", "platform": "events",
+                      "url": links[0] if links else ""})
+    total = bull + bear + neut
+    return {
+        "ticker": t,
+        "sentiment_score": round(total_score / total, 2) if total else 0.0,
+        "bullish_count": bull,
+        "bearish_count": bear,
+        "neutral_count": neut,
+        "total_posts": total,
+        "bullish_pct": round(bull / total, 2) if total else 0.0,
+        "volume_spike": total >= 5,
+        "platforms": ["events"],
+        "top_posts": posts[:5],
+    }
+
+
+@app.get("/api/portfolio")
+async def portfolio() -> dict:
+    """Positions + watchlists from the finscrape portfolio manager (SQLite)."""
+    from finscrape.portfolio import PortfolioManager
+
+    pm = PortfolioManager()
+    positions = [p.to_dict() for p in pm.get_all_positions()]
+    conn = _require_db()
+    watchlists = [
+        {"name": r["name"], "tickers": json.loads(r["tickers"])}
+        for r in conn.execute("SELECT name, tickers FROM watchlists")
+    ]
+    return {
+        "positions": positions,
+        "watchlists": watchlists,
+        "summary": {
+            "position_count": len(positions),
+            "cost_basis": round(sum(p.get("avg_cost", 0) * p.get("shares", 0) for p in positions), 2),
+        },
+    }
+
+
+@app.get("/api/health")
+async def health() -> dict:
+    return {
+        "status": "ok",
+        "mode": "local",
+        "db": _DB.exists(),
+        "llm": True,
+        "sources": [],
+    }
+
+
+# ── websocket (same message contract as server/ws.py: init/new_events/pong) ──
+
+
+@app.get("/api/ai/analyze")
+async def ai_analyze(id: int = Query(...)) -> dict:
+    """LLM reasoning for one event — runs the local model (dev-mode provider,
+    e.g. Ollama qwen) over the event's subject, verdict and tickers."""
+    conn = _require_db()
+    row = conn.execute("SELECT * FROM events WHERE id = ?", (id,)).fetchone()
+    if row is None:
+        raise HTTPException(status_code=404, detail="event not found")
+    event = _event_row(row)
+
+    from finscrape.analysis.ai_client import call_ai
+
+    prompt = (
+        f"Headline: {event['subject']}\n"
+        f"Verdict so far: {event['verdict']} (signal {event['signal_score']:+d}, "
+        f"confidence {event['confidence']})\n"
+        f"Tickers: {', '.join(event['tickers']) or 'none'}\n"
+        "Analyze the market impact. Respond as JSON with keys: "
+        '"summary" (2-3 sentences of reasoning), '
+        '"ticker_impacts" (list of {ticker, direction, estimated_pct, reason}), '
+        '"verdict_reason" (why this verdict is right or wrong).'
+    )
+    result = call_ai(prompt, "You are a geopolitical market analyst. Answer in strict JSON only.")
+    if not result:
+        raise HTTPException(status_code=503, detail="no AI backend available (dev mode off or model down)")
+
+    impacts = result.get("ticker_impacts") or []
+    return {
+        "summary": result.get("summary") or result.get("reasoning") or "",
+        "ticker_impacts": impacts if isinstance(impacts, list) else [],
+        "verdict_reason": result.get("verdict_reason") or "",
+    }
+
+
+@app.websocket("/ws")
+async def ws(websocket: WebSocket) -> None:
+    """Realtime hub: pushes the recent-event snapshot on connect, then echoes
+    pings; new-event broadcast arrives when the local pipeline runs."""
+    await websocket.accept()
+    try:
+        if _DB.exists():
+            conn = _db()
+            rows = conn.execute(
+                "SELECT * FROM events ORDER BY id DESC LIMIT 200"
+            ).fetchall()
+            await websocket.send_json({"type": "init", "events": [_event_row(r) for r in rows]})
+        while True:
+            msg = await websocket.receive_text()
+            if msg == "ping":
+                await websocket.send_json({"type": "pong"})
+    except WebSocketDisconnect:
+        return
+
+
+# ── static SPA ───────────────────────────────────────────────────────────────
+
+if _DIST.exists():
+    app.mount("/assets", StaticFiles(directory=_DIST / "assets"), name="assets")
+
+    @app.get("/")
+    async def index() -> FileResponse:
+        return FileResponse(_DIST / "index.html")
+
+    @app.get("/{path:path}")
+    async def spa_fallback(path: str) -> FileResponse:
+        candidate = _DIST / path
+        if candidate.is_file():
+            return FileResponse(candidate)
+        if (candidate / "index.html").is_file():  # directory entries ("/app/")
+            return FileResponse(candidate / "index.html")
+        return FileResponse(_DIST / "index.html")
