@@ -1,0 +1,11 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../client';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useVolatilityArbitrage() {
+  return useQuery({
+    queryKey: ['volatility-arbitrage'],
+    queryFn: () => api.get<any>('/volatility-arbitrage'),
+    staleTime: 60 * 60 * 1000,
+  });
+}

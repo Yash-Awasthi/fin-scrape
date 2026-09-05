@@ -1,0 +1,138 @@
+import pytest
+import asyncio
+from unittest.mock import MagicMock, patch, AsyncMock
+from datetime import datetime, timedelta
+
+from src.services.automated_trading_service import AutomatedTradingService
+from src.services.interaction_service import InteractionService
+from src.infrastructure.nlp.intent_classifier import IntentClassifier
+from src.domain.trading import Order, OrderAction
+from src.domain.interaction import InteractionStatus
+
+
+@pytest.fixture(autouse=True)
+def allow_trading_protections():
+    """
+    Isolate the approval-flow test from TradingProtectionsService.
+
+    2026-08-02: protections fail CLOSED on internal error. The in-memory SQLite
+    used here has no `decision_outcomes` table, so every BUY would be blocked
+    before reaching the approval path this test exercises. Fail-closed
+    behaviour is covered in tests/unit/services/test_protections_fail_closed.py.
+    2026-08-02：風控改為 fail-closed，此處隔離風控相依以測試審核流程本身。
+    """
+    with patch('src.services.trading_protections_service.TradingProtectionsService') as MockProt:
+        MockProt.return_value.check.return_value = None
+        yield MockProt
+
+
+@pytest.fixture
+def anyio_backend():
+    return 'asyncio'
+
+@pytest.mark.anyio
+async def test_trade_approval_with_ok_reply(anyio_backend):
+    """
+    Test that replying "OK" to a trade approval request triggers execution.
+    測試對交易審核請求回覆 "OK" 會觸發執行。
+    """
+    user_id = "test_user@example.com"
+    ticker = "AAPL"
+    
+    # 1. Mock Dependencies
+    mock_settings_repo = MagicMock()
+    # Upper threshold = 9, Min threshold = 3
+    mock_settings_repo.get.side_effect = lambda uid, key, default=None: {
+        "ai_trading_enabled": "true",
+        "auto_trade_threshold": 9,
+        "auto_trade_min_threshold": 3
+    }.get(key, default)
+    
+    mock_broker = MagicMock()
+    mock_broker.get_name.return_value = "MockBroker"
+    # execute_order is async, use AsyncMock
+    mock_broker.execute_order = AsyncMock(return_value={"status": "success", "order_id": "12345"})
+    # 2026-08-02: the BUY position-sizing guard awaits get_account()/get_positions().
+    # A bare MagicMock raises "object MagicMock can't be used in 'await' expression";
+    # that used to be swallowed (fail-open) but now correctly blocks the BUY, so the
+    # async surface has to be mocked properly.
+    # 2026-08-02：sizing guard 會 await get_account()/get_positions()，需用 AsyncMock。
+    _account = MagicMock()
+    _account.total_equity = 10000.0
+    _account.available_cash = 10000.0
+    mock_broker.get_account = AsyncMock(return_value=_account)
+    mock_broker.get_positions = AsyncMock(return_value=[])
+    
+    # 2. Setup Services
+    # Use MagicMock for registration (sync) but maintain async for messaging
+    mock_adapter = MagicMock()
+    mock_adapter.send_message = AsyncMock()
+    mock_adapter.send_alert = AsyncMock()
+    mock_adapter.__class__.__name__ = "MockAdapter"
+    
+    # Store callbacks manually to simulate BaseChannelAdapter behavior
+    mock_adapter.callback = None
+    mock_adapter.text_callback = None
+    mock_adapter.register_callback.side_effect = lambda cb: setattr(mock_adapter, 'callback', cb)
+    mock_adapter.register_text_callback.side_effect = lambda cb: setattr(mock_adapter, 'text_callback', cb)
+    
+    async def mock_trigger(rid, act):
+        if mock_adapter.callback:
+            await mock_adapter.callback(rid, act)
+    mock_adapter._trigger_callback = AsyncMock(side_effect=mock_trigger)
+    
+    # We will mock AgentFactory to avoid real LLM calls during test
+    with patch("src.agents.factory.AgentFactory.create_agent") as mock_create:
+        mock_agent = MagicMock()
+        mock_create.return_value = mock_agent
+        classifier = IntentClassifier()
+    
+        classifier = IntentClassifier()
+    
+    interaction_svc = InteractionService(adapters=[mock_adapter], intent_classifier=classifier, settings_service=MagicMock())
+    # Mock settings_service.find_user_by_channel_id to return our user_id
+    interaction_svc.settings_service.find_user_by_channel_id.return_value = user_id
+    
+    trade_svc = AutomatedTradingService(
+        settings_repo=mock_settings_repo,
+        interaction_service=interaction_svc
+    )
+    
+    # 3. Trigger Trade Evaluation (Score 7 is between 3 and 9)
+    with patch("src.services.broker_factory.BrokerFactory.get_broker", return_value=mock_broker):
+        # Start evaluation in a task because it will block waiting for approval
+        trade_task = asyncio.create_task(trade_svc.evaluate_and_execute_trade(
+            user_id=user_id,
+            ticker=ticker,
+            action="BUY",
+            quantity=10,
+            confidence_score=7,
+            rationale="Strong signal detected"
+        ))
+        
+        # Give it a moment to send the request
+        await asyncio.sleep(0.1)
+        
+        # 4. Verify Request was sent
+        assert len(interaction_svc._pending_requests) == 1
+        req_id = list(interaction_svc._pending_requests.keys())[0]
+        req = interaction_svc._pending_requests[req_id]
+        assert req.status == InteractionStatus.PENDING
+        
+        # 5. Simulate "OK" response from user
+        # This calls handles_text_response which uses IntentClassifier
+        # We need to ensure IntentClassifier is updated to handle "OK"
+        await interaction_svc.handle_text_response(mock_adapter, "channel_user_123", "OK")
+        
+        # Wait for the trade task to complete
+        result = await trade_task
+        
+        # 6. Final Assertions
+        assert result["status"] == "success"
+        mock_broker.execute_order.assert_called_once()
+        order = mock_broker.execute_order.call_args[0][0]
+        assert order.symbol == ticker
+        assert order.action == OrderAction.BUY
+        
+        # Verify req status updated
+        assert req.status == InteractionStatus.APPROVED

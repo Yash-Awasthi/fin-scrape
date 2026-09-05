@@ -1,0 +1,22 @@
+{
+  "lastRun": "2026-08-28T00:59:59.327Z",
+  "tracker": "united-kingdom",
+  "sections": {
+    "events": "updated",
+    "timeline": "updated",
+    "kpis": "updated",
+    "econ": "updated",
+    "claims": "updated",
+    "political": "updated",
+    "meta": "updated",
+    "mapPoints": {
+      "count": 26,
+      "status": "ok"
+    },
+    "mapLines": {
+      "count": 0,
+      "status": "ok"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

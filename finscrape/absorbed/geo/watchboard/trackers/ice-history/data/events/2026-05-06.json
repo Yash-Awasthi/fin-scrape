@@ -1,0 +1,60 @@
+[
+  {
+    "id": "mesa-gateway-airport-ice-facility-overcrowding-may6-2026",
+    "year": "2026",
+    "title": "Mesa Gateway Airport Authority Reports Overcrowding Concerns at Adjacent ICE Detention Facility — Hundreds Over Stated Capacity",
+    "type": "humanitarian",
+    "detail": "The Mesa Gateway Airport Authority raised concerns on May 6, 2026 about potential overcrowding at a DHS-operated ICE detention facility adjacent to Phoenix-Mesa Gateway Airport in Arizona, according to AZFamily (Arizona's Family News). The report alleges the facility is holding hundreds of detainees beyond its official capacity, compounding health and safety concerns already raised by civil liberties groups and Congressional oversight delegations. The overcrowding allegations at Mesa Gateway come on the same day as broader scrutiny of ICE's rapid detention expansion strategy — which has seen the agency use military contracting vehicles, convert commercial buildings, and push detention populations at existing facilities beyond designed capacity as it pursues the administration's stated 100,000-bed target. Mesa, Arizona has already been the site of one documented case of ICE moving detainees out before a Congressional oversight visit and immediately returning them afterward (at the Mesa holding facility in April 2026). Phoenix-Mesa Gateway Airport (IWA) is also used by ICE Air charter deportation flights, making it both a detention site and a departure hub for removal operations. Arizona advocates from the Florence Project and ACLU of Arizona called for independent inspections and immediate population reduction to ensure minimal health and safety standards.",
+    "sources": [
+      {
+        "name": "AZFamily / Arizona's Family News",
+        "tier": 2,
+        "url": "https://www.azfamily.com/2026/05/06/concerns-grow-over-potential-overcrowding-mesa-gateway-ice-facility/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.azfamily.com/2026/05/06/concerns-grow-over-potential-overcrowding-mesa-gateway-ice-facility/",
+        "caption": "Mesa Gateway Airport Authority reports overcrowding at adjacent ICE detention facility — hundreds of detainees over capacity as ICE races toward 100,000-bed target",
+        "source": "AZFamily",
+        "thumbnail": "https://www.azfamily.com/2026/05/06/concerns-grow-over-potential-overcrowding-mesa-gateway-ice-facility/"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim"
+  },
+  {
+    "id": "eleventh-circuit-mandatory-detention-struck-down-may6-2026",
+    "year": "2026",
+    "title": "11th Circuit Court of Appeals Strikes Down Trump's Mandatory Detention Policy — Second Appeals Court to Rule Against No-Bond Blanket Detention",
+    "type": "legal",
+    "detail": "The U.S. Court of Appeals for the Eleventh Circuit — based in Atlanta — struck down the Trump administration's mandatory detention policy on May 6, 2026, ruling in a divided panel decision that Congress never granted the executive branch 'unfettered authority to detain, without the possibility of bond, every unadmitted alien present in the country.' The ruling is the second major circuit court to reject the policy, following the Second Circuit's ruling on April 29, 2026. Two other circuits — the 5th and 8th — have upheld the policy, creating a circuit split that makes Supreme Court review highly likely. The mandatory detention policy was an expansive reinterpretation of the 1996 Illegal Immigration Reform and Immigrant Responsibility Act (IIRIRA), mandating that anyone who entered the country illegally be held without bond regardless of how long they had lived in the U.S., their family ties, or other individualized factors. Separately, federal immigration judges have already ruled ICE held more than 4,000 immigrants illegally. The 11th Circuit's ruling requires ICE to provide bond hearings to detainees in Florida, Georgia, and Alabama — a region that includes Stewart Detention Center (multiple FY2026 deaths) and the controversial 'Alligator Alcatraz' facility near the Everglades. Civil liberties advocates hailed the ruling while the Trump administration indicated it would seek en banc review or appeal to the Supreme Court.",
+    "sources": [
+      {
+        "name": "Axios",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/05/06/trump-ice-immigration-detention-court-ruling-florida",
+        "pole": "western"
+      },
+      {
+        "name": "NOTUS",
+        "tier": 2,
+        "url": "https://www.notus.org/immigration/appeals-court-ice-mandatory-detention-immigrants",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.axios.com/2026/05/06/trump-ice-immigration-detention-court-ruling-florida",
+        "caption": "11th Circuit strikes down Trump mandatory detention policy — court rules Congress did not authorize blanket no-bond detention for all undocumented immigrants",
+        "source": "Axios",
+        "thumbnail": "https://www.axios.com/2026/05/06/trump-ice-immigration-detention-court-ruling-florida"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  }
+]

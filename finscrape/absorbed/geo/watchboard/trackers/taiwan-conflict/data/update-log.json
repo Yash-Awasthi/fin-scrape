@@ -1,0 +1,40 @@
+{
+  "lastRun": "2026-08-28T00:49:09.819Z",
+  "tracker": "taiwan-conflict",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-07T14:25:00.000Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "lastRun": "2026-05-06T15:00:00.000Z",
+      "status": "no-change"
+    },
+    "mapPoints": "no-change",
+    "mapLines": {
+      "lastRun": "2026-06-07T14:25:00.000Z",
+      "status": "updated"
+    },
+    "casualties": "no-change",
+    "econ": "no-change",
+    "claims": {
+      "lastRun": "2026-06-07T14:25:00.000Z",
+      "status": "updated"
+    },
+    "political": {
+      "lastRun": "2026-06-07T14:25:00.000Z",
+      "status": "updated"
+    },
+    "assets": "no-change",
+    "events": {
+      "lastRun": "2026-08-23T12:26:27.048Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-23T12:26:27.048Z",
+      "status": "updated"
+    },
+    "map-points": "no-change"
+  },
+  "consecutiveQuietRuns": 0
+}

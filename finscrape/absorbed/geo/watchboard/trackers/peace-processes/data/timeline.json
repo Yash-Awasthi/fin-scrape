@@ -1,0 +1,1728 @@
+[
+  {
+    "era": "Post-Cold War Peace Architecture (1993–2000)",
+    "events": [
+      {
+        "id": "oslo-accords-1993",
+        "year": "1993",
+        "title": "Oslo Accords Signed",
+        "type": "accord",
+        "detail": "Israel and the PLO sign the Declaration of Principles on the White House lawn on September 13, 1993, following secret back-channel negotiations in Oslo mediated by Norway. The accords establish a Palestinian Authority and a five-year transitional process toward final-status talks on borders, Jerusalem, refugees, and settlements. Yasser Arafat and Yitzhak Rabin shake hands before President Clinton. The accords represent the first direct recognition between Israel and the PLO but leave core issues deferred. Oslo II follows in 1995.",
+        "sources": [
+          {
+            "name": "U.S. State Department",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "UN General Assembly records",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Oslo_I_Accord",
+            "source": "Wikipedia / Oslo I Accord",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bill_Clinton%2C_Yitzhak_Rabin%2C_Yasser_Arafat_at_the_White_House_1993-09-13.jpg/330px-Bill_Clinton%2C_Yitzhak_Rabin%2C_Yasser_Arafat_at_the_White_House_1993-09-13.jpg"
+          }
+        ]
+      },
+      {
+        "id": "dayton-accords-1995",
+        "year": "1995",
+        "title": "Dayton Peace Accords End Bosnian War",
+        "type": "accord",
+        "detail": "The General Framework Agreement for Peace in Bosnia and Herzegovina is initialed at Wright-Patterson Air Force Base in Dayton, Ohio on November 21, 1995, and formally signed in Paris on December 14. Brokered by U.S. envoy Richard Holbrooke, the accords end three and a half years of war that killed approximately 100,000 people and displaced 2.2 million. The agreement creates two entities — the Federation of Bosnia and Herzegovina and Republika Srpska — under a unified state. NATO's IFOR deploys 60,000 troops to implement the peace.",
+        "sources": [
+          {
+            "name": "U.S. Department of State",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "UN Security Council Resolution 1031",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Dayton_Agreement",
+            "source": "Wikipedia / Dayton Agreement",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/DaytonAgreement.jpg/330px-DaytonAgreement.jpg"
+          }
+        ]
+      },
+      {
+        "id": "guatemala-peace-1996",
+        "year": "1996",
+        "title": "Guatemala Peace Accords End 36-Year Civil War",
+        "type": "accord",
+        "detail": "The government of Guatemala and the Unidad Revolucionaria Nacional Guatemalteca (URNG) sign comprehensive peace accords on December 29, 1996 in Guatemala City, ending one of Latin America's longest civil wars. UN-mediated over several years, the accords include agreements on indigenous rights, socioeconomic reform, resettlement of displaced persons, and military downsizing. A UN truth commission (CEH) later documents 200,000 deaths, 83% committed by state forces. The accords are considered a landmark but implementation of socioeconomic provisions remains incomplete.",
+        "sources": [
+          {
+            "name": "UN MINUGUA (Verification Mission)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Crisis Group",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Guatemalan_Civil_War",
+            "source": "Wikipedia / Guatemalan Civil War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Guatemala_collage_%2850%25_size%29.png/330px-Guatemala_collage_%2850%25_size%29.png"
+          }
+        ]
+      },
+      {
+        "id": "good-friday-agreement-1998",
+        "year": "1998",
+        "title": "Good Friday Agreement Signed in Belfast",
+        "type": "accord",
+        "detail": "The Belfast (Good Friday) Agreement is signed on April 10, 1998, ending 30 years of 'The Troubles' in Northern Ireland that claimed over 3,500 lives. Brokered by U.S. Senator George Mitchell, UK PM Tony Blair, and Irish Taoiseach Bertie Ahern, the agreement creates a power-sharing executive, cross-border bodies, and a human rights framework. The IRA and loyalist paramilitary groups move toward decommissioning. Endorsed by referendums North and South, the GFA is considered one of the most successful modern peace processes. EU membership underpins the Irish dimension.",
+        "sources": [
+          {
+            "name": "UK Government / NIO",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Irish Government",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "USIP",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "lome-accord-sierra-leone-1999",
+        "year": "1999",
+        "title": "Lomé Peace Accord — Sierra Leone",
+        "type": "accord",
+        "detail": "The government of Sierra Leone and the RUF (Revolutionary United Front) sign the Lomé Peace Accord on July 7, 1999 in Togo, ending eight years of brutal civil war. The accord grants amnesty to RUF leaders including Foday Sankoh and establishes a power-sharing government. The peace fails within a year when the RUF kidnaps hundreds of UN peacekeepers. A fresh British military intervention (Operation Palliser) and a reformed UN mission (UNAMSIL) ultimately suppress the RUF. The Special Court for Sierra Leone later tries and convicts Charles Taylor. A cautionary tale on premature amnesty.",
+        "sources": [
+          {
+            "name": "ECOWAS",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN Mission Sierra Leone (UNAMSIL)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Human Rights Watch",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Sierra_Leone_Civil_War",
+            "source": "Wikipedia / Sierra Leone Civil War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/MacKenzieSlcu.jpg/330px-MacKenzieSlcu.jpg"
+          }
+        ]
+      },
+      {
+        "id": "arusha-accord-burundi-2000",
+        "year": "2000",
+        "title": "Arusha Peace Agreement — Burundi",
+        "type": "accord",
+        "detail": "The Arusha Peace and Reconciliation Agreement for Burundi is signed on August 28, 2000, mediated by Nelson Mandela after Julius Nyerere's death. The accord ends six years of civil war between the Tutsi-dominated army and Hutu rebel groups, establishing power-sharing and transitional institutions. Implementation is incomplete at signing, with major rebel factions excluded. A later ceasefire with the main FNL faction (Palipehutu-FNL) is reached in 2009. Burundi's political stability remains fragile, with a coup attempt in 2015 and ongoing repression under Nkurunziza.",
+        "sources": [
+          {
+            "name": "African Union / OAU",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN Secretary-General report S/2000/1099",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Crisis Group",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      }
+    ]
+  },
+  {
+    "era": "War on Terror & Peace Process Challenges (2001–2010)",
+    "events": [
+      {
+        "id": "aceh-helsinki-mou-2005",
+        "year": "2005",
+        "title": "Helsinki MOU Ends Aceh Conflict",
+        "type": "accord",
+        "detail": "The Memorandum of Understanding between the Government of Indonesia and the Free Aceh Movement (GAM) is signed in Helsinki on August 15, 2005, ending a 29-year separatist conflict that killed approximately 15,000 people. Mediated by former Finnish President Martti Ahtisaari under the Crisis Management Initiative (CMI), the MOU follows the December 2004 Indian Ocean tsunami, which devastated Aceh and created an opening for talks. GAM agrees to demobilize and relinquish its independence demand; Jakarta grants Aceh special autonomy and wealth-sharing for oil revenues. EU and ASEAN monitors verify implementation. Considered a model humanitarian diplomacy breakthrough.",
+        "sources": [
+          {
+            "name": "Government of Indonesia",
+            "tier": 1,
+            "pole": "eastern"
+          },
+          {
+            "name": "Crisis Management Initiative (CMI)",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "EU Aceh Monitoring Mission",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Insurgency_in_Aceh",
+            "source": "Wikipedia / Insurgency in Aceh",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Free_Aceh_Movement_women_soldiers.jpg/330px-Free_Aceh_Movement_women_soldiers.jpg"
+          }
+        ]
+      },
+      {
+        "id": "nepal-cpa-2006",
+        "year": "2006",
+        "title": "Nepal Comprehensive Peace Agreement",
+        "type": "accord",
+        "detail": "The Government of Nepal and the Communist Party of Nepal (Maoist) sign the Comprehensive Peace Agreement on November 21, 2006, ending a decade-long Maoist insurgency that killed over 17,000 people. The CPA follows the 2006 Jana Andolan II people's movement and establishes a ceasefire, cantonment of Maoist combatants, elections for a Constituent Assembly, and abolition of the monarchy. UN Political Mission (UNMIN) monitors cantonment. The Maoists enter mainstream politics, eventually winning the 2008 Constituent Assembly elections. Nepal transitions to a federal democratic republic. Integration of Maoist fighters into the national army remains contentious for years.",
+        "sources": [
+          {
+            "name": "Government of Nepal",
+            "tier": 1,
+            "pole": "eastern"
+          },
+          {
+            "name": "UN Mission in Nepal (UNMIN)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Crisis Group",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "darfur-dpa-2006",
+        "year": "2006",
+        "title": "Darfur Peace Agreement — Partial, Contested",
+        "type": "accord",
+        "detail": "The Darfur Peace Agreement is signed in Abuja, Nigeria on May 5, 2006 between the Sudanese government and one SLA faction (Minni Minawi), mediated by the African Union. Two major rebel factions refuse to sign. The government violates the ceasefire within months. The ICC issues arrest warrants for President Omar al-Bashir in 2009 for genocide, war crimes, and crimes against humanity — the first ICC warrant for a sitting head of state. Over 300,000 people are estimated to have died. AU-UN hybrid mission UNAMID deploys in 2007. A new surge of violence in Darfur restarts after Sudan's 2023 civil war.",
+        "sources": [
+          {
+            "name": "African Union",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "International Criminal Court",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Human Rights Watch",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Peace_treaty",
+            "source": "Wikipedia / Peace treaty",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Treaty_of_Versailles%2C_English_version.jpg/330px-Treaty_of_Versailles%2C_English_version.jpg"
+          }
+        ]
+      },
+      {
+        "id": "juba-peace-process-lra-2008",
+        "year": "2008",
+        "title": "Juba LRA Talks Collapse — Uganda",
+        "type": "spoiler",
+        "detail": "The Juba Peace Process between the government of Uganda and the Lord's Resistance Army (LRA) collapses in April 2008 when LRA leader Joseph Kony refuses to sign the Final Peace Agreement despite having agreed to its terms. Kony cites fear of ICC prosecution. The mediation by Riek Machar (then Vice President of Southern Sudan) had produced a framework addressing accountability, disarmament, and amnesty. Following the collapse, Uganda, DRC, CAR, and South Sudan launch Operation Lightning Thunder, a joint military offensive. The LRA disperses into Central African Republic and DRC, committing atrocities across a broader geographic area.",
+        "sources": [
+          {
+            "name": "Government of Uganda",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "International Criminal Court",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Crisis Group",
+            "tier": 3,
+            "pole": "international"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2006%E2%80%932008_Juba_talks",
+            "source": "Wikipedia / 2006%E2%80%932008 Juba talks",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ugandan_districts_affected_by_Lords_Resistance_Army.png/330px-Ugandan_districts_affected_by_Lords_Resistance_Army.png"
+          }
+        ]
+      },
+      {
+        "id": "cpa-sudan-2005",
+        "year": "2005",
+        "title": "Comprehensive Peace Agreement — Sudan/South Sudan",
+        "type": "accord",
+        "detail": "The Comprehensive Peace Agreement ending Sudan's Second Civil War (1983–2005) is signed in Nairobi on January 9, 2005 by the Government of Sudan and the Sudan People's Liberation Movement/Army, mediated by IGAD and the Troika (U.S., UK, Norway). The CPA establishes a six-year Interim Period, wealth and power sharing, and a self-determination referendum for southern Sudan. John Garang dies in a helicopter crash months after becoming First Vice President. South Sudan votes 98.8% for independence in January 2011 and declares independence on July 9, 2011 — the world's newest state. Post-independence conflict erupts again in 2013.",
+        "sources": [
+          {
+            "name": "IGAD",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN Mission in Sudan (UNMIS)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Carter Center",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Comprehensive_Peace_Agreement",
+            "source": "Wikipedia / Comprehensive Peace Agreement",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Political_Regions_of_Sudan_-_July_2006.svg/330px-Political_Regions_of_Sudan_-_July_2006.svg.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Arab Spring & Multipolarity (2011–2015)",
+    "events": [
+      {
+        "id": "columbia-havana-talks-2012",
+        "year": "2012",
+        "title": "Colombia–FARC Formal Talks Open in Havana",
+        "type": "negotiation",
+        "detail": "The Colombian government of President Juan Manuel Santos and the FARC-EP revolutionary group open formal peace negotiations in Havana, Cuba on November 19, 2012, after secret exploratory talks brokered by Cuba and Norway. The six-point agenda covers: rural reform, political participation, illicit crops, victims, DDR (disarmament, demobilization, reintegration), and implementation. The talks run for four years, the longest peace negotiation in Colombian history. Havana hosts the talks; Cuba and Norway act as guarantors; Venezuela and Chile as accompanying countries.",
+        "sources": [
+          {
+            "name": "Colombian Government Office of the High Commissioner for Peace",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Cuban Foreign Ministry",
+            "tier": 1,
+            "pole": "eastern"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "minsk-i-2014",
+        "year": "2014",
+        "title": "Minsk Protocol — Ukraine–Russia (Minsk I)",
+        "type": "ceasefire",
+        "detail": "The Minsk Protocol is signed on September 5, 2014 by the Trilateral Contact Group — Ukraine, Russia, and OSCE — along with representatives of separatist 'republics' in the Donbas. The agreement includes a ceasefire, OSCE monitoring, prisoner exchanges, and humanitarian corridors. Fighting continues within days of signing. A follow-on Minsk Memorandum is signed September 19. The ceasefire repeatedly breaks down. Minsk II (February 2015) establishes a more detailed framework, but its implementation is blocked. Russia invades Ukraine fully in February 2022, rendering the Minsk framework defunct. Both sides accuse the other of negotiating in bad faith.",
+        "sources": [
+          {
+            "name": "OSCE Special Monitoring Mission",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Government of Ukraine",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "TASS",
+            "tier": 2,
+            "pole": "eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Minsk_agreements",
+            "source": "Wikipedia / Minsk agreements",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Minsk_Protocol.svg/330px-Minsk_Protocol.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "algiers-accords-mali-2015",
+        "year": "2015",
+        "title": "Algiers Accords — Mali",
+        "type": "accord",
+        "detail": "The Accord for Peace and Reconciliation in Mali is signed in Algiers on June 20, 2015 by the government of Mali, the Coordination of Azawad Movements (CMA, including Tuareg groups), and the Platform coalition. Mediated by Algeria with AU, UN (MINUSMA), EU, ECOWAS, and OIC support, the accord provides for devolution, security sector reform, and northern development. Implementation stalls on all fronts. MINUSMA withdraws in December 2023 at junta request. The accord is effectively suspended after the 2021 military coup. The CMA and Platform sign a ceasefire extension in 2023, but hostilities resume as the junta realigns with Wagner/Russia.",
+        "sources": [
+          {
+            "name": "African Union / MISAHEL",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN MINUSMA",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "stockholm-agreement-yemen-2018-preview",
+        "year": "2015",
+        "title": "Yemen Conflict Escalates; UN Peace Efforts Begin",
+        "type": "negotiation",
+        "detail": "Following Saudi-led coalition intervention from March 2015, the UN Special Envoy for Yemen Ismail Ould Cheikh Ahmed launches multiple rounds of peace talks — Geneva (June 2015) and Biel (December 2015). UNSCR 2216 (April 2015) imposes an arms embargo on Houthi forces. Talks fail to achieve a ceasefire. Humanitarian corridor negotiations continue at ICRC level. The UN subsequently cycles through multiple special envoys — Griffiths (2018), Grundberg (2021) — as the conflict kills over 377,000 (including indirect deaths) through 2021 per UNDP estimates. The peace process is marked by repeated partial ceasefires and their collapse.",
+        "sources": [
+          {
+            "name": "UN Security Council Resolution 2216",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN Office of the Special Envoy for Yemen",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Yemeni_civil_war_(2014%E2%80%93present)",
+            "source": "Wikipedia / Yemeni civil war (2014%E2%80%93present)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Yemeni_Civil_War.svg/330px-Yemeni_Civil_War.svg.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "New Accords, New Crises (2016–2019)",
+    "events": [
+      {
+        "id": "colombia-farc-deal-2016",
+        "year": "2016",
+        "title": "Colombia–FARC Peace Agreement Signed",
+        "type": "accord",
+        "detail": "After four years of negotiations, the Colombian government and FARC-EP sign a final peace agreement on November 24, 2016 in Bogotá (after a revised version following the October 2 plebiscite rejection). The agreement covers land reform, political participation, illicit crop substitution, transitional justice (Special Jurisdiction for Peace — JEP), victims, and reintegration. President Santos receives the Nobel Peace Prize. Approximately 13,000 FARC combatants demobilize. However, a dissident faction (FARC-EP Estado Mayor Central, led by 'Iván Mordisco') re-arms. Implementation of rural reform and crop substitution lags. JEP opens investigations into FARC and military crimes.",
+        "sources": [
+          {
+            "name": "Colombian Government High Commissioner for Peace",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "UN Mission Colombia (UNMC)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "El País",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Crisis Group",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "philippines-bangsamoro-boa-2018",
+        "year": "2018",
+        "title": "Bangsamoro Organic Law — Philippines",
+        "type": "accord",
+        "detail": "The Bangsamoro Organic Law (BOL) is signed by President Rodrigo Duterte on July 26, 2018, creating the Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) to replace the failed ARMM. The culmination of decades of conflict and negotiations with the Moro Islamic Liberation Front (MILF), the BOL provides meaningful autonomy, power-sharing, and a decommissioning pathway for 40,000 MILF fighters. The first BARMM parliament is established in 2019. Decommissioning proceeds in phases. Spoiler attacks from the Bangsamoro Islamic Freedom Fighters (BIFF) and Abu Sayyaf Group continue. A landmark in Asia-Pacific peace-building supported by Malaysia as facilitator.",
+        "sources": [
+          {
+            "name": "Government of the Philippines / OPApp",
+            "tier": 1,
+            "pole": "eastern"
+          },
+          {
+            "name": "Bangsamoro Transition Authority (BTA)",
+            "tier": 1,
+            "pole": "eastern"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "HD Centre",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "south-sudan-r-arcss-2018",
+        "year": "2018",
+        "title": "South Sudan Revitalized Peace Agreement (R-ARCSS)",
+        "type": "accord",
+        "detail": "The Revitalized Agreement on the Resolution of the Conflict in South Sudan (R-ARCSS) is signed in Addis Ababa on September 12, 2018, following the breakdown of the 2015 ARCSS agreement and a resumption of civil war in 2016. Mediated by IGAD, AU, and the Troika, the agreement provides for a transitional government of national unity (R-TGoNU), reconstituted army (SSPDF), security arrangements, transitional justice, and humanitarian access. The transitional period is extended multiple times. President Salva Kiir and First Vice President Riek Machar remain in fragile partnership. Implementation of chapter 2 (security) remains the most contested.",
+        "sources": [
+          {
+            "name": "IGAD (Intergovernmental Authority on Development)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "African Union",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/South_Sudanese_Civil_War",
+            "source": "Wikipedia / South Sudanese Civil War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Southern_Sudan_Civil_War.svg/330px-Southern_Sudan_Civil_War.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "stockholm-agreement-yemen-2018",
+        "year": "2018",
+        "title": "Yemen Stockholm Agreement on Hodeidah",
+        "type": "ceasefire",
+        "detail": "UN-mediated talks in Stockholm produce the Stockholm Agreement on December 13, 2018 — the first significant diplomatic breakthrough in the Yemen conflict. The agreement includes a ceasefire in Hodeidah port, a prisoner exchange (the Taiz agreement), and talks on Taiz. The UN Mission to support the Hodeidah Agreement (UNMHA) deploys to monitor the ceasefire. The Hodeidah ceasefire broadly holds but both sides violate its terms. Full port handover to neutral parties is never implemented. The Taiz element collapses. The agreement prevents a full-scale battle for Hodeidah which could have triggered famine conditions for millions.",
+        "sources": [
+          {
+            "name": "UN Office of the Special Envoy for Yemen",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN Mission to support the Hodeidah Agreement (UNMHA)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/United_Nations_Mission_to_support_the_Hudaydah_Agreement",
+            "source": "Wikipedia / United Nations Mission to support the Hudaydah Agreement",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Emblem_of_the_United_Nations.svg/330px-Emblem_of_the_United_Nations.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "sudan-juba-peace-2019",
+        "year": "2019",
+        "title": "Sudan: Transitional Government After Al-Bashir Ouster",
+        "type": "negotiation",
+        "detail": "Following popular protests that topple Omar al-Bashir in April 2019, Sudan's Sovereignty Council (a military-civilian hybrid) takes power. The AU and Ethiopian mediation produce the Constitutional Declaration of August 2019. IGAD and AU broker the Juba Peace Agreement on October 3, 2020 between the transitional government and several rebel groups (not RSF, which is now part of the state). The process is complicated by the October 2021 military coup by General al-Burhan, which suspends the civilian government. International peace efforts intensify as Sudan descends into civil war between the SAF and RSF in April 2023.",
+        "sources": [
+          {
+            "name": "African Union High-Level Implementation Panel",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "IGAD",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Government_of_Sudan",
+            "source": "Wikipedia / Government of Sudan",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Emblem_of_Sudan_%28gold%29.svg/330px-Emblem_of_Sudan_%28gold%29.svg.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "COVID-19 and Conflict Resurgence (2020–2023)",
+    "events": [
+      {
+        "id": "doha-agreement-afghanistan-2020",
+        "year": "2020",
+        "title": "Doha Agreement — U.S.–Taliban",
+        "type": "accord",
+        "detail": "The Agreement for Bringing Peace to Afghanistan is signed between the United States and the Taliban in Doha, Qatar on February 29, 2020, mediated by Qatar. The agreement commits the U.S. to a phased military withdrawal and the Taliban to counter-terrorism guarantees and intra-Afghan talks. The agreement excluded the Kabul government. Intra-Afghan talks open in Doha in September 2020 but stall. The U.S. completes withdrawal by August 31, 2021. Taliban forces capture Kabul on August 15, 2021, 20 years after being removed from power. The Afghan government collapses without a fight. The accord is widely criticized for sidelining the Ghani government and lacking implementation mechanisms.",
+        "sources": [
+          {
+            "name": "U.S. State Department",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Qatar Ministry of Foreign Affairs",
+            "tier": 1,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "UN Assistance Mission in Afghanistan (UNAMA)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/United_States%E2%80%93Taliban_deal",
+            "source": "Wikipedia / United States%E2%80%93Taliban deal",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Secretary_Pompeo_Participates_in_a_Signing_Ceremony_in_Doha_%2849601220548%29.jpg/330px-Secretary_Pompeo_Participates_in_a_Signing_Ceremony_in_Doha_%2849601220548%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "un-global-ceasefire-call-2020",
+        "year": "2020",
+        "title": "UN Secretary-General Calls for Global Ceasefire",
+        "type": "ceasefire",
+        "detail": "UN Secretary-General António Guterres issues an unprecedented global ceasefire appeal on March 23, 2020, citing the COVID-19 pandemic as a reason for all warring parties to lay down arms. Over 180 organizations endorse the call. Some 18 armed groups and governments announce temporary ceasefires in contexts including Yemen, Cameroon, Colombia, the Philippines, and Syria. The UN Security Council endorses the appeal via Resolution 2532 on July 1, 2020 (delayed by U.S.–China dispute over whether to mention WHO). Most ceasefires are temporary and humanitarian, not political. The call is nonetheless unprecedented in scope.",
+        "sources": [
+          {
+            "name": "UN Secretary-General Statement",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN Security Council Resolution 2532",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Twelve-Day_War_ceasefire",
+            "source": "Wikipedia / Twelve-Day War ceasefire",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Trump_statement_on_Israel_Iran_ceasefire.png/330px-Trump_statement_on_Israel_Iran_ceasefire.png"
+          }
+        ]
+      },
+      {
+        "id": "tigray-war-begins-2020",
+        "year": "2020",
+        "title": "Tigray War Erupts — Ethiopia",
+        "type": "spoiler",
+        "detail": "Ethiopian Prime Minister Abiy Ahmed launches a military operation against the Tigray People's Liberation Front (TPLF) on November 4, 2020, following TPLF attacks on federal military bases. The conflict quickly becomes a humanitarian catastrophe, with Eritrean forces intervening on the Ethiopian side. AU and regional mediation attempts stall for nearly two years. The UN estimates 500,000 deaths from conflict and famine-related causes by 2022. Multiple ceasefire attempts fail before the Pretoria Agreement of November 2022. The war represents the largest armed conflict globally in terms of casualties since the Syrian civil war.",
+        "sources": [
+          {
+            "name": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "African Union",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Tigray_war",
+            "source": "Wikipedia / Tigray war",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/VOA_Tigray_Children2.jpg/330px-VOA_Tigray_Children2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "pretoria-agreement-ethiopia-2022",
+        "year": "2022",
+        "title": "Pretoria Agreement — Ethiopia–Tigray",
+        "type": "accord",
+        "detail": "The Cessation of Hostilities Agreement between the Ethiopian government and the TPLF is signed in Pretoria, South Africa on November 2, 2022, mediated by the African Union (Olusegun Obasanjo, Uhuru Kenyatta, Phumzile Mlambo-Ngcuka). The agreement establishes a permanent ceasefire, disarmament of TPLF forces, restoration of federal authority in Tigray, and unimpeded humanitarian access. A follow-on Nairobi declaration (November 12) sets implementation timelines. Disarmament proceeds incrementally; humanitarian access improves significantly. Eritrean forces' withdrawal becomes a point of contention. The agreement is considered one of the most significant African peace breakthroughs in years.",
+        "sources": [
+          {
+            "name": "African Union",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Ethiopian Government",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "TPLF",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Ethiopia%E2%80%93Tigray_peace_agreement",
+            "source": "Wikipedia / Ethiopia%E2%80%93Tigray peace agreement",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Delegation_from_the_African_Union_%28AU%29_and_other_partners_has_arrived_in_Mekelle.jpg/330px-Delegation_from_the_African_Union_%28AU%29_and_other_partners_has_arrived_in_Mekelle.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ukraine-russia-diplomacy-collapse-2022",
+        "year": "2022",
+        "title": "Russia–Ukraine Diplomacy Collapses at Istanbul",
+        "type": "spoiler",
+        "detail": "Following Russia's full-scale invasion of Ukraine on February 24, 2022, brief peace talks are held in Minsk (February 28) and via video (March 2–7). In-person talks in Istanbul on March 29, 2022 yield a preliminary framework: Ukraine proposes neutrality in exchange for security guarantees; Russia offers to pull back from Kyiv. Both sides claim the other withdrew from the deal. Ukraine accuses Russia of using talks as a cover for military repositioning; Russia blames Western pressure on Kyiv to abandon negotiations. Former Israeli PM Naftali Bennett, who mediated, later suggests a deal was possible. No agreement is reached. The conflict becomes Europe's largest war since 1945.",
+        "sources": [
+          {
+            "name": "Ukrainian Government",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Kremlin",
+            "tier": 1,
+            "pole": "eastern"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Xinhua",
+            "tier": 2,
+            "pole": "eastern"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Both parties give contradictory accounts of why Istanbul talks broke down; Bennett's claims are disputed by Ukrainian officials",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Russo-Ukrainian_war_(2022%E2%80%93present)",
+            "source": "Wikipedia / Russo-Ukrainian war (2022%E2%80%93present)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/2022_Russian_invasion_of_Ukraine.svg/330px-2022_Russian_invasion_of_Ukraine.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "sudan-civil-war-jeddah-talks-2023",
+        "year": "2023",
+        "title": "Sudan Civil War; Jeddah Talks Launched",
+        "type": "negotiation",
+        "detail": "Fighting erupts between Sudan's Armed Forces (SAF) under General Abdel Fattah al-Burhan and the Rapid Support Forces (RSF) under General Mohamed Hamdan Dagalo 'Hemeti' on April 15, 2023 in Khartoum. The conflict rapidly spreads to Darfur, where RSF and allied Arab militias commit mass atrocities. The U.S. and Saudi Arabia launch the Jeddah Platform mediation talks, producing multiple 'ceasefire declarations' (May, June 2023) that fail within hours or days. By end 2023, over 7 million people are displaced — the world's largest displacement crisis. The African Union launches a separate process (AUHIP). Talks remain stalled as of early 2024 while famine conditions emerge.",
+        "sources": [
+          {
+            "name": "U.S. Department of State",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Saudi Foreign Ministry",
+            "tier": 1,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "African Union / AUHIP",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN OCHA Sudan",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023%E2%80%93present)",
+            "source": "Wikipedia / Sudanese civil war (2023%E2%80%93present)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/War_in_Sudan_%282023%29.svg/330px-War_in_Sudan_%282023%29.svg.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Global Realignment & Current Processes (2024–2026)",
+    "events": [
+      {
+        "id": "gaza-ceasefire-efforts-2024",
+        "year": "2024",
+        "title": "Gaza Ceasefire Negotiations — Qatar/Egypt/U.S. Mediation",
+        "type": "negotiation",
+        "detail": "Following the Hamas attack on Israel of October 7, 2023 (killing ~1,200 Israelis) and Israel's military campaign in Gaza, Qatar, Egypt, and the United States mediate ceasefire and hostage release negotiations between Israel and Hamas. Multiple rounds of talks occur in Doha and Cairo throughout 2024. A temporary ceasefire framework (Phase I) is agreed January 15, 2025 providing for 42 days of fighting pause and hostage releases. The framework repeatedly faces implementation disputes. A Phase II permanent ceasefire remains unresolved as of April 2026. Over 50,000 Palestinian deaths are reported by Gaza health authorities (contested). Saudi Arabia conditions normalization with Israel on credible Palestinian state pathway.",
+        "sources": [
+          {
+            "name": "Qatar Ministry of Foreign Affairs",
+            "tier": 1,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "U.S. State Department",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "UN Security Council",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2023_Gaza_war_ceasefire",
+            "source": "Wikipedia / 2023 Gaza war ceasefire",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Release_of_hostages_during_Iron_Swords_war%2C_November_2023._I.jpg/330px-Release_of_hostages_during_Iron_Swords_war%2C_November_2023._I.jpg"
+          }
+        ]
+      },
+      {
+        "id": "colombia-eln-negotiations-2024",
+        "year": "2024",
+        "title": "Colombia–ELN Peace Talks — Continued",
+        "type": "negotiation",
+        "detail": "The government of President Gustavo Petro and the National Liberation Army (ELN) conduct negotiations under a 'Total Peace' framework, with Cuba and Norway as guarantors and Venezuela, Brazil, Chile, and Mexico as accompanying countries. Multiple ceasefire agreements are signed and violated. A 180-day ceasefire beginning January 2024 collapses as ELN and FARC dissident violence continues. Talks resume in Havana. The ELN demands recognition as a political actor and land reform before committing to permanent peace. As of 2026, talks remain active but fragile, with an ELN breakaway faction (Comuneros del Sur) refusing to participate.",
+        "sources": [
+          {
+            "name": "Colombian Government / Alto Comisionado para la Paz",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Norwegian Refugee Council",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "El País",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "ukraine-peace-proposals-2024-2025",
+        "year": "2024",
+        "title": "Ukraine — Peace Summit & Formula Diplomacy",
+        "type": "negotiation",
+        "detail": "Switzerland hosts a Summit on Peace in Ukraine at the Bürgenstock resort (June 15–16, 2024) with over 90 countries attending, but Russia is not invited and China abstains. The summit communiqué covers nuclear safety, food security, and prisoner exchange but not territorial issues. Ukraine's 10-point peace formula (Zelensky Formula) calls for full Russian withdrawal; Russia dismisses it. Trump's victory in November 2024 U.S. elections injects uncertainty into Western support. Trump envoy Steve Witkoff meets Putin in early 2025. Sporadic direct contact between Russian and U.S. sides continues without Ukrainian participation. A comprehensive peace framework remains absent as of April 2026.",
+        "sources": [
+          {
+            "name": "Swiss Federal Department of Foreign Affairs",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Ukrainian Government",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Xinhua",
+            "tier": 2,
+            "pole": "eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "myanmar-peace-nug-2024",
+        "year": "2024",
+        "title": "Myanmar — Ethnic Resistance Advances; Peace Talks Absent",
+        "type": "spoiler",
+        "detail": "The Three Brotherhood Alliance (Operation 1027, October 2023) and broader People's Defence Force (PDF) resistance to Myanmar's military junta (SAC) achieve significant territorial gains in 2024, capturing key towns in Shan State, Rakhine, and Sagaing. China mediates ceasefires between the SAC and ethnic armed organizations (notably the Myanmar National Democratic Alliance Army) but peace talks between the junta and the National Unity Government (NUG) or the broader resistance remain nonexistent. ASEAN's five-point consensus peace roadmap remains unimplemented. China's interests in border stability drive episodic ceasefire pressure.",
+        "sources": [
+          {
+            "name": "ASEAN Secretariat",
+            "tier": 1,
+            "pole": "eastern"
+          },
+          {
+            "name": "UN Special Adviser on Myanmar",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Xinhua",
+            "tier": 2,
+            "pole": "eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Myanmar_civil_war_(2021%E2%80%93present)",
+            "source": "Wikipedia / Myanmar civil war (2021%E2%80%93present)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Mon_State_Kyomaro_Township_bombed_2024-03-28_%28cropped%29.jpg/330px-Mon_State_Kyomaro_Township_bombed_2024-03-28_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "sudan-peace-2025-stalled",
+        "year": "2025",
+        "title": "Sudan — Peace Process Stalled; Famine Declared",
+        "type": "spoiler",
+        "detail": "By mid-2025, the Sudan conflict has produced the world's largest humanitarian crisis: over 10 million displaced, 25 million food insecure, and IPC Famine declared in multiple areas of Darfur. The SAF and RSF reject participation in a unified mediation process. The African Union-led process (AUHIP), U.S.-Saudi Jeddah Platform, and Qatar-hosted IGAD process remain fragmented and unable to bring both parties to the table simultaneously. SAF retakes Khartoum in March 2025. RSF controls most of Darfur. A humanitarian pause declared in May 2025 breaks down within two weeks. International pressure for accountability intensifies as ICC Prosecutor examines RSF atrocities.",
+        "sources": [
+          {
+            "name": "UN OCHA Sudan",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "IPC (Integrated Food Security Phase Classification)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "African Union",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Holodomor",
+            "source": "Wikipedia / Holodomor",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/HolodomorKharkiv_1933_Wienerberger.jpg/330px-HolodomorKharkiv_1933_Wienerberger.jpg"
+          }
+        ]
+      },
+      {
+        "id": "drc-luanda-process-2025",
+        "year": "2025",
+        "title": "DRC–Rwanda: Luanda Process & Nairobi Track",
+        "type": "negotiation",
+        "detail": "The eastern DRC conflict intensifies in late 2024 as M23 rebels — widely documented as backed by Rwanda — capture Goma on January 27, 2025. This is a major escalation of a conflict displacing 7 million people. The Luanda Process (AU-mediated by Angola's President Lourenço) and the Nairobi Track (EAC-mediated) operate in parallel. A joint AU/EAC summit produces a ceasefire framework in February 2025 that is repeatedly violated. M23 advances further. Negotiations in Doha (April 2025) bring DRC and Rwanda to direct talks for the first time. As of April 2026, a fragile ceasefire and diplomatic engagement continue but M23 maintains territorial control.",
+        "sources": [
+          {
+            "name": "African Union",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "East African Community (EAC)",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "UN Group of Experts on DRC",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-20"
+      },
+      {
+        "id": "sudan-3yr-anniversary-us-roadmap-2026",
+        "year": "2026",
+        "title": "Sudan War's Third Anniversary: US Sanctions, Peace Roadmap, and Diverging Parties",
+        "type": "negotiation",
+        "detail": "On April 15, 2026 — the third anniversary of Sudan's civil war — the U.S. State Department imposes targeted sanctions on five individuals obstructing peace and presents a five-pillar peace roadmap through Senior Adviser Massad Boulos. The framework proposes an immediate three-month humanitarian truce, joint SAF-RSF monitoring, revival of the Jeddah Platform with AU co-facilitation, and reconstruction conditionality. International pledges of $1.5 billion in aid are expected. RSF's Hemeti signals openness to talks in Nairobi, while SAF's al-Burhan rejects any truce preconditions. Over 150,000 have been killed and 14 million displaced in three years of war. The fragmented mediation landscape — U.S.-Saudi Jeddah, AU AUHIP, IGAD — remains incapable of bringing both parties to the table simultaneously.",
+        "sources": [
+          {
+            "name": "U.S. State Department",
+            "tier": 1,
+            "pole": "western",
+            "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/04/marking-three-years-of-conflict-in-sudan-with-sanctions-and-appeal-for-humanitarian-truce"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/4/15/erosion-of-a-countrys-future-what-has-the-war-cost-sudan"
+          },
+          {
+            "name": "UN OCHA",
+            "tier": 1,
+            "pole": "international",
+            "url": "https://www.unocha.org/sudan"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2026/4/15/erosion-of-a-countrys-future-what-has-the-war-cost-sudan",
+            "caption": "Sudan war three years on: 150,000+ killed, 14 million displaced, famine in Darfur",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/news/2026/4/15/erosion-of-a-countrys-future-what-has-the-war-cost-sudan"
+          }
+        ],
+        "lastUpdated": "2026-04-20"
+      },
+      {
+        "id": "drc-washington-accords-stall-2026",
+        "year": "2026",
+        "title": "DRC–Rwanda Washington Accords Stall; UN Security Council Warns of Collapse",
+        "type": "implementation",
+        "detail": "The Washington Accords signed December 4, 2025, hailed as a U.S.-brokered diplomatic breakthrough for the DRC-Rwanda-M23 crisis, face collapse by April 2026. Rwandan troops remain in eastern DRC, M23 continues to hold Goma and other key territory, and the FDLR armed group has not been disbanded as required. The UN Security Council convenes April 17, 2026, with U.S. Ambassador Tammy Bruce demanding immediate implementation. UN Special Envoy Huang Xia briefs on the stalled Peace, Security and Cooperation Framework. The episode illustrates the common pattern of diplomatic frameworks being signed but never implemented — a recurrent feature of the DRC peace architecture since the 2013 Addis Ababa Framework Agreement.",
+        "sources": [
+          {
+            "name": "Security Council Report",
+            "tier": 3,
+            "pole": "international",
+            "url": "https://www.securitycouncilreport.org/whatsinblue/2026/04/great-lakes-region-drc-9.php"
+          },
+          {
+            "name": "Critical Threats Project (AEI)",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://www.criticalthreats.org/briefs/congo-war-security-review"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.securitycouncilreport.org/whatsinblue/2026/04/great-lakes-region-drc-9.php",
+            "caption": "UN Security Council briefing on DRC-Rwanda Great Lakes situation and stalled Washington Accords",
+            "source": "Security Council Report",
+            "thumbnail": "https://www.securitycouncilreport.org/whatsinblue/2026/04/great-lakes-region-drc-9.php"
+          }
+        ],
+        "lastUpdated": "2026-04-20"
+      },
+      {
+        "id": "us-iran-islamabad-collapse-2026",
+        "year": "2026",
+        "title": "US–Iran Islamabad Talks Collapse; Iran Declares No Further Negotiations",
+        "type": "spoiler",
+        "detail": "Pakistan-facilitated direct talks between the United States and Iran in Islamabad on April 11-12, 2026, collapse after 21 hours without agreement. The central dispute: the U.S. demands Iran commit to halting uranium enrichment; Iran asserts its right to civilian nuclear energy. Following the talks' failure, the U.S. imposes a naval blockade on Iranian ports (April 13) and seizes an Iranian cargo ship in the Strait of Hormuz. Iran threatens to close the Strait. On April 20, Iranian Foreign Ministry spokesperson Esmaeil Baqaei announces Iran has 'no plans for the next round of negotiations,' citing U.S. 'deadlines and ultimatums.' The episode represents the most significant direct U.S.-Iran diplomatic engagement in over a decade — and its rapid collapse — demonstrating how coercive escalation can simultaneously drive and destroy diplomatic openings.",
+        "sources": [
+          {
+            "name": "NPR",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.npr.org/2026/04/20/nx-s1-5791256/iran-middle-east-updates"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/4/20/pakistan-ready-for-multi-day-us-iran-talks-but-tehran-unsure-about-joining"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.cnn.com/2026/04/20/world/live-news/iran-war-us-trump-israel"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.npr.org/2026/04/20/nx-s1-5791256/iran-middle-east-updates",
+            "caption": "Iran declares end to US nuclear talks as Strait of Hormuz crisis escalates",
+            "source": "NPR",
+            "thumbnail": "https://www.npr.org/2026/04/20/nx-s1-5791256/iran-middle-east-updates"
+          }
+        ],
+        "lastUpdated": "2026-04-20"
+      },
+      {
+        "id": "trump-ukraine-russia-3day-ceasefire-2026",
+        "year": "2026",
+        "title": "Trump Brokers 3-Day Ukraine–Russia Ceasefire on Victory Day — First Bilateral Diplomatic Milestone",
+        "type": "ceasefire",
+        "detail": "On May 8–9, 2026, the Trump administration brokered the first concrete bilateral ceasefire between Russia and Ukraine since the February 2022 full-scale invasion. The 3-day ceasefire (May 9–11) was accepted by both Presidents Putin and Zelensky, taking effect on Russia's Victory Day — the annual commemoration of the 1945 defeat of Nazi Germany. Russia held a scaled-down Victory Day military parade without heavy hardware on display for the first time in decades. Terms include a full suspension of kinetic military activity and an exchange of 1,000 prisoners per side. The ceasefire was brokered by U.S. Special Envoy Steve Witkoff following the collapse of two competing unilateral ceasefire proposals earlier in the week (Russia's May 8–9 truce and Ukraine's May 5–6 counter-proposal both disintegrated immediately). The 3-day truce does not address underlying peace negotiations, which remain stalled over control of Donetsk and other Russian-occupied territories (~20% of Ukraine's pre-war land), Ukraine's NATO membership aspirations, and security guarantees. It represents, however, the first mutually agreed ceasefire window since the war began — a significant symbolic and diplomatic milestone. Zelensky issued a formal decree 'authorizing' Russia's Victory Day parade, a pointed statement underscoring Ukraine's long-range precision strike capability.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/5/8/trump-announces-three-day-ceasefire-in-russia-ukraine-war"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.npr.org/2026/05/09/nx-s1-5816478/trump-says-russia-and-ukraine-have-agreed-to-his-request-for-a-3-day-ceasefire"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.bloomberg.com/news/articles/2026-05-08/trump-announces-three-day-ceasefire-between-russia-ukraine"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2026/5/8/trump-announces-three-day-ceasefire-in-russia-ukraine-war",
+            "caption": "Al Jazeera: Trump announces 3-day Ukraine-Russia ceasefire — both sides accept, May 8-9, 2026",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/news/2026/5/8/trump-announces-three-day-ceasefire-in-russia-ukraine-war"
+          }
+        ],
+        "lastUpdated": "2026-05-09"
+      },
+      {
+        "id": "india-pakistan-operation-sindoor-ceasefire-2025",
+        "year": "2025",
+        "title": "India–Pakistan 'Operation Sindoor' Conflict & Ceasefire — One-Year Anniversary May 10, 2026",
+        "type": "ceasefire",
+        "detail": "Following the April 22, 2025 Pahalgam terror attack that killed 26 tourists in Indian-administered Kashmir, India launched 'Operation Sindoor' on May 7, 2025 — precision airstrikes targeting nine alleged terrorist training camps in Pakistan and Pakistan-administered Kashmir. A four-day military confrontation (May 7–10, 2025) involving air exchanges, drone activity, and artillery fire followed — the most significant India-Pakistan military clash since Kargil 1999. The ceasefire was announced by U.S. Secretary of State Marco Rubio on May 10, 2025, with Pakistan crediting American mediation. India described it as a bilateral arrangement. On the one-year anniversary (May 10, 2026), the ceasefire continues to hold — a notable achievement given the history of India-Pakistan confrontation — but bilateral normalization has made minimal progress: the Indus Waters Treaty (1960) remains suspended, bilateral trade is severed, diplomatic ties are downgraded, and both sides remain on 'high alert.' PM Modi described Operation Sindoor as 'a defining moment in India's strategic journey.' No formal peace process or diplomatic normalization track has been established. Al Jazeera characterized the anniversary as 'two wins, two losses' for each party; The Diplomat warned of 'rising risks and deepening instability' despite the ceasefire's durability. The episode underscores a recurring pattern in South Asian security: ceasefires can be achieved through external pressure, but without political dialogue, they remain fragile pause points rather than peace processes.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/5/10/two-wins-two-losses-what-india-pakistan-have-learned-a-year-after-war"
+          },
+          {
+            "name": "Washington Post",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.washingtonpost.com/opinions/2026/05/05/year-later-india-pakistan-ceasefire-is-holding-so-far/"
+          },
+          {
+            "name": "The Diplomat",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://thediplomat.com/2026/05/a-year-after-operation-sindoor-rising-risks-and-deepening-instability/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2026/5/10/two-wins-two-losses-what-india-pakistan-have-learned-a-year-after-war",
+            "caption": "Al Jazeera: One year after Operation Sindoor — India-Pakistan ceasefire holds but normalization stalls, May 10, 2026",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/news/2026/5/10/two-wins-two-losses-what-india-pakistan-have-learned-a-year-after-war"
+          }
+        ],
+        "lastUpdated": "2026-05-10"
+      },
+      {
+        "id": "netanyahu-rejects-board-of-peace-gaza-roadmap",
+        "year": "2026",
+        "title": "Netanyahu Formally Rejects Board of Peace's 15-Point Gaza Roadmap",
+        "type": "spoiler",
+        "detail": "August 9, 2026 — At his weekly Cabinet meeting, Israeli PM Benjamin Netanyahu formally rejected the Trump administration's Board of Peace 15-point Gaza roadmap (published July 31, 2026), insisting the IDF would not withdraw until Hamas is fully disarmed and ruling out any Palestinian state under his premiership. Hamas reaffirmed conditional commitment to the roadmap, tying disarmament to Israeli withdrawal and reconstruction guarantees. Board of Peace envoy Nickolay Mladenov proposed a phased, incremental Israeli pullback from weapons-free zones as a compromise sequencing. The rejection — six weeks after the roadmap's unveiling — left the fundamental disarmament-before-withdrawal vs. withdrawal-before-disarmament impasse unresolved, with Netanyahu's October 27 Knesset election adding domestic political pressure against concessions.",
+        "sources": [
+          {
+            "name": "NPR",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.npr.org/2026/08/09/nx-s1-5926459/netanyahu-rejects-trump-gaza-peace-plan-israel-hamas"
+          },
+          {
+            "name": "The Washington Post",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.washingtonpost.com/world/2026/08/09/netanyahu-rejects-trump-backed-plan-hamas-disarm-israel-leave-gaza/"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/8/11/palestine-weekly-netanyahu-hedges-on-gaza-roadmap"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.npr.org/2026/08/09/nx-s1-5926459/netanyahu-rejects-trump-gaza-peace-plan-israel-hamas",
+            "caption": "NPR: Netanyahu rejects Trump's Gaza peace plan at weekly Cabinet meeting, Aug 9, 2026",
+            "source": "NPR",
+            "thumbnail": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4441x2498+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fc1%2F68%2F193b68e74e048932d77c41dfeff7%2Fap26208782971465.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-09"
+      },
+      {
+        "id": "us-iran-islamabad-mou-60-day-deadline-expires",
+        "year": "2026",
+        "title": "US-Iran Islamabad MOU's 60-Day Window Expires Without Final Agreement",
+        "type": "spoiler",
+        "detail": "August 17, 2026 — The 60-day negotiating window established by the June 17 Islamabad MOU expired without a comprehensive US-Iran agreement. Vague wording over control of Strait of Hormuz shipping proved a central sticking point, and no sign emerged that detailed nuclear talks had even begun. Iran's Foreign Ministry disputed that a hard deadline existed at all, saying Tehran 'will not set policy under time pressure'; the two governments offered conflicting interpretations of what the June accord committed them to. The impasse follows an Aug 11 dispute over dueling compensation demands — Trump seeking damages for alleged decades of Iranian actions, Iran demanding compensation for five months of US/Israeli strikes before fully reopening Hormuz. Any extension requires mutual consent; none was announced as the deadline lapsed, leaving the diplomatic track that produced the June ceasefire framework without a defined path forward.",
+        "sources": [
+          {
+            "name": "The Washington Post",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.washingtonpost.com/business/2026/08/17/iran-us-war-diplomacy-deal-deadline-nuclear/72551b60-9a16-11f1-9cc4-2dc9b46e2d5c_story.html"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/8/17/us-iran-memorandum-of-understanding-expires-how-and-why-it-fell-apart"
+          },
+          {
+            "name": "The National",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.thenationalnews.com/news/us/2026/08/16/deadline-for-us-iran-agreement-expires-with-stalemate-set-to-continue/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2026/8/17/us-iran-memorandum-of-understanding-expires-how-and-why-it-fell-apart",
+            "caption": "Al Jazeera: US-Iran Memorandum of Understanding expires — how and why it fell apart",
+            "source": "Al Jazeera",
+            "thumbnail": "https://aje.io/wp-content/uploads/2026/08/afp_6a82d2feb395-1786958590.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-17"
+      },
+      {
+        "id": "kushner-netanyahu-us-general-hamas-disarmament",
+        "year": "2026",
+        "title": "Kushner, Netanyahu Agree US General Will Oversee Hamas Weapons Handover",
+        "type": "negotiation",
+        "detail": "August 17, 2026 — After an hours-long Jerusalem meeting joined by US Ambassador Mike Huckabee and former UK PM Tony Blair, Jared Kushner and Prime Minister Netanyahu agreed Gaza 'demilitarization' should begin with a Hamas weapons handover supervised by Maj. Gen. Jasper Jeffers, head of the International Stabilization Force (ISF). Surrendered weapons would transfer to the proposed National Committee for the Administration of Gaza (NCAG) and the ISF. The agreement followed rare direct Board of Peace talks with Hamas leadership in Egypt, part of a renewed push to revive the roadmap Netanyahu formally rejected Aug 9. Netanyahu maintained no IDF pullback would be approved before full disarmament of both light and heavy weapons — keeping the disarmament-first vs. withdrawal-first sequencing dispute unresolved even as a concrete verification mechanism took shape. One day later, an Israeli strike killed six in Gaza City despite Kushner's parallel push for restraint, drawing Hamas/Islamic Jihad accusations that Israel was undermining the same process.",
+        "sources": [
+          {
+            "name": "France 24",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.france24.com/en/middle-east/20260817-netanyahu-kushner-agree-us-general-verify-hamas-disarmament-before-israel-withdraws-from-gaza"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.nbcnews.com/world/gaza/kushner-netanyahu-hamas-talks-gaza-plan-peace-trump-rcna592871"
+          },
+          {
+            "name": "The Jerusalem Post",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.jpost.com/middle-east/article-905789"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.jpost.com/middle-east/article-905789",
+            "caption": "Jerusalem Post: US general to oversee transfer of Hamas weapons to Gaza's technocratic committee and the ISF",
+            "source": "The Jerusalem Post",
+            "thumbnail": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/734274"
+          }
+        ],
+        "lastUpdated": "2026-08-17"
+      },
+      {
+        "id": "trump-economic-d-day-iran-araghchi-rejects",
+        "year": "2026",
+        "title": "Trump Announces 'Economic D-Day' Against Iran After Islamabad MOU Deadline Lapses",
+        "type": "spoiler",
+        "detail": "August 20, 2026 — Three days after the June 17 Islamabad MOU's 60-day negotiating window lapsed unrenewed (Aug 17) with the Hormuz shipping-control dispute and dueling compensation demands still unresolved, President Trump announced an 'economic D-Day' against Iran — new secondary sanctions targeting nations and firms (naming China and India as major Iranian oil buyers) that help Tehran evade existing sanctions. Iranian FM Abbas Araghchi rejected the threat as a 'diversion' from America's own economic troubles and accused Washington of 'economic terrorism.' Oil prices rose over 2% to roughly $94/barrel. The episode marks the coercive-diplomacy track's shift from a lapsed negotiating deadline into a fresh sanctions-escalation phase, with no new talks announced.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/liveblog/2026/8/20/iran-war-live-trump-announces-most-crushing-iran-sanctions"
+          },
+          {
+            "name": "Washington Post (via OPB)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.opb.org/article/2026/08/21/trump-warns-iran-economic-d-day-tehran-familiar-with-sanctions/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.opb.org/article/2026/08/21/trump-warns-iran-economic-d-day-tehran-familiar-with-sanctions/",
+            "caption": "Trump warns of 'economic D-Day' against Iran as the Islamabad MOU's 60-day window lapses without a deal",
+            "source": "OPB / Washington Post",
+            "thumbnail": "https://opb-opb-prod.cdn.arcpublishing.com/resizer/v2/FDXZRSH7PJABPGXH3C7U2UHQTE.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-20"
+      },
+      {
+        "id": "syria-sdf-integration-complete-qamishli",
+        "year": "2026",
+        "title": "SDF Announces Kurdish Integration Into Syrian State Institutions Complete",
+        "type": "implementation",
+        "detail": "August 20, 2026 — SDF commander Mazloum Abdi announced at a Qamishli celebration that the phase of integrating Kurdish-led military, security, and administrative institutions into Syrian state institutions is 'complete and finished,' implementing the January 29, 2026 Damascus-SDF agreement. Abdi said 'the next battle will be political,' citing unresolved Kurdish constitutional rights and Damascus's refusal so far to integrate all-women SDF units. Analysts called it a genuine milestone for Syrian state consolidation nine months after Assad's fall, while cautioning that Kurdish autonomy demands remain unresolved.",
+        "sources": [
+          {
+            "name": "The National",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.thenationalnews.com/news/mena/2026/08/21/sdf-integration-into-syrian-state-marks-milestone-but-key-tensions-unresolved-experts-say/"
+          },
+          {
+            "name": "France 24 (AFP)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.france24.com/en/live-news/20260820-syrian-kurds-announce-completion-of-civil-military-integration-with-damascus"
+          },
+          {
+            "name": "Enab Baladi",
+            "tier": 3,
+            "pole": "middle_eastern",
+            "url": "https://english.enabbaladi.net/archives/2026/08/mazloum-abdi-says-sdf-integration-into-state-is-complete/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.thenationalnews.com/news/mena/2026/08/21/sdf-integration-into-syrian-state-marks-milestone-but-key-tensions-unresolved-experts-say/",
+            "caption": "SDF commander Mazloum Abdi announces completion of Kurdish integration into Syrian state institutions",
+            "source": "The National",
+            "thumbnail": "https://www.thenationalnews.com/resizer/v2/LARE3LEGCRALRMJZTF6XNIG3NQ.jpg?smart=true&auth=d05f3420e0c9164f0fed5ce74114e9203a5eecd5ff3ab123d084d0ab029a2006&width=400&height=225"
+          }
+        ],
+        "lastUpdated": "2026-08-20"
+      },
+      {
+        "id": "drc-m23-doha-roadmap-geneva-talks",
+        "year": "2026",
+        "title": "DRC, M23-Led Alliance Agree Roadmap for Peace Talks After Swiss-Hosted Talks",
+        "type": "negotiation",
+        "detail": "August 23, 2026 — The DRC government and the AFC/M23-led alliance agreed a roadmap setting out sequenced steps and timelines for negotiations under their November 2025 Doha framework agreement, following five days of talks in Switzerland (Aug 17-21) that also included the US, Qatar, Togo, Switzerland and the AU Commission. The parties agreed a standardized method for reporting ceasefire violations and a mechanism to address implementation problems — a step forward for a Doha track that had stalled for months while the parallel Washington Accords (Dec 2025) implementation also lagged, with M23 still holding Goma and Bukavu and roughly 7 million people displaced.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/8/23/dr-congo-m23-rebels-agree-on-roadmap-for-peace-talks"
+          },
+          {
+            "name": "Africanews",
+            "tier": 2,
+            "pole": "international",
+            "url": "https://www.africanews.com/2026/08/24/drc-m23-agree-peace-roadmap-as-doha-talks-seek-to-regain-momentum/"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.euronews.com/2026/08/24/dr-congo-and-m23-fighters-agree-to-roadmap-for-peace-talks-switzerland-says"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/23/dr-congo-m23-rebels-agree-on-roadmap-for-peace-talks",
+            "caption": "DR Congo and the AFC/M23-led alliance agree a roadmap for peace talks after Swiss-hosted negotiations",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/08/2026-05-13T143803Z_1807338249_RC2O7LA8KFVJ_RTRMADP_3_CONGO-SECURITY-1787462671.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-23"
+      },
+      {
+        "id": "bessent-economic-d-day-iran-sanctions-unveiled",
+        "year": "2026",
+        "title": "Treasury Secretary Bessent Unveils 'Economic D-Day' Sanctions Campaign Against Iran",
+        "type": "spoiler",
+        "detail": "August 24, 2026 — Following through on Trump's Aug 20 threat, Treasury Secretary Scott Bessent moved to unveil a new sanctions package he called 'the single greatest financial offensive ever marshalled against an adversary,' writing in a Financial Times op-ed that 'at dawn begins an economic D-Day' aimed to 'sever every economic lifeline' sustaining Iran's government. The package layers new secondary sanctions on nations, banks and shipping networks still buying Iranian oil or processing its finances — chiefly China (around 90% of Iran's oil exports per Bessent), plus Turkey and India — atop the existing naval blockade and banking/energy/aviation/crypto sanctions regime. Iran's security chief said Tehran would not yield and the Strait of Hormuz would stay effectively closed to normal traffic until Washington meets its own commitments; the rial hit a record low as markets awaited the announcement.",
+        "sources": [
+          {
+            "name": "The Washington Post",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.washingtonpost.com/business/2026/08/24/bessent-unveil-economic-d-day-sanctions-against-iran/"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.npr.org/2026/08/24/g-s1-139743/treasury-secretary-scott-bessent-to-unveil-new-economic-sanctions-on-iran"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.bloomberg.com/news/articles/2026-08-24/us-set-to-unveil-fresh-iran-sanctions-as-rial-hits-record-low"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/business/2026/08/24/us-threatens-iran-with-economic-d-day-as-markets-await-sanctions-announcement",
+            "caption": "Bessent frames new Iran sanctions package as an 'economic D-Day' ahead of Monday's announcement",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/88/59/85/1536x864_cmsv2_6cd28975-e8aa-547d-a8bc-2586957f3f7d-9885985.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-24"
+      },
+      {
+        "id": "witkoff-kushner-delay-kyiv-visit-russian-strikes",
+        "year": "2026",
+        "title": "Witkoff, Kushner Delay First Planned Kyiv Visit Amid Intensified Russian Strikes",
+        "type": "spoiler",
+        "detail": "August 24, 2026 — US envoys Steve Witkoff and Jared Kushner postponed their planned first visit to Kyiv, which had been expected around Ukraine's Aug 24 Independence Day, citing intensified Russian missile and drone attacks on the capital the preceding week. The trip — meant to allow direct talks with Ukraine's leadership, an assessment of air-defense needs, and discussion of a possible air-ceasefire proposal for Moscow — had never been formally confirmed by either side. President Zelensky said Ukraine's diplomatic team was 'preparing decisions' ahead of any rescheduled visit; the prisoner-exchange channel remains the only presently functioning US-Russia-Ukraine diplomatic track.",
+        "sources": [
+          {
+            "name": "Ukrainska Pravda",
+            "tier": 2,
+            "pole": "eastern",
+            "url": "https://www.pravda.com.ua/eng/news/2026/08/24/8049996/"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.euronews.com/my-europe/2026/08/22/will-witkoff-and-kushner-make-first-visit-to-ukraine-on-countrys-independence-day"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.pravda.com.ua/eng/news/2026/08/24/8049996/",
+            "caption": "Witkoff and Kushner postpone first planned Kyiv visit as Russian strikes on the capital intensify",
+            "source": "Ukrainska Pravda",
+            "thumbnail": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/c/2/897580/c29f4187b9cf0da7738010c8b62e2d3d.jpeg?w=900&q=90"
+          }
+        ],
+        "lastUpdated": "2026-08-24"
+      },
+      {
+        "id": "gaza-mladenov-point-of-no-return-warning",
+        "year": "2026",
+        "title": "Board of Peace Chief Mladenov Warns Gaza Ceasefire Collapse Would Be 'Point of No Return'",
+        "type": "implementation",
+        "detail": "August 26, 2026 — Nickolay Mladenov, the US-backed Board of Peace's high representative for Gaza, told the UN Security Council that a resumption of fighting in Gaza would be irreversible: \"That would not be a setback. It would be a point of no return for everyone\" — warning that a collapsed ceasefire would leave \"no road map to return to,\" no administration to deploy, and \"nothing left on the ground to rebuild.\" Mladenov said Gaza \"does not have another catastrophe left in it,\" and credited Hamas and Palestinian armed factions for agreeing, for the first time, to hand over their weapons and transfer governing authority to a transitional, UN-recognized administration overseen by the International Stabilisation Force — while cautioning that \"every weapon carried, every tunnel still worked on and every convoy still obstructed sets the process back.\" He also criticized Israel's continued strikes on Gaza, which have kept civilian casualties from fully stopping despite the nominal ceasefire, warning the alternative to the US-backed plan is \"the next war.\" The briefing came days after Israeli PM Netanyahu voiced rejection of elements of the Board's 15-point disarmament roadmap, and after US Ambassador Mike Waltz criticized civil-society representatives for not addressing alleged Hamas abuses.",
+        "sources": [
+          {
+            "name": "Al Jazeera — Israel-Hamas truce failure 'point of no return,' envoy warns",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/news/2026/8/26/israel-hamas-truce-failure-point-of-no-return-envoy-warns"
+          },
+          {
+            "name": "NPR — Official leading Trump's Gaza ceasefire effort criticizes Israel for its attacks",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.npr.org/2026/08/27/g-s1-140400/israel-gaza-ceasefire"
+          },
+          {
+            "name": "Arab News — Gaza 'does not have another catastrophe left in it,' Board of Peace chief warns Security Council",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.arabnews.com/node/2655951/middle-east"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/26/israel-hamas-truce-failure-point-of-no-return-envoy-warns",
+            "caption": "Board of Peace high representative Nickolay Mladenov warns the UN Security Council that a Gaza ceasefire collapse would be a 'point of no return'",
+            "source": "Al Jazeera",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/08/AP26238387733561-1787762555.jpg?resize=770%2C513&quality=80"
+          }
+        ],
+        "lastUpdated": "2026-08-26"
+      },
+      {
+        "id": "colombia-de-la-espriella-extradites-total-peace-negotiators",
+        "year": "2026",
+        "title": "Colombia's De la Espriella Extradites Five Former Peace Negotiators, Declares End of 'Total Peace'",
+        "type": "spoiler",
+        "detail": "August 27, 2026 — President Abelardo De la Espriella ordered the effective extradition to the United States of five individuals who had been recognized as representatives in dialogue processes advanced under predecessor Gustavo Petro's 'Total Peace' policy, saying their extraditions — approved by Petro's government in 2025 — had been suspended solely because of their roles in the talks. The five are Geovanny Andrés Rojas ('Araña,' Comandos de Frontera), Willinton Henao Gutiérrez ('Mocho Olmedo,' FARC dissidents), Carmen Evelio Castillo ('Muñeca,' Los Pachenca/ACSN), Gabriel Yepes Mejía ('HH,' an ELN dissident faction leader) and Fredy Castillo Carrillo ('Pinocho,' ACSN) — wanted in the US on drug-trafficking, illegal-weapons and narco-terrorism charges. De la Espriella, who took office Aug. 5 pledging a military crackdown on armed groups, said \"In my government, there will be no peace processes,\" formalizing the dismantling of Total Peace, Petro's signature effort to negotiate simultaneously with the ELN, FARC dissident factions and other armed and criminal organizations.",
+        "sources": [
+          {
+            "name": "Bloomberg — Colombia Targets Rebels, Approves US Extradition for Drug Traffickers",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.bloomberg.com/news/articles/2026-08-27/colombia-bombs-rebels-orders-drug-suspect-extraditions-to-us"
+          },
+          {
+            "name": "De Último Minuto — De la Espriella signs extradition to the US of five former negotiators of armed groups",
+            "tier": 3,
+            "pole": "international",
+            "url": "https://deultimominuto.com/en/international/de-la-espriella-signs-extradition-to-the-us-of-five-former-negotiators-of-armed-groups/"
+          },
+          {
+            "name": "Colombia One — De la Espriella Signals the End of Petro's Total Peace With Extraditions",
+            "tier": 3,
+            "pole": "international",
+            "url": "https://colombiaone.com/2026/08/27/de-la-espriella-signals-the-end-of-petros-total-peace-with-extraditions/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://deultimominuto.com/en/international/de-la-espriella-signs-extradition-to-the-us-of-five-former-negotiators-of-armed-groups/",
+            "caption": "President Abelardo De la Espriella announces the extradition of five former Total Peace negotiators to the United States",
+            "source": "De Último Minuto",
+            "thumbnail": "https://cdn.deultimominuto.com/en/wp-content/uploads/sites/2/2026/08/images-2026-08-07T215042.784.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-27"
+      }
+    ]
+  }
+]

@@ -1,0 +1,61 @@
+[
+  {
+    "id": "macron-bastille-day-36bn-defense-spending-2026-07-13",
+    "year": "2026",
+    "title": "Macron Marks Final Bastille Day as President with €36 Billion Defense Spending Boost",
+    "type": "spending",
+    "detail": "In his traditional pre-Bastille Day address to the armed forces on July 13, 2026, President Emmanuel Macron announced an additional €36 billion for France's defense budget over the next five years, telling troops the increase in spending since 2017 was 'a commitment that has been fulfilled.' Macron framed the boost as necessary preparation for a world 'more dangerous than at any point since the end of the Second World War' and said France and Europe would defend freedom 'even at the cost of blood' if necessary. The following day's parade — his last as president — was the largest in French history, with nearly 6,700 troops, 98 aircraft, 31 helicopters and 315 vehicles, including contingents from 11 European countries and roughly 500 troops from Coalition of the Willing states supporting Ukraine's postwar security.",
+    "sources": [
+      {
+        "name": "France 24",
+        "tier": 2,
+        "url": "https://www.france24.com/en/the-facts-are-there-macron-salutes-fulfilling-pledge-to-boost-defence-spending",
+        "pole": "western"
+      },
+      {
+        "name": "Euronews",
+        "tier": 2,
+        "url": "https://www.euronews.com/my-europe/2026/07/14/european-troops-join-paris-bastille-day-parade-in-show-of-unity-for-ukraine",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.france24.com/en/the-facts-are-there-macron-salutes-fulfilling-pledge-to-boost-defence-spending",
+        "caption": "Macron salutes fulfilling pledge to boost defence spending in final Bastille Day address",
+        "source": "France 24"
+      }
+    ]
+  },
+  {
+    "id": "coalition-willing-paris-anti-ballistic-missile-2026-07-13",
+    "year": "2026",
+    "title": "Coalition of the Willing Summit in Paris Forms Anti-Ballistic Missile Coalition",
+    "type": "summit",
+    "detail": "Macron, UK PM and German Chancellor Merz co-chaired a Coalition of the Willing summit at the Hôtel national des Invalides in Paris on July 13, 2026, attended by Ukrainian President Zelensky, building on progress from the G7 Evian summit. Denmark, France, Germany, Italy, the Netherlands, Norway, Spain, Sweden, Ukraine and the UK agreed to establish a new defensive Anti-Ballistic Missile Coalition to build shared European missile-defense capacity complementary to NATO. Zelensky confirmed the coalition will support Ukraine's Freya air-defense project — a lower-cost domestic alternative to the US-made Patriot — as European states continue positioning to backfill capability gaps left by reduced US commitments.",
+    "sources": [
+      {
+        "name": "Euronews",
+        "tier": 2,
+        "url": "https://www.euronews.com/my-europe/2026/07/13/nine-european-countries-and-ukraine-form-anti-ballistic-missile-coalition",
+        "pole": "western"
+      },
+      {
+        "name": "Élysée (French Presidency)",
+        "tier": 1,
+        "url": "https://www.elysee.fr/en/emmanuel-macron/2026/07/13/coalition-of-the-willing-summit-in-paris",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.euronews.com/my-europe/2026/07/13/nine-european-countries-and-ukraine-form-anti-ballistic-missile-coalition",
+        "caption": "Nine European countries and Ukraine form anti-ballistic missile coalition at Paris summit",
+        "source": "Euronews",
+        "thumbnail": "https://images.euronews.com/articles/stories/09/83/63/83/1536x864_cmsv2_83ad21b6-1b76-5bc2-9526-fff71e24f9a3-9836383.jpg"
+      }
+    ]
+  }
+]

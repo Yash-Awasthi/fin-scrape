@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World News Globe · Live</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #05060a;
+    --panel: rgba(14, 17, 28, 0.74);
+    --stroke: rgba(255, 255, 255, 0.10);
+    --text: #eef1f8;
+    --muted: #9aa3b8;
+    --up: #5be49b;
+    --down: #ff6b6b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: var(--bg); overflow: hidden; }
+  body {
+    font-family: 'Familjen Grotesk', system-ui, -apple-system, sans-serif;
+    color: var(--text); -webkit-font-smoothing: antialiased;
+  }
+  #globe { position: fixed; inset: 0; }
+  #globe::after {
+    content: ""; position: fixed; inset: 0; pointer-events: none;
+    background: radial-gradient(circle at 42% 45%, transparent 42%, rgba(0,0,0,0.6) 100%);
+  }
+  .overlay { position: fixed; z-index: 5; }
+
+  /* Top bar: live badge + title + market ticker */
+  .topbar { top: 18px; left: 22px; right: 22px; display: flex; align-items: center; gap: 16px; pointer-events: none; }
+  .topbar > * { pointer-events: auto; }
+  .live {
+    display: inline-flex; align-items: center; gap: 7px; flex: none;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.14em;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(255, 60, 60, 0.14); color: #ff6b6b; border: 1px solid rgba(255, 90, 90, 0.35);
+  }
+  .live.demo { background: rgba(255,180,60,.14); color: #ffc154; border-color: rgba(255,180,60,.35); }
+  .live .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 0 currentColor; animation: pulse 1.6s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(255,82,82,.6)} 70%{box-shadow:0 0 0 9px rgba(255,82,82,0)} 100%{box-shadow:0 0 0 0 rgba(255,82,82,0)} }
+  .title { font-size: 15px; font-weight: 700; flex: none; }
+  .title span { color: var(--muted); font-weight: 500; }
+  .ticker { display: flex; gap: 8px; overflow: hidden; flex: 1; }
+  .tk {
+    display: inline-flex; align-items: baseline; gap: 7px; flex: none;
+    background: var(--panel); backdrop-filter: blur(14px); border: 1px solid var(--stroke);
+    border-radius: 10px; padding: 6px 11px; font-size: 12px; font-variant-numeric: tabular-nums;
+  }
+  .tk b { font-weight: 700; letter-spacing: 0.04em; }
+  .tk .px { color: var(--text); font-weight: 600; }
+  .tk .ch { font-weight: 600; }
+  .up { color: var(--up); } .down { color: var(--down); }
+
+  /* Right: live events panel */
+  .panel {
+    top: 66px; right: 22px; bottom: 22px; width: min(360px, calc(100vw - 44px));
+    display: flex; flex-direction: column;
+    background: var(--panel); backdrop-filter: blur(16px);
+    border: 1px solid var(--stroke); border-radius: 16px; overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  }
+  .phead { padding: 15px 16px 12px; border-bottom: 1px solid var(--stroke); }
+  .phead .ph1 { display: flex; align-items: baseline; justify-content: space-between; }
+  .phead h2 { font-size: 15px; font-weight: 700; letter-spacing: 0.01em; }
+  .phead .pc { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .phead .src { margin-top: 3px; font-size: 11px; color: var(--muted); letter-spacing: 0.02em; }
+  .phead input {
+    margin-top: 11px; width: 100%; background: rgba(0,0,0,0.28); color: var(--text);
+    border: 1px solid var(--stroke); border-radius: 10px; padding: 9px 12px;
+    font: inherit; font-size: 13px; outline: none;
+  }
+  .phead input::placeholder { color: var(--muted); }
+  .phead input:focus { border-color: rgba(120,160,255,.5); }
+  .list { overflow-y: auto; flex: 1; padding: 6px; }
+  .list::-webkit-scrollbar { width: 8px; }
+  .list::-webkit-scrollbar-thumb { background: rgba(255,255,255,.12); border-radius: 8px; }
+  .ev {
+    display: flex; gap: 11px; width: 100%; text-align: left; cursor: pointer;
+    background: transparent; border: 0; border-radius: 11px; padding: 11px 10px; color: inherit; font: inherit;
+    transition: background .15s;
+  }
+  .ev:hover { background: rgba(255,255,255,0.05); }
+  .ev.active { background: rgba(120,160,255,0.10); }
+  .ev .sev { width: 9px; height: 9px; border-radius: 50%; margin-top: 5px; flex: none; box-shadow: 0 0 8px 0 currentColor; }
+  .ev .tag { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; }
+  .ev .h { font-family: 'Newsreader', Georgia, serif; font-size: 16px; font-weight: 500; line-height: 1.24; margin: 2px 0 3px; }
+  .ev .m { font-size: 11.5px; color: var(--muted); font-weight: 500; }
+
+  /* Bottom-left featured card */
+  .card {
+    bottom: 24px; left: 22px; width: min(400px, calc(100vw - 44px));
+    background: var(--panel); backdrop-filter: blur(14px); border: 1px solid var(--stroke);
+    border-radius: 16px; padding: 17px 19px 19px; box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    transition: transform .35s, opacity .35s;
+  }
+  .card .row { display: flex; align-items: center; gap: 10px; margin-bottom: 11px; }
+  .chip { font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; color: #05060a; }
+  .place { font-size: 13px; font-weight: 600; color: var(--muted); }
+  .place b { color: var(--text); }
+  .headline { font-family: 'Newsreader', Georgia, serif; font-size: 27px; font-weight: 500; line-height: 1.18; }
+  .meta { margin-top: 11px; font-size: 12px; color: var(--muted); font-weight: 500; }
+  .meta b { color: #c7ccda; font-weight: 600; }
+  .meta a { color: #8fb4ff; text-decoration: none; }
+
+  @media (max-width: 720px) {
+    .panel, .ticker { display: none; }
+    .headline { font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+  <div id="globe"></div>
+
+  <div class="overlay topbar">
+    <span class="live" id="badge"><span class="dot"></span><span id="badgetext">CONNECTING</span></span>
+    <span class="title">World News Globe</span>
+    <span class="ticker" id="ticker"></span>
+  </div>
+
+  <aside class="overlay panel">
+    <div class="phead">
+      <div class="ph1"><h2>Live events</h2><span class="pc"><b id="pcount">0</b> live</span></div>
+      <div class="src" id="src">USGS · CoinGecko · GDELT</div>
+      <input id="q" type="search" placeholder="Search events & places…" autocomplete="off">
+    </div>
+    <div class="list" id="list"></div>
+  </aside>
+
+  <div class="overlay card" id="card">
+    <div class="row"><span class="chip" id="chip">World</span><span class="place" id="place"></span></div>
+    <div class="headline" id="headline">Connecting to live feeds…</div>
+    <div class="meta" id="metatext"></div>
+  </div>
+
+  <script src="https://unpkg.com/globe.gl@2.46.1/dist/globe.gl.min.js"
+          integrity="sha384-fS13P48RBFel+cPUp5960AhzvtEr64LerQ00neZuM+Hi/VDxxemdQnN7IcWPYvPb"
+          crossorigin="anonymous"></script>
+  <script>
+  const $ = id => document.getElementById(id);
+  const CATEGORY = {
+    quake:   { color: '#ff5a4d', label: 'Seismic' },
+    disaster:{ color: '#ff8a3d', label: 'Disaster' },
+    world:   { color: '#ffb454', label: 'World' },
+    markets: { color: '#5be49b', label: 'Markets' },
+    tech:    { color: '#38e1ff', label: 'Tech' },
+  };
+  const quakeColor = m => m >= 6 ? '#ff2d2d' : m >= 5 ? '#ff5a4d' : m >= 4 ? '#ff8a3d' : '#ffc154';
+  const colorOf = e => e.category === 'quake' ? quakeColor(e.mag || 0) : (CATEGORY[e.category] || CATEGORY.world).color;
+  const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  const timeAgo = d => {
+    const s = (Date.now() - d.getTime()) / 1000;
+    if (s < 60) return Math.max(1, Math.round(s)) + 's ago';
+    if (s < 3600) return Math.round(s / 60) + 'm ago';
+    if (s < 86400) return Math.round(s / 3600) + 'h ago';
+    return Math.round(s / 86400) + 'd ago';
+  };
+  const fmtPrice = n => n >= 1000 ? '$' + Math.round(n).toLocaleString() : '$' + n.toFixed(2);
+
+  // ── Live source: USGS earthquakes (real-time GeoJSON, no key, CORS *) ──
+  // USGS coordinates are [lng, lat, depth] — the ordering that bites everyone.
+  function usgsToEvent(f) {
+    const [lng, lat] = f.geometry.coordinates;
+    const mag = f.properties.mag ?? 0;
+    return {
+      id: 'q' + f.id, lat, lng, category: 'quake', mag,
+      headline: `M${mag.toFixed(1)} earthquake — ${f.properties.place || 'unknown region'}`,
+      place: f.properties.place || 'Unknown', source: 'USGS',
+      time: new Date(f.properties.time), url: f.properties.url,
+    };
+  }
+  async function fetchQuakes() {
+    const r = await fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson');
+    const j = await r.json();
+    return j.features.map(usgsToEvent).filter(e => Number.isFinite(e.lat) && Number.isFinite(e.lng));
+  }
+
+  // ── Live source: NASA EONET natural disasters (wildfires/storms/volcanoes; no key, CORS *) ──
+  async function fetchDisasters() {
+    const r = await fetch('https://eonet.gsfc.nasa.gov/api/v3/events?status=open&days=30&limit=120');
+    const j = await r.json();
+    return (j.events || []).map(ev => {
+      const g = ev.geometry && ev.geometry[ev.geometry.length - 1];   // latest known position
+      if (!g) return null;
+      let lng, lat;
+      if (g.type === 'Point') { [lng, lat] = g.coordinates; }
+      else { const p = g.coordinates && g.coordinates[0] && g.coordinates[0][0]; if (!p) return null; [lng, lat] = p; }
+      return {
+        id: 'e' + ev.id, lat, lng, category: 'disaster',
+        headline: ev.title,
+        place: (ev.categories && ev.categories[0] && ev.categories[0].title) || 'Natural event',
+        source: 'NASA EONET',
+        time: new Date(g.date || Date.now()),
+        url: (ev.sources && ev.sources[0] && ev.sources[0].url) || null,
+      };
+    }).filter(e => e && Number.isFinite(e.lat) && Number.isFinite(e.lng));
+  }
+
+  // ── Live source: GDELT geolocated news (no key; may block CORS → fails soft) ──
+  async function fetchNews() {
+    const q = encodeURIComponent('(breaking OR crisis OR summit OR election OR storm OR wildfire)');
+    const url = `https://api.gdeltproject.org/api/v2/geo/geo?query=${q}&format=GeoJSON&timespan=1d`;
+    const r = await fetch(url);
+    const j = await r.json();
+    const div = document.createElement('div');
+    return (j.features || []).map(f => {
+      const [lng, lat] = f.geometry.coordinates;
+      div.innerHTML = f.properties.html || '';
+      const a = div.querySelector('a');
+      return {
+        id: 'n' + lat.toFixed(2) + lng.toFixed(2), lat, lng, category: 'world',
+        headline: (a ? a.textContent : f.properties.name) || 'World news event',
+        place: f.properties.name || 'World', source: 'GDELT',
+        time: new Date(), url: a ? a.href : null,
+      };
+    }).filter(e => Number.isFinite(e.lat) && Number.isFinite(e.lng) && e.headline);
+  }
+
+  // ── Live source: CoinGecko markets (no key, CORS *) ──
+  async function fetchMarkets() {
+    const ids = 'bitcoin,ethereum,solana';
+    const r = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`);
+    const j = await r.json();
+    const row = (sym, o) => o ? { sym, price: o.usd, chg: o.usd_24h_change ?? 0 } : null;
+    return [row('BTC', j.bitcoin), row('ETH', j.ethereum), row('SOL', j.solana)].filter(Boolean);
+  }
+
+  // ── Fallback seed so the globe is never empty (offline / all feeds down) ──
+  const SEED = [
+    ['Tokyo', 35.68, 139.69, 'world', 'Regional markets steady as central banks hold rates'],
+    ['San Francisco', 37.77, -122.42, 'tech', 'New open model tops the coding benchmarks'],
+    ['Brussels', 50.85, 4.35, 'world', 'EU summit headline drops: energy policy in focus'],
+    ['Miami', 25.76, -80.19, 'world', 'Tropical system intensifying in the Gulf'],
+    ['Mexico City', 19.43, -99.13, 'world', 'Festival color wash lights up the capital'],
+    ['Mumbai', 19.08, 72.88, 'world', 'Early monsoon shifts supply expectations'],
+  ].map(([place, lat, lng, category, headline], i) => ({
+    id: 's' + i, place, lat, lng, category, headline, source: 'Wire', time: new Date(Date.now() - (i + 1) * 6e5), url: null,
+  }));
+
+  // ── Globe ─────────────────────────────────────────────────────────
+  const TEX = 'https://unpkg.com/three-globe/example/img/';
+  let EVENTS = SEED.slice(), featured = EVENTS[0];
+  const world = Globe()(document.getElementById('globe'))
+    .globeImageUrl(TEX + 'earth-night.jpg')
+    .bumpImageUrl(TEX + 'earth-topology.png')
+    .backgroundImageUrl(TEX + 'night-sky.png')
+    .atmosphereColor('#3a86ff').atmosphereAltitude(0.18)
+    .pointLat('lat').pointLng('lng')
+    .pointColor(colorOf)
+    .pointAltitude(0.02)
+    .pointRadius(e => e.category === 'quake' ? Math.min(0.85, 0.16 + (e.mag || 0) * 0.08) : 0.28)
+    .pointsMerge(false)
+    .pointLabel(e => `<div style="font:600 12px 'Familjen Grotesk',sans-serif;color:#fff;background:rgba(10,12,20,.88);padding:6px 9px;border-radius:8px;border:1px solid rgba(255,255,255,.12);max-width:240px">${escapeHtml(e.place)}<br><span style="color:#9aa3b8;font-weight:500">${escapeHtml(e.headline)}</span></div>`)
+    .onPointClick(e => { focus(e); resetCycle(); })
+    .ringColor(d => t => colorOf(d) + Math.round((1 - t) * 200).toString(16).padStart(2, '0'))
+    .ringMaxRadius(e => e.category === 'quake' ? 5.5 : 4)
+    .ringPropagationSpeed(2.4).ringRepeatPeriod(620);
+
+  const ctrl = world.controls();
+  ctrl.autoRotate = true; ctrl.autoRotateSpeed = 0.5; ctrl.enableDamping = true;
+  const resize = () => world.width(innerWidth).height(innerHeight);
+  addEventListener('resize', resize); resize();
+
+  // ── Rendering ─────────────────────────────────────────────────────
+  function tagLabel(e) {
+    if (e.category === 'quake') return `M${(e.mag || 0).toFixed(1)} · Seismic`;
+    if (e.category === 'disaster') return e.place;   // EONET category, e.g. "Wildfires"
+    return (CATEGORY[e.category] || CATEGORY.world).label;
+  }
+
+  function renderList() {
+    const term = $('q').value.trim().toLowerCase();
+    const shown = term ? EVENTS.filter(e => (e.headline + ' ' + e.place).toLowerCase().includes(term)) : EVENTS;
+    $('list').innerHTML = shown.map(e => `
+      <button class="ev${e === featured ? ' active' : ''}" data-id="${escapeHtml(e.id)}">
+        <span class="sev" style="color:${colorOf(e)};background:${colorOf(e)}"></span>
+        <span class="evbody">
+          <span class="tag" style="color:${colorOf(e)}">${escapeHtml(tagLabel(e))}</span>
+          <span class="h">${escapeHtml(e.headline)}</span>
+          <span class="m">${escapeHtml(e.place)} · ${escapeHtml(e.source)} · ${timeAgo(e.time)}</span>
+        </span>
+      </button>`).join('') || '<div style="padding:24px;color:var(--muted);font-size:13px">No matching events.</div>';
+    $('pcount').textContent = EVENTS.length;
+  }
+
+  function renderGlobe() { world.pointsData(EVENTS); }
+
+  function renderCard(e) {
+    const col = colorOf(e);
+    $('chip').textContent = tagLabel(e);
+    $('chip').style.background = col;
+    $('place').innerHTML = `<b>${escapeHtml(e.place)}</b>`;
+    $('headline').textContent = e.headline;
+    const link = e.url ? ` · <a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">open ↗</a>` : '';
+    $('metatext').innerHTML = `<b>${escapeHtml(e.source)}</b> · ${timeAgo(e.time)}${link}`;
+    const card = $('card');
+    card.style.opacity = 0; card.style.transform = 'translateY(8px)';
+    requestAnimationFrame(() => { card.style.opacity = 1; card.style.transform = 'none'; });
+  }
+
+  function activeRings() {
+    const major = EVENTS.filter(e => e.category === 'quake' && (e.mag || 0) >= 5).slice(0, 6);
+    return [featured, ...major].filter((e, i, a) => e && a.indexOf(e) === i);
+  }
+  function focus(e) {
+    if (!e) return;
+    featured = e;
+    world.ringsData(activeRings());
+    world.pointOfView({ lat: e.lat, lng: e.lng, altitude: 1.9 }, 1100);
+    renderCard(e);
+    document.querySelectorAll('.ev').forEach(b => b.classList.toggle('active', b.dataset.id === e.id));
+  }
+
+  function renderTicker(rows) {
+    $('ticker').innerHTML = rows.map(r => {
+      const cls = r.chg >= 0 ? 'up' : 'down';
+      return `<span class="tk"><b>${r.sym}</b><span class="px">${fmtPrice(r.price)}</span><span class="ch ${cls}">${r.chg >= 0 ? '▲' : '▼'}${Math.abs(r.chg).toFixed(2)}%</span></span>`;
+    }).join('');
+  }
+
+  // ── Auto-cycle through the top events (pauses on interaction) ──────
+  let cyc = 0, cycTimer = null;
+  function cycleOrder() { return [...EVENTS].sort((a, b) => (b.mag || 0) - (a.mag || 0) || b.time - a.time).slice(0, 12); }
+  function tick() { const o = cycleOrder(); if (o.length) focus(o[cyc++ % o.length]); }
+  function startCycle() { clearInterval(cycTimer); cycTimer = setInterval(tick, 6000); }
+  function resetCycle() { cyc = 0; startCycle(); }
+
+  // ── Live refresh loops ────────────────────────────────────────────
+  async function refreshEvents() {
+    const feeds = [['USGS', fetchQuakes], ['NASA EONET', fetchDisasters], ['GDELT', fetchNews]];
+    const res = await Promise.allSettled(feeds.map(([, fn]) => fn()));
+    const live = res.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+    res.forEach((r, i) => r.status === 'rejected' && console.warn(feeds[i][0], 'feed failed:', r.reason?.message || r.reason));
+    const liveOk = live.length > 0;
+    EVENTS = (liveOk ? live : SEED).sort((a, b) => b.time - a.time).slice(0, 80);
+    $('badge').classList.toggle('demo', !liveOk);
+    $('badgetext').textContent = liveOk ? 'LIVE' : 'DEMO';
+    const names = feeds.filter((_, i) => res[i].status === 'fulfilled' && res[i].value.length).map(f => f[0]);
+    if (liveOk) names.push('CoinGecko');
+    $('src').textContent = (liveOk ? names.join(' · ') : 'offline — showing cached demo') + ` · updated ${new Date().toLocaleTimeString()}`;
+    if (!EVENTS.includes(featured)) featured = EVENTS[0];
+    renderGlobe(); renderList(); world.ringsData(activeRings());
+  }
+  async function refreshMarkets() {
+    try { renderTicker(await fetchMarkets()); }
+    catch (err) { console.warn('markets feed failed:', err.message); }
+  }
+
+  // ── Wire up + boot ────────────────────────────────────────────────
+  $('q').addEventListener('input', renderList);
+  $('list').addEventListener('click', ev => {
+    const btn = ev.target.closest('.ev'); if (!btn) return;
+    const e = EVENTS.find(x => x.id === btn.dataset.id);
+    if (e) { focus(e); resetCycle(); }
+  });
+
+  (async function boot() {
+    renderGlobe(); renderList(); focus(featured);
+    await Promise.all([refreshEvents(), refreshMarkets()]);
+    focus(cycleOrder()[0] || featured);
+    startCycle();
+    setInterval(refreshEvents, 5 * 60 * 1000);   // quakes/news every 5 min
+    setInterval(refreshMarkets, 60 * 1000);       // prices every minute
+  })();
+
+  // ── Self-check (ponytail: one runnable guard for the parse/geo path) ──
+  (function selfTest() {
+    const e = usgsToEvent({ id: 'x', geometry: { coordinates: [139.69, 35.68, 10] }, properties: { mag: 6.1, place: 'off Honshu', time: Date.now(), url: '#' } });
+    console.assert(Math.round(e.lat) === 36 && Math.round(e.lng) === 140, 'USGS lng/lat swapped!', e);
+    console.assert(quakeColor(6) !== quakeColor(3), 'quake severity colors are flat');
+    console.assert(/\bago\b/.test(timeAgo(new Date(Date.now() - 3.6e6))), 'timeAgo broken');
+    console.assert(escapeHtml('<img>') === '&lt;img&gt;', 'escapeHtml not escaping');
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1168 @@
+[
+  {
+    "era": "Pre-Columbian Americas (c. 900–1491)",
+    "events": [
+      {
+        "id": "maya-classic-collapse",
+        "year": "c. 900",
+        "title": "Classic Maya Collapse — Cities Abandoned",
+        "type": "colonization",
+        "detail": "Between 800 and 900 CE, the great Classic Maya cities of the southern lowlands — Tikal, Copán, Palenque, Calakmul — are abandoned. Population plummets by 80–90% in some areas. The causes remain debated: prolonged drought, warfare, soil exhaustion, political fragmentation, or a combination. Post-Classic Maya civilization continues in the Yucatán (Chichén Itzá, Uxmal) and highlands for centuries until Spanish contact.",
+        "sources": [
+          { "name": "David Webster, The Fall of the Ancient Maya (2002)", "tier": 2 },
+          { "name": "Diamond, Jared, Collapse (2005)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mississippian-cahokia-peak",
+        "year": "c. 1100",
+        "title": "Cahokia — Largest City North of Mexico at its Peak",
+        "type": "colonization",
+        "detail": "Cahokia (near present-day St. Louis, Missouri), the center of Mississippian culture, reaches its peak population of 10,000–20,000 around 1100 CE, making it the largest pre-Columbian city north of Mexico. Its central Monks Mound is larger at its base than the Great Pyramid of Giza. By 1350 CE, Cahokia is abandoned — possibly due to drought, environmental degradation, or disease — but Mississippian culture continues when de Soto arrives in 1539.",
+        "sources": [
+          { "name": "Timothy Pauketat, Cahokia: Ancient America's Great City on the Mississippi (2009)", "tier": 2 },
+          { "name": "Smithsonian Magazine, 'The Lost City of Cahokia' (2011)", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+
+        "id": "aztec-tenochtitlan-founded",
+        "year": "1325",
+        "title": "Founding of Tenochtitlan",
+        "type": "colonization",
+        "detail": "The Mexica (Aztec) people found Tenochtitlan on an island in Lake Texcoco, fulfilling a prophecy of an eagle eating a serpent on a cactus. By 1500 it was one of the world's largest cities, home to an estimated 200,000–300,000 people. It would become the capital of the Triple Alliance empire.",
+        "sources": [
+          { "name": "Codex Mendoza", "tier": 1 },
+          { "name": "Hugh Thomas, Conquest (1993)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "aztec-triple-alliance",
+        "year": "1428",
+        "title": "Aztec Triple Alliance Formed",
+        "type": "diplomatic",
+        "detail": "The Triple Alliance of Tenochtitlan, Texcoco, and Tlacopan is established, overthrowing Azcapotzalco Tepanec dominance. Under Itzcoatl and later Moctezuma I, the empire rapidly expands across central Mexico through military conquest and tributary arrangements. This political structure will still be dominant when the Spanish arrive in 1519.",
+        "sources": [
+          { "name": "Diego Durán, History of the Indies of New Spain (c.1570)", "tier": 1 },
+          { "name": "Frances Berdan, Aztecs of Central Mexico (2005)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "inca-pachacuti-expansion",
+        "year": "1438",
+        "title": "Pachacuti Transforms Inca State",
+        "type": "conquest",
+        "detail": "After defeating the Chanka confederation, Pachacuti (Pachakutiq Inka Yupanki) refounds the Inca state as Tawantinsuyu — 'The Four Suyus.' He builds Machu Picchu, rebuilds Cusco in its imperial form, and creates the extensive road network (Qhapaq Ñan). His son Tupac Yupanqui later expands the empire to Ecuador, Bolivia, and Chile, making it the largest empire in the pre-Columbian Americas.",
+        "sources": [
+          { "name": "John Rowe, 'Inca Culture at the Time of the Spanish Conquest,' Handbook of South American Indians (1946)", "tier": 2 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "aztec-ahuitzotl-peak",
+        "year": "1487",
+        "title": "Dedication of the Great Temple — Aztec Empire at its Peak",
+        "type": "colonization",
+        "detail": "Under Emperor Ahuitzotl, the Templo Mayor in Tenochtitlan is completed and dedicated with mass sacrifices of war captives. The Aztec tribute network now encompasses some 500 towns and nearly 5–6 million subjects. Ahuitzotl also expands into Guatemala and the Gulf Coast. When Moctezuma II succeeds him in 1502, the empire is at its demographic and territorial zenith.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Inga Clendinnen, Aztecs: An Interpretation (1991)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "taino-caribbean-peoples",
+        "year": "1490",
+        "title": "Taíno Civilization of the Caribbean",
+        "type": "colonization",
+        "detail": "On the eve of contact, the Greater Antilles and Bahamas are home to the Taíno, numbering perhaps 400,000 to several million people (estimates vary widely). They cultivate manioc, maize, cotton, and tobacco; they live in permanent villages of up to several thousand; and they are organized under hereditary chiefs (caciques). The Taíno will be the first indigenous people to suffer the full catastrophic impact of European contact, disease, and forced labor.",
+        "sources": [
+          { "name": "Irving Rouse, The Tainos (1992)", "tier": 2 },
+          { "name": "Bartolomé de las Casas, A Short Account of the Destruction of the Indies (1542)", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Columbus and First Contact (1492–1493)",
+    "events": [
+      {
+        "id": "columbus-departs-palos",
+        "year": "Aug 3, 1492",
+        "title": "Columbus Departs Palos de la Frontera",
+        "type": "conquest",
+        "detail": "Under commission from the Catholic Monarchs Ferdinand and Isabella, Christopher Columbus departs Palos de la Frontera, Spain, with three ships — Niña, Pinta, and Santa María — and approximately 90 men. Columbus believes he can reach Asia by sailing west across the Atlantic. His mission is to find a sea route to the spice islands, establish trade, and spread Christianity. The voyage is financed primarily by the Spanish crown after Portugal rejected the proposal.",
+        "sources": [
+          { "name": "Christopher Columbus, Journal of the First Voyage (1492–93)", "tier": 1 },
+          { "name": "Felipe Fernández-Armesto, Columbus (1991)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-reaches-bahamas",
+        "year": "Oct 12, 1492",
+        "title": "Columbus Reaches San Salvador — First Contact",
+        "type": "conquest",
+        "detail": "After 70 days at sea, lookout Rodrigo de Triana spots land. Columbus lands on an island in the Bahamas he names San Salvador (probably present-day Watlings Island). He claims the island for Spain, names the indigenous Lucayan people 'Indians' (believing he has reached India), and notes they would make good servants. Within a generation, the entire Lucayan population will be enslaved and transported to Hispaniola, effectively extinct.",
+        "sources": [
+          { "name": "Christopher Columbus, Journal of the First Voyage (1492–93)", "tier": 1 },
+          { "name": "Samuel Eliot Morison, Admiral of the Ocean Sea (1942)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-reaches-cuba",
+        "year": "Oct 28, 1492",
+        "title": "Columbus Reaches Cuba",
+        "type": "conquest",
+        "detail": "Columbus reaches the northeastern coast of Cuba, naming it Juana. He believes it may be the Asian mainland or Japan. He sends emissaries inland looking for the Emperor of China, instead finding Taíno villages. Columbus explores the north coast of Cuba before sailing east toward another large island, which he will call Hispaniola. He collects gold, parrots, and cotton as evidence of the new lands' potential wealth.",
+        "sources": [
+          { "name": "Christopher Columbus, Journal of the First Voyage (1492–93)", "tier": 1 },
+          { "name": "Kirkpatrick Sale, The Conquest of Paradise (1990)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-hispaniola-arrival",
+        "year": "Dec 5, 1492",
+        "title": "Columbus Reaches Hispaniola",
+        "type": "conquest",
+        "detail": "Columbus reaches the island he names La Isla Española (Hispaniola), home to the Taíno kingdom of Cacique Guacanagari. The Taíno help Columbus recover cargo when the Santa María runs aground on Christmas Day (December 25). Columbus orders the construction of a small fort, La Navidad, from the ship's timbers — the first European settlement in the Americas. He leaves 39 men behind when he sails back to Spain.",
+        "sources": [
+          { "name": "Christopher Columbus, Journal of the First Voyage (1492–93)", "tier": 1 },
+          { "name": "Peter Hulme, Colonial Encounters (1986)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-returns-spain",
+        "year": "Mar 15, 1493",
+        "title": "Columbus Returns to Spain in Triumph",
+        "type": "diplomatic",
+        "detail": "Columbus arrives back in Palos, then travels to Barcelona to meet the Catholic Monarchs, presenting captive Taíno people, gold, parrots, and exotic plants. His news causes immediate sensation across Europe. The monarchs grant him the titles Admiral of the Ocean Sea, Viceroy, and Governor of the discovered territories. Pope Alexander VI issues a series of papal bulls (Inter caetera) dividing the non-Christian world between Spain and Portugal.",
+        "sources": [
+          { "name": "Columbus's Letter to the Catholic Monarchs (Feb 15, 1493)", "tier": 1 },
+          { "name": "William D. Phillips Jr., The Worlds of Christopher Columbus (1992)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "treaty-tordesillas",
+        "year": "Jun 7, 1494",
+        "title": "Treaty of Tordesillas Divides the World",
+        "type": "diplomatic",
+        "detail": "Spain and Portugal sign the Treaty of Tordesillas, moving the papal line of demarcation to 370 leagues west of the Cape Verde Islands. Land east of the line (including most of Brazil and Africa) goes to Portugal; land west (most of the Americas) goes to Spain. The treaty is mediated by Pope Alexander VI and excludes all other European powers, sowing seeds of future conflicts with France, England, and the Netherlands. The indigenous peoples of the Americas have no voice in the division.",
+        "sources": [
+          { "name": "Treaty of Tordesillas (1494), Archivo General de Indias", "tier": 1 },
+          { "name": "Lyle N. McAlister, Spain and Portugal in the New World 1492–1700 (1984)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-second-voyage",
+        "year": "Sep 25, 1493",
+        "title": "Columbus Departs on Second Voyage with 17 Ships",
+        "type": "colonization",
+        "detail": "Columbus departs Cadiz with 17 ships and approximately 1,200 men — soldiers, clergy, farmers, and colonists — marking the transition from exploration to colonization. The fleet discovers the Lesser Antilles, Puerto Rico, and returns to Hispaniola only to find La Navidad destroyed: the garrison had been killed by Taíno led by Cacique Caonabó, after abusing and enslaving the local population. Columbus establishes a new settlement, La Isabela, farther east.",
+        "sources": [
+          { "name": "Michele de Cuneo, Letter on the Second Voyage (1495)", "tier": 1 },
+          { "name": "William D. Phillips Jr., The Worlds of Christopher Columbus (1992)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-letter-published",
+        "year": "Apr 1493",
+        "title": "Columbus's Letter Printed Across Europe",
+        "type": "diplomatic",
+        "detail": "Columbus's letter describing his discoveries is printed and distributed across Europe in multiple languages, becoming one of the first best-sellers of the printing age. The letter, addressed to the Catholic Monarchs' treasurer, describes the beauty of the islands, docility of the inhabitants, and the potential for gold and conversion. It goes through at least nine editions in 1493 alone, fundamentally changing European consciousness about the shape of the world.",
+        "sources": [
+          { "name": "Columbus, Epistola de insulis nuper inventis (1493)", "tier": 1 },
+          { "name": "Anthony Grafton, New Worlds, Ancient Texts (1992)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Early Caribbean Colonization (1494–1511)",
+    "events": [
+      {
+        "id": "la-navidad-destroyed",
+        "year": "Nov 1493",
+        "title": "La Navidad Garrison Destroyed by Taíno",
+        "type": "resistance",
+        "detail": "Columbus returns to Hispaniola to find La Navidad burned and the 39 men he left behind dead. Cacique Guacanagari says the garrison was killed by another chief, Caonabó, after they quarreled over gold and women and raided neighboring villages. This marks the first violent European-indigenous conflict in the Americas and foreshadows the pattern of exploitation and resistance that would characterize the conquest era.",
+        "sources": [
+          { "name": "Fernando Columbus, The Life of Christopher Columbus (1571)", "tier": 1 },
+          { "name": "Samuel Eliot Morison, Admiral of the Ocean Sea (1942)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-enslaves-tainos",
+        "year": "1495",
+        "title": "Columbus Ships 500 Taíno to Spain as Slaves",
+        "type": "colonization",
+        "detail": "Columbus organizes a slave raid, seizing approximately 1,600 Taíno. He loads 500 onto ships for Spain; many die during the crossing. Queen Isabella is reportedly scandalized and orders their return, questioning the legality of enslaving Christian converts. Despite this, enslaving 'cannibals' was authorized, and de facto enslavement continued under the encomienda system. Columbus also imposes a gold tribute on every Taíno adult, enforced by cutting off hands of those who failed to deliver.",
+        "sources": [
+          { "name": "Bartolomé de las Casas, Historia de las Indias (c.1530–61)", "tier": 1 },
+          { "name": "Kirkpatrick Sale, The Conquest of Paradise (1990)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "columbus-stripped-of-titles",
+        "year": "1500",
+        "title": "Columbus Sent Back to Spain in Chains",
+        "type": "diplomatic",
+        "detail": "Spanish royal investigator Francisco de Bobadilla arrives in Santo Domingo and arrests Columbus on charges of tyranny, mismanagement, and cruelty in governing the colony. Columbus and his brothers are sent back to Spain in chains. Although the chains are removed before Columbus reaches Spain, he is stripped of his governorship. The Spanish crown appoints Nicolás de Ovando as the new governor of Hispaniola in 1502, signaling the shift from Columbus's personal enterprise to crown-controlled colonial administration.",
+        "sources": [
+          { "name": "Archivo General de Indias, Columbus judicial documents (1500)", "tier": 1 },
+          { "name": "Consuelo Varela, La caída de Cristóbal Colón (2006)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cabral-claims-brazil",
+        "year": "Apr 22, 1500",
+        "title": "Cabral Claims Brazil for Portugal",
+        "type": "conquest",
+        "detail": "Portuguese navigator Pedro Álvares Cabral, leading a fleet to India, makes landfall on the Brazilian coast (near present-day Porto Seguro, Bahia) and claims it for Portugal. Whether accidental or deliberate is debated by historians. The land falls within the Portuguese sphere established by the Treaty of Tordesillas. Cabral sends a dispatch ship back to Lisbon before continuing to India. Portugal initially shows little interest in Brazil beyond dyewood (pau-brasil) trade, but will establish permanent settlements by the 1530s.",
+        "sources": [
+          { "name": "Pero Vaz de Caminha, Letter to King Manuel I (May 1, 1500)", "tier": 1 },
+          { "name": "Merrick Posnansky, Oxford History of Mexico (2000)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ovando-hispaniola-massacres",
+        "year": "1503",
+        "title": "Governor Ovando Massacres Taíno Leadership at Jaragua",
+        "type": "conquest",
+        "detail": "Governor Nicolás de Ovando invites the Taíno chieftess Anacaona and 80 subordinate caciques to a feast, then burns the building with them inside; Anacaona is publicly hanged. Ovando launches systematic military campaigns across Hispaniola, effectively destroying organized Taíno resistance. The population, already devastated by introduced diseases and overwork in gold mines and agricultural labor, collapses catastrophically. By 1514, a Spanish census counts only about 27,000 Taíno; by 1542, Las Casas reports them nearly extinct.",
+        "sources": [
+          { "name": "Bartolomé de las Casas, A Short Account of the Destruction of the Indies (1542)", "tier": 1 },
+          { "name": "Frank Moya Pons, The Dominican Republic: A National History (1995)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "encomienda-system-formalized",
+        "year": "1503",
+        "title": "Encomienda System Formally Authorized",
+        "type": "colonization",
+        "detail": "Queen Isabella authorizes the encomienda system: Spanish settlers (encomenderos) are granted rights to indigenous labor in exchange for Christianizing and 'protecting' them. In practice, the system becomes an engine of brutal exploitation. Taíno people are worked to death in gold mines and agriculture. The encomienda will become the dominant institution of colonial labor exploitation and will spread across all Spanish American territories, inspiring sustained criticism from Las Casas and ultimately the New Laws of 1542.",
+        "sources": [
+          { "name": "Royal Order, December 20, 1503 (Archivo General de Indias)", "tier": 1 },
+          { "name": "Silvio Zavala, La encomienda indiana (1935)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "balboa-pacific-crossing",
+        "year": "Sep 25, 1513",
+        "title": "Balboa Becomes First European to See the Pacific Ocean",
+        "type": "conquest",
+        "detail": "Vasco Núñez de Balboa leads an expedition of 190 Spaniards and several hundred indigenous guides across the isthmus of Panama. On September 25, 1513, he climbs a peak and becomes the first European to see the Pacific from the Americas. He wades into the sea in full armor and claims the 'South Sea' and all its shores for Spain. The discovery opens the possibility of a Pacific route to Asia and makes Panama the strategic gateway for the conquest of South America.",
+        "sources": [
+          { "name": "Peter Martyr d'Anghiera, De Orbe Novo (1516)", "tier": 1 },
+          { "name": "Charles Mann, 1493: Uncovering the New World Columbus Created (2011)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "hatuey-execution",
+        "year": "Feb 1512",
+        "title": "Hatuey Burned at Stake in Cuba — First American Martyr of Resistance",
+        "type": "resistance",
+        "detail": "Taíno chief Hatuey, who had fled Hispaniola to warn Cuba's indigenous people about the Spanish, is captured after leading guerrilla resistance in eastern Cuba for months. He is burned at the stake by Governor Diego Velázquez. At the execution, a Franciscan friar offers him last rites and asks if he wishes to go to heaven. Hatuey asks whether Spaniards go to heaven too; told yes, he refuses baptism, saying he does not want to go where such cruel people are. His execution is witnessed and recorded by a young Bartolomé de las Casas, who is transformed by it.",
+        "sources": [
+          { "name": "Bartolomé de las Casas, Historia de las Indias (c.1530–61)", "tier": 1 },
+          { "name": "Matthew Restall, Seven Myths of the Spanish Conquest (2003)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "laws-of-burgos-1512",
+        "year": "1512",
+        "title": "Laws of Burgos — First Spanish Legislation on Indigenous Rights",
+        "type": "diplomatic",
+        "detail": "In 1511, Dominican friar Antonio de Montesinos delivered a thunderous sermon at Hispaniola denouncing the brutal treatment of Taíno people: 'Are these not men? Do they not have rational souls?' In response, King Ferdinand convened a council at Burgos that produced the Leyes de Burgos (December 27, 1512) — the first European legislation governing treatment of indigenous people in the Americas. The 35 ordinances required adequate food, housing, and religious instruction for encomienda workers; limited work hours; and prohibited beating pregnant women. Despite their stated aims, the laws proved largely unenforceable in practice — encomenderos continued to work indigenous people to death, and Hispaniola's Taíno population was already near extinction. However, the Laws of Burgos represent the first formal acknowledgment that indigenous people had legal rights requiring Spanish protection, and established a precedent that Las Casas and the reformers would build on for decades.",
+        "sources": [
+          { "name": "Leyes de Burgos, Royal Decree (December 27, 1512), Archivo General de Indias", "tier": 1, "url": "https://en.wikipedia.org/wiki/Laws_of_Burgos", "pole": "western" },
+          { "name": "Lewis Hanke, The Spanish Struggle for Justice in the Conquest of America (1949)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Lewis_Hanke", "pole": "western" }
+        ],
+        "media": [
+          { "type": "article", "url": "https://en.wikipedia.org/wiki/Laws_of_Burgos", "caption": "Laws of Burgos (1512) — first Spanish legislation governing indigenous rights in the Americas", "source": "Wikipedia" }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Expansion to the Mainland (1513–1519)",
+    "events": [
+      {
+        "id": "ponce-de-leon-florida",
+        "year": "Apr 1513",
+        "title": "Juan Ponce de León Explores Florida",
+        "type": "conquest",
+        "detail": "Juan Ponce de León, governor of Puerto Rico, leads an expedition that makes the first documented European landfall in what is now the continental United States, landing on the Florida coast near present-day St. Augustine. He names the land 'La Florida' (feast of flowers, for Easter Sunday). He explores both the Atlantic and Gulf coasts before returning to Puerto Rico. His second expedition in 1521 ends when Calusa warriors fatally wound him.",
+        "sources": [
+          { "name": "Antonio de Herrera y Tordesillas, Historia general (1601)", "tier": 1 },
+          { "name": "John Worth, The Timucuan Chiefdoms of Spanish Florida (1998)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cordoba-yucatan",
+        "year": "1517",
+        "title": "Hernández de Córdoba Discovers the Yucatán Peninsula",
+        "type": "conquest",
+        "detail": "Francisco Hernández de Córdoba leads the first Spanish expedition to the Yucatan Peninsula, encountering the sophisticated Maya cities of Campeche and Champotón. The Maya successfully resist — Córdoba is badly wounded and dies shortly after returning to Cuba. His reports of rich, densely populated cities spark further interest in the mainland. The expedition discovers the first evidence of advanced civilization in the Americas, fueling the ambitions that lead to Cortés's later conquest.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Robert Carmack, The Legacy of Mesoamerica (2007)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "grijalva-yucatan",
+        "year": "1518",
+        "title": "Grijalva Explores Gulf of Mexico Coast",
+        "type": "conquest",
+        "detail": "Juan de Grijalva leads a follow-up expedition along the Yucatan and Gulf Coast of Mexico, trading for gold and hearing of the vast Aztec empire in the interior. He explores from the Yucatan north to the Pánuco River, establishing contact with Aztec tributary peoples, who send word of the strangers to Tenochtitlan. Grijalva returns to Cuba with significant gold but is criticized by Governor Velázquez for not establishing a settlement. His reports convince Velázquez to authorize a full conquest expedition.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Hugh Thomas, Conquest: Montezuma, Cortés and the Fall of Old Mexico (1993)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "smallpox-caribbean",
+        "year": "1518",
+        "title": "Smallpox Epidemic Reaches the Caribbean",
+        "type": "colonization",
+        "detail": "Smallpox arrives in Hispaniola in 1518–1519, killing perhaps one-third of the remaining indigenous population within months. This is the first recorded smallpox epidemic in the Americas. The disease will travel ahead of Cortés into Mexico, arriving in the Aztec heartland by 1520 — well before Spanish soldiers — and killing the emperor Cuitlahuac and up to half of Tenochtitlan's population. The role of epidemic disease in facilitating the conquest cannot be overstated.",
+        "sources": [
+          { "name": "Bartolomé de las Casas, Historia de las Indias (c.1530–61)", "tier": 1 },
+          { "name": "Alfred Crosby, The Columbian Exchange (1972)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "las-casas-conversion",
+        "year": "1514",
+        "title": "Las Casas Renounces His Encomienda",
+        "type": "diplomatic",
+        "detail": "Dominican friar and encomendero Bartolomé de las Casas, while preparing a sermon for Pentecost, is struck by a passage in Ecclesiasticus that condemns those who make offerings from the fruits of others' misery. He frees his indigenous workers, denounces the encomienda before the congregation of Cuba, and dedicates himself to defending indigenous rights. He will become the most important critic of the conquest, eventually writing the Brevísima relación (1542) and arguing the case for indigenous humanity before the Spanish court.",
+        "sources": [
+          { "name": "Bartolomé de las Casas, Historia de las Indias (c.1530–61)", "tier": 1 },
+          { "name": "Lawrence Clayton, Bartolomé de las Casas: A Biography (2012)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "requerimiento-1513",
+        "year": "1513",
+        "title": "The Requerimiento — Legal Fiction for Conquest Authorization",
+        "type": "diplomatic",
+        "detail": "In 1513, Spanish jurist Juan López de Palacios Rubios drafted the Requerimiento (Requirement) — a legal document that conquistadors were required to read aloud to indigenous peoples before launching any military attack. Written in Spanish (occasionally Latin), it demanded that indigenous peoples acknowledge the authority of the Catholic Church and Spanish Crown or face war, slavery, and death — with any violence declared their own fault for refusing. The document was routinely read to empty forests, sleeping populations, non-Spanish-speaking people, or after battles had already begun. Even contemporaries mocked it: Bartolomé de las Casas wrote he did not know 'whether to laugh or cry' upon first reading it, and Palacios Rubios reportedly laughed when told how it was actually used in practice. Despite its obvious absurdity, the Requerimiento remained in official use until 1542 and was employed at Cajamarca, Tenochtitlan, and throughout the Americas. It became a defining symbol of colonial legalism — the reduction of conquest to procedural formality.",
+        "sources": [
+          { "name": "Juan López de Palacios Rubios, El Requerimiento (1513), Archivo General de Indias", "tier": 1, "url": "https://en.wikipedia.org/wiki/Requerimiento", "pole": "western" },
+          { "name": "Lewis Hanke, 'The Requerimiento and Its Interpreters,' Revista de Historia de América (1938)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Requerimiento", "pole": "western" }
+        ],
+        "media": [
+          { "type": "article", "url": "https://en.wikipedia.org/wiki/Requerimiento", "caption": "The Requerimiento (1513) — Spanish legal demand read before every conquest attack", "source": "Wikipedia" }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Conquest of the Aztec Empire (1519–1521)",
+    "events": [
+      {
+        "id": "cortes-departs-cuba",
+        "year": "Feb 1519",
+        "title": "Cortés Defies Velázquez and Departs Cuba",
+        "type": "conquest",
+        "detail": "Hernán Cortés departs Cuba with 11 ships, approximately 530 soldiers, 16 horses, and 14 cannon despite Governor Diego Velázquez revoking his commission at the last moment. Cortés sails anyway, an act of insubordination that forces him to succeed or face execution. He stops at Cozumel, rescuing shipwrecked Spaniard Jerónimo de Aguilar, who speaks Maya and becomes a vital interpreter. At Tabasco he defeats the Maya in battle and receives 20 enslaved women, including Malintzin (La Malinche), who speaks both Nahuatl and Maya.",
+        "sources": [
+          { "name": "Hernán Cortés, Second Letter to Emperor Charles V (October 1520)", "tier": 1 },
+          { "name": "Hugh Thomas, Conquest (1993)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cortes-veracruz-founded",
+        "year": "Apr 1519",
+        "title": "Cortés Founds Veracruz and Rejects Velázquez's Authority",
+        "type": "colonization",
+        "detail": "Cortés establishes the settlement of Villa Rica de la Vera Cruz on the Gulf Coast and then maneuvers the colonists to elect him as their own captain-general, bypassing Velázquez and appealing directly to the Spanish crown. He sends a ship to Spain with treasure and his first letter justifying his actions. He also receives Aztec ambassadors bearing magnificent gifts from Moctezuma II — including a replica of the sun in gold and the moon in silver — who attempt to dissuade him from traveling inland.",
+        "sources": [
+          { "name": "Hernán Cortés, First Letter to Emperor Charles V (1519)", "tier": 1 },
+          { "name": "Hugh Thomas, Conquest (1993)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cortes-burns-ships",
+        "year": "Jul 1519",
+        "title": "Cortés Scuttles His Ships to Prevent Retreat",
+        "type": "conquest",
+        "detail": "To prevent faint-hearted soldiers from sailing back to Cuba, Cortés orders most of his ships beached and stripped of equipment, effectively scuttled. This dramatic act commits the entire force to the march inland with no possibility of withdrawal. It becomes one of history's most famous acts of leadership through audacity. Cortés has approximately 500 men, 16 horses, and 14 cannon as he begins the march toward Tenochtitlan through unknown terrain.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Matthew Restall, When Montezuma Met Cortés (2018)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tlaxcala-alliance",
+        "year": "Sep 1519",
+        "title": "Alliance with Tlaxcala — The Decisive Strategic Partnership",
+        "type": "diplomatic",
+        "detail": "After initial battles against the Tlaxcalans, Cortés negotiates an alliance with the Tlaxcalan confederation — bitter enemies of the Aztec empire who resented years of tribute and sacrificial tribute demands. The Tlaxcalans provide tens of thousands of warriors who become the backbone of Cortés's military force. Without Tlaxcalan and other indigenous allies, the Spanish conquest would have been impossible. This alliance reflects the fragmented political landscape of Mesoamerica rather than simple military superiority.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Ross Hassig, Mexico and the Spanish Conquest (1994)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cholula-massacre",
+        "year": "Oct 1519",
+        "title": "Cholula Massacre — Cortés Kills Thousands",
+        "type": "battle",
+        "detail": "Warned by Malintzin of a supposed Aztec plot to ambush the Spanish at Cholula (the second-largest city in Mexico and a major religious center), Cortés orders a pre-emptive massacre of the city's nobility and warriors gathered in the main plaza. Spanish and Tlaxcalan forces kill an estimated 3,000–6,000 unarmed Cholulans in hours. Whether the conspiracy was real or fabricated is debated by historians. The massacre terrorizes the Aztec empire and sends a message about Spanish ruthlessness.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Camilla Townsend, Fifth Sun: A New History of the Aztecs (2019)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cortes-meets-moctezuma",
+        "year": "Nov 8, 1519",
+        "title": "Cortés Meets Moctezuma II at Tenochtitlan",
+        "type": "diplomatic",
+        "detail": "Cortés enters Tenochtitlan across the great causeway. Moctezuma II comes out to meet him in an elaborate procession, carried in a litter and covered with a canopy of feathers and gold. The city dazzles the Spaniards — Bernal Díaz writes it seemed like an enchantment. Within a week, Cortés has seized Moctezuma as a hostage, using the ruler to govern the empire from captivity — a bold gamble that temporarily paralyzes Aztec resistance. What Moctezuma thought and intended remains deeply contested by scholars.",
+        "sources": [
+          { "name": "Hernán Cortés, Second Letter to Emperor Charles V (October 1520)", "tier": 1 },
+          { "name": "Matthew Restall, When Montezuma Met Cortés (2018)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "toxcatl-massacre",
+        "year": "May 1520",
+        "title": "Alvarado Massacres Aztec Nobles at Toxcatl Festival",
+        "type": "battle",
+        "detail": "While Cortés is away fighting Pánfilo de Narváez, Pedro de Alvarado panics at or deliberately attacks the Toxcatl festival, massacring hundreds of unarmed Aztec nobles, priests, and warriors gathered in the Templo Mayor precinct. The attack ignites a general uprising. Cortés rushes back to find the Spanish trapped in their palace with a dead Moctezuma and the entire city in revolt. The massacre is a critical turning point — after it, peaceful coexistence becomes impossible.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Inga Clendinnen, Aztecs (1991)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "la-noche-triste",
+        "year": "Jun 30, 1520",
+        "title": "La Noche Triste — Spanish Routed from Tenochtitlan",
+        "type": "battle",
+        "detail": "Attempting to escape Tenochtitlan under cover of night, Cortés's force is discovered and attacked on the causeways across Lake Texcoco. In the running battle, the Spanish and their allies suffer catastrophic losses: over 450 Spanish soldiers and thousands of Tlaxcalan allies killed, most of the artillery and horses lost, and nearly all the seized Aztec treasure dropped in the lake as the soldiers tried to flee. Cortés is said to have wept under a tree at dawn — the famous 'sad night.' It is the worst Spanish defeat of the conquest.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Hugh Thomas, Conquest (1993)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-otumba",
+        "year": "Jul 7, 1520",
+        "title": "Battle of Otumba — Cortés Survives Aztec Counterattack",
+        "type": "battle",
+        "detail": "Pursuing the battered Spanish force through the Valley of Mexico, a massive Aztec army intercepts Cortés at Otumba plain. Exhausted, wounded, and hugely outnumbered, the Spanish are on the verge of defeat when Cortés leads a cavalry charge directly at the Aztec commander and kills him, seizing the feathered royal standard. The Aztec army, following military custom, stops fighting when the commander falls. The Spanish escape to Tlaxcala, regroup, and begin planning the conquest of Tenochtitlan.",
+        "sources": [
+          { "name": "Bernal Díaz del Castillo, Historia verdadera de la conquista de la Nueva España (c.1568)", "tier": 1 },
+          { "name": "Ross Hassig, Mexico and the Spanish Conquest (1994)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tenochtitlan-smallpox",
+        "year": "Oct 1520",
+        "title": "Smallpox Devastates Tenochtitlan, Kills Emperor Cuitlahuac",
+        "type": "colonization",
+        "detail": "Smallpox, introduced to New Spain by a member of Narváez's expedition, sweeps through Tenochtitlan during the Aztec resistance. Emperor Cuitlahuac, who had organized the expulsion of the Spanish, dies of smallpox after only 80 days in power. Estimates suggest 25–50% of the city's population died. The epidemic disrupts command structures, destroys the will to resist, and kills experienced warriors. The pandemic is the most important single factor enabling the final Spanish conquest.",
+        "sources": [
+          { "name": "Florentine Codex (Sahagún, c.1577), Book 12", "tier": 1 },
+          { "name": "Alfred Crosby, The Columbian Exchange (1972)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "siege-tenochtitlan",
+        "year": "May 22, 1521",
+        "title": "Siege of Tenochtitlan Begins — 75-Day Urban Battle",
+        "type": "battle",
+        "detail": "Cortés launches his reconquest with a fleet of 13 brigantines built in Tlaxcala, carried overland, and launched on Lake Texcoco. He is supported by 200,000+ indigenous allies, primarily Tlaxcalans. Cuauhtémoc, the new Aztec emperor, organizes a tenacious defense. The Spanish systematically demolish buildings and fill canals as they advance street by street. Starvation, disease, and water shortages ravage the defenders. The siege and urban warfare last 75 days, one of the bloodiest battles in pre-modern history.",
+        "sources": [
+          { "name": "Hernán Cortés, Third Letter to Emperor Charles V (May 1522)", "tier": 1 },
+          { "name": "Hugh Thomas, Conquest (1993)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "fall-tenochtitlan",
+        "year": "Aug 13, 1521",
+        "title": "Fall of Tenochtitlan — End of the Aztec Empire",
+        "type": "conquest",
+        "detail": "On August 13, 1521, Emperor Cuauhtémoc attempts to escape by boat and is captured. He surrenders formally, ending 75 days of siege and the Aztec empire. The city lies in ruins — Cortés writes that there is not a house standing. Bernal Díaz says the bodies were so many that soldiers had to walk over them. The population of Tenochtitlan, perhaps 300,000 before the siege, is reduced to a fraction. Mexico City is built on the ruins. The conquest of New Spain is complete.",
+        "sources": [
+          { "name": "Hernán Cortés, Third Letter to Emperor Charles V (May 1522)", "tier": 1 },
+          { "name": "Florentine Codex (Sahagún, c.1577), Book 12", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Conquest of the Inca Empire (1531–1572)",
+    "events": [
+      {
+        "id": "pizarro-departs-panama",
+        "year": "Dec 1531",
+        "title": "Pizarro Departs Panama to Conquer Peru",
+        "type": "conquest",
+        "detail": "Francisco Pizarro departs Panama with only 180 men and 37 horses on his third and final expedition to Peru, after returning to Spain to obtain royal authorization (capitulación). He has intelligence that the Inca empire is in the midst of a devastating civil war between half-brothers Huascar and Atahualpa over succession after the death of Huayna Capac (who reportedly died of smallpox, c.1527). The timing is crucial — Pizarro will exploit Inca political fragmentation as Cortés exploited anti-Aztec resentment.",
+        "sources": [
+          { "name": "Pedro de Cieza de León, Chronicle of Peru (1553)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "inca-civil-war",
+        "year": "1529",
+        "title": "Inca Civil War Weakens the Empire",
+        "type": "conquest",
+        "detail": "Following the death of Sapa Inca Huayna Capac (c.1527–1528), possibly from smallpox, his empire is divided between his sons Huascar (ruling Cusco) and Atahualpa (controlling Quito and the northern armies). The ensuing civil war lasts approximately five years and kills hundreds of thousands. When Atahualpa finally defeats and captures Huascar in 1532, his armies are fresh from victory but the empire is politically fractured. Pizarro arrives in this aftermath — at the most vulnerable moment in Tawantinsuyu's history.",
+        "sources": [
+          { "name": "Felipe Guaman Poma de Ayala, Nueva corónica y buen gobierno (c.1615)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cajamarca-ambush",
+        "year": "Nov 16, 1532",
+        "title": "Battle/Massacre of Cajamarca — Atahualpa Captured",
+        "type": "battle",
+        "detail": "Pizarro's 168 men ambush the entourage of Atahualpa at Cajamarca plaza. Friar Valverde presents the 'Requirement' (Requerimiento) — a legal document ordering the Inca to submit to Spain and Christianity — then throws it aside when Atahualpa drops it. The Spanish fire cannon and cavalry charge the unarmed procession of 5,000–8,000 court attendants. In less than two hours, thousands of Inca are killed, Atahualpa is captured, and not a single Spaniard dies. It is the pivotal moment of South American conquest.",
+        "sources": [
+          { "name": "Pedro Pizarro, Relation of the Discovery and Conquest of the Kingdoms of Peru (1571)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "atahualpa-ransom",
+        "year": "1532",
+        "title": "Atahualpa Offers Ransom of a Room Full of Gold",
+        "type": "diplomatic",
+        "detail": "Imprisoned Atahualpa offers to fill the large room of his captivity once with gold and twice with silver in exchange for his freedom — a ransom of perhaps 13,000 pounds of gold and 26,000 pounds of silver, the largest ransom in history. Inca subjects from across the empire bring the precious metals. Pizarro melts down priceless Inca artwork and artifacts to be smelted into gold bars, destroying irreplaceable objects of art and religion. Despite receiving the full ransom, Pizarro has Atahualpa tried and executed.",
+        "sources": [
+          { "name": "Francisco de Jerez, Verdadera relación de la conquista del Perú (1534)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "atahualpa-executed",
+        "year": "Aug 29, 1533",
+        "title": "Execution of Atahualpa Despite Ransom Payment",
+        "type": "conquest",
+        "detail": "Pizarro has Atahualpa tried on charges of polygamy, idolatry, fratricide (for ordering Huascar killed), and plotting against the Spanish. Convicted and sentenced to death, he is garrotted rather than burned after agreeing to accept baptism at the last moment (burning was reserved for heretics; Christians could be strangled). Atahualpa had learned to play chess and to read from guards during captivity. His execution was explicitly condemned by Emperor Charles V as illegal and unjust, but the deed was done.",
+        "sources": [
+          { "name": "Francisco de Xerez, True Account of the Conquest of New Spain (1534)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "lima-founded",
+        "year": "Jan 18, 1535",
+        "title": "Pizarro Founds Lima as Capital of Peru",
+        "type": "colonization",
+        "detail": "Francisco Pizarro founds Ciudad de los Reyes (City of Kings) — later known as Lima — on the Peruvian coast near the Rimac River. He chooses the coast over the high-altitude Inca capital of Cusco for logistical access to Spain via sea. Lima becomes the administrative capital of the Viceroyalty of Peru and one of the most important cities in the Spanish colonial world. Cusco remains a center of Inca culture and periodic resistance.",
+        "sources": [
+          { "name": "Pedro de Cieza de León, Chronicle of Peru (1553)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "almagro-chile-expedition",
+        "year": "1535",
+        "title": "Almagro's Chile Expedition — Catastrophic Crossing of the Andes",
+        "type": "conquest",
+        "detail": "Frustrated that Francisco Pizarro kept the best lands and titles for himself and his brothers, Diego de Almagro led an expedition of approximately 570 Spaniards and 15,000 Peruvian indigenous allies south from Cusco in 1535 in search of a second Peru in Chile. The expedition crossed the Andes via the Atacama Desert in brutal winter conditions — soldiers froze to death, horses died by the hundreds, and an estimated 10,000 indigenous auxiliaries perished from exposure. The survivors reached central Chile but found no great civilization and no significant gold. The dispirited force returned to Cusco in 1536 having achieved nothing of commercial value and having inflicted catastrophic losses on the Andean peoples conscripted to carry supplies. The failure intensified the bitter rivalry between Almagro and Pizarro that led to the first civil war among Spanish colonists in the Americas. In 1538, Pizarro's brothers captured Almagro at the Battle of Las Salinas and had him strangled; in retaliation, Almagro's mestizo son Francisco later had Pizarro assassinated in 1541.",
+        "sources": [
+          { "name": "Pedro de Cieza de León, Chronicle of Peru, Part II (1553)", "tier": 1, "url": "https://en.wikipedia.org/wiki/Pedro_Cieza_de_Le%C3%B3n", "pole": "western" },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2, "url": "https://en.wikipedia.org/wiki/John_Hemming_(historian)", "pole": "western" }
+        ],
+        "media": [
+          { "type": "article", "url": "https://en.wikipedia.org/wiki/Diego_de_Almagro", "caption": "Diego de Almagro's failed Chile expedition (1535–36) — the first major Spanish failure in South America", "source": "Wikipedia" }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      },
+      {
+        "id": "manco-inca-rebellion",
+        "year": "1536",
+        "title": "Manco Inca Leads Great Rebellion — Siege of Cusco",
+        "type": "resistance",
+        "detail": "Manco Inca, installed by the Spanish as a puppet emperor, escapes captivity and raises a vast army estimated at 100,000–200,000 warriors, laying siege to Cusco for 10 months. A separate Inca force attacks and nearly destroys Lima. The rebellion comes close to destroying the entire Spanish enterprise in South America. Manco's general Quizo Yupanki defeats several Spanish relief expeditions before being killed. Despite initial successes, the rebellion fails due to Spanish cavalry, native allies, and reinforcements from Panama.",
+        "sources": [
+          { "name": "Diego de Almagro / various Spanish accounts (1536)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "vilcabamba-state",
+        "year": "1537",
+        "title": "Vilcabamba — Last Independent Inca State Founded",
+        "type": "resistance",
+        "detail": "After the failure of the great siege, Manco Inca retreats to the remote jungle region of Vilcabamba in the Andes, establishing an independent Inca state that resists Spanish conquest for 35 years. Three successive Sapa Incas rule Vilcabamba: Manco Inca (until assassinated 1544), Sayri Tupac, and Titu Cusi Yupanqui, who negotiates a partial peace and allows missionary entry. Vilcabamba becomes a symbol of indigenous resistance and sovereignty.",
+        "sources": [
+          { "name": "Titu Cusi Yupanqui, Account of the Conquest of Peru (1570)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tupac-amaru-executed",
+        "year": "Sep 24, 1572",
+        "title": "Tupac Amaru I Executed — End of Inca Resistance",
+        "type": "conquest",
+        "detail": "Viceroy Francisco de Toledo invades Vilcabamba with a large force, capturing the last Sapa Inca, Tupac Amaru I. Despite pleas from church authorities and Lima's city council for mercy, Toledo orders Tupac Amaru publicly beheaded in Cusco's main plaza before a crowd of thousands of indigenous people. Many Inca nobles weep. His execution ends the independent Inca state but fails to end indigenous political consciousness — Tupac Amaru becomes a martyr, and his name is taken by the 18th-century rebel José Gabriel Condorcanqui.",
+        "sources": [
+          { "name": "Pedro Sarmiento de Gamboa, History of the Incas (1572)", "tier": 1 },
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Wider Conquest and Colonization (1521–1560)",
+    "events": [
+      {
+        "id": "conquest-guatemala",
+        "year": "1524",
+        "title": "Alvarado Conquers Guatemala with Extreme Violence",
+        "type": "conquest",
+        "detail": "Pedro de Alvarado invades Guatemala with approximately 400 Spanish soldiers and several thousand Nahua allies. Over three years he conquers the Kaqchikel, Quiché, and Tzutujil Maya through brutal campaigns. Alvarado's own letters describe massacres and burning of towns. He founds the city of Santiago de Guatemala (1524). The Kaqchikel initially ally with Alvarado but then rebel in 1524 when he demands tribute. His conquest of Central America extends Spanish control to the Pacific coast.",
+        "sources": [
+          { "name": "Pedro de Alvarado, Cartas de relación (1524)", "tier": 1 },
+          { "name": "Robert Carmack, The Legacy of Mesoamerica (2007)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "conquest-yucatan",
+        "year": "1527",
+        "title": "Protracted Conquest of the Yucatán (1527–1546)",
+        "type": "conquest",
+        "detail": "The Yucatan peninsula is the most protracted Spanish conquest in Mesoamerica. Francisco de Montejo and his son fail in two expeditions before finally establishing control. The Maya, organized in multiple independent polities, resist ferociously for nearly two decades. The final battle at Mérida (1542) and pacification of the peninsula extend into the 1540s. The last independent Maya state — Tayasal (Petén Itza) — will not fall until 1697, making the Yucatan conquest the most extended military campaign of the era.",
+        "sources": [
+          { "name": "Diego de Landa, Relación de las cosas de Yucatán (c.1566)", "tier": 1 },
+          { "name": "Grant Jones, The Conquest of the Last Maya Kingdom (1998)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "de-soto-mississippi",
+        "year": "1539",
+        "title": "Hernando de Soto Explores the American Southeast",
+        "type": "conquest",
+        "detail": "Hernando de Soto leads 600 soldiers on a devastating four-year expedition through the American Southeast — from Florida through the Carolinas, Tennessee, Alabama, and Arkansas — becoming the first European to cross the Mississippi River (1541). His force plunders indigenous towns, enslaves thousands, and leaves disease that kills 75–90% of some Southeastern peoples. De Soto dies of fever on the Mississippi banks (1542) and is buried in the river to conceal his death from indigenous people who believed the Spanish immortal.",
+        "sources": [
+          { "name": "Garcilaso de la Vega, La Florida (1605)", "tier": 1 },
+          { "name": "Charles Hudson, Knights of Spain, Warriors of the Sun (1997)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "coronado-southwest",
+        "year": "1540",
+        "title": "Coronado Explores the North American Southwest",
+        "type": "conquest",
+        "detail": "Francisco Vásquez de Coronado leads 300 Spanish soldiers and 1,000 indigenous allies north from Mexico, reaching the Pueblo communities of New Mexico, the Grand Canyon, Kansas, and possibly Nebraska in search of the mythical Seven Cities of Gold (Cíbola). Finding only pueblos instead of gold, he returns to Mexico in 1542 having found nothing of commercial value. His expedition devastates Pueblo towns, but provides the first European descriptions of the Great Plains and Pueblo civilization.",
+        "sources": [
+          { "name": "Pedro de Castañeda, Narrative of the Coronado Expedition (c.1565)", "tier": 1 },
+          { "name": "Richard Flint, Great Cruelties Have Been Reported (2002)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "potosi-silver-mines",
+        "year": "Apr 1545",
+        "title": "Silver Mines of Potosí Discovered",
+        "type": "colonization",
+        "detail": "An indigenous man named Diego Huallpa discovers the rich silver deposits of Cerro Rico ('Rich Mountain') at Potosí, in present-day Bolivia, at 4,100 meters altitude. The mines produce an estimated 45,000 tons of silver between 1545 and 1800 — financing the Spanish empire, fueling world trade, and destroying the lives of an estimated 8 million mita (forced labor) workers over three centuries. Potosí becomes the largest city in the Americas by 1650, with 160,000 inhabitants. The Spanish phrase 'vale un Potosí' (worth a Potosí) enters the language as a measure of immense wealth.",
+        "sources": [
+          { "name": "Archivo General de Indias, Potosí mine records (1545 onwards)", "tier": 1 },
+          { "name": "Kris Lane, Potosí: The Silver City That Changed the World (2019)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "valdivia-chile",
+        "year": "Feb 12, 1541",
+        "title": "Valdivia Founds Santiago de Chile",
+        "type": "colonization",
+        "detail": "Pedro de Valdivia founds the city of Santiago del Nuevo Extremo (present-day Santiago) in the Mapocho Valley, beginning the Spanish conquest of Chile. He faces immediate resistance from the Mapuche (Araucanians) who attack and burn the city within months. Valdivia leads repeated campaigns south of the Biobío River, penetrating Mapuche territory. He is eventually captured by the Mapuche leader Lautaro during the Battle of Tucapel (December 25, 1553) and executed — according to tradition by having molten gold poured down his throat.",
+        "sources": [
+          { "name": "Pedro de Valdivia, Cartas de Relación (1545–52)", "tier": 1 },
+          { "name": "Eugene Korth, Spanish Policy in Colonial Chile (1968)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mapuche-battle-tucapel",
+        "year": "Dec 25, 1553",
+        "title": "Battle of Tucapel — Mapuche Kill Valdivia",
+        "type": "resistance",
+        "detail": "Mapuche forces under the military genius Lautaro, who had served Valdivia as a groom and learned Spanish tactics and cavalry weaknesses, ambush and destroy Valdivia's force at Fort Tucapel on Christmas Day. Valdivia is captured and executed. Lautaro launches a general Mapuche uprising that nearly expels the Spanish from Chile entirely. He is killed in 1557 but the Araucanian War becomes one of the longest and most costly armed conflicts of colonial America, continuing for over 200 years. The Mapuche remain undefeated until the 1880s.",
+        "sources": [
+          { "name": "Alonso de Ercilla, La Araucana (1569, 1578, 1589)", "tier": 1 },
+          { "name": "José Bengoa, Historia del Pueblo Mapuche (2000)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "orellana-amazon",
+        "year": "1541",
+        "title": "Orellana Descends the Amazon River",
+        "type": "conquest",
+        "detail": "Francisco de Orellana, separated from Gonzalo Pizarro's expedition in search of El Dorado, becomes the first European to navigate the entire Amazon River from the Andes to the Atlantic Ocean (1541–42). He describes large, densely populated cities and rich agricultural systems along the Amazon — later dismissed by Europeans as fantasy, but recently confirmed by archaeologists as accurate. His encounter with female warriors gives the river its name. He dies attempting a second Amazon expedition in 1546.",
+        "sources": [
+          { "name": "Gaspar de Carvajal, Account of the Recent Discovery of the Famous Grand River (1542)", "tier": 1 },
+          { "name": "John Hemming, The Search for El Dorado (1978)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "las-casas-cumana-colony",
+        "year": "1520",
+        "title": "Las Casas's Peaceful Colony at Cumaná — An Experiment That Failed",
+        "type": "colonization",
+        "detail": "Having been converted to a champion of indigenous rights after witnessing the destruction of Hispaniola, Bartolomé de las Casas persuaded the Spanish court to let him attempt a model colony on the Venezuelan coast at Cumaná in 1520, to be populated by peasant farmers rather than soldiers. The experiment was designed to prove that peaceful Christian settlement was possible without conquest violence. It failed catastrophically: slave raiders from Hispaniola attacked and enslaved local indigenous people; the infuriated indigenous population retaliated in 1521, burning the settlement and driving the colonists out. Las Casas, devastated by the failure, entered a Dominican friary in Hispaniola and spent several years in contemplation. The experience radicalized him further — he concluded that only complete prohibition of the encomienda system could save indigenous people. He emerged to write the Brevísima relación and debate at Valladolid. His failed colony became a cautionary tale about the impossibility of humane colonialism within an inherently exploitative system.",
+        "sources": [
+          { "name": "Bartolomé de las Casas, Historia de las Indias, Book III (c.1530–61)", "tier": 1, "url": "https://en.wikipedia.org/wiki/Bartolom%C3%A9_de_las_Casas", "pole": "western" },
+          { "name": "Lawrence Clayton, Bartolomé de las Casas: A Biography (2012)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Bartolom%C3%A9_de_las_Casas", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://en.wikipedia.org/wiki/Bartolom%C3%A9_de_las_Casas",
+            "caption": "Las Casas's failed peaceful colony at Cumaná (1520–21) preceded his most influential advocacy work",
+            "source": "Wikipedia"
+          }
+        ],
+        "lastUpdated": "2026-05-19T14:35:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Reform, Resistance, and New Laws (1537–1566)",
+    "events": [
+      {
+        "id": "sublimis-deus-papal-bull",
+        "year": "Jun 2, 1537",
+        "title": "Pope Paul III Declares Indigenous People Are Human",
+        "type": "diplomatic",
+        "detail": "Pope Paul III issues the papal bull Sublimis Deus, declaring that indigenous Americans are 'true men' with souls capable of salvation, and that they cannot be deprived of their liberty or property even if they are not yet Christian. The bull condemns slavery of indigenous people as invalid and orders enslaved indigenous people freed. While its practical effect was limited — Spain suppressed it at the request of Charles V — it establishes the theoretical basis for indigenous rights that Las Casas and others will invoke for decades.",
+        "sources": [
+          { "name": "Pope Paul III, Sublimis Deus (June 2, 1537)", "tier": 1 },
+          { "name": "Lewis Hanke, All Mankind is One (1974)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "las-casas-brevissima",
+        "year": "1542",
+        "title": "Las Casas Writes Brevísima Relación — Indictment of the Conquest",
+        "type": "diplomatic",
+        "detail": "Bartolomé de las Casas presents his Brevísima relación de la destrucción de las Indias to the Spanish Council of the Indies, detailing systematic atrocities committed against indigenous people across the Americas. The work catalogs massacres, torture, enslavement, and the destruction of whole civilizations. It will be published in 1552 and translated across Europe, fueling the 'Black Legend' of Spanish cruelty. While historians debate some specific figures, the work's core account is corroborated by other sources and influenced colonial reform legislation.",
+        "sources": [
+          { "name": "Bartolomé de las Casas, A Short Account of the Destruction of the Indies (1542, pub. 1552)", "tier": 1 },
+          { "name": "Lawrence Clayton, Bartolomé de las Casas: A Biography (2012)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "new-laws-1542",
+        "year": "1542",
+        "title": "New Laws of the Indies — Attempted Abolition of Encomienda",
+        "type": "diplomatic",
+        "detail": "Emperor Charles V promulgates the New Laws of the Indies, largely drafted under Las Casas's influence. The laws prohibit new encomiendas, order existing ones to revert to the crown upon the current holder's death, ban indigenous slavery, and establish protections for indigenous workers. The laws provoke immediate violent revolt by the encomendero class in Peru (Gonzalo Pizarro rebellion, 1544–1548) and strong resistance in New Spain. Key provisions are revoked in 1545 under settler pressure, but the laws establish important legal precedents.",
+        "sources": [
+          { "name": "Leyes Nuevas, Royal Decree (November 20, 1542), Archivo General de Indias", "tier": 1 },
+          { "name": "Lewis Hanke, The Spanish Struggle for Justice in the Conquest of America (1949)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "valladolid-debate",
+        "year": "1550",
+        "title": "Valladolid Debate — Can Indigenous People Be Conquered?",
+        "type": "diplomatic",
+        "detail": "Emperor Charles V orders all conquest suspended while a formal debate takes place at Valladolid between Bartolomé de las Casas (arguing indigenous people are fully rational, free, and equal, and conquest is illegal) and Juan Ginés de Sepúlveda (arguing indigenous people are natural slaves whose barbaric practices require Christian correction by force). The debate is the first serious European examination of the ethics of colonialism. No clear winner is declared. The conquest resumes, but the debate shapes subsequent colonial law.",
+        "sources": [
+          { "name": "Juan Ginés de Sepúlveda, Demócrates segundo (c.1550)", "tier": 1 },
+          { "name": "Lewis Hanke, All Mankind is One: A Study of the Disputation Between Bartolomé de las Casas and Juan Ginés de Sepúlveda (1974)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "gonzalo-pizarro-rebellion",
+        "year": "1544",
+        "title": "Gonzalo Pizarro Rebellion Against the New Laws",
+        "type": "conquest",
+        "detail": "When Viceroy Blasco Núñez Vela attempted to enforce the 1542 New Laws (which would eliminate encomenderos' inherited rights), Gonzalo Pizarro led a rebellion of Peruvian encomenderos that captured and beheaded the viceroy in 1546. The first Peruvian viceroy to die violently, he was killed by his own colonists defending their right to indigenous labor. Pedro de la Gasca eventually suppressed the rebellion in 1548; Gonzalo Pizarro was captured and executed.",
+        "sources": [
+          { "name": "John Hemming, The Conquest of the Incas (1970)", "tier": 2 },
+          { "name": "James Lockhart, Spanish Peru 1532–1560 (1968)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mixtons-war",
+        "year": "1541",
+        "title": "Mixtón War — Major Indigenous Revolt in New Galicia",
+        "type": "resistance",
+        "detail": "The Caxcán and other indigenous peoples of Nueva Galicia (western Mexico) launch a large-scale rebellion, seizing fortified hilltops and defeating several Spanish forces. Viceroy Antonio de Mendoza personally leads a massive campaign with thousands of indigenous allies to suppress the revolt. The war lasts approximately two years and requires the largest military effort in New Spain's history to that point. It is followed by the long Chichimec War (1550–1590), during which the semi-nomadic Chichimec peoples of the northern frontier hold off Spanish expansion for four decades.",
+        "sources": [
+          { "name": "Pedro de Mota Padilla, Historia de la conquista de la provincia de la Nueva Galicia (1742)", "tier": 1 },
+          { "name": "Philip Powell, Soldiers, Indians and Silver (1952)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "landa-mani-auto-da-fe",
+        "year": "Jul 12, 1562",
+        "title": "Landa Burns Maya Codices at Maní — Catastrophic Knowledge Destruction",
+        "type": "colonization",
+        "detail": "On July 12, 1562, Franciscan Provincial Diego de Landa conducted an auto-da-fé at the town of Maní in the Yucatán, burning at least 27 Maya hieroglyphic books (codices) and approximately 5,000 cult images, believing them to contain 'nothing but superstition and lies of the devil.' He also subjected hundreds of Maya to interrogation and torture to extract confessions of continued idolatry, killing or permanently crippling some. When reports of his excesses reached Spain, Landa was recalled and tried before the Council of the Indies; he was ultimately acquitted and later appointed Bishop of Yucatán. In a profound historical irony, Landa himself wrote the Relación de las cosas de Yucatán — the most comprehensive early account of Maya civilization — which preserved the Maya calendar, cosmology, and the 'Landa alphabet' later used by scholars to begin decoding Maya hieroglyphs. Of perhaps thousands of Maya codices that existed at contact, only four pre-Columbian examples survive today: the Dresden, Madrid, Paris, and Grolier codices. The burning at Maní represents one of history's most consequential single acts of cultural destruction.",
+        "sources": [
+          { "name": "Diego de Landa, Relación de las cosas de Yucatán (c.1566)", "tier": 1, "url": "https://en.wikipedia.org/wiki/Relaci%C3%B3n_de_las_cosas_de_Yucat%C3%A1n", "pole": "western" },
+          { "name": "Inga Clendinnen, Ambivalent Conquests: Maya and Spaniard in Yucatán, 1517–1570 (1987)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Inga_Clendinnen", "pole": "western" }
+        ],
+        "media": [
+          { "type": "article", "url": "https://en.wikipedia.org/wiki/Diego_de_Landa", "caption": "Diego de Landa ordered the burning of Maya codices at Maní on July 12, 1562 — one of history's greatest acts of cultural destruction", "source": "Wikipedia" }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Columbian Exchange and Colonial Economy (1493–1700)",
+    "events": [
+      {
+        "id": "columbian-exchange-crops-americas-to-europe",
+        "year": "1493",
+        "title": "American Crops Begin Transforming the Old World",
+        "type": "colonization",
+        "detail": "The Columbian Exchange — the transfer of plants, animals, diseases, and people between the Eastern and Western Hemispheres following 1492 — is one of history's most consequential ecological events. American crops including maize (corn), potatoes, tomatoes, sweet potatoes, cacao, tobacco, peanuts, vanilla, and chili peppers are introduced to Europe, Africa, and Asia. The potato and maize alone are credited with fueling European population growth: Europe's population roughly doubles between 1650 and 1800 largely due to caloric surplus from American crops.",
+        "sources": [
+          { "name": "Alfred Crosby, The Columbian Exchange (1972)", "tier": 2 },
+          { "name": "Charles Mann, 1493: Uncovering the New World Columbus Created (2011)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "european-livestock-americas",
+        "year": "1493",
+        "title": "European Livestock Transform American Ecosystems",
+        "type": "colonization",
+        "detail": "Columbus's second voyage introduces cattle, pigs, horses, goats, sheep, and chickens to the Americas — animals that transform indigenous agriculture and ecology. Feral pigs devastate indigenous gardens in the Caribbean within years. Horses, unknown in the Americas since the Pleistocene, are rapidly adopted by plains indigenous peoples (reaching the Plains tribes by the 1700s), transforming their cultures. Cattle ranching becomes a primary export economy. European weeds and crops rapidly colonize disturbed American landscapes.",
+        "sources": [
+          { "name": "Alfred Crosby, Ecological Imperialism (1986)", "tier": 2 },
+          { "name": "Elinor Melville, A Plague of Sheep (1994)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "african-slave-trade-begins",
+        "year": "1510",
+        "title": "African Slave Trade to the Americas Begins",
+        "type": "colonization",
+        "detail": "The first African enslaved people are brought directly from Africa to Hispaniola in 1510, though some had been brought via Spain earlier. As the indigenous population collapses under disease and exploitation, Spanish colonists lobby for African labor. In 1517, Bishop Las Casas (later recanting) suggests importing African slaves as a humanitarian measure to spare indigenous people. The transatlantic slave trade will transport an estimated 12.5 million Africans to the Americas over four centuries, becoming the largest forced migration in human history.",
+        "sources": [
+          { "name": "Hugh Thomas, The Slave Trade (1997)", "tier": 2 },
+          { "name": "David Eltis, The Trans-Atlantic Slave Trade Database (slavevoyages.org)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "brazil-sugar-plantations",
+        "year": "1532",
+        "title": "Brazil's Sugar Plantation Economy Established",
+        "type": "colonization",
+        "detail": "Portugal establishes the plantation economy of Brazil around sugar production from the 1530s, initially using indigenous enslaved labor, then overwhelmingly African enslaved workers from the 1560s. By 1600, Brazil produces the majority of the world's sugar. The plantation model — vast estates worked by enslaved Africans, producing a single export crop for European markets — becomes the dominant economic system of tropical America and the primary driver of the Atlantic slave trade. Brazil will import more enslaved Africans (approximately 4 million) than any other nation.",
+        "sources": [
+          { "name": "Stuart Schwartz, Sugar Plantations in the Formation of Brazilian Society (1985)", "tier": 2 },
+          { "name": "Leslie Bethell (ed.), Colonial Brazil, Cambridge History of Latin America (1984)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "manila-galleon-trade",
+        "year": "1565",
+        "title": "Manila Galleon Trade Links Americas to Asia",
+        "type": "colonization",
+        "detail": "Andrés de Urdaneta discovers the return route across the Pacific, enabling the Manila Galleon trade between Acapulco and Manila. Beginning in 1565 and continuing until 1815 — 250 years — galleons carry American silver to China and return with Chinese silk, porcelain, and spices. Potosí silver effectively funds the Ming dynasty's economy and fuels global trade. The trade route connects Asia, Americas, Africa, and Europe into the first truly global economy. Mexican and Peruvian silver is found across Eurasia and Africa.",
+        "sources": [
+          { "name": "William Schurz, The Manila Galleon (1939)", "tier": 2 },
+          { "name": "Dennis Flynn & Arturo Giráldez, 'Born with a Silver Spoon,' World History (1995)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "inca-quipu-knowledge-system",
+        "year": "1532",
+        "title": "Destruction of the Quipu — Inca Knowledge Annihilated",
+        "type": "colonization",
+        "detail": "The Spanish conquest of Peru destroyed the Inca's quipu system — knotted strings encoding census data, tribute records, historical narratives, and possibly literature. Spanish authorities burned quipus as idolatrous objects and banned their use, equating them with pagan accounting. Only about 900 quipus survive today; the code for reading narrative quipus (as opposed to numerical ones) has never been fully broken. The loss represents one of the most catastrophic destructions of a non-Western knowledge system in history.",
+        "sources": [
+          { "name": "Marcia and Robert Ascher, Code of the Quipu (1981)", "tier": 2 },
+          { "name": "Sabine Hyland, The Quipu: Andean Narrative Strings (2017)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "great-dying-population-collapse",
+        "year": "1520",
+        "title": "The Great Dying — Catastrophic Indigenous Population Collapse",
+        "type": "colonization",
+        "detail": "Epidemics of smallpox, measles, typhus, influenza, and other Old World diseases sweep through the Americas in successive waves following 1492, killing populations with no prior immunity. Estimates of pre-Columbian American populations range from 50 to 100 million; by 1600, perhaps 90% had died — 45–90 million people. Recent research by Alexander Koch et al. (2019) in The Lancet found the death toll so catastrophic that land abandonment caused forests to regrow on 56 million hectares, sequestering enough CO2 to cause a measurable global cooling event.",
+        "sources": [
+          { "name": "Alexander Koch et al., 'Earth system impacts of the European arrival and Great Dying,' The Lancet (2019)", "tier": 2 },
+          { "name": "Alfred Crosby, The Columbian Exchange (1972)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Indigenous Resistance and Colonial Consolidation (1511–1700)",
+    "events": [
+      {
+        "id": "chichimec-war",
+        "year": "1550",
+        "title": "Chichimec War — 40 Years of Frontier Resistance",
+        "type": "resistance",
+        "detail": "The Chichimec War in northern Mexico (1550–1590) is one of the costliest and most prolonged colonial conflicts in American history. Semi-nomadic Chichimec peoples — Zacatec, Guachichil, Guamar, and Pame — resist Spanish invasion of their territory (spurred by silver mine expansion) for four decades. Their guerrilla tactics, including ambushing silver convoys on the Camino Real, prove highly effective. Spain ultimately resolves the conflict not through military victory but through peace, offering gifts, food, and land — a colonial policy of 'peace by purchase' (paz por compra).",
+        "sources": [
+          { "name": "Philip Powell, Soldiers, Indians and Silver: The Northward Advance of New Spain (1952)", "tier": 2 },
+          { "name": "Charlotte Gleghorn, Rebellion and Resistance in Colonial Mexico (2003)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pueblo-revolt-1680",
+        "year": "Aug 10, 1680",
+        "title": "Pueblo Revolt Drives Spanish from New Mexico",
+        "type": "resistance",
+        "detail": "The Pueblo people of New Mexico, under the leadership of Popé of Ohkay Owingeh, launch a coordinated uprising on August 10, 1680, killing approximately 400 Spanish settlers and 21 missionaries and driving the remaining 2,000 Spanish south to El Paso del Norte. The revolt is the most successful indigenous uprising against Spanish colonial rule in North America. Pueblos destroy Spanish churches and ceremonial objects, declare their old ways restored, and maintain independence for 12 years. Spain reconquers New Mexico in 1692 under different, more conciliatory policies.",
+        "sources": [
+          { "name": "Archivo General de la Nación, Mexico, Inquisición, expedientes (1680–81)", "tier": 1 },
+          { "name": "Andrew Knaut, The Pueblo Revolt of 1680 (1995)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "african-maroon-communities",
+        "year": "1570",
+        "title": "African Maroon Communities Established — Palmares",
+        "type": "resistance",
+        "detail": "Enslaved Africans who escaped Portuguese plantation slavery in Brazil establish the Quilombo dos Palmares maroon state in the northeastern interior, which at its peak shelters 20,000–30,000 people and resists Portuguese military expeditions for nearly a century (c.1605–1694). Palmares is led by the legendary Ganga Zumba and later Zumbi dos Palmares. Similar maroon communities exist throughout the Caribbean and mainland Americas. These communities of escaped enslaved people represent a parallel tradition of resistance against colonial exploitation.",
+        "sources": [
+          { "name": "Arquivo Histórico Ultramarino, Palmares documents", "tier": 1 },
+          { "name": "R.K. Kent, 'Palmares: An African State in Brazil,' Journal of African History (1965)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "inca-mita-potosi",
+        "year": "1573",
+        "title": "Viceroy Toledo Institutionalizes Potosí Mita Labor System",
+        "type": "colonization",
+        "detail": "Viceroy Francisco de Toledo formalizes the mita system at Potosí: 17 Andean provinces must supply a rotating draft of 1/7 of their adult male population to work in the silver mines for one year at fixed (below-market) wages. Each year approximately 13,500 workers labor in the mines alongside enslaved Africans and wage workers. The miners work in darkness, with primitive tools, breathing mercury and silver dust. Death rates are catastrophic — one 18th-century estimate suggests 8 million died over the mine's history. The mita devastates the Andean communities it draws on.",
+        "sources": [
+          { "name": "Francisco de Toledo, Ordenanzas para las minas de Potosí (1573)", "tier": 1 },
+          { "name": "Kris Lane, Potosí: The Silver City That Changed the World (2019)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "drake-sacks-cartagena",
+        "year": "1586",
+        "title": "Francis Drake Sacks Cartagena de Indias — Challenge to Spanish Monopoly",
+        "type": "conquest",
+        "detail": "English privateer Sir Francis Drake attacked and sacked Cartagena de Indias in January 1586 with 23 ships and 2,300 soldiers, occupying it for six weeks and extorting 107,000 ducats before withdrawing. Drake had already attacked Santo Domingo on Hispaniola (the oldest city in the Americas) that same expedition. The attacks demonstrated that Spain's colonial monopoly in the Americas was increasingly vulnerable to rival European powers. England, France, and the Netherlands refused to recognize the Treaty of Tordesillas and progressively challenged Spanish and Portuguese dominance of the Atlantic. Drake's raids prompted Spain to massively upgrade Cartagena's fortifications — the spectacular Castillo San Felipe de Barajas that visitors see today was built in response. Drake's 1588 destruction of a Spanish treasure fleet preceded the dispatch of the Armada against England.",
+        "sources": [
+          { "name": "Richard Hakluyt, Principal Navigations (1589)", "tier": 1, "url": "https://en.wikipedia.org/wiki/Francis_Drake", "pole": "western" },
+          { "name": "John Sugden, Sir Francis Drake (1990)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Francis_Drake", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://en.wikipedia.org/wiki/Drake%27s_1585%E2%80%9386_expedition",
+            "caption": "Drake's 1585–86 expedition attacked Santo Domingo and Cartagena, demonstrating the fragility of Spain's Atlantic monopoly",
+            "source": "Wikipedia"
+          }
+        ],
+        "lastUpdated": "2026-05-19T14:35:00Z"
+      },
+      {
+        "id": "jesuit-guarani-reductions",
+        "year": "1609",
+        "title": "Jesuit Guaraní Reductions Founded — Model Colonial Community",
+        "type": "colonization",
+        "detail": "Jesuit missionaries founded the first of approximately 30 reducciones (reductions) among the Guaraní people of Paraguay and adjacent regions beginning in 1609, reaching their peak population of approximately 150,000 people by the early 18th century. The Jesuit Reductions were self-governing indigenous communities where Guaraní people lived under Jesuit religious guidance, maintained their own culture and language (Guaraní), produced goods, and — critically — were protected from Portuguese slave raiders (bandeirantes) from Brazil. The Reductions are among the most sustained experiments in indigenous-protected colonialism in the Americas. When King Charles III expelled all Jesuits from Spanish territories in 1767, the Reductions immediately collapsed; Portuguese slave raiders destroyed the defenseless communities within years. Approximately 150,000 Guaraní lost their shelter from enslavement. The ruins of the Reduction churches are now UNESCO World Heritage Sites in Argentina, Paraguay, and Brazil.",
+        "sources": [
+          { "name": "Ruiz de Montoya, Conquista espiritual (1639)", "tier": 1, "url": "https://en.wikipedia.org/wiki/Jesuit_reductions", "pole": "western" },
+          { "name": "Barbara Ganson, The Guaraní Under Spanish Rule in the Rio de la Plata (2003)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Jesuit_reductions", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://en.wikipedia.org/wiki/Jesuit_reductions",
+            "caption": "The Jesuit Guaraní Reductions (1609–1767) — largest indigenous-protection experiment in colonial Latin America",
+            "source": "Wikipedia"
+          }
+        ],
+        "lastUpdated": "2026-05-19T14:35:00Z"
+      },
+      {
+        "id": "acoma-massacre-1599",
+        "year": "Jan 22, 1599",
+        "title": "Acoma Massacre — Oñate Destroys Sky City Pueblo",
+        "type": "battle",
+        "detail": "After Acoma Pueblo warriors killed 11 Spanish soldiers (including a nephew of governor Juan de Oñate) in December 1598, Oñate dispatched 70 soldiers under Vicente de Zaldívar to punish the community. Over three days in January 1599, the Spanish attacked Acoma Pueblo — perched 367 feet above the surrounding New Mexico plain on a sandstone mesa — killing approximately 800 of the defenders and destroying most of the village. Survivors were sentenced in a formal 'trial': men over 25 had one foot amputated and were sentenced to 20 years of forced labor; women and children were distributed to the Franciscans as servants; two Hopi visitors had their right hands cut off as a warning to neighboring peoples. Oñate was later investigated by Spanish authorities, tried, and found guilty of cruelty — a rare case of colonial accountability — but the sentence was not fully enforced. The massacre established Spanish domination over the Pueblo peoples of the Southwest and set conditions for the devastating Pueblo Revolt of 1680, when the Pueblos drove the Spanish from New Mexico for 12 years.",
+        "sources": [
+          { "name": "Joe Sando, Pueblo Nations: Eight Centuries of Pueblo Indian History (1992)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Battle_of_Acoma", "pole": "western" },
+          { "name": "Andrew Knaut, The Pueblo Revolt of 1680 (1995)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Juan_de_O%C3%B1ate", "pole": "western" }
+        ],
+        "media": [
+          { "type": "article", "url": "https://en.wikipedia.org/wiki/Battle_of_Acoma", "caption": "The Acoma Massacre (1599) — Oñate's punishment of Acoma Pueblo set up conditions for the 1680 Pueblo Revolt", "source": "Wikipedia" }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Late Colonial Period and Legacy (1700–1898)",
+    "events": [
+      {
+        "id": "bourbon-reforms",
+        "year": "1765",
+        "title": "Bourbon Reforms Restructure Colonial Administration",
+        "type": "colonization",
+        "detail": "Spanish King Charles III implements a series of reforms to revitalize the colonial economy and increase crown revenue. Intendancies replace inefficient local councils; trade monopolies are partially relaxed; American-born Spaniards (creoles) are increasingly excluded from high office in favor of peninsular Spaniards. The reforms succeed in increasing revenue but generate resentment among creole elites who feel politically marginalized, helping spark the independence movements of the early 19th century.",
+        "sources": [
+          { "name": "John Lynch, Bourbon Spain, 1700–1808 (1989)", "tier": 2 },
+          { "name": "David Brading, Miners and Merchants in Bourbon Mexico (1971)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tupac-amaru-ii-rebellion",
+        "year": "Nov 1780",
+        "title": "Tupac Amaru II Rebellion — Largest Andean Uprising",
+        "type": "resistance",
+        "detail": "José Gabriel Condorcanqui, a mestizo cacique who takes the name Tupac Amaru II, leads the largest and most violent uprising in colonial Latin American history, sparked by abuses of the mita system and high taxation. At its peak, his forces number 60,000–80,000 and threaten to expel the Spanish from Peru entirely. The rebellion spreads across Peru, Bolivia, and into Argentina and Chile. After 18 months, the Spanish capture Tupac Amaru and his family; all are publicly executed in Cusco's main plaza with extreme cruelty. The rebellion foreshadows independence.",
+        "sources": [
+          { "name": "Archivo General de Indias, Audiencia del Cuzco, Tupac Amaru trial documents (1781)", "tier": 1 },
+          { "name": "Charles Walker, The Tupac Amaru Rebellion (2014)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "haitian-revolution",
+        "year": "Aug 1791",
+        "title": "Haitian Revolution — First Successful Slave Revolution",
+        "type": "resistance",
+        "detail": "The enslaved population of Saint-Domingue (Haiti) launches a revolution on August 22, 1791, that within 13 years destroys French colonial rule, abolishes slavery, and establishes Haiti as the first Black republic and the first nation founded by formerly enslaved people. The revolution kills approximately 100,000–200,000 people and destroys the plantation economy. It terrifies plantation owners across the Americas and makes slaveholders in Cuba and Brazil resist independence movements they fear would end their own slave regimes. Haiti pays reparations to France until 1947.",
+        "sources": [
+          { "name": "C.L.R. James, The Black Jacobins (1938)", "tier": 2 },
+          { "name": "Laurent Dubois, Avengers of the New World (2004)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "jesuit-expulsion",
+        "year": "1767",
+        "title": "Jesuits Expelled from Spanish America",
+        "type": "colonization",
+        "detail": "King Charles III expels the Society of Jesus from all Spanish territories in 1767. The Jesuit Reductions of Paraguay (sheltering 150,000 Guaraní), Brazil, and Bolivia collapse almost immediately. Slave raiders who had been held back by Jesuit protection devastated the former Guaraní communities. The expulsion represents the end of the most sustained attempt to protect indigenous people within the colonial system and marked a turn toward more direct economic exploitation.",
+        "sources": [
+          { "name": "Ganson, Barbara, The Guaraní Under Spanish Rule in the Rio de la Plata (2003)", "tier": 2 },
+          { "name": "O'Neill, Charles, Diccionario histórico de la Compañía de Jesús (2001)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "latin-american-independence",
+        "year": "1810",
+        "title": "Latin American Independence Movements Begin",
+        "type": "resistance",
+        "detail": "Following Napoleon's invasion of Spain (1808) and the resulting power vacuum, independence movements erupt across Spanish America beginning in 1810. Led by creole elites like Simón Bolívar, José de San Martín, and Miguel Hidalgo, the wars of independence last until the mid-1820s. By 1826, most of Spanish America is independent. The newly independent states inherit colonial social structures — indigenous people and Afro-descendants remain economically and politically marginalized, while creoles take the place of peninsular Spaniards at the top of colonial hierarchies.",
+        "sources": [
+          { "name": "John Lynch, The Spanish American Revolutions, 1808–1826 (1986)", "tier": 2 },
+          { "name": "Leslie Bethell (ed.), Cambridge History of Latin America, vol. 3 (1985)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "caste-war-yucatan-1847",
+        "year": "Jul 30, 1847",
+        "title": "Caste War of Yucatán — Maya Reclaim the Peninsula",
+        "type": "resistance",
+        "detail": "On July 30, 1847, Maya leaders Cecilio Chi and Manuel Antonio Ay launched the Caste War of Yucatán, the longest and most successful indigenous uprising in North American history. Sparked by the seizure of Maya communal lands for sugar cultivation and escalating debt-peonage, Maya forces swept across the peninsula with extraordinary speed, killing landowners, burning haciendas, and recapturing ancient Maya territory. By 1848, Maya forces had reduced Mexican authority to a few coastal cities — the Yucatán oligarchy was so desperate they offered to place the state under the sovereignty of the United States, Britain, or Spain for protection. A U.S. president (Polk) briefly considered annexation. The Maya established a self-governing state at Chan Santa Cruz (now Felipe Carrillo Puerto), guided by a 'Speaking Cross' delivering divine military instructions. The Mexican government did not destroy this independent state until 1901 — nearly 54 years after the war began. The Caste War killed perhaps 250,000 people and reduced Yucatán's population by one-third. It permanently transformed the political geography of the Yucatán, and Chan Santa Cruz's descendants, the Maya Cruzoob, maintained a distinct political identity well into the 20th century.",
+        "sources": [
+          { "name": "Don E. Dumond, The Machete and the Cross: Campesino Rebellion in Yucatán (1997)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Caste_War_of_Yucat%C3%A1n", "pole": "western" },
+          { "name": "Terry Rugeley, Yucatán's Maya Peasantry and the Origins of the Caste War (1996)", "tier": 2, "url": "https://en.wikipedia.org/wiki/Caste_War_of_Yucat%C3%A1n", "pole": "western" }
+        ],
+        "media": [
+          { "type": "article", "url": "https://en.wikipedia.org/wiki/Caste_War_of_Yucat%C3%A1n", "caption": "The Caste War of Yucatán (1847–1901) — the longest sustained indigenous uprising in North American history", "source": "Wikipedia" }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      },
+      {
+        "id": "spanish-empire-ends",
+        "year": "1898",
+        "title": "Spanish-American War Ends the Last Spanish Colonial Empire",
+        "type": "conquest",
+        "detail": "The Spanish-American War of 1898 results in Spain's defeat by the United States, ceding Cuba (nominal independence), Puerto Rico, Guam, and the Philippines. The 406-year era of Spanish empire in the Americas ends. Cuba, which had been fighting for independence since 1868, receives a limited independence heavily constrained by the Platt Amendment. The formal end of Spanish colonialism does not end economic neo-colonialism or the structural inequalities — poverty, racism, land concentration — inherited from 400 years of conquest.",
+        "sources": [
+          { "name": "Treaty of Paris (December 10, 1898)", "tier": 1 },
+          { "name": "Louis Pérez Jr., Cuba: Between Reform and Revolution (2006)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  }
+]

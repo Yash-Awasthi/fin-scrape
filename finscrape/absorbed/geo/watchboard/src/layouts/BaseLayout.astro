@@ -1,0 +1,249 @@
+---
+import '../styles/global.css';
+import CriticalCSS from '../components/static/CriticalCSS.astro';
+import PushSubscriptionManager from '../components/islands/PushSubscriptionManager';
+import { loadAllTrackers } from '../lib/tracker-registry';
+import { jsonLd } from '../lib/json-ld';
+
+interface Props {
+  title: string;
+  description?: string;
+  trackerSlug?: string;
+  githubRepo?: string;
+  locale?: string;
+}
+
+const { title, description, trackerSlug, githubRepo, locale = 'en' } = Astro.props;
+const siteUrl = import.meta.env.SITE || 'https://watchboard.dev';
+const base = import.meta.env.BASE_URL || '/';
+const basePath = base.endsWith('/') ? base : `${base}/`;
+const pageUrl = trackerSlug ? `${siteUrl}${basePath}${trackerSlug}/` : `${siteUrl}${new URL(Astro.url.pathname, siteUrl).pathname}`;
+const desc = description || 'Multi-topic intelligence dashboard with sourced data, interactive maps, and contested claims tracking.';
+const githubUrl = githubRepo ? `https://github.com/${githubRepo}` : 'https://github.com/ArtemioPadilla/watchboard';
+const hasLocalizedVersions = !!trackerSlug; // Only tracker pages have localized versions for now
+const ogImageUrl = trackerSlug
+  ? `${siteUrl}${basePath}og/${trackerSlug}.png`
+  : `${siteUrl}${basePath}og-card.png`;
+
+// Dynamic tracker list for push notification picker
+const pushTrackers = loadAllTrackers()
+  .filter(t => t.status === 'active')
+  .map(t => ({ slug: t.slug, shortName: t.shortName, icon: t.icon, domain: t.domain }));
+---
+<!DOCTYPE html>
+<html lang={locale}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <CriticalCSS />
+  <title>{title}</title>
+  <meta name="description" content={desc}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={desc}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={pageUrl}>
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content={locale === 'es' ? 'es_MX' : locale === 'fr' ? 'fr_FR' : locale === 'pt' ? 'pt_BR' : 'en_US'} />
+  {locale !== 'es' && <meta property="og:locale:alternate" content="es_MX" />}
+  {locale !== 'fr' && <meta property="og:locale:alternate" content="fr_FR" />}
+  {locale !== 'pt' && <meta property="og:locale:alternate" content="pt_BR" />}
+  {locale !== 'en' && <meta property="og:locale:alternate" content="en_US" />}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content={ogImageUrl} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={desc} />
+  <meta name="theme-color" content="#0d1117">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  {/* Enforced. Previously Report-Only, which turned out to mean "no policy".
+
+      Report-Only is not permitted in a <meta> element — the spec allows it
+      only as an HTTP header, and Chrome says so out loud:
+
+        "The report-only Content Security Policy ... was delivered via a
+         <meta> element, which is disallowed. The policy has been ignored."
+
+      And GitHub Pages serves no CSP header at all (public/_headers is Netlify
+      /Cloudflare syntax and is inert here — confirmed with curl). So the site
+      had no effective CSP whatsoever: not enforcement, not report-only. The
+      soak period this was waiting on was never collecting anything.
+
+      CesiumJS needs 'unsafe-eval' and 'wasm-unsafe-eval' — that is what broke
+      the globe when this was first flipped, and both are granted here. Its
+      assets are served locally from /cesium/, so no cesium.com origin is
+      allowlisted: Cesium Ion, the cloud service, is not used.
+      Verified with Playwright against the live pages, not by static analysis:
+      home and /globe/ load with zero CSP refusals and the Cesium canvas
+      renders.
+
+      What this does and does not buy, so nobody reads more into it:
+        blocks  external <script src> from non-allowlisted hosts
+        blocks  fetch/XHR/WebSocket exfiltration (connect-src allowlist)
+        blocks  form-action, base-uri, object-src vectors
+        does not stop injected inline scripts — 'unsafe-inline' is still here
+        does not stop image-based exfiltration — img-src must allow https:
+                because event media comes from arbitrary publishers' og:image
+
+      The change that would actually harden this is removing 'unsafe-inline'
+      via nonces. That is separate, larger work.
+
+      frame-ancestors is deliberately NOT in this string: it is ignored in a
+      meta element and browsers log a warning about it on every page load. It
+      lives in public/_headers instead, ready for a CDN in front of Pages.
+      X-Frame-Options (set there too) is the clickjacking control that
+      actually applies today. */}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://*.posthog.com https://static.cloudflareinsights.com 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; connect-src 'self' https://*.posthog.com https://app.posthog.com https://us.i.posthog.com https://api.open-meteo.com https://archive-api.open-meteo.com https://earthquake.usgs.gov https://opensky-network.org https://celestrak.org https://*.celestrak.org https://api.github.com https://*.basemaps.cartocdn.com https://tile.openstreetmap.org https://t.me wss://stream.aisstream.io https://*.wikipedia.org https://*.wikimedia.org https://api.memegen.link https://static.cloudflareinsights.com https://cloudflareinsights.com; frame-src https://www.youtube.com https://youtube.com; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+  <link rel="preload" href={`${basePath}fonts/jetbrains-mono-latin.woff2`} as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href={`${basePath}fonts/dm-sans-latin.woff2`} as="font" type="font/woff2" crossorigin>
+  <link rel="manifest" href={`${basePath}manifest.json`}>
+  <link rel="canonical" href={pageUrl}>
+  <link rel="alternate" hreflang="en" href={pageUrl} />
+  {hasLocalizedVersions && <link rel="alternate" hreflang="es" href={`${siteUrl}${basePath}es/${trackerSlug ? `${trackerSlug}/` : ''}`} />}
+  {hasLocalizedVersions && <link rel="alternate" hreflang="fr" href={`${siteUrl}${basePath}fr/${trackerSlug ? `${trackerSlug}/` : ''}`} />}
+  {hasLocalizedVersions && <link rel="alternate" hreflang="pt" href={`${siteUrl}${basePath}pt/${trackerSlug ? `${trackerSlug}/` : ''}`} />}
+  <link rel="alternate" hreflang="x-default" href={pageUrl} />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔴</text></svg>">
+  <script is:inline type="application/ld+json" set:html={jsonLd({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Watchboard",
+    "url": `${siteUrl}${basePath}`,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": `${siteUrl}${basePath}search/?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  })} />
+  <script is:inline type="application/ld+json" set:html={jsonLd({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": title,
+    "description": desc,
+    "url": pageUrl,
+    "inLanguage": locale,
+  })} />
+  <link rel="alternate" type="application/rss+xml" title={trackerSlug ? `${title} RSS` : 'Watchboard RSS'} href={trackerSlug ? `${basePath}${trackerSlug}/rss.xml` : `${basePath}rss.xml`} />
+  <link rel="alternate" type="application/rss+xml" title="Watchboard Breaking News RSS" href={`${basePath}rss/breaking.xml`} />
+  <link rel="alternate" type="application/rss+xml" title="Watchboard Light-Scan Triage RSS" href={`${basePath}rss/light-scan.xml`} />
+  {/* Machine-readable feed index (for agents/crawlers) and OPML bundle (one-click import in any RSS reader) */}
+  <link rel="alternate" type="application/json" title="Watchboard feed index (JSON)" href={`${basePath}feeds.json`} />
+  <link rel="alternate" type="text/x-opml" title="Watchboard feeds (OPML)" href={`${basePath}feeds.opml`} />
+  {/* Resource hints for common image domains — only on pages that load event images */}
+  {(trackerSlug || Astro.url.pathname === '/' || Astro.url.pathname === basePath) && (<>
+  <link rel="preconnect" href="https://www.aljazeera.com" crossorigin>
+  <link rel="preconnect" href="https://dims.apnews.com" crossorigin>
+  <link rel="preconnect" href="https://d3i6fh83elv35t.cloudfront.net" crossorigin>
+  <link rel="preconnect" href="https://i.iranintl.com" crossorigin>
+  <link rel="dns-prefetch" href="https://global.unitednations.entermediadb.net">
+  <link rel="dns-prefetch" href="https://npr.brightspotcdn.com">
+  <link rel="dns-prefetch" href="https://www.hrw.org">
+  <link rel="dns-prefetch" href="https://media.cnn.com">
+  <link rel="dns-prefetch" href="https://images.jpost.com">
+  <link rel="dns-prefetch" href="https://assets.kyivindependent.com">
+  <link rel="dns-prefetch" href="https://upload.wikimedia.org">
+  </>)}
+  <!-- Analytics preconnects -->
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "e1a664e3c0b34e03b06b74bb10f199f5"}'></script>
+  <!-- PostHog Analytics — deferred to idle to avoid blocking TBT -->
+  {import.meta.env.PUBLIC_POSTHOG_KEY && (
+    <script define:vars={{
+      posthogKey: import.meta.env.PUBLIC_POSTHOG_KEY,
+      posthogHost: import.meta.env.PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
+    }}>
+      (typeof requestIdleCallback==='function'?requestIdleCallback:function(cb){setTimeout(cb,150)})(function(){
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageviewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init(posthogKey, {
+          api_host: posthogHost,
+          person_profiles: 'identified_only',
+          autocapture: true,
+          capture_pageview: true,
+          capture_pageleave: true,
+          // Capture LCP, FID/INP, CLS, FCP, TTFB on real user loads so we
+          // can track perf trends in PostHog Insights instead of trusting
+          // noisy single-run synthetic Lighthouse numbers.
+          capture_performance: { web_vitals: true },
+        });
+      });
+    </script>
+  )}
+  <slot name="head" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">{locale === 'es' ? 'Ir al contenido principal' : locale === 'fr' ? 'Aller au contenu principal' : locale === 'pt' ? 'Ir para o conteudo principal' : 'Skip to main content'}</a>
+  <div class="tooltip" id="tooltip"></div>
+  <a
+    class="feedback-fab"
+    href={`${githubUrl}/issues/new/choose`}
+    target="_blank"
+    rel="noopener noreferrer"
+    title={locale === 'es' ? 'Reportar problema o sugerir mejora' : locale === 'fr' ? 'Signaler un probleme ou suggerer une amelioration' : locale === 'pt' ? 'Reportar problema ou sugerir melhoria' : 'Report issue or suggest a feature'}
+    aria-label={locale === 'es' ? 'Reportar problema o sugerir mejora' : locale === 'fr' ? 'Signaler un probleme ou suggerer une amelioration' : locale === 'pt' ? 'Reportar problema ou sugerir melhoria' : 'Report issue or suggest a feature'}
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      <line x1="12" y1="8" x2="12" y2="12"/>
+      <line x1="12" y1="16" x2="12.01" y2="16"/>
+    </svg>
+  </a>
+  
+  <!-- Push Notifications Bell -->
+  <PushSubscriptionManager client:idle trackers={pushTrackers} />
+  
+  <slot />
+
+  <script>
+    // ── i18n: swap content for locale-specific data attributes ──
+    (function() {
+      const locale = localStorage.getItem('watchboard-locale') || 'en';
+      if (locale !== 'en') {
+        document.querySelectorAll('[data-i18n][data-' + locale + ']').forEach(el => {
+          const translated = el.getAttribute('data-' + locale);
+          if (translated) el.textContent = translated;
+        });
+      }
+      // Listen for locale changes from the toggle
+      window.addEventListener('locale-change', (e) => {
+        const newLocale = (e as CustomEvent).detail;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const translated = el.getAttribute('data-' + newLocale);
+          const original = el.getAttribute('data-en') || el.textContent;
+          if (!el.getAttribute('data-en')) el.setAttribute('data-en', el.textContent || '');
+          el.textContent = newLocale === 'en' ? (el.getAttribute('data-en') || '') : (translated || el.getAttribute('data-en') || '');
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    if ('serviceWorker' in navigator) {
+      // Unregister any foreign service worker (e.g. from main site)
+      // that may be caching routes incorrectly
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        for (const reg of regs) {
+          if (reg.scope && !reg.scope.includes('watchboard.dev')) reg.unregister();
+        }
+      });
+      // Register Watchboard service worker (scoped to the configured base path)
+      const swBase = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+      navigator.serviceWorker.register(`${swBase}sw.js`);
+    }
+
+    // PWA refresh system (pull-to-refresh, update banner, refresh button)
+    import('../lib/pwa-refresh').then(m => m.initPwaRefresh()).catch(() => {});
+  </script>
+</body>
+</html>

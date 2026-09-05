@@ -1,0 +1,145 @@
+[
+  {
+    "id": "gdp-growth-rate",
+    "label": "GDP Growth Rate (2025)",
+    "value": "-2.4%",
+    "change": "-0.4pp vs 2024",
+    "direction": "down",
+    "sparkData": [1.2, 0.5, -1.8, -3.3, -1.7, -2.0, -2.4],
+    "color": "red",
+    "source": "IMF DataMapper, 2025",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "inflation-rate",
+    "label": "Inflation Rate (CPI, Jun 2026)",
+    "value": "18.9%",
+    "change": "-1.1pp vs May 2026 (20.0%)",
+    "direction": "down",
+    "sparkData": [15.4, 22.0, 34.0, 45.0, 25.8, 20.0, 18.9],
+    "color": "amber",
+    "source": "Trading Economics / Banque de la République d'Haïti, Jun 2026",
+    "lastUpdated": "2026-08-18T00:00:00.000Z"
+  },
+  {
+    "id": "remittances-pct-gdp",
+    "label": "Remittances (% of GDP, 2024)",
+    "value": "15%",
+    "change": "-4pp vs 2023",
+    "direction": "down",
+    "sparkData": [17.0, 18.0, 19.0, 21.0, 20.0, 19.0, 15.0],
+    "color": "amber",
+    "source": "World Bank, 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "remittances-total",
+    "label": "Remittances Total (2024)",
+    "value": "$4.1B",
+    "change": "+$358M vs 2023",
+    "direction": "up",
+    "sparkData": [2.4, 2.9, 3.3, 3.5, 3.7, 3.75, 4.11],
+    "color": "green",
+    "source": "World Bank, 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "unemployment-rate",
+    "label": "Unemployment Rate (2025)",
+    "value": "14.9%",
+    "change": "+2.3pp vs pre-crisis",
+    "direction": "up",
+    "sparkData": [12.0, 12.5, 13.2, 13.8, 14.2, 14.6, 14.9],
+    "color": "red",
+    "source": "IMF DataMapper, 2025",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "usaid-disbursements",
+    "label": "US Aid Disbursements (2024)",
+    "value": "$340M",
+    "change": "Cuts deepened in 2026",
+    "direction": "down",
+    "sparkData": [400, 350, 500, 420, 380, 360, 340],
+    "color": "red",
+    "source": "USAID, FY2024; OCHA 2026",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "gdp-per-capita",
+    "label": "GDP Per Capita (2025)",
+    "value": "$1,612",
+    "change": "-$88 vs 2024",
+    "direction": "down",
+    "sparkData": [1900, 1820, 1760, 1700, 1680, 1700, 1612],
+    "color": "red",
+    "source": "World Bank / IMF, 2025",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "food-insecurity-pct",
+    "label": "Population in Acute Food Insecurity",
+    "value": "52%",
+    "change": "5.8M Haitians IPC Phase 3+; 1.8M in Phase 4 Emergency",
+    "direction": "up",
+    "sparkData": [32, 35, 40, 42, 45, 48, 52],
+    "color": "red",
+    "source": "WFP / IPC / OCHA, Apr 2026",
+    "lastUpdated": "2026-04-25T13:00:00Z"
+  },
+  {
+    "id": "gang-extortion-estimated",
+    "label": "Estimated Gang Extortion Revenue (Annual)",
+    "value": "$100–400M",
+    "change": "Structural parallel economy",
+    "direction": "up",
+    "sparkData": [30, 50, 80, 120, 180, 250, 300],
+    "color": "red",
+    "source": "ACLED / ICG, 2024 estimate",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "solar-battery-tax-elimination-june2026",
+    "label": "Solar Panel & Battery Import Tax",
+    "value": "0% (eliminated)",
+    "change": "Tariffs removed Jun 5, 2026",
+    "direction": "down",
+    "sparkData": [15, 15, 15, 15, 15, 10, 0],
+    "color": "green",
+    "source": "PM Fils-Aimé / HaitiLibre, Jun 5, 2026",
+    "lastUpdated": "2026-06-05T14:00:00.000Z"
+  },
+  {
+    "id": "hrp-funding-gap",
+    "label": "2026 Humanitarian Response Plan Funding",
+    "value": "~23%",
+    "change": "$880M needed; ~$198.7M secured — USAID cuts deepening gap; WFP alone needs $332M",
+    "direction": "down",
+    "sparkData": [62, 55, 48, 40, 35, 20, 23],
+    "color": "red",
+    "source": "Jamaica Observer / UN / OCHA, May 29, 2026",
+    "lastUpdated": "2026-05-29T14:30:00.000Z"
+  },
+  {
+    "id": "imf-smp-program-compliance",
+    "label": "IMF Staff-Monitored Program Compliance",
+    "value": "All targets met",
+    "change": "3rd review concluded Apr 6, 2026",
+    "direction": "up",
+    "sparkData": [0, 0, 1, 1, 1, 1, 1],
+    "color": "green",
+    "source": "IMF, Apr 6, 2026",
+    "lastUpdated": "2026-04-09T00:00:00Z"
+  },
+  {
+    "id": "fuel-price-gasoline-apr2026",
+    "label": "Gasoline Price (Port-au-Prince, Apr 2026)",
+    "value": "$5.58/gal",
+    "change": "+30–40% from early April",
+    "direction": "up",
+    "sparkData": [3.50, 3.80, 4.10, 4.30, 4.65, 5.00, 5.58],
+    "color": "red",
+    "source": "Haitian Times, Apr 17, 2026",
+    "lastUpdated": "2026-04-22T14:55:43Z"
+  }
+]

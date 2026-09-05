@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-26T15:00:17.176Z",
+  "tracker": "battery-revolution",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-25T18:59:43.893Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 37,
+      "lastRun": "2026-05-14T14:45:23.891Z",
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 33,
+      "lastRun": "2026-05-28T14:52:00.000Z",
+      "status": "updated"
+    },
+    "econ": {
+      "count": 8,
+      "lastRun": "2026-05-28T14:52:00.000Z",
+      "status": "updated"
+    },
+    "claims": {
+      "count": 15,
+      "lastRun": "2026-05-28T14:52:00.000Z",
+      "status": "updated"
+    },
+    "political": {
+      "count": 15,
+      "status": "ok"
+    },
+    "events": {
+      "lastRun": "2026-08-18T18:29:08.235Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-18T18:29:08.235Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-25T18:59:43.893Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

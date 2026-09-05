@@ -1,0 +1,134 @@
+[
+  {
+    "id": "diaspora-remittances",
+    "label": "Diaspora Remittances (Annual)",
+    "value": "$1.4–2B",
+    "change": "+5% (2023)",
+    "direction": "up",
+    "sparkData": [900, 1000, 1100, 1200, 1400, 1600, 1700, 1800],
+    "color": "green",
+    "source": "World Bank 2023",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "shabaab-annual-revenue",
+    "label": "Al-Shabaab Revenue (Est. Annual)",
+    "value": "$100–180M",
+    "change": "Stable (2023)",
+    "direction": "up",
+    "sparkData": [50, 80, 120, 150, 130, 120, 150, 160],
+    "color": "red",
+    "source": "UN Monitoring Group 2023",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "gdp-per-capita",
+    "label": "GDP Growth Rate (Somalia)",
+    "value": "3.0% (2025 est.)",
+    "change": "Down from 4% in 2023-24; projected 2.8% in 2026",
+    "direction": "down",
+    "sparkData": [2.1, 2.5, 3.0, 3.5, 4.0, 4.0, 3.0, 2.8],
+    "color": "amber",
+    "source": "World Bank Somalia Economic Update (11th ed.), May 13, 2026",
+    "lastUpdated": "2026-05-13T14:22:17.000Z"
+  },
+  {
+    "id": "humanitarian-funding-gap",
+    "label": "Humanitarian Response Plan Funding Gap",
+    "value": "~84.8% (only 15.2% funded)",
+    "change": "Still critical Jul 14 — UN confirms 'real and credible risk of famine' in Burhakaba District",
+    "direction": "up",
+    "sparkData": [30, 35, 45, 55, 65, 70, 76, 87, 85],
+    "color": "red",
+    "source": "UN Humanitarian Coordinator George Conway, Jul 14, 2026 / OCHA",
+    "lastUpdated": "2026-07-14T00:00:00.000Z"
+  },
+  {
+    "id": "livestock-export-value",
+    "label": "Livestock Export Revenue",
+    "value": "~$360M",
+    "change": "Recovering post-drought",
+    "direction": "up",
+    "sparkData": [500, 480, 300, 200, 150, 250, 300, 360],
+    "color": "green",
+    "source": "FAO / Somalia Trade Statistics 2023",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "foreign-aid-dependency",
+    "label": "Foreign Aid as % of GDP",
+    "value": "~35%",
+    "change": "Declining slowly",
+    "direction": "down",
+    "sparkData": [70, 65, 60, 55, 50, 45, 40, 35],
+    "color": "amber",
+    "source": "World Bank Development Indicators 2023",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "telecom-mobile-money",
+    "label": "Mobile Money Transaction Volume",
+    "value": "$3B+ annually",
+    "change": "Growing (2023)",
+    "direction": "up",
+    "sparkData": [500, 800, 1200, 1800, 2200, 2500, 2800, 3000],
+    "color": "blue",
+    "source": "Somali Central Bank / Hormuud Telecom 2023",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "drought-economic-loss",
+    "label": "Drought-Related Economic Loss (2022 peak)",
+    "value": "$3.5B estimated",
+    "change": "2022 crisis year",
+    "direction": "up",
+    "sparkData": [200, 300, 500, 800, 1500, 3500, 2000, 1200],
+    "color": "red",
+    "source": "World Bank Somalia Economic Update 2023",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "hipc-debt-relief",
+    "label": "External Debt Post-HIPC Relief",
+    "value": "$0.6B",
+    "change": "From $5.3B (2018)",
+    "direction": "down",
+    "sparkData": [5300, 5200, 4800, 4000, 3000, 1800, 900, 600],
+    "color": "green",
+    "source": "IMF / World Bank HIPC Completion Point, Dec 2023",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "turkey-somalia-oil-exploration",
+    "label": "Turkey-Somalia Offshore Oil Exploration (TPAO)",
+    "value": "~15,000 km² (3 blocks)",
+    "change": "Blue Economy Ministry inaugurated Apr 23, 2026; Curad-1 drilling ongoing",
+    "direction": "up",
+    "sparkData": [0, 0, 0, 0, 0, 0, 1, 2],
+    "color": "green",
+    "source": "TPAO / Radio Dalsan / Somalia Ministry of Ports & Marine Transport Apr 2026",
+    "lastUpdated": "2026-04-23T14:00:00.000Z"
+  },
+  {
+    "id": "iran-war-shipping-disruption-somalia-2026",
+    "label": "Shipping Disruption Cost Impact (Somalia)",
+    "value": "+50% transport costs",
+    "change": "+50% vs. pre-Iran War (Apr 2026)",
+    "direction": "up",
+    "sparkData": [0, 5, 10, 15, 22, 35, 45, 50],
+    "color": "red",
+    "source": "EU NAVFOR / Insurance Journal / Middle East Observer Apr 2026",
+    "lastUpdated": "2026-04-30T15:45:00.000Z"
+  },
+  {
+    "id": "somalia-china-fishery-export-deal",
+    "label": "Somalia-China Duty-Free Fishery Export Access",
+    "value": "First tariff-free access to China market",
+    "change": "NEW Jul 16, 2026 — signed in Mogadishu",
+    "direction": "up",
+    "sparkData": [0, 0, 0, 0, 0, 0, 0, 1],
+    "color": "green",
+    "source": "allAfrica / Radio Dalsan / Hiiraan Online Jul 16, 2026",
+    "lastUpdated": "2026-07-16T00:00:00.000Z"
+  }
+]

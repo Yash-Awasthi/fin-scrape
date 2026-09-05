@@ -1,0 +1,109 @@
+[
+  {
+    "id": "years_of_secrecy",
+    "label": "Years Since Roswell",
+    "value": "79",
+    "color": "red",
+    "source": "US Air Force / National Archives",
+    "contested": false,
+    "delta": "+1",
+    "trend": "up",
+    "lastUpdated": "2026-04-05T00:00:00.000Z"
+  },
+  {
+    "id": "congressional_hearings",
+    "label": "Congressional Hearings",
+    "value": "7",
+    "color": "blue",
+    "source": "Congress.gov / C-SPAN",
+    "contested": false,
+    "delta": "+2",
+    "deltaNote": "FY2026 cycle added 2 hearings (House Oversight Sep 2025, Senate Armed Services Nov 2024)",
+    "trend": "up",
+    "lastUpdated": "2026-04-05T00:00:00.000Z"
+  },
+  {
+    "id": "aaro_cases",
+    "label": "AARO Cases Received",
+    "value": "2,300+",
+    "color": "amber",
+    "source": "AARO / The Black Vault",
+    "contested": true,
+    "contestNote": "AARO's FY2025 annual report (released Jul 21, 2026, months late) logged 319 new cases and resolved 114 — 205 remain unresolved. Whistleblowers allege AARO has not been given access to the most classified programs.",
+    "delta": "+319",
+    "deltaNote": "FY2025 report (Jun 2024–May 2025): 319 new reports received, including the fiscal year's only maritime case — a ~100-object Navy-reported swarm off Virginia's coast.",
+    "trend": "up",
+    "lastUpdated": "2026-07-21T00:00:00.000Z"
+  },
+  {
+    "id": "whistleblowers",
+    "label": "Public Whistleblowers",
+    "value": "4+",
+    "color": "amber",
+    "source": "Congressional testimony / NewsNation",
+    "contested": true,
+    "contestNote": "Grusch, Graves, Fravor, and Herrera testified publicly. Grusch claims 40+ additional witnesses provided classified testimony to the ICIG. AARO Historical Report Vol. 1 found 'no evidence' supporting retrieval program claims. July 31, 2026: ODNI issued formal guidance waiving prior NDAs and secrecy oaths for current/former officials disclosing UAP information through AARO or PURSUE channels — intended to remove the legal deterrent that kept additional witnesses silent, though it does not authorize public disclosure.",
+    "trend": "stable",
+    "lastUpdated": "2026-07-31T00:00:00.000Z"
+  },
+  {
+    "id": "disclosure_laws",
+    "label": "UAP Laws Enacted",
+    "value": "5",
+    "color": "green",
+    "source": "Congress.gov",
+    "contested": false,
+    "delta": "+1",
+    "deltaNote": "FY2026 NDAA added 3 new UAP provisions (signed Dec 2025)",
+    "trend": "up",
+    "lastUpdated": "2025-12-20T00:00:00.000Z"
+  },
+  {
+    "id": "presidential_directives",
+    "label": "Presidential Directives",
+    "value": "1",
+    "color": "green",
+    "source": "White House / Time",
+    "contested": false,
+    "delta": "+1",
+    "deltaNote": "Trump ordered Pentagon to release UAP/alien files (Feb 19, 2026) — first ever presidential UAP disclosure directive. Implemented July 31, 2026 via ODNI guidance waiving NDAs/secrecy oaths for witnesses disclosing through AARO/PURSUE channels.",
+    "trend": "up",
+    "lastUpdated": "2026-07-31T00:00:00.000Z"
+  },
+  {
+    "id": "eo_deadline_days",
+    "label": "EO Milestone Status",
+    "value": "Reached",
+    "color": "green",
+    "source": "Executive Order / Department of War",
+    "contested": false,
+    "delta": "✓ May 20",
+    "deltaNote": "May 20 EO 90-day milestone reached. PURSUE Tranche 2 (64 files: 51 videos, 6 PDFs, 7 audio) released May 22 — two days after the milestone. Next milestone: 300-day full-disclosure-or-justify deadline in late Nov/Dec 2026.",
+    "trend": "up",
+    "lastUpdated": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "pursue_files_released",
+    "label": "PURSUE Files Released",
+    "value": "379",
+    "color": "green",
+    "source": "Department of War / war.gov/UFO",
+    "contested": false,
+    "delta": "+41",
+    "deltaNote": "Tranche 4 (Jul 10, 2026, 40 files): 2015 Pantex nuclear-facility drone intrusion, 2019 aviator account, 2025 China-adjacent sightings. Tranche 5 (Aug 7, 2026, 41 files): 2021 Gulf of Oman UAP swarm during a live-fire exercise, 2002 Afghanistan triangle-object account, 2026 FBI infrared footage. Total: 379 files across five tranches; portal has logged 1.7B+ hits since May 8 launch.",
+    "trend": "up",
+    "lastUpdated": "2026-08-10T14:15:00.000Z"
+  },
+  {
+    "id": "science_advisory_council",
+    "label": "UAP Science Advisory Council",
+    "value": "12 members",
+    "color": "blue",
+    "source": "Disclosure Foundation / DefenseScoop",
+    "contested": false,
+    "delta": "NEW",
+    "deltaNote": "Formed June 14, 2026 and chaired by Harvard astrophysicist Avi Loeb, tasked by the White House, AARO, ODNI, and FBI to provide scientific guidance to UAP investigations, spanning physics, data science, oceanography, and biology.",
+    "trend": "up",
+    "lastUpdated": "2026-07-16T14:15:00.000Z"
+  }
+]

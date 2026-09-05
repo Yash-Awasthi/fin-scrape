@@ -1,0 +1,11 @@
+faiss-cpu
+numpy
+pandas
+PyYAML
+requests
+scikit-learn
+yfinance
+python-dotenv
+google-generativeai
+matplotlib
+sentence-transformers 

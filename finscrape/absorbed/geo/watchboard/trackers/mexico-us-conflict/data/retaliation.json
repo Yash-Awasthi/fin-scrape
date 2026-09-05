@@ -1,0 +1,83 @@
+[
+  {
+    "id": "santa-anna-alamo-offensive",
+    "name": "Santa Anna's Texas Offensive (Jan–Apr 1836)",
+    "detail": "Following Texan capture of San Antonio (Dec 1835), Santa Anna led 6,000 soldiers north to crush the rebellion personally. He seized the Alamo (Mar 6), ordered the Goliad Massacre (Mar 27), and pursued Houston east — until his catastrophic defeat at San Jacinto (Apr 21, 1836) reversed all Mexican gains.",
+    "icon": "retaliation",
+    "time": "Jan–Apr 1836",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexico-texas-raids-1842",
+    "name": "Mexican Raids into Texas (1842)",
+    "detail": "General Rafael Vásquez (March 1842) and General Adrián Woll (September 1842) each led expeditions into Texas, briefly occupying San Antonio. The raids were meant to demonstrate that Mexico still considered Texas its territory and had not accepted independence. Both expeditions withdrew without holding any territory.",
+    "icon": "retaliation",
+    "time": "Mar–Sep 1842",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mier-expedition-capture",
+    "name": "Mexican Capture of Texan Raiders at Mier (Dec 1842)",
+    "detail": "In response to Texan raids across the Rio Grande, Mexican forces under Pedro de Ampudia surrounded and defeated ~700 Texan raiders at Mier. 243 prisoners were taken. After a mass escape attempt, Santa Anna ordered the Black Bean lottery — 17 of 176 recaptured men were shot. The survivors were imprisoned in Perote Fortress.",
+    "icon": "retaliation",
+    "time": "Dec 25–26, 1842",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexico-breaks-diplomatic-relations",
+    "name": "Mexico Breaks Diplomatic Relations (Mar 1845)",
+    "detail": "When the US passed the joint resolution annexing Texas, Mexico's foreign minister immediately broke diplomatic relations with the United States and recalled the Mexican minister from Washington. Mexico declared annexation a casus belli (cause for war). This was Mexico's formal diplomatic response to what it viewed as an unlawful act of aggression.",
+    "icon": "retaliation",
+    "time": "Mar 1845",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "thornton-ambush",
+    "name": "Mexican Cavalry Attack on US Dragoons (Apr 25, 1846)",
+    "detail": "General Anastasio Torrejón's 1,600-man cavalry force crossed the Rio Grande and ambushed Captain Seth Thornton's 63-man US dragoon patrol north of the river. 11 Americans were killed, 5 wounded, 47 captured. This was Mexico's direct military response to Taylor's fortification of the Rio Grande. Polk used the incident to request a declaration of war.",
+    "icon": "retaliation",
+    "time": "Apr 25, 1846",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fort-texas-shelling",
+    "name": "Mexican Artillery Bombardment of Fort Texas (May 3–9, 1846)",
+    "detail": "While Taylor was at Point Isabel resupplying, Mexican forces in Matamoros bombarded Fort Texas with heavy artillery. US Sergeant Rueben Downing and Major Jacob Brown were killed. The fort held; Taylor returned, won at Palo Alto and Resaca de la Palma, and the bombardment ended. Fort Texas was renamed Fort Brown (now Brownsville, Texas) in Brown's honor.",
+    "icon": "retaliation",
+    "time": "May 3–9, 1846",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "california-reconquest-1846",
+    "name": "Californio Reconquest of Los Angeles (Sep–Dec 1846)",
+    "detail": "After initial US occupation of California, Californio lancers under Serbulo Varela and Manuel Flores staged an uprising and retook Los Angeles (Sep 23, 1846), San Diego, and most of southern California. The reconquest forced the US to fight the battles of San Pasqual (Dec 6), San Gabriel (Jan 8), and La Mesa (Jan 9, 1847) before California was finally secured.",
+    "icon": "retaliation",
+    "time": "Sep–Dec 1846",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexican-guerrilla-war",
+    "name": "Mexican Guerrilla Campaign Against US Supply Lines (1847–48)",
+    "detail": "After the fall of Mexico City, irregular forces under 'El Plateado' and other guerrilla leaders harassed US supply convoys on the National Highway between Veracruz and Puebla. Several US supply trains were ambushed with significant losses. Scott responded with harsh counter-guerrilla measures including village punishments and executions. Guerrilla activity continued until the treaty was ratified.",
+    "icon": "retaliation",
+    "time": "Sep 1847–May 1848",
+    "tier": 2,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "puebla-defense",
+    "name": "Mexican Siege of US Garrison at Puebla (Sep–Oct 1847)",
+    "detail": "After Scott's main army left Puebla for Mexico City, Mexican forces under General Joaquín Rea besieged the small US garrison of 500 men under Colonel Thomas Childs. The siege lasted from September 14 to October 12, 1847. Childs held out until relieved by General Lane's column. The siege tied down resources and showed Mexico's continuing will to resist.",
+    "icon": "retaliation",
+    "time": "Sep 14–Oct 12, 1847",
+    "tier": 2,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

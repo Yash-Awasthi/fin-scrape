@@ -1,0 +1,58 @@
+[
+  {
+    "id": "washington-negotiations-announced-may10-2026",
+    "year": "2026",
+    "title": "US Schedules Israel-Lebanon Peace Negotiations for May 14-15 in Washington; Elections Postponed",
+    "type": "diplomatic",
+    "active": true,
+    "detail": "The United States announced a second round of US-mediated negotiations between Israel and Lebanon for May 14-15 in Washington DC, aimed at advancing 'a comprehensive peace and security agreement.' The talks would address Israeli troop withdrawal from occupied Lebanese positions, UNSCR 1701 implementation, Hezbollah disarmament south of the Litani River, and long-term border arrangements. Separately, Lebanon's parliamentary elections — originally scheduled for May 10, 2026 for domestic voters — had been postponed by the Lebanese Parliament due to the ongoing Israeli military operations, which had killed over 2,750 people and displaced more than 1.2 million since March 2. The Security Council also anticipated briefings on UNIFIL's situation, with the force's mandate set to expire December 31, 2026, raising questions about international monitoring of the Blue Line after withdrawal.",
+    "sources": [
+      {
+        "name": "UN Security Council Report — Lebanon Monthly Forecast May 2026",
+        "tier": 1,
+        "url": "https://www.securitycouncilreport.org/monthly-forecast/2026-05/lebanon-38.php",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/5/9/israeli-attacks-across-lebanon-kill-at-least-19",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/5/9/israeli-attacks-across-lebanon-kill-at-least-19",
+        "caption": "Israeli military operations in southern Lebanon continue despite US-brokered ceasefire and planned Washington negotiations",
+        "source": "Reuters / Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/05/2026-05-09T145904Z_2074759255_RC2Q5LA1BLRD_RTRMADP_3_IRAN-CRISIS-LEBANON-ISRAEL-1778342289.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hezbollah-attacks-south-lebanon-may10-2026",
+    "year": "May 10, 2026",
+    "title": "Hezbollah Claims Multiple Attacks on Israeli Forces in South Lebanon",
+    "type": "military",
+    "active": true,
+    "detail": "Hezbollah claimed responsibility for multiple attacks against Israeli military forces operating in south Lebanon, sustaining active hostilities on the northern front even as US-brokered Lebanon–Israel peace negotiations were scheduled for May 14–15 in Washington. The attacks targeted Israeli military positions south of the Litani River, where Israeli forces have maintained a presence in violation of the November 2024 ceasefire agreement. The continued fighting underscored the fragility of diplomatic efforts, with Hezbollah rejecting ceasefire terms that would require its disarmament and withdrawal from the border area as a precondition for Israeli troop withdrawal from occupied Lebanese territory.",
+    "sources": [
+      {
+        "name": "Middle East Eye",
+        "tier": 2,
+        "url": "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-claims-multiple-attacks-israeli-forces-south-lebanon",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.middleeasteye.net/live-blog/live-blog-update/hezbollah-claims-multiple-attacks-israeli-forces-south-lebanon",
+        "caption": "Hezbollah claims multiple attacks on Israeli forces in south Lebanon amid US-brokered peace talks",
+        "source": "Middle East Eye",
+        "thumbnail": "https://www.middleeasteye.net/sites/default/files/2026-05/000_B2DV873%20%281%29_0.jpg"
+      }
+    ]
+  }
+]

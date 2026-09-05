@@ -1,0 +1,27 @@
+# Development & test dependencies.
+#
+# The test suite boots the real application — tests/test_startup_gate.py runs
+# main.py's lifespan — so it needs everything the app imports. That list is
+# requirements-base.txt, included below rather than restated: an earlier
+# version of this file kept its own hand-maintained copy, which drifted six
+# packages behind and broke CI at collection, before a single assertion ran.
+#
+# What is deliberately left out is requirements.txt's own additions: chromadb,
+# sentence-transformers (torch) and scrapling's browser fetchers, roughly a
+# gigabyte that no test touches, because all three are imported lazily.
+#
+# For local work that exercises the vector store or the scraper, install both:
+#   pip install -r requirements.txt -r requirements-dev.txt
+
+-r requirements-base.txt
+
+# ── Test framework ───────────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-mock>=3.12.0
+
+# ── HTTP mocking (httpx transport-level) ─────────────────────────────────────
+respx>=0.21.0
+
+# ── Lint / format (also enforced in CI and pre-commit) ───────────────────────
+ruff>=0.6.9

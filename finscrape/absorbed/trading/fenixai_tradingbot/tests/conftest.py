@@ -1,0 +1,128 @@
+from __future__ import annotations
+
+import asyncio
+import atexit
+import inspect
+import os
+import tempfile
+
+import pytest
+
+
+def _force_test_database_url() -> None:
+    """Never let the test suite touch the production SQLite DB.
+
+    The default DATABASE_URL is the relative ``sqlite+aiosqlite:///./fenix_trading.db``,
+    so running pytest from the repo root would write test fixtures (fill:123,
+    position:1234, price 100.0, ...) straight into the live trading DB — which is
+    exactly what happened on 2026-07-04.
+
+    We point DATABASE_URL at a throwaway temp FILE (not ``:memory:`` — an
+    in-memory aiosqlite DB is per-connection, so tables created on one async
+    connection are invisible to the next and the API e2e tests would fail with
+    "no such table"). The file is removed at interpreter exit. A caller that sets
+    DATABASE_URL explicitly always wins.
+    """
+    if os.getenv("DATABASE_URL"):
+        return
+    fd, path = tempfile.mkstemp(prefix="fenix_test_", suffix=".db")
+    os.close(fd)
+    os.environ["DATABASE_URL"] = f"sqlite+aiosqlite:///{path}"
+
+    def _cleanup() -> None:
+        try:
+            os.unlink(path)
+        except OSError:
+            pass
+
+    atexit.register(_cleanup)
+
+
+# Apply at import time so it wins even before any module-level engine is built.
+_force_test_database_url()
+
+# The AGENT_CONSENSUS gate (FENIX_MIN_AGENT_CONSENSUS, default 2 in production)
+# blocks any _process_decision test whose fixture data doesn't supply >=2/3
+# agreeing directional agents — which is most legacy filter/risk-gate tests that
+# predate the gate. Disable it by default for the suite; tests that exercise the
+# gate itself re-enable it explicitly with monkeypatch.setenv.
+os.environ.setdefault("FENIX_MIN_AGENT_CONSENSUS", "0")
+# Unit tests must not perform live multi-timeframe, macro, or scorecard I/O.
+os.environ.setdefault("FENIX_STRICT_MTF_BIAS_TIMEFRAME", "")
+os.environ.setdefault("FENIX_MACRO_RISKOFF_ENABLE", "0")
+os.environ.setdefault("FENIX_SCORECARD_WEIGHTS", "0")
+# Live safety flags belong to deployment configuration, not the default unit
+# test environment. Individual safety tests opt back in with monkeypatch.
+os.environ.setdefault("FENIX_ENFORCE_LLM_RISK", "0")
+os.environ.setdefault("FENIX_REQUIRE_LIVE_STOP_LOSS", "0")
+os.environ.setdefault("FENIX_GLOBAL_PORTFOLIO_GUARD", "0")
+os.environ.setdefault("FENIX_PYRAMID_ENABLE", "0")
+os.environ.setdefault("FENIX_ALLOW_ADD_TO_POSITION", "0")
+# The live analysis stagger would add real sleeps to live-mode engine tests.
+os.environ.setdefault("FENIX_ANALYSIS_STAGGER_SEC", "0")
+
+
+def _isolate_hybrid_log_dir() -> None:
+    """Keep hybrid paper-run artifacts (hybrid_signals/trades_*.jsonl) out of
+    the repo's real logs/ directory when tests construct a HybridController."""
+    if os.getenv("FENIX_HYBRID_LOG_DIR"):
+        return
+    path = tempfile.mkdtemp(prefix="fenix_hybrid_logs_")
+    os.environ["FENIX_HYBRID_LOG_DIR"] = path
+
+    def _cleanup() -> None:
+        import shutil
+
+        shutil.rmtree(path, ignore_errors=True)
+
+    atexit.register(_cleanup)
+
+
+_isolate_hybrid_log_dir()
+
+
+@pytest.fixture(autouse=True, scope="session")
+def _isolate_test_database():
+    _force_test_database_url()
+    yield
+
+
+@pytest.fixture(autouse=True)
+def isolate_runtime_risk_manager_storage(monkeypatch, tmp_path):
+    """Keep RuntimeRiskManager tests from reading or writing live run state."""
+    monkeypatch.setenv("FENIX_RISK_MANAGER_STORAGE_PATH", str(tmp_path / "risk_manager.jsonl"))
+    try:
+        from src.risk import runtime_risk_manager
+
+        runtime_risk_manager._risk_manager = None
+    except Exception:
+        pass
+
+
+@pytest.fixture
+def device():
+    """Torch device fixture for standalone NanoFenix validation tests."""
+    import torch
+
+    return torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+
+
+def pytest_pyfunc_call(pyfuncitem):
+    """Fallback async test runner when pytest-asyncio is unavailable."""
+    testfunction = pyfuncitem.obj
+    if not inspect.iscoroutinefunction(testfunction):
+        return None
+
+    loop = asyncio.new_event_loop()
+    try:
+        asyncio.set_event_loop(loop)
+        funcargs = {
+            name: pyfuncitem.funcargs[name]
+            for name in pyfuncitem._fixtureinfo.argnames
+        }
+        loop.run_until_complete(testfunction(**funcargs))
+    finally:
+        loop.run_until_complete(loop.shutdown_asyncgens())
+        asyncio.set_event_loop(None)
+        loop.close()
+    return True

@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-28T02:00:38.980Z",
+  "tracker": "covid-pandemic",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-05-20T19:05:06.394Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 90
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 66
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 21
+    },
+    "political": {
+      "status": "seeded",
+      "itemCount": 22
+    },
+    "casualties": {
+      "status": "seeded",
+      "itemCount": 15
+    },
+    "econ": {
+      "status": "seeded",
+      "itemCount": 12
+    },
+    "events": {
+      "lastRun": "2026-08-28T02:00:38.980Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-05-20T19:05:06.394Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-28T02:00:38.980Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

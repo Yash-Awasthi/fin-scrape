@@ -1,0 +1,64 @@
+[
+  {
+    "id": "magyar-economy-europe-analysis-f24",
+    "year": "Apr 17, 2026",
+    "title": "France 24 Analysis: What Magyar's Election Win Means for Hungary's Economy and Europe",
+    "type": "analysis",
+    "detail": "France 24's People & Profit program examines the economic and geopolitical implications of Peter Magyar's electoral victory over Viktor Orbán. The analysis covers expected shifts in Hungary's economic policy, including potential re-engagement with EU cohesion funds frozen under Orbán, improved relations with Brussels, and implications for Hungary's role within the eurozone. Analysts assess how Magyar's win could reshape Hungary's bilateral ties with European partners and affect investment flows into the country.",
+    "sources": [
+      {
+        "name": "France 24",
+        "tier": 2,
+        "url": "https://www.france24.com/en/tv-shows/people-profit/20260417-what-magyar-s-election-win-means-for-hungary-s-economy-and-europe",
+        "pole": "western"
+      }
+    ],
+    "media": [],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "eu-unlocks-funds-magyar-power-transition",
+    "year": "Apr 17, 2026",
+    "title": "EU Rushes to Unlock Billions for Hungary as Magyar Prepares to Take Power",
+    "type": "diplomacy",
+    "detail": "The European Union is moving quickly to release billions of euros in previously frozen funds for Hungary as opposition leader Péter Magyar prepares to assume power following his election victory over Viktor Orbán. Brussels had withheld the funds over rule-of-law concerns during the Orbán era, and the anticipated leadership transition is accelerating EU efforts to re-engage with Budapest and restore the financial flows.",
+    "sources": [
+      {
+        "name": "RFI",
+        "tier": 2,
+        "url": "https://www.rfi.fr/en/international/20260417-eu-rushes-to-unlock-billions-for-hungary-as-magyar-prepares-for-power",
+        "pole": "western"
+      }
+    ],
+    "media": [],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "hungary-russian-energy-dependence-analysis",
+    "year": "Apr 17, 2026",
+    "title": "Analysis: Can Hungary Wean Itself Off Russian Energy Under New Leader?",
+    "type": "analysis",
+    "detail": "Al Jazeera examines whether Hungary under its new leader Péter Magyar can realistically end the country's deep dependence on Russian energy as promised. Hungary has historically been one of the EU's most Russia-reliant members for oil and gas, and the analysis explores the structural, infrastructural, and political challenges Magyar's government will face in diversifying away from Russian supplies while managing energy costs for Hungarian consumers.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/17/can-hungary-wean-itself-off-russian-energy-as-its-new-leader-has-promised?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/4/17/can-hungary-wean-itself-off-russian-energy-as-its-new-leader-has-promised?traffic_source=rss",
+        "caption": "Hungary's energy transition challenge under new leadership",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/reuters_69dd0534-1776092468.jpg?resize=1920%2C1440"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  }
+]

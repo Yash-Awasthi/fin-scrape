@@ -1,0 +1,191 @@
+[
+  {
+    "id": "rodrigo-paz",
+    "name": "Rodrigo Paz Pereira",
+    "role": "President of Bolivia",
+    "avatar": "bo-gov",
+    "initial": "RP",
+    "quote": "Time is running out.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "edmand-lara",
+    "name": "Edmand Lara",
+    "role": "Vice President of Bolivia",
+    "avatar": "bo-gov",
+    "initial": "EL",
+    "quote": "A former police officer whose relationship with Paz soured early in the administration, increasingly acting as an internal critic of the government's crisis response.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "jose-luis-lupo",
+    "name": "José Luis Lupo",
+    "role": "Former Minister of the Presidency (until Aug 3, 2026); nominated as ambassador to the OAS",
+    "avatar": "bo-gov",
+    "initial": "JL",
+    "quote": "Coordinated the government's negotiating track with COB and sectoral protest groups throughout May and June, before being replaced by Fernando Aramayo on Aug 3, 2026.",
+    "lastUpdated": "2026-08-27T14:30:00.000Z"
+  },
+  {
+    "id": "fernando-aramayo",
+    "name": "Fernando Aramayo",
+    "role": "Minister of the Presidency (since Aug 3, 2026; previously Foreign Minister)",
+    "avatar": "bo-gov",
+    "initial": "FA",
+    "quote": "Told mayors and cabinet the diesel decree \"is one of the conditions we have from the International Monetary Fund,\" rejecting calls to repeal it, Aug 27, 2026.",
+    "lastUpdated": "2026-08-27T14:30:00.000Z"
+  },
+  {
+    "id": "jose-gabriel-espinoza",
+    "name": "José Gabriel Espinoza",
+    "role": "Former Minister of Economy and Public Finance (dismissed Aug 21, 2026)",
+    "avatar": "bo-gov",
+    "initial": "JE",
+    "quote": "Censured by Congress (91-of-129 vote) for skipping a scheduled interpellation on bond issuances and budget delays; dismissed by presidential decree Aug 21, 2026.",
+    "lastUpdated": "2026-08-26T14:52:18.000Z"
+  },
+  {
+    "id": "marco-oviedo",
+    "name": "Marco Antonio \"Tuco\" Oviedo",
+    "role": "Minister of Government (Interior)",
+    "avatar": "bo-security",
+    "initial": "MO",
+    "quote": "Alleged links between San Julián and Cuatro Cañadas blockade leaders and prior land-grabbing cases, June 27, 2026.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "ernesto-justiniano",
+    "name": "Ernesto Justiniano",
+    "role": "Minister of Defence (appointed Jun 3, 2026)",
+    "avatar": "bo-security",
+    "initial": "EJ",
+    "quote": "Oversaw the joint police-military operations to clear blockades, including the June 6 Route 9 action; ordered a preventive troop deployment to Yapacaní on Aug 25 to head off new diesel-decree blockades, saying the mission was to \"prevent blockades, protect the highway and, above all, avoid confrontations.\"",
+    "lastUpdated": "2026-08-27T14:30:00.000Z"
+  },
+  {
+    "id": "mario-argollo",
+    "name": "Mario Argollo",
+    "role": "Executive Secretary, Central Obrera Boliviana (COB)",
+    "avatar": "cob",
+    "initial": "MA",
+    "quote": "We must begin to iron out our differences.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "evo-morales",
+    "name": "Evo Morales",
+    "role": "Former President; cocalero federation and MAS leader",
+    "avatar": "opposition",
+    "initial": "EM",
+    "quote": "\"Oportunamente dijimos [Rodrigo Paz] es un presidente por accidente. Ahora se demuestra eso\" — told supporters in Ivirgarzama Paz was an \"accidental president,\" Aug 26, 2026.",
+    "lastUpdated": "2026-08-27T14:30:00.000Z"
+  },
+  {
+    "id": "leonardo-loza",
+    "name": "Leonardo Loza",
+    "role": "MAS lawmaker and Morales ally",
+    "avatar": "opposition",
+    "initial": "LL",
+    "quote": "Amplified calls for Paz's resignation alongside Evo Morales's 190km march into La Paz.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "vicente-salazar",
+    "name": "Vicente Salazar",
+    "role": "Leader, Federación Túpac Katari",
+    "avatar": "other",
+    "initial": "VS",
+    "quote": "Arrested in early July 2026 amid the government's crackdown on blockade organizers.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "alberto-quelali",
+    "name": "Alberto Quelali",
+    "role": "Leader, FEJUVE El Alto",
+    "avatar": "other",
+    "initial": "AQ",
+    "quote": "Arrested June 26, 2026, after leading FEJUVE's declaration of a city-wide emergency in El Alto.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "eliser-roca",
+    "name": "Eliser Roca",
+    "role": "Mayor of El Alto",
+    "avatar": "bo-gov",
+    "initial": "ER",
+    "quote": "Losing roughly US$6.5 million per day.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "sebastian-daroca",
+    "name": "Sebastián Daroca",
+    "role": "President, YPFB (state oil company)",
+    "avatar": "bo-gov",
+    "initial": "SD",
+    "quote": "Announced the two-tier diesel pricing decree (Bs. 18/L for large consumers) intended to close the smuggling margin and end fuel-station queues, Aug 17, 2026.",
+    "lastUpdated": "2026-08-21T14:47:26.000Z"
+  },
+  {
+    "id": "donald-trump",
+    "name": "Donald Trump",
+    "role": "President of the United States",
+    "avatar": "intl",
+    "initial": "DT",
+    "quote": "Characterized the protests as an attempted coup and blamed narco-terrorists for driving the unrest.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "javier-milei",
+    "name": "Javier Milei",
+    "role": "President of Argentina",
+    "avatar": "intl",
+    "initial": "JM",
+    "quote": "Sent two C-130 Hercules aircraft to Bolivia, described by his government as humanitarian aid.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "gustavo-petro",
+    "name": "Gustavo Petro",
+    "role": "President of Colombia",
+    "avatar": "intl",
+    "initial": "GP",
+    "quote": "Voiced support for the protesters, prompting Bolivia to expel Colombian ambassador Elizabeth García on May 20, 2026.",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "fernando-cerimedo",
+    "name": "Fernando Cerimedo",
+    "role": "Argentine political consultant; informal adviser to Paz's 2025 campaign",
+    "avatar": "other",
+    "initial": "FC",
+    "quote": "Ordered into 180 days of preventive detention at Palmasola prison, Aug 21, 2026, after prosecutors charged him with attempted femicide against former partner Nadia Beller.",
+    "lastUpdated": "2026-08-23T14:32:04.000Z"
+  },
+  {
+    "id": "nadia-beller",
+    "name": "Nadia Beller",
+    "role": "Lawyer; Fernando Cerimedo's former partner and shooting victim",
+    "avatar": "other",
+    "initial": "NB",
+    "quote": "Called the Aug 17 shooting a \"state crime\" implicating government and police after phone messages surfaced linking a contact to the government's intelligence chief, and demanded President Paz break his public silence, Aug 22, 2026.",
+    "lastUpdated": "2026-08-26T14:52:18.000Z"
+  },
+  {
+    "id": "oscar-mario-justiniano",
+    "name": "Óscar Mario Justiniano Pinto",
+    "role": "Interim Minister of Economy and Public Finance (previously Minister of Sustainable Production, Environment and Water)",
+    "avatar": "bo-gov",
+    "initial": "OJ",
+    "quote": "Named interim Economy Minister by decree, Aug 21, 2026, after Congress forced the dismissal of predecessor José Gabriel Espinoza.",
+    "lastUpdated": "2026-08-26T14:52:18.000Z"
+  },
+  {
+    "id": "erik-correa-gonzalez",
+    "name": "Erik Correa González",
+    "role": "Intelligence chief, Government of Rodrigo Paz (alleged)",
+    "avatar": "bo-security",
+    "initial": "EC",
+    "quote": "Identified by Nadia Beller and Evo Morales — based on phone messages recovered from Fernando Cerimedo's device — as the contact saved as \"ECG\" who allegedly tracked the Aug 17 attack on Beller in real time; has not publicly responded.",
+    "lastUpdated": "2026-08-26T14:52:18.000Z"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "philippines-us-military-drills-apr-2026",
+    "year": "Apr 14, 2026",
+    "title": "Philippines and US Conduct Joint Military Drills Amid Regional Tensions",
+    "type": "military",
+    "detail": "The Philippines and United States conducted joint military exercises as regional security concerns escalate in Southeast Asia. The drills come amid growing tensions in the South China Sea and increasing militarization of disputed territories. Military officials from both nations emphasized the importance of alliance cooperation and readiness in the face of evolving regional threats.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV85cUxObmU5TXhsdlB1SFBpM2JCNlMtajcwR3FqNHB4ekZyazB0dU1wb0tmaXJGMXRyV1FCc1ZPMUlVYnk5NWhvaVhmYlFWOUlQOUNMUjBuRFd5Tm5TYmVMZklscDN2eUhQb3hVYk5tRzM1M3QyVl8yUEtvbHpqZEl3NkJZZkV5a0NqRWhpMldKMlM1RWtTRzRCRXROLVkwTWdkTHk0WDgxUmlUdlFEVzJ4U05N?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMirwFBVV85cUxObmU5TXhsdlB1SFBpM2JCNlMtajcwR3FqNHB4ekZyazB0dU1wb0tmaXJGMXRyV1FCc1ZPMUlVYnk5NWhvaVhmYlFWOUlQOUNMUjBuRFd5Tm5TYmVMZklscDN2eUhQb3hVYk5tRzM1M3QyVl8yUEtvbHpqZEl3NkJZZkV5a0NqRWhpMldKMlM1RWtTRzRCRXROLVkwTWdkTHk0WDgxUmlUdlFEVzJ4U05N?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Philippines-US joint military exercises continue amid regional security concerns",
+        "source": "news.google.com"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "indonesia-caution-us-military-overflights-apr-2026",
+    "year": "Apr 14, 2026",
+    "title": "Indonesia Expresses Caution Over US Military Overflight Proposal",
+    "type": "diplomatic",
+    "detail": "Indonesia has expressed reservations about a US proposal for increased military overflights in the region, highlighting growing tensions within ASEAN over how to respond to escalating South China Sea disputes. The cautious stance reflects Jakarta's traditional non-aligned foreign policy and concerns about being drawn into great power competition between the US and China.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcWpnOFEtc2RCc3hTNm1KWUdVZ1l5V0lnNlNKVjFyTHJfUkw1S3I3cGFpUVdhQVRZV0Rza3loUEt1UEdkbU9QcGNlLUwwd1hiMWwtTHZXRTVTSFRxS2dkSW5xQ2hnYnZmZDdhS1JCU1hFRWlSaVhud1VHcHZBZmRrRHBfUVo2dW1Ed3QtSGVnUkJuMUpvbldnaWw3YWdsSVFJd1A2ajFUSm5Ta2JtOEVjN1A5M1YtMXdWUEp3SHpBWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/2026_United_States_intervention_in_Venezuela",
+        "source": "Wikipedia / 2026 United States intervention in Venezuela",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/P20260103MR-0139_President_Donald_Trump%2C_CIA_Director_John_Ratcliffe_and_Secretary_of_State_Marco_Rubio_monitor_U.S._military_operations_in_Venezuela.jpg/330px-P20260103MR-0139_President_Donald_Trump%2C_CIA_Director_John_Ratcliffe_and_Secretary_of_State_Marco_Rubio_monitor_U.S._military_operations_in_Venezuela.jpg"
+      },
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV85cUxQcWpnOFEtc2RCc3hTNm1KWUdVZ1l5V0lnNlNKVjFyTHJfUkw1S3I3cGFpUVdhQVRZV0Rza3loUEt1UEdkbU9QcGNlLUwwd1hiMWwtTHZXRTVTSFRxS2dkSW5xQ2hnYnZmZDdhS1JCU1hFRWlSaVhud1VHcHZBZmRrRHBfUVo2dW1Ed3QtSGVnUkJuMUpvbldnaWw3YWdsSVFJd1A2ajFUSm5Ta2JtOEVjN1A5M1YtMXdWUEp3SHpBWQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Indonesia maintains cautious stance on US military cooperation amid regional tensions",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  }
+]

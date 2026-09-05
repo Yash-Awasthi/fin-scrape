@@ -1,0 +1,70 @@
+[
+  {
+    "id": "houthi-red-sea-saudi-oil-disruption-aug24",
+    "year": "Aug 24, 2026",
+    "title": "Houthi Threats Against Red Sea Shipping Compound Saudi Oil Logistics Pressures",
+    "type": "security",
+    "detail": "Houthi threats against Red Sea shipping routes are once again disrupting Saudi oil logistics, compounding supply chain pressures that have already strained global food and energy transport through the broader Gulf corridor. The renewed maritime threat echoes patterns seen earlier in the conflict and adds further uncertainty to regional shipping costs and routing decisions.",
+    "sources": [
+      {
+        "name": "The Japan Times",
+        "tier": 2,
+        "url": "https://www.japantimes.co.jp/news/2026/08/24/world/saudi-oil-houthis-red-sea-threat/",
+        "pole": "western"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "yemeni-army-attacks-houthis-aug24",
+    "year": "Aug 24, 2026",
+    "title": "Yemeni Government Forces Report Fresh Attacks on Houthi Positions",
+    "type": "military",
+    "detail": "The Yemeni government army has claimed fresh attacks on Houthi positions as fighting continues across Yemen. The ongoing ground conflict between government forces and the Houthis remains a key driver of regional instability affecting shipping security in the Red Sea and Gulf of Aden, with knock-on effects for food and energy supply chains transiting the Strait of Hormuz corridor.",
+    "sources": [
+      {
+        "name": "Middle East Eye",
+        "tier": 2,
+        "url": "https://www.middleeasteye.net/live-blog/live-blog-update/yemeni-army-claims-attacks-houthis",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "bessent-operation-economic-outcast-aug24",
+    "year": "2026",
+    "title": "Treasury Unveils 'Operation Economic Outcast,' Sweeping New Iran Sanctions Targeting Oil, Shipping and Gold",
+    "type": "policy",
+    "detail": "Treasury Secretary Scott Bessent formally unveiled 'Operation Economic Outcast,' sanctioning nearly 60 entities, vessels and individuals across the UAE, Hong Kong, China, Singapore and Switzerland for facilitating Iranian trade in oil, shipping, gold, aviation and digital assets. Bessent said the campaign's goal is to 'sever every economic lifeline that sustains this tyrannical regime until Tehran stands alone,' and that President Trump was personally calling world leaders -- including in China, Turkey and the UAE, Iran's largest trading partners -- with 'specific requests' to cut ties with Tehran. Bessent stopped short of imposing immediate penalties on those countries, instead giving a 'cure period' to wind down Iran-linked trade.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/8/24/trump-administration-announces-global-economic-war-on-iran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "NPR",
+        "tier": 2,
+        "url": "https://www.npr.org/2026/08/24/g-s1-139743/treasury-secretary-scott-bessent-to-unveil-new-economic-sanctions-on-iran",
+        "pole": "western"
+      },
+      {
+        "name": "CBS News",
+        "tier": 2,
+        "url": "https://www.cbsnews.com/news/bessent-press-conference-iran-sanctions-economic-d-day/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cbsnews.com/news/bessent-press-conference-iran-sanctions-economic-d-day/",
+        "caption": "Treasury Secretary Scott Bessent announces sweeping new sanctions targeting Iran's economic lifelines",
+        "source": "CBS News",
+        "thumbnail": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/08/24/a8cefe8d-860a-4b94-a0b4-98d0193ac295/thumbnail/1200x630g2/006baa5b5199d3abf6495cf30d3ccf01/ap26232565516998.jpg"
+      }
+    ]
+  }
+]

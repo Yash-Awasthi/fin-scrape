@@ -1,0 +1,72 @@
+[
+  {
+    "id": "brigantines-tenochtitlan",
+    "type": "Naval",
+    "name": "13 Brigantines — Lake Texcoco Fleet",
+    "detail": "Cortés ordered construction of 13 brigantines (shallow-draft armed vessels) in Tlaxcala, which were carried in pieces overland and assembled at Lake Texcoco for the 1521 siege of Tenochtitlan. The fleet controlled the lake, cutting off supplies and reinforcements to the island city. Each was armed with cannon and crewed by ~25 men. The brigantines were arguably the decisive technical innovation of the Aztec conquest.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spanish-cavalry",
+    "type": "Military Force",
+    "name": "Spanish Cavalry (Horses)",
+    "detail": "Horses were unknown in the Americas since the Pleistocene extinction (~10,000 BCE). The psychological and tactical impact of cavalry was enormous in the conquest. Cortés landed with 16 horses in 1519; Pizarro with 37. Cavalry could charge infantry, pursue fleeing opponents, and maintain shock in ways indigenous warriors had never encountered. The initial terror they caused was a significant tactical advantage, diminishing as indigenous armies adapted.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spanish-tlaxcalan-alliance",
+    "type": "Military Alliance",
+    "name": "Tlaxcalan Alliance — 200,000+ Indigenous Warriors",
+    "detail": "The Tlaxcalan confederation provided the military backbone of the Aztec conquest. After initial battles, Cortés negotiated an alliance with a people who resented decades of Aztec tribute and sacrificial demands. Tlaxcalan warriors numbering in the tens of thousands fought at Cholula, in the siege of Tenochtitlan, and in subsequent campaigns throughout Mesoamerica. They were rewarded with tax exemptions and special status in colonial New Spain for centuries.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spanish-steel-weapons",
+    "type": "Weapons",
+    "name": "Toledo Steel — Swords and Armor",
+    "detail": "Spanish soldiers were equipped with Toledo steel swords, pikes, halberds, and body armor. Against obsidian-edged weapons (macuahuitl) and quilted cotton armor, Spanish steel provided significant advantages in personal combat. However, indigenous warriors quickly adapted, targeting horses' unarmored legs and developing tactics to avoid cavalry charges. Steel was important but not decisive on its own.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cannon-and-arquebuses",
+    "type": "Weapons",
+    "name": "Artillery and Firearms",
+    "detail": "Cortés landed with 14 cannon and some arquebuses; Pizarro had fewer. Artillery was psychologically terrifying to peoples who had never heard gunpowder weapons, and effective against massed formations. However, firearms of the 1520s were slow to reload, inaccurate, and not the primary factor in conquest military victories. The cannon on Cortés's brigantines were more important than his land artillery.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "encomienda-system",
+    "type": "Colonial Institution",
+    "name": "Encomienda — Labor Extraction System",
+    "detail": "The encomienda granted Spanish settlers (encomenderos) the right to indigenous labor in exchange for Christianizing them. Formally authorized in 1503, it became the primary engine of colonial exploitation in the Caribbean and later mainland. The encomienda system effectively enslaved indigenous labor for gold mining, agriculture, and construction. Las Casas documented its murderous consequences, leading to reform attempts in the 1542 New Laws.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "casa-contratacion",
+    "type": "Administrative Institution",
+    "name": "Casa de Contratación (House of Trade, 1503)",
+    "detail": "Established in Seville in 1503, the Casa de Contratación held monopoly control over all trade, emigration, and navigation to the Americas. It registered all goods, issued licenses, and collected the Royal Fifth (quinto real) — 20% tax on all precious metals from the New World. Moved to Cádiz in 1717. The Casa funneled the wealth of the Americas into the Spanish crown while maintaining strict control over colonial commerce.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mita-potosi",
+    "type": "Colonial Institution",
+    "name": "Mita Forced Labor System — Potosí",
+    "detail": "Viceroy Toledo formalized the mita at Potosí in 1573: 17 Andean provinces were required to supply 1/7 of their adult male population annually to work in the silver mines at fixed wages. About 13,500 workers per year entered the mines, where conditions were catastrophic: silica dust, mercury poisoning, altitude sickness, cave-ins. The mita devastated Andean communities, driving people to flee their home villages to escape the obligation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spanish-silver-fleet",
+    "type": "Naval",
+    "name": "Spanish Silver Fleet (Flota System, 1565–1790s)",
+    "detail": "The annual flota (treasure fleet) system, formalized in 1565, transported American silver and other goods from Veracruz (New Spain) and Portobelo (Peru) to Seville in convoyed fleets. The fleets typically sailed twice a year, each carrying thousands of tons of silver. They were the primary target of privateers and pirates; a successful flota interception (like Piet Heyn's 1628 capture of the Mexican fleet) was the equivalent of a financial windfall for rival nations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jesuit-reductions",
+    "type": "Colonial Institution",
+    "name": "Jesuit Reductions (1609–1767)",
+    "detail": "The Society of Jesus established autonomous indigenous mission communities (reducciones) in Paraguay, Brazil, Argentina, and Bolivia from 1609, sheltering 150,000+ Guaraní people at their peak. The reductions offered indigenous people relative protection from enslavement and brutal exploitation. When Spain expelled the Jesuits in 1767, the reductions collapsed and their indigenous inhabitants were decimated by slave raiders. The reductions were a controversial but relatively humane experiment in colonial mission governance.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

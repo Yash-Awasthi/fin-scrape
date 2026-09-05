@@ -1,0 +1,72 @@
+[
+  {
+    "id": "artemis2-nasa-science-leadership-critics-response-apr14-2026",
+    "year": "Apr 14, 2026",
+    "title": "NASA Science Leadership Publicly Defends Artemis II Architecture Against Congressional and Public Critics",
+    "type": "political",
+    "active": false,
+    "detail": "NASA science leadership issued a public defense of the Artemis II crewed lunar flyby mission on April 14, pushing back against mounting congressional and public skepticism about the program's architecture, scope, and cost. Senior officials argued that the crewed lunar flyby provided critical human-rating data for the Orion capsule and deep-space life support systems that cannot be replicated by uncrewed flights, and that the mission's $4.1 billion unit cost must be evaluated against the broader program investment rather than as a standalone figure. Critics in Congress and the broader space community had questioned whether a flyby — without a lunar orbit or surface contact — justified the timeline and expense, particularly given delays in the Human Landing System and pressure to maintain cadence toward an Artemis III crewed landing. NASA leaders countered that the mission architecture was deliberately sequenced to minimize risk, citing the heat shield anomaly on Artemis I as evidence that crewed validation missions are essential. The public rebuttal signals heightened political pressure on the program as appropriations discussions for FY2027 begin.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1ZdG9DVlpsakxadnFVRjVrM1QxMGpzTEtUR2xia0NqUU1IX3VLYXBsU2I5NkhtU2dJZlloOGdvS0RiTlZCaTRBLUFNai02OHU1R3NiYms4SXU1TVhpWFE5Y2F6LTFwc0FVOVJzaVRTNU5tMnRnRUpB0gF8QVVfeXFMTXFWXzhjQzFLbkVGOHVTSFhoVjJmb0NlVzBIbk4xZVd2SmN5dkFNNjdOcG1PZHU0eDhXRWhhREN4Z1RMOVp6RHg5dkJjX3d3UVdqUFVvV2JEcFhjYXh3R2VTbG1pU2hDUFRBVXAyQkw5RElsVWdadDZtX1AxQQ?oc=5",
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-04-14T00:44:19Z",
+    "media": []
+  },
+  {
+    "id": "artemis2-crew-hatch-opening-footage-released-apr14-2026",
+    "year": "Apr 14, 2026",
+    "title": "New Footage Released Shows Artemis II Crew Joy During Orion Capsule Hatch Opening",
+    "type": "milestone",
+    "detail": "NASA released new footage showing the emotional moment when the Artemis II crew opened the Orion capsule hatch, capturing their joy and relief after completing the historic lunar flyby mission. The footage provides intimate glimpses of the crew's experience during this pivotal moment of their return to Earth.",
+    "sources": [
+      {
+        "name": "BBC News",
+        "tier": 2,
+        "url": "https://www.bbc.com/news/videos/cyv11je1emeo?at_medium=RSS&at_campaign=rss",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "video",
+        "url": "https://www.bbc.com/news/videos/cyv11je1emeo?at_medium=RSS&at_campaign=rss",
+        "caption": "Newly released footage shows Artemis II crew members during the Orion capsule hatch opening",
+        "source": "BBC News",
+        "thumbnail": "https://ichef.bbci.co.uk/images/ic/1024xn/ichef.bbci.co.uk/images/ic/$widthxn/p0ndd5rb.jpg"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "artemis2-mission-documentaries-reviews-apr14-2026",
+    "year": "Apr 14, 2026",
+    "title": "Media Coverage and Documentary Reviews Highlight Artemis II Achievement and Future Impact",
+    "type": "milestone",
+    "detail": "Multiple media outlets are publishing reviews and coverage of the Artemis II mission's success, with PBS documentaries and NASA transparency pieces emphasizing the mission's inspirational impact and its role in building momentum for future lunar and Mars missions. The coverage highlights the mission's achievement in returning humans to lunar vicinity for the first time since Apollo.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 3,
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNa01KN1k0dU10dThodzFRUmxVdnF6b3dzVm1LSG90TE1yczRVLV9YS1psYlBtMFNGTnpFQ29oLUVPRzltLTZNUk1rVDMtdm9xUEdmYjc0VUsxZEIwcWl0TEkyWWw0Q054MG00RHpnTko5bDJXS3F2RWJZMnk0eU1OS19BY2ZRRXBCdUVqUEZQWFhMQUhtZWlwRldrZVlGenRzLTVDUW1BaERDcGVJcTZSVUxzMl9HQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNa01KN1k0dU10dThodzFRUmxVdnF6b3dzVm1LSG90TE1yczRVLV9YS1psYlBtMFNGTnpFQ29oLUVPRzltLTZNUk1rVDMtdm9xUEdmYjc0VUsxZEIwcWl0TEkyWWw0Q054MG00RHpnTko5bDJXS3F2RWJZMnk0eU1OS19BY2ZRRXBCdUVqUEZQWFhMQUhtZWlwRldrZVlGenRzLTVDUW1BaERDcGVJcTZSVUxzMl9HQQ?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Media coverage highlights Artemis II's achievement and future mission momentum",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  }
+]

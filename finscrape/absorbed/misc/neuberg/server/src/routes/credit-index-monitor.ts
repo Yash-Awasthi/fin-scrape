@@ -1,0 +1,15 @@
+import { Router } from 'express';
+import { getRawQuotes } from '../services/stocks/yahoo-finance.js';
+const router = Router();
+const SYMBOLS = ['HYG', 'LQD', 'JNK', 'ANGL', 'EMB', '^TNX', '^VIX', 'AGG'];
+const CACHE_TTL = 5 * 60_000;
+let cache: { data: unknown; ts: number } | null = null;
+function r2(n: number | undefined | null): number { return n != null && isFinite(n) ? Math.round(n * 100) / 100 : 0; }
+async function fetchData() {
+  const quotes = await getRawQuotes(SYMBOLS); if (!quotes || quotes.length === 0) throw new Error('No data');
+  const qMap = new Map(quotes.filter(q => q?.symbol).map(q => [q.symbol!, q])); const tnx = qMap.get('^TNX')?.regularMarketPrice || 4.5;
+  const monitors = [{ name: 'CDX IG', proxy: 'LQD', base: 55 }, { name: 'CDX HY', proxy: 'HYG', base: 350 }, { name: 'iTraxx', proxy: 'AGG', base: 45 }, { name: 'CDX EM', proxy: 'EMB', base: 280 }].map(m => { const q = qMap.get(m.proxy); const yld = (q?.trailingAnnualDividendYield || 0) * 100; const spread = Math.round((yld - tnx) * 100); return { index: m.name, spreadBps: spread, change: r2(q?.regularMarketChangePercent || 0), historicalAvg: m.base, vsAvg: spread - m.base, signal: spread > m.base * 1.2 ? 'Wide' : spread < m.base * 0.8 ? 'Tight' : 'Normal' }; });
+  return { monitors, vix: r2(qMap.get('^VIX')?.regularMarketPrice || 20), generatedAt: new Date().toISOString() };
+}
+router.get('/', async (_req, res) => { try { const now = Date.now(); if (cache && now - cache.ts < CACHE_TTL) return res.json(cache.data); const data = await fetchData(); cache = { data, ts: now }; res.json(data); } catch (err) { console.error('[CreditIndexMonitor] Error:', (err as Error).message); if (cache) return res.json(cache.data); res.status(500).json({ error: 'Failed' }); } });
+export default router;

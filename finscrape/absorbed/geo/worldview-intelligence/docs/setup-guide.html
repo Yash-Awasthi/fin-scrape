@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorldView Intelligence — Complete Setup Guide (A to Z)</title>
+<style>
+  :root {
+    --bg: #0a0e17;
+    --bg-surface: #111827;
+    --bg-elevated: #1a2332;
+    --bg-code: #0d1117;
+    --primary: #00b8f0;
+    --secondary: #6366f1;
+    --accent: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #1e293b;
+    --glow: rgba(0, 184, 240, 0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed; top: 0; left: 0; width: 300px; height: 100vh;
+    background: var(--bg-surface); border-right: 1px solid var(--border);
+    overflow-y: auto; z-index: 100; padding: 24px 0;
+  }
+  .sidebar-header {
+    padding: 0 20px 16px; border-bottom: 1px solid var(--border); margin-bottom: 12px;
+  }
+  .sidebar-header h2 {
+    font-size: 13px; letter-spacing: 0.12em; color: var(--primary);
+    font-family: 'Consolas', 'Courier New', monospace; font-weight: 700;
+  }
+  .sidebar-header p { font-size: 11px; color: var(--text-muted); margin-top: 3px; }
+  .sidebar nav { padding: 0 10px; }
+  .sidebar nav a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 7px 12px; border-radius: 6px; font-size: 12.5px;
+    color: var(--text-muted); transition: all 0.15s; margin-bottom: 1px;
+    border-left: 2px solid transparent;
+  }
+  .sidebar nav a:hover { background: var(--glow); color: var(--text); text-decoration: none; border-left-color: var(--primary); }
+  .sidebar nav .section-label {
+    font-size: 9.5px; letter-spacing: 0.12em; color: var(--text-muted);
+    text-transform: uppercase; padding: 14px 12px 5px; font-weight: 700; opacity: 0.5;
+  }
+  .step-badge {
+    width: 22px; height: 22px; border-radius: 50%; background: var(--secondary);
+    color: white; display: inline-flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700; flex-shrink: 0;
+  }
+
+  /* Main */
+  .main { margin-left: 300px; padding: 40px 56px 100px; max-width: 920px; }
+  h1 {
+    font-size: 34px; font-weight: 800; margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle { font-size: 16px; color: var(--text-muted); margin-bottom: 40px; line-height: 1.6; }
+  h2 {
+    font-size: 24px; font-weight: 700; color: var(--text); margin: 56px 0 8px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 12px;
+  }
+  h2 .step-num {
+    width: 36px; height: 36px; border-radius: 50%; background: var(--secondary);
+    color: white; display: inline-flex; align-items: center; justify-content: center;
+    font-size: 15px; font-weight: 800; flex-shrink: 0;
+  }
+  h3 { font-size: 17px; font-weight: 600; color: var(--primary); margin: 28px 0 10px; }
+  h4 { font-size: 14px; font-weight: 600; color: var(--text); margin: 20px 0 8px; }
+  p { margin-bottom: 14px; }
+
+  /* Code */
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background: var(--bg-code); color: var(--accent); padding: 2px 7px;
+    border-radius: 4px; font-size: 13px; border: 1px solid var(--border);
+  }
+  pre {
+    background: var(--bg-code); border: 1px solid var(--border); border-radius: 8px;
+    padding: 18px 22px; overflow-x: auto; margin: 12px 0 18px; line-height: 1.65;
+    font-size: 13px; position: relative;
+  }
+  pre code { background: none; border: none; padding: 0; color: var(--text); }
+  .cmd-label {
+    position: absolute; top: 8px; right: 12px;
+    font-size: 9px; letter-spacing: 0.1em; color: var(--text-muted);
+    text-transform: uppercase; font-weight: 600; font-family: 'Consolas', monospace;
+    background: var(--bg-elevated); padding: 2px 8px; border-radius: 3px;
+  }
+  .comment { color: #6a737d; }
+  .highlight-cmd { color: var(--primary); }
+  .highlight-path { color: #fbbf24; }
+  .highlight-val { color: #a5d6ff; }
+
+  /* Tables */
+  table {
+    width: 100%; border-collapse: collapse; margin: 12px 0 18px;
+    font-size: 13px; border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--bg-elevated); color: var(--text-muted); font-weight: 600;
+    text-align: left; padding: 10px 14px; font-size: 11px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+
+  /* Callouts */
+  .callout {
+    border-left: 3px solid; border-radius: 6px; padding: 16px 20px;
+    margin: 18px 0; font-size: 14px;
+  }
+  .callout-info { border-color: var(--primary); background: rgba(0,184,240,0.06); }
+  .callout-warn { border-color: var(--warning); background: rgba(245,158,11,0.06); }
+  .callout-danger { border-color: var(--danger); background: rgba(239,68,68,0.06); }
+  .callout-success { border-color: var(--accent); background: rgba(16,185,129,0.06); }
+  .callout strong { display: block; margin-bottom: 4px; }
+
+  /* Instruction blocks */
+  .instruction {
+    background: var(--bg-surface); border: 1px solid var(--border); border-radius: 10px;
+    padding: 24px; margin: 18px 0;
+  }
+  .instruction h4 { margin-top: 0; color: var(--primary); font-size: 15px; }
+  .instruction ol, .instruction ul { margin: 10px 0 0 20px; }
+  .instruction li { margin-bottom: 10px; font-size: 14px; }
+
+  /* Numbered walkthrough */
+  .walk {
+    display: flex; gap: 16px; margin: 16px 0; align-items: flex-start;
+    background: var(--bg-surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 18px 20px;
+  }
+  .walk-num {
+    width: 28px; height: 28px; border-radius: 50%; background: var(--secondary);
+    color: white; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 12px; flex-shrink: 0; margin-top: 2px;
+  }
+  .walk-content { flex: 1; }
+  .walk-content p { margin-bottom: 8px; }
+  .walk-content p:last-child { margin-bottom: 0; }
+
+  /* File content display */
+  .file-display {
+    background: var(--bg-code); border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden; margin: 12px 0 18px;
+  }
+  .file-display-header {
+    background: var(--bg-elevated); padding: 8px 16px; font-size: 12px;
+    color: var(--text-muted); font-family: 'Consolas', monospace;
+    border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px;
+  }
+  .file-display-header .dot {
+    width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+  }
+  .file-display-body { padding: 16px 20px; font-size: 13px; line-height: 1.7; }
+  .file-display-body code { background: none; border: none; padding: 0; color: var(--text); }
+
+  /* Badge */
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
+  }
+  .badge-required { background: rgba(239,68,68,0.15); color: #f87171; }
+  .badge-optional { background: rgba(16,185,129,0.15); color: #34d399; }
+  .badge-free { background: rgba(0,184,240,0.15); color: #38bdf8; }
+
+  /* Checklist */
+  .checklist { list-style: none; margin: 12px 0 16px; padding: 0; }
+  .checklist li {
+    padding: 8px 12px; margin-bottom: 4px; border-radius: 6px;
+    background: var(--bg-surface); border: 1px solid var(--border);
+    font-size: 14px; display: flex; align-items: center; gap: 10px;
+  }
+  .checklist .check {
+    width: 20px; height: 20px; border-radius: 4px; border: 2px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; flex-shrink: 0; color: var(--accent);
+  }
+
+  /* Screenshot placeholder */
+  .screenshot {
+    background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px;
+    padding: 20px; margin: 12px 0; text-align: center; color: var(--text-muted);
+    font-size: 13px; font-style: italic;
+  }
+
+  ul, ol { margin: 10px 0 16px 22px; }
+  li { margin-bottom: 8px; }
+
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 24px 18px 60px; }
+  }
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    body { background: white; color: #1a1a1a; }
+    pre, code, .file-display, .instruction, .walk, .callout { border-color: #ddd; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ SIDEBAR ═══════════════════════════════════════════════════ -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h2>WORLDVIEW INTEL</h2>
+    <p>Complete Setup Guide — A to Z</p>
+  </div>
+  <nav>
+    <div class="section-label">Before You Start</div>
+    <a href="#overview"><span class="step-badge">i</span> What You'll Set Up</a>
+    <a href="#prereqs"><span class="step-badge">ii</span> Prerequisites Checklist</a>
+
+    <div class="section-label">Install Tools</div>
+    <a href="#step1"><span class="step-badge">1</span> Install Node.js</a>
+    <a href="#step2"><span class="step-badge">2</span> Install Git</a>
+    <a href="#step3"><span class="step-badge">3</span> Install VS Code / Cursor</a>
+    <a href="#step4"><span class="step-badge">4</span> Install Docker (Optional)</a>
+
+    <div class="section-label">Get the Code</div>
+    <a href="#step5"><span class="step-badge">5</span> Clone or Unzip the Project</a>
+    <a href="#step6"><span class="step-badge">6</span> Understand the Folder Structure</a>
+
+    <div class="section-label">Create API Keys</div>
+    <a href="#step7"><span class="step-badge">7</span> Cesium Ion Token (Required)</a>
+    <a href="#step8"><span class="step-badge">8</span> OpenSky Network (Optional)</a>
+    <a href="#step9"><span class="step-badge">9</span> TomTom Traffic (Optional)</a>
+    <a href="#step10"><span class="step-badge">10</span> N2YO Satellites (Optional)</a>
+    <a href="#step11"><span class="step-badge">11</span> NewsAPI (Optional)</a>
+    <a href="#step12"><span class="step-badge">12</span> OpenAI (Optional)</a>
+
+    <div class="section-label">Configure &amp; Run</div>
+    <a href="#step13"><span class="step-badge">13</span> Configure Environment Files</a>
+    <a href="#step14"><span class="step-badge">14</span> Install Dependencies</a>
+    <a href="#step15"><span class="step-badge">15</span> Start the Backend</a>
+    <a href="#step16"><span class="step-badge">16</span> Start the Frontend</a>
+    <a href="#step17"><span class="step-badge">17</span> Verify Everything Works</a>
+
+    <div class="section-label">Debugging</div>
+    <a href="#step18"><span class="step-badge">18</span> Debug in VS Code / Cursor</a>
+    <a href="#step19"><span class="step-badge">19</span> Browser DevTools</a>
+
+    <div class="section-label">Advanced</div>
+    <a href="#docker-setup"><span class="step-badge">D</span> Docker Full-Stack Setup</a>
+    <a href="#troubleshooting"><span class="step-badge">!</span> Troubleshooting</a>
+    <a href="#quickref"><span class="step-badge">Q</span> Quick Reference</a>
+  </nav>
+</div>
+
+<!-- ═══ MAIN CONTENT ══════════════════════════════════════════════ -->
+<div class="main">
+
+<h1>WorldView Intelligence</h1>
+<p class="subtitle">Complete Setup Guide — From Zero to Running &amp; Debugging<br>
+This guide assumes you have <strong>never set up a Node.js project before</strong>. Every single step is explained.</p>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="overview"><span class="step-num">i</span> What You'll Set Up</h2>
+
+<p>By the end of this guide, you will have:</p>
+
+<ul class="checklist">
+  <li><span class="check">&#10003;</span> Node.js, Git, and a code editor installed</li>
+  <li><span class="check">&#10003;</span> The WorldView Intelligence source code on your machine</li>
+  <li><span class="check">&#10003;</span> All required API keys created and configured</li>
+  <li><span class="check">&#10003;</span> The backend running on <code>http://localhost:3001</code></li>
+  <li><span class="check">&#10003;</span> The WebSocket server running on <code>ws://localhost:3002</code></li>
+  <li><span class="check">&#10003;</span> The frontend running on <code>http://localhost:5173</code></li>
+  <li><span class="check">&#10003;</span> Debugging configured in your editor</li>
+  <li><span class="check">&#10003;</span> Live data streaming to a 3D globe in your browser</li>
+</ul>
+
+<div class="callout callout-info">
+  <strong>Time Estimate</strong>
+  First-time setup takes about <strong>15–25 minutes</strong>. If you already have Node.js and Git installed, it takes about 5 minutes.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2 id="prereqs"><span class="step-num">ii</span> Prerequisites Checklist</h2>
+
+<table>
+  <tr><th>Tool</th><th>Required?</th><th>Purpose</th><th>Version</th></tr>
+  <tr>
+    <td><strong>Node.js</strong></td>
+    <td><span class="badge badge-required">REQUIRED</span></td>
+    <td>Runs the backend server and builds the frontend</td>
+    <td>v20 or higher</td>
+  </tr>
+  <tr>
+    <td><strong>npm</strong></td>
+    <td><span class="badge badge-required">REQUIRED</span></td>
+    <td>Package manager (comes with Node.js automatically)</td>
+    <td>v10 or higher</td>
+  </tr>
+  <tr>
+    <td><strong>Git</strong></td>
+    <td><span class="badge badge-required">REQUIRED</span></td>
+    <td>Clone the repository</td>
+    <td>Any recent version</td>
+  </tr>
+  <tr>
+    <td><strong>VS Code or Cursor</strong></td>
+    <td><span class="badge badge-required">REQUIRED</span></td>
+    <td>Code editor with debugging support</td>
+    <td>Latest</td>
+  </tr>
+  <tr>
+    <td><strong>Cesium Ion Account</strong></td>
+    <td><span class="badge badge-required">REQUIRED</span></td>
+    <td>Free API token for the 3D globe imagery</td>
+    <td>Free tier</td>
+  </tr>
+  <tr>
+    <td><strong>Docker Desktop</strong></td>
+    <td><span class="badge badge-optional">OPTIONAL</span></td>
+    <td>Run Redis/PostgreSQL or full Docker deployment</td>
+    <td>Latest</td>
+  </tr>
+  <tr>
+    <td><strong>A Modern Browser</strong></td>
+    <td><span class="badge badge-required">REQUIRED</span></td>
+    <td>Chrome, Edge, or Firefox (WebGL support needed)</td>
+    <td>Latest</td>
+  </tr>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 1 -->
+<h2 id="step1"><span class="step-num">1</span> Install Node.js</h2>
+
+<p>Node.js is the JavaScript runtime that runs the backend server and provides npm (the package manager) for installing libraries.</p>
+
+<div class="instruction">
+  <h4>Windows</h4>
+  <ol>
+    <li>Go to <a href="https://nodejs.org" target="_blank">https://nodejs.org</a></li>
+    <li>Click the <strong>"LTS"</strong> download button (the green one — currently v20.x or higher)</li>
+    <li>Run the downloaded <code>.msi</code> installer</li>
+    <li>Click <strong>Next</strong> through all steps, keeping all default options checked</li>
+    <li>When you see <strong>"Automatically install the necessary tools"</strong> — check that box</li>
+    <li>Click <strong>Install</strong>, then <strong>Finish</strong></li>
+  </ol>
+</div>
+
+<div class="instruction">
+  <h4>macOS</h4>
+  <ol>
+    <li>Go to <a href="https://nodejs.org" target="_blank">https://nodejs.org</a></li>
+    <li>Download the <strong>macOS Installer (.pkg)</strong> for the LTS version</li>
+    <li>Double-click the <code>.pkg</code> file and follow the installer</li>
+    <li><strong>Alternative:</strong> If you have Homebrew, run: <code>brew install node</code></li>
+  </ol>
+</div>
+
+<h3>Verify Installation</h3>
+<p>Open a <strong>new</strong> terminal (PowerShell on Windows, Terminal on macOS) and run:</p>
+
+<pre><code><span class="highlight-cmd">node</span> --version
+<span class="comment"># Should output: v20.x.x or higher</span>
+
+<span class="highlight-cmd">npm</span> --version
+<span class="comment"># Should output: 10.x.x or higher</span></code></pre>
+
+<div class="callout callout-warn">
+  <strong>Must open a NEW terminal!</strong>
+  If you had a terminal open before installing Node.js, it won't recognize the <code>node</code> command. Close it and open a fresh one.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 2 -->
+<h2 id="step2"><span class="step-num">2</span> Install Git</h2>
+
+<p>Git is the version control tool used to clone (download) the project code.</p>
+
+<div class="instruction">
+  <h4>Windows</h4>
+  <ol>
+    <li>Go to <a href="https://git-scm.com/download/win" target="_blank">https://git-scm.com/download/win</a></li>
+    <li>The download starts automatically — run the installer</li>
+    <li>Click <strong>Next</strong> through all screens, accepting all defaults</li>
+    <li>On the <strong>"Choosing the default editor"</strong> screen, you can pick <strong>Visual Studio Code</strong> if you prefer</li>
+    <li>Click <strong>Install</strong>, then <strong>Finish</strong></li>
+  </ol>
+</div>
+
+<div class="instruction">
+  <h4>macOS</h4>
+  <ol>
+    <li>Open Terminal and type <code>git --version</code></li>
+    <li>If Git is not installed, macOS will prompt you to install the Xcode Command Line Tools — click <strong>Install</strong></li>
+    <li><strong>Alternative:</strong> <code>brew install git</code></li>
+  </ol>
+</div>
+
+<h3>Verify Installation</h3>
+<pre><code><span class="highlight-cmd">git</span> --version
+<span class="comment"># Should output: git version 2.x.x</span></code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 3 -->
+<h2 id="step3"><span class="step-num">3</span> Install a Code Editor</h2>
+
+<p>You need a code editor to browse and edit the source code. We recommend <strong>VS Code</strong> or <strong>Cursor</strong>.</p>
+
+<div class="instruction">
+  <h4>VS Code</h4>
+  <ol>
+    <li>Go to <a href="https://code.visualstudio.com" target="_blank">https://code.visualstudio.com</a></li>
+    <li>Click <strong>Download</strong> for your operating system</li>
+    <li>Run the installer with default settings</li>
+    <li>Check <strong>"Add to PATH"</strong> if prompted (Windows)</li>
+  </ol>
+</div>
+
+<div class="instruction">
+  <h4>Cursor (AI-powered VS Code fork)</h4>
+  <ol>
+    <li>Go to <a href="https://cursor.sh" target="_blank">https://cursor.sh</a></li>
+    <li>Click <strong>Download</strong> and install</li>
+    <li>Cursor uses the same UI and extensions as VS Code</li>
+  </ol>
+</div>
+
+<h3>Recommended Extensions</h3>
+<p>After installing your editor, install these extensions for the best experience:</p>
+<table>
+  <tr><th>Extension</th><th>Purpose</th></tr>
+  <tr><td><strong>ESLint</strong></td><td>Shows code quality issues inline</td></tr>
+  <tr><td><strong>Prettier</strong></td><td>Auto-formats code on save</td></tr>
+  <tr><td><strong>TypeScript Importer</strong></td><td>Auto-imports TypeScript modules</td></tr>
+  <tr><td><strong>Thunder Client</strong> or <strong>REST Client</strong></td><td>Test API endpoints from the editor</td></tr>
+  <tr><td><strong>Docker</strong></td><td>Manage Docker containers from the editor (if using Docker)</td></tr>
+</table>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 4 -->
+<h2 id="step4"><span class="step-num">4</span> Install Docker Desktop (Optional)</h2>
+
+<p>Docker is <strong>optional</strong>. The app works fully without it using an in-memory cache. Docker is only needed if you want:</p>
+<ul>
+  <li>Redis caching (performance improvement, not required)</li>
+  <li>PostgreSQL database (provisioned but not yet used by the app)</li>
+  <li>Full-stack containerized deployment</li>
+</ul>
+
+<div class="instruction">
+  <h4>Windows / macOS</h4>
+  <ol>
+    <li>Go to <a href="https://www.docker.com/products/docker-desktop" target="_blank">https://www.docker.com/products/docker-desktop</a></li>
+    <li>Click <strong>Download Docker Desktop</strong></li>
+    <li>Run the installer (Windows may require WSL 2 — the installer will guide you)</li>
+    <li>After installation, <strong>launch Docker Desktop</strong> and wait for it to say "Docker is running"</li>
+  </ol>
+</div>
+
+<h3>Verify Installation</h3>
+<pre><code><span class="highlight-cmd">docker</span> --version
+<span class="comment"># Should output: Docker version 24.x.x or higher</span>
+
+<span class="highlight-cmd">docker compose</span> version
+<span class="comment"># Should output: Docker Compose version v2.x.x</span></code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 5 -->
+<h2 id="step5"><span class="step-num">5</span> Clone or Unzip the Project</h2>
+
+<h3>Option A: Clone from Git</h3>
+<p>Open a terminal and navigate to where you want the project, then clone:</p>
+
+<pre><code><span class="comment"># Navigate to your projects folder (create it if it doesn't exist)</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">C:\Users\YourName\source\repos</span>
+
+<span class="comment"># Clone the repository</span>
+<span class="highlight-cmd">git clone</span> &lt;repository-url&gt;
+
+<span class="comment"># Enter the project folder</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">"WorldView Intelligence"</span></code></pre>
+
+<div class="callout callout-warn">
+  <strong>Important: Quotes around folder name!</strong>
+  The folder name <code>WorldView Intelligence</code> contains a space. Always wrap it in double quotes when typing in the terminal: <code>"WorldView Intelligence"</code>
+</div>
+
+<h3>Option B: Unzip a .zip File</h3>
+<ol>
+  <li>Right-click the <code>.zip</code> file and select <strong>Extract All...</strong></li>
+  <li>Choose your destination folder (e.g., <code>C:\Users\YourName\source\repos\</code>)</li>
+  <li>Click <strong>Extract</strong></li>
+  <li>Open a terminal and navigate into it:
+    <pre><code><span class="highlight-cmd">cd</span> <span class="highlight-path">"C:\Users\YourName\source\repos\WorldView Intelligence"</span></code></pre>
+  </li>
+</ol>
+
+<h3>Open in Your Editor</h3>
+<pre><code><span class="comment"># Open the project in VS Code / Cursor</span>
+<span class="highlight-cmd">code</span> <span class="highlight-path">.</span>
+<span class="comment"># Or for Cursor:</span>
+<span class="highlight-cmd">cursor</span> <span class="highlight-path">.</span></code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 6 -->
+<h2 id="step6"><span class="step-num">6</span> Understand the Folder Structure</h2>
+
+<p>Here is every folder and what it's for:</p>
+
+<pre><code><span class="highlight-path">WorldView Intelligence/</span>
+│
+├── <span class="highlight-path">backend/</span>                  <span class="comment">&larr; The server (Node.js + Express + WebSocket)</span>
+│   ├── <span class="highlight-path">src/</span>                  <span class="comment">&larr; All backend source code</span>
+│   │   ├── index.ts           <span class="comment">&larr; Entry point — starts the server</span>
+│   │   ├── <span class="highlight-path">routes/</span>            <span class="comment">&larr; API route handlers</span>
+│   │   │   └── api.ts         <span class="comment">&larr; All REST endpoints (/api/layers/*, /api/search, etc.)</span>
+│   │   ├── <span class="highlight-path">websocket/</span>         <span class="comment">&larr; Real-time data push</span>
+│   │   │   └── server.ts      <span class="comment">&larr; WebSocket server with subscriptions</span>
+│   │   ├── <span class="highlight-path">services/</span>          <span class="comment">&larr; One file per data layer</span>
+│   │   │   ├── aircraft.ts    <span class="comment">&larr; Fetches from OpenSky Network</span>
+│   │   │   ├── satellites.ts  <span class="comment">&larr; Fetches from CelesTrak</span>
+│   │   │   ├── ships.ts       <span class="comment">&larr; Simulated ship positions</span>
+│   │   │   ├── earthquakes.ts <span class="comment">&larr; Fetches from USGS</span>
+│   │   │   ├── conflicts.ts   <span class="comment">&larr; Simulated conflict data</span>
+│   │   │   ├── missiles.ts    <span class="comment">&larr; Simulated missile trajectories</span>
+│   │   │   ├── news.ts        <span class="comment">&larr; RSS feeds from BBC, Reuters, etc.</span>
+│   │   │   ├── traffic.ts     <span class="comment">&larr; Simulated city traffic</span>
+│   │   │   ├── weather.ts     <span class="comment">&larr; Fetches from Open-Meteo</span>
+│   │   │   └── intelligence.ts <span class="comment">&larr; AI anomaly detection</span>
+│   │   ├── <span class="highlight-path">middleware/</span>
+│   │   │   └── rateLimiter.ts <span class="comment">&larr; 100 req/min per IP</span>
+│   │   ├── <span class="highlight-path">types/</span>
+│   │   │   └── index.ts       <span class="comment">&larr; TypeScript type definitions</span>
+│   │   └── <span class="highlight-path">utils/</span>
+│   │       └── cache.ts       <span class="comment">&larr; Redis cache with in-memory fallback</span>
+│   ├── package.json           <span class="comment">&larr; Backend dependencies list</span>
+│   ├── tsconfig.json          <span class="comment">&larr; TypeScript config</span>
+│   ├── Dockerfile             <span class="comment">&larr; Docker build instructions</span>
+│   ├── .env.example           <span class="comment">&larr; Template for environment variables</span>
+│   └── .env                   <span class="comment">&larr; YOUR actual environment variables (you create this)</span>
+│
+├── <span class="highlight-path">frontend/</span>                 <span class="comment">&larr; The UI (React + CesiumJS)</span>
+│   ├── <span class="highlight-path">src/</span>                  <span class="comment">&larr; All frontend source code</span>
+│   │   ├── main.tsx           <span class="comment">&larr; React entry point</span>
+│   │   ├── App.tsx            <span class="comment">&larr; Main layout (top bar, panels, globe)</span>
+│   │   ├── index.css          <span class="comment">&larr; Global styles</span>
+│   │   ├── <span class="highlight-path">components/</span>        <span class="comment">&larr; React components</span>
+│   │   │   ├── Globe/         <span class="comment">&larr; 3D globe with CesiumJS</span>
+│   │   │   ├── LandingPage/   <span class="comment">&larr; Entry/splash screen</span>
+│   │   │   └── SearchBar/     <span class="comment">&larr; Search across all layers</span>
+│   │   ├── <span class="highlight-path">layers/</span>            <span class="comment">&larr; Cesium entity renderers (one per layer)</span>
+│   │   ├── <span class="highlight-path">stores/</span>            <span class="comment">&larr; Zustand state management</span>
+│   │   │   └── appStore.ts    <span class="comment">&larr; Single store for all app state</span>
+│   │   ├── <span class="highlight-path">services/</span>          <span class="comment">&larr; API + WebSocket clients</span>
+│   │   │   ├── api.ts         <span class="comment">&larr; REST API fetch functions</span>
+│   │   │   ├── websocket.ts   <span class="comment">&larr; WebSocket connection manager</span>
+│   │   │   ├── globe.ts       <span class="comment">&larr; Cesium viewer utilities</span>
+│   │   │   └── icons.ts       <span class="comment">&larr; Entity icon helpers</span>
+│   │   └── <span class="highlight-path">types/</span>
+│   │       └── index.ts       <span class="comment">&larr; Frontend TypeScript types</span>
+│   ├── package.json           <span class="comment">&larr; Frontend dependencies list</span>
+│   ├── vite.config.ts         <span class="comment">&larr; Vite build tool config</span>
+│   ├── tsconfig.json          <span class="comment">&larr; TypeScript config</span>
+│   ├── Dockerfile             <span class="comment">&larr; Docker build instructions</span>
+│   ├── nginx.conf             <span class="comment">&larr; Nginx config for production</span>
+│   ├── .env.example           <span class="comment">&larr; Template for env variables</span>
+│   └── .env                   <span class="comment">&larr; YOUR actual env variables (you create this)</span>
+│
+├── docker-compose.yml         <span class="comment">&larr; Docker Compose for full-stack deployment</span>
+├── README.md                  <span class="comment">&larr; Project README</span>
+└── <span class="highlight-path">docs/</span>                     <span class="comment">&larr; Documentation (you are here)</span></code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 7 — Cesium Ion -->
+<h2 id="step7"><span class="step-num">7</span> Create a Cesium Ion Token <span class="badge badge-required">REQUIRED</span></h2>
+
+<p>The Cesium Ion token is the <strong>only required API key</strong>. Without it, the 3D globe will not display satellite imagery or terrain. It is <strong>100% free</strong>.</p>
+
+<div class="instruction">
+  <h4>Step-by-Step: Create Your Cesium Ion Token</h4>
+  <ol>
+    <li>Go to <a href="https://ion.cesium.com/signup" target="_blank"><strong>https://ion.cesium.com/signup</strong></a></li>
+    <li>Click <strong>"Sign up"</strong> — you can sign up with GitHub, Google, or email</li>
+    <li>Fill in the registration form and verify your email if required</li>
+    <li>Once logged in, you will land on the Cesium Ion dashboard</li>
+    <li>In the left sidebar, click <strong>"Access Tokens"</strong></li>
+    <li>You will see a <strong>"Default Token"</strong> already created — you can use this one</li>
+    <li>Click the <strong>clipboard icon</strong> next to the token to copy it</li>
+    <li>Save this token — you will paste it into the <code>frontend/.env</code> file in Step 13</li>
+  </ol>
+</div>
+
+<div class="callout callout-info">
+  <strong>How to create a custom token (optional)</strong>
+  Click <strong>"Create Token"</strong> button, name it <code>WorldView Intelligence</code>, keep all default asset permissions checked, and click <strong>Create</strong>. Copy the generated token.
+</div>
+
+<p>Your token will look something like this (a long string of random characters):</p>
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4NTQ2YzRiNy01Y...</code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 8 — OpenSky -->
+<h2 id="step8"><span class="step-num">8</span> Create OpenSky Network Account <span class="badge badge-optional">OPTIONAL</span> <span class="badge badge-free">FREE</span></h2>
+
+<p>OpenSky provides live aircraft tracking data. The app works <strong>without</strong> an account (anonymous access), but with credentials you get <strong>higher rate limits</strong> and more data.</p>
+
+<div class="instruction">
+  <h4>Step-by-Step</h4>
+  <ol>
+    <li>Go to <a href="https://opensky-network.org/index.php/-en/login.html" target="_blank"><strong>https://opensky-network.org</strong></a></li>
+    <li>Click <strong>"Register"</strong> in the top navigation</li>
+    <li>Fill in: Username, Email, Password</li>
+    <li>Complete the CAPTCHA and click <strong>Register</strong></li>
+    <li>Check your email and click the verification link</li>
+    <li><strong>Note down your username and password</strong> — these go into <code>backend/.env</code></li>
+  </ol>
+</div>
+
+<p>You will use these values later:</p>
+<pre><code>OPENSKY_USERNAME=<span class="highlight-val">your_username_here</span>
+OPENSKY_PASSWORD=<span class="highlight-val">your_password_here</span></code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 9 — TomTom -->
+<h2 id="step9"><span class="step-num">9</span> Create TomTom API Key <span class="badge badge-optional">OPTIONAL</span> <span class="badge badge-free">FREE TIER</span></h2>
+
+<p>TomTom provides real traffic data. Without it, the app uses simulated traffic data for major cities.</p>
+
+<div class="instruction">
+  <h4>Step-by-Step</h4>
+  <ol>
+    <li>Go to <a href="https://developer.tomtom.com/user/register" target="_blank"><strong>https://developer.tomtom.com</strong></a></li>
+    <li>Click <strong>"Register"</strong> and create an account (email + password)</li>
+    <li>Verify your email address</li>
+    <li>Once logged in, go to <strong>"Dashboard"</strong></li>
+    <li>You should see a default application with an <strong>API Key</strong></li>
+    <li>If not, click <strong>"Add a new key"</strong> &rarr; name it <code>WorldView</code> &rarr; select <strong>"Traffic"</strong> product</li>
+    <li>Copy the API Key</li>
+  </ol>
+</div>
+
+<p>Your key will look like: <code>A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6</code></p>
+<pre><code>TOMTOM_API_KEY=<span class="highlight-val">your_api_key_here</span></code></pre>
+
+<div class="callout callout-info">
+  <strong>Free Tier</strong>
+  TomTom's free tier includes 2,500 free requests per day, which is more than enough for development.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 10 — N2YO -->
+<h2 id="step10"><span class="step-num">10</span> Create N2YO API Key <span class="badge badge-optional">OPTIONAL</span> <span class="badge badge-free">FREE</span></h2>
+
+<p>N2YO provides additional satellite tracking data beyond what CelesTrak offers. The app already uses CelesTrak (no key needed), so this is purely supplemental.</p>
+
+<div class="instruction">
+  <h4>Step-by-Step</h4>
+  <ol>
+    <li>Go to <a href="https://www.n2yo.com/api/" target="_blank"><strong>https://www.n2yo.com/api/</strong></a></li>
+    <li>Scroll down to <strong>"Get Your API Key"</strong></li>
+    <li>Enter your email address and click <strong>"Generate Key"</strong></li>
+    <li>Check your email — the API key will be sent to you</li>
+    <li>Copy the key from the email</li>
+  </ol>
+</div>
+
+<pre><code>N2YO_API_KEY=<span class="highlight-val">your_api_key_here</span></code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 11 — NewsAPI -->
+<h2 id="step11"><span class="step-num">11</span> Create NewsAPI Key <span class="badge badge-optional">OPTIONAL</span> <span class="badge badge-free">FREE</span></h2>
+
+<p>NewsAPI provides additional news sources beyond the built-in RSS feeds. The app already works with free RSS feeds (BBC, Reuters, etc.) without this key.</p>
+
+<div class="instruction">
+  <h4>Step-by-Step</h4>
+  <ol>
+    <li>Go to <a href="https://newsapi.org/register" target="_blank"><strong>https://newsapi.org/register</strong></a></li>
+    <li>Fill in: Name, Email, Password</li>
+    <li>For "What are you building?", select <strong>"I'm a developer"</strong></li>
+    <li>Click <strong>"Submit"</strong></li>
+    <li>Your API key is displayed immediately on the next page</li>
+    <li>It's also sent to your email</li>
+  </ol>
+</div>
+
+<pre><code>NEWS_API_KEY=<span class="highlight-val">your_api_key_here</span></code></pre>
+
+<div class="callout callout-warn">
+  <strong>Free Tier Limitation</strong>
+  NewsAPI's free plan only allows requests from <code>localhost</code>. In production, you would need a paid plan or use the built-in RSS feeds.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 12 — OpenAI -->
+<h2 id="step12"><span class="step-num">12</span> Create OpenAI API Key <span class="badge badge-optional">OPTIONAL</span></h2>
+
+<p>OpenAI powers enhanced AI situation reports. Without it, the app uses rule-based intelligence analysis (which still works well). The OpenAI integration is <strong>prepared but not yet fully wired</strong> in the current codebase.</p>
+
+<div class="instruction">
+  <h4>Step-by-Step</h4>
+  <ol>
+    <li>Go to <a href="https://platform.openai.com/signup" target="_blank"><strong>https://platform.openai.com/signup</strong></a></li>
+    <li>Sign up with Google, Microsoft, or email</li>
+    <li>Once logged in, click your profile icon (top right) &rarr; <strong>"API Keys"</strong></li>
+    <li>Or go directly to: <a href="https://platform.openai.com/api-keys" target="_blank">https://platform.openai.com/api-keys</a></li>
+    <li>Click <strong>"Create new secret key"</strong></li>
+    <li>Name it <code>WorldView Intelligence</code></li>
+    <li>Click <strong>"Create secret key"</strong></li>
+    <li><strong>COPY THE KEY IMMEDIATELY</strong> — you cannot see it again after closing the dialog</li>
+  </ol>
+</div>
+
+<pre><code>OPENAI_API_KEY=<span class="highlight-val">sk-proj-abc123xyz...</span></code></pre>
+
+<div class="callout callout-danger">
+  <strong>OpenAI is NOT free</strong>
+  OpenAI charges per API call. New accounts get $5 free credit. For development, this is more than enough. Skip this step if you don't want to incur any costs.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 13 — Configure .env -->
+<h2 id="step13"><span class="step-num">13</span> Configure Environment Files</h2>
+
+<p>Environment files (<code>.env</code>) contain your API keys and configuration. You need to create <strong>two</strong> of them — one for the backend, one for the frontend.</p>
+
+<h3>13a. Create the Backend <code>.env</code> File</h3>
+
+<p>In your terminal, from the project root:</p>
+<pre><code><span class="comment"># Navigate to the backend folder</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">backend</span>
+
+<span class="comment"># Copy the example file to create your .env</span>
+<span class="highlight-cmd">cp</span> .env.example .env</code></pre>
+
+<p>On Windows PowerShell, use:</p>
+<pre><code><span class="highlight-cmd">Copy-Item</span> .env.example .env</code></pre>
+
+<p>Now <strong>open <code>backend/.env</code></strong> in your editor and fill in your values:</p>
+
+<div class="file-display">
+  <div class="file-display-header">
+    <span class="dot" style="background:#f87171"></span>
+    <span class="dot" style="background:#fbbf24"></span>
+    <span class="dot" style="background:#34d399"></span>
+    backend/.env
+  </div>
+  <div class="file-display-body">
+<code><span class="comment"># Server ports (keep these as-is unless you have a conflict)</span>
+PORT=3001
+WS_PORT=3002
+
+<span class="comment"># PostgreSQL — keep default, not used yet</span>
+DATABASE_URL=postgresql://postgres:password@localhost:5432/worldview
+
+<span class="comment"># Redis — keep default, app falls back to in-memory if unavailable</span>
+REDIS_URL=redis://localhost:6379
+
+<span class="comment"># ──── API KEYS ────────────────────────────────────────────</span>
+<span class="comment"># Paste your keys below. Delete "your_..._here" and paste.</span>
+<span class="comment"># Leave blank if you don't have one — the app still works.</span>
+
+<span class="comment"># OpenSky (from Step 8)</span>
+OPENSKY_USERNAME=<span class="highlight-val"></span>
+OPENSKY_PASSWORD=<span class="highlight-val"></span>
+
+<span class="comment"># TomTom (from Step 9)</span>
+TOMTOM_API_KEY=<span class="highlight-val"></span>
+
+<span class="comment"># ADS-B Exchange (not used in current code, leave blank)</span>
+ADSB_EXCHANGE_API_KEY=
+
+<span class="comment"># N2YO (from Step 10)</span>
+N2YO_API_KEY=<span class="highlight-val"></span>
+
+<span class="comment"># GDELT (no key needed, leave blank)</span>
+GDELT_API_KEY=
+
+<span class="comment"># NewsAPI (from Step 11)</span>
+NEWS_API_KEY=<span class="highlight-val"></span>
+
+<span class="comment"># OpenAI (from Step 12)</span>
+OPENAI_API_KEY=<span class="highlight-val"></span>
+
+<span class="comment"># Cesium (not used by backend currently, leave blank)</span>
+CESIUM_ION_TOKEN=</code>
+  </div>
+</div>
+
+<h3>13b. Create the Frontend <code>.env</code> File</h3>
+
+<pre><code><span class="comment"># Navigate to the frontend folder</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">../frontend</span>
+
+<span class="comment"># Copy the example file</span>
+<span class="highlight-cmd">cp</span> .env.example .env</code></pre>
+
+<p>On Windows PowerShell:</p>
+<pre><code><span class="highlight-cmd">Copy-Item</span> .env.example .env</code></pre>
+
+<p>Open <code>frontend/.env</code> and <strong>paste your Cesium Ion token</strong>:</p>
+
+<div class="file-display">
+  <div class="file-display-header">
+    <span class="dot" style="background:#f87171"></span>
+    <span class="dot" style="background:#fbbf24"></span>
+    <span class="dot" style="background:#34d399"></span>
+    frontend/.env
+  </div>
+  <div class="file-display-body">
+<code><span class="comment"># REQUIRED — Paste your Cesium Ion token from Step 7</span>
+VITE_CESIUM_ION_TOKEN=<span class="highlight-val">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4NTQ2...</span>
+
+<span class="comment"># These are correct for local development — don't change</span>
+VITE_API_BASE_URL=http://localhost:3001
+VITE_WS_URL=ws://localhost:3002</code>
+  </div>
+</div>
+
+<div class="callout callout-danger">
+  <strong>CRITICAL: Replace the Cesium token!</strong>
+  You <strong>must</strong> replace <code>your_cesium_ion_token_here</code> with your actual token from Step 7. The globe will not render imagery without a valid token.
+</div>
+
+<div class="callout callout-warn">
+  <strong>Never commit .env files to Git!</strong>
+  The <code>.env</code> files contain your private API keys. They should already be in <code>.gitignore</code>. Never share them or push them to a public repository.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 14 -->
+<h2 id="step14"><span class="step-num">14</span> Install Dependencies</h2>
+
+<p>Now you need to install all the JavaScript libraries the project depends on. You need to do this separately for the backend and frontend.</p>
+
+<h3>14a. Install Backend Dependencies</h3>
+
+<pre><code><span class="comment"># Make sure you're in the project root</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">"C:\Users\YourName\source\repos\WorldView Intelligence"</span>
+
+<span class="comment"># Go to the backend folder and install</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">backend</span>
+<span class="highlight-cmd">npm install</span></code></pre>
+
+<p>This will:</p>
+<ul>
+  <li>Read <code>package.json</code> to find all required packages</li>
+  <li>Download them into a <code>node_modules/</code> folder</li>
+  <li>Create a <code>package-lock.json</code> file (locks exact versions)</li>
+  <li>Takes about 30–60 seconds</li>
+</ul>
+
+<h3>14b. Install Frontend Dependencies</h3>
+
+<pre><code><span class="comment"># Go to the frontend folder and install</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">../frontend</span>
+<span class="highlight-cmd">npm install</span></code></pre>
+
+<p>This takes a bit longer (1–2 minutes) because CesiumJS is a large library.</p>
+
+<div class="callout callout-success">
+  <strong>Success Check</strong>
+  Both commands should finish without errors. You may see some <span style="color:var(--warning)">WARN</span> messages — those are fine. Only red <span style="color:var(--danger)">ERR!</span> messages indicate a problem.
+</div>
+
+<div class="callout callout-warn">
+  <strong>If <code>npm install</code> fails</strong>
+  <ol style="margin-top:8px;margin-left:16px;">
+    <li>Make sure Node.js v20+ is installed: <code>node --version</code></li>
+    <li>Try deleting <code>node_modules</code> and <code>package-lock.json</code>, then re-run <code>npm install</code></li>
+    <li>On Windows, try running the terminal as Administrator</li>
+    <li>Check your internet connection — npm needs to download packages</li>
+  </ol>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 15 -->
+<h2 id="step15"><span class="step-num">15</span> Start the Backend Server</h2>
+
+<p>Open a terminal (or use the integrated terminal in VS Code / Cursor) and run:</p>
+
+<pre><code><span class="comment"># From the project root</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">backend</span>
+<span class="highlight-cmd">npm run dev</span></code></pre>
+
+<p>What <code>npm run dev</code> does:</p>
+<ul>
+  <li>Runs <code>tsx watch src/index.ts</code> — this compiles and runs the TypeScript code</li>
+  <li>The <code>watch</code> flag means it auto-restarts when you edit any file</li>
+  <li>Starts the HTTP server on port <strong>3001</strong></li>
+  <li>Starts the WebSocket server on port <strong>3002</strong></li>
+</ul>
+
+<h3>Expected Output</h3>
+<pre><code>[Server] HTTP server running on port 3001
+[Server] API available at http://localhost:3001/api
+[Server] WebSocket server running on port 3002</code></pre>
+
+<p>If you see Redis connection warnings like <code>[Cache] Redis unavailable, using in-memory cache</code>, that's normal — the app works without Redis.</p>
+
+<div class="callout callout-info">
+  <strong>Keep this terminal open!</strong>
+  The backend needs to keep running. Open a <strong>second terminal</strong> for the frontend in the next step.
+</div>
+
+<h3>Quick Test</h3>
+<p>Open your browser and go to: <a href="http://localhost:3001/api/health" target="_blank"><strong>http://localhost:3001/api/health</strong></a></p>
+<p>You should see a JSON response like:</p>
+<pre><code>{
+  "status": "ok",
+  "uptime": 5.123,
+  "timestamp": 1710000000000,
+  "memory": { ... }
+}</code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 16 -->
+<h2 id="step16"><span class="step-num">16</span> Start the Frontend</h2>
+
+<p>Open a <strong>second terminal</strong> (or split your existing one) and run:</p>
+
+<pre><code><span class="comment"># From the project root</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">frontend</span>
+<span class="highlight-cmd">npm run dev</span></code></pre>
+
+<h3>Expected Output</h3>
+<pre><code>  VITE v6.x.x  ready in 1234 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.x.x:5173/
+  ➜  press h + enter to show help</code></pre>
+
+<p>What this does:</p>
+<ul>
+  <li>Starts the <strong>Vite dev server</strong> on port 5173</li>
+  <li>Serves the React frontend with hot-reload (changes appear instantly in the browser)</li>
+  <li>Proxies <code>/api</code> requests to the backend at <code>localhost:3001</code></li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 17 -->
+<h2 id="step17"><span class="step-num">17</span> Verify Everything Works</h2>
+
+<div class="walk">
+  <div class="walk-num">1</div>
+  <div class="walk-content">
+    <p><strong>Open the app</strong></p>
+    <p>Go to <a href="http://localhost:5173" target="_blank"><strong>http://localhost:5173</strong></a> in Chrome, Edge, or Firefox.</p>
+  </div>
+</div>
+
+<div class="walk">
+  <div class="walk-num">2</div>
+  <div class="walk-content">
+    <p><strong>See the landing page</strong></p>
+    <p>You should see the WorldView Intelligence landing page with a theme selector (Command, Cyber, or Nexus). Pick any theme and click <strong>"Enter Command Center"</strong>.</p>
+  </div>
+</div>
+
+<div class="walk">
+  <div class="walk-num">3</div>
+  <div class="walk-content">
+    <p><strong>Verify the 3D globe</strong></p>
+    <p>You should see a 3D globe with satellite imagery. If the globe is blank or black, your <strong>Cesium Ion token</strong> is missing or invalid — go back to Step 7 and Step 13b.</p>
+  </div>
+</div>
+
+<div class="walk">
+  <div class="walk-num">4</div>
+  <div class="walk-content">
+    <p><strong>Check data layers</strong></p>
+    <p>In the left panel, you should see layers like Aircraft, Satellites, Ships, etc. with entity counts. If counts are <code>0</code> for everything, check that the backend is running (Step 15).</p>
+  </div>
+</div>
+
+<div class="walk">
+  <div class="walk-num">5</div>
+  <div class="walk-content">
+    <p><strong>Check the browser console</strong></p>
+    <p>Press <code>F12</code> to open Developer Tools, then click the <strong>Console</strong> tab. You should see <code>[WS] Connected</code>. If you see <code>[WS] Connection error</code>, the backend WebSocket server isn't running.</p>
+  </div>
+</div>
+
+<div class="walk">
+  <div class="walk-num">6</div>
+  <div class="walk-content">
+    <p><strong>Test the API</strong></p>
+    <p>Open a new browser tab and go to <a href="http://localhost:3001/api/layers/earthquakes" target="_blank"><strong>http://localhost:3001/api/layers/earthquakes</strong></a>. You should see JSON earthquake data.</p>
+  </div>
+</div>
+
+<div class="callout callout-success">
+  <strong>Congratulations!</strong>
+  If you can see the globe with data layers, the WebSocket is connected, and the API returns data — your setup is complete! You can now start developing.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 18 — Debugging -->
+<h2 id="step18"><span class="step-num">18</span> Debugging in VS Code / Cursor</h2>
+
+<p>To debug the code with breakpoints (pause execution and inspect variables), set up launch configurations:</p>
+
+<h3>18a. Debug the Backend (Node.js)</h3>
+
+<div class="instruction">
+  <h4>Setup</h4>
+  <ol>
+    <li>In VS Code / Cursor, press <code>Ctrl+Shift+D</code> (Windows) or <code>Cmd+Shift+D</code> (Mac) to open the <strong>Run and Debug</strong> panel</li>
+    <li>Click <strong>"create a launch.json file"</strong></li>
+    <li>Select <strong>"Node.js"</strong> from the dropdown</li>
+    <li>Replace the generated content with the configuration below</li>
+  </ol>
+</div>
+
+<p>Create or edit the file <code>.vscode/launch.json</code> at the project root with this content:</p>
+
+<div class="file-display">
+  <div class="file-display-header">
+    <span class="dot" style="background:#f87171"></span>
+    <span class="dot" style="background:#fbbf24"></span>
+    <span class="dot" style="background:#34d399"></span>
+    .vscode/launch.json
+  </div>
+  <div class="file-display-body">
+<code>{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Backend",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "src/index.ts"],
+      "cwd": "${workspaceFolder}/backend",
+      "envFile": "${workspaceFolder}/backend/.env",
+      "console": "integratedTerminal",
+      "restart": true,
+      "skipFiles": ["&lt;node_internals&gt;/**", "node_modules/**"]
+    },
+    {
+      "name": "Debug Frontend (Chrome)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/frontend/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      }
+    }
+  ]
+}</code>
+  </div>
+</div>
+
+<div class="instruction">
+  <h4>How to Debug the Backend</h4>
+  <ol>
+    <li>Open the Run and Debug panel (<code>Ctrl+Shift+D</code>)</li>
+    <li>Select <strong>"Debug Backend"</strong> from the dropdown</li>
+    <li>Click the <strong>green play button</strong> (or press <code>F5</code>)</li>
+    <li>The backend starts in debug mode</li>
+    <li>Open any backend file (e.g., <code>backend/src/routes/api.ts</code>)</li>
+    <li>Click on the <strong>line number gutter</strong> to the left of a line — a red dot appears (breakpoint)</li>
+    <li>Trigger that code path (e.g., open <code>http://localhost:3001/api/layers/aircraft</code> in the browser)</li>
+    <li>Execution pauses at your breakpoint — you can inspect variables, step through code, etc.</li>
+  </ol>
+</div>
+
+<h3>18b. Debug the Frontend (React)</h3>
+
+<div class="instruction">
+  <h4>How to Debug the Frontend</h4>
+  <ol>
+    <li>First, make sure the frontend dev server is running (<code>npm run dev</code> in the frontend folder)</li>
+    <li>In VS Code, select <strong>"Debug Frontend (Chrome)"</strong> from the Debug dropdown</li>
+    <li>Press <code>F5</code> — Chrome opens with the app</li>
+    <li>Back in VS Code, open any frontend file (e.g., <code>frontend/src/App.tsx</code>)</li>
+    <li>Set breakpoints by clicking line numbers</li>
+    <li>Interact with the app in Chrome — breakpoints will trigger in VS Code</li>
+  </ol>
+</div>
+
+<h3>18c. Alternative: Debug with <code>console.log</code></h3>
+
+<p>The simplest way to debug (and what most developers do day-to-day):</p>
+
+<pre><code><span class="comment">// Add this anywhere in your code to inspect a value:</span>
+console.<span class="highlight-cmd">log</span>(<span class="highlight-val">'Aircraft data:'</span>, data);
+console.<span class="highlight-cmd">log</span>(<span class="highlight-val">'Number of items:'</span>, data.length);
+console.<span class="highlight-cmd">log</span>(<span class="highlight-val">'First item:'</span>, JSON.stringify(data[0], null, 2));</code></pre>
+
+<ul>
+  <li><strong>Backend logs</strong> appear in the terminal where <code>npm run dev</code> is running</li>
+  <li><strong>Frontend logs</strong> appear in the browser's Developer Tools Console (<code>F12</code>)</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- STEP 19 — Browser DevTools -->
+<h2 id="step19"><span class="step-num">19</span> Browser Developer Tools</h2>
+
+<p>The browser's built-in DevTools are essential for frontend debugging. Press <code>F12</code> to open them.</p>
+
+<h3>Console Tab</h3>
+<p>Shows <code>console.log</code> output and errors. You should see:</p>
+<pre><code>[WS] Connected                    <span class="comment">&larr; WebSocket connected to backend</span></code></pre>
+
+<h3>Network Tab</h3>
+<p>Shows all HTTP and WebSocket traffic. Use this to:</p>
+<ul>
+  <li>Verify API calls are being made to <code>/api/layers/*</code></li>
+  <li>See WebSocket messages (click on the WS connection, then the "Messages" sub-tab)</li>
+  <li>Check response status codes (200 = OK, 500 = server error)</li>
+</ul>
+
+<h3>Filtering WebSocket Messages</h3>
+<ol>
+  <li>Open the <strong>Network</strong> tab</li>
+  <li>Click <strong>"WS"</strong> filter button at the top</li>
+  <li>Click on the <code>localhost:3002</code> connection</li>
+  <li>Click the <strong>"Messages"</strong> sub-tab</li>
+  <li>You'll see real-time <code>layer_update</code> messages streaming in with JSON data</li>
+</ol>
+
+<h3>React Developer Tools (Optional Extension)</h3>
+<p>Install the <strong>React Developer Tools</strong> browser extension to inspect React component tree and state:</p>
+<ul>
+  <li><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi" target="_blank">Chrome Web Store</a></li>
+  <li><a href="https://addons.mozilla.org/en-US/firefox/addon/react-devtools/" target="_blank">Firefox Add-ons</a></li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- DOCKER FULL SETUP -->
+<h2 id="docker-setup"><span class="step-num">D</span> Docker Full-Stack Setup (Alternative)</h2>
+
+<p>Instead of running backend and frontend separately, you can run <strong>everything</strong> with one command using Docker.</p>
+
+<h3>Prerequisites</h3>
+<ul>
+  <li>Docker Desktop installed and running (Step 4)</li>
+  <li>The <code>frontend/.env</code> must have your Cesium Ion token set (Step 13b)</li>
+</ul>
+
+<h3>Run Everything</h3>
+<pre><code><span class="comment"># From the project root</span>
+<span class="highlight-cmd">cd</span> <span class="highlight-path">"WorldView Intelligence"</span>
+
+<span class="comment"># Build and start all services</span>
+<span class="highlight-cmd">docker compose up --build</span></code></pre>
+
+<p>This starts 4 containers:</p>
+<table>
+  <tr><th>Container</th><th>Port</th><th>What It Does</th></tr>
+  <tr><td><code>frontend</code></td><td>80</td><td>Nginx serving the built React app</td></tr>
+  <tr><td><code>backend</code></td><td>3001, 3002</td><td>API + WebSocket server</td></tr>
+  <tr><td><code>postgres</code></td><td>5432</td><td>PostgreSQL database</td></tr>
+  <tr><td><code>redis</code></td><td>6379</td><td>Redis cache</td></tr>
+</table>
+
+<p>Open <a href="http://localhost" target="_blank"><strong>http://localhost</strong></a> (port 80, no port number needed) to access the app.</p>
+
+<h3>Stop Everything</h3>
+<pre><code><span class="comment"># Press Ctrl+C in the Docker terminal, then:</span>
+<span class="highlight-cmd">docker compose down</span></code></pre>
+
+<h3>Just Run Redis (for Development)</h3>
+<p>If you want Redis caching while running backend/frontend manually:</p>
+<pre><code><span class="highlight-cmd">docker compose up redis -d</span></code></pre>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- TROUBLESHOOTING -->
+<h2 id="troubleshooting"><span class="step-num">!</span> Troubleshooting</h2>
+
+<h3>Problem: Globe is blank / black / no imagery</h3>
+<div class="callout callout-danger">
+  <strong>Cause: Missing or invalid Cesium Ion token</strong>
+  <ol style="margin-top:8px;margin-left:16px;">
+    <li>Open <code>frontend/.env</code></li>
+    <li>Make sure <code>VITE_CESIUM_ION_TOKEN=</code> has a real token (not <code>your_cesium_ion_token_here</code>)</li>
+    <li>Get a token from <a href="https://cesium.com/ion/tokens" target="_blank">cesium.com/ion/tokens</a></li>
+    <li>After changing the <code>.env</code> file, <strong>restart the frontend dev server</strong> (Ctrl+C, then <code>npm run dev</code> again)</li>
+  </ol>
+</div>
+
+<h3>Problem: <code>npm install</code> fails with permission errors</h3>
+<div class="callout callout-warn">
+  <strong>Fix (Windows)</strong>
+  Run PowerShell as Administrator. Right-click PowerShell &rarr; "Run as administrator".
+</div>
+<div class="callout callout-warn">
+  <strong>Fix (macOS/Linux)</strong>
+  Do NOT use <code>sudo npm install</code>. Instead, fix npm permissions: <a href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally" target="_blank">npm docs guide</a>
+</div>
+
+<h3>Problem: <code>npm run dev</code> says "port 3001 already in use"</h3>
+<div class="callout callout-info">
+  <strong>Cause: Another process is using port 3001</strong>
+  <p><strong>Windows:</strong> <code>netstat -ano | findstr :3001</code> then <code>taskkill /PID &lt;PID&gt; /F</code></p>
+  <p><strong>macOS:</strong> <code>lsof -ti:3001 | xargs kill -9</code></p>
+  <p>Or change the port in <code>backend/.env</code>: <code>PORT=3003</code></p>
+</div>
+
+<h3>Problem: <code>[WS] Connection error</code> in browser console</h3>
+<div class="callout callout-info">
+  <strong>Cause: Backend isn't running or WebSocket port blocked</strong>
+  <ol style="margin-top:8px;margin-left:16px;">
+    <li>Make sure the backend is running (<code>npm run dev</code> in the backend folder)</li>
+    <li>Check the backend terminal for errors</li>
+    <li>The frontend expects WebSocket on <code>ws://localhost:3002</code> — make sure <code>WS_PORT=3002</code> in <code>backend/.env</code></li>
+  </ol>
+</div>
+
+<h3>Problem: All layer counts show 0</h3>
+<div class="callout callout-info">
+  <strong>Possible causes:</strong>
+  <ol style="margin-top:8px;margin-left:16px;">
+    <li>Backend not running — start it with <code>npm run dev</code> in the backend folder</li>
+    <li>Data hasn't loaded yet — wait 10-30 seconds for the first data fetch</li>
+    <li>External APIs might be down — check backend terminal for error messages</li>
+    <li>Network/firewall blocking outgoing requests</li>
+  </ol>
+</div>
+
+<h3>Problem: <code>'tsx' is not recognized as a command</code></h3>
+<div class="callout callout-warn">
+  <strong>Fix</strong>
+  This means <code>npm install</code> didn't run correctly in the backend folder. Run:
+  <pre style="margin-top:8px;background:var(--bg-code);"><code>cd backend
+npm install</code></pre>
+  Then try <code>npm run dev</code> again.
+</div>
+
+<h3>Problem: TypeScript compilation errors</h3>
+<div class="callout callout-info">
+  <strong>Fix</strong>
+  <ol style="margin-top:8px;margin-left:16px;">
+    <li>Make sure you're using Node.js v20+ (<code>node --version</code>)</li>
+    <li>Delete <code>node_modules</code> and reinstall: <code>rm -rf node_modules && npm install</code></li>
+    <li>On Windows PowerShell: <code>Remove-Item -Recurse -Force node_modules; npm install</code></li>
+  </ol>
+</div>
+
+<h3>Problem: <code>ERR_OSSL_EVP_UNSUPPORTED</code></h3>
+<div class="callout callout-warn">
+  <strong>Fix</strong>
+  This happens with newer Node.js versions. Set the environment variable:
+  <p><strong>Windows PowerShell:</strong> <code>$env:NODE_OPTIONS="--openssl-legacy-provider"</code></p>
+  <p><strong>macOS/Linux:</strong> <code>export NODE_OPTIONS=--openssl-legacy-provider</code></p>
+  Then re-run <code>npm run dev</code>.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- QUICK REFERENCE -->
+<h2 id="quickref"><span class="step-num">Q</span> Quick Reference Card</h2>
+
+<h3>Commands You'll Use Every Day</h3>
+<table>
+  <tr><th>What</th><th>Command</th><th>Where</th></tr>
+  <tr><td>Start backend</td><td><code>npm run dev</code></td><td><code>backend/</code> folder</td></tr>
+  <tr><td>Start frontend</td><td><code>npm run dev</code></td><td><code>frontend/</code> folder</td></tr>
+  <tr><td>Build backend</td><td><code>npm run build</code></td><td><code>backend/</code> folder</td></tr>
+  <tr><td>Build frontend</td><td><code>npm run build</code></td><td><code>frontend/</code> folder</td></tr>
+  <tr><td>Lint backend</td><td><code>npm run lint</code></td><td><code>backend/</code> folder</td></tr>
+  <tr><td>Run everything (Docker)</td><td><code>docker compose up --build</code></td><td>project root</td></tr>
+  <tr><td>Stop Docker</td><td><code>docker compose down</code></td><td>project root</td></tr>
+  <tr><td>Start just Redis</td><td><code>docker compose up redis -d</code></td><td>project root</td></tr>
+</table>
+
+<h3>URLs</h3>
+<table>
+  <tr><th>What</th><th>URL</th></tr>
+  <tr><td>Frontend (dev)</td><td><a href="http://localhost:5173">http://localhost:5173</a></td></tr>
+  <tr><td>Frontend (Docker)</td><td><a href="http://localhost">http://localhost</a></td></tr>
+  <tr><td>Backend API</td><td><a href="http://localhost:3001/api">http://localhost:3001/api</a></td></tr>
+  <tr><td>Health Check</td><td><a href="http://localhost:3001/api/health">http://localhost:3001/api/health</a></td></tr>
+  <tr><td>WebSocket</td><td>ws://localhost:3002</td></tr>
+</table>
+
+<h3>File Locations</h3>
+<table>
+  <tr><th>File</th><th>What to Edit</th></tr>
+  <tr><td><code>backend/.env</code></td><td>Backend API keys and ports</td></tr>
+  <tr><td><code>frontend/.env</code></td><td>Cesium Ion token</td></tr>
+  <tr><td><code>backend/src/routes/api.ts</code></td><td>Add/modify REST API endpoints</td></tr>
+  <tr><td><code>backend/src/services/*.ts</code></td><td>Data fetching logic per layer</td></tr>
+  <tr><td><code>backend/src/websocket/server.ts</code></td><td>WebSocket subscriptions and broadcasting</td></tr>
+  <tr><td><code>frontend/src/App.tsx</code></td><td>Main UI layout</td></tr>
+  <tr><td><code>frontend/src/components/Globe/GlobeView.tsx</code></td><td>3D globe and visual modes</td></tr>
+  <tr><td><code>frontend/src/layers/*.ts</code></td><td>How entities render on the globe</td></tr>
+  <tr><td><code>frontend/src/stores/appStore.ts</code></td><td>Application state management</td></tr>
+  <tr><td><code>frontend/src/services/websocket.ts</code></td><td>WebSocket client connection</td></tr>
+</table>
+
+<h3>API Key Registration Links</h3>
+<table>
+  <tr><th>Service</th><th>Sign Up URL</th><th>Cost</th></tr>
+  <tr><td>Cesium Ion</td><td><a href="https://ion.cesium.com/signup" target="_blank">ion.cesium.com/signup</a></td><td>Free</td></tr>
+  <tr><td>OpenSky Network</td><td><a href="https://opensky-network.org" target="_blank">opensky-network.org</a></td><td>Free</td></tr>
+  <tr><td>TomTom Developer</td><td><a href="https://developer.tomtom.com" target="_blank">developer.tomtom.com</a></td><td>Free tier (2,500/day)</td></tr>
+  <tr><td>N2YO</td><td><a href="https://www.n2yo.com/api/" target="_blank">n2yo.com/api</a></td><td>Free</td></tr>
+  <tr><td>NewsAPI</td><td><a href="https://newsapi.org/register" target="_blank">newsapi.org/register</a></td><td>Free (localhost only)</td></tr>
+  <tr><td>OpenAI</td><td><a href="https://platform.openai.com/signup" target="_blank">platform.openai.com/signup</a></td><td>$5 free credit, then paid</td></tr>
+</table>
+
+<div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center;">
+  <p style="font-size: 13px; color: var(--text-muted);">
+    WorldView Intelligence Setup Guide &bull; Version 2.0
+  </p>
+  <p style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+    See also: <a href="technical-documentation.html">Technical Documentation</a> &bull; <a href="business-document.html">Business Overview</a>
+  </p>
+</div>
+
+</div>
+</body>
+</html>

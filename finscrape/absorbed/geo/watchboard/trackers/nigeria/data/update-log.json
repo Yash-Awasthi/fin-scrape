@@ -1,0 +1,44 @@
+{
+  "lastRun": "2026-08-26T06:37:37.167Z",
+  "tracker": "nigeria",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-05T14:42:00Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 46,
+      "eras": 12,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 37,
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 16,
+      "status": "updated"
+    },
+    "econ": {
+      "count": 8,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 21,
+      "status": "ok"
+    },
+    "political": {
+      "count": 23,
+      "status": "ok"
+    },
+    "events": {
+      "lastRun": "2026-08-26T06:37:37.167Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-26T06:37:37.167Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

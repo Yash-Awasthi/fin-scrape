@@ -1,0 +1,41 @@
+[
+  {
+    "id": "beit-lahia-strike-mohanad-saada-aug12-2026",
+    "year": "2026",
+    "title": "Israel Strikes Northern Gaza for First Time in Over a Week, Killing Municipal Worker",
+    "type": "military",
+    "detail": "Israel carried out its first Gaza airstrike in more than a week on Wednesday, August 12, 2026, hitting a tuk-tuk near the Western Roundabout in Beit Lahia, northern Gaza. The IDF said it targeted 'a Hamas commander who was actively planning attacks against Israeli forces' and that the strike 'removed the threat.' Gaza's Civil Defence said the vehicle was carrying a municipal maintenance crew returning from repairing a water well damaged by earlier shelling; Mohanad Saada was killed — his body reportedly 'torn to pieces' — and five others were wounded. Civil Defence spokesperson Mahmoud Basal said Israeli airstrikes and assassinations had 'almost completely ceased for over a week' before this resumption. Israeli operations in Gaza have killed more than 1,259 Palestinians since the October 2025 ceasefire, per Gaza's health ministry.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/8/12/israeli-air-strike-kills-one-in-northern-gaza",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Arab News",
+        "tier": 2,
+        "url": "https://www.arabnews.com/node/2654410/middle-east",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "The Times of Israel",
+        "tier": 2,
+        "url": "https://www.timesofisrael.com/idf-says-hamas-operative-killed-in-first-gaza-airstrike-in-over-a-week/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.arabnews.com/node/2654410/middle-east",
+        "caption": "Palestinians inspect the aftermath of an Israeli strike on a tuk-tuk in Beit Lahia, northern Gaza, that killed municipal worker Mohanad Saada — August 12, 2026",
+        "source": "Arab News",
+        "thumbnail": "https://www.arabnews.com/sites/default/files/styles/n_670_395/public/main-image/2026/08/12/4740382-737911367.jpg?itok=ZynOB7CT"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "disputed",
+    "confidenceReason": "IDF says strike targeted a Hamas commander planning attacks; Gaza Civil Defence and witnesses say the vehicle carried municipal water-repair workers with no combatant ties."
+  }
+]

@@ -1,0 +1,19 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#FFE066" stroke="#F9C74F" stroke-width="2"/>
+  
+  <!-- Simplified Canairy body -->
+  <ellipse cx="16" cy="18" rx="8" ry="10" fill="#FFF3C4"/>
+  
+  <!-- Head -->
+  <circle cx="16" cy="11" r="5" fill="#FFF3C4"/>
+  
+  <!-- Eye -->
+  <circle cx="17" cy="10" r="1" fill="#222831"/>
+  
+  <!-- Beak -->
+  <path d="M14,12 Q13,13 14,13.5 Q15,13 14,12" fill="#FF6B6B"/>
+  
+  <!-- Wing -->
+  <path d="M10,18 Q8,20 10,22 Q12,20 10,18" fill="#F9C74F"/>
+</svg>

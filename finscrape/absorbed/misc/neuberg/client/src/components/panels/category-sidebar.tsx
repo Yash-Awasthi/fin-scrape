@@ -1,0 +1,44 @@
+import { useCategories } from '../../api/hooks/use-categories';
+import { useAppStore } from '../../stores/use-app-store';
+import { useT, type TranslationKey } from '../../i18n';
+
+const CATEGORY_KEYS: Record<string, TranslationKey> = {
+  finance: 'categoryFinance',
+  business: 'categoryBusiness',
+  world: 'categoryWorld',
+  politics: 'categoryPolitics',
+};
+
+export function CategorySidebar() {
+  const { data: categories } = useCategories();
+  const selectedCategory = useAppStore((s) => s.selectedCategory);
+  const setSelectedCategory = useAppStore((s) => s.setSelectedCategory);
+  const t = useT();
+
+  return (
+    <>
+      {categories?.map((cat) => {
+        const isSelected = selectedCategory === cat.slug;
+        return (
+          <button
+            key={cat.slug}
+            onClick={() => setSelectedCategory(isSelected ? null : cat.slug)}
+            className={`shrink-0 px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest transition-colors border flex items-center gap-1.5 ${
+              isSelected
+                ? ''
+                : 'bg-black border-border text-neutral hover:border-accent hover:text-accent'
+            }`}
+            style={
+              isSelected && cat.color
+                ? { backgroundColor: `${cat.color}22`, borderColor: cat.color, color: cat.color }
+                : undefined
+            }
+          >
+            {CATEGORY_KEYS[cat.slug] ? t(CATEGORY_KEYS[cat.slug]) : cat.name}
+            <span className={`px-1 font-mono text-[9px] ${isSelected ? 'bg-black/40' : 'bg-border text-neutral'}`}>{cat._count.articles}</span>
+          </button>
+        );
+      })}
+    </>
+  );
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "id": "brics-member-count",
+    "label": "Full Member States",
+    "value": "10",
+    "color": "green",
+    "source": "BRICS Official / NDB",
+    "contested": false,
+    "delta": "+5 since 2011",
+    "deltaNote": "Egypt, Ethiopia, Iran, UAE joined Jan 2024; Indonesia joined Jan 2025",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "brics-gdp-ppp-share",
+    "label": "Share of World GDP (PPP)",
+    "value": "~41%",
+    "color": "green",
+    "source": "IMF World Economic Outlook 2024",
+    "contested": true,
+    "contestNote": "PPP-adjusted figure favored by BRICS; G7 holds ~43% by nominal exchange rates — methodology choice significantly shifts perception of bloc dominance",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "brics-population-share",
+    "label": "Share of World Population",
+    "value": "~46%",
+    "color": "blue",
+    "source": "UN Population Division 2024",
+    "contested": false,
+    "delta": "+4%",
+    "deltaNote": "Grew with 2024–2025 expansion including Indonesia",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "ndb-approved-financing",
+    "label": "NDB Total Approved Financing",
+    "value": "$42.9B+",
+    "color": "blue",
+    "source": "NDB 11th Annual Meeting, Moscow May 2026 / NDB Investor Presentation, June 2026",
+    "contested": false,
+    "delta": "140+ projects",
+    "deltaNote": "Q1 2026 total announced at 11th Annual Meeting in Moscow (May 14-15); up from $35.7B at end-2024. NDB's June 2026 investor presentation confirms the figure holds. On June 17, 2026 the NDB separately approved up to $1B for South African urban infrastructure (8 metros, PUIMM programme). Russia lending suspended Dec 2022. Local currency target: 30% by end-2026. On July 17, 2026 the NDB separately priced a $1.75B 3-year benchmark bond (1.8x oversubscribed) to fund its lending pipeline; VPs Daopeng Fu (CFO) and Monale Ratsoma (CRO) were appointed July 8 in a leadership rotation.",
+    "trend": "up",
+    "lastUpdated": "2026-08-10T14:36:45Z"
+  },
+  {
+    "id": "brics-oil-production-share",
+    "label": "Share of Global Oil Production",
+    "value": "~44%",
+    "color": "amber",
+    "source": "IEA / OPEC 2024",
+    "contested": true,
+    "contestNote": "Includes Russia, Iran, UAE, and Brazil; Saudi Arabia's unconfirmed membership status affects the figure significantly if included",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "brics-partner-nations",
+    "label": "BRICS Partner Nations",
+    "value": "12",
+    "color": "amber",
+    "source": "Kazan Declaration, Oct 2024",
+    "contested": false,
+    "delta": "+12 (new category)",
+    "deltaNote": "13 admitted at Kazan 2024; Indonesia upgraded to full member Jan 2025, reducing partner count to 12. Turkey's full membership bid blocked by India. Lavrov (May 15) signaled BRICS will 'not rush further expansion' after doubling membership in 2023-25.",
+    "trend": "stable",
+    "lastUpdated": "2026-05-24T14:49:21Z"
+  },
+  {
+    "id": "intra-brics-trade",
+    "label": "Intra-BRICS Trade (Annual)",
+    "value": "$680B+",
+    "color": "blue",
+    "source": "UNCTAD / WTO 2024",
+    "contested": true,
+    "contestNote": "China-Russia energy trade volumes disputed due to sanctions opacity; aggregate figures from member-state customs vary by 10–15%. UNCTAD's 2026 report 'Two Decades of Intra-BRICS Trade' separately measures intra-bloc EXPORTS (not total trade turnover) at $1.17 trillion in 2024 across the now-11-member bloc — a different, broader-basis metric that still equates to only ~5% of global trade, underscoring that expansion has not yet translated into proportionate trade integration.",
+    "trend": "up",
+    "lastUpdated": "2026-07-16T16:30:00Z"
+  },
+  {
+    "id": "usd-share-global-fx-reserves",
+    "label": "USD Share of Global FX Reserves",
+    "value": "59%",
+    "color": "red",
+    "source": "IMF COFER 2024",
+    "contested": true,
+    "contestNote": "Down from 72% in 1999; BRICS de-dollarization framing claims faster decline, but yuan remains below 3% of global reserves — structural shift is slow",
+    "trend": "down",
+    "lastUpdated": "2026-05-03T00:00:00Z"
+  },
+  {
+    "id": "brics-qris-payment-corridors",
+    "label": "BRICS Intra-Member QRIS Payment Corridors",
+    "value": "6 active",
+    "color": "green",
+    "source": "Bank Indonesia / Xinhua, May 2026",
+    "contested": false,
+    "delta": "+1 (Indonesia–China, Apr 30 2026)",
+    "deltaNote": "Indonesia's QRIS now links to China (Apr 30), South Korea (Apr 1), Japan, Singapore, Malaysia, Thailand — expanding rupiah-yuan direct settlement across BRICS and partner-state corridors",
+    "trend": "up",
+    "lastUpdated": "2026-05-03T00:00:00Z"
+  }
+]

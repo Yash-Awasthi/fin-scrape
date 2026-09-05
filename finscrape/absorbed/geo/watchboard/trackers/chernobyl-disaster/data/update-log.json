@@ -1,0 +1,43 @@
+{
+  "lastRun": "2026-08-15T14:33:59.055Z",
+  "tracker": "chernobyl-disaster",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "itemCount": 9
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 42
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 23
+    },
+    "mapLines": {
+      "status": "unchanged",
+      "itemCount": 0
+    },
+    "casualties": {
+      "status": "unchanged",
+      "itemCount": 10
+    },
+    "econ": {
+      "status": "updated",
+      "itemCount": 10
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 16
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 15
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 2
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

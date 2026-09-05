@@ -1,0 +1,110 @@
+[
+  {
+    "id": "alamo-assault",
+    "name": "Storming of the Alamo",
+    "detail": "Santa Anna's predawn assault on the Alamo mission-fortress with four columns, March 6, 1836. All ~189 defenders killed after ~90 minutes of fighting. Mexican forces sustained ~400–600 casualties. Mexican army used scaling ladders to breach the walls.",
+    "icon": "target",
+    "time": "Mar 6, 1836",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "goliad-prisoners-execution",
+    "name": "Goliad Massacre — Execution of POWs",
+    "detail": "By order of Santa Anna, 342 Texan prisoners including the wounded were marched out of Presidio La Bahía and shot on March 27, 1836. General Urrea had urged mercy; Santa Anna overruled him. Became a defining atrocity of the Texas Revolution.",
+    "icon": "casualty",
+    "time": "Mar 27, 1836",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "palo-alto-us-artillery",
+    "name": "Battle of Palo Alto — US Flying Artillery Attack",
+    "detail": "US flying artillery under Samuel Ringgold devastated Arista's massed infantry formations at Palo Alto on May 8, 1846. Ringgold was mortally wounded in the action. US artillery proved so effective that Mexican cavalry and infantry charges were repulsed repeatedly.",
+    "icon": "target",
+    "time": "May 8, 1846",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fort-texas-bombardment",
+    "name": "Mexican Bombardment of Fort Texas",
+    "detail": "Mexican artillery in Matamoros bombarded Fort Texas (across the Rio Grande) May 3–9, 1846, while Taylor was at Point Isabel. US Army Sergeant Rueben Downing was the fort's first US Army combat death. Taylor returned and won Resaca de la Palma, ending the siege.",
+    "icon": "retaliation",
+    "time": "May 3–9, 1846",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "monterrey-street-fighting",
+    "name": "Street Combat at Monterrey",
+    "detail": "US forces under General Worth and General Twiggs used picks and crowbars to breach walls between houses, moving through the city block by block September 21–24, 1846. Mexican soldiers and artillery defended from fortified buildings. One of the most intense urban combat engagements of the war.",
+    "icon": "target",
+    "time": "Sep 21–24, 1846",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "buena-vista-bragg-artillery",
+    "name": "Buena Vista — Bragg's Artillery Saves the Day",
+    "detail": "At a critical moment when the US 2nd Indiana Regiment broke and the line nearly collapsed, Captain Braxton Bragg's artillery battery and Jefferson Davis's Mississippi Rifles formed the famous 'V' formation to close the gap. Taylor reportedly said 'A little more grape, Captain Bragg,' repelling Santa Anna's final assault.",
+    "icon": "retaliation",
+    "time": "Feb 23, 1847",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "veracruz-bombardment-operation",
+    "name": "Veracruz Bombardment — 6,700 Rounds",
+    "detail": "US Army siege artillery and Navy guns fired approximately 6,700 shells at Veracruz over 88 hours of bombardment, March 22–25, 1847. Foreign consuls protested civilian casualties. The governor of the castle of San Juan de Ulúa surrendered days later. The city fell March 29.",
+    "icon": "target",
+    "time": "Mar 22–29, 1847",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cerro-gordo-lee-flank",
+    "name": "Cerro Gordo — Lee's Flanking Route Attack",
+    "detail": "Captain Robert E. Lee scouted an impassable-seeming trail around Santa Anna's left flank through the jungle. US forces dragged artillery through the jungle overnight and attacked the Mexican rear on April 17–18, 1847. Santa Anna barely escaped; 3,000 Mexicans captured.",
+    "icon": "target",
+    "time": "Apr 17–18, 1847",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "contreras-17-minute-assault",
+    "name": "Contreras — 17-Minute Rout",
+    "detail": "After a night march through the Pedregal lava field, US forces attacked General Valencia's Mexican army at Contreras from the rear on August 20, 1847. The battle lasted approximately 17 minutes; 700 Mexicans killed, 813 captured, 22 cannon taken. General Valencia was considered a traitor in Mexico for abandoning the position.",
+    "icon": "target",
+    "time": "Aug 20, 1847",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "churubusco-last-stand",
+    "name": "Churubusco — San Patricio Last Stand",
+    "detail": "August 20, 1847. The Ex-convent of Churubusco was defended by Santa Anna's best remaining troops and the San Patricio Battalion's artillery. US forces under Twiggs and Worth fought for four hours against determined resistance. Mexican commander Anaya reportedly said 'If there were ammunition, you would not be here' when asked to surrender his munitions.",
+    "icon": "target",
+    "time": "Aug 20, 1847",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "chapultepec-final-assault",
+    "name": "Chapultepec Castle — Final Assault",
+    "detail": "Two US divisions stormed Chapultepec Hill simultaneously on September 13, 1847 — using scaling ladders against steep stone walls while under artillery and musket fire. The castle fell within hours. The assault cleared the last major obstacle before Mexico City. General Bravo was captured in the fighting.",
+    "icon": "target",
+    "time": "Sep 13, 1847",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "molino-del-rey-assault",
+    "name": "Molino del Rey — Costly Frontal Attack",
+    "detail": "General Worth's September 8, 1847 frontal assault on the King's Mill complex produced 781 US casualties — one of the highest loss rates of the war — based on faulty intelligence that Mexico was manufacturing cannon there. Historians generally view it as an avoidable tactical error by Scott.",
+    "icon": "target",
+    "time": "Sep 8, 1847",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

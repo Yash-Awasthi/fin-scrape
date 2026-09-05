@@ -1,0 +1,100 @@
+[
+  {
+    "id": "ua-strike-novorossiysk-energy-hub-apr6",
+    "year": "Apr 6, 2026",
+    "title": "Ukraine Strikes Russian Black Sea Energy Hub at Novorossiysk",
+    "type": "military",
+    "active": true,
+    "detail": "Ukraine struck Russia's Black Sea energy hub at Novorossiysk, expanding its sustained campaign against Russian energy and logistics infrastructure beyond oil refineries. The strike targets one of Russia's key Black Sea export terminals, which handles significant volumes of crude oil and petroleum products. The attack is part of Ukraine's broader deep-strike strategy aimed at degrading Russia's ability to generate oil revenues that fund the war effort, following a series of strikes on Baltic port facilities at Ust-Luga and Primorsk in late March 2026.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPd2VtM2lXb0I3cVM3a2lyb0tGaVhzOThVZVN1RU9EaFF4S05NSDlfaTE4RWphVDkwckZBYzZwQ0JsODNpOE5WR1ZHRTI4eTFabkNEYWZmdDB0Q2VnWDFGeXdYUm0zRzF2VjgwblF2Q294ZUc3TFN1eDBsQmVmdmkyRFljRVBnbFMwNllNUEhOX0RENjhpcHV6Z2cwSGs0d9IBowFBVV95cUxNZDVpMEpvSXpqRmhzZm90Qm9BNG1uSlRkVThxSWtiQ052WlZoY05idk1CODVNY1ZoMlpWWmhjRHNncGQwVXZzZi13TFpLclVOSFE3SDk4ekZ0ZTNwMllURXF6UWNBdEd0MXlocHlaLXJVVS1qeUdVNFEycUF1ZHpJWGZCTUVPUXRuekpFSVhVdy0xb2dyeVoyTzBPOVExbHVfbk9B?oc=5",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Ukrainian_attacks_on_the_Russian_shadow_fleet",
+        "source": "Wikipedia / Ukrainian attacks on the Russian shadow fleet",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/8/88/2025_burning_tanker_in_the_Black_Sea.jpg/330px-2025_burning_tanker_in_the_Black_Sea.jpg"
+      }
+    ]
+  },
+  {
+    "id": "russia-iran-israel-grid-targeting-apr6",
+    "year": "Apr 6, 2026",
+    "title": "Ukraine Claims Russia Supplied Iran with Targeting Coordinates for Israeli Energy Grid",
+    "type": "diplomatic",
+    "active": true,
+    "detail": "Ukraine has claimed that Russia provided Iran with precise targeting coordinates for Israeli energy grid infrastructure, significantly escalating concerns over the depth of Russia-Iran military cooperation. The allegation, if confirmed, would represent a direct Russian role in enabling potential strikes on Israeli critical infrastructure — a major escalation beyond previously documented arms transfers and drone technology sharing between Moscow and Tehran. The disclosure adds a new dimension to the war's geopolitical fallout, linking the Ukraine conflict to Middle Eastern security dynamics.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5GQTUzUUxPUmVBRkNEOFJFR1Z6U3NTZjlMeXNuTmVnV3pqZHROQzBGcVV2dHJ4UExRaXFxTHFMN0dYeEhBZ3VrcTBTRTQ5bUdIbFBJQmp6N2NiSnp6M2ZkQ2hEdEhDNFVuVVE?oc=5",
+        "pole": "western"
+      }
+    ],
+    "confidence": "low",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Kyiv_strikes_(2022%E2%80%93present)",
+        "source": "Wikipedia / Kyiv strikes (2022%E2%80%93present)",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Sirens-2023.pdf/page1-330px-Sirens-2023.pdf.jpg"
+      }
+    ]
+  },
+  {
+    "id": "child-rescued-rubble-easter-strikes-apr6",
+    "year": "Apr 6, 2026",
+    "title": "Child Rescued from Rubble as Russia Escalates Aerial Strikes Over Easter",
+    "type": "humanitarian",
+    "active": true,
+    "detail": "A child was rescued from rubble following intensified Russian aerial bombardment across Ukraine, underscoring the ongoing civilian toll as Russia ramped up strikes during the Easter period. The Easter escalation represents a recurring pattern of Russian targeting of civilian infrastructure during religious holidays, drawing international condemnation. Rescue operations were conducted by Ukrainian emergency services amid ongoing strikes.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/6/child-rescued-from-rubble-after-russia-ramps-up-strikes-on-ukraine?traffic_source=rss",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/6/child-rescued-from-rubble-after-russia-ramps-up-strikes-on-ukraine?traffic_source=rss",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/video/newsfeed/2026/4/6/child-rescued-from-rubble-after-russia-ramps-up-strikes-on-ukraine?traffic_source=rss"
+      }
+    ]
+  },
+  {
+    "id": "russia-kursk-governor-jailed-graft-apr6",
+    "year": "Apr 6, 2026",
+    "title": "Russia Jails Former Kursk Governor in Graft Probe Linked to Ukraine's Incursion",
+    "type": "diplomatic",
+    "active": true,
+    "detail": "Russia has jailed the former governor of the Kursk region as part of a corruption investigation connected to Ukraine's August 2024 cross-border incursion into Russian territory. The arrest marks a rare instance of official accountability within Russia's wartime governance, with authorities linking procurement and supply-chain fraud to the failures that allowed Ukrainian forces to penetrate and hold Russian border territory for weeks. The Kursk incursion — Ukraine's first seizure of Russian soil since WWII — exposed significant gaps in Russia's border defenses and regional emergency management, prompting a Kremlin-backed accountability review.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/6/russia-jails-former-kursk-governor-in-ukraine-incursion-linked-graft-probe?traffic_source=rss",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/news/2026/4/6/russia-jails-former-kursk-governor-in-ukraine-incursion-linked-graft-probe?traffic_source=rss",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/news/2026/4/6/russia-jails-former-kursk-governor-in-ukraine-incursion-linked-graft-probe?traffic_source=rss"
+      }
+    ],
+    "confidence": "medium"
+  }
+]

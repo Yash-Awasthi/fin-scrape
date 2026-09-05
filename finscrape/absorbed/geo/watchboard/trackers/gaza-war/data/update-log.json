@@ -1,0 +1,27 @@
+{
+  "lastRun": "2026-08-29T16:18:56.888Z",
+  "tracker": "gaza-war",
+  "sections": {
+    "events": {
+      "lastRun": "2026-08-29T16:18:56.888Z",
+      "status": "updated"
+    },
+    "mapLines": "updated",
+    "mapPoints": "updated",
+    "kpis": {
+      "lastRun": "2026-08-24T18:30:00.000Z",
+      "status": "updated"
+    },
+    "casualties": "updated",
+    "political": "unchanged",
+    "meta": {
+      "lastRun": "2026-08-29T16:18:56.888Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-08-24T18:30:00.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

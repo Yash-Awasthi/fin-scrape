@@ -1,0 +1,245 @@
+[
+  {
+    "id": "iyad-ag-ghaly",
+    "name": "Iyad Ag Ghaly",
+    "role": "Emir of JNIM (Jama'at Nusrat al-Islam wal-Muslimin); founder of Ansar Dine",
+    "avatar": "jnim",
+    "initial": "I",
+    "quote": "We will not lay down our arms until Islamic law governs all of Mali — this is a duty before God, not a negotiation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "amadou-koufa",
+    "name": "Amadou Koufa",
+    "role": "JNIM Commander — Katiba Macina; Fulani jihadist recruiter in central Mali",
+    "avatar": "jnim",
+    "initial": "A",
+    "quote": "The Fulani of the Macina have been oppressed for too long. We are not terrorists — we are the inheritors of Sékou Amadou's revolution.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "abu-al-bara-al-sahrawi",
+    "name": "Abu al-Bara al-Sahrawi",
+    "role": "Emir — Islamic State Sahel Province (IS-Sahel); successor to Adnan al-Sahrawi (killed 2021)",
+    "avatar": "jnim",
+    "initial": "A",
+    "quote": "[Claimed in IS-Sahel media]: The crusaders and their allies will not drive us from this land. Every soldier of the apostates is a legitimate target.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "adnan-abu-walid-al-sahrawi",
+    "name": "Adnan Abu Walid al-Sahrawi",
+    "role": "Founder of ISGS/IS-Sahel Province (killed August 17, 2021 by French drone)",
+    "avatar": "jnim",
+    "initial": "A",
+    "quote": "We are Islamic State soldiers in the Great Sahara. We answer only to the Caliph and to God.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sadio-camara",
+    "name": "Gen. Sadio Camara (1979–2026)",
+    "role": "Mali's Defence Minister 2020–2026; killed by JNIM suicide car bomb at his Kati residence on April 25, 2026 (confirmed April 26). Key architect of the 2020 coup and the FAMa-Russia partnership. His wife and two grandchildren were also killed.",
+    "avatar": "aes",
+    "initial": "S",
+    "quote": "Mali's security is our absolute priority. No external pressure will change our partnership choices — we are a sovereign state defending our own people.",
+    "lastUpdated": "2026-04-26T15:45:00.000Z"
+  },
+  {
+    "id": "assimi-goita",
+    "name": "Col. Assimi Goïta",
+    "role": "President and Defence Minister of Mali (dual role since May 4, 2026); leader of 2020 and 2021 coups; head of CNSP junta. Granted a five-year non-elected presidential term by the government-organized Assises Nationales (May 2026). Formally dissolved all political parties by decree in May 2026 — completing Mali's transition to permanent authoritarian state. Opposition figures Mountaga Tall (May 3), El Bachir Thiam (May 9), and Abba Alhassane (May 9, later released) forcibly disappeared. Survived the April 25–26, 2026 JNIM-FLA nationwide offensive that killed his Defence Minister Sadio Camara; assumed the Defence Minister portfolio May 4. On May 29–30, 2026, Goïta announced a theater command restructure appointing Col.-Maj. Karim Traoré, Col.-Maj. Didier Dembélé, and Col. Issa Bagayoko as new theater commanders. On June 3, 2026, signed Decree 2026-0312 banning motorcycles above 125cc outside urban centers nationwide — a direct counter-insurgency measure targeting JNIM's primary tactical mobility platform, effective immediately with enforcement by FAMa and national police. Bamako siege at Day 38 as of June 5, 2026. Kidal remains under FLA control. Jeune Afrique (May 2026) documented 'fractures within the junta' as crisis accountability questions mount.",
+    "avatar": "aes",
+    "initial": "A",
+    "quote": "Mali will no longer accept to be dictated to. We have the right to choose our partners and our destiny. France had nine years — now it is our turn.",
+    "lastUpdated": "2026-06-01T14:22:00.000Z"
+  },
+  {
+    "id": "makan-alassane-diarra",
+    "name": "Gen. Makan Alassane Diarra",
+    "role": "Commander — AES Unified Military Force (FU-AES); confirmed as head of the Alliance of Sahel States joint force coordination command (May 2026). The AES Unified Force was inaugurated December 2025 in Bamako and expanded to 15,000 authorized troops in April 2026. His appointment as overall AES force commander follows the April 25–May 13 crisis that exposed the gap between the force's paper authorization and its real rapid-reaction capacity.",
+    "avatar": "aes",
+    "initial": "M",
+    "quote": "The AES Unified Force is not a promise — it is a capability. The Alliance's three nations will coordinate as one against our common enemies.",
+    "lastUpdated": "2026-06-01T14:22:00.000Z"
+  },
+  {
+    "id": "ibrahim-traore",
+    "name": "Capt. Ibrahim Traoré",
+    "role": "President of Burkina Faso; AES chair 2025–2026; extended junta rule to 2029 after banning all political parties in January 2026",
+    "avatar": "aes",
+    "initial": "I",
+    "quote": "Forget about democracy — that's not for us right now. We need security, sovereignty, and development. Elections will come when we have won the war.",
+    "lastUpdated": "2026-04-09T14:55:00Z"
+  },
+  {
+    "id": "abdourahamane-tchiani",
+    "name": "Gen. Abdourahamane Tchiani",
+    "role": "President of Niger (CNSP); led July 2023 coup that deposed President Bazoum",
+    "avatar": "aes",
+    "initial": "A",
+    "quote": "The National Council for the Safeguard of the Homeland has decided to put an end to the regime that you know, as a result of the continuing deterioration of the security situation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "emmanuel-macron",
+    "name": "Emmanuel Macron",
+    "role": "President of France; authorized end of Operation Barkhane; oversaw French withdrawal from all three AES states",
+    "avatar": "france",
+    "initial": "E",
+    "quote": "We left because the de facto authorities [in Mali] preferred to work with mercenaries rather than with a sovereign allied partner. Africa can count on France — France cannot be counted out by coups.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "yevgeny-prigozhin",
+    "name": "Yevgeny Prigozhin",
+    "role": "Founder of Wagner Group (deceased — killed August 23, 2023 in plane crash); oversaw Wagner's Mali deployment from December 2021",
+    "avatar": "other",
+    "initial": "Y",
+    "quote": "We are not in Mali to drink tea. The boys are doing real work — fighting, dying, winning. Russia needs Africa and Africa needs Russia.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ibrahim-boubacar-keita",
+    "name": "Ibrahim Boubacar Keïta (IBK)",
+    "role": "President of Mali 2013–2020; ousted in August 2020 coup; died January 16, 2022",
+    "avatar": "other",
+    "initial": "I",
+    "quote": "I do not wish blood to be shed in order to keep me in power. If today, certain elements of our armed forces want this to end, do I really have a choice?",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "roch-kabore",
+    "name": "Roch Marc Christian Kaboré",
+    "role": "President of Burkina Faso 2015–2022; ousted in January 2022 coup amid surging jihadist violence",
+    "avatar": "other",
+    "initial": "R",
+    "quote": "We are facing a new form of terrorism that respects no borders. Burkina Faso alone cannot address this challenge — regional and international solidarity is essential.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mohamed-bazoum",
+    "name": "Mohamed Bazoum",
+    "role": "President of Niger 2021–2023; detained since July 26, 2023 coup; remains in custody as of 2026",
+    "avatar": "other",
+    "initial": "M",
+    "quote": "What is happening [the coup] is totally unacceptable. The gains made for the reinforcement of our democracy will be safeguarded. I count on Nigeriens, on friends of democracy, to stand by my side.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "el-ghassim-wane",
+    "name": "El-Ghassim Wane",
+    "role": "Special Representative of the UN Secretary-General for Mali; head of MINUSMA 2021–2023",
+    "avatar": "un",
+    "initial": "E",
+    "quote": "MINUSMA has consistently sought to protect civilians and support Mali's peace process despite enormous constraints. The mission's departure does not mean the UN abandons the Malian people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "antonio-guterres",
+    "name": "António Guterres",
+    "role": "UN Secretary-General; repeatedly called for renewed diplomatic engagement in the Sahel",
+    "avatar": "un",
+    "initial": "A",
+    "quote": "The Sahel is in flames. Terrorist groups and armed actors are exploiting governance failures, poverty, and climate change. No military response alone will solve this — we need political solutions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "moussa-faki-mahamat",
+    "name": "Moussa Faki Mahamat",
+    "role": "Chairperson of the African Union Commission 2017–2025; key AU voice on Sahel coups",
+    "avatar": "un",
+    "initial": "M",
+    "quote": "The African Union categorically rejects unconstitutional changes of government in all circumstances. Peace, security, and democracy are inseparable in Africa's development agenda.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "amadou-sanogo",
+    "name": "Capt. Amadou Haya Sanogo",
+    "role": "Leader of March 2012 Mali coup (CNSP); handed over to transitional government; later arrested for crimes related to the 2012 coup",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "The army has decided to assume its responsibilities before history. We promise a return to democratic civilian rule as soon as conditions allow.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "paul-henri-damiba",
+    "name": "Lt. Col. Paul-Henri Sandaogo Damiba",
+    "role": "President of Burkina Faso January–September 2022; led first 2022 coup; himself ousted in second 2022 coup by Traoré",
+    "avatar": "other",
+    "initial": "P",
+    "quote": "I assumed power to save Burkina Faso from the jihadist threat. I did not come for personal power — I came to serve. My departure is a sacrifice for national unity.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mohamed-toumba",
+    "name": "Maj. Gen. Mohamed Toumba",
+    "role": "Niger Interior Minister and CNSP Security Chief; key figure in July 2023 coup against President Bazoum; led negotiations expelling US and French forces from Niger in 2023–2024",
+    "avatar": "aes",
+    "initial": "M",
+    "quote": "Terrorist attacks in Niger could cease following a change in political power in France, which supports these jihadists. The state is stronger now — the terrorists will lose their support when France changes direction.",
+    "lastUpdated": "2026-04-23T14:30:00Z"
+  },
+  {
+    "id": "faure-gnassingbe",
+    "name": "Faure Gnassingbé",
+    "role": "President of Togo; architect of the April 2026 Togo-Sahel 2026–2028 Strategy; key AES-ECOWAS bridge and mediator between the juntas and the West",
+    "avatar": "other",
+    "initial": "F",
+    "quote": "Togo is ready to put its mediation expertise and its regional foothold at the service of stability — acting as a bridge between the Sahel and the wider international community. The door of dialogue must remain open, because there is no military solution without political dialogue.",
+    "lastUpdated": "2026-04-21T14:12:00Z"
+  },
+  {
+    "id": "karim-khan",
+    "name": "Karim Khan",
+    "role": "ICC Prosecutor; called for investigation into Sahel atrocities including Mali and Burkina Faso",
+    "avatar": "un",
+    "initial": "K",
+    "quote": "Alleged crimes committed in Mali — against civilians, against cultural heritage, against humanity — fall squarely within the ICC's mandate. There will be no impunity for mass atrocities in the Sahel.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "lansana-kouyate",
+    "name": "Lansana Kouyaté",
+    "role": "ECOWAS Chief Negotiator to AES States (appointed March 26, 2026); former Prime Minister of Guinea. Called for immediate AES cooperation frameworks in Abuja on June 3, 2026 — his most substantive public statement since appointment.",
+    "avatar": "un",
+    "initial": "L",
+    "quote": "Cooperation between ECOWAS and the Alliance of Sahel States is not optional — it is the only path that can address the security crisis and the humanitarian emergency facing our region together. I call on the AES leaders to return to the table.",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  },
+  {
+    "id": "alghabass-ag-intalla",
+    "name": "Alghabass Ag Intalla",
+    "role": "Commander-in-Chief of the Front de Libération de l'Azawad (FLA); hereditary Tuareg Amenokal (traditional chief) from the noble Ifoghas clan of Kidal. Led the FLA forces that seized Kidal on April 25–26, 2026 — reversing the Mali-Russia military achievement of November 2023 in under 24 hours. On June 4, 2026, stated publicly that 'Kidal is only the beginning.'",
+    "avatar": "jnim",
+    "initial": "A",
+    "quote": "Kidal is only the beginning. Azawad will be free — not just Kidal, but all our lands. The liberation of our city is not a coup — it is the restoration of a political reality that Bamako and its foreign partners refused to negotiate in good faith.",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  },
+  {
+    "id": "bilal-ag-cherif",
+    "name": "Bilal Ag Cherif",
+    "role": "Secretary-General of the Mouvement National de Libération de l'Azawad (MNLA) and key FLA political figure. Former head of the MNLA that initiated the 2012 Azawad independence campaign. Led Tuareg political engagement with the 2015 Algiers Accord. Now aligned with the FLA's armed campaign following the junta's refusal to implement the accord.",
+    "avatar": "jnim",
+    "initial": "B",
+    "quote": "The Algiers Accord was our attempt to reach peace within Mali's framework. The junta buried it with the Wagner offensive in 2023. We did not restart this war — the junta did when it chose bullets over dialogue.",
+    "lastUpdated": "2026-04-30T14:30:00.000Z"
+  },
+  {
+    "id": "mountaga-tall",
+    "name": "Mountaga Tall",
+    "role": "Prominent Malian opposition lawyer, former Minister of National Education (under President Alpha Oumar Konaré), founder of the Citizens' Party (CODEM). Leading junta critic. Abducted from his Bamako home by armed men without a warrant in the pre-dawn hours of May 3, 2026 — days after the April 25 JNIM-FLA crisis. Whereabouts unknown as of May 4, 2026. Case documented by IAPL Monitoring and reported by PBS NewsHour/AP, Washington Post, and Africanews.",
+    "avatar": "other",
+    "initial": "M",
+    "quote": "The Malian state cannot defeat terrorism by becoming itself a source of terror against its own citizens. A junta that silences lawyers cannot build the rule of law that is the only sustainable answer to the jihadist challenge.",
+    "lastUpdated": "2026-05-04T14:32:18.000Z"
+  },
+  {
+    "id": "mahamadou-issoufou",
+    "name": "Mahamadou Issoufou",
+    "role": "Former President of Niger 2011–2021; key Western partner on Sahel security; predecessor to Bazoum",
+    "avatar": "other",
+    "initial": "M",
+    "quote": "The Sahel needs two things above all: development and security. Without development there is no security; without security there is no development. The world must not abandon us.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

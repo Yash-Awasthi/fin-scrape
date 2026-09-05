@@ -1,0 +1,65 @@
+# ── Core ─────────────────────────────────
+anthropic
+yfinance
+pandas
+numpy
+matplotlib
+mplfinance
+scikit-learn
+xgboost
+
+# ── API Server ───────────────────────────
+fastapi
+uvicorn[standard]
+python-dotenv
+python-multipart
+
+# ── NLP / Sentiment ──────────────────────
+vaderSentiment
+textblob
+
+# ── Streamlit UI (optional) ──────────────
+streamlit
+
+# ── Evaluation ───────────────────────────
+scipy
+tqdm
+optuna
+
+# ── X/Twitter Publishing ────────────────
+tweepy
+
+# ── Deep Learning (optional — enables 6 additional models) ──
+# Uncomment to enable EMAformer, Diffusion, GNN, RL PPO:
+# torch
+# einops
+# stable-baselines3
+# gymnasium
+
+# ── Testing ──────────────────────────────
+pytest
+pytest-cov
+
+# ── Desktop Agent (optional) ─────────────
+openai
+sounddevice
+pystray
+Pillow
+pygame
+keyboard
+alpaca-py
+
+# ── Sports prediction (2026-06-29) ─────────────────────────────
+# penaltyblog dropped 2026-06-29 — aesara/numpy ABI incompat.
+# Our engine/sports_pricer.py uses pure-Python Dixon-Coles; the
+# package was only needed for the v0.2 full-Bayesian fit, deferred.
+
+# Unified scraper for FBref/ClubElo/Understat/Sofascore/WhoScored.
+# Feeds penaltyblog with today's xG / Elo / lineup data.
+soccerdata>=1.8.0
+
+# Fallback scraper layer when soccerdata blocks. GPL-3 = local cron only.
+ScraperFC>=3.0.0
+
+# StatsBomb open-data streamer — for eval/backtest_sports.py ground truth.
+statsbombpy>=1.0.4

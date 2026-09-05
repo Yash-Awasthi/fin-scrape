@@ -1,0 +1,123 @@
+[
+  {
+    "id": "total-cleanup-cost-ussr",
+    "label": "Total Cleanup Cost (Soviet Era)",
+    "value": "~$700B",
+    "change": "Estimated cumulative 1986–2000",
+    "direction": "up",
+    "sparkData": [100, 180, 280, 380, 480, 580, 660, 700],
+    "color": "red",
+    "source": "UN Chernobyl Forum (2005); Ukrainian Ministry of Finance estimates",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "new-safe-confinement-cost",
+    "label": "New Safe Confinement Construction",
+    "value": "€2.1B",
+    "change": "Funded by 45+ countries via EBRD",
+    "direction": "up",
+    "sparkData": [200, 600, 950, 1300, 1650, 1900, 2050, 2100],
+    "color": "amber",
+    "source": "European Bank for Reconstruction and Development (EBRD)",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "ukraine-annual-budget-chernobyl",
+    "label": "Ukraine Annual Chernobyl Budget",
+    "value": "~$150M",
+    "change": "Per year (recent years)",
+    "direction": "down",
+    "sparkData": [380, 350, 290, 240, 200, 175, 155, 150],
+    "color": "amber",
+    "source": "Ukrainian State Budget; World Bank Chernobyl Reports",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "agricultural-losses-belarus",
+    "label": "Belarus Agricultural Land Condemned",
+    "value": "2.6M hectares",
+    "change": "Taken out of agricultural production 1986–1990",
+    "direction": "down",
+    "sparkData": [0, 800, 1400, 1900, 2200, 2450, 2550, 2600],
+    "color": "red",
+    "source": "Belarusian government; UNDP Chernobyl Program",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "exclusion-zone-tourism-revenue",
+    "label": "Exclusion Zone Tourism Revenue",
+    "value": "$50M+",
+    "change": "+35% after HBO series (2019)",
+    "direction": "up",
+    "sparkData": [5, 8, 12, 18, 25, 35, 50, 42],
+    "color": "green",
+    "source": "Ukrainian State Agency on Exclusion Zone Management; Ukrainian Tourism Board",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "soviet-gdp-cleanup-burden",
+    "label": "Soviet GDP Spent on Chernobyl Cleanup",
+    "value": "~1.8% GDP",
+    "change": "Annual average 1986–1991",
+    "direction": "down",
+    "sparkData": [1.5, 2.0, 2.2, 1.9, 1.7, 1.5, 1.4, 1.8],
+    "color": "red",
+    "source": "Mikhail Gorbachev Institute; Soviet State Budget Archives",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "ukraine-economic-losses-total",
+    "label": "Total Ukrainian Economic Losses",
+    "value": "$180B+",
+    "change": "1986–2000 estimated cumulative",
+    "direction": "down",
+    "sparkData": [15, 35, 65, 90, 110, 135, 158, 180],
+    "color": "red",
+    "source": "UN Development Programme — Human Consequences of the Chernobyl Nuclear Accident (2002)",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "healthcare-costs-affected-regions",
+    "label": "Annual Healthcare Costs (Affected Regions)",
+    "value": "$1B+",
+    "change": "Ukraine, Belarus, Russia combined annual estimate",
+    "direction": "down",
+    "sparkData": [2.5, 2.2, 1.9, 1.6, 1.4, 1.2, 1.1, 1.0],
+    "color": "amber",
+    "source": "WHO; UNDP Chernobyl Annual Reports",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "nsc-emergency-repair-cost",
+    "label": "NSC Emergency Repair Cost Estimate",
+    "value": "€500M",
+    "change": "EBRD estimate for post-drone-strike repairs (2025–2030)",
+    "direction": "up",
+    "sparkData": [50, 100, 175, 250, 330, 410, 470, 500],
+    "color": "red",
+    "source": "European Bank for Reconstruction and Development (EBRD); NucNet, April 2026; World Nuclear News",
+    "lastUpdated": "2026-05-16T14:23:47.391Z"
+  },
+  {
+    "id": "nsc-repair-funding-secured",
+    "label": "NSC Repair Funding Secured (ICCA)",
+    "value": "€70M+",
+    "change": "of €100M+ EBRD-estimated total; 15 donor countries as of March 2026",
+    "direction": "up",
+    "sparkData": [0, 10, 25, 40, 55, 65, 70, 70],
+    "color": "amber",
+    "source": "International Chornobyl Cooperation Account (ICCA); EBRD; Nuclear Engineering International",
+    "lastUpdated": "2026-07-16T14:00:00.000Z"
+  },
+  {
+    "id": "decommissioning-program-budget-2026-2036",
+    "label": "Chornobyl Decommissioning Program Budget (2026–2036)",
+    "value": "UAH 50.8B",
+    "change": "UAH 45.6B domestic + UAH 5.2B international technical assistance",
+    "direction": "up",
+    "sparkData": [45.6, 50.8],
+    "color": "amber",
+    "source": "Ukrainian Cabinet of Ministers bill No. 15513; Interfax-Ukraine, Aug 2026",
+    "lastUpdated": "2026-08-15T14:32:39.000Z"
+  }
+]

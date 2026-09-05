@@ -1,0 +1,90 @@
+[
+  {
+    "id": "zelensky-berlin-visit-april-2026",
+    "year": "Apr 16, 2026",
+    "title": "Zelensky visits Berlin as Germany escalates military support",
+    "type": "diplomatic",
+    "detail": "Ukrainian President Volodymyr Zelensky arrived in Berlin for high-level talks with German leadership, with reports indicating Germany is preparing to announce significant escalation in military aid to Ukraine. The visit comes amid intensified Russian attacks and growing pressure on Western allies to increase weapons deliveries.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 3,
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5COGZKTE5JNGVJdUl3ZjhxbURjNkR6a0hCdHk5TnRvbnk1eUtRaEkzUW1ESE14R0xPeFF6QmdwbGc3NndXeS1jQUNSUjQxdVBnVFF1elFGN1E5c3dqdUEzRmNrVG04RjJk?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy",
+        "source": "Wikipedia / Volodymyr Zelenskyy",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Volodymyr_Zelensky_2022_official_portrait_%28cropped%29.jpg/330px-Volodymyr_Zelensky_2022_official_portrait_%28cropped%29.jpg"
+      },
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5COGZKTE5JNGVJdUl3ZjhxbURjNkR6a0hCdHk5TnRvbnk1eUtRaEkzUW1ESE14R0xPeFF6QmdwbGc3NndXeS1jQUNSUjQxdVBnVFF1elFGN1E5c3dqdUEzRmNrVG04RjJk?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Zelensky's diplomatic visit to Berlin amid escalating German military support",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "kyiv-ballistic-missile-strike-april-15",
+    "year": "Apr 15, 2026",
+    "title": "Russia launches ballistic missile attack on Kyiv",
+    "type": "military",
+    "detail": "Russian forces conducted a ballistic missile strike on Kyiv with multiple explosions reported across the Ukrainian capital. Air raid sirens sounded throughout the city as air defense systems engaged incoming missiles. The attack represents a continuation of Russia's systematic targeting of Ukrainian civilian infrastructure and government facilities.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 3,
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZUZGQ2VQV2RNaEZ2aGNLTkwwaEVXYmt2Tm1wQ3RPSTlscjk3OF9Fcy1jY1NyMkFEdVgxLU9GUmh3UGFMR053b1lYMXRlWTNuVEdJQlczT0ozMVNlNnoyZk0wS3RIX3FMZWpnR3VZdjJRdDhDeGFhUWdMbjQ4SjhDRlpXSTRiNk4tQWUyNUxzQnNlZ0U3LXM3TjJTTGpyZkpkQmowTA?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Russian_attacks_on_civilians_in_the_Russo-Ukrainian_war_(2022%E2%80%93present)",
+        "source": "Wikipedia / Russian attacks on civilians in the Russo-Ukrainian war (2022%E2%80%93present)",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Dnipro_after_Russian_missile_attack%2C_2023-01-14_%2802-01%29.jpg/330px-Dnipro_after_Russian_missile_attack%2C_2023-01-14_%2802-01%29.jpg"
+      },
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPZUZGQ2VQV2RNaEZ2aGNLTkwwaEVXYmt2Tm1wQ3RPSTlscjk3OF9Fcy1jY1NyMkFEdVgxLU9GUmh3UGFMR053b1lYMXRlWTNuVEdJQlczT0ozMVNlNnoyZk0wS3RIX3FMZWpnR3VZdjJRdDhDeGFhUWdMbjQ4SjhDRlpXSTRiNk4tQWUyNUxzQnNlZ0U3LXM3TjJTTGpyZkpkQmowTA?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Russian ballistic missile strike on Kyiv with explosions reported",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "russia-aerial-assault-april-16-2026",
+    "year": "Apr 16, 2026",
+    "title": "Russia launches deadliest aerial attack in months, killing 18 across Ukraine",
+    "type": "military",
+    "detail": "Russian forces conducted a massive aerial bombardment across multiple Ukrainian cities, killing at least 18 people including a 12-year-old girl. The coordinated strikes hit civilian infrastructure and residential areas in what officials described as one of the deadliest Russian attacks in recent months. The assault targeted energy facilities and population centers, marking a significant escalation in Russia's campaign against Ukrainian civilian infrastructure.",
+    "sources": [
+      {
+        "name": "BBC News",
+        "tier": 2,
+        "url": "https://www.bbc.com/news/articles/cm29plylqnvo?at_medium=RSS&at_campaign=rss",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://ichef.bbci.co.uk/news/1024/branded_news/f9d0/live/1a37f100-3940-11f1-9d5c-8ba507d7dbde.jpg",
+        "caption": "Aftermath of Russian aerial strikes across Ukraine",
+        "source": "BBC",
+        "thumbnail": "https://ichef.bbci.co.uk/news/1024/branded_news/f9d0/live/1a37f100-3940-11f1-9d5c-8ba507d7dbde.jpg"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  }
+]

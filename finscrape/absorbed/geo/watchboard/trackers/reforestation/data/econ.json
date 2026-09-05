@@ -1,0 +1,112 @@
+[
+  {
+    "id": "bonn-challenge-annual-finance",
+    "label": "Nature-Based Solutions Finance (Annual)",
+    "value": "$220 B/yr",
+    "change": "+18%",
+    "direction": "up",
+    "sparkData": [80, 110, 130, 150, 168, 185, 200, 220],
+    "color": "green",
+    "source": "UNEP — State of Finance for Nature 2026 (target: $571B/yr by 2030; private share: $23B/yr)",
+    "lastUpdated": "2026-05-13"
+  },
+  {
+    "id": "restoration-finance-gap",
+    "label": "Annual Nature Finance Gap (NbS)",
+    "value": "$351 B/yr",
+    "change": "+24%",
+    "direction": "up",
+    "sparkData": [250, 268, 275, 280, 283, 290, 320, 351],
+    "color": "red",
+    "source": "UNEP — State of Finance for Nature 2026 (needed: $571B/yr; current: $220B/yr)",
+    "lastUpdated": "2026-05-13"
+  },
+  {
+    "id": "great-green-wall-funding",
+    "label": "GGW Funding Pledged (Cumulative)",
+    "value": "$19 B",
+    "change": "+$2.2 B",
+    "direction": "up",
+    "sparkData": [0.5, 1.0, 1.5, 2.5, 2.5, 14.3, 16.8, 19.0],
+    "color": "amber",
+    "source": "NPR / UNCCD — $19B pledged but only 13% (~$2.5B) disbursed as of 2023 (NPR assessment Apr 2026)",
+    "lastUpdated": "2026-04-11"
+  },
+  {
+    "id": "amazon-fund-disbursements",
+    "label": "Amazon Fund Disbursements (Cumulative)",
+    "value": "$1.45 B",
+    "change": "+$950 M",
+    "direction": "up",
+    "sparkData": [0.1, 0.3, 0.5, 0.5, 0.5, 0.5, 0.9, 1.45],
+    "color": "green",
+    "source": "Amazon Fund BNDES (Brazil) — Annual Report 2023",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "voluntary-carbon-market-forests",
+    "label": "Voluntary Carbon Market — Forest Credits",
+    "value": "$2.8 B",
+    "change": "-34%",
+    "direction": "down",
+    "sparkData": [0.8, 1.2, 2.0, 4.0, 5.5, 4.2, 3.5, 2.8],
+    "color": "amber",
+    "source": "Ecosystem Marketplace — State of the Voluntary Carbon Markets 2024",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "restoration-economy-jobs",
+    "label": "Ecosystem Restoration Economy Jobs",
+    "value": "18 M jobs",
+    "change": "+22%",
+    "direction": "up",
+    "sparkData": [8, 10, 11, 13, 14, 15, 16.5, 18],
+    "color": "blue",
+    "source": "ILO — Greening with Jobs; UNEP Restoration Economy Estimate (2023)",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "redd-plus-result-based-payments",
+    "label": "REDD+ Result-Based Payments (Cumulative)",
+    "value": "$3.2 B",
+    "change": "+$800 M",
+    "direction": "up",
+    "sparkData": [0.2, 0.5, 0.9, 1.4, 1.8, 2.2, 2.8, 3.2],
+    "color": "green",
+    "source": "UNFCCC / Green Climate Fund — REDD+ Progress Report 2024",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "mangrove-blue-carbon-market",
+    "label": "Mangrove Blue Carbon Credits Issued",
+    "value": "~12 M tCO₂e",
+    "change": "+85%",
+    "direction": "up",
+    "sparkData": [0.5, 1.0, 2.0, 3.5, 5.0, 7.0, 9.5, 12.0],
+    "color": "blue",
+    "source": "Verra / Gold Standard — Blue Carbon Registry (2024). Includes mangrove, seagrass, tidal wetland credits.",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "green-samar-private-investment",
+    "label": "Green Samar Private Restoration Investment (Annual)",
+    "value": "₱80 M/yr (~$1.4 M)",
+    "change": "new commitment",
+    "direction": "up",
+    "sparkData": [0, 0, 0, 0, 0, 20, 60, 80],
+    "color": "green",
+    "source": "Daily Tribune — aDryada/Samar Bamboo Corp./DENR Green Samar 120,000 ha restoration deal (June 23, 2026); funds reforestation, forest patrols, and community forest guards over a 25-year term",
+    "lastUpdated": "2026-06-23"
+  },
+  {
+    "id": "living-carbon-octopus-us-reforestation-deal",
+    "label": "Largest US Nature-Based Carbon Removal Deal",
+    "value": "$500M (Octopus Energy / Living Carbon)",
+    "change": "new record",
+    "direction": "up",
+    "sparkData": [10, 30, 50, 80, 100, 150, 300, 500],
+    "color": "green",
+    "source": "GlobeNewswire / Octopus Energy Generation — Living Carbon secures $500M to restore degraded US land, targeting 50 Mt CO₂ removal over 40 years (April 30, 2026). Google, Meta, McKinsey purchased 131,240 tCO₂e in credits.",
+    "lastUpdated": "2026-04-30"
+  }
+]

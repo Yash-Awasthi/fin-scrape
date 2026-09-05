@@ -1,0 +1,92 @@
+[
+  {
+    "id": "strike-nova-festival",
+    "name": "Supernova/Nova Music Festival",
+    "detail": "3,500 attendees targeted; 364 killed, ~40 taken hostage. Hamas fighters arrived via paraglider and breached fence. Systematic massacre along Route 232.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 6:30 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-kibbutz-beeri",
+    "name": "Kibbutz Be'eri",
+    "detail": "~97 residents killed in house-to-house massacre over 10 hours. ~30 taken hostage. ~10% of community's 1,000 residents killed.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 7:00 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-kibbutz-kfar-aza",
+    "name": "Kibbutz Kfar Aza",
+    "detail": "66 residents killed, 19 taken hostage. 'Young farm' section systematically targeted. Adjacent to Gaza fence — one of first communities breached.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 6:45 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-kibbutz-nir-oz",
+    "name": "Kibbutz Nir Oz",
+    "detail": "~40 killed, ~79 taken hostage. 25% of 400-person community killed or captured. Bibas family (including 9-month-old Kfir) taken hostage.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 7:15 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-nahal-oz-base",
+    "name": "Nahal Oz IDF Observation Post",
+    "detail": "Military base housing Unit 414 female intelligence observers overrun. 66 soldiers killed, 15 female 'tatzpitaniyot' taken hostage to Gaza. Critical surveillance infrastructure destroyed.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 6:40 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-reim-hq",
+    "name": "Re'im Military Base (Gaza Division HQ)",
+    "detail": "Gaza Division headquarters attacked; adjacent to Nova festival site. Command-and-control disruption significantly delayed IDF's organized response throughout Oct 7.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 6:35 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-sderot-police",
+    "name": "Sderot Police Station",
+    "detail": "Police station captured; Police Chief Barak Lufan killed. Hamas seized police vehicles and weapons. Fighting continued several hours before IDF secured the station.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 7:00 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-kibbutz-holit",
+    "name": "Kibbutz Holit",
+    "detail": "12 residents killed in southernmost kibbutz attack. Entire families murdered in homes. ~200-person community devastated.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 7:30 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-ofakim",
+    "name": "City of Ofakim",
+    "detail": "~100 Hamas fighters reached Ofakim — 25 km from Gaza, deepest infiltration. 52 killed (mostly police). Armed civilians and IDF reservists held fighters until reinforcements arrived.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 8:00 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-zikim-base",
+    "name": "Zikim Military Base",
+    "detail": "Coastal military training base raided. Hamas fighters breached perimeter from sea and land simultaneously. IDF repelled the attack with casualties on both sides.",
+    "icon": "target",
+    "time": "Oct 7, 2023 — 7:00 AM",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  }
+]

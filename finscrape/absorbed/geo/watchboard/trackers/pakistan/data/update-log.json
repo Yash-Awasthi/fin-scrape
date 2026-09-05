@@ -1,0 +1,59 @@
+{
+  "lastRun": "2026-08-10T16:35:29.669Z",
+  "tracker": "pakistan",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 42
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated",
+      "count": 34
+    },
+    "casualties": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated",
+      "count": 11
+    },
+    "econ": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated",
+      "count": 8
+    },
+    "claims": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated",
+      "count": 20
+    },
+    "political": {
+      "status": "ok",
+      "count": 20
+    },
+    "assets": {
+      "status": "ok",
+      "count": 8
+    },
+    "strikeTargets": {
+      "status": "ok",
+      "count": 8
+    },
+    "events": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-06-07T14:20:00.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 4
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "bald-eagle-nesting-pairs",
+    "label": "Bald Eagle Nesting Pairs (USA)",
+    "value": "71,467",
+    "color": "green",
+    "source": "USFWS Bald Eagle Survey 2021",
+    "contested": false,
+    "delta": "+17,000%",
+    "deltaNote": "From 417 pairs in 1963 at species low",
+    "trend": "up",
+    "lastUpdated": "2026-04-13"
+  },
+  {
+    "id": "iberian-lynx-population",
+    "label": "Iberian Lynx Total Population",
+    "value": "2,663",
+    "color": "green",
+    "source": "Spanish Ministry for Ecological Transition / Fundación Biodiversidad — 2025 census, Jun 2026",
+    "contested": false,
+    "delta": "+2,633%",
+    "deltaNote": "From 94 individuals in 2002 (world's most endangered cat); +10.9% year-over-year from 2024 to 2025, +95% over four years",
+    "trend": "up",
+    "lastUpdated": "2026-06-05"
+  },
+  {
+    "id": "california-condor-total",
+    "label": "California Condor Total Population",
+    "value": "607+",
+    "color": "amber",
+    "source": "USFWS / Yurok Tribe Condor Restoration Program — updated count Mar 2026",
+    "contested": false,
+    "delta": "+2,152%",
+    "deltaNote": "From 27 captive birds in 1987; first nest on Yurok tribal land in 100+ years confirmed early 2026",
+    "trend": "up",
+    "lastUpdated": "2026-04-02"
+  },
+  {
+    "id": "giant-panda-wild-population",
+    "label": "Giant Panda Wild Population",
+    "value": "~1,900",
+    "color": "green",
+    "source": "China National Forestry and Grassland Administration — 2025 count",
+    "contested": false,
+    "delta": "+19%",
+    "deltaNote": "From ~1,596 in 2004 national survey; IUCN upgraded status from 'Endangered' to 'Vulnerable' in Sep 2025",
+    "trend": "up",
+    "lastUpdated": "2026-06-05"
+  },
+  {
+    "id": "numbat-population-australia",
+    "label": "Numbat Total Population (Australia)",
+    "value": "2,000–3,000",
+    "color": "green",
+    "source": "IUCN Red List 2026-1 update / Australian Wildlife Conservancy",
+    "contested": false,
+    "delta": "+567–900%",
+    "deltaNote": "From ~300 individuals in the late 1970s; downlisted from 'Endangered' to 'Near Threatened' Jul 2026 after 40 years of predator control and captive breeding",
+    "trend": "up",
+    "lastUpdated": "2026-07-10"
+  },
+  {
+    "id": "gray-wolf-lower-48",
+    "label": "Gray Wolf Population (Lower 48 USA)",
+    "value": "~7,000",
+    "color": "amber",
+    "source": "USFWS / state agency estimates 2023",
+    "contested": true,
+    "contestNote": "State vs federal counts diverge; some states dispute federal delisting criteria",
+    "delta": "+600%",
+    "deltaNote": "From ~1,000 wolves in the mid-1990s before Yellowstone reintroduction",
+    "trend": "up",
+    "lastUpdated": "2026-04-13"
+  },
+  {
+    "id": "mountain-gorilla-population",
+    "label": "Mountain Gorilla Total Population",
+    "value": "1,063+",
+    "color": "green",
+    "source": "Uganda Wildlife Authority / IUCN — Bwindi + Virunga census May 2026",
+    "contested": false,
+    "delta": "+72%",
+    "deltaNote": "From 620 individuals in 1989; growing at ~3.7% per year — up from 1,004 in 2018 census",
+    "trend": "up",
+    "lastUpdated": "2026-05-10"
+  },
+  {
+    "id": "india-wild-tiger-count",
+    "label": "Wild Tigers in India",
+    "value": "3,167",
+    "color": "green",
+    "source": "National Tiger Conservation Authority, India — All India Tiger Estimation 2022",
+    "contested": false,
+    "delta": "+126%",
+    "deltaNote": "From ~1,400 in 2006; now >75% of world's wild tigers",
+    "trend": "up",
+    "lastUpdated": "2026-04-13"
+  },
+  {
+    "id": "species-recovered-esa-usa",
+    "label": "Species Delisted Due to Recovery (US ESA)",
+    "value": "64",
+    "color": "green",
+    "source": "USFWS ESA Species Report 2024",
+    "contested": true,
+    "contestNote": "Critics argue some delistings were due to data revisions or political pressure rather than genuine recovery",
+    "delta": "+64",
+    "deltaNote": "Since ESA enacted December 28, 1973",
+    "trend": "up",
+    "lastUpdated": "2026-04-13"
+  }
+]

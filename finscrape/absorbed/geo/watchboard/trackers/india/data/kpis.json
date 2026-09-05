@@ -1,0 +1,117 @@
+[
+  {
+    "id": "population",
+    "label": "Population",
+    "value": "1.44 Billion",
+    "color": "blue",
+    "source": "UN World Population Prospects 2024",
+    "contested": false,
+    "delta": "+7M/yr",
+    "deltaNote": "World's most populous nation since April 2023",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "gdp-nominal",
+    "label": "GDP (Nominal)",
+    "value": "$3.89 Trillion",
+    "color": "green",
+    "source": "IMF World Economic Outlook 2025",
+    "contested": false,
+    "delta": "+$0.2T yr/yr",
+    "deltaNote": "5th largest economy; projected to reach $5T by 2027",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "gdp-growth",
+    "label": "GDP Growth Rate",
+    "value": "6.5%",
+    "color": "green",
+    "source": "Reserve Bank of India, IMF (FY2025-26)",
+    "contested": false,
+    "delta": "Fastest-growing major economy",
+    "deltaNote": "Growth led by services, manufacturing, and digital economy",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "years-civilization",
+    "label": "Years of Civilization",
+    "value": "~4,600 Years",
+    "color": "amber",
+    "source": "Archaeological Survey of India; UNESCO",
+    "contested": true,
+    "contestNote": "Indus Valley civilization dating varies; some scholars extend to 3300 BCE or earlier",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "years-independence",
+    "label": "Years Since Independence",
+    "value": "78 Years",
+    "color": "green",
+    "source": "Government of India; August 15, 1947",
+    "contested": false,
+    "delta": "Republic since Jan 26, 1950",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "nuclear-warheads",
+    "label": "Nuclear Warheads",
+    "value": "~172",
+    "color": "red",
+    "source": "SIPRI Yearbook 2024",
+    "contested": true,
+    "contestNote": "Estimates vary 160-172; India does not officially disclose arsenal size",
+    "delta": "+8 since 2020",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "literacy-rate",
+    "label": "Literacy Rate",
+    "value": "77.7%",
+    "color": "amber",
+    "source": "Census of India 2011 (updated estimate ~78.5% by 2023)",
+    "contested": false,
+    "delta": "+13% since 1991",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "it-exports",
+    "label": "IT & Services Exports",
+    "value": "$257 Billion",
+    "color": "blue",
+    "source": "NASSCOM, RBI Annual Report FY2024",
+    "contested": false,
+    "delta": "+11% yr/yr",
+    "deltaNote": "Largest contributor to services trade surplus",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "bjp-states-governed",
+    "label": "States Governed by BJP / NDA",
+    "value": "~19 States",
+    "color": "amber",
+    "source": "Election Commission of India; May 2026 state election results",
+    "contested": false,
+    "delta": "+1 (West Bengal May 2026)",
+    "deltaNote": "BJP won West Bengal for first time in history (May 2026), ousting TMC after 15 years",
+    "trend": "up",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "semiconductor-mission-investment",
+    "label": "India Semiconductor Mission Total Investment",
+    "value": "₹1.64 Lakh Crore (~$19.7B)",
+    "color": "green",
+    "source": "Prime Minister's Office, Government of India (May 2026)",
+    "contested": false,
+    "delta": "12 projects approved",
+    "deltaNote": "Includes 2 new projects approved May 5, 2026 — India's push to reduce chip import dependency",
+    "trend": "up",
+    "lastUpdated": "2026-05-09"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "manco-inca-siege-cusco",
+    "name": "Manco Inca — Great Siege of Cusco (1536–1537)",
+    "detail": "Manco Inca escaped Spanish captivity in 1536 and raised an army estimated at 100,000–200,000 warriors, besieging Cusco for 10 months and laying waste to the surrounding region. A separate army under Quizo Yupanqui attacked Lima, defeating three Spanish relief expeditions. The rebellion nearly expelled Spain from Peru entirely.",
+    "icon": "retaliation",
+    "time": "1536-04-18",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "la-noche-triste",
+    "name": "Aztec Counterattack — La Noche Triste (June 30, 1520)",
+    "detail": "Following Alvarado's Toxcatl massacre, Aztec forces under new emperor Cuitlahuac drove the Spanish from Tenochtitlan in a night assault on the causeways (June 30–July 1, 1520). Over 450 Spanish soldiers and thousands of Tlaxcalan allies were killed — the worst Spanish military defeat of the conquest era.",
+    "icon": "retaliation",
+    "time": "1520-06-30",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hatuey-guerrilla-cuba",
+    "name": "Hatuey's Guerrilla Resistance in Cuba (1511–1512)",
+    "detail": "Taíno chief Hatuey, who had fled Hispaniola to warn Cuba's people, led guerrilla resistance against Diego Velázquez's conquest forces for months in eastern Cuba before his capture and execution (February 1512). He refused baptism at the stake, unwilling to go to a heaven shared by Spaniards.",
+    "icon": "retaliation",
+    "time": "1511-12-01",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pueblo-revolt-1680",
+    "name": "Pueblo Revolt — Drives Spanish from New Mexico (1680)",
+    "detail": "Popé of Ohkay Owingeh led a coordinated Pueblo uprising on August 10, 1680, killing ~400 Spanish settlers and 21 missionaries and expelling all 2,000 remaining Spanish south to El Paso. Spain did not reconquer New Mexico until 1692. The most successful indigenous uprising against Spanish rule in North America.",
+    "icon": "retaliation",
+    "time": "1680-08-10",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "battle-tucapel-valdivia-killed",
+    "name": "Lautaro Kills Valdivia at Battle of Tucapel (1553)",
+    "detail": "Mapuche forces under the military genius Lautaro (a former Valdivia groom who had learned Spanish tactics) ambushed and destroyed Valdivia's force at Fort Tucapel on Christmas Day 1553. Valdivia was captured and executed. Lautaro then launched a general uprising that nearly expelled the Spanish from Chile entirely.",
+    "icon": "retaliation",
+    "time": "1553-12-25",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tupac-amaru-ii-rebellion",
+    "name": "Tupac Amaru II Rebellion — Largest Colonial Uprising (1780–81)",
+    "detail": "José Gabriel Condorcanqui (Tupac Amaru II) launched the largest indigenous uprising in colonial Latin American history in November 1780, mobilizing 60,000–80,000 warriors across Peru, Bolivia, and Argentina. La Paz was besieged for months. Spain suppressed the revolt with extreme violence, publicly executing Tupac Amaru and his entire family in Cusco's plaza.",
+    "icon": "retaliation",
+    "time": "1780-11-04",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mixtón-war-1541",
+    "name": "Mixtón War — Major Revolt in Western Mexico (1541–42)",
+    "detail": "The Caxcán and allied Chichimec peoples launched the Mixtón War in Nueva Galicia (western Mexico) in 1541, seizing fortified hilltops and defeating multiple Spanish forces. Viceroy Mendoza personally commanded the 50,000-man force that suppressed it. The revolt was directly connected to anger over encomienda abuses.",
+    "icon": "retaliation",
+    "time": "1541-09-01",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "chichimec-war-frontier",
+    "name": "Chichimec War — 40 Years of Frontier Resistance (1550–1590)",
+    "detail": "Semi-nomadic Chichimec peoples of northern Mexico (Zacatec, Guachichil, Guamar, Pame) fought Spain for 40 years over silver-mine expansion into their territory. Their guerrilla tactics, including ambushing silver convoys on the Camino Real, were highly effective. Spain ultimately resolved the conflict through 'peace by purchase' rather than military victory.",
+    "icon": "retaliation",
+    "time": "1550-01-01",
+    "tier": 2,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kaqchikel-revolt-guatemala",
+    "name": "Kaqchikel Maya Revolt Against Alvarado (1524–1530)",
+    "detail": "The Kaqchikel Maya had initially allied with Alvarado against the Quiché, but revolted in August 1524 when he demanded impossible tribute in gold. For six years the Kaqchikel waged guerrilla warfare from highland fortresses, abandoning their capital Iximché. Alvarado's prolonged campaign of burning villages and seizing crops finally broke the resistance by 1530.",
+    "icon": "retaliation",
+    "time": "1524-08-28",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "palmares-maroon-resistance",
+    "name": "Quilombo dos Palmares — Maroon State Resists Portugal (c.1605–1694)",
+    "detail": "Escaped enslaved Africans established Palmares in the Brazilian interior (c.1605), a maroon state sheltering 20,000–30,000 people at its peak under leaders Ganga Zumba and Zumbi. Palmares successfully resisted over 30 Portuguese military expeditions for nearly a century before being destroyed in 1694. Zumbi dos Palmares is now a Brazilian national hero.",
+    "icon": "retaliation",
+    "time": "1605-01-01",
+    "tier": 2,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

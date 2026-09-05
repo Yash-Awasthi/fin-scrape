@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ceasefire-brink-disarmament-deadline-apr-9-2026",
+    "year": "2026",
+    "title": "Gaza Ceasefire 'On the Brink' as Hamas Disarmament Deadline Expires",
+    "type": "diplomatic",
+    "active": true,
+    "detail": "On April 9, 2026, the Board of Peace disarmament deadline for Hamas officially expired without an acceptance. Israel Hayom reported that Israel began preparations to resume combat operations in Gaza. Board of Peace High Representative Nickolay Mladenov was scheduled to meet Hamas in Turkey to receive a formal response. Hamas had already signaled through its armed wing that disarmament was 'not acceptable,' and diplomats described the ceasefire as being 'on the brink' of collapse. Mediators warned that failure to reach agreement could unravel the fragile truce that has held since October 2025. Talks were set to continue in Cairo with Egypt, Qatar, Turkey, and US representatives present.",
+    "sources": [
+      {
+        "name": "Israel Hayom",
+        "tier": 2,
+        "url": "https://www.israelhayom.com/2026/04/09/hamas-disarmament-deadline-expires-israel-prepares-resume-gaza-war/",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Times of Israel",
+        "tier": 2,
+        "url": "https://www.timesofisrael.com/hamas-not-expected-to-okay-disarmament-offer-by-saturday-deadline-but-talks-ongoing/",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.israelhayom.com/2026/04/09/hamas-disarmament-deadline-expires-israel-prepares-resume-gaza-war/",
+        "caption": "Hamas disarmament deadline expires; Israel prepares to resume Gaza war",
+        "source": "Israel Hayom",
+        "thumbnail": "https://www.israelhayom.com/wp-content/uploads/2026/04/503090b2-38b1-41bf-9794-fdb6176ffbc6-960x640-1.png"
+      }
+    ],
+    "lastUpdated": "2026-04-09"
+  }
+]

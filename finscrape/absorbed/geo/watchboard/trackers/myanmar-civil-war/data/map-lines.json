@@ -1,0 +1,2651 @@
+[
+  {
+    "id": "op1027-mndaa-thrust-laukkai",
+    "from": [
+      98.73,
+      23.56
+    ],
+    "to": [
+      99.47,
+      23.78
+    ],
+    "cat": "resistance",
+    "label": "MNDAA: Chin Shwe Haw → Laukkai",
+    "date": "2023-10-27",
+    "confidence": "high",
+    "notes": "MNDAA Operation 1027 main thrust capturing Kokang capital Jan 2024",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "op1027-tnla-lashio-advance",
+    "from": [
+      98.73,
+      23.56
+    ],
+    "to": [
+      97.75,
+      22.93
+    ],
+    "cat": "resistance",
+    "label": "TNLA/MNDAA: Northern Shan → Lashio",
+    "date": "2024-01-01",
+    "confidence": "high",
+    "notes": "TNLA and MNDAA coordinated advance capturing Lashio Aug 2024",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "aa-rakhine-north-advance",
+    "from": [
+      92.37,
+      20.82
+    ],
+    "to": [
+      92.9,
+      20.15
+    ],
+    "cat": "resistance",
+    "label": "AA: Maungdaw → Sittwe Corridor",
+    "date": "2024-12-08",
+    "confidence": "high",
+    "notes": "AA advance from captured Maungdaw pressing toward Sittwe (Rakhine capital)",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "aa-rakhine-south-advance",
+    "from": [
+      93.96,
+      19.66
+    ],
+    "to": [
+      92.9,
+      20.15
+    ],
+    "cat": "resistance",
+    "label": "AA: Ann → Sittwe Pressure",
+    "date": "2024-12-20",
+    "confidence": "high",
+    "notes": "AA advance from captured Ann (W. Military Command HQ) toward Rakhine capital Sittwe",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "kia-myitkyina-pressure",
+    "from": [
+      97.38,
+      25.35
+    ],
+    "to": [
+      97.4,
+      25.38
+    ],
+    "cat": "resistance",
+    "label": "KIA: Surrounding Myitkyina",
+    "date": "2023-03-01",
+    "confidence": "medium",
+    "notes": "KIA tightening encirclement of Kachin State capital from multiple directions",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "knla-myawaddy-advance",
+    "from": [
+      97.63,
+      16.9
+    ],
+    "to": [
+      98.5,
+      16.68
+    ],
+    "cat": "resistance",
+    "label": "KNLA: Hpa-An → Myawaddy",
+    "date": "2024-04-11",
+    "confidence": "high",
+    "notes": "KNLA advance capturing Myawaddy Apr 2024 (briefly); strategic Thai border trade corridor",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-airstrike-sagaing-depayin",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.5,
+      23.0
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Depayin",
+    "date": "2022-10-23",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "casualties": "80+ killed",
+    "damage": "Charity concert destroyed; mass civilian casualties",
+    "notes": "SAC jet bombers struck civilian concert in Kanbalu Township",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-airstrike-pazigyi",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.73,
+      22.78
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Pazigyi",
+    "date": "2023-04-11",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "casualties": "170+ killed",
+    "damage": "Village gathering destroyed; UN called 'act of pure terror'",
+    "notes": "SAC jets and helicopter gunship attack on inauguration ceremony",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-airstrike-let-yet-kone",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.38,
+      25.35
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Let Yet Kone (IDP Camp)",
+    "date": "2022-04-11",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "casualties": "60+ killed",
+    "damage": "School and IDP shelter destroyed",
+    "notes": "SAC jets struck Kachin State IDP camp during displacement crisis",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-airstrike-kayah",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.21,
+      19.68
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike Campaign: Naypyidaw → Loikaw Area",
+    "date": "2022-06-01",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "notes": "Repeated SAC airstrikes on Kayah State targeting Karenni resistance positions and civilian areas",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "aa-paletwa-capture-advance",
+    "from": [
+      92.9,
+      20.15
+    ],
+    "to": [
+      93.03,
+      21.59
+    ],
+    "cat": "resistance",
+    "label": "AA: Rakhine Coast → Paletwa (Chin State)",
+    "date": "2024-01-15",
+    "confidence": "high",
+    "notes": "AA extending operations northward into Chin State; captured Paletwa controlling Kaladan river corridor",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "pdf-sagaing-magway-operations",
+    "from": [
+      95.98,
+      21.88
+    ],
+    "to": [
+      94.93,
+      20.15
+    ],
+    "cat": "resistance",
+    "label": "PDF: Sagaing → Magway Operations",
+    "date": "2022-06-01",
+    "confidence": "medium",
+    "notes": "PDF guerrilla operations extending from Sagaing heartland into Magway region; disrupting SAC supply lines",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-sagaing-ground-offensive",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.98,
+      21.88
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Ground Offensive: Naypyidaw → Sagaing",
+    "date": "2023-01-01",
+    "confidence": "high",
+    "notes": "SAC major ground operations in Sagaing Region deploying combined infantry, armor, and airpower",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-kayah-ground-ops",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.38,
+      19.46
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Ground Ops: Naypyidaw → Kayah State",
+    "date": "2021-06-01",
+    "confidence": "high",
+    "notes": "SAC combined arms operations against Karenni resistance in Kayah State with airstrikes and artillery",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "tnla-kutkai-hsipaw",
+    "from": [
+      97.75,
+      22.93
+    ],
+    "to": [
+      97.3,
+      22.65
+    ],
+    "cat": "resistance",
+    "label": "TNLA: Lashio → Hsipaw Advance",
+    "date": "2024-10-01",
+    "confidence": "medium",
+    "notes": "TNLA pressing SAC positions in Hsipaw and Kyaukme townships in Phase 2 of Op 1027",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-mandalay-chin-supply",
+    "from": [
+      96.08,
+      21.98
+    ],
+    "to": [
+      94.08,
+      23.21
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Supply Route: Mandalay → Kalay (Contested)",
+    "date": "2022-01-01",
+    "confidence": "medium",
+    "notes": "Key SAC logistics corridor from Mandalay to northwestern garrison at Kalay; repeatedly disrupted by PDF ambushes",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "aa-taungup-advance",
+    "from": [
+      93.96,
+      19.66
+    ],
+    "to": [
+      94.23,
+      18.92
+    ],
+    "cat": "resistance",
+    "label": "AA: Ann → Taungup Capture",
+    "date": "2024-12-13",
+    "confidence": "high",
+    "notes": "AA captured Taungup after 42-day siege; key road junction connecting Rakhine to Bago Region",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "mndaa-muse-pressure",
+    "from": [
+      99.47,
+      23.78
+    ],
+    "to": [
+      97.98,
+      23.97
+    ],
+    "cat": "resistance",
+    "label": "MNDAA/TNLA: Laukkai → Muse Trade Corridor",
+    "date": "2023-11-01",
+    "confidence": "medium",
+    "notes": "Resistance forces threatening SAC control of Muse border crossing; major disruption to China trade revenue",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-airstrike-sagaing-villages",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.98,
+      21.88
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Village Burning Campaign — Sagaing",
+    "date": "2022-01-01",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "notes": "Systematic village destruction campaign in Sagaing; 800+ villages burned by SAC as counter-insurgency tactic",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "cnf-cdf-kalay-india-corridor",
+    "from": [
+      93.62,
+      22.64
+    ],
+    "to": [
+      94.08,
+      23.21
+    ],
+    "cat": "resistance",
+    "label": "CDF/CNF: Hakha → Kalay Resistance Corridor",
+    "date": "2021-05-01",
+    "confidence": "medium",
+    "notes": "Chinland Defence Force and CNF coordination along Chin-Sagaing border; connection to India-border resistance",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-airstrike-ayardaw-sagaing-mar22",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.22,
+      22.31
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrikes: Naypyidaw → Ayardaw (Sagaing)",
+    "date": "2026-03-22",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "casualties": "6 civilians killed",
+    "notes": "Two SAC jets conducted multiple strikes on Ayardaw Township; part of a surge killing 27+ Sagaing civilians between March 20–22",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "sac-airstrike-myaung-sagaing-mar23",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.42,
+      22.03
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Myaung Township",
+    "date": "2026-03-23",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "casualties": "4 civilians killed; 40+ homes burned",
+    "notes": "Single SAC jet dropped 4 bombs on Myaung Township; continued near-daily aerial campaign against Sagaing villages",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "aa-assault-sittwe-naval-base-mar23",
+    "from": [
+      92.37,
+      20.82
+    ],
+    "to": [
+      92.87,
+      20.16
+    ],
+    "cat": "resistance",
+    "label": "AA Assault: Maungdaw Corridor → Shwe Min Gan Naval Base",
+    "date": "2026-03-23",
+    "confidence": "high",
+    "casualties": "30–40 junta troops killed",
+    "notes": "AA launched coordinated assault on Shwe Min Gan Naval Base at ~09:00; fighters advanced to within 2 km of Sittwe city center; simultaneous Ann/Ngape attacks",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "aa-ann-ngape-concurrent-mar24",
+    "from": [
+      93.96,
+      19.66
+    ],
+    "to": [
+      94.25,
+      19.65
+    ],
+    "cat": "resistance",
+    "label": "AA: Ann → Ngape Concurrent Offensive",
+    "date": "2026-03-24",
+    "confidence": "medium",
+    "notes": "AA attacked remaining SAC positions in Ann and Ngape simultaneously with Sittwe naval assault; multi-axis Rakhine-Magway corridor pressure",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "pdf-rocket-magway-airbase-mar25",
+    "from": [
+      94.7,
+      20.0
+    ],
+    "to": [
+      94.93,
+      20.16
+    ],
+    "cat": "resistance",
+    "label": "BWM/NMD-PDF: Rocket Attack on Magway Air Base",
+    "date": "2026-03-25",
+    "confidence": "medium",
+    "launched": 11,
+    "intercepted": 0,
+    "notes": "BWM Mission 53: 11 x 107mm rockets fired at 23:20; Magway Air Base is primary SAC airstrike hub for Upper Myanmar",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "aa-padan-magway-mar29",
+    "from": [
+      93.96,
+      19.66
+    ],
+    "to": [
+      94.58,
+      21.12
+    ],
+    "cat": "resistance",
+    "label": "AA: Ann Area → Padan Township (Magway) Operations",
+    "date": "2026-03-29",
+    "confidence": "medium",
+    "notes": "AA expanding operations northward into Magway Region; attacked junta Nat Yay Kan hilltop base; reflects AA multi-front pressure beyond Rakhine",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "sac-airstrike-yaw-magway-mar24",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.3,
+      21.4
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Yaw Region (Maulay Junction)",
+    "date": "2026-03-24",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "launched": 8,
+    "casualties": "5 men injured",
+    "notes": "Two waves: 4 jets at 13:22 (6x500lb bombs + 3 rockets) and 2 jets at 14:43 (2x300lb bombs); no active resistance presence reported",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "sac-airstrike-butalin-sagaing-mar30",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.55,
+      22.15
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Butalin Township (Sagaing)",
+    "date": "2026-03-30",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "casualties": "~10 civilians killed including pregnant women and infants",
+    "notes": "3 SAC jets struck Ngapayin village 13:00–14:15 local time; 4 bombs + rockets; no resistance presence reported; part of ongoing Sagaing aerial campaign",
+    "lastUpdated": "2026-04-01"
+  },
+  {
+    "id": "sac-airstrike-myaing-pauk-oilfield-apr4",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.45,
+      21.49
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Myaing–Pauk Oil Fields (Magway)",
+    "date": "2026-04-04",
+    "confidence": "medium",
+    "casualties": "5 PDF fighters killed",
+    "notes": "SAC jets struck PDF units that had surrounded junta-controlled oil fields between Myaing and Pauk townships; reflects junta air campaign to defend Magway petroleum assets from PDF encirclement",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "id": "kia-hpakant-advance-apr2",
+    "from": [
+      97.4,
+      25.38
+    ],
+    "to": [
+      96.02,
+      25.93
+    ],
+    "cat": "resistance",
+    "label": "KIA: Myitkyina Area → Hpakant (6 SAC Positions Captured)",
+    "date": "2026-04-02",
+    "confidence": "medium",
+    "notes": "KIA captured 6 SAC frontline positions near Maw Wan Gyi in Hpakant Township; jade-mining heartland offensive threatening SAC revenue and encirclement of Myitkyina",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "id": "sac-airstrike-shwebo-idp-camp-apr7",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.7,
+      22.57
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Shwebo IDP Camp (Sagaing)",
+    "date": "2026-04-07",
+    "weaponType": "unknown",
+    "confidence": "medium",
+    "launched": 7,
+    "intercepted": 0,
+    "status": "hit",
+    "casualties": "1 monk killed; 2 women severely injured",
+    "damage": "Displacement camp and school struck; monk teaching children killed",
+    "notes": "7 bombing runs on civilian displacement camp in Shwebo Township; targets civilians sheltering from prior SAC operations",
+    "lastUpdated": "2026-04-09"
+  },
+  {
+    "id": "sac-airstrike-minbu-saku-magway-apr7",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.82,
+      20.25
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Minbu-Saku Area (Magway)",
+    "date": "2026-04-07",
+    "weaponType": "unknown",
+    "confidence": "medium",
+    "status": "hit",
+    "casualties": "3 civilians wounded; 10+ SAC troops injured in ground fighting",
+    "damage": "School building struck by 500-pound bomb",
+    "notes": "Day 6 of sustained combat in Minbu-Saku; SAC air support for ground troops; school bombed; separate 5-run strike on Pauk Township same day",
+    "lastUpdated": "2026-04-09"
+  },
+  {
+    "id": "sac-airstrike-wuntho-sagaing-apr9",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.77,
+      23.55
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Wuntho Township (N. Sagaing)",
+    "date": "2026-04-09",
+    "weaponType": "unknown",
+    "confidence": "low",
+    "status": "hit",
+    "notes": "SAC jets struck villages in Wuntho Township as part of near-daily Sagaing aerial campaign; exact casualties unverified; part of 100+ civilian killing spree since junta parliament convened Mar 16",
+    "lastUpdated": "2026-04-09"
+  },
+  {
+    "id": "resistance-ngape-kinpwonchaung-apr10",
+    "from": [
+      94.75,
+      19.58
+    ],
+    "to": [
+      94.82,
+      19.64
+    ],
+    "cat": "resistance",
+    "label": "Joint Resistance: Ngape Township Kinpwonchaung Gate Raid",
+    "date": "2026-04-10",
+    "confidence": "medium",
+    "casualties": "8 SAC troops killed, many injured",
+    "notes": "PRA-Magway, CDF-Asho, New Society Army, Minbu Bn 8, and Ngape PDT raided Kinpwonchaung gate at 05:00; 2.5-hour battle; seized MA-1 rifle, 2 carbines, ammunition",
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "llsbf-drone-launglon-apr10",
+    "from": [
+      98.18,
+      13.7
+    ],
+    "to": [
+      98.22,
+      13.74
+    ],
+    "cat": "resistance",
+    "label": "LLSBF: Drone Strike on Launglon Police Station (Tanintharyi)",
+    "date": "2026-04-10",
+    "confidence": "medium",
+    "launched": 2,
+    "intercepted": 0,
+    "casualties": "2 killed, 7 seriously injured",
+    "notes": "Launglone Steel Butterfly Force dropped 2 drone bombs at 22:00 on junta personnel gathered at police station; southern Tanintharyi resistance expanding drone operations",
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "kia-kpdf-drone-hpakant-apr11",
+    "from": [
+      97.4,
+      25.38
+    ],
+    "to": [
+      96.02,
+      25.93
+    ],
+    "cat": "resistance",
+    "label": "KIA/KPDF: Drone Bombs on Junta Hilltop — Hpakant",
+    "date": "2026-04-11",
+    "confidence": "medium",
+    "casualties": "SAC military casualties (unspecified)",
+    "notes": "KIA and KPDF dropped drone bombs on strategic junta hilltop position at ~12:00; struck trenches; junta retaliated with airstrikes on Hmawsi Khtaung ward within 30 min; intense fighting at Prayer Hill and Cemetery Hill throughout April 11",
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "sac-airstrike-hpakant-retaliation-apr11",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      96.02,
+      25.93
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Hpakant Civilian Areas (Kachin)",
+    "date": "2026-04-11",
+    "confidence": "medium",
+    "damage": "Hmawsi Khtaung ward, garbage dump village area, Cemetery Hill bombed",
+    "notes": "SAC retaliatory airstrike within 30 min of KIA/KPDF drone attack; collective punishment targeting civilian Hmawsi Khtaung ward and Prayer Hill areas; sustained artillery fire throughout day",
+    "lastUpdated": "2026-04-12"
+  },
+  {
+    "id": "sac-airstrike-seik-hkun-monastery-apr13",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.45,
+      22.45
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Seik Hkun Monastery (W. Shwebo, Sagaing)",
+    "date": "2026-04-13",
+    "weaponType": "unknown",
+    "launched": 5,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "13:00",
+    "status": "hit",
+    "casualties": "2 monks killed; 8 novice monks + 3 civilians injured",
+    "damage": "Monastery dormitories, dining halls, wells, and school building destroyed",
+    "notes": "Thingyan eve airstrike on Buddhist monastery west of Shwebo; school and nearby homes also struck; second strike hit Tan Zin and Ponnagyun villages same day",
+    "lastUpdated": "2026-04-18"
+  },
+  {
+    "id": "sac-airstrike-hpakant-jets-apr13",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      96.02,
+      25.93
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Hpakant Thingyan Continuation (Kachin)",
+    "date": "2026-04-13",
+    "weaponType": "unknown",
+    "launched": 5,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "13:00",
+    "status": "hit",
+    "notes": "Two SAC jets dropped ~5 bombs on Ma Shi Ka Htaung near Sutaunggon Mountain at ~13:00; separate drone strikes at ~15:00 and later; ~100 SAC troops deployed ~16:00; third day of sustained Hpakant escalation",
+    "lastUpdated": "2026-04-18"
+  },
+  {
+    "id": "sac-gyrocopter-salingyi-yinmabin-apr13",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.15,
+      22.1
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Gyrocopter Attacks: NW Regional Cmd → Salingyi/Yinmabin (Sagaing)",
+    "date": "2026-04-13",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "15:00",
+    "status": "hit",
+    "casualties": "1 infant killed (Salingyi); 1 girl age 14 killed (Yinmabin)",
+    "notes": "SAC Northwestern Regional Military Command gyrocopter attacks on Weikwe village (Salingyi Twp) and Leingnaut village (Yinmabin Twp) on Thingyan eve; infantry gunfire from low-altitude aircraft",
+    "lastUpdated": "2026-04-18"
+  },
+  {
+    "id": "sac-airstrike-pauk-magway-apr17",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.45,
+      21.45
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Pauk Township (Magway) — Thingyan Day",
+    "date": "2026-04-17",
+    "weaponType": "unknown",
+    "confidence": "medium",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "6 killed (Pauk and Luthaw Townships combined)",
+    "notes": "SAC airstrikes on Pauk Township (Magway) and Luthaw Township on Myanmar New Year's Day; 6 killed during Thingyan celebrations; SAC maintained full military operations throughout the New Year holiday",
+    "lastUpdated": "2026-04-18"
+  },
+  {
+    "id": "sac-airstrike-mutraw-dae-bu-noh-apr15",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.45,
+      18.1
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Mutraw/Dae Bu Noh (Karen State)",
+    "date": "2026-04-15",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "status": "hit",
+    "casualties": "4 civilians killed; 13 wounded",
+    "damage": "Dae Bu Noh junior college building destroyed; village area struck",
+    "notes": "SAC jets struck village gathering in Mutraw (Papun) District, KNU-administered Kawthoolei, on Thingyan Apr 15; school destroyed — had already relocated twice from prior attacks",
+    "lastUpdated": "2026-04-20"
+  },
+  {
+    "id": "sac-airstrike-mrauk-u-ponnagyun-apr19",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.2,
+      20.59
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Mrauk-U / Ponnagyun (Rakhine State)",
+    "date": "2026-04-19",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "13 injured (3 monks, 8 men, 2 women)",
+    "damage": "500-pound bombs dropped on AA-administered townships",
+    "notes": "SAC jets dropped 500-pound bombs on Mrauk-U and Ponnagyun (Rakhine); junta uses airpower against AA-controlled territory it can no longer hold on ground",
+    "lastUpdated": "2026-04-20"
+  },
+  {
+    "id": "kia-hpakant-militia-ambush-apr19",
+    "from": [
+      96.02,
+      25.93
+    ],
+    "to": [
+      96.04,
+      25.94
+    ],
+    "cat": "resistance",
+    "label": "KIA: Landmine Ambush on Militia Column — Hpakant",
+    "date": "2026-04-19",
+    "confidence": "medium",
+    "casualties": "~40 pro-junta militia killed",
+    "notes": "KIA landmine ambush at ~08:00 on pro-junta militia column in Hpakant Twp; among highest single-action militia casualties in Kachin 2026; part of sustained KIA offensive targeting SAC revenue from jade mining",
+    "lastUpdated": "2026-04-20"
+  },
+  {
+    "id": "sac-airstrike-bue-so-karen-apr20",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.86,
+      17.98
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Bue So KNU Hospital (Karen/Thai Border)",
+    "date": "2026-04-20",
+    "weaponType": "unknown",
+    "launched": 9,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "6 AA members killed; additional KNU casualties unclear",
+    "damage": "KNU hospital and civilian areas struck; 1 bomb crossed into Thailand (Mae Wan area, Mae Hong Son)",
+    "notes": "Yak-130 and MiG-29 jets dropped 9 bombs on KNU hospital ~500m from Salween River/Thai border; 1 bomb landed in Mae Hong Son, Thailand; Thai 36th Ranger Forces Regiment responded; cross-border strike threatens Thailand-Myanmar diplomatic relations",
+    "lastUpdated": "2026-04-20"
+  },
+  {
+    "id": "sac-airstrike-taze-sagaing-apr21",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.65,
+      23.38
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Taze Township (Sagaing)",
+    "date": "2026-04-21",
+    "weaponType": "unknown",
+    "launched": 8,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:15",
+    "status": "hit",
+    "casualties": "1 civilian injured; motorcycle shop and 5 vehicles destroyed",
+    "notes": "3 SAC jets from Tada-U and Meiktila air bases conducted 8 strikes on Kantuu Ma and Inyay Oe villages; civilian infrastructure targeted; post-Thingyan continuation of Sagaing aerial campaign",
+    "lastUpdated": "2026-04-23"
+  },
+  {
+    "id": "kia-road-closure-hpakant-karmaing-apr23",
+    "from": [
+      96.02,
+      25.93
+    ],
+    "to": [
+      96.72,
+      25.43
+    ],
+    "cat": "resistance",
+    "label": "KIA: Hpakant → Karmaing Road Closure (Indefinite)",
+    "date": "2026-04-23",
+    "confidence": "medium",
+    "notes": "KIA announced indefinite closure of Hpakant–Nantyar–Karmaing road on Apr 23; cuts SAC resupply to Hpakant garrison and degrades junta jade revenue; follows KIA captures of 6 SAC positions (Apr 2), drone attack (Apr 11), and ~40 militia killed in ambush (Apr 19)",
+    "lastUpdated": "2026-04-23"
+  },
+  {
+    "id": "sac-drone-school-wetlet-sagaing-apr23",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.78,
+      21.92
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Drone: Naypyidaw → Wetlet School (Sagaing)",
+    "date": "2026-04-23",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "11 injured — 3 male students, 7 female students, 1 female teacher",
+    "damage": "Village school struck; 3 in serious condition",
+    "notes": "Infantry Battalion No. 42 suicide drone struck Moksokyone village school at ~11:00; no resistance presence reported; part of SAC counter-civilian campaign in PDF-controlled Sagaing",
+    "lastUpdated": "2026-04-24"
+  },
+  {
+    "id": "sac-airstrike-ngapali-thandwe-rakhine-apr23",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.2,
+      18.78
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Ngapali Town (Thandwe, Rakhine)",
+    "date": "2026-04-23",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "15:00",
+    "status": "hit",
+    "damage": "Ziphyu Kone Ward struck; casualties under investigation",
+    "notes": "2 SAC jets dropped bombs on Ngapali tourist town ward at ~15:00; rare strike on Rakhine coastal resort area now under AA administration; reflects SAC using air power in areas lost on ground",
+    "lastUpdated": "2026-04-24"
+  },
+  {
+    "id": "sac-jets-falam-chin-major-assault-apr23",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.67,
+      22.9
+    ],
+    "cat": "junta-operation",
+    "label": "SAC ~10 Jets: Naypyidaw → Falam (Chin State) Major Assault",
+    "date": "2026-04-23",
+    "weaponType": "unknown",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "status": "hit",
+    "damage": "Sur Bun airfield and Var Bridge areas struck; sustained ground fighting followed",
+    "notes": "~10 SAC fighter jets struck Falam Township in retaliation for Apr 22 resistance drone attack (2 SAC killed, 5 injured); exceptional air power concentration; SAC defending Sur Bun airstrip and Var Bridge strategic access points",
+    "lastUpdated": "2026-04-24"
+  },
+  {
+    "id": "sac-airstrike-letpadan-fishermen-bago-apr22",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.73,
+      17.78
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Letpadan Fishing Area (Bago Region)",
+    "date": "2026-04-22",
+    "weaponType": "unknown",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "14:00",
+    "status": "hit",
+    "casualties": "4 civilians killed (ages 15, 16, 19, 20); 6 injured",
+    "damage": "Civilian fishing group struck near Thei Kaw Dam",
+    "notes": "2 SAC jets dropped ~10 bombs on young civilians fishing near Thei Kaw Dam; no military affiliation reported; collective punishment pattern targeting civilian economic activities",
+    "lastUpdated": "2026-04-24"
+  },
+  {
+    "id": "sac-airstrike-paletwa-mee-zar-chin-apr22",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.03,
+      21.59
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Paletwa (Mee Zar Village, Chin State)",
+    "date": "2026-04-22",
+    "weaponType": "unknown",
+    "launched": 50,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "13:00",
+    "status": "hit",
+    "damage": "~50 bombs dropped on Mee Zar village; AA-administered territory",
+    "notes": "Exceptionally large strike (50 bombs) on Paletwa Township village; AA has administered Paletwa since Jan 2024; SAC using airpower in territories lost on ground; Kaladan River corridor strategic context",
+    "lastUpdated": "2026-04-24"
+  },
+  {
+    "id": "sac-mortar-hpakant-idp-camp-apr23",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      96.02,
+      25.93
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Mortars: Naypyidaw → Hpakant IDP Camp (Kachin)",
+    "date": "2026-04-23",
+    "weaponType": "rocket",
+    "launched": 5,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "1 child (age 13, Maung Swut Jet Aung) killed; Grade-4 students injured by shrapnel; school also struck",
+    "notes": "SAC 60mm mortar strike on Hpakant IDP camp; collective punishment targeting civilians during ongoing KIA Hpakant offensive; same day as KIA announced indefinite road closure",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "pdf-lewe-outpost-capture-naypyidaw-apr22",
+    "from": [
+      96.08,
+      19.62
+    ],
+    "to": [
+      96.12,
+      19.63
+    ],
+    "cat": "resistance",
+    "label": "PDF: Lewe Township Outpost Capture (Near Naypyidaw)",
+    "date": "2026-04-22",
+    "confidence": "low",
+    "casualties": "10 SAC soldiers killed (incl. Major Htun Htun Lin); 4 firearms seized",
+    "notes": "Resistance forces seized junta outpost in Aung Chan Thar Yar Thit monastery compound, Lewe Township, Naypyidaw Union Territory; ~45km from SAC capital; one of closest resistance operations to Naypyidaw since the coup",
+    "lastUpdated": "2026-04-24"
+  },
+  {
+    "id": "sac-airstrike-bon-taung-thandaunggyi-apr24",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.17,
+      18.65
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets+Mi-35+Drones: Naypyidaw → Bon Taung, Thandaunggyi (Karen)",
+    "date": "2026-04-24",
+    "weaponType": "mixed",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "status": "hit",
+    "casualties": "12+ civilians killed; 20+ injured; 3 resistance fighters killed",
+    "damage": "Schools and homes destroyed in Bon Taung village",
+    "notes": "SAC deployed jets, Mi-35 attack helicopters, armed drones, and 500-pound bombs on Bon Taung village; one of deadliest single aerial incidents in Karen State in 2026",
+    "lastUpdated": "2026-04-27"
+  },
+  {
+    "id": "sac-drone-nanmaikone-karenni-apr26",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.47,
+      19.32
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Drone: Naypyidaw → Nanmaikone Township (Karenni State)",
+    "date": "2026-04-26",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "14:00",
+    "status": "hit",
+    "casualties": "5 civilians killed (including 19-year-old woman)",
+    "notes": "SAC suicide drone strike on Nanmaikone Township; part of SAC counter-civilian aerial campaign during martial law expansion across Karenni State",
+    "lastUpdated": "2026-04-27"
+  },
+  {
+    "id": "sac-drone-yesagyo-magway-apr26",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.15,
+      21.23
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Drone: Naypyidaw → Yesagyo Township (Magway)",
+    "date": "2026-04-26",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "13:00",
+    "status": "hit",
+    "casualties": "3 children killed (ages 8, 15, 16; one a novice monk)",
+    "notes": "SAC drone strike on Yesagyo Township killed 3 children including a novice monk; part of sustained SAC aerial campaign targeting civilians in Magway Region",
+    "lastUpdated": "2026-04-27"
+  },
+  {
+    "id": "knla-waw-lay-offensive-apr27",
+    "from": [
+      97.63,
+      16.9
+    ],
+    "to": [
+      98.42,
+      16.6
+    ],
+    "cat": "resistance",
+    "label": "KNLA: Karen State → Waw Lay Military Base (Myawaddy Area)",
+    "date": "2026-04-27",
+    "confidence": "medium",
+    "casualties": "~20 junta troops fled; 12+ civilians injured by junta shelling",
+    "notes": "KNLA and allied resistance forces assaulted Waw Lay military base; ~20 junta personnel including officers fled; junta indiscriminate shelling wounded 12+ civilians near Thai border; Thailand increased border patrols",
+    "lastUpdated": "2026-04-27"
+  },
+  {
+    "id": "sac-airstrike-thandaunggyi-ngwe-taung-apr27",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.17,
+      18.65
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrikes: Naypyidaw → Thandaunggyi (Ngwe Taung, Bahan, Taw Pone Auk)",
+    "date": "2026-04-27",
+    "weaponType": "unknown",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "status": "hit",
+    "casualties": "20+ displaced civilians killed; combined April 27 SAC strikes killed ~30 civilians across Karen and Tanintharyi",
+    "damage": "IDP clusters in Ngwe Taung, Bahan, and Taw Pone Auk villages struck; deliberate targeting of displaced civilians",
+    "notes": "Third set of SAC strikes in Thandaunggyi in 4 days (after Apr 24 Bon Taung attack); targets were already-displaced civilian IDPs; combined Karen + Tanintharyi April 27 strikes killed ~30",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "pdf-kalewa-aung-chan-thar-capture-apr28",
+    "from": [
+      95.98,
+      21.88
+    ],
+    "to": [
+      94.08,
+      23.2
+    ],
+    "cat": "resistance",
+    "label": "PDF/Pa Ka Pha: Sagaing → Kalewa Aung Chan Thar Base Capture",
+    "date": "2026-04-28",
+    "confidence": "medium",
+    "casualties": "Junta troops retreated to Sin Ain Ma village after base fell",
+    "notes": "PDF and Pa Ka Pha forces captured Aung Chan Thar base in Kalewa Township; Ye-U–Kalewa road reopened; Chindwin River corridor increasingly under resistance control",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "knla-kabawtu-mutraw-capture-apr28",
+    "from": [
+      97.63,
+      16.9
+    ],
+    "to": [
+      97.52,
+      18.05
+    ],
+    "cat": "resistance",
+    "label": "KNLA: Hpa-An Area → Kabawtu Base (Hpapun/Mutraw District)",
+    "date": "2026-04-28",
+    "confidence": "medium",
+    "casualties": "68th junta position captured in Mutraw District since 2021 coup",
+    "notes": "KNLA and allies seized Kabawtu base in Mutraw (Papun) District; seized 15-20 small arms, 2 machine guns, 1 mortar, landmines, grenades, RPGs; part of systematic clearance of junta outposts from KNU-administered Kawthoolei",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "kia-putao-wadat-ambush-apr29",
+    "from": [
+      97.4,
+      27.33
+    ],
+    "to": [
+      97.44,
+      27.31
+    ],
+    "cat": "resistance",
+    "label": "KIA Brigade 1: Putao–Sumprabum Axis Ambush (Wadat Village)",
+    "date": "2026-04-29",
+    "confidence": "medium",
+    "casualties": "Heavy junta casualties; ~70-man column scattered in retreat",
+    "notes": "KIA Battalion 7 (Brigade 1) ambushed ~70-man SAC column near Wadat Village, Putao Township; junta was pressing toward KIO-held Sumprabum; consistent with KIA multi-axis offensive across all of Kachin State in April 2026",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "kia-advance-katha-indaw-sagaing-apr29",
+    "from": [
+      97.4,
+      25.38
+    ],
+    "to": [
+      95.91,
+      24.18
+    ],
+    "cat": "resistance",
+    "label": "KIA-Led Forces: Myitkyina Area → Indaw / Katha Axis (Sagaing)",
+    "date": "2026-04-29",
+    "confidence": "medium",
+    "casualties": "Thousands of civilians displaced; fighting at Natyaytwin and Thutaung hilltop",
+    "notes": "KIA-led and PDF-affiliated forces pressing toward Indaw on Katha axis while simultaneous SAC column from Htigyaing advances toward Katha; fluid situation with both sides claiming progress; Myanmar Now reported resistance capture of Indaw after months of fighting",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "sac-airstrike-mawdaung-tanintharyi-apr26",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      98.72,
+      15.4
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Mawdaung / Singkhon Pass (Tanintharyi)",
+    "date": "2026-04-26",
+    "weaponType": "unknown",
+    "launched": 6,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:45",
+    "status": "hit",
+    "damage": "2 houses destroyed in No. 1 and No. 9 villages; no casualties (residents evacuated)",
+    "notes": "Two SAC jet strikes (10:45 and 13:44) on KNU-controlled Mawdaung trade hub; 6x250lb bombs; junta uses air power against KNLA Singkhon Pass border crossing it cannot retake on ground",
+    "lastUpdated": "2026-04-30"
+  },
+  {
+    "id": "pdf-myingyan-nyaung-u-convoy-ambush-apr28",
+    "from": [
+      95.38,
+      21.44
+    ],
+    "to": [
+      95.1,
+      21.2
+    ],
+    "cat": "resistance",
+    "label": "PDF District Bn 4-10: Myingyan → Nyaung-U Road Ambush",
+    "date": "2026-04-28",
+    "confidence": "medium",
+    "casualties": "~25 SAC troops killed; 3 vehicles destroyed including drone carrier",
+    "notes": "PDF District Battalion 4-10 and allies ambushed SAC convoy on Myingyan–Nyaung-U road; drone carrier destroyed — significant tactical asset loss for regional SAC commanders; separate Thabeikkyin attack killed 1 SAC soldier",
+    "lastUpdated": "2026-04-30"
+  },
+  {
+    "id": "sac-airstrike-kanpetlet-bridge-chin-apr30",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.98,
+      21.17
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Kanpetlet (Chin State) Bridge Site",
+    "date": "2026-04-30",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "9 construction workers killed; 3 seriously injured",
+    "damage": "Chaung Ku bridge construction site destroyed; JCB excavator, truck, 3 motorcycles destroyed",
+    "notes": "SAC struck civilian bridge construction workers near Kyindwe town, Kanpetlet Township; two 300-pound bombs; part of SAC campaign to destroy civilian infrastructure in Chin State following Falam recapture",
+    "lastUpdated": "2026-04-30"
+  },
+  {
+    "id": "sac-airstrike-falam-khawpuichhip-india-border-may1",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.65,
+      23.12
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Khawpuichhip/Zimpi (Falam, Chin — India Border)",
+    "date": "2026-05-01",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "status": "hit",
+    "casualties": "5 children (ages 3-10) and 1 man killed; 10+ injured; 150+ refugees fled to Mizoram, India",
+    "damage": "Khawpuichhip and Zimpi villages struck (~5km from India/Mizoram border); 15-20 buildings destroyed; Thlanrawn village also burned same day",
+    "notes": "SAC Tada-U air base jet dropped 2x500lb bombs on Falam Township villages near Mizoram border; refugee influx into Champhai District, India; part of Chin State post-Falam aerial punishment campaign",
+    "lastUpdated": "2026-05-04"
+  },
+  {
+    "id": "sac-ground-invasion-yinmabin-pale-kani-sagaing-may1",
+    "from": [
+      96.08,
+      21.98
+    ],
+    "to": [
+      95.15,
+      22.1
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Ground Invasion: Mandalay → Yinmabin/Pale/Kani (Lower Sagaing)",
+    "date": "2026-05-01",
+    "confidence": "medium",
+    "notes": "SAC deployed large columns into Yinmabin, Pale, and Kani townships simultaneously on May 1, 2026; offensive linked to Bo Nagar's (resistance commander) surrender which provided junta intelligence on PDF positions; triggered local battles in all three townships",
+    "lastUpdated": "2026-05-04"
+  },
+  {
+    "id": "kia-shwegu-counterattack-kills-40-may2",
+    "from": [
+      96.43,
+      24.22
+    ],
+    "to": [
+      96.43,
+      24.22
+    ],
+    "cat": "resistance",
+    "label": "KIA: Shwegu Battle — 40 SAC Troops Killed, 1 Captured (vs. Armored Reinforcements)",
+    "date": "2026-05-02",
+    "confidence": "medium",
+    "casualties": "40 SAC troops killed; 1 captured; SAC armored column of 1,000+ troops repulsed",
+    "notes": "KIA fought back 1,000+ SAC reinforcements including tanks dispatched into Shwegu Township (Kachin-Sagaing border) from May 2; KIA killed 40 and captured 1 by May 4; SAC aimed to sever KIA operational corridor to northern Sagaing",
+    "lastUpdated": "2026-05-04"
+  },
+  {
+    "id": "knla-htee-khee-base-capture-tanintharyi-may4",
+    "from": [
+      98.21,
+      14.08
+    ],
+    "to": [
+      98.73,
+      14.12
+    ],
+    "cat": "resistance",
+    "label": "KNLA Brigade 4: Dawei Area → Htee Khee Base (Thai-Myanmar Border Capture)",
+    "date": "2026-05-04",
+    "confidence": "medium",
+    "casualties": "SAC troops fled into Thailand; junta base captured after ~1 week of fighting",
+    "notes": "KNLA Brigade 4 and allies captured Htee Khee junta operational command base in Dawei Township, Tanintharyi Region; follows April 19 capture of Htee Hta camp (~5 miles away); third junta outpost seized by KNLA in this border area; SAC soldiers reportedly fled into Thailand",
+    "lastUpdated": "2026-05-04"
+  },
+  {
+    "id": "sac-advance-indaw-mawlu-highway-may5",
+    "from": [
+      95.91,
+      24.18
+    ],
+    "to": [
+      96.1,
+      23.9
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Column: Indaw → Mawlu (Mandalay–Myitkyina Highway Secured)",
+    "date": "2026-05-05",
+    "confidence": "high",
+    "casualties": "Civilians from 7 villages displaced into Kachin State forests",
+    "notes": "Junta captured Mawlu on ~May 5, completing SAC control of the full Mandalay–Myitkyina road/rail corridor; resistance held Mawlu since Dec 13, 2023; strategic blow: cuts KIA-PDF overland logistics; follows Indaw recapture Apr 29; multiple sources (DVB, Myanmar Now, MoeMaKa) confirmed",
+    "lastUpdated": "2026-05-07"
+  },
+  {
+    "id": "sac-airstrike-bhamo-monastery-kachin-may7",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.23,
+      24.25
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Bhamo Township Monastery (Kachin)",
+    "date": "2026-05-07",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "status": "hit",
+    "casualties": "15 people killed sheltering in monastery; civilians displaced; resistance relocated hundreds including children and elderly",
+    "damage": "Monastery used as civilian displacement shelter struck; deliberate targeting of non-combatant shelter",
+    "notes": "SAC airstrike killed 15 civilians sheltering in Bhamo Township monastery; Bhamo is active KIA-junta frontline; fourth documented monastery strike in 2026 (after Seik Hkun Apr 13, Shwebo Apr 7, Hpruso); Myanmar Now confirmed",
+    "lastUpdated": "2026-05-07"
+  },
+  {
+    "id": "sac-salin-village-burning-magway-may6",
+    "from": [
+      94.93,
+      20.16
+    ],
+    "to": [
+      94.68,
+      20.55
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Ground Forces: Magway Base → Salin Township (Village Burning Campaign)",
+    "date": "2026-05-06",
+    "confidence": "medium",
+    "casualties": "2 elderly killed; 9 hostages taken including novice monk; 5+ villages burned; 2 additional hostages executed May 7",
+    "notes": "SAC ground forces burned 5+ villages in Salin Township (Magway), killed 2 elderly civilians unable to flee, took 9 hostages; May 7: two hostages (including elderly disabled woman) killed by junta troops; part of coordinated SAC offensive with simultaneous Yinmabin/Pale/Kani operations launched May 1; Mizzima and Myanmar Now confirmed",
+    "lastUpdated": "2026-05-07"
+  },
+  {
+    "id": "sac-airstrike-kyauktaw-schools-rakhine-may7",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      92.87,
+      20.58
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets+Y-12: Naypyidaw → Kyauktaw Schools (Rakhine State)",
+    "date": "2026-05-07",
+    "weaponType": "mixed",
+    "launched": 6,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "22:00",
+    "status": "hit",
+    "casualties": "19 high school students killed; 20+ injured",
+    "damage": "Pyinnyar Pan Khinn High School and A Myin Thit High School struck; AA-administered Kyauktaw township targeted",
+    "notes": "SAC deployed Y-12 aircraft and 6 jet fighters on two waves (14:00 Minbya; 22:00 Kyauktaw); 19 boarding school students killed and 20+ injured; AA controls ~90% of Rakhine State; SAC uses air power against AA territory it cannot hold on ground; Narinjara confirmed",
+    "lastUpdated": "2026-05-08"
+  },
+  {
+    "id": "sac-airstrike-phunom-tedim-chin-may8",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.99,
+      23.36
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Phunom Village, Tedim Township (Chin State)",
+    "date": "2026-05-08",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "status": "hit",
+    "casualties": "7 PDF-Zoland fighters killed; 3 civilians killed",
+    "damage": "Phunom village struck; follows junta recapture of Kennedy Peak in Tedim Township May 7",
+    "notes": "SAC bombing of Phunom village in Tedim Township killed 7 PDF-Zoland fighters and 3 civilians; part of ongoing SAC post-Falam offensive pushing northward through Chin Hills toward Rikhawdar India-border town; MoeMaKa CDM confirmed",
+    "lastUpdated": "2026-05-08"
+  },
+  {
+    "id": "sac-thayetchaung-ground-offensive-tanintharyi-may8",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      98.21,
+      13.42
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Ground Offensive: Naypyidaw → Thayetchaung Township (Tanintharyi)",
+    "date": "2026-05-08",
+    "confidence": "medium",
+    "casualties": "6,000+ civilians displaced from 8 villages",
+    "damage": "8 villages raided; longest junta offensive in Tanintharyi since 2021 coup",
+    "notes": "SAC launched major multi-village ground offensive in Thayetchaung Township from May 8; 6,000+ civilians displaced in the longest such operation in Tanintharyi Region since the coup; follows KNLA Brigade 4 capture of Htee Khee base (May 4) and LLSBF drone strikes; Irrawaddy confirmed",
+    "lastUpdated": "2026-05-08"
+  },
+  {
+    "id": "kia-seizes-bhamo-waingmaw-junta-camps-may8",
+    "from": [
+      97.4,
+      25.38
+    ],
+    "to": [
+      97.25,
+      24.27
+    ],
+    "cat": "resistance",
+    "label": "KIA: Myitkyina Area → Bhamo/Waingmaw (Camps Seized)",
+    "date": "2026-05-08",
+    "confidence": "medium",
+    "casualties": "KIA encircled IB-58 in Waingmaw to within 100 meters; multiple SAC camps seized",
+    "notes": "KIA-led forces seized multiple junta military camps in Bhamo and Waingmaw districts; KIA tightened encirclement of Infantry Battalion 58 in Waingmaw to within 100 meters; part of sustained KIA Kachin State offensive amid SAC Shwegu reinforcement push; Irrawaddy confirmed",
+    "lastUpdated": "2026-05-08"
+  },
+  {
+    "id": "cdf-pdf-falam-hakha-road-battle-may9",
+    "from": [
+      93.68,
+      22.9
+    ],
+    "to": [
+      93.62,
+      22.64
+    ],
+    "cat": "resistance",
+    "label": "CDF/PDF: Falam → Hakha Road Battle (15 SAC Killed)",
+    "date": "2026-05-09",
+    "confidence": "medium",
+    "casualties": "15 junta soldiers killed in local battles",
+    "notes": "CDF and PDF forces killed 15 SAC soldiers on the strategic Falam-Hakha road axis; follows junta recapture of Falam (Apr 25-26) and Kennedy Peak (May 7); resistance maintaining sustained combat capacity in northern Chin Hills corridor",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "pdf-mine-seikphyu-convoy-may9",
+    "from": [
+      95.1,
+      21.55
+    ],
+    "to": [
+      95.1,
+      21.55
+    ],
+    "cat": "resistance",
+    "label": "PDF: Mine Ambush on Junta Aerial Bomb Convoy — Seik Phyu (Magway)",
+    "date": "2026-05-09",
+    "confidence": "medium",
+    "casualties": "4 junta soldiers killed; aerial bombs and ammunition confiscated",
+    "notes": "PDF mine attack destroyed SAC logistics convoy transporting aerial ordnance in Seik Phyu Township, Magway Region; confiscation of aerial bombs degrades junta airstrike resupply capacity in northern Magway corridor; Mizzima confirmed",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "sac-drone-ledo-karen-monastery-may9",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.0,
+      18.5
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Drone: Naypyidaw → Ledo Township (KNU Brigade 3, Karen State)",
+    "date": "2026-05-09",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "14:00",
+    "status": "hit",
+    "casualties": "1 civilian injured",
+    "damage": "1 monastery and 2 houses destroyed",
+    "notes": "SAC drone attack on civilian area in Ledo Township, KNU Brigade 3 territory; monastery destroyed — fifth documented monastery or religious site attack in 2026; part of expanding SAC drone campaign against Karen State civilian areas; Mizzima confirmed",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "pdf-okpho-pyu-saw-htee-bago-may12",
+    "from": [
+      96.48,
+      17.34
+    ],
+    "to": [
+      96.18,
+      17.93
+    ],
+    "cat": "resistance",
+    "label": "PDF: Bago → Okpho Township (Pyu Saw Htee Attack)",
+    "date": "2026-05-12",
+    "confidence": "medium",
+    "casualties": "2 Pyu Saw Htee killed; 6 injured",
+    "notes": "PDF attacked junta-aligned Pyu Saw Htee militia posts in Okpho Township, Bago Region; 2 killed, 6 injured; follows AA Pantaung attack (May 10) and Mawtaung border fighting; multi-township resistance pressure across Bago Region",
+    "lastUpdated": "2026-05-12"
+  },
+  {
+    "id": "pdf-letpadan-checkpoint-bago-may12",
+    "from": [
+      96.48,
+      17.34
+    ],
+    "to": [
+      95.73,
+      17.78
+    ],
+    "cat": "resistance",
+    "label": "PDF: Bago → Letpadan Checkpoint Attack",
+    "date": "2026-05-12",
+    "confidence": "medium",
+    "notes": "Resistance forces attacked junta checkpoint in Letpadan Township, Bago Region; part of sustained PDF operations across central/lower Bago Region's SAC logistics corridor between Yangon and Naypyidaw",
+    "lastUpdated": "2026-05-12"
+  },
+  {
+    "id": "sac-airstrike-mindat-kanpetlet-chin-may15",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.73,
+      21.36
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Mindat/Kanpetlet (S. Chin State) — 15 Airstrikes in One Day",
+    "date": "2026-05-15",
+    "weaponType": "unknown",
+    "launched": 15,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "4 killed including prisoner of war (CPU/A confirmed)",
+    "damage": "Homes and infrastructure struck in Mindat town and Kanpetlet Township",
+    "notes": "SAC conducted ~11 airstrikes May 13-14 then 15 strikes on May 15 on Mindat and Kanpetlet towns; CPU/A confirmed 4 killed including POW; escalation of post-Falam Chin Hills offensive pushing northward toward Rikhawdar India-border town; third major Chin airstrike escalation in May 2026",
+    "lastUpdated": "2026-05-15"
+  },
+  {
+    "id": "sac-pauk-saw-kyaukhtu-magway-ground-offensive-may14",
+    "from": [
+      96.08,
+      21.98
+    ],
+    "to": [
+      94.08,
+      20.77
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Ground Offensive: Mandalay → Pauk/Saw/Kyaukhtu (Magway) — 20+ Airstrikes",
+    "date": "2026-05-14",
+    "confidence": "medium",
+    "casualties": "At least 1 civilian killed; civilian displacement; travel warnings issued",
+    "notes": "SAC launched large-scale multi-township ground offensive with 20+ airstrikes in a single day across Pauk, Saw, and Kyaukhtu townships, Magway Region, on May 13-14; part of junta's multi-front May 2026 offensive across Magway-Sagaing corridor; five soldiers from Regiment (33) defected to PDF with weapons same day",
+    "lastUpdated": "2026-05-15"
+  },
+  {
+    "id": "aa-artillery-344-ayeyarwady-offensive-may14",
+    "from": [
+      92.9,
+      20.15
+    ],
+    "to": [
+      95.11,
+      16.86
+    ],
+    "cat": "resistance",
+    "label": "AA-Led Forces: Rakhine → Yekyi (Ayeyarwady) — Artillery Bn 344 Offensive",
+    "date": "2026-05-14",
+    "confidence": "medium",
+    "notes": "Arakan Army and allied forces launched offensive against junta Artillery Battalion 344 in Yekyi Township, Ayeyarwady Region (Ngathinechaung area), from approximately May 9-15, 2026; objective to interdict SAC supply routes to remaining junta positions in southern Rakhine State; heavy fighting and military airstrikes reported; reflects AA expanding operational reach beyond Rakhine",
+    "lastUpdated": "2026-05-15"
+  },
+  {
+    "id": "sac-three-column-advance-maw-taung-knla-brigade4-may16",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      98.72,
+      15.4
+    ],
+    "cat": "junta-operation",
+    "label": "SAC 3-Column Advance: Naypyidaw → Maw Taung (KNLA Brigade 4, Tanintharyi)",
+    "date": "2026-05-16",
+    "weaponType": "mixed",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "status": "unknown",
+    "notes": "Three SAC columns advanced along two routes toward KNLA-held Maw Taung border town (Tanintharyi Region) as of May 16, 2026; junta forces closed to within 15 miles of Maw Taung with daily airstrikes; KNLA Brigade 4 territory; simultaneous with Lay Kay camp retaken in Brigade 1 (May 11) and Hpapun Brigade 5 fighting; Mizzima confirmed",
+    "lastUpdated": "2026-05-16"
+  },
+  {
+    "id": "sac-airstrike-ponnagyun-rakhine-aa-may15",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      92.87,
+      20.1
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Ponnagyun (Rakhine State, AA-Controlled)",
+    "date": "2026-05-15",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "09:00",
+    "status": "hit",
+    "damage": "Civilian houses damaged in AA-administered Ponnagyun Township",
+    "notes": "SAC jets bombed Ponnagyun Township (Rakhine State, under AA administration) on May 15, 2026 at 9:00 am; civilian houses damaged; junta targeting AA-controlled territory it cannot hold by ground; reported in Mizzima Spring Revolution Daily News May 16",
+    "lastUpdated": "2026-05-16"
+  },
+  {
+    "id": "sac-airstrike-kani-chaungma-school-may17",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.6,
+      22.62
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets: Naypyidaw → Chaung Ma School + Thamin Village (Kani Township, Sagaing)",
+    "date": "2026-05-17",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "status": "hit",
+    "casualties": "4 injured (school airstrike); 10 civilians abducted in Thamin village ground raid",
+    "damage": "Chaung Ma school struck, 4 civilians injured; 4 houses burned in Thamin village ground raid",
+    "notes": "Dual SAC assault in Kani Township on May 17, 2026: jets struck Chaung Ma school (injuring 4 civilians) and ground troops burned 4 houses + abducted 10 residents in Thamin village; Pauk Inn Myaing school in Sagaing also struck (school closed, no casualties); Irrawaddy documented 6+ school strikes in 5 weeks across Myanmar; ~350-troop column in Saw town area; Mizzima / Irrawaddy confirmed",
+    "lastUpdated": "2026-05-17"
+  },
+  {
+    "id": "aa-nat-yay-kan-padan-assault-may17",
+    "from": [
+      93.96,
+      19.66
+    ],
+    "to": [
+      94.58,
+      21.12
+    ],
+    "cat": "resistance",
+    "label": "AA: Ann Area → Nat Yay Kan Base (Padan Township, Magway) — Resumed Assault",
+    "date": "2026-05-17",
+    "confidence": "medium",
+    "casualties": "Ongoing heavy fighting; junta responded with artillery and airstrikes",
+    "notes": "Arakan Army and allied resistance forces resumed assault on junta's Nat Yay Kan hilltop strategic base in Padan Township, Magway Region, through May 17, 2026; reflects AA strategic expansion beyond Rakhine State to multi-front pressure in Magway; Myanmar Now confirmed",
+    "lastUpdated": "2026-05-17"
+  },
+  {
+    "id": "sac-airstrike-palaw-township-tanintharyi-may18",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      98.63,
+      12.53
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Palaw Township (Tanintharyi)",
+    "date": "2026-05-18",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "status": "hit",
+    "casualties": "6 civilians killed including 3 children (two age 11, one age 6)",
+    "notes": "SAC airstrike in Palaw Township, Myeik District, Tanintharyi Region on May 18, 2026 (Monday); KNU confirmed 6 killed including 3 children; part of escalating SAC aerial campaign across KNLA Brigade 4 territory as junta three-column offensive presses toward Maw Taung Thailand border crossing",
+    "lastUpdated": "2026-05-18"
+  },
+  {
+    "id": "sac-maw-taung-recapture-three-column-may19",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      98.72,
+      15.4
+    ],
+    "cat": "junta-operation",
+    "label": "SAC 3-Column Recapture: Naypyidaw → Maw Taung (KNLA Brigade 4 — Completed May 19)",
+    "date": "2026-05-19",
+    "weaponType": "mixed",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "status": "hit",
+    "casualties": "24 resistance fighters killed (junta claim); KNLA Brigade 4 forces withdrew",
+    "notes": "SAC completed recapture of Maw Taung — KNLA Brigade 4's strategic Thailand border crossing — on May 19, 2026 after two-week three-column offensive (launched ~May 5); KNLA had held Maw Taung since November 2025 (6 months); thousands displaced toward Ranong, Thailand; critical resistance logistics link to Thailand lost; DVB/Mizzima/Moemaka confirmed",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "sac-airstrike-sanae-kyaukphyu-rakhine-may21",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      93.55,
+      19.44
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets + Navy: Naypyidaw → Sanae, Kyaukphyu District (Rakhine State)",
+    "date": "2026-05-21",
+    "weaponType": "mixed",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "status": "hit",
+    "casualties": "Multiple civilians killed; 50,000+ displaced from 10+ villages",
+    "damage": "100+ homes destroyed in Shwe Hintha Ward, Sanae town; naval shelling causes civilian casualties",
+    "notes": "SAC jets and warships struck Sanae Township, Kyaukphyu District on May 21, 2026 as AA advances on Chinese CMEC port; 100+ homes destroyed in Shwe Hintha Ward; junta previously repelled AA-repulsed amphibious assault from Taungmawgyi naval base on May 10; Irrawaddy / BNI Online / CDM confirmed",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "sac-airstrike-mae-baw-khee-hpa-an-karen-may19",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.58,
+      16.82
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jet/Gyrocopter: Naypyidaw → Mae Baw Khee Village (Hpa-an Township, Karen State)",
+    "date": "2026-05-19",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "08:00",
+    "status": "hit",
+    "casualties": "1 killed (19-year-old woman); 5 injured including 2 children",
+    "notes": "SAC fighter jet and/or gyrocopter attack on Mae Baw Khee village in Hpa-an Township, Karen State on May 19, 2026; killed 19-year-old displaced woman; part of SAC multi-location aerial campaign on same day as Maw Taung and Tonzang recaptures; CDM confirmed",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "pdf-saing-pyin-depayin-police-capture-may20",
+    "from": [
+      95.38,
+      22.8
+    ],
+    "to": [
+      95.52,
+      22.97
+    ],
+    "cat": "resistance",
+    "label": "PDF: Sagaing Area → Saing Pyin Police Station (Depayin Township) Capture",
+    "date": "2026-05-20",
+    "confidence": "medium",
+    "casualties": "11 junta security personnel killed; weapons and ammunition seized",
+    "notes": "PDF forces captured Saing Pyin police station in Depayin Township, Sagaing Region; operation launched May 14, station fully seized May 16; local police chief abandoned injured personnel; reported in CDM May 20 bulletin; Depayin includes Kanbalu area (site of 2022 concert massacre); continued PDF targeting of junta security infrastructure in Sagaing heartland",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "sac-mandalay-myitkyina-300-vehicle-convoy-may22",
+    "from": [
+      96.08,
+      21.98
+    ],
+    "to": [
+      97.4,
+      25.38
+    ],
+    "cat": "junta-operation",
+    "label": "SAC 300-Vehicle Convoy: Mandalay → Myitkyina Northern Command (Kachin Reinforcement)",
+    "date": "2026-05-22",
+    "confidence": "high",
+    "notes": "Approximately 300-vehicle SAC convoy with mobile howitzers, armor, and support vehicles departed Mandalay ~May 9 and reached Northern Military Command HQ in Myitkyina by May 22; largest junta reinforcement to Kachin State in years; directly prompted KIA to announce shift to defensive strategy; SAC aims to relieve Myitkyina garrison (encircled by KIA) and sever KIA's operational corridor to northern Sagaing Region; part of coordinated May 2026 multi-front offensive surge",
+    "lastUpdated": "2026-05-24"
+  },
+  {
+    "id": "pdf-monywa-nw-command-rocket-may23",
+    "from": [
+      94.6,
+      22.62
+    ],
+    "to": [
+      95.13,
+      22.11
+    ],
+    "cat": "resistance",
+    "label": "PDF/Resistance: Sagaing → NW Regional Command HQ Monywa (Rocket Attack)",
+    "date": "2026-05-23",
+    "launched": 11,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "8 junta personnel killed; 20+ injured",
+    "notes": "PDF and allied resistance rocket attack on SAC Northwest Regional Military Command HQ in Monywa; confirmed by NUG Deputy Minister of Home Affairs and Immigration; one of the most significant strikes on a junta regional command HQ since the coup; NW Command oversees SAC operations across Sagaing and Mandalay regions; attack exploited operational overextension from junta's simultaneous multi-front offensive surge",
+    "lastUpdated": "2026-05-24"
+  },
+  {
+    "id": "sac-airstrike-indaw-hman-hae-sagaing-may25",
+    "from": [
+      96.08,
+      21.98
+    ],
+    "to": [
+      95.9,
+      24.1
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Mandalay → Indaw Township, Mawluu Area (Sagaing)",
+    "date": "2026-05-25",
+    "confidence": "medium",
+    "casualties": "5 PDF fighters killed; 2 civilians injured",
+    "notes": "SAC airstrike struck Hman Hae Village in PDF-controlled Mawluu area, Indaw Township, Sagaing Region on May 25, 2026; 5 resistance members killed and 2 civilians injured; part of SAC ongoing effort to clear PDF fighters from the Indaw-Katha corridor following junta recapture of the Mandalay-Myitkyina highway (Mawlu, May 5); Myanmar Now / LiveUAMap CDM reporting",
+    "lastUpdated": "2026-05-25"
+  },
+  {
+    "id": "pdf-anyar-myay-militia-capture-myaing-magway-may26",
+    "from": [
+      95.98,
+      21.88
+    ],
+    "to": [
+      94.9,
+      21.45
+    ],
+    "cat": "resistance",
+    "label": "PDF/Anyar Myay: Sagaing Corridor → Myaing Township (Militia Base Captured)",
+    "date": "2026-05-26",
+    "confidence": "medium",
+    "casualties": "49 civilians rescued; weapons and ammunition confiscated",
+    "notes": "PDF and Anyar Myay Coalition Force seized Pyu Saw Htee militia camp at Thayetkan Village, Myaing Township, Magway Region on May 26; 49 civilians (women and children) held under militia control were rescued; follow-on mine attacks May 27 killed 2 more junta soldiers; Myanmar Now / Mizzima confirmed",
+    "lastUpdated": "2026-05-27"
+  },
+  {
+    "id": "kia-fpv-drone-bhamo-may26",
+    "from": [
+      97.4,
+      25.38
+    ],
+    "to": [
+      97.23,
+      24.25
+    ],
+    "cat": "resistance",
+    "label": "KIA FPV Drone: Myitkyina Area → Bhamo Township (5 Junta Killed)",
+    "date": "2026-05-26",
+    "confidence": "medium",
+    "casualties": "5 junta soldiers killed",
+    "notes": "KIA-aligned resistance FPV (first-person view) drone strike on junta army formations in Bhamo Township, Kachin State on May 26, 2026; demonstrates continued localized offensive operations despite KIA's May 22 announced defensive strategy shift; Bhamo-Waingmaw district is active KIA frontline with IB-58 encircled to within 100m; Mizzima Spring Revolution Daily confirmed",
+    "lastUpdated": "2026-05-27"
+  },
+  {
+    "id": "sac-airstrike-kyain-seikkyi-karen-may27",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.93,
+      16.47
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Airstrike: Naypyidaw → Kyain Seikkyi Township (Karen State)",
+    "date": "2026-05-27",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "status": "hit",
+    "casualties": "3 women killed; no preceding ground engagement",
+    "notes": "SAC fighter jet bombed Kyain Seikkyi Township, Karen State on May 27, 2026 killing 3 women with no preceding battle; KNU Central confirmed; Kawkareik District approach corridor toward Myawaddy; part of sustained SAC aerial campaign across KNLA-controlled Karen State; Mizzima Spring Revolution Daily confirmed",
+    "lastUpdated": "2026-05-27"
+  },
+  {
+    "id": "sac-drone-ngazun-mandalay-may29",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.9,
+      21.79
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Drone: Naypyidaw → Ngazun Township (9 Killed, Mandalay)",
+    "date": "2026-05-29",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "status": "hit",
+    "casualties": "9 civilians killed including woman shielding infant",
+    "notes": "SAC armed drone strike on Ngazun Township, Mandalay Region after brief resistance clash; mother killed shielding infant — collective punishment; part of sustained SAC drone campaign across Myingyan District; Myanmar Now confirmed",
+    "lastUpdated": "2026-05-29"
+  },
+  {
+    "id": "sac-airstrike-khin-u-sagaing-may21",
+    "from": [
+      96.08,
+      21.98
+    ],
+    "to": [
+      95.65,
+      22.95
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jet + Drones: Mandalay Area → Khin-U Township, Sagaing (4 Killed)",
+    "date": "2026-05-21",
+    "weaponType": "mixed",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "21:00",
+    "status": "hit",
+    "casualties": "4 civilians killed; 20+ homes destroyed",
+    "damage": "Ywa Sin village bombed; residential area destroyed",
+    "notes": "Junta fighter jet from Tada-U Air Base bombed Ywa Sin village, Khin-U Township at ~9:00 pm; two SAC suicide drones struck 40 minutes later; no fighting had been reported in township at time of attack; 4 civilians killed (man 45, man 20, woman 62, woman 27); Mizzima confirmed via local sources",
+    "lastUpdated": "2026-05-31"
+  },
+  {
+    "id": "aa-kyaukphyu-encirclement-5km-advance-jun1",
+    "from": [
+      93.2,
+      20.59
+    ],
+    "to": [
+      93.55,
+      19.44
+    ],
+    "cat": "resistance",
+    "label": "AA: Northern Rakhine → Kyaukphyu Encirclement (5km)",
+    "date": "2026-06-01",
+    "confidence": "high",
+    "notes": "AA advances to within ~5km of Kyaukphyu (China's $7.3B CMEC deep-sea port) by early June 2026; junta warships from Danyawaddy naval base shelling area as all land supply routes are cut; AA simultaneously maintaining Sittwe and Ngape fronts; Irrawaddy confirmed",
+    "lastUpdated": "2026-06-01"
+  },
+  {
+    "id": "sac-mass-airstrikes-bhamo-kia-siege-jun2",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.23,
+      24.25
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Mass Airstrikes: Naypyidaw → Bhamo (50/day — KIA Siege Defense)",
+    "date": "2026-06-02",
+    "weaponType": "unknown",
+    "launched": 50,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "status": "hit",
+    "notes": "SAC conducting up to 50 airstrikes per day on KIA siege positions around Bhamo city as of June 2026; highest air power concentration in Kachin State since the coup; KIA-led coalition maintains encirclement despite 300-vehicle SAC reinforcement convoy that arrived at Northern Command Myitkyina May 22; if Bhamo falls, KIA controls all eastern Kachin State; Irrawaddy / CSIS confirmed",
+    "lastUpdated": "2026-06-02"
+  },
+  {
+    "id": "aa-sittwe-naval-complex-fierce-fighting-jun1",
+    "from": [
+      92.37,
+      20.82
+    ],
+    "to": [
+      92.87,
+      20.16
+    ],
+    "cat": "resistance",
+    "label": "AA: Maungdaw Corridor → Sittwe Naval Complex (40+ Junta Killed May 29–Jun 1)",
+    "date": "2026-06-01",
+    "confidence": "high",
+    "casualties": "40+ junta soldiers killed including a captain; heavy artillery exchanges in Bay of Bengal and Kaladan River",
+    "notes": "Fierce AA assault on Shwe Min Gan naval support base and Kyar Ma Thauk village military position May 29–June 1, 2026; 40+ regime soldiers killed in engagements ~2 km from naval base; heavy artillery exchanges between AA forces and junta naval vessels from Danyawaddy base; junta 'firing nonstop' per Irrawaddy; Sittwe residents report junta fortifying river routes with bunkers and landmines; AA vowed to capture all remaining Rakhine towns (Sittwe, Kyaukphyu, Manaung) by 2027; Irrawaddy confirmed",
+    "lastUpdated": "2026-06-02"
+  },
+  {
+    "id": "kia-guerrilla-ambush-sagaing-kachin-border-may28",
+    "from": [
+      97.23,
+      24.25
+    ],
+    "to": [
+      95.91,
+      24.18
+    ],
+    "cat": "resistance",
+    "label": "KIA-PDF: Bhamo / Kachin → Indaw Corridor (Guerrilla Ambushes Continue)",
+    "date": "2026-05-28",
+    "confidence": "medium",
+    "casualties": "13 SAC soldiers killed in Katha-Nabar road ambush (May 24); ongoing attrition through May 28",
+    "notes": "KIA and allied PDF forces continue guerrilla ambushes along Mandalay-Myitkyina road corridor and Sagaing-Kachin border through May 28, 2026, contesting junta's nominal highway control following SAC's May 5 recapture of Mawlu; KIA encirclement of IB-58 in Waingmaw maintained to within 100m; 300-vehicle SAC convoy reached Myitkyina Northern Command by May 22 — largest Kachin reinforcement in years; Myanmar Now / MoeMaKa confirmed ongoing heavy clashes",
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "id": "sac-airstrike-kanbalu-double-strike-jun3",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      95.45,
+      23.15
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Double Airstrike: Naypyidaw → Kanbalu Township, Sagaing — 133+ Civilians Killed",
+    "date": "2026-06-03",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "08:00",
+    "status": "hit",
+    "casualties": "133+ civilians killed; double strike (morning + 17:30); women and children among dead; rescuers targeted in second wave",
+    "notes": "SAC jets struck Kanbalu Township twice on June 3, 2026 — morning strike then returned at 17:30 to target rescuers; double-tap tactic; one of deadliest single-day attacks in Sagaing Region since coup; Rising Nepal Daily / Irrawaddy confirmed",
+    "lastUpdated": "2026-06-05"
+  },
+  {
+    "id": "kia-bhamo-tank-battalion-seized-jun4",
+    "from": [
+      97.4,
+      25.38
+    ],
+    "to": [
+      97.23,
+      24.25
+    ],
+    "cat": "resistance",
+    "label": "KIA: Myitkyina Area → Bhamo (Tank Battalion Seized + Airport Camps Captured)",
+    "date": "2026-06-04",
+    "confidence": "medium",
+    "casualties": "Junta tank battalion seized; multiple SAC frontline camps near airport captured; radar system at Myitkyina Air Base destroyed",
+    "notes": "KIA seized junta tank battalion near Bhamo airport and destroyed radar at Myitkyina Air Base in early June 2026; KIA holds all positions despite 50 SAC airstrikes/day; Col. Naw Bu confirmed airport camp captures; Myanmar Now / Irrawaddy confirmed",
+    "lastUpdated": "2026-06-05"
+  },
+  {
+    "id": "aa-mindon-magway-junta-column-ambush-jun6",
+    "from": [
+      93.96,
+      19.66
+    ],
+    "to": [
+      94.87,
+      20.07
+    ],
+    "cat": "resistance",
+    "label": "AA: Rakhine → Mindon Township (1,000-Man SAC Column Intercepted)",
+    "date": "2026-06-06",
+    "confidence": "low",
+    "casualties": "400+ junta troops claimed killed; ~100 surrendered (resistance claims, unverified)",
+    "notes": "AA and allied forces intercepted ~1,000-man SAC column in Mindon Township, Magway Region (May 30–June 2); resistance scattered column in mountains; AA expanding operational reach to interdict SAC Rakhine supply routes; high casualty claims from single resistance source — treat with caution",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "knla-brave-warriors-toungoo-airbase-rocket-jun6",
+    "from": [
+      97.1,
+      17.9
+    ],
+    "to": [
+      96.46,
+      18.92
+    ],
+    "cat": "resistance",
+    "label": "KNLA Br. 2 / Brave Warriors: Karen Hills → Toungoo Air Base (Rocket Attack)",
+    "date": "2026-06-06",
+    "confidence": "medium",
+    "launched": 4,
+    "intercepted": 0,
+    "notes": "Brave Warriors for Myanmar and KNLA Brigade 2, Battalion 5 fired 4x107mm rockets at Toungoo Air Base (Kaytumadi) and Kaytumadi Hotel on June 6; attack reportedly timed to Min Aung Hlaing secret visit to area; casualties unconfirmed; MoeMaKa CDM confirmed",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "sac-airstrike-malaiing-mandalay-jun5",
+    "from": [
+      96.08,
+      21.98
+    ],
+    "to": [
+      95.47,
+      20.92
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jets (Tada-U): Mandalay → Malaiing Township (Thayet Kaung Pin Village, 2 Killed)",
+    "date": "2026-06-05",
+    "weaponType": "unknown",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "status": "hit",
+    "casualties": "2 civilians killed; 4 children seriously injured; 6 houses destroyed",
+    "damage": "Thayet Kaung Pin village bombed; 6 houses destroyed; no active fighting in area at time of strike",
+    "notes": "Two SAC Yak-130 jets from Tada-U air base dropped 4 bombs on Thayet Kaung Pin village, Malaiing Township, Mandalay Region on June 5, 2026; no active fighting reported in township; MoeMaKa CDM confirmed in June 7 bulletin",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "sac-drones-artillery-karenni-jun7",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.38,
+      19.46
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Drones + Artillery: Naypyidaw → Demoso/Hpruso/Nanmekhon (Karenni State)",
+    "date": "2026-06-07",
+    "weaponType": "mixed",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "status": "hit",
+    "casualties": "1 Baptist pastor killed; 3+ civilians injured",
+    "notes": "SAC deployed aircraft, suicide drones, and artillery against Demoso, Hpruso, and Nanmekhon areas, Karenni State on June 6–7; Baptist pastor killed — latest in series of clergy killed in SAC air attacks in 2026; KNDF and KA still control most of Karenni State rural territory; MoeMaKa CDM confirmed",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "aa-repels-kyaukphyu-offensive-jul12",
+    "from": [
+      93.6,
+      19.15
+    ],
+    "to": [
+      93.54,
+      19.09
+    ],
+    "cat": "resistance",
+    "label": "AA: Repels Junta Offensive Near Kyaukphyu Naval Station",
+    "date": "2026-07-12",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "casualties": "Junta column routed; bodies, weapons, ammunition abandoned",
+    "notes": "Junta surprise monsoon offensive near Awataung Village repelled by AA forces; column retreated toward Taungmaw Naval Station",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "sac-airstrike-loikaw-idp-jul14",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.25,
+      19.68
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Aircraft: Naypyidaw → Loikaw IDP Camps",
+    "date": "2026-07-14",
+    "weaponType": "unknown",
+    "launched": 14,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "17:00",
+    "status": "hit",
+    "casualties": "1 displaced woman killed by shrapnel",
+    "damage": "Multiple houses and vehicles destroyed across two IDP camps and one village",
+    "notes": "Three junta aircraft dropped 14 bombs across two IDP camps and a village in eastern Loikaw with no prior clashes reported — direct targeting of civilian/IDP sites",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "resistance-ambush-kawkareik-jul18",
+    "from": [
+      98.5,
+      16.68
+    ],
+    "to": [
+      98.2,
+      16.55
+    ],
+    "cat": "resistance",
+    "label": "Resistance: Myawaddy → Kawkareik Convoy Ambush",
+    "date": "2026-07-18",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "time": "11:20",
+    "status": "hit",
+    "casualties": "15+ soldiers killed, 20+ injured",
+    "notes": "Resistance forces ambushed an 8-truck junta reinforcement convoy on the Myawaddy-Kawkareik section of the Asian Highway; one vehicle overturned",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "sac-airstrike-maei-toungup-jul19",
+    "from": [
+      94.3,
+      18.45
+    ],
+    "to": [
+      94.22,
+      18.85
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Fighter Jet: Thandwe → Ma-Ei Town (Toungup)",
+    "date": "2026-07-19",
+    "weaponType": "unknown",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:30",
+    "status": "hit",
+    "casualties": "5 killed, 14 injured",
+    "damage": "10+ houses damaged in Wards 2 and 3",
+    "notes": "Junta fighter jet dropped three 500-pound bombs on Ma-Ei town, Toungup Township; a Buddhist monk was among the wounded",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "dpla-ambush-ywangan-yatsauk-jul22",
+    "from": [
+      96.68,
+      20.85
+    ],
+    "to": [
+      96.9,
+      20.66
+    ],
+    "cat": "resistance",
+    "label": "DPLA: Ambush on Ywangan-Yatsauk Road",
+    "date": "2026-07-22",
+    "weaponType": "mixed",
+    "confidence": "medium",
+    "casualties": "40+ junta soldiers killed",
+    "notes": "Danu People's Liberation Army ambushed a military convoy, seizing weapons and ammunition; junta retaliated with 1,000+ troop deployment into Ywangan Township",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "sac-clearance-ops-dawei-sez-aug2",
+    "from": [
+      98.2,
+      14.08
+    ],
+    "to": [
+      98.33,
+      14.3
+    ],
+    "cat": "junta-operation",
+    "label": "SAC 'Area Clearance': Dawei → Yebyu Township",
+    "date": "2026-08-02",
+    "weaponType": "unknown",
+    "confidence": "high",
+    "casualties": "6 civilians killed (incl. a monk and a minor), 13 arrested",
+    "damage": "~1,000 people displaced from ~40 villages",
+    "notes": "Deputy C-in-C Kyaw Swar Lin ordered clearance operations with ~1,000 troops to secure the stalled Dawei Special Economic Zone, beginning July 9, 2026",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "sac-airstrikes-arakan-magway-border-aug3",
+    "from": [
+      93.8,
+      19.35
+    ],
+    "to": [
+      94.05,
+      19.1
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Air Campaign: Arakan Mountain Range (Nat Yay Kan / Goteseeyoe)",
+    "date": "2026-08-03",
+    "weaponType": "mixed",
+    "confidence": "medium",
+    "time": "09:00",
+    "status": "hit",
+    "damage": "Junta pushes to recapture Chinese gas-pipeline route territory from AA",
+    "notes": "Fighter jets, Y-12 aircraft, drones and Artillery Battalion No. 905 conducted a two-hour coordinated air campaign on Aug 2 against AA positions near the besieged Nat Yay Kan hilltop base",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "sac-drone-hpruso-aug4",
+    "from": [
+      97.21,
+      19.68
+    ],
+    "to": [
+      97.15,
+      19.2
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Drone: Loikaw → Hpruso Township",
+    "date": "2026-08-04",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "18:00",
+    "status": "hit",
+    "casualties": "5 killed (incl. a 5-month-old infant), 1 wounded (prior day)",
+    "notes": "Junta drone dropped two heavy bombs on a residential area in western Hpruso Township; a drone had wounded a woman in eastern Hpruso the previous day",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "sac-airstrike-demawso-school-aug6",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      97.17,
+      19.55
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Aircraft: Naypyidaw → Demawso Middle School",
+    "date": "2026-08-06",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "18:00",
+    "status": "hit",
+    "casualties": "1 displaced man killed, 1 woman wounded",
+    "damage": "Middle-school building hit just after dismissal; 5+ schools closed indefinitely",
+    "notes": "Aircraft bombed a middle school in western Demawso; artillery shells also landed near an IDP camp per the Interim Executive Council",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "sac-airstrike-kanphyu-wetlet-aug7",
+    "from": [
+      95.98,
+      21.83
+    ],
+    "to": [
+      95.72,
+      22.3
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jet (Tada-U): → Kan Phyu Village, Wetlet Township",
+    "date": "2026-08-07",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "00:30",
+    "status": "hit",
+    "damage": "2 school buildings and ~3 homes damaged; 13 cattle killed",
+    "notes": "Bomb dropped near the Abhidhamma school in Kan Phyu village; part of a broader pattern of drone/air attacks on Yoar Thar Yar tract villages",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "kia-recapture-lonton-camp-jul17",
+    "from": [
+      96.68,
+      24.53
+    ],
+    "to": [
+      96.35,
+      25.1
+    ],
+    "cat": "resistance",
+    "label": "KIA/KPDF: Recapture Lonton Camp (Indawgyi)",
+    "date": "2026-07-17",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "casualties": "6 SNA militia bodies recovered; heavy junta/SNA casualties",
+    "notes": "KIA and Kachin People's Defence Force jointly recaptured Lonton camp near Indawgyi, Mohnyin Township, lost to junta/SNA forces in June",
+    "lastUpdated": "2026-08-10T16:26:52.000Z"
+  },
+  {
+    "id": "kia-strike-danai-militia-base-aug9",
+    "from": [
+      96.8,
+      25.95
+    ],
+    "to": [
+      96.85,
+      26.05
+    ],
+    "cat": "resistance",
+    "label": "KIA Drone/Artillery: Danai Militia Base",
+    "date": "2026-08-09",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "status": "hit",
+    "casualties": "5 militia killed, 10 injured",
+    "notes": "KIA drone and artillery strike hit the pro-junta Min Zay Thant militia's training base in Danai Township during a graduation ceremony",
+    "lastUpdated": "2026-08-12T15:23:38.000Z"
+  },
+  {
+    "id": "sac-airstrike-kyauk-gyi-thandwe-aug10",
+    "from": [
+      94.45,
+      18.65
+    ],
+    "to": [
+      94.35,
+      18.25
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jet: → Kyauk Gyi Village, Thandwe Township",
+    "date": "2026-08-10",
+    "weaponType": "unknown",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "13:00",
+    "status": "hit",
+    "casualties": "14 killed (11 female, 3 male, ages 9-88), 11 injured",
+    "damage": "~20 houses and buildings damaged near Dhamma Yaung Chi monastery",
+    "notes": "Fighter jet circled the AA-controlled village for ~20 minutes before dropping 3 high-explosive bombs; part of a wider week-long air campaign across Kyauktaw, Mrauk-U, Thandwe, Gwa, Kyeintali and Virathani townships",
+    "lastUpdated": "2026-08-12T15:23:38.000Z"
+  },
+  {
+    "id": "sac-airstrike-paletwa-aug11",
+    "from": [
+      92.8,
+      21.2
+    ],
+    "to": [
+      92.87,
+      21.28
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jet: → Paletwa Town Entrance",
+    "date": "2026-08-11",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "07:32",
+    "status": "hit",
+    "casualties": "2 teenage girls injured by shrapnel",
+    "notes": "Jet dropped a bomb near the Paletwa Town entrance sign on the upper Kaladan River, southern Chin State",
+    "lastUpdated": "2026-08-12T15:23:38.000Z"
+  },
+  {
+    "id": "sac-airstrike-ngapali-aug21",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.2,
+      18.78
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Aircraft: Naypyidaw → Ngapali (Thandwe)",
+    "date": "2026-08-21",
+    "weaponType": "unknown",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "00:30",
+    "status": "hit",
+    "casualties": "1 killed, 14 injured (AA claim)",
+    "notes": "AA reported 8 jets plus a Y-12 and Y-8 dropped ~100 bombs across Ngapali and Nyaung Chaung (Gwa) overnight; single-source AA claim, not independently corroborated for this specific night.",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "sac-airstrike-gwa-nyaungchaung-aug21",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      94.6,
+      17.6
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Aircraft: Naypyidaw → Nyaung Chaung Village (Gwa)",
+    "date": "2026-08-21",
+    "weaponType": "unknown",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "00:45",
+    "status": "hit",
+    "casualties": "8 injured (AA claim)",
+    "notes": "Part of the same overnight AA-reported strike wave that hit Ngapali; single-source AA claim.",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "sac-clearance-ops-dawei-thayetchaung-aug21",
+    "from": [
+      98.2,
+      14.08
+    ],
+    "to": [
+      98.28,
+      14.05
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Ground Column: Dawei → Thayetchaung/Myitta (Russia-Backed SEZ Land Clearance)",
+    "date": "2026-08-21",
+    "weaponType": "mixed",
+    "launched": 700,
+    "intercepted": 0,
+    "confidence": "medium",
+    "status": "hit",
+    "notes": "ACLED-estimated ~700-troop column burning villages and clearing land since July for the Russia-backed Dawei port SEZ; 3 aid workers killed Jul 9; offensive continues toward Hteekhee.",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "sac-airstrike-seinnyinwa-paletwa-aug24",
+    "from": [
+      96.13,
+      19.75
+    ],
+    "to": [
+      92.95,
+      21.32
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Jet: → Seinnyinwa Village (Paletwa)",
+    "date": "2026-08-24",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "status": "hit",
+    "casualties": "School building destroyed",
+    "notes": "Part of a Rakhine/Chin bombardment wave BNI tallied at 33 killed, 78 wounded Aug 2-24.",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "sac-flotilla-escort-kyuntaw-aug23",
+    "from": [
+      96.34,
+      24.18
+    ],
+    "to": [
+      96.85,
+      24.15
+    ],
+    "cat": "junta-operation",
+    "label": "SAC Artillery/Air Escort: Katha River Corridor → Kyuntaw (Shwegu)",
+    "date": "2026-08-23",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "status": "hit",
+    "casualties": "5 killed, 2+ injured (Kyuntaw, Kalon, Kamphyu combined)",
+    "notes": "Escort bombardment for a 14-15 vessel junta supply flotilla (departed Mandalay ~Aug 21, docked Katha Aug 25, bound for Kachin State); also destroyed a monastery chapel in Sithaw village, Shwegu.",
+    "lastUpdated": "2026-08-28T00:21:48.000Z"
+  }
+]

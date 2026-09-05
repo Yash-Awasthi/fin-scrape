@@ -1,0 +1,63 @@
+{
+  "lastRun": "2026-08-27T17:12:59.443Z",
+  "tracker": "russia",
+  "runType": "backfill",
+  "status": "success",
+  "sectionsUpdated": [
+    "mapPoints",
+    "claims",
+    "political"
+  ],
+  "itemCounts": {
+    "kpis": 8,
+    "timeline": 9,
+    "mapPoints": 40,
+    "claims": 30,
+    "political": 30,
+    "casualties": 10,
+    "econ": 10
+  },
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-22T19:23:43.666Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 9
+    },
+    "mapPoints": {
+      "status": "seeded",
+      "itemCount": 40
+    },
+    "claims": {
+      "status": "seeded",
+      "itemCount": 30
+    },
+    "political": {
+      "status": "seeded",
+      "itemCount": 30
+    },
+    "casualties": {
+      "status": "ok",
+      "count": 10
+    },
+    "econ": {
+      "status": "ok",
+      "count": 10
+    },
+    "events": {
+      "lastRun": "2026-08-27T17:12:59.443Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-22T19:23:43.666Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-27T17:12:59.443Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

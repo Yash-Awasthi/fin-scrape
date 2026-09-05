@@ -1,0 +1,66 @@
+[
+  {
+    "id": "ymtc-two-additional-wuhan-fabs-domestic-tooling-2026",
+    "date": "2026-04-21",
+    "year": "2026",
+    "title": "YMTC Plans Two Additional Wuhan Fabs as Phase 3 Exceeds 50% Domestic Tooling Threshold",
+    "type": "breakthrough",
+    "detail": "China's premier memory chipmaker Yangtze Memory Technologies Corporation (YMTC) disclosed plans this week for two additional fabrication plants in Wuhan, beyond its Phase 3 facility currently ramping to volume production. The three-fab Wuhan complex will collectively target 300,000 wafers per month at full capacity — a scale that would position YMTC as the world's third-largest NAND flash memory producer, behind Samsung and Kioxia. The milestone of Phase 3 crossing Beijing's 50% domestic tooling threshold — meaning more than half of the fab equipment is sourced from Chinese suppliers rather than ASML, Tokyo Electron, or Applied Materials — is strategically significant. Phase 3 is expected to reach 50,000 wafers per month by 2027 and volume ramp begins in the second half of 2026. YMTC has achieved 232-layer 3D NAND technology and its current monthly output already stands at approximately 500,000 wafers. US export controls placed YMTC on the Entity List in December 2022, accelerating China's domestic semiconductor equipment investment. The domestic tooling threshold achievement suggests that US restrictions on chip manufacturing equipment are being partially offset by advances in China's domestic equipment industry, particularly through SMEE (Shanghai Micro Electronics Equipment Group) for lithography and AMEC for etching tools. Each new YMTC fab represents approximately $10B+ in capital investment and creates a self-reinforcing demand signal for China's domestic equipment sector.",
+    "sources": [
+      {
+        "name": "Tom's Hardware",
+        "tier": 2,
+        "url": "https://www.tomshardware.com/tech-industry/semiconductors/ymtc-planms-two-additional-wuhan-fabs",
+        "pole": "western"
+      },
+      {
+        "name": "DigiTimes",
+        "tier": 2,
+        "url": "https://www.digitimes.com/news/a20260416PD219/ymtc-dram-fab-capacity-2026.html",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.tomshardware.com/tech-industry/semiconductors/ymtc-planms-two-additional-wuhan-fabs",
+        "caption": "YMTC announces plans for two additional Wuhan fabs as Phase 3 exceeds 50% domestic tooling threshold — a milestone in China's chip self-sufficiency push",
+        "source": "Tom's Hardware"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "china-humanoid-robots-surpass-us-global-shipments-apr21-2026",
+    "date": "2026-04-21",
+    "year": "2026",
+    "title": "China's Humanoid Robot Startups Dominate Global Shipments — 90% of Units Sold Globally Were Chinese in 2025",
+    "type": "breakthrough",
+    "detail": "CNBC reported April 21 that Chinese humanoid robot startups are shipping more robots than their US rivals and captured approximately 90% of all global humanoid robot units sold in 2025. Chinese companies occupied the top six spots in Omdia's global humanoid robot shipment rankings for 2025. Unitree (Shenzhen) was the world's top seller with 5,500 humanoid robots shipped last year; Shanghai-based AgiBot came second with 5,168 units. Figure and Tesla Optimus were the only US companies in the top 10 — but at significantly lower volumes. The report also noted a fundamental divergence in how investors value humanoid robots in each country: US startups like Figure, Physical Intelligence, and Apptronik are valued as broad AI platforms at $1B+ valuations on limited revenue, while Chinese companies are valued more as industrial hardware plays on actual shipment volumes. This valuation divergence mirrors China's EV playbook — where BYD's dominance was initially dismissed as 'just cheap hardware' before the company achieved software-driven competitive advantages at scale. China's humanoid robot output is projected to surge 94% in 2026, with Unitree and AgiBot expected to capture nearly 80% of market share. China's deep industrial supply chains for servo motors, actuators, and sensors give Chinese companies structural advantages in rapid cost reduction analogous to their dominance in EV battery supply chains.",
+    "sources": [
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/04/21/china-humanoid-robots-us-investors.html",
+        "pole": "western"
+      },
+      {
+        "name": "Omdia Research",
+        "tier": 3,
+        "url": "https://www.ico-optics.org/china-leads-u-s-in-humanoid-robot-shipments-as-investors-diverge/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.cnbc.com/2026/04/21/china-humanoid-robots-us-investors.html",
+        "caption": "China's humanoid robot startups dominate global shipments — 90% of all units sold globally in 2025 were Chinese, led by Unitree and AgiBot; China ships more humanoid robots than US",
+        "source": "CNBC"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  }
+]

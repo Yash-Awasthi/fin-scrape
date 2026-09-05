@@ -1,0 +1,189 @@
+[
+  {
+    "id": "partition-1947-communal-violence",
+    "category": "1947 Partition — Communal Violence",
+    "killed": "200,000–2,000,000",
+    "injured": "Millions displaced and injured",
+    "source": "Encyclopaedia Britannica / UN Archives",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Estimates range widely. Modern scholarship suggests 200,000–2 million. 10–20 million people were displaced in the largest mass migration in history.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "first-kashmir-war-1947-49",
+    "category": "First Kashmir War (1947–1949)",
+    "killed": "~6,000 (India + Pakistan combined)",
+    "injured": "~10,000+",
+    "source": "Indian Army Historical Archives / Crisis Group",
+    "tier": 3,
+    "contested": "partial",
+    "note": "Includes Indian Army, Pakistani forces, and tribals. Precise figures disputed; civilian casualties also occurred but not systematically counted.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "second-india-pakistan-war-1965",
+    "category": "Second Indo-Pakistani War (1965)",
+    "killed": "India: 3,000 / Pakistan: 3,800 (est.)",
+    "injured": "~10,000 combined",
+    "source": "Indian MOD / Pakistani ISPR estimates (divergent)",
+    "tier": 1,
+    "contested": "yes",
+    "note": "Both sides dispute each other's figures. Pakistan claims lower Indian casualties; India claims higher Pakistani losses. ~800 tanks destroyed combined. Civilian casualties in border areas unaccounted.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "third-india-pakistan-war-1971",
+    "category": "1971 Indo-Pakistani War",
+    "killed": "India: 1,426 / Pakistan: ~9,000 (military + civilians in West front)",
+    "injured": "~4,000 India, higher Pakistan",
+    "source": "Indian MOD / Pakistani Hamoodur Rahman Commission",
+    "tier": 1,
+    "contested": "partial",
+    "note": "India suffered 1,426 killed and 4,004 wounded. 93,000 Pakistani soldiers became POWs. Separate from East Pakistan civilian deaths (300,000–3 million contested).",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "east-pakistan-1971-civilian",
+    "category": "1971 East Pakistan Civilian Killings",
+    "killed": "300,000–3,000,000",
+    "injured": "Unknown; millions displaced",
+    "source": "Bangladesh Government / Hamoodur Rahman Commission / Multiple scholars",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "Bangladesh's official figure is 3 million. Pakistan's Hamoodur Rahman Commission cited 26,000. Independent scholarship suggests 300,000–500,000 as most credible estimate. UN has not ruled on the figures.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "siachen-conflict-1984-present",
+    "category": "Siachen Glacier Conflict (1984–present)",
+    "killed": "India: 2,000+ / Pakistan: 1,400+ (est.)",
+    "injured": "Thousands from frostbite, altitude sickness",
+    "source": "Indian Army / Pakistani Army statements",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Most deaths (70%+) from extreme cold, avalanches, and altitude sickness rather than combat. Pakistan's 2012 Gayari avalanche killed 140 soldiers in a single event.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kargil-war-1999",
+    "category": "Kargil War (May–July 1999)",
+    "killed": "India: 527 / Pakistan: 350–1,000 (disputed)",
+    "injured": "India: 1,363 / Pakistan: undisclosed",
+    "source": "Indian MOD / Kargil Review Committee",
+    "tier": 1,
+    "contested": "yes",
+    "note": "India's figure of 527 killed is official. Pakistan never officially disclosed military losses; independent estimates range 350–1,000. Pakistan initially denied NLI involvement, complicating accounting.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kashmir-insurgency-1989-present",
+    "category": "Kashmir Insurgency Conflict Deaths (1989–present)",
+    "killed": "~47,000 total (all sides)",
+    "injured": "Tens of thousands",
+    "source": "South Asia Terrorism Portal (SATP) / Indian MHA",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Includes militants, Indian security forces, and civilians. Kashmiri groups allege higher civilian toll. Most deaths occurred 1989–2002; significant reduction after 2004 but continued incidents.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mumbai-26-11-attack-2008",
+    "category": "Mumbai Attacks (26/11) — November 2008",
+    "killed": "166 (including 6 Americans, 1 Israeli)",
+    "injured": "293+",
+    "source": "Indian NIA / Maharashtra Police",
+    "tier": 1,
+    "contested": "no",
+    "note": "166 killed in the 60-hour attack across multiple sites. 9 of 10 attackers killed; Ajmal Kasab captured, tried, and executed November 2012.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pulwama-attack-2019",
+    "category": "Pulwama CRPF Attack — February 2019",
+    "killed": "40 CRPF personnel",
+    "injured": "~40+",
+    "source": "Indian MOD / NIA",
+    "tier": 1,
+    "contested": "no",
+    "note": "Suicide bombing by JeM operative Adil Ahmad Dar killed 40 CRPF personnel in the Pulwama attack — the deadliest militant attack in Kashmir since the 1989 insurgency began.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "uri-attack-2016",
+    "category": "Uri Army Base Attack — September 2016",
+    "killed": "19 Indian soldiers",
+    "injured": "~30",
+    "source": "Indian Army / MOD",
+    "tier": 1,
+    "contested": "no",
+    "note": "Four JeM militants killed 19 Indian Army personnel in predawn attack on Brigade HQ at Uri, Baramulla. Deadliest attack on Indian Army in 30 years. All attackers killed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-parakram-2002",
+    "category": "Operation Parakram — Mobilization Casualties (2002)",
+    "killed": "~800 Indian soldiers (accidents/mines)",
+    "injured": "Hundreds",
+    "source": "Indian MOD reports / Parliamentary Committee",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Over 800 Indian soldiers died in accidents, landmine explosions, and disease during the 10-month military standoff — without a single combat engagement.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "indian-parliament-attack-2001",
+    "category": "Indian Parliament Attack — December 2001",
+    "killed": "9 security personnel",
+    "injured": "16",
+    "source": "Indian Home Ministry",
+    "tier": 1,
+    "contested": "no",
+    "note": "9 Indian security guards and personnel killed by 5 LeT/JeM gunmen; all attackers killed. Delhi Police identified Pakistani nationals; attack nearly triggered full-scale war.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pahalgam-attack-casualties-2025",
+    "category": "Pahalgam Tourist Attack — April 2025",
+    "killed": "26 (including tourists and local residents)",
+    "injured": "17+",
+    "source": "Indian MOD / J&K Police",
+    "tier": 1,
+    "contested": "no",
+    "note": "Militants attacked tourists at Baisaran meadow, Pahalgam on April 22, 2025. The attack triggered India's suspension of the Indus Waters Treaty and Operation Sindoor.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-sindoor-2025",
+    "category": "Operation Sindoor Exchange Casualties — May 2025",
+    "killed": "India: ~10–15 / Pakistan: 31+ (claimed by India)",
+    "injured": "Dozens on both sides",
+    "source": "Indian MOD / Pakistan ISPR statements",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "India struck nine Pakistan/AJK militant targets. Pakistan claimed 31 Indian kills in retaliatory fire; India claimed Pakistani military and civilian casualties from Pakistani shelling. Both sides dispute the other's numbers. Ceasefire on May 10.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kulgam-kilam-attack-2026",
+    "category": "Kulgam Labourer Attack — July 2026",
+    "killed": "2 non-local labourers (Deepak, Bopinder)",
+    "injured": "0 (Bopinder initially injured, later died)",
+    "source": "News on Air / Morning Kashmir",
+    "tier": 1,
+    "contested": "no",
+    "note": "Terrorists shot two migrant brick-kiln labourers from Chhattisgarh and Uttar Pradesh at Kilam village, Kulgam, on July 31, 2026 — the first attack on civilians in the Kashmir Valley since the April 2025 Pahalgam massacre.",
+    "lastUpdated": "2026-08-10T14:22:18.000Z"
+  },
+  {
+    "id": "ajk-jaac-election-protests-2026",
+    "category": "AJK JAAC Election-Reform Protests (Jun–Aug 2026)",
+    "killed": "89 (JKHRO verified) / 7 security personnel (AJK govt confirmed)",
+    "injured": "Dozens (unofficial)",
+    "source": "Jammu Kashmir Human Rights Observatory (JKHRO) / Al Jazeera / Tribune India",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Clashes between Jammu Kashmir Joint Awami Action Committee (JAAC) protesters and Pakistani security forces over reserved-seat reforms in Azad Jammu & Kashmir have killed at least 89 people according to the Jammu Kashmir Human Rights Observatory's running verified tally (updated through early August 2026) since unrest began June 7, 2026; the AJK government has confirmed only 7 police/paramilitary deaths. JAAC was banned under the Anti-Terrorism Act on June 5, 2026; unrest forced postponement of voting in 7 of 11 Poonch-division constituencies in the Aug 10 third-phase AJK election. The drawn-out four-phase election process concluded Aug 24 with the new 53-member Legislative Assembly sworn in after a final reserved-seat polling round; PML-N (25 general seats) is set to form the next AJK government, a process PPP has accused of rigging and violence.",
+    "lastUpdated": "2026-08-24T00:00:00.000Z"
+  }
+]

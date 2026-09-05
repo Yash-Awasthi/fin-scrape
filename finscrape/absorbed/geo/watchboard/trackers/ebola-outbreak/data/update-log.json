@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-27T23:59:21.109Z",
+  "tracker": "ebola-outbreak",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-08-14T15:07:31.000Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "lastRun": "2026-08-14T15:07:31.000Z",
+      "status": "updated",
+      "count": 36
+    },
+    "mapPoints": {
+      "lastRun": "2026-08-14T15:07:31.000Z",
+      "status": "updated",
+      "count": 35
+    },
+    "claims": {
+      "status": "ok",
+      "count": 15
+    },
+    "political": {
+      "lastRun": "2026-08-14T15:07:31.000Z",
+      "status": "updated",
+      "count": 15
+    },
+    "casualties": {
+      "lastRun": "2026-08-14T15:07:31.000Z",
+      "status": "updated",
+      "count": 10
+    },
+    "econ": {
+      "status": "ok",
+      "count": 11
+    },
+    "events": {
+      "lastRun": "2026-08-14T15:07:31.000Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-14T15:07:31.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-26T15:22:47.406Z",
+  "tracker": "fusion-energy",
+  "sections": {
+    "kpis": {
+      "count": 11,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 53,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 28,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 15,
+      "status": "updated"
+    },
+    "political": {
+      "count": 17,
+      "status": "updated"
+    },
+    "econ": {
+      "count": 15,
+      "status": "updated"
+    },
+    "events": {
+      "count": 24,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

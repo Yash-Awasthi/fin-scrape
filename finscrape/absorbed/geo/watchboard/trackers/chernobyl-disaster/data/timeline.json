@@ -1,0 +1,608 @@
+[
+  {
+    "era": "The Explosion — 26 April 1986",
+    "events": [
+      {
+        "id": "reactor-4-explosion",
+        "year": "Apr 26, 1986 — 01:23",
+        "title": "Reactor No. 4 Explodes",
+        "type": "explosion",
+        "detail": "At 01:23:40 local time, a safety test gone wrong triggers an uncontrolled nuclear chain reaction in Reactor No. 4 of the Chernobyl Nuclear Power Plant. Two successive explosions destroy the reactor's 1,000-tonne roof and rupture the building. The explosions are the result of a steam explosion and possibly a prompt criticality excursion, releasing approximately 400 times more radiation than the Hiroshima atomic bomb.",
+        "sources": [
+          { "name": "IAEA INSAG-7 Report", "tier": 1, "url": "https://www.iaea.org/publications/3598/the-chernobyl-accident-updating-of-insag-1" },
+          { "name": "UNSCEAR 2008 Report", "tier": 1, "url": "https://www.unscear.org/unscear/en/chernobyl.html" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "graphite-fires-roof",
+        "year": "Apr 26, 1986 — 01:30",
+        "title": "Burning Graphite Ejected onto Roof",
+        "type": "explosion",
+        "detail": "The explosions hurl burning fragments of the reactor core — including highly radioactive graphite moderator blocks — onto the roofs of adjacent buildings. Approximately 3.5% of the reactor's radioactive inventory is ejected directly into the atmosphere. Fires ignite on the rooftops of the turbine hall and other buildings, creating an extremely hazardous environment for first responders.",
+        "sources": [
+          { "name": "IAEA INSAG-7 Report", "tier": 1, "url": "https://www.iaea.org/publications/3598/the-chernobyl-accident-updating-of-insag-1" },
+          { "name": "BBC — Chernobyl: The True Scale", "tier": 2, "url": "https://www.bbc.com/news/world-europe-26413398" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "firefighters-first-response",
+        "year": "Apr 26, 1986 — 01:28",
+        "title": "Firefighters Respond Without Radiation Protection",
+        "type": "evacuation",
+        "detail": "Firefighters from Chernobyl and Pripyat arrive within minutes, unaware of the extreme radiation levels. They are told the situation is an ordinary fire. Without protective equipment or dosimeters capable of measuring the actual radiation levels, they directly handle radioactive graphite and fight fires on the reactor roof. Within hours, dozens begin exhibiting acute radiation syndrome — vomiting, skin redness, extreme fatigue.",
+        "sources": [
+          { "name": "IAEA Post-Accident Review Meeting", "tier": 1 },
+          { "name": "The Guardian — Chernobyl's Firefighters", "tier": 2, "url": "https://www.theguardian.com/environment/2019/may/28/chernobyl-firefighters-hbo-tv-show" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "dosimeters-removed-coverup",
+        "year": "Apr 26, 1986 — 02:00",
+        "title": "High-Range Dosimeters Confiscated",
+        "type": "coverup",
+        "detail": "Plant safety officer Aleksandr Yuvchenko and others report that dosimeters capable of measuring radiation above 3.6 roentgens per hour are locked away or confiscated by supervisors. Workers and firefighters are given only low-range instruments that go off-scale, leading them to believe the situation is less severe than it is. This suppression of accurate radiation data is one of the first acts of the cover-up, later cited in the IAEA INSAG-7 report.",
+        "sources": [
+          { "name": "IAEA INSAG-7 Report", "tier": 1 },
+          { "name": "Chernobyl — Oral History Archive (IAEA)", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "first-ars-victims",
+        "year": "Apr 26, 1986 — Morning",
+        "title": "First Acute Radiation Syndrome Cases Manifest",
+        "type": "explosion",
+        "detail": "By morning, 134 emergency workers and plant personnel have received radiation doses sufficient to cause Acute Radiation Syndrome (ARS). Symptoms — vomiting, erythema, neurological effects — are documented at local clinics. Victims are transported to Moscow's Hospital No. 6, the USSR's only specialized radiation medicine facility. Of the 134 ARS cases, 28 die within the first three months, including most of the roof firefighters.",
+        "sources": [
+          { "name": "UNSCEAR 2008 Report Vol. II", "tier": 1, "url": "https://www.unscear.org" },
+          { "name": "WHO — Chernobyl Health Effects", "tier": 1, "url": "https://www.who.int/news-room/fact-sheets/detail/chernobyl" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "helicopter-reconnaissance",
+        "year": "Apr 26, 1986 — Morning",
+        "title": "Helicopter Survey Reveals Scale of Destruction",
+        "type": "investigation",
+        "detail": "Early morning helicopter flights over the reactor reveal that the reactor core is open and burning, not merely a roof fire as initially reported by plant director Viktor Bryukhanov. The helicopter crews receive significant radiation doses. Reports reach Moscow indicating the true catastrophic scale, but official communications continue to downplay the event for public consumption.",
+        "sources": [
+          { "name": "IAEA INSAG-7 Report", "tier": 1 },
+          { "name": "Reuters — Chernobyl 30th Anniversary", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Soviet Cover-Up & Delayed Evacuation — April 1986",
+    "events": [
+      {
+        "id": "pripyat-residents-unwarned",
+        "year": "Apr 26, 1986 — Daytime",
+        "title": "Pripyat's 49,000 Residents Kept Uninformed",
+        "type": "coverup",
+        "detail": "Throughout the day of April 26, the 49,360 residents of Pripyat — the modern city built to house Chernobyl workers just 3 km from the plant — go about daily life. Schools are open, children play outdoors. City officials receive no evacuation orders. Local Communist Party officials are aware of the explosion but told to maintain calm and say nothing. Radiation levels in the city rise throughout the day.",
+        "sources": [
+          { "name": "UNSCEAR 2008 Report", "tier": 1 },
+          { "name": "BBC — Chernobyl Evacuation", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "moscow-commission-formed",
+        "year": "Apr 26, 1986 — Afternoon",
+        "title": "Moscow Government Commission Dispatched",
+        "type": "investigation",
+        "detail": "Soviet Deputy Prime Minister Boris Shcherbina is assigned to lead a government commission to the accident site. Nuclear physicists including Valery Legasov (IAEA Scientific Council Member and Deputy Director of the Kurchatov Institute) join the delegation. The commission arrives at Chernobyl late on April 26. Legasov will later write that the scale of the disaster was apparent immediately — the graphite blocks on the ground, the blue glow of the ionized air.",
+        "sources": [
+          { "name": "Valery Legasov — Memoirs (Kurchatov Institute archives)", "tier": 1 },
+          { "name": "BBC — Valery Legasov Profile", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "pripyat-evacuation",
+        "year": "Apr 27, 1986 — 14:00",
+        "title": "Pripyat Evacuated 36 Hours After Explosion",
+        "type": "evacuation",
+        "detail": "At 14:00 on April 27 — approximately 36 hours after the explosion — Pripyat's 49,360 residents are given two hours to pack essentials and board a convoy of 1,100 buses. Residents are told the evacuation is temporary, lasting three days. Most leave valuables and pets behind. They will never return. The 36-hour delay in evacuation, during which residents were exposed to high radiation levels, is subsequently identified as a major public health failure driven by Soviet institutional inertia and fear of causing panic.",
+        "sources": [
+          { "name": "IAEA INSAG-7 Report", "tier": 1 },
+          { "name": "UNSCEAR 2008 — Exposure of the Public", "tier": 1 },
+          { "name": "The Guardian — Pripyat Evacuation", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "sweden-detects-fallout",
+        "year": "Apr 28, 1986",
+        "title": "Sweden Forces Soviet Admission After Detecting Fallout",
+        "type": "investigation",
+        "detail": "Workers at Sweden's Forsmark Nuclear Power Plant detect elevated radiation levels on their clothing — traced not to their plant but to particles from the Soviet Union. Swedish authorities alert the Soviet government and demand an explanation. Facing international pressure, Soviet state media issues its first public statement — a four-sentence report on TASS at 21:00 on April 28, nearly 64 hours after the explosion, calling it an 'accident.' This was the first public acknowledgment of the disaster.",
+        "sources": [
+          { "name": "Swedish Radiation Safety Authority", "tier": 1 },
+          { "name": "IAEA — The International Chernobyl Project", "tier": 1 },
+          { "name": "Reuters — Sweden and Chernobyl", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "tass-four-sentence-statement",
+        "year": "Apr 28, 1986",
+        "title": "Soviet TASS Issues Four-Sentence Statement",
+        "type": "coverup",
+        "detail": "Forced by Sweden's detection and international pressure, Soviet state news agency TASS releases a brief statement: 'An accident has occurred at the Chernobyl nuclear power plant as one of the reactors was damaged. Measures are being taken to eliminate the consequences of the accident.' The statement contains no mention of casualties, radiation levels, or the scale of the catastrophe. Soviet state television provides no coverage. International news organizations have no access.",
+        "sources": [
+          { "name": "TASS Historical Archives", "tier": 1 },
+          { "name": "Columbia Journalism Review — Chernobyl Media", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "european-fallout-spread",
+        "year": "Apr 28–May 6, 1986",
+        "title": "Radioactive Fallout Spreads Across Europe",
+        "type": "investigation",
+        "detail": "Over 10 days, atmospheric winds carry the radioactive plume across Europe. Cesium-137, iodine-131, strontium-90, and other radionuclides are deposited in Belarus, Ukraine, Russia, Finland, Sweden, Poland, Austria, and beyond. An estimated 5.2 million people in Belarus, Russia, and Ukraine live in areas receiving significant contamination (above 37 kBq/m² of cesium-137). The plume's trajectory shifts with weather patterns, creating an uneven contamination map.",
+        "sources": [
+          { "name": "UNSCEAR 2008 Report — Annex D", "tier": 1 },
+          { "name": "WHO — Chernobyl Health Effects Report", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "may-day-parade-kyiv",
+        "year": "May 1, 1986",
+        "title": "Kyiv May Day Parade Held Despite Contamination",
+        "type": "coverup",
+        "detail": "Soviet authorities order the traditional May Day parade to proceed in Kyiv — just 130 km south of Chernobyl — despite elevated radiation levels in the city. Children and parents march through contaminated air while Communist Party leaders watch from the reviewing stand. Officials later acknowledge this decision was intended to prevent panic and maintain the appearance of Soviet normality. Ukrainian doctors who warned against the parade were overruled. It became a defining symbol of the Soviet cover-up.",
+        "sources": [
+          { "name": "Alla Yaroshinskaya — Chernobyl: The Forbidden Truth", "tier": 3 },
+          { "name": "BBC — Soviet Chernobyl Cover-Up", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "gorbachev-first-address",
+        "year": "May 14, 1986",
+        "title": "Gorbachev Addresses Nation — 18 Days Late",
+        "type": "coverup",
+        "detail": "Mikhail Gorbachev makes his first televised address to the Soviet nation about Chernobyl — 18 days after the explosion. He frames the accident as a test of the newly proclaimed glasnost policy and criticizes 'bureaucratic distortions' but does not acknowledge the full extent of casualties or contamination. The speech is notable for what it omits rather than reveals. Gorbachev later wrote that Chernobyl was a 'turning point' that 'opened the possibility of much greater freedom of expression' in the USSR.",
+        "sources": [
+          { "name": "Mikhail Gorbachev — Memoirs (1996)", "tier": 1 },
+          { "name": "AP — Gorbachev Chernobyl Speech", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Liquidation Campaign — 1986–1990",
+    "events": [
+      {
+        "id": "helicopter-sand-boron-drops",
+        "year": "Apr 27–May 10, 1986",
+        "title": "Helicopter Drops of Sand, Lead, and Boron",
+        "type": "evacuation",
+        "detail": "Military helicopters make approximately 1,800 flights to drop 5,000 tonnes of sand, clay, lead, and neutron-absorbing boron on the burning reactor. The operation is dangerous — helicopters must fly through high radiation fields and the rising plume. Several helicopter crews are grounded after receiving high doses. By May 10, the graphite and fuel fires are largely extinguished. The drops also contribute to the eventual partial collapse of the reactor building.",
+        "sources": [
+          { "name": "IAEA Safety Report: Chernobyl's Legacy", "tier": 1, "url": "https://www.iaea.org/publications/7279/chernobyl-s-legacy-health-environmental-and-socio-economic-impacts" },
+          { "name": "UNSCEAR 2008", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "miners-tunnel-construction",
+        "year": "Jun–Jul 1986",
+        "title": "3,000 Miners Dig Tunnel Under Reactor",
+        "type": "investigation",
+        "detail": "Approximately 3,000 coal miners from Donetsk and Moscow are mobilized to excavate a tunnel beneath Reactor No. 4 to install a cooling system and prevent a hypothesized melt-through into the water table. The miners work in brutal conditions — high heat and radiation — with minimal protective equipment. The cooling system they install is ultimately never activated as the corium (melted reactor core) solidifies naturally. Many miners later develop serious health problems and call for recognition of their sacrifices.",
+        "sources": [
+          { "name": "IAEA Chernobyl Project Technical Report", "tier": 1 },
+          { "name": "The Guardian — Chernobyl Miners", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "biorobots-roof-decontamination",
+        "year": "Oct 1986",
+        "title": "'Biorobots' Manually Clear Radioactive Roof Debris",
+        "type": "evacuation",
+        "detail": "In October 1986, after Soviet and German remote-controlled robots failed due to electronics damage from radiation, Soviet authorities deploy 'biorobots' — human workers — to manually clear radioactive graphite and debris from the roof of the adjacent Unit 3 building. Each worker is limited to 40–90 seconds on the roof per mission. Approximately 3,500 men participated in the roof-clearing operation over several days, earning them the nickname 'biorobots' or 'roof cats.' Many subsequently developed serious health conditions.",
+        "sources": [
+          { "name": "IAEA Safety Report", "tier": 1 },
+          { "name": "Chernobyl Children International", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "sarcophagus-construction-completed",
+        "year": "Nov 1986",
+        "title": "Concrete Sarcophagus Completed in 206 Days",
+        "type": "memorial",
+        "detail": "A massive concrete and steel 'sarcophagus' encasing Reactor No. 4 is completed on November 30, 1986 — just 206 days after the explosion. Approximately 200,000–240,000 construction workers contribute to its construction. Built under extreme time pressure, the structure is deliberately designed as a temporary containment measure. Engineers are aware it has significant structural deficiencies — gaps in the roof, no filtration system, limited structural integrity. It is estimated to contain 200 tonnes of melted nuclear fuel.",
+        "sources": [
+          { "name": "IAEA Safety Report: Chernobyl's Legacy", "tier": 1 },
+          { "name": "WHO — Chernobyl Health Effects", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "iaea-vienna-conference",
+        "year": "Aug 25–29, 1986",
+        "title": "IAEA Vienna Conference — Soviet Scientists Present Data",
+        "type": "investigation",
+        "detail": "In an unprecedented move, Soviet scientists led by Valery Legasov present a comprehensive 382-page technical report on the Chernobyl accident to the IAEA Post-Accident Review Meeting in Vienna. The presentation — praised for its openness — is seen as a breakthrough for Soviet transparency and glasnost. However, subsequent IAEA review (INSAG-7, 1992) reveals that the Soviet report placed excessive blame on operator error while minimizing fundamental RBMK reactor design flaws that made the explosion possible.",
+        "sources": [
+          { "name": "IAEA INSAG-1 Report (1986)", "tier": 1 },
+          { "name": "IAEA INSAG-7 Report (1992)", "tier": 1, "url": "https://www.iaea.org/publications/3598/the-chernobyl-accident-updating-of-insag-1" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "liquidators-campaign",
+        "year": "1986–1990",
+        "title": "600,000 Liquidators Deployed in Cleanup",
+        "type": "evacuation",
+        "detail": "Over the course of the cleanup from 1986 to 1990, an estimated 600,000 persons — officially designated 'liquidators' — are deployed in cleanup and decontamination operations. They include military reservists, miners, construction workers, and specialists from across the Soviet Union. Many are not fully informed of radiation risks. Individual doses range widely; UNSCEAR estimates approximately 240,000 liquidators received 'higher doses' (average ~100 mSv). Long-term health monitoring of this population remains contested and politically contentious.",
+        "sources": [
+          { "name": "UNSCEAR 2008 Report", "tier": 1 },
+          { "name": "WHO — Chernobyl Health Effects", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "extended-exclusion-zone",
+        "year": "May 1986",
+        "title": "30 km Exclusion Zone Established, 116,000 Evacuated",
+        "type": "evacuation",
+        "detail": "Following Pripyat's evacuation on April 27, Soviet authorities establish a 10 km exclusion zone, then expand it to 30 km in early May. By the end of May 1986, approximately 116,000 people have been evacuated from the zone. An additional 220,000 people are relocated from Belarus, Russia, and Ukraine between 1986 and 1990 as contamination maps are refined. Many of the early evacuees are resettled in substandard conditions, contributing to significant psychosocial trauma.",
+        "sources": [
+          { "name": "UNSCEAR 2008 Report", "tier": 1 },
+          { "name": "UN Chernobyl Forum Report 2005", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "red-forest-bulldozed",
+        "year": "1986",
+        "title": "The 'Red Forest' Bulldozed and Buried",
+        "type": "evacuation",
+        "detail": "The pine forest immediately west of the reactor, which turned rust-red from intense radiation exposure in the days after the explosion, is bulldozed and buried in trenches. This area — covering about 4–6 km² — received the highest radiation doses of any terrestrial ecosystem. The trees, killed by radiation, turn a distinctive reddish-brown color, giving rise to the name 'Red Forest' (Рыжий лес). Burying the trees creates permanent radioactive waste in the soil that will remain hazardous for centuries.",
+        "sources": [
+          { "name": "IAEA Environmental Consequences Report", "tier": 1 },
+          { "name": "Chernobyl: Assessment of Radiological and Health Impacts (OECD)", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Trials, Glasnost & Soviet Collapse — 1987–1991",
+    "events": [
+      {
+        "id": "show-trial-plant-workers",
+        "year": "Jul 1987",
+        "title": "Six Chernobyl Officials Tried and Convicted",
+        "type": "investigation",
+        "detail": "In July 1987, a Soviet court tries six Chernobyl NPP officials, including plant director Viktor Bryukhanov, chief engineer Nikolai Fomin, and deputy chief engineer Anatoly Dyatlov. All six are convicted of criminal negligence and violations of safety regulations. Bryukhanov, Fomin, and Dyatlov receive the maximum sentence of 10 years each. Critics argue the trial is a show trial designed to place all blame on plant workers while shielding Soviet system failures and RBMK reactor design flaws from scrutiny.",
+        "sources": [
+          { "name": "Soviet Supreme Court Records (1987)", "tier": 1 },
+          { "name": "RFE/RL — Chernobyl Trial Analysis", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "legasov-tape-recordings",
+        "year": "Apr 1988",
+        "title": "Legasov Secretly Records Cassette Tapes Condemning Cover-Up",
+        "type": "investigation",
+        "detail": "In the final weeks of his life, Valery Legasov — the Soviet scientist who led the government commission and presented data at Vienna — records a series of candid cassette tape testimonies describing systematic failures in Soviet nuclear safety culture, the suppression of safety information, and the institutional pressures that led to the disaster. He criticizes the Academy of Sciences, the KGB, and government officials. The tapes are hidden before his death.",
+        "sources": [
+          { "name": "Valery Legasov Tapes (Kurchatov Institute)", "tier": 1 },
+          { "name": "Novaya Gazeta — Legasov Testimony", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "legasov-suicide",
+        "year": "Apr 27, 1988",
+        "title": "Legasov Takes His Life on Second Anniversary",
+        "type": "investigation",
+        "detail": "On April 27, 1988 — the second anniversary of Pripyat's evacuation — Valery Legasov dies by suicide at his Moscow apartment. He was 51. Legasov had grown increasingly despondent after being passed over for the Lenin Prize and marginalized by Soviet scientific establishment for his outspoken safety reforms after Chernobyl. His cassette tapes are discovered posthumously and their contents eventually published, revealing his scathing indictment of Soviet nuclear secrecy. In 1996, Ukrainian President Kuchma posthumously awards him the title 'Hero of Ukraine.'",
+        "sources": [
+          { "name": "Kurchatov Institute Archive", "tier": 1 },
+          { "name": "BBC Profile — Valery Legasov", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "yaroshinskaya-exposes-secrets",
+        "year": "1989–1990",
+        "title": "Journalist Alla Yaroshinskaya Exposes Secret Chernobyl Documents",
+        "type": "investigation",
+        "detail": "Ukrainian journalist and People's Deputy Alla Yaroshinskaya obtains classified Politburo documents showing that Soviet leaders knew the true scale of the disaster but deliberately concealed it from the public and even from local officials. She publishes the classified protocols in the Soviet newspaper Rabochaya Tribuna and in her book 'Chernobyl: The Forbidden Truth.' Her disclosures contribute to public outrage in Ukraine and Belarus and fuel growing independence movements. In 1991, she receives the Goldman Environmental Prize.",
+        "sources": [
+          { "name": "Alla Yaroshinskaya — Chernobyl: The Forbidden Truth (1991)", "tier": 3 },
+          { "name": "Goldman Environmental Prize Records", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "chernobyl-glasnost-catalyst",
+        "year": "1988–1991",
+        "title": "Chernobyl Accelerates Glasnost and Soviet Nationalism",
+        "type": "investigation",
+        "detail": "The Chernobyl disaster becomes a catalyst for Mikhail Gorbachev's glasnost (openness) reforms as the Soviet government is forced into unprecedented transparency. In Ukraine and Belarus, environmental movements emerge around Chernobyl that evolve into independence movements. Gorbachev later states: 'Chernobyl was perhaps the real cause of the collapse of the Soviet Union five years later.' The disaster demonstrates the inability of Soviet institutions to protect citizens and the hypocrisy of official secrecy.",
+        "sources": [
+          { "name": "Mikhail Gorbachev — 'Turning Point at Chernobyl,' Project Syndicate (2006)", "tier": 1 },
+          { "name": "Journal of Cold War Studies — Chernobyl and Soviet Collapse", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ukraine-independence-1991",
+        "year": "Aug 24, 1991",
+        "title": "Ukraine Declares Independence, Inherits Chernobyl",
+        "type": "investigation",
+        "detail": "Ukraine declares independence from the Soviet Union on August 24, 1991, following the failed coup against Gorbachev. The declaration leaves Ukraine as the new sovereign authority over the Chernobyl Nuclear Power Plant, the exclusion zone, and the ongoing cleanup operation — without the vast Soviet technical and financial resources that had previously supported them. Ukraine also inherits the Soviet Union's nuclear arsenal and faces immediate pressure from Russia and the West regarding the plant's continued operation.",
+        "sources": [
+          { "name": "Ukrainian Verkhovna Rada Declaration of Independence (1991)", "tier": 1 },
+          { "name": "IAEA — Ukraine Country Nuclear Profile", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Post-Soviet Ukraine & Long-Term Health Studies — 1991–2006",
+    "events": [
+      {
+        "id": "thyroid-cancer-epidemic-children",
+        "year": "1990s",
+        "title": "Epidemic of Thyroid Cancer in Children Documented",
+        "type": "investigation",
+        "detail": "By the early 1990s, epidemiologists document a dramatic increase in thyroid cancer among children who were under age 18 in 1986 in Belarus, Ukraine, and Russia. Iodine-131 released by the explosion concentrated in the thyroid glands of children who drank contaminated milk or breathed contaminated air in the days following the disaster. Over 6,000 thyroid cancer cases are eventually documented in this population. While most are treatable with surgery, approximately 15 patients die. The causal link to Chernobyl radiation is scientifically established.",
+        "sources": [
+          { "name": "UNSCEAR 2008 Report — Annex D", "tier": 1 },
+          { "name": "WHO — Health Effects of the Chernobyl Accident", "tier": 1, "url": "https://www.who.int" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "chernobyl-npp-unit1-2-closure",
+        "year": "1991–1996",
+        "title": "Chernobyl Units 1 and 2 Shut Down",
+        "type": "memorial",
+        "detail": "Following a turbine building fire at Unit 2 in October 1991, that reactor is permanently closed. The Ukrainian government closes Unit 1 in November 1996 under international pressure and an agreement with the G7 nations (the 'Memorandum of Understanding') that links closure to international financial assistance. The continued operation of Chernobyl's other reactors after 1986 remains controversial — the plant was still generating electricity and providing significant income to cash-strapped post-Soviet Ukraine.",
+        "sources": [
+          { "name": "IAEA — Chernobyl NPP Country Report", "tier": 1 },
+          { "name": "G7 Memorandum of Understanding on Chernobyl (1995)", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "chernobyl-npp-final-closure",
+        "year": "Dec 15, 2000",
+        "title": "Chernobyl Nuclear Power Plant Permanently Closed",
+        "type": "memorial",
+        "detail": "Under international pressure and a financial assistance agreement, Ukrainian President Leonid Kuchma signs the order permanently shutting down the last operating reactor (Unit 3) at the Chernobyl Nuclear Power Plant on December 15, 2000. The closure is marked by a ceremony attended by international observers. Ukraine had negotiated for years over the closure, seeking compensation for lost electricity generation. The plant transitions to decommissioning status; the exclusion zone remains permanently inhabited only by a small number of 'self-settlers.'",
+        "sources": [
+          { "name": "IAEA Press Release — Chernobyl NPP Closure", "tier": 1 },
+          { "name": "AP — Chernobyl Closes", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "unscear-2000-report",
+        "year": "2000",
+        "title": "UNSCEAR 2000 Report: Key Health Findings",
+        "type": "investigation",
+        "detail": "The UN Scientific Committee on the Effects of Atomic Radiation (UNSCEAR) publishes its first comprehensive health assessment of the Chernobyl disaster in 2000. It documents the thyroid cancer epidemic in children as the clearest health impact, acknowledges increased psychological health problems and stigma among affected populations, but does not find statistically significant increases in other cancers. The report's conservative methodology is subsequently criticized by environmental groups and some independent researchers who argue it underestimates long-term cancer mortality.",
+        "sources": [
+          { "name": "UNSCEAR 2000 Report Vol. II", "tier": 1, "url": "https://www.unscear.org" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "chernobyl-forum-report",
+        "year": "Sep 2005",
+        "title": "Chernobyl Forum: Estimates Up to 4,000 Cancer Deaths",
+        "type": "investigation",
+        "detail": "The Chernobyl Forum — a collaborative report by eight UN agencies including IAEA, WHO, UNDP, and UNICEF — is released in September 2005. It estimates that up to 4,000 people from the most exposed populations could eventually die from radiation-related cancers, with a best estimate of approximately 4,000 deaths among the 600,000 most highly exposed workers and evacuees. The report acknowledges widespread psychological trauma and stigma as among the most serious long-term impacts. It is controversial for what critics call an underestimate of total casualties.",
+        "sources": [
+          { "name": "Chernobyl Forum Report (2005)", "tier": 1, "url": "https://www.iaea.org/publications/7279/chernobyl-s-legacy-health-environmental-and-socio-economic-impacts" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "torch-report-2006",
+        "year": "Apr 2006",
+        "title": "TORCH Report: 30,000–60,000 Excess Cancer Deaths Estimated",
+        "type": "investigation",
+        "detail": "The Independent TORCH (The Other Report on Chernobyl) report, commissioned by the Greens-European Free Alliance and authored by radiation health experts Ian Fairlie and David Sumner, is published in April 2006. Using different methodologies than the Chernobyl Forum, it estimates 30,000–60,000 excess cancer deaths in Europe from the disaster, with a central estimate of approximately 66,000 in the former Soviet Union. The report challenges the IAEA/WHO methodology as systematically underestimating cancer risk and calls for independent research.",
+        "sources": [
+          { "name": "TORCH Report (Fairlie & Sumner, 2006)", "tier": 3, "url": "https://www.chernobylreport.org" },
+          { "name": "Greenpeace — Chernobyl Health Legacy", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "New Safe Confinement & Modern Legacy — 2006–2026",
+    "events": [
+      {
+        "id": "sarcophagus-deterioration",
+        "year": "2003–2008",
+        "title": "Original Sarcophagus Cracks and Deteriorates",
+        "type": "investigation",
+        "detail": "By the mid-2000s, structural inspections reveal significant deterioration in the original 1986 concrete sarcophagus. Cracks allow rainwater to enter, causing radioactive water to flow into the groundwater. In February 2013, a section of the machine hall roof collapses under snow load. The structure is estimated to contain approximately 200 tonnes of melted nuclear fuel as corium — a mixture of nuclear fuel, graphite, sand, and concrete formed during the meltdown — and poses an ongoing threat if the sarcophagus itself were to collapse.",
+        "sources": [
+          { "name": "IAEA — Status of the Chernobyl Sarcophagus", "tier": 1 },
+          { "name": "European Bank for Reconstruction and Development — NSC Project", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "nsc-construction-begins",
+        "year": "2012",
+        "title": "New Safe Confinement Arch Construction Begins",
+        "type": "memorial",
+        "detail": "Construction of the New Safe Confinement (NSC) — a massive 257-metre-wide, 108-metre-high stainless steel arch — begins in earnest in 2012. Funded primarily by the European Bank for Reconstruction and Development (EBRD) with contributions from over 45 countries, the total project cost exceeds €2.1 billion. The arch is assembled in sections away from the reactor to minimize worker radiation exposure, then slid into place over the existing sarcophagus on specialized rails.",
+        "sources": [
+          { "name": "EBRD — New Safe Confinement Project", "tier": 1, "url": "https://www.ebrd.com/what-we-do/sectors-and-topics/chernobyl-new-safe-confinement.html" },
+          { "name": "Reuters — NSC Construction", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "nsc-sliding-completion",
+        "year": "Nov 29, 2016",
+        "title": "New Safe Confinement Arch Slid Into Place",
+        "type": "memorial",
+        "detail": "On November 29, 2016, the New Safe Confinement arch is successfully slid 327 metres on hydraulic rails to cover the original sarcophagus. The operation takes 15 days. The NSC is designed to last at least 100 years, providing a safe enclosure for the dismantlement of the original sarcophagus and eventually the reactor itself. The NSC is the largest movable structure ever built. A ceremony marking its completion is attended by Ukrainian President Petro Poroshenko and EBRD President Chakrabarti.",
+        "sources": [
+          { "name": "EBRD — NSC Completion Press Release (2016)", "tier": 1 },
+          { "name": "BBC — Chernobyl New Shelter", "tier": 2, "url": "https://www.bbc.com/news/world-europe-38148728" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "hbo-chernobyl-miniseries",
+        "year": "May 2019",
+        "title": "HBO Chernobyl Miniseries Reignites Global Interest",
+        "type": "memorial",
+        "detail": "HBO's Chernobyl miniseries, created by Craig Mazin and directed by Johan Renck, premieres in May 2019. It becomes the highest-rated television program in IMDB history within weeks of release. The series depicts the explosion, cover-up, and the role of Valery Legasov with high historical fidelity (though some details are dramatized). Tourism to the Chernobyl exclusion zone surges by 35% in 2019 following its premiere. The series spurs new international interest in the disaster's history and legacy.",
+        "sources": [
+          { "name": "AP — HBO Chernobyl Review", "tier": 2 },
+          { "name": "Ukrainian Tourism Authority — Exclusion Zone Visit Statistics", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "russian-occupation-chernobyl",
+        "year": "Feb 24, 2022",
+        "title": "Russian Forces Seize Chernobyl Exclusion Zone",
+        "type": "investigation",
+        "detail": "On February 24, 2022, Russian military forces advancing on Kyiv seize the Chernobyl Nuclear Power Plant and exclusion zone as part of Russia's full-scale invasion of Ukraine. Russian troops dig trenches in the Red Forest, stirring up highly radioactive soil. IAEA Director General Rafael Grossi expresses alarm about the safety of spent nuclear fuel and monitoring systems. Ukraine's State Nuclear Regulatory Inspectorate reports elevated radiation levels in the zone. Russian forces withdraw on March 31, 2022, after approximately 5 weeks of occupation.",
+        "sources": [
+          { "name": "IAEA Director General Reports — Ukraine (2022)", "tier": 1, "url": "https://www.iaea.org" },
+          { "name": "Reuters — Russia Seizes Chernobyl", "tier": 2 },
+          { "name": "Kyiv Post — Chernobyl Under Occupation", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "40th-anniversary-2026",
+        "year": "Apr 26, 2026",
+        "title": "40th Anniversary: Legacy, Drone-Sparked Wildfire, and NSC Repair Crisis",
+        "type": "memorial",
+        "detail": "On April 26, 2026, the world marks the 40th anniversary of the Chernobyl disaster with ceremonies at the plant site and in Kyiv. Surviving liquidators return to Chernobyl for the first time in years, sharing testimonies of chronic health impacts. Ukrainian President Zelenskyy accuses Russia of 'nuclear terrorism' through repeated drone attacks on the exclusion zone — including a February 2025 strike on the New Safe Confinement arch requiring an estimated €500M in repairs. IAEA Director General Grossi signs a Memorandum of Understanding with Ukraine for NSC repair support; full restoration is targeted for 2030. Germany's Federal Office for Radiation Protection issues a comprehensive 40th anniversary environmental health assessment. Less than two weeks later, on May 7–8, Russian Shahed drone crashes ignite a 1,100-hectare wildfire in the exclusion zone — a stark demonstration of ongoing threats to the site.",
+        "sources": [
+          { "name": "IAEA Director General Statement on Ukraine", "tier": 1, "url": "https://www.iaea.org/newscenter/pressreleases/update-331-iaea-director-general-statement-on-situation-in-ukraine" },
+          { "name": "Al Jazeera — Liquidators Return 40 Years After Disaster", "tier": 2, "url": "https://www.aljazeera.com/gallery/2026/4/26/survivors-return-to-chernobyl-40-years-after-devastating-explosion" },
+          { "name": "World Nuclear News — NSC Restoration Targeted for 2030", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/full-restoration-of-chernobyl-shelter--function-targeted-for-2030" },
+          { "name": "German Federal Office for Radiation Protection — Chernobyl 2026 Assessment", "tier": 1, "url": "https://www.bfs.de/EN/topics/ion/accident-management/emergency/chornobyl2026/chornobyl2026_node.html" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/gallery/2026/4/26/survivors-return-to-chernobyl-40-years-after-devastating-explosion",
+            "caption": "Surviving liquidators return to Chernobyl on the 40th anniversary",
+            "source": "Al Jazeera / AP",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/AP26113371686055-1777188443.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-16T14:23:47.391Z"
+      },
+      {
+        "id": "chernobyl-isf2-drone-strike-jun-2026",
+        "year": "Jun 7, 2026",
+        "title": "Russian Drone Strikes Spent Fuel Storage Facility (ISF-2)",
+        "type": "investigation",
+        "detail": "A Russian Shahed drone strikes the Central Spent Nuclear Fuel Storage Facility (ISF-2) in the Chernobyl exclusion zone, damaging the fuel-reception building and the IAEA's on-site safeguards office. No spent fuel is present in the damaged section and radiation levels stay normal, but IAEA Director General Rafael Grossi calls the strike 'extremely dangerous,' warning that attacking a facility holding large quantities of nuclear material 'must not happen.'",
+        "sources": [
+          { "name": "World Nuclear News — IAEA warning after drone hits used fuel facility near Chernobyl", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/iaea-warning-after-drone-hits-used-fuel-facility-near-chernobyl" },
+          { "name": "Al Jazeera — Russian drone attack damages site near Chornobyl nuclear plant", "tier": 2, "url": "https://www.aljazeera.com/news/2026/6/7/russian-drone-strike-damages-site-near-chornobyl-nuclear-plant" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.world-nuclear-news.org/articles/iaea-warning-after-drone-hits-used-fuel-facility-near-chernobyl",
+            "caption": "IAEA Director General Rafael Grossi briefs on the ISF-2 drone strike, June 8, 2026",
+            "source": "World Nuclear News / IAEA (Dean Calma)",
+            "thumbnail": "https://www.world-nuclear-news.org/images/articles/grossi_730_8june26_IAEA_45283.jpg"
+          }
+        ],
+        "lastUpdated": "2026-07-16T14:00:00.000Z"
+      },
+      {
+        "id": "chernobyl-wildfire-june-july-2026",
+        "year": "Jun 25–Jul 14, 2026",
+        "title": "Fire Tornado and 500-Hotspot Wildfire Blanket Kyiv in Smog",
+        "type": "investigation",
+        "detail": "A second major exclusion-zone wildfire wave of 2026 ignites from downed drone debris, growing to roughly 500 fire hotspots and producing a rare fire tornado on July 3. Smoke drifts over 170 km south, blanketing Kyiv in heavy smog. Radiation stays within normal limits throughout; the fires are fully contained by July 10–14 after nearly two weeks of round-the-clock firefighting.",
+        "sources": [
+          { "name": "Mezha — State Emergency Service reports four fires in Chornobyl zone", "tier": 2, "url": "https://mezha.net/eng/bukvy/190f8000_state_emergency_service/" },
+          { "name": "Censor.NET — All fires in Chornobyl Zone contained after Russian drone attack", "tier": 2, "url": "https://censor.net/en/photonews/4012191/fires-contained-in-chornobyl-zone-after-drone-attack" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://censor.net/en/photonews/4012191/fires-contained-in-chornobyl-zone-after-drone-attack",
+            "caption": "Firefighters battle wildfires in the Chernobyl exclusion zone, July 2026",
+            "source": "Censor.NET",
+            "thumbnail": "https://images.cnscdn.com/4/e/7/2/4e72bb083d829e30547cadec0c1441fb/780x554.jpg"
+          }
+        ],
+        "lastUpdated": "2026-07-16T14:00:00.000Z"
+      },
+      {
+        "id": "chornobyl-decommissioning-bill-2036",
+        "year": "Aug 9, 2026",
+        "title": "Ukraine Submits Bill Extending Decommissioning Programme to 2036",
+        "type": "investigation",
+        "detail": "Ukraine's Cabinet of Ministers submits a bill to the Verkhovna Rada extending the National Programme for decommissioning the Chornobyl NPP and transforming the 'Shelter' object through 2036, specifying UAH 50.8 billion (~$1.1B) in total funding — UAH 45.6B domestic, UAH 5.2B international — and adding tasks to repair New Safe Confinement structures damaged by the February 2025 drone strike. Initiated by newly appointed Prime Minister Serhiy Koretskyi, who took office July 16, 2026.",
+        "sources": [
+          { "name": "Interfax-Ukraine — Govt submits bill to Rada on repairing Chornobyl NPP containment structure after drone attack", "tier": 2, "url": "https://en.interfax.com.ua/news/general/1193297.html", "pole": "eastern" },
+          { "name": "Nuclear Engineering International — Chornobyl funding extended", "tier": 2, "url": "https://www.neimagazine.com/news/chornobyl-funding-extended/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.neimagazine.com/news/chornobyl-funding-extended/",
+            "caption": "The Chornobyl Nuclear Power Plant, subject of Ukraine's extended decommissioning funding bill",
+            "source": "Nuclear Engineering International / ChNPP",
+            "thumbnail": "https://www.neimagazine.com/wp-content/uploads/sites/7/2026/07/Chornobyl-430x241.png"
+          }
+        ],
+        "lastUpdated": "2026-08-15T14:32:39.000Z"
+      },
+      {
+        "id": "chernobyl-zone-fortification-2026",
+        "year": "Aug 10, 2026",
+        "title": "Ukraine Fortifies Exclusion Zone Against Possible Invasion via Belarus",
+        "type": "investigation",
+        "detail": "A Der Spiegel investigation reveals Ukrainian forces have spent recent months digging trenches, timbered defensive tunnels, and checkpoints inside the Chernobyl exclusion zone roughly 15 km from the Belarusian border, and stringing anti-drone nets over zone roads. The preparations reflect concern that Russia could again use Belarusian territory to launch an advance toward Kyiv, as it did in February 2022 when Russian troops occupied Chernobyl and dug trenches in the radioactive Red Forest.",
+        "sources": [
+          { "name": "Censor.NET — Invasion of the Chornobyl Exclusion Zone: how are the Defense Forces preparing?", "tier": 2, "url": "https://censor.net/en/news/4017668/invasion-of-the-chernobyl-exclusion-zone-how-are-the-defense-forces-preparing", "pole": "eastern" },
+          { "name": "UNN — Ukraine is preparing Chernobyl for another attempted invasion by Russia (citing Der Spiegel)", "tier": 2, "url": "https://unn.ua/en/news/ukraine-is-preparing-chernobyl-for-another-attempted-invasion-by-russia-spiegel", "pole": "eastern" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://censor.net/en/news/4017668/invasion-of-the-chernobyl-exclusion-zone-how-are-the-defense-forces-preparing",
+            "caption": "Defensive fortifications under construction in the Chernobyl exclusion zone near the Belarusian border, August 2026",
+            "source": "Censor.NET",
+            "thumbnail": "https://images.cnscdn.com/1/0/0/a/100a4b9bc2cee0ee0e82f8b9fc38060c/original.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-15T14:32:39.000Z"
+      }
+    ]
+  }
+]

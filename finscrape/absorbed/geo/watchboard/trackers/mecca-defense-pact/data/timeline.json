@@ -1,0 +1,803 @@
+[
+  {
+    "era": "Prelude: Doha Strike & Saudi-Pakistan Pact (Sep 2025 – Jan 2026)",
+    "events": [
+      {
+        "id": "doha_strike_2025",
+        "year": "2025-09-09",
+        "title": "Israeli Strike on Hamas Leadership in Doha",
+        "type": "reaction",
+        "detail": "Israel strikes a Hamas political delegation in Doha, Qatar. The attack on Gulf soil unsettles Gulf states' confidence that close US ties would deter Israeli operations against them, becoming a direct catalyst for the Saudi-Pakistan defense pact signed eight days later.",
+        "sources": [
+          {
+            "name": "Wikipedia (Strategic Mutual Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Strategic_Mutual_Defence_Agreement",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "smda_signing",
+        "year": "2025-09-17",
+        "title": "Saudi Arabia and Pakistan Sign Strategic Mutual Defence Agreement",
+        "type": "diplomatic",
+        "detail": "Saudi Crown Prince and PM Mohammed bin Salman and Pakistani PM Shehbaz Sharif sign the Strategic Mutual Defence Agreement (SMDA) at Al-Yamamah Palace in Riyadh, committing both states to treat an act of aggression against one as aggression against both. The role of Pakistan's nuclear arsenal in the pact remains ambiguous — a Saudi official called it \"a comprehensive defensive agreement that encompasses all military means,\" while Pakistani officials maintained it did not include a nuclear umbrella.",
+        "sources": [
+          {
+            "name": "Wikipedia (Strategic Mutual Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Strategic_Mutual_Defence_Agreement",
+            "pole": "international"
+          },
+          {
+            "name": "Vivekananda International Foundation",
+            "tier": 3,
+            "url": "https://www.vifindia.org/2025/september/30/Saudi-Arabia-Pakistan-Strategic-Mutual-Defence-Agreement",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "india_reaction_smda",
+        "year": "2025-09-18",
+        "title": "India Vows to Safeguard National Security Amid Pact",
+        "type": "reaction",
+        "detail": "India's government reacts to the Saudi-Pakistan pact, with officials stating they will monitor the agreement's implications and safeguard India's national security interests given Pakistan's role as a signatory.",
+        "sources": [
+          {
+            "name": "All India Radio / NewsOnAIR",
+            "tier": 2,
+            "url": "https://www.newsonair.gov.in/india-reacts-to-saudi-pakistan-defense-pact-vows-to-safeguard-national-security",
+            "pole": "eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "iran_welcomes_smda",
+        "year": "2025-09-25",
+        "title": "Iran's Pezeshkian Welcomes SMDA as Regional Security Step",
+        "type": "reaction",
+        "detail": "Iranian President Masoud Pezeshkian welcomes the Saudi-Pakistan pact as the beginning of a \"comprehensive regional security system\" that could oppose Israeli military expansion in the region — a notably warmer initial reception than Iran's later, more skeptical stance toward the trilateral Mecca pact.",
+        "sources": [
+          {
+            "name": "Wikipedia (Strategic Mutual Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Strategic_Mutual_Defence_Agreement",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "turkey_denies_joining_smda",
+        "year": "2026-01-20",
+        "title": "Turkey Denies Reports of Joining Saudi-Pakistan Pact",
+        "type": "diplomatic",
+        "detail": "Reports surface that Turkey is considering acceding to the Saudi-Pakistan Strategic Mutual Defence Agreement. Ankara initially denies the reports, though the speculation foreshadows Turkey's formal inclusion seven months later in the Mecca Joint Defence Agreement.",
+        "sources": [
+          {
+            "name": "Wikipedia (Strategic Mutual Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Strategic_Mutual_Defence_Agreement",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "The 2026 Iran War & Pact Invocation (Feb–Apr 2026)",
+    "events": [
+      {
+        "id": "us_israel_strikes_iran",
+        "year": "2026-02-28",
+        "title": "US-Israel Launch ~900 Strikes on Iran, Opening 2026 Iran War",
+        "type": "military",
+        "detail": "US and Israeli forces launch nearly 900 strikes in 12 hours against Iranian missile forces, air defenses, military infrastructure, and leadership targets, opening the 2026 Iran war. Iran responds with sustained ballistic missile and drone waves against Israel and US positions region-wide, setting the stage for retaliatory strikes on Gulf states including Saudi Arabia.",
+        "sources": [
+          {
+            "name": "Britannica",
+            "tier": 3,
+            "url": "https://www.britannica.com/event/2026-Iran-war",
+            "pole": "western"
+          },
+          {
+            "name": "UK House of Commons Library",
+            "tier": 1,
+            "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-10521/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "iran_strikes_psab",
+        "year": "2026-03-01",
+        "title": "Iranian Missiles Hit Prince Sultan Air Base, Riyadh Airport",
+        "type": "military",
+        "detail": "Iran launches retaliatory missiles targeting Prince Sultan Air Base — which hosts US and later Pakistani forces — and Riyadh's airport. A US soldier stationed at the base later dies from injuries sustained in the strike.",
+        "sources": [
+          {
+            "name": "Wikipedia (Saudi Arabia in the 2026 Iran war)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "pakistan_invokes_smda",
+        "year": "2026-03-02",
+        "title": "Pakistan Invokes SMDA as Iran Strikes Saudi Arabia",
+        "type": "military",
+        "detail": "As Iranian strikes continue against Saudi territory, Pakistan's Foreign Minister publicly reminds Iran of the Strategic Mutual Defence Agreement, signaling Islamabad's readiness to treat the attacks as triggering its collective-defense commitments to Riyadh.",
+        "sources": [
+          {
+            "name": "Wikipedia (Saudi Arabia in the 2026 Iran war)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "us_embassy_riyadh_struck",
+        "year": "2026-03-03",
+        "title": "Iranian Drones Strike US Embassy in Riyadh",
+        "type": "military",
+        "detail": "Two Iranian drones strike the US Embassy compound in Riyadh, part of a broader wave of attacks on Saudi Arabia that also hit the Ras Tanura refinery complex, sharpening Gulf perceptions of an active Iranian threat to Saudi sovereignty.",
+        "sources": [
+          {
+            "name": "Wikipedia (Saudi Arabia in the 2026 Iran war)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "al_kharj_drone_strike",
+        "year": "2026-03-08",
+        "title": "Drone Strike on Al-Kharj Kills Two",
+        "type": "military",
+        "detail": "An Iranian drone strike on Al-Kharj, near Prince Sultan Air Base, kills two people and injures twelve, adding to the toll of Iranian strikes on Saudi territory that Riyadh's new defense partners cite as justification for deeper security cooperation.",
+        "sources": [
+          {
+            "name": "Wikipedia (Saudi Arabia in the 2026 Iran war)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "riyadh_summit_march",
+        "year": "2026-03-20",
+        "title": "Riyadh Summit Floats Quadrilateral Defense Arrangement",
+        "type": "diplomatic",
+        "detail": "Saudi, Pakistani and Turkish officials hold summit discussions in Riyadh exploring a broader quadrilateral defense arrangement (reportedly including Egypt) as the Iran war continues. Egypt's reservations at this stage foreshadow its eventual non-participation in the trilateral pact signed in August.",
+        "sources": [
+          {
+            "name": "MEPEI",
+            "tier": 3,
+            "url": "https://mepei.com/the-mecca-joint-defense-agreement-and-the-limits-of-gulf-strategic-autonomy/",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "psab_major_strike",
+        "year": "2026-03-27",
+        "title": "Major Iranian Strike Destroys Aircraft at Prince Sultan Air Base",
+        "type": "military",
+        "detail": "A major Iranian strike on Prince Sultan Air Base destroys refueling aircraft and an AWACS surveillance plane, among the most damaging single strikes on Saudi military infrastructure during the war and a key data point later cited in debates over the credibility of US extended deterrence in the Gulf.",
+        "sources": [
+          {
+            "name": "Wikipedia (Saudi Arabia in the 2026 Iran war)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "iran_ceasefire",
+        "year": "2026-04-08",
+        "title": "Conditional Ceasefire Ends Active Phase of Iran War",
+        "type": "diplomatic",
+        "detail": "A conditional ceasefire, mediated in part by Pakistan, halts the active exchange of strikes between Iran, Israel and the US. The war leaves 3 Saudi civilians dead, 23 injured, and 2 US military personnel dead, alongside significant damage to Saudi military and energy infrastructure — the immediate backdrop against which the Mecca pact would be signed four months later.",
+        "sources": [
+          {
+            "name": "Britannica",
+            "tier": 3,
+            "url": "https://www.britannica.com/event/2026-Iran-war",
+            "pole": "western"
+          },
+          {
+            "name": "Wikipedia (Saudi Arabia in the 2026 Iran war)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "pakistan_troop_deployment_ksa",
+        "year": "2026-04-15",
+        "title": "Pakistan Deploys Troops and Jets to Saudi Arabia Under SMDA",
+        "type": "military",
+        "detail": "Under the Strategic Mutual Defence Agreement, Pakistan deploys forces to Saudi Arabia including fighter jets (mostly JF-17s), drone squadrons and an HQ-9 air defense battery. Reported troop numbers vary by source and date — roughly 8,000 during the war itself, rising to a reported 13,000 troops sent post-ceasefire — the first large-scale operational test of the bilateral pact that later became the template for the Mecca agreement.",
+        "sources": [
+          {
+            "name": "Wikipedia (Saudi Arabia in the 2026 Iran war)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia_in_the_2026_Iran_war",
+            "pole": "international"
+          },
+          {
+            "name": "Wikipedia (Strategic Mutual Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Strategic_Mutual_Defence_Agreement",
+            "pole": "international"
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "Deployed troop figures are contested — 8,000 (May 2026, wartime) vs. 13,000 (post-ceasefire) reported in different sources.",
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Mecca Summit & Trilateral Pact (Aug 7, 2026)",
+    "events": [
+      {
+        "id": "mecca_pact_signing",
+        "year": "2026-08-07",
+        "title": "Saudi Arabia, Turkey and Pakistan Sign Mecca Joint Defence Agreement",
+        "type": "diplomatic",
+        "detail": "At the \"Makkah Al-Mukarramah Summit for Joint Defence\" in Mecca, Saudi Crown Prince Mohammed bin Salman, Turkish President Recep Tayyip Erdoğan and Pakistani PM Shehbaz Sharif sign the Mecca Joint Defence Agreement, extending the 2025 Saudi-Pakistan pact to include Turkey. The core clause: \"any armed attack against any one of the three states shall be regarded as an attack against them all,\" modeled on NATO's Article 5.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/7/turkiye-saudi-arabi-pakistan-sign-joint-defence-agreement-whats-in-it",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "PBS NewsHour",
+            "tier": 2,
+            "url": "https://www.pbs.org/newshour/world/pakistan-says-new-defense-pact-with-saudi-arabia-and-turkey-is-purely-defensive-and-open-to-others",
+            "pole": "western"
+          },
+          {
+            "name": "Wikipedia (Mecca Joint Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Mecca_Joint_Defence_Agreement",
+            "pole": "international"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "pakistan_fm_dar_statement",
+        "year": "2026-08-07",
+        "title": "Pakistan's FM Dar: Pact \"Purely Defensive,\" Open to Others",
+        "type": "diplomatic",
+        "detail": "Pakistani Foreign Minister Ishaq Dar states the Mecca (\"Makkah\") Accord is \"purely defensive in nature\" and open to other states that uphold its principles and resolve disputes peacefully. He stresses it \"does not abrogate or replace any existing bilateral or multilateral agreements between these countries, or with other countries or organizations,\" citing UN Charter Article 51 collective self-defense rights.",
+        "sources": [
+          {
+            "name": "PBS NewsHour",
+            "tier": 2,
+            "url": "https://www.pbs.org/newshour/world/pakistan-says-new-defense-pact-with-saudi-arabia-and-turkey-is-purely-defensive-and-open-to-others",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "turkey_fm_fidan_command_structure",
+        "year": "2026-08-07",
+        "title": "Fidan Outlines NATO-Style Command Structure",
+        "type": "diplomatic",
+        "detail": "Turkish Foreign Minister Hakan Fidan describes a planned command architecture resembling NATO's: a ministerial committee, political and military committees, and a permanent secretariat based in Saudi Arabia. Officials frame the division of labor as Saudi Arabia providing financing, Turkey advanced defense technology, and Pakistan frontline manpower and nuclear-armed deterrent weight.",
+        "sources": [
+          {
+            "name": "Wikipedia (Mecca Joint Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Mecca_Joint_Defence_Agreement",
+            "pole": "international"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/7/turkiye-saudi-arabi-pakistan-sign-joint-defence-agreement-whats-in-it",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "nuclear_umbrella_debate",
+        "year": "2026-08-07",
+        "title": "Analysts Debate Whether Pact Extends Pakistan's Nuclear Umbrella",
+        "type": "diplomatic",
+        "detail": "Following the signing, analysts revive the question of whether Pakistan's nuclear deterrent now covers Saudi Arabia and Turkey. Most assessments — including the Belfer Center's earlier analysis of the 2025 SMDA — conclude an explicit nuclear umbrella is unlikely, since Pakistan's nuclear posture remains India-focused and officials have avoided confirming nuclear-sharing language.",
+        "sources": [
+          {
+            "name": "Wikipedia (Mecca Joint Defence Agreement)",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/Mecca_Joint_Defence_Agreement",
+            "pole": "international"
+          },
+          {
+            "name": "ICAN",
+            "tier": 3,
+            "url": "https://www.icanw.org/pakistan_saudi_arabia_a_mutual_defence_pact_with_nuclear_shadows",
+            "pole": "international"
+          }
+        ],
+        "confidence": "medium",
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Reactions & Regional Realignment (Aug 2026)",
+    "events": [
+      {
+        "id": "iran_reaction_mecca",
+        "year": "2026-08-07",
+        "title": "Iran Dismisses Pact as \"Paper Agreement,\" Calls for Muslim Unity",
+        "type": "reaction",
+        "detail": "Iranian Foreign Minister Abbas Araghchi calls on Muslim states to \"rely only on ourselves and embrace true brotherhood\" without directly criticizing the pact. Majlis National Security Commission member Ebrahim Rezaei is more pointed, dismissing it as a \"paper agreement\" that \"would bring the Saudis no security,\" while the Foreign Ministry spokesperson says there is \"no reason to worry\" given Iran's own ties to all three signatories.",
+        "sources": [
+          {
+            "name": "Iran Analytica",
+            "tier": 3,
+            "url": "https://www.irananalytica.org/p/how-iran-sees-the-mecca-defense-pact",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Türkiye Today",
+            "tier": 2,
+            "url": "https://www.turkiyetoday.com/opinion/how-mecca-pact-is-viewed-by-iran-israel-india-and-uae-3226063",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "israel_reaction_mecca",
+        "year": "2026-08-07",
+        "title": "Senior Israeli Official: \"Agreement Worries Us\"",
+        "type": "reaction",
+        "detail": "A senior Israeli official tells Ynet the pact \"worries us\" and is \"aimed at Israel,\" specifically flagging the risk that Egypt could later join, bringing what the official called \"hostile forces to Israel's doorstep.\" Netanyahu's office and the Foreign Ministry decline formal comment. Israeli analysts are more divided — INSS's Yoel Guzansky calls it \"an alignment, perhaps... not necessarily military,\" while JINSA's Blaise Misztal argues the three signatories' \"only strategic rationale that unites them all is an incompatible one\" since each wants leadership without accepting the others' primacy.",
+        "sources": [
+          {
+            "name": "The Times of Israel",
+            "tier": 2,
+            "url": "https://www.timesofisrael.com/mecca-defense-pact-isnt-meant-to-challenge-israel-at-least-not-on-the-battlefield/",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Türkiye Today",
+            "tier": 2,
+            "url": "https://www.turkiyetoday.com/opinion/how-mecca-pact-is-viewed-by-iran-israel-india-and-uae-3226063",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "uae_reaction_mecca",
+        "year": "2026-08-08",
+        "title": "UAE and Israeli Intelligence Caught Off Guard",
+        "type": "reaction",
+        "detail": "The Mecca pact reportedly surprises Emirati and Israeli intelligence services, with the UAE learning of it only two weeks before the announcement. UAE University's Abdulkhaleq Abdulla publicly criticizes the state of Gulf cooperation, asking \"If this agreement is not an alliance, then what is the name that befits it?\" and warning \"Gulf cooperation is NOT in its best state,\" amid reports of friction between Riyadh and Abu Dhabi over UAE policy in Yemen and Sudan.",
+        "sources": [
+          {
+            "name": "Middle East Eye",
+            "tier": 2,
+            "url": "https://www.middleeasteye.net/opinion/why-mecca-agreement-has-given-UAE-Israel-alliance-the-jitters",
+            "pole": "middle_eastern"
+          }
+        ],
+        "confidence": "medium",
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "india_mea_reaction",
+        "year": "2026-08-08",
+        "title": "India's MEA Says It Is \"Closely Following\" the Pact",
+        "type": "reaction",
+        "detail": "India's Ministry of External Affairs offers a non-committal response, saying it is \"closely following\" the development and expects Riyadh to consider India's \"interests and sensitivities.\" Indian strategic commentators are more alarmed, framing the pact as a setback that strengthens Pakistan's regional standing and complicates India's own relationship with Saudi Arabia.",
+        "sources": [
+          {
+            "name": "Türkiye Today",
+            "tier": 2,
+            "url": "https://www.turkiyetoday.com/opinion/how-mecca-pact-is-viewed-by-iran-israel-india-and-uae-3226063",
+            "pole": "eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "al_jazeera_us_role_analysis",
+        "year": "2026-08-08",
+        "title": "Analysts Debate What the Pact Means for the US Role in the Region",
+        "type": "diplomatic",
+        "detail": "Regional analysts weigh whether the Mecca pact signals declining confidence in US security guarantees or complementary \"burden-sharing.\" The general assessment: signatories are diversifying security partnerships without abandoning Washington outright, with the Trump administration expected to view the arrangement as allies taking on more of their own defense.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/8/what-could-the-mecca-defence-pact-mean-for-the-us-role-in-the-middle-east",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "egypt_expansion_talk",
+        "year": "2026-08-09",
+        "title": "Turkey's Fidan Calls Egypt a \"Natural Partner\" for Accession",
+        "type": "accession",
+        "detail": "Turkish FM Hakan Fidan says \"I believe that at the next stage, Egypt will also be among us in the alliance,\" naming Egypt as the most likely near-term accession candidate. Cairo remains hesitant, wary of open-ended military obligations, its dependence on US aid, and how membership might be read against its peace treaty with Israel and Mediterranean disputes with Greece and Cyprus. Chatham House's Karim Elgendy notes Egypt prefers \"overlapping regional security arrangements that are narrow in scope\" rather than a binding collective-defense clause.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/9/which-other-countries-could-join-the-turkiye-saudi-pakistan-defence-pact",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "capabilities_report",
+        "year": "2026-08-11",
+        "title": "Combined Military Capabilities of the Three Signatories Detailed",
+        "type": "military",
+        "detail": "Al Jazeera details the combined military weight of the pact, citing the 2026 Global Firepower Index: roughly 1.4 million active personnel, 3,415 aircraft, 6,046 tanks, and 344 naval assets (including 33 frigates, 24 corvettes and 22 submarines) across the three states, with combined annual defense spending of about $124.4bn — Saudi Arabia $63.9bn, Turkey $51.4bn, Pakistan $9.1bn. Pakistan alone brings nuclear-weapons status among the three.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/11/what-are-saudi-arabia-turkiye-and-pakistans-joint-military-capabilities",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "osw_analysis_loose_alliance",
+        "year": "2026-08-12",
+        "title": "Analysts Call Pact a \"Loose Alliance\" Lacking Operational Machinery",
+        "type": "diplomatic",
+        "detail": "The OSW Centre for Eastern Studies assesses the Mecca agreement as a \"loose alliance\" that, despite its NATO-like collective-defense clause, lacks \"coordinating institutions or operational arrangements, such as those concerning force deployment.\" The full treaty text remains unpublished, and the three signatories retain distinct geographic priorities — a structural gap other analysts (JINSA's Misztal) attribute to competing bids for regional leadership among the three capitals.",
+        "sources": [
+          {
+            "name": "OSW Centre for Eastern Studies",
+            "tier": 3,
+            "url": "https://www.osw.waw.pl/en/publikacje/analyses/2026-08-12/mecca-agreement-a-loose-alliance-between-saudi-arabia-pakistan-and",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "foreign_policy_pakistan_analysis",
+        "year": "2026-08-12",
+        "title": "Analysis: What the Pact Delivers for Pakistan",
+        "type": "diplomatic",
+        "detail": "Foreign Policy examines the pact's payoff for Islamabad: deeper embedding in Middle Eastern security architecture, enhanced regional prestige as the Muslim world's only nuclear power, and prospective economic opportunities from Saudi financing and Turkish defense-industrial cooperation, alongside the risk of being drawn into conflicts distant from its core India-focused security priorities.",
+        "sources": [
+          {
+            "name": "Foreign Policy",
+            "tier": 2,
+            "url": "https://foreignpolicy.com/2026/08/12/pakistan-mecca-pact-saudi-arabia-turkey-iran-mutual-defense/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "cfr_us_led_order_over",
+        "year": "2026-08-13",
+        "title": "CFR: \"US-Led Middle East Order Is Over\"",
+        "type": "diplomatic",
+        "detail": "Council on Foreign Relations analyst Steven Cook argues the pact proves \"it is no longer possible to talk about a U.S.-led order in the Middle East,\" with regional powers now \"shaping their own security order\" rather than relying on Washington as guarantor. He attributes the shift to years of perceived US policy unpredictability and unreliability during regional crises, and warns of an emerging split between the Mecca-pact bloc and the US-aligned Abraham Accords bloc.",
+        "sources": [
+          {
+            "name": "Council on Foreign Relations",
+            "tier": 3,
+            "url": "https://www.cfr.org/articles/the-u-s-led-middle-east-order-is-over-the-mecca-agreement-proves-it",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "netanyahu_hexagon_alliance",
+        "year": "2026-08-14",
+        "title": "Netanyahu Floats \"Hexagon Alliance\" as Counter-Initiative",
+        "type": "reaction",
+        "detail": "Israeli media report Prime Minister Netanyahu has introduced the concept of a \"Hexagon Alliance\" as a potential counter to the Mecca pact and has lobbied Washington against F-35 sales to Turkey. Israeli minister Amichai Chikli warns Israel should prepare for the possibility of military friction — including at sea — with Turkey, while former PM Naftali Bennett has previously described Turkey as \"the new Iran.\"",
+        "sources": [
+          {
+            "name": "Türkiye Today",
+            "tier": 2,
+            "url": "https://www.turkiyetoday.com/opinion/how-mecca-pact-is-viewed-by-iran-israel-india-and-uae-3226063",
+            "pole": "middle_eastern"
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "Reported by a single Turkish-outlet source; not independently confirmed by an official Israeli government statement.",
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "mecouncil_what_it_is_not",
+        "year": "2026-08-15",
+        "title": "Analysts Push Back on \"Muslim NATO\" Framing",
+        "type": "diplomatic",
+        "detail": "The Middle East Council on Global Affairs publishes an explainer arguing the pact is being widely mischaracterized: it is \"not a sectarian coalition,\" \"not intended to replace the United States or existing security arrangements,\" and \"not a 'NATO in the Middle East' or 'Muslim NATO'\" — noting that unlike NATO's Article 5, \"collective solidarity does not necessarily mean that every attack automatically produces an identical military response.\"",
+        "sources": [
+          {
+            "name": "Middle East Council on Global Affairs",
+            "tier": 3,
+            "url": "https://mecouncil.org/blog_posts/what-is-the-mecca-joint-defense-pact-and-what-it-is-not/",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00Z"
+      },
+      {
+        "id": "saudi_opposed_egypt_accession",
+        "year": "2026-08-11",
+        "title": "Report: Saudi Arabia Opposed Egypt's Inclusion in Mecca Pact",
+        "type": "diplomatic",
+        "detail": "Three Saudi sources tell Middle East Eye that Riyadh, not Cairo, was the party that blocked Egypt's entry into the pact — despite roughly $25bn in Saudi support for Cairo since 2013, citing Egypt's limited backing on Yemen/Houthi and Iran-conflict issues and its closer alignment with the UAE. A former senior adviser to the Saudi monarchy said Egypt \"has always been a dependent on us, on the US, and it does not give back, it just takes and takes.\" The report complicates Turkish FM Fidan's public framing of Egypt as a \"natural partner\" for the pact's next stage of accession.",
+        "sources": [
+          {
+            "name": "Middle East Eye",
+            "tier": 2,
+            "url": "https://www.middleeasteye.net/news/saudi-arabia-opposed-egypts-inclusion-mecca-agreement-sources-say",
+            "pole": "middle_eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.middleeasteye.net/news/saudi-arabia-opposed-egypts-inclusion-mecca-agreement-sources-say",
+            "caption": "Mohammed bin Salman, Erdoğan and Shehbaz Sharif at the Mecca defence pact signing, Aug 7, 2026",
+            "source": "Middle East Eye / Reuters",
+            "thumbnail": "https://www.middleeasteye.net/sites/default/files/styles/crop_16_9/public/images-story/saudi-arabia-mohamed-bin-salman-turkey-erdogan-pakistan-sharif-defence-pact-mecca-7-aug-2026-reuters.jpg.jpg?itok=UCXEJieH"
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "Sourced to three anonymous Saudi officials/advisers via a single Tier 2 outlet; not confirmed on the record by the Saudi or Egyptian governments.",
+        "lastUpdated": "2026-08-21T15:00:05Z"
+      },
+      {
+        "id": "turkey_exercise_mechanisms",
+        "year": "2026-08-13",
+        "title": "Turkey Outlines Phased Joint Exercises and Defense-Industry Cooperation",
+        "type": "military",
+        "detail": "Turkey's defence ministry, briefing in Ankara, lays out how the Mecca pact's military cooperation will be staged: command-post and field exercises first, followed by joint land, naval and air drills plus air-defence and unmanned-systems training. Defense-industry cooperation is to move beyond procurement into joint development and production, technology sharing, and long-term maintenance/logistics support, with emphasis on unmanned systems, electronic warfare and AI. A strategic/political/military mechanism grouping defence ministers, foreign ministers and chiefs of general staff is planned. The goal, per the ministry, is to put defence ties on a \"more institutional and sustainable\" footing.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/13/turkiye-lays-out-mechanisms-of-defence-pact-with-pakistan-saudi-arabia",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Daily Pakistan",
+            "tier": 2,
+            "url": "https://en.dailypakistan.com.pk/14-Aug-2026/turkiye-saudi-arabia-and-pakistan-to-hold-joint-military-exercise-under-makkah-defence-agreement",
+            "pole": "middle_eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/13/turkiye-lays-out-mechanisms-of-defence-pact-with-pakistan-saudi-arabia",
+            "caption": "Erdoğan and Shehbaz Sharif shake hands as Mohammed bin Salman looks on after the Mecca defence pact signing",
+            "source": "Al Jazeera / AFP",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/08/afp_6a79d91dd736-1786370333.jpg?resize=770%2C513&quality=80"
+          }
+        ],
+        "lastUpdated": "2026-08-21T15:00:05Z"
+      },
+      {
+        "id": "trump_praises_pact",
+        "year": "2026-08-17",
+        "title": "Trump Praises Mecca Pact; Analysts Say It Doesn't Replace US Umbrella",
+        "type": "reaction",
+        "detail": "US President Donald Trump writes on Truth Social that he is \"very happy to see\" the pact, saying it \"shows that the Middle East is coming together\" and that \"countries will finally be able to defend themselves in a more meaningful way.\" Analysts caution the framework falls well short of a US substitute: Umer Karim (King Faisal Center) calls it \"a workable alternative\" but \"a separate layer of deterrence,\" not a replacement, while Mansoor Ahmed (ANU) notes it is \"nowhere near matching\" the roughly 50,000 US troops stationed across the region.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/17/trump-hails-mecca-pact-can-it-replace-the-regions-us-security-umbrella",
+            "pole": "middle_eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/17/trump-hails-mecca-pact-can-it-replace-the-regions-us-security-umbrella",
+            "caption": "Analysts weigh whether the Mecca pact can substitute for US security guarantees in the region",
+            "source": "Al Jazeera / AP",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/08/AP26227095299258-1786962525.jpg?resize=770%2C513&quality=80"
+          }
+        ],
+        "lastUpdated": "2026-08-21T15:00:05Z"
+      },
+      {
+        "id": "israel_strikes_syria_turkey_tension",
+        "year": "2026-08-19",
+        "title": "Israeli Strike on Syrian Air Base Signals Turkey-Israel Friction Tied to Pact",
+        "type": "reaction",
+        "detail": "Israel strikes Abu al-Duhur air base in Syria's Idlib governorate shortly after a Turkish military delegation visited to assess rehabilitating the facility. Netanyahu's office says Damascus violated security understandings by \"permitting Turkish troops to deploy at an airbase near Aleppo.\" A US special envoy calls the strike \"an unnecessary escalation.\" Analyst Ali Burak Daricili links the episode directly to the Mecca pact, characterizing it as Ankara's counter-response to \"the strategic axis that Israel has been developing with Greece, the Greek Cypriot Administration and India.\"",
+        "sources": [
+          {
+            "name": "Newsweek",
+            "tier": 2,
+            "url": "https://www.newsweek.com/nato-ally-confronts-warning-shot-from-israel-as-trump-faces-new-test-12338949",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.newsweek.com/nato-ally-confronts-warning-shot-from-israel-as-trump-faces-new-test-12338949",
+            "caption": "Israel strikes Abu al-Duhur air base in Syria after a Turkish delegation visit, amid Mecca-pact-linked tension with Ankara",
+            "source": "Newsweek"
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "Single Tier 2 Western outlet; Israeli and Turkish governments have not both issued matching on-record accounts of the incident's link to the pact.",
+        "lastUpdated": "2026-08-21T15:00:05Z"
+      },
+      {
+        "id": "bangladesh_openness_to_pact",
+        "year": "2026-08-20",
+        "title": "Bangladesh Signals Openness to Joining Pact Framework",
+        "type": "accession",
+        "detail": "Bangladesh's Foreign Affairs Adviser Humayun Kabir tells The Business Standard that Dhaka \"maintains a positive approach towards the possibility of joining an economic or defence framework involving Saudi Arabia, Pakistan and Türkiye, taking into account its own interests and the changing dynamics of the global economy and trade\" — the first public signal of interest from a non-Middle Eastern, non-Gulf state.",
+        "sources": [
+          {
+            "name": "ThePrint",
+            "tier": 2,
+            "url": "https://theprint.in/diplomacy/bangladesh-open-to-joining-mecca-pact-considering-its-own-interests-foreign-affairs-adviser-humayun-kabir/3020678/",
+            "pole": "international"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://theprint.in/diplomacy/bangladesh-open-to-joining-mecca-pact-considering-its-own-interests-foreign-affairs-adviser-humayun-kabir/3020678/",
+            "caption": "Bangladesh Foreign Affairs Adviser Humayun Kabir",
+            "source": "ThePrint",
+            "thumbnail": "https://staticprintenglish.theprint.in/wp-content/uploads/2026/08/BANGLADESH-HUMAYUN-KABIR-696x392.png"
+          }
+        ],
+        "lastUpdated": "2026-08-21T15:00:05Z"
+      },
+      {
+        "id": "abdulla_pakistan_tweet_controversy",
+        "year": "2026-08-15",
+        "title": "Emirati Analyst's Mocking Post About Pakistan Exposes Gulf Unease Over Pact",
+        "type": "reaction",
+        "detail": "Former UAE presidential aide Abdulkhaleq Abdulla posts on X that it is one of the \"paradoxes of time\" that Pakistan — where he says a quarter of the population is poor and a third illiterate — could \"opportunistically\" position itself to defend Saudi Arabia, one of the world's 20 largest economies, citing its roughly 170 nuclear warheads as its main qualification. The post, which drew over a million views, sparks sharp pushback from users defending Pakistan's economy and geopolitical weight. Analysts say the episode lays bare persistent UAE anxiety that the trilateral pact sidelines the GCC framework in favor of a rival axis.",
+        "sources": [
+          {
+            "name": "Middle East Eye",
+            "tier": 2,
+            "url": "https://www.middleeasteye.net/news/emirati-academics-barbed-tweet-pakistan-exposes-uae-unease-over-mecca-pact",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Middle East Eye",
+            "tier": 2,
+            "url": "https://www.middleeasteye.net/trending/saudi-arabia-defence-pact-turkey-pakistan-sparks-uae-backlash",
+            "pole": "middle_eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.middleeasteye.net/news/emirati-academics-barbed-tweet-pakistan-exposes-uae-unease-over-mecca-pact",
+            "caption": "Erdogan, MBS and Shehbaz Sharif meet in Mecca on Aug 7, 2026 — the pact whose fallout later drew a mocking post about Pakistan from an Emirati analyst",
+            "source": "Middle East Eye / AFP",
+            "thumbnail": "https://www.middleeasteye.net/sites/default/files/styles/crop_16_9/public/images-story/Turkish%20President%20Recep%20Tayyip%20Erdogan%2C%20Saudi%20Crown%20Prince%20Mohammed%20bin%20Salman%20and%20Pakistani%20Prime%20Minister%20Shehbaz%20Sharif%20meet%20in%20Mecca%2C%207%20August%202026%20%28AFP%29.jpg.jpg?itok=eIIFGedM"
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "Corroborated by two Middle East Eye pieces; neither the UAE nor Pakistani government has issued an on-record response to the specific post.",
+        "lastUpdated": "2026-08-23T14:20:00Z"
+      },
+      {
+        "id": "iran_invitation_claim",
+        "year": "2026-08-23",
+        "title": "Report: Iran Invited to Join Mecca Pact",
+        "type": "reaction",
+        "detail": "Mehdi Rahimi, head of the Iranian parliament's Khaneh Mellat news agency, tells Lebanon-based Al Mayadeen that Iran \"has received an invitation to join the Mecca Agreement, and the matter is under review,\" calling it \"a victory for Iran, because it has been calling for this for a long time.\" None of the three founding signatories publicly confirms the claim, and Rahimi does not specify which government extended the invitation or when.",
+        "sources": [
+          {
+            "name": "The Media Line",
+            "tier": 2,
+            "url": "https://themedialine.org/mideast-daily-news/iran-reportedly-invited-to-join-mecca-defense-pact/",
+            "pole": "western"
+          },
+          {
+            "name": "Jerusalem Post",
+            "tier": 2,
+            "url": "https://www.jpost.com/middle-east/iran-news/article-906316",
+            "pole": "middle_eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.jpost.com/middle-east/iran-news/article-906316",
+            "caption": "Iran reportedly invited to join the Mecca defense pact, per Iranian parliament news agency",
+            "source": "Jerusalem Post",
+            "thumbnail": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/733193"
+          }
+        ],
+        "confidence": "medium",
+        "confidenceReason": "Sourced to a single Iranian parliamentary official via Al Mayadeen, relayed by two Tier-2 outlets; unconfirmed by any of the three signatory governments.",
+        "lastUpdated": "2026-08-25T15:06:11Z"
+      },
+      {
+        "id": "iran_denies_invitation",
+        "year": "2026-08-24",
+        "title": "Iran's Foreign Ministry Denies Formal Invitation to Join Pact",
+        "type": "reaction",
+        "detail": "Iranian Foreign Ministry spokesperson Esmail Baghaei contradicts the previous day's report, saying Tehran has \"not received a formal invitation, but proposals have been raised for dialogue with these countries on matters related to collective security in the region.\" Baghaei adds Iran has no reason to believe the Mecca agreement targets Tehran. The denial walks back Mehdi Rahimi's Aug 23 claim that Iran had received and was reviewing an invitation.",
+        "sources": [
+          {
+            "name": "Türkiye Today",
+            "tier": 2,
+            "url": "https://www.turkiyetoday.com/region/iran-denies-receiving-formal-invitation-to-join-mecca-defense-pact-3226701",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "TASS",
+            "tier": 2,
+            "url": "https://tass.com/world/2177039",
+            "pole": "eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.turkiyetoday.com/region/iran-denies-receiving-formal-invitation-to-join-mecca-defense-pact-3226701",
+            "caption": "Iranian Foreign Ministry spokesperson Esmail Baghaei denies Tehran received a formal Mecca pact invitation",
+            "source": "Türkiye Today",
+            "thumbnail": "https://img.turkiyetoday.com/images/2026/8/24/iran-denies-receiving-formal-invitation-to-join-mecca-defense-pact-3226701_20260824121106.jpg"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "confidence": "high",
+        "confidenceReason": "On-record denial from Iran's Foreign Ministry spokesperson, corroborated by two independent Tier-2 outlets.",
+        "lastUpdated": "2026-08-25T15:06:11Z"
+      }
+    ]
+  }
+]

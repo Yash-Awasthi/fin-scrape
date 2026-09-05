@@ -1,0 +1,12 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../client';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useMuniBonds() {
+  return useQuery({
+    queryKey: ['muni-bonds'],
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    queryFn: () => api.get<any>('/muni-bonds'),
+    staleTime: 60 * 60_000,
+  });
+}

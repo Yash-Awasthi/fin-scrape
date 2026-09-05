@@ -1,0 +1,105 @@
+[
+  {
+    "id": "diaspora-total",
+    "label": "Venezuelans Displaced",
+    "value": "7.9M",
+    "color": "red",
+    "source": "UNHCR / R4V (2024)",
+    "contested": false,
+    "delta": "+400K vs 2023",
+    "trend": "up",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "oil-production",
+    "label": "Daily Oil Output",
+    "value": "~900K–1.2M bpd",
+    "color": "amber",
+    "source": "EIA / Chevron / PDVSA (May 2026)",
+    "contested": true,
+    "contestNote": "Chevron's Q2 2026 earnings call reported ~280K bpd gross from its PDVSA joint ventures (up ~15% over the prior six months), roughly a third of estimated national output (~900K bpd per industry estimates); Chevron CFO Eimear Bonner said the company sees room to raise Venezuelan volumes up to 50% by end-2028; ExxonMobil/ConocoPhillips negotiations and BP offshore gas deal (April 2026) continue expanding sector access post-Maduro",
+    "delta": "−67% vs 1998 peak (3.3M bpd); +29% vs 2020 low",
+    "trend": "up",
+    "lastUpdated": "2026-08-10T15:47:03Z"
+  },
+  {
+    "id": "inflation-peak",
+    "label": "Peak Hyperinflation",
+    "value": "1,698,488%",
+    "color": "red",
+    "source": "IMF (2018)",
+    "contested": true,
+    "contestNote": "BCV withheld data for years; opposition economists estimated even higher figures",
+    "deltaNote": "Worst inflation in Venezuela's history (2018)",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "poverty-rate",
+    "label": "Extreme Poverty Rate",
+    "value": "~65%",
+    "color": "red",
+    "source": "ENCOVI / Universidad Católica Andrés Bello (2023)",
+    "contested": true,
+    "contestNote": "Government disputes figures; independent surveys consistently show 50–80%",
+    "trend": "down",
+    "deltaNote": "Improved from ~80% (2021) due to partial dollarization",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "political-prisoners",
+    "label": "Political Prisoners",
+    "value": "391 (Foro Penal, Aug 2026)",
+    "color": "amber",
+    "source": "Foro Penal / Al Jazeera (August 2026)",
+    "contested": true,
+    "contestNote": "Foro Penal counted 391 political prisoners still detained (228 civilians, 163 military) as of mid-August, after the government freed 131 more in a mid-August release tied to the transition talks — independently verified at ~43 by Vente Venezuela and 'at least 40' by Foro Penal. That release brought total releases since Maduro's January 3 detention to roughly 1,046 per government/opposition tallies. US Secretary of State Rubio called the release 'a crucial step' for reconciliation; opposition figure Juan Pablo Guanipa demanded all remaining prisoners be freed 'without exception, without delay.'",
+    "trend": "down",
+    "delta": "−1,046 released since Jan 3, 2026 capture; 391 still detained per Foro Penal",
+    "lastUpdated": "2026-08-26T16:11:48.000Z"
+  },
+  {
+    "id": "gdp-decline",
+    "label": "GDP Decline (2013–2021)",
+    "value": "−80%",
+    "color": "red",
+    "source": "IMF / World Bank (2022)",
+    "contested": false,
+    "deltaNote": "Largest peacetime economic contraction in modern history; Q1 2026 shows ~23% year-on-year rebound",
+    "lastUpdated": "2026-05-04T00:00:00Z"
+  },
+  {
+    "id": "remittances",
+    "label": "Annual Remittances",
+    "value": "~$4.6B",
+    "color": "blue",
+    "source": "World Bank (2023)",
+    "contested": false,
+    "trend": "up",
+    "delta": "+15% vs 2022",
+    "deltaNote": "Largest single source of household income for many families",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "minimum-wage",
+    "label": "Monthly Minimum Wage",
+    "value": "$5.50",
+    "color": "amber",
+    "source": "BCV / Datanálisis (2024)",
+    "contested": false,
+    "deltaNote": "Nominal bolívar wage; most workers rely on dollar remittances",
+    "trend": "up",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "earthquake-death-toll",
+    "label": "Earthquake Death Toll (Jun 24 quakes)",
+    "value": "6,509",
+    "color": "red",
+    "source": "Jorge Rodríguez / Government figures (Aug 25, 2026)",
+    "contested": true,
+    "contestNote": "USGS PAGER modeling initially projected a potential toll above 10,000; a UN estimate put ~50,000 people still missing as of late July; only 28.61% of debris had been cleared as of Aug 25, according to Rodríguez; government figures are self-reported without independent verification. Only 335 of the 4,000 promised replacement homes had been delivered as of mid-August, and an August 22 flash flood — unrelated to the earthquakes but striking the same recovering region — killed one more person and left six missing.",
+    "delta": "+71 since Aug 17 (6,438)",
+    "trend": "up",
+    "lastUpdated": "2026-08-26T16:11:48.000Z"
+  }
+]

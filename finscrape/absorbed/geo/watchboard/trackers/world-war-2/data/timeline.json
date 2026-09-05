@@ -1,0 +1,2599 @@
+[
+  {
+    "era": "Rise of Fascism & Pre-War (1933–1938)",
+    "events": [
+      {
+        "id": "rhineland-reoccupation",
+        "year": "Mar 7, 1936",
+        "title": "Germany Remilitarizes the Rhineland",
+        "type": "diplomatic",
+        "detail": "Hitler ordered German troops to march into the Rhineland — a demilitarized zone under the Treaty of Versailles — in a direct challenge to France and Britain. Neither power responded with force. Hitler later admitted it was his most dangerous gamble: had France mobilized, Germany would have been forced to retreat in humiliation. The unopposed move emboldened Hitler to pursue increasingly aggressive foreign policy and convinced him that the Western democracies would not fight.",
+        "sources": [
+          {
+            "name": "German Federal Archives – OKW records",
+            "tier": 1
+          },
+          {
+            "name": "Kershaw, I., 'Hitler 1889–1936: Hubris'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Remilitarization_of_the_Rhineland",
+            "source": "Wikipedia / Remilitarization of the Rhineland",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Rheinland_1936.jpg/330px-Rheinland_1936.jpg"
+          }
+        ]
+      },
+      {
+        "id": "spanish-civil-war-german-involvement",
+        "year": "Jul 18, 1936",
+        "title": "Condor Legion — Germany and Italy Enter the Spanish Civil War",
+        "type": "battle",
+        "detail": "After Franco's Nationalist uprising against Spain's Republican government, Nazi Germany and Fascist Italy intervened militarily, deploying the Condor Legion (German) and Corpo Truppe Volontarie (Italian). Germany used the conflict as a testing ground for new aircraft, tank tactics, and strategic bombing. The April 26, 1937 Condor Legion bombing of Guernica — a Basque civilian town — became the world's first deliberate mass aerial bombardment of civilians and inspired Picasso's famous painting.",
+        "sources": [
+          {
+            "name": "NARA RG 242 – German Military Records, Spanish Operations",
+            "tier": 1
+          },
+          {
+            "name": "Thomas, H., 'The Spanish Civil War', 4th ed.",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Bombing_of_Guernica",
+            "source": "Wikipedia / Bombing of Guernica",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Ruins_of_Guernica.jpg/330px-Ruins_of_Guernica.jpg"
+          }
+        ]
+      },
+      {
+        "id": "second-sino-japanese-war",
+        "year": "Jul 7, 1937",
+        "title": "Japan Invades China — Second Sino-Japanese War Begins",
+        "type": "battle",
+        "detail": "A skirmish at the Marco Polo Bridge near Beijing provided Japan's pretext for a full-scale invasion of China, beginning eight years of brutal warfare that killed 15–20 million people. Japan quickly captured Beijing, Shanghai, and Nanjing, with Chinese Nationalist forces under Chiang Kai-shek retreating inland. The war merged with the global WWII conflict after Pearl Harbor but had effectively been underway since 1937, making China the longest-fighting Allied power.",
+        "sources": [
+          {
+            "name": "Chinese Second Historical Archives, Nanjing",
+            "tier": 1
+          },
+          {
+            "name": "Rana Mitter, 'Forgotten Ally: China's World War II, 1937–1945'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Second_Sino-Japanese_War",
+            "source": "Wikipedia / Second Sino-Japanese War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Shanghai_1937_bomb.jpg/330px-Shanghai_1937_bomb.jpg"
+          }
+        ]
+      },
+      {
+        "id": "rape-of-nanjing",
+        "year": "Dec 13, 1937",
+        "title": "Rape of Nanjing — Japanese Forces Massacre Chinese Civilians",
+        "type": "battle",
+        "detail": "Japanese forces entering the Chinese capital Nanjing carried out six weeks of mass murder, mass rape, looting, and arson. The International Military Tribunal for the Far East (Tokyo) documented 260,000 deaths; Chinese sources cite 300,000+; academic estimates range from 100,000 to 300,000. The International Safety Zone established by foreigners — including Nazi Party member John Rabe — sheltered up to 250,000 Chinese civilians. The atrocity became a permanent fixture in Sino-Japanese relations and one of the defining war crimes prosecuted at the Tokyo Tribunal.",
+        "sources": [
+          {
+            "name": "International Military Tribunal for the Far East (IMTFE) — Judgment, Vol. IV",
+            "tier": 1
+          },
+          {
+            "name": "Chang, I., 'The Rape of Nanking', 1997",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Nanjing_massacre",
+            "source": "Wikipedia / Nanjing massacre",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nanjing_Massacre.jpg/330px-Nanjing_Massacre.jpg"
+          }
+        ]
+      },
+      {
+        "id": "anschluss",
+        "year": "Mar 12, 1938",
+        "title": "Anschluss — Nazi Germany Annexes Austria",
+        "type": "diplomatic",
+        "detail": "German forces crossed into Austria on March 12, 1938, meeting no military resistance. Chancellor Kurt Schuschnigg resigned under pressure and Hitler entered Vienna the following day to thunderous crowds. A sham plebiscite recorded 99.7% support for union. The Anschluss incorporated 7 million Austrians into the Third Reich and brought German forces to the borders of Czechoslovakia. Austria's 192,000 Jews immediately faced Nazi persecution, property seizure, and deportation.",
+        "sources": [
+          {
+            "name": "Austrian State Archives – Haus-, Hof- und Staatsarchiv",
+            "tier": 1
+          },
+          {
+            "name": "Shirer, W.L., 'The Rise and Fall of the Third Reich', ch. 10",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Anschluss",
+            "source": "Wikipedia / Anschluss",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Anschluss_Vienna_1938.jpg/330px-Anschluss_Vienna_1938.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Pre-War Crisis & Outbreak (1939)",
+    "events": [
+      {
+        "id": "munich-agreement",
+        "year": "Sep 29, 1938",
+        "title": "Munich Agreement Signed",
+        "type": "diplomatic",
+        "detail": "Britain, France, Italy, and Germany signed the Munich Agreement, allowing Nazi Germany to annex the Sudetenland from Czechoslovakia. British Prime Minister Neville Chamberlain returned declaring 'peace for our time,' a promise that would prove catastrophically wrong. The agreement emboldened Hitler and demonstrated that Western democracies would not challenge Nazi expansion.",
+        "sources": [
+          {
+            "name": "UK National Archives",
+            "tier": 1
+          },
+          {
+            "name": "Imperial War Museum",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Munich_Agreement",
+            "source": "Wikipedia / Munich Agreement",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Bundesarchiv_Bild_183-R69173%2C_M%C3%BCnchener_Abkommen%2C_Staatschefs.jpg/330px-Bundesarchiv_Bild_183-R69173%2C_M%C3%BCnchener_Abkommen%2C_Staatschefs.jpg"
+          }
+        ]
+      },
+      {
+        "id": "molotov-ribbentrop-pact",
+        "year": "Aug 23, 1939",
+        "title": "Molotov–Ribbentrop Pact Signed",
+        "type": "diplomatic",
+        "detail": "Nazi Germany and the Soviet Union signed the Molotov–Ribbentrop Non-Aggression Pact in Moscow. The public treaty pledged non-aggression, but a secret protocol divided Eastern Europe into Nazi and Soviet spheres of influence, setting the stage for the partition of Poland. The pact shocked the world and cleared Hitler's eastern flank for the invasion of Poland.",
+        "sources": [
+          {
+            "name": "German Federal Archives",
+            "tier": 1
+          },
+          {
+            "name": "Yale Avalon Project – Treaty text",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Molotov%E2%80%93Ribbentrop_Pact_negotiations",
+            "source": "Wikipedia / Molotov%E2%80%93Ribbentrop Pact negotiations",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Vyacheslav_Molotov.jpg"
+          }
+        ]
+      },
+      {
+        "id": "invasion-poland",
+        "year": "Sep 1, 1939",
+        "title": "Germany Invades Poland — War Begins",
+        "type": "battle",
+        "detail": "At 4:45 AM, Germany launched a massive invasion of Poland from the north, south, and west using 1.5 million troops, tanks, and aircraft. The Luftwaffe bombed Polish cities while Panzer divisions executed Blitzkrieg tactics. This act of aggression triggered World War II in Europe.",
+        "sources": [
+          {
+            "name": "NARA RG 242 – German Military Records",
+            "tier": 1
+          },
+          {
+            "name": "Zaloga, S., 'Poland 1939', Osprey",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Invasion_of_Poland",
+            "source": "Wikipedia / Invasion of Poland",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Battle_of_Poland.png/330px-Battle_of_Poland.png"
+          }
+        ]
+      },
+      {
+        "id": "britain-france-declare-war",
+        "year": "Sep 3, 1939",
+        "title": "Britain and France Declare War on Germany",
+        "type": "diplomatic",
+        "detail": "Following Germany's refusal to withdraw from Poland, Britain and France declared war on Germany. Prime Minister Chamberlain announced the declaration in a radio address to the British public. The British Empire and Commonwealth subsequently joined, expanding the war's global reach.",
+        "sources": [
+          {
+            "name": "Hansard Parliamentary Records",
+            "tier": 1
+          },
+          {
+            "name": "Imperial War Museum",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/British_declaration_of_war_on_Germany_(1939)",
+            "source": "Wikipedia / British declaration of war on Germany (1939)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/The_German-soviet_Invasion_of_Poland%2C_1939_HU83158.jpg/330px-The_German-soviet_Invasion_of_Poland%2C_1939_HU83158.jpg"
+          }
+        ]
+      },
+      {
+        "id": "soviet-invasion-poland",
+        "year": "Sep 17, 1939",
+        "title": "Soviet Union Invades Poland from the East",
+        "type": "battle",
+        "detail": "Sixteen days after Germany's invasion, the Soviet Red Army invaded Poland from the east pursuant to the secret Molotov–Ribbentrop protocol. Facing enemies on two fronts and no effective international aid, Polish forces were overwhelmed. Poland was partitioned between Germany and the USSR by September 28.",
+        "sources": [
+          {
+            "name": "Russian State Military Archive (RGVA)",
+            "tier": 1
+          },
+          {
+            "name": "Sanford, G., 'Katyn and the Soviet Massacre of 1940'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Soviet_invasion_of_Poland",
+            "source": "Wikipedia / Soviet invasion of Poland",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Lviv_1939_Sov_Cavalry.jpg/330px-Lviv_1939_Sov_Cavalry.jpg"
+          }
+        ]
+      },
+      {
+        "id": "winter-war-begins",
+        "year": "Nov 30, 1939",
+        "title": "Soviet Union Attacks Finland — The Winter War",
+        "type": "battle",
+        "detail": "The Soviet Union launched a massive invasion of Finland after Finland refused Soviet territorial demands. Despite overwhelming Soviet numbers, Finnish forces inflicted disproportionate losses using guerrilla tactics, ski troops, and defensive fortifications (the Mannerheim Line). The war lasted until March 12, 1940, and exposed serious weaknesses in the Red Army.",
+        "sources": [
+          {
+            "name": "Finnish War Archives",
+            "tier": 1
+          },
+          {
+            "name": "Tanner, V., 'The Winter War'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Winter_War",
+            "source": "Wikipedia / Winter War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/A_Finnish_Maxim_M-32_machine_gun_nest_during_the_Winter_War.jpg/330px-A_Finnish_Maxim_M-32_machine_gun_nest_during_the_Winter_War.jpg"
+          }
+        ]
+      },
+      {
+        "id": "phoney-war",
+        "year": "Sep 1939",
+        "title": "The Phoney War on the Western Front",
+        "type": "diplomatic",
+        "detail": "After declaring war on Germany, Britain and France took no major offensive action in the West for eight months — a period called the 'Phoney War' or 'Sitzkrieg.' Both sides manned their defensive positions along the Franco-German border while Germany completed the conquest of Poland. This inaction would later be criticized as a missed opportunity to strike Germany while it was focused eastward.",
+        "sources": [
+          {
+            "name": "French National Archives",
+            "tier": 1
+          },
+          {
+            "name": "Jackson, J., 'France: The Dark Years'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Phoney_War",
+            "source": "Wikipedia / Phoney War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/8inchHowitzerCamouflagedLaquielle20October1939.jpg/330px-8inchHowitzerCamouflagedLaquielle20October1939.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-atlantic-begins",
+        "year": "Sep 3, 1939",
+        "title": "Battle of the Atlantic Begins",
+        "type": "battle",
+        "detail": "Hours after Britain declared war, German U-boat U-30 sank the British passenger liner SS Athenia, killing 112 civilians. This opened the Battle of the Atlantic, the longest continuous military campaign of WWII, lasting until Germany's defeat in 1945. German submarines would ultimately sink over 3,500 Allied merchant ships.",
+        "sources": [
+          {
+            "name": "Royal Navy Historical Branch",
+            "tier": 1
+          },
+          {
+            "name": "Blair, C., 'Hitler's U-boat War'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Timeline_of_the_Battle_of_the_Atlantic",
+            "source": "Wikipedia / Timeline of the Battle of the Atlantic",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Officers_on_the_bridge.jpg/330px-Officers_on_the_bridge.jpg"
+          }
+        ]
+      },
+      {
+        "id": "katyn-massacre",
+        "year": "Apr 1940",
+        "title": "Katyn Massacre — Soviet Execution of Polish Officers",
+        "type": "battle",
+        "detail": "NKVD agents executed approximately 22,000 Polish military officers, police, intellectuals, and other prisoners in Katyn Forest and other sites by order of Stalin and the Politburo. The massacre decapitated Poland's leadership class and was concealed by the USSR until 1990. In 2010, Russia formally acknowledged Soviet responsibility.",
+        "sources": [
+          {
+            "name": "Soviet Politburo Order No. 794/B, March 5, 1940 – declassified 1992",
+            "tier": 1
+          },
+          {
+            "name": "IPN (Institute of National Remembrance, Poland)",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Katyn_massacre",
+            "source": "Wikipedia / Katyn massacre",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Katyn_Massacre_-_Mass_Graves_2.jpg/330px-Katyn_Massacre_-_Mass_Graves_2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "kristallnacht",
+        "year": "Nov 9, 1938",
+        "title": "Kristallnacht — Night of Broken Glass",
+        "type": "holocaust",
+        "detail": "Nazi authorities and party members carried out a coordinated pogrom against Jews throughout Germany, Austria, and the Sudetenland over the nights of November 9–10, 1938. Named for the shattered glass of Jewish shop windows that blanketed streets, the pogrom destroyed 267 synagogues, ransacked 7,500 Jewish-owned businesses, killed at least 91 Jews directly (with hundreds more dying of injuries), and arrested approximately 30,000 Jewish men who were sent to concentration camps. Kristallnacht marked the open brutalization of German Jews and signaled the acceleration from economic persecution toward physical violence. International condemnation intensified emigration pressure on German Jews.",
+        "sources": [
+          {
+            "name": "US Holocaust Memorial Museum — Kristallnacht Documentation",
+            "tier": 1
+          },
+          {
+            "name": "Thalmann, R. & Feinermann, E., 'Crystal Night: 9–10 November 1938'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Kristallnacht",
+            "source": "Wikipedia / Kristallnacht",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Kristallnacht.jpg/330px-Kristallnacht.jpg"
+          }
+        ]
+      },
+      {
+        "id": "czechoslovakia-occupation",
+        "year": "Mar 15, 1939",
+        "title": "Germany Occupies Czechoslovakia — Appeasement Collapses",
+        "type": "diplomatic",
+        "detail": "Six months after the Munich Agreement gave Germany the Sudetenland, Hitler ordered Wehrmacht forces into the Czech heartland, creating the 'Protectorate of Bohemia and Moravia.' Slovakia was declared a puppet state. The occupation violated Munich's explicit guarantee and shattered Chamberlain's belief that Hitler could be satisfied. Britain and France immediately began serious rearmament and issued security guarantees to Poland and Romania. The fall of Czechoslovakia and its world-class Škoda arms factories materially strengthened Germany while destroying Allied credibility.",
+        "sources": [
+          {
+            "name": "Czech National Archives – Military Historical Archive",
+            "tier": 1
+          },
+          {
+            "name": "Kershaw, I., 'Hitler: 1936–1945 Nemesis', ch. 5",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/German_occupation_of_Czechoslovakia",
+            "source": "Wikipedia / German occupation of Czechoslovakia",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Bundesarchiv_Bild_146-1972-039-11%2C_Einmarsch_in_Prag.jpg/330px-Bundesarchiv_Bild_146-1972-039-11%2C_Einmarsch_in_Prag.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Western Europe Falls (1940)",
+    "events": [
+      {
+        "id": "norway-denmark-invaded",
+        "year": "Apr 9, 1940",
+        "title": "Germany Invades Denmark and Norway",
+        "type": "battle",
+        "detail": "Germany launched Operation Weserübung, simultaneously invading Denmark and Norway to secure iron ore routes and strategic Atlantic bases. Denmark capitulated within hours; Norway fought until June 10, aided briefly by British and French forces. The Norwegian campaign ended in German victory but cost the Kriegsmarine significant naval losses.",
+        "sources": [
+          {
+            "name": "Norwegian National Archives",
+            "tier": 1
+          },
+          {
+            "name": "Derry, T.K., 'The Campaign in Norway', HMSO Official History",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "churchill-becomes-pm",
+        "year": "May 10, 1940",
+        "title": "Churchill Becomes British Prime Minister",
+        "type": "diplomatic",
+        "detail": "Winston Churchill replaced Neville Chamberlain as Prime Minister on the same day Germany launched its Western offensive. Churchill formed a National Government and immediately signaled a policy of total war, famously declaring he had 'nothing to offer but blood, toil, tears and sweat.' His leadership proved vital in sustaining British resistance.",
+        "sources": [
+          {
+            "name": "Hansard – Churchill's First Speech as PM, May 13, 1940",
+            "tier": 1
+          },
+          {
+            "name": "Churchill Archives Centre, Cambridge",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+            "source": "Wikipedia / Winston Churchill",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg/330px-Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "fall-of-france",
+        "year": "May 10, 1940",
+        "title": "Germany Launches Western Offensive — Fall of France",
+        "type": "battle",
+        "detail": "Germany invaded France, Belgium, the Netherlands, and Luxembourg in a sweeping Blitzkrieg attack. German Panzer forces drove through the Ardennes forest, bypassing the Maginot Line and encircling Allied forces in Belgium. France fell in just six weeks — an astonishing collapse of the world's largest army.",
+        "sources": [
+          {
+            "name": "French Army Historical Service (SHAT)",
+            "tier": 1
+          },
+          {
+            "name": "May, E., 'Strange Victory: Hitler's Conquest of France'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_France",
+            "source": "Wikipedia / Battle of France",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Battle_of_France_Infobox.png/330px-Battle_of_France_Infobox.png"
+          }
+        ]
+      },
+      {
+        "id": "dunkirk-evacuation",
+        "year": "May 26, 1940",
+        "title": "Operation Dynamo — Dunkirk Evacuation",
+        "type": "battle",
+        "detail": "With 400,000 Allied troops encircled at Dunkirk, Britain launched Operation Dynamo, evacuating 338,226 soldiers across the English Channel using Royal Navy vessels and a famous 'armada' of civilian boats. The evacuation saved the core of the British Army but left vast equipment behind. Churchill called it a 'miracle of deliverance.'",
+        "sources": [
+          {
+            "name": "Royal Navy Historical Branch – Operation Dynamo records",
+            "tier": 1
+          },
+          {
+            "name": "Sebag-Montefiore, H., 'Dunkirk: Fight to the Last Man'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Dunkirk_evacuation",
+            "source": "Wikipedia / Dunkirk evacuation",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Dunkirk_26-29_May_1940_NYP68075.jpg/330px-Dunkirk_26-29_May_1940_NYP68075.jpg"
+          }
+        ]
+      },
+      {
+        "id": "italy-enters-war",
+        "year": "Jun 10, 1940",
+        "title": "Italy Declares War on Britain and France",
+        "type": "diplomatic",
+        "detail": "Mussolini declared war on Britain and France, calculating that a quick German victory would allow Italy to claim territorial prizes in the Mediterranean and Africa. Italy's entry opened new theaters of war in North Africa and the Mediterranean. Italian forces were poorly equipped and trained compared to German standards.",
+        "sources": [
+          {
+            "name": "Italian State Archives – Archivio Centrale dello Stato",
+            "tier": 1
+          },
+          {
+            "name": "Knox, M., 'Mussolini Unleashed'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Napoleonic_Wars",
+            "source": "Wikipedia / Napoleonic Wars",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Napoleonic_Wars_%28revision%29.jpg/330px-Napoleonic_Wars_%28revision%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "france-armistice",
+        "year": "Jun 22, 1940",
+        "title": "France Signs Armistice — Vichy Government Formed",
+        "type": "diplomatic",
+        "detail": "France signed an armistice with Germany in the same railway car where Germany accepted defeat in WWI. Northern France and the Atlantic coast came under German occupation; southern France became the collaborationist 'Vichy' regime under Marshal Pétain. General de Gaulle fled to London and continued resistance from exile.",
+        "sources": [
+          {
+            "name": "French National Archives – Armistice text",
+            "tier": 1
+          },
+          {
+            "name": "Paxton, R., 'Vichy France: Old Guard and New Order'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Government_of_Vichy_France",
+            "source": "Wikipedia / Government of Vichy France",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Carte_de_France_divis%C3%A9e_suivant_les_quatre_d%C3%A9partements_de_Messieurs_les_secretaires_d%27Etat_-_par_Philippe_Buache_-_btv1b8593230j.jpg/330px-Carte_de_France_divis%C3%A9e_suivant_les_quatre_d%C3%A9partements_de_Messieurs_les_secretaires_d%27Etat_-_par_Philippe_Buache_-_btv1b8593230j.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-of-britain",
+        "year": "Jul 10, 1940",
+        "title": "Battle of Britain — RAF Defeats Luftwaffe",
+        "type": "battle",
+        "detail": "Germany launched an air campaign to destroy the RAF as a precondition for the planned invasion of Britain (Operation Sea Lion). RAF Fighter Command, aided by radar and Ultra intelligence, defeated the Luftwaffe in three months of intense aerial combat. By October 1940, Hitler postponed the invasion indefinitely — Britain's first major Allied victory.",
+        "sources": [
+          {
+            "name": "RAF Air Historical Branch",
+            "tier": 1
+          },
+          {
+            "name": "Overy, R., 'The Battle of Britain'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Britain",
+            "source": "Wikipedia / Battle of Britain",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Spitfire_and_He_111_during_Battle_of_Britain_1940.jpg/330px-Spitfire_and_He_111_during_Battle_of_Britain_1940.jpg"
+          }
+        ]
+      },
+      {
+        "id": "the-blitz",
+        "year": "Sep 7, 1940",
+        "title": "The Blitz — Germany Bombs British Cities",
+        "type": "strategic-bombing",
+        "detail": "After failing to destroy the RAF, Germany shifted to bombing British cities — the Blitz — targeting London nightly for 57 consecutive nights. Over the following months, the Luftwaffe bombed Coventry, Birmingham, Liverpool, Plymouth, and other industrial centers. Approximately 43,000 British civilians died in the Blitz, but morale held.",
+        "sources": [
+          {
+            "name": "Imperial War Museum – Blitz Collection",
+            "tier": 2
+          },
+          {
+            "name": "Ziegler, P., 'London at War 1939–1945'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Birmingham_Blitz",
+            "source": "Wikipedia / Birmingham Blitz",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Bull_Ring_Blitz.jpg/330px-Bull_Ring_Blitz.jpg"
+          }
+        ]
+      },
+      {
+        "id": "tripartite-pact",
+        "year": "Sep 27, 1940",
+        "title": "Tripartite Pact — Axis Alliance Formalized",
+        "type": "diplomatic",
+        "detail": "Germany, Italy, and Japan signed the Tripartite Pact in Berlin, formalizing the Axis alliance. The pact created a mutual defense obligation and divided spheres of influence: Europe under Germany and Italy, Asia under Japan. Spain, Hungary, Romania, and Slovakia later adhered to the pact.",
+        "sources": [
+          {
+            "name": "German Foreign Ministry Archives – Tripartite Pact text",
+            "tier": 1
+          },
+          {
+            "name": "Yale Avalon Project",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Anti-Comintern_Pact",
+            "source": "Wikipedia / Anti-Comintern Pact",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Anti-Comintern_Pact_signing_1936.jpg/330px-Anti-Comintern_Pact_signing_1936.jpg"
+          }
+        ]
+      },
+      {
+        "id": "north-africa-campaign-opens",
+        "year": "Sep 9, 1940",
+        "title": "North Africa Campaign Opens",
+        "type": "battle",
+        "detail": "Italian forces under Marshal Graziani invaded Egypt from Libya, beginning the North Africa campaign. The British Eighth Army under General Wavell mounted a counter-offensive (Operation Compass) that devastated Italian forces in December 1940. Germany would deploy the Afrika Korps under Rommel in early 1941 to rescue the Italian position.",
+        "sources": [
+          {
+            "name": "UK National Archives – WO 201 Middle East Command records",
+            "tier": 1
+          },
+          {
+            "name": "Playfair, I.S.O., 'The Mediterranean and Middle East', HMSO Official History",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/North_African_campaign",
+            "source": "Wikipedia / North African campaign",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/1stAlameinBritDefense.jpg/330px-1stAlameinBritDefense.jpg"
+          }
+        ]
+      },
+      {
+        "id": "rotterdam-bombing",
+        "year": "May 14, 1940",
+        "title": "Luftwaffe Bombs Rotterdam — Dutch Surrender Follows",
+        "type": "strategic-bombing",
+        "detail": "German aircraft bombed the Dutch city of Rotterdam while surrender negotiations were underway, killing approximately 900 civilians and destroying 24,000 homes, leaving 78,000 homeless. The bombing was partly the result of a communications failure — orders to abort the attack were not received by all aircraft — but was used by Germany to threaten Utrecht with the same fate, forcing the Netherlands to surrender within hours. The Rotterdam bombing shocked international opinion and was presented as evidence of Germany's willingness to massacre civilians from the air — helping to justify British reprisal bombing of German cities later in the war.",
+        "sources": [
+          {
+            "name": "NIOD Institute for War, Holocaust and Genocide Studies, Amsterdam",
+            "tier": 2
+          },
+          {
+            "name": "Dutch National Archives – 1940 Rotterdam bombing records",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Bombing_of_Rotterdam",
+            "source": "Wikipedia / Bombing of Rotterdam",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Rotterdam_May_1940_Leuvehaven.jpg/330px-Rotterdam_May_1940_Leuvehaven.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Barbarossa & Global War (1941)",
+    "events": [
+      {
+        "id": "lend-lease-act",
+        "year": "Mar 11, 1941",
+        "title": "Lend-Lease Act — US Supplies Allies",
+        "type": "diplomatic",
+        "detail": "President Roosevelt signed the Lend-Lease Act, authorizing the US to supply Britain and later the USSR and other Allies with war materials without requiring immediate payment. Lend-Lease ultimately transferred $50 billion in goods (equivalent to ~$650 billion today) to Allied nations. It marked a decisive end to US neutrality short of direct entry into the war.",
+        "sources": [
+          {
+            "name": "US Congress – Public Law 77-11, 1941",
+            "tier": 1
+          },
+          {
+            "name": "NARA – Lend-Lease records RG 169",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Lend-Lease",
+            "source": "Wikipedia / Lend-Lease",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/330px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "operation-barbarossa",
+        "year": "Jun 22, 1941",
+        "title": "Operation Barbarossa — Germany Invades the Soviet Union",
+        "type": "battle",
+        "detail": "Germany launched the largest land invasion in history, deploying 3.8 million Axis troops along a 2,900-km front against the Soviet Union. The surprise attack initially routed the Red Army, capturing millions of prisoners and vast territory. However, Hitler's decision to divide forces among three army groups — Leningrad, Moscow, and Kyiv — dispersed strength and slowed the advance before Moscow.",
+        "sources": [
+          {
+            "name": "NARA RG 242 – German OKH records",
+            "tier": 1
+          },
+          {
+            "name": "Glantz, D., 'Barbarossa: Hitler's Invasion of Russia 1941'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Barbarossa",
+            "source": "Wikipedia / Operation Barbarossa",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Operation_Barbarossa_collage.jpg/330px-Operation_Barbarossa_collage.jpg"
+          }
+        ]
+      },
+      {
+        "id": "siege-leningrad-begins",
+        "year": "Sep 8, 1941",
+        "title": "Siege of Leningrad Begins",
+        "type": "battle",
+        "detail": "German and Finnish forces encircled Leningrad (St. Petersburg), beginning a 872-day siege — the longest in modern warfare. Over 800,000 civilians died, mostly from starvation during the brutal blockade winters. The city held out through extraordinary civilian endurance until relief in January 1944.",
+        "sources": [
+          {
+            "name": "Russian State Archive of Literature and Art – Leningrad diaries",
+            "tier": 1
+          },
+          {
+            "name": "Salisbury, H., 'The 900 Days: The Siege of Leningrad'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Siege_of_Leningrad",
+            "source": "Wikipedia / Siege of Leningrad",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Anti_aircraft_Leningrad_1941.JPG/330px-Anti_aircraft_Leningrad_1941.JPG"
+          }
+        ]
+      },
+      {
+        "id": "atlantic-charter",
+        "year": "Aug 14, 1941",
+        "title": "Atlantic Charter — Roosevelt and Churchill Define War Aims",
+        "type": "diplomatic",
+        "detail": "Churchill and Roosevelt met aboard warships off Newfoundland and issued the Atlantic Charter, outlining Allied war aims: no territorial aggrandizement, self-determination of peoples, freedom from fear and want, and freedom of the seas. The Charter became the foundation for the United Nations and post-war international order.",
+        "sources": [
+          {
+            "name": "US Department of State – Atlantic Charter text",
+            "tier": 1
+          },
+          {
+            "name": "Churchill Archives Centre",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Presidency_of_Franklin_D._Roosevelt_(1941%E2%80%931945)",
+            "source": "Wikipedia / Presidency of Franklin D. Roosevelt (1941%E2%80%931945)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg/330px-FDR-1944-Campaign-Portrait_%283x4_retouched%2C_cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "pearl-harbor-attack",
+        "year": "Dec 7, 1941",
+        "title": "Japan Attacks Pearl Harbor — US Enters the War",
+        "type": "battle",
+        "detail": "Japan launched a surprise carrier-based air attack on the US Pacific Fleet at Pearl Harbor, Hawaii, sinking or damaging 8 battleships, killing 2,403 Americans, and wounding 1,178 more. The attack was coordinated with simultaneous strikes across Southeast Asia. President Roosevelt called it 'a date which will live in infamy' and Congress declared war on Japan the following day.",
+        "sources": [
+          {
+            "name": "NARA – Pearl Harbor Attack Congressional Hearings, 1945–1946",
+            "tier": 1
+          },
+          {
+            "name": "Prange, G., 'At Dawn We Slept'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Consequences_of_the_attack_on_Pearl_Harbor",
+            "source": "Wikipedia / Consequences of the attack on Pearl Harbor",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hirohito_in_dress_uniform.jpg/330px-Hirohito_in_dress_uniform.jpg"
+          }
+        ]
+      },
+      {
+        "id": "germany-declares-war-us",
+        "year": "Dec 11, 1941",
+        "title": "Germany and Italy Declare War on the United States",
+        "type": "diplomatic",
+        "detail": "Four days after Pearl Harbor, Hitler declared war on the United States, honoring his Axis pact with Japan and relieving Roosevelt of a political dilemma about entering the European war. This decision transformed the conflict into a truly global war and ultimately sealed Germany's fate by bringing America's industrial and military power to bear against it.",
+        "sources": [
+          {
+            "name": "German Reichstag – Hitler's December 11 Speech",
+            "tier": 1
+          },
+          {
+            "name": "Weinberg, G., 'A World at Arms'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/German_declaration_of_war_against_the_United_States",
+            "source": "Wikipedia / German declaration of war against the United States",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Bundesarchiv_Bild_183-1987-0703-507%2C_Berlin%2C_Reichstagssitzung%2C_Rede_Adolf_Hitler.jpg/330px-Bundesarchiv_Bild_183-1987-0703-507%2C_Berlin%2C_Reichstagssitzung%2C_Rede_Adolf_Hitler.jpg"
+          }
+        ]
+      },
+      {
+        "id": "fall-singapore",
+        "year": "Feb 15, 1942",
+        "title": "Fall of Singapore — Britain's Greatest Military Defeat",
+        "type": "battle",
+        "detail": "Japanese forces under General Yamashita captured Singapore after a 70-day campaign down the Malay Peninsula, forcing 85,000 British, Australian, and Indian troops to surrender — Britain's greatest military disaster. Churchill called it 'the worst disaster and largest capitulation in British history.' Singapore's capture gave Japan control of Southeast Asia.",
+        "sources": [
+          {
+            "name": "UK National Archives WO 172 – Malaya Command records",
+            "tier": 1
+          },
+          {
+            "name": "Elphick, P., 'Singapore: The Pregnable Fortress'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Fall_of_Singapore",
+            "source": "Wikipedia / Fall of Singapore",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Surrender_Singapore.jpg/330px-Surrender_Singapore.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wannsee-conference",
+        "year": "Jan 20, 1942",
+        "title": "Wannsee Conference — Final Solution Coordinated",
+        "type": "holocaust",
+        "detail": "Fifteen senior Nazi officials met at a lakeside villa in Wannsee, Berlin to coordinate the 'Final Solution to the Jewish Question' — the systematic genocide of all European Jews. Chaired by SS-Obergruppenführer Reinhard Heydrich, the conference planned the murder of 11 million Jews across Europe. The Wannsee Protocol is one of WWII's most damning primary source documents.",
+        "sources": [
+          {
+            "name": "Wannsee Protocol – Nuremberg Document NG-2586 (Nuremberg Trials)",
+            "tier": 1
+          },
+          {
+            "name": "Yad Vashem – Holocaust Research Center",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Final_Solution",
+            "source": "Wikipedia / Final Solution",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Heydrich-Endlosung.jpg/330px-Heydrich-Endlosung.jpg"
+          }
+        ]
+      },
+      {
+        "id": "japanese-internment-us",
+        "year": "Feb 19, 1942",
+        "title": "US Executive Order 9066 — Japanese-American Internment",
+        "type": "diplomatic",
+        "detail": "President Roosevelt signed Executive Order 9066, authorizing the forced removal of 120,000 Japanese-Americans from the West Coast to inland internment camps. Most were American citizens; none were ever found guilty of espionage or sabotage. In 1988, the US government formally apologized and paid reparations under the Civil Liberties Act.",
+        "sources": [
+          {
+            "name": "NARA – Executive Order 9066",
+            "tier": 1
+          },
+          {
+            "name": "Commission on Wartime Relocation, 'Personal Justice Denied', 1983",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Executive_Order_9066",
+            "source": "Wikipedia / Executive Order 9066",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Instructions_to_japanese.png/330px-Instructions_to_japanese.png"
+          }
+        ]
+      },
+      {
+        "id": "operation-torch-planning",
+        "year": "Jul 1942",
+        "title": "Allied Decision to Invade North Africa (Operation Torch)",
+        "type": "diplomatic",
+        "detail": "Roosevelt, Churchill, and their commanders agreed to launch a second front in North Africa rather than France in 1942, over strong Soviet objections. Operation Torch would land in Morocco and Algeria in November 1942, aiming to squeeze Axis forces between the US Eighth Army from the west and British forces from the east. The decision shaped Allied Mediterranean strategy for 1943.",
+        "sources": [
+          {
+            "name": "Combined Chiefs of Staff records – NARA RG 218",
+            "tier": 1
+          },
+          {
+            "name": "Atkinson, R., 'An Army at Dawn'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Torch",
+            "source": "Wikipedia / Operation Torch",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Operation_Torch_-_map.jpg/330px-Operation_Torch_-_map.jpg"
+          }
+        ]
+      },
+      {
+        "id": "bataan-fall-death-march",
+        "year": "Apr 9, 1942",
+        "title": "Fall of Bataan and the Death March",
+        "type": "battle",
+        "detail": "After a four-month siege on the Bataan Peninsula, the largest US military force ever to surrender — approximately 76,000 Filipino and American soldiers — capitulated to Japan on April 9, 1942. Japanese forces then forced the emaciated prisoners to march 65–70 miles to POW camps in brutal heat with no food or water, beating, bayoneting, and beheading those who fell behind. Between 5,000–11,000 Filipino and 600–650 American soldiers died on the march. Another 26,000+ died in the appalling conditions of Camp O'Donnell. General Homma was later tried and executed for command responsibility.",
+        "sources": [
+          {
+            "name": "NARA – Bataan Force records, RG 395",
+            "tier": 1
+          },
+          {
+            "name": "Morton, L., 'The Fall of the Philippines', US Army in WWII Official History",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Bataan_Death_March",
+            "source": "Wikipedia / Bataan Death March",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bataan_march_corrected.jpg/330px-Bataan_march_corrected.jpg"
+          }
+        ]
+      },
+      {
+        "id": "doolittle-raid",
+        "year": "Apr 18, 1942",
+        "title": "Doolittle Raid — B-25s Bomb Tokyo",
+        "type": "battle",
+        "detail": "Sixteen B-25 Mitchell bombers under Lieutenant Colonel James Doolittle launched from the aircraft carrier USS Hornet and bombed Tokyo and four other Japanese cities on April 18, 1942. The raid caused minimal physical damage but had enormous psychological and strategic impact: it shocked Japan's military leadership who had promised the homeland was invulnerable, forced Japan to divert resources to homeland defense, and boosted American morale after months of defeats. The decision to bring the carrier force forward, requiring Doolittle's crews to fly beyond their planned landing range, meant all 16 aircraft were lost though most crews survived.",
+        "sources": [
+          {
+            "name": "NARA – Mission orders, Army Air Forces records",
+            "tier": 1
+          },
+          {
+            "name": "Doolittle, J., 'I Could Never Be So Lucky Again', 1991",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Doolittle_Raid",
+            "source": "Wikipedia / Doolittle Raid",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Doolittle_Raid.jpg/330px-Doolittle_Raid.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-coral-sea",
+        "year": "May 4, 1942",
+        "title": "Battle of the Coral Sea — First Carrier vs. Carrier Battle",
+        "type": "battle",
+        "detail": "US and Japanese carrier forces clashed in the Coral Sea in the first naval battle in history fought entirely by aircraft, with neither fleet sighting the other. The US lost the carrier Lexington and suffered heavy damage to Yorktown; Japan lost the light carrier Shōhō and suffered major damage to two fleet carriers. Strategically a US victory: Japan's plan to capture Port Moresby and threaten Australia was halted, and two Japanese carriers were unable to participate in the upcoming Battle of Midway, which proved decisive.",
+        "sources": [
+          {
+            "name": "NARA – Task Force 17 Action Report",
+            "tier": 1
+          },
+          {
+            "name": "Lundstrom, J., 'The First Team: Pacific Naval Air Combat from Pearl Harbor to Midway'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Coral_Sea",
+            "source": "Wikipedia / Battle of the Coral Sea",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Battle_of_the_Coral_Sea_Lexington_burning.jpg/330px-Battle_of_the_Coral_Sea_Lexington_burning.jpg"
+          }
+        ]
+      },
+      {
+        "id": "us-oil-embargo-japan",
+        "year": "Jul 26, 1941",
+        "title": "US Freezes Japanese Assets — Oil Embargo Cuts 80% of Japan's Supply",
+        "type": "diplomatic",
+        "detail": "President Roosevelt froze Japanese assets in the United States on July 26, 1941, following Japan's occupation of southern Indochina. The British Empire and Netherlands East Indies followed suit, effectively cutting off 80% of Japan's imported oil and 75% of its trade. Japan's military planners calculated their oil reserves would last roughly 18 months, after which the navy would be immobilized. The embargo was the decisive trigger for Japan's decision to attack Pearl Harbor and seize the oil-rich Dutch East Indies — accepting war with the US rather than submit to Western demands to withdraw from China.",
+        "sources": [
+          {
+            "name": "US Department of State – Foreign Relations of the United States (FRUS), 1941, Vol. IV",
+            "tier": 1
+          },
+          {
+            "name": "Ike, N. (ed.), 'Japan's Decision for War: Records of the 1941 Policy Conferences'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Japan%E2%80%93United_States_relations",
+            "source": "Wikipedia / Japan–United States relations",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/USS_Panay_incident.jpg/330px-USS_Panay_incident.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Turning Points (1942–1943)",
+    "events": [
+      {
+        "id": "battle-midway",
+        "year": "Jun 4, 1942",
+        "title": "Battle of Midway — Pacific War's Turning Point",
+        "type": "battle",
+        "detail": "US carrier aircraft, guided by codebreakers who had cracked Japanese naval codes, sank four Japanese fleet carriers at Midway Atoll in a stunning 5-minute dive-bomber attack. The four carriers — Akagi, Kaga, Sōryū, and Hiryū — represented the core of Japan's striking power. Midway shifted naval supremacy in the Pacific to the United States.",
+        "sources": [
+          {
+            "name": "NARA – CINCPAC Action Reports, June 1942",
+            "tier": 1
+          },
+          {
+            "name": "Prange, G., 'Miracle at Midway'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Midway",
+            "source": "Wikipedia / Battle of Midway",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/USS_Yorktown_%28CV-5%29_is_hit_by_a_torpedo_on_4_June_1942.jpg/330px-USS_Yorktown_%28CV-5%29_is_hit_by_a_torpedo_on_4_June_1942.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-el-alamein",
+        "year": "Oct 23, 1942",
+        "title": "Second Battle of El Alamein — Rommel Defeated",
+        "type": "battle",
+        "detail": "General Montgomery's British Eighth Army launched a massive 13-day offensive against Rommel's Afrika Korps at El Alamein, Egypt, breaking through Axis lines and beginning the final expulsion of Axis forces from North Africa. Churchill called it 'the end of the beginning.' Combined with Operation Torch, Axis forces in Africa were trapped in Tunisia.",
+        "sources": [
+          {
+            "name": "UK National Archives WO 169 – 8th Army records",
+            "tier": 1
+          },
+          {
+            "name": "Barr, N., 'Pendulum of War: The Three Battles of El Alamein'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/First_Battle_of_El_Alamein",
+            "source": "Wikipedia / First Battle of El Alamein",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/1stAlameinBritDefense.jpg/330px-1stAlameinBritDefense.jpg"
+          }
+        ]
+      },
+      {
+        "id": "operation-torch",
+        "year": "Nov 8, 1942",
+        "title": "Operation Torch — Allied Landings in North Africa",
+        "type": "battle",
+        "detail": "US and British forces under General Eisenhower landed in Morocco and Algeria, opening a second front against Axis forces in Africa. Initially encountering Vichy French resistance, the Allies quickly advanced eastward toward Tunisia. This was America's first major offensive operation in the European theater and a crucial test of Allied coordination.",
+        "sources": [
+          {
+            "name": "NARA – 12th Army Group records RG 331",
+            "tier": 1
+          },
+          {
+            "name": "Atkinson, R., 'An Army at Dawn'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Torch",
+            "source": "Wikipedia / Operation Torch",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Operation_Torch_-_map.jpg/330px-Operation_Torch_-_map.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-stalingrad",
+        "year": "Aug 23, 1942",
+        "title": "Battle of Stalingrad — War's Bloodiest Battle Begins",
+        "type": "battle",
+        "detail": "Germany's 6th Army under General Paulus launched an all-out assault on Stalingrad on the Volga River, where fighting devolved into brutal street combat for every building. Soviet forces under General Chuikov defended the city in savage close-quarters battles. The battle lasted six months and became the bloodiest single engagement in human history.",
+        "sources": [
+          {
+            "name": "Russian State Military Archive RGVA",
+            "tier": 1
+          },
+          {
+            "name": "Beevor, A., 'Stalingrad'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge",
+            "source": "Wikipedia / Battle of the Bulge",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/117th_Infantry_North_Carolina_NG_at_St._Vith_1945.jpg/330px-117th_Infantry_North_Carolina_NG_at_St._Vith_1945.jpg"
+          }
+        ]
+      },
+      {
+        "id": "operation-uranus-stalingrad",
+        "year": "Nov 19, 1942",
+        "title": "Operation Uranus — Soviet Counteroffensive Encircles German 6th Army",
+        "type": "battle",
+        "detail": "Soviet forces launched Operation Uranus, a massive pincer attack north and south of Stalingrad that encircled the German 6th Army (330,000 men) within days. Hitler refused to allow Paulus to break out. A relief operation (Operation Winter Storm) failed. The encircled army slowly starved and froze through the winter of 1942–43.",
+        "sources": [
+          {
+            "name": "Russian State Military Archive RGVA – Operation Uranus orders",
+            "tier": 1
+          },
+          {
+            "name": "Glantz, D., 'Armageddon in Stalingrad'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Uranus",
+            "source": "Wikipedia / Operation Uranus",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Operation_Uranus.svg/330px-Operation_Uranus.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "paulus-surrenders-stalingrad",
+        "year": "Feb 2, 1943",
+        "title": "Paulus Surrenders at Stalingrad — Germany's Greatest Defeat",
+        "type": "surrender",
+        "detail": "Field Marshal Friedrich Paulus — just promoted by Hitler, who expected him to die rather than surrender — capitulated at Stalingrad with 91,000 surviving troops. Only 6,000 would return to Germany after the war. Stalingrad marked the definitive strategic turning point on the Eastern Front and shattered the myth of German invincibility.",
+        "sources": [
+          {
+            "name": "German Federal Archives-Military Archives (BA-MA)",
+            "tier": 1
+          },
+          {
+            "name": "Beevor, A., 'Stalingrad'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Stalingrad",
+            "source": "Wikipedia / Battle of Stalingrad",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/The_Battle_of_Stalingrad_second_collage.jpg/330px-The_Battle_of_Stalingrad_second_collage.jpg"
+          }
+        ]
+      },
+      {
+        "id": "warsaw-ghetto-uprising",
+        "year": "Apr 19, 1943",
+        "title": "Warsaw Ghetto Uprising — Largest Armed Jewish Revolt of the Holocaust",
+        "type": "holocaust",
+        "detail": "On the eve of Passover, the Jewish Combat Organization (ŻOB) under 24-year-old Mordechai Anielewicz launched an armed revolt against SS forces arriving to liquidate Warsaw's remaining 60,000 ghetto inhabitants. Approximately 700 fighters armed with smuggled pistols, rifles, and improvised weapons held off 2,000+ SS troops and Wehrmacht soldiers for 28 days. SS General Jürgen Stroop systematically burned the ghetto block by block to suppress the uprising. Anielewicz and his command staff died at the ŻOB bunker at 18 Miła Street on May 8. The uprising ended on May 16, 1943, when Stroop detonated the Great Synagogue of Warsaw as a symbol of Nazi victory. The revolt is the largest single act of Jewish armed resistance during the Holocaust and is commemorated annually on April 19.",
+        "sources": [
+          {
+            "name": "Stroop Report — Nuremberg Document 1061-PS",
+            "tier": 1,
+            "url": "https://www.ushmm.org/research/research-in-collections/search-the-collections/bibliography/stroop-report",
+            "pole": "western"
+          },
+          {
+            "name": "Yad Vashem — Warsaw Ghetto Uprising",
+            "tier": 2,
+            "url": "https://www.yadvashem.org/articles/general/the-warsaw-ghetto-uprising.html",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-19T15:14:07Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Warsaw_Ghetto",
+            "source": "Wikipedia / Warsaw Ghetto",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bundesarchiv_Bild_101I-134-0791-29A%2C_Polen%2C_Ghetto_Warschau%2C_Ghettomauer.jpg/330px-Bundesarchiv_Bild_101I-134-0791-29A%2C_Polen%2C_Ghetto_Warschau%2C_Ghettomauer.jpg"
+          }
+        ]
+      },
+      {
+        "id": "axis-north-africa-surrenders",
+        "year": "May 13, 1943",
+        "title": "Axis Forces Surrender in Tunisia — North Africa Campaign Ends",
+        "type": "surrender",
+        "detail": "Over 230,000 Axis troops surrendered in Tunisia, ending the North Africa campaign. The scale of the surrender rivaled Stalingrad. Allied victory in Africa opened the way for the invasion of Sicily and Italy. The campaign had cost the Axis two years of strategic time and irreplaceable forces.",
+        "sources": [
+          {
+            "name": "NARA – 15th Army Group records",
+            "tier": 1
+          },
+          {
+            "name": "Atkinson, R., 'An Army at Dawn'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/North_African_campaign",
+            "source": "Wikipedia / North African campaign",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/1stAlameinBritDefense.jpg/330px-1stAlameinBritDefense.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-kursk",
+        "year": "Jul 5, 1943",
+        "title": "Battle of Kursk — Largest Tank Battle in History",
+        "type": "battle",
+        "detail": "Germany launched Operation Citadel to eliminate the Kursk salient with 780,000 troops and 2,900 tanks. Soviet intelligence had forewarned of the attack, allowing massive defensive preparations. The battle resulted in Germany's last major offensive on the Eastern Front, after which the strategic initiative permanently shifted to the Soviets.",
+        "sources": [
+          {
+            "name": "German Federal Archives BA-MA – OKH Kursk records",
+            "tier": 1
+          },
+          {
+            "name": "Glantz, D. & House, J., 'The Battle of Kursk'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Kursk",
+            "source": "Wikipedia / Battle of Kursk",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Battle_of_Kursk_%28map%29.jpg/330px-Battle_of_Kursk_%28map%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "allied-invasion-sicily",
+        "year": "Jul 10, 1943",
+        "title": "Operation Husky — Allied Invasion of Sicily",
+        "type": "battle",
+        "detail": "American and British forces landed on Sicily in the largest amphibious operation in history to that point (160,000 troops on the first day). Despite fierce resistance from German forces, Sicily fell within 38 days. The campaign directly triggered the fall of Mussolini's government and Italy's armistice negotiations.",
+        "sources": [
+          {
+            "name": "NARA – 15th Army Group records RG 407",
+            "tier": 1
+          },
+          {
+            "name": "D'Este, C., 'Bitter Victory: The Battle for Sicily'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Allied_invasion_of_Sicily",
+            "source": "Wikipedia / Allied invasion of Sicily",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Map_operation_husky_landing.svg/330px-Map_operation_husky_landing.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "mussolini-overthrown",
+        "year": "Jul 25, 1943",
+        "title": "Mussolini Arrested — Italian Fascism Collapses",
+        "type": "diplomatic",
+        "detail": "The Italian Fascist Grand Council voted to remove Mussolini from power; King Victor Emmanuel III had him arrested. Marshal Badoglio formed a new government and began secret armistice negotiations with the Allies. Germany responded by occupying Italy, rescuing Mussolini in a daring glider raid (September 12), and installing him in a puppet state (Italian Social Republic).",
+        "sources": [
+          {
+            "name": "Italian State Archives – Verbale del Gran Consiglio, July 25, 1943",
+            "tier": 1
+          },
+          {
+            "name": "Knox, M., 'Hitler's Italian Allies'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Fall_of_the_Fascist_regime_in_Italy",
+            "source": "Wikipedia / Fall of the Fascist regime in Italy",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Benito_Mussolini_portrait_as_dictator_%28retouched%29.jpg/330px-Benito_Mussolini_portrait_as_dictator_%28retouched%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "italy-surrenders",
+        "year": "Sep 8, 1943",
+        "title": "Italy Surrenders — Armistice with Allies",
+        "type": "surrender",
+        "detail": "Italy signed an armistice with the Allies, announced simultaneously with Allied landings at Salerno. Germany immediately disarmed Italian forces, occupied northern and central Italy, and deported thousands of Italian Jews to death camps. The Italian campaign would continue as a brutal slog up the peninsula until May 1945.",
+        "sources": [
+          {
+            "name": "Armistice of Cassibile – Eisenhower's Headquarters records NARA",
+            "tier": 1
+          },
+          {
+            "name": "Lamb, R., 'War in Italy 1943–1945'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Armistice_of_Cassibile",
+            "source": "Wikipedia / Armistice of Cassibile",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/General_Castellano_signs_the_armistice_on_behalf_of_Badoglio.jpg/330px-General_Castellano_signs_the_armistice_on_behalf_of_Badoglio.jpg"
+          }
+        ]
+      },
+      {
+        "id": "guadalcanal-campaign",
+        "year": "Aug 7, 1942",
+        "title": "Guadalcanal Campaign — First US Ground Offensive in Pacific",
+        "type": "battle",
+        "detail": "US Marines landed on Guadalcanal in the Solomon Islands, beginning a six-month campaign to seize the island and its vital airstrip. The campaign involved intense ground fighting in jungle conditions, major naval battles, and sustained aerial combat. Japan's defeat at Guadalcanal in February 1943 marked the first significant US ground victory in the Pacific.",
+        "sources": [
+          {
+            "name": "NARA – 1st Marine Division records",
+            "tier": 1
+          },
+          {
+            "name": "Frank, R., 'Guadalcanal: The Definitive Account of the Landmark Battle'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Guadalcanal_campaign",
+            "source": "Wikipedia / Guadalcanal campaign",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Marines_rest_in_the_field_on_Guadalcanal.jpg/330px-Marines_rest_in_the_field_on_Guadalcanal.jpg"
+          }
+        ]
+      },
+      {
+        "id": "casablanca-conference",
+        "year": "Jan 14, 1943",
+        "title": "Casablanca Conference — Allies Demand Unconditional Surrender",
+        "type": "diplomatic",
+        "detail": "Roosevelt and Churchill met in Casablanca, Morocco for ten days of strategic planning. The most consequential decision was their public announcement of a policy of 'unconditional surrender' for all Axis powers — a declaration that foreclosed any negotiated peace. Stalin was invited but could not attend, citing the ongoing Stalingrad battle. The conference also resolved the debate over a cross-Channel invasion: the Allies agreed to continue in the Mediterranean with an invasion of Sicily rather than France in 1943. Churchill and Roosevelt also agreed on the Combined Bomber Offensive against Germany.",
+        "sources": [
+          {
+            "name": "US Department of State – FRUS: The Conferences at Washington and Casablanca, 1943",
+            "tier": 1
+          },
+          {
+            "name": "Churchill Archives Centre – Casablanca Papers",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Casablanca_Conference",
+            "source": "Wikipedia / Casablanca Conference",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Casablanca_Conference.jpg/330px-Casablanca_Conference.jpg"
+          }
+        ]
+      },
+      {
+        "id": "teheran-conference",
+        "year": "Nov 28, 1943",
+        "title": "Tehran Conference — 'Big Three' Confirm Overlord for 1944",
+        "type": "diplomatic",
+        "detail": "The first meeting of the 'Big Three' — Roosevelt, Churchill, and Stalin — took place in Tehran, Iran. The three leaders confirmed that Operation Overlord (the cross-Channel invasion of France) would be launched in May 1944, coordinated with a Soviet summer offensive. Stalin promised to declare war on Japan within three months of Germany's defeat. The conference also discussed the post-war reorganization of Europe, foreshadowing the division between Soviet and Western spheres of influence. Roosevelt attempted to use his personal charm to manage Stalin, sometimes at Churchill's expense.",
+        "sources": [
+          {
+            "name": "US Department of State – FRUS: The Conferences at Cairo and Tehran, 1943",
+            "tier": 1
+          },
+          {
+            "name": "Edmonds, R., 'The Big Three: Churchill, Roosevelt and Stalin in Peace and War'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Tehran_Conference",
+            "source": "Wikipedia / Tehran Conference",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/The_Tehran_Conference%2C_1943_TR205.jpg/330px-The_Tehran_Conference%2C_1943_TR205.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-tarawa",
+        "year": "Nov 20, 1943",
+        "title": "Battle of Tarawa — 76 Hours of Carnage in the Central Pacific",
+        "type": "battle",
+        "detail": "US Marines assaulted Betio Island in the Tarawa Atoll in the Gilbert Islands, encountering the most heavily fortified Pacific island they had yet attacked. Of approximately 4,700 Japanese defenders, only 146 survived; they fought almost to the last man. US Marines suffered approximately 1,000 killed and 2,100 wounded in 76 hours. The battle shocked American public opinion when graphic photographs and film footage were released — the first time the US government allowed images of American dead. The costly lessons of Tarawa — about amphibious equipment, naval gunfire support, and reef obstacles — directly shaped subsequent Pacific island assaults.",
+        "sources": [
+          {
+            "name": "NARA – 2nd Marine Division records",
+            "tier": 1
+          },
+          {
+            "name": "Alexander, J., 'Utmost Savagery: The Three Days of Tarawa'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Tarawa",
+            "source": "Wikipedia / Battle of Tarawa",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/TarawaMarines.jpg/330px-TarawaMarines.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Allied Advances & Liberation (1944)",
+    "events": [
+      {
+        "id": "d-day-normandy",
+        "year": "Jun 6, 1944",
+        "title": "D-Day — Allied Invasion of Normandy",
+        "type": "battle",
+        "detail": "Operation Overlord launched the largest amphibious invasion in history: 156,000 Allied troops landed on five Normandy beaches under massive naval and air support. American forces suffered heavy losses at Omaha Beach; other beaches were secured more quickly. The Normandy landings opened the long-awaited second front in Western Europe and began the liberation of France.",
+        "sources": [
+          {
+            "name": "NARA – SHAEF records RG 331; 21st Army Group records",
+            "tier": 1
+          },
+          {
+            "name": "Ambrose, S., 'D-Day: June 6, 1944'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Normandy_landings",
+            "source": "Wikipedia / Normandy landings",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg/330px-Into_the_Jaws_of_Death_23-0455M_edit.jpg"
+          }
+        ]
+      },
+      {
+        "id": "operation-market-garden",
+        "year": "Sep 17, 1944",
+        "title": "Operation Market Garden — Airborne Assault in Netherlands",
+        "type": "battle",
+        "detail": "Montgomery's ambitious plan to end the war by Christmas 1944 used 35,000 paratroopers to capture bridges across the Dutch rivers, with ground forces linking them up. At Arnhem, the British 1st Airborne Division landed too far from its bridge and was surrounded; only 2,400 of 10,000 escaped. 'A bridge too far' became a byword for overreach.",
+        "sources": [
+          {
+            "name": "UK National Archives WO 205 – 21st Army Group records",
+            "tier": 1
+          },
+          {
+            "name": "Ryan, C., 'A Bridge Too Far'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Market_Garden",
+            "source": "Wikipedia / Operation Market Garden",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Waves_of_paratroops_land_in_Holland.jpg/330px-Waves_of_paratroops_land_in_Holland.jpg"
+          }
+        ]
+      },
+      {
+        "id": "liberation-paris",
+        "year": "Aug 25, 1944",
+        "title": "Liberation of Paris",
+        "type": "battle",
+        "detail": "Free French forces of General Leclerc's 2nd Armored Division entered Paris, followed by General de Gaulle who marched down the Champs-Élysées amidst massive celebrations. German commander General von Choltitz had defied Hitler's order to destroy Paris. De Gaulle declared the liberation a great French achievement, downplaying the vital American role.",
+        "sources": [
+          {
+            "name": "French National Archives – Provisional Government records",
+            "tier": 1
+          },
+          {
+            "name": "Collins, L. & Lapierre, D., 'Is Paris Burning?'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Liberation_of_Paris",
+            "source": "Wikipedia / Liberation of Paris",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg/330px-Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-bulge",
+        "year": "Dec 16, 1944",
+        "title": "Battle of the Bulge — Germany's Last Major Offensive in West",
+        "type": "battle",
+        "detail": "Germany launched its last major offensive in the West through the Ardennes Forest, achieving complete surprise and driving a 'bulge' 85 km deep into Allied lines. Surrounded at Bastogne, General McAuliffe famously replied 'Nuts!' to German surrender demands. The offensive ultimately failed, exhausting Germany's last armored reserves.",
+        "sources": [
+          {
+            "name": "NARA – 12th Army Group records RG 407",
+            "tier": 1
+          },
+          {
+            "name": "MacDonald, C., 'A Time for Trumpets: The Battle of the Bulge'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge",
+            "source": "Wikipedia / Battle of the Bulge",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/117th_Infantry_North_Carolina_NG_at_St._Vith_1945.jpg/330px-117th_Infantry_North_Carolina_NG_at_St._Vith_1945.jpg"
+          }
+        ]
+      },
+      {
+        "id": "warsaw-uprising",
+        "year": "Aug 1, 1944",
+        "title": "Warsaw Uprising — Polish Home Army Rises Against Nazis",
+        "type": "battle",
+        "detail": "The Polish Home Army (Armia Krajowa) launched a major uprising against German occupation in Warsaw, expecting Soviet forces approaching from the east to assist. Stalin halted Soviet advances, denying air access to Western Allied supply missions for weeks. Germany crushed the uprising after 63 days; Warsaw was systematically destroyed and 200,000 civilians killed.",
+        "sources": [
+          {
+            "name": "Institute of National Remembrance (IPN), Poland",
+            "tier": 2
+          },
+          {
+            "name": "Davies, N., 'Rising '44: The Battle for Warsaw'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Warsaw_Uprising",
+            "source": "Wikipedia / Warsaw Uprising",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warsaw_Uprising.png/330px-Warsaw_Uprising.png"
+          }
+        ]
+      },
+      {
+        "id": "operation-bagration",
+        "year": "Jun 23, 1944",
+        "title": "Operation Bagration — Soviet Summer Offensive Destroys Army Group Centre",
+        "type": "battle",
+        "detail": "The Soviet Red Army launched Operation Bagration against German Army Group Centre, the largest Allied offensive of WWII. Using elaborate deception operations, Soviet forces shattered 28 German divisions, killing or capturing 300,000 troops — losses exceeding Stalingrad. The offensive advanced over 600 km in two months and liberated Belorussia.",
+        "sources": [
+          {
+            "name": "Russian State Military Archive RGVA – Belorussian Front records",
+            "tier": 1
+          },
+          {
+            "name": "Glantz, D., 'When Titans Clashed'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "d-day-southern-france",
+        "year": "Aug 15, 1944",
+        "title": "Operation Dragoon — Allied Landings in Southern France",
+        "type": "battle",
+        "detail": "US and Free French forces landed on the French Riviera in Operation Dragoon, quickly advancing up the Rhône Valley. The landings liberated southern France within weeks and linked with forces advancing from Normandy. Marseille and Toulon were captured within a fortnight, providing crucial port capacity for Allied logistics.",
+        "sources": [
+          {
+            "name": "NARA – 6th Army Group records",
+            "tier": 1
+          },
+          {
+            "name": "Clarke, J. & Smith, R., 'Riviera to the Rhine', US Army Official History",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Dragoon",
+            "source": "Wikipedia / Operation Dragoon",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Operation_Dragoon_invasion_fleet_1944.jpg/330px-Operation_Dragoon_invasion_fleet_1944.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-philippine-sea",
+        "year": "Jun 19, 1944",
+        "title": "Battle of Philippine Sea — 'Great Marianas Turkey Shoot'",
+        "type": "battle",
+        "detail": "The largest carrier-versus-carrier battle in history saw the US Navy destroy Japanese naval air power in what became known as 'the Great Marianas Turkey Shoot.' Japan lost 600 aircraft and three carriers; US losses were minimal. The battle ended Japan's ability to mount effective carrier operations for the rest of the war.",
+        "sources": [
+          {
+            "name": "NARA – CINCPAC Action Reports June 1944",
+            "tier": 1
+          },
+          {
+            "name": "Morison, S.E., 'History of US Naval Operations in WWII', Vol. VIII",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Philippine_Sea",
+            "source": "Wikipedia / Battle of the Philippine Sea",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Japanese_aircraft_carrier_Zuikaku_and_two_destroyers_under_attack_on_20_June_1944_%2880-G-238025%29.jpg/330px-Japanese_aircraft_carrier_Zuikaku_and_two_destroyers_under_attack_on_20_June_1944_%2880-G-238025%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "bretton-woods-conference",
+        "year": "Jul 1, 1944",
+        "title": "Bretton Woods Conference — Post-War Economic Order",
+        "type": "diplomatic",
+        "detail": "44 Allied nations met at Bretton Woods, New Hampshire to design the post-war international monetary system. The conference created the International Monetary Fund and the World Bank, and established the US dollar as the global reserve currency pegged to gold. The Bretton Woods system shaped global finance until 1971.",
+        "sources": [
+          {
+            "name": "US Treasury Department – Bretton Woods Conference proceedings",
+            "tier": 1
+          },
+          {
+            "name": "IMF Archive, Washington DC",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Bretton_Woods_Conference",
+            "source": "Wikipedia / Bretton Woods Conference",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Mt._Washington_Hotel.jpg/330px-Mt._Washington_Hotel.jpg"
+          }
+        ]
+      },
+      {
+        "id": "liberation-auschwitz",
+        "year": "Jan 27, 1945",
+        "title": "Soviet Forces Liberate Auschwitz-Birkenau",
+        "type": "holocaust",
+        "detail": "Soldiers of the Soviet 60th Army liberated the Auschwitz-Birkenau concentration camp complex, finding 7,000 surviving prisoners amid evidence of mass murder on an industrial scale. Over 1.1 million people, predominantly Jews, had been murdered at Auschwitz. January 27 is now designated International Holocaust Remembrance Day by the United Nations.",
+        "sources": [
+          {
+            "name": "Yad Vashem – Auschwitz documentation",
+            "tier": 2
+          },
+          {
+            "name": "USHMM – Liberation of the Camps",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp",
+            "source": "Wikipedia / Auschwitz concentration camp",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Auschwitz_I_%2822_May_2010%29_b.jpg/330px-Auschwitz_I_%2822_May_2010%29_b.jpg"
+          }
+        ]
+      },
+      {
+        "id": "yalta-conference",
+        "year": "Feb 4, 1945",
+        "title": "Yalta Conference — Big Three Shape Post-War World",
+        "type": "diplomatic",
+        "detail": "Roosevelt, Churchill, and Stalin met at Yalta in Crimea to plan the final defeat of Germany and design the post-war international order. Stalin secured control over Eastern Europe and a Soviet role in the Pacific war in exchange for agreeing to the United Nations. The agreements made at Yalta were contested as a Western betrayal of Eastern European nations.",
+        "sources": [
+          {
+            "name": "US Department of State – Foreign Relations of the United States, Yalta Conference 1945",
+            "tier": 1
+          },
+          {
+            "name": "Churchill Archives Centre – Yalta records",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Yalta_Conference",
+            "source": "Wikipedia / Yalta Conference",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg/330px-Yalta_Conference_%28Churchill%2C_Roosevelt%2C_Stalin%29_%28B%26W%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "iwo-jima",
+        "year": "Feb 19, 1945",
+        "title": "Battle of Iwo Jima",
+        "type": "battle",
+        "detail": "US Marines assaulted the heavily fortified island of Iwo Jima, defended by 21,000 Japanese troops in a labyrinth of tunnels and bunkers. The 36-day battle cost nearly 7,000 Marine dead and 19,000 wounded. The iconic flag-raising on Mount Suribachi became one of WWII's most famous images. Almost all Japanese defenders died.",
+        "sources": [
+          {
+            "name": "NARA – 5th Marine Division records",
+            "tier": 1
+          },
+          {
+            "name": "Bradley, J., 'Flags of Our Fathers'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Iwo_Jima",
+            "source": "Wikipedia / Battle of Iwo Jima",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Raising_the_Flag_on_Iwo_Jima%2C_larger_-_edit1.jpg/330px-Raising_the_Flag_on_Iwo_Jima%2C_larger_-_edit1.jpg"
+          }
+        ]
+      },
+      {
+        "id": "dresden-bombing",
+        "year": "Feb 13, 1945",
+        "title": "Firebombing of Dresden",
+        "type": "strategic-bombing",
+        "detail": "British and American bombers conducted four raids on the German city of Dresden, creating massive firestorms that destroyed the city center. Post-war estimates of deaths ranged from 22,700 to 25,000 (confirmed by a 2010 German commission) though wartime propaganda inflated figures to 200,000+. The bombing's military necessity and proportionality remains debated by historians.",
+        "sources": [
+          {
+            "name": "Dresden Historical Commission Report, 2010",
+            "tier": 1
+          },
+          {
+            "name": "Taylor, F., 'Dresden: Tuesday, 13 February 1945'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Bombing_of_Dresden",
+            "source": "Wikipedia / Bombing of Dresden",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Bundesarchiv_Bild_146-1994-041-07%2C_Dresden%2C_zerst%C3%B6rtes_Stadtzentrum.jpg/330px-Bundesarchiv_Bild_146-1994-041-07%2C_Dresden%2C_zerst%C3%B6rtes_Stadtzentrum.jpg"
+          }
+        ]
+      },
+      {
+        "id": "liberation-rome",
+        "year": "Jun 4, 1944",
+        "title": "Liberation of Rome — First Axis Capital Falls",
+        "type": "battle",
+        "detail": "Allied forces entered Rome on June 4, 1944, making it the first Axis capital to be liberated. The US 5th Army under General Mark Clark entered the city to jubilant crowds, but the liberation was immediately overshadowed by D-Day two days later, which dominated international attention. The Italian campaign's slow progress — grinding up the 'long leg' of the Italian peninsula against the German Gustav and Gothic Lines — had consumed enormous Allied resources for 10 months before Rome fell. German forces withdrew northward intact, continuing resistance until May 2, 1945.",
+        "sources": [
+          {
+            "name": "NARA – US 5th Army records",
+            "tier": 1
+          },
+          {
+            "name": "Clark, M., 'Calculated Risk', 1950",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Allies_enter_Rome",
+            "source": "Wikipedia / Allies enter Rome",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/US_Fifth_Army_enters_Rome.jpg/330px-US_Fifth_Army_enters_Rome.jpg"
+          }
+        ]
+      },
+      {
+        "id": "operation-cobra",
+        "year": "Jul 25, 1944",
+        "title": "Operation Cobra — Allied Breakout from Normandy",
+        "type": "battle",
+        "detail": "After seven weeks of grinding attrition in the Normandy bocage, US forces under General Omar Bradley launched Operation Cobra on July 25, 1944, with 3,000 Allied bombers saturating a narrow 7-km front. Despite tragic short-bombing casualties on American troops (including General Lesley McNair), the attack shattered the German line. General George Patton's newly operational 3rd Army poured through the gap, encircling German forces in the Falaise Pocket, liberating Paris on August 25, and racing 500 miles across France in six weeks — the most spectacular Allied advance of the European war.",
+        "sources": [
+          {
+            "name": "NARA – SHAEF Operations records",
+            "tier": 1
+          },
+          {
+            "name": "Blumenson, M., 'Breakout and Pursuit', US Army in WWII Official History",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Cobra",
+            "source": "Wikipedia / Operation Cobra",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Patton_3rd_Army.jpg/330px-Patton_3rd_Army.jpg"
+          }
+        ]
+      },
+      {
+        "id": "liberation-brussels",
+        "year": "Sep 4, 1944",
+        "title": "Liberation of Brussels and the 'Great Swan'",
+        "type": "battle",
+        "detail": "British Guards Armoured Division liberated Brussels on September 4, 1944, to enormous public celebration after four years of German occupation. The following day, Allied forces liberated Antwerp — with its critical port still intact (a rare occurrence). The rapid advance known as the 'Great Swan' saw Allied forces cover 300–400 miles in two weeks, liberating virtually all of France and Belgium and parts of the Netherlands. The headlong advance outran logistics; the Allied supply system, designed for a slower advance, could not sustain further offensive operations without a pause to consolidate.",
+        "sources": [
+          {
+            "name": "Imperial War Museum – Guards Armoured Division records",
+            "tier": 2
+          },
+          {
+            "name": "Stacey, C., 'The Victory Campaign', Canadian Army Official History",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Liberation_of_Brussels",
+            "source": "Wikipedia / Liberation of Brussels",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Lib_bxl_1944.jpg/330px-Lib_bxl_1944.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-leyte-gulf",
+        "year": "Oct 23, 1944",
+        "title": "Battle of Leyte Gulf — Largest Naval Battle in History",
+        "type": "battle",
+        "detail": "The Battle of Leyte Gulf was the largest naval battle in history, involving 367 ships, nearly 200,000 sailors, and 1,996 aircraft across four interconnected engagements over four days. Japan deployed virtually its entire remaining fleet in a desperate attempt to repel the US invasion of the Philippines, losing 3 battleships, 4 aircraft carriers, 10 cruisers, and 9 destroyers. Japan's carrier force was effectively destroyed and the Imperial Japanese Navy never again operated as a strategic force. The battle also saw the first organized use of kamikaze suicide aircraft attacks.",
+        "sources": [
+          {
+            "name": "NARA – 7th Fleet and 3rd Fleet Action Reports",
+            "tier": 1
+          },
+          {
+            "name": "Morison, S.E., 'History of United States Naval Operations in WWII, Vol. XII: Leyte'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf",
+            "source": "Wikipedia / Battle of Leyte Gulf",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Battle_leyte_gulf_map.jpg/330px-Battle_leyte_gulf_map.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-budapest",
+        "year": "Oct 29, 1944",
+        "title": "Battle of Budapest — 108-Day Soviet Siege of the Hungarian Capital",
+        "type": "battle",
+        "detail": "Soviet forces began encircling Budapest on October 29, 1944, and completed the encirclement on December 26. Hitler ordered the 188,000 Axis defenders to hold the city to the last, refusing all German breakout requests. The siege lasted 108 days, destroying much of the city, killing approximately 38,000 civilians, and causing 160,000 military casualties on both sides. On February 11, 1945, the remaining 30,000 Axis troops attempted a breakout — fewer than 700 reached German lines. The city fell to the Soviets on February 13, 1945, ending the last major Axis bastion east of Vienna.",
+        "sources": [
+          {
+            "name": "Russian State Military Archive (RGVA) — 2nd Ukrainian Front records",
+            "tier": 1
+          },
+          {
+            "name": "Ungváry, K., 'Battle for Budapest: 100 Days in World War II'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Siege_of_Budapest",
+            "source": "Wikipedia / Siege of Budapest",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Budapest_1945.jpg/330px-Budapest_1945.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Final Campaigns & Victory (1945)",
+    "events": [
+      {
+        "id": "battle-berlin",
+        "year": "Apr 16, 1945",
+        "title": "Battle of Berlin — Final Assault on the German Capital",
+        "type": "battle",
+        "detail": "Soviet Marshal Zhukov's forces launched a massive assault on Berlin with 2.5 million troops and 6,250 tanks. Intense house-to-house fighting raged through the ruined capital for two weeks. An estimated 100,000 German civilians died during the battle, along with 80,000 Soviet soldiers and the entire garrison of Berlin.",
+        "sources": [
+          {
+            "name": "Russian State Military Archive RGVA – 1st Belorussian Front records",
+            "tier": 1
+          },
+          {
+            "name": "Beevor, A., 'Berlin: The Downfall 1945'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_in_Berlin",
+            "source": "Wikipedia / Battle in Berlin",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Raising_a_flag_over_the_Reichstag_-_Restoration.jpg/330px-Raising_a_flag_over_the_Reichstag_-_Restoration.jpg"
+          }
+        ]
+      },
+      {
+        "id": "hitler-suicide",
+        "year": "Apr 30, 1945",
+        "title": "Hitler Dies by Suicide in Berlin Bunker",
+        "type": "diplomatic",
+        "detail": "With Soviet forces fighting street-to-street battles less than a kilometer away, Adolf Hitler shot himself in the head in his underground bunker (Führerbunker) in Berlin; Eva Braun, whom he had married hours earlier, took cyanide. Their bodies were burned in the Reich Chancellery garden per Hitler's instructions. Grand Admiral Dönitz was named Hitler's successor.",
+        "sources": [
+          {
+            "name": "Soviet NKVD interrogation records of Hitler's staff, 1945 (declassified)",
+            "tier": 1
+          },
+          {
+            "name": "Kershaw, I., 'Hitler: 1936–1945 Nemesis'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Death_of_Adolf_Hitler",
+            "source": "Wikipedia / Death of Adolf Hitler",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Stars_%26_Stripes_%26_Hitler_Dead2.jpg/330px-Stars_%26_Stripes_%26_Hitler_Dead2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "germany-surrenders-v-e-day",
+        "year": "May 8, 1945",
+        "title": "Germany Surrenders — V-E Day",
+        "type": "surrender",
+        "detail": "Germany signed the unconditional surrender instrument at Reims (May 7) and Berlin-Karlshorst (May 8), accepted by Allied Supreme Commander Eisenhower and Soviet Marshal Zhukov. V-E Day (Victory in Europe) was celebrated across the Allied world. The war in Europe had lasted 2,174 days from the invasion of Poland.",
+        "sources": [
+          {
+            "name": "German Act of Military Surrender, May 8, 1945 – NARA",
+            "tier": 1
+          },
+          {
+            "name": "Imperial War Museum – V-E Day Collection",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/German_Instrument_of_Surrender",
+            "source": "Wikipedia / German Instrument of Surrender",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Field_Marshall_Keitel_signs_German_surrender_terms_in_Berlin_8_May_1945_-_Restoration.jpg/330px-Field_Marshall_Keitel_signs_German_surrender_terms_in_Berlin_8_May_1945_-_Restoration.jpg"
+          }
+        ]
+      },
+      {
+        "id": "potsdam-conference",
+        "year": "Jul 17, 1945",
+        "title": "Potsdam Conference — Final Allied Summit",
+        "type": "diplomatic",
+        "detail": "Truman, Churchill (then Attlee), and Stalin met near Berlin at Potsdam to settle German occupation zones, issue an ultimatum to Japan (the Potsdam Declaration), and plan the post-war order. Truman secretly informed Stalin that the US had 'a new weapon of unusual destructive force' — the atomic bomb, tested the day before. The conference finalized the division of Germany and Europe.",
+        "sources": [
+          {
+            "name": "US Department of State – Foreign Relations of the United States, Potsdam 1945",
+            "tier": 1
+          },
+          {
+            "name": "Gaddis, J.L., 'The Cold War: A New History'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Potsdam_Conference",
+            "source": "Wikipedia / Potsdam Conference",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Attlee%2C_Truman_and_Stalin_at_Potsdam.jpg/330px-Attlee%2C_Truman_and_Stalin_at_Potsdam.jpg"
+          }
+        ]
+      },
+      {
+        "id": "atomic-bomb-hiroshima",
+        "year": "Aug 6, 1945",
+        "title": "Atomic Bomb Dropped on Hiroshima",
+        "type": "strategic-bombing",
+        "detail": "The B-29 Enola Gay dropped 'Little Boy,' a uranium gun-type atomic bomb, on Hiroshima, destroying 4.7 square miles of the city and killing an estimated 70,000–80,000 people instantly. Total deaths by year's end reached 90,000–140,000, including radiation sickness victims. It was the first use of a nuclear weapon in warfare.",
+        "sources": [
+          {
+            "name": "US Strategic Bombing Survey, Pacific War – NARA",
+            "tier": 1
+          },
+          {
+            "name": "Hiroshima Peace Memorial Museum records",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki",
+            "source": "Wikipedia / Atomic bombings of Hiroshima and Nagasaki",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/330px-Atomic_bombing_of_Japan.jpg"
+          }
+        ]
+      },
+      {
+        "id": "soviet-declaration-war-japan",
+        "year": "Aug 8, 1945",
+        "title": "Soviet Union Declares War on Japan — Manchuria Invaded",
+        "type": "battle",
+        "detail": "The USSR declared war on Japan and launched Operation August Storm, a massive invasion of Japanese-held Manchuria with 1.5 million troops. Within days, Soviet forces shattered the Kwantung Army, Japan's largest overseas force. This Soviet entry, combined with the atomic bombs, convinced Japan's Supreme War Council that continuing the war was hopeless.",
+        "sources": [
+          {
+            "name": "Russian State Military Archive – August Storm operation records",
+            "tier": 1
+          },
+          {
+            "name": "Glantz, D., 'The Soviet Strategic Offensive in Manchuria, 1945'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/World_War_II",
+            "source": "Wikipedia / World War II",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Bundesarchiv_Bild_101I-646-5188-17%2C_Flugzeuge_Junkers_Ju_87.jpg/330px-Bundesarchiv_Bild_101I-646-5188-17%2C_Flugzeuge_Junkers_Ju_87.jpg"
+          }
+        ]
+      },
+      {
+        "id": "atomic-bomb-nagasaki",
+        "year": "Aug 9, 1945",
+        "title": "Atomic Bomb Dropped on Nagasaki",
+        "type": "strategic-bombing",
+        "detail": "The B-29 Bockscar dropped 'Fat Man,' a plutonium implosion bomb, on Nagasaki, killing 40,000–50,000 immediately and 60,000–80,000 total by year's end. The bomb detonated 2 miles off target due to cloud cover, limiting but not preventing catastrophic destruction. Combined with Soviet entry into the war, these events forced Japan's surrender.",
+        "sources": [
+          {
+            "name": "US Strategic Bombing Survey, Pacific War – NARA",
+            "tier": 1
+          },
+          {
+            "name": "Nagasaki Atomic Bomb Museum records",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki",
+            "source": "Wikipedia / Atomic bombings of Hiroshima and Nagasaki",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/330px-Atomic_bombing_of_Japan.jpg"
+          }
+        ]
+      },
+      {
+        "id": "japan-surrenders-v-j-day",
+        "year": "Aug 15, 1945",
+        "title": "Japan Surrenders — V-J Day",
+        "type": "surrender",
+        "detail": "Emperor Hirohito broadcast his surrender announcement to the Japanese people — the first time most had heard his voice. The formal surrender was signed aboard USS Missouri in Tokyo Bay on September 2. The Pacific War had lasted 1,347 days from Pearl Harbor and cost approximately 36 million lives across the Asia-Pacific region.",
+        "sources": [
+          {
+            "name": "Japanese Imperial Rescript of Surrender, August 15, 1945",
+            "tier": 1
+          },
+          {
+            "name": "National Archives of Japan – Imperial Household Agency records",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Victory_over_Japan_Day",
+            "source": "Wikipedia / Victory over Japan Day",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Surrender_of_Japan_-_USS_Missouri_%28restored%29.jpg/330px-Surrender_of_Japan_-_USS_Missouri_%28restored%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "nuremberg-trials",
+        "year": "Nov 20, 1945",
+        "title": "Nuremberg Trials Begin — Nazi Leaders on Trial",
+        "type": "diplomatic",
+        "detail": "The International Military Tribunal convened at Nuremberg to try 24 major Nazi war criminals for crimes against peace, war crimes, and crimes against humanity. Twelve were sentenced to death, including Göring and Ribbentrop; seven received prison sentences. The trials established the Nuremberg Principles and the modern concept of international criminal law.",
+        "sources": [
+          {
+            "name": "Nuremberg Tribunal Records – NARA RG 238",
+            "tier": 1
+          },
+          {
+            "name": "Tusa, A. & J., 'The Nuremberg Trial'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Nuremberg_(2025_film)",
+            "source": "Wikipedia / Nuremberg (2025 film)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/2/25/Nuremberg_2025_film_theatrical_poster.jpg"
+          }
+        ]
+      },
+      {
+        "id": "okinawa-campaign",
+        "year": "Apr 1, 1945",
+        "title": "Battle of Okinawa — Bloodiest Pacific Battle",
+        "type": "battle",
+        "detail": "The last major battle of the Pacific War, Okinawa involved 287,000 US troops assaulting an island defended by 100,000 Japanese. The 82-day campaign produced catastrophic casualties: 12,000 US dead, 70,000+ wounded, 100,000+ Japanese military dead, and an estimated 100,000–150,000 Okinawan civilian dead. Kamikaze attacks sank 36 US ships.",
+        "sources": [
+          {
+            "name": "NARA – 10th Army records",
+            "tier": 1
+          },
+          {
+            "name": "Feifer, G., 'The Battle of Okinawa'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Okinawa",
+            "source": "Wikipedia / Battle of Okinawa",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ww2_158.jpg/330px-Ww2_158.jpg"
+          }
+        ]
+      },
+      {
+        "id": "death-of-roosevelt",
+        "year": "Apr 12, 1945",
+        "title": "President Roosevelt Dies — Truman Assumes Presidency",
+        "type": "diplomatic",
+        "detail": "President Franklin D. Roosevelt died of a cerebral hemorrhage at Warm Springs, Georgia, just three weeks before Germany's surrender. He had served as president through the entire US involvement in WWII. Vice President Harry S. Truman was sworn in and would make the fateful decision to use atomic bombs against Japan.",
+        "sources": [
+          {
+            "name": "National Archives – FDR Presidential Library, Hyde Park",
+            "tier": 1
+          },
+          {
+            "name": "McCullough, D., 'Truman'",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States",
+            "source": "Wikipedia / List of presidents of the United States",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/White_House_Washington.JPG/330px-White_House_Washington.JPG"
+          }
+        ]
+      },
+      {
+        "id": "united-nations-charter",
+        "year": "Jun 26, 1945",
+        "title": "United Nations Charter Signed in San Francisco",
+        "type": "diplomatic",
+        "detail": "Representatives of 50 nations signed the UN Charter in San Francisco, creating the United Nations as the primary international organization for maintaining peace and security. The Charter created the Security Council with five permanent members (US, UK, USSR, France, China) holding veto power. The UN formally came into existence on October 24, 1945.",
+        "sources": [
+          {
+            "name": "UN Charter – Authenticated original text, UN Archives",
+            "tier": 1
+          },
+          {
+            "name": "United Nations Secretariat records",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Charter_of_the_United_Nations",
+            "source": "Wikipedia / Charter of the United Nations",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Uncharter.pdf/page1-330px-Uncharter.pdf.jpg"
+          }
+        ]
+      },
+      {
+        "id": "us-firebombing-tokyo",
+        "year": "Mar 9, 1945",
+        "title": "Operation Meetinghouse — Firebombing of Tokyo",
+        "type": "strategic-bombing",
+        "detail": "In the single most destructive air raid in history, 279 B-29 Superfortresses dropped 1,665 tons of incendiary bombs on Tokyo's densely packed residential districts over the night of March 9–10, 1945. The resulting firestorm destroyed 16 square miles of the city, killed 80,000–100,000 civilians, and left approximately 1 million homeless. General Curtis LeMay's shift from high-altitude precision bombing to low-altitude incendiary raids against Japanese cities would eventually destroy 67 cities before the atomic bomb attacks. Tokyo was struck again in May 1945; five raids on the capital alone killed more civilians than the atomic bombs at Hiroshima and Nagasaki combined.",
+        "sources": [
+          {
+            "name": "US Strategic Bombing Survey – Summary Report (Pacific War), 1946",
+            "tier": 1
+          },
+          {
+            "name": "Selden, M. & Selden, K. (eds.), 'The Atomic Bomb: Voices from Hiroshima and Nagasaki'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Bombing_of_Tokyo_(10_March_1945)",
+            "source": "Wikipedia / Bombing of Tokyo (10 March 1945)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Tokyo_1945-3-10-US.jpg/330px-Tokyo_1945-3-10-US.jpg"
+          }
+        ]
+      },
+      {
+        "id": "liberation-buchenwald",
+        "year": "Apr 11, 1945",
+        "title": "Liberation of Buchenwald — Eisenhower Orders Commanders to Witness Nazi Crimes",
+        "type": "holocaust",
+        "detail": "US forces of the 6th Armored Division liberated Buchenwald concentration camp near Weimar, Germany on April 11, 1945, discovering approximately 21,000 surviving prisoners — many barely alive from starvation, disease, and forced labor. General Eisenhower immediately visited and ordered all available US commanders and soldiers, as well as German civilians from nearby towns, to tour the camp. He also arranged for members of Congress and reporters to visit, stating he wanted the evidence documented because 'the world will not believe it.' Survivor Elie Wiesel, a teenager at liberation, later wrote of the experience in his memoir 'Night.'",
+        "sources": [
+          {
+            "name": "US Holocaust Memorial Museum — Buchenwald liberation records",
+            "tier": 1
+          },
+          {
+            "name": "Eisenhower, D.D., 'Crusade in Europe', 1948",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Buchenwald_concentration_camp",
+            "source": "Wikipedia / Buchenwald concentration camp",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Buchenwald_Survivors_05763.jpg/330px-Buchenwald_Survivors_05763.jpg"
+          }
+        ]
+      },
+      {
+        "id": "death-mussolini",
+        "year": "Apr 28, 1945",
+        "title": "Mussolini Captured and Executed by Italian Partisans",
+        "type": "surrender",
+        "detail": "Benito Mussolini was captured by Communist partisans while attempting to flee to Switzerland disguised in a German military overcoat. On April 28, 1945 — just two days before Hitler's suicide — he was summarily executed by partisan Luigi Longo at Giulino di Mezzegra on Lake Como. His body and that of his mistress Clara Petacci were transported to Milan's Piazzale Loreto — the same site where partisans had been publicly executed months earlier — and hung upside down from a metal girder. The manner of his death was seen as symbolic justice for fascism's victims. Mussolini's 21-year rule had brought Italy into an alliance that cost 457,000 Italian lives.",
+        "sources": [
+          {
+            "name": "Italian National Archives – Archivio Centrale dello Stato",
+            "tier": 1
+          },
+          {
+            "name": "Mack Smith, D., 'Mussolini: A Biography'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Execution_of_Mussolini",
+            "source": "Wikipedia / Execution of Mussolini",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Mussolini_e_Petacci_a_Piazzale_Loreto.jpg/330px-Mussolini_e_Petacci_a_Piazzale_Loreto.jpg"
+          }
+        ]
+      },
+      {
+        "id": "germany-surrenders-italy",
+        "year": "May 2, 1945",
+        "title": "Germany Surrenders in Italy — First Major Axis Force to Capitulate",
+        "type": "surrender",
+        "detail": "The German Army Group C in Italy signed an unconditional instrument of surrender at the Royal Palace of Caserta on May 2, 1945 — the same day Berlin fell to Soviet forces. The surrender came into effect at noon, ending 20 months of fighting in Italy that cost the Allies 313,000 casualties and Germany approximately 430,000. The Italian campaign had tied down 26 German divisions that could otherwise have reinforced the Eastern or Western Front. The Caserta surrender was negotiated partly through Operation Sunrise, a controversial secret contact between Allen Dulles of the OSS and SS General Karl Wolff.",
+        "sources": [
+          {
+            "name": "NARA – Allied Forces HQ Italy (AFHQ) surrender records",
+            "tier": 1
+          },
+          {
+            "name": "Jackson, W.G.F., 'The Battle for Italy', 1967",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Instrument_of_surrender_of_Italy_(1945)",
+            "source": "Wikipedia / Instrument of surrender of Italy (1945)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Caserta_surrender.jpg/330px-Caserta_surrender.jpg"
+          }
+        ]
+      },
+      {
+        "id": "liberation-netherlands-denmark-1945",
+        "year": "May 5, 1945",
+        "title": "Liberation of the Netherlands and Denmark",
+        "type": "surrender",
+        "detail": "On May 5, 1945, the German forces occupying the Netherlands surrendered to Canadian General Charles Foulkes at Hotel De Wereld in Wageningen, ending five years of brutal occupation that killed approximately 270,000 Dutch civilians — including 102,000 Jews murdered in the Holocaust, the highest percentage of any Western European Jewish community. The same day, German forces in Denmark and Norway capitulated as part of the general German collapse; Danish citizens emerged to place lit candles in their windows, a spontaneous act of celebration that has become an annual remembrance tradition. The Netherlands had suffered severely in the 'Hunger Winter' of 1944–45, when the German administration cut off food supplies, killing 18,000–22,000 civilians from starvation.",
+        "sources": [
+          {
+            "name": "Dutch National Archives – Liberation records",
+            "tier": 1
+          },
+          {
+            "name": "Schrijvers, P., 'The Margraten Boys: How a Dutch Community Adopted America's WWII Dead'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Liberation_of_the_Netherlands",
+            "source": "Wikipedia / Liberation of the Netherlands",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Liberation_of_Netherlands_1945.jpg/330px-Liberation_of_Netherlands_1945.jpg"
+          }
+        ]
+      },
+      {
+        "id": "germany-surrenders-reims",
+        "year": "May 7, 1945",
+        "title": "Germany's First Unconditional Surrender Signed at Reims",
+        "type": "surrender",
+        "detail": "At 02:41 CET on May 7, 1945, General Alfred Jodl signed Germany's unconditional surrender at Supreme Headquarters Allied Expeditionary Force (SHAEF) in Reims, France, in the presence of representatives from the US, Britain, France, and the USSR. The Soviet Union, however, refused to accept the Reims document as the final surrender, demanding a more elaborate ceremony in Berlin. A second, formal surrender was signed at Berlin-Karlshorst on May 8–9, 1945 — explaining why Western nations observe VE Day on May 8 while Russia commemorates Victory Day on May 9.",
+        "sources": [
+          {
+            "name": "NARA SHAEF – Surrender document original",
+            "tier": 1
+          },
+          {
+            "name": "Musée de la Reddition, Reims – Exhibition records",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/German_Instrument_of_Surrender",
+            "source": "Wikipedia / German Instrument of Surrender",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Reims_surrender_1945.jpg/330px-Reims_surrender_1945.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trinity-nuclear-test",
+        "year": "Jul 16, 1945",
+        "title": "Trinity Test — First Nuclear Weapon Detonated",
+        "type": "battle",
+        "detail": "At 5:29 AM Mountain War Time on July 16, 1945, the world's first nuclear weapon was detonated at the Trinity test site in the Jornada del Muerto desert of New Mexico. The 'Gadget' (a plutonium implosion device similar to the Nagasaki bomb) yielded approximately 21 kilotons. A blinding flash was seen 250 miles away; the blast wave knocked observers off their feet at 10 miles. Manhattan Project director J. Robert Oppenheimer recalled the Bhagavad Gita: 'Now I am become Death, the destroyer of worlds.' The successful test confirmed that atomic bombs were ready for operational use against Japan.",
+        "sources": [
+          {
+            "name": "US Department of Energy – Manhattan Project Historical Overview",
+            "tier": 1
+          },
+          {
+            "name": "Rhodes, R., 'The Making of the Atomic Bomb', Pulitzer Prize 1987",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)",
+            "source": "Wikipedia / Trinity (nuclear test)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Trinity_shot_color.jpg/330px-Trinity_shot_color.jpg"
+          }
+        ]
+      },
+      {
+        "id": "potsdam-declaration",
+        "year": "Jul 26, 1945",
+        "title": "Potsdam Declaration — Allies Demand Japan's Surrender or 'Prompt and Utter Destruction'",
+        "type": "diplomatic",
+        "detail": "The Potsdam Declaration, issued by Truman, Churchill (replaced mid-conference by Attlee), and Chiang Kai-shek on July 26, 1945, warned Japan to surrender unconditionally or face 'prompt and utter destruction.' The declaration specified Allied occupation, war crimes trials, and peaceful Japanese sovereignty over the home islands but did not mention the atomic bomb or the Soviet declaration of war. Japan's Supreme War Council and Prime Minister Suzuki publicly rejected the ultimatum on July 28 (mokusatsu), though the Emperor and some ministers were looking for a way out. The rejection provided the political justification for the atomic bomb attacks ten days later.",
+        "sources": [
+          {
+            "name": "US Department of State – Potsdam Declaration text, July 26, 1945",
+            "tier": 1
+          },
+          {
+            "name": "Hasegawa, T., 'Racing the Enemy: Stalin, Truman, and the Surrender of Japan'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Potsdam_Declaration",
+            "source": "Wikipedia / Potsdam Declaration",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Potsdam_conference_1945-8.jpg/330px-Potsdam_conference_1945-8.jpg"
+          }
+        ]
+      },
+      {
+        "id": "hirohito-surrender-broadcast",
+        "year": "Aug 15, 1945",
+        "title": "Hirohito's Surrender Broadcast — The Voice of the Emperor",
+        "type": "surrender",
+        "detail": "Emperor Hirohito broadcast Japan's acceptance of the Potsdam Declaration's terms at noon on August 15, 1945 — the first time in history that most Japanese had ever heard the Emperor's voice. Speaking in formal court Japanese that many could barely understand, Hirohito announced that Japan would 'endure the unendurable.' Reaction across Japan ranged from stunned weeping to grief-stricken prostrations to suicides by military officers. A coup attempt by fanatical Army officers to seize the surrender announcement recordings — Operation Kyūjō — had been defeated just hours before. The day is observed in Japan as the anniversary of the war's end (August 15); the formal surrender on September 2 marked the legal conclusion.",
+        "sources": [
+          {
+            "name": "Imperial Household Agency, Japan – Surrender broadcast transcript",
+            "tier": 1
+          },
+          {
+            "name": "Dower, J., 'Embracing Defeat: Japan in the Wake of World War II', 1999",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Jewel_Voice_Broadcast",
+            "source": "Wikipedia / Jewel Voice Broadcast",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hirohito_recording.jpg/330px-Hirohito_recording.jpg"
+          }
+        ]
+      },
+      {
+        "id": "formal-surrender-uss-missouri",
+        "year": "Sep 2, 1945",
+        "title": "Formal Japanese Surrender Aboard USS Missouri — World War II Ends",
+        "type": "surrender",
+        "detail": "The Instrument of Surrender was signed aboard the battleship USS Missouri in Tokyo Bay at 09:04 AM on September 2, 1945, formally ending World War II. General Douglas MacArthur signed on behalf of all Allied powers; Japanese Foreign Minister Mamoru Shigemitsu and Army Chief of Staff General Yoshijiro Umezu signed for Japan. Representatives of nine Allied nations signed as witnesses. MacArthur declared: 'Let us pray that peace be now restored to the world and that God will preserve it always.' The signing occurred under a flag that had flown over the US Capitol on December 7, 1941 — Pearl Harbor Day. September 2 is observed as VJ Day.",
+        "sources": [
+          {
+            "name": "NARA – Official Instrument of Surrender, original document",
+            "tier": 1
+          },
+          {
+            "name": "MacArthur, D., 'Reminiscences', 1964",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Japanese_Instrument_of_Surrender",
+            "source": "Wikipedia / Japanese Instrument of Surrender",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Surrender-of-Japan-1945.jpg/330px-Surrender-of-Japan-1945.jpg"
+          }
+        ]
+      },
+      {
+        "id": "nuremberg-verdicts",
+        "year": "Oct 1, 1946",
+        "title": "Nuremberg Verdicts — International Military Tribunal Sentences Nazi Leaders",
+        "type": "diplomatic",
+        "detail": "The International Military Tribunal at Nuremberg delivered its verdicts on October 1, 1946, after nearly 10 months of proceedings against 22 major Nazi defendants. Twelve were sentenced to death by hanging (including Göring, Ribbentrop, Keitel, Kaltenbrunner, Rosenberg, Frank, Frick, Streicher, Sauckel, Jodl, Seyss-Inquart, and Bormann in absentia); three were acquitted; seven received prison sentences including Hess (life), Funk (life), and Speer (20 years). Hermann Göring escaped execution by swallowing a smuggled cyanide capsule hours before his scheduled hanging. The proceedings established that crimes against humanity and crimes against peace were internationally prosecutable — a precedent that would underpin all subsequent international criminal law.",
+        "sources": [
+          {
+            "name": "Avalon Project, Yale Law School – Nuremberg Trial Judgment text",
+            "tier": 1
+          },
+          {
+            "name": "Taylor, T., 'The Anatomy of the Nuremberg Trials', 1992",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Nuremberg_trials",
+            "source": "Wikipedia / Nuremberg trials",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Nuremberg_Trials_retouched.jpg/330px-Nuremberg_Trials_retouched.jpg"
+          }
+        ]
+      },
+      {
+        "id": "tokyo-tribunal-begins",
+        "year": "May 3, 1946",
+        "title": "Tokyo War Crimes Tribunal Opens — Asia's Nuremberg",
+        "type": "diplomatic",
+        "detail": "The International Military Tribunal for the Far East (IMTFE) opened in Tokyo on May 3, 1946, trying 28 Class A Japanese war crimes suspects. The tribunal ran for two and a half years, ultimately convicting 25 defendants: 7 were hanged (including former Prime Minister Hideki Tōjō), 16 received life imprisonment, and 2 died during proceedings. Unlike Nuremberg, the IMTFE did not indict Emperor Hirohito — a deliberate political decision by MacArthur to use the imperial institution to stabilize Japan's occupation. The tribunal's legitimacy has been more contested than Nuremberg; critics note the exclusion of the Emperor and Japan's biological warfare program (Unit 731) from prosecution in exchange for research data.",
+        "sources": [
+          {
+            "name": "National Archives of Japan – IMTFE records",
+            "tier": 1
+          },
+          {
+            "name": "Piccigallo, P., 'The Japanese on Trial: Allied War Crimes Operations in the East 1945–1951'",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-05-21T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/International_Military_Tribunal_for_the_Far_East",
+            "source": "Wikipedia / International Military Tribunal for the Far East",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Tokyo_War_Crimes_Trial.jpg/330px-Tokyo_War_Crimes_Trial.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]

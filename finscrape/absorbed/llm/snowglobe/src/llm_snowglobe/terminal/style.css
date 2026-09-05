@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+}
+
+h1 {
+    margin-top: 0px;
+    /* margin-bottom: 0px; */
+}
+
+.waiting {
+    background-color: #dfecff; /* #b4c7e7; */
+}
+
+.fineprint {
+    font-size: small;
+    font-variant: small-caps;
+    line-height: 100%;
+}

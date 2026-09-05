@@ -1,0 +1,212 @@
+[
+  {
+    "id": "alps-water-ocean-safety",
+    "question": "Is the ALPS-treated water release safe for the ocean and human health?",
+    "sideA": {
+      "label": "Japan / IAEA / TEPCO",
+      "text": "The ALPS-treated water meets international safety standards. Tritium concentrations are diluted to 1,500 Bq/L before release — 40 times below Japan's regulatory limit and well below WHO drinking water guidelines. The IAEA conducted a two-year review and concluded the release will have 'negligible radiological impact.' Similar releases occur at nuclear plants worldwide. Independent ocean monitoring shows no anomalous radioactivity."
+    },
+    "sideB": {
+      "label": "China / Fishers / Environmental NGOs",
+      "text": "The long-term effects of tritium on marine ecosystems and bioaccumulation through the food chain are inadequately studied. ALPS has repeatedly failed to fully remove radionuclides other than tritium from some tanks, calling data quality into question. China states that the ocean is the common heritage of humanity and Japan has no right to use it as a dumping ground. Greenpeace argues the IAEA review underweights the biological impacts of organically bound tritium."
+    },
+    "resolution": "The scientific consensus, including the IAEA, WHO, and most national nuclear regulatory bodies, supports Japan's position that the diluted release poses negligible health risk. China lifted its near-total Japanese seafood ban on June 30, 2025 (after a September 2024 diplomatic deal establishing new monitoring), though partial restrictions on seafood from Fukushima and 9 other prefectures remain as of July 2026. The IAEA Task Force's sixth mission (May 11–15, 2026) confirmed Japan continues to meet international safety standards. On June 24, 2026, IAEA Director General Grossi personally joined scientists from China, South Korea, and Switzerland in independent seawater sampling near Daiichi under the 2024 'Additional Measures' framework — no anomalous radioactivity was detected. A brief automatic discharge suspension on June 13, 2026 (lightning-related equipment blip, no off-spec water released) illustrates the system's built-in safety margins rather than a containment failure. The 22nd discharge round, begun July 30, 2026, again measured tritium concentrations far below Japan's operational limit.",
+    "lastUpdated": "2026-08-10"
+  },
+  {
+    "id": "thyroid-cancer-radiation-link",
+    "question": "Are the elevated thyroid cancer rates in Fukushima children caused by radiation exposure?",
+    "sideA": {
+      "label": "UNSCEAR / Japanese Government / Most Epidemiologists",
+      "text": "The elevated detection rate of thyroid cancer (295+ cases in ~380,000 screened) is attributable primarily to 'screening effect': the systematic ultrasound surveillance detected cancers — largely indolent papillary microcarcinomas — that would never have been clinically detected in the absence of screening. Radiation doses to the thyroid were insufficient to cause elevated incidence. UNSCEAR 2020 report found no attributable excess thyroid cancer risk."
+    },
+    "sideB": {
+      "label": "CNIC / Victims Advocates / Some Researchers",
+      "text": "The incidence rate in Fukushima's screened population is 20–50 times higher than expected Japanese background rates. The cancers are not all indolent — many required surgery. Comparative studies with Chernobyl-affected populations and internal dosimetry suggest radiation exposure cannot be ruled out as a contributing factor. The government's position serves to minimize compensation liability, and the Health Management Survey design may be inadequate to detect a causal signal."
+    },
+    "resolution": "Highly contested. Multiple peer-reviewed studies have reached conflicting conclusions. The scientific consensus leans toward screening effect as the dominant explanation, but a 2020 paper in JAMA Oncology and ongoing epidemiological studies have re-opened the debate. The definitive answer may require decades of follow-up data.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "decommission-timeline-feasibility",
+    "question": "Is TEPCO's 2041–2051 decommissioning completion target achievable?",
+    "sideA": {
+      "label": "TEPCO / Japanese Government",
+      "text": "The 30–40 year timeline reflects a methodical approach, incorporating international best practices from Three Mile Island and other decommissioned plants. While fuel debris retrieval at Units 1–3 is unprecedented, Japan is developing new robotics and remote handling technology through IRID. The 2051 end-state is defined as 'complete cleanup' and will be revised as technology matures."
+    },
+    "sideB": {
+      "label": "Independent Nuclear Engineers / CNIC / Critics",
+      "text": "No technology currently exists to safely retrieve 880 tonnes of molten corium from three heavily damaged reactor vessels operating under water in fields of thousands of Sv/hr. Even starting fuel debris retrieval has been repeatedly delayed by years. TMI-2 fuel removal took 10 years for a single, less severely damaged reactor. A 2021 estimate by some researchers put likely completion at 100+ years. Japan is setting unrealistic targets to reassure the public and investors."
+    },
+    "resolution": "The Japanese government and NRA have acknowledged the 2051 target is aspirational. Most nuclear engineering experts agree the timeline will slip significantly. Fuel debris retrieval technology development is genuinely ongoing, but current progress suggests the 2051 target is extremely optimistic.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "return-policy-radiation-limits",
+    "question": "Are Japan's return-policy radiation limits (20 mSv/year) safe enough for long-term habitation?",
+    "sideA": {
+      "label": "Japanese Government / IAEA / NRA",
+      "text": "The 20 mSv/year reference level for return decisions is consistent with ICRP recommendations for post-accident recovery situations. It is below occupational exposure limits for radiation workers and much lower than natural background in some inhabited areas globally. The long-term goal is below 1 mSv/year additional dose. Decontamination work is actively reducing ambient dose rates. Residents returning to 20 mSv/year areas face much lower actual doses after time-use patterns are accounted for."
+    },
+    "sideB": {
+      "label": "Medical Advocates / International Physicians for Prevention of Nuclear War / Some Evacuees",
+      "text": "For vulnerable populations — children, pregnant women, elderly — the precautionary limit should be 1 mSv/year additional exposure, which is the pre-disaster standard and the international norm for ordinary public exposure. Using the higher 20 mSv/year emergency limit for permanent habitation is inappropriate and prioritizes land recovery over human health. Residents who refuse to return on safety grounds face termination of compensation payments, amounting to coercion."
+    },
+    "resolution": "WHO and IAEA align with the Japanese government's position that 20 mSv/year is an acceptable transition-phase standard. However, several European and international medical bodies recommend lower limits for children and women of childbearing age. The debate reflects genuinely different risk tolerance frameworks and values about precaution vs. restoration.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "tepco-criminal-accountability",
+    "question": "Should TEPCO executives face criminal accountability for the accident?",
+    "sideA": {
+      "label": "Victims Groups / Fukushima Plaintiffs",
+      "text": "Internal TEPCO documents from 2008 show executives were warned about the risk of a large tsunami exceeding the seawall but chose not to implement additional protective measures due to cost and schedule concerns. This constitutes foreseeability and therefore criminal negligence. The acquittal of three executives in 2019 was a miscarriage of justice that protected corporate power over human lives. TEPCO and government complicity in the pre-accident 'nuclear village' culture should be criminally prosecuted."
+    },
+    "sideB": {
+      "label": "Tokyo District Court / TEPCO Defense",
+      "text": "The 2019 Tokyo District Court found that while a TEPCO report identified potential for a large tsunami, executives could not have been expected to act on a single preliminary study that contradicted the established scientific consensus at the time. The disaster was caused by a once-in-a-millennium earthquake and tsunami, not by individual criminal negligence. TEPCO has paid billions in compensation and is funding cleanup — criminal prosecution would not serve justice or aid recovery."
+    },
+    "resolution": "The Tokyo District Court acquitted all three former executives in September 2019. Victims groups appealed. The Tokyo High Court in January 2023 upheld the acquittals. No TEPCO executive has been criminally convicted for the accident. Civil litigation has resulted in numerous judgments against TEPCO.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "compensation-adequacy",
+    "question": "Has TEPCO's compensation to Fukushima victims been adequate?",
+    "sideA": {
+      "label": "TEPCO / Japanese Government",
+      "text": "As of 2024, TEPCO has paid over ¥10 trillion (~$90 billion) in compensation to over 200,000 individuals and businesses. A detailed compensation framework developed by the Nuclear Damage Liability Dispute Resolution Center covers mental distress, property losses, medical costs, lost income, and moving expenses. Japan also enacted special legislation providing additional government support for evacuees. Compensation payments have been a major financial burden on TEPCO and taxpayers."
+    },
+    "sideB": {
+      "label": "Evacuee Advocates / Legal Scholars",
+      "text": "The compensation framework has been systematically unfair to victims who refuse to return to areas below 20 mSv/year — their payments are terminated even when individual radiation risk concern is reasonable. Some evacuees have received less than ¥1 million total. Psychological damage, community destruction, and loss of hometown are systematically undervalued. The Supreme Court has ordered state compensation in some cases, finding the government also bears liability. Many elderly evacuees died before receiving fair compensation."
+    },
+    "resolution": "Multiple Japanese courts have ordered additional state compensation beyond TEPCO's payments, finding the government also negligent. The Supreme Court held in 2022 that the state was NOT liable for the disaster (overturning lower courts on state liability), but TEPCO remains liable. Compensation disputes continue through 2025.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "nuclear-energy-future-japan",
+    "question": "Should Japan restart nuclear power plants in response to the Fukushima experience?",
+    "sideA": {
+      "label": "Japanese Government / Nuclear Advocates",
+      "text": "Japan faces severe energy security challenges without nuclear power, which provided 30% of electricity pre-Fukushima. Post-Fukushima reliance on fossil fuel imports has increased CO₂ emissions and energy costs. The new NRA has implemented the world's strictest post-Fukushima safety standards. Restarting compliant plants reduces both climate and energy security risks. Abandoning nuclear energy entirely makes Japan's 2050 carbon neutrality goal more difficult."
+    },
+    "sideB": {
+      "label": "Anti-Nuclear Movement / Greenpeace / Opposition Parties",
+      "text": "Fukushima demonstrated that no regulatory system can guarantee nuclear safety. Japan is a seismically active country with multiple 'active fault' threats near nuclear plants. The economic case for nuclear is undermined by the full lifecycle costs including insurance, waste storage, and potential accident liability. Renewable energy has become cost-competitive. Fukushima's unresolved decommissioning should preclude building new nuclear plants or restarting old ones in Japan."
+    },
+    "resolution": "Japan's government reversed the post-Fukushima phase-out commitment under PM Kishida in 2022, authorizing restarts of plants meeting NRA standards and exploration of advanced reactor technologies. Public opinion remains divided. As of May 2026, 15 of 32 operable reactors are operating. In a significant milestone, TEPCO's Kashiwazaki-Kariwa Unit 6 resumed commercial operations on April 16, 2026 — the company's first commercial nuclear power generation since the 2011 Fukushima disaster. Japan's long-term energy policy targets nuclear at ~20% of electricity by FY2040. Coverage of the Kashiwazaki-Kariwa restart in June 2026 (NPR, TechXplore) renewed scrutiny of an unresolved problem underlying the restart push: Japan still has no permanent disposal site for spent nuclear fuel, and several plants' cooling pools — including Kashiwazaki-Kariwa's — are projected to reach capacity within about five years, a constraint critics argue undercuts the case for accelerating restarts.",
+    "lastUpdated": "2026-07-16"
+  },
+  {
+    "id": "groundwater-contamination-extent",
+    "question": "How extensively has contaminated water from Fukushima Daiichi affected the Pacific Ocean?",
+    "sideA": {
+      "label": "TEPCO / Japanese / US Government Scientists",
+      "text": "Monitoring has found no measurable health impact on Pacific Ocean fisheries or marine ecosystems from Fukushima contamination. Cesium-137 detected in Pacific seawater and fish is detectable with modern instruments but at levels far below WHO food safety standards. The majority of the radioactive release went into the atmosphere over the Pacific in 2011, and natural dilution has reduced concentrations over time. ALPS water release adds negligible amounts compared to natural ocean radioactivity."
+    },
+    "sideB": {
+      "label": "IRSN / TEPCO Whistleblowers / Pacific Island Nations",
+      "text": "TEPCO has repeatedly been found to have underreported water leaks and contaminated groundwater seepage into the ocean. The 2013 tank leak and ongoing groundwater bypass discharges represent additional uncontrolled contamination beyond the 2011 release. Marine radiological monitoring in the Pacific is insufficient given the scale and duration of potential contamination. Pacific Island nations whose populations depend on ocean resources have not adequately consented to ongoing discharges affecting their EEZs."
+    },
+    "resolution": "US, Canadian, and international monitoring programs have consistently found Fukushima-derived cesium and tritium at low but detectable levels in Pacific fish and water. Levels remain well below food safety and regulatory limits everywhere measured. However, data quality and coverage are contested, particularly for areas close to the plant.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "evacuee-return-rate-low",
+    "question": "Why are Fukushima evacuee return rates so low, and who bears responsibility?",
+    "sideA": {
+      "label": "Japanese Government / Reconstruction Agency",
+      "text": "The low return rates primarily reflect the difficulty of rebuilding community life after multi-year displacement rather than ongoing radiation risk. Infrastructure has been restored, medical facilities reopened, and schools re-established in most return zones. Government programs provide relocation support, incentives, and decontaminated housing. Radiation in returned areas is confirmed safe. Younger demographics' preference for urban areas pre-dated the disaster and would have reduced rural populations regardless."
+    },
+    "sideB": {
+      "label": "Evacuee Advocates / Sociologists / Fukushima Residents",
+      "text": "Return rates are low because: (1) radiation safety concerns are rational for families with young children; (2) community social networks are permanently destroyed; (3) schools, hospitals, and shops remain absent or reduced; (4) psychological trauma has not been addressed; (5) agricultural stigma makes farming unviable; (6) the government creates pressure to return by cutting compensation for those who remain displaced. Hundreds of thousands remain effectively permanently displaced with inadequate support."
+    },
+    "resolution": "Both factors are real. Academic research finds that radiation concern, community dissolution, and lack of services all contribute to low return rates. Return rates average 10–20% in most opened zones as of 2024, well below government projections. The issue is a defining challenge of the ongoing recovery.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "contaminated-soil-disposal",
+    "question": "What should Japan do with the ~14 million bags of contaminated soil from decontamination?",
+    "sideA": {
+      "label": "Ministry of Environment / Japanese Government",
+      "text": "The government's plan is to store contaminated soil at the Fukushima Interim Storage Facility until 2045, by which time it will have found a final disposal site outside Fukushima Prefecture. The government is legally obligated to remove the waste by 2045. Lower-activity soils (under 8,000 Bq/kg cesium) could be safely reused in road embankments and construction, reducing the overall volume requiring final disposal. Decontamination has been effective in reducing ambient dose rates."
+    },
+    "sideB": {
+      "label": "Fukushima Residents / Opposition Groups",
+      "text": "The 2045 removal promise is not credible — no community anywhere in Japan has agreed to host a final disposal site, and decades of Japanese politics suggest this will be extremely difficult to achieve. Reusing mildly contaminated soil in public construction is unacceptable without proper consent and monitoring. Residents of Fukushima already bear enormous burdens; forcing them to also host a permanent contaminated waste site for the entire nation is unjust."
+    },
+    "resolution": "The 14 million bags remain at the FISTF as of 2026. The government has begun small-scale soil reuse pilot projects under MoE oversight, meeting significant local opposition. No progress has been made on selecting a final disposal site outside Fukushima, and the 2045 deadline is widely considered at risk.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "tsunami-warning-system-failure",
+    "question": "Could better tsunami warning systems and seawalls have prevented the Fukushima nuclear accident?",
+    "sideA": {
+      "label": "Post-Fukushima Nuclear Safety Experts / IAEA",
+      "text": "The Fukushima accident was preventable with better design standards and emergency preparedness. Post-Fukushima lessons — higher seawalls, elevated backup power, additional passive safety systems, and improved tsunami hazard assessments incorporating historical geological records — have now been incorporated into global nuclear safety standards. The plant survived identical tsunami conditions at Units 5 and 6 (whose diesel generators were at higher elevation), demonstrating that placement decisions were decisive."
+    },
+    "sideB": {
+      "label": "Nuclear Skeptics / Some Engineers",
+      "text": "The fundamental problem was siting a nuclear plant on a seismically active coast with known tsunami history. The 869 Jōgan earthquake and tsunami, which reached similar heights to the 2011 event, should have informed design standards but was ignored. Engineering resilience cannot substitute for proper siting, and the accident demonstrates that nuclear power plants have inherent catastrophic risk that cannot be fully engineered away in seismically active regions."
+    },
+    "resolution": "The NAIIC report and TEPCO's own investigation both confirmed the accident was preventable. Post-Fukushima, all Japanese nuclear plants must meet new NRA standards including diverse backup power, flood protection upgrades, and filtered vent systems. Onagawa NPP (similar region, better designed seawall) survived undamaged, supporting the preventability thesis.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "alps-reliability-data",
+    "question": "Is TEPCO's ALPS water quality data reliable and transparent?",
+    "sideA": {
+      "label": "TEPCO / NRA / IAEA",
+      "text": "TEPCO publishes daily sampling data for discharge water and surrounding ocean. IAEA conducts independent sampling and testing through its IAEA-OCEAN monitoring network. Japan's NRA requires water to be tested before and after each discharge round, and any exceedance halts release. Third-party labs in Japan, the US, and internationally have verified key results. The system has evolved significantly since early 2011 data management failures."
+    },
+    "sideB": {
+      "label": "Greenpeace / CNIC / Former TEPCO Employees",
+      "text": "TEPCO has a documented history of misrepresenting radiation data — including the 2013 tank leak initially rated at 100 mSv/h later revised to 1,800 mSv/h. A 2018 TEPCO admission that about 70% of stored water still contained radionuclides above ALPS treatment standards (despite being claimed as treated) severely damaged public trust. The utility cannot be trusted to self-certify its own discharge quality data, especially given its commercial and reputational interest in completing the release."
+    },
+    "resolution": "TEPCO's 2018 disclosure that significant proportions of stored ALPS-treated water still contained non-tritium radionuclides above standards was a major credibility setback. Subsequent re-treatment campaigns and independent verification have improved data quality. The IAEA's ongoing monitoring provides some independent verification, but concerns about corporate data management practices persist.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "fukushima-vs-chernobyl",
+    "question": "How does the Fukushima accident compare to Chernobyl in severity?",
+    "sideA": {
+      "label": "Japanese Government / IAEA / Most Nuclear Scientists",
+      "text": "Fukushima released approximately 10–15% of the radioactivity released by Chernobyl in 1986. Most of Fukushima's release went into the Pacific Ocean, not over densely populated land. There have been no confirmed direct radiation deaths at Fukushima (vs. at least 30 acute radiation syndrome deaths at Chernobyl). Exclusion zone sizes are comparable, but long-term contamination area in Japan is much smaller due to ocean dispersal. Both are INES Level 7, but the actual severity is significantly different."
+    },
+    "sideB": {
+      "label": "Some Researchers / Anti-Nuclear Critics",
+      "text": "The comparison of total becquerel releases understates Fukushima's long-term ocean contamination and the ongoing radioactive releases through the decommissioning process. Fukushima involved three reactor meltdowns simultaneously, a larger operational fleet, and more spent fuel at risk than Chernobyl. The decommissioning challenge is unprecedented. The absence of confirmed radiation deaths at Fukushima reflects the speed of evacuation and accident evolution, not a fundamental difference in the hazard posed."
+    },
+    "resolution": "IAEA and scientific consensus is that Chernobyl was more severe in terms of immediate radiation release to land and confirmed health effects. Both are rated INES Level 7. Fukushima's unprecedented simultaneous multi-unit damage and ongoing decommissioning challenges are unique. Long-term oceanic impacts are still being studied.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "fishing-industry-recovery",
+    "question": "Has the Fukushima fishing industry recovered, and are its products safe?",
+    "sideA": {
+      "label": "Fukushima Fisheries Cooperative / Japanese Government / Scientific Monitors",
+      "text": "Extensive testing of fish from Fukushima waters — over 100,000 samples since 2011 — consistently shows cesium levels far below Japan's 100 Bq/kg limit (world's strictest). Test fishing has resumed in most Fukushima coastal waters. Japan's domestic and international markets (except China) have largely resumed accepting Fukushima-origin seafood. The economic and safety case for lifting China's ban is strong."
+    },
+    "sideB": {
+      "label": "Fukushima Fisheries Union / Consumer Groups",
+      "text": "The fishing industry has not recovered, primarily because consumer perception of safety has been permanently damaged. Even domestic Japanese consumers remain reluctant to buy Fukushima seafood despite evidence of safety. The ALPS water discharge, whether safe or not, has made the reputational recovery even harder. Fishermen's livelihoods remain devastated. The government promised not to proceed with water release against the fisheries unions' consent — a promise that was effectively broken."
+    },
+    "resolution": "Fish testing data consistently shows safety by all measurable standards. However, economic recovery of Fukushima's fishing industry remains incomplete due to reputational damage, China's ban, and ongoing consumer hesitancy. The fisheries cooperative (JFUA) continues to formally oppose the ALPS water release.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "independent-reporting-access",
+    "question": "Has Japan provided adequate transparency and press freedom in reporting on the Fukushima disaster?",
+    "sideA": {
+      "label": "Japanese Government / TEPCO",
+      "text": "Japan has been broadly transparent, publishing extensive technical data and allowing IAEA access. Press conferences by TEPCO and NRA have been regular and documented. The disaster prompted major regulatory reform including the independent NRA. TEPCO's live webcam from the plant was a global first in nuclear transparency. Japan has cooperated fully with IAEA safety reviews and international monitoring programs."
+    },
+    "sideB": {
+      "label": "Reporters Without Borders / Journalists / Critics",
+      "text": "TEPCO withheld critical data in the immediate aftermath of the accident — including Unit 1's core melt confirmation, which occurred March 12 but was acknowledged only months later. Japan's 2013 State Secrecy Law raised concerns about the ability to report on nuclear safety information classified as state secrets. Some journalists have faced harassment or legal pressure. Independent researchers have struggled to access official datasets on health monitoring. The cultural deference to authority in Japan creates systemic barriers to accountability journalism."
+    },
+    "resolution": "The record is mixed. Early in the crisis, TEPCO and government communications were widely criticized as slow, opaque, and misleading. Subsequent years have seen improved data availability and independent reviews. The State Secrecy Law remains a concern. The NAIIC report's public process represented significant transparency, but ongoing monitoring data and compensation disputes remain contested.",
+    "lastUpdated": "2026-03-17"
+  }
+]

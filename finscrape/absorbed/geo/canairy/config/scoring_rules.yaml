@@ -1,0 +1,259 @@
+# HOPI Scoring Rules Configuration
+# Domain weights, critical flags, and pair caps
+
+# Domain definitions with weights and critical indicators
+domains:
+  economy:
+    weight: 1.0
+    indicators:
+      - Treasury
+      - GroceryCPI
+      - MarketVolatility
+      - GDPGrowth
+      - MBridgeSettlements  # Note: MBridge removed to avoid duplication
+    critical:
+      - MarketVolatility  # Fires on first red
+      
+  jobs_labor:
+    weight: 1.0
+    indicators:
+      - JoblessClaims
+      - StrikeTracker
+      - LuxuryCollapse
+    critical: []
+    
+  rights_governance:
+    weight: 1.0
+    indicators:
+      - LegiScan
+      - ACLEDProtests
+      - ICEDetention
+      - TaiwanZone
+      - DoDAutonomy
+    critical:
+      - TaiwanZone  # Open-ended closure = critical
+      
+  security_infrastructure:
+    weight: 1.25
+    indicators:
+      - CISACyber
+      - GridOutages
+      - WHODisease
+      - HormuzRisk
+      - PharmacyShortage
+    critical: []
+    
+  oil_axis:
+    weight: 1.0
+    indicators:
+      - CREAOil
+      - MBridgeSettlements
+      - OFACDesignations
+      - JODIOil
+    critical: []
+    
+  ai_window:
+    weight: 1.0
+    indicators:
+      - AILayoffs
+      - AIRansomware
+      - DeepfakeShocks
+      - LaborDisplacement
+    critical:
+      - DeepfakeShocks  # Market manipulation risk
+      
+  global_conflict:
+    weight: 1.5  # Highest weight
+    indicators:
+      - GlobalConflict
+      - TaiwanPLA
+      - NATOReadiness
+      - NuclearTests
+      - RussiaNATO
+      - DefenseSpending
+    critical:
+      - NATOReadiness  # Direct war risk
+      
+  domestic_control:
+    weight: 1.25
+    indicators:
+      - DCControl
+      - GuardMetros
+      - ICEDetentions
+      - DHSRemoval
+      - HillLegislation
+      - LibertyLitigation
+    critical:
+      - GuardMetros    # Martial law indicator
+      - DHSRemoval     # Constitutional crisis
+      
+  cult:
+    weight: 0.75  # Lower weight for emerging signals
+    indicators:
+      - AGIMilestones
+      - SchoolClosures
+    critical: []
+
+# Pair caps to prevent double-counting correlated indicators
+pair_caps:
+  - pair: [ICEDetention, ICEDetentions]
+    domain: domestic_control
+    cap_factor: 1.0  # Cap at what one red would contribute
+    
+  - pair: [MBridgeSettlements, CREAOil]
+    domain: oil_axis
+    cap_factor: 1.5  # Cap at 1.5x a single red
+    
+  - pair: [TaiwanZone, TaiwanPLA]
+    domain: global_conflict
+    cap_factor: 2.0  # Cap at 2x a single red (both hot = serious)
+
+# HOPI calculation weights (for overall index)
+hopi_weights:
+  global_conflict: 1.5
+  security_infrastructure: 1.25
+  domestic_control: 1.25
+  default: 1.0  # All other domains
+
+# Confirmation rules
+confirmation:
+  default_polls: 2      # Red must persist for 2 polls
+  amber_polls: 1        # Amber fires on first poll
+  critical_bypass: true # Critical indicators skip confirmation
+
+# Stale data rules
+stale_data:
+  amber_hours: 48   # Force amber after 48 hours
+  red_hours: 168    # Force red after 7 days (1 week)
+
+# Confidence calculation
+confidence:
+  stale_penalty_weight: 1.0      # Full weight for stale count
+  single_source_penalty: 0.15    # 15% penalty per single-source red
+
+# Phase mapping with hysteresis
+phases:
+  0:
+    name: "Normal Operations"
+    hopi_max: 0.10
+    condition: "HOPI < 0.10 & no ambers"
+    
+  1:
+    name: "72-Hour Ready"
+    hopi_max: 0.20
+    condition: "HOPI 0.10-0.19 or 1 amber"
+    
+  2:
+    name: "Digital & Comms"
+    hopi_max: 0.30
+    condition: "HOPI 0.20-0.29 or ≥2 ambers"
+    
+  2.5:
+    name: "Liquidity Buffer"
+    hopi_max: 0.35
+    condition: "HOPI 0.30-0.34"
+    
+  3:
+    name: "Health Prep"
+    hopi_max: 0.45
+    condition: "HOPI 0.35-0.44 or any red"
+    
+  4:
+    name: "Light Restrictions"
+    hopi_max: 0.55
+    condition: "HOPI 0.45-0.54 and ≥1 domain ≥0.60"
+    
+  5:
+    name: "Generator Prep"
+    hopi_max: 0.65
+    condition: "HOPI 0.55-0.64 and ≥2 domains ≥0.60"
+    
+  6:
+    name: "Shelter Active"
+    hopi_max: 0.75
+    condition: "HOPI 0.65-0.74 and ≥2 domains ≥0.60"
+    
+  7:
+    name: "Hardened Operations"
+    hopi_max: 0.85
+    condition: "HOPI 0.75-0.84 and ≥3 domains ≥0.60 or critical+red"
+    
+  8:
+    name: "Water & Movement"
+    hopi_max: 0.95
+    condition: "HOPI 0.85-0.94 and ≥4 domains ≥0.60"
+    
+  9:
+    name: "Full Emergency"
+    hopi_max: 1.0
+    condition: "HOPI ≥0.95 or DEFCON ≤2"
+
+# Hysteresis rules
+hysteresis:
+  up_polls: 2          # Need 2 consecutive polls to move up
+  down_hours: 72       # Need 72 hours to move down
+  down_no_reds: true   # Can't move down with active reds
+
+# Critical jump rules
+critical_jumps:
+  - name: "Market + Deepfake Crisis"
+    conditions:
+      - indicator: MarketVolatility
+        state: red
+      - indicator: DeepfakeShocks
+        state: red
+    window_hours: 3   # Within 3 hours
+    min_phase: 7
+    
+  - name: "NATO Activation"
+    conditions:
+      - indicator: NATOReadiness
+        state: red
+    min_phase: 6
+    extra_condition: "RussiaNATO >= 75"
+    extra_phase: 1    # +1 if Russia-NATO also high
+    
+  - name: "National Guard Deployment"
+    conditions:
+      - indicator: GuardMetros
+        state: red
+    min_phase: 5
+    
+  - name: "DHS Powers Expansion"
+    conditions:
+      - indicator: DHSRemoval
+        state: red
+    min_phase: 5
+
+# Thresholds for indicators without defined values
+default_thresholds:
+  JoblessClaims:
+    green: 250000   # 4-week average
+    amber: 300000
+    red: 350000
+    unit: "claims"
+    
+  LuxuryCollapse:
+    green: 10       # % drop vs 6-month average
+    amber: 25
+    red: 40
+    unit: "percent_drop"
+    
+  PharmacyShortage:
+    green: 2        # Count of top-20 critical meds in shortage
+    amber: 5
+    red: 8
+    unit: "medications"
+    
+  HormuzRisk:
+    green: 1.5      # War-risk premium %
+    amber: 4.0
+    red: 7.0
+    unit: "percent_premium"
+    
+  SchoolClosures:
+    green: 0.5      # Statewide % closed (non-weather)
+    amber: 2.0
+    red: 5.0
+    unit: "percent_closed"
+    days_required: 3  # Must persist for 3 days

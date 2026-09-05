@@ -1,0 +1,70 @@
+[
+  {
+    "id": "spacex-ipo-roadshow-open-fidelity-retail-jun2026",
+    "year": "2026",
+    "title": "SpaceX IPO Roadshow Officially Opens — S&P 500 Fast-Track Denied as Retail Investors Gain Access via Fidelity",
+    "type": "milestone",
+    "detail": "SpaceX's historic IPO roadshow officially launched on June 4, 2026, with the investor presentation website live and Fidelity providing retail access for accounts with $2,000 or more. JPMorgan hosted a live interactive session with SpaceX President Gwynne Shotwell and CFO Bret Johnsen. In a significant market structure decision, S&P Dow Jones Indices confirmed it will not change its megacap IPO inclusion rules to fast-track SpaceX into the S&P 500 index on debut, meaning index funds will not automatically buy SpaceX shares at listing — dampening some institutional demand projections. For the digital inclusion community, the IPO roadshow is a pivotal moment: it determines how much capital SpaceX can raise to fund Starlink's critical next phase — Starship V3 launches capable of deploying 120 satellites per mission (versus 22 on Falcon 9), and the sub-$15/month community WiFi hotspot pricing needed to make Starlink accessible to the bottom 40% of income earners in low- and middle-income countries. The roadshow materials highlighted Starlink's 25 carrier partner agreements covering 500 million mobile subscribers globally and the Direct-to-Cell capability being activated in Africa, Southeast Asia, and Latin America.",
+    "sources": [
+      {
+        "name": "Bloomberg — S&P Dow Jones keeps megacap IPO rules as-is after consultation",
+        "tier": 2,
+        "url": "https://www.bloomberg.com/news/articles/2026-06-04/s-p-dow-jones-keeps-megacap-ipo-rules-as-is-after-consultation",
+        "pole": "western"
+      },
+      {
+        "name": "Axios — Musk SpaceX IPO S&P investors",
+        "tier": 2,
+        "url": "https://www.axios.com/2026/06/04/musk-spacex-ipo-sp-investors",
+        "pole": "western"
+      },
+      {
+        "name": "CNBC — SpaceX IPO live updates",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/05/20/spacex-ipo-live-updates.html",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.bloomberg.com/news/articles/2026-06-04/s-p-dow-jones-keeps-megacap-ipo-rules-as-is-after-consultation",
+        "caption": "S&P 500 denies SpaceX fast-track IPO inclusion as roadshow opens with Fidelity retail access — Starlink's capital raise will shape global connectivity expansion",
+        "source": "Bloomberg",
+        "thumbnail": "https://www.bloomberg.com/news/articles/2026-06-04/s-p-dow-jones-keeps-megacap-ipo-rules-as-is-after-consultation"
+      }
+    ],
+    "lastUpdated": "2026-06-04T12:00:00Z"
+  },
+  {
+    "id": "starlink-12-million-subscribers-jun2026",
+    "year": "2026",
+    "title": "Starlink Surpasses 12 Million Active Subscribers Across 160+ Countries",
+    "type": "milestone",
+    "detail": "SpaceX confirmed on June 4, 2026 that Starlink has crossed 12 million active customers, up from 9 million at the start of 2025 and 10.3 million reported in its Q1 2026 IPO prospectus. The service now covers subscribers across more than 160 countries and territories, having activated more than 35 new markets during 2025. Growth has accelerated sharply — the jump from 10 million to 12 million took roughly 53 days, averaging about 27,700 new customers per day. SpaceX has said Starlink's next-generation V3 satellites will deliver more than 10x the bandwidth per satellite, supporting a target of 25 million subscribers by the end of 2026 as the network races to connect the roughly 2.2 billion people still offline worldwide.",
+    "sources": [
+      {
+        "name": "Yahoo Finance — SpaceX's Starlink Surpasses 12M Customers Across 160 Countries As Growth Accelerates",
+        "tier": 2,
+        "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-starlink-surpasses-12m-customers-000951284.html",
+        "pole": "western"
+      },
+      {
+        "name": "TechSpot — Starlink hits 12 million subscribers, plans 100x bandwidth boost with V3 satellites",
+        "tier": 2,
+        "url": "https://www.techspot.com/news/112669-starlink-crosses-12-million-active-users-spacex-outlines.html",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-starlink-surpasses-12m-customers-000951284.html",
+        "caption": "Starlink surpasses 12 million active subscribers across more than 160 countries as SpaceX targets 25 million by year-end 2026",
+        "source": "Yahoo Finance",
+        "thumbnail": "https://media.zenfs.com/en/stocktwits_383/25ba95859f29abad8837bb4f20e03d3a"
+      }
+    ],
+    "lastUpdated": "2026-07-16T12:00:00Z"
+  }
+]

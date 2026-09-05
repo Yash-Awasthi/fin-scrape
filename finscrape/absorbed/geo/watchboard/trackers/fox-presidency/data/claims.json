@@ -1,0 +1,212 @@
+[
+  {
+    "id": "fox-democratic-transition",
+    "question": "Did Fox genuinely deliver on democratic transition promises?",
+    "sideA": {
+      "label": "Partial Success",
+      "text": "Fox achieved a historic democratic transition: the first peaceful transfer of power from an opposition party after 71 years of PRI rule. Key institutional achievements include the IFAI freedom of information law (2002), the FEMOSPP special prosecutor for past crimes, expanded media pluralism, and a peaceful handoff to Calderón in 2006 — completing a full democratic cycle. These represent real, lasting democratic infrastructure."
+    },
+    "sideB": {
+      "label": "Failed Promises",
+      "text": "Fox's democratic promises largely went unfulfilled. He failed to pass judicial reform, electoral reform, fiscal reform, or energy reform. He lacked a congressional majority throughout his term and proved unable to build cross-party coalitions. The desafuero against AMLO and the compromised 2006 election environment (TRIFE acknowledged Fox's interference) showed democracy remained fragile. HRW's 2006 report 'Lost in Transition' documented systemic failure to reform military accountability and prosecute past abuses."
+    },
+    "resolution": "Partial — institutional reforms credited (IFAI, FEMOSPP) but structural reform agenda largely blocked",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "immigration-deal-nine-eleven",
+    "question": "Was the US-Mexico immigration deal killed by 9/11, or was it never viable?",
+    "sideA": {
+      "label": "9/11 Derailed It",
+      "text": "The September 5–6, 2001 Fox-Bush summit had produced a genuine framework for comprehensive immigration reform. Foreign Minister Castañeda's 'whole enchilada' — regularization, expanded guest worker visas, border development — was on the table with Bush's backing. The attacks five days later irreversibly shifted US priorities to border security and counterterrorism. A deal that was achievable in September 2001 became politically impossible for the rest of the decade."
+    },
+    "sideB": {
+      "label": "Always Politically Blocked",
+      "text": "US domestic politics made a comprehensive deal unlikely regardless of 9/11. Attorney General Ashcroft had already signaled 'no appetite for full amnesty' during the September summit. Republican congressional resistance to legalization was strong even before the attacks. Fox and Castañeda may have oversold the 'whole enchilada' framework as more concrete than it actually was. Bush's 2006 comprehensive immigration bill ultimately died in the Republican-controlled House — suggesting the obstacles were structural."
+    },
+    "resolution": "Contested — 9/11 clearly killed the immediate momentum; whether a deal was achievable without it remains debated",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "desafuero-political-persecution",
+    "question": "Was the AMLO desafuero a legitimate legal proceeding or political persecution?",
+    "sideA": {
+      "label": "Political Persecution",
+      "text": "The legal charge — contempt of a court injunction over a road built on disputed land — was real but trivial, normally resolved by fines rather than criminal prosecution. The timing (AMLO led presidential polls by 15-20 points) and the intensity of the prosecution strongly indicate political motivation. The joint PRI-PAN vote for the desafuero suggested an establishment consensus to eliminate AMLO's candidacy. Fox's rapid capitulation when faced with 300,000 protesters proved the government's position was politically untenable."
+    },
+    "sideB": {
+      "label": "Rule of Law Applied Consistently",
+      "text": "The Attorney General's office argued that AMLO repeatedly defied a federal court injunction and that no official — not even a popular mayor — should be above the law. Constitutional immunity (fuero) exists to protect legislative function, not to shield officials from criminal accountability. The procedural steps followed the constitutional process. Supporters of the desafuero argued that allowing AMLO to ignore court orders would set a dangerous precedent for selective law enforcement."
+    },
+    "resolution": "Widely assessed as politically motivated — Fox's retreat confirmed he overplayed his hand; charges were dropped",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "election-2006-fraud",
+    "question": "Was the 2006 presidential election fraudulent?",
+    "sideA": {
+      "label": "AMLO: Election Stolen",
+      "text": "AMLO and his supporters argued that Calderón's margin (0.58%, ~243,000 votes) was smaller than the sum of acknowledged irregularities: Fox's inappropriate public statements endorsing Calderón, illegal business community campaign ads by the CCE, and statistical anomalies in district-level vote tallies. AMLO demanded a full manual recount of all 41 million ballots, which the TRIFE refused to order. He declared himself 'Presidente Legítimo' and established a parallel government."
+    },
+    "sideB": {
+      "label": "IFE/TRIFE: Calderón Won Legitimately",
+      "text": "The TRIFE conducted a partial recount of ~9% of ballots and confirmed Calderón's victory. The tribunal acknowledged Fox's interference and the CCE campaign ads as irregular but ruled they were 'not decisive' in the outcome. Independent academic analyses found no evidence of systemic fraud sufficient to change the result. International observers gave the IFE a generally positive assessment. A full manual recount would have required extraordinary legal authorization beyond the TRIFE's ruling."
+    },
+    "resolution": "TRIFE validated Calderón — but Fox's interference and business community irregularities were confirmed; definitive resolution impossible given margin vs. acknowledged anomalies",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "poverty-reduction-fox",
+    "question": "Did Fox genuinely reduce poverty, or was it driven by remittances and inherited programs?",
+    "sideA": {
+      "label": "Fox Reduced Poverty",
+      "text": "World Bank data shows poverty at the $4.20/day line fell from 26.2% (2000) to 17.0% (2006) — a significant 9-point reduction. Fox expanded Oportunidades from 2.5 to 5 million families, extended it to urban areas, and created Seguro Popular health coverage. These programs directly improved welfare for millions of poor Mexicans. The macroeconomic stability he achieved (inflation from 9.5% to 3.6%) also benefited lower-income households."
+    },
+    "sideB": {
+      "label": "Remittances Did the Work",
+      "text": "The primary driver of poverty reduction was the tripling of remittances from $7.5bn (2000) to $26.5bn (2006) — a private transfer to poor households driven by migration, not government policy. Oportunidades was created under Zedillo (1997); Fox expanded it but did not create it. Fox failed to pass structural reforms that would have created quality jobs. Rural poverty in southern states remained severe. Critics argue Fox 'promoted migration as economic policy' by effectively treating emigration as a pressure valve."
+    },
+    "resolution": "Both factors contributed — remittances were the larger driver; Oportunidades expansion was real but inherited",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "indigenous-law-betrayal",
+    "question": "Did the 2001 Indigenous Law betray the EZLN and the San Andrés Accords?",
+    "sideA": {
+      "label": "EZLN: Yes, Betrayal",
+      "text": "The EZLN and indigenous rights advocates argue the law passed by Congress in April 2001 was a fundamental betrayal of the 1996 San Andrés Accords. The Accords had promised indigenous communities autonomy over territory, natural resources, and local governance. The diluted law subordinated indigenous rights to existing municipal and constitutional frameworks, effectively gutting the autonomy provisions. The EZLN broke off all dialogue and has not substantively re-engaged with federal government since."
+    },
+    "sideB": {
+      "label": "Congress: Constitutional Limitations Applied",
+      "text": "Congressional supporters of the diluted law argued that the San Andrés Accords as originally written could have fragmented national sovereignty by creating indigenous territories with rights superior to the federal constitution. The passed law recognized indigenous cultural rights and community practices within the existing constitutional framework. Fox and PAN had supported the original COCOPA bill but ultimately could not control the PRI-dominated Congress, which imposed the modifications."
+    },
+    "resolution": "EZLN broke off dialogue — the diluted law is widely seen as a failure of the Chiapas peace process under Fox",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fox-castro-incident",
+    "question": "Was Fox's handling of the Castro-Monterrey incident subservient to Washington?",
+    "sideA": {
+      "label": "Yes — Capitulation to US",
+      "text": "Fox privately asking Castro not to criticize Bush and to leave the Monterrey UN conference early demonstrated Mexico's subordination of independent foreign policy to Washington's preferences. For a country that had maintained diplomatic relations with Cuba throughout the Cold War as a point of national pride, Fox's deference was a historic departure. When Castro revealed the conversation, Fox was internationally embarrassed and Mexico's standing as an independent voice was damaged."
+    },
+    "sideB": {
+      "label": "Pragmatic Diplomacy",
+      "text": "Fox was hosting a major international conference and had legitimate interest in preventing it from becoming a confrontational forum. Asking Castro for discretion was a reasonable host's request, not a capitulation to Washington. The real problem was that Castro chose to publicly reveal a private diplomatic conversation — a breach of diplomatic confidence. Fox's foreign policy maintained independence on major issues (Iraq War opposition, no support for Iraq invasion) that demonstrated genuine autonomy."
+    },
+    "resolution": "Severely damaged Mexico-Cuba relations; widely seen as Fox's worst diplomatic moment and as reflecting US pressure",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fiscal-reform-failure",
+    "question": "Was Fox's fiscal reform failure his own doing, or blocked by partisan Congress?",
+    "sideA": {
+      "label": "Congressional Obstruction",
+      "text": "Fox proposed a technically sound fiscal reform to extend IVA to food and medicine (items exempt since 1980) to broaden Mexico's extremely narrow tax base. The PRI and PRD rejected it purely for electoral reasons — IVA extension on food and medicine is politically unpopular. Mexico's fiscal problem was structural and known to all parties; opposition parties blocked reform knowing the fiscal consequences but prioritizing political advantage over national interest."
+    },
+    "sideB": {
+      "label": "Fox Lacked Political Skill",
+      "text": "Experienced observers argue Fox lacked the political skill to build coalitions and negotiate across party lines. A more adept president could have constructed a grand bargain — perhaps with exemptions for basic food items, accompanied by compensatory social transfers — that made reform politically viable. Fox governed as an outsider who never mastered the political arts required to move legislation in a plural Congress. His team lacked relationships with PRI and PRD legislators needed for deal-making."
+    },
+    "resolution": "Both factors — structural congressional resistance and Fox's limited legislative skills — contributed to defeat",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "marta-sahagun-corruption",
+    "question": "Did Fox's administration turn a blind eye to First Lady Marta Sahagún's family corruption?",
+    "sideA": {
+      "label": "Yes — Corruption Protected",
+      "text": "Multiple congressional investigations documented the Bribiesca Sahagún brothers (Marta's sons) receiving government contracts and business deals facilitated by proximity to the presidency. Manuel, Jorge, and Fernando Bribiesca were repeatedly investigated but never prosecuted during Fox's term. Fox dismissed all allegations as politically motivated attacks on his family. Critics argue this represented a failure of the anti-corruption mandate that was central to Fox's 2000 campaign."
+    },
+    "sideB": {
+      "label": "No Criminal Conviction — Allegations Unproven",
+      "text": "Fox and Marta denied all allegations, and no criminal convictions resulted from any Fox-era investigation of the Bribiescas. Some allegations were raised by political opponents with their own interests in damaging the Fox government. Vamos México (Marta's foundation) operated publicly and transparently. The absence of criminal prosecution — even by subsequent PAN and PRI governments with political incentives to prosecute — suggests the allegations, though damaging politically, did not meet the threshold of provable crimes."
+    },
+    "resolution": "No prosecutions under Fox or subsequently; politically damaging but legally unresolved",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "oaxaca-crisis-response",
+    "question": "Was Fox's delayed response to the Oaxaca crisis negligence or strategic caution?",
+    "sideA": {
+      "label": "Negligence and Political Cowardice",
+      "text": "Fox's refusal to intervene in Oaxaca for over 150 days while APPO occupied the city center, took over radio stations, and paralyzed the state allowed a manageable labor dispute to become a full-scale insurrection. Fox was unwilling to confront PRI Governor Ulises Ruiz Ortiz — either because he feared the political precedent of removing an elected opposition governor, or because he preferred not to complicate the electoral calendar. The delay cost lives and deepened the crisis."
+    },
+    "sideB": {
+      "label": "Constitutional Constraints",
+      "text": "Fox argued that intervening against an elected state governor required specific constitutional justification that did not clearly exist when the crisis began. The federal system gives governors significant autonomy, and Fox could not simply remove Ruiz Ortiz on demand. Deploying federal forces against state-level conflicts required careful legal and political preparation. The eventual federal intervention (October 29, 2006) restored order once the legal and political conditions for action were established."
+    },
+    "resolution": "PFP intervention ultimately occurred Oct 29, 2006 — critics argued it came 150 days too late",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "remittances-migration-policy",
+    "question": "Did Fox use migration as a deliberate economic strategy or simply fail to prevent it?",
+    "sideA": {
+      "label": "Migration as Policy — 'Heroes Migrantes'",
+      "text": "Fox publicly embraced migrants as 'héroes' who sent remittances home, effectively making emigration a de facto economic strategy for poverty reduction. His administration created the 3×1 Program (matching federal, state, and municipal funds 3-to-1 for migrant remittance investments). Critics argue this represented a failure of domestic job creation — exporting human capital rather than creating conditions for Mexicans to thrive at home."
+    },
+    "sideB": {
+      "label": "Pragmatic Response to Structural Reality",
+      "text": "Emigration to the US was a deep structural phenomenon driven by wage differentials and NAFTA-era disruption of Mexican agriculture — not something Fox could have stopped. Celebrating migrants and facilitating remittance transfers (including the 3×1 Program) was a pragmatic response that maximized welfare benefits from an inevitable phenomenon. The alternative — restricting migration and forgoing remittances — would have increased poverty. Fox was responding to reality, not creating it."
+    },
+    "resolution": "Both — remittance tripling ($7.5bn to $26.5bn) reduced poverty but reflected structural emigration pressure Fox couldn't address",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "iraq-war-opposition",
+    "question": "Was Mexico's opposition to the Iraq War a principled stand or diplomatic misstep?",
+    "sideA": {
+      "label": "Principled Foreign Policy",
+      "text": "Mexico's refusal to support the US-UK resolution authorizing the Iraq invasion on the UN Security Council (2003) reflected a long tradition of Mexican foreign policy emphasizing multilateralism, non-intervention, and the Estrada Doctrine. Fox correctly judged the intelligence basis for war to be flawed. The decision won broad domestic support and aligned Mexico with France, Germany, Russia, and China. History vindicated the position — no WMDs were found and the war proved disastrous."
+    },
+    "sideB": {
+      "label": "Diplomatic Misstep — US Relations Damaged",
+      "text": "Mexico's UN Security Council position significantly cooled US-Mexico relations during 2003–2004, reducing Washington's goodwill at precisely the moment Fox needed it most for immigration negotiations. A small, trade-dependent country sharing a 3,000 km border with the US has limited geopolitical autonomy. The Iraq vote was a symbolic gesture that cost real political capital with the Bush administration without delivering commensurate benefits for Mexican interests."
+    },
+    "resolution": "Fox's position was vindicated historically; short-term diplomatic costs with Washington were real",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "energy-reform-avoided",
+    "question": "Should Fox have attempted energy reform (PEMEX privatization / opening)?",
+    "sideA": {
+      "label": "Missed Critical Reform Window",
+      "text": "Fox's early popularity (2000–2001) represented a unique window to pursue PEMEX reform that subsequent presidents also failed to achieve until Peña Nieto's 2013 energy reform. PEMEX's dominance of fiscal revenue (~40% of federal income) created dangerous fiscal vulnerability and starved the company of investment. Fox's failure to attempt energy reform was a missed opportunity that locked Mexico into oil dependency for another decade."
+    },
+    "sideB": {
+      "label": "Politically Impossible",
+      "text": "PEMEX privatization is constitutionally complex and politically explosive in Mexico — it was nationalized in 1938 as a foundational national symbol. Fox lacked a congressional majority and would have faced massive opposition from the left, labor unions, and nationalist opinion across the spectrum. Even Calderón, with a full six-year term, couldn't achieve energy reform. Fox was correct to prioritize achievable reforms rather than squander political capital on a guaranteed legislative defeat."
+    },
+    "resolution": "Energy reform not attempted; oil dependency deepened; reform not achieved until Peña Nieto (2013)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pan-marriage-continuity",
+    "question": "Did Fox's presidency represent a break from PRI authoritarianism or continuity?",
+    "sideA": {
+      "label": "Real Break — New Paradigm",
+      "text": "The mere fact of Fox's election represented a fundamental rupture with PRI authoritarianism. Free and fair elections, independent judiciary, free press operating without censorship, IFAI, FEMOSPP, and civilian control of the military all deepened under Fox. Mexico did not return to the PRI's 'perfect dictatorship.' The 2006 election, despite its controversies, was administered by an independent IFE — impossible under PRI rule. Democratic norms took root."
+    },
+    "sideB": {
+      "label": "Structural Continuity",
+      "text": "Mexico's deep state — the political economy of corruption, clientelism, cartels embedded in state structures, and the PRI's regional bases — continued largely undisturbed. PRI governors in most states maintained their patronage machines. Fox made no sustained attempt to dismantle these structures. The Fox presidency changed who sat in Los Pinos without fundamentally changing how power worked at the local and state level across most of Mexico."
+    },
+    "resolution": "Ongoing scholarly debate — democratic institutions strengthened nationally; sub-national PRI power persisted",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fox-marriage-marta",
+    "question": "Was Fox's mid-presidency marriage to Marta Sahagún a private matter or a governance problem?",
+    "sideA": {
+      "label": "Governance Problem",
+      "text": "Marta Sahagún was Fox's presidential spokesperson with unprecedented access to power before becoming his wife (July 2, 2001). Her transition from chief communicator to First Lady represented an extraordinary concentration of personal influence around the presidency. Her sons' corruption scandals and her own presidential ambitions (publicly floated then retracted in 2004) created sustained distractions that diverted political capital from Fox's reform agenda. Critics saw the marriage as a governance failure."
+    },
+    "sideB": {
+      "label": "Personal Choice, Public Overreaction",
+      "text": "Fox and Sahagún were two adults who fell in love. The media and political obsession with their relationship, her charitable foundation (Vamos México), and her sons' business activities reflected the normal scrutiny applied to any First Family — and in Mexico's case, heightened by a press newly free of PRI-era restrictions. No criminal conviction resulted from any investigation. Fox's personal life was his own business as long as governance continued."
+    },
+    "resolution": "Politically damaging throughout presidency; Bribiesca sons corruption allegations never resulted in prosecution",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

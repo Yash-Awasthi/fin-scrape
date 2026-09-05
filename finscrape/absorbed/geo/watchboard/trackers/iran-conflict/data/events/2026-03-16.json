@@ -1,0 +1,313 @@
+[
+  {
+    "id": "iran-war-day-17-sitrep",
+    "year": "Mar 16",
+    "title": "Day 17: Iran's 6th Wave Targets Tel Nof & Tel Aviv; IDF Claims 'Thousands of Targets' Remain; No Ceasefire in Sight",
+    "type": "military",
+    "detail": "Day 17 of Operation Epic Fury / Roaring Lion. Iran launched its 6th declared 'wave' of retaliatory strikes, with the IRGC Aerospace Force targeting Tel Nof Airbase (south of Tel Aviv), Israeli Military General Headquarters, and a defense industry complex in central Tel Aviv. Cluster warhead fragments struck Tel Aviv streets, causing minor casualties. Sirens blared across central and northern Israel. Israel responded with continued high-tempo strikes on Iranian military infrastructure. The IDF stated it still has 'thousands of targets' in Iran and does not intend to stop; military planners described needing 'at least three more weeks' of operations. Trump said Iran was 'ready to negotiate' but that its terms were insufficient, while Iran's FM Araghchi told CBS Face the Nation: 'We never asked for a ceasefire and we have never asked even for negotiation.' The Strait of Hormuz remains effectively closed for its 17th consecutive day.",
+    "sources": [
+      {
+        "name": "Times of Israel",
+        "tier": 2,
+        "url": "https://www.timesofisrael.com/liveblog-march-15-2026/",
+        "pole": "western"
+      },
+      {
+        "name": "NBC News",
+        "tier": 2,
+        "url": "https://www.nbcnews.com/politics/donald-trump/iran-negotiate-ceasefire-deal-trump-kharg-hormuz-oil-rcna263474",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": [
+      "ballistic",
+      "drone"
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.timesofisrael.com/liveblog-march-15-2026/",
+        "caption": "Day 17: Iran's 6th Wave Targets Tel Nof & Tel Aviv; IDF Claims 'Thousands of Targets' Remain; No Ceasefire in Sight",
+        "source": "Times of Israel",
+        "thumbnail": "https://static-cdn.toi-media.com/www/uploads/2026/03/49abdb71-2b46-4a9b-ab22-76d976cf8bef.jpg"
+      }
+    ]
+  },
+  {
+    "id": "iran-6th-wave-israel-mar15",
+    "year": "Mar 15",
+    "title": "Iran's IRGC Launches 6th Wave — Tel Nof AB, Israeli Military HQ, Tel Aviv Defense Complex",
+    "type": "military",
+    "detail": "The IRGC Aerospace Force announced its 'sixth wave' of retaliatory operations against Israel on March 15. Confirmed targets included Tel Nof Airbase south of Tel Aviv (home to Israeli Air Force squadrons and F-35I units), the Israeli Military General Headquarters in the Tel Aviv area, and a defense industry complex in central Israel. A cluster missile fragment struck Tel Aviv streets. Air raid sirens sounded across central Israel repeatedly. Israel's air defense network — Iron Dome, David's Sling, and Arrow-3 — was activated in coordinated interceptions. Some impacts reported in open areas. 58 Israelis were taken to hospitals. The IRGC continues to demonstrate multi-vector capability despite US-Israeli suppression of approximately 92% of peak launch rate.",
+    "sources": [
+      {
+        "name": "IRGC Aerospace Force",
+        "tier": 1,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "IDF Spokesperson",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Times of Israel",
+        "tier": 2,
+        "pole": "western"
+      }
+    ],
+    "weaponTypes": [
+      "ballistic",
+      "drone",
+      "mixed"
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": []
+  },
+  {
+    "id": "iran-araghchi-no-ceasefire-mar15",
+    "year": "Mar 15",
+    "title": "Iran's Araghchi on CBS: 'We Never Asked for a Ceasefire, No Reason to Negotiate'",
+    "type": "diplomatic",
+    "detail": "Iranian Foreign Minister Abbas Araghchi appeared on CBS Face the Nation on March 15 and stated categorically: 'We never asked for a ceasefire, and we have never asked even for negotiation. We are ready to defend ourselves as long as it takes.' Iran reiterated it would only accept cessation of hostilities if the US and Israel provide guarantees of no future attacks and pay reparations — conditions the Trump administration has not acknowledged. Iran cited two prior rounds of nuclear negotiations that collapsed after US action as evidence of US bad faith. Separately, Trump told reporters Iran was 'ready to make a deal' but that its terms were 'not good enough yet.' Analysts see a possible disconnect between Iran's diplomatic and military command.",
+    "sources": [
+      {
+        "name": "CBS News / Face the Nation",
+        "tier": 2,
+        "url": "https://time.com/article/2026/03/15/iran-Abbas-Araghchi-ceasefire-trump/",
+        "pole": "western"
+      },
+      {
+        "name": "NPR",
+        "tier": 2,
+        "url": "https://www.npr.org/2026/03/15/nx-s1-5748472/us-military-six-killed-iran-war",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://time.com/article/2026/03/15/iran-Abbas-Araghchi-ceasefire-trump/",
+        "caption": "Iran's Araghchi on CBS: 'We Never Asked for a Ceasefire, No Reason to Negotiate'",
+        "source": "CBS News / Face the Nation",
+        "thumbnail": "https://gcp-na-images.contentstack.com/v3/assets/bltea6093859af6183b/blt55d788749eb936f2/69b6e3195f0af36ddd1b4459/AP26047359623508.jpg?branch=production&amp;width=3840&amp;quality=75&amp;auto=webp&amp;crop=16%3A9"
+      }
+    ]
+  },
+  {
+    "id": "idf-thousands-targets-mar15",
+    "year": "Mar 15",
+    "title": "IDF: 'Thousands of Targets' Remain in Iran; 3+ More Weeks of Operations Planned",
+    "type": "military",
+    "detail": "The Israeli Defense Forces stated on March 15 that it still has 'thousands of targets' remaining in Iran after 17 days of intensive strikes. IDF military planners indicated operations would need 'at least three more weeks' to complete their objectives. To date, the IDF has conducted 4,700+ sorties and 380+ waves of strikes since February 28. CENTCOM confirmed approximately 6,000+ Iranian targets have been struck across all 30+ provinces. Israel is increasing sortie rates, deploying additional F-35I squadrons and using IAF F-15I aircraft for deep-penetration strikes. The IDF framed the prolonged timeline as necessary for permanent disarmament of Iran's nuclear and missile programs.",
+    "sources": [
+      {
+        "name": "Times of Israel",
+        "tier": 2,
+        "url": "https://www.timesofisrael.com/liveblog-march-15-2026/",
+        "pole": "western"
+      },
+      {
+        "name": "CNN",
+        "tier": 2,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.timesofisrael.com/liveblog-march-15-2026/",
+        "caption": "IDF: 'Thousands of Targets' Remain in Iran; 3+ More Weeks of Operations Planned",
+        "source": "Times of Israel",
+        "thumbnail": "https://static-cdn.toi-media.com/www/uploads/2026/03/49abdb71-2b46-4a9b-ab22-76d976cf8bef.jpg"
+      }
+    ]
+  },
+  {
+    "id": "trump-kharg-additional-mar15",
+    "year": "Mar 15",
+    "title": "Trump Actively Weighs Additional Kharg Island Strikes and Broader Economic Targets",
+    "type": "military",
+    "detail": "US Ambassador to the UN Mike Waltz stated March 15 that President Trump is 'actively weighing' additional strikes on Kharg Island — Iran's principal oil export hub that was bombed on March 14 — as well as other economic infrastructure. Trump threatened to hit Iranian energy facilities '20 times harder' if Iran does not lift the Hormuz blockade. CNBC reported the administration is considering escalating strikes to include secondary oil infrastructure in Abadan and Arak refineries. Trump simultaneously called on other nations to send warships to secure the Strait of Hormuz, stating the US should not bear the burden alone. No other nation has publicly committed forces to a Hormuz escort coalition.",
+    "sources": [
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/03/15/iran-war.html",
+        "pole": "western"
+      },
+      {
+        "name": "NBC News",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "White House",
+        "tier": 1,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cnbc.com/2026/03/15/iran-war.html",
+        "caption": "Trump Actively Weighs Additional Kharg Island Strikes and Broader Economic Targets",
+        "source": "CNBC",
+        "thumbnail": "https://image.cnbcfm.com/api/v1/image/108276590-1773233295523-108276590-17732332322026-03-11t124404z_1241300443_rc2b2ka9fzh1_rtrmadp_0_iran-crisis-emirates-hormuz.jpg?v=1773233302&amp;w=1920&amp;h=1080"
+      }
+    ]
+  },
+  {
+    "id": "arab-league-condemns-iran-mar15",
+    "year": "Mar 15",
+    "title": "Arab League Secretary-General Condemns Iranian Attacks on Arab States as 'Grave Strategic Mistake'",
+    "type": "diplomatic",
+    "detail": "Arab League Secretary-General Ahmed Aboul Gheit issued a strongly-worded statement on March 15 condemning Iran's retaliatory attacks on Arab states as 'fully reprehensible' and a 'grave strategic mistake.' The statement represents a significant diplomatic rebuke of Iran from the broader Arab world, even as Arab governments have not joined the US-Israeli military coalition. UAE, Saudi Arabia, Bahrain, Kuwait, Qatar, and Oman have all been targeted by Iranian missiles and drones since February 28. Aboul Gheit called on Iran to immediately cease attacks on Arab nations and work toward a diplomatic solution.",
+    "sources": [
+      {
+        "name": "Arab League / Al Jazeera",
+        "tier": 1,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": []
+  },
+  {
+    "id": "uk-france-germany-statement-mar15",
+    "year": "Mar 15",
+    "title": "UK PM Starmer, France and Germany: Condemn Iranian Attacks; 'Don't Believe in Regime Change from the Skies'",
+    "type": "diplomatic",
+    "detail": "UK Prime Minister Keir Starmer, in a joint statement with France and Germany, condemned Iranian retaliatory strikes on Gulf neighbors and Israeli civilians as 'unacceptable.' However, the same statement expressed reservations about the US-Israeli campaign, with Starmer stating that the UK 'does not believe in regime change from the skies.' The joint E3 statement called for protection of civilians on all sides and adherence to international law. France continued pushing for a separate Israel-Lebanon ceasefire track, with French diplomats engaged in talks with both Lebanese officials and Israel's Ron Dermer. The E3 position reflects growing European discomfort with the US-Israeli targeting philosophy.",
+    "sources": [
+      {
+        "name": "UK Government",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": []
+  },
+  {
+    "id": "uss-ghwb-certification-mar15",
+    "year": "Mar 15",
+    "title": "USS George H.W. Bush Completing Certification as Potential 3rd US Carrier Strike Group",
+    "type": "military",
+    "detail": "The USS George H.W. Bush (CVN-77) is completing its pre-deployment certification as of mid-March, making it a potential third carrier strike group for the Iran theater. The Bush would join USS Abraham Lincoln (Arabian Sea) and USS Gerald R. Ford (Eastern Mediterranean) as the third carrier committed to Operation Epic Fury. Carrier Air Wing Eight (CVW-8) would deploy aboard the Bush. US defense officials have not publicly confirmed the deployment timeline, but congressional sources briefed on planning said a third carrier is part of the escalation package being considered if Iran does not capitulate.",
+    "sources": [
+      {
+        "name": "NBC News",
+        "tier": 2,
+        "url": "https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-threat-oil-refueling-plane-israel-gulf-rcna263302",
+        "pole": "western"
+      },
+      {
+        "name": "CENTCOM",
+        "tier": 1,
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-trump-threat-oil-refueling-plane-israel-gulf-rcna263302",
+        "caption": "USS George H.W. Bush Completing Certification as Potential 3rd US Carrier Strike Group",
+        "source": "NBC News",
+        "thumbnail": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2026-03/260313-quds-day-rs-95af04.jpg"
+      }
+    ]
+  },
+  {
+    "id": "state-dept-bounty-khamenei-mar15",
+    "year": "Mar 15",
+    "title": "US State Department Offers $10M Reward for Information on Mojtaba Khamenei and IRGC Leaders",
+    "type": "military",
+    "detail": "The US State Department posted a $10 million reward for information on the whereabouts and operational status of Iran's newly appointed Supreme Leader Mojtaba Khamenei and key IRGC commanders. The reward reflects ongoing US uncertainty about whether Mojtaba Khamenei is alive, dead, or severely incapacitated — Secretary Hegseth said Khamenei is 'likely disfigured.' Trump told reporters: 'I'm hearing he's not alive — if he is, he should surrender.' Iran has not released any photos or verifiable video of Mojtaba Khamenei since his election as Supreme Leader on March 8. US intelligence assessed his status as 'unknown but degraded.'",
+    "sources": [
+      {
+        "name": "US State Department",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "NBC News",
+        "tier": 2,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": []
+  },
+  {
+    "id": "israel-lebanon-ceasefire-track-mar15",
+    "year": "Mar 15",
+    "title": "Separate Israel–Lebanon Ceasefire Track Forming; France Involved; No Date Set",
+    "type": "diplomatic",
+    "detail": "A separate diplomatic track aimed at a ceasefire between Israel and Lebanon/Hezbollah is forming, with France playing a lead mediating role. Israel has designated Ron Dermer to lead its side of any Lebanon-focused negotiations. The proposed framework would require Hezbollah to halt all rocket attacks on Israel and move forces north of the Litani River in exchange for a suspension of Israeli ground operations in southern Lebanon (where Israel's 91st Division has been operating since March 3). Lebanon's PM Nawaf Salam is supportive of a ceasefire but has limited control over Hezbollah. No negotiations date has been set, and Hezbollah has not responded to the framework.",
+    "sources": [
+      {
+        "name": "Reuters",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "France 24",
+        "tier": 2,
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-16T06:00:00.000Z",
+    "media": []
+  }
+]

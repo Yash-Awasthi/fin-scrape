@@ -1,0 +1,492 @@
+[
+  {
+    "id": "southern-spear-effectiveness-2026",
+    "question": "Has Operation Southern Spear's campaign of lethal boat strikes actually reduced cocaine trafficking to the US?",
+    "sideA": {
+      "label": "Trump administration",
+      "text": "Officials say the campaign of strikes on suspected drug-trafficking vessels, which has destroyed at least 67 boats and killed at least 221 people since September 2025, has 'virtually ended' seaborne cocaine trafficking to the United States and represents a decisive win in the drug war."
+    },
+    "sideB": {
+      "label": "Pentagon & DEA analysts",
+      "text": "Officials at the Pentagon and DEA told the Washington Post and CNN in late July 2026 that the strikes have not meaningfully slowed the cocaine supply. US Southern Command chief Gen. Francis Donovan told lawmakers in March 2026 that 'boat strikes aren't the answer,' and analysts note most cocaine still enters via land routes through Mexico and via shipping containers rather than small boats — plus the campaign has seen no strikes at all since June 21, 2026, its longest pause to date."
+    },
+    "resolution": "Unresolved. Independent Pentagon and DEA assessments as of July 2026 contradict the administration's public claims of success; no reduction in US cocaine supply has been independently verified.",
+    "lastUpdated": "2026-08-10T00:00:00Z"
+  },
+  {
+    "id": "guatemala-1954-us-role",
+    "question": "Was the 1954 Guatemalan coup a CIA operation or an internal uprising?",
+    "sideA": {
+      "label": "US Government (1954 position)",
+      "text": "The Eisenhower administration denied CIA involvement and characterized the overthrow of Árbenz as a 'democratic revolution' by patriotic Guatemalans opposed to communist infiltration. Secretary of State John Foster Dulles claimed Guatemala had become a 'Soviet beachhead' in the Americas threatening the hemisphere."
+    },
+    "sideB": {
+      "label": "Historical consensus / Declassified record",
+      "text": "Declassified CIA documents (PBSUCCESS history, released 1997) confirm the coup was planned, financed, and directed by the CIA under Allen Dulles. The CIA recruited, trained, and equipped the invasion force, ran a psychological warfare campaign including a fake radio station, and coordinated directly with Castillo Armas. Both Dulles brothers (CIA and State) had previously worked as lawyers for United Fruit Company."
+    },
+    "resolution": "Confirmed US operation. CIA PBSUCCESS history declassified; National Security Archive documents provide extensive documentation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "chile-coup-us-involvement",
+    "question": "Did the US directly order or orchestrate the 1973 Chilean coup?",
+    "sideA": {
+      "label": "US Government / Kissinger position",
+      "text": "The Nixon administration maintained it did not directly order the September 11, 1973 coup and was not informed of the precise timing. Kissinger argued the US only supported opposition groups and that Chilean military officers acted independently. He denied the US gave 'a green light' for the coup."
+    },
+    "sideB": {
+      "label": "Declassified documents / Church Committee",
+      "text": "Declassified documents confirm the CIA ran Track II—an explicit effort to instigate a military coup—from October 1970. The CIA maintained close contact with Chilean military coup plotters through 1973 and provided covert funding to destabilize Allende's economy. Nixon told CIA director Helms to make the economy 'scream.' A 2023 declassification review found CIA contact with coup plotters continued into September 1973."
+    },
+    "resolution": "US complicity confirmed. Extent of direct coordination on September 11 remains partially classified but US role in creating conditions for coup is documented.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bay-of-pigs-kennedy-responsibility",
+    "question": "Was Kennedy responsible for the Bay of Pigs failure, or did he inherit an unworkable plan?",
+    "sideA": {
+      "label": "CIA / Eisenhower planners",
+      "text": "CIA officials (particularly Allen Dulles and Richard Bissell) argued after the fact that Kennedy's decision to cancel a second air strike on April 16, 1961, and his insistence on reducing the invasion's 'noise' doomed a plan that could have succeeded with full air cover. The operation was designed around air superiority that Kennedy withdrew."
+    },
+    "sideB": {
+      "label": "Kennedy administration / Subsequent historians",
+      "text": "The CIA Inspector General's own secret report (1961, declassified 1998) concluded the operation was fatally flawed regardless of air cover: the CIA had underestimated Cuban military strength, overestimated popular uprisings, and violated compartmentalization so thoroughly the Cubans had advance warning. Kennedy inherited a plan designed to be plausibly deniable—yet could not have succeeded without massive US military involvement."
+    },
+    "resolution": "Shared failure. CIA IG report (declassified 1998) found CIA planning was fundamentally flawed independent of Kennedy's decisions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "allende-death-suicide-or-murder",
+    "question": "Did Salvador Allende die by suicide during the 1973 coup, or was he murdered?",
+    "sideA": {
+      "label": "Chilean military / Pinochet government",
+      "text": "The Pinochet government maintained from the beginning that Allende committed suicide using an AK-47 assault rifle gifted by Fidel Castro. Military officers present in La Moneda said Allende took his own life as coup forces breached the palace. This was the official Chilean government position for decades."
+    },
+    "sideB": {
+      "label": "Allende family / Left; some forensic evidence",
+      "text": "Allende's family and supporters maintained for years he was murdered by coup forces. A 2011 official Chilean forensic investigation exhumed Allende's remains and concluded he died of two gunshot wounds to the head consistent with suicide—but critics noted the conditions made murder difficult to rule out. Former Cuban official Luis Fernández Oña (Allende's son-in-law) maintains the suicide account."
+    },
+    "resolution": "2011 Chilean forensic commission concluded suicide; family accepted the conclusion. Some historians maintain questions about circumstances.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-condor-us-knowledge",
+    "question": "Did the US government actively support Operation Condor or merely know about it?",
+    "sideA": {
+      "label": "US Government position",
+      "text": "US officials have maintained that while the US knew of Operation Condor, it did not direct or meaningfully participate in its assassination campaigns. State Department officials allegedly warned some Condor targets. The US provided intelligence-sharing capabilities but not operational direction of the killing program."
+    },
+    "sideB": {
+      "label": "Declassified documents / National Security Archive",
+      "text": "Declassified cables show CIA and State Department officials were aware of Condor's assassination plans and provided communications infrastructure via the Panama Canal Zone's Condortel system. A 1978 State Department cable from Robert Scherrer explicitly described Condor's Phase Three assassination program. Some documents suggest US officials facilitated Condor operations rather than merely observing them."
+    },
+    "resolution": "Active facilitation confirmed through communications infrastructure; direct operational involvement in killings debated. Full extent still partially classified.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "contra-war-freedom-fighters-terrorists",
+    "question": "Were the Nicaraguan Contras 'freedom fighters' or terrorists?",
+    "sideA": {
+      "label": "Reagan administration",
+      "text": "President Reagan called the Contras 'the moral equivalent of our founding fathers' and 'freedom fighters' battling communist dictatorship. The administration argued the Sandinistas had suppressed freedom of the press, persecuted the Miskito indigenous population, and were building an oppressive Soviet-Cuban-style state that threatened Central American democracy."
+    },
+    "sideB": {
+      "label": "Americas Watch / Church / ICJ",
+      "text": "Americas Watch (now Human Rights Watch) documented systematic Contra atrocities including murder, rape, kidnapping, and torture of civilians—not military targets. The ICJ ruled in 1986 that US support for Contras violated international law. The Kerry Committee found Contra groups engaged in drug trafficking with CIA knowledge. Former CIA Director Stansfield Turner called the Contra program a 'moral catastrophe.'"
+    },
+    "resolution": "ICJ ruled US violated international law. Human rights groups documented systematic civilian targeting. Reagan's 'freedom fighter' characterization remains politically contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "panama-invasion-civilian-deaths",
+    "question": "How many Panamanians were killed in the 1989 US invasion?",
+    "sideA": {
+      "label": "US Department of Defense",
+      "text": "The Pentagon reported 202 Panamanian military dead and 'some' civilian deaths. The US claimed the operation was precise and that civilian casualties were minimized. The Pentagon acknowledged destruction of the El Chorrillo neighborhood but attributed fires to Panamanian Defense Force activities."
+    },
+    "sideB": {
+      "label": "Americas Watch / Panamanian human rights groups",
+      "text": "Americas Watch estimated 300+ civilian deaths; the Panamanian Human Rights Commission estimated 2,000–3,000 killed. Entire neighborhoods (El Chorrillo) were destroyed. Mass graves were reported. The Southern Command later adjusted its estimates upward but has never acknowledged the higher figures from civil society organizations."
+    },
+    "resolution": "Disputed. Official US figure: ~300. Independent human rights investigations suggest 300–1,000+. Full accounting impeded by limited access during and after the invasion.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "argentina-dirty-war-disappearances-count",
+    "question": "How many people disappeared during Argentina's Dirty War (1976–1983)?",
+    "sideA": {
+      "label": "Argentine government / CONADEP official count",
+      "text": "The National Commission on Disappeared Persons (CONADEP), established by President Alfonsín after the dictatorship, documented 8,960 verified disappeared persons in the 1984 Nunca Más report. The commission explicitly stated this was a minimum figure and the actual number was likely higher."
+    },
+    "sideB": {
+      "label": "Human rights organizations / Mothers of Plaza de Mayo",
+      "text": "Human rights organizations, particularly the Mothers and Grandmothers of Plaza de Mayo, have consistently maintained approximately 30,000 were disappeared. This figure has been adopted by the Argentine state in official memorialization. Researchers note that the CONADEP figure was limited by the methodology, access to information, and the abbreviated timeline of the investigation."
+    },
+    "resolution": "Officially documented minimum: ~9,000. Human rights consensus: 30,000. Argentine government memorialization uses 30,000 figure. Exact number unknowable given destruction of records.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "el-mozote-massacre-scale",
+    "question": "Did the US government know about and cover up the El Mozote massacre?",
+    "sideA": {
+      "label": "Reagan administration (1982 position)",
+      "text": "US Ambassador Deane Hinton and Assistant Secretary Thomas Enders dismissed early reporting of the El Mozote massacre as Salvadoran guerrilla propaganda. Enders testified to Congress in February 1982 that the numbers were 'not credible' and that government forces had conducted an anti-guerrilla operation against 'armed men.' The State Department denied the massacre occurred."
+    },
+    "sideB": {
+      "label": "New York Times / UN Truth Commission / Historical record",
+      "text": "Reporters Raymond Bonner (NYT) and Alma Guillermoprieto (Washington Post) documented the massacre in January 1982. The UN Truth Commission (1993) confirmed approximately 1,000 civilians were killed including 553 children. The US actively pressured editors to discredit Bonner's reporting; he was reassigned. The Reagan administration's denial was a deliberate cover-up enabling continued military aid to El Salvador."
+    },
+    "resolution": "Cover-up confirmed. UN Truth Commission documented massacre in 1993. State Department apology never issued; US military aid continued throughout.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "venezuela-coup-2002-us-involvement",
+    "question": "Was the US government involved in the April 2002 coup against Hugo Chávez?",
+    "sideA": {
+      "label": "Bush administration",
+      "text": "The Bush administration denied orchestrating or knowing in advance about the coup, though it immediately and enthusiastically recognized the Carmona government. The State Department characterized events as a resignation rather than a coup. Officials denied any US involvement in planning the overthrow."
+    },
+    "sideB": {
+      "label": "Venezuelan government / Declassified documents",
+      "text": "Declassified State Department cables show US officials met repeatedly with coup plotters in the weeks before April 11. The National Endowment for Democracy (NED) provided $877,000 to anti-Chávez groups in 2001–2002. A US Army attache sent intelligence dispatches describing coup planning. A BBC documentary ('The Revolution Will Not Be Televised') documented US embassy foreknowledge."
+    },
+    "resolution": "US funding of opposition confirmed; direct coup coordination disputed. Declassified documents confirm US meetings with plotters and rapid recognition of coup government.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-embargo-effectiveness",
+    "question": "Has the US trade embargo on Cuba been effective in promoting democracy?",
+    "sideA": {
+      "label": "US government / Cuba hawks",
+      "text": "Proponents argue the embargo is essential leverage against the Castro/Díaz-Canel government, denying revenue that would fund repression. They contend lifting the embargo without democratic reforms would reward authoritarian behavior and betray Cuban dissidents. The Helms-Burton Act (1996) codified the embargo's conditions for removal into law."
+    },
+    "sideB": {
+      "label": "UN General Assembly / Critics / Former presidents",
+      "text": "The UN General Assembly has voted to condemn the embargo as a violation of international law every year since 1992—typically by margins exceeding 180–2. Five US presidents from both parties have criticized the embargo's effectiveness. Engagement with China and Vietnam (communist states with far more human rights violations) provides no comparable restrictions, suggesting the embargo reflects politics rather than principle."
+    },
+    "resolution": "Ineffective by most assessments. Cuba remains under one-party rule after 60+ years; UN votes consistently condemn embargo. Obama normalization reversed without democratic opening.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "plan-colombia-success",
+    "question": "Was Plan Colombia a success in reducing drug trafficking and improving security?",
+    "sideA": {
+      "label": "US State Department / Colombian government",
+      "text": "US and Colombian officials cite significant reductions in cocaine production (2002–2008), dismantling of major drug cartels, demobilization of paramilitary groups (AUC), and weakening of FARC as evidence of Plan Colombia's success. The program is held up as a model for US security assistance."
+    },
+    "sideB": {
+      "label": "WOLA / Latin American scholars",
+      "text": "Critics note Colombian cocaine production rebounded to record highs by 2017, guerrilla groups reconstituted, fumigation campaigns displaced hundreds of thousands and damaged food security without reducing supply. Human rights abuses by security forces (including the 'False Positives' scandal—army killed civilians and dressed them as guerrillas) continued with US-supplied units. The program cost over $10 billion."
+    },
+    "resolution": "Mixed results. Short-term violence metrics improved; cocaine production rebounded. Security gains partially sustained but human rights costs significant.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "haiti-2004-kidnapping-claim",
+    "question": "Was President Aristide kidnapped by the US in 2004 or did he voluntarily resign?",
+    "sideA": {
+      "label": "US State Department / Colin Powell",
+      "text": "The US maintained that Aristide resigned voluntarily and requested US assistance in leaving Haiti for his personal safety. Secretary Powell stated: 'He was not kidnapped. We did not force him onto the airplane. He went onto the airplane willingly.' The US argued it was protecting Aristide from a deteriorating security situation."
+    },
+    "sideB": {
+      "label": "Aristide / Congressmembers / South Africa",
+      "text": "Aristide stated repeatedly he was taken by force: 'I was kidnapped...The coup started in Haiti and it was completed here on American soil.' US Congressmembers Maxine Waters and Charles Rangel spoke to Aristide by phone from the aircraft and said he confirmed being forced to leave. South Africa's ANC accepted his account. Former US officials involved have refused to discuss the details."
+    },
+    "resolution": "Contested. US denies kidnapping; Aristide and multiple witnesses maintain it. No independent investigation was conducted. Aristide eventually returned to Haiti in 2011.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "grenada-invasion-legality",
+    "question": "Was the 1983 US invasion of Grenada legal under international law?",
+    "sideA": {
+      "label": "Reagan administration / US legal position",
+      "text": "The US argued the invasion was legally justified: (1) to protect American citizens (medical students); (2) at the request of Grenada's Governor-General Paul Scoon; (3) at the invitation of the Organization of Eastern Caribbean States (OECS). The administration argued it was consistent with the UN Charter's right to self-defense."
+    },
+    "sideB": {
+      "label": "UN General Assembly / International law scholars",
+      "text": "The UN General Assembly passed Resolution 38/7 by 108–9 votes calling the invasion a 'flagrant violation of international law.' Legal scholars noted the OECS treaty did not authorize military action by non-members (the US). Governor-General Scoon's 'invitation' was signed after the invasion began. The medical students faced no documented danger before the invasion."
+    },
+    "resolution": "Widely condemned as illegal by UN vote 108–9. US position rejected by international legal consensus. Reagan administration proceeded without UN authorization.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kissinger-argentina-greenlight",
+    "question": "Did Kissinger give Argentina's junta a 'green light' for human rights atrocities in 1976?",
+    "sideA": {
+      "label": "Kissinger's position",
+      "text": "Kissinger denied endorsing the junta's repression. He maintained that US policy during this period was engaging Argentina diplomatically while privately raising human rights concerns. His supporters argued Carter's human rights approach was naive and that stability in Argentina served US Cold War interests."
+    },
+    "sideB": {
+      "label": "Declassified cables (2004) / Historians",
+      "text": "Declassified State Department cables from June 1976 show Kissinger told Argentine Foreign Minister Guzzetti: 'If there are things that have to be done, you should do them quickly. But you should get back quickly to normal procedures.' After Guzzetti returned to Buenos Aires, the junta dramatically accelerated disappearances. National Security Archive director Peter Kornbluh called the cables 'the smoking gun.'"
+    },
+    "resolution": "Declassified cables confirm Kissinger encouraged junta to accelerate repression and complete it before Congressional human rights hearings. Kissinger denied this characterization until his death in 2023.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "iran-contra-reagan-knew",
+    "question": "Did Reagan know about the Iran-Contra arms diversion to the Contras?",
+    "sideA": {
+      "label": "Reagan administration / Tower Commission",
+      "text": "Reagan repeatedly stated he approved selling arms to Iran for hostage release but denied knowledge that profits were diverted to the Contras—claiming the diversion was Oliver North's freelancing. The Tower Commission concluded Reagan had been 'out of the loop' on the specifics and found 'no credible evidence' he knew of the diversion."
+    },
+    "sideB": {
+      "label": "Democrats / Independent Counsel / Critics",
+      "text": "Independent Counsel Lawrence Walsh concluded in his 1994 final report that Reagan knew more than he admitted and that Bush (as Vice President) was 'deeply involved.' Casey's notes and North's diary entries suggest senior officials were aware. Critics noted Reagan had signed a Finding authorizing the Iran operation and was briefed regularly on Contra funding shortfalls."
+    },
+    "resolution": "Reagan maintained ignorance of diversion to end of life. Independent Counsel found Reagan's account 'generally implausible.' Full truth obscured by shredding of documents by Poindexter and North.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "school-of-americas-responsibility",
+    "question": "Is the School of the Americas (WHINSEC) responsible for human rights abuses by its graduates?",
+    "sideA": {
+      "label": "US Army / WHINSEC",
+      "text": "The US Army argues the School of the Americas trained officers in democratic values, rule of law, and human rights—especially after 1990 when human rights instruction was added to curriculum. The institution, renamed WHINSEC in 2001, contends that individual graduates' later actions reflect personal choices, not the institution's mission, and that positive outcomes (democratic transitions, counternarcotics success) outweigh negatives."
+    },
+    "sideB": {
+      "label": "SOA Watch / Human rights groups",
+      "text": "SOA Watch documented that graduates include 11 Latin American dictators, the Guatemalan military officers who massacred villagers, El Mozote massacre participants, and perpetrators of most of the hemisphere's worst human rights crimes. Declassified 1992 training manuals revealed instruction in torture, assassination, and blackmail—contradicting claims of democratic education. Representative Joe Moakley introduced legislation to close the school multiple times."
+    },
+    "resolution": "Ongoing controversy. 1992 manual release confirmed torture instruction. School renamed (WHINSEC) in 2001 with new curriculum. Critics maintain structural problems persist.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "monroe-doctrine-legitimacy",
+    "question": "Does the Monroe Doctrine legitimately justify US intervention in Latin America?",
+    "sideA": {
+      "label": "US foreign policy establishment",
+      "text": "Proponents argue the Monroe Doctrine reflects a legitimate US security interest in preventing hostile great powers from establishing military or political control over the Western Hemisphere. As the hemisphere's dominant power, the US has a legitimate interest in regional stability and democratic governance, and the doctrine evolved through the Roosevelt Corollary to protect those interests."
+    },
+    "sideB": {
+      "label": "Latin American governments / International law",
+      "text": "Latin American nations have consistently rejected the Monroe Doctrine as a unilateral assertion of US hegemony that violates the sovereignty and equal standing of nations under international law. The UN Charter's prohibition on intervention in the domestic affairs of states supersedes the Monroe Doctrine. The Inter-American system (OAS) is built on the principle of non-intervention. Most interventions justified by the doctrine actually protected US corporate interests, not regional security."
+    },
+    "resolution": "No international legal recognition. The UN Charter prohibits intervention. OAS Charter explicitly prohibits the doctrine's application. Domestic US political opinion remains divided.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cia-mining-nicaragua-international-law",
+    "question": "Was the CIA's mining of Nicaraguan harbors a violation of international law?",
+    "sideA": {
+      "label": "Reagan administration",
+      "text": "The US argued the harbor mining was a legitimate act of collective self-defense at El Salvador's request and in support of the Contras' armed struggle against a hostile government. The administration asserted US actions were within the bounds of international law and rejected the ICJ's jurisdiction over the matter."
+    },
+    "sideB": {
+      "label": "International Court of Justice (1986)",
+      "text": "The ICJ ruled 12–3 that the US had violated international law by mining Nicaraguan harbors, training and equipping Contra forces, and attacking Nicaraguan territory. The court ordered the US to pay reparations to Nicaragua. The US refused to accept the court's jurisdiction after the proceedings began—a position widely condemned as incompatible with the rule of law."
+    },
+    "resolution": "ICJ ruling: US violated international law. Nicaragua v. United States (1986) is a landmark international law case. US rejected jurisdiction and never paid reparations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "guatemala-arbenz-communist",
+    "question": "Was Jacobo Árbenz a communist threat justifying US intervention in Guatemala?",
+    "sideA": {
+      "label": "Eisenhower administration / United Fruit Company",
+      "text": "The administration characterized Árbenz as a Soviet agent building a 'communist beachhead' in the Americas. Árbenz's land reform program expropriated United Fruit Company holdings and his government included Communist Party members (though not in key posts). Secretary Dulles warned the coup was necessary to prevent Guatemala from becoming 'another Korea.'"
+    },
+    "sideB": {
+      "label": "Historical consensus / CIA's own assessment",
+      "text": "CIA's own PBSUCCESS history acknowledged that Árbenz was a nationalist reformer, not a Soviet agent, and that Guatemala's Communist Party had influence but did not control the government. Árbenz's land reform was modeled on US agricultural practices in post-WWII Japan and Germany. The Dulles brothers' conflict of interest (both had worked for United Fruit's law firm) was documented. Guatemala had no Soviet military ties."
+    },
+    "resolution": "Historical consensus: Árbenz was not a communist agent. CIA's own documents confirm the threat was exaggerated. Land reform targeted United Fruit, whose lawyers had become US Secretaries of State and CIA Director.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "venezuela-sanctions-impact",
+    "question": "Are US sanctions on Venezuela responsible for the humanitarian crisis?",
+    "sideA": {
+      "label": "US government / Trump/Biden administrations",
+      "text": "The US argues Venezuela's humanitarian crisis was caused by the Maduro government's economic mismanagement, corruption, and political repression that predates the most severe sanctions. The US maintains 'targeted' sanctions on government officials and PDVSA—not on food or medicine—and that the Maduro government bears full responsibility for refusing international humanitarian aid."
+    },
+    "sideB": {
+      "label": "UN Special Rapporteur / CEPR / Critics",
+      "text": "UN Special Rapporteur Alena Douhan (2021) concluded US and EU sanctions violated human rights and international law, contributing to 'unimaginable suffering.' CEPR economists Jeffrey Sachs and Mark Weisbrot estimated 40,000 deaths attributable to sanctions in 2017–2018 alone. The 2019 executive order constituted a comprehensive embargo similar to the Cuba embargo. Even humanitarian exemptions were largely ineffective as banks refused to process transactions."
+    },
+    "resolution": "Contested. Economic mismanagement predates sanctions. UN Special Rapporteur found sanctions violated international law and caused significant harm. Causal attribution of deaths is disputed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bolivia-2019-coup-election-fraud",
+    "question": "Was the 2019 Bolivian election result fraudulent, justifying Morales's removal?",
+    "sideA": {
+      "label": "OAS / US government / Interim government",
+      "text": "The OAS Electoral Integrity Mission claimed to find 'clear manipulation' and 'inexplicable' statistical irregularities in Bolivia's October 2019 election results. The US and regional allies used the OAS report to characterize Morales's removal as democratic and justified. The Áñez interim government held new elections in 2020."
+    },
+    "sideB": {
+      "label": "CEPR / MIT Election Lab / MAS party",
+      "text": "CEPR (Center for Economic and Policy Research) and MIT's Election Data and Science Lab independently analyzed Bolivian election returns and found no evidence of fraud—concluding the OAS used flawed methodology. The New York Times reported the OAS findings were 'deeply flawed.' Bolivia's 2020 elections, conducted after Morales's removal, returned MAS to power with a larger margin than 2019—suggesting Morales would have won fairly."
+    },
+    "resolution": "OAS report contested by independent academic analysis. Bolivia's 2020 elections confirmed MAS majority. OAS has not retracted or revised its 2019 findings.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "letelier-assassination-cia",
+    "question": "Did the CIA protect DINA operative Michael Townley to shield US interests?",
+    "sideA": {
+      "label": "FBI / DOJ position",
+      "text": "US investigators eventually prosecuted Townley (an American who worked for Chilean DINA) under a plea agreement, and he was sentenced to 10 years but served only 62 months. DOJ and FBI argued they pursued the case vigorously under difficult circumstances involving a foreign intelligence operation on US soil."
+    },
+    "sideB": {
+      "label": "Institute for Policy Studies / National Security Archive",
+      "text": "The CIA initially withheld information about Townley from the FBI investigation. CIA documents released later showed the agency had knowledge of DINA's assassination plans before the Letelier bombing. The relatively light sentence and early release of Townley, who entered the witness protection program, led critics to argue that intelligence equities impeded justice. No Chilean official was ever extradited."
+    },
+    "resolution": "CIA-FBI friction in investigation documented. Townley convicted and released early; entered witness protection. No senior DINA or Pinochet official faced justice in the US.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "haitian-occupation-race",
+    "question": "Was the US occupation of Haiti (1915–1934) driven by racism as well as strategic interests?",
+    "sideA": {
+      "label": "US government / Military historians",
+      "text": "The US occupied Haiti primarily for strategic reasons: German investment in Haiti was seen as a potential threat, and financial stability—control of customs and debt—was the primary stated rationale. US officials argued they brought infrastructure (roads, hospitals) and stabilized Haitian institutions."
+    },
+    "sideB": {
+      "label": "Haitian historians / African American press / Contemporary critics",
+      "text": "The US Marines imposed racial segregation policies in Haiti and US officials openly expressed white supremacist views about Haitian capacity for self-governance. Wilson's Secretary of State Robert Lansing argued that 'the African race' lacked 'the inherent capacity for self-government.' The occupation aimed to install a system where US corporate interests (National City Bank, railroad companies) controlled the economy through Black proxies."
+    },
+    "resolution": "Scholarly consensus: race was a significant factor alongside strategic and commercial interests. Declassified documents and contemporary statements of US officials confirm racist framing.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "united-fruit-company-us-policy",
+    "question": "Did US corporations (United Fruit, Standard Oil) drive US military interventions in Latin America?",
+    "sideA": {
+      "label": "US government / Free market advocates",
+      "text": "The US intervened primarily to maintain stability and prevent the spread of communism, not to protect individual corporations. US investments in Latin America represented legitimate economic engagement that contributed to development. The expropriation of US companies (like United Fruit in Guatemala) without compensation violated international law."
+    },
+    "sideB": {
+      "label": "Gen. Smedley Butler / historians / Latin American governments",
+      "text": "General Butler's 1935 confession named specific corporations he served as a Marine 'muscle man.' Documents confirm United Fruit Company officials lobbied directly for the Guatemala coup; Allen Dulles sat on UFC's board before becoming CIA director. Roosevelt Corollary interventions explicitly protected US corporate debt collection. US State Department cables routinely cited protection of US corporate interests as grounds for intervention."
+    },
+    "resolution": "Documented correlation between US corporate interests and intervention decisions confirmed in Guatemala, Nicaragua, Cuba, Haiti. Declassified records confirm corporate access to US policymakers in multiple cases.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "noriega-cia-asset",
+    "question": "Was Manuel Noriega a CIA asset when he was committing the crimes the US later prosecuted him for?",
+    "sideA": {
+      "label": "US government position (1989–1990)",
+      "text": "The US argued that the decision to indict and then invade to capture Noriega demonstrated its commitment to the rule of law over intelligence relationships. Officials maintained the CIA relationship with Noriega ended years before the invasion and that his drug trafficking and repression became unacceptable regardless of past cooperation."
+    },
+    "sideB": {
+      "label": "Senate investigations / Noriega's own defense",
+      "text": "Senate investigations confirmed Noriega received payments from the CIA from at least the 1960s through 1986—over 20 years—while simultaneously drug trafficking. The DEA was warned about Noriega's drug ties in the 1970s but US intelligence agencies blocked action. Noriega's attorneys subpoenaed CIA records and he was allowed to use classified documents in his defense—an extraordinary concession suggesting the government feared what might emerge."
+    },
+    "resolution": "Confirmed CIA asset for 20+ years while drug trafficking. US tolerated trafficking because of intelligence value until 1986. Decision to prosecute came when Noriega became politically untenable.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "honduras-coup-2009-obama-response",
+    "question": "Did the Obama administration facilitate or oppose the 2009 Honduran coup?",
+    "sideA": {
+      "label": "Obama administration",
+      "text": "Obama initially called the Zelaya ouster 'not legal' and a coup. The US did not immediately recognize the Micheletti government. The administration worked through OAS mechanisms and eventually supported elections as the path forward, arguing democratic elections were the appropriate response to the institutional crisis."
+    },
+    "sideB": {
+      "label": "Democracy advocates / Zelaya / Latin American governments",
+      "text": "Secretary Clinton's memoir ('Hard Choices') acknowledged she worked to 'steer' the situation toward elections rather than Zelaya's restoration—a strategy that legitimized the coup. Leaked cables show US Ambassador Llorens confirmed the coup was illegal and constitutional but the administration refused to formally designate it as such, which would have triggered automatic aid cutoffs under US law. Obama administration continued military aid to Honduras."
+    },
+    "resolution": "Contested. Administration initially called coup illegal but worked against Zelaya's restoration. Clinton memo acknowledged facilitating elections over return. US aid to Honduras continued.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "drug-war-vs-political-control",
+    "question": "Has the US 'War on Drugs' in Latin America been primarily about drugs or political control?",
+    "sideA": {
+      "label": "DEA / US government",
+      "text": "The War on Drugs in Latin America targets genuine threats from drug trafficking organizations that export narcotics to the United States. Supply-side eradication, interdiction, and security cooperation reduce drug availability. The US acts in cooperation with partner governments to protect both US and Latin American citizens from drug-related violence."
+    },
+    "sideB": {
+      "label": "Nixon aide John Ehrlichman / WOLA / Scholars",
+      "text": "Nixon aide John Ehrlichman admitted in a 1994 interview (published 2016): 'We knew we couldn't make it illegal to be against the war or black, but by getting the public to associate the hippies with marijuana and blacks with heroin...we could disrupt those communities.' Multiple scholars note US antidrug operations have systematically targeted left-leaning governments while overlooking allied governments' drug ties (Honduras post-2009, Colombia paramilitaries)."
+    },
+    "resolution": "Contested. Ehrlichman admission documents political origins. Academic consensus: War on Drugs has been selectively enforced based on political alignment, not drug trafficking severity.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "guatemala-genocide-label",
+    "question": "Does the violence against Maya communities during Guatemala's civil war constitute genocide?",
+    "sideA": {
+      "label": "Guatemalan and US government positions (1980s)",
+      "text": "The Reagan administration characterized violence in Guatemala as counterinsurgency against communist guerrillas—not genocide. Ríos Montt was called 'a man of great personal integrity.' The Guatemalan military maintained it was fighting armed combatants, not targeting ethnic groups. Guatemala denied genocide in legal and diplomatic forums for decades."
+    },
+    "sideB": {
+      "label": "Guatemala CEH / Ríos Montt conviction (2013)",
+      "text": "The UN-backed Historical Clarification Commission (1999) found 'acts of genocide' were committed against Ixil Maya communities. In 2013, a Guatemalan court convicted Ríos Montt of genocide—the first such conviction of a former head of state by his own country's courts. The conviction was overturned on procedural grounds but retrial proceedings began before Ríos Montt's 2018 death."
+    },
+    "resolution": "Genocide confirmed by CEH (1999) and Guatemalan court (2013 conviction, later vacated). CEH attributed 93% of human rights violations to state forces backed by US military aid.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-castro-us-assassination-attempts",
+    "question": "How many times did the CIA attempt to assassinate Fidel Castro?",
+    "sideA": {
+      "label": "US government / Church Committee",
+      "text": "The 1975 Church Committee documented at least eight CIA-sponsored assassination plots against Castro between 1960 and 1965, many involving organized crime figures. The committee concluded plots were authorized at high levels of government. Specific plots involved poisoned cigars, a contaminated wetsuit, and a botulin-laced pill passed through a mob connection."
+    },
+    "sideB": {
+      "label": "Cuban intelligence / Fabian Escalante",
+      "text": "Cuban intelligence chief Fabian Escalante documented 638 CIA-linked plots to assassinate Castro over the course of his rule (1959–2006). While many of these may have been surveillance operations or very minor schemes catalogued as 'assassination plots,' Cuban officials maintained the campaign was continuous. Many plots involved Cuban exile groups with ambiguous CIA relationships."
+    },
+    "resolution": "Church Committee confirmed 8+ plots 1960–1965 with high-level authorization. Cuban government claims 638 over Castro's lifetime. Actual number depends on definition of 'plot.'",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-absolute-resolve-legality",
+    "question": "Was the 2026 US military operation to capture Venezuelan President Maduro legal under international law?",
+    "sideA": {
+      "label": "Trump administration",
+      "text": "The administration argued the operation was a legitimate law enforcement action to bring a narco-terrorist to justice under federal indictments for cocaine trafficking, weapons charges, and narco-terrorism. Officials cited Maduro's 2020 federal indictment in the Southern District of New York and invoked the US right to act against criminal organizations that threaten US national security, drawing analogies to the 1989 capture of Noriega."
+    },
+    "sideB": {
+      "label": "Latin American governments / UN Charter / International law",
+      "text": "Brazil, Chile, Colombia, Mexico, Uruguay, and Spain condemned the operation as a flagrant violation of Article 2(4) of the UN Charter, which prohibits the use of force against the territorial integrity or political independence of any state. No UN Security Council resolution authorized the operation. Legal scholars noted that domestic criminal indictments do not confer the right to invade a sovereign state, and that the operation set a dangerous precedent for unilateral military action in the hemisphere."
+    },
+    "resolution": "Widely condemned as illegal under international law. No UN authorization existed. Multiple regional governments formally protested. The operation drew direct comparisons to the 1989 Panama invasion, which was similarly condemned by the UN General Assembly.",
+    "lastUpdated": "2026-04-19T14:18:37Z"
+  },
+  {
+    "id": "cuba-eo14380-blockade-vs-sanctions",
+    "question": "Does Trump's EO 14380 (2026) constitute an illegal naval blockade of Cuba or legitimate sanctions authority?",
+    "sideA": {
+      "label": "US government",
+      "text": "The Trump administration characterized EO 14380 as an exercise of lawful sanctions and tariff authority under the International Emergency Economic Powers Act (IEEPA) and the national emergency framework, targeting the Cuban government's access to energy revenues that fund repression. Officials argued the measures were economic, not military, in nature and did not constitute a blockade under international law."
+    },
+    "sideB": {
+      "label": "UN experts / Cuba / International law scholars",
+      "text": "UN human rights experts condemned EO 14380 as a de facto blockade, noting that intercepting oil tankers on the high seas and threatening third-country tariffs effectively created a naval quarantine analogous to the 1962 Cuban Missile Crisis blockade. UN Special Rapporteurs cited violations of international humanitarian law and the right to development. Cuba's government characterized the measure as 'genocidal.' The order's extraterritorial scope—threatening tariffs against any country that supplies Cuba—has no clear precedent in US sanctions law."
+    },
+    "resolution": "Contested. UN experts determined the order constituted a human rights violation. US maintains it is lawful sanctions authority. The legal distinction between 'blockade' and 'economic sanctions' remains contested; Cuba has called for an ICJ opinion.",
+    "lastUpdated": "2026-04-19T14:18:37Z"
+  },
+  {
+    "id": "ratcliffe-cuba-visit-coercion-or-opening",
+    "question": "Was CIA Director Ratcliffe's May 2026 Havana visit a genuine diplomatic opening or maximum-pressure coercion?",
+    "sideA": {
+      "label": "US government / Trump administration",
+      "text": "The Trump administration framed Ratcliffe's Havana visit as a pragmatic, conditional engagement: the US is willing to 'seriously engage' on economic and security issues if Cuba makes 'fundamental changes.' Officials cited the preconditions — releasing political prisoners, ending support for adversary nations, transparency on biological weapons — as reasonable requirements for any normalization. The visit was characterized as evidence the US would reward genuine reform, not punish Cuba indefinitely."
+    },
+    "sideB": {
+      "label": "Cuba / Latin American analysts / Human rights scholars",
+      "text": "Critics argued the CIA director's visit — rather than a State Department diplomat — signaled coercive intelligence-channel pressure, not genuine normalization. The timing (coinciding with Cuba declaring zero fuel reserves and 20–22-hour blackouts) was viewed as deliberate leverage maximization: the US waited until the oil blockade brought Cuba to collapse before negotiating. Analysts noted that sending the CIA director rather than a diplomat conveyed that the US viewed Cuba as a security threat to be managed, not a sovereign state to be engaged as an equal — echoing the CIA's historic operational role in Cuban affairs from the Bay of Pigs to the Castro assassination campaigns."
+    },
+    "resolution": "Ongoing. No normalization agreement announced as of May 2026. Cuba remains on State Sponsors of Terrorism list. The preconditions demanded by Ratcliffe have not been met. The secret February 2026 Rubio-Rodríguez Castro St. Kitts meeting and the Havana visit suggest backchannel dialogue is active but outcomes remain unknown.",
+    "lastUpdated": "2026-05-19T16:09:54Z"
+  },
+  {
+    "id": "pinochet-thatcher-reagan-legacy",
+    "question": "Is Pinochet's Chile a model of economic development or a cautionary tale of authoritarian capitalism?",
+    "sideA": {
+      "label": "Chicago Boys / Thatcher / Free market advocates",
+      "text": "Pinochet's 'Chicago Boys' economic team (trained at University of Chicago under Milton Friedman) implemented radical free-market reforms—privatization, deregulation, pension reform—that transformed Chile into Latin America's most prosperous economy. Margaret Thatcher called Pinochet a personal friend who 'brought democracy to Chile.' Free-market economists held up the 'Chilean miracle' as evidence that market liberalization produces prosperity."
+    },
+    "sideB": {
+      "label": "Human rights organizations / Chilean economists",
+      "text": "The 'Chilean miracle' occurred despite severe inequality, pension fund losses for retirees, and the torture of 40,000 political prisoners—numbers that are inseparable from the political repression that enabled the reforms. The 'miracle' years also saw a catastrophic 1982 economic crisis requiring a government bailout of banks the junta had privatized. Chile's constitution—written under Pinochet—was only replaced after mass protests in 2019–2020."
+    },
+    "resolution": "Contested. Chile's economy grew but at enormous human cost and with severe inequality. 2019 protests demanded constitutional revision. Pinochet arrested in London 1998; died under house arrest 2006 facing 300 criminal charges.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

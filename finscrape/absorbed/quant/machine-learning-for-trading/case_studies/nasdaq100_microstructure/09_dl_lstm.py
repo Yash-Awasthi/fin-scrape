@@ -1,0 +1,310 @@
+# ---
+# jupyter:
+#   jupytext:
+#     cell_metadata_filter: tags,-all
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.19.3
+#   kernelspec:
+#     display_name: Python 3 (ipykernel)
+#     language: python
+#     name: python3
+# ---
+
+# %% [markdown]
+# # LSTM - NASDAQ-100 Microstructure
+#
+# A long short-term memory network reads the window one observation at a time
+# and carries a running summary forward, deciding at each step how much of that
+# summary to keep and how much of the new observation to admit. Those decisions
+# are learned rather than fixed, which is what lets the model hold on to
+# something that happened early in the window if it turns out to matter, and
+# discard it otherwise.
+#
+# That is a real difference from a model that maps a flattened window through one
+# linear layer: the same feature carries different weight depending on what
+# preceded it. Whether it is a *useful* difference on order-flow features at this
+# horizon is the question the fit answers.
+#
+# The label looks 15 minutes ahead on a one-minute grid, so consecutive windows
+# overlap heavily and neighbouring rows are far from independent. That shapes
+# everything below: how windows are built, where folds are cut, and how much of
+# the training set is sampled.
+#
+# **Learning Objectives**:
+# - Fit a recurrent sequence model on a panel by declaring one request rather
+#   than assembling folds and windows in the notebook
+# - Read a learning curve across training epochs and say what it shows about
+#   capacity and noise
+# - Check that a fitted model produced predictions on every fold it was asked
+#   for, before any of those predictions are used
+#
+# **Book Reference**: Chapter 13
+#
+# **Prerequisites**: [`05_evaluation`](05_evaluation.ipynb)
+
+# %%
+"""LSTM - nasdaq100_microstructure deep learning."""
+
+import warnings
+
+import matplotlib.pyplot as plt
+import polars as pl
+import yaml
+
+from case_studies.utils.deep_learning import resolve_dl_device, run_dl_cv
+from utils.modeling import append_holdout_fold_if_needed, load_configs, load_modeling_dataset
+from utils.paths import get_case_study_dir
+from utils.reproducibility import set_global_seeds
+
+warnings.filterwarnings("ignore")
+
+# %% [markdown]
+# ### Settings
+#
+# `LOOKBACK` is how many one-minute observations enter each window, so 60 gives
+# the model the trailing hour. `MAX_TRAIN_SEQUENCES` caps how many windows are
+# drawn per fold: every row starts a window, so an uncapped fold would build
+# tens of millions of near-identical overlapping sequences. `N_EPOCHS` is how
+# many passes are made over that sample, and checkpoints are written along the
+# way so the run can be inspected and resumed at a known epoch rather than only
+# at the end.
+#
+# `MAX_FOLDS` and `FOLD_IDS` restrict which walk-forward folds run. They exist
+# for previews; a run that uses them covers less of the history than the fold
+# plan declares, and the fold set is part of what the run is registered under.
+#
+# `DEVICE` is the backend to train on, `gpu` or `cpu`. Left empty it takes the one
+# the case study declares in `config/setup.yaml` under `modeling.dl.device`, which
+# is what a production run uses; setting it is how a run on other hardware is asked
+# for, and the device it resolves to is registered with the run either way.
+
+# %% tags=["parameters"]
+CASE_STUDY_ID = "nasdaq100_microstructure"
+MODEL = "lstm"
+PRIMARY_LABEL = ""
+MAX_SYMBOLS = 0
+SEED = 42
+N_EPOCHS = 100
+LOOKBACK = 60
+BATCH_SIZE = 2048
+MAX_TRAIN_SEQUENCES = 750_000
+MAX_FOLDS = 0
+FOLD_IDS = []
+FORCE_RETRAIN = False  # Set True to retrain configs that already have complete hashes
+PREDICTION_SPLIT = "validation"
+DEVICE = ""  # empty: take modeling.dl.device from setup.yaml
+
+# %%
+set_global_seeds(SEED)
+CASE_DIR = get_case_study_dir(CASE_STUDY_ID)
+setup = yaml.safe_load((CASE_DIR / "config" / "setup.yaml").read_text())
+
+if not PRIMARY_LABEL:
+    PRIMARY_LABEL = setup["labels"]["primary"]
+
+# The device is part of what the run is registered under, so an unavailable accelerator
+# stops the run rather than quietly retraining on CPU and registering the result as
+# though it were the requested one. `DEVICE` names the backend for this run and the
+# case study declares the production one; either way it is recorded, so a CPU run is
+# registered as a CPU run.
+device_str = resolve_dl_device((setup.get("modeling") or {}).get("dl"), DEVICE)
+
+print(f"Case study: {CASE_STUDY_ID} | architecture: {MODEL}")
+print(f"Label: {PRIMARY_LABEL} (from config/setup.yaml)")
+print(f"Device: {device_str} (from {'DEVICE' if DEVICE else 'setup.yaml'})")
+print(f"Window: {LOOKBACK} one-minute observations | training epochs: {N_EPOCHS}")
+
+# %% [markdown]
+# ## 1. Load Data
+
+# %%
+mds = load_modeling_dataset(CASE_STUDY_ID, PRIMARY_LABEL, max_symbols=MAX_SYMBOLS)
+append_holdout_fold_if_needed(mds, PREDICTION_SPLIT, CASE_STUDY_ID)
+
+dataset = mds.dataset
+feature_names = mds.feature_names
+label_col = mds.label_col
+date_col = mds.date_col
+entity_col = mds.entity_cols[0] if mds.entity_cols else "symbol"
+splits = mds.splits[:MAX_FOLDS] if MAX_FOLDS else mds.splits
+n_features = len(feature_names)
+
+print(f"Dataset: {len(dataset):,} rows × {n_features} features")
+print(f"Label: {label_col} | Entity: {entity_col} | Folds: {len(splits)}")
+
+dataset_pd = dataset.to_pandas()
+print(f"Entities: {dataset_pd[entity_col].nunique()}")
+
+# %% [markdown]
+# ## 2. Declare the fitting request
+#
+# Configurations come from the label's config file rather than from literals
+# here, and the notebook keeps only the ones whose architecture is the one it is
+# about. The three training settings above are then applied to every retained
+# configuration, so what is fitted is visible in one place instead of being
+# spread between a config file and the runner's defaults.
+#
+# Nothing about the windows, folds or gaps is assembled here. The runner receives
+# the label's fold plan and the observation cadence and derives the rest, so this
+# notebook and the ones for the other architectures cannot drift apart in how
+# they cut a window.
+
+# %%
+dl_configs = load_configs(CASE_STUDY_ID, PRIMARY_LABEL, "deep_learning")
+dl_configs = [c for c in dl_configs if c["params"].get("architecture") == MODEL]
+if not dl_configs:
+    available = sorted(
+        {
+            c["params"].get("architecture", "?")
+            for c in load_configs(CASE_STUDY_ID, PRIMARY_LABEL, "deep_learning")
+        }
+    )
+    raise ValueError(
+        f"No '{MODEL}' configuration in the {PRIMARY_LABEL} deep_learning config. "
+        f"Declared architectures: {available}"
+    )
+
+for cfg in dl_configs:
+    cfg["n_epochs"] = N_EPOCHS
+    cfg["batch_size"] = BATCH_SIZE
+    cfg["params"]["lookback"] = LOOKBACK
+
+print(f"Fitting {len(dl_configs)} {MODEL} configuration(s) on {len(splits)} folds:")
+for cfg in dl_configs:
+    print(f"  {cfg['config_name']}: window {LOOKBACK}, batch {BATCH_SIZE}, {N_EPOCHS} epochs")
+
+# %%
+result = run_dl_cv(
+    dataset_pd,
+    splits,
+    feature_names=feature_names,
+    label_col=label_col,
+    date_col=date_col,
+    entity_col=entity_col,
+    configs=dl_configs,
+    n_features=n_features,
+    device=device_str,
+    save_dir=CASE_DIR / "run_log" / "training" / "deep_learning",
+    register=True,
+    force_retrain=FORCE_RETRAIN,
+    prediction_split=PREDICTION_SPLIT,
+    case_study=CASE_STUDY_ID,
+    notebook="09_dl_lstm",
+    max_train_sequences=MAX_TRAIN_SEQUENCES,
+    selected_folds=FOLD_IDS or None,
+    temporal_by_fold=mds.temporal_by_fold,
+    temporal_keys=mds.temporal_keys,
+    temporal_feature_names=mds.temporal_feature_names,
+    seed=SEED,
+)
+
+# %% [markdown]
+# ## 3. Learning curves
+#
+# A checkpoint is written every few epochs and scored on the fold's validation
+# window, which gives one curve per configuration. The shape is what to read,
+# not any single point on it. A curve that climbs and then falls says the model
+# has started fitting noise and the useful capacity was reached earlier; a curve
+# that stays flat from the first checkpoint says the extra epochs are buying
+# nothing. At this label horizon the values are small in absolute terms, so read
+# the direction and the spread between configurations rather than the level.
+
+# %%
+curves = result["all_learning_curves"]
+if curves.height > 0:
+    fig, ax = plt.subplots(figsize=(9, 4.5))
+    for config_name in sorted(curves["config"].unique().to_list()):
+        series = curves.filter(pl.col("config") == config_name).sort("epoch")
+        ax.plot(series["epoch"], series["ic_mean"], marker="o", markersize=3, label=config_name)
+    ax.axhline(0.0, color="0.6", linewidth=0.8)
+    ax.set_xlabel("Training epoch")
+    ax.set_ylabel("Validation information coefficient")
+    ax.set_title(f"{MODEL} validation score across training epochs")
+    ax.legend(title="Configuration")
+
+# %% [markdown]
+# ## 4. Check what was produced
+#
+# Before these predictions are used anywhere, confirm the run covered the folds
+# it was asked for. A model that failed on one fold still leaves rows in the
+# registry for the others, and a downstream average over whatever is present
+# reads as a complete result. Comparing the folds returned against the folds
+# requested is what separates the two.
+
+# %%
+all_predictions = result["all_predictions"]
+requested_folds = sorted(int(f) for f in (FOLD_IDS or [s["fold"] for s in splits]))
+
+# A score is unusable when it is absent, undefined, or infinite. Counting only
+# nulls would pass a fold whose every score is NaN, because a float column built
+# from a NumPy array holds NaN rather than null.
+_unusable = (
+    pl.col("y_score").is_null() | pl.col("y_score").is_nan() | pl.col("y_score").is_infinite()
+)
+
+coverage = (
+    all_predictions.group_by("config")
+    .agg(
+        pl.col("fold_id").n_unique().alias("folds"),
+        pl.len().alias("rows"),
+        _unusable.sum().alias("unusable_scores"),
+    )
+    .sort("config")
+)
+coverage
+
+# %%
+incomplete = []
+for cfg in dl_configs:
+    name = cfg["config_name"]
+    produced = all_predictions.filter(pl.col("config") == name)
+    got = sorted(int(f) for f in produced["fold_id"].unique().to_list())
+    absent = [f for f in requested_folds if f not in got]
+    unusable = int(produced.select(_unusable.sum()).item()) if produced.height else 0
+    if absent or unusable:
+        incomplete.append((name, absent, unusable))
+
+print(f"Folds requested: {requested_folds}")
+if incomplete:
+    detail = "; ".join(
+        f"{name}: missing folds {absent}, {unusable} unusable scores"
+        for name, absent, unusable in incomplete
+    )
+    raise RuntimeError(
+        f"{MODEL} did not produce a complete prediction set for every configuration "
+        f"({detail}). These rows must not be compared or backtested."
+    )
+print("Every configuration covered every requested fold with a usable score on every row.")
+
+# %% [markdown]
+# ## 5. Key Takeaways
+#
+# 1. **A sequence model is a request, not a loop.** The window length, fold plan,
+#    observation cadence and gap policy are declared once and resolved by the
+#    shared runner. A notebook that rebuilds them locally will eventually cut a
+#    window differently from its sibling notebooks, and the two results stop
+#    being comparable without anything looking wrong.
+#
+# 2. **Overlapping labels make sequence counts misleading.** Every row starts a
+#    window, so a fold holds almost as many sequences as it has rows, and nearly
+#    all of them share most of their content. Capping how many are drawn is what
+#    keeps the fit tractable; it also means the effective sample is far smaller
+#    than the sequence count suggests.
+#
+# 3. **Check coverage before you compare.** Fold-level completeness is the
+#    precondition for any comparison across architectures. `13_model_analysis`
+#    is where those comparisons happen, on the population this notebook and its
+#    siblings register.
+#
+# 4. **Recurrence costs wall-clock, not just parameters.** The window is read one
+#    step at a time, so the sequential work per sequence grows with `LOOKBACK`
+#    in a way a single linear map's does not. Lengthening the window is
+#    therefore a runtime decision as much as a modelling one.
+#
+# **Known limitations**: The validation score here is a diagnostic of the fit, not
+# a basis for choosing a configuration or a checkpoint. Gated memory is the
+# capability this architecture adds; whether it is worth its cost is a question
+# for the comparison in `13_model_analysis`, not for this notebook.

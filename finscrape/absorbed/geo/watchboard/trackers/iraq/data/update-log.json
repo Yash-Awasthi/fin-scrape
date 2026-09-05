@@ -1,0 +1,51 @@
+{
+  "lastRun": "2026-08-25T15:06:54.131Z",
+  "tracker": "iraq",
+  "sections": {
+    "events": {
+      "status": "updated",
+      "itemCount": 39
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 42
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 34
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 15
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 16
+    },
+    "kpis": {
+      "status": "updated",
+      "itemCount": 8
+    },
+    "casualties": {
+      "status": "ok",
+      "itemCount": 10
+    },
+    "econ": {
+      "status": "updated",
+      "itemCount": 8
+    },
+    "strikeTargets": {
+      "status": "ok",
+      "itemCount": 6
+    },
+    "retaliation": {
+      "status": "ok",
+      "itemCount": 6
+    },
+    "assets": {
+      "status": "ok",
+      "itemCount": 6
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

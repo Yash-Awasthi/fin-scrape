@@ -1,0 +1,107 @@
+[
+  {
+    "id": "starship_ift12_slips_to_may_2026_04_02",
+    "date": "2026-04-02",
+    "year": "2026",
+    "title": "Starship IFT-12 Timeline Slips from Late April to May 2026 — Booster 19 Awaits 33-Engine Static Fire",
+    "type": "milestone",
+    "detail": "SpaceX's Starship Integrated Flight Test 12 (IFT-12) — the debut of the V3 Starship architecture — has slipped from its late-April target to approximately May 2026, according to space industry reporters including Sawyer Merritt. The delay stems from the partial result of the March 16 static fire: Booster 19 (the first V3 Super Heavy, equipped with Raptor 3 engines) completed a 10-engine firing that ended early due to a ground-side abort, but only 10 of the required 33 Raptor 3 engines had been installed at that time. The booster was subsequently rolled back to the Starbase production facility to receive the remaining 23 engines. A full 33-engine static fire — identical in scope to the milestone tests on previous Super Heavy boosters — remains the primary gating milestone before rollout, stacking, and the IFT-12 launch attempt. Ship 39, the V3 Starship upper stage, has completed cryoloading preflight tests at Pad 2. The FAA launch license covering the April 5–October 5, 2026 window remains valid. No formal public target date for the 33-engine test has been announced by SpaceX.",
+    "sources": [
+      {
+        "name": "Basenor / Space Industry Reports",
+        "tier": 3,
+        "url": "https://www.basenor.com/blogs/news/starship-flight-12-targeting-late-april-what-to-expect",
+        "pole": "western"
+      },
+      {
+        "name": "Tesla Oracle / SpaceX Reporting",
+        "tier": 3,
+        "url": "https://www.teslaoracle.com/2026/03/19/starship-flight-12-booster-19s-10-engine-static-fire-ends-abruptly-spacex-prepares-for-a-33-engine-static-fire-test/",
+        "pole": "western"
+      },
+      {
+        "name": "Space.com",
+        "tier": 2,
+        "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-fires-up-next-gen-v3-starship-for-1st-time-ahead-of-april-launch-photos",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.basenor.com/blogs/news/starship-flight-12-targeting-late-april-what-to-expect",
+        "caption": "Starship IFT-12 Timeline Slips from Late April to May 2026 — Booster 19 Awaits 33-Engine Static Fire",
+        "source": "Basenor / Space Industry Reports",
+        "thumbnail": "https://www.basenor.com/cdn/shop/articles/439abbfe76680e593990a30a0d3ea501.jpg?v=1774822212"
+      }
+    ]
+  },
+  {
+    "id": "starlink_17_35_scrub_april2_2026",
+    "date": "2026-04-02",
+    "year": "2026",
+    "title": "Starlink 17-35 Scrubbed at Vandenberg — Booster B1103 Debut Delayed",
+    "type": "launch",
+    "detail": "SpaceX scrubbed the Starlink Group 17-35 launch attempt from SLC-4E at Vandenberg Space Force Base on April 2, 2026, within the 4:03–8:03 p.m. PT window. The mission — carrying 25 Starlink V2 Mini Optimized satellites to sun-synchronous orbit — was to mark the debut flight of new booster B1103, making it a notable first-flight milestone for SpaceX's booster fleet. The scrub continued a string of delays: the mission had previously been targeting March 28, then March 30, then April 1, before slipping to April 2. Booster B1103 is SpaceX's newest Falcon 9 first stage, representing continued fleet expansion to support the ~140-launch 2026 pace forecast by President Gwynne Shotwell. No cause for the scrub was publicly disclosed; new launch attempts were assessed for the following days.",
+    "sources": [
+      {
+        "name": "Spaceflight Now Launch Schedule",
+        "tier": 2,
+        "url": "https://spaceflightnow.com/launch-schedule/",
+        "pole": "western"
+      },
+      {
+        "name": "edhat / KTLA / Regional Space Coverage",
+        "tier": 2,
+        "url": "https://www.edhat.com/news/spacex-to-launch-25-starlink-satellites-from-vandenberg-on-sunday/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.edhat.com/news/spacex-to-launch-25-starlink-satellites-from-vandenberg-on-sunday/",
+        "caption": "Starlink 17-35 Scrubbed at Vandenberg — Booster B1103 Debut Delayed",
+        "source": "edhat / KTLA / Regional Space Coverage",
+        "thumbnail": "https://www.edhat.com/wp-content/uploads/2024/01/starlink-spacex-scaled.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "starlink_10_58_launch_april2_2026",
+    "date": "2026-04-02",
+    "year": "2026",
+    "title": "Starlink 10-58 Launches from Cape Canaveral — B1085 Completes 15th Flight",
+    "type": "launch",
+    "detail": "SpaceX successfully launched Starlink Group 10-58 from Space Launch Complex 40 (SLC-40) at Cape Canaveral Space Force Station at 7:55 a.m. EDT (11:55 UTC) on April 2, 2026. The Falcon 9 carried 29 Starlink V2 Mini Optimized satellites to low Earth orbit, continuing expansion of the Starlink mega-constellation now exceeding 10,000 active satellites. Booster B1085 completed its 15th flight, having previously flown on the historic Crew-9 rescue mission, RRT-1, Firefly Blue Ghost Mission 1, Fram2, SXM-10, MTG-S1, EchoStar XXV, and seven additional Starlink missions. Following stage separation, B1085 executed a precision landing on the drone ship 'Just Read the Instructions' positioned in the Atlantic Ocean. The mission was SpaceX's 41st orbital launch of 2026 and pushed the total 2026 booster recovery count to 594, continuing the company's trajectory toward a ~140-mission year.",
+    "sources": [
+      {
+        "name": "Spaceflight Now Launch Log",
+        "tier": 2,
+        "url": "https://spaceflightnow.com/launch-log/",
+        "pole": "western"
+      },
+      {
+        "name": "My News 13 / Bay News 9 (Orlando)",
+        "tier": 2,
+        "url": "https://mynews13.com/fl/orlando/space/2026/04/02/spacex-successfully-launches-29-starlink-satellites",
+        "pole": "western"
+      },
+      {
+        "name": "Basenor / SpaceX Reporting",
+        "tier": 3,
+        "url": "https://www.basenor.com/blogs/news/spacex-launches-29-starlink-satellites-on-falcon-9s-15th-flight",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://mynews13.com/fl/orlando/space/2026/04/02/spacex-successfully-launches-29-starlink-satellites",
+        "caption": "Starlink 10-58 Launches from Cape Canaveral — B1085 Completes 15th Flight",
+        "source": "My News 13 / Bay News 9 (Orlando)",
+        "thumbnail": "https://s7d2.scene7.com/is/image/TWCNews/SpaceX_launch_0402"
+      }
+    ]
+  }
+]

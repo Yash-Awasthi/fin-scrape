@@ -1,0 +1,112 @@
+[
+  {
+    "id": "oct2019-military-killed",
+    "category": "Military / Security Forces — Oct 2019",
+    "killed": "~4",
+    "injured": "~10",
+    "source": "SSPC official figures (partial; records sealed)",
+    "tier": 1,
+    "contested": "yes",
+    "note": "Full military casualty breakdown was not officially released; records were sealed for five years. SSPC reported 8 total killed across all categories combined; military-specific count estimated from partial disclosures.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "oct2019-cartel-killed",
+    "category": "Cartel Gunmen — Oct 2019",
+    "killed": "~3",
+    "injured": "Unknown",
+    "source": "SSPC official / local police",
+    "tier": 1,
+    "contested": "yes",
+    "note": "Government reported cartel casualties but withheld individual breakdowns. Local media accounts suggest higher cartel deaths; many bodies were reportedly removed by the cartel before official tallies.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "oct2019-civilians-killed",
+    "category": "Civilians — Oct 2019",
+    "killed": "1–3+",
+    "injured": "~6",
+    "source": "SSPC (1 official) / Local authorities (3 in Tres Ríos alone)",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Government acknowledged only 1 civilian death; local officials cited at least 3 in the Tres Ríos neighborhood. Civilian bystanders were caught in crossfire and carjackings across the city. True civilian toll remains unknown.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "oct2019-total",
+    "category": "Total — Oct 2019 Culiacanazo",
+    "killed": "8–15",
+    "injured": "16+",
+    "source": "SSPC official (8) / Local estimates (15)",
+    "tier": "all",
+    "contested": "heavily",
+    "note": "Official government figure of 8 dead and 16 wounded. Local officials and witness accounts suggest 13–15+ dead. Sealed operational records prevent definitive accounting. 68 military vehicles were damaged.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "jan2023-military-killed",
+    "category": "Military / Security Forces — Jan 2023",
+    "killed": "10",
+    "injured": "15+",
+    "source": "SEDENA official",
+    "tier": 1,
+    "contested": "no",
+    "note": "Includes Colonel Juan José Moreno Orzua and his four bodyguards (ambushed in Escuinapa) plus five additional soldiers killed in Culiacán firefights. This was the most severe military toll in any single cartel operation in years.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "jan2023-cartel-killed",
+    "category": "Cartel Gunmen — Jan 2023",
+    "killed": "19",
+    "injured": "Unknown",
+    "source": "SEDENA official",
+    "tier": 1,
+    "contested": "partial",
+    "note": "SEDENA reported 19 confirmed cartel gunmen killed. Independent monitors suggested the figure may be understated as the cartel customarily removes casualties from scenes before official accounting.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "jan2023-police-killed",
+    "category": "Police Officer — Jan 2023",
+    "killed": "1",
+    "injured": "~5",
+    "source": "SEDENA official",
+    "tier": 1,
+    "contested": "no",
+    "note": "One police officer killed during statewide cartel operations across Sinaloa in response to Ovidio's arrest. Reported separately from military casualties.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "jan2023-total",
+    "category": "Total — Jan 2023 Operation Ovidio",
+    "killed": "30",
+    "injured": "35+",
+    "source": "SEDENA official",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Official SEDENA total: 10 soldiers + 19 cartel gunmen + 1 police = 30 dead. 35+ wounded; 21 arrested. Weapons seized included four .50 caliber Barrett rifles and six .50 caliber machine guns. Some independent counts cited 29.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "sinaloa-civil-war-2024-2025",
+    "category": "Sinaloa Civil War (Sep 2024 – Jul 2026)",
+    "killed": "~3,600+",
+    "injured": "~2,100+ (gunshot, including 36% rise in early 2026)",
+    "source": "Grupo Animal / Proceso / ACLED / La Jornada",
+    "tier": 3,
+    "contested": "yes",
+    "note": "Approximately 1,972 homicides in the first 12 months (Sep 2024–Aug 2025). Peak: 6.9 deaths/day in June 2025. Rate fell to ~2.5/day by March 2026 before resurging — June 2026 was the second-deadliest month of the year with 116 homicides. By the Jul 25, 2026 two-year anniversary of El Mayo's capture, the cumulative toll topped 3,600 homicides and nearly 4,000 disappearances (roughly 6 homicides and 6 disappearances/day sustained), with over 94% of cases unresolved. Official Sinaloa state figures are lower.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "oct2019-prison-escape",
+    "category": "Prison Escapees — Oct 2019 (Aguaruto)",
+    "killed": "0",
+    "injured": "5 guards (weapons stripped)",
+    "source": "AP / La Jornada",
+    "tier": 2,
+    "contested": "no",
+    "note": "51 inmates escaped from Aguaruto Federal Penitentiary during the October 2019 Culiacanazo; 2 were quickly recaptured, leaving 49 at large. Five guards had their weapons stripped during the coordinated prison riot.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  }
+]

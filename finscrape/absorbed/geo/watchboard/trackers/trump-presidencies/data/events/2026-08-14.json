@@ -1,0 +1,74 @@
+[
+  {
+    "id": "trump-navy-steam-catapults-order-aug14-2026",
+    "year": "2026",
+    "title": "Trump Orders Navy to Ditch EMALS, Revert to Steam Catapults on Newest Carriers",
+    "type": "political",
+    "detail": "President Trump signed a national security memorandum on August 14, 2026 directing the Pentagon and Navy to present plans within two months for removing the Electromagnetic Aircraft Launch System (EMALS) from Gerald R. Ford-class aircraft carriers and reverting to older steam catapult technology, starting with USS Doris Miller, the fourth Ford-class ship. Trump has long criticized EMALS as costly and unreliable, telling reporters years earlier the Navy should go 'goddamned steam.' The Navy and defense contractor General Atomics have opposed the switch, citing billions of dollars in cost, added crew requirements, and integration risk given that work on Doris Miller's launch systems is already halfway complete; USS Gerald R. Ford, USS John F. Kennedy, and USS Enterprise are not affected.",
+    "sources": [
+      {
+        "name": "The Hill",
+        "tier": 2,
+        "url": "https://thehill.com/policy/defense/6029103-trump-orders-navy-catapult-reversal/",
+        "pole": "western"
+      },
+      {
+        "name": "Breaking Defense",
+        "tier": 2,
+        "url": "https://breakingdefense.com/2026/08/trump-orders-return-of-steam-catapults-on-carriers-fifth-public-shipyard/",
+        "pole": "western"
+      },
+      {
+        "name": "Spectrum News",
+        "tier": 2,
+        "url": "https://spectrumlocalnews.com/me/maine/politics/2026/08/14/trump-orders-navy-return-steam-catapults-launching-jets-off-aircraft-carriers",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://spectrumlocalnews.com/me/maine/politics/2026/08/14/trump-orders-navy-return-steam-catapults-launching-jets-off-aircraft-carriers",
+        "caption": "Trump orders the Navy to revert to steam catapults on its newest aircraft carriers",
+        "source": "Spectrum News",
+        "thumbnail": "https://s7d2.scene7.com/is/image/TWCNews/aircraft_carrier_AP_26226014245859_NAT_0814"
+      }
+    ]
+  },
+  {
+    "id": "kevin-rideout-missionary-released-niger-aug14-2026",
+    "year": "2026",
+    "title": "American Missionary Kevin Rideout Released After 9 Months' Captivity in Niger",
+    "type": "diplomatic",
+    "detail": "Kevin Rideout, a 50-year-old American missionary pilot for SIM International, was released to US officials on August 14, 2026 after more than nine months in captivity following his October 21, 2025 kidnapping outside his home in Niamey, Niger. SIM International Director Phil Bauman confirmed Rideout was 'in good health in the care of US officials' and would soon be reunited with his wife, Krista. President Trump credited the release to administration diplomatic efforts, including assistance from eastern Libyan military commander Khalifa Haftar, and said Rideout marks roughly the 110th American captive freed since Trump's second term began.",
+    "sources": [
+      {
+        "name": "CBS News",
+        "tier": 2,
+        "url": "https://www.cbsnews.com/news/kevin-rideout-american-missionary-kidnapped-niger-october-released/",
+        "pole": "western"
+      },
+      {
+        "name": "NPR",
+        "tier": 2,
+        "url": "https://www.npr.org/2026/08/14/nx-s1-5931225/kidnapped-us-missionary-released",
+        "pole": "western"
+      },
+      {
+        "name": "The Hill",
+        "tier": 2,
+        "url": "https://thehill.com/homenews/administration/6033660-donald-trump-released-missionary-kevin-rideout-niger-release-to-us/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cbsnews.com/news/kevin-rideout-american-missionary-kidnapped-niger-october-released/",
+        "caption": "Niamey, Niger, where missionary pilot Kevin Rideout was kidnapped before his release after nine months in captivity",
+        "source": "CBS News",
+        "thumbnail": "https://assets1.cbsnewsstatic.com/hub/i/r/2026/08/14/2ec49d88-d3a2-4a7b-b51c-62ffb9d6fb8b/thumbnail/620x413/5114bad687c66ef027b6060699dfc63b/ap26169614739417.jpg"
+      }
+    ]
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "id": "russian-military-killed",
+    "category": "Russian Military — Killed",
+    "killed": "~352,000–500,000",
+    "injured": "~860,000–1,070,000",
+    "source": "CSIS / BBC-Mediazona / Netherlands MIVD / Ukrainian MoD (Aug 22, 2026)",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Russia has never released official casualty figures. Ukrainian General Staff reported ~1,476,580 total personnel losses by August 23, 2026 (Day 1,642). Meduza/Mediazona confirmed 239,354+ Russian soldiers killed by name as of August 2026. The Economist (May 17): 1.1–1.5M total KIA+WIA. Netherlands MIVD (April 2026): 1.2M permanent losses including 500,000+ dead. Aug 21-24: Russia's double-tap drone strike on a Kryvyi Rih mall killed 16+; a Kyiv barrage killed 1; Russia's Independence Day nationwide barrage (Aug 24) killed 8 and injured 43, incl. 5 killed in Kharkiv Oblast, plus a Chernihiv apartment-block drone strike injuring 20. Ukraine struck the Ozon warehouse and refinery in Samara region and, on Aug 23-24, Ozon's Orenburg warehouse and the Kombinat Kamenskiy rocket-fuel plant in Rostov Oblast plus a MiG-29.",
+    "lastUpdated": "2026-08-24T15:43:31Z"
+  },
+  {
+    "id": "russian-military-overall",
+    "category": "Russian Military — Total Casualties (KIA+WIA+MIA)",
+    "killed": "est. ~352,000–500,000",
+    "injured": "est. ~860,000–1,070,000",
+    "source": "Ukrainian MoD / Economist May 2026 / Netherlands MIVD Apr 2026 / WSJ Feb 2026",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Total personnel losses reach ~1,476,580 per Ukrainian General Staff (August 23, 2026, Day 1,642). Aug 21: Russia's double-tap drone strike on a Kryvyi Rih shopping mall killed 16+ (130+ injured) and a Shahed strike on Mykolaiv region killed 4, including 3 children. Aug 22: Russian ballistic missiles hit Kyiv's Darnytskyi district; Ukraine struck the Ozon warehouse and Novokuibyshevsk oil refinery in Samara region for the first time. Aug 23: Russian guided bombs hit Izium and a jet-powered drone hit Kharkiv's Osnovianskyi district; Ukraine reportedly struck an Ozon warehouse in Orenburg, ~1,000km from the border. Aug 24 (Ukraine's Independence Day): Russia's nationwide barrage (2 Oniks, 6 Kh-31P/Kh-59 missiles, 143 drones) killed 8 and injured 43, including 5 killed in Kharkiv Oblast; a Geran-5 drone hit a Chernihiv apartment block, injuring 20. Ukraine struck 66 Russian targets overnight, including the Kombinat Kamenskiy rocket-fuel plant in Rostov Oblast and a MiG-29.",
+    "lastUpdated": "2026-08-24T15:43:31Z"
+  },
+  {
+    "id": "russian-equipment-losses",
+    "category": "Russian Military — Equipment",
+    "killed": "24,268+ pieces total",
+    "injured": "13,931+ tanks/armored vehicles",
+    "source": "Oryx (OSINT verified) / Ukrainian MoD (Mar 2026)",
+    "tier": 3,
+    "contested": "partial",
+    "note": "Oryx counts only losses confirmed by photo/video evidence. Ukrainian MoD claims are higher. Equipment losses represent most of Russia's pre-war stocks, replaced by reserve stocks and wartime production. Ukrainian drone units destroyed 6 BM-21 Grad launchers in Pokrovsk area in Mar 2026.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "ukrainian-military-killed",
+    "category": "Ukrainian Military — Killed",
+    "killed": "86,000–140,000",
+    "injured": "350,000–460,000",
+    "source": "UALosses / CSIS / Zelenskyy statement (2026)",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Zelenskyy stated 55,000 soldiers killed in 2026. UALosses project documented 86,142 by name. CSIS estimates 100K–140K KIA. Western officials (Feb 2026): 250K–300K total KIA+WIA. Ukrainian government has strict OPSEC around casualty figures.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "ukrainian-military-overall",
+    "category": "Ukrainian Military — Total Casualties",
+    "killed": "est. ~110,000–140,000",
+    "injured": "est. ~390,000–460,000",
+    "source": "CSIS Jan 2026 / Western intelligence estimates (Feb 2026)",
+    "tier": 3,
+    "contested": "partial",
+    "note": "Ukrainian losses significantly lower than Russian but still catastrophic for a country of 30M. Manpower shortages led to mobilization law in 2024 lowering conscription age to 25. Acute manpower shortages ongoing as of early 2026.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "civilian-killed-un",
+    "category": "Civilians — Killed (UN verified)",
+    "killed": "58,930+",
+    "injured": "Unknown (cumulative)",
+    "source": "UN OHCHR (through March 31, 2026); ongoing documentation",
+    "tier": 1,
+    "contested": "partial",
+    "note": "UN OHCHR verified 58,930 civilian casualties through March 31, 2026. UN emphasizes real figures are significantly higher — particularly in Russian-occupied territory where documentation is impossible. 97% of 2025 civilian casualties attributed to Russian attacks. Ceasefire (May 9–11) collapsed; Russia's 216+ drone attack May 12 continued targeting civilian areas in Kyiv, Dnipro, Mykolaiv, Cherkasy, Kherson. 2025 was deadliest year for civilians since 2022 (31% rise over 2024).",
+    "lastUpdated": "2026-05-12T15:44:35Z"
+  },
+  {
+    "id": "civilian-killed-2022",
+    "category": "Civilians — Killed in 2022 (peak year)",
+    "killed": "~8,000+",
+    "injured": "~13,000+",
+    "source": "UN OHCHR Annual Report 2022",
+    "tier": 1,
+    "contested": "no",
+    "note": "2022 was the deadliest year for civilians, particularly the opening months with siege warfare and mass atrocities in Bucha, Mariupol, and Kherson Oblast.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "civilian-killed-2025",
+    "category": "Civilians — Killed in 2025 (deadliest since 2022)",
+    "killed": "2,514",
+    "injured": "12,142",
+    "source": "UN OHCHR Year Report 2025",
+    "tier": 1,
+    "contested": "no",
+    "note": "2025 was the deadliest year for civilians since 2022, with a 31% rise over 2024. Russia's intensified aerial campaign against civilian infrastructure drove the increase.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "mariupol-civilian-killed",
+    "category": "Civilians — Mariupol Siege (Mar–May 2022)",
+    "killed": "~22,000",
+    "injured": "Unknown",
+    "source": "Mariupol City Council estimate / Kyiv Independent",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Mariupol Mayor Boychenko estimated 22,000 civilians killed during siege. Ukrainian and Western officials consider this credible; Russia disputed. The actual figure may be higher — body recovery ongoing.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "displaced-internal",
+    "category": "Internally Displaced Persons (IDPs)",
+    "killed": "N/A",
+    "injured": "N/A",
+    "source": "UNHCR (Dec 2025)",
+    "tier": 1,
+    "contested": "no",
+    "note": "3.7 million Ukrainians internally displaced. 73% have been displaced for 2+ years. 10.8 million in need of humanitarian assistance in 2026.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "refugees-abroad",
+    "category": "Ukrainian Refugees Abroad",
+    "killed": "N/A",
+    "injured": "N/A",
+    "source": "UNHCR (Dec 2025)",
+    "tier": 1,
+    "contested": "no",
+    "note": "5.86 million Ukrainian refugees recorded abroad, predominantly in Europe (~5.3M). Largest European refugee crisis since WWII. Germany, Poland, and Czech Republic host most refugees.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "pows-ukraine",
+    "category": "POWs — Ukrainian fighters held by Russia",
+    "killed": "N/A",
+    "injured": "N/A",
+    "source": "Ukrainian Commissioner for POWs / ICRC",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Over 3,000 Ukrainian military POWs confirmed via ICRC. Azovstal garrison (2,439) taken prisoner May 2022. Russia accused of mistreating POWs; Ukraine requested ICRC access; access denied in many cases.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "pows-russia",
+    "category": "POWs — Russian soldiers held by Ukraine",
+    "killed": "N/A",
+    "injured": "N/A",
+    "source": "Ukrainian MoD / ICRC",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Ukraine held over 5,000+ Russian POWs as of early 2025. Major prisoner exchange agreed at Istanbul talks (May 2025) — largest of the war, 1,000+ soldiers on each side. ICRC has access.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "north-korean-troops-casualties",
+    "category": "North Korean Troops — Casualties in Russia",
+    "killed": "~4,000–6,000",
+    "injured": "~5,000–8,000",
+    "source": "South Korean NIS / Western intelligence (early 2025)",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "South Korean intelligence estimated North Korea suffered extremely high losses during Kursk fighting — reportedly from lack of familiarity with drone warfare. North Korea denied casualties. ~11,000 troops total deployed.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "children-killed",
+    "category": "Children — Killed",
+    "killed": "699+",
+    "injured": "1,387+",
+    "source": "Ukrainian Prosecutor General (Dec 2025)",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Ukrainian authorities track child casualties specifically as evidence of war crimes. OHCHR confirms children among civilian casualties. 8 children were among 38 killed in Ternopil missile strike (Nov 2025).",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  }
+]

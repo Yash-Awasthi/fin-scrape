@@ -1,0 +1,29 @@
+[
+  {
+    "id": "protests_erupt_2025",
+    "year": "Dec 2025",
+    "title": "Protests Erupt",
+    "type": "humanitarian",
+    "detail": "Grand Bazaar shuts over rial collapse (1.44M/$1). Protests spread to 17 provinces. Inflation at 42–52%, food prices up 72%.",
+    "sources": [
+      {
+        "name": "CNN",
+        "tier": 2,
+        "pole": "international"
+      },
+      {
+        "name": "Foreign Policy",
+        "tier": 2,
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.pbs.org/newshour/world/iran-security-forces-clash-with-protesters-at-grand-bazaar-at-least-36-killed-in-demonstrations",
+        "caption": "Security forces clash with protesters at Tehran's Grand Bazaar amid Iran's economic crisis",
+        "source": "PBS NewsHour"
+      }
+    ]
+  }
+]

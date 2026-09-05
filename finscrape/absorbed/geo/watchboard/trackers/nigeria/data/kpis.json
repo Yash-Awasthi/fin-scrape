@@ -1,0 +1,101 @@
+[
+  {
+    "id": "kpi-population",
+    "label": "Population (2024 est.)",
+    "value": "223 million",
+    "color": "blue",
+    "source": "World Bank / NBS 2024",
+    "contested": false,
+    "delta": "+3.2%/yr",
+    "deltaNote": "Most populous country in Africa; 7th globally",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kpi-gdp",
+    "label": "Nominal GDP (2026 est.)",
+    "value": "$395 billion",
+    "color": "green",
+    "source": "NBS Q1 2026 GDP / IMF World Economic Outlook Apr 2026",
+    "contested": false,
+    "delta": "+3.89% real growth (Q1 2026 actual); +4.1% full-year forecast",
+    "deltaNote": "NBS released Q1 2026 GDP on May 25 showing 3.89% real YoY growth (N110.79 trillion nominal); non-oil sector drove 96% of GDP; IMF full-year 2026 forecast remains 4.1%",
+    "trend": "up",
+    "lastUpdated": "2026-05-25"
+  },
+  {
+    "id": "kpi-inflation",
+    "label": "Inflation Rate (Jul 2026)",
+    "value": "15.43%",
+    "color": "amber",
+    "source": "NBS Nigeria",
+    "contested": false,
+    "delta": "-0.48pp vs June (15.91%); -9.51pp vs Jul 2025 (24.94%)",
+    "deltaNote": "Headline inflation eased for a second straight month to 15.43% in July 2026, per NBS; but food inflation jumped to 20.31% y/y (5.56% m/m, +1.82pp vs June) on rising crayfish, pepper, onion, rice, and garri prices — a divergence between cooling headline numbers and worsening food costs",
+    "trend": "down",
+    "lastUpdated": "2026-08-17"
+  },
+  {
+    "id": "kpi-oil-production",
+    "label": "Crude Oil Output (Jun 2026)",
+    "value": "1.56 mbpd crude / 1.735 mbpd incl. condensate",
+    "color": "green",
+    "source": "NNPC / OPEC Monthly Report June 2026",
+    "contested": true,
+    "contestNote": "OPEC figures disputed; NGOs estimate lower due to oil theft losses exceeding 150,000 bpd",
+    "delta": "74-month high; 104% of 1.5 mbpd OPEC quota; +11% vs 2024 avg",
+    "deltaNote": "4th consecutive month of rising output; best single day touched 1.89 mbpd; driven by improved Niger Delta pipeline security",
+    "trend": "up",
+    "lastUpdated": "2026-07-13"
+  },
+  {
+    "id": "kpi-poverty-rate",
+    "label": "Poverty Headcount (2023)",
+    "value": "40.1%",
+    "color": "red",
+    "source": "World Bank Poverty & Equity Brief 2023",
+    "contested": true,
+    "contestNote": "NBS methodology revisions disputed; multidimensional poverty index shows 65%+",
+    "delta": "+4pp since 2019",
+    "deltaNote": "COVID-19 and subsidy removal impact; ~87 million in extreme poverty",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kpi-conflict-fatalities",
+    "label": "Conflict Fatalities (2025 est.)",
+    "value": "10,600+",
+    "color": "red",
+    "source": "ACLED Nigeria / US AFRICOM / Council on Foreign Relations Nigeria Security Tracker",
+    "contested": true,
+    "contestNote": "Government figures significantly lower; ACLED cross-checks multiple independent sources; US-Nigeria joint strikes killed 240+ ISWAP fighters May–June 2026; Borno cholera outbreak adds separate humanitarian toll (not counted in conflict figure)",
+    "delta": "-13% vs 2023 peak (12,200)",
+    "deltaNote": "Combined ISWAP/JAS, banditry, farmer-herder, and separatist violence; a July 1 Fulani-Kamuku clash in Tegina, Niger State killed 48; retired Maj. Gen. Rabe Batsari died in bandit captivity June 13; ISWAP continued probing attacks into July despite May's sustained joint strikes",
+    "trend": "down",
+    "lastUpdated": "2026-07-11"
+  },
+  {
+    "id": "kpi-nollywood",
+    "label": "Nollywood Films/Year",
+    "value": "2,500+",
+    "color": "green",
+    "source": "NOFiA / UNESCO Cultural Statistics 2022",
+    "contested": false,
+    "delta": "+60% vs 2010",
+    "deltaNote": "Third largest film industry globally by volume; ~$1B annual revenue",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kpi-naira-exchange",
+    "label": "Naira/USD Rate (Jul 2026)",
+    "value": "₦1,380/$1",
+    "color": "amber",
+    "source": "Trading Economics / CBN",
+    "contested": false,
+    "delta": "-66% vs Jan 2023 (₦460/$); +9.8% over trailing 12 months; -1.52% over trailing month",
+    "deltaNote": "Naira weakened modestly through late June and early July to ₦1,380.20 (July 15) after a stronger early-June run near ₦1,362–1,367; still up nearly 10% year-on-year as reserves and reform credibility hold",
+    "trend": "up",
+    "lastUpdated": "2026-07-16"
+  }
+]

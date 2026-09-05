@@ -1,0 +1,107 @@
+[
+  {
+    "id": "us-army-occupation",
+    "type": "US Land Forces",
+    "name": "Army of Occupation (Taylor)",
+    "detail": "General Zachary Taylor's force that fought the northern Mexico campaign. Assembled at Corpus Christi (Aug 1845), ~3,500-men. Fought Palo Alto, Resaca de la Palma, Monterrey, and Buena Vista. Core comprised US Regular Army infantry, artillery, and dragoon regiments supplemented by state volunteers. Known as 'Old Rough and Ready' after their commander.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-army-center-wool",
+    "type": "US Land Forces",
+    "name": "Army of the Center (Wool)",
+    "detail": "General John Wool's 3,000-man force that marched from San Antonio through Coahuila to Saltillo. Arrived November 1846. Played a crucial role at the Battle of Buena Vista alongside Taylor's forces. One of three separate US armies operating simultaneously in Mexico.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-army-west-kearny",
+    "type": "US Land Forces",
+    "name": "Army of the West (Kearny)",
+    "detail": "General Stephen Kearny's 1,700-man force that captured Santa Fe, New Mexico (Aug 1846) and fought its way to California. Traveled over 2,500 miles total. Included Missouri Volunteers, regular US Dragoons, and the Mormon Battalion. Suffered its worst defeat at San Pasqual, California (Dec 6, 1846).",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-army-scott",
+    "type": "US Land Forces",
+    "name": "Army under Scott — Veracruz to Mexico City",
+    "detail": "General Winfield Scott's 12,000-man expeditionary force that landed at Veracruz (Mar 9, 1847) and captured Mexico City (Sep 14, 1847). Comprised Regular Army units and volunteers. Featured future Civil War generals including Robert E. Lee, Ulysses Grant, George McClellan, and Thomas 'Stonewall' Jackson as junior officers.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "doniphan-missouri-volunteers",
+    "type": "US Land Forces",
+    "name": "Doniphan's Missouri Volunteers (1st Missouri Mounted Rifles)",
+    "detail": "Colonel Alexander Doniphan's 900-man regiment of Missouri frontiersmen that made one of the longest marches in US Army history — from Fort Leavenworth, Kansas to Chihuahua City, Mexico (~2,000 miles). Fought Brazito (Dec 25, 1846) and Sacramento (Feb 28, 1847). Mustered out in New Orleans in June 1847.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-gulf-squadron",
+    "type": "US Naval Forces",
+    "name": "US Home Squadron (Gulf Squadron)",
+    "detail": "Blockaded Mexican Gulf Coast ports from the war's start. Commanded by Commodore David Conner (later replaced by Commodore Matthew Perry). Seized Tampico (Nov 14, 1846) without resistance. Provided naval fire support and landing craft (67 specially designed surf boats) for Scott's Veracruz amphibious assault.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-pacific-squadron",
+    "type": "US Naval Forces",
+    "name": "US Pacific Squadron",
+    "detail": "Commanded by Commodore John Sloat (then Robert Stockton). Raised the US flag at Monterey, California (Jul 7, 1846), San Francisco (Jul 9), and San Diego (Jul 29). Conducted amphibious operations along the California coast and provided the rescue force that saved Kearny's men after San Pasqual.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "texas-revolution-army",
+    "type": "Texas Forces",
+    "name": "Army of the Republic of Texas",
+    "detail": "Irregular volunteer army formed during the Texas Revolution. Never exceeded ~1,400 men under Sam Houston at San Jacinto. Comprised American volunteers (including those from the US who answered Travis's calls for aid), Anglo Texan colonists, and Tejano allies including Juan Seguín's company. Fought the decisive battle in 18 minutes on April 21, 1836.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "texas-rangers",
+    "type": "Texas Forces",
+    "name": "Texas Rangers",
+    "detail": "Irregular frontier cavalry force that served as scouts and reconnaissance for Taylor's and Scott's armies. Expert horsemen and marksmen. Known for extreme effectiveness and extreme ruthlessness. Mexican civilians called them 'Los Diablos Tejanos' (The Texas Devils). Their service created a mythology of frontier toughness that persists today.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexican-army-north",
+    "type": "Mexican Forces",
+    "name": "Mexican Army of the North",
+    "detail": "The primary Mexican force defending northern Mexico under Generals Arista and Ampudia. Strength approximately 5,000–7,000 men at peak. Defeated at Palo Alto and Resaca de la Palma (May 1846), then at Monterrey (Sep 1846). Rebuilt and reinforced to ~20,000 under Santa Anna for Buena Vista (Feb 1847). Best equipped Mexican force of the war.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexican-army-east",
+    "type": "Mexican Forces",
+    "name": "Mexican Army Defending the Capital",
+    "detail": "Santa Anna's reorganized force defending Mexico City in 1847. Totaled approximately 25,000–30,000 men across multiple engagements but was never concentrated effectively. Suffered sequential defeats at Cerro Gordo, Contreras, Churubusco, Molino del Rey, and Chapultepec before the capital fell. Supplemented by National Guard units and civilian levies.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "san-patricio-battalion",
+    "type": "Mexican Forces",
+    "name": "San Patricio (Saint Patrick) Battalion",
+    "detail": "Unit of predominantly Irish Catholic and other European immigrant US Army deserters who fought for Mexico. Approximately 200 men at peak strength. Named in honor of Ireland's patron saint. Operated US Army artillery against former comrades with devastating effectiveness. Made their last stand at Churubusco (Aug 20, 1847); 85 captured, 50 subsequently executed by hanging.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexican-army-cos",
+    "type": "Mexican Forces",
+    "name": "General Cos's Garrison — San Antonio (1835–36)",
+    "detail": "General Martín Perfecto de Cos commanded approximately 1,400 soldiers defending San Antonio de Bexar and the Alamo during the Texas Revolution. Surrendered December 10, 1835, under parole to withdraw south of the Rio Grande. Broke his parole to return with Santa Anna's army for the Alamo siege in February 1836.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "flying-artillery-us",
+    "type": "US Weapons System",
+    "name": "US Flying Artillery",
+    "detail": "Light, horse-drawn artillery pieces that could be rapidly repositioned on the battlefield. Commanded by officers including Samuel Ringgold (killed at Palo Alto) and Braxton Bragg (Buena Vista). The flying artillery's mobility and accuracy proved decisive against massed Mexican infantry throughout the war, creating a revolution in US tactical doctrine.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "heroic-military-college",
+    "type": "Mexican Forces",
+    "name": "Heroic Military College (Colegio Militar) — Chapultepec Cadets",
+    "detail": "Mexico's military academy, housed at Chapultepec Castle. During the September 13, 1847 US assault, six young cadets stayed to fight rather than evacuate with the main garrison. These 'Niños Héroes' — Juan de la Barrera, Juan Escutia, Francisco Márquez, Agustín Melgar, Fernando Montes de Oca, and Vicente Suárez — are among Mexico's most venerated historical figures.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

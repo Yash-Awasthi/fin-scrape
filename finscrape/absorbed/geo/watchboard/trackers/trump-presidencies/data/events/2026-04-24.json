@@ -1,0 +1,102 @@
+[
+  {
+    "id": "trump-uk-tariff-threat-digital-services-tax-apr24-2026",
+    "year": "Apr 24, 2026",
+    "title": "Trump Threatens New Tariffs on UK Over Digital Services Tax",
+    "type": "trade",
+    "detail": "President Trump threatened to impose new tariffs on the United Kingdom in response to the UK's digital services tax, which US officials argue unfairly targets American technology companies. The threat broadens the ongoing global trade confrontation to a key ally at a particularly fraught moment — the UK–US relationship is already under strain from the wider tariff war and US-Iran conflict fallout. The digital services tax has been a persistent irritant in transatlantic trade relations; the Trump administration's public ultimatum escalates pressure on London to offer concessions or risk new economic penalties.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPVm9Sc1A3d25FeFE3d0xfVllITi1RblRKdEtGQmd5LWRHZTZVd21aRllFMWw5czJ0ZEpZOER3Rm9qUU0xcnM1aklSellnVG1jNjlyQWFhWThBYUQtUkpjRzBYd0lwQ3EzNWs2czdjTjdzRWRZT3ZadkxtTEUxVjFBUmJ6V0ZGeGw0LVE",
+        "pole": "western"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "doj-drops-powell-probe-fed-chair-apr24-2026",
+    "year": "Apr 24, 2026",
+    "title": "DOJ Drops Probe Into Fed Chair Powell, Easing Political Interference Concerns",
+    "type": "economic",
+    "detail": "The US Justice Department dropped its investigation into Federal Reserve Chairman Jerome Powell, potentially easing the political interference concerns that had stalled Kevin Warsh's Fed chair confirmation in the Senate. The probe had been seen as part of the Trump administration's broader pressure campaign against the independent central bank, raising alarm among economists and markets about the Fed's institutional autonomy. The decision may smooth Senate confirmation proceedings for Warsh, Trump's preferred successor to Powell.",
+    "sources": [
+      {
+        "name": "BBC News",
+        "tier": 2,
+        "url": "https://www.bbc.com/news/articles/cdxd1v0028vo",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.bbc.com/news/articles/cdxd1v0028vo",
+        "caption": "DOJ drops investigation into Federal Reserve Chair Jerome Powell",
+        "source": "BBC News",
+        "thumbnail": "https://ichef.bbci.co.uk/news/1024/branded_news/2ad5/live/487e57a0-3feb-11f1-b55d-0f258dce1735.jpg"
+      }
+    ]
+  },
+  {
+    "id": "trump-doj-death-penalty-firing-squads-apr24-2026",
+    "year": "Apr 24, 2026",
+    "title": "Trump Directs DOJ to Prioritize Death Penalty, Authorizes Use of Firing Squads",
+    "type": "justice",
+    "detail": "The Trump administration directed the Justice Department to prioritize seeking the death penalty in all eligible cases and formally authorized the use of firing squads as an execution method. The directive marks a significant escalation of the administration's tough-on-crime posture, reversing years of declining federal executions. Critics — including civil liberties groups and death penalty opponents — condemned the move as cruel and politically motivated, while the administration framed it as delivering justice for victims of the most heinous crimes.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/24/trump-administration-to-prioritize-seeking-death-penalty-use-firing-squads",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/4/24/trump-administration-to-prioritize-seeking-death-penalty-use-firing-squads",
+        "caption": "Trump administration authorizes firing squads and prioritizes death penalty prosecutions",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/reuters_69eba968-1777052008.jpg?resize=1920%2C1440"
+      }
+    ]
+  },
+  {
+    "id": "dc-circuit-asylum-ban-illegal-apr24-2026",
+    "year": "Apr 24, 2026",
+    "title": "DC Circuit Strikes Down Trump's Asylum Suspension as Unlawful",
+    "type": "legal",
+    "detail": "A three-judge panel of the US Court of Appeals for the DC Circuit ruled 2-1 that Trump's Inauguration Day executive order suspending the right to seek asylum at the southern border is unlawful. The court found the Immigration and Nationality Act affirmatively grants migrants the right to apply for asylum, and the president cannot unilaterally override it. The ruling is a significant legal blow to one of Trump's signature immigration priorities. DHS stated the decision 'will not be the last word,' signaling a probable direct appeal to the Supreme Court. Separately, the administration moved to again end legal status of people who entered under the CBP One app, issuing new parole termination notices.",
+    "sources": [
+      {
+        "name": "NPR",
+        "tier": 2,
+        "url": "https://www.npr.org/2026/04/24/g-s1-118707/trump-asylum-ban-us-mexico-border-illegal",
+        "pole": "western"
+      },
+      {
+        "name": "PBS NewsHour",
+        "tier": 2,
+        "url": "https://www.pbs.org/newshour/politics/trumps-asylum-ban-at-the-border-is-illegal-appeals-court-says",
+        "pole": "western"
+      },
+      {
+        "name": "CNN",
+        "tier": 2,
+        "url": "https://www.cnn.com/2026/04/24/politics/trump-migrant-claiming-asylum-rejected-appeals-court",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.pbs.org/newshour/politics/trumps-asylum-ban-at-the-border-is-illegal-appeals-court-says",
+        "caption": "DC Circuit Court rules Trump's asylum suspension at the southern border is unlawful",
+        "source": "PBS NewsHour / Reuters",
+        "thumbnail": "https://d3i6fh83elv35t.cloudfront.net/static/2026/04/2026-04-23T215430Z_1262229248_RC29VKAS8T63_RTRMADP_3_USA-TRUMP-1024x609.jpg"
+      }
+    ]
+  }
+]

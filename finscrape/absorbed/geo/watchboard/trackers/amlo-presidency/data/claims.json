@@ -1,0 +1,380 @@
+[
+  {
+    "id": "abrazos-no-balazos-effectiveness",
+    "question": "Did 'abrazos no balazos' security doctrine reduce violence?",
+    "sideA": {
+      "label": "Policy Failed — Violence Worsened",
+      "text": "The first six months of 2019 were the most violent in Mexico's modern history. AMLO's term recorded ~166,193 homicides — the most violent sexenio in Mexican history. The October 2019 Culiacanazo, where AMLO ordered Ovidio Guzmán released after cartel forces mobilized 700 sicarios, became the defining symbol of state surrender. The homicide impunity rate was 99.1%. Security analyst Alejandro Hope: 'It's just a slogan. There are no abrazos.' Eventually AMLO re-militarized security, extending military law enforcement to 2028."
+    },
+    "sideB": {
+      "label": "Policy Had Social Rationale; Violence Eventually Declined",
+      "text": "Homicides declined each year from 2020 to 2024, with 2023 recording 30,523 — a 20% reduction from the 2018 peak (SSPC). The root-causes approach — social transfers, minimum wage hikes, Sembrando Vida rural jobs — addressed criminal recruitment drivers. Sheinbaum's campaign claimed a 51% homicide reduction from 2018 to 2023. Political scientist Lorenzo Meyer: 'The idea is to create incentives so young people will not be recruited by organized crime.' Late-term data showed genuine, if modest, improvement."
+    },
+    "resolution": "Contested. Violence peaked in 2020 and then modestly declined, but AMLO's sexenio remained the most violent six-year presidency in Mexican recorded history. Late-term improvements are attributed partly to policy and partly to cartel territorial consolidation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "naim-cancellation-correctness",
+    "question": "Was the cancellation of the NAIM Texcoco airport correct policy?",
+    "sideA": {
+      "label": "Cancellation Was Economically Damaging",
+      "text": "The Federal Auditor's Office estimated the cancellation cost 184.55 billion pesos (~$11 billion USD). Construction was 30% complete with $3 billion already spent; completing NAICM would have been cheaper than canceling. IATA called the decision 'extremely disappointing.' The non-binding referendum sampled only 1.07 million voters out of ~90 million eligible — a 1.18% participation rate without INE oversight. The AIFA replacement airport operated at minimal capacity for years and failed to replicate NAIM's planned capacity and connectivity."
+    },
+    "sideB": {
+      "label": "Cancellation Averted Corruption and Environmental Harm",
+      "text": "NAIM had ballooned from $9B to $13B with documented corruption and irregular contracting. Construction on the soft Texcoco lakebed posed serious engineering challenges and significant subsidence risks. Environmental harm to Texcoco wetlands and 130+ bird species would have been severe. AMLO argued the project exemplified PRI-era corruption. AIFA's final cost (~$4–6.2B) was lower than NAIM's projected completion costs, and the Santa Lucía site required no new land acquisition."
+    },
+    "resolution": "Deeply contested. The decision cost billions in cancellation fees and stranded investment, but NAIM's documented cost overruns and corruption were genuine. Independently audited final costs suggest the cancellation was economically damaging on net.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tren-maya-environment",
+    "question": "Did construction of the Tren Maya cause significant environmental harm?",
+    "sideA": {
+      "label": "Yes — Ecocide and Cultural Destruction",
+      "text": "Over 9 million trees were deforested. Construction broke through 100+ caverns and cenotes of the Yucatán aquifer system. The route crosses 33% of Mexico's freshwater reserves. No proper environmental impact assessment was completed before construction began. UN OHCHR stated the indigenous consultation 'did not comply with international human rights standards.' An International Rights of Nature Tribunal found Mexico guilty of ecocide and ethnocide in August 2023. Even Environment Minister Alicia Bárcena acknowledged construction damage to protected areas and cave walls."
+    },
+    "sideB": {
+      "label": "Economic Benefits Justify the Railway",
+      "text": "FONATUR argues the train created tens of thousands of direct jobs and expanded transportation access to some of Mexico's most marginalized communities across five southern states. The 1,554 km network connects underserved regions of Chiapas, Tabasco, Campeche, Yucatán, and Quintana Roo that lacked modern transit infrastructure. The government implemented a US$17 million environmental compensation fund and replanted trees along the corridor. Tourism revenues are expected to benefit local communities near Chichén Itzá, Tulum, and Palenque."
+    },
+    "resolution": "Strong consensus among environmental scientists and international bodies that construction caused significant ecological damage. The government's environmental mitigation measures were widely judged inadequate. The project proceeded under military construction management with all judicial injunctions ultimately dismissed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "democratic-backsliding",
+    "question": "Did AMLO systematically weaken Mexico's democratic institutions?",
+    "sideA": {
+      "label": "Yes — Executive Aggrandizement",
+      "text": "AMLO made three separate attempts to weaken or overhaul the independent INE electoral authority. The September 2024 judicial reform replaced all ~6,500 federal judges with popularly elected officials — the first country in the world to do so — effectively removing judicial independence. He absorbed civilian functions into the military (ports, airports, construction, law enforcement, customs, immigration). He cut budgets of 100+ autonomous regulatory agencies. CSIS, CFR, Wilson Center, and Foreign Policy all classify the period as democratic backsliding via executive aggrandizement. The Economist downgraded Mexico from 'flawed democracy' to 'hybrid regime.'"
+    },
+    "sideB": {
+      "label": "Populist Transfer of Power to the People",
+      "text": "AMLO argued prior 'autonomous' institutions were captured by technocratic elites and transnational corporations, not genuinely serving citizens. He had clear popular mandates (53% in 2018; Morena supermajority in 2024) and respected term limits by not seeking re-election. He held daily open press conferences (unprecedented in Mexico) framed as maximum transparency. Popular election of judges is practiced in some US states and could be viewed as an extension of direct democracy. His 2018 austerity actually reduced state bureaucracy overhead."
+    },
+    "resolution": "Highly contested politically but consensus among international democracy watchdogs (Freedom House, Economist Intelligence Unit, V-Dem) that Mexico experienced measurable democratic backsliding under AMLO, particularly through the judiciary overhaul and INE reform attempts.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "covid-response-adequacy",
+    "question": "Was AMLO's COVID-19 response adequate?",
+    "sideA": {
+      "label": "Response Was Grossly Inadequate",
+      "text": "Mexico had the lowest per-capita testing rate in the Americas (17 tests/1,000). Economic stimulus was under 1% of GDP vs. Chile/Brazil/Argentina at 8–10%. AMLO rarely wore a mask publicly, displayed religious 'amulets' as protection, and called his second infection 'Covidcito.' López-Gatell took a beach vacation at peak transmission while urging others to stay home. Excess mortality estimates reached 455,000–655,000 by end of 2021 — far above official counts. Nine governors demanded López-Gatell's resignation. Mexico had the world's third-highest COVID death toll in absolute terms."
+    },
+    "sideB": {
+      "label": "Vaccination Was Rapid; Lockdowns Protected Informal Economy",
+      "text": "Mexico was among the first Latin American countries to begin COVID vaccination (Christmas Eve 2020), securing contracts covering 129% of the population. Avoiding strict lockdowns may have mitigated economic collapse for Mexico's massive informal economy — over 55% of workers who cannot work from home. AMLO argued Mexico ranked 6th in Latin America per-capita COVID deaths — behind Peru, Brazil, Colombia, Argentina, and Paraguay. The sentinel testing model had epidemiological precedent from Mexico's 2009 swine flu response, which AMLO cited as justification."
+    },
+    "resolution": "Broad international consensus that the response was inadequate. Mexico's excess mortality was among the highest in the world relative to population. The government's testing, tracing, and communication strategy fell below WHO standards, though the vaccine rollout was eventually reasonably fast.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "social-programs-poverty-reduction",
+    "question": "Did AMLO's social programs genuinely reduce poverty?",
+    "sideA": {
+      "label": "Yes — Historic, Measurable Reduction",
+      "text": "Poverty fell from 41.9% (2018) to 29.6% (2024) — the lowest in Mexican recorded history — with 13.4 million fewer people in poverty. Extreme poverty fell to 5.3% from 7.0%. The World Bank acknowledged 9.5 million lifted from poverty. Minimum wage hikes, Pensión para Adultos Mayores, Jóvenes Construyendo el Futuro, and Sembrando Vida together contributed to the historic result. Economist Viri Ríos: 'There has never been a single six-year term in which poverty has been reduced so significantly.'"
+    },
+    "sideB": {
+      "label": "Minimum Wages Did the Work; Health Crisis Worsened",
+      "text": "70–73% of poverty reduction was due to minimum wage hikes, not the social programs themselves. The bottom 10% of earners saw cash transfers fall 42% in real terms in 2018–2020 as the new universal system was less targeted. Access to health services collapsed: people without health access rose from 20.1 million (2018) to 44+ million (2022). Former CONEVAL head Gonzalo Hernández Licona: 'We lost focus and lost the ability to give to the poorest.' CONEVAL itself was dissolved and transferred to INEGI in 2024, raising accountability concerns."
+    },
+    "resolution": "Poverty reduction was real and significant, particularly in the 2022–2024 period, but driven primarily by the minimum wage policy rather than program design. Healthcare access deterioration represents a major unaddressed social deficit.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cartel-collusion",
+    "question": "Did AMLO collude with or accommodate drug cartels?",
+    "sideA": {
+      "label": "De Facto Accommodation — Evidence of Collusion",
+      "text": "The Culiacanazo (Oct 2019): AMLO ordered Ovidio Guzmán released after 700 cartel sicarios mobilized, setting a precedent of state capitulation. Ovidio Guzmán's 2024 US plea deal admitted systematic bribery of Mexican government officials at multiple levels during the AMLO era. Sinaloa Cartel fentanyl operations expanded dramatically 2018–2024. Guacamaya Leaks revealed AMLO's Interior Secretary's hand-picked Tabasco security chief had CJNG ties. The 'abrazos no balazos' framework provided tactical space for cartel consolidation."
+    },
+    "sideB": {
+      "label": "No Proven Direct Collusion; Strategic Rationale Existed",
+      "text": "AMLO and his government consistently denied collusion. The 2019 Culiacanazo release was framed as avoiding mass civilian casualties — a military tactical judgment AMLO stood behind publicly. AMLO ultimately ordered Ovidio Guzmán re-captured in January 2023 and extradited to the US in September 2023. No direct evidence of personal financial ties between AMLO and cartel leadership has been proven in court. Mexico's cartel violence predates and postdates AMLO; structural conditions — poverty, impunity, demand in the US — are root causes no single policy could quickly resolve."
+    },
+    "resolution": "No court has found AMLO personally guilty of corruption or cartel ties. However, documented state accommodation of cartel operations (Culiacanazo, Guajaca leaks, plea admissions) and the absence of aggressive interdiction created a de facto permissive environment for cartel expansion. The debate escalated sharply in 2026: U.S. prosecutors indicted sitting Sinaloa Governor Rubén Rocha Moya (elected 2021, during AMLO's term) and Morena senator Enrique Inzunza Cázarez for allegedly institutionalizing cartel protection within state government — the first time sitting Morena officials elected under the AMLO-era party machine faced U.S. cartel-collusion charges. Both deny wrongdoing and no conviction has occurred; a federal judge in New York described the prosecution's evidence against a co-defendant as 'abundant' at a June 2026 hearing.",
+    "lastUpdated": "2026-07-16T00:00:00Z"
+  },
+  {
+    "id": "judicial-reform-constitutionality",
+    "question": "Was Mexico's 2024 popular-election judicial reform constitutional and legitimate?",
+    "sideA": {
+      "label": "Illegitimate — Destroys Judicial Independence",
+      "text": "The UN Special Rapporteur on the Independence of Judges expressed serious concern. The Inter-American Commission on Human Rights and US and Canadian ambassadors all formally objected. Critics argue electing judges makes courts responsive to political popularity rather than law, eliminating the judiciary's ability to check the executive. The reform passed in 8 days with no public deliberation, then was ratified by state legislatures in under 24 hours. Eight of eleven Supreme Court justices resigned in protest — unprecedented in Mexican history. Legal scholars widely describe it as constitutionally regressive."
+    },
+    "sideB": {
+      "label": "Democratically Passed — Populist Accountability",
+      "text": "The reform followed the constitutionally required process: two-thirds of Congress plus ratification by a majority of Mexico's 32 state legislatures. Morena had a genuine supermajority mandate from the June 2024 election (Sheinbaum won 59%). Popular election of judges is practiced in some US states and is not inherently anti-democratic. AMLO argued the judiciary was corrupt and politically biased, citing the many amparos that blocked his infrastructure projects. Democratizing the judiciary could be viewed as direct citizen empowerment rather than institutional capture."
+    },
+    "resolution": "The reform was procedurally constitutional by Mexico's domestic process but widely condemned by international legal and human rights bodies as destructive to judicial independence. Mexico is the first country in the world to apply popular election to its entire judiciary.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "press-freedom-amlo",
+    "question": "Did AMLO endanger press freedom in Mexico?",
+    "sideA": {
+      "label": "Yes — Unprecedented Hostility Toward Press",
+      "text": "At least 37–41 journalists were killed under AMLO (2018–2024). Article 19 documented 3,400+ aggressions against press. AMLO personally named and attacked journalists at mañaneras, displaying the phone number of NYT correspondent at least once. Pegasus spyware was used against at least 3 journalists during his term. RSF ranked Mexico the deadliest non-conflict country for press throughout his term. OHCHR documented 158 judicial cases filed against journalists, two-thirds linked to public officials. 31 journalists had disappeared in Mexico as of April 2024."
+    },
+    "sideB": {
+      "label": "AMLO Blamed Cartels, Not Policy — Mañaneras Were Unprecedented Openness",
+      "text": "AMLO held 1,833 daily press conferences — an unprecedented level of access to the president. He argued violence against journalists was pre-existing and rooted in cartel power in states controlled by PRI or PAN. He did not order journalist killings. Government-sponsored impunity for cartel violence is a structural problem dating to the 1980s; AMLO did not invent it. The Committee to Protect Journalists also documented journalist killings under predecessor presidents Calderón and Peña Nieto at comparable rates."
+    },
+    "resolution": "Mexico was the world's deadliest non-conflict country for journalists throughout AMLO's term. While structural cartel violence preceded AMLO, his rhetorical attacks on critical press and documented Pegasus use created a hostile environment. The legal impunity rate for journalist killings (99%+) continued unchanged.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "executive-power-concentration",
+    "question": "Did AMLO dangerously concentrate power in the executive branch?",
+    "sideA": {
+      "label": "Yes — Systematic Democratic Backsliding",
+      "text": "AMLO made three separate attempts to reshape the INE electoral authority. He bypassed legislature with dubious non-binding referendums for major infrastructure decisions. He oversaw military absorption of civilian functions: ports, airports, public works, customs, immigration, and domestic security. He appointed a political ally to the Supreme Court — an unprecedented move in Mexican history. He dismantled 100+ autonomous regulatory agencies and trust funds. CFR, CSIS, Foreign Policy, and the Economist all characterized his presidency as executive aggrandizement that exceeded constitutional norms."
+    },
+    "sideB": {
+      "label": "AMLO Had Legitimate Mandates; Counter-Reform Had Popular Support",
+      "text": "AMLO won the 2018 election with 53% of the vote — the largest margin in Mexican history. Morena won a constitutional supermajority in both chambers in 2024 with genuine popular support. He respected term limits and did not seek re-election. His austerity policies actually reduced the size of the federal bureaucracy and government overhead. Supporters frame the 4T as transferring power from entrenched oligarchs and PRI-era technocrats to ordinary citizens. Prior 'autonomous' institutions were themselves non-democratic elite capture mechanisms, some argue."
+    },
+    "resolution": "Academic consensus across major think tanks and democracy indices found significant executive aggrandizement under AMLO. The 2024 judicial reform is widely seen as the culmination of this trend. However, AMLO maintained genuine popular support throughout.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pemex-rescue-viability",
+    "question": "Was AMLO's strategy of rescuing Pemex through government subsidies economically sound?",
+    "sideA": {
+      "label": "Rescue Bailed Water With a Sieve — Structural Problems Persist",
+      "text": "AMLO injected over $60 billion in government support to Pemex over six years — direct capital, tax cuts, and deferrals — yet Pemex remained the world's most indebted oil company. Production hit a 24-year low in Q1 2024 at 1.542 million bbl/day. Moody's rated Pemex B3 (deep junk). $11 billion in maturities were due in 2024 alone. JPMorgan called each rescue 'a one-off liquidity boost.' Baker Institute: 'AMLO's energy policies will make Mexico poor again.' Every dollar injected into Pemex was unavailable for social programs, health, or education."
+    },
+    "sideB": {
+      "label": "Rescue Was Necessary — Oil Sovereignty Demands State Control",
+      "text": "Pemex is not merely a company but an instrument of national sovereignty. The $60B in support preserved hundreds of thousands of jobs and maintained Mexico's oil production as partial coverage for government revenues. By 2023, Pemex posted its second consecutive year of net profit (~$6.4B). AMLO argued that private sector involvement in Mexican oil had led to corruption and asset stripping under Peña Nieto's energy reform. State control of energy resources is a fundamental principle in Mexico's constitution."
+    },
+    "resolution": "Contested. Pemex's financial situation did not materially improve despite massive support, and production declined. However, the company remained solvent through AMLO's term. The long-term sustainability of the subsidy model is widely questioned by financial analysts.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "minimum-wage-impact",
+    "question": "Did AMLO's minimum wage increases help or harm the Mexican economy?",
+    "sideA": {
+      "label": "Benefited Workers — Historic Achievement",
+      "text": "The minimum wage rose 182% over the sexenio (88.36 → 248.93 pesos/day), the largest sustained increase of any OECD country 2020–2023. An estimated 6.64 million people were lifted out of poverty solely by the wage hikes. Real formal wage growth averaged 2–3% annually across sectors. Low unemployment (2.48% by October 2024, a historic low) during the period suggests the labor market absorbed the increases without the disemployment effects critics predicted. The minimum wage hike was the single largest driver of poverty reduction in the sexenio."
+    },
+    "sideB": {
+      "label": "Inflationary and Damaging to Business Competitiveness",
+      "text": "Mexico's inflation peaked at 8.7% (a 20-year high) in August 2022, partly driven by rising labor costs across the supply chain. Small and medium enterprises (SMEs) — which employ 72% of Mexico's workforce — reported significantly higher cost burdens. The business sector (Coparmex, CCE) cited the rapid increases as unsustainable and as discouraging formal job creation. The Northern Border Zone wage (375 pesos/day) created a wage cliff that deterred investment in non-border regions. Some argue the wage increases benefited formal workers while exacerbating informality."
+    },
+    "resolution": "Net economic analysis shows the minimum wage increases were beneficial on balance: poverty reduction was real, employment remained high, and formal sector wages rose. Inflation was partly driven by global commodity cycles, not solely wage policy. OECD recognized Mexico's wage growth as a positive development.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nearshoring-amlo-credit",
+    "question": "Was the nearshoring boom a result of AMLO's policies or despite them?",
+    "sideA": {
+      "label": "Despite AMLO's Policies — Driven by External Factors",
+      "text": "The nearshoring boom was driven primarily by US-China trade tensions and pandemic supply chain disruptions — external factors unrelated to AMLO's governance. Mexico's energy policy (CFE dispatch reform, blocked renewables, USMCA dispute) made manufacturing more expensive and unreliable for energy-intensive industries. Legal uncertainty from AMLO's frequent regulatory reversals discouraged some investors. Critics argue Mexico captured only a fraction of its nearshoring potential precisely because of AMLO's hostile investment climate in key sectors. Private investment as a share of GDP declined under AMLO."
+    },
+    "sideB": {
+      "label": "AMLO Provided Macro Stability That Attracted Investment",
+      "text": "Mexico's macroeconomic stability under AMLO — low public debt (53% GDP), peso strength, low unemployment, USMCA ratification (2020) — provided the foundation that made nearshoring attractive. The minimum wage increased purchasing power without triggering devaluation. AMLO's government negotiated the USMCA ratification in 2020, which reinforced investor confidence in Mexico's rule-of-law framework relative to other emerging markets. Mexico became the US's top trading partner in 2023, a testament to the integration AMLO preserved despite nationalist rhetoric."
+    },
+    "resolution": "The nearshoring boom was primarily driven by geopolitical and supply chain factors, though Mexico's USMCA membership, macroeconomic stability, and geographic proximity to the US were enabling conditions. AMLO's investment-hostile policies in energy likely limited the full scale of the boom.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "energy-reform-renewable-impact",
+    "question": "Did AMLO's energy counter-reform set back Mexico's clean energy transition?",
+    "sideA": {
+      "label": "Yes — Renewable Investment Collapsed",
+      "text": "Mexico suspended electricity auctions that had attracted record-low renewable energy prices in 2016–2018. No new private renewable projects received permits after 2019. The Baker Institute estimated Mexico missed $150 billion in renewable investment. The USMCA dispute launched by the US and Canada in June 2022 found Mexico's policies discriminatory against foreign renewable investors. Mexico fell far behind regional peers (Chile, Brazil, Colombia) in renewable energy capacity additions. CFE's aging thermal plants emitted more CO2 per kWh than the private renewable projects they replaced in dispatch priority."
+    },
+    "sideB": {
+      "label": "Energy Sovereignty Justified Prioritizing State Generation",
+      "text": "AMLO argued the 2013 energy reform allowed private companies to drain Mexican resources at below-market rates by contractually fixing preferential dispatch terms. CFE's financial viability required dispatch priority to amortize its existing plant infrastructure. Manuel Bartlett argued that renewable energy auctions were structured to benefit foreign companies at the expense of Mexican consumers. The lithium nationalization (April 2022) secured a strategic resource for future domestic clean energy development. Maintaining CFE's financial health is a prerequisite for any long-term energy transition."
+    },
+    "resolution": "Strong consensus among energy economists and the IEA that AMLO's energy policies significantly set back Mexico's clean energy transition and cost billions in foregone investment. Mexico's CO2 intensity in electricity generation increased during his term. The USMCA arbitration found Mexico's practices discriminatory.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "austerity-health-impact",
+    "question": "Did AMLO's austerity program harm Mexico's public health system?",
+    "sideA": {
+      "label": "Yes — Health System Severely Damaged",
+      "text": "The dismantling of Seguro Popular and its replacement with the underfunded IMSS-Bienestar model collapsed health coverage: people without access to health services rose from 20.1 million (2018) to 44+ million (2022) — CONEVAL data. Hospital budgets, medical equipment, and staffing were cut under the austerity framework. Medicine shortages became a crisis in 2019–2020, with chemotherapy drugs running out at children's cancer wards. NGO 'Cero Desabasto' documented over 400 types of essential medicines unavailable at IMSS facilities. The COVID pandemic hit a weakened health system particularly hard."
+    },
+    "sideB": {
+      "label": "Seguro Popular Was Corrupt — New Model Is More Equitable",
+      "text": "AMLO argued Seguro Popular was riddled with corruption, with funds diverted to contractors and political allies. IMSS-Bienestar provides direct universal health access without intermediaries. Budget realignment toward social programs (pensions, scholarships, rural programs) reduced inequality of resource distribution. The Farmacia del Bienestar network was expanded to 22,000+ locations to provide free medicines. By 2024, the government claimed health coverage gaps were closing. The medicine shortages were in part a deliberate disruption of corrupt supply chains, not just a resource problem."
+    },
+    "resolution": "CONEVAL data conclusively shows health access deteriorated significantly under AMLO, with 24+ million more Mexicans losing health coverage. Medicine shortages were documented across multiple independent sources. The health system damage is the most significant uncontested negative legacy of the sexenio.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fourth-transformation-genuine",
+    "question": "Was AMLO's 'Fourth Transformation' a genuine historic rupture or political branding?",
+    "sideA": {
+      "label": "Genuine Transformation in Poverty and Wages",
+      "text": "The 4T produced the largest reduction in poverty in Mexican history (13.4 million lifted out), the largest minimum wage increase in the OECD, record remittance flows, and historically high final approval ratings (68%). The shift of federal spending priorities from infrastructure (roads, NAIM) to direct social transfers was a genuine policy transformation. The 2024 judicial reform, regardless of its merits, fundamentally restructured Mexico's justice system. The 2024 election of Mexico's first female president under a continuation government represents a historic political moment."
+    },
+    "sideB": {
+      "label": "Political Brand Concealing Continuities and Regressions",
+      "text": "Mexico's GDP per capita was 1.5% lower at the end of AMLO's term than at the start — no economic transformation occurred. Key metrics of democracy (Freedom House, Economist Democracy Index, V-Dem) declined. Mexico's homicide rate was higher at the end of the sexenio than at the start in 2018. The military — far from being depoliticized — gained unprecedented influence in civilian life. Health coverage collapsed. Critics (CSIS, CFR, CIDE) describe the 4T as an authoritarian populist project, not a genuine left-wing transformation, noting AMLO's alliance with the military, hostility to civil society, and dismantling of autonomous institutions."
+    },
+    "resolution": "Disputed. Real progress in poverty reduction and wages versus significant regression in health, democracy indices, and rule of law. Whether this constitutes a 'transformation' depends on how the concept is defined and weighted.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ine-reform-democracy",
+    "question": "Were AMLO's three attempts to reform the INE electoral authority a threat to democracy?",
+    "sideA": {
+      "label": "Yes — Systematic Assault on Electoral Independence",
+      "text": "AMLO's three electoral reform attempts (Plan A constitutional — 2021 failed, Plan B statutory — 2022–2023 struck down, Plan C popular vote of judges — 2024 passed) represented a sustained multi-year effort to reshape institutions that certified electoral results. Plan B cut INE's budget by 3.5 billion pesos and reduced staff just before the 2024 election. SCJN struck down Plan B 9–2 on procedural grounds. Millions marched in defense of the INE in 2022–2023 — the largest opposition mobilization of the sexenio. US, EU, and OAS observers expressed concern."
+    },
+    "sideB": {
+      "label": "INE Needed Reform — Elitist, Expensive Institution",
+      "text": "The INE's annual budget exceeded 10 billion pesos — one of the most expensive electoral agencies per voter in the world. AMLO proposed making INE councilors democratically elected rather than appointed by Congress through horse-trading among parties. He argued the INE was controlled by the political class he was elected to replace. Mexico's 2024 election, administered under the unreformed INE framework, was judged by international observers as free and fair — suggesting AMLO's reforms were defeated before they could threaten the 2024 vote. The INE's refusal to implement a popular vote for its councilors could itself be seen as anti-democratic."
+    },
+    "resolution": "The SCJN struck down Plan B as procedurally unconstitutional. Massive civil society mobilization (Marea Rosa, INE defense marches) demonstrated broad popular attachment to the institution. The 2024 election proceeded under unreformed INE rules and was internationally certified as credible.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "military-civilian-roles",
+    "question": "Did AMLO's expansion of military roles threaten civilian democratic control?",
+    "sideA": {
+      "label": "Yes — Military Now Controls Key Civilian Functions",
+      "text": "Under AMLO, SEDENA (the Army) took over: construction and operation of AIFA airport, Tren Maya sections, the Dos Bocas refinery, port administration, customs enforcement, immigration control, National Guard command, and domestic law enforcement. Military spending as a share of the budget grew significantly. Congress extended military law enforcement authority to 2028. The Inter-American Commission on Human Rights warned that entrenching military roles in civilian law enforcement was incompatible with human rights norms. CSIS described the result as a 'praetorian state' in the making."
+    },
+    "sideB": {
+      "label": "Military Was Necessary Given Civilian Institutional Failures",
+      "text": "Mexico's civilian institutions — particularly the Federal Police and public works agencies — were riddled with corruption. AMLO argued that only the military had the organizational discipline and institutional integrity to execute large infrastructure projects without theft. The National Guard, though military-trained, operates under a nominally civilian chain of command. The military's track record in infrastructure delivery (AIFA built in 886 days) demonstrated effectiveness that civilian agencies historically lacked. AMLO's military subordination differs from Latin American cases where militaries acted autonomously of elected government."
+    },
+    "resolution": "Contested. The militarization of civilian functions under AMLO exceeded any previous Mexican president. Whether this represents dangerous militarization or pragmatic institution-building given civilian corruption is debated. The military's expanded role is the most durable institutional change of the sexenio.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fentanyl-denial",
+    "question": "Did AMLO's denial that fentanyl is produced in Mexico harm bilateral counter-narcotics cooperation?",
+    "sideA": {
+      "label": "Yes — Denial Obstructed Cooperation",
+      "text": "AMLO publicly stated fentanyl was purely a US social problem and denied Mexican cartels synthesized the drug — a position US and DEA officials explicitly contradicted with evidence. Sinaloa Cartel and CJNG import precursor chemicals from China, synthesize fentanyl in Mexico, and traffic it north — a fact established through prosecution evidence and Ovidio Guzmán's 2024 plea deal. AMLO's denial made it politically impossible to cooperate on precursor chemical interdiction and lab raids. US-Mexico counternarcotics cooperation reached its lowest ebb since the 1985 DEA Agent Camarena case."
+    },
+    "sideB": {
+      "label": "Fentanyl Is Ultimately a US Demand Problem",
+      "text": "AMLO argued, with some validity, that without US domestic demand for fentanyl, Mexican trafficking would not exist. Over 70,000 Americans die annually from synthetic opioid overdoses — a domestic public health and regulatory failure. AMLO contended that US pressure to militarize Mexican interdiction would reprise the failures of the Calderón drug war (2006–2012), which produced record violence without reducing drug flows. Mexico extradited Ovidio Guzmán to the US (September 2023) and cooperated on specific high-value targets despite AMLO's public rhetoric maintaining sovereignty over law enforcement strategy."
+    },
+    "resolution": "AMLO's public denial of fentanyl production in Mexico contradicted established DEA and prosecution evidence. The stance damaged bilateral counter-narcotics cooperation and strained the relationship with the Biden administration, though Ovidio Guzmán's extradition represented a significant practical cooperation milestone.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sembrando-vida-effectiveness",
+    "question": "Did the Sembrando Vida program effectively restore forests and reduce rural poverty?",
+    "sideA": {
+      "label": "Mixed — Some Benefits, Significant Failures",
+      "text": "Cases documented where enrollees cleared standing forest to qualify for replanting payments, producing net deforestation rather than reforestation. No comprehensive independent program-wide evaluation was released. Beneficiary savings pool mismanagement and delays in investigating irregularities were documented. Despite claims of 100% environmental practice adoption, satellite forest cover analysis showed no net improvement in program areas in some states. The government expanded the program internationally to El Salvador and Honduras with unverified claims of 96%+ reduction in migration intent among participants."
+    },
+    "sideB": {
+      "label": "Benefited 442,000 Rural Families",
+      "text": "By 2022, Sembrando Vida had reached over 442,000 beneficiaries across 20 states at ~$250/month per family. 62.3% of beneficiaries reported increased agricultural income. Coffee production among participants increased 25%; cocoa production rose 20%. Budget grew from 15 billion pesos (2019) to ~30 billion pesos (2022–2023), reflecting scale-up. World Bank recognized the program as an innovative model. At-scale agroforestry income helps prevent rural-to-urban migration and cartel recruitment. The triple benefit structure (income + food security + reforestation) was internationally recognized as a promising anti-poverty model."
+    },
+    "resolution": "Evidence is mixed. The program provided real income benefits to hundreds of thousands of rural families but documented cases of perverse environmental incentives and opacity in evaluation. The international expansion's effectiveness claims lack independent verification.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "dos-bocas-refinery-viability",
+    "question": "Was building the Dos Bocas Olmeca refinery a sound investment?",
+    "sideA": {
+      "label": "Economic Failure — Catastrophic Cost Overruns",
+      "text": "The Olmeca refinery ballooned from an $8 billion budget to over $20 billion — a 150%+ cost overrun. It was operating at only 17% of nameplate capacity as of December 2024, years after its nominal 2022 'completion.' Building over a mangrove swamp in Tabasco created ongoing structural engineering problems. No private oil company would have financed the project on its economics; Pemex — already the world's most indebted oil company — was forced to absorb the overruns. IMCO gave the project a 2% probability of success when announced. The capital could have funded 8+ years of the entire Tren Maya or hospital construction nationwide."
+    },
+    "sideB": {
+      "label": "Energy Sovereignty — Mexico Must Refine Its Own Oil",
+      "text": "Mexico historically exported crude oil and imported refined gasoline — paying foreign refineries to process Mexican oil. AMLO argued this was an absurd arrangement that exported value-added jobs. At full capacity, the refinery would reduce Mexico's $20B+ annual gasoline import bill by approximately $6–8B. Refinery ownership provides energy security against geopolitical supply disruptions. The delay and cost overruns were partly attributable to COVID-era supply chain disruptions and construction learning curve for new project type. Long-term, a functional domestic refinery aligns with Mexico's energy sovereignty principles enshrined in its constitution."
+    },
+    "resolution": "Economic consensus is that the project was poorly planned, significantly over budget, and underperforming at far below capacity. The opportunity cost of the $20B+ investment — in social programs, health, or clean energy — was enormous. The energy sovereignty argument has political merit but weak economic justification.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ovidio-release-culiacanazo",
+    "question": "Was AMLO's decision to release Ovidio Guzmán during the Culiacanazo justified?",
+    "sideA": {
+      "label": "Inexcusable Capitulation to Cartel Pressure",
+      "text": "Releasing a federally indicted drug lord under cartel military pressure set a dangerous precedent: organized crime could now effectively veto government law enforcement actions. Mexico had extradition requests from the US for Ovidio; releasing him damaged the bilateral relationship. The lesson the cartels drew was that sufficient force would deter state action. Former security official Alejandro Hope called it 'the worst decision in Mexican security policy in a decade.' The precedent may have contributed to the scale of January 2023 cartel retaliation after AMLO's government finally re-captured Ovidio."
+    },
+    "sideB": {
+      "label": "Prevented Mass Civilian Casualties in an Impossible Situation",
+      "text": "AMLO's military commanders were outgunned: the 35-officer convoy faced 700+ gunmen with .50 caliber weapons, armored vehicles, and rocket launchers. Fighting to the end would have resulted in mass civilian casualties in a densely populated city of 860,000. AMLO stated clearly: 'The lives of soldiers and civilians are worth more than one arrest.' Ultimately AMLO did re-capture Ovidio in January 2023 under better-prepared circumstances, with military helicopter escort and immediate transfer to El Altiplano. The 2023 capture and 2024 extradition demonstrated the release was tactical, not a policy surrender."
+    },
+    "resolution": "Highly contested. AMLO's decision prevented immediate casualties but was widely criticized as emboldening cartel forces. The subsequent January 2023 capture and September 2023 extradition of Ovidio partially rehabilitated the narrative but the precedent of state capitulation to cartel force remained.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "morena-electoral-dominance",
+    "question": "Did AMLO's Morena party use state resources to secure its 2024 electoral supermajority?",
+    "sideA": {
+      "label": "Yes — Social Programs Weaponized for Electoral Mobilization",
+      "text": "Opposition parties and INE documented systematic use of social program (Bienestar) delivery events and Banco del Bienestar debit cards as electoral mobilization tools. AMLO regularly promoted Morena and Sheinbaum at mañaneras — a constitutional violation of presidential electoral neutrality. The INE fined Morena multiple times for campaign finance irregularities. Marko Cortés (PAN): 'The election was not clean nor legitimate — it was never a level playing field.' The federal budget expanded by 25% in real terms in 2024 — an election year — with much of the increase flowing to social programs in competitive districts."
+    },
+    "sideB": {
+      "label": "Morena Won on Merits — Poverty Reduction Earned Votes",
+      "text": "International observers (OAS, EU, UN) certified the June 2024 election as technically credible. Sheinbaum won 59% of the vote — representing genuine popular approval of the 4T. Incumbents who deliver real improvements in living standards should expect electoral advantages; this is democracy working correctly. The social program delivery infrastructure predated the election cycle. Xóchitl Gálvez ran a well-funded campaign with media support from Grupo Reforma, Televisa/Univisión, and other pro-opposition outlets. The opposition's defeat reflected popular rejection of their policy platform, not solely manipulation."
+    },
+    "resolution": "International election observation missions found the 2024 election technically credible, though INE documented multiple campaign finance violations by Morena. The use of federal social program infrastructure in campaign mobilization represents a structural advantage for incumbents that was not unique to AMLO but intensified under his administration.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "amlo-corruption-legacy",
+    "question": "Was AMLO's government meaningfully less corrupt than its predecessors?",
+    "sideA": {
+      "label": "Corruption Continued — New Forms Emerged",
+      "text": "AMLO's brother Pío López Obrador was filmed receiving cash-in-bags from a Chiapas businessman in 2020; AMLO defended him without consequence. The Casa Gris scandal — AMLO's son living in a Baker Hughes executive's home while Pemex paid Baker Hughes $151M — suggested influence-peddling at the presidential family level. Guacamaya Leaks revealed military corruption under AMLO's military allies. Transparency International's Corruption Perceptions Index for Mexico moved from 29 in 2018 to 31 in 2023 — a negligible improvement for a stated anti-corruption presidency. Large-scale procurement was centralized to the Army (SEDENA) without public tender in many projects."
+    },
+    "sideB": {
+      "label": "Austerity Eliminated Many Corruption Vectors",
+      "text": "AMLO eliminated the Presidential General Staff, a notorious corruption hub. He refused government contracts for family members and published his assets publicly annually. The Austerity Law banned revolving door hiring and created pay limits that reduced corruption incentives at senior levels. Public procurement for social programs was redesigned to go directly to beneficiaries via Banco del Bienestar accounts, bypassing intermediary contractors. AMLO refused traditional kickbacks from business groups that had characterized prior administrations (PRI-era 'moches'). Independent surveys showed public perception of presidential-level corruption declined significantly."
+    },
+    "resolution": "Mixed legacy. AMLO eliminated some well-documented PRI-era corruption mechanisms but new corruption patterns emerged around presidential family members and military construction. His government never successfully prosecuted a major corruption case from prior administrations. Transparency International data shows marginal improvement.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "feminism-gender-violence",
+    "question": "Did AMLO's government adequately respond to Mexico's femicide crisis?",
+    "sideA": {
+      "label": "Inadequate — Dismissive of Feminist Demands",
+      "text": "Mexico registered 4,892 femicides during AMLO's sexenio (SESNSP). AMLO repeatedly dismissed women's rights marches as 'provocations' organized by conservatives and 'pseudo-feminists.' His government's initial COVID response eliminated funding for women's shelters, and he refused to declare a gender emergency despite 11 femicides per day in some months. At a March 8, 2020 Women's Day march, protestors spray-painted the National Palace — AMLO called it vandalism rather than engaging with demands. Human Rights Watch documented systematic failure to investigate or prosecute femicides throughout the sexenio."
+    },
+    "sideB": {
+      "label": "Social Programs Targeted At-Risk Women and Children",
+      "text": "AMLO argued that the best protection against gender violence is economic empowerment: his minimum wage increases, Pensión para Adultos Mayores, and Becas Benito Juárez programs disproportionately benefited women. The government eventually invested in expanding the CAVI and UIAEM victim assistance centers and domestic violence shelters after initial budget cuts. Claudia Sheinbaum — the first female president — rose under the 4T and has pledged to prioritize gender violence prevention. AMLO appointed women to key cabinet and judicial positions at higher rates than most predecessors."
+    },
+    "resolution": "Femicide rates remained high throughout AMLO's term, and his dismissive tone toward feminist movements was broadly criticized by civil society organizations. Economic improvements for women were real but insufficient to address the structural drivers of gender-based violence. AMLO's relationship with Mexico's feminist movement was deeply antagonistic.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "judicial-elections-2025-outcome",
+    "question": "Did Mexico's June 2025 judicial elections deliver judicial accountability or entrench Morena's control over all three branches of government?",
+    "sideA": {
+      "label": "Power Grab — Judiciary Now a Fourth Morena Branch",
+      "text": "The June 2025 elections gave Morena-aligned candidates 5 of 9 Supreme Court seats, plus majorities on the Judicial Disciplinary Tribunal and Electoral Tribunal — giving Morena de facto control over all three branches of federal government for the first time in Mexican history. Voter turnout was approximately 13%, the lowest in Mexico's democratic history and among the lowest ever for any Latin American election (OAS). Civil society documented illegal Morena voter guides steering voters to pro-government candidates; multiple elected judges had documented links to organized crime. HRW reported the process undermined judicial independence. Former President Zedillo called it 'the assassination of our young democracy.' The elected Chief Justice had zero prior experience as a judge."
+    },
+    "sideB": {
+      "label": "Historic Democratization — First Indigenous Chief Justice Since Juárez",
+      "text": "Mexico implemented the constitutional mandate of AMLO's 2024 reform, which passed with a legitimate legislative supermajority. Héctor Aguilar Ortiz — a Mixtec Indigenous lawyer from Oaxaca — became Chief Justice, only the second person of indigenous heritage to hold that position since Benito Juárez, representing a historic breakthrough for indigenous representation. Low turnout is common in first-ever elections for unfamiliar institutions and is expected to improve in future cycles. The prior system of congressional appointment was itself captured by elite horse-trading. Mexico's 34% homicide reduction under Sheinbaum's 4T government suggests the broader institutional environment remained stable."
+    },
+    "resolution": "The June 1, 2025 elections proceeded under AMLO's constitutional reform, with approximately 13% turnout. Morena-linked candidates dominated all key courts, concentrating judicial, legislative, and executive power in one political movement — an alignment with no modern precedent in Mexico. International observers (OAS, HRW, UN Special Rapporteur) expressed serious concern about the long-term independence of Mexico's judiciary.",
+    "lastUpdated": "2026-04-19T12:00:00Z"
+  },
+  {
+    "id": "coneval-dissolution",
+    "question": "Was AMLO's dissolution of CONEVAL (poverty measurement agency) a threat to accountability?",
+    "sideA": {
+      "label": "Yes — Eliminated Independent Poverty Monitoring",
+      "text": "CONEVAL (National Council for Evaluation of Social Development Policy) was dissolved in 2024 and its functions transferred to INEGI — an agency within the executive branch. CONEVAL had been one of Mexico's most respected autonomous institutions, with its multidimensional poverty methodology recognized internationally. Critics argued the dissolution was timed to prevent CONEVAL from independently evaluating AMLO's social programs ahead of the 2024 election. Former CONEVAL head Gonzalo Hernández Licona warned that absorbing evaluation into INEGI would compromise independence and comparability of historical data."
+    },
+    "sideB": {
+      "label": "INEGI Can Maintain Measurement Standards",
+      "text": "AMLO argued that reducing duplicative autonomous agencies would save public resources and streamline government. INEGI is a well-established statistical agency with international recognition. The poverty methodology itself was maintained, and INEGI committed to continuity of the multidimensional measurement framework. The 2024 poverty data showing 29.6% — released under the new structure — was broadly accepted as methodologically consistent with prior CONEVAL measurements. Multiple autonomous agencies were consolidated during the sexenio as part of the broader austerity framework."
+    },
+    "resolution": "Contested. The dissolution of a respected independent evaluation agency shortly before a pivotal election raised legitimate accountability concerns, regardless of INEGI's technical capacity. International evaluation experts widely opposed the move.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

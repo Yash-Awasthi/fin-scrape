@@ -1,0 +1,46 @@
+{
+  "lastRun": "2026-08-21T00:48:17.356Z",
+  "tracker": "cuba-crises",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-05-22T13:03:49.645Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "seeded",
+      "itemCount": 62
+    },
+    "mapPoints": {
+      "lastRun": "2026-05-12T14:00:00Z",
+      "status": "updated",
+      "itemCount": 34
+    },
+    "claims": {
+      "status": "seeded",
+      "itemCount": 25
+    },
+    "political": {
+      "lastRun": "2026-05-12T14:00:00Z",
+      "status": "updated",
+      "itemCount": 20
+    },
+    "econ": {
+      "lastRun": "2026-05-12T14:00:00Z",
+      "status": "updated",
+      "itemCount": 10
+    },
+    "events": {
+      "lastRun": "2026-08-21T00:48:17.356Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-21T00:48:17.356Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-05-22T13:03:49.645Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

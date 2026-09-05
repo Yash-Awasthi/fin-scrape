@@ -1,0 +1,101 @@
+[
+  {
+    "id": "airstrike-pazigyi-2023",
+    "name": "Pazigyi Village Inauguration Bombing",
+    "detail": "Apr 11, 2023 — SAC jet fighters and helicopter gunship bombed Pazigyi village, Kanbalu Township, Sagaing Region during a public ceremony. 170+ killed, including women and children. UN Special Rapporteur called it 'an act of pure terror.'",
+    "icon": "target",
+    "time": "Apr 11, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "airstrike-depayin-2022",
+    "name": "Depayin Charity Concert Bombing",
+    "detail": "Oct 23, 2022 — SAC jets bombed a charity concert and fundraiser in Kanbalu Township, Sagaing Region, killing 80+ people. Hundreds wounded. One of the deadliest single attacks of the conflict.",
+    "icon": "target",
+    "time": "Oct 23, 2022",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "airstrike-let-yet-kone-2022",
+    "name": "Let Yet Kone IDP School Airstrike",
+    "detail": "Apr 11, 2022 — SAC jets struck a school hosting IDPs in Let Yet Kone village, Sagaing Region, killing 60+ civilians. Village was hosting displaced persons fleeing SAC ground operations.",
+    "icon": "target",
+    "time": "Apr 11, 2022",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hpruso-christmas-2021",
+    "name": "Hpruso Christmas Eve Massacre",
+    "detail": "Dec 24, 2021 — SAC troops killed 35+ civilians, burning them alive in vehicles in Hpruso Township, Kayah State. Victims were Christians fleeing violence. HRW documented as a war crime.",
+    "icon": "target",
+    "time": "Dec 24, 2021",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "bago-protest-massacre-2021",
+    "name": "Bago Massacre — Protest Crackdown",
+    "detail": "Apr 9, 2021 — SAC security forces opened fire on anti-coup protesters in Bago, killing 80+ people. Considered one of the bloodiest single-day crackdowns of the protest era. Heavy weapons including machine guns used against civilians.",
+    "icon": "casualty",
+    "time": "Apr 9, 2021",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sagaing-village-burning-campaign",
+    "name": "Sagaing Region Village Burning Campaign",
+    "detail": "2022–2023 — SAC forces systematically burned 800+ villages in Sagaing Region as counter-insurgency strategy. Villages were torched during ground operations, with civilian residents often present. One of the largest documented scorched-earth campaigns in modern Southeast Asian history.",
+    "icon": "target",
+    "time": "Jan 2022–Dec 2023",
+    "tier": 3,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "lashio-northeastern-command",
+    "name": "Northeastern Regional Military Command — Lashio",
+    "detail": "Aug 2024 — MNDAA/TNLA captured the Northeastern Regional Military Command headquarters in Lashio, Northern Shan State. First Regional Military Command HQ captured by resistance forces. Hundreds of SAC soldiers surrendered or fled.",
+    "icon": "target",
+    "time": "Aug 3, 2024",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "ann-western-military-command",
+    "name": "Western Regional Military Command — Ann",
+    "detail": "Dec 20, 2024 — AA captured Ann Township's Western Regional Military Command headquarters, the second Regional Military Command lost to resistance forces. Complete collapse of SAC military authority in Rakhine State.",
+    "icon": "target",
+    "time": "Dec 20, 2024",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "laukkai-kokang-zone",
+    "name": "Kokang Self-Administered Zone — Laukkai",
+    "detail": "Jan 5, 2024 — MNDAA captured Laukkai, the capital of the Kokang Self-Administered Zone. Thousands of online scam compound victims freed. SAC lost control of the entire Kokang border region.",
+    "icon": "target",
+    "time": "Jan 5, 2024",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "airstrike-kachin-churches",
+    "name": "Kachin State Airstrikes on Civilian Sites",
+    "detail": "2021–2025 — SAC conducted repeated airstrikes on villages, churches, and market areas in Kachin State. Multiple documented strikes on IDP camps. Thousands of Kachin civilians killed or displaced by aerial bombardment combined with ground operations.",
+    "icon": "target",
+    "time": "2021–2025",
+    "tier": 3,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "airstrike-butalin-sagaing-mar2026",
+    "name": "Butalin Township Civilian Airstrike",
+    "detail": "Mar 30, 2026 — Three SAC jets struck Ngapayin village, Butalin Township, Sagaing Region over 75 minutes (13:00–14:15 local), dropping 4 bombs and firing rockets. Approximately 10 civilians killed including pregnant women and infants; no resistance presence reported. Part of the junta's documented surge in aerial attacks on civilian targets in Sagaing during March 2026.",
+    "icon": "target",
+    "time": "Mar 30, 2026",
+    "tier": 2,
+    "lastUpdated": "2026-04-01"
+  }
+]

@@ -1,0 +1,119 @@
+[
+  {
+    "id": "ovidio-guzman",
+    "name": "Ovidio Guzmán López",
+    "role": "Los Chapitos Co-Leader, Sinaloa Cartel; arrested Jan 2023, extradited Sep 2023",
+    "avatar": "cartel",
+    "initial": "O",
+    "quote": "No comment — held in U.S. federal custody. Pleaded guilty July 2025 to drug trafficking and continuing criminal enterprise. Sentencing hearing postponed a seventh time, to October 28, 2026, as the court reviews his cooperation.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "ivan-archivaldo-guzman",
+    "name": "Iván Archivaldo Guzmán Salazar",
+    "role": "Los Chapitos Co-Leader ('El Chapito'); leads diminished Chapitos faction; reportedly in U.S. DOJ surrender negotiations as of May 2026",
+    "avatar": "cartel",
+    "initial": "I",
+    "quote": "Reportedly in preliminary surrender negotiations with the U.S. DOJ as of May 2026, along with brother Jesús Alfredo. Reports indicate both brothers may have provided intelligence about Sinaloa governor Rocha Moya's alleged cartel bribes as leverage. Still at large as of August 2026; $10M U.S. bounty active.",
+    "lastUpdated": "2026-05-16T00:00:00.000Z"
+  },
+  {
+    "id": "el-mayo-zambada",
+    "name": "Ismael 'El Mayo' Zambada García",
+    "role": "Sinaloa Cartel Co-Founder; arrested El Paso July 2024; pleaded guilty Aug 2025; sentenced to life Jul 20, 2026",
+    "avatar": "cartel",
+    "initial": "I",
+    "quote": "Pido perdón. Acepto mi castigo, no estoy aquí para pedir compasión. (I ask for forgiveness. I accept my punishment, I am not here to ask for compassion.) — Brooklyn federal court, July 20, 2026, at his sentencing to life in prison plus $15 billion forfeiture.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "joaquin-guzman-lopez",
+    "name": "Joaquín Guzmán López",
+    "role": "Los Chapitos Co-Leader ('El Ratón'); surrendered to U.S. El Paso July 2024; pleaded guilty Dec 2025; next hearing Aug 31, 2026",
+    "avatar": "cartel",
+    "initial": "J",
+    "quote": "Admitted in open court to orchestrating El Mayo Zambada's kidnapping and forcible transport to the U.S. Pleaded guilty December 2025 to drug trafficking and continuing criminal enterprise. Hearing rescheduled to August 31, 2026. His cooperation is reportedly influencing his brothers' parallel DOJ negotiations, and his case is being watched alongside El Mayo's and Ovidio's for how the court credits cooperation.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "mayito-flaco",
+    "name": "Ismael Zambada Sicairos ('Mayito Flaco')",
+    "role": "La Mayiza Leader; El Mayo's son; commands Sinaloa Cartel faction vs. Chapitos",
+    "avatar": "cartel",
+    "initial": "I",
+    "quote": "Authorized coordinated strikes against Los Chapitos on September 9, 2024, formally triggering the Sinaloa civil war. By early 2026, La Mayiza reportedly controls ~90% of former Chapitos territory.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "amlo",
+    "name": "Andrés Manuel López Obrador",
+    "role": "President of Mexico (Dec 2018 – Sep 2024); ordered Ovidio's release in 2019",
+    "avatar": "mx-gov",
+    "initial": "A",
+    "quote": "La prioridad fue salvar vidas. (The priority was to save lives.) — Press conference, October 18, 2019, defending the order to release Ovidio Guzmán López",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "luis-cresencio-sandoval",
+    "name": "Luis Cresencio Sandoval González",
+    "role": "SEDENA Secretary (2018–2024); oversaw both 2019 failure and 2023 Operation Ovidio",
+    "avatar": "mil",
+    "initial": "L",
+    "quote": "La operación fue pobremente organizada, apresurada, y subestimó la fuerza y capacidad de movilización del Cártel de Sinaloa. (The operation was poorly organized, hasty, and underestimated the strength and mobilization capacity of the Sinaloa Cartel.) — Press conference, October 18, 2019",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "alfonso-durazo",
+    "name": "Alfonso Durazo Montaño",
+    "role": "Secretary of Security and Citizen Protection (2018–2020); initially misrepresented the 2019 operation",
+    "avatar": "mx-gov",
+    "initial": "A",
+    "quote": "Acknowledged 'hasty planning, inadequate risk assessment, and bureaucratic oversights' after initially claiming the October 17 convoy was a 'routine patrol' — a claim contradicted within 24 hours.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "rosa-icela-rodriguez",
+    "name": "Rosa Icela Rodríguez Velázquez",
+    "role": "Secretary of Security and Citizen Protection (Nov 2020 – Sep 2024); first woman to hold post; served during 2023 Operation Ovidio",
+    "avatar": "mx-gov",
+    "initial": "R",
+    "quote": "Coordinated federal security response during the January 2023 Operation Ovidio. Currently serves as Secretary of the Interior under President Claudia Sheinbaum from October 2024.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "adan-augusto-lopez",
+    "name": "Adán Augusto López Hernández",
+    "role": "Secretary of the Interior under AMLO; declared order restored in Sinaloa on Jan 13, 2023",
+    "avatar": "mx-gov",
+    "initial": "A",
+    "quote": "El orden ha sido restablecido en Sinaloa. (Order has been reestablished in Sinaloa.) — January 13, 2023, eight days after Operation Ovidio began",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "marcelo-ebrard",
+    "name": "Marcelo Ebrard Casaubon",
+    "role": "Foreign Affairs Secretary under AMLO; confirmed 2019 operation was per U.S. extradition request",
+    "avatar": "mx-gov",
+    "initial": "M",
+    "quote": "63 percent of the weapons seized in the January 2023 Culiacán operation originated in the United States — a finding that underscores the urgent need for U.S. action on firearms trafficking to Mexico. — Press statement, January 2023",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "colonel-moreno-orzua",
+    "name": "Col. Juan José Moreno Orzua",
+    "role": "Commander, 43rd Infantry Battalion; killed in Escuinapa ambush, January 5, 2023",
+    "avatar": "mil",
+    "initial": "J",
+    "quote": "The most senior military fatality of Operation Ovidio. Ambushed by Los Chapitos hitmen with his four bodyguards near Escuinapa, Sinaloa, on January 5, 2023 at approximately 2:50 PM. His killing was a targeted cartel response to military operations.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "claudia-sheinbaum",
+    "name": "Claudia Sheinbaum Pardo",
+    "role": "President of Mexico (Oct 2024–present); reinforced military presence in Sinaloa May 2026",
+    "avatar": "mx-gov",
+    "initial": "C",
+    "quote": "On May 5, 2026 her security cabinet committed to maintaining and expanding military deployments in Sinaloa as the civil war between La Mayiza and the Chapitos continued. Homicides have fallen ~63% from the June 2025 peak but Sinaloa remains among Mexico's most violent states.",
+    "lastUpdated": "2026-05-16T00:00:00.000Z"
+  }
+]

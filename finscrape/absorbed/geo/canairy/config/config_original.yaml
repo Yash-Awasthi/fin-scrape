@@ -1,0 +1,425 @@
+# Brown Man Bunker Phase-Based Monitoring Configuration
+# Complete system with 22 metrics driving phases 0-9
+
+monitoring:
+  enabled: true
+  check_interval_minutes: 15  # More frequent checks for critical metrics
+  data_retention_days: 365
+  max_retries: 3
+  timeout_seconds: 30
+  
+  # Stale data rules
+  stale_thresholds:
+    amber_hours: 48  # Force amber after 48 hours
+    red_hours: 168   # Force red after 7 days
+
+# Phase definitions and triggers
+phases:
+  current_phase: 0  # Tracks current phase
+  
+  definitions:
+    0:
+      name: "Foundations"
+      trigger: "default"
+      actions:
+        - "CPR/First Aid, Stop-the-Bleed training"
+        - "Bitwarden + FIDO2 security"
+        - "Resilience notebook"
+        - "SCAN→DECIDE→ACT walks"
+        - "Baseline fitness & labs"
+        - "Pepper gel + 1000-lm light EDC"
+    
+    1:
+      name: "72-hour bin"
+      trigger: "normal/green overall"
+      actions:
+        - "48× Mainstay water + low-sugar food kit"
+        - "Crank NOAA radio"
+        - "$500 cash"
+        - "CO alarm + ABC extinguisher"
+        - "Anker C1000 at ~60% SoC"
+    
+    2:
+      name: "Digital & comms"
+      trigger: "any 1 amber in econ/rights/security"
+      actions:
+        - "Password manager done"
+        - "2× power banks"
+        - "Laminated contacts"
+        - "GMRS handhelds set (Ch7/CTCSS23)"
+        - "Print PACE card"
+        - "Quarterly backup test"
+    
+    2.5:
+      name: "Liquidity & docs"
+      trigger: "any 2 ambers or GREEN-G1 false"
+      actions:
+        - "3-month T-bill ladder"
+        - "5% gold + 5% USD-hedge"
+        - "Dual cloud vaults + IronKey"
+        - "Passport card/Real-ID in wallets"
+        - "Go-folder lives by front door"
+    
+    3:
+      name: "Air, health, mobile"
+      trigger: "1 red anywhere or 2 ambers sustained 7 days"
+      actions:
+        - "HEPA on"
+        - "N95 cache verified"
+        - "C1000 moved to shelter as UPS"
+        - "inReach Mini in Faraday pouch"
+        - "Weekly modem-off comms drill"
+    
+    4:
+      name: "Dry-basement / perimeter"
+      trigger: "ACLED or CYBER turns red or 2 total reds"
+      actions:
+        - "Avoid protest zones"
+        - "Minor family curfew"
+        - "Top off fuel & cash"
+        - "Utility pump staged"
+        - "Door strike-plates/door bar installed"
+    
+    5:
+      name: "Oil-tank → generator prep"
+      trigger: "OIL-01 or OIL-02 red or MARKET-01 ≥30 bp event"
+      actions:
+        - "Dose PRI-D"
+        - "Buy Racor 500FG + 2 spares"
+        - "Choose day-tank vs direct feed"
+        - "Battery tender on genset"
+        - "Write '1-hour morning charge' routine for C1000"
+    
+    6:
+      name: "Shelter nook build"
+      trigger: "2+ reds sustained ≥48 h"
+      actions:
+        - "Tyvek clean-out"
+        - "Shelves/bins"
+        - "PoE NVR on isolated VLAN"
+        - "Roles matrix posted (Ops/Comms/Med/Logistics)"
+        - "Soft-skill ledger whiteboard"
+    
+    7:
+      name: "Harden + genset live"
+      trigger: "local Guard activation or court-injunction chaos + 2 reds"
+      actions:
+        - "Install 18–22 kW diesel + ATS"
+        - "Lightning & surge protection"
+        - "Circuit power-budget + daily run schedule"
+        - "Steel/plywood wrap for nook"
+    
+    8:
+      name: "Water & circuits"
+      trigger: "grid instability pattern (3+ PJM outages/quarter)"
+      actions:
+        - "Rainwater totes + RV pump + filters"
+        - "Integrate shelter circuits to ATS"
+        - "Download local 7B LLM & first-aid videos for offline"
+    
+    9:
+      name: "Optional safe-room"
+      trigger: "only if you want near-absolute wind/blast"
+      actions:
+        - "FEMA/ICC-500 engineered room"
+        - "Not required for most scenarios"
+
+# Global phase rules
+phase_rules:
+  tighten_threshold: 2  # Tighten within 48h if ≥2 reds at once
+  relax_budget_percent: 10  # Relax 10% budget if green-flag holds 2 quarters
+  
+# Trip-wire metrics
+trip_wires:
+  # ECONOMY, JOBS, RIGHTS, SECURITY
+  econ_01_treasury_tail:
+    name: "10Y auction tail (bp)"
+    enabled: true
+    source_type: "api"
+    url: "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auction_results"
+    params:
+      filter: "security_desc:eq:10-Year Note,record_date:gte:2024-01-01"
+      sort: "-issue_date"
+      limit: 1
+    thresholds:
+      green: 3.0
+      amber: 7.0
+      red: 999.0
+    unit: "basis_points"
+    category: "economy"
+    
+  econ_02_grocery_cpi:
+    name: "Grocery CPI, 3-mo annualized (%)"
+    enabled: true
+    source_type: "api"
+    url: "https://api.stlouisfed.org/fred/series/observations"
+    series_id: "CUSR0000SAF11"
+    thresholds:
+      green: 4.0
+      amber: 8.0
+      red: 999.0
+    unit: "percent"
+    category: "economy"
+    
+  job_01_strike_days:
+    name: "US strike days / month"
+    enabled: true
+    source_type: "api"
+    url: "https://striketracker.ilr.cornell.edu/api/v1/strikes"
+    thresholds:
+      green: 100000
+      amber: 500000
+      red: 999999999
+    unit: "worker_days"
+    category: "jobs"
+    
+  power_01_ai_surveillance:
+    name: "AI-surveillance bills / month"
+    enabled: true
+    source_type: "api"
+    url: "https://api.legiscan.com"
+    thresholds:
+      green: 3
+      amber: 10
+      red: 999
+    unit: "bills"
+    category: "rights"
+    
+  cyber_01_cisa_kev:
+    name: "CISA KEV + ICS significant (90d count)"
+    enabled: true
+    source_type: "api"
+    url: "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+    thresholds:
+      green: 2
+      amber: 5
+      red: 999
+    unit: "vulnerabilities"
+    category: "security"
+    
+  civil_01_acled_protests:
+    name: "ACLED US protests, 7-day avg"
+    enabled: true
+    source_type: "api"
+    url: "https://api.acleddata.com/acled/read"
+    thresholds:
+      green: 25
+      amber: 75
+      red: 999
+    unit: "protests_per_day"
+    category: "rights"
+    
+  grid_01_pjm_outages:
+    name: "PJM outages ≥50k / quarter"
+    enabled: true
+    source_type: "csv"
+    url: "https://www.oe.netl.doe.gov/OE417_annual_summary.csv"
+    thresholds:
+      green: 1
+      amber: 2
+      red: 999
+    unit: "outages"
+    category: "security"
+    
+  market_01_intraday_swing:
+    name: "10Y intraday swing (bp) on data days"
+    enabled: true
+    source_type: "yahoo_finance"
+    ticker: "^TNX"
+    critical: true  # Fires immediately
+    thresholds:
+      green: 20
+      amber: 29
+      red: 30
+    unit: "basis_points"
+    category: "economy"
+    
+  bio_01_h2h_countries:
+    name: "Novel H2H countries (14d count)"
+    enabled: true
+    source_type: "rss"
+    url: "https://www.who.int/feeds/entity/csr/don/en/rss.xml"
+    thresholds:
+      green: 0
+      amber: 2
+      red: 3  # Or US case
+    unit: "countries"
+    category: "security"
+    
+  # NEW OIL AXIS
+  oil_01_russian_brics:
+    name: "Share of Russian crude to BRICS (30d %)"
+    enabled: true
+    source_type: "csv"
+    url: "https://energyandcleanair.org/russia_oil_exports.csv"
+    thresholds:
+      green: 60
+      amber: 75
+      red: 999
+    unit: "percent"
+    category: "oil_axis"
+    
+  oil_02_mbridge_settlements:
+    name: "mBridge energy settlement (USD m/day)"
+    enabled: true
+    source_type: "pdf"
+    url: "https://www.bis.org/project/mbridge/reports"
+    thresholds:
+      green: 50
+      amber: 300
+      red: 999
+    unit: "million_usd_per_day"
+    category: "oil_axis"
+    
+  oil_03_ofac_designations:
+    name: "OFAC designations (India/China + oil, 30d)"
+    enabled: true
+    source_type: "csv"
+    url: "https://home.treasury.gov/ofac_downloads/sdn.csv"
+    thresholds:
+      green: 0
+      amber: 5
+      red: 999
+    unit: "designations"
+    category: "oil_axis"
+    
+  oil_04_refinery_ratio:
+    name: "Refinery run-rate ratio (India+China)/OECD"
+    enabled: true
+    source_type: "api"
+    url: "https://www.jodidata.org/api"
+    thresholds:
+      green: 1.2
+      amber: 1.4
+      red: 999
+    unit: "ratio"
+    category: "oil_axis"
+    
+  # AI HELL WINDOW + INFO WAR
+  labor_ai_01_layoffs:
+    name: "AI-linked layoffs (monthly)"
+    enabled: true
+    source_type: "api"
+    url: "https://api.layoffs.fyi"
+    thresholds:
+      green: 5000
+      amber: 25000
+      red: 999999
+    unit: "workers"
+    category: "ai_window"
+    
+  cyber_02_ai_ransomware:
+    name: "AI-assisted ransomware (90d)"
+    enabled: true
+    source_type: "json"
+    url: "https://www.cisa.gov/sites/default/files/feeds/ics-advisories.json"
+    thresholds:
+      green: 3
+      amber: 6
+      red: 999
+    unit: "incidents"
+    category: "ai_window"
+    
+  info_02_deepfake_shocks:
+    name: "Deepfake market shocks / quarter"
+    enabled: true
+    source_type: "composite"
+    critical: true  # Fires immediately
+    thresholds:
+      green: 0
+      amber: 1
+      red: 2
+    unit: "events"
+    category: "ai_window"
+    
+  compute_01_training_cost:
+    name: "$/training-FLOP 6-mo Δ (%)"
+    enabled: true
+    source_type: "csv"
+    url: "https://epochai.org/data/flop_price.csv"
+    green_flag: true  # Positive indicator
+    green_flag_threshold: -30  # Green when ≤ -30% for 6 months
+    unit: "percent_change"
+    category: "ai_window"
+    
+  green_g1_gdp_rates:
+    name: "US real GDP ≥4% y/y (2 qtrs) & 10Y <4%"
+    enabled: true
+    source_type: "composite"
+    green_flag: true  # Positive indicator
+    unit: "condition"
+    category: "economy"
+    
+  # CULT SIGNALS
+  cult_trend_01_twitter:
+    name: "X/Twitter 24h #AIGod OR #Basilisk OR #JoinTheComet"
+    enabled: true
+    source_type: "twitter_api"
+    query: "#AIGod OR #Basilisk OR #JoinTheComet"
+    thresholds:
+      green: 10000
+      amber: 50000
+      red: 999999
+    unit: "tweets"
+    category: "cult"
+    
+  cult_meme_01_tokens:
+    name: "New ERC-20 with (cult.*ai), 7d"
+    enabled: true
+    source_type: "etherscan_api"
+    thresholds:
+      green: 5
+      amber: 20
+      red: 999
+    unit: "tokens"
+    category: "cult"
+    
+  cult_event_01_protests:
+    name: "ACLED protests mentioning AI+(god|cult|church), 30d"
+    enabled: true
+    source_type: "api"
+    url: "https://api.acleddata.com/acled/read"
+    thresholds:
+      green: 1
+      amber: 4
+      red: 999
+    unit: "protests"
+    category: "cult"
+    
+  cult_media_01_trends:
+    name: "Google Trends 'AI religion' (US weekly)"
+    enabled: true
+    source_type: "pytrends"
+    thresholds:
+      green: 15
+      amber: 40
+      red: 999
+    unit: "trend_score"
+    category: "cult"
+
+# Alert system configuration
+alerts:
+  tighten_up_threshold: 2  # Number of red alerts to trigger "TIGHTEN-UP"
+  notification_methods:
+    - email
+    - desktop
+  
+  # Critical indicators bypass confirmation
+  critical_indicators:
+    - "market_01_intraday_swing"
+    - "info_02_deepfake_shocks"
+  
+  # Notification settings (actual credentials in secrets.yaml)
+  email:
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    from_email: "${EMAIL_FROM}"
+    to_emails:
+      - "${EMAIL_TO_PRIMARY}"
+
+# Logging configuration
+logging:
+  level: "INFO"
+  file: "logs/monitoring.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 5

@@ -1,0 +1,99 @@
+[
+  {
+    "id": "iraq-population",
+    "label": "Population (2024)",
+    "value": "42.5 million",
+    "color": "blue",
+    "source": "World Bank / UN Population Division 2024",
+    "contested": false,
+    "delta": "+600,000/yr",
+    "deltaNote": "Growth rate ~1.5% annually; one of the world's youngest populations with median age ~22",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "oil-production",
+    "label": "Oil Production",
+    "value": "~1.5 million bpd",
+    "color": "red",
+    "source": "Iraqi Cabinet / Bloomberg / Turkish Minute / AGBI July 2026",
+    "contested": true,
+    "contestNote": "Pre-crisis (Jan 2026): ~4.4M bpd. Hormuz blockade (Feb–June 2026) cut production to ~800K bpd at trough; recovery to ~1.5M bpd. Iraq cabinet approved (June 2) tripling Kirkuk-Ceyhan pipeline exports from 220K to 770K bpd target by late August 2026. Basra southern terminals severely constrained; full Hormuz normalization needed for full recovery. ~37M barrels in floating/onshore storage. The 1973 Iraq-Turkey Pipeline treaty governing Ceyhan exports expires July 27, 2026; Turkey rejected a like-for-like extension and both sides are negotiating an interim protocol to keep 200K+ bpd flowing while a successor deal is worked out, adding fresh uncertainty to the northern export route.",
+    "delta": "-66% vs pre-crisis",
+    "deltaNote": "Hormuz blockade (US-Iran war, from Feb 2026) restricts southern export capacity. Kirkuk-Ceyhan pipeline ramp-up to 770K bpd underway (June 2026), now complicated by the ITP treaty's July 27 expiration. Basra-Haditha pipeline ($1.5B, construction May 2026) is 18–24 months from operational. KRG-Baghdad dispute over $110B gas contracts adds political risk to northern export route. PM Zaidi's July 13–14 Washington visit included a proposed US-Iraq energy fund built around 500K bpd of exports in return for electricity-sector support.",
+    "trend": "up",
+    "lastUpdated": "2026-07-16"
+  },
+  {
+    "id": "oil-reserves",
+    "label": "Proven Oil Reserves",
+    "value": "145 billion barrels",
+    "color": "green",
+    "source": "OPEC Statistical Bulletin 2023",
+    "contested": false,
+    "delta": "5th largest globally",
+    "deltaNote": "~9% of world total; Iraq has barely explored its western desert, where further giant fields are suspected",
+    "trend": "stable",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "gdp-total",
+    "label": "GDP (Nominal)",
+    "value": "$268 billion",
+    "color": "blue",
+    "source": "World Bank, IMF Article IV Consultation 2024",
+    "contested": false,
+    "delta": "+8% vs 2022",
+    "deltaNote": "Oil revenues account for ~90% of government budget and ~45% of GDP; non-oil economy remains underdeveloped",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "idp-count",
+    "label": "Internally Displaced Persons",
+    "value": "1.18 million",
+    "color": "amber",
+    "source": "IOM Iraq Displacement Tracking Matrix (DTM) Q3 2024",
+    "contested": true,
+    "contestNote": "Peak displacement was 6 million at height of ISIS conflict (2014–2017); remaining IDPs face return barriers in Sinjar, disputed territories, and Anbar Province",
+    "delta": "-350,000 vs 2022",
+    "trend": "down",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "years-of-civilization",
+    "label": "Years of Continuous Civilization",
+    "value": "~5,500 years",
+    "color": "amber",
+    "source": "Archaeological consensus; Uruk period ~3500 BCE",
+    "contested": false,
+    "delta": "Since ~3500 BCE",
+    "deltaNote": "The world's oldest continuous urban civilization; includes the invention of writing, the wheel, and the first empires and law codes",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "isis-attacks-2024",
+    "label": "ISIS Attacks in Iraq (2024)",
+    "value": "~500 incidents",
+    "color": "red",
+    "source": "ACLED / UNAMI Threat Assessment 2024",
+    "contested": true,
+    "contestNote": "ISIS claimed responsibility for ~200 attacks; remainder attributed to ISIS by Iraqi security forces. ISIS defeated territorially (2017) but maintains active insurgency primarily in Anbar, Diyala, Kirkuk, and Salah al-Din provinces",
+    "delta": "-15% vs 2023",
+    "trend": "down",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "oil-export-revenue",
+    "label": "Annual Oil Export Revenue",
+    "value": "~$37B annualized (2026 est.)",
+    "color": "red",
+    "source": "Bloomberg / SOMO / IMF / AGBI / The National August 2026",
+    "contested": true,
+    "contestNote": "H1 2026 oil export earnings totaled ~$18.5B (AGBI), far below budget projections. Monthly revenue collapsed from ~$6.8B in February to ~$2.3B by June as the Hormuz blockade persisted. Iraq's debt has hit record highs as the government borrows to plug the gap (~ID13 trillion borrowed in the first five months of 2026). IMF/World Bank project the 2026 budget deficit could reach 8-11% of GDP. A one-year Kirkuk-Ceyhan transit deal (signed Aug 1, 750K bpd capacity, ~170K bpd actual flow) offers only partial relief; Baghdad separately sought special Hormuz transit arrangements from Iran during the Aug 19-21 Ghalibaf visit.",
+    "delta": "-58% vs 2024 ($88B)",
+    "deltaNote": "Iraq's $74B 2026 federal budget severely underfunded; public sector salaries remain the largest expenditure item. KRG's budget dispute with Baghdad persists. The Kirkuk-Ceyhan pipeline's underlying 1973 transit treaty expired July 27; the Aug 1 one-year interim deal keeps a reduced flow moving while a long-term successor is negotiated. Zaidi government faces simultaneous oil, KRG, and PMF disarmament crises heading into the September 30 deadline.",
+    "trend": "down",
+    "lastUpdated": "2026-08-25"
+  }
+]

@@ -1,0 +1,263 @@
+[
+  {
+    "id": "zelenskyy-ua",
+    "name": "Volodymyr Zelenskyy",
+    "role": "President of Ukraine",
+    "avatar": "ua",
+    "initial": "Z",
+    "quote": "We are already defeating Russia: through willpower, technology, resilience and dignity. We will not save the Kremlin half a million soldiers [by ceding Donbas]. Give Ukraine everything it needs to stop this war, to stop it faster than Putin can start the next one. (Zelenskyy, in his Independence Day address on Ukraine's 35th anniversary of independence, August 24, 2026, delivered hours after a nationwide Russian missile-and-drone barrage killed 8 and injured 43 across the country.)",
+    "lastUpdated": "2026-08-24T15:43:31Z"
+  },
+  {
+    "id": "putin-ru",
+    "name": "Vladimir Putin",
+    "role": "President of Russia",
+    "avatar": "ru",
+    "initial": "P",
+    "quote": "Zelenskyy's letter is rude in form. I see no point in meeting with him before a comprehensive settlement is agreed — he knows the Russian position. Ukraine must accept the framework from our discussions. Talks are possible, but Zelenskyy 'can come to Moscow any time.' (Putin, rejecting Zelensky's June 4 open letter proposing ceasefire and bilateral meeting, June 5–6, 2026 — as Ukraine launched its second major drone strike on St. Petersburg and Kronstadt in one week.)",
+    "lastUpdated": "2026-06-07T14:00:00Z"
+  },
+  {
+    "id": "biden-nato",
+    "name": "Joe Biden",
+    "role": "US President (2021–Jan 2025)",
+    "avatar": "nato",
+    "initial": "B",
+    "quote": "We will not waver in our support for Ukraine. Ukraine can and will stop Putin. America stands with Ukraine.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "trump-nato",
+    "name": "Donald Trump",
+    "role": "US President (Jan 2025–present)",
+    "avatar": "nato",
+    "initial": "T",
+    "quote": "The end of the war in Ukraine, I really think, is getting very close. Believe it or not, it's getting closer, and we think we're going to end up getting a settlement between Russia and Ukraine. We are 90% agreed on a framework — the last 10% is always the hardest. America has done its part; now Russia and Ukraine need to come together and end this.",
+    "lastUpdated": "2026-05-13T14:30:00Z"
+  },
+  {
+    "id": "stoltenberg-nato",
+    "name": "Jens Stoltenberg",
+    "role": "NATO Secretary General (until Oct 2024)",
+    "avatar": "nato",
+    "initial": "S",
+    "quote": "Ukraine's future is in NATO. Supporting Ukraine is not charity, it is an investment in our own security. A world where might makes right is more dangerous for all of us.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "rutte-nato",
+    "name": "Mark Rutte",
+    "role": "NATO Secretary General (from Oct 2024)",
+    "avatar": "nato",
+    "initial": "R",
+    "quote": "NATO can secure an additional $15 billion in 2026 to sustain Ukraine's military needs. European allies are stepping up — the responsibility for Patriot systems and advanced air defenses has shifted from Washington to us.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "vonderleyen-eu",
+    "name": "Ursula von der Leyen",
+    "role": "EU Commission President",
+    "avatar": "eu",
+    "initial": "V",
+    "quote": "Russia must pay for its crimes. The frozen Russian assets are not ours — but as long as Russia wages its illegal war, they will be at work for Ukraine's reconstruction.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "lavrov-ru",
+    "name": "Sergei Lavrov",
+    "role": "Russian Foreign Minister",
+    "avatar": "ru",
+    "initial": "L",
+    "quote": "The West has declared a 'total hybrid war' on Russia. The Coalition of the Willing and the Kyiv regime form a genuine 'axis of war.' Their proposals are dangerous and destructive.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "gerasimov-ru",
+    "name": "Valery Gerasimov",
+    "role": "Russian Chief of General Staff / Ukraine Commander",
+    "avatar": "ru",
+    "initial": "G",
+    "quote": "The Russian Armed Forces are conducting an active defense and inflicting significant losses on the enemy in all directions of the special military operation.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "syrskyi-ua",
+    "name": "Oleksandr Syrskyi",
+    "role": "Ukrainian Commander-in-Chief (from Feb 2024)",
+    "avatar": "ua",
+    "initial": "S",
+    "quote": "Russian cumulative losses reach approximately 1,373,620 personnel as of June 7, 2026. Our forces continue to hold the line while striking deep inside Russia. On June 6, we struck St. Petersburg and Kronstadt for the second time in one week — the largest single Ukrainian drone operation of the war with 400+ drones launched. We continue to target Russian military infrastructure, energy assets, and air defense systems across Russia's entire depth. Putin's rejection of President Zelensky's ceasefire proposal demonstrates Russia's unwillingness to negotiate in good faith. We will defend Ukraine until sovereignty and security are guaranteed. (Syrskyi, June 7, 2026.)",
+    "lastUpdated": "2026-06-07T14:00:00Z"
+  },
+  {
+    "id": "zaluzhnyi-ua",
+    "name": "Valery Zaluzhnyi",
+    "role": "Former Ukrainian Commander-in-Chief; now UK Ambassador",
+    "avatar": "ua",
+    "initial": "Z",
+    "quote": "We are at a stalemate. Without a technological leap — new technologies, new weapons — there is unlikely to be a breakthrough in the near future. The enemy has adapted.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "yermak-ua",
+    "name": "Andriy Yermak",
+    "role": "Head of Ukrainian Presidential Office",
+    "avatar": "ua",
+    "initial": "Y",
+    "quote": "Ukraine will never accept ultimatums. We negotiate from a position of principle, not desperation. Our sovereignty and territorial integrity are not bargaining chips.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "macron-eu",
+    "name": "Emmanuel Macron",
+    "role": "President of France",
+    "avatar": "eu",
+    "initial": "M",
+    "quote": "The US decision to ease Russia oil sanctions is in no way justified. Increasing economic pressure on Russia is decisive for it to accept serious negotiations for a just and lasting peace. France stands with Ukraine — unconditionally.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "scholz-eu",
+    "name": "Olaf Scholz",
+    "role": "German Chancellor (until Jan 2025)",
+    "avatar": "eu",
+    "initial": "S",
+    "quote": "We will not participate in any actions that could lead to a direct confrontation between NATO and Russia. Germany supports Ukraine firmly but will not escalate to nuclear risk.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "merz-eu",
+    "name": "Friedrich Merz",
+    "role": "German Chancellor (from Feb 2025)",
+    "avatar": "eu",
+    "initial": "M",
+    "quote": "Germany was not notified of the US decision to ease Russia oil sanctions prior to its announcement. Europe must be able to defend itself. We will increase defense spending and support Ukraine for as long as necessary.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "grossi-un",
+    "name": "Rafael Grossi",
+    "role": "IAEA Director General",
+    "avatar": "un",
+    "initial": "G",
+    "quote": "Attacks on nuclear sites are unacceptable and must stop in order to prevent the very real risk of a nuclear accident. IAEA experts have recorded drone strike damage to the exterior of the turbine hall at Zaporizhzhia Nuclear Power Plant — immediately next to reactor unit 6. We have requested access inside the building for further examination. Radiation levels remain normal, but this attack is a serious escalation. (Grossi, IAEA Update 307, June 1, 2026 — first confirmed drone strike within ZNPP perimeter since April 2024.)",
+    "lastUpdated": "2026-06-01T17:09:25Z"
+  },
+  {
+    "id": "guterres-un",
+    "name": "António Guterres",
+    "role": "UN Secretary-General",
+    "avatar": "un",
+    "initial": "G",
+    "quote": "This war is killing and displacing people in huge numbers. It is causing massive destruction. It is creating alarming dangers for nuclear facilities. The exchange of prisoners of war and the return of civilian detainees must be part of any pathway to peace. It must end.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "pope-leo-xiv-un",
+    "name": "Pope Leo XIV (Jorge Prevost)",
+    "role": "Pope / Head of the Catholic Church (from May 2025)",
+    "avatar": "un",
+    "initial": "L",
+    "quote": "I condemn the sharp intensification of attacks on Ukraine. This senseless violence must end. The way of war is not the way of God. I call upon all parties to choose dialogue, justice, and peace — and to protect the civilian populations who are paying with their lives.",
+    "lastUpdated": "2026-05-27T16:23:11Z"
+  },
+  {
+    "id": "schroder-other",
+    "name": "Gerhard Schröder",
+    "role": "Former German Chancellor (1998–2005); Kremlin back-channel figure",
+    "avatar": "other",
+    "initial": "S",
+    "quote": "I maintain my contacts with President Putin. Diplomacy requires speaking to all sides — including the difficult ones. I believe dialogue is the only path to ending this war. (Schröder, defending his June 6, 2026 private Kremlin meeting with Putin — held as Ukraine's drones struck St. Petersburg for the second time in a week. EU foreign policy chief Kallas rejected any Schröder mediator role as compromised by his financial ties to Russian state energy firms.)",
+    "lastUpdated": "2026-06-07T14:00:00Z"
+  },
+  {
+    "id": "prigozhin-other",
+    "name": "Yevgeny Prigozhin",
+    "role": "Wagner Group Chief (deceased Aug 23, 2023)",
+    "avatar": "other",
+    "initial": "P",
+    "quote": "We are marching for justice! This is not a coup but a march of justice against incompetent military leadership. We will not let Russia be destroyed by mediocre generals.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "kim-jongun-other",
+    "name": "Kim Jong Un",
+    "role": "North Korean Leader",
+    "avatar": "other",
+    "initial": "K",
+    "quote": "The DPRK will always be with Russia. Our relations have reached a new high strategic level — an impregnable fortress of iron solidarity.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "sunak-nato",
+    "name": "Rishi Sunak",
+    "role": "UK Prime Minister (until Jul 2024)",
+    "avatar": "nato",
+    "initial": "S",
+    "quote": "The UK stands unwaveringly with Ukraine. We were the first country to provide lethal aid, the first to provide long-range missiles, the first to pledge battle tanks. We will continue to lead.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "starmer-nato",
+    "name": "Keir Starmer",
+    "role": "UK Prime Minister (from Jul 2024)",
+    "avatar": "nato",
+    "initial": "S",
+    "quote": "As Putin continues his abhorrent attacks across Ukraine — striking maternity hospitals and homes — my message is simple: there will be no let up in the UK's support. We are committing a further $133 million in air defense support. Ukraine's fight is our fight.",
+    "lastUpdated": "2026-03-28T14:28:24Z"
+  },
+  {
+    "id": "blinken-nato",
+    "name": "Antony Blinken",
+    "role": "US Secretary of State (until Jan 2025)",
+    "avatar": "nato",
+    "initial": "B",
+    "quote": "We will support Ukraine for as long as it takes. And Russia will face a strategic failure — it will never subjugate Ukraine, and its economy will be increasingly isolated.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "rubio-nato",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State (from Jan 2025)",
+    "avatar": "nato",
+    "initial": "R",
+    "quote": "Zelenskyy's claims about Ukraine offering to withdraw from Donbas in exchange for security guarantees are simply untrue. We support peace, not endless war — but the path forward requires honest dialogue, not misrepresentation of positions.",
+    "lastUpdated": "2026-03-28T14:28:24Z"
+  },
+  {
+    "id": "reznikov-ua",
+    "name": "Oleksii Reznikov",
+    "role": "Ukrainian Defence Minister (2021–2023)",
+    "avatar": "ua",
+    "initial": "R",
+    "quote": "Every HIMARS, every tank, every air defense system is not just a weapon — it is a life saved. Ukraine fights for values that the entire free world shares.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "umerov-ua",
+    "name": "Rustem Umerov",
+    "role": "Ukrainian Defence Minister (from 2023)",
+    "avatar": "ua",
+    "initial": "U",
+    "quote": "Ukraine needs partners to transform commitment into capability. Paper pledges must become real weapons at real frontlines. We are grateful for the support but more is urgently needed.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "costa-eu",
+    "name": "António Costa",
+    "role": "European Council President (from Dec 2024)",
+    "avatar": "eu",
+    "initial": "C",
+    "quote": "The US decision to ease Russia oil sanctions is very concerning, as it impacts European security. Increasing economic pressure on Russia is decisive for it to accept serious negotiations for a just and lasting peace. The EU is prepared to contribute to robust and credible security guarantees for Ukraine.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "bessent-nato",
+    "name": "Scott Bessent",
+    "role": "US Treasury Secretary (from Jan 2025)",
+    "avatar": "nato",
+    "initial": "B",
+    "quote": "The 30-day waiver on sanctioned Russian seaborne crude is aimed at stabilizing energy markets amid threats from Iran. It is a targeted, time-limited measure — not a reversal of our overall Russia sanctions posture.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  }
+]

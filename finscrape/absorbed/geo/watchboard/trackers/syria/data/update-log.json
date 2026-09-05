@@ -1,0 +1,68 @@
+{
+  "lastRun": "2026-08-26T19:45:21.888Z",
+  "tracker": "syria",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-02T14:00:00.000Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 46,
+      "lastUpdated": "2026-04-25T07:30:00.000Z"
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 35,
+      "lastUpdated": "2026-06-02T14:00:00.000Z"
+    },
+    "mapLines": {
+      "status": "updated",
+      "count": 9,
+      "lastUpdated": "2026-06-02T14:00:00.000Z"
+    },
+    "casualties": {
+      "status": "ok",
+      "count": 10,
+      "lastUpdated": "2026-04-25T07:30:00.000Z"
+    },
+    "econ": {
+      "status": "updated",
+      "count": 8,
+      "lastUpdated": "2026-06-02T14:00:00.000Z"
+    },
+    "claims": {
+      "status": "ok",
+      "count": 20,
+      "lastUpdated": "2026-04-25T07:30:00.000Z"
+    },
+    "political": {
+      "status": "ok",
+      "count": 22,
+      "lastUpdated": "2026-05-17T15:36:03.000Z"
+    },
+    "assets": {
+      "status": "updated",
+      "count": 10,
+      "lastUpdated": "2026-06-02T14:00:00.000Z"
+    },
+    "events": {
+      "lastRun": "2026-08-26T19:45:21.888Z",
+      "status": "updated"
+    },
+    "strikeTargets": {
+      "status": "ok",
+      "count": 9,
+      "lastUpdated": "2026-05-09T14:24:13.000Z"
+    },
+    "meta": {
+      "lastRun": "2026-08-26T19:45:21.888Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-02T14:00:00.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

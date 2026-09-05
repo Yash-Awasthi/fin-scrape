@@ -1,0 +1,123 @@
+[
+  {
+    "id": "eu-gdp-growth",
+    "label": "EU Real GDP Growth",
+    "value": "+0.4% q/q Q2 2026 (Eurostat); Q1 revised to flat 0.0%",
+    "change": "Eurozone Q2 2026 GDP grew +0.4% q/q — ahead of the +0.2% consensus — rebounding from a flat Q1 (revised up from the earlier -0.2% contraction estimate); annual growth reached +1.0% (euro area) / +1.2% (EU); Germany, France and Italy each posted +0.2% q/q, Spain +0.7%, Ireland led at +3.9%",
+    "direction": "up",
+    "sparkData": [2.3, 5.9, 3.5, 0.5, -0.4, 0.9, 1.0, 0.0, 0.4],
+    "color": "green",
+    "source": "Eurostat — National Accounts Q2 2026 (released July 30, 2026)",
+    "lastUpdated": "2026-08-26T14:32:00.000Z"
+  },
+  {
+    "id": "eurozone-inflation",
+    "label": "Eurozone HICP Inflation",
+    "value": "2.9% (July 2026 flash)",
+    "change": "-0.3pp vs May's cycle-high 3.2%; eased to 2.8% in June before ticking back up to 2.9% in July; energy +10.0% (vs +8.5% in June), services 3.3%; August flash due September 1",
+    "direction": "down",
+    "sparkData": [8.1, 10.6, 8.0, 5.2, 2.9, 2.3, 2.2, 3.0, 3.2, 2.8, 2.9],
+    "color": "amber",
+    "source": "Eurostat — HICP flash estimate, July 2026 (released Aug 1)",
+    "lastUpdated": "2026-08-26T14:32:00.000Z"
+  },
+  {
+    "id": "ecb-interest-rate",
+    "label": "ECB Deposit Facility Rate",
+    "value": "2.25% (held since June 17; reaffirmed July 23)",
+    "change": "Governing Council raised all three key rates +25bp on June 11 (deposit facility to 2.25%, effective June 17), then held rates unchanged at the July 23 meeting; next decision due in September as HICP ticked back up to 2.9% in July",
+    "direction": "up",
+    "sparkData": [0.0, 0.0, 0.0, 0.5, 2.0, 3.5, 4.0, 3.25, 2.5, 2.0, 2.25, 2.25],
+    "color": "amber",
+    "source": "ECB — Monetary policy decisions, 23 July 2026",
+    "lastUpdated": "2026-08-26T14:32:00.000Z"
+  },
+  {
+    "id": "eu-unemployment",
+    "label": "EU Unemployment Rate",
+    "value": "5.9% (Feb 2025)",
+    "change": "Near historical low",
+    "direction": "down",
+    "sparkData": [6.7, 7.1, 6.2, 6.0, 6.1, 6.0, 5.9],
+    "color": "green",
+    "source": "Eurostat — Labour Force Survey",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "eu-trade-surplus",
+    "label": "EU Goods Trade Balance (2024)",
+    "value": "+€29B surplus",
+    "change": "Swing from -€432B deficit in 2022 (energy crisis peak)",
+    "direction": "up",
+    "sparkData": [-432, -310, -200, -100, 10, 29],
+    "color": "green",
+    "source": "Eurostat — International Trade in Goods",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "nextgenerationeu-disbursed",
+    "label": "NextGenerationEU Disbursed",
+    "value": "€269B disbursed of €723B committed (2021–2026)",
+    "change": "+€70B vs 2023",
+    "direction": "up",
+    "sparkData": [0, 18, 60, 145, 200, 269],
+    "color": "blue",
+    "source": "European Commission — NGEU Dashboard",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "eu-energy-dependency",
+    "label": "EU Energy Import Dependency",
+    "value": "~55% (2024 est.)",
+    "change": "-8pp since 2021 as Russia gas replaced",
+    "direction": "down",
+    "sparkData": [63, 61, 58, 55],
+    "color": "amber",
+    "source": "Eurostat — Energy Statistics",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "eu-renewable-energy-share",
+    "label": "EU Renewable Energy Share",
+    "value": "44.7% of electricity generation (2024 est.)",
+    "change": "+5pp vs 2022",
+    "direction": "up",
+    "sparkData": [35, 37, 39, 41, 44.7],
+    "color": "green",
+    "source": "European Commission / EMBER Energy",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "eu-intraeu-trade",
+    "label": "Intra-EU Trade Share",
+    "value": "~61% of total EU trade",
+    "change": "Stable since Single Market completion",
+    "direction": "up",
+    "sparkData": [52, 55, 58, 60, 62, 61, 61],
+    "color": "blue",
+    "source": "Eurostat — International Trade in Goods",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "eu-investment-gap",
+    "label": "EU Investment Gap vs US (Draghi Report)",
+    "value": "€750–800B/year shortfall",
+    "change": "Identified in September 2024 Draghi Report; Savings & Investments Union (SIU) reform underway",
+    "direction": "down",
+    "sparkData": [100, 200, 350, 500, 650, 750],
+    "color": "red",
+    "source": "Draghi Report — The Future of European Competitiveness (2024)",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "eu-us-trade-deal-tariffs",
+    "label": "EU-US Trade: Agreed Tariff Cap",
+    "value": "15% max on most EU goods (US side)",
+    "change": "Down from 25% threatened tariff; EU scraps all tariffs on US industrial goods",
+    "direction": "down",
+    "sparkData": [3, 3, 3, 25, 25, 15],
+    "color": "green",
+    "source": "Council of the EU — EU-US Trade Deal, May 20, 2026",
+    "lastUpdated": "2026-05-24T00:00:00.000Z"
+  }
+]

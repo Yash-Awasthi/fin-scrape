@@ -1,0 +1,478 @@
+[
+  {
+    "id": "moura-death-toll",
+    "question": "How many civilians were killed in the March 2022 Moura massacre?",
+    "sideA": {
+      "label": "Malian Government",
+      "text": "FAMa conducted a legitimate counter-terrorism operation. The Defense Ministry reports 203 terrorists neutralized and 51 arrested. No civilians were deliberately targeted; casualties resulted from terrorists sheltering among the population."
+    },
+    "sideB": {
+      "label": "UN OHCHR / HRW",
+      "text": "At least 500 people were unlawfully executed over 5 days (UN OHCHR May 2023). Initial HRW count ~300. Approximately 20 women and 7 children were killed; 58 women subjected to rape and sexual violence. Victims were overwhelmingly unarmed Fulani men."
+    },
+    "resolution": "Unresolved — junta blocked MINUSMA investigation; Russia and China blocked UNSC action. ICC review requested; no prosecutions as of 2026.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "wagner-moura-involvement",
+    "question": "Were Russian Wagner Group mercenaries involved in the Moura massacre?",
+    "sideA": {
+      "label": "Russia / Malian Denial",
+      "text": "Russia and Mali both deny any Wagner Group involvement. The Malian government states the operation was conducted solely by FAMa. Human rights reports are characterized as politically motivated Western disinformation."
+    },
+    "sideB": {
+      "label": "UN OHCHR / HRW",
+      "text": "Multiple witnesses independently described ~100 white soldiers speaking a non-French European language participating alongside FAMa. Uniform and equipment descriptions are consistent with Wagner personnel. OHCHR concluded they were 'foreign military personnel' most consistent with Russian fighters."
+    },
+    "resolution": "Not formally determined — access restrictions prevented forensic investigation. US Treasury sanctioned Wagner Mali leader Ivan Maslov in May 2022. No prosecutions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "wagner-security-improvement",
+    "question": "Has the Wagner Group/Africa Corps presence improved security in Mali?",
+    "sideA": {
+      "label": "Malian Junta",
+      "text": "Russia enabled the historic recapture of Kidal (November 2023), first time in years the Malian state controlled the city. FAMa-Wagner operations neutralized hundreds of jihadists. France failed for 9 years; Russia achieved concrete territorial progress within two."
+    },
+    "sideB": {
+      "label": "ACLED / Crisis Group / HRW",
+      "text": "Conflict fatalities reached record highs in 2023 and 2024 despite Wagner's presence. JNIM expanded territory dramatically after France's exit. Wagner's 71% civilian-targeting rate (ACLED) actively fuels jihadist recruitment. Kidal targeted Tuareg rebels — not jihadists — while JNIM moved into vacated territory."
+    },
+    "resolution": "Contested — territorial gain in Kidal acknowledged; independent analysts and ACLED data show record violence and expanding jihadist control across the broader theater.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "barkhane-effectiveness",
+    "question": "Was Operation Barkhane an effective counter-terrorism mission or a failed colonial enterprise?",
+    "sideA": {
+      "label": "France / Western Governments",
+      "text": "Barkhane killed hundreds of jihadist fighters, eliminated ISGS leader al-Sahrawi, and prevented full jihadist territorial consolidation. The mission was undermined by junta obstruction, the Wagner invitation, and its own expulsion — not by failure of military effectiveness."
+    },
+    "sideB": {
+      "label": "AES Juntas / Pan-African Critics",
+      "text": "Barkhane failed to halt jihadist expansion over 8 years. It was a neocolonial project prioritizing French strategic interests — intelligence, influence, mineral access — over genuine Sahelian security. JNIM grew dramatically during Barkhane's tenure. Political disengagement from Fulani grievances allowed JNIM recruitment to flourish."
+    },
+    "resolution": "Deeply contested. Violence statistics show expansion during Barkhane's tenure; counterfactual (what would have happened without intervention?) is unresolvable.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "minusma-failure",
+    "question": "Did MINUSMA fail in its mandate to stabilize Mali?",
+    "sideA": {
+      "label": "Malian Junta",
+      "text": "MINUSMA failed to reduce violence, prevent territorial loss, or implement the Algiers Accord. At $1.2 billion/year it produced no measurable security improvement, primarily serving as a French intelligence platform. The junta was correct to demand termination after 10 years."
+    },
+    "sideB": {
+      "label": "UN / Western Governments",
+      "text": "MINUSMA prevented full state collapse, protected hundreds of thousands of civilians, supported election cycles, and monitored atrocities. Its mandate was undermined by the junta itself — including airspace restrictions after Wagner's arrival. Post-MINUSMA violence escalation supports the mission's net positive assessment."
+    },
+    "resolution": "Mandate terminated June 30, 2023. Violence has escalated dramatically since MINUSMA's departure, challenging the junta's narrative that the mission itself caused insecurity.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kidal-victory-hollow",
+    "question": "Was the November 2023 Kidal recapture a genuine security victory?",
+    "sideA": {
+      "label": "Malian Junta",
+      "text": "Recapturing Kidal after 11 years of separatist control is a historic restoration of Malian sovereignty and proof of the FAMa-Russia partnership's effectiveness. It ends Tuareg impunity and opens northern Mali to state authority for the first time in over a decade."
+    },
+    "sideB": {
+      "label": "Crisis Group / Analysts",
+      "text": "The operation targeted Tuareg CSP-PSD — Algiers Accord signatories — not JNIM. JNIM rapidly moved into surrounding territory vacated by retreating Tuareg. The operation destroyed the peace accord's key interlocutor and likely pushed former CMA fighters toward JNIM. It is a Pyrrhic victory."
+    },
+    "resolution": "Definitively answered: FAMa/Africa Corps lost Kidal on April 26, 2026 — less than 17 months after its recapture. FLA forces seized the city during the April 25–26 JNIM-FLA nationwide offensive; Africa Corps and FAMa withdrew under FLA escort; FLA declared Kidal 'totally' under its control. The 'Pyrrhic victory' framing proved accurate. Kidal's rapid fall also eliminated the junta's primary security success narrative.",
+    "lastUpdated": "2026-04-26T15:45:00.000Z"
+  },
+  {
+    "id": "niger-coup-motivation",
+    "question": "Was the July 2023 Niger coup internally motivated or externally facilitated?",
+    "sideA": {
+      "label": "AES Juntas / Pro-coup Narrative",
+      "text": "The coup reflects genuine popular discontent with Bazoum's alignment with France and the West while failing to halt jihadist violence. General Tchiani acted to restore sovereignty. ECOWAS's threatened intervention demonstrated it was an instrument of French interests, not African governance."
+    },
+    "sideB": {
+      "label": "ECOWAS / Western Governments",
+      "text": "The coup was a straightforward seizure of power by the Presidential Guard commander facing potential removal. Niger under Bazoum had made significant counter-terrorism progress. The coup reversed these gains and exposed Niger to Russian influence expansion. No evidence of genuine popular mandate."
+    },
+    "resolution": "Contested — Bazoum remains detained without charge. Niger's security has deteriorated since the coup per ACLED data. ECOWAS intervention threat dropped.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ogossagou-responsibility",
+    "question": "Who bears primary responsibility for the March 2019 Ogossagou massacre?",
+    "sideA": {
+      "label": "Dan Nan Ambassagou (Dogon Militia)",
+      "text": "The militia acted as a defensive response to repeated Fulani raids and JNIM infiltration in Dogon villages. The attack was a community security response to existential threat, not a coordinated state-backed campaign. Responsibility lies with Katiba Macina for radicalizing Fulani in the area."
+    },
+    "sideB": {
+      "label": "HRW / UN",
+      "text": "The Dan Nan Ambassagou directly carried out the attack. However, the IBK government bears indirect responsibility for refusing to disarm the militia despite documented prior violence. Government failure to protect Fulani communities contributed directly to Katiba Macina's recruitment surge in the area."
+    },
+    "resolution": "Government disbanded Dan Nan Ambassagou officially in March 2019 but did not enforce the ban. A second Ogossagou attack in February 2020 killed 35 more. No perpetrators prosecuted.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jnim-governance-vs-terrorism",
+    "question": "Is JNIM primarily a terrorist organization or a proto-governance actor?",
+    "sideA": {
+      "label": "Governments / Western Designation",
+      "text": "JNIM is a designated al-Qaeda affiliate conducting mass-casualty attacks, forced taxation, blockades, executions of teachers and officials, and ethnic targeting. There can be no negotiation with an al-Qaeda organization seeking to impose Sharia governance. It is a terrorist organization by any legitimate definition."
+    },
+    "sideB": {
+      "label": "Crisis Group / Academic Analysis",
+      "text": "JNIM has achieved proto-governance in areas under its control — enforcing Islamic law, providing dispute resolution, collecting taxes. Many fighters joined due to economic marginalization and Fulani grievances, not global jihadist ideology. A purely military response cannot succeed; political engagement is necessary alongside security measures."
+    },
+    "resolution": "Unresolved — Malian intelligence reportedly engaged JNIM intermediaries in 2025 while officially denying all talks. JNIM's blockade of Bamako tightens state leverage erosion.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mali-jnim-talks",
+    "question": "Is the Malian government conducting secret negotiations with JNIM?",
+    "sideA": {
+      "label": "Malian Junta (Official Position)",
+      "text": "Mali classifies JNIM as a terrorist organization and will not negotiate with those who attack the Malian state. Goïta has publicly rejected any talks. All JNIM-related operations are purely military counter-terrorism with no political track toward the jihadist group."
+    },
+    "sideB": {
+      "label": "Crisis Group / Local Sources",
+      "text": "Multiple sources including Crisis Group report indirect contacts between Malian intelligence and JNIM intermediaries in Mopti by 2025, as the fuel blockade created acute pressure on Bamako. Contacts are described as informal and deniable. Mali's history includes precedents of negotiated arrangements with insurgent groups."
+    },
+    "resolution": "Unconfirmed — no official admission. JNIM blockade continues as of early 2026; no visible reduction in JNIM operations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "burkina-territory-control",
+    "question": "What percentage of Burkina Faso does the Traoré junta actually control?",
+    "sideA": {
+      "label": "Traoré Junta",
+      "text": "FAB and VDP militias are actively contesting jihadist groups across the country. The government is present in all 13 regional capitals. Claims of 60–70% territory loss are Western disinformation designed to delegitimize the junta and reverse the French military withdrawal decision."
+    },
+    "sideB": {
+      "label": "ACLED / Crisis Group / UNOCHA",
+      "text": "Independent estimates suggest the state controls approximately 30–50% of territory. Road access to major northern cities requires air transport. Djibo has been under effective siege since 2022; JNIM controls road access to Dori and Ouahigouya. The UN closed 20% of health facilities for insecurity reasons."
+    },
+    "resolution": "Contested — no neutral ground mapping authority accepted by all parties. JNIM's blockade of key supply arteries provides indirect evidence of near-complete rural control.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nondin-soro-accountability",
+    "question": "Did Burkina Faso's military commit crimes against humanity in Nondin and Soro (Feb 2024)?",
+    "sideA": {
+      "label": "Burkinabè Junta",
+      "text": "The junta denies any massacre occurred. Any security operations in the area targeted jihadist elements. International human rights organizations are spreading disinformation designed to undermine Burkina Faso's sovereignty and legitimate counter-terrorism efforts."
+    },
+    "sideB": {
+      "label": "HRW / Amnesty International",
+      "text": "HRW documented Burkinabè forces and VDP militias killed at least 223 civilians — including 56 children — in what survivors described as a reprisal execution. Consistent testimony, evidence of mass graves, and satellite imagery corroborate the findings. HRW calls this a potential crime against humanity."
+    },
+    "resolution": "No accountability proceedings initiated. Junta suspended domestic media coverage; international access to the area remains restricted.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "wagner-africa-corps-same",
+    "question": "Is Africa Corps the same as Wagner Group, or a fundamentally different organization?",
+    "sideA": {
+      "label": "Russia / Africa Corps",
+      "text": "Africa Corps is a legitimate Russian security company operating under MoD oversight — distinct from the now-defunct Wagner Group. Personnel and methods reflect reformed standards under direct state supervision. The rebranding represents genuine institutional change, not cosmetic renaming."
+    },
+    "sideB": {
+      "label": "Western Intelligence / ACLED",
+      "text": "Africa Corps is Wagner Group under Russian state control. The same Sahel commanders continue operations. Civilian casualty patterns are unchanged. Al Jazeera (2025) documented internal tensions but found the same personnel conducting the same operations under the same tactical culture."
+    },
+    "resolution": "Operational continuity is well-documented. The institutional distinction is real but has not produced observable changes in conduct in Mali.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "g5-failure-blame",
+    "question": "Why did the G5 Sahel fail — structural underfunding or political sabotage by the AES?",
+    "sideA": {
+      "label": "AES Juntas",
+      "text": "France politically interfered with G5 leadership elections, blocked Mali from chairing the organization, and Western donors chronically underfunded the joint force. The G5 failed because its Western backers never committed adequate resources and prioritized political control over military capacity."
+    },
+    "sideB": {
+      "label": "Crisis Group / UN Analysis",
+      "text": "The G5 Sahel suffered from funding shortfalls, coordination failures, JNIM's targeting of G5 headquarters, and — decisively — the three AES coups removing three of five member states. Political withdrawal by Mali, Burkina Faso, and Niger was the direct cause of dissolution."
+    },
+    "resolution": "Dissolved December 2023. No successor regional security body has emerged. The AES's own Unified Force inaugurated December 2025.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "algiers-accord-failure",
+    "question": "Who bears primary responsibility for the failure of the 2015 Algiers Accord?",
+    "sideA": {
+      "label": "Malian Junta",
+      "text": "The CMA Tuareg signatories undermined the accord through continued arms trafficking, parallel governance in Kidal, and refusal to disarm or integrate into FAMa. The accord was a shield against legitimate security operations. FAMa's Kidal operation was necessitated by this decade-long failure."
+    },
+    "sideB": {
+      "label": "CMA / International Observers",
+      "text": "The Malian government never implemented decentralization or the development corridor. Bamako continuously delayed DDR processes. The 2020 and 2021 coups violated democratic transition requirements. The Goïta junta's invitation to Wagner Group and offensive on Kidal effectively buried the accord."
+    },
+    "resolution": "Accord is effectively dead following the November 2023 Kidal offensive and MINUSMA's dissolution, which was the accord's primary monitoring mechanism.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fulani-collective-punishment",
+    "question": "Are Fulani communities being collectively punished for JNIM/Katiba Macina membership?",
+    "sideA": {
+      "label": "Malian / Burkinabè Governments",
+      "text": "Security operations target JNIM fighters based on intelligence, not ethnicity. Governments recognize Fulani community diversity. The association of Fulani with JNIM is a jihadist propaganda construct governments are actively countering. Counter-terrorism operations are legally compliant."
+    },
+    "sideB": {
+      "label": "HRW / ACLED / UN",
+      "text": "Multiple incidents — Ogossagou (2019), Moura (2022), and repeated security force operations — document patterns of collective targeting of Fulani. ACLED shows Fulani civilians face violence from both sides; security forces treat them as presumptively guilty. This cycle drives JNIM recruitment from Fulani grievances."
+    },
+    "resolution": "Unresolved — a structural driver of the conflict. No formal accountability for collective punishment incidents. Pattern documented across a decade of ACLED data.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jnim-territorial-control",
+    "question": "How much territory does JNIM functionally control in the Sahel?",
+    "sideA": {
+      "label": "AES Governments",
+      "text": "JNIM does not 'control' territory in any conventional sense — it conducts hit-and-run attacks then withdraws. FAMa and VDP maintain presence in all provincial capitals. International claims of vast 'JNIM-controlled' areas conflate insecure rural areas with actual jihadist administration."
+    },
+    "sideB": {
+      "label": "ACLED / SIPRI / Crisis Group",
+      "text": "ACLED incident mapping shows JNIM operations across ~40% of Mali with minimal FAMa contestation. Crisis Group estimates 30–50% of Burkina Faso outside government control. JNIM's ability to blockade provincial capitals and attack near Bamako demonstrates functional territorial dominance in vast areas."
+    },
+    "resolution": "Contested — JNIM effectively controls access to large areas. The question of whether 'control' requires formal governance or mere security dominance divides analysts.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "prigozhin-mutiny-mali",
+    "question": "Did Prigozhin's June 2023 mutiny and death disrupt Wagner Group operations in Mali?",
+    "sideA": {
+      "label": "Russia / Africa Corps",
+      "text": "Operations continued seamlessly through the mutiny and Prigozhin's death. The transition to Africa Corps under Russian MoD control improved command coherence. The November 2023 Kidal offensive — completed after Prigozhin's death — demonstrated uninterrupted operational capability."
+    },
+    "sideB": {
+      "label": "Al Jazeera / Investigative Reports",
+      "text": "Al Jazeera (2025) documents internal tensions between original Wagner veterans and new MoD-appointed Africa Corps leadership. Several experienced Sahel operators departed post-transition. The ideological flexibility of Prigozhin's freelance model was partially replaced by more rigid Russian military bureaucracy."
+    },
+    "resolution": "Operations continued with no observable disruption. Kidal offensive executed post-transition. Internal tensions documented but not operationally significant.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ecowas-military-capacity",
+    "question": "Does ECOWAS actually have the military capacity to intervene in Sahel states?",
+    "sideA": {
+      "label": "ECOWAS / Western Governments",
+      "text": "ECOWAS member-state militaries — particularly Nigeria — have both the capability and legal mandate to intervene. Threats after the Niger coup were backed by concrete military planning. Failure to deploy reflected political disagreements among member states, not military incapacity."
+    },
+    "sideB": {
+      "label": "AES Juntas / Military Analysts",
+      "text": "ECOWAS's intervention threat was a bluff. Nigeria faced domestic political constraints, National Assembly approval requirements, and popular opposition to military action in a Muslim-majority state. ECOWAS has never deployed a combat force against a coup government. The AES juntas calculated correctly the threat would not materialize."
+    },
+    "resolution": "ECOWAS did not intervene. Bazoum remains detained; sanctions were progressively relaxed. ECOWAS's credibility as a security guarantor is significantly diminished.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mali-coup-2020-legitimacy",
+    "question": "Was the August 2020 Mali coup a legitimate popular uprising or an illegal power seizure?",
+    "sideA": {
+      "label": "CNSP Junta",
+      "text": "The military acted in response to overwhelming popular demand expressed through the M5-RFP protest movement. IBK had lost legitimacy through corruption, electoral fraud, and catastrophic security failures. The CNSP committed to a democratic transition and acted as an emergency measure, not out of political ambition."
+    },
+    "sideB": {
+      "label": "ECOWAS / AU / Constitutional Order",
+      "text": "The coup was an unconstitutional power seizure. ECOWAS and AU condemned it immediately and imposed sanctions. The 2021 second coup — ousting the transitional government Goïta himself agreed to — definitively demonstrated the junta's intent to retain power indefinitely rather than transition to civilian governance."
+    },
+    "resolution": "Junta remains in power as of 2026. Elections postponed multiple times. ECOWAS sanctions partially lifted but full normalization not achieved.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "france-sahel-motivations",
+    "question": "Were France's Sahel operations motivated by security concerns or strategic economic interests?",
+    "sideA": {
+      "label": "French Government",
+      "text": "France intervened at Mali's explicit request to prevent a jihadist state threatening European security and Sahelian civilians. French forces sacrificed lives and spent billions with no territorial ambition. Withdrawal was forced by juntas, not French choice. France remains committed to African security through other partners."
+    },
+    "sideB": {
+      "label": "AES Juntas / Pan-African Critics",
+      "text": "France maintained operations for 9 years to protect strategic interests: Niger's uranium (via French firm Orano), gold and mining concessions, and regional political influence. Barkhane perpetuated security dependency rather than building genuine Sahelian capacity while Sahelians bore the cost in lives and displacement."
+    },
+    "resolution": "Both motivations coexisted. France's genuine counter-terrorism contribution and strategic interests are not mutually exclusive. The political framing has polarized debate, making nuanced assessment difficult.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "russia-arms-pipeline-legality",
+    "question": "Is Russia's arms pipeline to Africa Corps in Mali legal under international law?",
+    "sideA": {
+      "label": "Russia / Mali Junta",
+      "text": "Arms deliveries to Mali are bilateral commercial transactions between sovereign states. Mali has the right to purchase security equipment from any partner. Africa Corps operates as a legitimate contracted security company under Russian Defense Ministry oversight. The AES-Russia arms agreements finalized April 2025 are standard inter-state defense cooperation, and transit through Guinea is a normal logistics routing arrangement."
+    },
+    "sideB": {
+      "label": "The Sentry / Western Analysts",
+      "text": "The Sentry's April 2026 investigation documents that the actual recipient is Africa Corps (not the Malian Armed Forces as declared), routed through Guinea via Rusal and Albayrak Group infrastructure to evade EU arms export scrutiny. False end-user certification constitutes sanctions evasion. Africa Corps has a documented record of atrocities — supplying it with advanced armaments enables ongoing war crimes under international humanitarian law."
+    },
+    "resolution": "Unresolved — no international body has formally adjudicated the sanctions question. The FIDH case filed before the African Court on Human and Peoples' Rights (April 20, 2026) represents the first effort to establish legal accountability for atrocities by PMC forces in Mali; it does not directly address the arms pipeline.",
+    "lastUpdated": "2026-04-22T14:32:00Z"
+  },
+  {
+    "id": "jnim-al-qaeda-local",
+    "question": "Is JNIM primarily a local insurgency or an al-Qaeda global jihad project?",
+    "sideA": {
+      "label": "Global Jihad Framing",
+      "text": "JNIM is formally affiliated with al-Qaeda, pledged allegiance to al-Zawahiri and the Afghan Taliban, uses al-Qaeda's media networks, and coordinates with AQIM globally. It attacks Western nationals and interests. Its ideology seeks Sharia governance across West Africa as a step toward broader global jihad."
+    },
+    "sideB": {
+      "label": "Local Grievance Analysis",
+      "text": "Most JNIM recruits — especially Katiba Macina's Fulani cadres — joined for local reasons: Fulani marginalization, state violence, cattle theft, lack of political representation. The al-Qaeda affiliation provides resources and legitimacy but local commanders operate with significant autonomy. Structural drivers must be addressed alongside military response."
+    },
+    "resolution": "Both dimensions are real and coexist. The al-Qaeda affiliation is genuine; local recruitment drivers are also genuine. Effective policy requires addressing both dimensions simultaneously.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "russia-sahel-partnership",
+    "question": "Is Russia a genuine security partner for Sahel states, or exploiting them strategically?",
+    "sideA": {
+      "label": "AES Juntas / Russia",
+      "text": "Russia provides security assistance without political conditionality, no democratic governance lectures, and no foreign cultural impositions. Africa Corps enabled Kidal's recapture where France failed for 11 years. Russia supplies arms at favorable prices and supports AES states at the UN Security Council — a partnership of equals respecting African sovereignty."
+    },
+    "sideB": {
+      "label": "Western Analysts / HRW",
+      "text": "Russia extracts gold mining concessions, strategic influence against NATO, UN Security Council leverage, and disinformation platforms. Africa Corps's atrocities directly fuel JNIM recruitment, making Russia a net contributor to the insecurity that then requires 'security cooperation' — a self-reinforcing cycle benefiting Russia at Sahelian expense."
+    },
+    "resolution": "The partnership's balance decisively shifted after April 25–30, 2026. Africa Corps failed catastrophically across all its primary objectives in a single week: Kidal fell in 24 hours, Ménaka's urban area was seized, the Defence Minister was killed, and an Mi-35 helicopter was lost — while the claimed 1,000+ militants killed was dismissed by analysts as implausible given concurrent territorial losses. Russia publicly rejected JNIM's demand for withdrawal on April 30, framing the crisis as a 'foiled coup' to avoid admitting defeat. The 'both elements coexist' equilibrium has broken: strategic losses now outpace visible gains, and Africa Corps' recruitment function for jihadists (via civilian targeting) accelerated the JNIM growth that produced the April 25 offensive.",
+    "lastUpdated": "2026-04-30T14:30:00.000Z"
+  },
+  {
+    "id": "africa-corps-stays-or-leaves-mali",
+    "question": "Will Russia's Africa Corps remain in Mali following the Kidal collapse and the April 25–30 crisis?",
+    "sideA": {
+      "label": "Russia / Mali Junta",
+      "text": "Africa Corps will stay. Russia rejected JNIM's April 28 withdrawal demand on April 30, framing the crisis as a 'foiled coup attempt' rather than a military defeat. Russia's strategic calculus requires staying: withdrawal would validate JNIM's leverage, validate Western critics, and eliminate Russia's primary sub-Saharan foothold. Africa Corps is essential to preventing complete state collapse in Bamako, which would produce a strategic vacuum far more damaging to Russian interests than the reputational cost of staying after Kidal."
+    },
+    "sideB": {
+      "label": "Western Analysts / ACLED",
+      "text": "Africa Corps' credibility has been terminally damaged. They left behind equipment in Kidal, failed to protect the Defence Minister, and lost an Mi-35 helicopter — all within 72 hours. Staying will not restore credibility; it will produce more casualties for a diminishing strategic position. Analysts predict Russia may quietly reduce the footprint while maintaining a face-saving presence, or pivot to renegotiating terms with the junta that extract additional resource concessions in exchange for staying."
+    },
+    "resolution": "Unresolved as of April 30, 2026 — Russia officially rejected withdrawal and pledged to continue operations. The practical question of whether Africa Corps can meaningfully secure FAMa positions without a full-scale reinforcement (which Russia has not announced) remains open.",
+    "lastUpdated": "2026-04-30T14:30:00.000Z"
+  },
+  {
+    "id": "jnim-fuel-blockade",
+    "question": "Who is responsible for the fuel and food crisis affecting Bamako and Sahelian cities?",
+    "sideA": {
+      "label": "Malian Junta",
+      "text": "JNIM's declaration of fuel-truck drivers as military targets and active interdiction of supply routes constitute terrorist economic warfare against civilians. Responsibility lies entirely with JNIM. The government is establishing alternative routes and accelerating the AES Unified Force to secure logistics corridors."
+    },
+    "sideB": {
+      "label": "JNIM / Civil Society Voices",
+      "text": "JNIM frames the blockade as a legitimate military tactic against the FAMa-Wagner alliance conducting massacres. Some civil society voices argue the blockade emerged in direct response to Wagner atrocities and FAMa collective punishment operations — the junta's own security choices created the conditions for JNIM's blockade strategy."
+    },
+    "resolution": "Partial resolution — March 23, 2026: Mali released 100+ jihadist detainees in exchange for JNIM opening a fuel corridor to Bamako, ending a 7-month blockade. Diesel prices surged 29.7% to 940 CFA/L confirming structural economic damage. On March 31, FAMa's DIRPA publicly denied any prisoner release arrangement. UPDATE MAY 27, 2026: Eid al-Adha (approximately May 28–June 2) marks the nominal expiry of the March 2026 truce window. Livestock prices in Bamako doubled in days preceding Eid as JNIM blockade operations kept traders stranded (AP, May 27). JNIM retains full structural road-junction control to reinstate total supply interdiction with no formal post-Eid truce obligation. The junta's official denial of the deal means JNIM extracted a major concession with no accountability — incentivizing future blockade strategies. Post-Eid supply security is the critical unresolved question as of May 27.",
+    "lastUpdated": "2026-05-27T14:35:22.000Z"
+  },
+  {
+    "id": "jnim-prisoner-deal-precedent",
+    "question": "Did Mali's March 2026 prisoner release in exchange for fuel access set a dangerous precedent?",
+    "sideA": {
+      "label": "Malian Junta (Implicit Defense)",
+      "text": "The release of 100+ detainees restored critical fuel supply to Bamako after a seven-month JNIM blockade that caused 400%+ price surges, shuttered schools and businesses, and disrupted electricity. Pragmatic dialogue to end civilian suffering is necessary. The truce buys time for the FAMa-Africa Corps-AES Unified Force to improve the security situation before Eid al-Adha."
+    },
+    "sideB": {
+      "label": "Security Analysts / Crisis Group",
+      "text": "The deal demonstrates that JNIM's economic blockade strategy works: it extracted a massive concession without any reduction in military operations. Releasing jihadist detainees replenishes JNIM's operational capacity. The precedent incentivizes future blockades of other cities. JNIM now holds structural leverage over Bamako's fuel supply that it can exercise at will after the truce expires."
+    },
+    "resolution": "Partially resolved with contested denial — March 23 deal (100+ detainees released for fuel corridor) confirmed by price surge and resumed flow. March 31: FAMa DIRPA publicly denied any deal, complicating accountability. Truce nominally valid until ~Eid al-Adha (late May 2026). JNIM retains ability to reinstate blockade. Junta's official denial reinforces JNIM's leverage: it secured a major concession while the government cannot acknowledge it.",
+    "lastUpdated": "2026-04-02T00:00:00Z"
+  },
+  {
+    "id": "aes-military-djibo-test",
+    "question": "Has the AES Unified Force improved Burkina Faso's security capacity, or does the Djibo assault (May 11, 2026) expose a fundamental military failure?",
+    "sideA": {
+      "label": "AES Junta / Traoré",
+      "text": "The Djibo assault was repelled — JNIM withdrew after 9 hours. The FAB dispatched a fighter jet and deployed helicopter reinforcements. The AES Unified Force, inaugurated December 2025 with its 15,000-troop authorized expansion confirmed April 2026, represents a generational improvement over the G5 Sahel's dysfunctional structure. Multiple other operations in April 2026 killed 100+ militants in Soum Province and eliminated JNIM emir Karim Torodo. The security situation requires more time and resources — but the trajectory of the AES model is positive."
+    },
+    "sideB": {
+      "label": "Crisis Group / Tactics Institute / Analysts",
+      "text": "The Djibo assault directly exposes catastrophic military failings: a fighter jet sent to defend a besieged provincial capital turned back under JNIM fire without engaging; armed drones were not deployed; helicopter reinforcements arrived only after JNIM voluntarily withdrew. JNIM occupied an entire provincial capital — seizing the military base, gendarmerie, police HQ, hospital, and market — for 9 hours without effective military response. The AES Unified Force's paper authorization of 15,000 troops is meaningless: real deployable capacity, rapid reaction capability, and air-ground coordination are absent where they are most needed."
+    },
+    "resolution": "Unresolved — the Djibo assault of May 11, 2026 represents the most severe test of AES military capacity since the Alliance's inaugural declaration. The 9-hour occupation of a provincial capital without effective FAB response is a documented operational failure; the AES cannot claim the Unified Force improved security when Djibo — blockaded since 2022 — was overrun on the exact same day the AES declared readiness for 'large-scale operations.'",
+    "lastUpdated": "2026-05-11T14:00:00.000Z"
+  },
+  {
+    "id": "aes-france-sponsors-terrorism",
+    "question": "Are France and neighboring West African states actively sponsoring jihadist groups in the Sahel?",
+    "sideA": {
+      "label": "AES Juntas (Mali, Niger, Burkina Faso)",
+      "text": "France's intelligence networks, logistics infrastructure, and political relationships have sustained jihadist armed groups as a strategic instrument to destabilize AES states and justify future reengagement. Niger's FM (Dakar Forum, April 22, 2026) named France, Benin, and Côte d'Ivoire as 'feeding and financing' militants. Niger's Interior Minister Toumba stated attacks 'could cease after a French political change' because terrorists 'would lose their support.' The AES juntas consistently cite the surge in jihadist violence following French and US withdrawals as paradoxical evidence of external funding."
+    },
+    "sideB": {
+      "label": "France / Western Governments / ACLED",
+      "text": "The accusation is disinformation designed to justify the expulsion of French forces and legitimize Russia's growing presence. ACLED data shows violence escalating after French withdrawals, consistent with the loss of counter-terrorism capacity rather than the removal of a sponsor. France has consistently supported counter-terrorism architecture across the Sahel; Côte d'Ivoire and Benin are themselves victims of JNIM expansion toward their northern borders. The AES accusations serve a domestic political function: deflecting from governance failures that have enabled jihadist recruitment."
+    },
+    "resolution": "No evidence of French state sponsorship has been presented. AES accusations are diplomatic claims, not intelligence findings. The pattern of escalating violence after French withdrawal is inconsistent with the sponsorship hypothesis. The CNSP and Goïta juntas have a track record of disinformation (e.g., the 2022 Gossi fake mass grave staged by Wagner). The French government has not responded to the Dakar Forum accusations.",
+    "lastUpdated": "2026-04-23T14:30:00Z"
+  },
+  {
+    "id": "junta-crisis-crackdown",
+    "question": "Is the Malian junta using the JNIM crisis as political cover to eliminate domestic opposition?",
+    "sideA": {
+      "label": "Malian Junta",
+      "text": "Security measures taken after the April 25 nationwide JNIM-FLA attacks represent legitimate counter-terrorism actions in a state of emergency. The arrests of soldiers for insider collusion demonstrate accountability within the security forces. Any detentions of individuals during the crisis reflect necessary security precautions, not political persecution. The junta is focused on restoring order and protecting citizens — not on political opponents."
+    },
+    "sideB": {
+      "label": "Human Rights Organizations / International Media",
+      "text": "The abduction of prominent opposition lawyer and former minister Mountaga Tall from his Bamako home by armed men without a warrant on May 3, 2026 — following the junta's January 2026 ban on all political parties — fits a pattern of using security emergencies to suppress political dissent. The junta has progressively dismantled legal accountability: JNIM crises provide cover for actions that would otherwise attract international censure. The timing — days after the JNIM offensive, with international attention on the siege — is consistent with deliberate exploitation of a security emergency to eliminate political opposition."
+    },
+    "resolution": "Unresolved as of May 4, 2026. Tall's whereabouts unknown. IAPL Monitoring and international legal organizations documenting the case. No charges announced; no warrant presented. Pattern is consistent with prior junta suppression of political voices since the January 2026 party ban.",
+    "lastUpdated": "2026-05-04T14:32:18.000Z"
+  },
+  {
+    "id": "jnim-coalition-manifesto-legitimacy",
+    "question": "Does JNIM's April 30 coalition manifesto represent a legitimate political alternative to the Malian junta, or is it information warfare?",
+    "sideA": {
+      "label": "JNIM / Anti-Junta Framing",
+      "text": "JNIM's manifesto calling for 'a peaceful and inclusive transition' represents the only credible challenge to an illegitimate junta that has repeatedly violated its democratic transition promises, banned all political parties in January 2026, extended rule to 2029, and allied with Russian mercenaries who massacred civilians. By addressing political parties, religious leaders, and military personnel, JNIM positions itself as the catalyst for a broad national liberation movement. The April 25–30 offensive demonstrated JNIM's military dominance; the manifesto offers an off-ramp for FAMa soldiers who wish to avoid fighting for a losing cause."
+    },
+    "sideB": {
+      "label": "Western Governments / Security Analysts",
+      "text": "JNIM is an al-Qaeda affiliate with a documented record of mass civilian executions, forced taxation, blockading food supplies to entire cities, and ethnic targeting of Fulani and Dogon communities. Its 'manifesto' is sophisticated information warfare designed to exploit FAMa's demonstrably low morale (evidenced by surrenders at Kidal, Tessit, and Labbezanga) and legitimize a jihadist takeover. The fact that JNIM simultaneously maintains a 'total siege' of Bamako — threatening civilians with supply starvation — while claiming to seek a 'peaceful transition' exposes the manifesto as propaganda with no credible political track."
+    },
+    "resolution": "Unresolved — JNIM's manifesto marks a significant evolution in messaging sophistication. Whether it attracts FAMa defections, civilian collaboration, or political party alignment could decisively shape the trajectory of the Malian state's survival. As of May 1, 2026, the Malian junta did not respond to the manifesto's contents.",
+    "lastUpdated": "2026-05-01T14:28:31.000Z"
+  },
+  {
+    "id": "diafarabe-massacre-accountability",
+    "question": "Did Malian security forces commit extrajudicial killings of 22 Fulani civilians at Diafarabé in May 2026?",
+    "sideA": {
+      "label": "Malian Junta (No Response)",
+      "text": "As of May 15, 2026, the Malian junta has not issued any statement on the Diafarabé incident. When security forces conduct operations in Mopti Region (core Katiba Macina territory), Bamako consistently frames any arrests or operations as targeting JNIM combatants and collaborators, not civilians. The junta's general position — maintained across Moura, Ogossagou, Nondin/Soro, and Hombori — is that human rights organizations use unverified testimony to delegitimize legitimate counter-terrorism operations."
+    },
+    "sideB": {
+      "label": "Amnesty International / FIDH / Witnesses",
+      "text": "At least 30 Fulani men were arrested at a cattle market on May 12, 2026 — making no distinction between fighters and civilians. Bodies of 22 men aged 32–67 were found in two mass graves on May 15. Witnesses described soldiers and Dozo militia binding, blindfolding, transporting by canoe, and slitting victims' throats. This constitutes extrajudicial execution — a war crime under international humanitarian law. Amnesty and FIDH called for urgent independent investigation. The pattern matches documented prior FAMa/Dozo collective Fulani targeting."
+    },
+    "resolution": "Unresolved as of May 15, 2026. Junta has issued no response. Amnesty International and FIDH have called for investigation. The incident adds to a documented pattern of Fulani collective punishment operations in the Mopti-Ségou corridor — raising the question of whether systematic ethnic targeting constitutes a policy rather than individual excess.",
+    "lastUpdated": "2026-05-15T14:35:22.000Z"
+  },
+  {
+    "id": "africa-corps-cluster-bomb-accountability",
+    "question": "Are Africa Corps and Mali accountable under international law for the alleged cluster bomb strikes near Aguelhoc (May 2026)?",
+    "sideA": {
+      "label": "Russia / Mali Junta",
+      "text": "Africa Corps and Mali are not signatories to the Convention on Cluster Munitions (CCM) and are therefore not bound by its prohibitions. Any aerial operations in the Kidal Region target armed combatants of the FLA — terrorist and separatist forces that illegally seized Malian state territory in violation of Malian sovereignty. International coverage of alleged munition types constitutes 'media terrorism' designed to undermine the legitimate military operations of a sovereign state recovering its territory. The Malian government exercises its inherent right of self-defense under Article 51 of the UN Charter."
+    },
+    "sideB": {
+      "label": "FLA / Rights Groups / International Observers",
+      "text": "While Mali and Russia are CCM non-signatories, the use of cluster munitions near Aguelhoc (Tadjmart hamlet) and Oubder still violates customary international humanitarian law — specifically the principles of distinction, proportionality, and precaution. RFI's weapons specialist confirmed the Russian-made RBK-500 delivery system and ShOAB-0.5 submunitions from images and physical evidence collected by civilians. The strikes killed 1 child and injured 3 women in a civilian-inhabited hamlet. The dispersal of hundreds of submunitions across cultivated land, nomadic routes, and civilian infrastructure poses a prolonged and indiscriminate risk consistent with the prohibition on inherently indiscriminate weapons under customary IHL applicable to all states. The FLA is collecting unexploded remnants as evidence for potential accountability proceedings."
+    },
+    "resolution": "Unresolved — Africa Corps and Mali deny the specific characterization of events as 'media terrorism.' The use of cluster munitions is confirmed by RFI weapons analysis (May 23, 2026). No international accountability mechanism for CCM non-signatories currently exists beyond diplomatic condemnation. The FIDH case before the African Court (filed April 20, 2026) addressing PMC atrocities may create precedent, but does not directly address cluster munition use. The ongoing Kidal aerial campaign is assessed to continue.",
+    "lastUpdated": "2026-05-24T00:00:00Z"
+  },
+  {
+    "id": "koufa-false-death",
+    "question": "Was Amadou Koufa killed in November 2018 as claimed by France and Mali?",
+    "sideA": {
+      "label": "French / Malian Military (Nov 2018 Claim)",
+      "text": "French and Malian forces announced Koufa's death in a joint operation in Mopti Region in November 2018. The claim was based on intelligence assessment and post-strike analysis. His death was reported as high-confidence by both governments."
+    },
+    "sideB": {
+      "label": "JNIM Media / Verified Reality",
+      "text": "Koufa appeared alive in a JNIM video on February 28, 2019 — three months after his supposed death — delivering a religious sermon. His continued leadership has since been confirmed in multiple JNIM communiqués. The false announcement revealed critical intelligence limitations in tracking JNIM's dispersed leadership."
+    },
+    "resolution": "False — Koufa is alive and active as of 2026 as JNIM's Fulani-operations commander. US designated him SDGT in 2019; UN sanctions followed in 2020.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

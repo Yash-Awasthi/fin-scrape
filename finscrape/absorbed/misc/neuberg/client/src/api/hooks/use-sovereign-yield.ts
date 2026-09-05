@@ -1,0 +1,10 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../client';
+
+export function useSovereignYield() {
+  return useQuery({
+    queryKey: ['sovereign-yield'],
+    queryFn: () => api.get<any>('/sovereign-yield'),
+    staleTime: 60 * 60 * 1000,
+  });
+}

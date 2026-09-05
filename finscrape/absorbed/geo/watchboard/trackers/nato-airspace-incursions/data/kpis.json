@@ -1,0 +1,88 @@
+[
+  {
+    "id": "kpi-total-incursions",
+    "label": "Confirmed Incursion Incidents",
+    "value": "27+",
+    "color": "amber",
+    "source": "Aggregated NATO member-state defence ministry reports, Mar 23 – Aug 25, 2026",
+    "contested": true,
+    "contestNote": "Counting methodology varies by government; Romania's own incident dashboard reports 25 drone violations of its airspace in 2026 as of Aug 25 (nearly triple the 9 in all of 2025), plus 47 fighter-scramble situations this year vs 21 in 2025 — not all scrambles confirm an actual incursion.",
+    "trend": "up",
+    "lastUpdated": "2026-08-25T15:12:06.000Z"
+  },
+  {
+    "id": "kpi-nato-shootdowns",
+    "label": "Drones Downed by NATO Forces",
+    "value": "8",
+    "color": "red",
+    "source": "Estonia (May 19), Latvia (Jun 8, Aug 14), Romania (Jul 26, Aug 11 x2, Aug 16, Aug 20)",
+    "contested": false,
+    "delta": "+1 since Aug 16",
+    "deltaNote": "Neptun Deep gas project drone destroyed by Romanian F-16 cannon fire (Aug 20) — first gun kill of the wave",
+    "trend": "up",
+    "lastUpdated": "2026-08-23T14:56:25.000Z"
+  },
+  {
+    "id": "kpi-member-states-affected",
+    "label": "NATO Members With Confirmed Incursions",
+    "value": "6",
+    "color": "amber",
+    "source": "Poland, Romania, Latvia, Lithuania, Estonia, Germany (Finland non-NATO-incursion also affected)",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "kpi-days-since-first-incursion",
+    "label": "Days Since First Confirmed Incursion",
+    "value": "159",
+    "color": "blue",
+    "source": "First incident: Lithuania, March 23, 2026",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-08-28T00:21:43Z"
+  },
+  {
+    "id": "kpi-governments-destabilized",
+    "label": "NATO Governments Destabilized",
+    "value": "1",
+    "color": "red",
+    "source": "Latvian PM Evika Siliņa resigned May 15, 2026 after coalition collapse over drone response",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "kpi-civilians-injured",
+    "label": "Civilians Injured",
+    "value": "2",
+    "color": "amber",
+    "source": "Galați, Romania apartment-block drone strike, May 29, 2026",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "kpi-nac-sessions",
+    "label": "North Atlantic Council Sessions on Incursions",
+    "value": "3+",
+    "color": "blue",
+    "source": "Formal NAC sessions incl. the Aug 12, 2026 statement assigning Russia full responsibility",
+    "contested": true,
+    "contestNote": "Additional informal Article 4-style consultations among affected allies are not all individually disclosed.",
+    "trend": "up",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "kpi-air-defence-reinforcement",
+    "label": "Air-Defence Units Reinforcing Eastern Flank",
+    "value": "12+",
+    "color": "green",
+    "source": "Dutch Patriot/NASAMS (Poland), Spanish NASAMS (Estonia), Italian Eurofighter & Turkish F-16 detachments (Baltic Air Policing), French Rafale rotation, Spanish F/A-18 rotation (Romania), German counter-drone unit expansion, Cochstedt drone-security research centre, U.S. EA-37B electronic-warfare rotation (Poland/Baltic)",
+    "contested": false,
+    "delta": "+2 since Aug 16",
+    "deltaNote": "Germany's Cochstedt drone-security centre and the U.S. EA-37B electronic-warfare rotation, both new Aug 18",
+    "trend": "up",
+    "lastUpdated": "2026-08-21T15:02:11.000Z"
+  }
+]

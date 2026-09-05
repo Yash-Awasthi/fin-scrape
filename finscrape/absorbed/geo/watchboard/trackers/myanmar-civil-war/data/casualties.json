@@ -1,0 +1,145 @@
+[
+  {
+    "id": "civilians-aapp-confirmed",
+    "category": "People Killed by Junta (AAPP)",
+    "killed": "7,941+",
+    "injured": "Unknown",
+    "source": "AAPP (Mar 23, 2026)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "AAPP documents individually verified deaths since the Feb 2021 coup. Actual toll significantly higher — excludes many undocumented deaths in remote areas, detention deaths, and indirect conflict casualties.",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "total-conflict-deaths-acled",
+    "category": "Total Conflict Deaths (ACLED, all actors)",
+    "killed": "96,000+",
+    "injured": "Unknown",
+    "source": "ACLED (early 2026 estimate)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "ACLED estimate includes combatant deaths from all sides (SAC, PDF, EAOs) plus civilians. Junta denies figures. Likely an undercount given limited reporting from remote conflict zones. Significant increase from 50,000+ estimate in 2025 reflects escalating combat losses.",
+    "lastUpdated": "2026-03-29"
+  },
+  {
+    "id": "deaths-in-detention",
+    "category": "Deaths in Detention / Torture",
+    "killed": "2,000+",
+    "injured": "Unknown",
+    "source": "AAPP (Dec 2025)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "AAPP documents deaths in SAC detention from torture, medical neglect, and extrajudicial execution. Junta denies systematic mistreatment. Many families never notified.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "children-killed",
+    "category": "Children Killed",
+    "killed": "751+",
+    "injured": "Unknown",
+    "source": "AAPP (Apr 2025)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "AAPP documents 751 confirmed child deaths. UN Children's Fund (UNICEF) warns actual number is much higher given attacks on schools, villages, and IDP camps.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "women-killed",
+    "category": "Women Killed",
+    "killed": "1,494+",
+    "injured": "Unknown",
+    "source": "AAPP (Apr 2025)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "AAPP documented 1,494 confirmed female deaths. Women Make Peace and other organizations document gender-based violence including rape as a weapon of war by SAC forces.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "airstrike-casualties-2025",
+    "category": "Airstrike Civilian Deaths (2025)",
+    "killed": "1,971",
+    "injured": "Unknown",
+    "source": "ACLED (2025 annual data)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "ACLED recorded 2,602 air attacks in 2025 — the highest annual total since the coup — killing 1,971 people. SAC denies targeting civilians.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "earthquake-deaths-march-2025",
+    "category": "Earthquake Deaths (Mar 28, 2025)",
+    "killed": "3,500–5,352",
+    "injured": "Thousands",
+    "source": "SAC Official (3,564–3,770) / Independent Media (DVB: 4,549 / Mizzima: 5,352+)",
+    "tier": "all",
+    "contested": "heavily",
+    "note": "Junta official figures significantly lower than independent media reports. True toll likely higher due to access restrictions in conflict-affected earthquake zones. 7.7-magnitude earthquake struck Mandalay-Sagaing region on March 28, 2025.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-soldiers-killed",
+    "category": "SAC Soldiers Killed (Resistance Claims)",
+    "killed": "50,000+",
+    "injured": "Unknown",
+    "source": "NUG Defense Ministry / EAO Claims",
+    "tier": 4,
+    "contested": "heavily",
+    "note": "NUG/PDF/EAO claims of SAC soldier deaths. Junta does not publish military casualty figures. Independent verification is impossible. Claims likely exaggerated for propaganda; actual SAC losses significant given territory losses.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "protest-deaths-2021",
+    "category": "Killed in 2021 Protest Crackdowns",
+    "killed": "800+",
+    "injured": "3,000+",
+    "source": "AAPP (2021)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "Security forces fired on anti-coup protesters from February to April 2021. Deadliest single day: March 3 (38+ killed). Bago crackdown April 9 killed 80+. Junta characterizes all deaths as 'instigated' by armed groups.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idp-related-deaths",
+    "category": "IDP/Displacement-Related Deaths",
+    "killed": "Unknown (thousands estimated)",
+    "injured": "Unknown",
+    "source": "UN OCHA / UNHCR (2025)",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "3.6 million IDPs (Nov 2025) with only 15% in formal camps; majority in jungles/temporary shelters with minimal healthcare, food, or sanitation. Mortality rate in IDP camps not systematically tracked but known to be significant.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "airstrike-deaths-since-peace-offer-2026",
+    "category": "Civilian Airstrike Deaths Since Min Aung Hlaing's 'Peace Offer' (Apr 20, 2026)",
+    "killed": "274",
+    "injured": "579",
+    "source": "DVB (Jul 20, 2026)",
+    "tier": 2,
+    "contested": "no",
+    "note": "Cumulative civilian toll from junta airstrikes in the three months since Min Aung Hlaing's April 20, 2026 'peace offer' — including a July 19 coordinated strike wave across Rakhine, Mandalay and Sagaing that killed 6 and injured 26+ in a single day. Illustrates the gap between the junta's diplomatic peace rhetoric and continued aerial bombardment of resistance-held areas.",
+    "lastUpdated": "2026-07-20"
+  },
+  {
+    "id": "un-ohchr-documented-deaths-aug2026",
+    "category": "UN OHCHR Documented Deaths (Jun 2025–May 2026 report)",
+    "killed": "8,075 confirmed / up to 15,731 estimated (since 2021)",
+    "injured": "Unknown",
+    "source": "UN OHCHR (Aug 26, 2026)",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "OHCHR's independent tally for its June 2025–May 2026 reporting year alone: 1,241 confirmed and up to 3,102 estimated deaths, including 1,074 children confirmed killed since the coup. Separately estimates 100,000+ deaths across all sides (combatants and civilians) since 2021 — broadly consistent with ACLED's total conflict-death estimate. Methodology and reporting window differ from AAPP's continuously-updated confirmed count.",
+    "lastUpdated": "2026-08-26"
+  },
+  {
+    "id": "rakhine-chin-airstrike-casualties-aug2026",
+    "category": "Rakhine/Chin Airstrike Casualties (August 2026)",
+    "killed": "33",
+    "injured": "78",
+    "source": "Burma News International (Aug 26, 2026)",
+    "tier": 2,
+    "contested": "no",
+    "note": "BNI tally of civilians killed/wounded by junta airstrikes across Rakhine and Chin states between August 2-24, 2026 — including the Thandwe/Gwa and Paletwa strikes — up from 22 killed/66 wounded from similar strikes in July. Women and children made up the majority of casualties.",
+    "lastUpdated": "2026-08-26"
+  }
+]

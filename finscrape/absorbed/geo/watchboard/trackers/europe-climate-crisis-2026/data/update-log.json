@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-27T23:59:16.034Z",
+  "tracker": "europe-climate-crisis-2026",
+  "sections": {
+    "kpis": {
+      "count": 8,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 45,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 30,
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 12,
+      "status": "updated"
+    },
+    "econ": {
+      "count": 11,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 16,
+      "status": "updated"
+    },
+    "political": {
+      "count": 13,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

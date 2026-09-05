@@ -1,0 +1,112 @@
+[
+  {
+    "id": "gdp-growth-trajectory",
+    "label": "GDP Growth Rate (Annual %)",
+    "value": "4.81% (2006)",
+    "change": "From -0.45% (2001 recession) to 4.81% by final year",
+    "direction": "up",
+    "sparkData": [-0.45, -0.24, 1.19, 3.57, 2.11, 4.81],
+    "color": "#27ae60",
+    "source": "World Bank World Development Indicators",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "inflation-rate",
+    "label": "Annual Inflation Rate (CPI %)",
+    "value": "3.63% (2006)",
+    "change": "Down from 9.49% in 2000 — most successful Fox macro achievement",
+    "direction": "down",
+    "sparkData": [9.49, 6.37, 5.03, 4.55, 4.69, 3.99, 3.63],
+    "color": "#27ae60",
+    "source": "World Bank / Banco de México",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "remittances",
+    "label": "Remittances Received (USD billions)",
+    "value": "$26.5bn (2006)",
+    "change": "Tripled from $7.5bn in 2000; surpassed FDI as foreign exchange source",
+    "direction": "up",
+    "sparkData": [7.5, 10.1, 11.0, 16.7, 19.9, 22.7, 26.5],
+    "color": "#3498db",
+    "source": "World Bank / Banco de México",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "foreign-direct-investment",
+    "label": "Foreign Direct Investment (USD billions)",
+    "value": "$22.1bn (2006)",
+    "change": "Peak $30.1bn in 2001 (Citibank-Banamex deal); averaged ~$22bn/year",
+    "direction": "down",
+    "sparkData": [18.4, 30.1, 20.2, 18.2, 25.1, 25.2, 22.1],
+    "color": "#3498db",
+    "source": "World Bank World Development Indicators",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "poverty-rate",
+    "label": "Poverty Rate ≥$4.20/day PPP (%)",
+    "value": "17.0% (2006)",
+    "change": "Down from 26.2% in 2000 — driven by remittances and Oportunidades expansion",
+    "direction": "down",
+    "sparkData": [26.2, 23.3, 19.7, 19.9, 17.0],
+    "color": "#27ae60",
+    "source": "World Bank Poverty and Inequality Platform",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "trade-gdp",
+    "label": "Trade as % of GDP",
+    "value": "54.5% (2006)",
+    "change": "Rising NAFTA integration — up from 49.9% in 2000; US absorbed ~85% of exports",
+    "direction": "up",
+    "sparkData": [49.9, 44.7, 45.2, 48.7, 52.0, 52.6, 54.5],
+    "color": "#f39c12",
+    "source": "World Bank World Development Indicators",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "health-spending",
+    "label": "Public Health Spending (% of GDP)",
+    "value": "5.41% (2006)",
+    "change": "Up from 4.24% in 2000 — reflects Seguro Popular launch and expansion",
+    "direction": "up",
+    "sparkData": [4.24, 4.58, 4.83, 5.54, 5.68, 5.58, 5.41],
+    "color": "#3498db",
+    "source": "World Bank World Development Indicators",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "education-spending",
+    "label": "Public Education Spending (% of GDP)",
+    "value": "4.49% (2006)",
+    "change": "Up from 3.81% in 2000 — reflects expanded Oportunidades and basic education",
+    "direction": "up",
+    "sparkData": [3.81, 4.03, 4.24, 4.83, 4.51, 4.63, 4.49],
+    "color": "#9b59b6",
+    "source": "World Bank World Development Indicators",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "unemployment-rate",
+    "label": "Unemployment Rate (ILO modeled %)",
+    "value": "3.57% (2006)",
+    "change": "Rose from 2.65% (2000) to peak 3.94% (2004), then stabilized — hides large informal sector",
+    "direction": "up",
+    "sparkData": [2.65, 2.63, 3.00, 3.46, 3.94, 3.56, 3.57],
+    "color": "#e74c3c",
+    "source": "World Bank / ILO ILOSTAT",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "military-spending",
+    "label": "Military Spending (% of GDP)",
+    "value": "0.30% (2006)",
+    "change": "Steadily reduced from 0.41% (2000) — Fox did not militarize security policy",
+    "direction": "down",
+    "sparkData": [0.41, 0.41, 0.39, 0.39, 0.35, 0.34, 0.30],
+    "color": "#95a5a6",
+    "source": "World Bank / SIPRI",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

@@ -1,0 +1,376 @@
+[
+  {
+    "id": "line-lithuania-varena-mar23",
+    "from": [
+      28.0,
+      55.0
+    ],
+    "to": [
+      24.56,
+      54.23
+    ],
+    "cat": "incursion",
+    "label": "Drone track into Lithuania (Mar 23)",
+    "date": "2026-03-23",
+    "weaponType": "drone",
+    "confidence": "medium",
+    "notes": "Attributed to Russian EW jamming during Ukrainian strikes on Ust-Luga/Primorsk",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-estonia-auvere-mar25",
+    "from": [
+      28.5,
+      59.4
+    ],
+    "to": [
+      27.67,
+      59.36
+    ],
+    "cat": "incursion",
+    "label": "Drone track into Estonia (Mar 25)",
+    "date": "2026-03-25",
+    "weaponType": "drone",
+    "confidence": "high",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-latvia-dobrocina-mar25",
+    "from": [
+      28.2,
+      56.3
+    ],
+    "to": [
+      27.28,
+      55.87
+    ],
+    "cat": "incursion",
+    "label": "Drone track into Latvia (Mar 25)",
+    "date": "2026-03-25",
+    "weaponType": "drone",
+    "confidence": "medium",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-finland-kouvola-mar29",
+    "from": [
+      29.5,
+      60.2
+    ],
+    "to": [
+      26.7,
+      60.87
+    ],
+    "cat": "incursion",
+    "label": "Drone track into Finland (Mar 29)",
+    "date": "2026-03-29",
+    "weaponType": "drone",
+    "confidence": "medium",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-latvia-rezekne-may7",
+    "from": [
+      28.4,
+      56.7
+    ],
+    "to": [
+      27.33,
+      56.51
+    ],
+    "cat": "infrastructure-strike",
+    "label": "Drone track to Rēzekne oil facility (May 7)",
+    "date": "2026-05-07",
+    "weaponType": "drone",
+    "confidence": "high",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-lithuania-samane-may17",
+    "from": [
+      26.6,
+      55.2
+    ],
+    "to": [
+      25.65,
+      55.45
+    ],
+    "cat": "incursion",
+    "label": "Drone track into Lithuania (May 17)",
+    "date": "2026-05-17",
+    "weaponType": "drone",
+    "confidence": "medium",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-estonia-kablakula-shootdown-may19",
+    "from": [
+      26.8,
+      58.3
+    ],
+    "to": [
+      25.97,
+      58.65
+    ],
+    "cat": "shootdown",
+    "label": "Romanian F-16 intercept track (May 19)",
+    "date": "2026-05-19",
+    "weaponType": "drone",
+    "confidence": "high",
+    "platform": "F-16",
+    "status": "hit",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-lithuania-vilnius-may20",
+    "from": [
+      26.5,
+      55.0
+    ],
+    "to": [
+      25.28,
+      54.69
+    ],
+    "cat": "incursion",
+    "label": "Drone track toward Vilnius (May 20)",
+    "date": "2026-05-20",
+    "weaponType": "drone",
+    "confidence": "medium",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-romania-galati-may29",
+    "from": [
+      29.0,
+      46.0
+    ],
+    "to": [
+      28.05,
+      45.44
+    ],
+    "cat": "infrastructure-strike",
+    "label": "Drone strike track to Galați (May 29)",
+    "date": "2026-05-29",
+    "weaponType": "drone",
+    "confidence": "high",
+    "damage": "Apartment block roof fire",
+    "casualties": "2 injured",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-romania-constanta-jun5",
+    "from": [
+      29.3,
+      44.0
+    ],
+    "to": [
+      28.6167,
+      44.1833
+    ],
+    "cat": "infrastructure-strike",
+    "label": "Naval drone drift track to Constanța Port (Jun 5)",
+    "date": "2026-06-05",
+    "weaponType": "drone",
+    "confidence": "high",
+    "damage": "None — self-detonated near oil terminal",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-latvia-berzgale-shootdown-jun8",
+    "from": [
+      27.9,
+      56.9
+    ],
+    "to": [
+      27.15,
+      56.6
+    ],
+    "cat": "shootdown",
+    "label": "French Rafale intercept track (Jun 8)",
+    "date": "2026-06-08",
+    "weaponType": "drone",
+    "confidence": "high",
+    "platform": "Rafale",
+    "status": "hit",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-romania-sulina-shootdown-jul26",
+    "from": [
+      30.3,
+      45.3
+    ],
+    "to": [
+      29.65,
+      45.15
+    ],
+    "cat": "shootdown",
+    "label": "Romanian F-16 intercept track, Black Sea (Jul 26)",
+    "date": "2026-07-26",
+    "time": "10:13",
+    "weaponType": "drone",
+    "confidence": "high",
+    "platform": "F-16",
+    "status": "hit",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-poland-lublin-missile-jul30",
+    "from": [
+      26.0,
+      51.5
+    ],
+    "to": [
+      22.7,
+      51.15
+    ],
+    "cat": "incursion",
+    "label": "Suspected Kh-101 track into Poland (Jul 30)",
+    "date": "2026-07-30",
+    "time": "3:40",
+    "weaponType": "cruise",
+    "confidence": "medium",
+    "damage": "10m crater near Tarnawa-Kolonia",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-baltic-il20-intercept-aug5",
+    "from": [
+      20.5,
+      55.7
+    ],
+    "to": [
+      19.5,
+      55.3
+    ],
+    "cat": "intercept",
+    "label": "Polish F-16 intercept track vs Il-20 (Aug 5)",
+    "date": "2026-08-05",
+    "confidence": "high",
+    "platform": "F-16",
+    "status": "unknown",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-latvia-rugaji-shootdown-aug14",
+    "from": [
+      28.0,
+      57.3
+    ],
+    "to": [
+      27.33,
+      56.98
+    ],
+    "cat": "shootdown",
+    "label": "Eurofighter/F-16 intercept track (Aug 14)",
+    "date": "2026-08-14",
+    "weaponType": "drone",
+    "confidence": "medium",
+    "platform": "Eurofighter",
+    "status": "hit",
+    "notes": "2 Italian Eurofighters from Šiauliai AB + 2 Turkish F-16s from Ämari AB Latvia's National Armed Forces confirmed Aug 20 the drone was Ukrainian-origin, diverted into Latvian airspace by Russian EW jamming.",
+    "lastUpdated": "2026-08-28T00:21:43Z"
+  },
+  {
+    "id": "line-romania-galati-moldova-shootdown-aug16",
+    "from": [
+      28.3,
+      46.4
+    ],
+    "to": [
+      28.05,
+      45.6
+    ],
+    "cat": "shootdown",
+    "label": "Spanish F/A-18 intercept track via Moldova (Aug 16)",
+    "date": "2026-08-16",
+    "time": "5:01",
+    "weaponType": "drone",
+    "confidence": "high",
+    "platform": "F/A-18",
+    "status": "hit",
+    "notes": "Coordinated via NATO CAOC Torrejón, Spain",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "line-romania-grindu-crash-aug20",
+    "from": [
+      28.55,
+      45.55
+    ],
+    "to": [
+      28.2013,
+      45.4071
+    ],
+    "cat": "incursion",
+    "label": "Drone track into Romania near Grindu (Aug 20)",
+    "date": "2026-08-20",
+    "time": "3:24",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "damage": "Small self-extinguished fire, no casualties",
+    "notes": "Detected by radar 02:23, entered airspace 03:21 ~13km east of Galați, crashed 03:24 near Grindu",
+    "lastUpdated": "2026-08-23T14:56:25.000Z"
+  },
+  {
+    "id": "line-romania-neptun-deep-shootdown-aug20",
+    "from": [
+      31.5,
+      43.6
+    ],
+    "to": [
+      30.47,
+      44.15
+    ],
+    "cat": "shootdown",
+    "label": "Romanian F-16 intercept track, Neptun Deep (Aug 20)",
+    "date": "2026-08-20",
+    "time": "6:28",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "platform": "F-16",
+    "status": "hit",
+    "notes": "First cannon-kill and first maritime-drone engagement of the wave; drone carried explosives, ~80nm east of Constanța",
+    "lastUpdated": "2026-08-23T14:56:25.000Z"
+  },
+  {
+    "id": "line-romania-ciuslea-drone-aug24",
+    "from": [
+      28.1966,
+      45.9077
+    ],
+    "to": [
+      27.2,
+      45.783
+    ],
+    "cat": "incursion",
+    "label": "Drone track from Moldova to Ciușlea, Romania (Aug 24)",
+    "date": "2026-08-24",
+    "time": "8:30",
+    "weaponType": "drone",
+    "confidence": "high",
+    "damage": "Drone broke into two pieces in a walnut tree, no explosives found",
+    "notes": "Radar first detected the signal over Cahul, Moldova ~06:00, tracked over Târgu Bujor, Galați County, before crashing near Ciușlea, Garoafa commune, Vrancea County; ~300m evacuation perimeter",
+    "lastUpdated": "2026-08-25T15:12:06.000Z"
+  },
+  {
+    "id": "line-romania-snake-island-intercept-aug24",
+    "from": [
+      30.2,
+      45.255
+    ],
+    "to": [
+      29.4,
+      45.3
+    ],
+    "cat": "intercept",
+    "label": "Spanish F/A-18 monitoring track, Snake Island approach (Aug 24)",
+    "date": "2026-08-24",
+    "time": "22:37",
+    "confidence": "high",
+    "platform": "F/A-18",
+    "status": "unknown",
+    "notes": "Targets vanished from radar at 22:58 amid explosions reported on the Ukrainian side; no penetration of Romanian airspace confirmed",
+    "lastUpdated": "2026-08-25T15:12:06.000Z"
+  }
+]

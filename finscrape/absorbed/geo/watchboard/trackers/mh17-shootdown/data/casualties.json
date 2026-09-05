@@ -1,0 +1,90 @@
+[
+  {
+    "id": "total-all",
+    "category": "Total Killed — All Aboard MH17",
+    "killed": "298",
+    "injured": "0",
+    "source": "Dutch Safety Board Final Report, Oct 2015",
+    "tier": 1,
+    "contested": "no",
+    "note": "283 passengers and 15 crew. All 298 aboard were killed. No survivors. The aircraft disintegrated at 33,000 feet over eastern Ukraine.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "crew-members",
+    "category": "Flight Crew and Cabin Crew",
+    "killed": "15",
+    "injured": "0",
+    "source": "Malaysian Airlines / DSB",
+    "tier": 1,
+    "contested": "no",
+    "note": "Malaysia Airlines crew: 3 flight crew (2 pilots, 1 additional pilot) and 12 cabin crew. All were Malaysian nationals.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "dutch-nationals",
+    "category": "Dutch Nationals / Residents",
+    "killed": "196",
+    "injured": "0",
+    "source": "Dutch Government / JIT",
+    "tier": 1,
+    "contested": "partial",
+    "note": "196 Dutch nationals and residents killed — the largest national group. Some sources cite 192–193 Dutch citizens specifically; 196 includes Dutch residents. The Netherlands bore the greatest national loss.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "malaysian-nationals",
+    "category": "Malaysian Nationals",
+    "killed": "44",
+    "injured": "0",
+    "source": "Malaysian Ministry of Transport / DSB",
+    "tier": 1,
+    "contested": "no",
+    "note": "44 Malaysian nationals killed, including 15 crew and 29 passengers. Malaysia Airlines operated the flight; MH17 was returning to Kuala Lumpur.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "australian-nationals",
+    "category": "Australian Nationals",
+    "killed": "27",
+    "injured": "0",
+    "source": "Australian Government DFAT",
+    "tier": 1,
+    "contested": "no",
+    "note": "27 Australian citizens killed. Australia co-sponsored UNSC Resolution 2166, was a founding JIT member, and has been a leading international advocate for MH17 accountability.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "indonesian-nationals",
+    "category": "Indonesian Nationals",
+    "killed": "12",
+    "injured": "0",
+    "source": "Indonesian Government / DSB",
+    "tier": 2,
+    "contested": "no",
+    "note": "12 Indonesian nationals killed. Many were affiliated with HIV/AIDS research and were traveling to an international AIDS conference in Melbourne, Australia.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "british-nationals",
+    "category": "British Nationals",
+    "killed": "10",
+    "injured": "0",
+    "source": "UK Foreign Office / DSB",
+    "tier": 2,
+    "contested": "no",
+    "note": "10 British nationals killed. The UK was not a JIT member but provided assistance through GCHQ intelligence sharing and bilateral cooperation with Dutch investigators.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "other-nationalities",
+    "category": "Other Nationalities (17 total represented)",
+    "killed": "9",
+    "injured": "0",
+    "source": "DSB Final Report, Oct 2015",
+    "tier": 1,
+    "contested": "no",
+    "note": "9 victims from additional nationalities: Germany (4), Belgium (4), Philippines (3), Canada (3), New Zealand (1), and others. A total of 17 nationalities were represented among the 298 aboard MH17.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  }
+]

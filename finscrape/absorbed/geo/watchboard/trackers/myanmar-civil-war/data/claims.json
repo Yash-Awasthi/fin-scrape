@@ -1,0 +1,255 @@
+[
+  {
+    "id": "legitimacy-of-coup",
+    "question": "Was the February 2021 coup legally justified?",
+    "sideA": {
+      "label": "SAC / Military Junta",
+      "text": "The coup was a constitutional necessity under Article 417 of the 2008 military-drafted constitution. The November 2020 elections were fraudulent — 10.4 million votes were irregularly cast — and the civilian government failed to act. The military acted to preserve national sovereignty and order."
+    },
+    "sideB": {
+      "label": "NUG / International Community",
+      "text": "The coup was illegal and unconstitutional. The November 2020 elections were verified as free and fair by international observers. The Myanmar Election Commission found no evidence of significant fraud. The coup was a naked power grab by Min Aung Hlaing to avoid accountability and extend military privilege."
+    },
+    "resolution": "No electoral fraud was substantiated by independent observers. The UN, US, EU, and ASEAN majority rejected junta legitimacy. Myanmar's Supreme Court and legal scholars found the coup had no constitutional basis. The NUG, CRPH, and most of the international community recognize the junta as illegitimate.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "civilian-death-toll-accuracy",
+    "question": "How many civilians has the junta killed since the 2021 coup?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "Military operations target terrorists and armed insurrectionists, not civilians. All casualties reported are combatants affiliated with illegal armed organizations. Civilian deaths are minimized as collateral damage in legitimate counter-terrorism operations."
+    },
+    "sideB": {
+      "label": "AAPP / UN / Human Rights Organizations",
+      "text": "AAPP has documented 6,486+ confirmed civilian deaths as of April 2025, with 29,507 arrests. ACLED estimates 50,000+ total conflict deaths including combatants. UNHCR and UN OHCHR have documented systematic attacks on civilian villages, hospitals, schools, churches, and markets as deliberate targeting."
+    },
+    "resolution": "AAPP, ACLED, Human Rights Watch, Amnesty International, and UN Special Rapporteur all document systematic civilian targeting. The Pazigyi airstrike (170+ dead at a public ceremony), Depayin concert bombing (80+ dead), and Let Yet Kone IDP camp strike (60+ dead) indicate deliberate attacks on non-combatants. UN has called for ICC referral.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "territory-control-estimates",
+    "question": "How much territory does the junta actually control?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "The military controls all major cities, strategic highways, ports, and economic zones. Rural insecurity does not equate to resistance governance. The SAC maintains administrative presence in all 14 states and regions through civilian administrators and local governance structures."
+    },
+    "sideB": {
+      "label": "NUG / Resistance Analysis",
+      "text": "By mid-2024, the SAC controls fewer than 100 of 330+ townships. Resistance forces (PDF, EAOs) control or contest the majority of Myanmar's territory by area. Rakhine State is 90% under AA control, Shan State has been largely captured, and Sagaing/Magway are PDF-dominated. Only Yangon, Naypyidaw, and Mandalay remain firmly under junta control."
+    },
+    "resolution": "Independent analysts (Crisis Group, SAC-M, ACLED) estimate junta territory at 20-33% of the country. The NUG Defense Ministry claims junta controls under 100 townships. Territory is highly dynamic and contested; the junta retains major urban centers and border economic zones.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "china-junta-support",
+    "question": "Is China supporting the Myanmar military junta?",
+    "sideA": {
+      "label": "SAC / China's Position",
+      "text": "China maintains a policy of non-interference and engages with whoever controls Myanmar's government. China's trade and investment relations with Myanmar predate the coup. China has brokered ceasefires and encouraged dialogue. Any military equipment transfers are normal commercial relations."
+    },
+    "sideB": {
+      "label": "NUG / Western Analysts",
+      "text": "China has supplied the SAC with armed drones, jet aircraft components, and other military equipment. China's border trade provides critical revenue to the junta. China has blocked or watered down UN Security Council resolutions on Myanmar. Chinese-brokered ceasefires have only benefited the SAC by halting resistance gains."
+    },
+    "resolution": "China has provided diplomatic cover, military equipment (aircraft, drones), and economic revenue to the SAC. China's primary interest is border stability, protection of its economic investments (BRI projects, pipelines, Kyaukpyu port), and suppression of online scam compounds on the border. China's stance has shifted toward greater junta support from 2024-2025 as resistance gains threatened Chinese-linked projects.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "genocide-rohingya-link",
+    "question": "Is the current civil war linked to the 2017 Rohingya genocide?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "The 2017 operations in Rakhine State were legitimate counter-terrorism operations against ARSA militants. There is no genocide. The current conflict is entirely separate — caused by NUG-sponsored terrorism against a legitimate government. Rohingya who fled voluntarily can return."
+    },
+    "sideB": {
+      "label": "UN / Rohingya Advocates",
+      "text": "The 2017 military campaign constitutes genocide under international law (ICJ provisional ruling). The same military institutions and commanders who conducted the 2017 genocide now rule Myanmar. The civil war exposes the same impunity structure that enabled genocide. AA's takeover of Rakhine also raises new concerns about Rohingya safety."
+    },
+    "resolution": "The International Court of Justice issued provisional measures in 2020 recognizing the plausibility of genocide against Rohingya. The UN Fact-Finding Mission found 'genocidal intent.' The same Tatmadaw leadership responsible for 2017 atrocities now runs the SAC. The AA's capture of Rakhine has created new humanitarian concerns for the 600,000+ Rohingya who remained in Myanmar.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "op1027-china-role",
+    "question": "Did China encourage or greenlight Operation 1027?",
+    "sideA": {
+      "label": "SAC / Skeptics",
+      "text": "The Three Brotherhood Alliance acted independently to pursue territorial and economic gains. China did not authorize Operation 1027 and was caught off-guard by its scope. China's immediate priority was halting operations to protect border trade and Chinese nationals in the area."
+    },
+    "sideB": {
+      "label": "NUG / Analysts",
+      "text": "China had long relationships with MNDAA and TNLA as historically China-aligned EAOs. China's focus on eliminating border scam compounds provided a pretext that aligned with the alliance's goals. China's rapid brokering of a ceasefire — only when resistance gains threatened Chinese-linked infrastructure — suggests awareness if not tacit approval."
+    },
+    "resolution": "No confirmed evidence of Chinese pre-authorization. However, MNDAA and TNLA had traditional ties to China, and Operation 1027 began partly motivated by anti-scam compound operations that China supported. China's rapid ceasefire mediation showed it could influence resistance EAOs. Most analysts conclude China was informed rather than directive.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "nug-governing-capacity",
+    "question": "Can the NUG realistically govern Myanmar if the junta falls?",
+    "sideA": {
+      "label": "NUG",
+      "text": "The NUG has established 17 ministries, a working judiciary, civil administration in liberated areas, and coordination with 20+ EAOs. The Federal Democracy Charter provides a framework for a federal democratic system. The NUG maintains international recognition from key democracies and has significant diaspora support and financial capacity."
+    },
+    "sideB": {
+      "label": "Skeptics / Regional Analysts",
+      "text": "The NUG operates primarily in exile and has limited physical presence inside Myanmar. EAOs have their own competing governance structures, territorial ambitions, and political agendas that may not align with NUG authority. Post-conflict governance will require complex federal negotiations between dozens of ethnic armed organizations."
+    },
+    "resolution": "The NUG has demonstrated administrative capacity in KNU-controlled zones and some PDF-liberated areas. However, significant challenges remain: EAO coordination is imperfect, the NUG lacks unified military command, and international recognition remains limited. Post-conflict governance will require genuine power-sharing federalism with ethnic minorities.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "aa-rohingya-treatment",
+    "question": "How is the Arakan Army treating the Rohingya population in Rakhine?",
+    "sideA": {
+      "label": "AA / ULA",
+      "text": "The AA is committed to protecting all communities in Rakhine State, including Muslims. The ULA has established local governance frameworks and opposes discrimination. The AA denies responsibility for the May 2, 2024 Hoyyar Siri village incident cited by HRW and rejects HRW's conclusions. AA Commander Twan Mrat Naing has stated in a May 2026 interview that the AA seeks inclusive governance in Rakhine and is open to dialogue with all communities and neighboring states."
+    },
+    "sideB": {
+      "label": "HRW / Rohingya Advocates",
+      "text": "Human Rights Watch published a major report on May 18, 2026 — 'Skeletons and Skulls Scattered Everywhere' — documenting that AA forces committed a massacre at Hoyyar Siri village, Buthidaung Township, on May 2, 2024, killing at least 170 Rohingya including at least 90 children, based on 41 witnesses, satellite imagery, and geolocation analysis. Two years later, survivors remain in a makeshift camp with restricted movement, forced labor, and food shortages. The 600,000+ Rohingya remaining in Myanmar face profound uncertainty about their safety under AA rule."
+    },
+    "resolution": "The HRW May 2026 report represents the most detailed independent documentation of AA atrocities against Rohingya civilians since the AA expanded into northern Rakhine. The AA's denial has not been independently verified by any neutral observer. AA Commander Twan Mrat Naing's diplomatic posture in May 2026 — expressing openness to governance dialogue — is partly in response to this mounting international scrutiny. The fundamental tension between the AA's aspiration for international legitimacy and credible atrocity allegations is a defining feature of the Rakhine political situation in 2026.",
+    "lastUpdated": "2026-05-25"
+  },
+  {
+    "id": "conscription-law-impact",
+    "question": "Will the junta's conscription law restore military capability?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "The People's Military Service Law is a necessary measure to restore national defense capacity. Mandatory service is practiced in many democratic nations. The 14 million eligible youth will provide the manpower needed to restore security and defend Myanmar against foreign-backed terrorists."
+    },
+    "sideB": {
+      "label": "NUG / Analysts",
+      "text": "Conscription will deepen resistance by forcing civilians to fight for a hated regime. Conscripts have low morale, high desertion rates, and many defect to the resistance. The law is creating a youth exodus to Thailand, India, and China rather than military recruits. By 2025, many conscripts reportedly surrendered to resistance forces immediately.",
+      "text2": "Conscription will deepen resistance"
+    },
+    "resolution": "Evidence from 14 batches of conscripts by 2025 shows mixed results. Some conscripts have bolstered junta numbers, but defection rates are high and resistance forces have actively recruited from surrendered conscripts. The law has accelerated youth migration out of Myanmar and deepened popular hostility toward the junta.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "earthquake-death-toll-claim",
+    "question": "What was the true death toll from the March 2025 earthquake?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "The official death toll from the March 28, 2025 earthquake was 3,564–3,770 as reported by junta-controlled media. The SAC coordinated effective rescue operations and accepted international humanitarian assistance in a timely manner."
+    },
+    "sideB": {
+      "label": "Independent Media / Aid Organizations",
+      "text": "Independent media (DVB: 4,549 deaths; Mizzima: 5,352+ deaths) report significantly higher tolls than junta figures. Access restrictions prevented accurate counting. The earthquake struck war-devastated communities with destroyed infrastructure, compromising rescue. SAC maintained military operations even in earthquake zones, hampering aid delivery."
+    },
+    "resolution": "The true death toll is likely significantly higher than official SAC figures, given systematic underreporting, restricted access to conflict zones, and the devastation in already-destroyed Sagaing Region. International aid organizations were unable to independently verify casualty figures due to access restrictions.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-election-legitimacy",
+    "question": "Were the December 2025 junta-organized elections legitimate?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "Myanmar held successful general elections providing a democratic mandate for the new government. The elections were open to all legal political parties and conducted under established electoral law. The results reflect the genuine choice of Myanmar citizens who reject terrorism and support stability."
+    },
+    "sideB": {
+      "label": "NUG / International Community",
+      "text": "The elections were held without the NLD (banned), imprisoned Aung San Suu Kyi, or participation from most ethnic parties. Elections could not be held in vast conflict-affected areas covering most of the country. The 2008 constitution guarantees 25% of parliamentary seats to military appointees regardless of results. ASEAN, US, EU, and UN all rejected the elections as illegitimate."
+    },
+    "resolution": "The elections lacked basic democratic prerequisites: free participation, independent monitoring, and meaningful civil liberties. The military's constitutional veto power and the exclusion of the country's most popular party (NLD) made the results non-representative. No major democracy recognized the outcome as legitimate.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "tnla-political-shift-2026",
+    "question": "Will TNLA's April 2026 political shift fracture the anti-junta resistance coalition?",
+    "sideA": {
+      "label": "TNLA / Chinese Diplomatic Position",
+      "text": "The PSLF/TNLA's April 15 statement welcoming Min Aung Hlaing's government represents pragmatic recognition of political reality. TNLA has secured significant territorial gains in northern Shan State; political engagement protects those gains without requiring continued large-scale combat. China's mediation offers a path to stable governance and reconstruction in Ta'ang areas."
+    },
+    "sideB": {
+      "label": "NUG / Resistance Coalition",
+      "text": "TNLA's statement is a capitulation to junta legitimization under Chinese pressure. Accepting Min Aung Hlaing's presidency validates a political process condemned by the entire democratic world as fraudulent. The TNLA's gains will be eroded if the junta uses political normalization to rebuild military capacity before turning on remaining resistance forces, as it has done after every previous ceasefire."
+    },
+    "resolution": "The TNLA shift marks the first significant fracture in the Three Brotherhood Alliance since Operation 1027 (October 2023). China's influence over TNLA and MNDAA has long been a structural vulnerability. However, at China-brokered Kunming talks (May 12-13, 2026), TNLA rejected junta demands to surrender four northern Shan towns (Namhkam, Namtu, Mongngawt, Monglon), showing the limits of Chinese coercion: TNLA will make political gestures but not surrender core territorial gains. The NUG, KIO, KNU, and AA have not followed TNLA's political reversal; the SCEF coalition continues resistance operations. The long-term outcome depends on whether MNDAA follows TNLA's hedging posture or maintains resistance alignment.",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "pdf-nug-unity",
+    "question": "Is the resistance unified under NUG command?",
+    "sideA": {
+      "label": "NUG",
+      "text": "The NUG has signed cooperation agreements with major EAOs and PDF units. A Joint Command and Coordination Council coordinates military strategy. The Federal Political Negotiation and Consultation Committee provides political coordination. The resistance increasingly operates with shared strategic objectives against the SAC."
+    },
+    "sideB": {
+      "label": "SAC / Skeptical Analysts",
+      "text": "The resistance is deeply fragmented — over 20 EAOs with competing interests, territorial ambitions, and differing visions for Myanmar's political future. Some groups like RCSS/SSA signed ceasefires with the SAC. KNU-affiliated BGFK supported the SAC in Myawaddy. Coordination is inconsistent and resistance forces operate largely independently."
+    },
+    "resolution": "The resistance is more coordinated than in 2021 but remains pluralistic rather than unified. Operation 1027 demonstrated effective Three Brotherhood Alliance coordination, and the NUG has formalized relationships with most major EAOs. However, full military unification has not been achieved, and EAOs retain independent command structures and political agendas.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "junta-airstrike-policy",
+    "question": "Is the junta deliberately targeting civilians in airstrikes?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "All air operations target verified terrorist positions and military infrastructure. Any civilian casualties result from terrorists using civilian shields and infrastructure. The military follows international humanitarian law and takes all precautions to minimize civilian harm in counter-terrorism operations."
+    },
+    "sideB": {
+      "label": "UN / Human Rights Organizations",
+      "text": "ACLED recorded 2,602 air attacks in 2025 alone — the highest rate since the coup. Multiple strikes have hit hospitals, churches, schools, markets, and IDP camps with no military presence. The Pazigyi, Depayin, Let Yet Kone, and Hpruso incidents are among dozens demonstrating deliberate civilian targeting. The UN Special Rapporteur has called for ICC referral for crimes against humanity."
+    },
+    "resolution": "Multiple independent investigations by HRW, Amnesty International, the UN Special Rapporteur, and ACLED data confirm a systematic pattern of attacks on civilian infrastructure. The geographic pattern (villages, markets, religious sites, IDP camps) and frequency of civilian strikes far exceeds what could be explained by incidental error, indicating deliberate targeting policy.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "humanitarian-access-restrictions",
+    "question": "Is the junta blocking humanitarian aid access?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "The SAC permits humanitarian organizations to operate in government-controlled areas and has established aid distribution through government channels. Unauthorized movement into terrorist-controlled areas is a security issue, not a humanitarian restriction. The SAC has coordinated international earthquake relief following the March 2025 disaster."
+    },
+    "sideB": {
+      "label": "UN OCHA / INGOs / NUG",
+      "text": "UN OCHA's 2025 Humanitarian Response Plan was only 7.8% funded, with access severely restricted in conflict areas. The SAC imposes movement restrictions, requires bureaucratic approvals, and has arrested aid workers. 3.6 million IDPs (Nov 2025) have severely inadequate access to food, medicine, and shelter. The earthquake exacerbated an already dire access crisis."
+    },
+    "resolution": "UN OCHA, ICRC, and multiple INGOs have documented systematic access restrictions to conflict-affected areas. The 2025 humanitarian plan's 7.8% funding rate reflects both donor shortfalls and operational impossibility in junta-restricted zones. UN calls Myanmar one of the world's most severe humanitarian crises with correspondingly limited access.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "post-conflict-federal-future",
+    "question": "Can Myanmar achieve lasting peace through a federal democratic framework?",
+    "sideA": {
+      "label": "NUG / EAO Coalition",
+      "text": "The Federal Democracy Charter, agreed by the NUG and major EAOs, provides a viable framework for a federal union respecting ethnic minority rights. With the SAC defeated, a negotiated federal transition is achievable. Myanmar's diverse ethnic communities have shown willingness to cooperate within a federal structure through their anti-junta coalition."
+    },
+    "sideB": {
+      "label": "Regional Skeptics / Some Ethnic Groups",
+      "text": "Myanmar has never functioned as a genuine federal democracy. Decades of ethnic armed conflict predate the 2021 coup and reflect deep disputes over land, resources, and autonomy that a single political framework cannot resolve. Some EAOs (like the AA) effectively seek near-independence rather than federal integration, potentially fragmenting the country."
+    },
+    "resolution": "The path to a stable federal Myanmar remains uncertain. The unprecedented anti-junta coalition has demonstrated cross-ethnic solidarity, but post-conflict governance negotiations will be highly complex. Historical precedents from comparable federal transitions suggest it will require sustained international support, inclusive negotiations, and genuine power-sharing arrangements that go beyond existing frameworks.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "thailand-normalization-legitimacy-2026",
+    "question": "Does Thailand's outreach to Min Aung Hlaing legitimize the junta despite ongoing atrocities?",
+    "sideA": {
+      "label": "Thailand / SAC",
+      "text": "Thailand's August 6-7, 2026 hosting of Min Aung Hlaing — his first official Thailand visit since the coup — reflects pragmatic engagement on trade ($7.4B to a $12B target), labor cooperation, and border stability, including reopening the Second Thailand-Myanmar Friendship Bridge. Thailand says it is working toward Myanmar's 'full reintegration with ASEAN' and that dialogue, not isolation, is the path to resolving the conflict."
+    },
+    "sideB": {
+      "label": "Thai Civil Society / Rights Groups",
+      "text": "Rolling out a 'red carpet welcome' for Min Aung Hlaing legitimizes a regime that has killed 274 civilians and injured 579 in airstrikes in the three months since its own April 2026 'peace offer' alone. Sixteen Thai civil-society and migrant-worker groups protested outside the UN office in Bangkok during the visit; a Thai opposition MP publicly protested the reception."
+    },
+    "resolution": "ASEAN's own special envoy, Philippine FM Ma. Theresa Lazaro, said normalization remained 'still far off' even as Thailand pursued bilateral engagement. Myanmar's junta simultaneously rejected ASEAN's renewed call to free Aung San Suu Kyi (Aug 8) and questioned the need for the special envoy role — suggesting the SAC is using bilateral openings like the Bangkok visit to sidestep, rather than fulfill, the ASEAN Five-Point Consensus.",
+    "lastUpdated": "2026-08-09"
+  },
+  {
+    "id": "dawei-russia-sez-clearance",
+    "question": "Is Myanmar's junta forcibly clearing civilian land in Tanintharyi Region to benefit Russian commercial interests?",
+    "sideA": {
+      "label": "SAC / Junta",
+      "text": "The Dawei Special Economic Zone is a legitimate national development project bringing foreign investment and infrastructure to an underdeveloped region. Security operations in Dawei District target 'terrorist' insurgents, not civilians, and any resettlement is administrative, not punitive. Cooperation with Russia on the port and energy sectors is normal bilateral economic engagement discussed during President Min Aung Hlaing's August 17-18 Moscow visit with President Putin."
+    },
+    "sideB": {
+      "label": "Resistance / Local Communities",
+      "text": "Since July 2026, a roughly 700-strong SAC column (per ACLED) has burned villages and sealed off land across Thayetchaung, Launglon, and Myitta townships to clear ground for the Russia-backed Dawei deep-sea port SEZ, killing at least one executed civilian and driving thousands from more than ten villages. Three aid workers were detained and killed on July 9 after encountering the column. Resistance fighters say the campaign exists specifically to hand cleared land to Russian companies, timed to follow Min Aung Hlaing's Moscow visit."
+    },
+    "resolution": "Independent reporting (Reuters, via Free Malaysia Today) corroborates the ACLED-estimated troop deployment, the July 9 killing of three aid workers, and mass displacement, tying the offensive to the Dawei SEZ port project discussed with Russia. The junta has not disputed the operation's existence, only its characterization. The scale of displacement and the July 9 killings are independently documented; the specific claim that the campaign is being conducted expressly to benefit Russian firms rests on resistance-fighter testimony and circumstantial timing rather than an official document.",
+    "lastUpdated": "2026-08-28"
+  }
+]

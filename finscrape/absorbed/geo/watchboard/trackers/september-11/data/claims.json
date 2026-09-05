@@ -1,0 +1,296 @@
+[
+  {
+    "id": "saudi-government-complicity",
+    "question": "Were Saudi government officials complicit in planning or supporting the 9/11 attacks?",
+    "sideA": {
+      "label": "Saudi Government Involvement",
+      "text": "Declassified FBI documents and the '28 pages' of the Joint Inquiry show that Saudi consulate employee Omar al-Bayoumi — suspected of being a Saudi intelligence agent — provided material assistance to hijackers al-Hazmi and al-Mihdhar upon their arrival in San Diego, including finding them an apartment and helping open bank accounts. Declassified FBI records show al-Bayoumi had prior contact with Saudi government officials and received an unexpected salary increase from a Saudi company shortly after meeting the hijackers. The 9/11 Families United lawsuit argues this evidence demonstrates government direction."
+    },
+    "sideB": {
+      "label": "No Proven Government Direction",
+      "text": "The 9/11 Commission found 'no credible evidence' that the Saudi government as an institution, or senior Saudi officials individually, funded al-Qaeda. The Commission reviewed the same underlying intelligence and concluded that al-Bayoumi's assistance appeared 'accidental' though suspicious. Saudi Arabia has consistently and vehemently denied any government role in the attacks. The Saudi government cooperated with counterterrorism efforts after 9/11 and provided significant intelligence against al-Qaeda networks targeting Saudi Arabia itself."
+    },
+    "resolution": "Under active civil litigation (U.S. District Court SDNY) since JASTA passage in 2016. Declassified FBI documents released 2021–2023 continue to fuel investigation. No court has rendered a final verdict on Saudi government liability.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "wtc7-collapse-cause",
+    "question": "Did World Trade Center Building 7 collapse due to fire, or was it brought down by controlled demolition?",
+    "sideA": {
+      "label": "NIST: Fire-Induced Collapse",
+      "text": "NIST's 2008 final report concludes that WTC 7 collapsed due to ordinary office fires ignited by debris from the North Tower's collapse. The fires burned on multiple floors without suppression because the building's water main had been broken. 'Thermal expansion' caused a key structural column (Column 79) to buckle, initiating a progressive collapse. NIST states it 'found no evidence of a blast or controlled demolition event' and that all physical evidence is consistent with fire-induced failure."
+    },
+    "sideB": {
+      "label": "9/11 Truth: Controlled Demolition",
+      "text": "Critics in the '9/11 Truth' movement point to the speed and symmetry of WTC 7's collapse (approximately 6.5 seconds), the discovery of iron microspheres and nano-thermite residue in WTC dust by some researchers, and NIST's own admission that its collapse model relied on simulations rather than physical testing. A 2019 University of Alaska Fairbanks study, funded by 9/11 Truth advocates, concluded that fire alone could not have caused the observed collapse pattern and that 'the most likely cause of the collapse of WTC 7 was the near-simultaneous failure of every column in the building.'"
+    },
+    "resolution": "NIST's official conclusion stands: fire-induced collapse. The UAF study has not been peer-reviewed in mainstream engineering journals and its conclusions are not accepted by the structural engineering community. No physical evidence of explosive residue has been confirmed by independent forensic testing.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "flight-93-shot-down",
+    "question": "Was United Airlines Flight 93 shot down by U.S. military aircraft or did it crash due to passenger revolt?",
+    "sideA": {
+      "label": "Shot Down by USAF",
+      "text": "Some accounts note that Vice President Cheney issued a shoot-down authorization while in the White House PEOC, and that F-16s were in the air. The absence of large recognizable aircraft debris at the Shanksville crash site — with wreckage spread over a mile — suggests a mid-air breakup that some claim is consistent with a missile strike. Former Secretary of Defense Donald Rumsfeld appeared to accidentally refer to Flight 93 being 'shot down' in a December 2004 speech before correcting himself."
+    },
+    "sideB": {
+      "label": "Crashed Due to Passenger Revolt",
+      "text": "The 9/11 Commission concluded definitively that Flight 93 crashed because hijacker-pilot Ziad Jarrah, in response to the passenger assault on the cockpit, deliberately crashed the plane. Cockpit voice recorder analysis reveals the hijackers rolling the plane and deploying the pitch control to prevent passengers from breaching the cockpit. The F-16s from Langley AFB were still far from Shanksville when the crash occurred. The debris field pattern is consistent with the flight's speed (575 mph) and the soft soil of the former mine."
+    },
+    "resolution": "The 9/11 Commission's conclusion — passenger revolt caused the hijackers to crash the plane — is supported by flight recorder data, cockpit voice recordings, and passenger phone calls. No credible physical evidence supports a shoot-down. The shoot-down authorization was never executed for Flight 93.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "9-11-intelligence-warning",
+    "question": "Did U.S. intelligence agencies have specific advance warning of the 9/11 attacks that was ignored?",
+    "sideA": {
+      "label": "Warnings Were Ignored",
+      "text": "The President's Daily Brief of August 6, 2001 — titled 'Bin Laden Determined to Strike in US' — warned of possible al-Qaeda plots, including hijackings, and referenced suspicious activity by 'a cell of Bin Ladin supporters' in the U.S. Phoenix FBI agent Kenneth Williams had sent a memo in July 2001 warning that bin Laden associates were enrolling in U.S. flight schools. The CIA had identified hijackers al-Hazmi and al-Mihdhar as al-Qaeda operatives but failed to place them on watch lists or alert the FBI until weeks before 9/11."
+    },
+    "sideB": {
+      "label": "No Specific, Actionable Warning",
+      "text": "The 9/11 Commission acknowledges the intelligence community had general strategic warning of a possible attack but found that this did not constitute specific, actionable intelligence about the timing, location, or method of the 9/11 attacks. The August 6 PDB was historical in nature and contained no specific threat information. The CIA-FBI information sharing failures were structural and legal rather than deliberate. The 'Phoenix memo' was one of thousands of threat reports circulating in 2001 and lacked the specificity needed to act upon."
+    },
+    "resolution": "The 9/11 Commission finds 'the system was blinking red' in summer 2001 and identifies critical intelligence failures, particularly around al-Hazmi and al-Mihdhar. It recommends structural reforms including the creation of the Director of National Intelligence and the National Counterterrorism Center.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "iraq-9-11-link",
+    "question": "Was the 2003 invasion of Iraq justified by connections between Saddam Hussein and the 9/11 attacks?",
+    "sideA": {
+      "label": "Iraq-al-Qaeda Connection",
+      "text": "The Bush administration cited alleged links between Saddam Hussein's government and al-Qaeda as part of the justification for the Iraq invasion. Administration officials, including Vice President Cheney, repeatedly suggested a possible connection between 9/11 hijacker Mohammed Atta and Iraqi intelligence in Prague. Some intelligence reports cited in the run-up to the invasion mentioned meetings between senior Iraqi officials and al-Qaeda figures, and that al-Qaeda operatives had sought chemical and biological weapons knowledge from Iraq."
+    },
+    "sideB": {
+      "label": "No Credible Iraq-9/11 Link",
+      "text": "The 9/11 Commission found 'no credible evidence' of a collaborative relationship between Saddam Hussein's Iraq and al-Qaeda on the 9/11 attacks. The alleged Atta-Iraqi intelligence Prague meeting was debunked by CIA and FBI investigation. The CIA's own assessments before the war described contacts but no operational cooperation. The Senate Intelligence Committee's 2006 report concluded that post-war intelligence confirmed Saddam Hussein's regime had no relationship with al-Qaeda and viewed the group as a threat."
+    },
+    "resolution": "The 9/11 Commission, Senate Intelligence Committee, and Iraq Survey Group all conclude there was no collaborative relationship between Saddam Hussein's Iraq and al-Qaeda on 9/11. The claimed WMD evidence was also found to be inaccurate. The Iraq War's justification remains deeply contested.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "torture-effectiveness",
+    "question": "Did CIA enhanced interrogation techniques (EITs) — including waterboarding — produce intelligence that prevented terrorist attacks?",
+    "sideA": {
+      "label": "CIA: EITs Produced Actionable Intelligence",
+      "text": "Former CIA Director Michael Hayden and other CIA officials testified to Congress that enhanced interrogation techniques produced intelligence that disrupted al-Qaeda plots, including information on Khalid Sheikh Mohammed's networks, information on Jose Padilla's 'dirty bomb' plot, and the identity of Hambali (the operational leader of Jemaah Islamiyah). Former Director Leon Panetta stated that waterboarding produced 'some information' used in tracking Osama bin Laden's courier network."
+    },
+    "sideB": {
+      "label": "Senate Report: EITs Were Ineffective and Unnecessary",
+      "text": "The 2014 Senate Intelligence Committee report concludes after reviewing 6.7 million CIA documents that EITs produced no unique intelligence that prevented attacks, that CIA representations to policymakers about their effectiveness were inaccurate, and that information obtained through torture was either fabricated by detainees or available through other means. The report finds that conventional interrogation techniques produced more reliable intelligence. The Senate report also documents extensive deception of Congress and the White House about the program's scope."
+    },
+    "resolution": "The CIA disputes the Senate report's conclusions. No independent review has verified the CIA's efficacy claims because the underlying intelligence remains classified. The U.S. government banned the use of EITs under the Detainee Treatment Act (2005) and Executive Order 13491 (2009).",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "ksm-military-vs-civilian-trial",
+    "question": "Should Khalid Sheikh Mohammed and 9/11 co-defendants be tried in civilian federal court or military commissions?",
+    "sideA": {
+      "label": "Civilian Federal Court",
+      "text": "Attorney General Eric Holder's 2009 decision to try KSM in federal court in New York was supported by 9/11 victims' families who noted federal courts have successfully prosecuted hundreds of terrorism cases. Supporters argue that civilian trials demonstrate the strength of American judicial institutions and legal norms, that they produce reliable convictions, and that the military commission process — hampered by legal challenges to its validity — has produced fewer results in more time."
+    },
+    "sideB": {
+      "label": "Military Commissions at Guantanamo",
+      "text": "Congress blocked the transfer of KSM to civilian court, arguing that classified intelligence could not be safely used in open court proceedings, that New York City would face an unacceptable security burden, and that unlawful enemy combatants are appropriately tried by military commissions under the laws of war. The Military Commissions Act of 2006 and 2009 amendments established a legal framework for proceedings. KSM himself has alternatively sought martyrdom through execution and engaged in legal delaying tactics."
+    },
+    "resolution": "As of May 2026, KSM and co-defendants remain at Guantanamo awaiting trial. The D.C. Circuit definitively rejected all plea deals on January 7, 2026; defense lawyers filed a Supreme Court cert petition extension through June 5, 2026. Pretrial hearings resumed May 4–29, 2026 — now the longest-pending war crimes prosecution in U.S. history at over 17 years. No trial date has been set.",
+    "lastUpdated": "2026-05-16T00:00:00.000Z"
+  },
+  {
+    "id": "nsa-surveillance-legality",
+    "question": "Was the NSA's post-9/11 bulk telephone and internet surveillance program legal and constitutionally permissible?",
+    "sideA": {
+      "label": "NSA Surveillance Was Necessary and Legal",
+      "text": "The Bush administration argued that the Authorization for Use of Military Force and the president's inherent constitutional authority as Commander in Chief provided legal authorization for surveillance programs, including the NSA's warrantless wiretapping of international communications involving al-Qaeda suspects. The FISA Amendments Act of 2008 provided subsequent congressional authorization. Intelligence officials argue that bulk metadata collection under Section 215 of the PATRIOT Act was explicitly authorized and reviewed by the FISA Court."
+    },
+    "sideB": {
+      "label": "Mass Surveillance Violates Constitutional Rights",
+      "text": "The 2013 Snowden revelations exposed NSA programs (PRISM, XKeyscore) that collected metadata on millions of ordinary Americans. Federal Judge Richard Leon ruled in 2013 that NSA phone metadata collection was 'almost certainly unconstitutional' under the Fourth Amendment. A 2020 federal appeals court ruled that the telephone metadata program exposed by Snowden was illegal. The Privacy and Civil Liberties Oversight Board concluded that the Section 215 bulk collection program was not authorized by the statute."
+    },
+    "resolution": "The USA FREEDOM Act (2015) ended bulk phone records collection and required targeted orders. Several NSA surveillance programs have been curtailed or reformed. The legal and constitutional debate about the balance between security and privacy remains ongoing.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "guantanamo-legality",
+    "question": "Is indefinite detention without trial at Guantanamo Bay legal and consistent with U.S. constitutional and international law obligations?",
+    "sideA": {
+      "label": "Detention Is Lawful",
+      "text": "The Bush and subsequent administrations argue that Guantanamo detainees are enemy combatants captured in an armed conflict and may be held for the duration of hostilities under the laws of war, which do not require criminal charges. Congress authorized military detention through the AUMF and later the NDAA. The Supreme Court in Boumediene v. Bush (2008) upheld habeas corpus rights for detainees but did not rule that military detention itself was unconstitutional, and Combatant Status Review Tribunals provide a review process."
+    },
+    "sideB": {
+      "label": "Indefinite Detention Without Trial Is Unlawful",
+      "text": "Human rights organizations including the ACLU and HRW argue that indefinite detention without criminal charges violates the Fifth Amendment, the Geneva Conventions, and the International Covenant on Civil and Political Rights. The Supreme Court has repeatedly held that Guantanamo detainees have constitutional rights, including habeas corpus. Critics note that many detainees were cleared for release by U.S. review boards but held for years afterward due to political obstacles to transfer."
+    },
+    "resolution": "As of 2026, approximately 30 detainees remain at Guantanamo, down from a peak of 780. Multiple administrations have pledged to close the facility. Congress has repeatedly blocked transfers to the U.S. The legal framework remains contested and unresolved.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "9-11-commission-independence",
+    "question": "Was the 9/11 Commission sufficiently independent and did it reach complete and accurate conclusions?",
+    "sideA": {
+      "label": "Commission Was Thorough and Independent",
+      "text": "The 9/11 Commission conducted the most extensive terrorism investigation in U.S. history, reviewing 2.5 million documents, interviewing 1,200 people in 10 countries, and producing a unanimous bipartisan report. Commission Chair Thomas Kean has defended its independence and thoroughness. The report's 41 recommendations have largely been implemented, including the creation of the DNI, NCTC, and information sharing reforms. Many victims' families who initially opposed the commission came to view its work as valuable."
+    },
+    "sideB": {
+      "label": "Commission Was Hampered and Incomplete",
+      "text": "Some commissioners and staff members later revealed the Commission faced significant obstruction, including the CIA's destruction of interrogation videotapes, access limitations on key witnesses, and the administration's initial refusal to allow Condoleezza Rice to testify. Commissioner Max Cleland resigned in protest over insufficient access to documents. Victims' families raised concerns that the Commission did not adequately investigate Saudi connections. Commissioner John Farmer later wrote that 'at some level of government, at some point in time, there was an agreement not to tell the truth about what happened.'"
+    },
+    "resolution": "The Commission's report stands as the authoritative account of the attacks. However, ongoing declassification of FBI and CIA documents, the Saudi lawsuit discovery process, and persistent questions about Saudi government connections suggest aspects of the full story remain undisclosed.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "wtc-cleanup-dust-health",
+    "question": "Were first responders and residents told it was safe to return to Lower Manhattan when it was not?",
+    "sideA": {
+      "label": "EPA Cleared Area Prematurely",
+      "text": "EPA Administrator Christie Whitman announced on September 18, 2001 that the air around Ground Zero was 'safe to breathe,' despite incomplete testing. Internal EPA documents show that the White House Council on Environmental Quality pressured the EPA to add reassuring statements and delete cautionary ones from public announcements. The EPA's Inspector General concluded in 2003 that the agency did not have sufficient data to support Whitman's statements and that 'competing considerations' — particularly economic concerns about reopening lower Manhattan — influenced the public messaging."
+    },
+    "sideB": {
+      "label": "Warnings Were Issued, Risk Communication Was Difficult",
+      "text": "The EPA argues it issued appropriate warnings for people to wear respirators and follow protective protocols at Ground Zero. Some officials note that under extraordinary emergency conditions, comprehensive risk assessments were impossible and that communicating complex risk data to the public in a crisis is inherently difficult. The federal government subsequently funded the World Trade Center Health Program with billions of dollars to monitor and treat those affected, acknowledging the ongoing health consequences of toxic exposure."
+    },
+    "resolution": "The EPA's IG report, subsequent cancer data from WTC Health Program, and the premature deaths of thousands of first responders have substantiated claims that the EPA's early assurances were unjustified. Legislation (Zadroga Act, VCF) has provided health monitoring and compensation for those affected.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "bin-laden-death-verification",
+    "question": "Was the U.S. government transparent and accurate about the circumstances of Osama bin Laden's killing?",
+    "sideA": {
+      "label": "Official Account: Bin Laden Was Killed in Firefight",
+      "text": "The Obama administration announced that Osama bin Laden was killed in a firefight during a raid on his Abbottabad compound by U.S. Navy SEALs. He was shot after confronting the assaulting forces. His body was identified using facial recognition and DNA testing compared to DNA from bin Laden's deceased sister. The decision to bury bin Laden at sea was made to prevent his grave from becoming a shrine. President Obama, senior NSC members, and multiple SEALs present have confirmed the basic account of the raid."
+    },
+    "sideB": {
+      "label": "Questions About Official Account",
+      "text": "Investigative journalist Seymour Hersh published a 2015 account in the London Review of Books claiming Pakistani ISI knew about bin Laden's location and cooperated with the U.S. raid, contradicting the official account that Pakistan was kept in the dark. Hersh also alleged that bin Laden was not given a proper burial but may have been disposed of differently. Pakistani officials disputed multiple elements of the initial U.S. account (bin Laden was not armed in the room where he was killed, there was no 'firefight' at the compound). The administration revised several details in the days after the announcement."
+    },
+    "resolution": "The core facts — that U.S. Navy SEALs killed Osama bin Laden at his Abbottabad compound on May 2, 2011 — are not seriously disputed. Multiple specific details of the initial account were revised by White House officials in the days following, but the killing itself and bin Laden's identity are confirmed by DNA evidence.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "pakistan-isi-role",
+    "question": "Did Pakistan's Inter-Services Intelligence (ISI) have prior knowledge of bin Laden's location in Abbottabad?",
+    "sideA": {
+      "label": "Pakistan/ISI Had Knowledge",
+      "text": "The Abbottabad compound where bin Laden lived was less than a mile from Pakistan's premier military academy, raising questions about how a 6-foot-4 man could live undetected for years in a military garrison town. Seymour Hersh's 2015 account claims a Pakistani intelligence official leaked bin Laden's location to the CIA in exchange for a portion of the $25 million reward. Pakistan's response to the U.S. raid — dispatching military aircraft after the helicopters — and its subsequent arrest of CIA informants suggests awareness, not ignorance."
+    },
+    "sideB": {
+      "label": "Pakistan Denies Any Knowledge",
+      "text": "Pakistan's government officially and vehemently denies any knowledge that bin Laden was hiding in Abbottabad, calling the U.S. operation a violation of Pakistani sovereignty. Pakistani officials note that bin Laden may have lived under false documentation and that security services are not infallible. Abbottabad is a large enough city (population ~1 million) that authorities might not track any particular resident. U.S. officials have publicly stated they deliberately did not inform Pakistan before the raid, implying they did not trust Pakistan with the information."
+    },
+    "resolution": "No conclusive public evidence has confirmed or denied Pakistani government/ISI foreknowledge. Pakistan arrested CIA informants who cooperated with the U.S., straining relations. The question remains unresolved and is a source of ongoing tension in U.S.-Pakistan relations.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "cia-black-sites-legality",
+    "question": "Were CIA secret overseas detention sites ('black sites') legal under U.S. and international law?",
+    "sideA": {
+      "label": "Black Sites Were Authorized and Necessary",
+      "text": "The CIA's detention and interrogation program was authorized by Presidential Finding after 9/11 and subsequently reviewed and upheld by the Justice Department's Office of Legal Counsel in the 'Torture Memos.' CIA officials argue the program produced intelligence that disrupted al-Qaeda plots and that the alternative — releasing dangerous individuals — posed unacceptable risks. The Supreme Court has not ruled definitively that the program itself was unlawful, and Congress provided retroactive authorization through the Military Commissions Act (2006)."
+    },
+    "sideB": {
+      "label": "Black Sites Violated U.S. and International Law",
+      "text": "The Council of Europe found that 14 European countries hosted or participated in CIA black sites, violating their human rights obligations. The European Court of Human Rights has ruled against Poland, Romania, and Lithuania for allowing black sites on their territory, awarding damages to detainees. The UN Committee Against Torture concluded that CIA detention practices violated the UN Convention Against Torture. The OLC Torture Memos, drafted by John Yoo and Jay Bybee, have been widely criticized by legal scholars and subsequently rescinded."
+    },
+    "resolution": "The CIA program was officially ended by President Obama's Executive Order 13491 (January 2009). The Justice Department declined to prosecute CIA officers for interrogation-related abuses. International legal proceedings have found CIA black sites to be illegal under European and international human rights law.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "afghanistan-war-outcome",
+    "question": "Was the U.S. war in Afghanistan, launched in response to 9/11, a success or failure?",
+    "sideA": {
+      "label": "War Achieved Its Core Objectives",
+      "text": "Proponents argue that Operation Enduring Freedom toppled the Taliban regime that hosted al-Qaeda, dismantled al-Qaeda's primary training infrastructure in Afghanistan, killed or captured most of al-Qaeda's senior leadership including bin Laden, and prevented Afghanistan from being used again as a staging ground for attacks on the scale of 9/11. There were no major al-Qaeda attacks on U.S. soil in the 20 years following 9/11. Afghan girls received education and women entered public life in ways that would have been unthinkable under the Taliban."
+    },
+    "sideB": {
+      "label": "War Was a Strategic Failure",
+      "text": "The Watson Institute estimates the war cost $2.3 trillion and resulted in 2,461 U.S. military deaths, with the Taliban retaking power within weeks of U.S. withdrawal in 2021 — effectively erasing 20 years of nation-building. The Special Inspector General for Afghanistan Reconstruction (SIGAR) documented systemic failures in reconstruction, governance, and counterinsurgency strategy. Afghan security forces dissolved with minimal resistance, undermining the entire justification for the prolonged commitment. Critics argue the initial objective — disrupting al-Qaeda — was achieved by 2002, and subsequent years represented mission creep."
+    },
+    "resolution": "As of 2026, the Taliban governs Afghanistan, having retaken power in August 2021. Al-Qaeda has been severely degraded but not eliminated. The war's long-term geopolitical assessment remains contested among policymakers and analysts.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "wtc-structural-failure",
+    "question": "Did the design of the World Trade Center contribute to the scale of casualties in the 9/11 attacks?",
+    "sideA": {
+      "label": "Design Contributed to Casualties",
+      "text": "Critics and some structural engineers argue that the WTC's tube-frame construction, which concentrated structural load on perimeter columns, created a design where aircraft impact could sever enough columns to compromise structural integrity. More critically, the 'spray-on' fireproofing applied to the steel was dislodged by the aircraft impact, leaving structural steel exposed to jet fuel fires. All stairwells in the North Tower passed through the impact zone, eliminating evacuation options for those above the impact. A redesign with reinforced fireproofing and distributed stairwells might have allowed more people above the impact zone to survive."
+    },
+    "sideB": {
+      "label": "Design Was Beyond Reasonable Anticipation",
+      "text": "The WTC's designers did consider aircraft impact in their calculations — specifically a slower-flying, less fuel-laden Boeing 707 — and concluded the building could survive such an impact. The 9/11 attacks involved a faster, fully-fueled Boeing 767 specifically selected by al-Qaeda to maximize destruction. NIST found that the buildings performed as designed up to impact: the collapses were caused by the unique combination of aircraft impact and subsequent fire, not a design flaw. Over 18,000 people evacuated successfully, suggesting the evacuation systems worked for the conditions they were designed for."
+    },
+    "resolution": "NIST's investigation resulted in improved building fire safety recommendations, including better fireproofing standards, redundant stairwells in tall buildings, and improved evacuation protocols. The NYC building code was updated. NIST's recommendations have been widely adopted in high-rise construction.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "iran-9-11-connection",
+    "question": "Did Iran have prior knowledge of or provide facilitation for the 9/11 attacks?",
+    "sideA": {
+      "label": "Iran Facilitated 9/11 Hijackers",
+      "text": "The 9/11 Commission found that 8–10 of the 19 hijackers transited through Iran, and that Iranian authorities had been instructed not to stamp their passports. A 2011 federal court in New York ruled in default judgment that Iran, Hezbollah, and the Iranian Revolutionary Guard Corps bore responsibility for providing material support to al-Qaeda in connection with 9/11. The ruling, affirmed on appeal, found that Iran provided training and logistical support to al-Qaeda operatives. Subsequent victims' family lawsuits have relied on these findings."
+    },
+    "sideB": {
+      "label": "Iran Had No Operational Role",
+      "text": "The 9/11 Commission explicitly states it 'found no evidence that Iran or Hezbollah was aware of the planning for what later became the 9/11 attack.' Iranian transit by some hijackers may reflect the route from Saudi Arabia to Afghanistan without special significance, as Iran was a transit country for many travelers. Al-Qaeda and Iran's Shia Islamic Republic were ideological enemies; al-Qaeda views Shia Muslims as apostates. The 2011 default judgment against Iran was issued in the absence of an Iranian defense, which is typically given less legal weight."
+    },
+    "resolution": "The 9/11 Commission found suspicious Iranian facilitation of hijacker travel but no evidence of Iranian direction or foreknowledge of the plot. Civil default judgments against Iran have awarded billions in damages but remain largely unenforceable. The question of Iranian foreknowledge remains unresolved.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "second-plane-awareness",
+    "question": "Did U.S. Air Defense (NORAD/FAA) have adequate systems to respond to the hijackings in time?",
+    "sideA": {
+      "label": "Systemic Failures Prevented Effective Response",
+      "text": "The 9/11 Commission found critical failures in NORAD's and the FAA's response. NORAD was oriented toward external threats, not domestic hijackings; its Cold War radar systems faced outward, not inward. Standard hijacking protocols involved a 30-minute response window — far too slow for the rapid 9/11 timeline. The FAA was slow to notify NORAD; the agency's protocol for such notifications was unclear. The fighters scrambled from Otis AFB were not given coordinates to fly to and flew in the wrong direction initially. Langley AFB fighters were vectored away from Washington due to false reports."
+    },
+    "sideB": {
+      "label": "Response Was Appropriate Given Available Information",
+      "text": "NORAD operated with only 7 minutes of warning before Flight 11 hit the North Tower and would have had virtually no time to identify, intercept, and shoot down civilian aircraft without confirmation of intent and presidential authorization for a shoot-down. Standard operating procedure for hijackings — which had previously always ended in negotiations, not suicide attacks — was not designed for this scenario. The failure was not of NORAD's response speed but of intelligence that failed to anticipate the novel threat. No doctrine or procedure existed for shooting down a U.S. civilian airliner."
+    },
+    "resolution": "Post-9/11, NORAD was restructured to address both external and internal threats. New protocols for FAA-NORAD coordination were established. Fighter coverage of major cities was increased. However, constitutional and political constraints on shooting down civilian aircraft remain unresolved challenges for air defense.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "anthrax-9-11-connection",
+    "question": "Was the 2001 anthrax letter campaign connected to al-Qaeda or the 9/11 attacks?",
+    "sideA": {
+      "label": "Anthrax Was Part of al-Qaeda's Attack",
+      "text": "The timing of the anthrax letters — arriving in the weeks immediately following 9/11 — led many officials and commentators to initially conclude they were a second wave of al-Qaeda attacks. The letters were addressed to Democratic senators and media outlets, and some letters included references to September 11 and to Allah. In the immediate aftermath, the Bush administration publicly suggested a possible al-Qaeda connection, with NBC News reporting the FBI was examining an Iraqi connection via a Florida pharmacy purchase by hijacker Mohammed Atta."
+    },
+    "sideB": {
+      "label": "Anthrax Was Domestic; No al-Qaeda Link",
+      "text": "After an 8-year FBI investigation (AMERITHRAX), the Bureau concluded in 2010 that the anthrax used in the letters originated from a flask (RMR-1029) at the U.S. Army's biological defense laboratory at Fort Detrick, Maryland. Dr. Bruce Ivins, a USAMRIID anthrax researcher, was identified as the likely perpetrator before he died by suicide in July 2008 as charges were being prepared. The National Academy of Sciences' 2011 review found the FBI's scientific analysis was 'not strong enough to form the sole basis for the FBI's conclusion' about Ivins's guilt."
+    },
+    "resolution": "The FBI closed the AMERITHRAX case in 2010, attributing the attacks to Dr. Bruce Ivins acting alone. No connection to al-Qaeda or foreign terrorism was established. The NAS raised scientific doubts about the FBI's evidentiary conclusions. Ivins's guilt was never tested in court.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "firefighter-communications-failures",
+    "question": "Did communication failures between FDNY and NYPD contribute to firefighter deaths on 9/11?",
+    "sideA": {
+      "label": "Communication Failures Cost Lives",
+      "text": "The 9/11 Commission found that FDNY and NYPD used incompatible radio systems that could not communicate with each other. NYPD helicopters circling the towers broadcast collapse warnings that FDNY could not receive. Several FDNY officers never received radio warnings to evacuate before the North Tower collapsed. A 1993 WTC bombing had identified radio problems in the WTC's dense concrete structure, but the problem was not fully resolved by 2001. As many as 100 FDNY members in the North Tower who were above the collapse zone may not have received evacuation orders in time."
+    },
+    "sideB": {
+      "label": "Radios Worked Under the Circumstances",
+      "text": "Many FDNY members did receive evacuation orders and did evacuate. The communications failures were compounded by the unprecedented nature of the event — no training or protocol existed for the collapse of the world's tallest buildings. NYPD and FDNY operate in parallel command structures for legitimate operational reasons; unified command was not standard practice in 2001. The chaotic acoustic environment inside the burning towers would have made any radio communications extremely difficult, regardless of system compatibility."
+    },
+    "resolution": "The 9/11 Commission cited FDNY-NYPD communication incompatibility as a contributing factor in first responder deaths. Subsequent reforms mandated interoperable communications systems and unified command protocols for major incidents. New York City's radio systems were substantially upgraded after 9/11.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "wtc-health-program-coverage-adequacy",
+    "question": "Is the WTC Health Program's list of covered conditions keeping pace with emerging science on 9/11-linked illness?",
+    "sideA": {
+      "label": "Program Is Falling Behind the Science",
+      "text": "On June 30, 2026, the WTC Health Program Administrator denied eight separate petitions to add ischemic heart disease to the list of covered conditions, citing insufficient evidence. Advocates for survivors and first responders say the denial came amid staffing shortages at the Program and leadership turnover at the CDC, even as new 2026 research — including a mortality study showing Program members have a 13% lower all-cause death risk and a cancer study finding elevated rates of multiple primary cancers among male responders — continues to document the scale of long-term harm from Ground Zero exposure. A bipartisan, bicameral group of 26 members of Congress wrote to HHS Secretary Kennedy on July 9, 2026 urging him to reappoint Dr. John Howard — the NIOSH director and WTC Health Program administrator whose term expires in November 2026 — warning that a leadership gap could further slow the Program's response to emerging science."
+    },
+    "sideB": {
+      "label": "Rigorous Evidence Standards Are Necessary",
+      "text": "The WTC Health Program Administrator maintains that petitions to add new covered conditions must meet a scientific evidentiary standard before triggering a Scientific/Technical Advisory Committee review or a proposed rule. Officials argue that adding conditions without sufficient supporting evidence would undermine the program's credibility and could strain its budget, and that the Program has added dozens of conditions — including many cancers — over its history when evidence supported doing so."
+    },
+    "resolution": "As of August 2026, the eight ischemic heart disease petitions remain denied for insufficient evidence, and Dr. John Howard's reappointment as Program administrator remains pending before HHS ahead of the November 2026 expiration of his term. The debate over the Program's staffing and pace of evidence review continues ahead of the 25th anniversary of the attacks, as long-term responder health research continues to accumulate.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "trump-donald",
+    "name": "Donald Trump",
+    "role": "US President (2017–2021, 2025–present)",
+    "avatar": "us",
+    "initial": "T",
+    "quote": "NATO is absolutely useless. I would have liked your help two months ago, but now I really don't want your help anymore — they were absolutely useless when we needed them. STAY AWAY. [May 7: White House CT strategy labels Europe a 'terror incubator.' May 26 (Der Spiegel exclusive): Pentagon adviser Velez-Green secretly notified European NATO allies at a confidential Brussels meeting of sweeping military contribution reductions — fighter jets minus one-third, bombers halved, zero submarines, zero drones, warships reduced — on top of 10,200+ confirmed troop cuts. European attendees reportedly 'shocked' at the scope. Gap-filling plan demanded by Ankara (July 7–8).]",
+    "lastUpdated": "2026-05-26T00:00:00.000Z"
+  },
+  {
+    "id": "biden-joe",
+    "name": "Joe Biden",
+    "role": "US President (2021–2025)",
+    "avatar": "us",
+    "initial": "B",
+    "quote": "America is back. The transatlantic alliance is back. And we are not looking backward; we are looking forward, together.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "macron-emmanuel",
+    "name": "Emmanuel Macron",
+    "role": "President of France (2017–present)",
+    "avatar": "eu",
+    "initial": "M",
+    "quote": "EU Article 42.7 is, in substance, stronger than Article 5 — it leaves no option. The lesson we must draw is: let us no longer be dependent. We Europeans must strengthen this European pillar of NATO — not against anyone, not as an alternative to anything. [May 28: Macron and Norwegian PM Støre signed the Narvik Agreement in Paris — extending France's nuclear deterrence guarantee to Norway, making it the 9th European country under French extended deterrence. Named for the 1940 Battle of Narvik, the pact covers mutual military assistance, nuclear umbrella extension, defense industrial integration, and High North/Arctic intelligence sharing.]",
+    "lastUpdated": "2026-05-28T00:00:00.000Z"
+  },
+  {
+    "id": "stoltenberg-jens",
+    "name": "Jens Stoltenberg",
+    "role": "NATO Secretary General (2014–2024)",
+    "avatar": "nato",
+    "initial": "S",
+    "quote": "It's not a natural law that we will have NATO forever. It's not written in stone that NATO will exist for the next ten years. I urge allies and the US Senate to take these threats seriously.",
+    "lastUpdated": "2026-04-15T00:00:00Z"
+  },
+  {
+    "id": "rutte-mark",
+    "name": "Mark Rutte",
+    "role": "NATO Secretary General (2024–present)",
+    "avatar": "nato",
+    "initial": "R",
+    "quote": "This, in itself, sends a strong message of the enduring bond between NATO and Ukraine. [June 3: Rutte made an unannounced visit to Kyiv — accompanied by NATO Military Committee Chairman Admiral Cavo Dragone and North Atlantic Council ambassadors — for the first-ever NATO-Ukraine Council meeting held on Ukrainian soil. Met FM Sybiha; visited Lukianivka damage sites. Rutte reaffirmed 'irreversible path' for Ukraine NATO membership. June 1: Romania's official investigation confirmed the Galati drone = Russian Geran-2, eliminating Russia's 'blame Ukraine' deflection. NATO and Romania discussing Article 4 consultation. May 31: US expected to submit formal NATO force-level withdrawal plan in June. May 22 Helsingborg: 'The question is not whether we need to do more, but how quickly we turn commitments into capabilities.' Next: NATO Defense Ministers June 18 Brussels; Ankara Leaders' Summit July 7–8, 2026 (32 days — Trump confirmed to attend per Rubio June 3).]",
+    "lastUpdated": "2026-06-05T14:30:00.000Z"
+  },
+  {
+    "id": "von-der-leyen-ursula",
+    "name": "Ursula von der Leyen",
+    "role": "European Commission President (2019–present)",
+    "avatar": "eu",
+    "initial": "V",
+    "quote": "Let's develop our strength without constantly leaning on someone else. Europe is in a fight — a fight for a continent that is whole and at peace.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "scholz-olaf",
+    "name": "Olaf Scholz",
+    "role": "German Chancellor (2021–2025)",
+    "avatar": "eu",
+    "initial": "S",
+    "quote": "We need a powerful, cutting-edge, progressive Bundeswehr. This Zeitenwende — this turning point — demands our joint effort. There will be a special fund of €100 billion for the Bundeswehr.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "merz-friedrich",
+    "name": "Friedrich Merz",
+    "role": "German Chancellor (2025–present)",
+    "avatar": "eu",
+    "initial": "M",
+    "quote": "Tehran is humiliating the Trump administration. The blockade may be forcing negotiations, but Washington has alienated every ally it needed — that is a strategic failure, not a success. Europe must now build its own strength without waiting to be invited.",
+    "lastUpdated": "2026-04-29T14:18:00.000Z"
+  },
+  {
+    "id": "frederiksen-mette",
+    "name": "Mette Frederiksen",
+    "role": "Prime Minister of Denmark (2019–present)",
+    "avatar": "eu",
+    "initial": "F",
+    "quote": "If the United States chooses to attack another NATO country militarily, then everything stops — that is, including our NATO, and thus the security that has been provided since the end of the Second World War.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "vance-jd",
+    "name": "JD Vance",
+    "role": "US Vice President (2025–present)",
+    "avatar": "us",
+    "initial": "V",
+    "quote": "I genuinely believe that the greatest threat to the security of Europe is not Russia. The greatest threat to the security of Europe is from within — it is the retreat from the values that make Western civilisation worth defending.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "zelensky-volodymyr",
+    "name": "Volodymyr Zelensky",
+    "role": "President of Ukraine (2019–present)",
+    "avatar": "other",
+    "initial": "Z",
+    "quote": "It's unprecedented and absurd when a timeframe is not set, neither for the invitation nor for Ukraine's membership, while at the same time allies are represented as open to inviting Ukraine.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "erdogan-recep",
+    "name": "Recep Tayyip Erdoğan",
+    "role": "President of Turkey (2014–present)",
+    "avatar": "nato",
+    "initial": "E",
+    "quote": "Turkey is working to revive Russia-Ukraine peace negotiations. We are ready to play our role as a facilitating party ahead of the Ankara Summit. Turkey is a committed NATO ally and will contribute to the alliance's defense production agenda.",
+    "lastUpdated": "2026-04-22T00:00:00Z"
+  },
+  {
+    "id": "mattis-james",
+    "name": "James Mattis",
+    "role": "US Secretary of Defense (2017–2018)",
+    "avatar": "us",
+    "initial": "M",
+    "quote": "America will meet its Article 5 commitments. But if your nation does not want to see America moderate its commitment to this alliance, each of your capitals needs to show support for our common defense.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "duda-andrzej",
+    "name": "Andrzej Duda",
+    "role": "President of Poland (2015–present)",
+    "avatar": "eu",
+    "initial": "D",
+    "quote": "Poland is the most credible NATO ally — we spend over 4% of GDP on defense and we want a permanent, full American military base on Polish soil. We are ready to pay for it. We call it Fort Trump.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kallas-kaja",
+    "name": "Kaja Kallas",
+    "role": "EU Foreign Policy Chief / former Estonian PM (2024–present)",
+    "avatar": "eu",
+    "initial": "K",
+    "quote": "The EU has always supported attempts to achieve a just and lasting peace. For Europe to take a more active role, we must agree amongst ourselves what we want to talk to Russia about and what our red lines are. [May 12, 2026: EU FAC Defence, Brussels — chairing the emergency defence ministerial as NATO and EU run dual emergency tracks toward Helsingborg and Ankara.]",
+    "lastUpdated": "2026-05-12T14:41:00.000Z"
+  },
+  {
+    "id": "johnson-boris",
+    "name": "Boris Johnson",
+    "role": "UK Prime Minister (2019–2022)",
+    "avatar": "uk",
+    "initial": "J",
+    "quote": "The UK stands four-square behind Article 5 and NATO's collective defense obligation. Brexit has not changed our commitment to European security — if anything it makes our NATO engagement more important, not less.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sunak-rishi",
+    "name": "Rishi Sunak",
+    "role": "UK Prime Minister (2022–2024)",
+    "avatar": "uk",
+    "initial": "S",
+    "quote": "The United Kingdom is committed to spending 2.5% of GDP on defense. We must ensure NATO remains the cornerstone of our collective defense while European nations do more to carry their share of the burden.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starmer-keir",
+    "name": "Keir Starmer",
+    "role": "UK Prime Minister (2024–present)",
+    "avatar": "uk",
+    "initial": "S",
+    "quote": "The UK has a proud history of leadership in NATO and we will continue to invest in our security. We are committed to reaching 2.5% of GDP on defense and will work with our European partners to strengthen the alliance. [May 27: Starmer and Polish PM Tusk signed the Northolt Treaty at RAF Northolt — the bilateral defense pact covering missile systems, drone technologies, defense industrial collaboration, and cybersecurity. Starmer called it 'the most fitting place we could have chosen — where Polish and British service members fought side by side and changed the course of history.']",
+    "lastUpdated": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "scholz-merkel-angela",
+    "name": "Angela Merkel",
+    "role": "German Chancellor (2005–2021)",
+    "avatar": "eu",
+    "initial": "M",
+    "quote": "The times in which we could rely fully on others are somewhat over, as I experienced in the last few days. We Europeans must really take our destiny into our own hands. We must fight for our own future as Europeans.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tusk-donald",
+    "name": "Donald Tusk",
+    "role": "Polish Prime Minister (2023–present) / former European Council President",
+    "avatar": "eu",
+    "initial": "T",
+    "quote": "I know from Polish experience what Russia truly is. That's why Poland invests more than 4% of GDP in defense. We don't need lectures about burden-sharing — we are the most credible NATO ally on the eastern flank. [May 27: Tusk and UK PM Starmer signed the Northolt Treaty at RAF Northolt — where Polish pilots of the 303 Squadron flew in the Battle of Britain. Warsaw has now signed bilateral defense compacts with London, Paris, and Kyiv, completing a trilateral network covering three of Europe's largest defense budgets.]",
+    "lastUpdated": "2026-05-27T00:00:00.000Z"
+  },
+  {
+    "id": "rubio-marco",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State (2025–present)",
+    "avatar": "us",
+    "initial": "R",
+    "quote": "Like any alliance, it has to be good for everyone who's involved. There has to be a clear understanding of what the expectations are. [June 3: Rubio confirmed Trump will attend the Ankara NATO Leaders' Summit July 7–8 — ending months of speculation about US participation in the alliance's most consequential summit. Helsingborg, May 22, 2026 — Rutte-Rubio bilateral joint appearance: Rubio noted Trump and senior officials remain 'very disappointed' with NATO over the Iran war response. May 14–15: 'What's the purpose of the alliance?' — the question that defined Helsingborg's backdrop. NATO Defense Ministers meeting Brussels June 18 is the last pre-Ankara ministerial.]",
+    "lastUpdated": "2026-06-05T14:30:00.000Z"
+  },
+  {
+    "id": "hegseth-pete",
+    "name": "Pete Hegseth",
+    "role": "US Secretary of Defense (2025–present)",
+    "avatar": "us",
+    "initial": "H",
+    "quote": "Europe must be the first to provide for its own conventional defense. [Jun 6, 2026 — D-Day 82nd anniversary, Normandy: Hegseth met French Armed Forces Minister Vautrin on the sidelines. Both agreed on urgency to accelerate 'NATO 3.0 — an alliance of real partners, not dependents' — European allies must take primary responsibility for conventional defense through non-nuclear means, raise defense spending to 5% GDP, and deploy combat-ready troops to fill NATO Force Model gaps. Jun 1–2, 2026 Shangri-La Dialogue, Singapore: praised Asian defense partners and suggested 'Western Europe might take note.' The formal NATO withdrawal plan codifies 10,200+ troop reductions and hardware cuts — jets −⅓, bombers −½, zero submarines, zero drones.]",
+    "lastUpdated": "2026-06-07T14:15:00.000Z"
+  },
+  {
+    "id": "magyar-peter",
+    "name": "Péter Magyar",
+    "role": "Hungarian PM-designate / Tisza Party Leader (2026–present)",
+    "avatar": "eu",
+    "initial": "M",
+    "quote": "Hungary will reappear as a strong NATO and EU ally. We will remove the vetoes on Ukraine's path to NATO membership, re-engage on EU burden-sharing, and rebuild Hungary's credibility as a constructive alliance partner.",
+    "lastUpdated": "2026-04-15T00:00:00Z"
+  },
+  {
+    "id": "sanchez-pedro",
+    "name": "Pedro Sánchez",
+    "role": "Prime Minister of Spain (2018–present)",
+    "avatar": "eu",
+    "initial": "S",
+    "quote": "The position of the government of Spain is clear: absolute collaboration with the allies, but always within the framework of international legality. Spain is a committed NATO ally — we will not be intimidated by threats.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "sikorski-radoslaw",
+    "name": "Radosław Sikorski",
+    "role": "Polish Foreign Minister (2023–present)",
+    "avatar": "eu",
+    "initial": "S",
+    "quote": "We certainly hope so — but Article 5 doesn't say that you have to go to war. It says an attack on one is treated as an attack on all. NATO has survived crises of non-participation before.",
+    "lastUpdated": "2026-04-05T00:00:00Z"
+  },
+  {
+    "id": "malmer-stenergard-maria",
+    "name": "Maria Malmer Stenergard",
+    "role": "Swedish Foreign Minister (2022–present) / Helsingborg NATO FMM Chair",
+    "avatar": "nato",
+    "initial": "M",
+    "quote": "Hosting a high-level meeting for the Alliance is a demonstration of Sweden's ambitions to be an active and constructive NATO Ally. [May 18, 2026: co-held pre-ministerial press briefing with PM Kristersson at Rosenbad — T-3 before the Helsingborg FMM. Sweden hosts its first NATO ministerial since joining in March 2024. Malmer Stenergard will formally chair the May 21–22 sessions as host-country FM. Airspace restrictions activated over Helsingborg for the duration of the summit.]",
+    "lastUpdated": "2026-05-18T15:39:15.000Z"
+  },
+  {
+    "id": "rasmussen-anders-fogh",
+    "name": "Anders Fogh Rasmussen",
+    "role": "NATO Secretary General (2009–2014) / Former Danish Prime Minister",
+    "avatar": "nato",
+    "initial": "R",
+    "quote": "What we are witnessing now is the disintegration of NATO, and this is dangerous. Trump has sown so much doubt about his commitment to Article 5 and the defense of Europe that there can only be one conclusion for Europeans: we must stand on our own feet. We need a coalition of willing nations — those who meet 5% GDP, commit to genuine collective defense, and cannot be vetoed by a single member.",
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
+  },
+  {
+    "id": "colby-elbridge",
+    "name": "Elbridge Colby",
+    "role": "US Under Secretary of War for Policy (2025–present)",
+    "avatar": "us",
+    "initial": "C",
+    "quote": "We want to hear from our allies. That's the questionnaire that some of you asked about. We wanted to hear from them directly in writing, in the spirit of NATO 3.0. [Aug 27, 2026 — Brussels, briefing all 32 NATO ambassadors on the Europe force-posture review he has branded 'NATO 3.0': America and its allies 'more fairly share the responsibility' for continental defense, with disputes over base access, basing rights and overflight the review's live issues.]",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  }
+]

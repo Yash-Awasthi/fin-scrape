@@ -1,0 +1,137 @@
+[
+  {
+    "id": "mikhail-gorbachev",
+    "name": "Mikhail Gorbachev",
+    "role": "Soviet General Secretary — Glasnost Policy Response",
+    "avatar": "soviet-gov",
+    "initial": "M",
+    "quote": "Chernobyl was perhaps the real cause of the collapse of the Soviet Union five years later. The nuclear meltdown at Chernobyl, even more than my election as General Secretary, was perhaps the main cause of the collapse of the Soviet Union.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "valery-legasov",
+    "name": "Valery Legasov",
+    "role": "Soviet Nuclear Scientist — Government Commission Lead; Whistleblower",
+    "avatar": "soviet-gov",
+    "initial": "V",
+    "quote": "The whole system was based on the idea that mistakes simply could not happen. And that idea itself was the biggest mistake of all. I came from Chernobyl understanding that there are limits to what science can achieve without honesty.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "viktor-bryukhanov",
+    "name": "Viktor Bryukhanov",
+    "role": "Director, Chernobyl NPP — Convicted of Criminal Negligence",
+    "avatar": "soviet-gov",
+    "initial": "V",
+    "quote": "I phoned Shcherbina and said: 'Radiation level at the moment of explosion was 3.6 roentgens per hour.' I was telling the truth as I knew it at the time. The instruments on site were simply unable to measure higher.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "anatoly-dyatlov",
+    "name": "Anatoly Dyatlov",
+    "role": "Deputy Chief Engineer, Chernobyl NPP — Oversaw Fatal Safety Test",
+    "avatar": "soviet-gov",
+    "initial": "A",
+    "quote": "I committed errors. I should not have permitted the test to proceed. But the reactor's positive void coefficient — the design flaw — was the real culprit. The operators did not cause this explosion; the RBMK design made it possible.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "boris-shcherbina",
+    "name": "Boris Shcherbina",
+    "role": "Soviet Deputy Prime Minister — Government Commission Chair, On-Site Response",
+    "avatar": "soviet-gov",
+    "initial": "B",
+    "quote": "When Legasov told me the reactor core was open and burning, I knew immediately that this was not an ordinary industrial accident. This was a catastrophe that could determine the fate of all Europe.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "nikolai-fomin",
+    "name": "Nikolai Fomin",
+    "role": "Chief Engineer, Chernobyl NPP — Convicted (10 years); Suffered Mental Breakdown",
+    "avatar": "soviet-gov",
+    "initial": "N",
+    "quote": "I approved the test program without fully understanding its implications. I bear responsibility for what happened. But I tell you: the RBMK reactor's characteristics were never fully disclosed to us.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "alla-yaroshinskaya",
+    "name": "Alla Yaroshinskaya",
+    "role": "Ukrainian Journalist & People's Deputy — Exposed Secret Politburo Chernobyl Documents",
+    "avatar": "victims",
+    "initial": "A",
+    "quote": "The documents I obtained proved that the Politburo knew. They knew the true scale and they chose to hide it. Every parent who let their child march in the May Day parade trusted the state with their child's health. The state lied.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "hans-blix",
+    "name": "Hans Blix",
+    "role": "IAEA Director General — Received Soviet Briefing, Represented International Response",
+    "avatar": "international",
+    "initial": "H",
+    "quote": "The Soviet scientists at the Vienna conference in August 1986 displayed a remarkable openness. We believed we were seeing glasnost in action. We did not yet know that the report understated the reactor's design flaws.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "rafael-grossi",
+    "name": "Rafael Grossi",
+    "role": "IAEA Director General — Nuclear Safety During 2022 Russian Occupation and 2025–2026 Drone Strikes",
+    "avatar": "international",
+    "initial": "R",
+    "quote": "Attacking a facility with large amounts of nuclear material is extremely dangerous. It must not happen.",
+    "lastUpdated": "2026-07-16T14:00:00.000Z"
+  },
+  {
+    "id": "natalia-manzurova",
+    "name": "Natalia Manzurova",
+    "role": "Liquidator and Health Researcher — Worked in Exclusion Zone 1987–1996",
+    "avatar": "liquidator",
+    "initial": "N",
+    "quote": "I worked for years in the zone thinking I was doing something heroic. We were not given proper protection. We were not told the truth about our doses. Now I watch my colleagues die and I know: we were sacrificed.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "leonid-toptunov",
+    "name": "Leonid Toptunov",
+    "role": "Senior Reactor Control Engineer — At Controls During Explosion; Died of ARS",
+    "avatar": "liquidator",
+    "initial": "L",
+    "quote": "(From colleagues' testimony) Toptunov was a conscientious young engineer. When the SCRAM signal was given and the reactor did not respond as expected, he had no way to know the design would cause an explosion. He was 26 years old.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "vasyl-nesterenko",
+    "name": "Vasyl Nesterenko",
+    "role": "Ukrainian Physicist — Opposed Soviet Cover-Up; Founded BELRAD Institute",
+    "avatar": "ukraine-gov",
+    "initial": "V",
+    "quote": "I told the Council of Ministers that the accident was catastrophic. I told them 100,000 people needed to be evacuated immediately. I was removed from my position. They did not want to hear the truth.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "volodymyr-zelensky",
+    "name": "Volodymyr Zelensky",
+    "role": "President of Ukraine — Visited Chernobyl; Managed Site During Russian Occupation",
+    "avatar": "ukraine-gov",
+    "initial": "V",
+    "quote": "When Russian troops arrived and occupied Chernobyl, they did not just violate Ukrainian sovereignty. They put at risk the safety of all of Europe. This was not just an act of war — it was an act of nuclear terrorism.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "yuri-shcherbak",
+    "name": "Yuri Shcherbak",
+    "role": "Ukrainian Doctor & Writer — First Major Oral History of Chernobyl (1989)",
+    "avatar": "victims",
+    "initial": "Y",
+    "quote": "The people of Ukraine and Belarus paid an enormous price for the pride and secrecy of a system that put ideology above human life. Their stories must be recorded before they are forgotten. Truth is the only monument worthy of their sacrifice.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "svetlana-alexievich",
+    "name": "Svetlana Alexievich",
+    "role": "Belarusian Nobel Laureate — Author of 'Voices from Chernobyl' (1997)",
+    "avatar": "victims",
+    "initial": "S",
+    "quote": "Chernobyl is not history. It is the future. I interviewed hundreds of people — liquidators, mothers of dead children, evacuees who could never go home. They all said the same thing: we were not people to them. We were a problem to be managed.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  }
+]

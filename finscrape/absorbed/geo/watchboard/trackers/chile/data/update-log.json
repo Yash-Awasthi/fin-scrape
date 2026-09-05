@@ -1,0 +1,42 @@
+{
+  "lastRun": "2026-08-26T15:06:37.720Z",
+  "tracker": "chile",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 8
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 42
+    },
+    "mapPoints": {
+      "status": "ok",
+      "itemCount": 28
+    },
+    "casualties": {
+      "status": "ok",
+      "count": 10
+    },
+    "econ": {
+      "status": "ok",
+      "count": 8
+    },
+    "claims": {
+      "status": "ok",
+      "itemCount": 18
+    },
+    "political": {
+      "status": "ok",
+      "itemCount": 26
+    },
+    "events": {
+      "status": "updated",
+      "count": 11
+    },
+    "meta": {
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

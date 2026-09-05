@@ -1,0 +1,98 @@
+[
+  {
+    "id": "population_city",
+    "label": "City Population (Proper)",
+    "value": "9.21M",
+    "color": "blue",
+    "source": "INEGI Censo 2020 / CONAPO 2024 estimate",
+    "contested": false,
+    "delta": "+0.4% YoY",
+    "deltaNote": "City proper within 16 alcaldías; metro area ~22.5M",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "metro_area_population",
+    "label": "Metro Area Population",
+    "value": "22.5M",
+    "color": "blue",
+    "source": "CONAPO 2024 / MacroTrends",
+    "contested": false,
+    "delta": "+1.01% YoY",
+    "deltaNote": "World's 6th-largest metro area; 2nd-largest in Western Hemisphere",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "homicide_rate_2024",
+    "label": "Homicide Rate (per 100k, 2024–2026)",
+    "value": "7.8",
+    "color": "amber",
+    "source": "Secretaría de Seguridad Ciudadana CDMX / SSC + FGJ-CDMX 2024–2026",
+    "contested": true,
+    "contestNote": "CDMX rate is among Mexico's lowest — well below national average of ~22/100k. Critics argue femicides are systematically undercounted as homicides. Extortion complaints, by contrast, rose 21% in Jan–May 2026 (727 cases vs. 599 in 2025), showing lethal and non-lethal crime trends diverging. An ongoing Unión Tepito vs. Anti-Unión turf war in the Centro Histórico has produced 24 deaths in 2026 as of mid-August, including a 17-year-old killed Aug 10 in the Morelos/Tepito neighborhood — despite SSC reporting 55 alleged members of both factions detained in July–early August, plus 8 more (6 identified as Unión Tepito) detained in two Cuauhtémoc raids on Aug 24. Critics argue official aggregate statistics understate this street-level, zone-specific violence even as INEGI/SSC reported city-wide homicides down 16.4% (817 in 2025 vs. 978 in 2024).",
+    "delta": "-57% daily homicides in June 2026 vs June 2018",
+    "deltaNote": "Brugada (Jul 13, 2026): June 2026 — the World Cup opening month — closed with 1.8 daily intentional homicides, down 57% from 4.2/day in June 2018 and the lowest monthly figure in 15 years. Intentional homicides down 31% since the start of her administration; high-impact crime in H1 2026 down 64% vs. H1 2019 and 8% vs. H1 2025. SSC (Aug 3, 2026) cited INEGI data showing a 16.4% year-over-year homicide reduction (817 in 2025 vs. 978 in 2024). SSC's July 2026 strategy report (presented Aug 10) cited 464 homicide arrest warrants executed Jan–Jul 2026, up 27.8% vs. the same period in 2024 and 203% above 2019 levels, plus 217 total arrest warrants executed in 2026 (of 373 since 2024).",
+    "trend": "down",
+    "lastUpdated": "2026-08-24T00:00:00.000Z"
+  },
+  {
+    "id": "metro_daily_ridership",
+    "label": "Metro Daily Ridership (STC)",
+    "value": "4.2M",
+    "color": "green",
+    "source": "Sistema de Transporte Colectivo (STC) 2024",
+    "contested": false,
+    "deltaNote": "2nd-largest metro in North America; 12 lines, 195 stations, 226 km",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "gdp_national_share",
+    "label": "Share of National GDP",
+    "value": "22%",
+    "color": "green",
+    "source": "INEGI Cuentas Nacionales 2023",
+    "contested": false,
+    "deltaNote": "Metro area produces ~22% of Mexico's GDP; city proper ~15.8%. Largest economic zone in Latin America after São Paulo.",
+    "trend": "stable",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "cutzamala_reservoir_level",
+    "label": "Cutzamala Reservoir Level",
+    "value": "~77%",
+    "color": "green",
+    "source": "CONAGUA / SACMEX Apr–May 2026",
+    "contested": false,
+    "contestNote": "Reached 90.7% in January 2026 (best in 6 years) after strong 2025 rainy season. Declined to ~77% by early May amid pre-rainy season drawdown. Still well above May 2024 historic low of 28–30%. Rainy season officially began May 15, 2026 — SACMEX deployed equipment to 56 flood-risk points citywide. A 604M peso modernization (new valves, SCADA control system) is underway after 40 years without major upgrades.",
+    "delta": "Rainy season began May 15; recovery expected through June",
+    "deltaNote": "Brugada administration declared no water shortages expected in 2026 based on current storage levels",
+    "trend": "up",
+    "lastUpdated": "2026-05-16T14:24:13Z"
+  },
+  {
+    "id": "budget_2025",
+    "label": "CDMX Annual Budget 2025",
+    "value": "MXN 291.5B",
+    "color": "blue",
+    "source": "Congreso CDMX / Secretaría de Finanzas CDMX Dec 2024",
+    "contested": false,
+    "delta": "+8.8% vs 2024",
+    "deltaNote": "Includes MXN 23B for Metro modernization — largest Metro investment in history",
+    "trend": "up",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "land_subsidence_rate",
+    "label": "Max Land Subsidence Rate",
+    "value": "~50 cm/yr",
+    "color": "red",
+    "source": "UNAM / Nature 2021 + NASA NISAR 2026",
+    "contested": false,
+    "contestNote": "Historic center sinking ~50cm/yr in worst zones; Palacio de Bellas Artes and Cathedral visibly tilting. Caused by groundwater over-extraction from ancient lake bed. NASA NISAR satellite data (published May 2026, Oct 2025–Jan 2026 measurements) confirmed 14 in/yr (~35 cm) at monitored landmarks including AICM airport and the Ángel de la Independencia monument.",
+    "delta": "NASA NISAR (May 2026) confirms ongoing",
+    "trend": "up",
+    "lastUpdated": "2026-05-09T14:24:13Z"
+  }
+]

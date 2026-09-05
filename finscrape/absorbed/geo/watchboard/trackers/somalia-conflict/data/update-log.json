@@ -1,0 +1,76 @@
+{
+  "lastRun": "2026-08-28T00:42:52.280Z",
+  "tracker": "somalia-conflict",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-08-18T15:30:00.000Z",
+      "status": "updated",
+      "itemCount": 10,
+      "lastUpdated": "2026-08-18T15:30:00.000Z"
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 39,
+      "lastUpdated": "2026-08-18T15:30:00.000Z"
+    },
+    "mapPoints": {
+      "lastRun": "2026-08-18T15:30:00.000Z",
+      "status": "updated",
+      "itemCount": 76,
+      "lastUpdated": "2026-08-18T15:30:00.000Z"
+    },
+    "mapLines": {
+      "lastRun": "2026-08-18T15:30:00.000Z",
+      "status": "updated",
+      "itemCount": 46,
+      "lastUpdated": "2026-08-18T15:30:00.000Z"
+    },
+    "claims": {
+      "lastRun": "2026-06-01T14:47:23.000Z",
+      "status": "ok",
+      "itemCount": 21,
+      "lastUpdated": "2026-06-01T14:47:23.000Z"
+    },
+    "political": {
+      "lastRun": "2026-08-18T15:30:00.000Z",
+      "status": "updated",
+      "itemCount": 20,
+      "lastUpdated": "2026-08-18T15:30:00.000Z"
+    },
+    "casualties": {
+      "lastRun": "2026-08-18T15:30:00.000Z",
+      "status": "updated",
+      "itemCount": 21,
+      "lastUpdated": "2026-08-18T15:30:00.000Z"
+    },
+    "econ": {
+      "status": "ok",
+      "itemCount": 11,
+      "lastUpdated": "2026-05-13T14:22:17.000Z"
+    },
+    "assets": {
+      "status": "updated",
+      "itemCount": 11,
+      "lastUpdated": "2026-08-18T15:30:00.000Z"
+    },
+    "strikeTargets": {
+      "status": "ok",
+      "itemCount": 10,
+      "lastUpdated": "2026-04-20T12:29:34.000Z"
+    },
+    "retaliation": {
+      "status": "ok",
+      "itemCount": 13,
+      "lastUpdated": "2026-04-21T14:31:00.000Z"
+    },
+    "meta": {
+      "lastRun": "2026-08-18T15:30:00.000Z",
+      "status": "updated"
+    },
+    "events": {
+      "lastRun": "2026-08-18T15:30:00.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

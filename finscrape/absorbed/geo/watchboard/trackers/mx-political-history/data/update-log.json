@@ -1,0 +1,37 @@
+{
+  "lastRun": "2026-08-10T16:23:06.049Z",
+  "tracker": "mx-political-history",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-05-13T15:41:46Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "seeded",
+      "itemCount": 64
+    },
+    "mapPoints": {
+      "lastRun": "2026-05-13T15:41:46Z",
+      "status": "updated",
+      "itemCount": 31
+    },
+    "claims": {
+      "lastRun": "2026-05-13T15:41:46Z",
+      "status": "updated",
+      "itemCount": 22
+    },
+    "political": {
+      "status": "seeded",
+      "itemCount": 25
+    },
+    "events": {
+      "lastRun": "2026-05-13T15:41:46Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-05-13T15:41:46Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

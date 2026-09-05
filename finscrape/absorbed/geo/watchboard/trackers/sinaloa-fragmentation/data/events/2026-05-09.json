@@ -1,0 +1,90 @@
+[
+  {
+    "id": "sheinbaum-us-mexico-standoff-extradition-may9-2026",
+    "date": "2026-05-09",
+    "year": "2026",
+    "title": "Sheinbaum Faces Pressure From All Sides — US-Mexico Standoff Deepens Over Sinaloa Official Extraditions as Mayo Delay Opens New Window",
+    "type": "arrest",
+    "detail": "As of May 9, 2026 — Day 655 of the Sinaloa cartel civil war — President Claudia Sheinbaum faced compounding political pressure from multiple directions following the historic April 30 SDNY indictment of Governor Rubén Rocha Moya and nine Sinaloa co-defendants. The Trump administration's National Counterterrorism Strategy (signed May 6–7) had designated cartel elimination as the highest US national security priority and explicitly threatened ground troops if Mexico failed to act. Mexico's Foreign Ministry (SRE) delivered a diplomatic note to the US DOJ on May 6 demanding 'solid and irrefutable evidence' before any extradition would be considered — a condition widely seen as functionally prohibitive given that US indictments routinely rest on protected intelligence sources. KJZZ Fronteras Desk reported on May 8 that Sheinbaum was caught between her sovereignty commitments to MORENA's political base and the mounting documented evidence of state-cartel collusion in the indictment. Domestic critics noted the indicted officials — including the governor, the Culiacán mayor, the former security secretary, and former police chiefs — were all members of Sheinbaum's own MORENA coalition. The same day, La Jornada confirmed El Mayo's sentencing had been postponed to July 20, temporarily reducing the immediate courtroom pressure. Security analysts noted that the delay gives Mexico a 10-week window to respond diplomatically before the sentencing could produce additional incriminating public revelations about the political corruption network. Separately, CBC News published an investigation revealing that the DEA/SDNY probe into the Chapitos' alleged practice of feeding victims to tigers at cartel-owned ranches was a key evidence thread that led investigators to build the case against Rocha Moya — documenting how the cartel's most extreme operational violence became the thread prosecutors traced upward to its political protection network.",
+    "sources": [
+      {
+        "name": "KJZZ Fronteras Desk",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://www.kjzz.org/fronteras-desk/2026-05-08/sheinbaum-faces-pressure-from-all-sides-after-u-s-indicts-mexican-politicians"
+      },
+      {
+        "name": "La Jornada",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://www.jornada.com.mx/2026/05/09/politica/005n3pol"
+      },
+      {
+        "name": "CBC News",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://www.cbc.ca/news/world/cartel-sinaloa-mexico-9.7192098"
+      },
+      {
+        "name": "CBS News",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://www.cbsnews.com/news/mexico-wants-evidence-officials-cartel-links-claudia-sheinbaum/"
+      }
+    ],
+    "confidence": "high",
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.kjzz.org/fronteras-desk/2026-05-08/sheinbaum-faces-pressure-from-all-sides-after-u-s-indicts-mexican-politicians",
+        "caption": "Sheinbaum faces pressure from all sides as the US-Mexico standoff over Sinaloa official extraditions deepens — KJZZ Fronteras Desk, May 8, 2026",
+        "source": "KJZZ Fronteras Desk"
+      },
+      {
+        "type": "article",
+        "url": "https://www.cbc.ca/news/world/cartel-sinaloa-mexico-9.7192098",
+        "caption": "CBC News investigation: Chapitos' alleged practice of feeding victims to tigers was key evidence thread that led US prosecutors to indict Sinaloa Governor Rocha Moya — CBC News, May 2026",
+        "source": "CBC News"
+      }
+    ],
+    "lastUpdated": "2026-05-09T14:47:13.000Z"
+  },
+  {
+    "id": "rocha-moya-culiacan-residence-attack-may9-2026",
+    "date": "2026-05-09",
+    "year": "2026",
+    "title": "La Mayiza Gunman in Sombrero Attacks Rocha Moya's Former Culiacán Residence — Faction Signal 10 Days After Indictment",
+    "type": "clash",
+    "detail": "At approximately 10:00 AM on Saturday, May 9, 2026, an armed man wearing tactical gear and a sombrero — a recognized symbol of the La Mayiza faction since the September 9, 2024 opening offensive — descended from a vehicle on Lago de Cuitzeo street in the Las Quintas neighborhood of Culiacán, fired multiple rounds at the facade of former Governor Rubén Rocha Moya's former residence, and fled in under 10 seconds. The attack was captured on security camera footage widely circulated by Mexican media on May 10. No injuries were reported; Sinaloa's Public Security Secretariat confirmed the property had been uninhabited for more than 10 years. The sombrero — La Mayiza's signature faction symbol used in the September 2024 offensive and subsequently adopted as a calling card for La Mayiza-aligned attacks — is seen by security analysts as a deliberate assertion of who was behind the message. The attack came exactly 10 days after the US SDNY unsealed its historic indictment of Rocha Moya on April 30, charging him with supporting the Chapitos faction in exchange for electoral protection. Analysts interpreted the attack as La Mayiza sending a calculated signal: that the Zambada family holds the indicted governor personally responsible for his alleged alliance with the Chapitos, and that this accountability extends beyond the courtroom. The symbolic nature of targeting an uninhabited property — rather than killing — is consistent with a faction issuing a psychological warning rather than an operational strike. Reports emerging on May 10 indicated Sheinbaum and Rocha Moya had met with former President Andrés Manuel López Obrador (AMLO) over the weekend to discuss the political fallout from the indictments.",
+    "sources": [
+      {
+        "name": "Infobae",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://www.infobae.com/mexico/2026/05/10/asi-fue-el-ataque-a-la-vivienda-de-ruben-rocha-moya-en-culiacan-agresor-llevaba-un-sobrero-y-armas-largas/"
+      },
+      {
+        "name": "WSWS",
+        "tier": 3,
+        "pole": "western",
+        "url": "https://www.wsws.org/en/articles/2026/05/10/suar-m10.html"
+      },
+      {
+        "name": "Meyka",
+        "tier": 3,
+        "pole": "western",
+        "url": "https://meyka.com/blog/rubn-rocha-moya-may-11-armed-attack-on-sinaloa-governors-home-1105/"
+      }
+    ],
+    "confidence": "high",
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.infobae.com/mexico/2026/05/10/asi-fue-el-ataque-a-la-vivienda-de-ruben-rocha-moya-en-culiacan-agresor-llevaba-un-sobrero-y-armas-largas/",
+        "caption": "Video footage shows La Mayiza-linked gunman in sombrero firing dozens of rounds at Rocha Moya's former Culiacán residence in Las Quintas — Infobae, May 10, 2026",
+        "source": "Infobae"
+      }
+    ],
+    "lastUpdated": "2026-05-11T14:22:00.000Z"
+  }
+]

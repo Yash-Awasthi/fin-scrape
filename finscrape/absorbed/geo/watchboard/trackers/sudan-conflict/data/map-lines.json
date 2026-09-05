@@ -1,0 +1,2939 @@
+[
+  {
+    "id": "rsf-advance-khartoum-presidential-palace",
+    "from": [
+      32.49,
+      15.6
+    ],
+    "to": [
+      32.54,
+      15.6
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Assault on Presidential Palace",
+    "date": "2023-04-15",
+    "notes": "RSF assault route from Omdurman toward Khartoum Presidential Palace on April 15, 2023",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-advance-omdurman-to-khartoum",
+    "from": [
+      32.48,
+      15.65
+    ],
+    "to": [
+      32.52,
+      15.58
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Cross-Nile Push: Omdurman to Khartoum",
+    "date": "2023-04-15",
+    "notes": "RSF forces crossed the White Nile bridges from Omdurman into central Khartoum in the opening assault",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-darfur-expansion-geneina-to-nyala",
+    "from": [
+      22.45,
+      13.47
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Darfur Expansion: Geneina → Nyala",
+    "date": "2023-06-01",
+    "notes": "RSF extended control from West Darfur capital El Geneina eastward across Darfur to Nyala in South Darfur, Oct 2023",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-push-wad-madani-from-khartoum",
+    "from": [
+      32.52,
+      15.45
+    ],
+    "to": [
+      33.55,
+      14.4
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Advance: South Khartoum → Wad Madani",
+    "date": "2023-10-01",
+    "notes": "RSF advanced southward from Khartoum along the Blue Nile toward Gezira State, capturing Wad Madani on Dec 19, 2023",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-advance-zalingei",
+    "from": [
+      22.45,
+      13.47
+    ],
+    "to": [
+      23.47,
+      12.91
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Advance: Geneina → Zalingei",
+    "date": "2023-06-01",
+    "notes": "RSF extended control from West Darfur into Central Darfur, capturing Zalingei (Central Darfur capital)",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-encirclement-el-fasher",
+    "from": [
+      24.88,
+      12.05
+    ],
+    "to": [
+      25.36,
+      13.63
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Siege Drive: Nyala → El Fasher",
+    "date": "2024-04-01",
+    "notes": "RSF advanced north from Nyala to encircle El Fasher, the last SAF-held Darfur capital, beginning 18-month siege",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-counteroffensive-omdurman",
+    "from": [
+      32.52,
+      15.57
+    ],
+    "to": [
+      32.47,
+      15.64
+    ],
+    "cat": "saf-control",
+    "label": "SAF Counteroffensive: Bahri → West Omdurman",
+    "date": "2024-09-01",
+    "notes": "SAF counteroffensive from Bahri (Khartoum North) driving RSF out of western Omdurman, Sept 2024–Jan 2025",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-recapture-khartoum-from-east",
+    "from": [
+      32.6,
+      15.55
+    ],
+    "to": [
+      32.53,
+      15.58
+    ],
+    "cat": "saf-control",
+    "label": "SAF Recapture: East Khartoum → City Center",
+    "date": "2025-01-01",
+    "notes": "SAF advance from eastern Khartoum through the city center toward the Presidential Palace, Jan–Mar 2025",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-relief-wad-madani",
+    "from": [
+      33.62,
+      13.56
+    ],
+    "to": [
+      33.55,
+      14.4
+    ],
+    "cat": "saf-control",
+    "label": "SAF Advance: Sennar → Wad Madani (Recapture)",
+    "date": "2025-01-01",
+    "notes": "SAF forces advanced from Sennar north to recapture Wad Madani in January 2025, expelling RSF from Gezira State capital",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-break-obeid-siege",
+    "from": [
+      30.21,
+      13.5
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "saf-control",
+    "label": "SAF Relief Corridor: North → El Obeid",
+    "date": "2025-02-01",
+    "notes": "SAF relief corridor that broke the RSF siege of El Obeid (Al-Ubayyid), North Kordofan capital, February 2025",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "refugee-flow-khartoum-to-port-sudan",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      37.22,
+      19.62
+    ],
+    "cat": "displacement",
+    "label": "Refugee Route: Khartoum → Port Sudan",
+    "date": "2023-04-20",
+    "notes": "Primary displacement route for Khartoum civilians fleeing east to Port Sudan and beyond; millions used this corridor",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "refugee-flow-darfur-to-chad",
+    "from": [
+      22.45,
+      13.47
+    ],
+    "to": [
+      22.23,
+      13.47
+    ],
+    "cat": "displacement",
+    "label": "Refugee Flow: Darfur → Chad (via Adre)",
+    "date": "2023-05-01",
+    "notes": "Hundreds of thousands of Darfur refugees fled west into Chad via the Adre border crossing, creating a massive humanitarian crisis",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "refugee-flow-khartoum-to-south-sudan",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      32.79,
+      11.85
+    ],
+    "cat": "displacement",
+    "label": "Refugee Route: Khartoum → South Sudan (via Renk)",
+    "date": "2023-05-01",
+    "notes": "Significant refugee flow south from Khartoum through Kordofan and White Nile State to Renk, South Sudan entry point",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-supply-route-darfur-from-uae-via-chad",
+    "from": [
+      23.0,
+      15.0
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Supply: Chad → Darfur (UAE-backed)",
+    "date": "2023-06-01",
+    "notes": "UN sanctions monitors documented RSF weapons and supplies transiting through Chad, reportedly with UAE financial backing, into Darfur",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-supply-egypt-to-port-sudan",
+    "from": [
+      31.35,
+      21.8
+    ],
+    "to": [
+      37.22,
+      19.62
+    ],
+    "cat": "saf-control",
+    "label": "SAF Supply: Egypt → Port Sudan",
+    "date": "2023-05-01",
+    "notes": "Egyptian military support — drones, weapons, and supplies — entered Sudan through the Egyptian-controlled northern border and Port Sudan",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-supply-port-sudan-to-khartoum",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      32.53,
+      15.55
+    ],
+    "cat": "saf-control",
+    "label": "SAF Logistics: Port Sudan → Khartoum Front",
+    "date": "2023-05-01",
+    "notes": "Primary SAF supply route from wartime capital Port Sudan through Atbara and Shendi to the Khartoum front",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-advance-gezira-southward",
+    "from": [
+      33.55,
+      14.4
+    ],
+    "to": [
+      33.62,
+      13.56
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Push South: Wad Madani → Sennar",
+    "date": "2024-01-01",
+    "notes": "After capturing Wad Madani, RSF advanced further south toward Sennar, threatening Blue Nile State and the Roseires Dam area",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-kordofan-corridor",
+    "from": [
+      25.36,
+      13.63
+    ],
+    "to": [
+      29.5,
+      12.0
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Corridor: Darfur → Kordofan",
+    "date": "2023-08-01",
+    "notes": "RSF established a corridor through North Kordofan linking Darfur to its forces besieging El Obeid and threatening central Sudan",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-airstrike-route-khartoum-to-omdurman",
+    "from": [
+      32.6,
+      15.5
+    ],
+    "to": [
+      32.47,
+      15.65
+    ],
+    "cat": "saf-control",
+    "label": "SAF Airstrike Corridor: Khartoum → Omdurman RSF Positions",
+    "date": "2023-06-01",
+    "notes": "SAF conducted sustained airstrikes from east to west across RSF positions in Omdurman, causing significant civilian casualties throughout 2023–2024",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "humanitarian-aid-route-adre-to-el-fasher",
+    "from": [
+      22.23,
+      13.47
+    ],
+    "to": [
+      25.36,
+      13.63
+    ],
+    "cat": "humanitarian",
+    "label": "Humanitarian Aid Route: Adre → El Fasher",
+    "date": "2023-10-01",
+    "notes": "Cross-border humanitarian corridor from Adre (Chad border) to El Fasher; frequently blocked by both SAF and RSF, severely limiting aid delivery",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-advance-east-kordofan",
+    "from": [
+      29.72,
+      11.01
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Push: South Kordofan → El Obeid",
+    "date": "2023-07-01",
+    "notes": "RSF advanced from South Kordofan northward, encircling El Obeid and cutting SAF ground supply routes to North Kordofan capital",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "refugee-flow-nyala-to-chad",
+    "from": [
+      24.88,
+      12.05
+    ],
+    "to": [
+      23.67,
+      12.81
+    ],
+    "cat": "displacement",
+    "label": "Refugee Flow: Nyala → Chad (Tine Crossing)",
+    "date": "2023-10-01",
+    "notes": "Following RSF capture of Nyala in October 2023, hundreds of thousands of South Darfur civilians fled westward into Chad via the Tine border crossing",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-push-western-khartoum-2025",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      32.45,
+      15.6
+    ],
+    "cat": "saf-control",
+    "label": "SAF West Khartoum Push (2025)",
+    "date": "2025-01-01",
+    "notes": "SAF advanced westward through Khartoum toward RSF holdouts; combined with Omdurman recapture to squeeze RSF from multiple directions",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-assault-zamzam-camp",
+    "from": [
+      25.2,
+      13.58
+    ],
+    "to": [
+      25.3,
+      13.75
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Assault on Zamzam IDP Camp",
+    "date": "2025-04-01",
+    "notes": "RSF forces assaulted Zamzam IDP camp (500,000 residents) from surrounding positions in April 2025, killing 300–1,500 civilians",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "iran-drone-supply-port-sudan",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      37.22,
+      19.62
+    ],
+    "cat": "saf-control",
+    "label": "Iranian Drone Supply to SAF (via Port Sudan)",
+    "date": "2024-01-01",
+    "notes": "Iran supplied SAF with drone technology; Iranian-supplied Shahed-type drones reportedly used in SAF counteroffensive strikes across Khartoum and RSF positions",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-el-daein-al-fasher",
+    "from": [
+      26.13,
+      11.47
+    ],
+    "to": [
+      25.36,
+      13.63
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Advance: East Darfur → El Fasher",
+    "date": "2024-03-01",
+    "notes": "RSF advance from Al Daein (East Darfur) northwest toward El Fasher to tighten the siege from multiple directions",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-attack-convoy-el-geneina",
+    "from": [
+      22.45,
+      13.5
+    ],
+    "to": [
+      22.52,
+      13.43
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Attack on Civilian Convoy → Ardamata",
+    "date": "2023-06-15",
+    "notes": "RSF opened fire on a kilometers-long civilian evacuation convoy near El Geneina, pursuing survivors to the Kajja river and into Ardamata neighborhood",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "refugee-flow-khartoum-to-egypt",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      31.35,
+      21.8
+    ],
+    "cat": "displacement",
+    "label": "Refugee Route: Khartoum → Egypt (via Wadi Halfa)",
+    "date": "2023-04-20",
+    "notes": "Major refugee route from Khartoum north through the Nile Valley to Wadi Halfa and into Egypt; over 700,000 Sudanese sought refuge in Egypt",
+    "confidence": "high",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "saf-advance-kordofan-west-2025",
+    "from": [
+      30.21,
+      13.18
+    ],
+    "to": [
+      29.5,
+      12.0
+    ],
+    "cat": "saf-control",
+    "label": "SAF Advance: El Obeid → South Kordofan",
+    "date": "2025-03-01",
+    "notes": "Following relief of El Obeid, SAF pushed southward into South Kordofan to contest RSF's Darfur–Kordofan corridor (ongoing as of early 2026)",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "turkey-drone-supply-saf",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      32.53,
+      15.55
+    ],
+    "cat": "saf-control",
+    "label": "Turkish Drone Supply to SAF",
+    "date": "2023-06-01",
+    "notes": "Turkey supplied Bayraktar TB2 drones to SAF for use against RSF. Turkish-supplied drones were used in multiple airstrikes on RSF positions across Sudan.",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-gold-smuggling-route-uae",
+    "from": [
+      23.68,
+      14.47
+    ],
+    "to": [
+      25.36,
+      13.63
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Gold Route: Jebel Amer → RSF Command",
+    "date": "2023-05-01",
+    "notes": "RSF extracted gold from Jebel Amer mines and smuggled it predominantly to the UAE, generating estimated $860M/year to fund RSF operations",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rsf-splmn-advance-kurmuk-march2026",
+    "from": [
+      34.45,
+      10.7
+    ],
+    "to": [
+      34.29,
+      10.56
+    ],
+    "cat": "rsf-control",
+    "label": "RSF-SPLM-N Advance: Ethiopia Border → Kurmuk",
+    "date": "2026-03-23",
+    "notes": "RSF and SPLM-N (al-Hilu faction) captured Kurmuk on March 23, 2026, staging from Ethiopia's Benishangul-Gumuz region. ~3,000 fighters; SAF 16th Brigade withdrew. Sudan accused Ethiopia of facilitating the assault.",
+    "confidence": "high",
+    "lastUpdated": "2026-03-28T00:00:00.000Z"
+  },
+  {
+    "id": "rsf-splmn-push-kurmuk-to-damazin-march2026",
+    "from": [
+      34.29,
+      10.56
+    ],
+    "to": [
+      34.35,
+      11.78
+    ],
+    "cat": "rsf-control",
+    "label": "RSF-SPLM-N Push: Kurmuk → Ed Damazin (Roseires Dam threatened)",
+    "date": "2026-03-26",
+    "notes": "After Kurmuk's fall, RSF-SPLM-N forces pushed north toward Ed Damazin and west toward Geissan, threatening the Roseires Dam and state capital. 73,000+ civilians fled.",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-28T00:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-lagawa-march2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      29.12,
+      11.39
+    ],
+    "cat": "saf-control",
+    "label": "SAF Drone Strikes: Port Sudan Area → Lagawa (March 23 & 27, 2026)",
+    "date": "2026-03-23",
+    "notes": "SAF struck Lagawa, West Kordofan twice in March 2026: March 23 (15 killed, 23 wounded) and March 27 (15 killed). Residential neighborhoods and civilian infrastructure targeted. Total 30+ killed.",
+    "confidence": "high",
+    "lastUpdated": "2026-03-28T00:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-ad-dabbah-march2026",
+    "from": [
+      29.5,
+      13.5
+    ],
+    "to": [
+      30.94,
+      18.04
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Long-Range Drone Strike: Kordofan → Ad Dabbah (March 21, 2026)",
+    "date": "2026-03-21",
+    "notes": "RSF drone struck Ad Dabbah in Northern State, killing 6 and damaging power infrastructure. Demonstrated RSF extended drone range into deep SAF-controlled northern Sudan territory.",
+    "confidence": "medium",
+    "lastUpdated": "2026-03-28T00:00:00.000Z"
+  },
+  {
+    "id": "rsf-recapture-bara-march2026",
+    "from": [
+      30.5,
+      13.0
+    ],
+    "to": [
+      30.36,
+      13.73
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Recapture: South → Bara (March 16, 2026)",
+    "date": "2026-03-16",
+    "notes": "RSF recaptured Bara on March 16, 2026, reversing earlier SAF gains and tightening pressure on El Obeid. Part of RSF counter-operations to restore the Kordofan corridor.",
+    "confidence": "high",
+    "lastUpdated": "2026-03-28T00:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-al-sunut-funeral-mar27-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      29.22,
+      11.44
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strike: Funeral in Al Sunut, W. Kordofan (March 27, 2026)",
+    "date": "2026-03-27",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "Funeral gathering hit",
+    "casualties": "7 killed, 39 wounded",
+    "status": "hit",
+    "notes": "SAF drone struck a funeral in Al Sunut, West Kordofan, killing 7 and wounding 39. RSF-held area. Town previously struck on March 10 (50 killed).",
+    "lastUpdated": "2026-03-29T12:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-zalingei-idp-mar27-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      23.47,
+      12.91
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strike: Zalingei IDP Camp Area, Central Darfur (March 27-28, 2026)",
+    "date": "2026-03-27",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "19:00",
+    "damage": "Residential buildings and Khamsa Daqaiq IDP camp area hit",
+    "casualties": "Unknown",
+    "status": "hit",
+    "notes": "SAF drones struck Zalingei (RSF-occupied Central Darfur capital) on March 27-28, hitting residential buildings in the eastern district and parts of the Khamsa Daqaiq IDP camp. RSF civil administration condemned the strikes.",
+    "lastUpdated": "2026-03-29T12:00:00.000Z"
+  },
+  {
+    "id": "rsf-splmn-assault-dilling-march2026",
+    "from": [
+      34.29,
+      10.56
+    ],
+    "to": [
+      29.97,
+      11.38
+    ],
+    "cat": "rsf-control",
+    "label": "RSF-SPLM-N Assault on Dilling, South Kordofan (March 28-29, 2026)",
+    "date": "2026-03-28",
+    "confidence": "high",
+    "notes": "RSF and SPLM-N (al-Hilu) launched a major ground assault on Dilling, South Kordofan, on March 28, supported by artillery, drones, and South Sudanese mercenaries. Al-Tukma (7 km east) seized; Habila road cut. 14 civilians killed (5 children), 23 wounded by March 29. Sudan Doctors Network warned of El Fasher-scale catastrophe.",
+    "lastUpdated": "2026-03-29T12:00:00.000Z"
+  },
+  {
+    "id": "rsf-splmn-pressure-geissan-blue-nile-mar30-2026",
+    "from": [
+      34.29,
+      10.56
+    ],
+    "to": [
+      34.41,
+      11.35
+    ],
+    "cat": "rsf-control",
+    "label": "RSF-SPLM-N Pressure: Kurmuk → Geissan (March 30, 2026)",
+    "date": "2026-03-30",
+    "confidence": "medium",
+    "notes": "After Kurmuk fell on March 23, RSF-SPLM-N massed forces toward Geissan (Qaysan) in Blue Nile State by March 30. Fall of Geissan would threaten Ed Damazin and the Roseires Dam. 1,645+ civilians displaced from Qaysan as of March 30.",
+    "lastUpdated": "2026-03-31T12:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-dilling-surroundings-mar30-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      29.97,
+      11.38
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: Port Sudan Area → Dilling Area (March 30, 2026)",
+    "date": "2026-03-30",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "RSF-SPLM-N positions on mountain range west of Dilling targeted",
+    "casualties": "Unknown",
+    "status": "unknown",
+    "notes": "SAF drones continued striking RSF-SPLM-N positions on the mountain range west of Dilling on March 30 as the RSF-SPLM-N siege entered its third day. Ground access to the city remained severed.",
+    "lastUpdated": "2026-03-31T12:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-al-rahad-mar26-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      30.6,
+      12.72
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strike: Civilian Vehicle in Al-Rahad, N. Kordofan (March 26, 2026)",
+    "date": "2026-03-26",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "09:00",
+    "damage": "Civilian passenger vehicle destroyed",
+    "casualties": "6 killed, 12 injured",
+    "status": "hit",
+    "notes": "Drone struck a civilian vehicle in Al-Rahad, North Kordofan, heading toward Um Rawaba. Part of the double-strike day that killed 28 total across Al-Rahad and Sarf Umra.",
+    "lastUpdated": "2026-03-29T12:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-nyala-rsf-politician-apr1-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "strike",
+    "label": "SAF Targeted Drone Strike: RSF Ta'asees Politician Killed, Nyala (April 1, 2026)",
+    "date": "2026-04-01",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "damage": "House in Nyala Khartoum district hit; RSF parallel administration building struck",
+    "casualties": "1 killed (Osama Hassan, Ta'asees founder), 4 wounded; RSF 'PM' Hassan Al Taishy narrowly escaped",
+    "status": "hit",
+    "notes": "SAF targeted killing of RSF-aligned Ta'asees coalition founder Osama Hassan in Nyala. Two munitions fired. Near-miss on RSF parallel 'Prime Minister' Al Taishy. Demonstrates SAF precision strike reach deep into RSF-controlled South Darfur.",
+    "lastUpdated": "2026-04-02T00:00:00.000Z"
+  },
+  {
+    "id": "rsf-assault-dalang-south-kordofan-apr2-2026",
+    "from": [
+      29.12,
+      11.39
+    ],
+    "to": [
+      29.69,
+      11.44
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Multi-Front Assault on Dalang, South Kordofan (April 2, 2026)",
+    "date": "2026-04-02",
+    "confidence": "medium",
+    "notes": "RSF-SPLM-N launched a multi-front ground assault on Dalang in the Nuba Mountains on April 2, briefly penetrating outer neighborhoods before SAF repelled the attack. Tribal tensions within RSF ranks (Arab recruits reluctant to fight Nuba fighters) weakened assault cohesion. Part of coordinated multi-front pressure on South Kordofan.",
+    "lastUpdated": "2026-04-03T14:30:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-jabalain-hospital-apr3-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.61,
+      12.59
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strikes: Al-Jabalain Hospital, White Nile State (April 3, 2026)",
+    "date": "2026-04-03",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "damage": "Operating theater and maternity ward directly struck; hospital severely damaged",
+    "casualties": "10 killed (7 medical staff), 19 wounded",
+    "status": "hit",
+    "notes": "RSF launched two drone strikes on Al-Jabalain Hospital in SAF-controlled White Nile State, hitting the operating theater and maternity ward during a children's immunization campaign. Seven medical staff killed. RSF denied responsibility. Injured transferred ~80 km to Kosti hospital. Attack confirms RSF long-range drone capability against SAF rear areas.",
+    "lastUpdated": "2026-04-03T14:30:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-rabak-medical-depot-apr4-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.74,
+      13.19
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Rabak Medical Supply Depot, White Nile State (April 3-4, 2026)",
+    "date": "2026-04-04",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "Medical supply depot struck; healthcare supply chain degraded",
+    "casualties": "Unknown",
+    "status": "hit",
+    "notes": "RSF drone struck a medical supply depot in Rabak, capital of White Nile State, concurrent with the Al-Jabalain Hospital attack. MSF disclosed the Rabak depot strike in its April 4 condemnation statement. Part of a coordinated RSF campaign against healthcare infrastructure in SAF-controlled White Nile State.",
+    "lastUpdated": "2026-04-04T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-dilling-artillery-apr5-2026",
+    "from": [
+      29.0,
+      10.8
+    ],
+    "to": [
+      29.97,
+      11.38
+    ],
+    "cat": "strike",
+    "label": "RSF-SPLM-N Artillery: Dilling Residential Areas, South Kordofan (April 5, 2026)",
+    "date": "2026-04-05",
+    "weaponType": "rocket",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "09:00",
+    "damage": "Residential areas struck; civilian infrastructure damaged",
+    "casualties": "5 killed, 33 injured (including children)",
+    "status": "hit",
+    "notes": "RSF and allied SPLM-N forces continued shelling residential areas of Dilling, South Kordofan on April 5. At least 5 civilians killed, 33 injured including children. Siege of the city continues; roads to surrounding areas cut off. Sudan Doctors Network warned of escalating humanitarian crisis.",
+    "lastUpdated": "2026-04-05T14:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-central-darfur-rac-apr8-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.2,
+      12.45
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strike: RSF-Allied Commander Killed, Damrat al-Firdous, Central Darfur (April 8, 2026)",
+    "date": "2026-04-08",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "RSF command meeting struck",
+    "casualties": "1 killed (Hamid Ali Abubakar, RAC commander and Hemedti security adviser), additional wounded",
+    "status": "hit",
+    "notes": "SAF drone struck a meeting of RSF and allied paramilitary commanders at Damrat al-Firdous, Central Darfur, killing Hamid Ali Abubakar — commander of the RSF-aligned Sudanese Awakening Revolutionary Council and a reported security adviser to Hemedti. One of the highest-value SAF targeted kills in the Darfur theater.",
+    "lastUpdated": "2026-04-08T12:00:00.000Z"
+  },
+  {
+    "id": "saf-advance-al-tukma-dilling-apr8-2026",
+    "from": [
+      30.21,
+      13.18
+    ],
+    "to": [
+      30.05,
+      11.32
+    ],
+    "cat": "saf-control",
+    "label": "SAF Ground Advance: El Obeid Axis → Al-Tukma (Dilling Approach), April 8, 2026",
+    "date": "2026-04-08",
+    "confidence": "high",
+    "notes": "SAF forces retook Al-Tukma (7km east of Dilling) on April 7-8, 2026, routing RSF-SPLM-N elements and reopening the Dilling–North Kordofan supply road. Concurrent SAF defense repelled an RSF assault on Al-Tumat neighborhood west of Dilling. Part of SAF's sustained counteroffensive in South Kordofan following relief of El Obeid.",
+    "lastUpdated": "2026-04-08T12:00:00.000Z"
+  },
+  {
+    "id": "drone-strike-umm-dukhun-central-darfur-apr16-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      23.5,
+      11.45
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Umm Dukhun, Central Darfur (April 16, 2026)",
+    "date": "2026-04-16",
+    "weaponType": "drone_loitering",
+    "launched": 8,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "Residential and civilian areas struck",
+    "casualties": "24+ killed, ~20 injured",
+    "notes": "Eight munitions struck Umm Dukhun district, Central Darfur, killing at least 24 and injuring approximately 20 civilians. Attribution not officially confirmed; pattern consistent with SAF drone strikes on RSF-controlled Darfur. Source: Radio Dabanga.",
+    "status": "hit",
+    "lastUpdated": "2026-04-19T13:58:22.456Z"
+  },
+  {
+    "id": "drone-strike-el-fula-market-west-kordofan-apr16-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      28.05,
+      11.7
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: El Wahda Market, El Fula, West Kordofan (April 16, 2026)",
+    "date": "2026-04-16",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "14:00",
+    "damage": "El Wahda market struck during busy period",
+    "casualties": "9 killed (3 women, 6 children)",
+    "notes": "Drone struck El Wahda market in El Fula, West Kordofan State capital, killing 9 civilians including 3 women and 6 children. Attribution contested; market strike in civilian area. Source: Radio Dabanga.",
+    "status": "hit",
+    "lastUpdated": "2026-04-19T13:58:22.456Z"
+  },
+  {
+    "id": "saf-drone-strike-kutum-wedding-apr10-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.67,
+      14.2
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Wedding Ceremony in Kutum, North Darfur (April 10, 2026)",
+    "date": "2026-04-10",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "20:00",
+    "damage": "Wedding gathering in Al-Salama neighborhood hit; large civilian crowd struck",
+    "casualties": "30–56 killed (incl. 17 children), 107 injured",
+    "status": "hit",
+    "notes": "Drone struck a wedding gathering in Kutum, RSF-controlled North Darfur, killing at least 30 (UN figure) to 56 (Xinhua/RSF claim) including 17 children, and injuring 107. Attribution by local human rights groups and RSF to SAF; SAF did not claim or deny. UN SG condemned the attack. Demonstrates continued aerial targeting of civilian gatherings across Darfur.",
+    "lastUpdated": "2026-04-10T20:00:00.000Z"
+  },
+  {
+    "id": "drone-strike-sultan-medical-el-geneina-apr20-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      22.45,
+      13.47
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Sultan Medical Complex, El Geneina, West Darfur (April 20, 2026)",
+    "date": "2026-04-20",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "12:00",
+    "damage": "Sultan Medical Complex struck; fires caused at the facility",
+    "casualties": "3 killed, 1 injured",
+    "status": "hit",
+    "notes": "Drone struck the Sultan Medical Complex in El Geneina, RSF-held capital of West Darfur, killing 3 and injuring at least 1. Attribution unconfirmed; strike pattern consistent with SAF long-range drones. El Geneina is deep in RSF-controlled West Darfur. Source: Radio Dabanga.",
+    "lastUpdated": "2026-04-21T14:00:00.000Z"
+  },
+  {
+    "id": "saf-recapture-muqja-blue-nile-apr21-2026",
+    "from": [
+      34.35,
+      11.78
+    ],
+    "to": [
+      34.31,
+      11.15
+    ],
+    "cat": "saf-control",
+    "label": "SAF 4th Infantry Division Recaptures Muqja Station, Blue Nile (April 21, 2026)",
+    "date": "2026-04-21",
+    "confidence": "medium",
+    "notes": "SAF's Fourth Infantry Division retook Muqja town and Muqja station on April 21, pushing back RSF-SPLM-N forces that had advanced north from Kurmuk toward Damazin. The recapture disrupts RSF logistics on the Kurmuk–Damazin axis and slows the threat to the Roseires Dam. Source: Darfur24.",
+    "lastUpdated": "2026-04-21T14:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-um-dukhun-market-apr17-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      23.42,
+      10.57
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: Um Dukhun Market & Residential Areas, Central Darfur (April 17, 2026)",
+    "date": "2026-04-17",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "Popular market, fuel market, and residential areas struck; multiple fires",
+    "casualties": "24+ killed (including an entire family of six), ~20 injured",
+    "status": "hit",
+    "notes": "SAF drones struck Um Dukhun town in Central Darfur's Buram locality on April 17, hitting a popular market, fuel market, and residential neighborhoods. At least 24 killed (some reports cite 44 combined across Darfur and North Kordofan). Sources: Darfur24, Radio Dabanga.",
+    "lastUpdated": "2026-04-23T14:05:00.000Z"
+  },
+  {
+    "id": "saf-airstrike-dilling-resumed-apr22-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      29.97,
+      11.38
+    ],
+    "cat": "strike",
+    "label": "SAF Resumes Heavy Air Strikes: Port Sudan → Dilling, South Kordofan (April 22, 2026)",
+    "date": "2026-04-22",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:30",
+    "damage": "RSF-SPLM-N targets, outposts, and logistics sites struck",
+    "casualties": "Unknown",
+    "status": "hit",
+    "notes": "SAF heavy military aircraft returned to South Kordofan for the first time in months on April 22, striking RSF-SPLM-N targets around Dilling. The halt had been linked to prior RSF air defence successes. Part of the broader SAF multi-state coordinated offensive launched April 22-24 across six states.",
+    "lastUpdated": "2026-04-24T15:24:19.000Z"
+  },
+  {
+    "id": "saf-multistate-strikes-north-kordofan-apr23-2026",
+    "from": [
+      30.21,
+      13.18
+    ],
+    "to": [
+      29.8,
+      13.7
+    ],
+    "cat": "strike",
+    "label": "SAF Multi-State Strikes: North Kordofan RSF Positions, 7 Vehicles Destroyed (April 23, 2026)",
+    "date": "2026-04-23",
+    "weaponType": "mixed",
+    "launched": 5,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "RSF weapons depots, ammunition stores, drone launch sites, and air defence systems destroyed",
+    "casualties": "Unknown — SAF claimed 7 RSF combat vehicles destroyed",
+    "status": "hit",
+    "notes": "Part of the SAF-declared 72-hour multi-state coordinated offensive (April 22-24, 2026). SAF claimed 7 RSF combat vehicles destroyed in North Kordofan. Across all fronts, SAF claimed 10 tanks, 6 armored vehicles, and 18 combat trucks destroyed. Source: Sudan Tribune.",
+    "lastUpdated": "2026-04-24T15:24:19.000Z"
+  },
+  {
+    "id": "rsf-drone-el-obeid-residential-house-apr24-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Residential House, El-Obeid, North Kordofan (April 24, 2026)",
+    "date": "2026-04-24",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "09:00",
+    "damage": "Residential house destroyed",
+    "casualties": "13 killed (8 children), unknown wounded",
+    "status": "hit",
+    "notes": "RSF drone struck a residential house in El-Obeid, North Kordofan capital. Among the 13 killed were 8 children. Part of a pattern of near-daily RSF drone attacks on El-Obeid, continuing despite SAF's February 2025 relief of the ground siege. UN documents RSF drones responsible for 700+ civilian deaths in Q1 2026, the majority in Kordofan. Source: UN News April 2026.",
+    "lastUpdated": "2026-04-24T15:24:19.000Z"
+  },
+  {
+    "id": "rsf-drone-el-obeid-residential-neighborhoods-apr25-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Residential Neighborhoods, El-Obeid, North Kordofan (April 25, 2026)",
+    "date": "2026-04-25",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "damage": "Densely populated residential neighborhoods struck",
+    "casualties": "7 killed, 22 wounded",
+    "status": "hit",
+    "notes": "RSF drone struck residential neighborhoods in El-Obeid, North Kordofan, killing 7 and wounding 22. Sudan Doctors Network condemned as deliberate targeting of civilians. Second RSF drone strike on El-Obeid in two days (April 24: 13 killed including 8 children). Sources: Middle East Monitor, Sudan Doctors Network.",
+    "lastUpdated": "2026-04-26T14:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-hamidiyah-camp-zalingei-apr27-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      23.47,
+      12.91
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strike: Al-Hamidiyah IDP Camp, Zalingei, Central Darfur (April 27, 2026)",
+    "date": "2026-04-27",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "06:00",
+    "damage": "Multiple homes inside Al-Hamidiyah IDP camp destroyed; thousands of displaced civilians sheltering there",
+    "casualties": "6 killed, 15 injured (some critical)",
+    "status": "hit",
+    "notes": "SAF drone struck Al-Hamidiyah displacement camp near Zalingei at dawn on April 27. Emergency Lawyers documented the attack; 15 injured transported to Zalingei Hospital. Camp shelters thousands of displaced women and children from across Darfur. Source: AFP.",
+    "lastUpdated": "2026-04-27T14:31:17.000Z"
+  },
+  {
+    "id": "rsf-drone-wave-kosti-white-nile-apr29-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.67,
+      13.17
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Wave: SAF 18th Infantry Division HQ & Kenana Airbase, White Nile (April 29, 2026)",
+    "date": "2026-04-29",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "20:00",
+    "damage": "SAF 18th Infantry Division HQ (Kosti), Kenana airbase, and Joint Forces base struck",
+    "casualties": "None confirmed",
+    "status": "hit",
+    "notes": "RSF drone wave struck SAF military installations in White Nile State on April 29, including the 18th Infantry Division headquarters in Kosti and Kenana airbase. Demonstrates ongoing RSF long-range drone capability into SAF rear areas. No official statement from either side. Source: The National.",
+    "lastUpdated": "2026-04-29T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-singa-sennar-apr30-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      33.93,
+      13.16
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: SAF Military Base During High-Level Meeting, Singa, Sennar State (April 30, 2026)",
+    "date": "2026-04-30",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "SAF military base struck during high-level meeting of commanders and state officials; significant command casualties",
+    "casualties": "27 killed (including senior officers), 73 wounded",
+    "status": "hit",
+    "notes": "RSF drones struck an SAF military base in Singa (Sinja), Sennar State capital, during a high-level meeting of commanders and officials on April 30, 2026. One of the highest-casualty single RSF drone strikes of the war. Sennar State Governor Al-Zubair Hassan Al-Sayed was present but survived. Extends RSF long-range drone reach to eastern/central Sudan rear areas. Source: Sudan War Monitor.",
+    "lastUpdated": "2026-04-30T14:48:00.000Z"
+  },
+  {
+    "id": "rsf-drone-jebel-awliya-el-obeid-may1-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Multi-Site Drone Strikes: Jebel Awliya, El Obeid, Rahad al-Nuba (May 1, 2026)",
+    "date": "2026-05-01",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "SAF positions and civilian infrastructure in Jebel Awliya (south Khartoum), El Obeid, and Rahad al-Nuba struck",
+    "casualties": "Unconfirmed",
+    "status": "hit",
+    "notes": "RSF drones renewed strikes on multiple locations on May 1 — Jebel Awliya (south Khartoum), El Obeid (North Kordofan capital), and Rahad al-Nuba. Continues the near-daily RSF drone campaign that already killed 20 El Obeid civilians on April 24-25. Source: Sudan Tribune, Wikipedia 2026 timeline.",
+    "lastUpdated": "2026-05-04T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-civilian-vehicle-khartoum-road-may2-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.5,
+      15.1
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Kills 5 Civilians in Vehicle: Jammouiya Triangle Road, South Khartoum (May 2, 2026)",
+    "date": "2026-05-02",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "damage": "Civilian passenger vehicle struck and destroyed on road approaching Omdurman from White Nile province",
+    "casualties": "5 civilians killed",
+    "status": "hit",
+    "notes": "RSF drone struck a civilian vehicle traveling toward Omdurman on the Jammouiya Triangle road, approximately 90 km south of central Khartoum. Documented by Emergency Lawyers Sudan. Confirmed by Al Jazeera, AP, Washington Post, Arab News, and The Defense Post. Second RSF strike on the Khartoum area that week.",
+    "lastUpdated": "2026-05-04T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-targeted-strike-kaikal-family-gezira-may2-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      33.95,
+      14.35
+    ],
+    "cat": "strike",
+    "label": "RSF Targeted Drone Strike: Kaikal Family Compound, Al-Kahli Zaidan, Gezira (May 2, 2026)",
+    "date": "2026-05-02",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "22:00",
+    "damage": "Family compound of Sudan Shield Forces commander Abu Aqla Kaikal destroyed; neighboring homes damaged",
+    "casualties": "9–17 killed (including 6 children), 2+ injured",
+    "status": "hit",
+    "notes": "RSF targeted the family of Abu Aqla Kaikal — a former RSF commander who defected in Oct 2024 and helped SAF recapture Al Jazirah. Victims include his brothers Azzam and Haidar Kaikal, SSF cmdr Siddiq Bakhit, and six children. Gen. Burhan visited the site May 3-4. Confirmed by AFP, The National (UAE), Sudan Horizon, TRT Afrika.",
+    "lastUpdated": "2026-05-04T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-kenana-fuel-complex-may3-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.9,
+      13.12
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Kenana Fuel Station & Industrial Complex, White Nile State (May 3, 2026)",
+    "date": "2026-05-03",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "Fuel station and industrial infrastructure at Kenana complex struck; logistics capacity degraded",
+    "casualties": "None reported",
+    "status": "hit",
+    "notes": "RSF drone struck fuel station and industrial complex at Kenana, White Nile State — one of Sudan's largest agro-industrial sites. Second attack on Kenana area in 4 days (Apr 29: Kenana airbase). Part of ongoing RSF campaign targeting SAF logistics in White Nile State. Source: Dabanga, Wikipedia 2026 timeline.",
+    "lastUpdated": "2026-05-04T14:00:00.000Z"
+  },
+  {
+    "id": "saf-strike-balila-market-kurmuk-may4-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      34.27,
+      10.58
+    ],
+    "cat": "strike",
+    "label": "SAF Airstrike: Balila Market & Water Source, Kurmuk Locality, Blue Nile (May 4, 2026)",
+    "date": "2026-05-04",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "Balila market, water infrastructure, and livestock destroyed; fires in market stalls",
+    "casualties": "7–10 killed, 20 injured (mostly women and children)",
+    "status": "hit",
+    "notes": "SAF struck Balila market and water source in Kurmuk locality, Blue Nile State — RSF-SPLM-N-controlled area seized March 23, 2026. SPLM-N El Hilu reported 10 killed, 20 injured, mostly women and children. Assayha cited 7 killed. Part of SAF's ongoing air campaign targeting RSF-SPLM-N positions in Blue Nile. Source: Dabanga, Assayha.",
+    "lastUpdated": "2026-05-04T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-kosti-fuel-stations-may5-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.67,
+      13.17
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Fuel Stations, Kosti, White Nile (May 5, 2026)",
+    "date": "2026-05-05",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "Two fuel stations destroyed; civilian fuel supply degraded in SAF 18th Infantry Division city",
+    "casualties": "5 killed",
+    "status": "hit",
+    "notes": "RSF drones struck two fuel stations in Kosti, White Nile State capital, on May 5, killing 5. Part of the same day's broader RSF drone escalation that also included the intercepted drone over Khartoum airport. Source: Wikipedia Sudan Civil War Timeline 2026, Sudan Tribune.",
+    "lastUpdated": "2026-05-07T14:37:46.000Z"
+  },
+  {
+    "id": "rsf-uae-drone-khartoum-airport-may5-2026",
+    "from": [
+      37.38,
+      11.59
+    ],
+    "to": [
+      32.55,
+      15.59
+    ],
+    "cat": "strike",
+    "label": "RSF/UAE Drone Strike: Ethiopia (Bahir Dar) → Khartoum International Airport (May 5, 2026)",
+    "date": "2026-05-05",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 1,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "Minor; airport suspended operations 72 hours as precaution",
+    "casualties": "None",
+    "status": "intercepted",
+    "platform": "UAE-supplied loitering munition (serial S88, per Sudan military)",
+    "notes": "SAF air defenses intercepted RSF/UAE drone approaching Khartoum International Airport from the south on May 5. Sudan presented evidence of 4 drone attacks since March 1 originating from Bahir Dar Airport, Ethiopia. Serial S88 identified as Emirati property. Airport closed 72 hours. Sudan recalled ambassador to Ethiopia and announced UNSC evidence submission. Ethiopia and UAE both denied involvement. Source: Al Jazeera, Sudan Tribune, Xinhua.",
+    "lastUpdated": "2026-05-06T14:45:32.117Z"
+  },
+  {
+    "id": "saf-border-reinforcement-gedaref-ethiopia-may8-2026",
+    "from": [
+      35.38,
+      14.02
+    ],
+    "to": [
+      36.07,
+      12.61
+    ],
+    "cat": "saf-control",
+    "label": "SAF Border Reinforcement: Gedaref → East Gallabat / Ethiopian Border Zones (May 2026)",
+    "date": "2026-05-08",
+    "confidence": "medium",
+    "notes": "Sudan deployed additional ground troops and anti-aircraft systems from Gedaref State staging areas to three border zones — East Gallabat, Basunda, and Al-Fashaga — in May 2026. Reinforcement confirmed by Bloomberg (May 7) citing Sudanese and regional security officials. Direct response to Sudan's accusation that Ethiopia facilitated RSF drone attacks on Khartoum Airport via Bahir Dar Airport. First confirmed conventional SAF border deployment in direct response to state-level confrontation with Ethiopia. Source: Bloomberg, Sudan Tribune.",
+    "lastUpdated": "2026-05-08T14:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-abu-zaima-market-may9-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      30.15,
+      13.25
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strike: Abu Zaima Market, North Kordofan (May 9, 2026)",
+    "date": "2026-05-09",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "12:00",
+    "damage": "Local market struck",
+    "casualties": "5 killed",
+    "status": "hit",
+    "notes": "SAF drone struck the market in Abu Zaima, North Kordofan, killing 5 civilians on May 9, 2026. Continues the pattern of aerial attacks on civilian markets in RSF-contested North Kordofan. Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-09T14:24:13.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-khartoum-commander-home-may8-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.53,
+      15.55
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Military-Allied Commander's Home, Khartoum Area (May 8, 2026)",
+    "date": "2026-05-08",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "12:00",
+    "damage": "Residential structure destroyed",
+    "casualties": "15 killed",
+    "status": "hit",
+    "notes": "RSF drone struck the home of a SAF-allied military commander near Khartoum on May 8, 2026, killing 15. Demonstrates continued RSF targeting of SAF-affiliated personnel in the recaptured capital. Source: MadaMasr Sudan roundup, May 8, 2026.",
+    "lastUpdated": "2026-05-10T14:30:00.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-nyala-may10-11-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: Port Sudan → Nyala (May 10–11, 2026)",
+    "date": "2026-05-11",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "Central Nyala, Nyala Airport, and Al-Riyadh neighborhood struck; SAF claims 240 RSF vehicles destroyed",
+    "casualties": "Unverified; SAF claims hundreds of RSF fighters killed",
+    "status": "hit",
+    "notes": "SAF struck Nyala for two consecutive days (May 10–11, 2026). Second day saw SAF also down an RSF-operated Bayraktar Akıncı UCAV over Nyala Airport. Source: Sudan Tribune.",
+    "lastUpdated": "2026-05-11T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-bayraktar-akinji-nyala-airport-intercepted-may11-2026",
+    "from": [
+      24.88,
+      12.05
+    ],
+    "to": [
+      24.96,
+      12.05
+    ],
+    "cat": "strike",
+    "label": "RSF Bayraktar Akıncı UCAV Intercepted Over Nyala Airport (May 11, 2026)",
+    "date": "2026-05-11",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 1,
+    "confidence": "low",
+    "time": "12:00",
+    "damage": "None — intercepted by SAF air defenses",
+    "casualties": "None",
+    "status": "intercepted",
+    "platform": "Baykar Bayraktar Akıncı (Turkish UCAV, RSF-operated)",
+    "notes": "SAF air defenses downed an RSF-operated Bayraktar Akıncı UCAV over Nyala Airport on May 11. This UCAV is more capable than the TB2 — its use by RSF suggests continued advanced drone supply via Turkey-UAE networks. Source: Sudan Tribune article 313797.",
+    "lastUpdated": "2026-05-11T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-al-quz-south-kordofan-may8-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.5,
+      11.8
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Al Quz, South Kordofan (May 8, 2026)",
+    "date": "2026-05-08",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "Civilian area struck",
+    "casualties": "Part of 26 killed across two May 8 strikes (Al Quz + El Obeid)",
+    "status": "hit",
+    "notes": "Documented by OHCHR in Türk's May 11 high-alert statement. Combined with near-simultaneous El Obeid strike; 26 civilians killed across both attacks on May 8. Source: OHCHR, Bloomberg.",
+    "lastUpdated": "2026-05-11T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-buildup-move-libya-egypt-sudan-border-may2026",
+    "from": [
+      24.88,
+      12.05
+    ],
+    "to": [
+      24.5,
+      21.8
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Forces Massing: Nyala → Libya-Egypt-Sudan Tri-Border Area (May 2026)",
+    "date": "2026-05-08",
+    "confidence": "low",
+    "notes": "RSF forces massing near Sudan-Libya-Egypt border triangle in far northwest Sudan as of May 2026 (MadaMasr reporting). Potential new supply corridor via Libyan territory. Complements established RSF-LNA (Haftar) networks in southern Libya. Unconfirmed by independent verification.",
+    "lastUpdated": "2026-05-10T14:30:00.000Z"
+  },
+  {
+    "id": "saf-4th-division-retakes-al-kayli-blue-nile-may10-2026",
+    "from": [
+      34.35,
+      11.78
+    ],
+    "to": [
+      34.3,
+      10.6
+    ],
+    "cat": "saf-control",
+    "label": "SAF 4th Infantry Division Retakes Al-Kayli: Damazin Axis → Al-Kayli (May 10, 2026)",
+    "date": "2026-05-10",
+    "confidence": "medium",
+    "notes": "SAF's Fourth Infantry Division recaptured Al-Kayli area near Kurmuk, Blue Nile State, on May 10, 2026. Disrupts RSF-SPLM-N logistics on the Kurmuk–Damazin axis; reduces threat to Roseires Dam. RSF-SPLM-N had claimed control of Al-Kayli in mid-April. Source: Radio Tamazuj.",
+    "lastUpdated": "2026-05-12T15:44:48.000Z"
+  },
+  {
+    "id": "saf-drone-nyala-rsf-leadership-meeting-may10-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "strike",
+    "label": "SAF Targeted Drone Strike: RSF Leadership Meeting House, Nyala (May 10, 2026)",
+    "date": "2026-05-10",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "House hosting RSF senior leaders' meeting struck; leaders had departed before impact",
+    "casualties": "None confirmed",
+    "status": "hit",
+    "notes": "SAF drone struck a house in Nyala hosting a meeting of senior RSF leaders on May 10. The RSF leaders had departed before the strike. Part of SAF's two consecutive days of Nyala strikes (May 10-11). Source: Wikipedia Sudan 2026 timeline, Sudan Tribune.",
+    "lastUpdated": "2026-05-12T15:44:48.000Z"
+  },
+  {
+    "id": "saf-drone-strike-al-daein-rsf-commands-may12-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      26.13,
+      11.47
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: RSF Commanders' Residences & Andour Well, Al-Daein, East Darfur (May 12, 2026)",
+    "date": "2026-05-12",
+    "weaponType": "drone_loitering",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "06:00",
+    "damage": "RSF civil admin chief's residence, two RSF commanders' homes, and Andour Well civilian water source hit; livestock killed",
+    "casualties": "Civilians killed and injured (numbers unconfirmed)",
+    "status": "hit",
+    "notes": "SAF drones hit four simultaneous targets in Al-Daein: residences of East Darfur civil admin chief Mohamed Idris Khater, RSF cmdr Mohamed Naji, RSF dep. cmdr Haroun Abdullah, and the Andour Well. Part of the broader May 10-12 Darfur aerial campaign alongside Nyala strikes and the RSF Akinci UCAV downing. Source: Darfur24.",
+    "lastUpdated": "2026-05-13T13:00:00.000Z"
+  },
+  {
+    "id": "saf-advance-al-hamadi-south-kordofan-may13-2026",
+    "from": [
+      30.21,
+      13.18
+    ],
+    "to": [
+      29.55,
+      11.55
+    ],
+    "cat": "saf-control",
+    "label": "SAF Ground Advance: El Obeid Axis → Al-Hamadi, South Kordofan (May 13, 2026)",
+    "date": "2026-05-13",
+    "confidence": "medium",
+    "notes": "SAF ground forces retook Al-Hamadi, an administrative hub for the Hawazma tribe in central South Kordofan, on May 13, 2026. Part of SAF's sustained westward push through the Kordofan corridor that links RSF-held Darfur to central Sudan. Sources: Wikipedia Sudan Civil War 2026 Timeline, Sudan Tribune article 313393.",
+    "lastUpdated": "2026-05-13T13:00:00.000Z"
+  },
+  {
+    "id": "saf-advance-omdurman-south-neighborhoods-may13-2026",
+    "from": [
+      32.48,
+      15.58
+    ],
+    "to": [
+      32.47,
+      15.5
+    ],
+    "cat": "saf-control",
+    "label": "SAF Clears Southern Omdurman — Al-Jami'a and Al-Shaqla Neighborhoods (May 13, 2026)",
+    "date": "2026-05-13",
+    "confidence": "medium",
+    "notes": "SAF recaptured Al-Jami'a neighborhood and fully cleared Al-Shaqla neighborhood in southern Omdurman on May 13, 2026, eliminating RSF pockets that persisted in the metro area's southern fringe after the broad 2025 SAF counteroffensive. Sources: Wikipedia Sudan Civil War 2026 Timeline, Sudan Tribune article 313393.",
+    "lastUpdated": "2026-05-13T13:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-el-geneina-three-sites-may13-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      22.45,
+      13.47
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: Three Sites, El Geneina, West Darfur (May 13, 2026)",
+    "date": "2026-05-13",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "Three separate sites in El Geneina struck; civilian infrastructure damaged",
+    "casualties": "2+ killed, several injured",
+    "status": "hit",
+    "notes": "SAF drone strikes hit three locations in El Geneina, RSF-held capital of West Darfur, on May 13, 2026. Continues SAF aerial campaign targeting RSF logistics in Darfur capitals. Source: Sudan Tribune 313882.",
+    "lastUpdated": "2026-05-15T15:38:49.000Z"
+  },
+  {
+    "id": "saf-airstrike-al-zorg-north-darfur-may14-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.0,
+      14.1
+    ],
+    "cat": "strike",
+    "label": "SAF Airstrike: Al Zorg (Hemedti's Hometown), North Darfur (May 2026)",
+    "date": "2026-05-14",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "Al Zorg town struck; local hospital destroyed; civilian infrastructure devastated",
+    "casualties": "64 civilians killed (incl. 2 Hemedti relatives and tribal leader Bashir Barma Baraka Allah)",
+    "status": "hit",
+    "notes": "SAF airstrikes hit Al Zorg, the North Darfur hometown and tribal heartland of RSF commander Hemedti, killing 64 civilians including two of Hemedti's relatives and tribal leader Bashir Barma Baraka Allah. The town's hospital was destroyed. Highest-profile SAF strike on a location tied to RSF leadership in the war's history. Source: Wikipedia Sudan 2026 Timeline.",
+    "lastUpdated": "2026-05-14T14:00:00.000Z"
+  },
+  {
+    "id": "saf-4th-division-advance-khor-hassan-blue-nile-may16-2026",
+    "from": [
+      34.3,
+      10.6
+    ],
+    "to": [
+      34.21,
+      10.59
+    ],
+    "cat": "saf-control",
+    "label": "SAF 4th Division Recaptures Khor Hassan — Blue Nile State (May 16, 2026)",
+    "date": "2026-05-16",
+    "confidence": "medium",
+    "notes": "SAF's 4th Infantry Division retook the strategic town of Khor Hassan in southeastern Blue Nile State on May 16, 2026, advancing from Al-Kayli (recaptured May 10) toward Kurmuk. Continues the SAF counteroffensive rolling back RSF-SPLM-N gains from their March 23, 2026 Kurmuk offensive that displaced ~50,000 people. SAF is methodically reclaiming the Kurmuk–Ed Damazin axis to protect the Roseires Dam and restore Blue Nile State stability. Source: Sudan Tribune article 313990.",
+    "lastUpdated": "2026-05-16T16:04:23.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-nyala-day3-al-masane-may17-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: Al-Masane Weapons Depots, Nyala, South Darfur — Day 3 (May 17, 2026)",
+    "date": "2026-05-17",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "RSF weapons depots in Al-Masane district struck; eastern Nyala neighborhoods with RSF command infrastructure also targeted",
+    "casualties": "Casualties reported, numbers unconfirmed",
+    "status": "hit",
+    "notes": "Third consecutive day of SAF drone strikes on Nyala, South Darfur. Targets: RSF weapons depots in Al-Masane district (western edge of Nyala) and eastern neighborhoods with RSF command infrastructure. Hemedti reportedly present in Nyala during strikes. Part of SAF's sustained Darfur aerial campaign hitting all RSF-held Darfur capitals in May 2026. Source: Sudan Tribune articles 313957 and 313797.",
+    "lastUpdated": "2026-05-17T14:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-nyala-day4-al-masane-may18-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: Al-Masane Weapons Depots, Nyala — Day 4 (May 18, 2026)",
+    "date": "2026-05-18",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "RSF weapons depots in Al-Masane district and eastern Nyala command infrastructure targeted; 4th consecutive day of strikes",
+    "casualties": "Unconfirmed",
+    "status": "hit",
+    "notes": "Fourth consecutive day of SAF drone strikes on Nyala, South Darfur (May 15–18, 2026). Al-Masane district — western edge of Nyala — serves as key RSF weapons depot. Hemedti reportedly still in city. Coincides with Burhan's RSF derecognition order and RSF payroll crisis. Source: Sudan Tribune ongoing coverage.",
+    "lastUpdated": "2026-05-18T14:30:00.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-nyala-day5-al-masane-may19-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      24.88,
+      12.05
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: Nyala, South Darfur — Day 5; RSF Cuts City Telecom (May 19, 2026)",
+    "date": "2026-05-19",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "RSF weapons depots and command infrastructure in Nyala; 5th consecutive day of strikes",
+    "casualties": "Unconfirmed — RSF cut all city telecommunications to suppress documentation",
+    "status": "hit",
+    "notes": "Fifth consecutive day of SAF drone strikes on Nyala (May 15–19, 2026). RSF cut all telecommunications in Nyala in response. Coincides with Hemedti's formal TSC removal (May 19) and SAF's Wadi al-Atrun capture in North Darfur. Source: Darfur24, Sudan Tribune.",
+    "lastUpdated": "2026-05-19T15:00:00.000Z"
+  },
+  {
+    "id": "saf-advance-wadi-atrun-north-darfur-may19-2026",
+    "from": [
+      25.36,
+      13.63
+    ],
+    "to": [
+      24.3,
+      18.2
+    ],
+    "cat": "saf-control",
+    "label": "SAF Capture: El Fasher Axis → Wadi al-Atrun, North Darfur (May 19, 2026)",
+    "date": "2026-05-19",
+    "confidence": "medium",
+    "notes": "SAF forces captured Wadi al-Atrun in Al-Malha locality, North Darfur on May 19. The town sits on a trans-Saharan supply route linking the Libyan Desert (Kufra) southward into North Darfur — a corridor used by RSF and their Libya-based allies for weapons, fuel, and fighter resupply. Capture severs RSF's northern Libyan supply axis. Part of SAF's multi-axis supply interdiction alongside Gedaref border reinforcement (May 8) and Nyala aerial campaign. Source: Sudan Tribune, Darfur24.",
+    "lastUpdated": "2026-05-19T15:00:00.000Z"
+  },
+  {
+    "id": "saf-breaks-dilling-siege-3rd-time-al-takma-may20-2026",
+    "from": [
+      30.21,
+      13.18
+    ],
+    "to": [
+      29.97,
+      11.38
+    ],
+    "cat": "saf-control",
+    "label": "SAF Breaks Dilling Siege (3rd Time) — Al-Takma Recaptured, Kadugli Road Reopened (May 20, 2026)",
+    "date": "2026-05-20",
+    "confidence": "high",
+    "notes": "SAF broke the RSF-SPLM-N siege of Dilling for the third time in 2026, recapturing Al-Takma (~7 km east of Dilling) and reopening the Dilling–Kadugli road. First supply convoy since January reached famine-confirmed Kadugli on May 20 (12 trucks); sugar prices collapsed from SDG 40,000 to SDG 13,000/kg. Part of SAF's May 2026 multi-front offensive. Sudan Security Council commended SAF gains across South Kordofan, Blue Nile, and Darfur. Source: Sudan Tribune articles 314123, 314165.",
+    "lastUpdated": "2026-05-21T14:25:00.000Z"
+  },
+  {
+    "id": "saf-humanitarian-corridor-dilling-kadugli-may20-2026",
+    "from": [
+      29.97,
+      11.38
+    ],
+    "to": [
+      29.72,
+      11.01
+    ],
+    "cat": "humanitarian",
+    "label": "SAF Humanitarian Corridor Reopened: Dilling → Kadugli (May 20, 2026)",
+    "date": "2026-05-20",
+    "confidence": "high",
+    "notes": "First supply convoy since January 2026 traversed the reopened Dilling–Kadugli road on May 20, delivering 12 trucks of food and medicine to Kadugli — a formally declared IPC Phase 5 famine zone. Food prices in Kadugli collapsed from crisis levels (sugar: SDG 40,000→13,000/kg; flour: SDG 30,000→13,000/kg). The corridor's durability is uncertain given RSF-SPLM-N counteroffensive history. Source: Sudan Tribune article 314165.",
+    "lastUpdated": "2026-05-21T14:25:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-ghubaysh-market-may19-2026",
+    "from": [
+      30.21,
+      13.18
+    ],
+    "to": [
+      29.84,
+      11.54
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Ghubaysh Market, West Kordofan (May 19, 2026)",
+    "date": "2026-05-19",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "damage": "Market and adjacent restaurant destroyed",
+    "casualties": "28 killed, 30+ wounded",
+    "status": "hit",
+    "notes": "Drone strike on crowded Ghubaysh market in RSF-controlled West Kordofan killed at least 28. Witnesses describe two-stage attack: first struck RSF vehicle (~3 killed), second hit packed restaurant. SAF denied responsibility; consistent with SAF targeting of RSF-held West Kordofan towns. Multiple sources: Washington Post, Defense Post, Al Arabiya.",
+    "platform": "drone",
+    "lastUpdated": "2026-05-22T10:00:00.000Z"
+  },
+  {
+    "id": "rsf-splmn-drone-dilling-medical-warehouses-may22-2026",
+    "from": [
+      29.72,
+      11.01
+    ],
+    "to": [
+      29.97,
+      11.38
+    ],
+    "cat": "strike",
+    "label": "RSF/SPLM-N Drone Strike: Dilling Medical Warehouses (May 20–21, 2026)",
+    "date": "2026-05-22",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "20:00",
+    "damage": "Complete destruction of Dilling city medical supply warehouses; thousands of patients deprived of medicines",
+    "casualties": "6 injured",
+    "status": "hit",
+    "notes": "RSF/SPLM-N drone strike struck and completely destroyed Dilling medical supply warehouses Wednesday evening (May 20–21), 24–48 hours after SAF broke the siege and reopened the Kadugli road. Consistent with RSF-SPLM-N pattern of counter-attacking healthcare and supply infrastructure after SAF siege breaks. Source: Anadolu Agency.",
+    "platform": "RSF/SPLM-N drone",
+    "lastUpdated": "2026-05-22T10:00:00.000Z"
+  },
+  {
+    "id": "saf-airstrike-convoy-yabus-blue-nile-may23-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      34.6,
+      10.75
+    ],
+    "cat": "strike",
+    "label": "SAF Airstrike: RSF-SPLM-N Supply Convoy, Yabus Area, Blue Nile (May 23, 2026)",
+    "date": "2026-05-23",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "10:00",
+    "damage": "Supply convoy destroyed near Ethiopian border corridor",
+    "casualties": "5 killed, 20 injured",
+    "status": "hit",
+    "notes": "SAF airstrike struck an RSF-SPLM-N supply convoy near Yabus, Blue Nile State, close to the Ethiopia border, killing 5 and injuring 20 on May 23. Extends SAF's aerial interdiction of the Kurmuk–Damazin RSF-SPLM-N supply axis. Part of SAF's rolling back of March 23 Kurmuk gains. Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-24T14:10:00.000Z"
+  },
+  {
+    "id": "drone-strike-saraf-omra-north-darfur-may24-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      25.78,
+      15.8
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Saraf Omra, North Darfur — 22 Killed (May 24, 2026)",
+    "date": "2026-05-24",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "12:00",
+    "damage": "Residential and civilian areas struck; second major strike on Saraf Omra (first: March 26)",
+    "casualties": "22 killed, 17 wounded",
+    "status": "hit",
+    "notes": "Drone strike killed 22 and wounded 17 in Saraf Omra, North Darfur on May 24. Second mass-casualty attack on the town within two months (March 26: market, gov't HQ, fuel tanker also struck). Attribution disputed: Wikipedia cites RSF but pattern/location in RSF-controlled North Darfur near Libya supply corridor is consistent with SAF targeting. Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-24T14:10:00.000Z"
+  },
+  {
+    "id": "rsf-drone-al-dabbah-power-station-may24-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.94,
+      18.04
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Al Dabbah Power Station, Northern State (May 24, 2026)",
+    "date": "2026-05-24",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "12:00",
+    "damage": "Power station struck; widespread blackouts across Al Dabbah and surrounding district",
+    "casualties": "3 injured",
+    "status": "hit",
+    "notes": "RSF drone struck Al Dabbah power station in Northern State, causing widespread blackouts. Second RSF drone attack on Al Dabbah within two months (March 21: 6 killed at engineering college and electricity substation). Confirms sustained RSF long-range drone reach ~850 km into SAF's northern rear territory. Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-24T14:10:00.000Z"
+  },
+  {
+    "id": "rsf-drone-al-tina-market-may25-2026",
+    "from": [
+      24.88,
+      12.05
+    ],
+    "to": [
+      22.2,
+      14.7
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Al-Tina Border Market, West Darfur (May 25, 2026) — Chad Closes Border",
+    "date": "2026-05-25",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "damage": "Weekly market struck during trading hours; civilian vendors killed; Chad-Sudan border crossing disrupted",
+    "casualties": "14 killed (mostly women vendors), additional wounded",
+    "status": "hit",
+    "notes": "RSF drone struck the weekly market in Al-Tina, West Darfur, on the Sudan-Chad border, killing 14 civilians. Chad condemned the attack, convened an emergency Defence & Security Council, and closed the Sudan border. Al-Tina is the primary refugee and humanitarian aid crossing for Darfur. Follows OHCHR documentation of 28 market drone attacks in Sudan Jan–Apr 2026. Sources: Arab News, Radio Dabanga, Al-Ahram Online.",
+    "lastUpdated": "2026-05-27T14:37:22.000Z"
+  },
+  {
+    "id": "rsf-drone-mustariha-musa-hilal-may25-2026",
+    "from": [
+      25.36,
+      13.63
+    ],
+    "to": [
+      26.3,
+      15.4
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Mustariha, North Darfur — Targeting RAC Leader Musa Hilal (May 25, 2026)",
+    "date": "2026-05-25",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "Guesthouse compound struck; leadership gathering hit",
+    "casualties": "Several RAC commanders killed; Musa Hilal's son injured; Hilal survived",
+    "status": "hit",
+    "notes": "RSF drones targeted the compound of Musa Hilal, leader of the SAF-aligned Sudanese Awakening Revolutionary Council (RAC), in Mustariha, North Darfur. Hilal — a former Janjaweed commander who broke with Hemedti before the 2023 war — survived; his son was injured and several RAC commanders present were killed. Intra-Rizeigat factional strike following SAF's Wadi al-Atrun capture (May 19) which cut the North Darfur-Libya supply corridor. Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-27T14:37:22.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-north-kordofan-may27-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      29.8,
+      13.7
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: RSF Positions, North Kordofan (May 27, 2026)",
+    "date": "2026-05-27",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "10:00",
+    "damage": "RSF personnel and equipment losses in North Kordofan",
+    "casualties": "Heavy RSF losses claimed; unverified",
+    "status": "hit",
+    "notes": "SAF launched drone strikes on RSF positions in North Kordofan on May 27, 2026 — Eid al-Adha. Military sources claimed heavy RSF losses in personnel and equipment. Part of ongoing SAF air campaign accompanying ground advances cutting the RSF Darfur-Kordofan supply corridor. Source: Sudan Tribune.",
+    "lastUpdated": "2026-05-27T14:37:22.000Z"
+  },
+  {
+    "id": "rsf-militia-assault-misterei-west-darfur-may28-2026",
+    "from": [
+      22.7,
+      14.0
+    ],
+    "to": [
+      23.9,
+      14.0
+    ],
+    "cat": "rsf-control",
+    "label": "RSF & Arab Militia Ground Assault: Misterei, West Darfur (May 28, 2026) — 28–97 Masalit Killed",
+    "date": "2026-05-28",
+    "confidence": "high",
+    "notes": "RSF fighters and allied Arab militias attacked the predominantly Masalit town of Misterei from the west on May 28, arriving on motorcycles, horses, and armed pickups in multiple waves. Assault rifles, recoilless rifles, RPGs, and vehicle-mounted machine guns used against fleeing civilians. Satellite fires confirmed May 29–June 2; imagery showed town-wide burn marks. One of seven West Darfur towns burned by RSF since April 2026. Sources: HRW/ReliefWeb, Wikipedia (Misterei massacre).",
+    "lastUpdated": "2026-05-28T14:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-north-kordofan-may28-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      30.1,
+      13.4
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: RSF Positions, North Kordofan (May 28, 2026)",
+    "date": "2026-05-28",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "10:00",
+    "damage": "RSF positions targeted in North Kordofan",
+    "casualties": "Unverified",
+    "status": "hit",
+    "notes": "SAF continued drone strikes targeting RSF positions in North Kordofan on May 28, 2026, as part of sustained air interdiction of the Darfur–Kordofan RSF supply corridor following SAF ground advances at Dilling (May 20) and Dibebad (May 23). Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-28T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-attack-murrah-villages-barah-may29-2026",
+    "from": [
+      30.36,
+      13.73
+    ],
+    "to": [
+      30.05,
+      13.65
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Ground Attack: Barah Area → Al-Murrah Villages (May 29, 2026)",
+    "date": "2026-05-29",
+    "notes": "RSF-affiliated forces attacked al-Murrah villages west of Barah, North Kordofan, on May 29 — the second day of Eid al-Adha — killing at least 27 civilians including elderly. Sudan Doctors Network confirmed no military presence in the targeted villages. RSF operates from the Bara area (recaptured March 2026) into contested North Kordofan territory. Source: AP / Washington Post.",
+    "confidence": "high",
+    "lastUpdated": "2026-05-29T14:30:00.000Z"
+  },
+  {
+    "id": "rsf-drone-el-obeid-residential-may29-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Residential House, El-Obeid, North Kordofan (May 29, 2026) — 10–24 Killed",
+    "date": "2026-05-29",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "09:00",
+    "damage": "Residential house destroyed in El-Obeid city center",
+    "casualties": "10–24 killed (including 8 children); count disputed across sources",
+    "status": "hit",
+    "notes": "RSF drone struck a residential house in El-Obeid, North Kordofan capital, on May 29 — the second day of Eid al-Adha. Sudan Doctors Network reported 13 killed (8 children); PBS cited 24 killed (8 children); Dabanga reported 10 killed. Continues the near-daily RSF drone campaign against El-Obeid documented since Q1 2026. OHCHR: 880+ civilian drone deaths Jan–Apr 2026, with El-Obeid among the most frequently targeted SAF-held cities. Sources: PBS NewsHour, Dabanga Radio, Wikipedia Sudan 2026 timeline.",
+    "lastUpdated": "2026-05-31T14:15:00.000Z"
+  },
+  {
+    "id": "rsf-renewed-assault-murrah-may30-2026",
+    "from": [
+      30.36,
+      13.73
+    ],
+    "to": [
+      30.05,
+      13.65
+    ],
+    "cat": "rsf-control",
+    "label": "RSF Renewed Ground Assault: Al-Murrah Villages Under Communications Blackout (May 30, 2026)",
+    "date": "2026-05-30",
+    "notes": "RSF forces renewed their ground assault on al-Murrah villages west of Barah on May 30, one day after the Eid al-Adha massacre that killed 27+ civilians. A complete communications blackout was imposed on the area, preventing independent casualty verification. Follows documented RSF pattern of multi-day sustained attacks on civilian villages to complete destruction and prevent survivor testimony. Sources: Sudan Tribune article 314451, New Arab.",
+    "confidence": "medium",
+    "lastUpdated": "2026-05-31T14:15:00.000Z"
+  },
+  {
+    "id": "rsf-drone-white-nile-intercepted-may31-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.6,
+      13.1
+    ],
+    "cat": "strike",
+    "label": "RSF Long-Range Drone Intercepted Over White Nile State (May 31, 2026)",
+    "date": "2026-05-31",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 1,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "None — intercepted by SAF air defenses before impact",
+    "casualties": "None",
+    "status": "intercepted",
+    "notes": "SAF air defenses intercepted an RSF long-range drone over White Nile State on May 31, 2026, before it could strike vital facilities. Follows a series of successful RSF drone strikes in the region (Al-Jabalain Hospital Apr 3, Rabak depot Apr 3-4, Kosti bases Apr 29, Kenana May 3, Kosti fuel stations May 5). First confirmed SAF drone shoot-down over White Nile State during spring 2026 RSF aerial campaign. Demonstrates improving SAF counter-drone capability deployment in rear areas. Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-31T14:15:00.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-north-kordofan-may31-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      29.8,
+      13.5
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: RSF Positions, North Kordofan (May 31, 2026)",
+    "date": "2026-05-31",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "14:00",
+    "damage": "RSF personnel and equipment in North Kordofan targeted",
+    "casualties": "Unverified",
+    "status": "hit",
+    "notes": "SAF launched drone strikes targeting RSF positions in North Kordofan following the White Nile drone interception on May 31. Part of the sustained SAF air interdiction campaign along the Darfur–Kordofan RSF supply corridor that has accompanied ground advances at Dilling (May 20), Dibebad (May 23), and Wadi al-Atrun (May 19). Source: Wikipedia Sudan Civil War Timeline 2026.",
+    "lastUpdated": "2026-05-31T14:15:00.000Z"
+  },
+  {
+    "id": "saf-advance-blue-nile-qaysan-district-may26-2026",
+    "from": [
+      34.17,
+      11.04
+    ],
+    "to": [
+      34.1,
+      10.65
+    ],
+    "cat": "saf-control",
+    "label": "SAF Blue Nile Advance: Qaysan District (Abdaqla, Adi, Washimbu, Um Shanqar, Kinshinkaru) — May 26, 2026",
+    "date": "2026-05-26",
+    "notes": "SAF retook five towns in Qaysan district (Blue Nile State) on May 26, 2026, pushing RSF/SPLM-N forces toward the Ethiopian border. Advance is southward from Geissan area toward Qaysan district center; part of SAF's accelerating Blue Nile offensive following recapture of Al-Barka (May 24), Kern Kern/Doukan (May 18), and Khor Hasan (May 15).",
+    "confidence": "medium",
+    "lastUpdated": "2026-06-01T06:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-abu-zabad-al-fula-road-may30-2026",
+    "from": [
+      27.5,
+      12.2
+    ],
+    "to": [
+      29.0,
+      12.1
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Abu Zabad–Al-Fula Road, West Kordofan (May 30, 2026) — 10 Killed",
+    "date": "2026-05-30",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "Vehicles destroyed on Abu Zabad–Al-Fula road",
+    "casualties": "10 killed",
+    "status": "hit",
+    "notes": "RSF drone struck civilian vehicles on the Abu Zabad–Al-Fula road in West Kordofan on May 30, 2026, killing 10. Strike from RSF positions in the West Kordofan/Darfur border zone toward the main road connecting Abu Zabad to the state capital Al-Fula. Consistent with RSF pattern of targeting road convoys in Kordofan states.",
+    "lastUpdated": "2026-06-01T06:00:00.000Z"
+  },
+  {
+    "id": "drone-strike-kabum-south-darfur-june1-2026",
+    "from": [
+      29.0,
+      12.0
+    ],
+    "to": [
+      23.82,
+      12.15
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Kabum, South Darfur (June 1, 2026) — 12 Killed, Attribution Disputed",
+    "date": "2026-06-01",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "14:00",
+    "damage": "Gathering struck; multiple buildings destroyed",
+    "casualties": "12 killed, multiple critically injured",
+    "status": "hit",
+    "notes": "Drone struck a civilian-military gathering near Kabum, ~120 km west of Nyala, South Darfur on June 1, 2026. Drone approached from the east and fired 3 missiles. TASIS (Sudan Founding Alliance) accused SAF; attribution disputed — RSF also operates drones across South Darfur. Concurrent Salamat-Beni Halba tribal clashes in the area using RSF-supplied vehicles complicated the ground situation.",
+    "lastUpdated": "2026-06-02T16:17:28.000Z"
+  },
+  {
+    "id": "rsf-rsf-attack-murrah-north-kordofan-may29-june2-2026",
+    "from": [
+      30.36,
+      13.73
+    ],
+    "to": [
+      30.05,
+      13.65
+    ],
+    "cat": "strike",
+    "label": "RSF Ground Assault: Al-Murrah Villages, Western Bara Locality, North Kordofan — 60 Civilians Killed",
+    "date": "2026-05-29",
+    "weaponType": "unknown",
+    "launched": 20,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "damage": "Multiple villages attacked; civilian homes destroyed",
+    "casualties": "60 civilians killed (confirmed June 2, 2026)",
+    "status": "hit",
+    "notes": "RSF convoy of ~20 combat vehicles attacked villages al-Murrah, Umm Sadoun al-Sharif, and al-Radah on May 29 (Eid al-Adha). Death toll confirmed at 60 civilians by June 2. Sudan Doctors Network: no military presence in targeted villages. Sudan MFA condemned attack June 2. Deadliest single RSF ground atrocity in North Kordofan in 2026.",
+    "lastUpdated": "2026-06-02T16:17:28.000Z"
+  },
+  {
+    "id": "rsf-splmn-assault-al-baraka-blue-nile-june3-2026",
+    "from": [
+      34.29,
+      10.56
+    ],
+    "to": [
+      34.2,
+      11.1
+    ],
+    "cat": "rsf-control",
+    "label": "RSF-SPLM-N Assault on Al-Baraka Garrison Town, Blue Nile (June 3–4, 2026)",
+    "date": "2026-06-03",
+    "confidence": "medium",
+    "notes": "Joint RSF/SPLM-N (Toka) force assaulted Al-Baraka garrison town in southern Blue Nile State on June 3, with fighting continuing June 4. Both sides claim control; SAF's 4th Infantry Division reported repelling the attack. Al-Baraka lies on the Kurmuk–Ed Damazin axis where SAF has been rolling back RSF-SPLM-N gains since April 2026. An RSF capture would threaten the Roseires Dam. Sources: Sudan Tribune article 314685, Darfur24.",
+    "lastUpdated": "2026-06-05T14:22:00.000Z"
+  },
+  {
+    "id": "rsf-drone-el-obeid-legal-admin-june3-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Legal Administration Buildings, El-Obeid, North Kordofan (June 3, 2026)",
+    "date": "2026-06-03",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "09:00",
+    "damage": "Legal Administration (judicial) buildings in El-Obeid struck",
+    "casualties": "Unknown",
+    "status": "hit",
+    "notes": "RSF drone struck Legal Administration buildings in El-Obeid, SAF-held North Kordofan capital, on the morning of June 3, 2026. Continues the near-daily RSF drone campaign targeting SAF government infrastructure in El-Obeid throughout 2026. Same day Sudan's Justice Minister formally condemned RSF atrocities in North Kordofan villages (AllAfrica 202606030171). The targeting of judicial/legal infrastructure represents systematic RSF disruption of SAF state governance.",
+    "lastUpdated": "2026-06-05T14:22:00.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-north-kordofan-june3-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      29.8,
+      13.5
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: RSF Positions, North Kordofan (June 3, 2026)",
+    "date": "2026-06-03",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "11:00",
+    "damage": "RSF personnel, vehicles, and equipment in North Kordofan targeted",
+    "casualties": "RSF losses claimed; unverified",
+    "status": "hit",
+    "notes": "SAF continued its drone interdiction campaign against RSF positions in North Kordofan on June 3, 2026, the same day SAF and RSF-SPLM-N clashed over Al-Baraka in Blue Nile State. North Kordofan remains the critical RSF Darfur–Kordofan supply corridor axis targeted by SAF aerial and ground operations throughout May–June 2026. Sources: Sudan Tribune, Security Council Report June 2026 forecast.",
+    "lastUpdated": "2026-06-05T14:22:00.000Z"
+  },
+  {
+    "id": "saf-drone-strikes-north-kordofan-june5-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      30.0,
+      13.3
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strikes: RSF Positions, North Kordofan (June 5, 2026) — Heavy Losses Claimed",
+    "date": "2026-06-05",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "10:00",
+    "damage": "RSF sites, vehicles, and logistics struck in North Kordofan",
+    "casualties": "SAF claims heavy RSF losses in personnel and equipment; unverified",
+    "status": "hit",
+    "notes": "SAF launched drone strikes on RSF positions in North Kordofan on June 5, 2026. Military sources stated strikes 'achieved their objectives, inflicting heavy losses on the militia in terms of personnel and equipment, and destroying several sites and vehicles.' North Kordofan fighting centered around El Obeid, Dilling, Kadugli, and Babanusa. Sources: Security Council Report June 2026, Wikipedia Sudan Civil War 2026 Timeline.",
+    "lastUpdated": "2026-06-05T14:22:00.000Z"
+  },
+  {
+    "id": "rsf-drone-white-nile-intercepted-june5-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.6,
+      13.1
+    ],
+    "cat": "strike",
+    "label": "RSF Long-Range Drone Intercepted Over White Nile State (June 5, 2026)",
+    "date": "2026-06-05",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 1,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "None — intercepted by SAF air defenses before impact",
+    "casualties": "None",
+    "status": "intercepted",
+    "notes": "SAF air defense units intercepted and shot down an RSF long-range drone over White Nile State on June 5, 2026, following a series of RSF aerial attacks on towns in the region. Second confirmed SAF drone interception over White Nile State in less than a week (first: May 31). Demonstrates continuing RSF effort to strike SAF rear-area logistics and improving SAF counter-drone deployment. Source: Sudan.liveuamap.",
+    "lastUpdated": "2026-06-05T14:22:00.000Z"
+  },
+  {
+    "id": "rsf-drone-attack-omdurman-june5-2026",
+    "from": [
+      25.36,
+      13.63
+    ],
+    "to": [
+      32.48,
+      15.64
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Attack: Omdurman, Khartoum State (June 5, 2026) — SAF Intercepts Strategic Drone",
+    "date": "2026-06-05",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 1,
+    "confidence": "medium",
+    "time": "04:00",
+    "damage": "SAF air defenses intercepted at least one strategic drone; 4 explosions heard over Omdurman",
+    "casualties": "None confirmed",
+    "status": "partial",
+    "notes": "RSF launched a coordinated multi-state drone campaign at dawn June 5, with Omdurman targeted alongside Ed Damazin and Abu Jubeiha. SAF air defenses intercepted at least one strategic drone; witnesses reported 4 powerful explosions. Part of RSF's widest single-day multi-state drone salvo of June 2026. Source: Sudan Tribune article 314739.",
+    "lastUpdated": "2026-06-07T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-attack-damazin-june5-2026",
+    "from": [
+      25.36,
+      13.63
+    ],
+    "to": [
+      34.35,
+      11.78
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Attack: Ed Damazin (Blue Nile Capital), SAF Military Positions (June 5, 2026)",
+    "date": "2026-06-05",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "04:00",
+    "damage": "SAF military positions in Ed Damazin targeted",
+    "casualties": "None confirmed",
+    "status": "hit",
+    "notes": "Part of RSF's coordinated June 5 dawn multi-state drone campaign also hitting Omdurman and Abu Jubeiha. Ed Damazin is the Blue Nile State capital near the Roseires Dam — a key strategic target since RSF-SPLM-N captured Kurmuk on March 23, 2026. Source: Sudan Tribune article 314739.",
+    "lastUpdated": "2026-06-07T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-attack-abu-jubeiha-june5-2026",
+    "from": [
+      25.36,
+      13.63
+    ],
+    "to": [
+      31.22,
+      11.46
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Attack: Abu Jubeiha, Nuba Mountains, South Kordofan (June 5, 2026)",
+    "date": "2026-06-05",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "04:00",
+    "damage": "SAF military positions in Abu Jubeiha targeted",
+    "casualties": "None confirmed",
+    "status": "hit",
+    "notes": "Part of RSF's coordinated June 5 multi-state dawn drone campaign also hitting Omdurman (Khartoum) and Ed Damazin (Blue Nile). Abu Jubeiha is a Nuba Mountains town in South Kordofan in the active SAF-RSF ground combat zone. Source: Sudan Tribune article 314739.",
+    "lastUpdated": "2026-06-07T14:00:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-abu-zaeima-market-june6-2026",
+    "from": [
+      37.22,
+      19.62
+    ],
+    "to": [
+      30.15,
+      13.25
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Abu Zaeima Market, North Kordofan (June 6, 2026) — 11 Killed",
+    "date": "2026-06-06",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "damage": "Main market in Abu Zaeima (RSF-held town) struck during busy hours",
+    "casualties": "11 killed, dozens wounded",
+    "status": "hit",
+    "notes": "Drone struck the main market in Abu Zaeima, North Kordofan (RSF-controlled). Attribution disputed; pattern consistent with SAF targeting of RSF-held North Kordofan towns. Emergency Lawyers Sudan documented the strike. Also noted: drone strikes hit nearby villages and a civilian vehicle in the preceding 24 hours. Sources: Al Jazeera, AFP, New Arab (June 6, 2026).",
+    "lastUpdated": "2026-06-07T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-el-obeid-fuel-station-june6-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Fuel Station, El-Obeid, North Kordofan (June 6, 2026) — 4 Wounded",
+    "date": "2026-06-06",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "damage": "Fuel station in El-Obeid struck; supply chain impact",
+    "casualties": "4 wounded",
+    "status": "hit",
+    "notes": "RSF drone struck a fuel station in SAF-held El-Obeid, North Kordofan capital, wounding 4 on June 6 — same day as the Abu Zaeima market strike. Continues the near-daily RSF drone campaign against El-Obeid, which has included strikes on residential areas (May 29: 10-24 killed) and legal admin buildings (June 3). Source: Asharq Al-Awsat June 6, 2026.",
+    "lastUpdated": "2026-06-07T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-el-obeid-mass-strike-june11-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strikes: El-Obeid, North Kordofan (June 11, 2026) — 23 Killed",
+    "date": "2026-06-11",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Al-Matar and Al-Muwazafin neighborhoods, area near SAF 5th Infantry Division HQ, a funeral gathering, and a food-supply truck",
+    "casualties": "23 killed, 19+ wounded",
+    "status": "hit",
+    "notes": "One of the deadliest single bombardments of El-Obeid to date. Sources: Xinhua, Radio Tamazuj, Radio Dabanga (June 11, 2026).",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "airstrike-jabal-al-uqaydat-june16-2026",
+    "from": [
+      33.8,
+      22.0
+    ],
+    "to": [
+      33.8,
+      21.5
+    ],
+    "cat": "strike",
+    "label": "Airstrike: Gold-Mining Camps, Jabal al-Uqaydat, River Nile State (June 16, 2026) — 15-30 Killed, Disputed",
+    "date": "2026-06-16",
+    "weaponType": "unknown",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "low",
+    "time": "10:00",
+    "damage": "Artisanal gold-mining camps at Jabal al-Uqaydat and Jabal al-Ahmar struck by fixed-wing aircraft and drones",
+    "casualties": "15-30 killed (contested), 50-80 wounded",
+    "status": "hit",
+    "notes": "Attribution to Egyptian forces reported by Mada Masr/Drop Site News but unconfirmed by Cairo; casualty toll varies sharply by outlet. Sources: Darfur24, Mada Masr, Sudanese Alliance for Rights (June 2026).",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "rsf-drone-kosti-fuel-station-june21-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.67,
+      13.17
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Fuel Station and Market, Kosti, White Nile (June 21, 2026)",
+    "date": "2026-06-21",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "Fuel station and adjacent market struck",
+    "casualties": "1 killed, 14-15 wounded",
+    "status": "hit",
+    "notes": "Same day, a separate RSF drone hit a gas station in El-Obeid's city center. Source: Radio Tamazuj (June 21, 2026).",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "rsf-drone-el-obeid-sewage-tankers-june21-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strikes: Sewage Tankers, El-Obeid (June 21, 2026)",
+    "date": "2026-06-21",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "13:00",
+    "damage": "Two water/sewage tankers struck in separate strikes",
+    "casualties": "1 killed (tanker driver), 6 wounded",
+    "status": "hit",
+    "notes": "Part of a drone campaign hitting El-Obeid at a rate of roughly 2-6 strikes/day through late June 2026. Source: Middle East Eye, Darfur24.",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "drone-strike-al-sayyah-market-june22-2026",
+    "from": [
+      24.67,
+      14.2
+    ],
+    "to": [
+      25.9,
+      15.45
+    ],
+    "cat": "strike",
+    "label": "Drone Strike (alleged SAF): Al-Sayyah Market, North Darfur (June 22, 2026)",
+    "date": "2026-06-22",
+    "weaponType": "drone_loitering",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "11:00",
+    "damage": "Main market's southern section set ablaze; ~100M SDG in goods destroyed",
+    "casualties": "1 killed, several wounded",
+    "status": "hit",
+    "notes": "Alleged SAF strike while RSF vehicles were reportedly nearby. Source: Darfur24 (June 24, 2026).",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "rsf-drone-wedding-convoy-al-shatout-july6-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.5,
+      13.4
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Wedding-Bound Vehicles, Al-Sha'tout, North Kordofan (July 6, 2026) — 13 Killed",
+    "date": "2026-07-06",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "17:00",
+    "damage": "Vehicle convoy carrying wedding guests struck",
+    "casualties": "13 killed (incl. 5 women)",
+    "status": "hit",
+    "notes": "Sudan Doctors Network called this a deliberate attack. Coordinated with a separate strike near Omdurman the same day. Sources: Xinhua, Al Arabiya, AP (July 2026).",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "rsf-drone-wedding-convoy-omdurman-july6-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.44,
+      15.68
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Wedding-Bound Vehicles, Omdurman Outskirts (July 6, 2026) — 10 Killed",
+    "date": "2026-07-06",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "18:00",
+    "damage": "Vehicle carrying wedding guests struck on Omdurman's outskirts",
+    "casualties": "10 killed, all one family",
+    "status": "hit",
+    "notes": "Coordinated with a separate strike in Al-Sha'tout, North Kordofan, the same day; Sudan Doctors Network blamed RSF-guided drones for both attacks. Sources: Xinhua, Al Arabiya, AP (July 2026).",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "drone-strike-el-obeid-fuel-station-al-malaja-july16-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "Drone Strike: Fuel Station, Al Malaja, El-Obeid (July 16, 2026)",
+    "date": "2026-07-16",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "09:00",
+    "damage": "Fuel station in the Al Malaja neighborhood struck",
+    "casualties": "Unknown",
+    "status": "hit",
+    "notes": "Operator unattributed in OCHA's reporting. Part of the continuing siege-era drone campaign against El-Obeid. Source: OCHA situation update via AllAfrica, July 16, 2026.",
+    "lastUpdated": "2026-07-16T14:10:00.000Z"
+  },
+  {
+    "id": "saf-drone-strike-garra-al-zawaya-court-august2-2026",
+    "from": [
+      32.53,
+      15.55
+    ],
+    "to": [
+      23.95,
+      13.6
+    ],
+    "cat": "strike",
+    "label": "SAF Drone Strike: Tribal Court, Garra al-Zawaya, N. Darfur (Aug 2, 2026) — 35 Killed",
+    "date": "2026-08-02",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "13:00",
+    "damage": "Traditional court gathering under a tree struck",
+    "casualties": "35 killed (incl. 4 tribal leaders, 2 RSF commanders), several wounded",
+    "status": "hit",
+    "notes": "Emergency Lawyers attributed the strike to SAF drones; military did not respond to the allegation. Village ~150km west of El Fasher, RSF-controlled. Sources: Al Jazeera, France 24, The National (Aug 2-3, 2026).",
+    "lastUpdated": "2026-08-12T16:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-khartoum-august12-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.53,
+      15.55
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Khartoum (Aug 12, 2026) — First in Months",
+    "date": "2026-08-12",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "05:00",
+    "damage": "Unknown; no immediate casualty reports",
+    "casualties": "None reported",
+    "status": "unknown",
+    "notes": "Dawn strike (~0300 GMT) ended months of relative calm in the capital since its 2025 recapture. SAF fired anti-aircraft missiles from Wadi Seidna base. Follows Hemedti's late-July vow to escalate operations. Sources: Arab News, The New Arab (Aug 12, 2026).",
+    "lastUpdated": "2026-08-12T16:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-atbara-august12-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      33.9846,
+      17.7047
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Atbara (Aug 12, 2026)",
+    "date": "2026-08-12",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "05:00",
+    "damage": "Unknown; no immediate casualty reports",
+    "casualties": "None reported",
+    "status": "unknown",
+    "notes": "Part of coordinated dawn drone strikes also hitting Khartoum and El-Damer. Sources: Arab News, The New Arab (Aug 12, 2026).",
+    "lastUpdated": "2026-08-12T16:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-eldamer-august12-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      33.9673,
+      17.5895
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: El-Damer (Aug 12, 2026)",
+    "date": "2026-08-12",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "05:00",
+    "damage": "Unknown; no immediate casualty reports",
+    "casualties": "None reported",
+    "status": "unknown",
+    "notes": "Part of coordinated dawn drone strikes also hitting Khartoum and Atbara. Sources: Arab News, The New Arab (Aug 12, 2026).",
+    "lastUpdated": "2026-08-12T16:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-el-obeid-august12-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.2167,
+      13.1833
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: El Obeid (Aug 12, 2026)",
+    "date": "2026-08-12",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "05:00",
+    "damage": "Struck near army 5th Infantry Division base",
+    "casualties": "2 killed, 6 injured",
+    "status": "hit",
+    "platform": "5th Infantry Division air defense (response)",
+    "notes": "Part of coordinated dawn drone strikes also hitting Khartoum, Atbara, and El-Damer. Sources: The National, Xinhua (Aug 12, 2026).",
+    "lastUpdated": "2026-08-14T15:31:10.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-omdurman-august13-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      32.48,
+      15.64
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Omdurman (Aug 13, 2026)",
+    "date": "2026-08-13",
+    "weaponType": "drone_loitering",
+    "launched": 10,
+    "intercepted": 10,
+    "confidence": "high",
+    "time": "06:00",
+    "damage": "No immediate reports of material damage",
+    "casualties": "None reported",
+    "status": "intercepted",
+    "platform": "SAF air defenses",
+    "notes": "Second consecutive day of RSF drone strikes; 10 drones downed over Omdurman. AFP-confirmed. Sources: The New Arab, A News, Xinhua (Aug 13, 2026).",
+    "lastUpdated": "2026-08-14T15:31:10.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-kadugli-august13-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      29.7167,
+      11.0
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Kadugli (Aug 13, 2026)",
+    "date": "2026-08-13",
+    "weaponType": "drone_loitering",
+    "launched": 5,
+    "intercepted": 5,
+    "confidence": "medium",
+    "time": "06:00",
+    "damage": "No immediate reports of material damage",
+    "casualties": "None reported",
+    "status": "intercepted",
+    "platform": "SAF air defenses",
+    "notes": "5 drones downed over South Kordofan (Kadugli) as part of second-day strike wave. Sources: Xinhua, The New Arab (Aug 13, 2026).",
+    "lastUpdated": "2026-08-14T15:31:10.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-rivernile-august13-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      33.9846,
+      17.7047
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: River Nile State (Aug 13, 2026)",
+    "date": "2026-08-13",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 3,
+    "confidence": "medium",
+    "time": "06:00",
+    "damage": "No immediate reports of material damage",
+    "casualties": "None reported",
+    "status": "intercepted",
+    "platform": "SAF air defenses",
+    "notes": "3 drones downed over River Nile State (Atbara/El-Damer area) as part of second-day strike wave. Sources: Xinhua, The New Arab (Aug 13, 2026).",
+    "lastUpdated": "2026-08-14T15:31:10.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-bara-august17-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.3667,
+      13.7
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: Bara, North Kordofan (Aug 17, 2026)",
+    "date": "2026-08-17",
+    "weaponType": "drone_ucav",
+    "launched": 2,
+    "intercepted": 2,
+    "confidence": "high",
+    "time": "12:00",
+    "damage": "No material damage reported",
+    "casualties": "None reported",
+    "status": "intercepted",
+    "platform": "SAF air defenses",
+    "notes": "SAF air defenses shot down two RSF FH-95 long-range drones over Bara, North Kordofan, the army's second and third confirmed drone intercept in the region in days; 7 RSF drones destroyed in Kordofan since June. Sources: allAfrica/SUNA, Medafrica Times (Aug 18, 2026).",
+    "lastUpdated": "2026-08-18T16:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strike-el-obeid-transformer-august20-2026",
+    "from": [
+      29.5,
+      12.0
+    ],
+    "to": [
+      30.21,
+      13.18
+    ],
+    "cat": "strike",
+    "label": "RSF Drone Strike: El Obeid Main Power Transformer (reported Aug 20, 2026)",
+    "date": "2026-08-20",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "damage": "El Obeid's main power transformer destroyed, cutting electricity for water pumping, hospitals, and telecommunications citywide",
+    "casualties": "None reported",
+    "status": "hit",
+    "notes": "IOM reported on August 20, 2026 that an RSF drone strike knocked out El Obeid's main power transformer, part of an intensified siege campaign that has displaced roughly 15,000 families into the city over three weeks. Time of strike not specified in source reporting. Sources: IOM, Al Jazeera/UN News.",
+    "lastUpdated": "2026-08-20T15:14:36.000Z"
+  },
+  {
+    "id": "saf-strike-rsf-convoy-chad-ennedi-august20-2026",
+    "from": [
+      24.5,
+      21.8
+    ],
+    "to": [
+      23.0,
+      18.1667
+    ],
+    "cat": "strike",
+    "label": "SAF Cross-Border Strike: RSF-Linked Convoy in Chad's Ennedi-Est Province (Aug 20, 2026)",
+    "date": "2026-08-23",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "20:00",
+    "damage": "Convoy of vehicles struck in the Mourdi department, Ennedi-Est province, more than 100km inside Chadian territory",
+    "casualties": "No Chadian casualties reported; convoy described as ~200 RSF-linked combat vehicles, fuel trucks, and supply vehicles",
+    "status": "hit",
+    "platform": "SAF aircraft and drones",
+    "notes": "Chad's General Staff said Sudanese army aircraft and drones pursued and struck a resupply convoy moving from Kufra, Libya toward Darfur, with strikes beginning on Sudanese soil before continuing over 100km into Chad on the evening of August 20, 2026. Chad publicly accused Sudan on August 23; the incident is not confirmed by an independent investigation and Sudan has not acknowledged responsibility. Sources: Sudan Tribune, Africanews (Aug 23-24, 2026).",
+    "lastUpdated": "2026-08-28T16:00:00.000Z"
+  }
+]

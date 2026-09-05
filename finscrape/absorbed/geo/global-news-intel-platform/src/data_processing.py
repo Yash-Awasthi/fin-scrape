@@ -1,0 +1,114 @@
+"""
+Data processing functions for headline extraction and cleaning.
+"""
+
+import re
+import pandas as pd
+
+from src.headline_utils import (
+    get_best_headline,
+    clean_headline,
+    dedupe_headlines_simple,
+    score_headline_quality
+)
+from src.utils import get_country, get_intensity_label
+
+
+def extract_headline(url, actor=None, impact_score=None):
+    """
+    Extract headline from URL.
+    Wrapper for backward compatibility - delegates to headline_utils.
+    """
+    from src.headline_utils import extract_headline_from_url, clean_headline
+    
+    extracted = extract_headline_from_url(url)
+    if extracted:
+        return clean_headline(extracted)
+    return None
+
+
+def process_df(df):
+    """Process raw database results into display-ready format."""
+    if df.empty:
+        return df
+
+    df = df.copy()
+    df.columns = [c.upper() for c in df.columns]
+
+    # Extract and clean headlines
+    headlines = []
+    quality_scores = []
+    
+    for _, row in df.iterrows():
+        db_headline = row.get('HEADLINE')
+        url = row.get('NEWS_LINK', '')
+        impact = row.get('IMPACT_SCORE')
+
+        # Prefer the LLM-polished headline (already display-ready); the regex
+        # path would re-mangle its acronym casing via _title_case.
+        ai_headline = row.get('HEADLINE_AI')
+        if ai_headline and isinstance(ai_headline, str) and len(ai_headline.strip()) >= 15:
+            headline = ai_headline.strip()
+            # Floor the score: polished headlines already passed validation, and
+            # the scorer's capitalization penalty misfires on title case.
+            quality = max(0.6, score_headline_quality(headline, url))
+        else:
+            headline = get_best_headline(db_headline, url, impact)
+            quality = score_headline_quality(headline, url) if headline else 0
+        headlines.append(headline)
+        quality_scores.append(quality)
+
+    df['HEADLINE'] = headlines
+    df['_QUALITY'] = quality_scores
+    
+    # Filter out rows without valid headlines or very low quality
+    df = df[df['HEADLINE'].notna() & (df['_QUALITY'] >= 0.3)]
+
+    if df.empty:
+        return df
+
+    # Sort by combined recency (60%) + quality (40%) so recent news surfaces first
+    try:
+        dates = pd.to_datetime(df['DATE'].astype(str), format='%Y%m%d', errors='coerce')
+        date_min = dates.min()
+        date_range = (dates.max() - date_min).days or 1
+        recency = (dates - date_min).dt.days / date_range
+        df['_SCORE'] = 0.6 * recency + 0.4 * df['_QUALITY']
+    except Exception:
+        df['_SCORE'] = df['_QUALITY']
+
+    df = df.sort_values('_SCORE', ascending=False)
+
+    # Deduplicate headlines
+    keep_indices = dedupe_headlines_simple(df['HEADLINE'].tolist())
+    df = df.iloc[keep_indices].copy()
+
+    # Add region from country code
+    df['REGION'] = df['ACTOR_COUNTRY_CODE'].apply(
+        lambda x: get_country(x) or x if x else 'Global'
+    )
+
+    # Format date
+    try:
+        df['DATE_FMT'] = pd.to_datetime(
+            df['DATE'].astype(str), format='%Y%m%d'
+        ).dt.strftime('%d/%m')
+    except Exception:
+        df['DATE_FMT'] = df['DATE']
+
+    # Add tone indicator
+    df['TONE'] = df['IMPACT_SCORE'].apply(
+        lambda x: "🔴" if x and x < -4 else (
+            "🟡" if x and x < -1 else (
+                "🟢" if x and x > 2 else "⚪"
+            )
+        )
+    )
+
+    # Add intensity label
+    df['INTENSITY'] = df['IMPACT_SCORE'].apply(get_intensity_label)
+
+    # Drop internal columns
+    df = df.drop(columns=['_QUALITY', '_SCORE'], errors='ignore')
+
+    return df

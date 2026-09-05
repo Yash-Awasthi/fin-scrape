@@ -1,0 +1,218 @@
+[
+  {
+    "id": "mohieddin-salem-sudan-fm",
+    "name": "Mohieddin Salem",
+    "role": "Sudan Foreign Minister (SAF government); recalled ambassador to Ethiopia on May 5, 2026 and announced Sudan's plan to submit UAE drone evidence to the UN Security Council",
+    "avatar": "saf",
+    "initial": "M",
+    "quote": "Whoever attacks us will be met with a response. Sudan is ready to enter into open confrontation with Ethiopia if it becomes necessary. We will not initiate attacks, but we will defend our sovereignty.",
+    "lastUpdated": "2026-05-06T14:45:32.117Z"
+  },
+  {
+    "id": "yasser-al-atta-saf",
+    "name": "Lt. Gen. Yasser al-Atta",
+    "role": "SAF Chief of Staff (appointed April 2026); part of Burhan's April 12 reshuffle of 21 generals — the largest command shakeup since the war began. Replaces Gen. Othman al-Hussein.",
+    "avatar": "saf",
+    "initial": "Y",
+    "quote": "The armed forces will pursue the war to its conclusion and restore the Sudanese state across all its territory. No rebel force will be allowed to persist.",
+    "lastUpdated": "2026-04-12T14:25:47.312Z"
+  },
+  {
+    "id": "burhan-saf",
+    "name": "Gen. Abdel Fattah al-Burhan",
+    "role": "SAF Commander-in-Chief; Head of State. On Eid al-Adha (May 27, 2026), announced plans to convene a 'comprehensive political dialogue' inside Sudan to formulate principles for a new governance structure and civilian democratic transition, explicitly excluding groups 'whose hands are dripping with the blood of the Sudanese people' — an overt reference to the RSF. The announcement signals SAF's intent to build a post-RSF political framework while pursuing military victory. Earlier May 2026 milestones: returned to Khartoum (May 14); Gulf diplomatic tour, meeting Bahrain's King; issued executive order derecognizing RSF as state institution (May 18); formally removed Hemedti from Transitional Sovereignty Council and appointed Malik Agar as replacement (May 19). Oversaw government's formal return to Khartoum from Port Sudan and the Central Bank's resumption of capital operations.",
+    "avatar": "saf",
+    "initial": "B",
+    "quote": "All national forces will be invited to dialogue to formulate principles of governance to unite Sudan. Those whose hands are dripping with the blood of the Sudanese people will not be included.",
+    "lastUpdated": "2026-05-27T14:37:22.000Z"
+  },
+  {
+    "id": "hemedti-rsf",
+    "name": "Gen. Mohamed Hamdan Dagalo (Hemedti)",
+    "role": "RSF Commander; Head of RSF 'Government of Peace and Unity'. Formally stripped of Transitional Sovereignty Council deputy role by al-Burhan decree on May 19, 2026 (Malik Agar appointed replacement). RSF signed Treaty of Jeddah on May 20, 2026 — a humanitarian framework agreement — despite SAF's formal derecognition of RSF two days earlier. Facing compounding crises: three senior commanders defected since March 2026, brother Algoney EU-sanctioned (May 2026), hometown Al Zorg destroyed by SAF airstrike (May 14, 64 killed including two relatives), payroll crisis following derecognition order. SAF Nyala aerial campaign (May 15–19+) targets his headquarters city. Claimed force of 450,000; declared willingness to fight until 2040.",
+    "avatar": "rsf",
+    "initial": "H",
+    "quote": "We fight for the people of Sudan. The army wants to return Sudan to the dark days of the Bashir regime, and we will not allow it.",
+    "lastUpdated": "2026-05-21T14:25:00.000Z"
+  },
+  {
+    "id": "hamdok-civilian",
+    "name": "Abdalla Hamdok",
+    "role": "Former Prime Minister (2019–2022); Taqaddum Civilian Coalition Leader",
+    "avatar": "other",
+    "initial": "H",
+    "quote": "What is happening in Sudan is a war of generals who are fighting over power and wealth, at the expense of the Sudanese people and their democratic aspirations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "khamis-abakar",
+    "name": "Khamis Abakar",
+    "role": "West Darfur Governor (assassinated June 14, 2023)",
+    "avatar": "darfur",
+    "initial": "K",
+    "quote": "What is happening in West Darfur is genocide. The RSF and the Arab militias are committing massacres against the Masalit people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mini-minawi",
+    "name": "Minni Minnawi",
+    "role": "Sudan Liberation Army (SLA-MM) Leader; North Darfur Governor",
+    "avatar": "darfur",
+    "initial": "M",
+    "quote": "El Fasher must not fall. If El Fasher falls, the genocide will be complete. The international community must act before it is too late.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jibril-ibrahim",
+    "name": "Jibril Ibrahim",
+    "role": "Justice and Equality Movement (JEM) Leader; Finance Minister (SAF government)",
+    "avatar": "darfur",
+    "initial": "J",
+    "quote": "The RSF is a criminal organization that must be dismantled. There can be no peace in Sudan until the RSF is defeated and disarmed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "volker-perthes",
+    "name": "Volker Perthes",
+    "role": "UN Special Envoy for Sudan (2021–2024)",
+    "avatar": "un",
+    "initial": "V",
+    "quote": "There is no military solution to this conflict. Both parties must commit to a genuine ceasefire and return to negotiations to spare the Sudanese people further suffering.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ramtane-lamamra",
+    "name": "Ramtane Lamamra",
+    "role": "Former African Union High Representative / Former UN Envoy for Sudan (replaced Feb 2026)",
+    "avatar": "un",
+    "initial": "R",
+    "quote": "The African Union calls on both parties to immediately cease hostilities and engage in dialogue. Sudan's crisis threatens the stability of the entire region.",
+    "lastUpdated": "2026-03-28T00:00:00.000Z"
+  },
+  {
+    "id": "pekka-haavisto",
+    "name": "Pekka Haavisto",
+    "role": "UN Secretary-General's Personal Envoy for Sudan (appointed Feb 2026)",
+    "avatar": "un",
+    "initial": "P",
+    "quote": "The United Nations remains committed to facilitating a ceasefire and protecting civilians. We call on all parties to engage with the peace process in good faith.",
+    "lastUpdated": "2026-03-28T00:00:00.000Z"
+  },
+  {
+    "id": "tom-fletcher-un",
+    "name": "Tom Fletcher",
+    "role": "UN Emergency Relief Coordinator (OCHA), from 2025; issued landmark April 22, 2026 warning that the world is failing Sudan",
+    "avatar": "un",
+    "initial": "T",
+    "quote": "This grim and chastening anniversary marks another year when the world has failed to meet the test of Sudan. Nearly 34 million people — 65% of the population — are in urgent need of humanitarian support. We cannot fail them again.",
+    "lastUpdated": "2026-04-22T14:00:37.491Z"
+  },
+  {
+    "id": "martin-griffiths-un",
+    "name": "Martin Griffiths",
+    "role": "Former UN Emergency Relief Coordinator (OCHA) (2019–2025)",
+    "avatar": "un",
+    "initial": "M",
+    "quote": "Sudan is now the world's largest humanitarian crisis. Never in modern history have so many people faced starvation and famine as in Sudan today.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tom-perriello",
+    "name": "Tom Perriello",
+    "role": "US Special Envoy for Sudan (2024–2025)",
+    "avatar": "other",
+    "initial": "T",
+    "quote": "The death toll in Sudan may be as high as 400,000 people. This is one of the worst humanitarian disasters in the world and the international response has been wholly inadequate.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sameh-shoukry",
+    "name": "Sameh Shoukry",
+    "role": "Egyptian Foreign Minister; SAF diplomatic ally",
+    "avatar": "other",
+    "initial": "S",
+    "quote": "Egypt fully supports the legitimate Sudanese Armed Forces in their effort to restore order and state authority. Sudan's security is directly linked to Egypt's security.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mahamat-deby",
+    "name": "Mahamat Déby",
+    "role": "President of Chad; humanitarian border management",
+    "avatar": "other",
+    "initial": "D",
+    "quote": "Chad cannot close its border to Sudanese brothers fleeing the war. But we need urgent international support to address this massive refugee crisis.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "osman-hussein",
+    "name": "Osman Hussein",
+    "role": "Sudan's UN Ambassador (SAF government representative)",
+    "avatar": "saf",
+    "initial": "O",
+    "quote": "We call on the Security Council to take decisive action against the RSF and those who fund them. The UAE's role in financing this genocide cannot continue without consequences.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mariam-mahdi",
+    "name": "Mariam al-Mahdi",
+    "role": "National Umma Party; Democratic Unionist civilian opposition",
+    "avatar": "other",
+    "initial": "M",
+    "quote": "Both generals must be held accountable. This war was started by two military men fighting over power — neither represents the democratic aspirations of the Sudanese people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "abdelaziz-al-hilu",
+    "name": "Abdelaziz al-Hilu",
+    "role": "Sudan People's Liberation Movement-North (SPLM-N) Leader, South Kordofan",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "The war between SAF and RSF has created an opportunity to resolve Sudan's structural problems through a secular democratic state, but the international community ignores Sudan's marginalized peoples.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "philippe-lazzarini-unwra",
+    "name": "Filippo Grandi",
+    "role": "UNHCR High Commissioner for Refugees",
+    "avatar": "un",
+    "initial": "F",
+    "quote": "Sudan now has the world's largest displacement crisis. Twelve million people have been forced from their homes in a war that has been largely ignored by the international community.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "abdallah-adam-ismail",
+    "name": "Abdallah Adam Ismail",
+    "role": "Massalit community leader; West Darfur survivor advocate",
+    "avatar": "darfur",
+    "initial": "A",
+    "quote": "The Massalit are being exterminated. We had nothing to do with this war between the generals. The RSF targeted us because of who we are — Massalit, Africans, not Arab.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "massad-boulos-us-sudan-envoy",
+    "name": "Massad Boulos",
+    "role": "US Senior Advisor for Africa (Trump Administration); leading US push for a humanitarian truce in Sudan. Proposed demilitarization-first ceasefire backed by UN oversight mechanism for El Fasher and parts of Kordofan.",
+    "avatar": "other",
+    "initial": "B",
+    "quote": "The United States is deeply committed to achieving a ceasefire in Sudan. The humanitarian toll is catastrophic and the international community must do more to end this conflict.",
+    "lastUpdated": "2026-05-08T14:00:00.000Z"
+  },
+  {
+    "id": "malik-agar-splmn",
+    "name": "Malik Agar",
+    "role": "Leader of SPLM-N (Agar faction); appointed Transitional Sovereignty Council Deputy by al-Burhan on May 19, 2026 — formally replacing Hemedti. Former Blue Nile rebel commander who signed the 2020 Juba Peace Agreement. His TSC appointment signals SAF's strategy of integrating reconciled armed movements into the political framework while formally excluding the RSF.",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "The Juba Peace Agreement offers Sudan's marginalized people a legitimate path. We will not allow the RSF's destructive war to erase the gains of two decades of negotiation.",
+    "lastUpdated": "2026-05-19T15:00:00.000Z"
+  },
+  {
+    "id": "kamil-idris-pm",
+    "name": "Kamil Idris",
+    "role": "Sudan Prime Minister (SAF government, appointed late 2025); former Director-General of the World Intellectual Property Organization (WIPO) and longtime diplomat. On June 2, 2026, inspected Port Sudan International Airport and issued development directives to improve operational efficiency as the city serves as Sudan's de facto wartime capital.",
+    "avatar": "saf",
+    "initial": "K",
+    "quote": "Port Sudan must be developed into a world-class gateway. With Khartoum recovering from war, our Red Sea capital must serve as the engine of Sudan's reconstruction.",
+    "lastUpdated": "2026-06-02T16:17:28.000Z"
+  }
+]

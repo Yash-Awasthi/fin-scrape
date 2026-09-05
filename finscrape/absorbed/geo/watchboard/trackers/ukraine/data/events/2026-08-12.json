@@ -1,0 +1,54 @@
+[
+  {
+    "id": "zelensky-warns-russia-massive-mobilization-2026-08-12",
+    "year": "Aug 12, 2026",
+    "title": "Zelensky Warns Russia Preparing Massive Mobilization by End of 2026",
+    "type": "political",
+    "detail": "Ukrainian President Volodymyr Zelensky warned allies that Moscow is preparing a massive mobilization by the end of 2026, signaling an intensified Russian offensive push in the coming months. Zelensky urged Western partners to accelerate military and financial support ahead of the expected escalation.",
+    "sources": [
+      {
+        "name": "Le Monde",
+        "tier": 2,
+        "url": "https://www.lemonde.fr/international/live/2026/08/12/en-direct-guerre-en-ukraine-moscou-se-prepare-a-une-mobilisation-massive-d-ici-la-fin-de-l-annee-affirme-volodymyr-zelensky_6741928_3210.html",
+        "pole": "western"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "ukraine-strikes-novorossiysk-naval-base-2026-08-12",
+    "year": "2026",
+    "title": "Ukraine Strikes Novorossiysk, Damaging Four Russian Warships and Halting Grain Terminals",
+    "type": "military",
+    "detail": "Ukraine launched a major overnight drone, Neptune cruise missile, and naval-drone assault on Russia's Black Sea Fleet base at Novorossiysk, damaging at least four warships — including the frigates Admiral Essen and Admiral Makarov, a Buyan-M missile ship, and a Vasily Bykov-class patrol vessel — per satellite imagery analysis. The strike also hit grain export terminals, forcing two major facilities to halt operations, and killed at least two to three people including an 8-year-old child, according to regional governor Veniamin Kondratyev. Zelensky said Ukrainian forces struck 'Russia's Novorossiysk naval base with drones, missiles and unmanned boats,' calling it proof Russia's last major Black Sea sanctuary is now within reach.",
+    "sources": [
+      {
+        "name": "NBC News",
+        "tier": 2,
+        "url": "https://www.nbcnews.com/world/ukraine/russia-ukraine-war-zelenskyy-attack-black-sea-fleet-rcna592069",
+        "pole": "western"
+      },
+      {
+        "name": "Moscow Times",
+        "tier": 2,
+        "url": "https://www.themoscowtimes.com/2026/08/12/drones-kill-one-reportedly-halt-work-at-novorossiysk-grain-terminal-a93465",
+        "pole": "eastern"
+      },
+      {
+        "name": "Naval News",
+        "tier": 3,
+        "url": "https://www.navalnews.com/naval-news/2026/08/ukrainian-drone-strike-russian-frigates-novorossiysk/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.themoscowtimes.com/2026/08/12/drones-kill-one-reportedly-halt-work-at-novorossiysk-grain-terminal-a93465",
+        "caption": "Novorossiysk port and naval facilities after the Ukrainian strike, August 12, 2026",
+        "source": "Moscow Times",
+        "thumbnail": "https://static.themoscowtimes.com/image/thumb/e7/40222450-8ce4-455a-9829-6776179c5203_medium.jpg"
+      }
+    ]
+  }
+]

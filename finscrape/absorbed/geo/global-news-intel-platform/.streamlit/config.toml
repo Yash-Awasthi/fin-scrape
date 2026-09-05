@@ -1,0 +1,15 @@
+[server]
+maxUploadSize = 50
+enableXsrfProtection = true
+fileWatcherType = "poll"
+
+[runner]
+magicEnabled = false
+fastReruns = true
+
+[client]
+# Don't expose stack traces / file paths to visitors on the public app
+showErrorDetails = "none"
+
+[logger]
+level = "info"

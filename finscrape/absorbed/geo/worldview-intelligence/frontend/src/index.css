@@ -1,0 +1,106 @@
+:root {
+  --primary: #00e87b;
+  --secondary: #00b8f0;
+  --danger: #ff3b5c;
+  --warning: #f0a030;
+  --accent: #8066ff;
+  --bg-primary: #05080d;
+  --bg-surface: #0b1018;
+  --bg-elevated: #101820;
+  --text-primary: #dce4f0;
+  --text-muted: #5a6a82;
+  --border: rgba(0, 184, 240, 0.08);
+  --border-active: rgba(0, 184, 240, 0.25);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body, #root {
+  width: 100%; height: 100%; overflow: hidden;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
+
+/* ── Surfaces ─────────────────────────────────── */
+.surface {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+}
+
+.surface-elevated {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+.surface-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+/* ── Buttons ──────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 12px; border: 1px solid var(--border);
+  border-radius: 3px; background: var(--bg-surface);
+  color: var(--text-muted); font-size: 10px; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+}
+.btn:hover { border-color: var(--border-active); color: var(--text-primary); background: var(--bg-elevated); }
+.btn-active { border-color: var(--secondary); color: var(--secondary); background: rgba(0,184,240,0.06); }
+
+/* ── Badges ───────────────────────────────────── */
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 1px 6px; border-radius: 2px;
+  font-size: 9px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  font-family: 'JetBrains Mono', monospace;
+}
+.badge-critical { background: rgba(255,59,92,0.12); color: var(--danger); border: 1px solid rgba(255,59,92,0.3); }
+.badge-high { background: rgba(240,160,48,0.12); color: var(--warning); border: 1px solid rgba(240,160,48,0.3); }
+.badge-medium { background: rgba(0,184,240,0.10); color: var(--secondary); border: 1px solid rgba(0,184,240,0.25); }
+.badge-low { background: rgba(0,232,123,0.08); color: var(--primary); border: 1px solid rgba(0,232,123,0.2); }
+
+/* ── Animations (minimal set) ─────────────────── */
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes slideL { from{transform:translateX(-20px);opacity:0} to{transform:translateX(0);opacity:1} }
+@keyframes slideR { from{transform:translateX(20px);opacity:0} to{transform:translateX(0);opacity:1} }
+@keyframes spin { to{transform:rotate(360deg)} }
+@keyframes liveDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+@keyframes sweep { 0%{left:-30%} 100%{left:130%} }
+
+.anim-pulse { animation: pulse 2s ease-in-out infinite; }
+.anim-slide-l { animation: slideL 0.25s ease-out; }
+.anim-slide-r { animation: slideR 0.25s ease-out; }
+.anim-fade { animation: fadeIn 0.2s ease-out; }
+
+/* ── Utility ──────────────────────────────────── */
+.truncate { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.text-glow { text-shadow: 0 0 12px rgba(0,232,123,0.4); }
+
+/* ── Cesium cleanup ──────────────────────────── */
+.cesium-viewer-bottom,
+.cesium-viewer-toolbar,
+.cesium-viewer .cesium-widget-credits { display: none !important; }

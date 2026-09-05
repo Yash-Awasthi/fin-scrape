@@ -1,0 +1,39 @@
+{
+  "lastRun": "2026-08-16T14:39:26.480Z",
+  "tracker": "european-conquest-americas",
+  "sections": {
+    "timeline": {
+      "status": "unchanged",
+      "itemCount": 89
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 87
+    },
+    "mapLines": {
+      "status": "unchanged",
+      "itemCount": 32
+    },
+    "claims": {
+      "status": "unchanged",
+      "itemCount": 25
+    },
+    "political": {
+      "status": "unchanged",
+      "itemCount": 22
+    },
+    "casualties": {
+      "status": "unchanged",
+      "itemCount": 12
+    },
+    "kpis": {
+      "status": "unchanged",
+      "itemCount": 11
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 3
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

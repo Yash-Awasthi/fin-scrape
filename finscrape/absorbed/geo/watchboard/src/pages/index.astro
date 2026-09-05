@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { loadAllTrackers } from '../lib/tracker-registry';
+import { loadTrackerData } from '../lib/data';
+import CommandCenter from '../components/islands/CommandCenter/CommandCenter';
+import { jsonLd } from '../lib/json-ld';
+
+const trackers = loadAllTrackers();
+const nonDraft = trackers.filter(t => t.status !== 'draft');
+const active = trackers.filter(t => t.status === 'active');
+const liveTrackers = active.filter(t => t.temporal !== 'historical');
+const historicalTrackers = active.filter(t => t.temporal === 'historical');
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+
+// Serialize tracker data for the CommandCenter island.
+//
+// PERF: this used to inline the full TrackerCardData (digestSummary,
+// digestSectionsUpdated, full eventImages array with eventDetail strings,
+// Spanish translations) for all ~95 trackers, which dominated the homepage
+// HTML. Detail fields are now served lazily from /api/cards/{slug}.json
+// and merged in by useTrackerDetail when a card is expanded / featured.
+// We still emit the scalars relevance sorting needs (recentEventCount,
+// avgSourceTier, sectionsUpdatedCount, isBreaking) so first-paint sort runs
+// without a fetch waterfall — see src/lib/relevance.ts.
+const serializedTrackers = nonDraft.map(t => {
+  let topKpis: Array<{ value: string; label: string }> = [];
+  let dayCount = 0;
+  let lastUpdated = t.startDate;
+  let headline: string | undefined;
+  let headlineEs: string | undefined;
+  let latestEventMedia: { url: string; source: string; tier: number } | undefined;
+  let isBreaking = false;
+  let recentEventCount = 0;
+  let avgSourceTier = 0;
+  let sectionsUpdatedCount = 0;
+
+  try {
+    const data = loadTrackerData(t.slug, t.eraLabel);
+    topKpis = data.kpis.slice(0, 3);
+    dayCount = data.meta.dayCount;
+    lastUpdated = data.meta.lastUpdated;
+    headline = data.meta.heroHeadline?.replace(/<[^>]+>/g, ' ').replace(/\s{2,}/g, ' ').trim();
+    const latestDigest = data.digests[0];
+    if (latestDigest) {
+      sectionsUpdatedCount = latestDigest.sectionsUpdated?.length ?? 0;
+    }
+
+    // Latest hero thumbnail only — the full eventImages[] gallery lives in
+    // /api/cards/{slug}.json. Walk events newest-first and pick the first
+    // T1/T2 image we find.
+    const allEvents = data.timeline.flatMap(era => era.events).reverse();
+    for (const evt of allEvents) {
+      if (latestEventMedia) break;
+      if (!evt.media?.length) continue;
+      const bestSource = evt.sources
+        .filter(s => s.tier <= 2)
+        .sort((a, b) => a.tier - b.tier)[0];
+      if (!bestSource) continue;
+      const image = evt.media.find(m => m.thumbnail);
+      if (image) {
+        latestEventMedia = {
+          url: image.thumbnail!,
+          source: image.source || bestSource.name,
+          tier: bestSource.tier,
+        };
+      }
+    }
+
+    // Compute relevance scoring inputs
+    const nowMs = Date.now();
+    const sevenDaysAgo = nowMs - 7 * 24 * 3600_000;
+    const oneDayAgo = nowMs - 24 * 3600_000;
+    let recentTierSum = 0;
+    let recentTierCount = 0;
+    let last24hCount = 0;
+    let hasT1InLast24h = false;
+    for (const evt of allEvents) {
+      const evtDate = new Date(evt.date).getTime();
+      if (evtDate >= sevenDaysAgo) {
+        recentEventCount++;
+        for (const s of evt.sources) {
+          recentTierSum += s.tier;
+          recentTierCount++;
+        }
+      }
+      if (evtDate >= oneDayAgo) {
+        last24hCount++;
+        if (evt.sources.some(s => s.tier === 1)) hasT1InLast24h = true;
+      }
+    }
+    avgSourceTier = recentTierCount > 0 ? recentTierSum / recentTierCount : 4;
+    // Explicit breaking flag from meta takes precedence; fall back to heuristic
+    isBreaking = data.meta.breaking ?? (last24hCount >= 3 && hasT1InLast24h);
+  } catch {
+    // Tracker may not have data yet — use config defaults
+  }
+
+  // Spanish hero headline only — kept in the shell so /es/ collapsed cards
+  // render the translated string on first paint. Long-form ES copy lives in
+  // /api/cards/{slug}.json (descriptionEs, topKpisEs).
+  try {
+    const esData = loadTrackerData(t.slug, t.eraLabel, 'es');
+    headlineEs = esData.meta.heroHeadline?.replace(/<[^>]+>/g, ' ').replace(/\s{2,}/g, ' ').trim();
+  } catch {
+    // No Spanish data — fall back to English headline.
+  }
+
+  return {
+    slug: t.slug,
+    shortName: t.shortName,
+    name: t.name,
+    description: t.description,
+    icon: t.icon,
+    color: t.color,
+    status: t.status,
+    temporal: t.temporal,
+    domain: t.domain,
+    region: t.region,
+    country: t.country,
+    state: t.state,
+    city: t.city,
+    neighborhood: t.neighborhood,
+    geoPath: t.geoPath,
+    geoSecondary: t.geoSecondary,
+    aggregate: t.aggregate,
+    startDate: t.startDate,
+    endDate: t.endDate,
+    sections: t.sections,
+    seriesId: t.series?.id,
+    seriesName: t.series?.name,
+    seriesOrder: t.series?.order,
+    isHub: t.series?.isHub,
+    mapEnabled: t.map?.enabled,
+    globeEnabled: t.globe?.enabled,
+    mapCenter: t.map?.center,
+    dayCount,
+    lastUpdated,
+    headline,
+    headlineEs,
+    topKpis,
+    latestEventMedia,
+    isBreaking,
+    recentEventCount,
+    avgSourceTier,
+    sectionsUpdatedCount,
+  };
+});
+
+// Computed data for overlay nav and ticker
+const now = Date.now();
+const oneDayMs = 24 * 3600_000;
+const updatedTodayCount = serializedTrackers.filter(t => {
+  const updated = new Date(t.lastUpdated).getTime();
+  return now - updated < oneDayMs;
+}).length;
+
+// Breaking/trending trackers for the bottom ticker
+const breakingTrackers = [...serializedTrackers]
+  .filter(t => t.status === 'active' && (t.isBreaking || (t.recentEventCount || 0) > 0))
+  .sort((a, b) => {
+    if (a.isBreaking && !b.isBreaking) return -1;
+    if (!a.isBreaking && b.isBreaking) return 1;
+    return (b.recentEventCount || 0) - (a.recentEventCount || 0);
+  })
+  .slice(0, 12)
+  .map(t => ({
+    slug: t.slug,
+    shortName: t.shortName,
+    headline: t.headline,
+    icon: t.icon,
+    color: t.color,
+    isBreaking: t.isBreaking,
+  }));
+---
+<BaseLayout title="Watchboard — Open-Source Intelligence Dashboard for Global Conflicts, Security & Geopolitics" description={`Track ${nonDraft.length} global events with AI-sourced intelligence — real-time maps, casualty data, contested claims, and daily digests for conflicts, politics, and security worldwide.`}>
+  <Fragment slot="head">
+    <script is:inline type="application/ld+json" set:html={jsonLd({
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Watchboard",
+      "url": "https://watchboard.dev/",
+      "description": `Open-source intelligence dashboard tracking ${nonDraft.length} global events with AI-sourced data, interactive maps, casualty tracking, and contested claims analysis.`,
+      "applicationCategory": "NewsApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Artemio Padilla",
+        "url": "https://github.com/ArtemioPadilla"
+      }
+    })} />
+  </Fragment>
+  <main id="main-content">
+  <CommandCenter
+    trackers={serializedTrackers}
+    basePath={basePath}
+    liveCount={liveTrackers.length}
+    historicalCount={historicalTrackers.length}
+    trackerCount={nonDraft.length}
+    updatedTodayCount={updatedTodayCount}
+    breakingTrackers={breakingTrackers}
+    client:idle
+  />
+  </main>
+</BaseLayout>
+
+<style is:global>
+  /* Command center takes full viewport */
+  body:has(.command-center-root) {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes tickerScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* Show follow star on tracker row hover */
+  .cc-tracker-row:hover .cc-follow-toggle {
+    opacity: 0.6 !important;
+  }
+  .cc-tracker-row .cc-follow-toggle:hover {
+    opacity: 1 !important;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  /* Desktop: offset sidebar content below the fixed overlay navbar. The actual
+     nav height is published to --cc-nav-h by CommandCenter via ResizeObserver,
+     so this stays correct if the nav grows or shrinks. Fallback matches the
+     current rendered height for first paint before JS hydrates. */
+  @media (min-width: 768px) {
+    .cc-sidebar {
+      padding-top: var(--cc-nav-h, 40px);
+    }
+  }
+
+  /* Tablets/narrow desktops: stack globe + sidebar */
+  /* Mobile-tab visibility — drive layout from CSS (not JS) so the SSR
+     HTML matches the final rendered layout on mobile. The
+     CommandCenter root carries cc-mobile-tab-{live|trackers} (defaults
+     to 'live' so SSR matches a fresh visit). On mobile, this controls
+     which slot is visible without waiting for hydration to flip
+     isMobile. */
+  .cc-mobile-live-slot { display: none; }
+  @media (max-width: 767px) {
+    .cc-mobile-live-slot.cc-mobile-live-active { display: block; }
+    /* Default mobile state: hide the desktop sidebar layout; show only
+       when the user picks the trackers tab. Without this, the SSR's
+       desktop sidebar (rendered because isMobile=false on server) flashes
+       on top of the carousel until hydration catches up. */
+    .cc-mobile-tab-live .cc-sidebar { display: none !important; }
+  }
+
+  @media (max-width: 767px) {
+    .command-center-root {
+      flex-direction: column !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+    }
+    .cc-globe {
+      flex: 0 0 40vh !important;
+      height: 40vh !important;
+      max-height: 40vh !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    /* Lights toggle: push below overlay nav so it's not covered */
+    .cc-globe .globe-lights-toggle {
+      top: 48px !important;
+      z-index: 60 !important;
+      width: 44px !important;
+      height: 44px !important;
+    }
+    .cc-sidebar {
+      flex: 1 1 0% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      width: 100% !important;
+      border-left: none !important;
+      border-top: 1px solid var(--border) !important;
+      overflow-y: auto !important;
+      min-height: 0 !important;
+    }
+  }
+
+  /* Phones: smaller globe */
+  @media (max-width: 480px) {
+    .cc-globe {
+      flex: 0 0 35vh !important;
+      height: 35vh !important;
+      max-height: 35vh !important;
+    }
+    .cc-sidebar .cc-search-input {
+      font-size: 0.7rem !important;
+      padding: 5px 8px 5px 28px !important;
+    }
+  }
+
+  /* Small phones */
+  @media (max-width: 380px) {
+    .command-center-root > div:first-child {
+      height: 25vh !important;
+      height: 25dvh !important;
+      min-height: 150px !important;
+    }
+  }
+</style>

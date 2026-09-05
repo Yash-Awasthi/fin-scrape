@@ -1,0 +1,164 @@
+[
+  {
+    "id": "osama-bin-laden",
+    "name": "Osama bin Laden",
+    "role": "Founder and Emir of al-Qaeda; mastermind of the 9/11 attacks",
+    "avatar": "al-qaeda",
+    "initial": "O",
+    "quote": "America is full of fear from its north to its south, from its west to its east. Thank God for that.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "khalid-sheikh-mohammed",
+    "name": "Khalid Sheikh Mohammed",
+    "role": "Al-Qaeda Head of External Operations; principal architect of the 9/11 attacks",
+    "avatar": "al-qaeda",
+    "initial": "K",
+    "quote": "I was responsible for the 9/11 operation from A to Z.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "mohammed-atta",
+    "name": "Mohammed Atta",
+    "role": "9/11 lead hijacker; pilot of AA Flight 11 (North Tower); operational coordinator for all four hijacking teams",
+    "avatar": "al-qaeda",
+    "initial": "M",
+    "quote": "The time of fun and waste has gone. The time of judgment has arrived.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "george-w-bush",
+    "name": "President George W. Bush",
+    "role": "43rd President of the United States; launched the War on Terror, Operation Enduring Freedom, and the Iraq War in response to 9/11",
+    "avatar": "us-gov",
+    "initial": "G",
+    "quote": "Whether we bring our enemies to justice, or bring justice to our enemies, justice will be done.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "dick-cheney",
+    "name": "Vice President Dick Cheney",
+    "role": "U.S. Vice President; managed crisis response from the White House PEOC on 9/11; key architect of enhanced interrogation and surveillance programs",
+    "avatar": "us-gov",
+    "initial": "D",
+    "quote": "We also have to work through, sort of, the dark side, if you will... use any means at our disposal.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "george-tenet",
+    "name": "George Tenet",
+    "role": "Director of Central Intelligence (1997–2004); reportedly warned the White House about bin Laden threat in 2001; 'slam dunk' WMD intelligence",
+    "avatar": "us-gov",
+    "initial": "G",
+    "quote": "The system was blinking red. And so we did move very quickly in the spring of 2001.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "condoleezza-rice",
+    "name": "Condoleezza Rice",
+    "role": "National Security Advisor (2001–2005); testified before 9/11 Commission; later served as Secretary of State",
+    "avatar": "us-gov",
+    "initial": "C",
+    "quote": "I believe the title was 'Bin Laden Determined to Attack Inside the United States.' ... It did not warn of attacks inside the United States.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "richard-clarke",
+    "name": "Richard Clarke",
+    "role": "National Coordinator for Security, Infrastructure Protection, and Counter-terrorism (1998–2003); testified before 9/11 Commission; publicly apologized to victims' families",
+    "avatar": "us-gov",
+    "initial": "R",
+    "quote": "Your government failed you. Those entrusted with protecting you failed you. And I failed you.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "rudy-giuliani",
+    "name": "Rudy Giuliani",
+    "role": "Mayor of New York City on 9/11; led city's emergency response and public communication; became 'America's Mayor'",
+    "avatar": "us-gov",
+    "initial": "R",
+    "quote": "Tomorrow New York is going to be here. And we're going to rebuild, and we're going to be stronger than we were before.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "thomas-kean",
+    "name": "Thomas Kean",
+    "role": "Chair of the 9/11 Commission; former Republican Governor of New Jersey; led the bipartisan investigation that produced the definitive account of the attacks",
+    "avatar": "commission",
+    "initial": "T",
+    "quote": "We believe that the 9/11 attacks revealed four kinds of failures: in imagination, policy, capabilities, and management.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "lee-hamilton",
+    "name": "Lee Hamilton",
+    "role": "Vice Chair of the 9/11 Commission; former Democratic Representative from Indiana; co-directed the investigation with Thomas Kean",
+    "avatar": "commission",
+    "initial": "L",
+    "quote": "We need to find ways to make America safer. The enemy is adaptive — if we close one door, they will find another.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "betty-ong",
+    "name": "Betty Ong",
+    "role": "American Airlines Flight 11 flight attendant; called American Airlines ground control for 27 minutes during the hijacking, providing the first detailed report of the attacks in progress",
+    "avatar": "victims",
+    "initial": "B",
+    "quote": "Our number-one is not breathing. Our purser is stabbed... the cockpit is not answering their phone.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "todd-beamer",
+    "name": "Todd Beamer",
+    "role": "Passenger on United Airlines Flight 93; credited with organizing passenger revolt; became iconic for reported final words 'Let's roll'",
+    "avatar": "victims",
+    "initial": "T",
+    "quote": "Are you guys ready? Let's roll.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "tony-blair",
+    "name": "Prime Minister Tony Blair",
+    "role": "British Prime Minister; closest international ally in the War on Terror; committed UK forces to Afghanistan and Iraq alongside the United States",
+    "avatar": "intl",
+    "initial": "T",
+    "quote": "This is not a battle between the United States of America and terrorism, but between the free and democratic world and terrorism.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "john-farmer",
+    "name": "John Farmer",
+    "role": "Senior Counsel to the 9/11 Commission; later Dean of Rutgers Law School; wrote 'The Ground Truth' about the gap between official accounts and actual events on 9/11",
+    "avatar": "commission",
+    "initial": "J",
+    "quote": "At some level of the government, at some point in time, there was an agreement not to tell the truth about what happened.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "rfk-jr",
+    "name": "Robert F. Kennedy Jr.",
+    "role": "HHS Secretary (2025–); administered DOGE-era cuts to the WTC Health Program, then reversed course after bipartisan congressional pressure, restoring staffing for 140,000+ enrolled 9/11 survivors and first responders. As of August 2026, a bipartisan group of 26 lawmakers is pressing Kennedy to reappoint WTC Health Program administrator Dr. John Howard before his term expires in November 2026.",
+    "avatar": "us-gov",
+    "initial": "R",
+    "quote": "We are fixing the World Trade Center Health Program.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "michael-bloomberg",
+    "name": "Michael Bloomberg",
+    "role": "Former NYC Mayor; Chairman of the National September 11 Memorial & Museum; pledged to match $25 million in donations to the Museum's 2026 'Never Forget Fund' educating Americans too young to remember the attacks",
+    "avatar": "other",
+    "initial": "M",
+    "quote": "This will help build awareness of the approaching anniversary, as well as the programs and mission of the 9/11 Memorial and Museum.",
+    "lastUpdated": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "john-howard",
+    "name": "Dr. John Howard",
+    "role": "Director, National Institute for Occupational Safety and Health (NIOSH); Administrator, WTC Health Program since its creation under the 2011 Zadroga Act. A bipartisan, bicameral group of 26 members of Congress wrote to HHS Secretary Kennedy on July 9, 2026 urging his reappointment to a further six-year term ahead of its November 2026 expiration, citing his two decades of leadership on 9/11 responder and survivor health.",
+    "avatar": "us-gov",
+    "initial": "J",
+    "quote": "The WTC Health Program exists because Congress and this community refused to let 9/11's health toll be forgotten.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  }
+]

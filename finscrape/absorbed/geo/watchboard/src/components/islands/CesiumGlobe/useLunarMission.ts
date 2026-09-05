@@ -1,0 +1,366 @@
+import { useEffect, useRef, type MutableRefObject } from 'react';
+import {
+  Cartesian3,
+  Color,
+  JulianDate,
+  SampledPositionProperty,
+  LagrangePolynomialApproximation,
+  PolylineGlowMaterialProperty,
+  NearFarScalar,
+  CallbackProperty,
+  ColorBlendMode,
+  Quaternion,
+  Simon1994PlanetaryPositions,
+  DirectionalLight,
+  type Viewer as CesiumViewer,
+  type Entity,
+} from 'cesium';
+import {
+  computeTelemetry,
+  EMPTY_TELEMETRY,
+  type TelemetryState,
+} from './mission-helpers';
+import type { MissionTrajectory } from '../../../lib/schemas';
+import { createSpacecraftIcon } from './cesium-icons';
+import { computeSpacecraftOrientation } from './spacecraft-orientation';
+import { computeAdaptiveScale, MIN_PIXEL_SIZE } from './spacecraft-scale';
+
+interface UseLunarMissionResult {
+  telemetryRef: MutableRefObject<TelemetryState>;
+  /** Current spacecraft position in meters (J2000 frame), updated per-frame */
+  positionRef: MutableRefObject<Cartesian3 | null>;
+  trackSpacecraft: () => void;
+}
+
+export function useLunarMission(
+  viewer: CesiumViewer | null,
+  trajectory: MissionTrajectory | null,
+  simTimeRef: MutableRefObject<number>,
+): UseLunarMissionResult {
+  const telemetryRef = useRef<TelemetryState>(EMPTY_TELEMETRY);
+  const positionRef = useRef<Cartesian3 | null>(null);
+  const entitiesRef = useRef<Entity[]>([]);
+  const rafRef = useRef<number>(0);
+  const spacecraftEntityRef = useRef<Entity | null>(null);
+
+  useEffect(() => {
+    if (!viewer || !trajectory || trajectory.waypoints.length < 2) return;
+
+    try {
+      const launchJd = JulianDate.fromIso8601(trajectory.launchTime);
+      const splashdownJd = JulianDate.fromIso8601(trajectory.splashdownTime);
+
+      // Hide built-in Moon — it's in true ECEF which doesn't match our J2000
+      // trajectory frame. We add a custom Moon entity below in the same frame.
+      if (viewer.scene.moon) {
+        viewer.scene.moon.show = false;
+      }
+
+      // Build SampledPositionProperty (FIXED/ECEF frame — no rotation)
+      // Waypoints are equatorial J2000 inertial but we treat them as ECEF.
+      // This gives a clean static arc. Geographic positions under the path
+      // aren't exact but at 400,000 km scale it's imperceptible.
+      const positionProperty = new SampledPositionProperty();
+      positionProperty.setInterpolationOptions({
+        interpolationDegree: 3,
+        interpolationAlgorithm: LagrangePolynomialApproximation,
+      });
+
+      const velocities: { t: JulianDate; v: number }[] = [];
+
+      for (const wp of trajectory.waypoints) {
+        const jd = JulianDate.fromIso8601(wp.t);
+        const pos = new Cartesian3(wp.x * 1000, wp.y * 1000, wp.z * 1000);
+        positionProperty.addSample(jd, pos);
+        velocities.push({
+          t: jd,
+          v: Math.sqrt(wp.vx ** 2 + wp.vy ** 2 + wp.vz ** 2),
+        });
+      }
+
+      // Static polyline from all waypoints — clean arc, no spiral
+      const polylinePositions: Cartesian3[] = trajectory.waypoints.map(
+        wp => new Cartesian3(wp.x * 1000, wp.y * 1000, wp.z * 1000),
+      );
+
+      const trajectoryEntity = viewer.entities.add({
+        polyline: {
+          positions: polylinePositions,
+          width: 3,
+          material: new PolylineGlowMaterialProperty({
+            glowPower: 0.4,
+            color: Color.fromCssColorString('#60a5fa').withAlpha(0.8),
+          }),
+          depthFailMaterial: new PolylineGlowMaterialProperty({
+            glowPower: 0.2,
+            color: Color.fromCssColorString('#60a5fa').withAlpha(0.4),
+          }),
+        },
+      });
+      entitiesRef.current.push(trajectoryEntity);
+
+      // Custom Moon entity in J2000-as-ECEF frame (matches trajectory coordinates).
+      // The built-in CesiumJS Moon is in true ECEF, which diverges from J2000 due to
+      // Earth rotation. At lunar distance this mismatch is tens of thousands of km.
+      const MOON_RADIUS_M = 1_737_400;
+
+      // Pre-compute Moon positions for the mission duration (J2000 frame)
+      // Used for both the Moon entity position and its orbit trail
+      const MOON_TRAIL_STEPS = 200;
+      const missionStartMs = new Date(trajectory.launchTime).getTime();
+      const missionEndMs = new Date(trajectory.splashdownTime).getTime();
+      const moonTrailPositions: Cartesian3[] = [];
+      for (let i = 0; i <= MOON_TRAIL_STEPS; i++) {
+        const t = missionStartMs + (i / MOON_TRAIL_STEPS) * (missionEndMs - missionStartMs);
+        const jd = JulianDate.fromDate(new Date(t));
+        const moonEci = Simon1994PlanetaryPositions.computeMoonPositionInEarthInertialFrame(jd);
+        moonTrailPositions.push(new Cartesian3(moonEci.x, moonEci.y, moonEci.z));
+      }
+
+      // Moon orbit trail polyline
+      const moonTrailEntity = viewer.entities.add({
+        polyline: {
+          positions: moonTrailPositions,
+          width: 1.5,
+          material: new PolylineGlowMaterialProperty({
+            glowPower: 0.3,
+            color: Color.fromCssColorString('#94a3b8').withAlpha(0.4),
+          }),
+          depthFailMaterial: new PolylineGlowMaterialProperty({
+            glowPower: 0.15,
+            color: Color.fromCssColorString('#94a3b8').withAlpha(0.2),
+          }),
+        },
+      });
+      entitiesRef.current.push(moonTrailEntity);
+
+      // Directional light from the Sun's J2000 position (same frame as our scene).
+      // CesiumJS's built-in SunLight uses ECEF which doesn't match our J2000 trajectory.
+      // We compute Sun direction in J2000 and update it per-frame in the tick loop.
+      const sunJ2000 = Simon1994PlanetaryPositions.computeSunPositionInEarthInertialFrame(launchJd);
+      const sunDir = Cartesian3.normalize(
+        Cartesian3.negate(sunJ2000, new Cartesian3()), new Cartesian3(),
+      );
+      viewer.scene.light = new DirectionalLight({ direction: sunDir });
+      viewer.scene.globe.enableLighting = true;
+
+      // Moon — glTF model with texture + normals (supports PBR lighting)
+      // Model is ~2 units across, Moon radius = 1,737,400 m → scale = 1,737,400
+      const moonModelUri = '/models/moon.glb';
+      const moonPositionCallback = new CallbackProperty(() => {
+        const simMs = simTimeRef.current;
+        const jd = simMs
+          ? JulianDate.fromDate(new Date(simMs))
+          : launchJd;
+        const moonEci = Simon1994PlanetaryPositions.computeMoonPositionInEarthInertialFrame(jd);
+        return new Cartesian3(moonEci.x, moonEci.y, moonEci.z);
+      }, false);
+
+      const moonEntity = viewer.entities.add({
+        position: moonPositionCallback as any,
+        model: {
+          uri: moonModelUri,
+          scale: MOON_RADIUS_M,
+          minimumPixelSize: 8,
+        },
+      });
+      entitiesRef.current.push(moonEntity);
+
+      // Moon label entity (labels need Entity API)
+      const moonLabelEntity = viewer.entities.add({
+        position: new CallbackProperty(() => {
+          const simMs = simTimeRef.current;
+          const jd = simMs ? JulianDate.fromDate(new Date(simMs)) : launchJd;
+          const moonEci = Simon1994PlanetaryPositions.computeMoonPositionInEarthInertialFrame(jd);
+          return new Cartesian3(moonEci.x, moonEci.y, moonEci.z);
+        }, false) as any,
+        label: {
+          text: 'MOON',
+          font: '12px JetBrains Mono',
+          fillColor: Color.fromCssColorString('#94a3b8'),
+          outlineColor: Color.BLACK,
+          outlineWidth: 2,
+          style: 2,
+          pixelOffset: { x: 0, y: -24 } as any,
+          scaleByDistance: new NearFarScalar(1e6, 1.0, 1e9, 0.1),
+        },
+      });
+      entitiesRef.current.push(moonLabelEntity);
+
+      // Sun entity — bright yellow point at J2000 position with label
+      // Sun is ~150M km away, so it's always a point. We use a large point
+      // with glow that stays visible at any zoom.
+      const sunEntity = viewer.entities.add({
+        position: new CallbackProperty(() => {
+          const simMs = simTimeRef.current;
+          const jd = simMs ? JulianDate.fromDate(new Date(simMs)) : launchJd;
+          return Simon1994PlanetaryPositions.computeSunPositionInEarthInertialFrame(jd);
+        }, false) as any,
+        point: {
+          pixelSize: 20,
+          color: Color.fromCssColorString('#fff4b8'),
+          outlineColor: Color.fromCssColorString('#ffdd00'),
+          outlineWidth: 4,
+          scaleByDistance: new NearFarScalar(1e9, 20, 1e12, 6),
+        },
+        label: {
+          text: 'SUN',
+          font: '12px JetBrains Mono',
+          fillColor: Color.fromCssColorString('#ffdd00'),
+          outlineColor: Color.BLACK,
+          outlineWidth: 2,
+          style: 2,
+          pixelOffset: { x: 0, y: -20 } as any,
+          scaleByDistance: new NearFarScalar(1e9, 1.0, 1e12, 0.2),
+        },
+      });
+      entitiesRef.current.push(sunEntity);
+
+      // Spacecraft entity — 3D model with velocity-aligned orientation
+      const modelUri = '/models/orion-spacecraft.glb';
+
+      // Shared position callback — reused by both model and scale
+      const positionCallback = new CallbackProperty(() => {
+        const simMs = simTimeRef.current;
+        if (!simMs) return polylinePositions[0];
+        const currentJd = JulianDate.fromDate(new Date(simMs));
+        const pos = positionProperty.getValue(currentJd);
+        if (!pos) {
+          const launchMs = new Date(trajectory.launchTime).getTime();
+          if (simMs < launchMs) return polylinePositions[0];
+          return polylinePositions[polylinePositions.length - 1];
+        }
+        return pos;
+      }, false);
+
+      // Orientation: velocity alignment + phase overrides
+      const orientationCallback = new CallbackProperty(() => {
+        const simMs = simTimeRef.current;
+        if (!simMs) return Quaternion.IDENTITY;
+        const currentJd = JulianDate.fromDate(new Date(simMs));
+        return computeSpacecraftOrientation(
+          positionProperty,
+          currentJd,
+          trajectory.phases,
+        ) ?? Quaternion.IDENTITY;
+      }, false);
+
+      // Common label config shared by model and billboard entities
+      const labelConfig = {
+        text: 'ORION',
+        font: '14px JetBrains Mono',
+        fillColor: Color.fromCssColorString('#4ade80'),
+        outlineColor: Color.BLACK,
+        outlineWidth: 3,
+        style: 2,
+        pixelOffset: { x: 0, y: -28 } as any,
+        scaleByDistance: new NearFarScalar(1e5, 1.2, 5e8, 0.15),
+      };
+
+      // Start with billboard — upgrade to 3D model once we confirm the .glb is reachable
+      const spacecraftEntity = viewer.entities.add({
+        position: positionCallback as any,
+        billboard: {
+          image: createSpacecraftIcon(),
+          scale: 1.0,
+          scaleByDistance: new NearFarScalar(1e5, 1.2, 5e8, 0.15),
+          color: Color.WHITE,
+        },
+        label: labelConfig,
+      });
+      entitiesRef.current.push(spacecraftEntity);
+      spacecraftEntityRef.current = spacecraftEntity;
+
+      // Async upgrade: verify model is reachable, then swap billboard → 3D model
+      fetch(modelUri, { method: 'HEAD' }).then(resp => {
+        if (!resp.ok) throw new Error(`Model HEAD ${resp.status}`);
+        // Model exists — swap to 3D
+        (spacecraftEntity as any).billboard = undefined;
+        (spacecraftEntity as any).orientation = orientationCallback;
+        (spacecraftEntity as any).model = {
+          uri: modelUri,
+          minimumPixelSize: MIN_PIXEL_SIZE,
+          scale: new CallbackProperty(() => {
+            const simMs = simTimeRef.current;
+            if (!simMs) return 1_000;
+            const currentJd = JulianDate.fromDate(new Date(simMs));
+            const pos = positionProperty.getValue(currentJd);
+            if (!pos) return 1_000;
+            return computeAdaptiveScale(viewer, pos);
+          }, false) as any,
+          silhouetteColor: Color.fromCssColorString('#4ade80'),
+          silhouetteSize: 1.0,
+          colorBlendMode: ColorBlendMode.HIGHLIGHT,
+        };
+        console.log('[lunar-mission] Upgraded spacecraft to 3D model');
+      }).catch(e => {
+        console.warn('[lunar-mission] 3D model unavailable, keeping billboard:', e);
+      });
+
+      console.log(`[lunar-mission] Loaded ${trajectory.waypoints.length} waypoints, static polyline + tracked entity`);
+
+      // Per-frame telemetry update
+      const tick = () => {
+        try {
+          const simMs = simTimeRef.current;
+          if (!simMs) { rafRef.current = requestAnimationFrame(tick); return; }
+          const currentJd = JulianDate.fromDate(new Date(simMs));
+          const pos = positionProperty.getValue(currentJd);
+          if (!pos) { rafRef.current = requestAnimationFrame(tick); return; }
+          positionRef.current = pos;
+
+          let currentV = 0;
+          for (let i = 0; i < velocities.length - 1; i++) {
+            if (
+              JulianDate.greaterThanOrEquals(currentJd, velocities[i].t) &&
+              JulianDate.lessThan(currentJd, velocities[i + 1].t)
+            ) {
+              const secDiff = JulianDate.secondsDifference(velocities[i + 1].t, velocities[i].t);
+              if (secDiff > 0) {
+                const frac = JulianDate.secondsDifference(currentJd, velocities[i].t) / secDiff;
+                currentV = velocities[i].v * (1 - frac) + velocities[i + 1].v * frac;
+              }
+              break;
+            }
+          }
+
+          telemetryRef.current = computeTelemetry(
+            pos, currentV, launchJd, currentJd, splashdownJd, trajectory.phases,
+          );
+
+          // Update Sun light direction in J2000 frame
+          const sunJ2k = Simon1994PlanetaryPositions.computeSunPositionInEarthInertialFrame(currentJd);
+          const light = viewer.scene.light as DirectionalLight;
+          if (light?.direction) {
+            Cartesian3.negate(sunJ2k, light.direction);
+            Cartesian3.normalize(light.direction, light.direction);
+          }
+
+        } catch (e) {
+          console.warn('[lunar-mission] tick error:', e);
+        }
+        rafRef.current = requestAnimationFrame(tick);
+      };
+      rafRef.current = requestAnimationFrame(tick);
+
+    } catch (e) {
+      console.error('[lunar-mission] init error:', e);
+    }
+
+    return () => {
+      cancelAnimationFrame(rafRef.current);
+      for (const entity of entitiesRef.current) {
+        try { viewer.entities.remove(entity); } catch {}
+      }
+      entitiesRef.current = [];
+      spacecraftEntityRef.current = null;
+    };
+  }, [viewer, trajectory]);
+
+  const trackSpacecraft = () => {
+    if (!viewer || !spacecraftEntityRef.current) return;
+    viewer.trackedEntity = spacecraftEntityRef.current;
+  };
+
+  return { telemetryRef, positionRef, trackSpacecraft };
+}

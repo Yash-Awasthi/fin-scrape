@@ -1,0 +1,92 @@
+[
+  {
+    "id": "op1027-launch-retaliation",
+    "name": "Operation 1027 — Three Brotherhood Alliance Offensive",
+    "detail": "Oct 27, 2023 — MNDAA, TNLA, and AA launched coordinated Operation 1027, capturing 200+ SAC outposts in northern Shan State within weeks. The largest and most successful resistance offensive since the 2021 coup.",
+    "icon": "retaliation",
+    "time": "Oct 27, 2023",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "defensive-war-declaration-pdf",
+    "name": "NUG Declares People's Defensive War",
+    "detail": "Aug 7, 2021 — NUG Acting President Duwa Lashi La declared a People's Defensive War against the SAC, formally launching armed resistance. PDF operations across Sagaing, Magway, and Kayah regions escalated immediately.",
+    "icon": "retaliation",
+    "time": "Aug 7, 2021",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "knla-myawaddy-capture",
+    "name": "KNLA Captures Myawaddy Border Town",
+    "detail": "Apr 11, 2024 — KNLA and PDF seized Myawaddy's military headquarters, demonstrating resistance capability to threaten major economic hubs. Junta's most important Thailand trade corridor briefly under resistance control.",
+    "icon": "retaliation",
+    "time": "Apr 11, 2024",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "aa-rakhine-offensive",
+    "name": "AA Rakhine State Offensive — 90% of State Captured",
+    "detail": "Nov 2023–Dec 2024 — Arakan Army launched simultaneous offensive with Operation 1027 in Rakhine State, capturing 14 of 17 townships including the Western Military Command headquarters. The most dramatic territorial shift of the entire conflict.",
+    "icon": "retaliation",
+    "time": "Nov 13, 2023",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "pdf-drone-attacks-naypyidaw",
+    "name": "PDF Drone Attacks on Naypyidaw Area",
+    "detail": "2022–2024 — PDF units used improvised quadcopter drones to drop grenades and IEDs on SAC facilities, including reported attacks near Naypyidaw. Drone warfare has been a significant resistance equalizer against junta airpower advantage.",
+    "icon": "retaliation",
+    "time": "2022–2024",
+    "tier": 3,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "kia-major-offensive-2023",
+    "name": "KIA Kachin State Offensive — Multiple Outposts Captured",
+    "detail": "Mar 2023 — KIA launched coordinated offensive in Kachin State capturing multiple SAC outposts near Myitkyina, cutting supply routes. Over 100 SAC positions captured across Kachin through 2023–2024.",
+    "icon": "retaliation",
+    "time": "Mar 2023",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "karenni-loikaw-encirclement",
+    "name": "Karenni Forces Encircle Loikaw",
+    "detail": "2022–2024 — Karenni Army, KNDF, and PDF forces gradually encircled Loikaw (Kayah State capital), severing road access and forcing SAC to rely on air supply. Demonstrated resistance capability for sustained positional warfare.",
+    "icon": "retaliation",
+    "time": "Jun 2022",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "pdf-sabotage-railways",
+    "name": "PDF Railway and Infrastructure Sabotage",
+    "detail": "2021–2025 — PDF units conducted hundreds of attacks on SAC railway infrastructure, bridges, pipelines, and supply routes across Sagaing, Magway, and Bago regions. Severely degraded SAC logistics capacity and forced expensive air resupply.",
+    "icon": "retaliation",
+    "time": "Oct 2021",
+    "tier": 3,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "mndaa-lashio-capture",
+    "name": "MNDAA/TNLA Capture Lashio — N. Shan Capital Falls",
+    "detail": "Aug 3, 2024 — MNDAA and TNLA forces captured Lashio, capital of Northern Shan State and headquarters of SAC's Northeastern Regional Military Command. First time an EAO captured a Regional Military Command HQ.",
+    "icon": "retaliation",
+    "time": "Aug 3, 2024",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "chinland-cdf-guerrilla-ops",
+    "name": "Chinland Defence Force Guerrilla Operations",
+    "detail": "2021–2025 — CDF and CNF conducted sustained guerrilla warfare across Chin State, ambushing SAC patrols, capturing outposts, and maintaining pressure on SAC garrisons in Hakha, Falam, and Tonzang. Chin State largely under resistance control.",
+    "icon": "retaliation",
+    "time": "Mar 2021",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  }
+]

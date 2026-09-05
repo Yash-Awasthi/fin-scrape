@@ -1,0 +1,178 @@
+[
+  {
+    "id": "gaza-total-oct7-war",
+    "category": "Gaza Total Deaths (Oct 7, 2023 – Aug 27, 2026)",
+    "killed": "73,414+ documented",
+    "injured": "174,259+",
+    "source": "Gaza Ministry of Health / WAFA / UN OCHA / UN Security Council / OHCHR",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "Aug 27: IDF strikes killed three named Hamas commanders — Ismail Mohammed Ibrahim Barim (former jailer of freed hostages Edan Alexander, Matan Zangauker and Avera Mengistu) in Khan Younis, Bilal Ibrahim Saleh Raqi'i (anti-tank commander) in Gaza City's Shati camp, and Azzam Rifaat Abd Abadala in Khan Younis — plus at least 4 more Palestinians in strikes on displacement tents and a motorbike near al-Mawasi and al-Sinaa; Gaza health officials say 1,300+ have now been killed since the Oct 2025 ceasefire, against roughly 4 Israeli soldiers. Aug 25: strikes on Deir al-Balah, Beit Lahiya and Khan Younis killed 7, destroying a malnutrition-supply warehouse. Aug 24: IDF struck two Hamas militants in Deir al-Balah, including a Nukhba force member who took part in the Oct 7, 2023 attack; separate strikes hit a mosque and desalination plant in Gaza City's Sheikh Radwan neighborhood. Aug 23: Israeli strikes on Az-Zawayda, Nuseirat and Maghazi killed at least 3 more Palestinians including 4-year-old Muhammad Abdel Salam Taha, as Netanyahu/Katz threatened to intensify strikes and order evacuations over kite/drone/balloon launches. Aug 22: IDF drone strike in Deir al-Balah killed Hamas Deir al-Balah Battalion commander Sharif al-Hasanat; Palestinian medics separately reported one additional death nearby, unconfirmed. Aug 12: Gaza MoH toll reached 73,388 killed / 174,259 wounded since Oct 7, 2023, after Israel's first Gaza airstrike in over a week killed municipal worker Mohanad Saada (5 wounded) near a Western Roundabout tuk-tuk in Beit Lahia; IDF said it targeted a Hamas commander, Gaza Civil Defence disputed this. Aug 7: UNICEF reported 300 children killed in the first 300 days of the ceasefire (~1/day). OHCHR documented 12+ attacks on police posts since Jan 2026 killing 53+ (35 police, 18 civilians). True toll with indirect deaths may exceed 90,000–100,000.",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "gaza-children-killed",
+    "category": "Palestinian Children Killed (Oct 2023 – Mar 2026)",
+    "killed": "19,000+",
+    "injured": "37,000+",
+    "source": "Gaza MoH / UNICEF / Save the Children",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "UNICEF called Gaza the most dangerous place in the world for children. Highest child death toll in any conflict in the UN's recorded history. Gaza has the highest number of child amputees per capita in the world. More children killed in first months than in all global conflicts combined in 2022.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "gaza-healthcare-workers",
+    "category": "Healthcare Workers Killed in Gaza",
+    "killed": "1,000+",
+    "injured": "2,000+",
+    "source": "WHO / Palestinian Health Ministry",
+    "tier": 1,
+    "contested": "no",
+    "note": "WHO documented over 700 attacks on health facilities in Gaza since Oct 7. Over 100 hospitals and clinics put out of service — 97% of schools damaged or destroyed. All 36 hospitals damaged or destroyed. Deadliest conflict for healthcare workers in WHO's history.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "journalists-killed-gaza",
+    "category": "Journalists Killed (Gaza War)",
+    "killed": "220+",
+    "injured": "50+",
+    "source": "Reporters Without Borders (RSF) / Committee to Protect Journalists (CPJ)",
+    "tier": 3,
+    "contested": "no",
+    "note": "Highest journalist death toll in any conflict in CPJ's 40-year history. RSF recorded 220 journalists killed by Israeli forces in less than two years. Includes Palestinian, Israeli, and foreign nationals. Many killed with press vest on; IDF investigations rarely resulted in accountability.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "aid-workers-killed-gaza",
+    "category": "Aid Workers Killed in Gaza (Oct 2023 – Dec 2025)",
+    "killed": "578+",
+    "injured": "100+",
+    "source": "UN Secretary-General / UNRWA / OCHA",
+    "tier": 1,
+    "contested": "no",
+    "note": "At least 578+ aid workers killed between Oct 7, 2023 and Dec 3, 2025, including at least 387 UN personnel. Single largest loss of UN staff in any conflict. WHO driver Majdi Aslan (54) killed by Israeli fire in eastern Khan Younis on April 6, 2026, prompting WHO to suspend all medical evacuations from Gaza on April 7 — leaving 18,000+ patients awaiting evacuation. WHO also had a doctor wounded and a child critically injured in the same incident.",
+    "lastUpdated": "2026-04-08T14:00:00.000Z"
+  },
+  {
+    "id": "israelis-oct7-attack",
+    "category": "Israelis Killed (October 7 Attack)",
+    "killed": "~1,200",
+    "injured": "~3,500",
+    "source": "IDF / Israeli National Security Council",
+    "tier": 1,
+    "contested": "no",
+    "note": "Deadliest attack on Jews since the Holocaust. ~364 killed at Nova music festival; ~400 soldiers and police killed; ~400+ civilians in kibbutzim and towns. 251 hostages taken to Gaza; all now accounted for (last body returned early 2026).",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "idf-soldiers-killed-gaza-war",
+    "category": "IDF Soldiers Killed (Gaza War, Oct 2023–present)",
+    "killed": "~850",
+    "injured": "~4,500",
+    "source": "IDF",
+    "tier": 1,
+    "contested": "no",
+    "note": "Includes combat deaths in Gaza and related operations. Ceasefire since Oct 10, 2025 has significantly reduced IDF combat fatalities. Many deaths from explosive devices and urban ambushes during active combat phase.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "hostages-remaining",
+    "category": "Israeli Hostages — Final Account",
+    "killed": "~30 (deceased in captivity)",
+    "injured": "N/A",
+    "source": "Israeli PM Office / Hostages Families Forum / UN Security Council",
+    "tier": 1,
+    "contested": "no",
+    "note": "251 taken Oct 7; ~105 released Nov 2023; 33 released Phase 1 ceasefire Jan–Mar 2025; remaining released or recovered as deceased under Oct 2025 ceasefire. Ran Gvili's body was the last returned, in early 2026. The UN Security Council convened the day after his return. Israel's UN representative removed his yellow hostage pin for the first time in 843 days.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "west-bank-palestinians-2023-2026",
+    "category": "West Bank Palestinians Killed (Oct 2023 – Aug 2026)",
+    "killed": "1,151+ (90+ since Jan 2026)",
+    "injured": "11,900+",
+    "source": "Palestinian Authority / B'Tselem / UN OHCHR / WAFA / Save the Children / UNSCO",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Deadliest period in West Bank since Second Intifada. 22,000+ arrested. Aug 27, 2026: the Israeli government told the High Court it will keep barring the return of 33,000+ Palestinians displaced from the Jenin, Tulkarm and Nur al-Shams refugee camps cleared during Operation Iron Wall (began Jan 2025), citing intelligence that armed groups could regroup; separately, Sens. Van Hollen, Kaine and Sanders unveiled a privileged Section 502B Senate resolution demanding a State Dept accounting of 9 Americans killed in the West Bank. Aug 23: Israeli forces shot dead 14-year-old Islam Ahmad Ajjouri during a raid on Askar refugee camp near Nablus; camp officials said there was no confrontation justifying the shooting, IDF said it is reviewing the incident. Same day, a 16-year-old Palestinian stabbed and wounded an Israeli soldier near al-Auja in the Jordan Valley; IDF arrested the suspect after an hours-long manhunt. Aug 21: settlers shot dead 17-year-old Karim Sanad Raja Shalaldeh near Sa'ir, Hebron, after a rock-throwing incident tied to an 'unauthorized hike'; a 70-year-old man was also wounded and homes reportedly torched. Same day, IDF soldiers killed 58-year-old retired PA colonel Fathi Khazem during an overnight Jenin home raid, claiming a knife attack — Palestinian officials said the body was withheld and medics blocked. Aug 20: HRW reported settler attacks have fully or partially displaced 107 West Bank communities (~5,900 people) since Jan 2023, with only ~3% of cases resulting in conviction; settlers separately overturned a Palestinian vehicle near al-Mughayyir, wounding 5-6. Aug 11: UN Deputy Special Coordinator Ramiz Alakbarov told the Security Council the West Bank is at a 'breaking point' amid 'de facto annexation' — UNSCO cited 76 Palestinians killed in 2026 as of Aug 10 (incl. 18 children), 174 children verified killed since Jan 2024, 1,430+ settler-violence incidents in 2026 affecting ~260 communities. Jul 24, 2026: shootout near Havat Gilad settlement (Tal village) killed 4 Palestinians and 2 Israeli soldiers after a settler raid. OCHA: July 2026 tied March 2026 as the deadliest month for settler-violence deaths since Oct 2023. 36,000+ forcibly displaced per UN OHCHR. 59 communities fully depopulated.",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "second-intifada-total",
+    "category": "Second Intifada Total (2000–2005)",
+    "killed": "4,228 total",
+    "injured": "~50,000",
+    "source": "B'Tselem / Israeli MFA",
+    "tier": 3,
+    "contested": "partial",
+    "note": "~3,354 Palestinians killed (including combatants), ~874 Israelis killed (mostly civilians in suicide bombings). Deadliest sustained conflict between the two peoples in modern times until 2023.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "operation-protective-edge-2014",
+    "category": "Operation Protective Edge — Gaza War III (2014)",
+    "killed": "2,251 Palestinians; 72 Israelis",
+    "injured": "~11,000 Palestinians; ~500 Israelis",
+    "source": "UN OCHA / B'Tselem / IDF",
+    "tier": 1,
+    "contested": "partial",
+    "note": "UN found 1,462 Palestinian civilians killed including 551 children. IDF estimated higher combatant ratio. Most destructive Gaza war prior to 2023. $8.4B damage to Gaza infrastructure.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "operation-cast-lead-2008",
+    "category": "Operation Cast Lead — Gaza War I (2008–09)",
+    "killed": "~1,385 Palestinians; 13 Israelis",
+    "injured": "~5,000 Palestinians; 518 Israelis",
+    "source": "UN Goldstone Report / B'Tselem / IDF",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "UN Goldstone Report documented civilian casualties and alleged war crimes by both sides. IDF subsequently disputed numbers. 10 of 13 Israelis killed were soldiers; 4 by friendly fire.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "1948-war-casualties",
+    "category": "1948 Arab-Israeli War",
+    "killed": "~15,000 total",
+    "injured": "Unknown",
+    "source": "Benny Morris historical research / Israeli Government",
+    "tier": 3,
+    "contested": "partial",
+    "note": "~6,000 Israelis killed (~4,000 soldiers, ~2,000 civilians); ~5,000-8,000 Arab soldiers and Palestinian fighters killed. ~700,000–750,000 Palestinians displaced (the Nakba). Arab states' casualty figures vary widely.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "first-intifada-casualties",
+    "category": "First Intifada (1987–1993)",
+    "killed": "~1,322 total",
+    "injured": "~80,000+",
+    "source": "B'Tselem / Israeli Defense Ministry",
+    "tier": 3,
+    "contested": "no",
+    "note": "~1,162 Palestinians killed by Israeli forces; ~160 Israelis killed by Palestinians. Tens of thousands injured, arrested, or subjected to 'break the bones' policy. Gaza refugee camps bore highest casualties.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "great-march-return-2018-2019",
+    "category": "Great March of Return (2018–2019)",
+    "killed": "~214 Palestinians",
+    "injured": "~36,000 Palestinians",
+    "source": "UN Commission of Inquiry / B'Tselem",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Over 13 months of protests; Israeli snipers fired live ammunition at protesters. UN Commission found Israel violated international human rights law. No Israeli casualties from protesters' actions.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "operation-guardian-walls-2021",
+    "category": "Operation Guardian of the Walls (May 2021)",
+    "killed": "253 Palestinians; 13 Israelis",
+    "injured": "~2,000 Palestinians; ~300 Israelis",
+    "source": "UN OCHA / IDF / B'Tselem",
+    "tier": 1,
+    "contested": "partial",
+    "note": "UN confirmed 67 children among Palestinian dead. 13 Israelis killed; 10 civilians (including 2 Thai workers). Both sides fired into civilian areas. 11-day war; Egyptian-mediated ceasefire.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  }
+]

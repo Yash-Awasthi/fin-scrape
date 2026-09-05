@@ -1,0 +1,67 @@
+{
+  "lastRun": "2026-08-28T00:43:49.255Z",
+  "tracker": "southeast-asia-escalation",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-05T14:22:00.000Z",
+      "status": "updated",
+      "itemCount": 16
+    },
+    "meta": {
+      "lastRun": "2026-06-05T14:22:00.000Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "unchanged",
+      "itemCount": 67
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-05T14:22:00.000Z",
+      "status": "updated",
+      "itemCount": 102
+    },
+    "mapLines": {
+      "lastRun": "2026-05-31T14:30:00.000Z",
+      "status": "unchanged",
+      "itemCount": 69
+    },
+    "claims": {
+      "lastRun": "2026-06-05T14:22:00.000Z",
+      "status": "updated",
+      "itemCount": 30
+    },
+    "political": {
+      "lastRun": "2026-06-02T14:30:00.000Z",
+      "status": "unchanged",
+      "itemCount": 35
+    },
+    "casualties": {
+      "status": "unchanged",
+      "itemCount": 10
+    },
+    "econ": {
+      "lastRun": "2026-06-02T14:30:00.000Z",
+      "status": "unchanged",
+      "itemCount": 12
+    },
+    "assets": {
+      "lastRun": "2026-05-31T14:30:00.000Z",
+      "status": "unchanged",
+      "itemCount": 27
+    },
+    "events": {
+      "lastRun": "2026-06-05T14:22:00.000Z",
+      "status": "updated",
+      "newFiles": [
+        "2026-06-03.json",
+        "2026-06-04.json",
+        "2026-06-05.json"
+      ]
+    },
+    "digests": {
+      "lastRun": "2026-06-05T14:22:00.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

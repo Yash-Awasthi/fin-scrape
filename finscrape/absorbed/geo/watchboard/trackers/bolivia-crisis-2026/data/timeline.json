@@ -1,0 +1,1184 @@
+[
+  {
+    "era": "Fuel Subsidies End & Early Unrest (Dec 2025 – Apr 2026)",
+    "events": [
+      {
+        "id": "fuel-subsidy-decree-dec2025",
+        "year": "Dec 2025",
+        "title": "Paz Decree Ends National Fuel Subsidies",
+        "type": "economic",
+        "detail": "Weeks after taking office, President Rodrigo Paz signed a decree eliminating Bolivia's decades-old fuel subsidies, effectively doubling gasoline prices overnight. The move, intended to relieve strain on dwindling dollar reserves and a collapsing state fuel-import system, became the spark for months of nationwide unrest.",
+        "sources": [
+          {
+            "name": "CSIS",
+            "tier": 3,
+            "url": "https://www.csis.org/analysis/bolivias-governance-crisis-under-rodrigo-paz"
+          },
+          {
+            "name": "World Socialist Web Site",
+            "tier": 3,
+            "url": "https://www.wsws.org/en/articles/2026/05/08/olmd-m08.html"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "law-1720-enacted-apr2026",
+        "year": "Apr 10, 2026",
+        "title": "Law 1720 Allows Land as Loan Collateral",
+        "type": "government",
+        "detail": "The Paz government implemented Law 1720, permitting agricultural land to be used as collateral for loans. Indigenous and agrarian organizations denounced it as a threat to communal and smallholder land tenure, calling it a prelude to land dispossession by lenders.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "General Strike Begins (May 2026)",
+    "events": [
+      {
+        "id": "cob-general-strike-may1-2026",
+        "year": "May 1, 2026",
+        "title": "COB Declares National General Strike",
+        "type": "protest",
+        "detail": "The Central Obrera Boliviana (COB) launched an indefinite general strike backed by more than 70 unions carrying over 100 demands, from a 20% wage increase to opposition to the closure of loss-making state enterprises. The first road blockades appeared in La Paz the same day.",
+        "sources": [
+          {
+            "name": "World Socialist Web Site",
+            "tier": 3,
+            "url": "https://www.wsws.org/en/articles/2026/05/08/olmd-m08.html"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/economy/2026/5/7/protests-in-bolivia-escalate-amid-economic-turmoil-and-policy-demands"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "blockades-67-highways-may6-2026",
+        "year": "May 6, 2026",
+        "title": "67 Highways Blockaded Nationwide",
+        "type": "protest",
+        "detail": "Road blockades (bloqueos) spread to roughly 67 highways across Bolivia, choking fuel, food, and medicine supply chains into La Paz and El Alto within the strike's first week.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "la-paz-march-may12-2026",
+        "year": "May 12, 2026",
+        "title": "Thousands March in La Paz",
+        "type": "protest",
+        "detail": "Miners, teachers, Indigenous organizations, and farmers converged on La Paz in a mass march, broadening a strike that began as a labor dispute into a multi-sector movement against the Paz government's economic program.",
+        "sources": [
+          {
+            "name": "NPR",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.npr.org/2026/05/20/nx-s1-5828203/bolivia-capital-protests-crisis"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "law-1720-annulled-may13-2026",
+        "year": "May 13, 2026",
+        "title": "Paz Annuls Law 1720; Labor Minister Resigns",
+        "type": "negotiation",
+        "detail": "Facing mounting pressure, President Paz annulled the contested land-collateral Law 1720. Labor Minister Edgar Morales resigned the same day, the first of several cabinet departures during the crisis.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "miner-delegation-clash-may14-2026",
+        "year": "May 14, 2026",
+        "title": "Miner Delegation Clash Near Plaza Murillo",
+        "type": "protest",
+        "detail": "A 20-person COB miner delegation attempted to reach the presidential palace at Plaza Murillo. Miners detonated dynamite and protesters allegedly threw Molotov cocktails; police deployed more than 3,500 officers and used tear gas. More than 5,000 trucks sat stranded on national highways, with losses estimated at $50 million per day.",
+        "sources": [
+          {
+            "name": "UPI",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.upi.com/Top_News/World-News/2026/05/19/latam-bolivia-protests-continue/8501779215979/"
+          },
+          {
+            "name": "Latin Times",
+            "tier": 3,
+            "url": "https://www.latintimes.com/bolivia-moves-toward-state-emergency-after-35-days-protests-blockades-nine-dead-597722"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Government and protest groups dispute who initiated violence at the palace approach.",
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "protests-shift-resignation-may15-2026",
+        "year": "May 15, 2026",
+        "title": "Protest Demands Shift to Paz's Resignation",
+        "type": "protest",
+        "detail": "As blockades entered their third week, the movement's core demand shifted from sectoral economic grievances to explicit calls for President Rodrigo Paz to resign.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "middle_eastern",
+            "url": "https://www.aljazeera.com/economy/2026/5/7/protests-in-bolivia-escalate-amid-economic-turmoil-and-policy-demands"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "evo-morales-march-may19-2026",
+        "year": "May 19, 2026",
+        "title": "Evo Morales Leads 190km March Into La Paz",
+        "type": "protest",
+        "detail": "Former president Evo Morales led a 190-kilometer march of cocalero and MAS supporters from the Chapare region into La Paz, positioning himself as a central figure in the movement to unseat Paz.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          },
+          {
+            "name": "CSIS",
+            "tier": 3,
+            "url": "https://www.csis.org/analysis/bolivias-governance-crisis-under-rodrigo-paz"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "cabinet-reshuffle-ambassador-may20-2026",
+        "year": "May 20, 2026",
+        "title": "Cabinet Reshuffle Announced; Colombian Ambassador Expelled",
+        "type": "government",
+        "detail": "Paz announced a cabinet reshuffle (completed by May 25) and expelled Colombia's ambassador Elizabeth García after Colombian President Gustavo Petro voiced support for the protesters, triggering a minor diplomatic rupture.",
+        "sources": [
+          {
+            "name": "NPR",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.npr.org/2026/05/20/nx-s1-5828203/bolivia-capital-protests-crisis"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "humanitarian-corridors-attacked-may23-2026",
+        "year": "May 23, 2026",
+        "title": "Security Forces Open Humanitarian Corridors, Attacked",
+        "type": "humanitarian",
+        "detail": "Police and military units opened humanitarian corridors to move stranded food and fuel; convoys were attacked with stones and dynamite. Public Works Minister Mauricio Zamora was ambushed while inspecting a blockade site and had to be rescued by security forces.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "blockades-spread-el-alto-may24-2026",
+        "year": "May 24, 2026",
+        "title": "Blockades Spread to El Alto",
+        "type": "protest",
+        "detail": "Roadblocks expanded into El Alto, the twin city overlooking La Paz and a historic center of Aymara labor organizing, cutting the capital's main highway links to the altiplano and the rest of the country.",
+        "sources": [
+          {
+            "name": "Latina Republic",
+            "tier": 3,
+            "url": "https://latinarepublic.com/2026/06/09/bolivia-crisis-40-days-of-road-blockades-disrupt-transport-economy-and-food-supply/"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "paz-flees-sucre-salary-cuts-may25-2026",
+        "year": "May 25, 2026",
+        "title": "Paz Relocates to Sucre, Cuts Cabinet Salaries",
+        "type": "government",
+        "detail": "President Paz relocated government operations to the constitutional capital Sucre and announced a 50% salary cut for himself and his cabinet as a gesture of austerity. Evo Morales called for fresh elections within 90 days.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "military-deployment-law-may26-2026",
+        "year": "May 26, 2026",
+        "title": "Congress Authorizes Military Deployment Against Unrest",
+        "type": "government",
+        "detail": "Congress passed legislation authorizing military deployment in support of police operations against the blockades. The same day, counter-protests by shopowners unable to restock their stores broke out, and the government hardened its public tone toward the strikers.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "paz-signs-military-law-time-running-out-may27-2026",
+        "year": "May 27, 2026",
+        "title": "Paz Signs Military Law: \"Time Is Running Out\"",
+        "type": "government",
+        "detail": "Paz signed the military-deployment authorization into law and warned publicly that \"time is running out\" for blockade leaders to stand down, signaling the government's intent to use force to reopen the roads.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Escalation, Military Deployment & State of Emergency (Jun 2026)",
+    "events": [
+      {
+        "id": "fejuve-emergency-oilfield-jun2-2026",
+        "year": "Jun 2, 2026",
+        "title": "FEJUVE Declares El Alto Emergency; Oil Field Occupied",
+        "type": "protest",
+        "detail": "El Alto's neighborhood council federation FEJUVE declared a city-wide state of emergency and demanded Paz's resignation. Protesters occupied and set fires at the Humberto Suárez oil field. El Alto Mayor Eliser Roca said the city was losing roughly $6.5 million per day. Defence Minister Marcelo Salinas and Education Minister Beatriz García de Achá resigned.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.euronews.com/2026/06/03/bolivian-ministers-resign-as-weeks-of-protests-against-economic-crisis-rock-government"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "police-retake-oilfield-agreements-jun3-2026",
+        "year": "Jun 3, 2026",
+        "title": "Police Retake Oil Facility; 80 Agreements Signed",
+        "type": "negotiation",
+        "detail": "Police regained control of the occupied oil facility, arresting eight. In the Legislative Assembly, the government and various protest sectors signed 80 partial agreements on sectoral demands. Ernesto Justiniano was appointed the new Defence Minister.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.euronews.com/2026/06/03/bolivian-ministers-resign-as-weeks-of-protests-against-economic-crisis-rock-government"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "route9-military-operation-jun6-2026",
+        "year": "Jun 6, 2026",
+        "title": "Joint Police-Military Operation on Route 9",
+        "type": "protest",
+        "detail": "A joint operation of 900 police officers and 100 soldiers attempted to clear Route 9 between Santa Cruz and Trinidad. The four-hour operation left 6 officers and 14 protesters injured, including 4 hit by gunfire, before security forces withdrew and protesters retook their positions.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Responsibility for the gunfire that injured four people at Route 9 is contested between security forces and protest organizers.",
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "deputies-pass-direct-military-action-jun7-2026",
+        "year": "Jun 7, 2026",
+        "title": "Chamber of Deputies Permits Direct Military Action",
+        "type": "government",
+        "detail": "The Chamber of Deputies passed legislation permitting the armed forces to take direct action against blockades, rather than a purely supporting role behind police — a significant escalation of the state's response.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "paz-narco-terrorist-el-alto-arrests-jun8-2026",
+        "year": "Jun 8, 2026",
+        "title": "Paz Signs Deployment Bill, Calls Leaders \"Narco-Terrorists\"",
+        "type": "government",
+        "detail": "President Paz signed the military-deployment bill into law and publicly labeled blockade leaders \"narco-terrorists,\" threatening further escalation. In El Alto, 28 people were arrested after protesters stormed a transport union office.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "confidenceReason": "\"Narco-terrorist\" characterization is the government's framing, disputed by protest leaders and Evo Morales.",
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "police-convoy-ambush-jun12-2026",
+        "year": "Jun 12, 2026",
+        "title": "El Alto Residents Ambush Police Convoy",
+        "type": "protest",
+        "detail": "Residents in El Alto ambushed a police convoy, set a vehicle on fire, and forced officers to remove their uniforms in a widely circulated humiliation incident, underscoring the breakdown of state authority in the city.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "blockades-77-tourism-losses-jun13-2026",
+        "year": "Jun 13, 2026",
+        "title": "77 Blockades Remain; Tourism Losses Top $200M",
+        "type": "economic",
+        "detail": "Seventy-seven active blockades remained nationally (28 in Cochabamba, 20 in La Paz department). Tourism-sector losses from cancellations surpassed $200 million, with roughly 90% of hotel bookings cancelled in affected regions.",
+        "sources": [
+          {
+            "name": "Latina Republic",
+            "tier": 3,
+            "url": "https://latinarepublic.com/2026/06/09/bolivia-crisis-40-days-of-road-blockades-disrupt-transport-economy-and-food-supply/"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "gdp-impact-5point5-percent-jun15-2026",
+        "year": "Jun 15, 2026",
+        "title": "Economic Impact Reaches 5.5% of GDP",
+        "type": "economic",
+        "detail": "Cumulative economic losses from six weeks of blockades reached an estimated $2.76 billion, equivalent to roughly 5.5% of Bolivia's GDP, according to government and institutional estimates.",
+        "sources": [
+          {
+            "name": "teleSUR English",
+            "tier": 3,
+            "url": "https://www.telesurenglish.net/bolivia-blockades/"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "cob-open-to-talks-anti-blockade-bill-jun16-2026",
+        "year": "Jun 16, 2026",
+        "title": "COB Signals Openness to Direct Talks",
+        "type": "negotiation",
+        "detail": "The COB signaled willingness to negotiate directly with the government for the first time since the strike began. Separately, an \"anti-blockade bill\" was introduced in the Chuquisaca departmental assembly, reflecting rising public frustration with the disruption.",
+        "sources": [
+          {
+            "name": "teleSUR English",
+            "tier": 3,
+            "url": "https://www.telesurenglish.net/bolivia-blockades/"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "el-alto-office-burned-ultimatum-jun17-2026",
+        "year": "Jun 17, 2026",
+        "title": "El Alto Sub-Mayor's Office Looted and Burned; COB Ultimatum",
+        "type": "protest",
+        "detail": "Protesters looted and set fire to the El Alto sub-mayor's office. The COB issued a 48-hour ultimatum demanding Paz's resignation, while Bolivia's constitutional courts ruled the ongoing blockades illegal. Forty-nine blockades remained across five departments.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "cob-deal-signed-jun19-2026",
+        "year": "Jun 19, 2026",
+        "title": "Paz Signs Deal With COB",
+        "type": "negotiation",
+        "detail": "President Paz signed an agreement with the COB. Executive Secretary Mario Argollo said, \"we must begin to iron out our differences,\" signaling a partial de-escalation, though other protest groups — including Evo Morales-aligned organizations — refused to join the accord.",
+        "sources": [
+          {
+            "name": "US News (Reuters)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.usnews.com/news/world/articles/2026-08-11/analysis-bolivias-paz-tests-fragile-coalition-with-reform-push-imf-deal"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "state-of-emergency-declared-jun20-2026",
+        "year": "Jun 20, 2026",
+        "title": "Paz Declares 90-Day State of Emergency",
+        "type": "government",
+        "detail": "On the 50th day of protests, President Paz declared a 90-day nationwide state of emergency and ordered the military to clear remaining roadblocks. More than 200 heavily armed police were deployed to El Alto; the La Paz–Oruro highway was cleared within hours.",
+        "sources": [
+          {
+            "name": "CNN",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.cnn.com/2026/06/20/americas/bolivia-president-state-of-emergency-intl-hnk"
+          },
+          {
+            "name": "France 24",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.france24.com/en/americas/20260620-bolivia-declares-state-of-emergency-as-protests-bring-economy-to-a-halt"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "congress-endorses-emergency-cochabamba-lifted-jun21-2026",
+        "year": "Jun 21, 2026",
+        "title": "Congress Endorses State of Emergency",
+        "type": "government",
+        "detail": "Congress ratified the 90-day state of emergency. Evo Morales ordered his supporters to lift blockades in Cochabamba, a sign that the largest opposition faction was stepping back from the standoff.",
+        "sources": [
+          {
+            "name": "States of Exception",
+            "tier": 3,
+            "url": "https://www.statesofexception.org/content/bolivia-declares-90-day-state-of-emergency-amid-nationwide-protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "all-blockades-cleared-jun23-2026",
+        "year": "Jun 23, 2026",
+        "title": "All Blockades Cleared Nationally",
+        "type": "government",
+        "detail": "All remaining road blockades were cleared nationwide, with only residual debris left on four roads in the Cochabamba–Oruro corridor, ending 53 days of continuous highway disruption.",
+        "sources": [
+          {
+            "name": "ABC News",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://abcnews.com/Business/wireStory/bolivias-president-declares-state-emergency-road-blockades-choke-134058818"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "currency-float-jun29-2026",
+        "year": "Jun 29, 2026",
+        "title": "Bolivia Floats Currency After 15-Year USD Peg",
+        "type": "economic",
+        "detail": "The Central Bank of Bolivia allowed the boliviano to float freely after 15 years pegged to the US dollar. The rate immediately dropped from Bs. 9.73 to Bs. 10.75 per dollar, a formal acknowledgment of the currency's de facto black-market devaluation during the crisis.",
+        "sources": [
+          {
+            "name": "Central Banking",
+            "tier": 3,
+            "url": "https://www.centralbanking.com/central-banks/economics/7976500/bolivia-and-imf-reach-19bn-financing-deal"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Fragile Truce, Investigations & IMF Talks (Jul 2026)",
+    "events": [
+      {
+        "id": "arrests-583-jul2-2026",
+        "year": "Jul 2, 2026",
+        "title": "Arrests Reach 583 Nationwide",
+        "type": "humanitarian",
+        "detail": "The cumulative number of arrests related to the two-month unrest reached 583 across Bolivia, according to government figures, as prosecutors began opening formal criminal cases against protest organizers.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "ypfb-endemic-problem-jul21-2026",
+        "year": "Jul 21, 2026",
+        "title": "Paz Blames State Oil Company Structure for Fuel Crisis",
+        "type": "economic",
+        "detail": "President Paz described the structure of state oil company YPFB as an \"endemic problem\" behind the fuel crisis, shifting blame away from earlier government claims that criminal \"mafias\" were diverting subsidized fuel for resale.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Government's explanation for fuel shortages shifted over time between blaming diversion \"mafias\" and YPFB's structural failures.",
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "exchange-rate-11-jul22-2026",
+        "year": "Jul 22, 2026",
+        "title": "Exchange Rate Surpasses Bs. 11 per Dollar",
+        "type": "economic",
+        "detail": "The floated boliviano continued to slide, surpassing Bs. 11 per US dollar by July 22 before stabilizing later in the month, deepening cost-of-living pressure on households already hit by fuel price increases.",
+        "sources": [
+          {
+            "name": "Central Banking",
+            "tier": 3,
+            "url": "https://www.centralbanking.com/central-banks/economics/7976500/bolivia-and-imf-reach-19bn-financing-deal"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "death-toll-24-criminal-cases-jul9-2026",
+        "year": "Jul 9, 2026",
+        "title": "Death Toll Reaches 24; 148 Criminal Cases Opened",
+        "type": "humanitarian",
+        "detail": "The confirmed death toll from the crisis reached 24, including an estimated 14 attributed to hospitals being cut off from oxygen and medicine supplies during the blockades. Prosecutors had opened 148 criminal cases nationally, 114 of them in La Paz department.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Health Ministry and independent/union sources diverge on how many deaths are directly attributable to blockade-caused hospital shortages versus other causes.",
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "imf-staff-agreement-jul29-2026",
+        "year": "Jul 29, 2026",
+        "title": "Bolivia and IMF Reach $1.9B Staff-Level Agreement",
+        "type": "economic",
+        "detail": "The IMF and Bolivian authorities reached a staff-level agreement on a 36-month, roughly $1.9 billion Extended Fund Facility aimed at restoring macroeconomic stability, rebuilding reserves, and cutting fiscal and external imbalances. The Fund said the deal could unlock more than $5 billion in additional financing from the World Bank and IDB. It still required IMF Executive Board and Bolivian Congress approval, with no funds yet disbursed.",
+        "sources": [
+          {
+            "name": "IMF",
+            "tier": 1,
+            "url": "https://www.imf.org/en/news/articles/2026/07/29/pr26268-bolivia-imf-reaches-staff-level-agreement-on-an-extended-fund-facility-arrangement"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.bloomberg.com/news/articles/2026-07-29/bolivia-imf-agree-on-new-1-9-billion-financing-program"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "morales-arrest-warrant-jul29-2026",
+        "year": "Jul 29, 2026",
+        "title": "Arrest Warrant Issued for Evo Morales",
+        "type": "government",
+        "detail": "Authorities issued an arrest warrant for Evo Morales, alleging links between blockade leaders in San Julián and Cuatro Cañadas and prior land-grabbing cases — a charge Morales rejected as \"politically motivated\" days earlier when Minister Marco Antonio Oviedo first raised it.",
+        "sources": [
+          {
+            "name": "Wikipedia — 2026 Bolivian protests",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Bolivian_protests"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Morales and MAS allies characterize the land-grabbing linkage as a politically motivated prosecution rather than a genuine criminal case.",
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Reform Push & Coalition Strain (Aug 2026)",
+    "events": [
+      {
+        "id": "investment-law-sent-congress-aug11-2026",
+        "year": "Aug 11, 2026",
+        "title": "Paz Sends Investment Law to Congress",
+        "type": "economic",
+        "detail": "President Paz sent an Investment Law to the Plurinational Legislative Assembly, the first in a planned series of market-oriented reforms meant to attract private firms through a more competitive tax and royalty regime, as his governing coalition showed signs of fracturing over the reform agenda.",
+        "sources": [
+          {
+            "name": "US News (Reuters)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.usnews.com/news/world/articles/2026-08-11/analysis-bolivias-paz-tests-fragile-coalition-with-reform-push-imf-deal"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "fragile-truce-buys-time-aug2026",
+        "year": "Aug 2026",
+        "title": "Analysts: June Accord \"Transferred the Crisis From the Roads to the Calendar\"",
+        "type": "negotiation",
+        "detail": "Analysts assessed that the June 20 COB accord did not resolve Bolivia's underlying crisis so much as postpone it, noting the deal left core fiscal, currency, and fuel-supply problems unaddressed while buying Paz political room to pursue IMF-linked reforms.",
+        "sources": [
+          {
+            "name": "Model Diplomat",
+            "tier": 3,
+            "url": "https://modeldiplomat.com/story/bolivias-fragile-truce-buys-paz-time"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "transport-workers-threaten-october-return-aug2026",
+        "year": "Aug 2026",
+        "title": "Transport Workers, Rural Groups Threaten October Return to Streets",
+        "type": "protest",
+        "detail": "Transport unions, rural organizations, and market traders in Bolivia's main cities warned they would resume blockades and protests from October if the government's reform package and unmet economic promises were not addressed, keeping the truce fragile heading into the fourth quarter.",
+        "sources": [
+          {
+            "name": "US News (Reuters)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.usnews.com/news/world/articles/2026-08-11/analysis-bolivias-paz-tests-fragile-coalition-with-reform-push-imf-deal"
+          }
+        ],
+        "lastUpdated": "2026-08-20T12:00:00.000Z"
+      },
+      {
+        "id": "paz-independence-day-speech-aug6-2026",
+        "year": "Aug 6, 2026",
+        "title": "Paz Marks Independence Day, Declares \"A New Bolivia Is Being Born\"",
+        "type": "government",
+        "detail": "In a 1-hour-22-minute address from the Casa de la Libertad in Sucre marking Bolivia's 201st independence anniversary, President Paz delivered his first nine-month progress report: the country-risk index falling from roughly 2,200 to 421 points under the floated exchange rate, a $940 million restitution to Bolivians, the expulsion of 17 alleged drug traffickers, and a proposed \"national agreement for development.\" He described the prior administration as having left Bolivia \"devastated and dying\" and said a \"moral transformation\" was underway.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/07/rodrigo-paz-defendio-su-gestion-al-conmemorar-201-anos-de-la-independencia-de-bolivia-estamos-ordenando-la-casa/"
+          },
+          {
+            "name": "FmBolivia",
+            "tier": 2,
+            "url": "https://fmbolivia.com.bo/nacional/presidente-rodrigo-paz-anuncia-una-nueva-bolivia-en-el-primer-6-de-agosto-del-tricentenario-20504"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/07/rodrigo-paz-defendio-su-gestion-al-conmemorar-201-anos-de-la-independencia-de-bolivia-estamos-ordenando-la-casa/",
+            "caption": "President Rodrigo Paz addresses Congress from Sucre's Casa de la Libertad on Bolivia's 201st independence anniversary, Aug 6, 2026.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/XMHSP6A6VZGWPGPMWQCQ54BBK4.JPG"
+          }
+        ],
+        "lastUpdated": "2026-08-21T14:47:26.000Z"
+      },
+      {
+        "id": "diesel-price-hike-gracos-aug17-2026",
+        "year": "Aug 17, 2026",
+        "title": "Government Raises Diesel Price 84% for Large Consumers",
+        "type": "economic",
+        "detail": "Supreme Decree 5676 set a new reference price of Bs. 18.00 per liter of diesel for large-volume buyers (\"GRACOS,\" consuming 20,000+ liters/month) and direct clients, an increase of roughly 84% from the prior Bs. 9.80-9.90 rate. The subsidized Bs. 9.80/liter price remains unchanged for transport operators, small businesses, and individual consumers. YPFB president Sebastián Daroca said the two-tier pricing aims to close the arbitrage margin that fueled cross-border diesel smuggling and end shortage-driven queues at filling stations; the agricultural producers' group Codepro rejected the decree and called instead for opening the fuel import market.",
+        "sources": [
+          {
+            "name": "Unitel",
+            "tier": 2,
+            "url": "https://unitel.bo/noticias/economia/decreto-5676-el-precio-del-diesel-se-mantiene-en-bs-980-para-el-transporte-y-particulares-FP22876267"
+          },
+          {
+            "name": "El Deber",
+            "tier": 2,
+            "url": "https://eldeber.com.bo/economia/productores-rechaza-diesel-bs-18-grandes-consumidores-exige-abrir-mercado-combustibles_1786977706"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://unitel.bo/noticias/economia/decreto-5676-el-precio-del-diesel-se-mantiene-en-bs-980-para-el-transporte-y-particulares-FP22876267",
+            "caption": "Fuel pumps in Bolivia amid the diesel supply crunch that prompted the two-tier pricing decree.",
+            "source": "Unitel",
+            "thumbnail": "https://estaticos.unitel.bo/binrepository/1280x733/0c177/1280d545/none/246276540/KIWK/surtidores-abi_101-16584330_20260817101608.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-21T14:47:26.000Z"
+      },
+      {
+        "id": "morales-assassination-claim-justiniano-denial-aug20-2026",
+        "year": "Aug 20, 2026",
+        "title": "Morales Alleges U.S.-Backed Plot to Kill Him; Justiniano Denies, Demands Proof",
+        "type": "government",
+        "detail": "In a post on X, former president Evo Morales alleged that President Paz and Defense Minister Ernesto Justiniano — whom he said had spent roughly two weeks in the United States coordinating with U.S. officials — had ordered an operation in the Chapare region to kill rather than capture him, citing unnamed \"patriotic\" military and police sources. Morales tied the claim to a separate corruption scandal involving presidential adviser Fernando Cerimedo and demanded the detention of First Lady María Elena Urquidi Barbery over alleged fuel and gold corruption links. Justiniano rejected the accusation as \"absolutely false and extremely serious\" and challenged Morales to present any evidence to the Public Ministry, noting Morales offered no documentation beyond an unrelated, confirmed meeting between Justiniano and U.S. officials at a Panama anti-cartel summit.",
+        "sources": [
+          {
+            "name": "La Nación (Argentina)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.lanacion.com.ar/el-mundo/evo-morales-denuncia-un-supuesto-complot-entre-el-gobierno-de-paz-y-eeuu-para-matarlo-nid20082026/"
+          },
+          {
+            "name": "Opinión Bolivia",
+            "tier": 2,
+            "url": "https://www.opinion.com.bo/articulo/pais/ministro-justiniano-niega-plan-asesinar-evo-desafia-presentar-pruebas/20260820231636995040.html"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Morales's plot allegation is uncorroborated and explicitly denied by the government; only the underlying dispute over enforcement of his outstanding arrest warrants is independently confirmed.",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.lanacion.com.ar/el-mundo/evo-morales-denuncia-un-supuesto-complot-entre-el-gobierno-de-paz-y-eeuu-para-matarlo-nid20082026/",
+            "caption": "Evo Morales, who alleged a plot against his life from his Chapare stronghold, Aug 20, 2026.",
+            "source": "La Nación",
+            "thumbnail": "https://www.lanacion.com.ar/resizer/v2/evo-WPHST7SZEFATVGABKTZRNPPAUM.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-21T14:47:26.000Z"
+      },
+      {
+        "id": "cerimedo-attack-nadia-beller-aug17-2026",
+        "year": "Aug 17, 2026",
+        "title": "Presidential Adviser's Ex-Partner Shot Outside Santa Cruz Hotel",
+        "type": "government",
+        "detail": "Two assailants posing as food-delivery couriers fired three shots at Nadia Beller, a lawyer and former congressional candidate, outside a hotel in Santa Cruz de la Sierra. Beller survived and accused her former partner, Fernando Cerimedo — an Argentine political consultant who had worked on Javier Milei's and other right-wing campaigns and whose official credential listed him as President Paz's \"principal adviser\" despite holding no declared public post — of orchestrating the attack, saying she possessed evidence of corruption reaching the president's family.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/19/nadia-beller-la-mujer-baleada-en-bolivia-que-complica-al-asesor-del-presidente-rodrigo-paz/"
+          },
+          {
+            "name": "La Nación (Argentina)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.lanacion.com.ar/politica/caso-cerimedo-en-vivo-que-se-sabe-de-la-investigacion-al-exasesor-de-milei-que-esta-detenido-en-nid19082026/"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "Beller's account that Cerimedo ordered the attack over corruption evidence is her own allegation; Cerimedo's precise government role was itself disputed even before the shooting.",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/19/nadia-beller-la-mujer-baleada-en-bolivia-que-complica-al-asesor-del-presidente-rodrigo-paz/",
+            "caption": "Nadia Beller, shot outside a Santa Cruz hotel on Aug 17, 2026, accused presidential adviser Fernando Cerimedo of ordering the attack.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/6RBJ6GERRRHFJESEXKTDDN6SV4.jpeg"
+          }
+        ],
+        "lastUpdated": "2026-08-23T14:32:04.000Z"
+      },
+      {
+        "id": "cerimedo-preventive-detention-aug21-2026",
+        "year": "Aug 21, 2026",
+        "title": "Cerimedo Ordered Into 180-Day Preventive Detention; Government Distances Itself",
+        "type": "government",
+        "detail": "Santa Cruz judge Wilson Espada ordered 180 days of preventive detention at Palmasola prison for Fernando Cerimedo after a six-hour hearing, siding with prosecutors' request over an alternative bid for the maximum-security Chonchocoro facility. Prosecutors presented phone messages allegedly from Cerimedo referencing a need to \"eliminate\" Beller. The case has embarrassed the Paz government, which for months had presented Cerimedo as a close campaign collaborator; officials now say his digital-communications consulting never amounted to a formal state position.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/22/la-justicia-boliviana-dicto-la-prision-preventiva-para-fernando-cerimedo-en-palmasola-por-180-dias/"
+          },
+          {
+            "name": "La Razón (Bolivia)",
+            "tier": 2,
+            "url": "https://larazon.bo/nacional/2026/08/23/de-asesor-a-la-carcel-cerimedo-cae-en-bolivia-por-intento-de-femicidio/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/22/la-justicia-boliviana-dicto-la-prision-preventiva-para-fernando-cerimedo-en-palmasola-por-180-dias/",
+            "caption": "Fernando Cerimedo was ordered held 180 days at Palmasola prison, Aug 21, 2026.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/JWBA27EP4ZFF3AQK3CTKKA5CLM.JPG"
+          }
+        ],
+        "lastUpdated": "2026-08-23T14:32:04.000Z"
+      },
+      {
+        "id": "investment-law-returned-blank-page-aug18-2026",
+        "year": "Aug 18, 2026",
+        "title": "Legislature Returns Investment Law to Executive Over Blank Page",
+        "type": "government",
+        "detail": "The Plurinational Legislative Assembly sent the 103-article Investment Law project — submitted by the Paz government on Aug 11 to attract domestic and foreign capital via a new National Investment Agency and stricter rules on expropriation — back to the Executive, citing a technical-administrative defect: page 44 of the submitted document was completely blank with no explanation. The Assembly's leadership stressed the observation concerned only the paperwork, not the bill's content, and asked the government to resubmit the missing text as soon as possible.",
+        "sources": [
+          {
+            "name": "El Día (Bolivia)",
+            "tier": 2,
+            "url": "https://www.eldia.com.bo/2026-08-18/economia/alp-devolvio-el-proyecto-de-ley-de-inversiones-al-ejecutivo-por-una-hoja-en-blanco.html"
+          },
+          {
+            "name": "El Diario (Bolivia)",
+            "tier": 2,
+            "url": "https://www.eldiario.net/portal/2026/08/19/legislativo-devuelve-ley-de-inversiones-al-ejecutivo/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.eldia.com.bo/2026-08-18/economia/alp-devolvio-el-proyecto-de-ley-de-inversiones-al-ejecutivo-por-una-hoja-en-blanco.html",
+            "caption": "The Legislative Assembly returned the Investment Law bill over a blank page 44, Aug 18, 2026.",
+            "source": "El Día (Bolivia)",
+            "thumbnail": "https://www.eldia.com.bo/files/posts/2026-08-18/alp-devolvio-proyecto-ley.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-24T14:00:00.000Z"
+      },
+      {
+        "id": "beller-discharged-protection-measures-aug23-2026",
+        "year": "Aug 23, 2026",
+        "title": "Beller Discharged From Hospital; Prosecutors Order Protection Measures",
+        "type": "humanitarian",
+        "detail": "Nadia Beller was discharged from Clínica Las Américas in Santa Cruz after five days of hospitalization for three gunshot wounds, leaving in a wheelchair under police custody. Prosecutor Yolanda Aguilera said the Public Ministry ordered formal protection measures for Beller and that she must give an expanded statement once her health allows, beyond the initial psychologically-supported declaration already taken. \"Mi vida sigue en riesgo\" (\"My life remains at risk\"), Beller said on leaving the clinic.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/23/la-fiscalia-de-bolivia-afirmo-que-nadia-beller-contara-con-medidas-de-proteccion-tras-el-atentado-y-debera-ampliar-su-declaracion/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/23/la-fiscalia-de-bolivia-afirmo-que-nadia-beller-contara-con-medidas-de-proteccion-tras-el-atentado-y-debera-ampliar-su-declaracion/",
+            "caption": "Nadia Beller was discharged from hospital under police protection, Aug 23, 2026.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/TXAJMMOGEZDLJPTPQNMIF4OZ2M.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-24T14:00:00.000Z"
+      },
+      {
+        "id": "cerimedo-codefendants-testify-aug24-2026",
+        "year": "Aug 24, 2026",
+        "title": "Two Cerimedo Case Suspects Testify; Prosecutors Seek Their Preventive Detention",
+        "type": "government",
+        "detail": "Colombian national Víctor Hugo C.Z. — identified by investigators as the alleged shooter after initially presenting himself voluntarily to deny involvement — and Róger A.C., accused of supplying the firearm, testified before Bolivian justice authorities. Róger's position worsened after phone-location expert reports reconstructed his movements before the Aug 17 attack. Prosecutors requested 180 days of preventive detention for both, the same term already imposed on Fernando Cerimedo, whom Beller accuses of ordering the shooting.",
+        "sources": [
+          {
+            "name": "Ambito",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.ambito.com/mundo/caso-cerimedo-declaran-los-dos-detenidos-el-ataque-nadia-beller-bolivia-n6313968"
+          },
+          {
+            "name": "La Nación (Argentina)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.lanacion.com.ar/politica/caso-cerimedo-declaran-este-lunes-los-dos-detenidos-acusados-de-disparar-contra-nadia-beller-en-nid23082026/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.ambito.com/mundo/caso-cerimedo-declaran-los-dos-detenidos-el-ataque-nadia-beller-bolivia-n6313968",
+            "caption": "The two co-defendants in the Cerimedo case testified before justice, Aug 24, 2026.",
+            "source": "Ambito",
+            "thumbnail": "https://media.ambito.com/p/72240dd1ed0c0191d4463083b7c1ef52/adjuntos/239/imagenes/043/598/0043598002/655x368/smart/fernando-cerimedo-preso.png"
+          }
+        ],
+        "lastUpdated": "2026-08-24T14:00:00.000Z"
+      },
+      {
+        "id": "espinoza-economy-minister-dismissed-aug21-2026",
+        "year": "Aug 21, 2026",
+        "title": "Paz Dismisses Economy Minister Espinoza After Congressional Censure",
+        "type": "government",
+        "detail": "Congress censured Economy and Public Finance Minister José Gabriel Espinoza on Aug 18 after he skipped a scheduled interpellation on sovereign bond issuances and budget delays, citing prior trips to Santa Cruz and Brazil; 91 of 129 lawmakers present voted to censure him, amid separate questions over an undeclared luxury-vehicle purchase. Paz initially signaled Espinoza might stay in office pending a Constitutional Tribunal review, then reversed course and published a dismissal decree on Aug 21, naming Óscar Mario Justiniano — until then minister of Sustainable Production, Environment and Water — as interim Economy Minister. The government maintains the censure vote itself was unconstitutional, arguing the threshold requires two-thirds of the Assembly's full membership rather than two-thirds of those present.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.aljazeera.com/news/2026/8/21/bolivias-president-rodrigo-paz-nixes-economy-minister-amid-unrest"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/21/rodrigo-paz-destituyo-al-ministro-de-economia-de-bolivia-tras-su-censura-en-el-parlamento/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/21/bolivias-president-rodrigo-paz-nixes-economy-minister-amid-unrest",
+            "caption": "President Paz dismissed Economy Minister José Gabriel Espinoza by decree after a congressional censure vote, Aug 21, 2026.",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/08/afp_6a88813c8b4f-1787330876.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-26T14:52:18.000Z"
+      },
+      {
+        "id": "cerimedo-intelligence-chief-messages-aug22-2026",
+        "year": "Aug 22, 2026",
+        "title": "Phone Messages Allegedly Link Presidential Intelligence Chief to Beller Shooting",
+        "type": "government",
+        "detail": "Bolivia's Institute of Forensic Investigations (IDIF) extracted chats from Fernando Cerimedo's phone showing a contact saved as \"ECG\" — whom Nadia Beller and Evo Morales identify as Erik Correa González, the Paz government's intelligence chief — messaging in real time during the Aug 17 attack: \"¿le digo que la busquen ahí?\" (\"should I tell them to look for her there?\"), followed by \"hermano, en este momento le dispararon, está herida\" (\"brother, they just shot her, she's wounded\"). Investigators also flagged 11 deleted calls between Cerimedo and the same contact that day, plus a message dated Aug 13 that prosecutors say points to premeditation. Beller publicly demanded President Paz break his silence on Cerimedo's role, and she and Morales have called the shooting a \"state crime\" implicating government and police; no charges have been filed against any official beyond Cerimedo, and the presidency has not directly addressed the ECG identification.",
+        "sources": [
+          {
+            "name": "El Ciudadano",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://www.elciudadano.com/en/bolivian-prosecutor-confirms-alarming-message-found-on-fernando-cerimedos-phone-amid-femicidal-attempt-charges/08/21/"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/22/mundo/nadia-beller-exige-a-presidente-de-bolivia-romper-silencio-sobre-su-asesor-fernando-cerimedo"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidenceReason": "The ECG-to-Erik Correa González identification comes from Beller and Morales, not an independent forensic confirmation, and the government has not addressed it publicly.",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.elciudadano.com/en/bolivian-prosecutor-confirms-alarming-message-found-on-fernando-cerimedos-phone-amid-femicidal-attempt-charges/08/21/",
+            "caption": "Fernando Cerimedo. Investigators say phone messages show a contact linked to the government's intelligence chief tracking the Aug 17 attack in real time.",
+            "source": "Reuters",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/08/2026-08-18T163809Z_19664727_RC2EIBAAH8RI_RTRMADP_3_BOLIVIA-CRIME-1787084939.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-26T14:52:18.000Z"
+      },
+      {
+        "id": "morales-cocalero-vigil-threat-aug23-2026",
+        "year": "Aug 23, 2026",
+        "title": "Cocalero Federations Mount Armed Vigil, Warn Security Forces Over Morales",
+        "type": "protest",
+        "detail": "Coca-grower federations loyal to Evo Morales set up a vigil near the Army's Ninth Division in the Trópico de Cochabamba, warning police and soldiers they \"will not guarantee\" the safety of any officer who tries to \"take the life\" of Morales or move against the vigil. The mobilization follows Morales's Aug 20 assassination-plot claim and his Aug 23 statement that a colonel had urged him to wear a bulletproof vest permanently because plans against him had moved \"beyond a simple detention.\" Six cocalero federations called a rally for Aug 26 in Ivirgarzama, about 230 km from Cochabamba — with 23 days left before the 90-day state of emergency (declared Jun 20) is due to expire.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/24/cocaleros-de-bolivia-instalan-vigilia-en-defensa-de-evo-morales-y-amenazan-a-las-fuerzas-del-orden/"
+          },
+          {
+            "name": "eju.tv",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://eju.tv/2026/08/morales-dice-que-por-su-seguridad-le-recomendaron-usar-chaleco-antibalas/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/24/cocaleros-de-bolivia-instalan-vigilia-en-defensa-de-evo-morales-y-amenazan-a-las-fuerzas-del-orden/",
+            "caption": "Evo Morales greets supporters in Ivirgarzama; coca-grower federations mounted an armed vigil in his defense.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/74H5WZT5U5ARPPU7DFMXYWTSS4.JPG"
+          }
+        ],
+        "lastUpdated": "2026-08-26T14:52:18.000Z"
+      },
+      {
+        "id": "diesel-decree-adjustment-aug25-2026",
+        "year": "Aug 25, 2026",
+        "title": "Government Signals Revision to Diesel Price Decree Amid Backlash",
+        "type": "economic",
+        "detail": "Facing continued criticism of Supreme Decree 5676 (the Aug 16 measure setting an initial Bs. 18/L reference price for large industrial diesel consumers and direct gas-station sales, an 84% jump from the prior Bs. 9.80/L rate), Deputy Minister of Hydrocarbons Hernán Paredes said the decree \"has to be modified\" to allow a more competitive diesel price. Proposed changes include broadening which sectors can import diesel directly and pressing state oil company YPFB to raise refinery utilization, currently running at just 18-20% of capacity. The subsidized Bs. 9.80/L rate for transport operators and households remains unchanged.",
+        "sources": [
+          {
+            "name": "Sputnik Mundo",
+            "tier": 3,
+            "pole": "eastern",
+            "url": "https://noticiaslatam.lat/20260825/bolivia-anuncia-ajuste-a-decreto-sobre-combustibles-1174802294.html"
+          },
+          {
+            "name": "El Diario (Bolivia)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.eldiario.net/portal/2026/08/20/ds-5676-analisis-pros-contras-riesgos-y-medidas-gubernamentales/"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://noticiaslatam.lat/20260825/bolivia-anuncia-ajuste-a-decreto-sobre-combustibles-1174802294.html",
+            "caption": "Bolivia's government signaled it would revise the diesel pricing decree after backlash from large consumers, Aug 25, 2026.",
+            "source": "Sputnik Mundo"
+          }
+        ],
+        "lastUpdated": "2026-08-26T14:52:18.000Z"
+      },
+      {
+        "id": "yapacani-military-deployment-diesel-blockades-aug25-26-2026",
+        "year": "Aug 25, 2026",
+        "title": "Military Deploys to Santa Cruz as Diesel Blockades Resume in Beni, Oruro",
+        "type": "protest",
+        "detail": "Defense Minister Ernesto Justiniano ordered a preventive military and police deployment to Yapacaní (131 km from Santa Cruz) on the night of Aug 24-25 after campesino sectors threatened blockades over Supreme Decree 5676's diesel price hike, saying the mission was to \"prevent blockades, protect the highway and, above all, avoid confrontations.\" The threat materialized Aug 26: agropecuario producers from Beni's Marbán province began an indefinite blockade of the Santa Cruz-Trinidad highway at the San Pablo bridge, and quinoa producers blocked the Oruro-Potosí highway with a 48-hour ultimatum, both demanding repeal of the decree. It was the first blockade activity since all roadblocks were cleared on Jun 23, ending a two-month lull.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/26/el-gobierno-boliviano-desplego-militares-y-policias-en-santa-cruz-ante-la-amenaza-de-nuevos-bloqueos/"
+          },
+          {
+            "name": "El Diario (Bolivia)",
+            "tier": 2,
+            "url": "https://www.eldiario.net/portal/2026/08/26/agropecuarios-inician-bloqueo-indefinido-en-la-via-santa-cruz-beni-0957/"
+          },
+          {
+            "name": "Resumen Latinoamericano",
+            "tier": 3,
+            "url": "https://www.resumenlatinoamericano.org/2026/08/26/bolivia-aumenta-el-rechazo-al-incremento-del-precio-de-diesel-e-instalan-bloqueos-en-oruro-y-beni"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/26/el-gobierno-boliviano-desplego-militares-y-policias-en-santa-cruz-ante-la-amenaza-de-nuevos-bloqueos/",
+            "caption": "Bolivian security forces deployed near Yapacaní, Santa Cruz, to preempt diesel-decree blockades, Aug 25, 2026.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/UKF2IYQXGBCK5DIB6ZS4URW5GY.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-27T14:30:00.000Z"
+      },
+      {
+        "id": "morales-ivirgarzama-rally-accidental-president-aug26-2026",
+        "year": "Aug 26, 2026",
+        "title": "Morales Rallies Cocaleros, Calls Paz an \"Accidental President\"",
+        "type": "protest",
+        "detail": "Speaking to hundreds of supporters at a rally in Ivirgarzama, in his Cochabamba Trópico cocalero stronghold, Evo Morales said: \"Oportunamente dijimos [Rodrigo Paz] es un presidente por accidente. Ahora se demuestra eso\" (\"We said early on that Paz is an accidental president. Now that's being shown\"), accusing him of corruption and of only knowing how to \"steal\" rather than govern. Morales also questioned the legitimacy of the state of emergency in effect since June, and union leaders allied with him announced they would seek to coordinate mobilizations with other regions against Decree 5676's diesel price hike.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/agencias/2026/08/27/morales-y-sus-seguidores-arremeten-contra-paz-y-el-estado-de-excepcion-que-rige-en-bolivia/"
+          },
+          {
+            "name": "Expreso (Ecuador)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.expreso.ec/internacional/morales-seguidores-arremeten-paz-excepcion-rige-bolivia-293775.html"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.expreso.ec/internacional/morales-seguidores-arremeten-paz-excepcion-rige-bolivia-293775.html",
+            "caption": "Evo Morales addresses supporters in Ivirgarzama, calling Paz an \"accidental president,\" Aug 26, 2026.",
+            "source": "Expreso",
+            "thumbnail": "https://imagenes.expreso.ec/files/og_thumbnail/uploads/2026/08/27/6a908b32095dd.jpeg"
+          }
+        ],
+        "lastUpdated": "2026-08-27T14:30:00.000Z"
+      },
+      {
+        "id": "cerimedo-network-accomplices-detained-aug26-2026",
+        "year": "Aug 26, 2026",
+        "title": "Two More Detained Over Beller Shooting; Ex-Military Officer Held in Related Enrichment Case",
+        "type": "government",
+        "detail": "A Santa Cruz judge ordered 120 days of preventive detention for Roger A.C. (41) and Paola Andrea V. (39) for \"effective complicity in attempted\" form, accused of providing and concealing the firearm used against Nadia Beller on Aug 17; the two hired gunmen who fired the shots remain at large. Separately, in La Paz, prosecutors detained Fritz Junior G.A., a former military officer, for 45 days in an illicit-enrichment investigation tied to business dealings attributed to Fernando Cerimedo; security footage showed him fleeing an exchange house where he held legal authority carrying a bag authorities suspect held more than $500,000. It brought to three the number of people detained across the Cerimedo-linked cases, plus Cerimedo himself.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/26/bolivia-suman-tres-los-detenidos-vinculados-a-fernando-cerimedo-en-dos-casos-distintos/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/26/bolivia-suman-tres-los-detenidos-vinculados-a-fernando-cerimedo-en-dos-casos-distintos/",
+            "caption": "Two more suspects were ordered detained in the Beller shooting case, and a third in a related enrichment probe, Aug 26, 2026.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/QPJ7VTDBBRDETASB5RZSF3JXAI.JPG"
+          }
+        ],
+        "lastUpdated": "2026-08-27T14:30:00.000Z"
+      },
+      {
+        "id": "aramayo-imf-diesel-decree-defense-aug27-2026",
+        "year": "Aug 27, 2026",
+        "title": "Government Blames IMF Conditions for Diesel Hike, Rejects Repeal",
+        "type": "economic",
+        "detail": "Minister of the Presidency Fernando Aramayo, meeting with President Paz, cabinet members, and municipal mayors, said Supreme Decree 5676 \"is one of the conditions we have from the International Monetary Fund ... because it is not sustainable for the State to finance an item that has had a very large corruption component and is bleeding the General Treasury dry,\" rejecting calls to abrogate the decree. The statement came as rejection of the decree widened: agricultural producers, transport confederations, and rice and sugarcane producers joined peasant organizations in opposing the measure, with Santa Cruz producers giving the government 48 hours to reverse it.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/27/el-gobierno-de-bolivia-atribuyo-al-fmi-el-retiro-parcial-de-la-subvencion-al-diesel/"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/america/america-latina/2026/08/27/el-gobierno-de-bolivia-atribuyo-al-fmi-el-retiro-parcial-de-la-subvencion-al-diesel/",
+            "caption": "Minister of the Presidency Fernando Aramayo defended the diesel decree as an IMF condition and rejected repeal, Aug 27, 2026.",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/5KDM7SOG3FBM3FCIKO72RD63HE.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-27T14:30:00.000Z"
+      },
+      {
+        "id": "cerimedo-new-probes-paz-distances-aug27-2026",
+        "year": "Aug 27, 2026",
+        "title": "New Money-Laundering, Narco-Protection Probes Opened Against Cerimedo; Paz Distances Himself",
+        "type": "government",
+        "detail": "Bolivian prosecutors opened two new investigations against Fernando Cerimedo: one for money laundering (\"legitimising illicit gains\"), opened by Deputy Transparency Minister Yamil García, and one in Beni department for allegedly providing \"protection\" to \"irregular flights\" linked to drug trafficking, opened by prosecutor Alexander Mendoza — both stemming from allegations made by Nadia Beller. President Paz responded publicly: \"There was never a contract ... there was never a direct working relationship\" with Cerimedo, distancing his government from the adviser whose credential had listed him as \"principal adviser\" to the president.",
+        "sources": [
+          {
+            "name": "Buenos Aires Times",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://batimes.com.ar/news/latin-america/two-new-probes-opened-into-fernando-cerimedo-right-wing-political-adviser-detained-in-bolivia.phtml"
+          }
+        ],
+        "eventConfidence": "verified",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://batimes.com.ar/news/latin-america/two-new-probes-opened-into-fernando-cerimedo-right-wing-political-adviser-detained-in-bolivia.phtml",
+            "caption": "Fernando Cerimedo now faces money-laundering and narco-trafficking-protection probes; Paz denied any formal working relationship, Aug 27, 2026.",
+            "source": "Buenos Aires Times",
+            "thumbnail": "https://fotos.perfil.com/2026/08/20/trim/900/506/fernando-cerimedo-stock-2307925.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-27T14:30:00.000Z"
+      }
+    ]
+  }
+]

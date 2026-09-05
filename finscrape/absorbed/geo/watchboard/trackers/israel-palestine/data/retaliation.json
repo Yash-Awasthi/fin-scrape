@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ret-hamas-oct7-kibbutz",
+    "name": "Hamas October 7 Ground Invasion",
+    "detail": "Hamas's Al-Qassam and PIJ's Al-Quds brigades breached the Gaza fence at over 30 points, attacking 22 communities. Used paragliders, motorcycles, and bulldozers. ~3,000 fighters crossed into Israel. 22 military bases and observation posts overrun. IDF response took hours — significant intelligence and operational failure.",
+    "icon": "retaliation",
+    "time": "2023-10-07",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "ret-hamas-rockets-oct7",
+    "name": "Hamas 3,000-Rocket Opening Barrage",
+    "detail": "Hamas fired approximately 3,000 rockets into Israel within hours of the October 7 ground attack, the largest single rocket barrage in history. Targets: Sderot, Ashkelon, Ashdod, Tel Aviv, Jerusalem, Beersheba. Iron Dome intercepted most but was partially overwhelmed. Several rockets struck schools, homes, and roads.",
+    "icon": "retaliation",
+    "time": "2023-10-07",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "ret-hamas-ongoing-rockets",
+    "name": "Ongoing Hamas Rocket Campaigns (2023–2026)",
+    "detail": "Despite IDF bombardment, Hamas continued launching rockets throughout the war. Continued firing during ceasefire negotiations as leverage. Some rockets reached Tel Aviv as late as Jan 2025. Hamas claimed rocket fire demonstrated continued military capability and resilience despite massive IDF campaign.",
+    "icon": "retaliation",
+    "time": "2023-10-08",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "ret-hamas-hostage-leverage",
+    "name": "Hamas Hostage Strategy",
+    "detail": "Hamas held 251 hostages as strategic leverage to force Israeli ceasefire and prisoner exchange. Used hostages as deterrent against certain IDF operations. Released 105 in November 2023 deal (in exchange for 240 Palestinian prisoners and aid). Used hostages as main bargaining chip in Phase 1 and Phase 2 negotiations.",
+    "icon": "casualty",
+    "time": "2023-10-07",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "ret-west-bank-attacks",
+    "name": "West Bank Armed Attacks (2023–2025)",
+    "detail": "Wave of Palestinian armed attacks on Israeli settlers and soldiers in the West Bank during the Gaza war. Groups: Lion's Den (Nablus), Jenin Battalion, Tulkarm Battalion. Attacks ranged from shooting to vehicle ramming to IED. Over 100 Israeli casualties in West Bank during the war period. IDF conducted near-daily counterterrorism raids.",
+    "icon": "retaliation",
+    "time": "2023-10-07",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  }
+]

@@ -1,0 +1,1368 @@
+from __future__ import annotations
+
+from datetime import datetime, timezone
+from enum import StrEnum
+from typing import Any, Literal, Optional, Self
+from uuid import uuid4
+
+from pydantic import BaseModel, Field, computed_field, field_validator, model_validator
+
+
+def utc_now() -> datetime:
+    """Return the current UTC timestamp for persisted runtime artifacts."""
+    return datetime.now(timezone.utc)
+
+
+def humanize_identifier(value: str) -> str:
+    """Convert a stored identifier like ``andrej_karpathy`` into display text."""
+    parts = [part for part in str(value or "").replace("-", "_").split("_") if part]
+    if not parts:
+        return ""
+    return " ".join(part[:1].upper() + part[1:] for part in parts)
+
+
+class TaskType(StrEnum):
+    CODEBASE_IMPLEMENTATION = "codebase_implementation"
+    RESEARCH_DESIGN = "research_design"
+    GENERAL_DEBATE = "general_debate"
+    POLICY_ANALYSIS = "policy_analysis"
+    TECHNICAL_REVIEW = "technical_review"
+    PRODUCT_STRATEGY = "product_strategy"
+    OPEN_DISCUSSION = "open_discussion"
+
+
+class ContextSourceKind(StrEnum):
+    INLINE_TEXT = "inline_text"
+    INLINE_IMAGE = "inline_image"
+    LOCAL_FILE = "local_file"
+    LOCAL_IMAGE = "local_image"
+    LOCAL_DIRECTORY = "local_directory"
+    EXTERNAL_REFERENCE = "external_reference"
+
+
+class ProviderType(StrEnum):
+    MOCK = "mock"
+    COMMAND = "command"
+    CLAUDE_CLI = "claude_cli"
+    CODEX_CLI = "codex_cli"
+    GEMINI_CLI = "gemini_cli"
+    OLLAMA = "ollama"
+    HUGGINGFACE_LOCAL = "huggingface_local"
+
+
+class BillingTier(StrEnum):
+    PAID = "paid"
+    FREE = "free"
+
+
+class JudgeMode(StrEnum):
+    AUTOMATED = "automated"
+    AI = "ai"
+    HUMAN = "human"
+
+
+class RunStatus(StrEnum):
+    PENDING = "pending"
+    PLANNING = "planning"
+    DEBATING = "debating"
+    AWAITING_HUMAN_JUDGE = "awaiting_human_judge"
+    COMPLETED = "completed"
+    FAILED = "failed"
+
+
+class NormalizedStrEnum(StrEnum):
+    """String enum with alias-aware coercion for model-facing inputs."""
+
+    @classmethod
+    def alias_map(cls) -> dict[str, Self]:
+        return {}
+
+    @classmethod
+    def heuristic_match(cls, normalized: str) -> Self | None:
+        del normalized
+        return None
+
+    @classmethod
+    def normalize_candidates(cls, value: object) -> list[str]:
+        if isinstance(value, cls):
+            return [value.value]
+        normalized = str(value or "").strip().lower()
+        if not normalized:
+            return []
+        candidates = [normalized, normalized.replace("-", "_").replace(" ", "_")]
+        extras: list[str] = []
+        for candidate in candidates:
+            if candidate.endswith("_round"):
+                extras.append(candidate[: -len("_round")])
+            if candidate.startswith("round_"):
+                extras.append(candidate[len("round_") :])
+        ordered: list[str] = []
+        for candidate in candidates + extras:
+            if candidate and candidate not in ordered:
+                ordered.append(candidate)
+        return ordered
+
+    @classmethod
+    def coerce(cls, value: object, fallback: Self) -> Self:
+        for candidate in cls.normalize_candidates(value):
+            try:
+                return cls(candidate)
+            except ValueError:
+                pass
+        for candidate in cls.normalize_candidates(value):
+            resolved = cls.alias_map().get(candidate)
+            if resolved is not None:
+                return resolved
+        normalized = next(iter(cls.normalize_candidates(value)), "")
+        resolved = cls.heuristic_match(normalized)
+        return resolved if resolved is not None else fallback
+
+    @classmethod
+    def supported_values(cls) -> tuple[str, ...]:
+        return tuple(member.value for member in cls)
+
+
+class RoundType(NormalizedStrEnum):
+    CRITIQUE = "critique"
+    REBUTTAL = "rebuttal"
+    SYNTHESIS = "synthesis"
+    FINAL_COMPARISON = "final_comparison"
+    TARGETED_REVISION = "targeted_revision"
+
+    @classmethod
+    def alias_map(cls) -> dict[str, Self]:
+        return {
+            "opening": cls.CRITIQUE,
+            "initial_critique": cls.CRITIQUE,
+            "evidence_gathering": cls.CRITIQUE,
+            "initial_evidence_gathering": cls.CRITIQUE,
+            "initial_fact_gathering": cls.CRITIQUE,
+            "rebut": cls.REBUTTAL,
+            "response": cls.REBUTTAL,
+            "synthesize": cls.SYNTHESIS,
+            "merge": cls.SYNTHESIS,
+            "comparison": cls.FINAL_COMPARISON,
+            "final": cls.FINAL_COMPARISON,
+            "revision": cls.TARGETED_REVISION,
+            "targeted_fix": cls.TARGETED_REVISION,
+            "focused_revision": cls.TARGETED_REVISION,
+        }
+
+    @classmethod
+    def heuristic_match(cls, normalized: str) -> Self | None:
+        if "rebut" in normalized or "respond" in normalized:
+            return cls.REBUTTAL
+        if "synth" in normalized or "merge" in normalized:
+            return cls.SYNTHESIS
+        if "compar" in normalized or normalized == "final":
+            return cls.FINAL_COMPARISON
+        if "revision" in normalized or "revise" in normalized:
+            return cls.TARGETED_REVISION
+        if "critique" in normalized or "evidence" in normalized or "gather" in normalized:
+            return cls.CRITIQUE
+        return None
+
+
+class JudgeActionType(NormalizedStrEnum):
+    CONTINUE_DEBATE = "continue_debate"
+    FINALIZE = "finalize"
+    REQUEST_REVISION = "request_revision"
+    HUMAN_REQUIRED = "human_required"
+
+    @classmethod
+    def alias_map(cls) -> dict[str, Self]:
+        return {
+            "continue": cls.CONTINUE_DEBATE,
+            "keep_going": cls.CONTINUE_DEBATE,
+            "next_round": cls.CONTINUE_DEBATE,
+            "finalise": cls.FINALIZE,
+            "stop": cls.FINALIZE,
+            "select_winner": cls.FINALIZE,
+            "declare_winner": cls.FINALIZE,
+            "revision": cls.REQUEST_REVISION,
+            "targeted_revision": cls.REQUEST_REVISION,
+            "revise": cls.REQUEST_REVISION,
+            "human": cls.HUMAN_REQUIRED,
+            "needs_human": cls.HUMAN_REQUIRED,
+            "escalate_to_human": cls.HUMAN_REQUIRED,
+        }
+
+    @classmethod
+    def heuristic_match(cls, normalized: str) -> Self | None:
+        if "human" in normalized:
+            return cls.HUMAN_REQUIRED
+        if "revision" in normalized or "revise" in normalized:
+            return cls.REQUEST_REVISION
+        if "final" in normalized or "winner" in normalized or "stop" in normalized:
+            return cls.FINALIZE
+        if "continue" in normalized or "next" in normalized or "debate" in normalized:
+            return cls.CONTINUE_DEBATE
+        return None
+
+
+class VerdictType(StrEnum):
+    WINNER = "winner"
+    MERGED = "merged"
+    TARGETED_REVISION = "targeted_revision"
+    NO_DECISION = "no_decision"
+
+
+class PaidExhaustionAction(StrEnum):
+    FAIL = "fail"
+    SWITCH_TO_FREE = "switch_to_free"
+    WAIT_FOR_RESET = "wait_for_reset"
+
+
+class RuntimeEventType(StrEnum):
+    QUOTA_SWITCHED = "quota_switched"
+    WAITING_FOR_RESET = "waiting_for_reset"
+    QUOTA_BLOCKED = "quota_blocked"
+    QUOTA_RESET = "quota_reset"
+
+
+class UsageMetrics(BaseModel):
+    prompt_tokens: int = 0
+    completion_tokens: int = 0
+    estimated_cost_usd: float = 0.0
+
+    @computed_field
+    @property
+    def total_tokens(self) -> int:
+        return self.prompt_tokens + self.completion_tokens
+
+    def add(self, other: "UsageMetrics") -> None:
+        self.prompt_tokens += other.prompt_tokens
+        self.completion_tokens += other.completion_tokens
+        self.estimated_cost_usd += other.estimated_cost_usd
+
+
+class ProviderPricing(BaseModel):
+    prompt_cost_per_1k_tokens: float = 0.0
+    completion_cost_per_1k_tokens: float = 0.0
+
+
+class ProviderConfig(BaseModel):
+    type: ProviderType = ProviderType.MOCK
+    model: str = "mock-default"
+    command: list[str] = Field(default_factory=list)
+    env: dict[str, str] = Field(default_factory=dict)
+    timeout_seconds: int | None = None
+    pricing: ProviderPricing = Field(default_factory=ProviderPricing)
+    ollama_model: str | None = None  # only used when type=ollama
+    hf_model: str | None = None  # only used when type=huggingface_local
+    billing_tier: BillingTier | None = None
+    quota_key: str | None = None
+
+    @field_validator("model", mode="before")
+    @classmethod
+    def _normalize_model(cls, value: object) -> str:
+        normalized = str(value or "mock-default").strip()
+        return normalized or "mock-default"
+
+    @model_validator(mode="after")
+    def validate_command_requirements(self) -> "ProviderConfig":
+        if self.type == ProviderType.COMMAND and not self.command:
+            raise ValueError("Command providers require a non-empty command.")
+        return self
+
+
+class LocalGpuDevice(BaseModel):
+    """Physical accelerator discovered on the current host."""
+
+    index: int = Field(ge=0)
+    backend: Literal["nvidia", "amd", "unknown"] = "unknown"
+    name: str
+    memory_total_mb: int | None = Field(default=None, ge=0)
+    driver_version: str | None = None
+
+
+class LocalRuntimeSettings(BaseModel):
+    """Persisted settings for the managed local-model runtime.
+
+    `selected_gpu_indices=None` means "auto" (use every detected GPU).
+    `selected_gpu_indices=[]` forces CPU-only execution.
+    A list like `[0]` or `[1, 2]` selects specific GPU(s) by index.
+    """
+
+    host: str = "127.0.0.1:11435"
+    selected_gpu_indices: list[int] | None = None
+    auto_start: bool = True
+
+
+class LocalRuntimeConfigUpdate(BaseModel):
+    """Partial update payload for local runtime settings."""
+
+    selected_gpu_indices: list[int] | None = None
+    auto_start: bool | None = None
+    restart_runtime: bool = True
+
+
+class LocalRuntimeStatus(BaseModel):
+    """Current runtime status exposed to the CLI and web UI."""
+
+    settings: LocalRuntimeSettings = Field(default_factory=LocalRuntimeSettings)
+    ollama_installed: bool = False
+    ollama_version: str | None = None
+    runtime_running: bool = False
+    managed_pid: int | None = Field(default=None, ge=1)
+    gpu_devices: list[LocalGpuDevice] = Field(default_factory=list)
+    selected_gpu_indices: list[int] = Field(default_factory=list)
+    selected_gpu_count: int = Field(default=0, ge=0)
+    llmfit_installed: bool = False
+    llmfit_version: str | None = None
+    installed_models: list[str] = Field(default_factory=list)
+    installed_models_known: bool = False
+    runtime_note: str | None = None
+
+
+class LocalModelDownloadRequest(BaseModel):
+    """Request payload for downloading a missing local model."""
+
+    model: str
+
+    @field_validator("model", mode="before")
+    @classmethod
+    def _require_model_name(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("Local model download requires a model name.")
+        return normalized
+
+
+class LocalModelDownloadResult(BaseModel):
+    """Result payload for a local-model download request."""
+
+    success: bool
+    model: str
+    message: str
+    status: LocalRuntimeStatus
+
+
+class LocalModelFitResult(BaseModel):
+    """Result of checking whether a model can run on current hardware via llmfit."""
+
+    model: str
+    fit_level: Literal["perfect", "good", "marginal", "too_tight", "unknown"] = "unknown"
+    run_mode: str | None = None
+    can_run: bool | None = None  # True if fit_level in (perfect, good, marginal)
+    message: str = ""
+    memory_required_gb: float | None = None  # VRAM needed to run this model
+
+
+class HFModelSearchResult(BaseModel):
+    """A single model from HuggingFace Hub search results."""
+
+    repo_id: str
+    author: str = ""
+    model_name: str = ""
+    downloads: int = 0
+    likes: int = 0
+    tags: list[str] = Field(default_factory=list)
+    pipeline_tag: str | None = None
+    last_modified: str | None = None
+    is_gguf: bool = True
+
+
+class HFSearchResponse(BaseModel):
+    """Response payload for HuggingFace Hub search."""
+
+    query: str
+    results: list[HFModelSearchResult] = Field(default_factory=list)
+    total: int = 0
+
+
+class HFPullRequest(BaseModel):
+    """Request payload for pulling a HuggingFace model via Ollama."""
+
+    repo_id: str
+
+    @field_validator("repo_id", mode="before")
+    @classmethod
+    def _require_repo_id(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized or "/" not in normalized:
+            raise ValueError("HF pull requires a repo_id in 'org/model' format.")
+        return normalized
+
+
+class HFRegisterRequest(BaseModel):
+    """Request payload for registering a model as an Ollama model.
+
+    Accepts GGUF files directly, or HuggingFace model directories /
+    safetensors / bin files that will be converted to GGUF first.
+    """
+
+    name: str
+    model_path: str  # GGUF file, safetensors file, or HF model directory
+
+    @field_validator("name", mode="before")
+    @classmethod
+    def _require_name(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("A model name is required for registration.")
+        return normalized
+
+
+class HFRegisterResult(BaseModel):
+    """Result payload for custom model registration."""
+
+    success: bool
+    name: str
+    message: str
+    gguf_path: str | None = None  # Path to the final GGUF file (if conversion happened)
+
+
+class AgentConfig(BaseModel):
+    agent_id: str
+    display_name: str
+    specialty: str | None = None
+    system_prompt: str | None = None
+    provider: ProviderConfig
+    persona_id: str | None = None
+    persona_name: str | None = None
+    persona_content: str | None = None
+
+    @field_validator("agent_id", "display_name", mode="before")
+    @classmethod
+    def _require_non_empty_identity(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("Agent identity fields must be non-empty.")
+        return normalized
+
+    @field_validator(
+        "specialty", "system_prompt", "persona_id", "persona_name", "persona_content", mode="before"
+    )
+    @classmethod
+    def _normalize_optional_text(cls, value: object) -> str | None:
+        normalized = str(value or "").strip()
+        return normalized or None
+
+    @computed_field
+    @property
+    def persona_label(self) -> str | None:
+        if self.persona_name:
+            return self.persona_name
+        if not self.persona_id:
+            return None
+        if self.persona_id == "__custom__":
+            return "Custom Persona"
+        return humanize_identifier(self.persona_id)
+
+    @computed_field
+    @property
+    def display_label(self) -> str:
+        persona_label = self.persona_label
+        if not persona_label:
+            return self.display_name
+        if persona_label.lower() in self.display_name.lower():
+            return self.display_name
+        return f"{self.display_name} [{persona_label}]"
+
+
+class TaskSpec(BaseModel):
+    title: str
+    problem_statement: str
+    task_type: TaskType = TaskType.CODEBASE_IMPLEMENTATION
+    success_criteria: list[str] = Field(default_factory=list)
+    constraints: list[str] = Field(default_factory=list)
+    desired_output: str | None = None
+
+    @field_validator("title", "problem_statement", mode="before")
+    @classmethod
+    def _require_non_empty_task_fields(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("Task title and problem statement must be non-empty.")
+        return normalized
+
+
+class ContextSourceInput(BaseModel):
+    source_id: str
+    kind: ContextSourceKind
+    label: str
+    path: str | None = None
+    uri: str | None = None
+    content: str | None = None
+    description: str | None = None
+    media_type: str | None = None
+    max_chars: int = 12000
+    max_files: int = 25
+
+    @model_validator(mode="after")
+    def validate_source_requirements(self) -> "ContextSourceInput":
+        if (
+            self.kind
+            in {
+                ContextSourceKind.LOCAL_FILE,
+                ContextSourceKind.LOCAL_IMAGE,
+                ContextSourceKind.LOCAL_DIRECTORY,
+            }
+            and not self.path
+        ):
+            raise ValueError(f"Context source '{self.source_id}' requires a path.")
+        if (
+            self.kind in {ContextSourceKind.INLINE_TEXT, ContextSourceKind.INLINE_IMAGE}
+            and not self.content
+        ):
+            raise ValueError(f"Context source '{self.source_id}' requires inline content.")
+        if self.kind == ContextSourceKind.EXTERNAL_REFERENCE and not (self.uri or self.content):
+            raise ValueError(
+                f"Context source '{self.source_id}' requires a URI or content reference."
+            )
+        if self.max_chars < 0 or self.max_files < 0:
+            raise ValueError("Context source limits must be non-negative.")
+        return self
+
+
+class ContextFragment(BaseModel):
+    fragment_id: str = Field(default_factory=lambda: str(uuid4()))
+    label: str
+    path: str | None = None
+    content: str
+    checksum: str
+    truncated: bool = False
+    media_type: str | None = None
+    is_binary: bool = False
+    size_bytes: int | None = None
+    inline_data: str | None = None
+
+
+class FrozenContextSource(BaseModel):
+    source_id: str
+    kind: ContextSourceKind
+    label: str
+    description: str | None = None
+    resolved_path: str | None = None
+    resolved_uri: str | None = None
+    checksum: str
+    fragments: list[ContextFragment] = Field(default_factory=list)
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class FrozenContextBundle(BaseModel):
+    bundle_id: str = Field(default_factory=lambda: str(uuid4()))
+    created_at: datetime = Field(default_factory=utc_now)
+    manifest_version: str = "1.0"
+    sources: list[FrozenContextSource]
+    aggregate_checksum: str
+    bundle_summary: str
+
+
+class RiskItem(BaseModel):
+    title: str
+    severity: Literal["low", "medium", "high"]
+    mitigation: str
+
+    @field_validator("severity", mode="before")
+    @classmethod
+    def _normalize_severity_case(cls, v: str) -> str:
+        if isinstance(v, str):
+            return v.lower()
+        return v
+
+    @field_validator("severity", mode="before")
+    @classmethod
+    def normalize_severity(cls, value: object) -> Literal["low", "medium", "high"]:
+        normalized = str(value or "medium").strip().lower()
+        aliases = {
+            "med": "medium",
+            "moderate": "medium",
+            "critical": "high",
+        }
+        normalized = aliases.get(normalized, normalized)
+        if normalized not in {"low", "medium", "high"}:
+            return "medium"
+        return normalized
+
+
+class PlanDocument(BaseModel):
+    plan_id: str = Field(default_factory=lambda: str(uuid4()))
+    agent_id: str
+    display_name: str
+    created_at: datetime = Field(default_factory=utc_now)
+    schema_version: str = "1.0"
+    summary: str
+    evidence_basis: list[str] = Field(default_factory=list)
+    assumptions: list[str] = Field(default_factory=list)
+    architecture: list[str] = Field(default_factory=list)
+    implementation_strategy: list[str] = Field(default_factory=list)
+    risks: list[RiskItem] = Field(default_factory=list)
+    strengths: list[str] = Field(default_factory=list)
+    weaknesses: list[str] = Field(default_factory=list)
+    trade_offs: list[str] = Field(default_factory=list)
+    open_questions: list[str] = Field(default_factory=list)
+    raw_response: str | None = None
+    usage: UsageMetrics = Field(default_factory=UsageMetrics)
+
+
+class PlanEvaluation(BaseModel):
+    plan_id: str
+    scores: dict[str, float] = Field(default_factory=dict)
+    notes: list[str] = Field(default_factory=list)
+    overall_score: float = 0.0
+
+
+class DebateClaim(BaseModel):
+    claim_id: str = Field(default_factory=lambda: str(uuid4()))
+    category: str
+    text: str
+    target_plan_ids: list[str] = Field(default_factory=list)
+    evidence: list[str] = Field(default_factory=list)
+
+
+class AgentMessage(BaseModel):
+    message_id: str = Field(default_factory=lambda: str(uuid4()))
+    round_index: int
+    round_type: RoundType
+    agent_id: str
+    plan_id: str
+    content: str
+    critique_points: list[DebateClaim] = Field(default_factory=list)
+    defense_points: list[DebateClaim] = Field(default_factory=list)
+    concessions: list[str] = Field(default_factory=list)
+    hybrid_suggestions: list[str] = Field(default_factory=list)
+    referenced_plan_ids: list[str] = Field(default_factory=list)
+    novelty_score: float = 1.0
+    repetitive: bool = False
+    usage: UsageMetrics = Field(default_factory=UsageMetrics)
+
+
+class RoundSummary(BaseModel):
+    agreements: list[str] = Field(default_factory=list)
+    key_disagreements: list[str] = Field(default_factory=list)
+    strongest_arguments: list[str] = Field(default_factory=list)
+    hybrid_opportunities: list[str] = Field(default_factory=list)
+    unresolved_questions: list[str] = Field(default_factory=list)
+    moderator_note: str = ""
+
+
+class DebateAgenda(BaseModel):
+    agenda_id: str = Field(default_factory=lambda: str(uuid4()))
+    title: str
+    question: str
+    why_it_matters: str = ""
+    focus_areas: list[str] = Field(default_factory=list)
+    source_plan_ids: list[str] = Field(default_factory=list)
+
+
+class AdoptedArgument(BaseModel):
+    agent_id: str
+    display_name: str
+    claim_kind: Literal["critique", "defense", "concession", "hybrid"]
+    summary: str
+    target_plan_ids: list[str] = Field(default_factory=list)
+    evidence: list[str] = Field(default_factory=list)
+    adoption_reason: str = ""
+    source_message_id: str | None = None
+
+
+class RoundAdjudication(BaseModel):
+    agenda_title: str = ""
+    agenda_question: str = ""
+    adopted_arguments: list[AdoptedArgument] = Field(default_factory=list)
+    resolution: str = ""
+    unresolved_points: list[str] = Field(default_factory=list)
+    judge_note: str = ""
+    moved_to_next_issue: bool = True
+    hallucination_flags: list[str] = Field(default_factory=list)
+    drift_flags: list[str] = Field(default_factory=list)
+
+
+class DebateRound(BaseModel):
+    round_id: str = Field(default_factory=lambda: str(uuid4()))
+    index: int
+    round_type: RoundType
+    purpose: str
+    started_at: datetime = Field(default_factory=utc_now)
+    completed_at: Optional[datetime] = None
+    agenda: DebateAgenda | None = None
+    messages: list[AgentMessage] = Field(default_factory=list)
+    summary: RoundSummary = Field(default_factory=RoundSummary)
+    adjudication: RoundAdjudication | None = None
+    usage: UsageMetrics = Field(default_factory=UsageMetrics)
+
+
+class JudgeConfig(BaseModel):
+    mode: JudgeMode = JudgeMode.AUTOMATED
+    provider: ProviderConfig | None = None
+    minimum_confidence_to_stop: float = 0.78
+    prefer_merged_plan_on_close_scores: bool = True
+    allow_early_finalization: bool = False
+    use_evidence_based_judging: bool = True
+    custom_instructions: str = ""  # Free-text instructions for the judge
+
+
+class JudgeDecision(BaseModel):
+    decision_id: str = Field(default_factory=lambda: str(uuid4()))
+    created_at: datetime = Field(default_factory=utc_now)
+    mode: JudgeMode
+    action: JudgeActionType
+    reasoning: str
+    confidence: float
+    disagreement_level: float
+    expected_value_of_next_round: float
+    next_round_type: RoundType | None = None
+    focus_areas: list[str] = Field(default_factory=list)
+    budget_pressure: float = 0.0
+    agenda: DebateAgenda | None = None
+
+
+class JudgeVerdict(BaseModel):
+    verdict_id: str = Field(default_factory=lambda: str(uuid4()))
+    created_at: datetime = Field(default_factory=utc_now)
+    judge_mode: JudgeMode
+    verdict_type: VerdictType
+    winning_plan_ids: list[str] = Field(default_factory=list)
+    synthesized_plan: PlanDocument | None = None
+    rationale: str
+    selected_strengths: list[str] = Field(default_factory=list)
+    rejected_risks: list[str] = Field(default_factory=list)
+    stop_reason: str
+    confidence: float
+
+
+class PaidProviderPolicy(BaseModel):
+    on_exhaustion: PaidExhaustionAction = PaidExhaustionAction.FAIL
+    fallback_provider: ProviderConfig | None = None
+    wait_for_reset_max_seconds: int | None = None
+
+    @model_validator(mode="after")
+    def validate_policy(self) -> "PaidProviderPolicy":
+        if (
+            self.on_exhaustion == PaidExhaustionAction.SWITCH_TO_FREE
+            and self.fallback_provider is None
+        ):
+            raise ValueError("A free fallback provider is required when switching on exhaustion.")
+        if self.wait_for_reset_max_seconds is not None and self.wait_for_reset_max_seconds < 0:
+            raise ValueError("wait_for_reset_max_seconds must be non-negative.")
+        return self
+
+
+class BudgetPolicy(BaseModel):
+    max_rounds: int = 3
+    min_rounds: int = 1
+    total_token_budget: int = 120000
+    per_round_token_limit: int = 12000
+    per_agent_message_limit: int = 1
+    min_novelty_threshold: float = 0.18
+    convergence_threshold: float = 0.75
+    planning_timeout_seconds: int = 0
+    round_timeout_seconds: int = 0
+    late_round_timeout_factor: float = 0.8
+    min_round_timeout_seconds: int = 0
+    per_round_timeouts: list[int] = Field(default_factory=list)
+
+    @model_validator(mode="after")
+    def validate_thresholds(self) -> "BudgetPolicy":
+        if self.max_rounds < 0 or self.min_rounds < 0:
+            raise ValueError("Round counts must be non-negative.")
+        if self.min_rounds > self.max_rounds:
+            raise ValueError("min_rounds cannot exceed max_rounds.")
+        if self.total_token_budget < 0 or self.per_round_token_limit < 0:
+            raise ValueError("Token budgets must be non-negative.")
+        if self.per_agent_message_limit <= 0:
+            raise ValueError("per_agent_message_limit must be positive.")
+        if not 0.0 <= self.min_novelty_threshold <= 1.0:
+            raise ValueError("min_novelty_threshold must be between 0 and 1.")
+        if not 0.0 <= self.convergence_threshold <= 1.0:
+            raise ValueError("convergence_threshold must be between 0 and 1.")
+        if self.planning_timeout_seconds < 0 or self.round_timeout_seconds < 0:
+            raise ValueError("Timeouts must be non-negative.")
+        if self.min_round_timeout_seconds < 0:
+            raise ValueError("min_round_timeout_seconds must be non-negative.")
+        if any(timeout < 0 for timeout in self.per_round_timeouts):
+            raise ValueError("per_round_timeouts entries must be non-negative.")
+        return self
+
+    def timeout_for_round(self, round_index: int) -> int:
+        """Return the timeout in seconds for a given debate round (1-based).
+
+        Values in *per_round_timeouts* take precedence.  A stored value of
+        ``0`` means **no limit**.  When no explicit per-round value exists
+        the legacy decay formula is used; *round_timeout_seconds* of ``0``
+        also means no limit.
+        """
+        if self.per_round_timeouts and round_index <= len(self.per_round_timeouts):
+            return self.per_round_timeouts[round_index - 1]  # 0 = no limit
+        if self.round_timeout_seconds == 0:
+            return 0  # no limit
+        t = self.round_timeout_seconds * (self.late_round_timeout_factor ** (round_index - 1))
+        if self.min_round_timeout_seconds == 0:
+            return int(t)
+        return max(self.min_round_timeout_seconds, int(t))
+
+
+class BudgetLedger(BaseModel):
+    total: UsageMetrics = Field(default_factory=UsageMetrics)
+    by_actor: dict[str, UsageMetrics] = Field(default_factory=dict)
+    by_round: dict[str, UsageMetrics] = Field(default_factory=dict)
+    exhausted: bool = False
+    stop_reason: str | None = None
+
+    def record(self, actor_id: str, usage: UsageMetrics, round_index: int | None = None) -> None:
+        self.total.add(usage)
+        actor_usage = self.by_actor.setdefault(actor_id, UsageMetrics())
+        actor_usage.add(usage)
+        if round_index is not None:
+            round_key = str(round_index)
+            round_usage = self.by_round.setdefault(round_key, UsageMetrics())
+            round_usage.add(usage)
+
+
+class PlanSummaryCard(BaseModel):
+    plan_id: str
+    display_name: str
+    summary: str
+    evidence_basis: list[str]
+    strengths: list[str]
+    weaknesses: list[str]
+    overall_score: float = 0.0
+
+
+class HumanJudgePacket(BaseModel):
+    generated_at: datetime = Field(default_factory=utc_now)
+    plan_cards: list[PlanSummaryCard] = Field(default_factory=list)
+    last_round_summary: RoundSummary | None = None
+    key_disagreements: list[str] = Field(default_factory=list)
+    strongest_arguments: list[str] = Field(default_factory=list)
+    recommended_action: str
+    available_actions: list[str] = Field(default_factory=list)
+    suggested_agenda: DebateAgenda | None = None
+
+
+class ProviderQuotaState(BaseModel):
+    quota_key: str
+    label: str
+    billing_tier: BillingTier = BillingTier.PAID
+    cycle_token_limit: int = 0
+    remaining_tokens: int = 0
+    reset_at: datetime | None = None
+    updated_at: datetime = Field(default_factory=utc_now)
+
+
+class ProviderQuotaBatchUpdate(BaseModel):
+    states: list[ProviderQuotaState] = Field(default_factory=list)
+
+
+class PersonaProfileRequest(BaseModel):
+    persona_name: str | None = None
+    profession: str
+    personality: str
+    debate_style: str
+    free_text: str | None = None
+
+    @field_validator("profession", "personality", "debate_style", mode="before")
+    @classmethod
+    def _require_non_empty_persona_profile_fields(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("Persona profile fields must be non-empty.")
+        return normalized
+
+
+class PersonaDefinition(BaseModel):
+    """Validated metadata and prompt content for a persona artifact."""
+
+    persona_id: str
+    name: str
+    description: str = ""
+    source: Literal["builtin", "custom", "generated"] = "builtin"
+    version: str = "1.0"
+    tags: list[str] = Field(default_factory=list)
+    is_active: bool = True
+    content: str
+    content_path: str | None = None
+
+    @field_validator("persona_id", "name", "content", mode="before")
+    @classmethod
+    def _require_non_empty_persona_fields(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("Persona id, name, and content must be non-empty.")
+        return normalized
+
+
+class PersonaCreateRequest(BaseModel):
+    """API payload for saving a custom persona."""
+
+    persona_id: str
+    content: str
+
+
+class GeneratedPersona(BaseModel):
+    persona_id: str
+    name: str
+    description: str
+    content: str
+
+
+class PersonaInterviewMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str
+
+
+class PersonaInterviewRequest(BaseModel):
+    """Request for one step of the persona interview."""
+
+    model: str  # provider:model spec (e.g. "claude:claude-sonnet-4-6")
+    messages: list[PersonaInterviewMessage] = Field(default_factory=list)
+
+
+class PersonaInterviewResult(BaseModel):
+    """Response for one step of the persona interview."""
+
+    message: str  # AI's response text
+    done: bool = False  # True when interview is complete
+    persona: GeneratedPersona | None = None  # Present when done=True
+
+
+class ChatPersonaRequest(BaseModel):
+    """Request to generate personas from a chat log."""
+
+    model: str  # provider:model spec
+    chat_text: str
+
+    @field_validator("chat_text", mode="before")
+    @classmethod
+    def _require_non_empty_chat(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("Chat text must be non-empty.")
+        return normalized
+
+
+class ChatPersonaResult(BaseModel):
+    """Result of chat-to-persona generation."""
+
+    speakers_found: int
+    personas: list[GeneratedPersona] = Field(default_factory=list)
+    skipped_speakers: list[str] = Field(default_factory=list)
+
+
+class RuntimeEvent(BaseModel):
+    event_id: str = Field(default_factory=lambda: str(uuid4()))
+    created_at: datetime = Field(default_factory=utc_now)
+    event_type: RuntimeEventType
+    actor_id: str
+    actor_label: str
+    provider_label: str | None = None
+    message: str
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class FinalReport(BaseModel):
+    one_line_verdict: str = ""
+    final_answer: str = ""
+    executive_summary: str
+    key_conclusions: list[str] = Field(default_factory=list)
+    debate_highlights: list[str] = Field(default_factory=list)
+    verdict_explanation: str = ""
+    recommendations: list[str] = Field(default_factory=list)
+
+
+class ReviewPhase(StrEnum):
+    PROJECT_RULES = "project_rules"
+    IMPLEMENTATION = "implementation"
+    ARCHITECTURE = "architecture"
+    SECURITY_PERFORMANCE = "security_performance"
+    TEST_COVERAGE = "test_coverage"
+    RED_TEAM = "red_team"
+
+
+class ReviewSeverity(StrEnum):
+    CRITICAL = "critical"
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+    INFO = "info"
+
+
+class ReviewFinding(BaseModel):
+    finding_id: str = Field(default_factory=lambda: str(uuid4()))
+    phase: ReviewPhase
+    severity: ReviewSeverity = ReviewSeverity.MEDIUM
+    title: str
+    description: str = ""
+    file_path: str | None = None
+    line_range: str | None = None
+    recommendation: str = ""
+    agent_consensus: float = 0.0
+    evidence: list[str] = Field(default_factory=list)
+
+
+class PhaseResult(BaseModel):
+    phase: ReviewPhase
+    phase_label: str
+    run_id: str
+    findings: list[ReviewFinding] = Field(default_factory=list)
+    phase_summary: str = ""
+    verdict_type: VerdictType | None = None
+    confidence: float = 0.0
+    usage: UsageMetrics = Field(default_factory=UsageMetrics)
+    completed_at: datetime = Field(default_factory=utc_now)
+
+
+class ReviewReport(BaseModel):
+    review_id: str = Field(default_factory=lambda: str(uuid4()))
+    created_at: datetime = Field(default_factory=utc_now)
+    target_description: str = ""
+    phase_results: list[PhaseResult] = Field(default_factory=list)
+    total_findings: int = 0
+    critical_count: int = 0
+    high_count: int = 0
+    medium_count: int = 0
+    low_count: int = 0
+    overall_summary: str = ""
+    top_recommendations: list[str] = Field(default_factory=list)
+    total_usage: UsageMetrics = Field(default_factory=UsageMetrics)
+    git_diff_included: bool = False
+    reviewed_paths: list[str] = Field(default_factory=list)
+
+
+class ReviewCreateRequest(BaseModel):
+    project_name: str = "Colosseum"
+    target_description: str
+    context_sources: list[ContextSourceInput] = Field(default_factory=list)
+    agents: list[AgentConfig]
+    judge: JudgeConfig = Field(default_factory=JudgeConfig)
+    budget_policy: BudgetPolicy = Field(default_factory=BudgetPolicy)
+    phases: list[ReviewPhase] = Field(
+        default_factory=lambda: [p for p in ReviewPhase if p != ReviewPhase.RED_TEAM],
+    )
+    git_diff: str | None = None
+    rules_context: str | None = None
+    response_language: str = "auto"
+
+    @model_validator(mode="after")
+    def validate_review_request(self) -> "ReviewCreateRequest":
+        if not self.agents:
+            raise ValueError("At least one agent is required.")
+        if not self.phases:
+            raise ValueError("At least one review phase is required.")
+        return self
+
+
+class ExperimentRun(BaseModel):
+    run_id: str = Field(default_factory=lambda: str(uuid4()))
+    project_name: str
+    encourage_internet_search: bool = False
+    response_language: str = "auto"
+    report_instructions: str = ""
+    created_at: datetime = Field(default_factory=utc_now)
+    updated_at: datetime = Field(default_factory=utc_now)
+    status: RunStatus = RunStatus.PENDING
+    task: TaskSpec
+    context_bundle: FrozenContextBundle | None = None
+    agents: list[AgentConfig]
+    judge: JudgeConfig
+    paid_provider_policy: PaidProviderPolicy = Field(default_factory=PaidProviderPolicy)
+    budget_policy: BudgetPolicy = Field(default_factory=BudgetPolicy)
+    budget_ledger: BudgetLedger = Field(default_factory=BudgetLedger)
+    plans: list[PlanDocument] = Field(default_factory=list)
+    plan_evaluations: list[PlanEvaluation] = Field(default_factory=list)
+    debate_rounds: list[DebateRound] = Field(default_factory=list)
+    judge_trace: list[JudgeDecision] = Field(default_factory=list)
+    runtime_events: list[RuntimeEvent] = Field(default_factory=list)
+    verdict: JudgeVerdict | None = None
+    final_report: FinalReport | None = None
+    stop_reason: str | None = None
+    human_judge_packet: HumanJudgePacket | None = None
+    error_message: str | None = None
+
+    def touch(self) -> None:
+        """Refresh the run timestamp after a state mutation."""
+        self.updated_at = utc_now()
+
+    def mark_planning(self, context_bundle: FrozenContextBundle) -> None:
+        """Transition the run into the planning phase with a frozen context."""
+        self.status = RunStatus.PLANNING
+        self.context_bundle = context_bundle
+        self.touch()
+
+    def mark_debating(self) -> None:
+        """Transition the run into an active debate round."""
+        self.status = RunStatus.DEBATING
+        self.touch()
+
+    def pause_for_human(self, packet: HumanJudgePacket) -> None:
+        """Pause the run and persist the latest human-judge review packet."""
+        self.status = RunStatus.AWAITING_HUMAN_JUDGE
+        self.human_judge_packet = packet
+        self.touch()
+
+    def append_debate_round(self, debate_round: DebateRound) -> None:
+        """Record a completed debate round and refresh timestamps."""
+        self.debate_rounds.append(debate_round)
+        self.touch()
+
+    def complete(
+        self,
+        verdict: JudgeVerdict,
+        stop_reason: str,
+        final_report: FinalReport | None = None,
+    ) -> None:
+        """Mark the run complete and attach the terminal artifacts."""
+        self.verdict = verdict
+        self.final_report = final_report
+        self.status = RunStatus.COMPLETED
+        self.stop_reason = stop_reason
+        self.error_message = None
+        self.human_judge_packet = None
+        self.touch()
+
+    def fail(self, exc: Exception) -> None:
+        """Mark the run as failed while keeping a readable error payload."""
+        self.status = RunStatus.FAILED
+        self.error_message = str(exc)
+        self.stop_reason = "run_failed"
+        self.touch()
+
+
+class RunListItem(BaseModel):
+    run_id: str
+    project_name: str
+    task_title: str
+    status: RunStatus
+    judge_mode: JudgeMode
+    updated_at: datetime
+    verdict_type: VerdictType | None = None
+    total_tokens: int = 0
+
+
+class RunCreateRequest(BaseModel):
+    project_name: str = "Colosseum"
+    encourage_internet_search: bool = False
+    response_language: str = "auto"
+    report_instructions: str = ""  # Custom instructions for final report generation
+    task: TaskSpec
+    context_sources: list[ContextSourceInput] = Field(default_factory=list)
+    agents: list[AgentConfig]
+    judge: JudgeConfig = Field(default_factory=JudgeConfig)
+    paid_provider_policy: PaidProviderPolicy = Field(default_factory=PaidProviderPolicy)
+    budget_policy: BudgetPolicy = Field(default_factory=BudgetPolicy)
+
+    @model_validator(mode="after")
+    def validate_request(self) -> "RunCreateRequest":
+        if not self.agents:
+            raise ValueError("At least one agent is required.")
+        agent_ids = [agent.agent_id for agent in self.agents]
+        if len(agent_ids) != len(set(agent_ids)):
+            raise ValueError("Agent ids must be unique within a run.")
+        return self
+
+
+class HumanJudgeActionRequest(BaseModel):
+    action: Literal["request_round", "select_winner", "merge_plans", "request_revision"]
+    round_type: RoundType | None = None
+    winning_plan_ids: list[str] = Field(default_factory=list)
+    instructions: str | None = None
+
+    @model_validator(mode="after")
+    def validate_action_requirements(self) -> "HumanJudgeActionRequest":
+        if self.action == "select_winner" and not self.winning_plan_ids:
+            raise ValueError("select_winner requires at least one winning plan id.")
+        if self.action == "merge_plans" and len(self.winning_plan_ids) < 2:
+            raise ValueError("merge_plans requires at least two winning plan ids.")
+        return self
+
+
+# ── QA ensemble mode ────────────────────────────────────────────────
+
+
+class QAFindingSeverity(StrEnum):
+    """Severity ranking for QA findings.
+
+    Distinct from ReviewSeverity because QA findings have different semantics:
+    they represent reproduced bugs from real code execution, not code review
+    observations.
+    """
+
+    CRITICAL = "critical"
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+    INFO = "info"
+
+
+class QAFindingStatus(StrEnum):
+    """Verification status of a QA finding.
+
+    A finding is REPRODUCED only when a sub-agent actually ran the failing
+    scenario and observed the failure. UNVERIFIED means the gladiator could
+    not test it (timed out, ran out of GPU, etc). FALSE_POSITIVE means a
+    verification agent tried to reproduce and could not.
+    """
+
+    REPRODUCED = "reproduced"
+    UNVERIFIED = "unverified"
+    FALSE_POSITIVE = "false_positive"
+
+
+class QAGladiatorStatus(StrEnum):
+    """Lifecycle status of a single QA gladiator run."""
+
+    PENDING = "pending"
+    RUNNING = "running"
+    REPORT_WRITTEN = "report_written"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    TIMED_OUT = "timed_out"
+    NO_OUTPUT = "no_output"
+
+
+class QAFinding(BaseModel):
+    """A single QA finding extracted from one gladiator's report.
+
+    Findings are clustered across gladiators by signature (file, line bucket,
+    severity, symptom hash) and then synthesized into canonical findings by
+    the judge.
+    """
+
+    finding_id: str = Field(default_factory=lambda: str(uuid4()))
+    title: str
+    symptom: str = ""
+    reproduction: str = ""
+    error_evidence: str = ""
+    root_cause: str = ""
+    file_path: str | None = None
+    line_hint: int | None = None
+    severity: QAFindingSeverity = QAFindingSeverity.MEDIUM
+    status: QAFindingStatus = QAFindingStatus.REPRODUCED
+    sources: list[str] = Field(default_factory=list)  # gladiator_ids that reported this
+    raw_bug_id: str | None = None  # e.g. "G-017" from gladiator's report
+    first_seen_by: str | None = None
+
+    @field_validator("title", mode="before")
+    @classmethod
+    def _normalize_title(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        return normalized or "(untitled finding)"
+
+
+class QAGpuPlan(BaseModel):
+    """The result of allocating detected GPUs across QA gladiators.
+
+    `mode == "parallel"` means each gladiator gets a disjoint slice and they
+    all run concurrently. `mode == "sequential"` means gladiators run one at
+    a time, each with the full eligible set.
+    """
+
+    detected_devices: list[int] = Field(default_factory=list)
+    eligible_devices: list[int] = Field(default_factory=list)
+    ineligible_reasons: dict[str, str] = Field(default_factory=dict)
+    allocations: dict[str, list[int]] = Field(default_factory=dict)
+    unused_devices: list[int] = Field(default_factory=list)
+    mode: Literal["parallel", "sequential"] = "parallel"
+    forced_indices: list[int] | None = None
+
+
+class QACreateRequest(BaseModel):
+    """Request payload for `colosseum qa`."""
+
+    project_name: str = "Colosseum QA"
+    target_description: str
+    target_path: str
+    qa_args: str = ""
+    gladiators: list[AgentConfig]
+    judge: ProviderConfig | None = None
+    forced_gpus: list[int] | None = None
+    gpus_per_gladiator: int | None = None
+    sequential: bool = False
+    max_budget_usd_per_gladiator: float = 25.0
+    max_gladiator_minutes: int = 90
+    stall_timeout_minutes: int = 10
+    brief: bool = False
+    keep_bug_outputs: bool = False
+    spec: str | None = None
+    response_language: str = "auto"
+    allow_dirty_target: bool = False
+    use_stash_safety: bool = True
+
+    @field_validator("target_description", "target_path", mode="before")
+    @classmethod
+    def _require_target_fields(cls, value: object) -> str:
+        normalized = str(value or "").strip()
+        if not normalized:
+            raise ValueError("target_description and target_path must be non-empty.")
+        return normalized
+
+    @model_validator(mode="after")
+    def validate_qa_request(self) -> "QACreateRequest":
+        if not self.gladiators:
+            raise ValueError("At least one QA gladiator is required.")
+        if self.max_budget_usd_per_gladiator < 0:
+            raise ValueError("max_budget_usd_per_gladiator must be non-negative.")
+        if self.max_gladiator_minutes <= 0:
+            raise ValueError("max_gladiator_minutes must be positive.")
+        if self.stall_timeout_minutes <= 0:
+            raise ValueError("stall_timeout_minutes must be positive.")
+        return self
+
+
+class QAGladiatorOutcome(BaseModel):
+    """The result of one gladiator's QA cycle."""
+
+    gladiator_id: str
+    display_name: str
+    provider_type: ProviderType
+    model: str
+    assigned_gpus: list[int] = Field(default_factory=list)
+    status: QAGladiatorStatus = QAGladiatorStatus.PENDING
+    report_path: str | None = None
+    raw_report_text: str | None = None
+    parsed_findings: list[QAFinding] = Field(default_factory=list)
+    raw_unstructured_sections: dict[str, str] = Field(default_factory=dict)
+    parse_status: Literal["ok", "degraded", "failed", "skipped"] = "skipped"
+    token_usage: dict[str, int] = Field(default_factory=dict)
+    cost_usd: float = 0.0
+    started_at: datetime | None = None
+    completed_at: datetime | None = None
+    duration_seconds: float = 0.0
+    error: str | None = None
+    stdout_log_path: str | None = None
+    stderr_log_path: str | None = None
+    stream_jsonl_path: str | None = None
+    session_id: str | None = None
+
+
+class QASynthesisReport(BaseModel):
+    """Final canonical QA report produced by the judge from the gladiator union."""
+
+    run_id: str
+    target_description: str
+    target_path: str
+    qa_args: str = ""
+    canonical_findings: list[QAFinding] = Field(default_factory=list)
+    cluster_count: int = 0
+    gladiator_contributions: dict[str, dict[str, float]] = Field(default_factory=dict)
+    overall_summary: str = ""
+    coverage_notes: str = ""
+    synthesizer_model: str = ""
+    total_cost_usd: float = 0.0
+    judge_raw_response: str | None = None
+
+
+class QARun(BaseModel):
+    """Top-level container for one `colosseum qa` invocation."""
+
+    run_id: str = Field(default_factory=lambda: str(uuid4()))
+    created_at: datetime = Field(default_factory=utc_now)
+    updated_at: datetime = Field(default_factory=utc_now)
+    status: Literal["pending", "running", "completed", "failed"] = "pending"
+    request: QACreateRequest
+    gpu_plan: QAGpuPlan = Field(default_factory=QAGpuPlan)
+    gladiators: list[QAGladiatorOutcome] = Field(default_factory=list)
+    synthesis: QASynthesisReport | None = None
+    stash_ref: str | None = None
+    preflight_warnings: list[str] = Field(default_factory=list)
+    error_message: str | None = None
+
+    def touch(self) -> None:
+        self.updated_at = utc_now()
+
+    def total_cost_usd(self) -> float:
+        return sum(g.cost_usd for g in self.gladiators) + (
+            self.synthesis.total_cost_usd if self.synthesis else 0.0
+        )

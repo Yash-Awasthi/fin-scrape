@@ -1,0 +1,327 @@
+[
+  {
+    "id": "spacex-cursor-acquisition-rationale",
+    "question": "Is SpaceX's $60 billion option to acquire Cursor AI (Anysphere) a strategic masterstroke or a costly distraction from its core mission?",
+    "sideA": {
+      "label": "SpaceX / Musk / Proponents",
+      "text": "Integrating Cursor's leading AI coding tool with SpaceX's Colossus supercomputer cluster (1M H100 equivalents) creates a vertically integrated AI-assisted engineering platform unique in the industry. AI-accelerated software development could slash time-to-flight for Starship, reduce Starlink software iteration cycles, and produce an internal competitive advantage worth far more than $60B in compounded engineering productivity. Ahead of a June 2026 IPO at $1.75T+ valuation, adding an AI software asset reframes SpaceX as a diversified tech company with recurring AI revenue — a higher valuation multiple than a pure launch company."
+    },
+    "sideB": {
+      "label": "Critics / Space Policy Analysts / Investors",
+      "text": "SpaceX's mission is to make humanity multiplanetary, not to build AI software products. A $60 billion commitment to acquire a coding tool is one of the largest tech acquisitions in history and raises serious questions about capital allocation when Starship, Mars infrastructure, and Starlink Gen3 all demand billions in investment. The deal concentrates further power in Musk's hands across launch, AI, and developer tools — a combination that may draw antitrust scrutiny. Cursor has not demonstrated the ability to scale to enterprise aerospace applications, and the integration risk with a hardware-focused rocket company is substantial."
+    },
+    "resolution": "CLOSED: SpaceX completed the all-stock acquisition of Anysphere (Cursor) on August 14, 2026, per an SEC Form 8-K — Merger Sub X67 Inc. merged into Cursor, which continues as a wholly owned SpaceX subsidiary. SpaceX issued 389,289,254 Class A shares to Cursor equity holders (implied $60.0B value) plus 1,752,426 shares for vested RSUs, and assumed ~29.1M unvested RSUs and ~44.4M stock options. SPCX fell 3.88% the same day as the ~391M-share issuance compounded post-lockup selling pressure ahead of the Aug 20 unlock, underperforming its sector's 2.28% decline — evidence for critics' capital-allocation and dilution concerns even as the deal formally closes the AI-integration bet. Context: follows SpaceX-xAI merger (Mar 2026) and the April 23, 2026 option agreement; deal originally flagged as a factor in SPCX's 15.8% Aug 7-8 stock jump when reports suggested an imminent close.",
+    "lastUpdated": "2026-08-16T14:20:00.000Z"
+  },
+  {
+    "id": "spacex-xai-merger-ipo-rationale",
+    "question": "Does the SpaceX–xAI merger and planned IPO benefit SpaceX's mission or represent a conflict of interest?",
+    "sideA": {
+      "label": "SpaceX / Musk / Proponents",
+      "text": "The merger of SpaceX and xAI (finalized in early 2026) creates a synergistic combination of satellite infrastructure and AI compute capacity. SpaceX's FCC filing for up to 1 million AI orbital data center satellites opens an entirely new revenue category. An IPO raising up to $75 billion would fund Starship operations, Starlink Gen2, and the Mars program without diluting SpaceX's mission-driven culture. The $1.25–1.75 trillion combined valuation reflects genuine enterprise value."
+    },
+    "sideB": {
+      "label": "Critics / Investors / Regulators",
+      "text": "Merging SpaceX with Musk's AI company concentrates multiple strategically critical companies under one individual's control. The IPO timing — while Musk holds significant US government influence through DOGE — raises conflict-of-interest questions about regulatory approvals for the combined entity. Critics note that SpaceX's core launch business is being entangled with speculative AI ventures before orbital AI compute has been demonstrated. The 1 million satellite FCC filing is seen by space debris researchers as a dramatic escalation of orbital congestion risk."
+    },
+    "resolution": "S-1 FILED May 20, 2026 (SEC EDGAR 000162828026036936). S-1 AMENDED June 1, 2026. ROADSHOW LAUNCHED June 4, 2026: Fixed IPO price confirmed at $135/share (CNBC, June 3); 555.56M Class A shares; ~$75B target raise; $1.77T implied valuation. CFO Brett Johnson's 17-min retail investor video released June 4. Gross margin target: 70%; Net profit margin target: 45%; Asteroid mining flagged as emerging business. Morningstar fair value: ~$780B (55% below ask); New Constructs: needs $1.1T revenue by 2035. Retail access: Fidelity ($2K+ min), Robinhood, Schwab. Key S-1 disclosures: 2025 revenue $18.7B (+33% YoY), 2025 net loss $4.94B, Q1 2026 revenue $4.69B, Q1 2026 net loss $4.27B, accumulated deficit $41.3B. Musk holds ~42% economic equity and ~79-85% voting control via dual-class Class B shares; cannot be removed as director except by his own vote. Starlink: >2/3 of revenue, 10.3M subscribers (doubled YoY), $1.2B segment profit, ARPU $66/month. SpaceX conducted 170 orbital launches in 2025 (>80% of global mass to orbit). Anthropic pays SpaceX $1.25B/month through 2029 (~$45B total). xAI and X (Twitter) consolidated into filing; AI segment lost $1.24B in 2025. 1.3B performance shares granted to Musk contingent on establishing a 1-million-person Mars colony. 5-for-1 split complete. IPO COMPLETED: priced at $135/share June 11; Nasdaq debut (SPCX) June 12, stock closed up nearly 20% on debut day — the largest IPO in history. Underwriters exercised the greenshoe overallotment June 15, lifting total proceeds to $85.7B. Stock hit an all-time high of $225.64 on June 16 before a steady multi-week pullback. SPCX joined the Nasdaq-100 on July 7 — the fastest index inclusion after an IPO on record, via a fast-tracked Nasdaq rule change, driving an estimated $4.3B in passive ETF buying despite only ~4% public float. On July 15, SPCX fell below its $135 IPO price for the first time (intraday low $132.15, closed $135.27), a fourth consecutive down day attributed to profit-taking and valuation reassessment. Meanwhile SpaceX filed an FCC application July 6 for up to 100,000 Gen3 Starlink satellites, and Musk confirmed June 29 that SpaceX plans a retail Starlink Mobile phone service (leveraging ~$17B in EchoStar spectrum) with compatible phones expected in roughly two years. POST-IPO UPDATE: the first post-IPO lock-up expired Aug 6, releasing up to 911.5M insider shares (~$100B) without triggering a sell-off (+6.1%); SpaceX and Tesla confirmed the $16.8B first phase of the jointly developed 'Terafab' chip plant in Grimes County, TX on Aug 6. The stock round-tripped from a 52-week low of $104.83 (Aug 3) back above the $135 IPO price by Aug 10, then rallied a further ~20% through Aug 12-13 on Musk's AI/Grok revenue comments and a regulatory filing showing his 48.4% stake worth over $900B (82%+ voting control), before falling 3.88% on Aug 14 as the $60B Cursor acquisition officially closed and added ~391M new Class A shares to the float — SPCX traded around $140.00 on Aug 16. Separately, SpaceX set a company launch-cadence record Aug 15, flying two Falcon 9 missions (Globalstar 2-R and the classified USSF-366) just 38.5 minutes apart from opposite coasts, its 96th Falcon-family launch of 2026 and 650th cumulative booster landing. Mid-August Form 13F filings then revealed SpaceX's largest institutional holders for the first time, sending SPCX up 4.45% to $146.23 on Aug 17: Alphabet (~$94B stake), Fidelity, Nvidia (~$21B, via its xAI stake), and first-time positions from AMD and Harvard Management (SpaceX now Harvard's largest single U.S. equity holding). SPCX gave back roughly 3% on Aug 18 amid a broader growth-stock selloff and profit-taking ahead of the Aug 20 unlock, even after SpaceX announced a new Transporter rideshare launch contract for VinSpace's first satellites (targeted 2027). SpaceX then launched its 100th mission of 2026 on Aug 19 (Starlink Group 17-50 from Vandenberg, 97th Falcon-family launch, 651st booster landing), pushing the Starlink constellation past roughly 11,000 satellites, and confirmed 12M Starlink subscribers (+66% YoY) generating $4.3B in Q2 2026 revenue (55% of SpaceX's total). SPCX closed Aug 19 at $139.65 (down ~2.6-3%) as traders de-risked ahead of a second lock-up tranche of ~319M shares (~2.4% of shares outstanding) that became eligible to trade Aug 20, extending the slide to as low as $132.42 intraday (down ~5.2%) — a sharper reaction than the Aug 6 first-unlock rally.",
+    "lastUpdated": "2026-08-20T15:40:00.000Z"
+  },
+  {
+    "id": "reusability-cost-savings",
+    "question": "Does rocket reusability actually lower launch costs for customers?",
+    "sideA": {
+      "label": "SpaceX / Proponents",
+      "text": "Falcon 9 reusability has driven commercial launch prices from ~$60,000/kg (Delta IV) to ~$2,720/kg, capturing over 60% of the commercial satellite market. Reuse enables ~10x more launches per year with the same hardware investment, fundamentally changing launch economics."
+    },
+    "sideB": {
+      "label": "Critics / Competing Providers",
+      "text": "SpaceX's advertised prices apply mainly to low-margin Starlink self-launches. Third-party customers often pay $67M+ per launch. Refurbishment costs, propellant reserves for landing, and reduced payload margins for reuse missions offset some claimed savings. ULA and Arianespace argue SpaceX is cross-subsidized by Starlink revenue."
+    },
+    "resolution": "SpaceX has demonstrably captured market share; debate remains over the true cost breakdown for third-party customers vs. internal missions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starlink-light-pollution",
+    "question": "Does Starlink pose an unacceptable risk to astronomical research?",
+    "sideA": {
+      "label": "Astronomical Community / Critics",
+      "text": "Starlink's 10,000+ satellites streak across telescope images, interfering with time-domain surveys, optical astronomy, and radio astronomy. The International Astronomical Union and major observatories have documented thousands of affected observations. The planned 42,000-satellite full constellation would make certain sky surveys impossible."
+    },
+    "sideB": {
+      "label": "SpaceX",
+      "text": "SpaceX has added sunshading 'Visorsat' designs, darkened satellite coatings, and works with observatories to provide satellite position data for scheduling. SpaceX argues satellites orbit at altitudes that minimize interference at most sites and that the benefits of global internet access outweigh residual astronomical costs."
+    },
+    "resolution": "Ongoing: IAU and SpaceX have established coordination frameworks; satellites remain measurably bright. FCC approved constellation with limited mitigation requirements.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "faa-regulatory-overreach",
+    "question": "Is FAA regulation of Starship delaying US space leadership?",
+    "sideA": {
+      "label": "SpaceX / Elon Musk",
+      "text": "FAA environmental review and licensing processes added months of delay between Starship test flights, hampering rapid iterative development that is core to SpaceX's engineering philosophy. Musk has publicly claimed FAA overreach threatens US competitive position against China's space program."
+    },
+    "sideB": {
+      "label": "FAA / Environmental Groups",
+      "text": "The FAA environmental review for Starbase identified real impacts on protected wildlife habitat including piping plover nesting areas, requiring mitigation measures. Standard safety licensing ensures public safety during tests over populated areas and is legally required. SN9 launched without an FAA license in 2021, prompting formal enforcement action."
+    },
+    "resolution": "FAA and SpaceX have developed an expedited review process; inter-agency tensions remain, with debate over whether the current regulatory framework is appropriate for rapid iterative rocket development.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spacex-hls-monopoly",
+    "question": "Was NASA's award of the HLS contract solely to SpaceX appropriate?",
+    "sideA": {
+      "label": "Blue Origin / Industry Critics",
+      "text": "NASA's decision to award the Artemis Human Landing System contract exclusively to SpaceX (rejecting Blue Origin and Dynetics) concentrated risk in a single provider and used cost savings as the primary criterion for a safety-critical crewed system. Blue Origin's protest alleged the sole-source award violated NASA's own competitive acquisition requirements."
+    },
+    "sideB": {
+      "label": "NASA / SpaceX",
+      "text": "Budget limitations required NASA to select one provider in the base contract; SpaceX's proposal was technically superior and $3B cheaper than Blue Origin's. The 2023 contract modification added Blue Origin as a second provider for later Artemis missions, restoring competitive tension. NASA maintains the selection process was fair."
+    },
+    "resolution": "Blue Origin's GAO protest was denied. Congress later appropriated additional funds and NASA awarded Blue Origin a second HLS contract in 2023.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starlink-national-security",
+    "question": "Is Starlink a strategic national security asset or a concentration of private power?",
+    "sideA": {
+      "label": "US Military / Proponents",
+      "text": "Starlink provided critical broadband connectivity to Ukraine's military after Russia disrupted ground infrastructure in 2022, demonstrating unprecedented military utility. DoD has contracted Starlink (Starshield) for military use. The ability to deploy internet to conflict zones within hours is a genuine strategic capability."
+    },
+    "sideB": {
+      "label": "Critics / European Governments",
+      "text": "SpaceX's decisions to restrict Starlink service in conflict zones (Crimea episode, 2022) showed that critical military infrastructure is controlled by a private actor responding to commercial interests, not national command authority. EU governments argue dependence on Starlink creates strategic vulnerability to Musk's personal business decisions."
+    },
+    "resolution": "Ongoing policy debate. The US DoD has invested in Starshield (classified Starlink variant) while also maintaining other satellite communications programs for redundancy.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starship-mars-timeline",
+    "question": "Is SpaceX's crewed Mars mission timeline credible?",
+    "sideA": {
+      "label": "SpaceX / Elon Musk",
+      "text": "Musk has repeatedly stated crewed Mars missions could begin by 2026-2029 using Starship. The vehicle's 100-ton payload to orbit (reusable) is sized specifically for Mars missions. In-space refueling via Starship tankers, demonstrated in orbit, would allow Starship to reach Mars from Earth orbit.",
+        "text": "With Starship now conducting regular test flights and the booster catch system operational, the fundamental hardware exists. Musk argues that if Starship reaches orbit reliably in 2025-2026, a Mars mission in the late 2020s is achievable."
+    },
+    "sideB": {
+      "label": "Space Policy Analysts / Former NASA Officials",
+      "text": "Crewed Mars missions require life support systems, radiation shielding for 6-9 month transit, in-situ resource utilization for return propellant, entry/descent/landing systems for Mars atmosphere, and surface infrastructure — none of which have been developed by SpaceX. Multiple former NASA human spaceflight experts consider a 2026-2029 crewed Mars landing a decade or more premature."
+    },
+    "resolution": "SpaceX has not yet demonstrated orbital refueling of Starship, Earth orbit operations, or any Mars-specific systems. The first uncrewed Starship Mars mission has been targeted for the late 2020s.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "copv-amos6-root-cause",
+    "question": "Was the AMOS-6 explosion preventable and did SpaceX cover up the root cause?",
+    "sideA": {
+      "label": "SpaceX",
+      "text": "SpaceX's investigation concluded the explosion was caused by a COPV (Composite Overwrapped Pressure Vessel) liner buckling under loading conditions outside the original design specification when using sub-cooled liquid oxygen. The anomaly was a novel failure mode not previously known in industry. SpaceX publicly shared findings and redesigned the system."
+    },
+    "sideB": {
+      "label": "Industry Analysts / Competitors",
+      "text": "Critics noted that SpaceX's use of densified (sub-cooled) liquid oxygen at extreme pressures was an aggressive choice that had been flagged as risky. Some industry experts argued the root cause investigation minimized the role of management pressure to reduce launch processing time. The rapid propellant loading approach that caused the anomaly was justified primarily by launch cadence economics, not safety."
+    },
+    "resolution": "The FAA accepted SpaceX's investigation findings. SpaceX redesigned COPVs across the Falcon 9 fleet; no recurrence has occurred.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spacex-labor-practices",
+    "question": "Does SpaceX maintain adequate worker safety and labor standards?",
+    "sideA": {
+      "label": "SpaceX Management",
+      "text": "SpaceX operates under standard US labor law and OSHA regulations. The company's culture of intense work is openly communicated to all employees; high compensation packages attract workers who choose the environment. SpaceX has built transformative technology with a workforce that accepts and embraces the mission-driven culture."
+    },
+    "sideB": {
+      "label": "Former Employees / Labor Advocates",
+      "text": "Investigations by Reuters (2023) found SpaceX had more workplace injuries than industry peers and that injured workers faced retaliation for filing OSHA complaints. SpaceX fired employees who signed a letter criticizing Musk's conduct in 2022. The NLRB filed a complaint alleging illegal termination of workers who organized for safety improvements."
+    },
+    "resolution": "NLRB complaint filed 2023; SpaceX challenged the NLRB's constitutionality in federal court. OSHA investigations ongoing. Labor disputes unresolved as of 2026.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starlink-ukraine-crimea",
+    "question": "Did SpaceX deliberately deny Starlink connectivity to Ukrainian forces at Crimea?",
+    "sideA": {
+      "label": "SpaceX / Elon Musk",
+      "text": "Musk stated in 2023 that he had refused to activate Starlink near Crimea because SpaceX had not enabled coverage there and to avoid being 'complicit in a major act of war.' SpaceX argues it was not contractually required to activate service in that region and acted to avoid escalation."
+    },
+    "sideB": {
+      "label": "Ukrainian Government / Critics",
+      "text": "Ukrainian officials stated that Starlink connectivity failure prevented a drone submarine attack on Russian naval vessels at Sevastopol, directly affecting military operations. A private company's infrastructure decision influenced the outcome of a military operation, raising questions about accountability and whether commercial contracts can guarantee service in conflict conditions."
+    },
+    "resolution": "Confirmed by Musk's own account and Isaacson biography. The episode prompted US military investment in alternative satellite communications and stricter Starshield contracts with defined military service obligations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "falcon9-vs-competitors-economics",
+    "question": "Has SpaceX destroyed competitors through predatory pricing or genuine innovation?",
+    "sideA": {
+      "label": "SpaceX",
+      "text": "SpaceX's cost reductions were achieved through vertical integration, innovative reusability, rapid iteration, and willingness to accept risk not tolerated by cost-plus contractors. The company received proportionally less government R&D funding than Boeing or ULA yet developed superior vehicles. Competition benefits all customers.",
+      "text": "SpaceX developed its technology through fixed-price contracts, not the cost-plus model that inflated competitors' prices. Reusability reduced marginal launch cost in a way competitors chose not to pursue."
+    },
+    "sideB": {
+      "label": "ULA / Arianespace / Legacy Providers",
+      "text": "SpaceX's COTS and CRS contracts ($2B+) provided crucial early revenue that subsidized commercial pricing below cost while the company matured. Starlink missions allow SpaceX to amortize launch vehicle costs across internal payloads, making third-party pricing appear lower than fully-loaded cost. Some industry analysts argue cross-subsidization, not pure innovation, explains SpaceX's pricing dominance."
+    },
+    "resolution": "Debate ongoing. Arianespace and ULA have both struggled to compete; Ariane 6 delayed by years. No antitrust action has been taken against SpaceX in any jurisdiction.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starship-environmental-impact",
+    "question": "Does Starship testing pose unacceptable environmental risks at Boca Chica?",
+    "sideA": {
+      "label": "Environmental Groups / Birdlife International",
+      "text": "The Boca Chica launch site is adjacent to protected wildlife refuges hosting endangered piping plovers and ocelots. The IFT-1 explosion scattered debris over wide areas. SpaceX's FAA environmental review was inadequate; a 2022 biological opinion found the project 'likely to jeopardize' listed species. SpaceX began operations before completing required mitigation measures."
+    },
+    "sideB": {
+      "label": "SpaceX / Texas Officials",
+      "text": "SpaceX has worked with US Fish and Wildlife Service to implement habitat mitigation, contributing to land conservation elsewhere in South Texas. Operations employ thousands in an economically distressed border region. The company's modified launch license from FAA includes environmental protection conditions, and the water deluge system has dramatically reduced launch pad impacts."
+    },
+    "resolution": "FAA environmental review completed with mitigation requirements. Lawsuits filed by Center for Biological Diversity; SpaceX continues operations under valid FAA licenses.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "crew-dragon-vs-boeing-starliner",
+    "question": "Was SpaceX's Commercial Crew victory over Boeing Starliner a result of superior design or Boeing's mismanagement?",
+    "sideA": {
+      "label": "SpaceX Proponents",
+      "text": "SpaceX delivered operational crewed flights in 2020, well ahead of Boeing despite receiving less funding ($2.6B vs $4.2B). Crew Dragon's design with propulsive abort (SuperDraco engines) and autonomous rendezvous proved more reliable. SpaceX's agile development culture outperformed Boeing's legacy contractor approach.",
+        "text": "SpaceX met milestones faster, at lower cost, with fewer anomalies than Boeing Starliner, which suffered multiple failed software loads, helium leaks, and thruster anomalies through 2024."
+    },
+    "sideB": {
+      "label": "Boeing / Legacy Contractor Perspective",
+      "text": "Both programs faced unique technical challenges. SpaceX had two earlier failures of its own (Demo-1 capsule explosion, pad abort anomaly). Boeing's cost overruns were partly due to fixed-price contract terms that did not account for NASA's evolving requirements. NASA chose fixed-price contracts knowing they created contractor risk."
+    },
+    "resolution": "Boeing Starliner's first crewed test (Butch Wilmore and Suni Williams) launched June 2024 but crew returned on Crew Dragon in 2025 after Boeing's capsule was deemed too risky to return with crew. Boeing's program commercial viability is in serious question as of 2026.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "musk-conflict-of-interest-government",
+    "question": "Does Elon Musk's dual role as SpaceX CEO and US government official create conflicts of interest?",
+    "sideA": {
+      "label": "Critics / Ethics Experts",
+      "text": "From 2025, Musk's role heading the Department of Government Efficiency (DOGE) while SpaceX receives billions in NASA and DoD contracts creates unprecedented conflicts of interest. Decisions about NASA's HLS program, FAA staffing, and DoD communications contracts could be influenced by Musk's personal financial interests in SpaceX and Starlink.",
+        "text": "SpaceX competitors have no comparable government access. Starlink's selection for DoD contracts expanded after Musk took on federal advisory roles."
+    },
+    "sideB": {
+      "label": "SpaceX / Musk",
+      "text": "Musk has recused himself from SpaceX-related government decisions. SpaceX's contracts are awarded through competitive processes by career civil servants. DOGE's mandate covers spending efficiency, not sector-specific procurement. SpaceX's superior technology makes it the natural choice for government contracts regardless of Musk's advisory role.",
+        "text": "Musk's government role is as an unpaid advisor, not an executive branch official with contracting authority."
+    },
+    "resolution": "Ongoing controversy. Multiple ethics watchdog organizations have filed complaints; no formal conflict-of-interest finding as of June 2026. On April 25, 2026, the U.S. Space Force awarded SpaceX (alongside Lockheed Martin, Anduril, Raytheon, Northrop Grumman, and others) a share of up to $3.2 billion across 12 companies for Golden Dome space-based interceptor prototypes. SpaceX also won a $57M Golden Dome Link-182 inter-satellite data link demonstration contract. In the week of May 26–30, 2026 alone, SpaceX won an additional $6.45 billion in new Space Force contracts: $2.29B for the Space Data Network (SDN) Backbone (military Starshield SATCOM, May 27) and $4.16B for the Space-Based Airborne Moving Target Indicator (SB-AMTI) constellation to track cruise missiles and hypersonic glide vehicles from LEO (May 29) — the largest single-week Space Force award total in SpaceX history. Critics note that Musk simultaneously holds the role of informal DOGE advisor while SpaceX wins contracts across sectors he helped reshape through DOGE's influence over agency budgets and staffing.",
+    "lastUpdated": "2026-06-02T14:00:00.000Z"
+  },
+  {
+    "id": "spacex-launch-record-authenticity",
+    "question": "Are SpaceX's reported launch success statistics meaningfully comparable to historical records?",
+    "sideA": {
+      "label": "SpaceX",
+      "text": "Falcon 9's demonstrated reliability — over 300 consecutive successful missions following the early CRS-7 and AMOS-6 anomalies — is objectively the best sustained record of any orbital launch vehicle in history. The mission success rate exceeds 99% across a range of orbits, payload masses, and customer types.",
+        "text": "No other vehicle has flown as often with as high a reliability while recovering and reusing the booster."
+    },
+    "sideB": {
+      "label": "Industry Analysts / Historians",
+      "text": "SpaceX counts partial successes (missions where secondary payload or booster was lost) as full successes, inflating the headline rate. Soyuz flew for 50+ years with a similarly high rate on comparable mission types. The comparison baseline matters: SpaceX's launch rate is unprecedented, but the vehicle is still young by historical standards.",
+        "text": "Statistical confidence in true failure rate requires longer mission history."
+    },
+    "resolution": "SpaceX's record is genuine and industry-recognized. Methodology questions are academic; no credible source disputes that Falcon 9 is among the most reliable orbital rockets in history.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starlink-orbital-debris",
+    "question": "Does Starlink's scale create unacceptable long-term orbital debris risk?",
+    "sideA": {
+      "label": "Space Debris Researchers / ESA",
+      "text": "Kessler syndrome risk increases with constellation size. Starlink's 10,000+ active satellites plus thousands of defunct ones and rocket bodies create collision risk that compounds over time. Near-misses between Starlink and ISS have required ISS avoidance maneuvers multiple times. ESA has formally protested Starlink's constellation expansion to the FCC.",
+        "text": "Independent models suggest a fleet of 42,000 satellites would make low Earth orbit hazardous within decades."
+    },
+    "sideB": {
+      "label": "SpaceX",
+      "text": "Starlink satellites are designed to deorbit within 5 years using onboard propulsion, far faster than the 25-year guideline. SpaceX's spacecraft are equipped with autonomous collision avoidance. The constellation's approval by FCC, ITU, and other regulatory bodies followed rigorous debris mitigation reviews. SpaceX has complied with all deorbit requirements.",
+        "text": "Starlink has also conducted collision avoidance maneuvers tens of thousands of times without incident."
+    },
+    "resolution": "Active regulatory and policy debate. ESA and NASA have formally raised concerns; FCC approved constellation under current debris mitigation guidelines which some researchers argue are inadequate for mega-constellation scale.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spacex-nasa-dependency",
+    "question": "Has SpaceX made NASA overly dependent on a single commercial provider?",
+    "sideA": {
+      "label": "Congressional Critics / Policy Analysts",
+      "text": "Boeing Starliner's failure leaves NASA entirely dependent on SpaceX for ISS crew transport, giving SpaceX significant pricing leverage. Similarly, SpaceX is the sole HLS provider for the next two Artemis crewed missions. This concentration creates mission risk: any SpaceX fleet grounding would halt US human spaceflight.",
+        "text": "NASA's embrace of commercial crew was intended to create competition, but the outcome has been a near-monopoly."
+    },
+    "sideB": {
+      "label": "NASA / SpaceX Advocates",
+      "text": "NASA chose a competitive commercial model precisely to reduce dependence on a single provider. Boeing's failures are Boeing's responsibility, not NASA's or SpaceX's. NASA has a second HLS provider (Blue Origin) for Artemis 5+. SpaceX's reliability makes it the rational choice. Maintaining redundant providers artificially would waste taxpayer money.",
+        "text": "Competition must be based on performance, not mandated market share."
+    },
+    "resolution": "NASA has taken steps to diversify with Blue Origin HLS and continued investment in other commercial crew entrants, but SpaceX remains dominant in US human spaceflight as of 2026.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "starship-payload-claims",
+    "question": "Can Starship actually deliver 100+ tons to low Earth orbit as claimed?",
+    "sideA": {
+      "label": "SpaceX",
+      "text": "Starship's design target of 100-150 metric tons to LEO (fully reusable) or 250 tons (expendable) is based on Raptor engine performance, vehicle mass fraction, and trajectory analysis. SpaceX has presented detailed technical documentation to NASA for the HLS contract. The vehicle's scale is designed around this requirement.",
+        "text": "Raptor 3 engines delivering 280+ tf thrust each, with 33 engines on Super Heavy, provide demonstrated total thrust exceeding 74 MN."
+    },
+    "sideB": {
+      "label": "Independent Aerospace Engineers",
+      "text": "No Starship flight has yet reached orbit, demonstrated in-space refueling, or flown a payload. Published estimates note that achieving 100+ tons to LEO reusably requires 5-20 refueling flights per mission (depending on configuration), which has never been demonstrated. The performance number should be considered aspirational until demonstrated in flight.",
+        "text": "Historical rocket payload claims have frequently been revised downward during development."
+    },
+    "resolution": "Pending: Starship has not yet demonstrated orbital operations or payload delivery. Performance targets are design claims under active validation through IFT program.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spacex-vertical-integration-model",
+    "question": "Is SpaceX's vertical integration (building almost everything in-house) a genuine cost advantage?",
+    "sideA": {
+      "label": "SpaceX / Proponents",
+      "text": "SpaceX manufactures over 80% of its rocket components in-house — engines, avionics, structures, and software — avoiding traditional aerospace supplier markup chains. Vertical integration enables rapid design changes, eliminates supply chain delays, and builds institutional knowledge. This approach delivered Falcon 9 at roughly 1/10th the cost of ULA's Atlas V."
+    },
+    "sideB": {
+      "label": "Traditional Contractors / Critics",
+      "text": "Vertical integration can increase fixed costs and risk concentration: if SpaceX's factory has a problem, there's no alternative supplier to fall back on. Traditional suppliers have specialized expertise that general SpaceX engineers cannot replicate. Some supply chain veterans argue that specialist suppliers, at scale, achieve lower unit costs than in-house production for many component categories."
+    },
+    "resolution": "SpaceX's cost outcomes have validated its approach commercially. The model has been widely adopted by new space companies. Traditional contractors have been unable to match SpaceX pricing despite years of competitive pressure.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "falcon1-russian-rejection-myth",
+    "question": "Did Musk truly try to buy Russian ICBMs before founding SpaceX?",
+    "sideA": {
+      "label": "SpaceX / Musk's Account",
+      "text": "Musk has repeatedly described visiting Russia in 2001-2002 to purchase decommissioned ICBMs for a Mars greenhouse mission, finding Russian prices too high and officials dismissive. This experience inspired him to build rockets himself. The story is foundational to SpaceX's origin narrative.",
+        "text": "Ashlee Vance's authorized Musk biography confirms the Russia trips and the rejection experience."
+    },
+    "sideB": {
+      "label": "Skeptics / Alternative Accounts",
+      "text": "No independent Russian source has confirmed the negotiations. Critics note the story's convenient narrative structure — a rejection that spawned a revolutionary company — and that Musk had already been interested in Mars missions before the Russia trips. Some colleagues who were present give slightly different accounts of the timeline.",
+        "text": "The account has been repeated so often in SpaceX lore that distinguishing fact from mythology is difficult."
+    },
+    "resolution": "Widely accepted as accurate based on multiple corroborating accounts in Vance's biography. No credible evidence contradicts the core narrative.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rocket-reuse-safety",
+    "question": "Are reflown rocket boosters as safe as newly manufactured ones?",
+    "sideA": {
+      "label": "SpaceX",
+      "text": "SpaceX has flown individual boosters over 20 times without a safety-related failure. Each booster undergoes thorough inspection and refurbishment between flights, with component replacement based on life limits. The flight record demonstrates that reflown boosters have the same reliability as new ones for both cargo and crewed missions.",
+        "text": "NASA certified Crew Dragon for crewed flight with reflown boosters after extensive analysis."
+    },
+    "sideB": {
+      "label": "Traditional Aerospace Engineers / Some NASA Officials",
+      "text": "Fatigue and thermal cycling effects on aerospace structures accumulate over multiple high-stress flights in ways that inspection cannot fully detect. The statistical sample of high-reuse flights (10+) is still small. For crew rating specifically, some NASA engineers were initially skeptical that reused boosters met NASA's historic safety margins.",
+        "text": "Any booster failure during a crewed mission would be catastrophic; risk accumulates non-linearly with flight count."
+    },
+    "resolution": "NASA certified reused Falcon 9 boosters for crewed Commercial Crew missions after detailed analysis. No crewed mission has had a reused-booster-related anomaly.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

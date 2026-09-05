@@ -1,0 +1,630 @@
+[
+  {
+    "era": "The Great East Japan Earthquake & Tsunami",
+    "events": [
+      {
+        "id": "earthquake-m9-tohoku",
+        "year": "2011-03-11",
+        "title": "M9.0 Earthquake Strikes Off Tōhoku Coast",
+        "type": "seismic",
+        "active": false,
+        "detail": "At 14:46 JST on March 11, 2011, a magnitude 9.0–9.1 megathrust earthquake—the most powerful ever recorded in Japan—struck 70 km east of the Oshika Peninsula at a depth of ~30 km. The earthquake lasted approximately 6 minutes and triggered a massive tsunami warning across the Pacific. The Fukushima Daiichi plant experienced ground acceleration well beyond its design basis. All six reactor units scrammed (emergency shutdown) automatically.",
+        "sources": [
+          { "name": "Japan Meteorological Agency", "tier": 1 },
+          { "name": "IAEA", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "tsunami-overwashes-seawall",
+        "year": "2011-03-11",
+        "title": "Tsunami Waves Overtop Daiichi's 5.7 m Seawall",
+        "type": "seismic",
+        "active": false,
+        "detail": "Beginning at approximately 15:27 JST, tsunami waves reaching 13–15 m inundated the Fukushima Daiichi complex, overwhelming the site's 5.7 m seawall. The tsunami flooded the turbine buildings, seawater pump intakes, and—critically—the emergency diesel generator rooms located in the basement, knocking out all AC power to reactor cooling systems. Only Unit 6's air-cooled diesel generator survived, powering limited safety systems for Units 5 and 6.",
+        "sources": [
+          { "name": "TEPCO Fukushima Nuclear Accident Analysis Report", "tier": 1 },
+          { "name": "IAEA Fukushima Daiichi Accident Report (2015)", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "station-blackout-sbo",
+        "year": "2011-03-11",
+        "title": "Station Blackout: All Power Lost to Reactor Cooling",
+        "type": "nuclear",
+        "active": false,
+        "detail": "With AC and DC power lost on Units 1–4, operators at Fukushima Daiichi faced a station blackout (SBO)—a condition the plant was not adequately designed to handle for extended duration. Reactor Isolation Cooling (RCIC) systems on Units 2 and 3 operated briefly on residual steam, but without power for sustained injection. Unit 1's IC (Isolation Condenser) was operated intermittently; the full extent of its operation was later disputed. Fuel heating began almost immediately after shutdown.",
+        "sources": [
+          { "name": "TEPCO Fukushima Nuclear Accident Analysis Report", "tier": 1 },
+          { "name": "National Diet of Japan Fukushima Nuclear Accident Independent Investigation Commission (NAIIC)", "tier": 1 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "initial-evacuation-3km",
+        "year": "2011-03-11",
+        "title": "PM Kan Orders 3 km Evacuation; Extended to 10 km Within Hours",
+        "type": "humanitarian",
+        "active": false,
+        "detail": "At 19:03 JST, Prime Minister Naoto Kan declared a Nuclear Emergency and ordered residents within 3 km of Fukushima Daiichi to evacuate. By 21:23 JST the zone was expanded to 10 km, affecting approximately 45,000 residents. The order was issued under the Act on Special Measures Concerning Nuclear Emergency Preparedness. Evacuees had little time to prepare; many left without medications, documents, or adequate supplies, conditions that would later contribute to excess morbidity and mortality.",
+        "sources": [
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "NHK", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "Nuclear Emergency Escalation (March 12–15, 2011)",
+    "events": [
+      {
+        "id": "unit1-hydrogen-explosion",
+        "year": "2011-03-12",
+        "title": "Unit 1 Reactor Building Destroyed by Hydrogen Explosion",
+        "type": "nuclear",
+        "active": false,
+        "detail": "At 15:36 JST on March 12, a hydrogen explosion blew apart the upper structure of Unit 1's reactor building. Hydrogen had accumulated after zirconium-cladding oxidation reactions in the overheated core at temperatures exceeding 1,200°C, indicating fuel damage had begun. The explosion injured four workers and caused additional damage to electrical systems. Prime Minister Kan had visited the plant earlier that morning in a controversial decision some argued delayed the venting decision. The evacuation zone was expanded to 20 km following the explosion.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "evacuation-zone-20km",
+        "year": "2011-03-12",
+        "title": "Evacuation Zone Expanded to 20 km; ~78,000 More Ordered to Flee",
+        "type": "humanitarian",
+        "active": false,
+        "detail": "Following the Unit 1 explosion, the Japanese government expanded the mandatory evacuation zone from 10 km to 20 km, ordering an additional ~78,000 residents to evacuate—bringing the total to approximately 150,000 people. Residents within 20–30 km were instructed to shelter in place. Evacuation by car created massive traffic jams on highways leading away from the coast. Hospitals struggled to evacuate critical patients; at Futaba Hospital, 21 patients died during or shortly after evacuation.",
+        "sources": [
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "Fukushima Prefectural Government", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "unit3-hydrogen-explosion",
+        "year": "2011-03-14",
+        "title": "Unit 3 Hydrogen Explosion — Larger Blast, Mixed-Oxide Fuel",
+        "type": "nuclear",
+        "active": false,
+        "detail": "At 11:01 JST on March 14, an even more powerful hydrogen explosion destroyed the Unit 3 reactor building, sending a large debris cloud thousands of feet into the air. Unit 3 was loaded with MOX (mixed-oxide plutonium-uranium) fuel, raising concerns about plutonium dispersal. Eleven workers were injured. The explosion damaged Units 3 and 4 interconnections. Operators continued seawater injection attempts with fire trucks as all normal cooling pathways were lost.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "IAEA", "tier": 1 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "unit2-suppression-pool-breach",
+        "year": "2011-03-15",
+        "title": "Unit 2 Suppression Pool Breach Feared; Containment Potentially Compromised",
+        "type": "nuclear",
+        "active": false,
+        "detail": "On March 15, a loud noise was heard from Unit 2 at approximately 06:10 JST, consistent with damage to the suppression pool (torus). This represented the most serious containment concern of the crisis, as the suppression pool is a key barrier against atmospheric radioactive release. Radiation levels at the site boundary spiked to over 400 mSv/h. TEPCO temporarily withdrew non-essential workers from the plant, leaving approximately 50 operators—the so-called 'Fukushima 50'—on site. A hydrogen explosion also occurred in Unit 4's reactor building on this day.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "IAEA Emergency Response Team Reports", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "unit4-spent-fuel-pool-concern",
+        "year": "2011-03-15",
+        "title": "Unit 4 Spent Fuel Pool Crisis — Feared to Be Boiling Dry",
+        "type": "nuclear",
+        "active": false,
+        "detail": "Unit 4's reactor had been defueled for maintenance prior to the earthquake, with 1,535 fuel assemblies stored in the spent fuel pool. When the Unit 4 reactor building exploded on March 15 (due to hydrogen migrating from Unit 3 via shared ventilation), the NRC and international experts feared the pool was on fire and losing water. US NRC Chairman Gregory Jaczko stated publicly on March 16 that the pool might be dry and recommended a 50-mile (80 km) evacuation for Americans in Japan—far exceeding the Japanese government's 20 km zone. Later investigation found the pool never actually boiled dry, but it remained a critical concern for weeks.",
+        "sources": [
+          { "name": "US Nuclear Regulatory Commission (NRC)", "tier": 1 },
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "International Response & INES Level 7 (March–April 2011)",
+    "events": [
+      {
+        "id": "iaea-emergency-mission",
+        "year": "2011-03-16",
+        "title": "IAEA Deploys Emergency Response Team; 58 Nations Mobilize Aid",
+        "type": "political",
+        "active": false,
+        "detail": "The International Atomic Energy Agency activated its Incident and Emergency Centre and deployed a mission to Japan. Director General Yukiya Amano traveled to Japan and met with PM Kan on March 16. The US dispatched the Ronald Reagan carrier strike group offshore; the aircraft carrier conducted decontamination operations after sailors were exposed to radioactive plume. France, Russia, and China offered nuclear emergency assistance. The EU discussed emergency measures and the incident prompted Germany to shut down seven nuclear plants for safety review.",
+        "sources": [
+          { "name": "IAEA", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "ines-level-7-declared",
+        "year": "2011-04-12",
+        "title": "Japan Raises Fukushima to INES Level 7 — Matching Chernobyl",
+        "type": "regulatory",
+        "active": false,
+        "detail": "On April 12, 2011, Japan's Nuclear and Industrial Safety Agency (NISA) raised the Fukushima Daiichi accident rating to Level 7 on the International Nuclear Event Scale—the maximum level, shared only with the 1986 Chernobyl disaster. Japan estimated that 370,000–630,000 terabecquerels of radioactive iodine-131 equivalent had been released, compared to Chernobyl's estimated 5.2 million TBq. Authorities were careful to note the total release was approximately 10% of Chernobyl's, and that most Japanese radiation release went into the Pacific Ocean rather than over populated land.",
+        "sources": [
+          { "name": "Japan Nuclear and Industrial Safety Agency (NISA)", "tier": 1 },
+          { "name": "IAEA", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "exclusion-zone-additional-areas",
+        "year": "2011-04-22",
+        "title": "Deliberate Evacuation Zone Expands to Include Iitate Village, 30+ km Away",
+        "type": "humanitarian",
+        "active": false,
+        "detail": "Despite being 40 km northwest of the plant, Iitate Village and other communities outside the nominal 20 km exclusion zone were found to have dangerously high cesium-137 depositions due to prevailing wind patterns and rain during the accident. On April 22, 2011, the government designated a Planned Evacuation Zone extending to these communities, ordering ~7,000 additional residents to leave within one month. The pattern of contamination highlighted how wind direction rather than distance determined exposure risk.",
+        "sources": [
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "MEXT (Ministry of Education, Culture, Sports, Science and Technology)", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "Stabilization & Cold Shutdown (April–December 2011)",
+    "events": [
+      {
+        "id": "tepco-roadmap-decommission",
+        "year": "2011-04-17",
+        "title": "TEPCO Announces 6–9 Month Roadmap to Stabilize Reactors",
+        "type": "nuclear",
+        "active": false,
+        "detail": "TEPCO released a two-step roadmap: Step 1 (3 months) to achieve a significant reduction in radiation levels, and Step 2 (3–6 months thereafter) to achieve cold shutdown. Key measures included installing recirculating water cooling systems, decontaminating high-radiation areas, and addressing contaminated water buildup. The roadmap acknowledged that major radiation releases had stopped but that the situation remained serious. Critics noted the roadmap was optimistic and lacked details on long-term fuel removal.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "nitrogen-injection-prevents-explosion",
+        "year": "2011-04-07",
+        "title": "Nitrogen Injection Begins to Prevent Re-Criticality and Hydrogen Buildup",
+        "type": "nuclear",
+        "active": false,
+        "detail": "To prevent recurrence of hydrogen explosions and the theoretical risk of re-criticality, TEPCO began injecting nitrogen gas into the reactor pressure vessels (RPVs) of Units 1, 2, and 3. Nitrogen injection displaced residual hydrogen and oxygen, creating an inert atmosphere. This was one of the first successful stabilization measures at the plant, demonstrating that while the cores were badly damaged, they could be managed.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "IAEA Status Reports", "tier": 1 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "fukushima-50-workers",
+        "year": "2011-03-15",
+        "title": "'Fukushima 50' — Skeleton Crew Stays to Prevent Catastrophe",
+        "type": "humanitarian",
+        "active": false,
+        "detail": "When TEPCO temporarily withdrew most workers from Fukushima Daiichi on March 15 amid fears of massive radiation release, approximately 50–70 workers remained on site to maintain cooling operations, monitor reactor conditions, and prevent complete loss of control. Working in intense radiation, limited protective equipment, and without adequate food or sleep, these workers prevented what many experts believe would have been a far larger catastrophe. Many subsequently exceeded annual radiation dose limits. The term 'Fukushima 50' became internationally recognized as a symbol of sacrifice.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "NHK", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "cold-shutdown-declared",
+        "year": "2011-12-16",
+        "title": "PM Noda Declares Cold Shutdown; Formal Stabilization Achieved",
+        "type": "nuclear",
+        "active": false,
+        "detail": "On December 16, 2011, Prime Minister Yoshihiko Noda declared 'cold shutdown' at Fukushima Daiichi, announcing that all three damaged reactor cores were now below 100°C and releasing minimal radiation. This was considered a major milestone, formally ending the acute emergency phase. Critics and nuclear experts noted that 'cold shutdown' was used loosely—the reactors were not in a truly cold shutdown state as defined for intact reactor vessels, since the fuel had largely melted through and containment was compromised. Nonetheless, the declaration allowed formal transition to decontamination and decommissioning phases.",
+        "sources": [
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "Decontamination & Regulatory Reform (2012–2013)",
+    "events": [
+      {
+        "id": "nra-established",
+        "year": "2012-09-19",
+        "title": "Nuclear Regulation Authority (NRA) Established — Replacing Captured Regulator",
+        "type": "regulatory",
+        "active": false,
+        "detail": "In response to the NAIIC (National Diet) report finding that the Fukushima accident was 'man-made' and caused in part by a cozy relationship between regulators and the nuclear industry ('regulatory capture'), the government disbanded the Nuclear and Industrial Safety Agency (NISA) and Nuclear Safety Commission (NSC) and replaced them with the independent Nuclear Regulation Authority (NRA), effective September 19, 2012. The NRA was housed under the Ministry of Environment (not METI, which promoted nuclear power) to reduce conflicts of interest, and given broader enforcement powers.",
+        "sources": [
+          { "name": "Nuclear Regulation Authority (NRA)", "tier": 1 },
+          { "name": "National Diet NAIIC Report", "tier": 1 },
+          { "name": "The Japan Times", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "naiic-man-made-disaster",
+        "year": "2012-07-05",
+        "title": "Diet Commission Declares Fukushima a 'Man-Made Disaster'",
+        "type": "political",
+        "active": false,
+        "detail": "The National Diet of Japan Fukushima Nuclear Accident Independent Investigation Commission (NAIIC), chaired by Dr. Kiyoshi Kurokawa, released its final report on July 5, 2012, concluding that the accident was 'fundamentally man-made' — the result of collusion between government, regulators, and TEPCO, and a failure to implement the safety measures that would have prevented it. The report cited 'a typical organizational accident' rooted in Japanese culture's deference to authority. The commission recommended fundamental reform of Japan's nuclear governance.",
+        "sources": [
+          { "name": "NAIIC (National Diet of Japan)", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "large-scale-decontamination-begins",
+        "year": "2012-01-01",
+        "title": "Large-Scale Decontamination Program Launches Across 11 Municipalities",
+        "type": "regulatory",
+        "active": false,
+        "detail": "The government launched a massive decontamination program across 11 municipalities in Fukushima Prefecture, covering approximately 1,150 km² designated as Special Decontamination Areas. Workers in full protective equipment removed topsoil, scraped pavements, pressure-washed buildings, and stripped bark from trees. Millions of 1-tonne flexible intermediate bulk containers (FIBCs) of contaminated soil were stored at tens of thousands of temporary sites. The program ultimately generated ~14 million bags of contaminated material.",
+        "sources": [
+          { "name": "Ministry of Environment Japan", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "Water Crisis & Infrastructure (2013–2016)",
+    "events": [
+      {
+        "id": "storage-tank-leak-2013",
+        "year": "2013-08-20",
+        "title": "300-Tonne Contaminated Water Leak from Storage Tank — INES Level 3",
+        "type": "nuclear",
+        "active": false,
+        "detail": "On August 20, 2013, TEPCO reported that approximately 300 tonnes of highly contaminated water had leaked from a bolted storage tank at the site, containing approximately 80 million becquerels per liter of beta-emitting radionuclides including strontium-90. Some water was estimated to have reached the Pacific Ocean via a drainage ditch. The NRA upgraded the incident to INES Level 3 (Serious Incident). The leak highlighted systemic problems with TEPCO's improvised storage infrastructure and triggered demands for more rigorous oversight.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Japan NRA", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "alps-system-operational",
+        "year": "2013-09-01",
+        "title": "ALPS Water Treatment System Commissioned to Remove 62 Radionuclides",
+        "type": "nuclear",
+        "active": false,
+        "detail": "The Advanced Liquid Processing System (ALPS), designed by Toshiba, began operations at Fukushima Daiichi. ALPS uses a multi-step ion exchange and precipitation process to remove 62 radionuclides from contaminated water — everything except tritium, which is chemically identical to hydrogen and cannot be separated economically by current technology. Initially plagued by maintenance issues and corrosion, ALPS capacity was expanded over subsequent years. By 2020, TEPCO had processed most stored water to secondary standards, but reprocessing revealed that some tanks still contained above-limit radionuclides other than tritium.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Japan NRA", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "groundwater-bypass-starts",
+        "year": "2014-05-21",
+        "title": "Underground Water Bypass Opens to Reduce Groundwater Inflow",
+        "type": "nuclear",
+        "active": false,
+        "detail": "TEPCO began pumping uncontaminated groundwater intercepted upstream of the reactor buildings via a bypass system, releasing it directly to the sea after confirming it met NRA safety limits. The bypass addressed ~100 tonnes per day of groundwater flowing into reactor buildings, mixing with contaminated water and increasing storage volumes. The bypass reduced but did not eliminate groundwater inflow. Local fishermen's associations, having protested the move, ultimately agreed to the bypass after TEPCO and government pledges of transparency.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Japan NRA", "tier": 1 },
+          { "name": "Kyodo News", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "ice-wall-construction",
+        "year": "2016-03-31",
+        "title": "Frozen Soil Barrier ('Ice Wall') Activated to Isolate Reactor Buildings",
+        "type": "nuclear",
+        "active": false,
+        "detail": "After years of construction, TEPCO activated the ¥34.5 billion (approx. $320 million) frozen soil barrier (commonly called the 'ice wall') on March 31, 2016. The barrier uses a network of ~1,568 pipes sunk 30 m into the ground, circulating coolant at -30°C to freeze the surrounding soil into an impermeable barrier around the four reactor buildings. The NRA approved partial activation. While the wall reduced groundwater inflow significantly, critics argued it never fully achieved the groundwater isolation promised, and that contaminated water generation continued at reduced but still significant rates.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Japan NRA", "tier": 1 },
+          { "name": "The Japan Times", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "tepco-nationalized",
+        "year": "2012-07-31",
+        "title": "Japanese Government Effectively Nationalizes TEPCO with ¥1 Trillion Bailout",
+        "type": "political",
+        "active": false,
+        "detail": "On July 31, 2012, the Nuclear Damage Liability Facilitation Fund injected ¥1 trillion (~$12.5 billion) into TEPCO, giving the government a 50.11% stake in the company and effectively nationalizing it. TEPCO had faced bankruptcy due to the combination of shuttering all nuclear plants (losing ~30% of Japan's electricity generation), paying billions in compensation to evacuees, and funding cleanup operations. The nationalization was designed to ensure TEPCO could continue as a going concern while funding its obligations, but critics questioned whether TEPCO management accountability had been adequately addressed.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Ministry of Finance Japan", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "Return Policies & Zone Relifting (2015–2020)",
+    "events": [
+      {
+        "id": "naraha-return-first-town",
+        "year": "2015-09-05",
+        "title": "Naraha Becomes First Entire Town to Lift Evacuation Order",
+        "type": "humanitarian",
+        "active": false,
+        "detail": "On September 5, 2015, Naraha town (population ~7,400) became the first entire municipality to have its evacuation order lifted. Naraha is located 20 km south of the Daiichi plant and had been evacuated since March 2011. Despite the formal order lifting, only about 7% of former residents returned initially, citing concerns about radiation, lack of services, and the psychological difficulty of returning after 4.5 years of displacement. Return rates remained low across Fukushima's evacuated municipalities, confounding government projections.",
+        "sources": [
+          { "name": "Fukushima Prefectural Government", "tier": 1 },
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "evacuation-orders-lifted-2017",
+        "year": "2017-03-31",
+        "title": "Mass Zone Liftings — Evacuation Orders Lifted for Most of Namie, Tomioka, Odaka",
+        "type": "humanitarian",
+        "active": false,
+        "detail": "On March 31, 2017, the government lifted evacuation orders for most of Namie Town, parts of Tomioka Town, and the Odaka district of Minamisoma City — representing tens of thousands of former residents. The liftings were conditional on decontamination completion in residential areas; 'difficult-to-return zones' where dose rates exceeded 50 mSv/year remained closed. As of 2019, return rates in most areas averaged 10–20%, with younger families in particular reluctant to return due to lack of schools, medical facilities, and economic opportunities.",
+        "sources": [
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "Reconstruction Agency Japan", "tier": 1 },
+          { "name": "The Japan Times", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "tepco-executives-acquitted",
+        "year": "2019-09-19",
+        "title": "TEPCO Three Executives Acquitted of Criminal Negligence",
+        "type": "political",
+        "active": false,
+        "detail": "On September 19, 2019, the Tokyo District Court acquitted three former TEPCO executives — Chairman Tsunehisa Katsumata, former Vice President Ichiro Takekuro, and former Vice President Sakae Muto — of professional negligence resulting in death and injury, finding that they could not have foreseen and prevented the accident. The case was the only criminal trial arising from the disaster. Prosecutors had argued that TEPCO executives had been warned as early as 2008 about a potential large tsunami but failed to act. The verdict was widely criticized by victims' groups and survivors who had campaigned for accountability.",
+        "sources": [
+          { "name": "Tokyo District Court", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "olympics-torch-relay-fukushima",
+        "year": "2021-03-25",
+        "title": "Tokyo Olympics Torch Relay Begins at J-Village in Fukushima",
+        "type": "political",
+        "active": false,
+        "detail": "The Tokyo 2020 Olympic Games torch relay began at J-Village in Fukushima Prefecture on March 25, 2021, a deliberate symbolic choice by the government to showcase Fukushima's recovery ahead of the Games (delayed a year by COVID-19). PM Yoshihide Suga and IOC President Thomas Bach attended. The relay through Fukushima municipalities was designed to counter perceptions of ongoing danger; however, some athletes declined to compete in events held in Fukushima due to radiation concerns. The baseball and softball events were held in Fukushima City, and additional events took place at the J-Village facility, itself a former emergency response hub during the nuclear crisis.",
+        "sources": [
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "IOC", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "unit4-fuel-removal-complete",
+        "year": "2014-12-22",
+        "title": "All 1,535 Fuel Assemblies Removed from Unit 4 Spent Fuel Pool",
+        "type": "nuclear",
+        "active": false,
+        "detail": "On December 22, 2014, TEPCO completed the removal of all 1,535 fuel assemblies from Unit 4's spent fuel pool — the first major fuel removal milestone. The operation, conducted in a custom-built cover structure, transferred the assemblies to the site's common spent fuel pool. This was the most urgent task in the early decommissioning roadmap, as Unit 4's elevated spent fuel pool had been a source of catastrophic concern in the weeks after the accident. The successful completion was widely hailed as an engineering achievement accomplished ahead of schedule.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "IAEA", "tier": 1 },
+          { "name": "Kyodo News", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "ALPS Water Release Decision (2020–2023)",
+    "events": [
+      {
+        "id": "water-release-decision-april2021",
+        "year": "2021-04-13",
+        "title": "Japan Formally Decides to Release ALPS-Treated Water to Pacific Ocean",
+        "type": "political",
+        "active": false,
+        "detail": "On April 13, 2021, PM Yoshihide Suga's government formally decided that ~1.25 million tonnes of ALPS-treated water stored at the Fukushima Daiichi site would be diluted and discharged into the Pacific Ocean over approximately 30 years. The decision cited running out of storage tank space (tanks were ~96% full and planned capacity was nearly exhausted) and the necessity to proceed with decommissioning. The water, after ALPS treatment, would be diluted to tritium concentrations 40 times below Japan's regulatory limit before release. China, South Korea, and Pacific Island nations protested the decision.",
+        "sources": [
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "Ministry of Economy, Trade and Industry (METI)", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "iaea-safety-report-july2023",
+        "year": "2023-07-04",
+        "title": "IAEA Comprehensive Safety Report Endorses Japan's Ocean Release Plan",
+        "type": "regulatory",
+        "active": false,
+        "detail": "After a two-year review, IAEA Director General Rafael Mariano Grossi presented the IAEA's comprehensive safety assessment report to PM Fumio Kishida on July 4, 2023, concluding that Japan's plan to discharge ALPS-treated water into the Pacific met international safety standards and would have 'negligible radiological impact on people and the environment.' The 137-page report was the most comprehensive international assessment of the plan. China immediately criticized the report as one-sided; environmental groups including Greenpeace also disputed the IAEA's findings, arguing tritium's potential biological impacts were underestimated.",
+        "sources": [
+          { "name": "IAEA", "tier": 1 },
+          { "name": "Cabinet Office of Japan", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "ocean-release-begins-aug2023",
+        "year": "2023-08-24",
+        "title": "ALPS-Treated Water Ocean Discharge Begins — First in History for Fukushima",
+        "type": "nuclear",
+        "active": false,
+        "detail": "On August 24, 2023, TEPCO began the first ocean discharge of ALPS-treated water through an undersea tunnel extending 1 km offshore. The initial release rate was ~460 m³ per day, diluted with seawater to achieve tritium concentrations below 1,500 Bq/L (~1/40 of the WHO drinking water guideline and 1/7 of Japan's regulatory limit). China immediately banned all Japanese seafood imports; Hong Kong and Macau followed with partial bans. Protests occurred in China, South Korea, and Japan. Japan and IAEA deployed offshore environmental monitors that initially detected no abnormal radioactivity.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "Japan NRA", "tier": 1 },
+          { "name": "IAEA", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "china-seafood-ban-aug2023",
+        "year": "2023-08-24",
+        "title": "China Bans All Japanese Seafood Imports in Response to Water Release",
+        "type": "political",
+        "active": false,
+        "detail": "On August 24, 2023, the same day Japan began ocean discharge, China's General Administration of Customs announced a complete ban on all seafood imports from Japan, citing 'food safety concerns.' The ban was a major economic blow; China had been Japan's largest seafood export market, accounting for roughly ¥88 billion ($600M) annually. Japan protested the ban as scientifically unjustified and politically motivated. PM Kishida pledged government support for affected fishermen. Following diplomatic negotiations, Japan and China reached a deal in September 2024 establishing a new monitoring and verification framework, leading to China lifting the near-total ban on June 30, 2025. Partial restrictions remain on seafood from Fukushima and 9 other prefectures pending further verification.",
+        "sources": [
+          { "name": "China General Administration of Customs", "tier": 1 },
+          { "name": "Ministry of Foreign Affairs Japan", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "Washington Times", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "second-discharge-round-oct2023",
+        "year": "2023-10-05",
+        "title": "Second Round of Ocean Discharge Completed; IAEA Monitoring Confirms Compliance",
+        "type": "nuclear",
+        "active": false,
+        "detail": "TEPCO completed the second round of ALPS-treated water discharge in early October 2023, having released approximately 7,800 m³ across the first two discharge periods. Independent monitoring by IAEA and national agencies in Japan, Korea, China, and international bodies confirmed tritium levels in seawater samples near the discharge point were far below detection limits or well within limits. TEPCO's daily samples showed consistent results. The fisheries union (JFUA) reiterated opposition despite the data, citing consumer confidence as irreparably damaged.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "IAEA", "tier": 1 },
+          { "name": "Kyodo News", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  },
+  {
+    "era": "Fuel Debris Removal & Long-term Decommissioning (2021–2026)",
+    "events": [
+      {
+        "id": "fuel-debris-first-retrieval-unit2",
+        "year": "2024-09-10",
+        "title": "Unit 2 Fuel Debris Trial Retrieval Begins — First Ever in History",
+        "type": "nuclear",
+        "active": true,
+        "detail": "On September 10, 2024, TEPCO began the world's first retrieval of actual melted nuclear fuel debris from a damaged reactor, using a modified telescoping robotic arm at Unit 2. After multiple delays (originally planned for 2021, pushed to 2022, 2023, then 2024), the trial operation successfully recovered approximately 0.9 grams of debris as a proof-of-concept. A second attempt in April 2025 recovered multiple small pieces totalling under 3 grams. The debris is being analyzed to characterize the corium's physical and chemical properties — essential data for planning full-scale removal of the estimated ~880 tonnes remaining in Units 1–3. Unit 3 full-scale removal has been pushed to FY 2037 at earliest.",
+        "sources": [
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "IRID", "tier": 1 },
+          { "name": "American Nuclear Society (ANS)", "tier": 3 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "decommission-revised-roadmap-2019",
+        "year": "2019-12-27",
+        "title": "Revised Decommissioning Roadmap Admits Fuel Debris Removal Far More Difficult",
+        "type": "regulatory",
+        "active": false,
+        "detail": "In December 2019, TEPCO and METI released a revised decommissioning roadmap acknowledging that the target to begin fuel debris retrieval had slipped, and that the overall completion timeline of 2041–2051 was subject to significant uncertainty. The revision was particularly candid about the difficulty of determining the exact location and condition of approximately 880 tonnes of melted fuel in three reactor containment vessels, and the technological challenges of developing robotics capable of operating in radiation fields of thousands of Sieverts per hour.",
+        "sources": [
+          { "name": "TEPCO / METI", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "contaminated-soil-interim-storage",
+        "year": "2015-03-01",
+        "title": "Interim Storage Facility Opens for ~14 Million Bags of Contaminated Soil",
+        "type": "regulatory",
+        "active": false,
+        "detail": "Japan opened the Fukushima Interim Storage Facility (FISTF) in the former exclusion zones of Futaba and Okuma towns in 2015 to consolidate the approximately 14 million 1-tonne bags of contaminated soil generated by decontamination operations. The facility was designed to hold up to 22 million m³ of contaminated material for 30 years, after which the government was legally required to find a final disposal site outside Fukushima Prefecture. As of 2024, no final disposal site has been identified, and the 30-year removal deadline (2045) is viewed skeptically. The facility occupies ~16 km² of prime agricultural land in the exclusion zone.",
+        "sources": [
+          { "name": "Ministry of Environment Japan", "tier": 1 },
+          { "name": "Reconstruction Agency Japan", "tier": 1 },
+          { "name": "The Japan Times", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "difficult-return-zones-reopened-2023",
+        "year": "2023-03-31",
+        "title": "Special Reconstruction Zones Designations Allow Re-entry to Former Hard-Return Areas",
+        "type": "humanitarian",
+        "active": false,
+        "detail": "In 2023, the government redesignated parts of Okuma and Futaba — the two towns that host the Fukushima Daiichi plant itself — from 'difficult-to-return zones' to 'special reconstruction zones' where residence is again permitted after intensive decontamination. This was a major symbolic step as these towns had been entirely closed since 2011. Very few former residents chose to return, reflecting a broader pattern of permanent displacement across Fukushima's evacuated communities.",
+        "sources": [
+          { "name": "Reconstruction Agency Japan", "tier": 1 },
+          { "name": "Fukushima Prefectural Government", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      },
+      {
+        "id": "15th-anniversary-2026",
+        "year": "2026-03-11",
+        "title": "15th Anniversary: Ongoing Challenges in Decommissioning, Return, and Health Monitoring",
+        "type": "humanitarian",
+        "active": true,
+        "detail": "On March 11, 2026, Japan marked the 15th anniversary of the Great East Japan Earthquake, Tsunami, and Fukushima nuclear disaster with memorial ceremonies. As of March 2026, approximately 28,000 Fukushima-related evacuees remain displaced. Fuel debris retrieval at Units 1–3 remains in early stages. ALPS water release continues with approximately 8–10 discharge rounds completed. The Fukushima Health Management Survey continues with growing debate over thyroid cancer findings. Decontamination of remaining difficult-to-return zones continues. The anniversary underscored both the remarkable recovery achieved and the multi-generational challenges that remain.",
+        "sources": [
+          { "name": "Reconstruction Agency Japan", "tier": 1 },
+          { "name": "TEPCO", "tier": 1 },
+          { "name": "NHK", "tier": 2 }
+        ],
+        "confidence": "high",
+        "lastUpdated": "2026-03-17"
+      }
+    ]
+  }
+]

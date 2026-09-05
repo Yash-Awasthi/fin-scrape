@@ -1,0 +1,83 @@
+# Pantheon Trades — Citation metadata
+# Render with `cffconvert --infile CITATION.cff --format bibtex` or open
+# in any CFF-aware indexer (GitHub natively renders this on the repo
+# sidebar). Cite this work when reproducing the Brier-decomposition
+# study or referencing the ProofOfRestraint primitive.
+
+cff-version: 1.2.0
+title: "Pantheon Trades — An eleven-agent AI council for prediction-market trading with on-chain proof of restraint"
+message: "If you use Pantheon Trades or reproduce the council Brier study, please cite this work."
+type: software
+authors:
+  - given-names: Muhammad Afsah
+    family-names: Mumtaz
+    alias: NAME0x0
+    affiliation: "Independent researcher"
+repository-code: "https://github.com/NAME0x0/Pantheon-Trades"
+url: "https://pantheon-trades.vercel.app"
+license: MIT
+keywords:
+  - prediction-markets
+  - multi-agent
+  - large-language-models
+  - brier-score
+  - calibration
+  - conformal-prediction
+  - kelly-criterion
+  - polymarket
+  - smart-contracts
+  - on-chain-auditability
+abstract: |
+  Pantheon Trades is a structured-deliberation trading system for
+  prediction markets. An eleven-agent AI council debates every
+  candidate trade across four rounds (opening, challenge, synthesis,
+  vote) using role-divergent prompts. Each refusal is anchored as
+  a Proof of Restraint witness on Circle's Arc Testnet so the
+  discipline of NOT trading becomes auditable.
+
+  Empirically: on a 200-market resolved Manifold sample, council
+  aggregation lowers Brier score from 0.260 (single-shot Gemini)
+  to 0.149, closing approximately 80% of the gap to the
+  free-play-money human-consensus baseline at 0.126.
+
+  The system implements Murphy (1973) Brier-score decomposition,
+  beta calibration (Kull et al. 2017), per-category Platt scaling,
+  Brier-weighted council aggregation, and conformal Kelly sizing
+  against a held-out prediction-interval lower bound.
+
+references:
+  - type: article
+    authors:
+      - family-names: Murphy
+        given-names: Allan H.
+    title: "A New Vector Partition of the Probability Score"
+    journal: "Journal of Applied Meteorology"
+    year: 1973
+    volume: 12
+    issue: 4
+    pages: "595-600"
+  - type: article
+    authors:
+      - family-names: Kull
+        given-names: Meelis
+      - family-names: Silva Filho
+        given-names: Telmo
+      - family-names: Flach
+        given-names: Peter
+    title: "Beyond sigmoids: How to obtain well-calibrated probabilities from binary classifiers with beta calibration"
+    journal: "Electronic Journal of Statistics"
+    year: 2017
+    volume: 11
+    issue: 2
+    pages: "5052-5080"
+  - type: book
+    authors:
+      - family-names: Vovk
+        given-names: Vladimir
+      - family-names: Gammerman
+        given-names: Alex
+      - family-names: Shafer
+        given-names: Glenn
+    title: "Algorithmic Learning in a Random World"
+    publisher: Springer
+    year: 2005

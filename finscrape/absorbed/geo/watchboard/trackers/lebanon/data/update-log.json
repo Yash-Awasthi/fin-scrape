@@ -1,0 +1,69 @@
+{
+  "lastRun": "2026-08-26T15:39:30.664Z",
+  "tracker": "lebanon",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-28T12:41:19.935Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 43,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-07T14:20:00Z",
+      "count": 40,
+      "status": "updated"
+    },
+    "mapLines": {
+      "lastRun": "2026-06-07T14:20:00Z",
+      "count": 37,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 20,
+      "status": "ok"
+    },
+    "political": {
+      "lastRun": "2026-05-10T14:12:00Z",
+      "count": 21,
+      "status": "ok"
+    },
+    "casualties": {
+      "lastRun": "2026-06-07T14:20:00Z",
+      "count": 17,
+      "status": "updated"
+    },
+    "econ": {
+      "lastRun": "2026-05-21T14:30:00Z",
+      "count": 10,
+      "status": "ok"
+    },
+    "assets": {
+      "lastRun": "2026-05-10T14:12:00Z",
+      "count": 10,
+      "status": "ok"
+    },
+    "strikeTargets": {
+      "count": 10,
+      "status": "ok"
+    },
+    "retaliation": {
+      "count": 8,
+      "status": "ok"
+    },
+    "events": {
+      "lastRun": "2026-06-28T12:41:19.935Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-06-28T12:41:19.935Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-28T12:41:19.935Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

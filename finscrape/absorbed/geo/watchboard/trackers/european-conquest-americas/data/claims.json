@@ -1,0 +1,352 @@
+[
+  {
+    "id": "moctezuma-surrender-vs-diplomacy",
+    "question": "Did Moctezuma II willingly surrender to Cortés or was he coerced?",
+    "sideA": {
+      "label": "Willing Surrender / Quetzalcóatl Prophecy",
+      "text": "Traditional Spanish accounts (Cortés, Bernal Díaz) and early colonial sources claimed Moctezuma welcomed Cortés as the returning god Quetzalcóatl, voluntarily submitting to Spanish authority. This narrative was used to legitimize the conquest and appeared in Spanish legal and political documents as justification for sovereignty over New Spain."
+    },
+    "sideB": {
+      "label": "Coercion / Revisionist Indigenous Interpretation",
+      "text": "Modern historians led by Camilla Townsend, Matthew Restall, and others argue the Quetzalcóatl legend was largely a post-conquest invention, inserted into indigenous-language texts decades later by Spanish-educated Nahua scribes. Moctezuma was conducting sophisticated diplomacy to buy time and assess Spanish intentions, not surrendering. He was subsequently taken hostage — an act of coercion, not consent. The Florentine Codex passages supporting the god-theory were composed long after the conquest."
+    },
+    "resolution": "Scholarly consensus has shifted toward the revisionist view. The Quetzalcóatl-surrender narrative is now widely considered a colonial fabrication, though some elements of Moctezuma's caution and accommodation remain genuinely puzzling.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "indigenous-population-precontact-estimates",
+    "question": "How many indigenous people lived in the Americas before European contact?",
+    "sideA": {
+      "label": "Low Counters (c.8–18 million)",
+      "text": "Early 20th-century scholars like Alfred Kroeber (1939) estimated only 8.4 million in the entire Western Hemisphere. Historical geographer Carl Sauer estimated 15–20 million. These lower figures were used to minimize the scale of depopulation and the demographic catastrophe of conquest, sometimes to downplay colonialism's impact."
+    },
+    "sideB": {
+      "label": "High Counters (c.50–145 million)",
+      "text": "Henry Dobyns (1966) proposed 90–112 million for the Americas (c.145 million including island populations). William Denevan's widely cited 1992 estimate of 53.9 million for the Americas is a moderate consensus point. Recent research by Koch et al. (The Lancet, 2019) supports approximately 60 million. These figures make the post-conquest depopulation one of history's greatest demographic catastrophes."
+    },
+    "resolution": "Scholarly consensus clusters around 50–65 million pre-contact, with c.90% mortality in the first century. Extreme high and low estimates remain contested; the debate has significant political implications for how the conquest is remembered.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "conquest-disease-vs-violence",
+    "question": "Was disease or deliberate violence the primary cause of indigenous depopulation?",
+    "sideA": {
+      "label": "Disease Was Dominant (Alfred Crosby / 'Virgin Soil' Model)",
+      "text": "Alfred Crosby's influential 'Columbian Exchange' (1972) and 'Ecological Imperialism' (1986) argued that epidemic diseases — smallpox, measles, typhus, influenza — killed 90% of indigenous Americans. Indigenous people had no prior immunity to Old World diseases. The demographic collapse was tragic but largely unintentional, the result of unintentional disease transfer rather than deliberate genocide."
+    },
+    "sideB": {
+      "label": "Deliberate Violence and Exploitation Were Decisive (Stannard / Las Casas)",
+      "text": "David Stannard's 'American Holocaust' (1992) and earlier accounts by Las Casas argue that deliberate mass killings, enslavement, brutal forced labor (encomienda, mita), starvation through destruction of food supplies, and sexual violence were decisive factors. Disease enabled but did not alone cause depopulation; colonial exploitation ensured populations could not recover. Koch et al. (2019) term the combined effect 'the Great Dying.'"
+    },
+    "resolution": "Modern historians recognize an integrated causation: epidemic disease was the primary killer, but deliberate violence, forced labor, famine, and social disruption were critical secondary causes and prevented recovery. Both factors are required for a complete explanation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pizarro-atahualpa-ransom-legitimacy",
+    "question": "Was Atahualpa's execution legally and morally justified after the ransom was paid?",
+    "sideA": {
+      "label": "Spanish Legal Justification",
+      "text": "Pizarro argued that Atahualpa had been tried by a proper legal process and convicted on charges of idolatry, polygamy, and plotting against the Spanish. The Requerimiento had been read (however impractical), and Atahualpa was considered a pagan ruler who had not submitted to Christian authority. Spanish legal opinion of the time found the execution defensible under conquest law."
+    },
+    "sideB": {
+      "label": "Murder / Breach of Agreement",
+      "text": "Emperor Charles V explicitly condemned the execution as unjust when he learned of it. Even among Pizarro's own men, many objected. The ransom agreement was honored in full — a room filled with gold and twice with silver. Many Spanish contemporaries saw the execution as treacherous, illegal, and motivated purely by fear that a free Atahualpa would rally resistance. Modern historians universally regard it as an unjustifiable breach of the agreement."
+    },
+    "resolution": "Charles V condemned the act; modern historical consensus regards Atahualpa's execution as a fundamental violation of the ransom agreement and an extrajudicial killing motivated by Spanish fear of Inca power rather than legal principle.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "black-legend-vs-white-legend",
+    "question": "Was the Spanish conquest uniquely cruel or no worse than other colonial powers?",
+    "sideA": {
+      "label": "Black Legend — Spanish Uniquely Brutal",
+      "text": "Las Casas's 'Brevísima relación' (1542/1552), translated across Protestant Europe, presented Spanish colonialism as uniquely savage. Protestant powers (England, the Netherlands) amplified this narrative to delegitimize Spanish empire. Las Casas himself documented systematic massacres, torture, mutilation, and mass enslavement. The term 'genocide' has been applied to Spanish conquest by Stannard and others."
+    },
+    "sideB": {
+      "label": "White Legend / Leyenda Rosa — Context and Comparison",
+      "text": "Spanish defenders argue the Black Legend was political propaganda by rival Protestant empires. Spain had legal protections for indigenous people (New Laws 1542), an active anti-slavery tradition (Las Casas), and official debate about the ethics of conquest (Valladolid 1550). English, Dutch, French, and later American colonialism destroyed indigenous peoples with equal or greater thoroughness, but escaped the same level of critique. Violence was inherent to all 16th-century European colonialism."
+    },
+    "resolution": "Both extreme narratives are polemical. Modern scholarship acknowledges Spanish colonialism caused extraordinary violence and demographic catastrophe while recognizing that all European colonial powers were responsible for comparable or worse acts toward indigenous peoples. The Black Legend served Protestant propaganda; the White Legend minimizes Spanish atrocities.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "conquest-indigenous-allies-agency",
+    "question": "Were indigenous allies passive instruments of the Spanish or active agents pursuing their own interests?",
+    "sideA": {
+      "label": "Traditional View — Spanish Superior Technology / Leadership",
+      "text": "Traditional accounts emphasized Spanish steel, horses, gunpowder, and superior tactical leadership as the decisive factors in conquest. In this view, indigenous allies were grateful auxiliaries who followed Spanish leadership against common enemies. European technological superiority and the psychological impact of horses and cannon were paramount. Cortés is the hero; indigenous allies are secondary characters."
+    },
+    "sideB": {
+      "label": "Revisionist View — Indigenous Civil War, Strategic Agency",
+      "text": "Matthew Restall, Ross Hassig, and others argue that without 200,000+ Tlaxcalan and other indigenous warriors, the Spanish conquest of New Spain was militarily impossible. Indigenous peoples — Tlaxcalans, Huexotzincans, Totonacs — allied with Cortés not out of awe but to defeat the Aztec empire that had oppressed them for decades. The conquest was fundamentally an indigenous civil war with Spanish participation, enabled by epidemic disease. Similarly in Peru, anti-Inca factions actively helped Pizarro."
+    },
+    "resolution": "Modern scholarship strongly supports the revisionist view: indigenous allies were the military backbone of the conquest, acting as strategic agents pursuing their own interests. The conquest cannot be explained by Spanish technology or leadership alone.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "columbus-intent-peaceful-vs-colonization",
+    "question": "Did Columbus intend peaceful encounter or colonization and conquest from the start?",
+    "sideA": {
+      "label": "Peaceful Explorer / Missionary",
+      "text": "Columbus's journal from 1492 emphasizes peaceful trade, mutual benefit, and Christian conversion. He frequently marvels at Taíno hospitality and physical beauty. His declared mission was to open trade routes to Asia, establish alliances, and spread Christianity. The Spanish crown commissioned him as an explorer and trader, not a conquistador."
+    },
+    "sideB": {
+      "label": "Extraction and Domination from Day One",
+      "text": "Columbus's journal also notes on October 12, 1492, that the Taíno 'would make good servants.' He quickly establishes tribute systems, attempts to ship enslaved Taíno to Spain in 1495, and governs Hispaniola with what his own contemporaries described as tyranny. Historian Kirkpatrick Sale argues Columbus brought the extractive, violent patterns of Portuguese Atlantic island colonization directly to the Caribbean. The shift from 'exploration' to exploitation was nearly instantaneous."
+    },
+    "resolution": "Columbus embodied both impulses simultaneously. His initial journal shows genuine wonder, but his governance quickly became exploitative. Most historians see the peaceful framing as aspirational rather than actual — extraction and coercion began almost immediately.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "las-casas-death-toll-figures",
+    "question": "Were Las Casas's death toll figures in the Brevísima relación accurate?",
+    "sideA": {
+      "label": "Largely Accurate — Eyewitness Account",
+      "text": "Las Casas was an eyewitness to many events he describes, having spent decades in the Caribbean and later Spanish America. His core accounts are corroborated by other Spanish sources, royal investigations, and declining indigenous population figures in census records. The specific numbers he gives (e.g., 12 million dead in Hispaniola) may be approximate or rhetorical, but the pattern of systematic mass killing he describes is well documented. He was motivated by genuine moral outrage, not fabrication."
+    },
+    "sideB": {
+      "label": "Exaggerated — Propaganda to Influence Policy",
+      "text": "Some historians (especially those of the revisionist or anti-Black Legend school) argue Las Casas exaggerated death tolls for rhetorical effect and political impact — he was explicitly lobbying for policy change and wrote in a polemical rather than scholarly register. His figure of 15 million dead by 1542 exceeds many modern pre-contact population estimates. His descriptions of Spanish behavior, while documenting real atrocities, sometimes read as hyperbole designed to shock rather than inform."
+    },
+    "resolution": "Modern scholarship accepts Las Casas's accounts as substantially accurate in pattern and scale while noting some figures are likely rhetorical amplifications. The overall death toll he describes is consistent with modern demographic evidence; specific numbers should be read in context of his advocacy mission.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "reconquista-crusade-ideology",
+    "question": "Was the Spanish conquest motivated primarily by religion or by economic greed?",
+    "sideA": {
+      "label": "Religious Crusade / Mission",
+      "text": "The conquistadors and Spanish crown consistently justified conquest as a divine mission to spread Christianity and save souls. The Requerimiento demanded indigenous submission to the Pope before any violence could legally begin. Franciscan, Dominican, and Jesuit missionaries accompanied every major expedition. Las Casas himself spent his life trying to make the conquest genuinely Christian. Spain invested enormous resources in the mission church system, building thousands of churches and converting (forcibly or willingly) millions."
+    },
+    "sideB": {
+      "label": "Economic Extraction — Gold, Silver, Tribute",
+      "text": "Columbus's first question on landing was about gold. The encomienda system extracted labor; the mita system extracted silver. Conquistadors were explicitly motivated by wealth — Pizarro was illiterate and impoverished before Peru. The Requerimiento was widely recognized even by contemporaries as a legal fiction. Bernal Díaz acknowledged that Cortés's men came 'to serve God and His Majesty, and also to get rich.' Economic extraction was the operational reality behind the religious rhetoric."
+    },
+    "resolution": "Both motivations were genuinely present and mutually reinforcing. The conquest was neither purely religious nor purely economic — Spanish imperialism used Christian evangelization as a legitimizing framework for systematic economic extraction. Historians like Anthony Pagden and James Lockhart emphasize the inseparability of the two.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "aztec-human-sacrifice-justification",
+    "question": "Was the scale of Aztec human sacrifice used to legitimize conquest?",
+    "sideA": {
+      "label": "Sacrifice Justified Intervention (Spanish View)",
+      "text": "Spanish accounts described mass human sacrifice as the primary justification for conquest — Cortés reported 20,000 sacrificed per year at Tenochtitlan. The theological argument was that conquest was necessary to end these atrocities and bring the Gospel. Sepúlveda used it as his primary argument at Valladolid. Spanish destruction of temples and idols was framed as liberation from a tyrannical religion."
+    },
+    "sideB": {
+      "label": "Exaggerated / Culturally Contextualized",
+      "text": "Modern archaeologists and anthropologists (Inga Clendinnen, Camilla Townsend) argue Spanish accounts vastly exaggerated the scale of sacrifice for propaganda purposes. Archaeological evidence at the Templo Mayor is consistent with sacrifice but at far lower numbers than Spanish accounts claimed. Sacrifice within Aztec cosmology was a sacred ritual of reciprocity, not wanton killing. Using sacrifice as a genocide justification is a form of cultural imperialism that decontextualizes indigenous religious practice."
+    },
+    "resolution": "Human sacrifice was practiced by the Aztecs but Spanish accounts significantly inflated the scale for ideological purposes. Modern archaeology confirms sacrificial practices but not the claimed numbers. The sacrifice argument remains contested as a retrospective justification for conquest rather than a genuine motivation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "encomienda-slavery-vs-labor",
+    "question": "Was the encomienda system effectively slavery?",
+    "sideA": {
+      "label": "Legal Labor System / Protective in Theory",
+      "text": "In Spanish law, the encomienda was explicitly distinct from slavery: indigenous people were legally free subjects of the Crown, the encomendero had legal obligation to protect and Christianize them, and they were paid wages (however minimal). The system was theoretically temporary, tied to one generation. Spanish law repeatedly attempted to reform or abolish the worst abuses (New Laws 1542, earlier ordinances)."
+    },
+    "sideB": {
+      "label": "Effective Slavery — Semantics of Exploitation",
+      "text": "Las Casas, contemporary critics, and modern historians argue the encomienda was slavery in practice: forced labor without meaningful consent, working conditions that killed workers in vast numbers, no real legal recourse against abusive encomenderos, and wages insufficient to sustain life. The death rates in Hispaniola's gold mines under encomienda exceeded those of antebellum American slavery. The legal fiction of 'free labor' was a cover for systematic enslavement."
+    },
+    "resolution": "Most modern historians regard the encomienda as a form of forced labor that functioned as slavery in practice even when legally distinct in theory. The distinction between 'free' encomienda labor and outright slavery was meaningful in law but largely irrelevant to those who experienced it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "conquest-as-genocide",
+    "question": "Does the European conquest of the Americas meet the legal and historical definition of genocide?",
+    "sideA": {
+      "label": "Yes — Genocide Occurred",
+      "text": "David Stannard ('American Holocaust,' 1992), Roxanne Dunbar-Ortiz ('An Indigenous Peoples' History,' 2014), and others argue the conquest and colonization of the Americas constitutes genocide under the UN definition: acts committed with 'intent to destroy, in whole or in part, a national, ethnical, racial or religious group.' The destruction of indigenous peoples was not accidental — deliberate massacres, enslavement, religious persecution, cultural suppression, and forced removal were systematic policies aimed at eliminating or subjugating indigenous peoples."
+    },
+    "sideB": {
+      "label": "Not Genocide — No Systematic Extermination Intent",
+      "text": "Some historians argue that most indigenous deaths from epidemic disease were unintentional — Europeans did not know about germ theory and could not have deliberately deployed smallpox. Spanish colonial law repeatedly attempted to protect indigenous people (New Laws, Sublimis Deus). The intent required for genocide — to destroy a group 'as such' — was not consistently present in colonial policy, which more often aimed at controlling and exploiting indigenous labor rather than eliminating indigenous populations entirely."
+    },
+    "resolution": "The debate is ongoing. The 2021 Canadian residential school discoveries have renewed the genocide debate globally. Many governments and international bodies have formally recognized colonial-era policies as genocide. Historians remain divided on applying the term to 1492–1600 events, given the complexity of intentionality and the primacy of disease.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "valladolid-debate-outcome",
+    "question": "Who 'won' the Valladolid Debate — Las Casas or Sepúlveda?",
+    "sideA": {
+      "label": "Sepúlveda Won in Practice",
+      "text": "Despite Charles V ordering all conquest suspended during the debate, the conquista resumed immediately afterward. The encomienda system continued for centuries. Sepúlveda's 'just war' arguments — that indigenous people's barbaric practices (especially human sacrifice) justified conquest — became the de facto operating principle of Spanish colonialism. Las Casas's reforms were largely blocked by encomendero pressure. In practical terms, Sepúlveda's position prevailed."
+    },
+    "sideB": {
+      "label": "Las Casas Won in Theory",
+      "text": "No formal verdict was announced, but most contemporary accounts describe the judges as more sympathetic to Las Casas. His arguments contributed to stronger colonial legislation. The debate itself — unprecedented in any other colonial power's history — established the principle that the justice of conquest must be debated and justified, not simply assumed. Las Casas's writings went on to influence Enlightenment philosophy on natural rights and international law."
+    },
+    "resolution": "No official victor was declared. Las Casas arguably won the philosophical argument while Sepúlveda's view prevailed operationally. The debate's most lasting legacy is the legal framework of just war and indigenous rights that Las Casas created, which continues to influence international indigenous rights law.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "colombus-day-vs-indigenous-peoples-day",
+    "question": "Should Columbus Day be celebrated or replaced with Indigenous Peoples Day?",
+    "sideA": {
+      "label": "Columbus Day — European Achievement / Italian Heritage",
+      "text": "Supporters of Columbus Day (celebrated in the US since 1937, made a federal holiday in 1968) argue it marks a genuine achievement in navigation that changed the world, and serves as a cultural touchstone for Italian-American communities. Columbus's achievement of sustained transatlantic contact was a watershed in world history, whatever its consequences. Removing the holiday erases legitimate historical complexity in favor of presentism."
+    },
+    "sideB": {
+      "label": "Indigenous Peoples Day — Reckoning with Genocide",
+      "text": "Indigenous rights advocates and many historians argue that celebrating Columbus perpetuates myths about the 'discovery' of a continent already home to tens of millions of people, and glorifies the beginning of a process of genocide, enslavement, and cultural destruction. Over 150 US cities and 14 states have replaced Columbus Day with Indigenous Peoples Day. Indigenous people argue their histories and contributions deserve celebration, not the man who initiated their catastrophe."
+    },
+    "resolution": "Active political debate. The movement to replace Columbus Day with Indigenous Peoples Day has grown significantly since 2014. Italy, Spain, and many Latin American countries have their own debates about commemorating October 12. There is no historical consensus on the appropriate commemoration; it is a live political issue.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "requerimiento-legal-vs-farce",
+    "question": "Was the Requerimiento a genuine attempt at legal consent or a cynical legal fiction?",
+    "sideA": {
+      "label": "Genuine Legal Attempt — Spanish Scrupulousness",
+      "text": "The Requerimiento (1513) was drafted by jurist Juan López de Palacios Rubios as a genuine attempt to fulfill natural law requirements before using force against indigenous people. It gave indigenous people a chance to submit to Spanish-Christian authority before war began, reflecting the era's genuine concern (influenced by the Salamanca School) with just war theory. Spanish legal scrupulousness about conquest, however misguided, was genuine."
+    },
+    "sideB": {
+      "label": "Absurd Legal Fiction — Self-Serving Formalism",
+      "text": "The Requerimiento was notoriously read in Latin to uncomprehending indigenous people, sometimes at night, sometimes before prisoners, sometimes before battle, sometimes within earshot of the enemy. Bartolomé de las Casas wrote that he didn't know whether to laugh or cry when he first heard it. Even Palacios Rubios laughed when told how it was used in practice. Historians universally regard it as a transparently cynical legal device to satisfy formal requirements while changing nothing about actual conquest practice."
+    },
+    "resolution": "The scholarly consensus is clear: the Requerimiento was a legal fiction that satisfied Spanish formal requirements without providing any genuine opportunity for indigenous consent. Its absurdity was recognized even by contemporaries. It remains a classic case study in the use of legalism to justify conquest.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "el-dorado-myth-real-city",
+    "question": "Was El Dorado a real place or a myth that drove destructive exploration?",
+    "sideA": {
+      "label": "Based on Real Muisca Gold Ritual",
+      "text": "The El Dorado legend originated in genuine practice: the Muisca people of the Colombian highlands conducted a ceremony in which a new chief (El Dorado, 'the gilded one') was covered in gold dust and entered a sacred lake (Lake Guatavita) to make offerings. Spanish explorers heard real accounts of this ceremony. The Muisca confederation was extraordinarily wealthy by Andean standards. The legend had a real historical basis."
+    },
+    "sideB": {
+      "label": "Pure Myth That Cost Thousands of Lives",
+      "text": "As a place rather than a ritual, El Dorado never existed. Successive expeditions — Orellana (1541–42), Gonzalo Pizarro (1541), Walter Raleigh (1595, 1617), and dozens more — cost thousands of Spanish and indigenous lives searching for a city of gold that was not there. The myth reflected European projection of Asian wealth onto the Americas. Indigenous informants sometimes encouraged explorers to travel elsewhere, using the legend to redirect destructive expeditions away from their own territory."
+    },
+    "resolution": "El Dorado originated as a real ritual (the gilded chief ceremony at Lake Guatavita) that became mythologized into a non-existent city. Modern archaeology has confirmed the Muisca gold-offering ceremony. El Dorado as a city was always a myth, one that drove some of the most destructive exploration expeditions of the conquest era.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "smallpox-intentional-biological-warfare",
+    "question": "Did Europeans deliberately spread smallpox to indigenous peoples?",
+    "sideA": {
+      "label": "No Deliberate Intent — Disease Transfer Was Accidental",
+      "text": "No evidence exists that 16th-century Spanish or Portuguese colonizers deliberately introduced smallpox. Europeans did not understand germ theory (it wasn't established until the 19th century). The epidemics spread ahead of the conquistadors, carried by trade networks, before Europeans arrived in many affected areas. The disease transfer was an unintended consequence of contact, tragic in scale but not deliberate. Intentional biological warfare would require knowledge that didn't yet exist."
+    },
+    "sideB": {
+      "label": "Later Documented Cases of Deliberate Spread (British, Not Spanish)",
+      "text": "While no documented cases of deliberate smallpox introduction exist in 16th-century Spanish or Portuguese colonization, British colonial cases are documented: Lord Amherst in 1763 discussed distributing smallpox-infected blankets to Delaware people. By the 18th century, germ transmission was understood empirically even without modern theory. Some historians argue that even if the initial spread was accidental, colonial officials who understood the epidemiological relationship between European contact and indigenous death and continued settlement policy regardless were engaged in a form of structural culpability."
+    },
+    "resolution": "For 16th-century Spanish and Portuguese colonizers, no evidence of deliberate smallpox introduction exists; the epidemics were largely accidental. British colonial cases from the 18th century are documented. The broader question of structural responsibility for disease-driven depopulation, known by the 18th century, remains historically contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "quetzalcoatl-legend-cortez",
+    "question": "Did the Quetzalcóatl prophecy cause Moctezuma to believe Cortés was a god?",
+    "sideA": {
+      "label": "Yes — Prophecy Paralyzed Aztec Resistance",
+      "text": "Traditional accounts (and many still-popular histories) assert that Moctezuma, believing the year One Reed (1519) to be the prophesied return of Quetzalcóatl, became paralyzed with uncertainty about whether Cortés was divine. This explains his seemingly irrational decision to allow Cortés into Tenochtitlan rather than destroying him on the causeway. The legend is mentioned in early indigenous-language sources and seemingly corroborated by Moctezuma's own words in Cortés's account."
+    },
+    "sideB": {
+      "label": "Post-Conquest Invention — No Pre-Conquest Evidence",
+      "text": "Historian Camilla Townsend and others have demonstrated that no pre-conquest source records a prophecy of Quetzalcóatl's return in the year One Reed. The sources asserting this belief were all produced after the conquest by indigenous writers working with Spanish friars. Moctezuma's behavior — intelligence gathering, tribute demands, sending ambassadors — is consistent with political calculation, not divine paralysis. The Quetzalcóatl story conveniently explains indigenous 'failure' as prophetic fatalism rather than acknowledging Spanish and allied military superiority combined with disease."
+    },
+    "resolution": "The Quetzalcóatl-Cortés identification is now considered by most scholars to be a post-conquest indigenous and Spanish co-construction, not a pre-existing belief that shaped Moctezuma's decisions. Moctezuma was a sophisticated political actor, not a credulous victim of prophecy.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "potosi-silver-global-economy",
+    "question": "Did Potosí silver benefit or harm Spain economically in the long run?",
+    "sideA": {
+      "label": "Silver Enriched Spain and Funded Empire",
+      "text": "Potosí and other American silver mines financed Spanish military and imperial power for over a century. The silver paid for armies that dominated Europe (the Tercios), financed the Netherlands campaigns, and built the Escorial. Without American silver, Spain could not have maintained the most powerful military in 16th-century Europe. Silver also funded the Church, arts, and intellectual culture of the Spanish Golden Age (Cervantes, El Greco, Velázquez)."
+    },
+    "sideB": {
+      "label": "Silver Caused 'Resource Curse' — Dutch Disease",
+      "text": "Economists and historians argue that the flood of American silver caused inflation ('Price Revolution') throughout Europe but especially in Spain, making Spanish manufactured goods uncompetitive. Rather than investing in productive industry, Spain depended on silver transfers — a resource curse that atrophied domestic manufacturing. By 1640, Spain's economic and military power was in severe decline despite still receiving large silver shipments. Argentina and other silver-exporting economies have traced their developmental problems to a similar colonial resource-curse pattern."
+    },
+    "resolution": "Both perspectives capture real dynamics. Silver provided short-term power and funded Spain's Golden Age military and cultural achievements, while contributing to long-term economic dysfunction through inflation and the neglect of productive manufacturing. The 'resource curse' interpretation has gained substantial historical support.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "malinche-traitor-vs-survivor",
+    "question": "Was La Malinche (Malintzin) a traitor to her people or a survivor exercising agency?",
+    "sideA": {
+      "label": "La Malinche as Traitor — 'Malinchismo'",
+      "text": "In Mexican national mythology, La Malinche became a symbol of betrayal — the indigenous woman who helped Cortés conquer her own people, giving rise to the term 'malinchismo' (preference for foreign over national). This view dominated Mexican cultural and political discourse through much of the 20th century. She is depicted as a traitor who enabled the Spanish conquest and gave birth to the mestizo race through her relationship with Cortés."
+    },
+    "sideB": {
+      "label": "Survivor and Agent — Revisionist Feminist History",
+      "text": "Modern historians (Camilla Townsend, Frances Karttunen, Anna Lanyon) argue that Malintzin was an enslaved woman who used intelligence and linguistic skill to survive and advance in an overwhelmingly male, violent conquest environment. She had no inherited loyalty to the Aztec empire that had enslaved her. She was a Nahua woman who served Nahua interests (Tlaxcalan allies) alongside Spanish ones. Calling her a 'traitor' projects a modern nationalist concept of ethnicity onto a 16th-century person with a completely different identity framework."
+    },
+    "resolution": "The revisionist view has substantially displaced the 'traitor' narrative in academic circles. Malintzin/La Malinche is now more often analyzed as an agent in complex political circumstances rather than a symbol of betrayal. The 'malinchismo' debate continues in Mexican politics and culture.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "inca-roads-administrative-system",
+    "question": "Was the Inca imperial system as exploitative as the Spanish, or did it provide genuine reciprocity?",
+    "sideA": {
+      "label": "Inca System Was Exploitative — Imposed Empire",
+      "text": "The Inca empire was an expansionist conquest state that imposed forced labor (mit'a), religious conversion (to Inca sun worship), and political submission on conquered peoples. Provinces that resisted were brutally suppressed; entire communities were relocated (mitimaes policy) to break social cohesion. Anti-Inca resentment — among the Huanca, Chanka, and others — explains why some groups initially allied with Pizarro against the Inca."
+    },
+    "sideB": {
+      "label": "Inca State Was a Welfare Empire — Reciprocal Labor",
+      "text": "Inca mit'a (labor tax) operated within a framework of state reciprocity: the state fed workers, provided tools, and redistributed surplus food through storehouses across the empire. Subject peoples gave labor but received food security, infrastructure (40,000 km of roads), and protection. John Rowe, John Murra, and others see the Inca system as a form of 'vertical archipelago' economy with genuine redistributive functions rather than simple extraction. Inca rule brought roads, communication, and food security to diverse Andean peoples."
+    },
+    "resolution": "Both characterizations contain truth. The Inca system combined genuine redistributive functions (food security, public works) with imperial coercion (forced labor, religious conversion, population relocation). The degree to which it was experienced as beneficial or exploitative varied by region and by when each polity was conquered. Most historians see it as a mixed system significantly more humane than the colonial mita that replaced it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "columbian-exchange-overall-assessment",
+    "question": "On balance, was the Columbian Exchange beneficial or catastrophic for humanity?",
+    "sideA": {
+      "label": "Transformatively Beneficial — Fed the World",
+      "text": "Alfred Crosby and Charles Mann argue the Columbian Exchange fundamentally improved human nutrition worldwide. The potato alone fed millions of Europeans, Chinese, and Africans, fueling population growth. Maize became a staple across Africa and Asia. Tomatoes, sweet potatoes, peanuts, cacao, vanilla, and dozens of other crops enriched diets globally. From the long-term perspective of global humanity, the Columbian Exchange massively increased food security and population capacity."
+    },
+    "sideB": {
+      "label": "Net Catastrophe — Disease and Slavery",
+      "text": "For indigenous Americans and Africans, the Columbian Exchange was catastrophic. The disease component alone killed 90% of indigenous Americans. The Atlantic slave trade — a direct consequence of demographic collapse and the plantation economy it enabled — destroyed millions of African lives and families. Even Old World beneficiaries gained their nutritional improvements at the cost of indigenous American civilizations and African enslavement. A 'beneficial' assessment requires ignoring the perspectives of those who bore its greatest costs."
+    },
+    "resolution": "The Columbian Exchange was simultaneously the most transformative event in human history since the agricultural revolution and one of history's greatest catastrophes, depending on whose perspective is centered. Any complete assessment must hold both dimensions simultaneously: global nutritional transformation and the near-extinction of indigenous American civilizations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "reconquest-model-americas-conquest",
+    "question": "Did the Spanish Reconquista (Reconquest of Iberia) directly shape the conquest of the Americas?",
+    "sideA": {
+      "label": "Reconquista Was the Direct Template",
+      "text": "Historians like John Elliott and James Lockhart argue that the conquista of the Americas was a direct extension of the Reconquista (718–1492). The Reconquista had just ended when Columbus sailed; many conquistadors (including Cortés's family) came from Extremadura and Andalusia — areas recently 'liberated' from Muslim rule. The juridical, military, and cultural frameworks — crusade ideology, holy war, forced conversion, encomienda from Moorish territory — were transferred wholesale from Iberia to the Americas."
+    },
+    "sideB": {
+      "label": "Americas Was Fundamentally Different — New Contexts",
+      "text": "While Reconquista frameworks influenced conquistadors' self-image, the Americas required new legal and administrative structures. The indigenous peoples of the Americas were legally different from Muslims (who had once been 'legitimate' subjects of Christian kings); the scale of territory and population was incomparable; and the encounter with people who had never heard of Christianity raised genuinely new theological questions. The New Laws, the Valladolid Debate, and Las Casas's advocacy all represent new responses to genuinely new situations without Iberian precedent."
+    },
+    "resolution": "Most historians accept both: the Reconquista provided immediate cultural, legal, and military templates that shaped the early conquest; but the Americas' genuine novelty forced Spain to develop new institutions, debates, and frameworks beyond anything Reconquista precedent could supply. The conquest was simultaneously a continuation and a rupture.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "maya-collapse-contact-timing",
+    "question": "Did the Classic Maya collapse before the Spanish arrival, or did European contact cause the final Maya collapse?",
+    "sideA": {
+      "label": "Classic Collapse Was Pre-Contact (c.800–900 CE)",
+      "text": "The Classic Maya collapse — abandonment of major southern lowland cities including Tikal, Copán, Palenque — occurred around 800–900 CE, six centuries before Columbus. Causes include warfare, environmental degradation, drought, and political fragmentation. By 1492, the Maya existed in multiple post-Classic polities in the Yucatán, Guatemala highlands, and Belize — a sophisticated civilization but not at the scale of the Classic period. The Spanish did not 'collapse' the Maya."
+    },
+    "sideB": {
+      "label": "Post-Classic Maya Were Thriving — Spanish Contact Caused Catastrophe",
+      "text": "Post-Classic Maya civilization was flourishing in 1492: the Yucatán had multiple city-states, the highland Guatemala Maya had sophisticated kingdoms, and the Petén Itza maintained independence until 1697. Spanish conquest, epidemic disease, and the destruction of Maya books (including by Bishop Diego de Landa in 1562) destroyed this living civilization. Landa himself wrote extensively about Maya culture, then burned the books he described, eliminating irreplaceable knowledge."
+    },
+    "resolution": "The Classic Maya collapse was pre-contact; post-Classic Maya civilization was intact and vibrant in 1492. The Spanish conquest then caused catastrophic depopulation (90%+ in many areas), cultural destruction, and political fragmentation of a still-functioning civilization. Both collapses are historical facts; they occurred in different eras.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spain-apology-conquest",
+    "question": "Should Spain issue a formal apology for the conquest of the Americas?",
+    "sideA": {
+      "label": "Yes — Formal Apology Required",
+      "text": "Mexican President AMLO requested a formal apology from Spain (and the Vatican) in 2019 for the conquest. He argues the conquest was a genocide, the suffering it caused is still felt in Mexico's present — in poverty, inequality, and racial hierarchy — and that a formal acknowledgment and apology is a prerequisite for genuine reconciliation. Indigenous advocates argue that without official acknowledgment, the wounds of colonialism cannot heal and colonial structures remain invisible and unquestioned."
+    },
+    "sideB": {
+      "label": "No — Historical Events Cannot Be Judged by Modern Standards",
+      "text": "Spain's government rejected AMLO's request, arguing that the conquest must be understood in its historical context and that neither Spain nor any government can be held responsible for events 500+ years ago. Many historians caution against 'presentism' — judging 16th-century actors by 21st-century moral standards — and argue that formal apologies involve post-hoc moralizing that distorts historical understanding. Others question whether Spain bears more responsibility than Mexico's current mestizo elite, who are equally descended from both sides."
+    },
+    "resolution": "Unresolved political dispute. Spain has not issued a formal apology. Pope Francis has apologized 'for the sins committed against the indigenous peoples during the conquest of America' (Bolivia, 2015). The question of historical responsibility versus present-day apology remains politically contested in both Spain and Latin America.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

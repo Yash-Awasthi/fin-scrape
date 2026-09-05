@@ -1,0 +1,43 @@
+[
+  {
+    "id": "israel-claims-aljazeera-journalist-hamas-apr9-2026",
+    "year": "Apr 9, 2026",
+    "title": "Israel Claims Killed Al Jazeera Journalist Was Active Hamas Militant",
+    "type": "military",
+    "active": true,
+    "detail": "The Israeli military claimed on April 9, 2026, that the Al Jazeera journalist killed in Gaza was an active Hamas militant, directly contradicting Al Jazeera's condemnation of the killing as a 'heinous crime' targeting a journalist. Israel's military stated it had intelligence identifying the journalist as an operative of Hamas's military wing. Al Jazeera disputed the characterization as a disinformation campaign designed to justify the targeting of press personnel and deflect accountability. The killing intensified international pressure over Israel's press freedom record in Gaza, where over 170 journalists have been killed since October 2023 — the highest toll for any single conflict on record according to the Committee to Protect Journalists.",
+    "sources": [
+      {
+        "name": "Israeli Military (IDF Spokesperson)",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPSDZOeXRCU2lGY2h0NTZLcF9lUTNOZFI5U0pNYkwxOEJBSjYydnBnRGRZcTFreHVDY3pNZUNma1lXRWszemhfSGNtTEh3OC1UTkxpcHZlYTBBT2l0ckwwNzN6Vlc4R3BrT0x3cE9yM3VDMTBoTVVkbGNmZUtoblVhS0RMSW9OUEZ3LVVhNTFILWxFRjBXMnhXZWJxR2tVdw?oc=5",
+        "pole": "middle_eastern"
+      }
+    ],
+    "eventConfidence": "disputed",
+    "media": []
+  },
+  {
+    "id": "aljazeera-wishah-funeral-apr9-2026",
+    "year": "Apr 9, 2026",
+    "title": "Funeral Held for Al Jazeera Journalist Wishah Killed in Israeli Strike",
+    "type": "humanitarian",
+    "active": true,
+    "detail": "A funeral was held on April 9, 2026, for Al Jazeera journalist Wishah, who was killed in an Israeli airstrike in Gaza. The funeral confirmed the journalist's identity and drew community mourning, following Al Jazeera's earlier condemnation of the killing as a targeted attack on press personnel. The network rejected Israeli military claims that Wishah was a Hamas militant as a disinformation campaign. The killing is part of a broader pattern: over 170 journalists have been killed in Gaza since October 2023, making it the deadliest conflict for press freedom on record according to the Committee to Protect Journalists.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/9/funeral-held-for-al-jazeeras-wishah-killed-in-israeli-strike-in-gaza?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "eventConfidence": "verified",
+    "media": []
+  }
+]

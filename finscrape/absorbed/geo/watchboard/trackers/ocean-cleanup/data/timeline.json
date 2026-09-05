@@ -1,0 +1,1247 @@
+[
+  {
+    "era": "Origins: The Concept Phase (2012–2015)",
+    "events": [
+      {
+        "id": "boyan-slat-tedx-2012",
+        "year": "2012",
+        "title": "18-Year-Old Boyan Slat Unveils Ocean Cleanup Concept at TEDx",
+        "type": "research",
+        "detail": "Dutch aerospace engineering student Boyan Slat presents 'How the Oceans Can Clean Themselves' at TEDx Delft on October 26, 2012. His concept proposes using ocean currents to passively concentrate plastic into collection systems anchored to the ocean floor, challenging the prevailing view that ocean cleanup was impossible. The talk goes viral, amassing millions of views, and galvanizes global attention around the prospect of large-scale ocean plastic removal.",
+        "sources": [
+          {
+            "name": "TEDx Talks",
+            "tier": 2,
+            "url": "https://www.youtube.com/watch?v=ROW9F-c0kIQ",
+            "pole": "western"
+          },
+          {
+            "name": "National Geographic",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Boyan_Slat",
+            "source": "Wikipedia / Boyan Slat",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Boyan_Slat_-_The_Ocean_Cleanup.jpg/330px-Boyan_Slat_-_The_Ocean_Cleanup.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ocean-cleanup-founded-2013",
+        "year": "2013",
+        "title": "The Ocean Cleanup Formally Founded in Delft, Netherlands",
+        "type": "research",
+        "detail": "Boyan Slat formally establishes The Ocean Cleanup as a non-profit technology organization on June 3, 2013, in Delft, Netherlands. The organization's mission: develop and scale technologies to rid the world's oceans of plastic. Initial funding comes from angel investors and a rapidly growing community of supporters drawn to Slat's vision. The foundation quickly attracts engineers, oceanographers, and materials scientists eager to tackle the problem.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/milestones",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com/milestones",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2021/11/TheOceanCleanup-Registered-Trademark-Meta.jpg"
+          }
+        ]
+      },
+      {
+        "id": "crowdfunding-success-2014",
+        "year": "2014",
+        "title": "Crowdfunding Campaign Raises $2.2 Million in 101 Days",
+        "type": "research",
+        "detail": "The Ocean Cleanup launches a crowdfunding campaign on June 3, 2014, raising $2.2 million from over 38,000 contributors in 160 countries within 101 days — at the time the largest crowdfunding campaign in history for a scientific effort. The outpouring of public support funds a comprehensive feasibility study and demonstrates massive global demand for ocean conservation action. Tech entrepreneur Marc Benioff subsequently donates $1.5 million.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "feasibility-study-published-2014",
+        "year": "2014",
+        "title": "100-Author Feasibility Study Validates Core Technology",
+        "type": "research",
+        "detail": "The Ocean Cleanup publishes a 528-page feasibility study co-authored by 100 scientists and engineers from 60 institutions. The study concludes that a 100 km passive cleanup system could remove 42% of the GPGP within 10 years at a projected cost of $390 million. Peer review validates the core concept while identifying structural engineering and ecological challenges requiring further open-ocean testing before full deployment.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup Feasibility Study",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/ocean",
+            "pole": "western"
+          },
+          {
+            "name": "Nature",
+            "tier": 1,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Software_testing",
+            "source": "Wikipedia / Software testing",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/TestingCup-Polish-Championship-in-Software-Testing-Katowice-2016.jpg/330px-TestingCup-Polish-Championship-in-Software-Testing-Katowice-2016.jpg"
+          }
+        ]
+      },
+      {
+        "id": "mega-expedition-gpgp-2015",
+        "year": "2015",
+        "title": "Mega Expedition Deploys 30 Vessels to Map the GPGP",
+        "type": "research",
+        "detail": "The Ocean Cleanup deploys 30 vessels and a C-130 Hercules aircraft in August 2015 — the largest oceanographic expedition ever assembled — to systematically sample the Great Pacific Garbage Patch. The expedition collects data from 652 surface trawls and aerial surveys. Results later published in Nature Scientific Reports (2018) reveal the GPGP contains approximately 79,000 metric tons of plastic across 1.6 million km² — 4–16x more than prior estimates — with ghost fishing nets comprising 46% of the mass.",
+        "sources": [
+          {
+            "name": "Nature Scientific Reports",
+            "tier": 1,
+            "url": "https://www.nature.com/articles/s41598-018-22939-w",
+            "pole": "western"
+          },
+          {
+            "name": "National Geographic",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14"
+      }
+    ]
+  },
+  {
+    "era": "Technology Development & Testing (2016–2018)",
+    "events": [
+      {
+        "id": "un-sdg14-adopted-2015",
+        "year": "2015",
+        "title": "UN Sustainable Development Goal 14: Life Below Water",
+        "type": "policy",
+        "detail": "On September 25, 2015, the UN General Assembly adopts the 2030 Agenda for Sustainable Development, including Goal 14: 'Conserve and sustainably use the oceans, seas and marine resources.' SDG 14 establishes binding targets to prevent marine pollution, protect marine ecosystems, end overfishing, and increase ocean conservation. It provides the multilateral framework underpinning the subsequent High Seas Treaty, 30x30 initiative, and Global Plastics Treaty negotiations.",
+        "sources": [
+          {
+            "name": "United Nations",
+            "tier": 1,
+            "url": "https://sdgs.un.org/goals/goal14",
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Sustainable_Development_Goal_14",
+            "source": "Wikipedia / Sustainable Development Goal 14",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Sustainable_Development_Goal_14LifeBelowWater.svg/330px-Sustainable_Development_Goal_14LifeBelowWater.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "north-sea-prototype-testing-2016",
+        "year": "2016",
+        "title": "Scale Model A Tested in North Sea Open Waters",
+        "type": "research",
+        "detail": "The Ocean Cleanup deploys a 100-meter scale model (Scale Model A) in the North Sea for critical open-water testing, gathering data on system behavior under real ocean conditions — waves, currents, storms, and biofouling. The tests reveal unexpected structural fatigue stresses from high-frequency wave action, driving important design revisions before full-scale deployment. Marine life interaction studies confirm that organisms can pass beneath the skirt, allaying ecological concerns.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "system-001-launch-2018",
+        "year": "2018",
+        "title": "System 001 Launches from San Francisco Bay",
+        "type": "cleanup",
+        "active": true,
+        "detail": "System 001 — a 600-meter U-shaped passive collection barrier with a 3-meter underwater skirt — departs San Francisco Bay on September 8, 2018, towed toward the GPGP. More than 100,000 people watch the live-streamed launch. After a two-week tow, System 001 reaches its deployment position roughly 1,400 km north of Hawaii in the heart of the GPGP. It is the world's largest ocean cleanup system and the first to attempt active plastic collection in deep ocean water.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "New York Times",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "system-001-structural-failure-2018",
+        "year": "2018",
+        "title": "System 001 Suffers Structural Failure — Design Revised",
+        "type": "research",
+        "detail": "In late November 2018, a critical 18-meter end section of System 001 fractures in the GPGP due to material fatigue caused by high-frequency wave stress — a force not fully modeled in pre-deployment testing. The system is towed back to Hilo, Hawaii for assessment. The Ocean Cleanup conducts an intensive forensic engineering review, identifying the failure mode and beginning a comprehensive redesign. The setback delays operations by six months but yields crucial engineering data.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "First Success: Ocean Deployments (2019–2021)",
+    "events": [
+      {
+        "id": "system-001b-redesigned-deployed-2019",
+        "year": "2019",
+        "title": "Redesigned System 001/B Returns to the Great Pacific Garbage Patch",
+        "type": "cleanup",
+        "detail": "After six months of intensive redesign, System 001/B — featuring a parachute sea anchor to reduce drift speed, improved cork floats, biofouling-resistant retention screen, and reinforced end-fittings — is deployed in the GPGP in late June 2019. The parachute anchor is the key innovation: by slowing the system relative to the surrounding plastic, it enables accumulation in the U-shaped barrier. Initial data from sensors confirm the system is traveling slower than the plastic, exactly as required.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "first-gpgp-plastic-haul-oct-2019",
+        "year": "2019",
+        "title": "System 001/B Collects First Ocean Plastic — Concept Proven",
+        "type": "cleanup",
+        "detail": "On October 4, 2019, The Ocean Cleanup announces System 001/B has successfully collected its first haul of ocean plastic from the GPGP — a landmark milestone confirming that passive collection works at ocean scale. The mixed catch includes ghost nets, hard plastic fragments, foam pieces, and plastic film. The plastic is transported to Hilo, Hawaii aboard support vessel Maersk Launcher, then shipped to shore for recycling into limited-edition consumer products sold as 'The Ocean Collection.'",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "National Geographic",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "interceptor-001-klang-river-2019",
+        "year": "2019",
+        "title": "River Interceptor 001 Deployed in Klang River, Malaysia",
+        "type": "cleanup",
+        "detail": "The Ocean Cleanup deploys Interceptor 001 in Malaysia's Klang River on October 26, 2019 — the world's first autonomous solar-powered river plastic collection system. The Interceptor uses a floating barrier to funnel plastic onto a conveyor belt, which deposits waste into six shuttle barges. Rivers deliver an estimated 80% of ocean-bound plastic globally; the Klang River alone transports significant quantities into the Strait of Malacca. The deployment marks the launch of The Ocean Cleanup's complementary rivers strategy.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/rivers",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com/rivers",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2022/02/Interceptor-River-Page-Meta.jpg"
+          }
+        ]
+      },
+      {
+        "id": "interceptor-002-jakarta-2019",
+        "year": "2019",
+        "title": "Interceptor 002 Deployed in Jakarta's Cengkareng Drain",
+        "type": "cleanup",
+        "detail": "In November 2019, The Ocean Cleanup deploys Interceptor 002 in the Cengkareng Drain, Jakarta, Indonesia — one of Asia's most plastic-polluted waterways. Indonesia ranks as the world's second-largest contributor of ocean plastic after China. The Interceptor immediately begins collecting large quantities of plastic waste, demonstrating the system's effectiveness in high-pollution environments. The organization announces an ambitious plan to deploy Interceptors in the 1,000 most polluting rivers globally.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "AP News",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "system-002-jenny-deployed-2021",
+        "year": "2021",
+        "title": "System 002 'Jenny' Deployed — Largest Yet",
+        "type": "cleanup",
+        "detail": "On June 26, 2021, The Ocean Cleanup deploys System 002, nicknamed 'Jenny,' to the Great Pacific Garbage Patch. Jenny is an 800-meter passive collection system incorporating all lessons from 273 days of prior sea operations, featuring reinforced structural connections, improved retention screen, and a more robust towing configuration. Within its first operational season, Jenny achieves multiple sustained extraction cycles, successfully hauling ocean plastic back to shore for processing and recycling.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Scaling Up: Rivers, Policy and Records (2021–2023)",
+    "events": [
+      {
+        "id": "eu-sup-directive-2021",
+        "year": "2021",
+        "title": "EU Single-Use Plastics Directive Bans Key Plastic Items",
+        "type": "policy",
+        "detail": "The European Union's Single-Use Plastics Directive enters full force on July 3, 2021, banning cotton bud sticks, cutlery, plates, straws, beverage stirrers, balloon sticks, food containers, expanded polystyrene cups, and beverage containers from the EU market. The directive — the most comprehensive single-use plastic legislation enacted globally — immediately affects 450 million EU consumers. It is projected to reduce marine plastic litter by 50% in the items covered within a decade.",
+        "sources": [
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "url": "https://environment.ec.europa.eu/topics/plastics/single-use-plastics_en",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://environment.ec.europa.eu/topics/plastics/single-use-plastics_en",
+            "source": "European Commission",
+            "thumbnail": "https://environment.ec.europa.eu/profiles/contrib/ewcms/modules/ewcms_seo/assets/images/ec-socialmedia-fallback.png"
+          }
+        ]
+      },
+      {
+        "id": "system-002-record-haul-2022",
+        "year": "2022",
+        "title": "System 002 Extracts Record 101-Ton Haul from GPGP",
+        "type": "cleanup",
+        "detail": "System 002 'Jenny' completes its most productive extraction in September 2022, removing 101 metric tons of plastic from the GPGP in a single operational run — the largest documented ocean plastic haul at that date. The cumulative catch from System 002 surpasses 200 metric tons. Scientists note this remains a fraction of the estimated 79,000 metric tons in the GPGP, but the demonstrated collection rate validates the scaling pathway. Extracted plastic is recycled into branded consumer products under the circular economy model.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "un-plastics-treaty-mandate-2022",
+        "year": "2022",
+        "title": "UN Environment Assembly Mandates Global Plastics Treaty Negotiations",
+        "type": "policy",
+        "detail": "The UN Environment Assembly (UNEA-5.2) unanimously passes Resolution 5/14 in March 2022, establishing an Intergovernmental Negotiating Committee (INC) to develop a legally binding global instrument on plastic pollution. The resolution, supported by 175 nations, mandates addressing the full lifecycle of plastics — production, design, waste management, and ocean recovery. It is widely regarded as the most significant environmental treaty mandate since the Paris Agreement on climate change.",
+        "sources": [
+          {
+            "name": "UNEP",
+            "tier": 1,
+            "url": "https://www.unep.org/news-and-stories/story/un-nations-agree-historic-deal-end-plastic-pollution",
+            "pole": "international"
+          },
+          {
+            "name": "Guardian",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14"
+      },
+      {
+        "id": "kunming-montreal-30x30-2022",
+        "year": "2022",
+        "title": "Kunming-Montreal Framework Sets 30% Ocean Protection Target by 2030",
+        "type": "policy",
+        "detail": "On December 19, 2022, the UN Convention on Biological Diversity adopts the Kunming-Montreal Global Biodiversity Framework at COP15 in Montreal. The landmark agreement commits 196 nations to protect 30% of land and oceans by 2030 — the '30x30' pledge. For oceans, this requires tripling Marine Protected Areas from ~8% to 30% of ocean surface within eight years, demanding designation of an additional 25–50 million km² of protected marine habitat — the largest conservation commitment in history.",
+        "sources": [
+          {
+            "name": "UN Convention on Biological Diversity",
+            "tier": 1,
+            "url": "https://www.cbd.int/gbf",
+            "pole": "international"
+          },
+          {
+            "name": "Nature",
+            "tier": 1,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2022_United_Nations_Biodiversity_Conference",
+            "source": "Wikipedia / 2022 United Nations Biodiversity Conference",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/22dec07-COP15-Sec-Gen-Media-3206_%2852549456365%29.jpg/330px-22dec07-COP15-Sec-Gen-Media-3206_%2852549456365%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "bbnj-high-seas-treaty-2023",
+        "year": "2023",
+        "title": "UN High Seas Treaty (BBNJ Agreement) Adopted After 20 Years of Talks",
+        "type": "policy",
+        "detail": "After two decades of negotiations, the UN adopts the Agreement on Marine Biological Diversity of Areas Beyond National Jurisdiction (BBNJ) on March 4, 2023, in New York. Hailed as the 'Paris Agreement for the oceans,' it is the first legally binding international instrument governing the 64% of the world's oceans beyond national jurisdiction. The treaty establishes: the right to create MPAs in international waters, mandatory environmental impact assessments for high-seas activities, and equitable benefit-sharing of marine genetic resources.",
+        "sources": [
+          {
+            "name": "United Nations",
+            "tier": 1,
+            "url": "https://www.un.org/bbnj",
+            "pole": "international"
+          },
+          {
+            "name": "Nature",
+            "tier": 1,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/High_Seas_Treaty",
+            "source": "Wikipedia / High Seas Treaty",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/High_Seas_Treaty_parties.svg/330px-High_Seas_Treaty_parties.svg.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Crisis and Milestones (2023–2024)",
+    "events": [
+      {
+        "id": "ocean-cleanup-1m-kg-gpgp-2023",
+        "year": "2023",
+        "title": "The Ocean Cleanup Surpasses 1 Million kg Extracted from GPGP",
+        "type": "cleanup",
+        "detail": "The Ocean Cleanup announces it has removed over 1 million kilograms (1,000 metric tons) of plastic from the Great Pacific Garbage Patch from its oceanic systems alone, with combined ocean plus river totals approaching 3 million kg. The milestone demonstrates proof of concept at meaningful scale. Scientists note the GPGP still holds ~79,000 metric tons, requiring sustained decades-long operations to meaningfully reduce concentrations, underscoring the need for parallel source-reduction policies.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "system-03-deployed-2023",
+        "year": "2023",
+        "title": "System 03 Deployed — 2.2 km Span, Largest Ocean Cleanup System Yet",
+        "type": "cleanup",
+        "detail": "The Ocean Cleanup deploys System 03 to the Great Pacific Garbage Patch in August 2023 — its largest and most capable ocean cleanup system to date, stretching over 2.2 kilometers. System 03 incorporates all engineering lessons from prior deployments and is designed for multi-year continuous operation with minimal maintenance cycles. Its projected collection rate is significantly higher than System 002, expected to accelerate progress toward meaningful GPGP reduction.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "AP News",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ocean-cleanup-10m-lbs-milestone-2024",
+        "year": "2024",
+        "title": "The Ocean Cleanup Surpasses 10 Million Pounds Total Removed",
+        "type": "cleanup",
+        "detail": "In January 2024, The Ocean Cleanup announces it has removed over 10 million pounds (approximately 4.5 million kg) of plastic from oceans and rivers combined — the organization's most publicized milestone to date. The total spans collections from the GPGP by oceanic systems and from 20+ rivers worldwide via Interceptors. Extracted plastic has been recycled into branded consumer goods including sunglasses, clothing accessories, and limited-edition products marketed under 'The Ocean Collection.'",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com",
+            "pole": "western"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "fourth-global-coral-bleaching-event-2024",
+        "year": "2024",
+        "title": "NOAA Declares 4th Global Coral Bleaching Event — Most Severe on Record",
+        "type": "discovery",
+        "detail": "On April 15, 2024, NOAA's Coral Reef Watch and the International Coral Reef Initiative declare the world's 4th global coral bleaching event — the most severe ever documented. Elevated ocean temperatures driven by the combined effects of anthropogenic climate change and the 2023–24 El Niño event expose more than 54% of the world's reef area to bleaching-level thermal stress. The Great Barrier Reef suffers its worst bleaching on record: 73% of surveyed reef areas show active bleaching, with widespread mortality in the central and northern sections.",
+        "sources": [
+          {
+            "name": "NOAA Coral Reef Watch",
+            "tier": 1,
+            "url": "https://coralreefwatch.noaa.gov",
+            "pole": "western"
+          },
+          {
+            "name": "Guardian",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/El_Ni%C3%B1o%E2%80%93Southern_Oscillation",
+            "source": "Wikipedia / El Ni%C3%B1o%E2%80%93Southern Oscillation",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/NOAA_Nino.jpg/330px-NOAA_Nino.jpg"
+          }
+        ]
+      },
+      {
+        "id": "global-plastics-treaty-stalls-inc5-2024",
+        "year": "2024",
+        "title": "Global Plastics Treaty Talks Stall at INC-5 in Busan",
+        "type": "policy",
+        "detail": "The fifth session of the Intergovernmental Negotiating Committee (INC-5) on a Global Plastics Treaty concludes in Busan, South Korea, in December 2024 without reaching a final agreement. Oil-producing nations (including Saudi Arabia, Russia, and Iran) and the plastics industry resist binding caps on plastic production, while the High Ambition Coalition of 60+ nations led by the EU, UK, and small island states pushes for a comprehensive treaty covering the full plastic lifecycle from production to disposal. Negotiations are extended into 2025.",
+        "sources": [
+          {
+            "name": "UNEP",
+            "tier": 1,
+            "url": "https://www.unep.org/inc-plastic-pollution",
+            "pole": "international"
+          },
+          {
+            "name": "Guardian",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.unep.org/inc-plastic-pollution",
+            "source": "UNEP",
+            "thumbnail": "https://cdn.unenvironment.org/s3fs-public/styles/topics_content_promo/public/2023-11/naja.jpeg?itok=ohEIl9YQ"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Path Forward: Scaling Conservation (2025–2026)",
+    "events": [
+      {
+        "id": "narw-ropeless-gear-regulations-2025",
+        "year": "2025",
+        "title": "NOAA Advances Ropeless Fishing Gear Rules to Protect Right Whales",
+        "type": "conservation",
+        "detail": "NOAA Fisheries advances regulatory requirements for ropeless (on-demand) fishing gear in New England lobster and crab fisheries — the primary measure to reduce North Atlantic Right Whale entanglement mortality. With fewer than 356 individuals remaining and calving rates declining, NOAA scientists warn that any additional mortality risks population collapse within decades. Ropeless gear uses acoustic releases to deploy lines only when fishermen are actively retrieving, eliminating the vertical ropes whales swim into.",
+        "sources": [
+          {
+            "name": "NOAA Fisheries",
+            "tier": 1,
+            "url": "https://fisheries.noaa.gov/species/north-atlantic-right-whale",
+            "pole": "western"
+          },
+          {
+            "name": "New York Times",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://fisheries.noaa.gov/species/north-atlantic-right-whale",
+            "source": "NOAA Fisheries",
+            "thumbnail": "https://www.fisheries.noaa.gov/s3//2021-01/north-atlantic-right-whale-1-.jpg?VersionId=null"
+          }
+        ]
+      },
+      {
+        "id": "bbnj-ratification-progress-2025",
+        "year": "2025",
+        "title": "High Seas Treaty Ratification Advances Toward Entry Into Force",
+        "type": "policy",
+        "detail": "The BBNJ Agreement continues accumulating ratifications through 2025, approaching the 60-country threshold required for entry into force. Pacific small island states, EU member states, and several major coastal nations submit instruments of ratification. Conservation organizations emphasize that entry into force is essential to begin establishing the first-ever Marine Protected Areas in international waters — a prerequisite for meeting the 30x30 global biodiversity target for the high seas.",
+        "sources": [
+          {
+            "name": "UN DOALOS",
+            "tier": 1,
+            "url": "https://www.un.org/bbnj",
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Comprehensive_Nuclear-Test-Ban_Treaty",
+            "source": "Wikipedia / Comprehensive Nuclear-Test-Ban Treaty",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/CTBT_Participation.svg/330px-CTBT_Participation.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "coral-restoration-million-fragments-2025",
+        "year": "2025",
+        "title": "Coral Restoration Programs Surpass 1 Million Transplanted Fragments",
+        "type": "conservation",
+        "detail": "Coral nursery and reef restoration programs across the Pacific, Caribbean, and Indian Ocean report a combined total exceeding 1 million coral fragments transplanted to degraded reefs by 2025. NOAA's Mission: Iconic Reefs in the Florida Keys, Australia's Reef Restoration and Adaptation Program, and Coral Triangle initiatives represent the most ambitious assisted-evolution efforts in history. Heat-tolerant coral genotypes developed via selective breeding and CRISPR-assisted techniques are prioritized for deployment to maximise survival prospects under continued ocean warming.",
+        "sources": [
+          {
+            "name": "NOAA",
+            "tier": 1,
+            "url": "https://www.noaa.gov/mission-iconic-reefs",
+            "pole": "western"
+          },
+          {
+            "name": "Nature",
+            "tier": 1,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14"
+      },
+      {
+        "id": "30x30-mpa-momentum-2026",
+        "year": "2026",
+        "title": "30x30 Marine Protection Push Accelerates Midway to Deadline",
+        "type": "policy",
+        "detail": "With four years remaining until the 2030 deadline, the 30x30 initiative has produced meaningful but insufficient progress: global ocean protection stands at approximately 8.2%, still far short of the 30% target. The BBNJ Agreement's entry into force opens a new pathway for international waters MPAs. Landmark designations in the South Pacific, Arctic, and Mediterranean advance the coverage figure, but NGOs warn that many existing MPAs lack enforcement capacity, functioning as 'paper parks' with little practical protection.",
+        "sources": [
+          {
+            "name": "UNEP-WCMC Protected Planet",
+            "tier": 1,
+            "url": "https://www.protectedplanet.net",
+            "pole": "international"
+          },
+          {
+            "name": "Nature",
+            "tier": 1,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-14",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.protectedplanet.net",
+            "source": "UNEP-WCMC Protected Planet",
+            "thumbnail": "https://www.protectedplanet.net/assets/social-cce192f2e7a0b5be655ef28149aef43bd28e378d6589c8b599f9e45d64d7a6e4.png"
+          }
+        ]
+      },
+      {
+        "id": "bbnj-enters-into-force-2026",
+        "year": "2026",
+        "title": "High Seas Treaty Enters Into Force — First-Ever Law for 64% of the Ocean",
+        "type": "policy",
+        "active": true,
+        "detail": "The BBNJ Agreement officially entered into force on January 17, 2026, becoming binding international law after achieving the required 60 ratifications in September 2025. With 81 parties and 145 signatories, it is now the governing legal instrument for the 64% of the world's oceans beyond national jurisdiction. The treaty creates for the first time a legal mechanism to designate Marine Protected Areas in the high seas, mandates environmental impact assessments for commercial activities, and establishes equitable benefit-sharing of marine genetic resources. The first Conference of Parties (CoP1) is scheduled for January 11–22, 2027.",
+        "sources": [
+          {
+            "name": "United Nations",
+            "tier": 1,
+            "url": "https://news.un.org/en/story/2025/09/1165901",
+            "pole": "international"
+          },
+          {
+            "name": "IISD",
+            "tier": 3,
+            "url": "https://sdg.iisd.org/news/with-60-ratifications-bbnj-agreement-to-enter-into-force-in-january-2026/",
+            "pole": "international"
+          },
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "url": "https://oceans-and-fisheries.ec.europa.eu/news/high-seas-treaty-enters-force-milestone-ocean-conservation-2026-01-16_en",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-21",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://news.un.org/en/story/2025/09/1165901",
+            "source": "United Nations",
+            "thumbnail": "https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Collections/Embargoed/09-06-2025-Ocean-Agency-La-Paz.jpg/image770x420cropped.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ocean-cleanup-50m-kg-milestone-march-2026",
+        "year": "2026",
+        "title": "The Ocean Cleanup Crosses 50 Million kg — 110 Million Pounds of Plastic Removed",
+        "type": "cleanup",
+        "active": true,
+        "detail": "On March 13, 2026, The Ocean Cleanup surpassed 50 million kilograms (110 million pounds) of plastic removed from oceans and rivers globally since 2013. The milestone — achieved by the combination of ocean-going System 03 in the Great Pacific Garbage Patch and more than 20 river Interceptors worldwide — represents a tenfold increase over totals reported in early 2024. The year 2025 was the organization's most productive on record at 25 million kg extracted. Boyan Slat noted that the organization will require approximately $1 billion more in funding to achieve its long-term goal of removing virtually all adrift ocean plastics by 2040. The May 2026 deployment of the first Interceptor in the Philippines (Meycauayan River) extended the network to a new country.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/milestones/",
+            "pole": "western"
+          },
+          {
+            "name": "National Today",
+            "tier": 2,
+            "url": "https://nationaltoday.com/us/ca/los-angeles/news/2026/03/13/the-ocean-cleanup-removes-over-50-million-kg-of-plastic-from-oceans/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com/milestones/",
+            "caption": "The Ocean Cleanup reaches 50 million kg plastic removed milestone — March 13, 2026",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-06"
+      },
+      {
+        "id": "narw-best-calving-season-15-years-2026",
+        "year": "2026",
+        "title": "23 Right Whale Calves Confirmed in 2025–2026 Season — Best Count in 15 Years",
+        "type": "conservation",
+        "active": true,
+        "detail": "NOAA Fisheries confirmed 23 North Atlantic Right Whale (NARW) mother-calf pairs in the 2025–2026 calving season (November 2025 – April 2026), the highest count since 2009 and the first time in 15 years that more than 20 calves were recorded. The uptick was welcomed by scientists but immediately overshadowed by a May 4, 2026 announcement that the Trump administration backed legislation (H.R. 8509) to extend a moratorium on new federal right whale fishing regulations until 2035 — seven years beyond the existing 2028 moratorium. Conservation groups argued the proposed delay would preserve rope entanglement conditions responsible for the species' long-term population decline, with only ~380 individuals and ~70 reproductively active females remaining. The calving improvement, while meaningful, cannot compensate for regulatory rollbacks if entanglement mortality resumes at prior rates.",
+        "sources": [
+          {
+            "name": "NOAA Fisheries",
+            "tier": 1,
+            "url": "https://www.fisheries.noaa.gov/feature-story/numbers-2026-north-atlantic-right-whale-calving-season",
+            "pole": "western"
+          },
+          {
+            "name": "Cape and Islands NPR",
+            "tier": 2,
+            "url": "https://www.capeandislands.org/local-news/2026-04-30/north-atlantic-right-whale-calving-season-hopeful",
+            "pole": "western"
+          },
+          {
+            "name": "WBUR",
+            "tier": 2,
+            "url": "https://www.wbur.org/news/2026/05/05/maine-right-whale-protection-delay-trump-golden",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.fisheries.noaa.gov/feature-story/numbers-2026-north-atlantic-right-whale-calving-season",
+            "caption": "NOAA confirms 23 right whale calves in 2025-2026 season — best in 15 years, but Trump whale protection delay threatens recovery",
+            "source": "NOAA Fisheries",
+            "thumbnail": "https://www.fisheries.noaa.gov/s3//2021-01/north-atlantic-right-whale-1-.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-06"
+      },
+      {
+        "id": "ocean-cleanup-45m-kg-milestone-2026",
+        "year": "2026",
+        "title": "The Ocean Cleanup Surpasses 45 Million kg — Most Productive Year on Record in 2025",
+        "type": "cleanup",
+        "active": false,
+        "detail": "By early 2026, The Ocean Cleanup has removed a total of 45 million kilograms (99 million pounds) of plastic from oceans and rivers worldwide — a tenfold increase from the 4.5 million kg milestone reported in January 2024. The year 2025 was the organization's most productive on record, with 25 million kg extracted in a single year as System 03 and the expanded Interceptor network reached operational maturity. The circular economy model — selling products made from extracted plastic — continues to fund operations while raising public awareness.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/milestones/",
+            "pole": "western"
+          },
+          {
+            "name": "Earth.com",
+            "tier": 2,
+            "url": "https://www.earth.com/news/record-ocean-cleanup-removes-45-million-kilograms-of-plastic/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.earth.com/news/record-ocean-cleanup-removes-45-million-kilograms-of-plastic/",
+            "caption": "The Ocean Cleanup surpasses 45 million kg of plastic removed from oceans and rivers",
+            "source": "Earth.com",
+            "thumbnail": "https://cff2.earth.com/uploads/2026/03/09085316/ocean-cleanup-45-million-kg-plastic-removed.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-21"
+      },
+      {
+        "id": "global-ocean-protection-10pct-2026",
+        "year": "2026",
+        "title": "Global Ocean Protection Crosses 10% Threshold — Four Years to Triple It",
+        "type": "conservation",
+        "active": true,
+        "detail": "In April 2026, global ocean protection crossed the symbolic 10% threshold, with 10.01% of marine area now officially designated as protected or conserved. This represents significant progress from the 8.2% recorded in 2024, driven by new MPA designations in the Pacific, Atlantic, and Indian Oceans — including Ghana's first MPA. However, scientists caution that only 1.3% of ocean area has a formally assessed management plan, and much of the remaining protection exists only on paper. With the Kunming-Montreal 30x30 deadline four years away, coverage must more than triple to reach 30%.",
+        "sources": [
+          {
+            "name": "Oceanographic Magazine",
+            "tier": 2,
+            "url": "https://oceanographicmagazine.com/news/10-of-the-ocean-now-protected-we-have-four-years-to-triple-it/",
+            "pole": "western"
+          },
+          {
+            "name": "UNEP-WCMC Protected Planet",
+            "tier": 1,
+            "url": "https://www.protectedplanet.net",
+            "pole": "international"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://oceanographicmagazine.com/news/10-of-the-ocean-now-protected-we-have-four-years-to-triple-it/",
+            "caption": "Global ocean protection reaches 10.01% — a milestone on the path to the 30x30 goal",
+            "source": "Oceanographic Magazine",
+            "thumbnail": "https://cdn.oceanographicmagazine.com/wp-content/uploads/2026/04/02114155/Vincent-Kneefel-ocean-scaled.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-21"
+      },
+      {
+        "id": "iucn-narw-critically-endangered-2026",
+        "year": "2026",
+        "title": "IUCN Upgrades North Atlantic Right Whale to 'Critically Endangered'",
+        "type": "conservation",
+        "active": true,
+        "detail": "The IUCN formally upgraded the North Atlantic Right Whale to 'Critically Endangered' in April 2026 — the highest threat category before extinction in the wild. Approximately 400 individuals remain with only ~100 reproductive-age females. The classification came as a U.S. federal court ruled the American lobster fishery in violation of the Endangered Species Act (April 9, 2026) due to entanglement risk to right whales. Canada simultaneously announced its tenth consecutive year of Gulf of St. Lawrence vessel speed restrictions. Scientists warn that ropeless gear adoption must accelerate dramatically or functional extinction within decades becomes plausible.",
+        "sources": [
+          {
+            "name": "SeafoodSource",
+            "tier": 2,
+            "url": "https://www.seafoodsource.com/news/environment-sustainability/north-atlantic-right-whale-gains-official-critically-endangered-classification-by-iucn",
+            "pole": "western"
+          },
+          {
+            "name": "NOAA Fisheries",
+            "tier": 1,
+            "url": "https://www.fisheries.noaa.gov/species/north-atlantic-right-whale",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-21",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.fisheries.noaa.gov/species/north-atlantic-right-whale",
+            "source": "NOAA Fisheries",
+            "thumbnail": "https://www.fisheries.noaa.gov/s3//2021-01/north-atlantic-right-whale-1-.jpg?VersionId=null"
+          }
+        ]
+      },
+      {
+        "id": "ocean-cleanup-la-river-30cities-la28-2026",
+        "year": "2026",
+        "title": "The Ocean Cleanup Expands to Los Angeles Rivers Ahead of LA28 Olympics — 30 Cities Program",
+        "type": "cleanup",
+        "active": true,
+        "detail": "In May 2026, The Ocean Cleanup and partner Kia announced the expansion of Interceptor technology to the Los Angeles River and San Gabriel River, building on Interceptor 007 already operational in Ballona Creek. The Los Angeles urban river network emits 380–570 tonnes of plastic annually into the Pacific Ocean. The project is framed as part of the 30 Cities Program — The Ocean Cleanup's global initiative targeting one-third of riverine ocean-bound plastic by 2030 by deploying in the 30 most plastic-polluting urban waterways worldwide. The LA expansion is timed ahead of the 2028 Olympic Games, making Los Angeles a flagship site for urban river plastic interception and providing global visibility for the technology in advance of the games.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/press/press-releases/the-ocean-cleanup-expands-la-to-stop-tons-of-plastic-from-pacific/",
+            "pole": "western"
+          },
+          {
+            "name": "Hyundai Motor Group",
+            "tier": 2,
+            "url": "https://www.hyundaimotorgroup.com/en/news/kias-global-partner-the-ocean-cleanup--expands-plastic-interception-project-ahead-of-la28",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-15",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com/press/press-releases/the-ocean-cleanup-expands-la-to-stop-tons-of-plastic-from-pacific/",
+            "caption": "Ocean Cleanup expands to LA and San Gabriel Rivers ahead of 2028 Olympics",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "copenhagen-coral-cilia-oxygen-study-2026",
+        "year": "2026",
+        "title": "Copenhagen Study Identifies Hidden Coral Kill Mechanism: Warming Disrupts Oxygen Supply Before Bleaching",
+        "type": "discovery",
+        "active": true,
+        "detail": "Published in Science Advances on May 21, 2026, University of Copenhagen researchers identified a previously unknown thermal kill mechanism in corals: rising ocean temperatures damage the microscopic cilia on coral surfaces that generate micro-scale water currents needed to absorb dissolved oxygen. At approximately 37°C, ciliary motion collapses and corals can die from oxygen deprivation without any visible bleaching symptoms. The discovery upends standard coral monitoring protocols, which rely heavily on visual bleaching surveys, and suggests the true scale of thermal damage to coral reefs may be significantly underestimated. Changes in ciliary motion could provide an earlier warning signal of thermal stress than the discolouration currently used to trigger conservation responses. The study, conducted with partners in Europe, Australia, and Saudi Arabia, adds urgency to global emissions reduction targets as it implies corals have a lower effective thermal tolerance threshold than previously assessed.",
+        "sources": [
+          {
+            "name": "University of Copenhagen",
+            "tier": 1,
+            "url": "https://news.ku.dk/all_news/2026/05/warming-oceans-can-disrupt-coral-oxygen-supply-and-trigger-coral-death",
+            "pole": "western"
+          },
+          {
+            "name": "Science Advances (AAAS)",
+            "tier": 1,
+            "url": "https://www.science.org/journal/sciadv",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-21",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://news.ku.dk/all_news/2026/05/warming-oceans-can-disrupt-coral-oxygen-supply-and-trigger-coral-death",
+            "caption": "Copenhagen researchers find corals can die from thermal oxygen deprivation before any bleaching is visible",
+            "source": "University of Copenhagen",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Coral_reef_at_palmyra.jpg/320px-Coral_reef_at_palmyra.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ocean-cleanup-mumbai-interceptors-2026",
+        "year": "2026",
+        "title": "The Ocean Cleanup Enters India — Interceptors Deployed in Mumbai Targeting 5 Million kg Annual Plastic Leakage",
+        "type": "cleanup",
+        "active": true,
+        "detail": "In May 2026, The Ocean Cleanup deployed its Interceptor plastic-capture barriers in two of Mumbai's most plastic-loaded waterways — Trombay Creek and Malad Creek — marking the organisation's first operations in India. The deployment was formalised through a Memorandum of Understanding with the Brihanmumbai Municipal Corporation (BMC) and the Maharashtra Pollution Control Board (MPCB). On-ground waste processing is led by social enterprise Plastic Fischer, which operates in seven Indian cities, with community engagement supported by United Way Mumbai. The two pilot systems are projected to intercept 61–92 tonnes of plastic annually once fully operational during the monsoon season, when river discharge peaks. Mumbai's waterways collectively discharge an estimated 5 million kilograms of plastic into the Arabian Sea each year, threatening 220 km of coastline, 152 km² of mangroves, 107 protected species, and the livelihoods of approximately 1.9 million people dependent on coastal ecosystems. The Mumbai deployment is part of The Ocean Cleanup's 30 Cities Program — targeting deployment in the 30 most polluting urban river systems globally by 2030 as part of its strategy to prevent one-third of all riverine ocean-bound plastic.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/press/press-releases/the-ocean-cleanup-deploys-mumbai-interceptors/",
+            "pole": "western"
+          },
+          {
+            "name": "Tribune India",
+            "tier": 2,
+            "url": "https://www.tribuneindia.com/news/arabiansea/barriers-to-be-installed-in-mumbai-to-stop-flow-of-plastic-waste-into-arabian-sea-indian-ocean",
+            "pole": "eastern"
+          }
+        ],
+        "lastUpdated": "2026-05-26",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theoceancleanup.com/press/press-releases/the-ocean-cleanup-deploys-mumbai-interceptors/",
+            "caption": "The Ocean Cleanup deploys Interceptors in Mumbai's Trombay and Malad waterways — part of the 30 Cities Program",
+            "source": "The Ocean Cleanup",
+            "thumbnail": "https://assets.theoceancleanup.com/app/uploads/2024/04/The-Ocean-Cleanup-STORY_presentation-202304-scaled.jpg"
+          }
+        ]
+      },
+      {
+        "id": "noaa-gray-whale-abundance-rebound-2026",
+        "year": "2026",
+        "title": "NOAA Survey Finds Gray Whale Population Rebounded to ~17,750 — Complicates 'Catastrophic Mortality' Narrative",
+        "type": "research",
+        "active": true,
+        "detail": "NOAA Fisheries' Southwest Fisheries Science Center published a new Eastern North Pacific gray whale abundance estimate on July 15, 2026 (NOAA Technical Memorandum NMFS-SWFSC-737), based on visual, infrared-camera, and drone surveys during the 2025/2026 southbound migration past Granite Canyon, California. The survey put the population at approximately 17,750 whales (95% CI: 15,930–20,530) — a rebound from the 2024/2025 estimate of roughly 11,700–14,200 and back within the range observed during the 2019–2023 Unusual Mortality Event. The finding complicates the 'catastrophic mortality event' framing that followed 145 gray whale strandings reported earlier in 2026, though NOAA cautioned calf production remains near record lows and flagged migration-timing or methodology questions requiring further study.",
+        "sources": [
+          {
+            "name": "NOAA Fisheries",
+            "tier": 1,
+            "url": "https://www.fisheries.noaa.gov/feature-story/west-coast-gray-whale-estimate-shows-increase-new-count-determines",
+            "pole": "western"
+          },
+          {
+            "name": "NOAA Technical Memorandum NMFS-SWFSC-737",
+            "tier": 1,
+            "url": "https://www.fisheries.noaa.gov/s3/2026-07/lang-2026-abundance-gray-whales.pdf",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-15",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.fisheries.noaa.gov/feature-story/west-coast-gray-whale-estimate-shows-increase-new-count-determines",
+            "caption": "Drone photo of gray whales migrating past the California coast, used in NOAA's 2025/2026 abundance survey",
+            "source": "NOAA Fisheries",
+            "thumbnail": "https://www.fisheries.noaa.gov/s3//styles/original/s3/2026-07/gray-whales-migrating.jpg?itok=8viYGY4U"
+          }
+        ]
+      },
+      {
+        "id": "isa-council-extends-nori-exploration-contract-2026",
+        "year": "2026",
+        "title": "ISA Council Extends Deep-Sea Mining Exploration Contract Five Years, Again Fails to Finalize Mining Code",
+        "type": "policy",
+        "active": true,
+        "detail": "The International Seabed Authority's Council met in Kingston, Jamaica from July 13–24, 2026 and again failed to finalize the commercial mining code needed to regulate seabed extraction in international waters, pushing the next substantive session to March 2027. Separately, the Council voted to extend by five years the Pacific polymetallic-nodule exploration contract held by NORI, a subsidiary of The Metals Company, in the Clarion-Clipperton Zone. Greenpeace International observer Louisa Casson called the extension a 'dangerous precedent for both the deep sea and the rule of law.' The decision comes as 45 countries have now called for a moratorium or precautionary pause on commercial deep-sea mining.",
+        "sources": [
+          {
+            "name": "Mongabay",
+            "tier": 3,
+            "url": "https://news.mongabay.com/2026/07/un-regulator-delays-deep-sea-mining-rules-but-extends-criticized-exploration-contract/",
+            "pole": "international"
+          },
+          {
+            "name": "Greenpeace International",
+            "tier": 3,
+            "url": "https://www.greenpeace.org/international/publication/84682/power-dynamics-deep-stakes-isa-deep-sea-mining-2026/",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-07-24",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://news.mongabay.com/2026/07/un-regulator-delays-deep-sea-mining-rules-but-extends-criticized-exploration-contract/",
+            "caption": "A deep-sea coral community in the Clarion-Clipperton Zone, the target of the extended NORI exploration contract",
+            "source": "Mongabay / NOAA Ocean Exploration",
+            "thumbnail": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2026/07/29184507/EX2503_coral-community-1.jpg"
+          }
+        ]
+      },
+      {
+        "id": "aims-great-barrier-reef-coral-recovery-2026",
+        "year": "2026",
+        "title": "AIMS Annual Survey Finds Great Barrier Reef Coral Cover Recovering in Northern and Central Regions",
+        "type": "discovery",
+        "active": true,
+        "detail": "The Australian Institute of Marine Science published its Annual Summary Report of Coral Reef Condition 2025/26 on August 10, 2026, based on manta-tow surveys of 121 reefs. Hard coral cover rose to 35.1% in the Northern region (up from 30.0% in 2025) and 31.6% in the Central region (up from 28.6%), while the Southern region slipped slightly to 26.4%. AIMS attributed the reprieve largely to a late-summer 2025/26 monsoon that cooled sea surface temperatures and limited bleaching severity after the reef's 2024 mass bleaching event, though temperatures remained 0.7–1.2°C above average and a regional bleaching event was still declared in the Northern Management Region.",
+        "sources": [
+          {
+            "name": "Australian Institute of Marine Science (AIMS)",
+            "tier": 1,
+            "url": "https://www.aims.gov.au/monitoring-great-barrier-reef/gbr-condition-summary-2025-26",
+            "pole": "western"
+          },
+          {
+            "name": "Phys.org",
+            "tier": 2,
+            "url": "https://phys.org/news/2026-08-monsoon-cooling-great-barrier-reef.html",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-10",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://phys.org/news/2026-08-monsoon-cooling-great-barrier-reef.html",
+            "caption": "An AIMS scientist conducts a manta tow survey of the Great Barrier Reef",
+            "source": "Phys.org / AIMS",
+            "thumbnail": "https://scx1.b-cdn.net/csz/news/800a/2026/relief-for-recovering.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ozama-interceptor-004-replacement-announced-2026",
+        "year": "2026",
+        "title": "The Ocean Cleanup and Dominican Republic Announce 400-Meter Replacement for Ozama River Interceptor",
+        "type": "cleanup",
+        "active": true,
+        "detail": "The Ocean Cleanup and the Government of the Dominican Republic jointly announced on August 16, 2026 that Interceptor 004 in Santo Domingo's Río Ozama — the Caribbean's first Interceptor, deployed in 2020 — will be replaced by a new 400-meter barrier, the organization's largest installation to date. The original unit intercepted more than 300 tonnes of waste, but seasonal blooms of invasive water hyacinth repeatedly overwhelmed it. The redesigned barrier will span the river in two overlapping sections while keeping it open to marine traffic, with deployment planned for early 2027 as the opening move of The Ocean Cleanup's 30 Cities Program, which targets the 30 most polluting urban river systems worldwide.",
+        "sources": [
+          {
+            "name": "The Ocean Cleanup",
+            "tier": 1,
+            "url": "https://theoceancleanup.com/updates/staying-with-the-flow-changes-to-interceptor-solutions/",
+            "pole": "western"
+          },
+          {
+            "name": "Seawanderer",
+            "tier": 3,
+            "url": "https://seawanderer.org/the-ocean-cleanup-dominican-republic-announce-replacement-of-ozama-river-barrier/",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-08-16",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://seawanderer.org/the-ocean-cleanup-dominican-republic-announce-replacement-of-ozama-river-barrier/",
+            "caption": "The Ocean Cleanup and the Dominican Republic announce a 400-meter replacement Interceptor for the Río Ozama",
+            "source": "Seawanderer",
+            "thumbnail": "https://seawanderer.org/wp-content/uploads/2026/08/OceanCleanup-seawanderer-696x392.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]

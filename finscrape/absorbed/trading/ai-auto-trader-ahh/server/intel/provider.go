@@ -1,0 +1,681 @@
+package intel
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"strings"
+	"sync"
+	"time"
+)
+
+// ProviderConfig configures the intel provider
+type ProviderConfig struct {
+	// Cache durations
+	FearGreedCacheDuration   time.Duration // Default: 30 min (updates daily anyway)
+	NewsCacheDuration        time.Duration // Default: 15 min
+	CoinDataCacheDuration    time.Duration // Default: 15 min
+	GlobalDataCacheDuration  time.Duration // Default: 15 min
+	LunarCrushCacheDuration  time.Duration // Default: 15 min
+	TradingViewCacheDuration time.Duration // Default: 5 min (more real-time)
+
+	// Limits
+	MaxNewsItems int // Default: 10
+
+	// API Keys
+	LunarCrushAPIKey string // Optional: LunarCrush API key for social sentiment
+
+	// TradingView settings
+	TradingViewInterval string // "1h", "4h", "1d" (default)
+
+	// Feature toggles
+	EnableFearGreed   bool
+	EnableNews        bool
+	EnableCoinData    bool
+	EnableGlobalData  bool
+	EnableLunarCrush  bool // Requires LunarCrushAPIKey
+	EnableTradingView bool // TradingView technical analysis
+}
+
+// DefaultConfig returns default provider configuration
+func DefaultConfig() ProviderConfig {
+	return ProviderConfig{
+		FearGreedCacheDuration:   30 * time.Minute,
+		NewsCacheDuration:        15 * time.Minute,
+		CoinDataCacheDuration:    60 * time.Minute, // CoinGecko free tier rate limit - cache longer
+		GlobalDataCacheDuration:  60 * time.Minute, // CoinGecko free tier rate limit - cache longer
+		LunarCrushCacheDuration:  15 * time.Minute,
+		TradingViewCacheDuration: 5 * time.Minute, // More real-time for TA
+		MaxNewsItems:             10,
+		TradingViewInterval:      "1h", // Default to 1 hour
+		EnableFearGreed:          true,
+		EnableNews:               true,
+		EnableCoinData:           true,
+		EnableGlobalData:         true,
+		EnableLunarCrush:         false, // Disabled by default, needs API key
+		EnableTradingView:        true,  // Enabled by default (free, no API key)
+	}
+}
+
+// coinCacheEntry holds cached coin data with its own timestamp
+type coinCacheEntry struct {
+	data      *CoinInfo
+	fetchedAt time.Time
+}
+
+// newsCacheEntry holds cached news for a symbol with its own timestamp
+type newsCacheEntry struct {
+	items     []NewsItem
+	fetchedAt time.Time
+}
+
+// lunarCrushCacheEntry holds cached LunarCrush data with timestamp
+type lunarCrushCacheEntry struct {
+	data      map[string]*LunarCrushData
+	fetchedAt time.Time
+}
+
+// tradingViewCacheEntry holds cached TradingView data with timestamp
+type tradingViewCacheEntry struct {
+	data      map[string]*TradingViewData
+	fetchedAt time.Time
+}
+
+// Provider fetches and caches market intelligence data
+type Provider struct {
+	config ProviderConfig
+
+	// Cached data with timestamps
+	mu             sync.RWMutex
+	fearGreedCache *FearGreedData
+	fearGreedTime  time.Time
+	// Per-symbol caches
+	newsCache        map[string]*newsCacheEntry // key: symbol (e.g., "BTC")
+	coinDataCache    map[string]*coinCacheEntry // key: coingecko ID (e.g., "bitcoin")
+	lunarCrushCache  *lunarCrushCacheEntry      // Cached LunarCrush data (fetched in bulk)
+	tradingViewCache *tradingViewCacheEntry     // Cached TradingView data (fetched in bulk)
+	// Dynamic symbol-to-CoinGecko ID mapping (permanent cache)
+	symbolIDCache map[string]string // key: symbol (e.g., "IPUSDT"), value: coingecko ID or "" if not found
+	// Global cache (applies to all pairs)
+	globalCache *GlobalMarketData
+	globalTime  time.Time
+}
+
+// NewProvider creates a new intel provider
+func NewProvider(config ProviderConfig) *Provider {
+	return &Provider{
+		config:        config,
+		newsCache:     make(map[string]*newsCacheEntry),
+		coinDataCache: make(map[string]*coinCacheEntry),
+		symbolIDCache: make(map[string]string),
+	}
+}
+
+// GetMarketIntel fetches all market intelligence for the given symbols
+// Uses caching to avoid hitting rate limits
+func (p *Provider) GetMarketIntel(ctx context.Context, symbols []string) (*MarketIntel, error) {
+	intel := &MarketIntel{
+		FetchedAt: time.Now(),
+		CoinData:  make(map[string]*CoinInfo),
+	}
+
+	var wg sync.WaitGroup
+	var errs []error
+	var errMu sync.Mutex
+
+	// Fetch Fear & Greed
+	if p.config.EnableFearGreed {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			fg, err := p.getFearGreed(ctx)
+			if err != nil {
+				errMu.Lock()
+				errs = append(errs, fmt.Errorf("fear & greed: %w", err))
+				errMu.Unlock()
+				log.Printf("[Intel] Fear & Greed fetch error: %v", err)
+			} else {
+				p.mu.Lock()
+				intel.FearGreed = fg
+				p.mu.Unlock()
+			}
+		}()
+	}
+
+	// Fetch News
+	if p.config.EnableNews {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			news, err := p.getNews(ctx, symbols)
+			if err != nil {
+				errMu.Lock()
+				errs = append(errs, fmt.Errorf("news: %w", err))
+				errMu.Unlock()
+				log.Printf("[Intel] News fetch error: %v", err)
+			} else {
+				p.mu.Lock()
+				intel.News = news
+				p.mu.Unlock()
+			}
+		}()
+	}
+
+	// Fetch Coin Data
+	if p.config.EnableCoinData {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			coinData, idMapping, err := p.getCoinData(ctx, symbols)
+			if err != nil {
+				errMu.Lock()
+				errs = append(errs, fmt.Errorf("coin data: %w", err))
+				errMu.Unlock()
+				log.Printf("[Intel] CoinGecko: fetch error: %v", err)
+			} else {
+				p.mu.Lock()
+				intel.CoinData = coinData
+				intel.CoinIDMapping = idMapping
+				p.mu.Unlock()
+				if len(coinData) == 0 && len(symbols) > 0 {
+					log.Printf("[Intel] CoinGecko: No coin data returned for %v", symbols)
+				}
+			}
+		}()
+	}
+
+	// Fetch Global Data
+	if p.config.EnableGlobalData {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			global, err := p.getGlobalData(ctx)
+			if err != nil {
+				errMu.Lock()
+				errs = append(errs, fmt.Errorf("global data: %w", err))
+				errMu.Unlock()
+				log.Printf("[Intel] Global data fetch error: %v", err)
+			} else {
+				p.mu.Lock()
+				intel.GlobalData = global
+				p.mu.Unlock()
+			}
+		}()
+	}
+
+	// Fetch LunarCrush Social Sentiment
+	if p.config.EnableLunarCrush && p.config.LunarCrushAPIKey != "" {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			socialData, err := p.getLunarCrushData(ctx, symbols)
+			if err != nil {
+				errMu.Lock()
+				errs = append(errs, fmt.Errorf("lunarcrush: %w", err))
+				errMu.Unlock()
+				log.Printf("[Intel] LunarCrush fetch error: %v", err)
+			} else {
+				p.mu.Lock()
+				intel.SocialData = socialData
+				p.mu.Unlock()
+			}
+		}()
+	}
+
+	// Fetch TradingView Technical Analysis
+	if p.config.EnableTradingView {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			tvData, err := p.getTradingViewData(ctx, symbols)
+			if err != nil {
+				errMu.Lock()
+				errs = append(errs, fmt.Errorf("tradingview: %w", err))
+				errMu.Unlock()
+				log.Printf("[Intel] TradingView: fetch error: %v", err)
+			} else {
+				p.mu.Lock()
+				intel.TechAnalysis = tvData
+				p.mu.Unlock()
+				// Log missing symbols
+				for _, s := range symbols {
+					if _, ok := tvData[strings.ToUpper(s)]; !ok {
+						log.Printf("[Intel] TradingView: No data for %s", s)
+					}
+				}
+			}
+		}()
+	}
+
+	wg.Wait()
+
+	// Return intel even with partial errors (cached data may be used)
+	return intel, nil
+}
+
+// getFearGreed returns cached or fresh Fear & Greed data
+func (p *Provider) getFearGreed(ctx context.Context) (*FearGreedData, error) {
+	p.mu.RLock()
+	if p.fearGreedCache != nil && time.Since(p.fearGreedTime) < p.config.FearGreedCacheDuration {
+		cached := p.fearGreedCache
+		p.mu.RUnlock()
+		return cached, nil
+	}
+	p.mu.RUnlock()
+
+	// Fetch fresh data
+	fg, err := FetchFearGreed(ctx)
+	if err != nil {
+		// Return cached if available
+		p.mu.RLock()
+		if p.fearGreedCache != nil {
+			cached := p.fearGreedCache
+			p.mu.RUnlock()
+			return cached, nil
+		}
+		p.mu.RUnlock()
+		return nil, err
+	}
+
+	// Update cache
+	p.mu.Lock()
+	p.fearGreedCache = fg
+	p.fearGreedTime = time.Now()
+	p.mu.Unlock()
+
+	return fg, nil
+}
+
+// getNews returns cached or fresh news for the given symbols
+// Uses per-symbol caching to avoid returning unrelated news
+func (p *Provider) getNews(ctx context.Context, symbols []string) ([]NewsItem, error) {
+	if len(symbols) == 0 {
+		return nil, nil
+	}
+
+	// Extract base currencies from symbols
+	baseCurrencies := make([]string, 0, len(symbols))
+	for _, s := range symbols {
+		base := strings.TrimSuffix(s, "USDT")
+		if base != "" {
+			baseCurrencies = append(baseCurrencies, base)
+		}
+	}
+
+	if len(baseCurrencies) == 0 {
+		return nil, nil
+	}
+
+	// Collect news from per-symbol cache or fetch fresh
+	var allNews []NewsItem
+	var symbolsToFetch []string
+
+	p.mu.RLock()
+	for _, base := range baseCurrencies {
+		if entry, ok := p.newsCache[base]; ok && time.Since(entry.fetchedAt) < p.config.NewsCacheDuration {
+			allNews = append(allNews, entry.items...)
+		} else {
+			symbolsToFetch = append(symbolsToFetch, base)
+		}
+	}
+	p.mu.RUnlock()
+
+	// Fetch news for symbols not in cache
+	for _, base := range symbolsToFetch {
+		// Query specifically for this symbol
+		query := base + " cryptocurrency crypto news"
+		news, err := FetchNews(ctx, query, 10)
+		if err != nil {
+			// Try to use stale cache if available
+			p.mu.RLock()
+			if entry, ok := p.newsCache[base]; ok {
+				allNews = append(allNews, entry.items...)
+			}
+			p.mu.RUnlock()
+			continue
+		}
+
+		// Filter to only include news actually mentioning this symbol
+		filtered := FilterNewsForSymbols(news, []string{base + "USDT"})
+		if len(filtered) == 0 {
+			// If no filtered results, take top 3 from the query results
+			if len(news) > 3 {
+				filtered = news[:3]
+			} else {
+				filtered = news
+			}
+		}
+
+		// Update per-symbol cache
+		p.mu.Lock()
+		p.newsCache[base] = &newsCacheEntry{
+			items:     filtered,
+			fetchedAt: time.Now(),
+		}
+		p.mu.Unlock()
+
+		allNews = append(allNews, filtered...)
+	}
+
+	// Deduplicate news by title
+	seen := make(map[string]bool)
+	dedupedNews := make([]NewsItem, 0, len(allNews))
+	for _, item := range allNews {
+		if !seen[item.Title] {
+			seen[item.Title] = true
+			dedupedNews = append(dedupedNews, item)
+		}
+	}
+
+	return dedupedNews, nil
+}
+
+// getCoinGeckoID returns the CoinGecko ID for a symbol, using dynamic lookup if needed
+func (p *Provider) getCoinGeckoID(ctx context.Context, symbol string) string {
+	// First check hardcoded mapping
+	if id := GetCoinGeckoID(symbol); id != "" {
+		return id
+	}
+
+	// Check dynamic cache
+	p.mu.RLock()
+	if id, ok := p.symbolIDCache[symbol]; ok {
+		p.mu.RUnlock()
+		if id == "" {
+			log.Printf("[Intel] CoinGecko: %s not found (cached)", symbol)
+		}
+		return id // Returns "" if we already tried and failed
+	}
+	p.mu.RUnlock()
+
+	// Dynamic lookup via CoinGecko search API
+	log.Printf("[Intel] CoinGecko: Searching for %s...", symbol)
+	id, err := SearchCoinID(ctx, symbol)
+	if err != nil {
+		log.Printf("[Intel] CoinGecko: Failed to search for %s: %v", symbol, err)
+		// Don't cache failures from network errors - we'll retry next time
+		return ""
+	}
+
+	// Cache result (even empty string to avoid repeated lookups)
+	p.mu.Lock()
+	p.symbolIDCache[symbol] = id
+	p.mu.Unlock()
+
+	if id != "" {
+		log.Printf("[Intel] CoinGecko: Found %s -> %s", symbol, id)
+	} else {
+		log.Printf("[Intel] CoinGecko: No match for %s", symbol)
+	}
+
+	return id
+}
+
+// getCoinData returns cached or fresh coin data for the given symbols
+// Uses per-symbol caching to only return data for requested symbols
+// Returns: map[ID]Data, map[Symbol]ID, error
+func (p *Provider) getCoinData(ctx context.Context, symbols []string) (map[string]*CoinInfo, map[string]string, error) {
+	if len(symbols) == 0 {
+		return nil, nil, nil
+	}
+
+	result := make(map[string]*CoinInfo)
+	idMapping := make(map[string]string)
+	var idsToFetch []string
+
+	// Check per-symbol cache, using dynamic lookup for unknown symbols
+	for _, symbol := range symbols {
+		cgID := p.getCoinGeckoID(ctx, symbol)
+		if cgID == "" {
+			continue
+		}
+
+		idMapping[symbol] = cgID
+
+		p.mu.RLock()
+		if entry, ok := p.coinDataCache[cgID]; ok && time.Since(entry.fetchedAt) < p.config.CoinDataCacheDuration {
+			result[cgID] = entry.data
+			p.mu.RUnlock()
+		} else {
+			p.mu.RUnlock()
+			idsToFetch = append(idsToFetch, cgID)
+		}
+	}
+
+	// If all symbols are cached, return early
+	if len(idsToFetch) == 0 {
+		return result, idMapping, nil
+	}
+
+	// Fetch missing symbols from API
+	coinData, err := FetchCoinData(ctx, idsToFetch)
+	if err != nil {
+		// Return stale cache if available
+		p.mu.RLock()
+		for _, id := range idsToFetch {
+			if entry, ok := p.coinDataCache[id]; ok {
+				result[id] = entry.data
+			}
+		}
+		p.mu.RUnlock()
+
+		// If we got some cached data, return it without error
+		if len(result) > 0 {
+			return result, idMapping, nil
+		}
+		return nil, idMapping, err
+	}
+
+	// Update per-symbol cache and result
+	p.mu.Lock()
+	for id, data := range coinData {
+		p.coinDataCache[id] = &coinCacheEntry{
+			data:      data,
+			fetchedAt: time.Now(),
+		}
+		result[id] = data
+	}
+	p.mu.Unlock()
+
+	return result, idMapping, nil
+}
+
+// getGlobalData returns cached or fresh global market data
+func (p *Provider) getGlobalData(ctx context.Context) (*GlobalMarketData, error) {
+	p.mu.RLock()
+	if p.globalCache != nil && time.Since(p.globalTime) < p.config.GlobalDataCacheDuration {
+		cached := p.globalCache
+		p.mu.RUnlock()
+		return cached, nil
+	}
+	p.mu.RUnlock()
+
+	// Fetch fresh data
+	global, err := FetchGlobalData(ctx)
+	if err != nil {
+		p.mu.RLock()
+		if p.globalCache != nil {
+			cached := p.globalCache
+			p.mu.RUnlock()
+			return cached, nil
+		}
+		p.mu.RUnlock()
+		return nil, err
+	}
+
+	// Update cache
+	p.mu.Lock()
+	p.globalCache = global
+	p.globalTime = time.Now()
+	p.mu.Unlock()
+
+	return global, nil
+}
+
+// getLunarCrushData returns cached or fresh LunarCrush social sentiment data
+func (p *Provider) getLunarCrushData(ctx context.Context, symbols []string) (map[string]*LunarCrushData, error) {
+	if len(symbols) == 0 {
+		return nil, nil
+	}
+
+	// Check cache
+	p.mu.RLock()
+	if p.lunarCrushCache != nil && time.Since(p.lunarCrushCache.fetchedAt) < p.config.LunarCrushCacheDuration {
+		cached := p.lunarCrushCache.data
+		p.mu.RUnlock()
+		// Filter to requested symbols
+		result := make(map[string]*LunarCrushData)
+		for _, symbol := range symbols {
+			base := strings.TrimSuffix(strings.ToUpper(symbol), "USDT")
+			if data, ok := cached[base]; ok {
+				result[base] = data
+			}
+		}
+		return result, nil
+	}
+	p.mu.RUnlock()
+
+	// Fetch fresh data
+	data, err := FetchLunarCrushData(ctx, p.config.LunarCrushAPIKey, symbols)
+	if err != nil {
+		// Return stale cache if available
+		p.mu.RLock()
+		if p.lunarCrushCache != nil {
+			cached := p.lunarCrushCache.data
+			p.mu.RUnlock()
+			result := make(map[string]*LunarCrushData)
+			for _, symbol := range symbols {
+				base := strings.TrimSuffix(strings.ToUpper(symbol), "USDT")
+				if d, ok := cached[base]; ok {
+					result[base] = d
+				}
+			}
+			return result, nil
+		}
+		p.mu.RUnlock()
+		return nil, err
+	}
+
+	// Update cache
+	p.mu.Lock()
+	p.lunarCrushCache = &lunarCrushCacheEntry{
+		data:      data,
+		fetchedAt: time.Now(),
+	}
+	p.mu.Unlock()
+
+	return data, nil
+}
+
+// getTradingViewData returns cached or fresh TradingView technical analysis
+func (p *Provider) getTradingViewData(ctx context.Context, symbols []string) (map[string]*TradingViewData, error) {
+	if len(symbols) == 0 {
+		return nil, nil
+	}
+
+	// Check cache
+	p.mu.RLock()
+	if p.tradingViewCache != nil && time.Since(p.tradingViewCache.fetchedAt) < p.config.TradingViewCacheDuration {
+		cached := p.tradingViewCache.data
+		p.mu.RUnlock()
+		// Filter to requested symbols
+		result := make(map[string]*TradingViewData)
+		for _, symbol := range symbols {
+			sym := strings.ToUpper(symbol)
+			if data, ok := cached[sym]; ok {
+				result[sym] = data
+			}
+		}
+		return result, nil
+	}
+	p.mu.RUnlock()
+
+	// Fetch fresh data
+	data, err := FetchTradingViewData(ctx, symbols, p.config.TradingViewInterval)
+	if err != nil {
+		// Return stale cache if available
+		p.mu.RLock()
+		if p.tradingViewCache != nil {
+			cached := p.tradingViewCache.data
+			p.mu.RUnlock()
+			result := make(map[string]*TradingViewData)
+			for _, symbol := range symbols {
+				sym := strings.ToUpper(symbol)
+				if d, ok := cached[sym]; ok {
+					result[sym] = d
+				}
+			}
+			return result, nil
+		}
+		p.mu.RUnlock()
+		return nil, err
+	}
+
+	// Update cache
+	p.mu.Lock()
+	p.tradingViewCache = &tradingViewCacheEntry{
+		data:      data,
+		fetchedAt: time.Now(),
+	}
+	p.mu.Unlock()
+
+	return data, nil
+}
+
+// FormatForAI formats all market intelligence for AI consumption
+func FormatForAI(intel *MarketIntel, symbols []string, maxNewsItems int) string {
+	if intel == nil {
+		return ""
+	}
+
+	var sb strings.Builder
+	sb.WriteString("\n>>> SEARCHING WEB FOR MARKET INTELLIGENCE...\n")
+	sb.WriteString(">>> FOUND RELEVANT LIVE DATA:\n\n")
+
+	// Global market data first
+	if intel.GlobalData != nil {
+		sb.WriteString(FormatGlobalData(intel.GlobalData))
+	}
+
+	// Fear & Greed
+	if intel.FearGreed != nil {
+		sb.WriteString(FormatFearGreed(intel.FearGreed))
+	}
+
+	// Coin fundamental data
+	if len(intel.CoinData) > 0 {
+		sb.WriteString(FormatCoinData(intel.CoinData, symbols, intel.CoinIDMapping))
+	}
+
+	// Social sentiment (LunarCrush)
+	if len(intel.SocialData) > 0 {
+		sb.WriteString(FormatLunarCrushData(intel.SocialData, symbols))
+	}
+
+	// TradingView technical analysis
+	if len(intel.TechAnalysis) > 0 {
+		sb.WriteString(FormatTradingViewData(intel.TechAnalysis, symbols))
+	}
+
+	// News
+	if len(intel.News) > 0 {
+		sb.WriteString(FormatNews(intel.News, maxNewsItems))
+	}
+
+	sb.WriteString("---\n\n")
+
+	return sb.String()
+}
+
+// ClearCache clears all cached data
+func (p *Provider) ClearCache() {
+	p.mu.Lock()
+	defer p.mu.Unlock()
+
+	p.fearGreedCache = nil
+	p.newsCache = make(map[string]*newsCacheEntry)
+	p.coinDataCache = make(map[string]*coinCacheEntry)
+	p.lunarCrushCache = nil
+	p.tradingViewCache = nil
+	p.globalCache = nil
+}

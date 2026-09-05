@@ -1,0 +1,130 @@
+[
+  {
+    "id": "gaza-total-deaths",
+    "label": "Gaza Deaths Since Oct 7",
+    "value": "73,414+ documented",
+    "color": "red",
+    "source": "Gaza Ministry of Health / WAFA / UN OCHA / UN Security Council",
+    "contested": true,
+    "contestNote": "Aug 27, 2026: IDF strikes killed three named Hamas commanders — Ismail Mohammed Ibrahim Barim (former jailer of freed hostages Edan Alexander, Matan Zangauker and Avera Mengistu) in Khan Younis, Bilal Ibrahim Saleh Raqi'i (anti-tank commander) in Gaza City's Shati camp, and Azzam Rifaat Abd Abadala in Khan Younis — plus at least 4 more Palestinians in strikes on displacement tents and a motorbike; Gaza health officials say 1,300+ have now been killed since the Oct 2025 ceasefire. Aug 25: Israeli strikes killed at least 7 more Palestinians across Gaza — a strike on a Deir al-Balah residential building destroyed adjacent Land of Man Association warehouses storing malnutrition supplies for children and pregnant/breastfeeding women; a separate strike on a Beit Lahiya home near Kamal Adwan Hospital killed 3; and a drone strike on a civilian gathering in Khan Younis's al-Mawasi area killed 1 and wounded 3. Aug 24: IDF struck two Hamas militants in Deir al-Balah, including a Nukhba force member who took part in the Oct 7, 2023 attack; separate strikes hit a mosque and desalination plant in Gaza City's Sheikh Radwan neighborhood. Aug 23: strikes on Az-Zawayda, Nuseirat and Maghazi killed at least 3 more Palestinians, including 4-year-old Muhammad Abdel Salam Taha, as Netanyahu/Katz threatened to intensify strikes over kite/drone/balloon launches. Aug 12: toll reached 73,388 killed / 174,259 wounded since Oct 7, 2023, after Israel's first Gaza airstrike in over a week killed municipal worker Mohanad Saada in Beit Lahia. Aug 7: UNICEF reported 300 children killed during the first 300 days of the ceasefire — about one child per day. Only 0.5% of rubble cleared, 77% face acute food insecurity. True toll with indirect deaths may exceed 90,000–100,000.",
+    "delta": "Aug 27: strikes kill 3 named Hamas commanders (incl. ex-jailer of freed hostages) plus 4 more Palestinians (73,414+ total, 1,300+ since ceasefire)",
+    "trend": "up",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "israeli-oct7-killed",
+    "label": "Israelis Killed (Oct 7 Attack)",
+    "value": "~1,200",
+    "color": "red",
+    "source": "IDF / Israeli National Security Council",
+    "contested": false,
+    "contestNote": "IDF-confirmed figure; Hamas has not disputed the overall casualty scale.",
+    "delta": "Deadliest day for Jews since the Holocaust",
+    "trend": "stable",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "hostages-remaining",
+    "label": "Hostages Remaining in Gaza",
+    "value": "0 alive (all accounted for)",
+    "color": "amber",
+    "source": "Israeli PM Office / Hostages Families Forum / UN Security Council",
+    "contested": false,
+    "contestNote": "The body of Ran Gvili, the last Israeli hostage, was returned to Israel in early 2026, prompting the UN Security Council to convene. All 251 taken Oct 7 are now dead, released, or accounted for.",
+    "delta": "Down from 251 taken Oct 7; last remains returned early 2026",
+    "trend": "down",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "displaced-gazans",
+    "label": "Displaced People in Gaza",
+    "value": "~1.9 million",
+    "color": "amber",
+    "source": "UN OCHA / UNRWA",
+    "contested": false,
+    "contestNote": "~90% of Gaza's population displaced at peak. Oct 2025 ceasefire has allowed some internal movement but reconstruction is years away; displacement remains critical.",
+    "delta": "Most displaced since 1948; 81% of all structures damaged",
+    "trend": "stable",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "west-bank-settlers",
+    "label": "Israeli Settlers in West Bank",
+    "value": "~700,000",
+    "color": "amber",
+    "source": "B'Tselem / UN OHCHR / Peace Now",
+    "contested": true,
+    "contestNote": "Figure includes East Jerusalem. UN OHCHR March 2026 report documented approval of 36,973 housing units in East Jerusalem settlements and ~27,200 in rest of West Bank in 12-month period. 84 new outposts established. Settler attacks have surged dramatically since Feb 28 Iran war — 257 incidents in first 25 days.",
+    "delta": "+100,000 since 2020; settlement expansion accelerating",
+    "trend": "up",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "idf-soldiers-killed-gaza",
+    "label": "IDF Soldiers Killed (Gaza War)",
+    "value": "~850",
+    "color": "red",
+    "source": "IDF spokesperson",
+    "contested": false,
+    "delta": "As of Mar 2026; ceasefire since Oct 10, 2025 reduced combat deaths",
+    "trend": "stable",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "years-of-conflict",
+    "label": "Years of Conflict",
+    "value": "78 years",
+    "color": "blue",
+    "source": "Historical record (1948–2026)",
+    "contested": false,
+    "delta": "78th Nakba Day May 15, 2026 — UN observance; commemorating displacement of 700,000–750,000 Palestinians in 1948",
+    "trend": "stable",
+    "lastUpdated": "2026-05-15T15:16:13.000Z"
+  },
+  {
+    "id": "un-resolutions",
+    "label": "UNSC Resolutions on Palestine",
+    "value": "100+",
+    "color": "blue",
+    "source": "UN Security Council records",
+    "contested": false,
+    "contestNote": "Includes all UNSC resolutions relating to Arab-Israeli / Israeli-Palestinian conflict since 1948. UNSC Resolution 2803 (Nov 2025) endorsed Trump ceasefire plan. UNSC Palestine briefing held March 26, 2026.",
+    "trend": "up",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "unrwa-refugees",
+    "label": "Registered Palestinian Refugees",
+    "value": "5.9 million",
+    "color": "blue",
+    "source": "UNRWA",
+    "contested": true,
+    "contestNote": "UNRWA counts descendants of 1948 refugees; Israel argues definition is uniquely broad. Israel banned UNRWA from Israeli territory (Jan 2025). 391 UNRWA staff killed in Gaza war. UNRWA 2026 Flash Appeal seeks $4B; agency down to half a dozen clinics in Gaza.",
+    "trend": "up",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "icc-warrants-active",
+    "label": "Active ICC Arrest Warrants",
+    "value": "2 confirmed + 5 new reported (incl. apartheid)",
+    "color": "amber",
+    "source": "ICC Pre-Trial Chamber I (Nov 2024) / Times of Israel / Jerusalem Post / Al Jazeera / UN CEIRPP (May–Jun 2026)",
+    "contested": true,
+    "contestNote": "2 warrants confirmed active: Netanyahu and Gallant (war crimes, Nov 2024). May 24–25: Reports of 5 new ICC sealed warrants for Katz, Smotrich (apartheid), Ben-Gvir, Zamir, Asor; ICC declined to confirm. ICJ (Case 192): written pleadings schedule confirmed May 21 — South Africa reply due Nov 22, 2027; Israel rejoinder due May 22, 2029. June 4: UN Committee on Palestinian Rights formally condemned Smotrich's Khan al-Ahmar eviction order as a war crime under international law; OHCHR demanded halt to forcible displacement and E1 settlement expansion. Hamas-Mladenov Phase 2 talks postponed June 3 as Hamas rejects disarmament precondition. October 2026 elections expected.",
+    "delta": "June 4: UN condemns Khan al-Ahmar eviction as war crime; June 3: Phase 2 talks postponed over Hamas disarmament",
+    "trend": "up",
+    "lastUpdated": "2026-06-05T06:00:00.000Z"
+  },
+  {
+    "id": "west-bank-palestinians-killed",
+    "label": "West Bank Palestinians Killed (Since Oct 7 2023)",
+    "value": "1,151+ (90+ in 2026 alone)",
+    "color": "red",
+    "source": "Palestinian Authority / UN OHCHR / B'Tselem / Save the Children / UNSCO",
+    "contested": true,
+    "contestNote": "Includes deaths from IDF operations and settler violence; figures vary by source/methodology (UNSCO cites 76 killed in 2026 as of Aug 10, incl. 18 children; Palestinian Health Ministry cited 87+ as of late July, now 90+ after Aug 23 killing). Aug 27: Sens. Van Hollen, Kaine and Sanders unveiled a privileged Section 502B resolution demanding a State Dept accounting of 9 Americans killed in the West Bank, separate from the Aug 26 sign-on letter; the Israeli government also told the High Court it will keep barring 33,000 displaced Palestinians from returning to the Jenin, Tulkarm and Nur al-Shams refugee camps cleared during Operation Iron Wall. Aug 25: masked settlers pepper-sprayed and beat Israeli Rabbis for Human Rights activists and struck an AFP journalist near the village of Jannatah south of Bethlehem, with IDF soldiers present making no arrests; separately Israeli forces raided and seized the UNRWA-run Qalandiya vocational training center in Kafr Aqab, East Jerusalem, expelling staff, and far-right MK Zvi Sukkot smashed a Palestinian memorial with a sledgehammer in Madama village during an IDF-escorted tour the military said he abused. Aug 26: 45 US Senate Democrats wrote Netanyahu demanding he rein in the 'significant surge' of settler violence and mass arrests, while Netanyahu separately vowed to keep expanding West Bank settlements. Aug 23: Israeli forces shot dead 14-year-old Islam Ajjouri during a raid on Askar refugee camp near Nablus; separately, a 16-year-old Palestinian stabbed and wounded an Israeli soldier near al-Auja in the Jordan Valley, prompting an IDF manhunt and arrest. Aug 21: settlers shot dead 17-year-old Karim Shalaldeh near Sa'ir (Hebron) after a rock-throwing incident; IDF separately killed 58-year-old retired PA colonel Fathi Khazem during a Jenin home raid, claiming a knife attack. Aug 20: settlers overturned a Palestinian vehicle near al-Mughayyir, wounding 5-6; HRW documented 107 communities (~5,900 people) displaced by settler attacks since Jan 2023. Aug 11: UN Deputy Special Coordinator Ramiz Alakbarov told the Security Council the West Bank is at a 'breaking point' amid 'de facto annexation' — 1,430+ settler-violence incidents in 2026 affecting ~260 communities, ~3,800 displaced, 174 children verified killed since Jan 2024, $6B in Palestinian tax revenue withheld.",
+    "delta": "Aug 27: Van Hollen/Kaine/Sanders unveil privileged Senate resolution on 9 Americans killed; Israel tells High Court it will keep 33,000 displaced Palestinians from returning to 3 W. Bank camps",
+    "trend": "up",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  }
+]

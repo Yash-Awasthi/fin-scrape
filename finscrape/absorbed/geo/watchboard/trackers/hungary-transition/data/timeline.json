@@ -1,0 +1,1886 @@
+[
+  {
+    "era": "Return to Power (2010–2014)",
+    "events": [
+      {
+        "id": "fidesz-2010-election-win",
+        "year": "Apr 11, 2010",
+        "title": "Fidesz Wins Historic Supermajority — Returns to Power After 8 Years",
+        "type": "election",
+        "detail": "On April 11 and 25, 2010, Viktor Orbán's Fidesz-KDNP coalition won 52.7% of the vote across two rounds, translating into 263 of 386 parliamentary seats — a two-thirds supermajority enabling constitutional changes without opposition consent. The coalition gained 33.4 percentage points over second-place MSZP. The result ended eight years of Socialist-led government marred by the 2006 Gyurcsány tape scandal, the 2008 financial crisis, and deep public disillusionment.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "OSCE/ODIHR",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "orban-second-term-begins",
+        "year": "May 29, 2010",
+        "title": "Orbán's Second Government Inaugurated — Constitutional Revolution Begins",
+        "type": "milestone",
+        "detail": "Viktor Orbán was inaugurated as Prime Minister on May 29, 2010, for his second term (having first served 1998–2002). Within weeks Fidesz announced sweeping constitutional changes using its two-thirds parliamentary majority. The government immediately began reshaping the electoral system, courts, and media landscape through supermajority legislation, launching what critics called a 'constitutional revolution' conducted through formally legal but substantively authoritarian means.",
+        "sources": [
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "media-law-nmhh-2010",
+        "year": "Nov 19, 2010",
+        "title": "Media Law Creates Partisan Regulatory Council — Press Freedom Alarm Sounded",
+        "type": "legislation",
+        "detail": "On November 19, 2010, Hungary's parliament passed a sweeping new media law creating the National Media and Infocommunications Authority (NMHH) and a Media Council with five members elected exclusively by Fidesz's parliamentary majority. The Council gained broad powers to fine and suspend media outlets for 'unbalanced' coverage and to compel disclosure of journalistic sources. The EU Commission, Reporters Without Borders, and Committee to Protect Journalists issued immediate condemnations. Critics noted all Council members were Fidesz-linked appointees serving 9-year terms.",
+        "sources": [
+          {
+            "name": "Reporters Without Borders",
+            "tier": 3,
+            "pole": "international"
+          },
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fundamental-law-adopted-parliament",
+        "year": "Apr 18, 2011",
+        "title": "New Fundamental Law Adopted — Replaces 1949 Communist-Era Constitution",
+        "type": "legislation",
+        "detail": "On April 18, 2011, the Hungarian parliament adopted the new Fundamental Law (constitution) by a vote of 262-44, replacing the amended 1949 constitution. The entire drafting and adoption took less than three months, with no public referendum, limited opposition participation, and the Venice Commission barely consulted before the vote. It entered into force on January 1, 2012. The law introduced provisions including church-state alignment, a flat-tax mandate, and restrictions on the Constitutional Court's ability to review fiscal laws based on fundamental rights.",
+        "sources": [
+          {
+            "name": "Venice Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "electoral-law-shrinks-parliament",
+        "year": "Dec 2011",
+        "title": "New Electoral Law Cuts Parliament From 386 to 199 Seats — Boundaries Redrawn",
+        "type": "legislation",
+        "detail": "In December 2011, Fidesz passed a new electoral law reducing the size of parliament from 386 to 199 seats and comprehensively redrawing constituency boundaries. Independent analyses by the OSCE and academic researchers found the new single-member-district boundaries systematically advantaged Fidesz, enabling supermajorities with lower vote shares than previously required. The law also changed rules on compensatory votes and overseas voting in ways that benefited the ruling party in future elections.",
+        "sources": [
+          {
+            "name": "OSCE/ODIHR",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fundamental-law-enters-force",
+        "year": "Jan 1, 2012",
+        "title": "Fundamental Law Enters Force — Thousands Protest in Budapest Streets",
+        "type": "milestone",
+        "detail": "Hungary's new Fundamental Law entered into force on January 1, 2012, replacing the old communist-era constitution. On New Year's Eve and the following days, tens of thousands protested in Budapest, forming a human chain on the Elizabeth Bridge and gathering at Astoria square. Protesters waved the old Hungarian flag alongside EU banners, chanting 'Europe! Europe!' The Venice Commission had published a sharply critical opinion in June 2011; the EU Commission warned the law raised concerns on judicial independence and the rights of the Central Bank.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "constitutional-court-packing-2013",
+        "year": "2010–2013",
+        "title": "Constitutional Court Packed With Fidesz Loyalists — Judicial Retirement Ages Cut",
+        "type": "legislation",
+        "detail": "Between 2010 and 2013, Fidesz used its parliamentary majority to expand the Constitutional Court from 11 to 15 members and fill seats with allies, fundamentally altering the Court's jurisprudence. The government also lowered the mandatory retirement age for judges from 70 to 62, forcing dozens of experienced independent judges off the bench. The European Court of Human Rights later ruled this violated EU employment law. The Kúria (Supreme Court) presidency was given to a Fidesz-aligned candidate, and Hungary's judiciary began consistently ruling in the government's favor on politically sensitive cases.",
+        "sources": [
+          {
+            "name": "Venice Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Freedom House",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fourth-amendment-fundamental-law",
+        "year": "Mar 11, 2013",
+        "title": "Fourth Amendment Overrides Constitutional Court Rulings",
+        "type": "legislation",
+        "detail": "On March 11, 2013, parliament adopted the Fourth Amendment to the Fundamental Law in a single day, in response to multiple Constitutional Court rulings striking down Fidesz legislation. The amendment 'constitutionalized' several laws previously ruled unconstitutional — effectively reversing the Court's decisions by embedding the invalidated policies in the constitution itself. It also restricted the Court's ability to review any constitutional provision passed since 2011. The Venice Commission called this 'a threat to the rule of law' and the EU Commission expressed 'serious concern.'",
+        "sources": [
+          {
+            "name": "Venice Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "paks-nuclear-rosatom-deal",
+        "year": "Jan 14, 2014",
+        "title": "Hungary Signs Secret Paks II Nuclear Deal With Russia's Rosatom",
+        "type": "diplomacy",
+        "detail": "On January 14, 2014, during a state visit to Moscow, Viktor Orbán signed a deal with Russia's Rosatom state nuclear company to expand the Paks nuclear power plant — which provides approximately 50% of Hungary's electricity — with two new VVER-1200 reactors at a total contract value of €12.5 billion, with 80% financed by a €10 billion Russian state loan. The deal was negotiated in secret and its terms were classified for 30 years. Critics argued it created a multi-decade strategic dependency on Russia. Construction of Unit 5 began with the first concrete pour on February 5, 2026.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "World Nuclear Association",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fidesz-2014-election-win",
+        "year": "Apr 6, 2014",
+        "title": "Fidesz Wins Second Consecutive Supermajority Under New Electoral Map",
+        "type": "election",
+        "detail": "On April 6, 2014, Fidesz-KDNP retained its two-thirds parliamentary majority, winning 44.5% of the vote and 133 of 199 seats under the newly gerrymandered electoral system — the first election held under the redrawn boundaries. The OSCE/ODIHR preliminary report noted the election was characterized by 'an unequal playing field' with public media coverage that 'heavily favored the governing party.' Opposition parties remained fragmented and failed to mount a united challenge. The result was Hungary's first ever supermajority won with under 50% of votes.",
+        "sources": [
+          {
+            "name": "OSCE/ODIHR",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "orban-illiberal-state-speech-2014",
+        "year": "Jul 26, 2014",
+        "title": "Orbán Declares Hungary an 'Illiberal State' at Băile Tușnad",
+        "type": "milestone",
+        "detail": "Speaking at the Bálványos Summer School at Băile Tușnad (Tusnádfürdő) in Romania on July 26, 2014, Viktor Orbán explicitly proclaimed that Hungary was building an 'illiberal state, a non-liberal state' that rejected Western liberal democracy. He cited Russia, China, Singapore, and Turkey as successful models operating outside liberal norms. The speech crystallized international alarm about Hungary's democratic trajectory and became one of the most widely cited political addresses in post-communist European history. Fidesz supporters said it reflected honest sovereign conservatism.",
+        "sources": [
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "anti-soros-campaign-launch-2014",
+        "year": "2014",
+        "title": "Government Begins Sustained Anti-Soros Campaign — Civil Society Targeted",
+        "type": "politics",
+        "detail": "From late 2014, the Hungarian government began a sustained campaign targeting NGOs funded by George Soros's Open Society Foundations. Government-aligned media portrayed Soros as a foreign agent undermining Hungarian sovereignty. This preceded formal legislation: in 2017 the 'Stop Soros' bills and the NGO transparency law forced organizations receiving foreign funding above certain thresholds to register as 'foreign agents.' The campaign peaked with billboard advertising featuring Soros's image. The CJEU later found multiple provisions violated EU law.",
+        "sources": [
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "HVG",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Illiberal State Consolidation (2014–2018)",
+    "events": [
+      {
+        "id": "belt-road-hungary-2015",
+        "year": "2015",
+        "title": "Hungary First EU State to Join China's Belt and Road Initiative",
+        "type": "diplomacy",
+        "detail": "In 2015, Hungary became the first EU member state to sign onto China's Belt and Road Initiative (BRI), a distinction Orbán celebrated as part of his 'Eastern Opening' (Keleti Nyitás) foreign policy. Hungary subsequently signed multiple bilateral agreements with China, including contentious deals for battery manufacturing investments from CATL and Samsung SDI. Critics said the BRI membership created leverage for Beijing inside EU decision-making and allowed Hungary to resist EU consensus on China human rights issues.",
+        "sources": [
+          {
+            "name": "The Diplomat",
+            "tier": 3,
+            "pole": "international"
+          },
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "anti-migration-billboards-2015",
+        "year": "Jun 2015",
+        "title": "Government Launches Anti-Migration Billboard Campaign Using Public Funds",
+        "type": "politics",
+        "detail": "In June 2015, the Hungarian government launched a nationwide billboard campaign with messages like 'If you come to Hungary, you must not take away jobs from Hungarians' — written in Hungarian, the language migrants would not read. Costing tens of millions of euros from public funds, the campaign set the template for years of anti-immigrant and anti-EU messaging. It was criticized as manipulative state propaganda ahead of physical border fence construction and shaped Hungary's political discourse on migration for a decade.",
+        "sources": [
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "border-fence-serbia-2015",
+        "year": "Jul 13, 2015",
+        "title": "Hungary Begins Construction of Border Fence With Serbia",
+        "type": "politics",
+        "detail": "On July 13, 2015, Hungary began building a 4-meter-high razor-wire fence along its 175-km border with Serbia to stop the flow of migrants and asylum seekers during the European refugee crisis. Completed by September 2015, the fence was built using Hungarian Army troops and thousands of workers including prison labor. Hungary later extended fences to its border with Croatia. The fence, combined with the use of water cannons and tear gas at Röszke, drew UNHCR condemnation and placed Hungary at the center of Europe's migration debate.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "UNHCR",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "roszke-border-clashes-2015",
+        "year": "Sep 16, 2015",
+        "title": "Röszke Border Clashes — Police Use Tear Gas and Water Cannons on Migrants",
+        "type": "politics",
+        "detail": "On September 16, 2015, Hungary sealed its border crossing at Röszke after thousands of migrants assembled near the newly constructed fence. Police used tear gas and water cannons on crowds including women and children attempting to cross. Dozens were detained and charged under new laws criminalizing 'illegal border crossing' with up to 3 years imprisonment. The scenes were broadcast globally and placed Hungary at the epicenter of the European migrant crisis. The UN High Commissioner for Refugees condemned Hungary's response as 'shocking and unacceptable.'",
+        "sources": [
+          {
+            "name": "AP",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "UNHCR",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "refugee-quota-referendum-2016",
+        "year": "Oct 2, 2016",
+        "title": "Anti-EU Quota Referendum: 98% Vote 'No' But Turnout Invalidates Result",
+        "type": "election",
+        "detail": "On October 2, 2016, Hungary held a referendum asking citizens whether the EU should be able to mandate resettlement of non-Hungarian citizens without parliamentary consent. A record 98.3% voted 'no.' However, turnout was only 44.05%, below the 50% threshold required by Hungarian law for a binding referendum result. Orbán nonetheless claimed a mandate and sought a constitutional amendment — which subsequently failed to get a two-thirds majority when far-right Jobbik voted against a slightly different text. The government spent over €40M on public 'Vote No' campaigns.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "National Election Office Hungary (NVI)",
+            "tier": 1,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "lex-ceu-parliament-2017",
+        "year": "Apr 4, 2017",
+        "title": "Lex CEU Passed — Targets Soros-Founded Central European University",
+        "type": "legislation",
+        "detail": "On April 4, 2017, Hungary's parliament passed an amendment to the Higher Education Act requiring foreign universities operating in Hungary to also maintain a campus in their home country and sign a bilateral government treaty. The law was universally seen as targeting the Central European University (CEU), founded by George Soros in Budapest in 1991. The European Commission launched infringement proceedings the same month. The US State Department formally protested. CEU began contingency planning for relocation to Vienna.",
+        "sources": [
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "ceu-protests-budapest-2017",
+        "year": "Apr 9, 2017",
+        "title": "75,000 March in Budapest to Defend Academic Freedom",
+        "type": "protest",
+        "detail": "On April 9, 2017, an estimated 75,000 people marched through central Budapest in the largest protest of Orbán's second term, carrying placards reading 'Let CEU Stay' and 'I Stand With CEU.' The protest was organized within days of Lex CEU's passage, drawing students, faculty, civil society organizations, and foreign diplomats. Similar protests occurred in Warsaw, London, and Brussels. The Hungarian government dismissed the demonstration as Soros-organized astroturfing and pressed ahead with implementation, refusing to sign a bilateral treaty with the United States.",
+        "sources": [
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Guardian",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "stop-soros-bills-2017",
+        "year": "Jun 2017",
+        "title": "Stop Soros Bills Introduced — NGOs Must Register as 'Foreign Agents'",
+        "type": "legislation",
+        "detail": "In June 2017, Hungary's government introduced a package of 'Stop Soros' bills requiring NGOs receiving more than 24,000 euros annually from foreign sources to register as 'organizations supported from abroad,' display this label on all materials, and pay a 25% surcharge on foreign donations. The legislation closely mirrored Russia's 2012 'foreign agent' law. The UN, OSCE, Venice Commission, and European Commission all issued critical assessments finding the bills incompatible with international human rights standards and EU law.",
+        "sources": [
+          {
+            "name": "Venice Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "OSCE",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "juncker-soros-billboard-2017",
+        "year": "May 2017",
+        "title": "Government Billboard Campaign Targets Juncker and Soros — EC Demands Removal",
+        "type": "politics",
+        "detail": "In May 2017, the Hungarian government launched a massive nationwide billboard campaign featuring images of EU Commission President Jean-Claude Juncker and George Soros under the headline 'You too can be part of Soros's plan.' The campaign falsely accused Juncker of wanting to flood Hungary with migrants. European Commission Deputy President Frans Timmermans demanded the billboards be taken down, calling them 'an attack on EU institutions.' The episode presaged the Fidesz-EPP confrontation that ultimately led to Fidesz's expulsion from the EPP in 2021.",
+        "sources": [
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fidesz-2018-election-win",
+        "year": "Apr 8, 2018",
+        "title": "Fidesz Wins Third Consecutive Supermajority — 'Stop Soros' Dominates Campaign",
+        "type": "election",
+        "detail": "On April 8, 2018, Fidesz-KDNP won 49.27% of the vote and 133 of 199 seats, retaining its two-thirds parliamentary majority for the third consecutive time. The campaign was dominated by anti-Soros and anti-migration messaging amplified through government-controlled media. OSCE/ODIHR noted the election was conducted in 'a pervasive atmosphere of intimidation' and 'an unlevel playing field' that gave opposition parties no fair chance. United opposition parties again failed to coordinate, splitting the anti-Fidesz vote among multiple candidates.",
+        "sources": [
+          {
+            "name": "OSCE/ODIHR",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "stop-soros-laws-enacted-2018",
+        "year": "Jun 20, 2018",
+        "title": "Stop Soros Laws Enacted — Criminalizes Assisting Asylum Seekers",
+        "type": "legislation",
+        "detail": "On June 20, 2018, Hungary enacted the 'Stop Soros' legislative package, including provisions imposing prison sentences of up to one year for anyone assisting irregular migrants to enter or stay in Hungary. Organizations like the Hungarian Helsinki Committee were effectively forced to cease asylum assistance work without a government permit. The UNHCR, Venice Commission, and EU Commission called the laws incompatible with international refugee law and EU directives. The CJEU ruled in 2020 that Hungary's asylum and migration laws violated EU law.",
+        "sources": [
+          {
+            "name": "UNHCR",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "article-7-sargentini-2018",
+        "year": "Sep 12, 2018",
+        "title": "European Parliament Triggers Article 7.1 — Sargentini Report Finds 'Clear Risk'",
+        "type": "milestone",
+        "detail": "On September 12, 2018, the European Parliament voted 448-197 to trigger Article 7.1 TEU proceedings against Hungary, based on the Sargentini Report documenting 12 areas of concern including rule-of-law violations, media freedom erosion, judicial independence, academic freedom, the rights of Roma and LGBTQ people, and migrants' rights. It was the first time the EP had triggered Article 7 against any EU member state. Orbán condemned the vote as 'a Soros plan' and 'an act of revenge against Hungary.'",
+        "sources": [
+          {
+            "name": "European Parliament",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Entrenching the System (2018–2022)",
+    "events": [
+      {
+        "id": "slave-law-protests-2018",
+        "year": "Dec 12, 2018",
+        "title": "'Slave Law' Passed — Mass Protests Against Overtime Legislation",
+        "type": "protest",
+        "detail": "On December 12, 2018, Hungary's parliament passed the Seventh Amendment to the Labor Code, allowing employers to demand up to 400 hours of overtime per year with payment potentially deferred for three years — dubbed the 'Slave Law' by protesters. Within days, tens of thousands took to the streets in Budapest and other cities in the largest protests since Orbán's return. Parliament simultaneously created an Administrative Court system giving the government effective control over courts hearing state-related cases, adding to protesters' anger.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "HVG",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fidesz-epp-suspension-2019",
+        "year": "Mar 20, 2019",
+        "title": "EPP Suspends Fidesz Membership Over Attacks on EU Institutions",
+        "type": "milestone",
+        "detail": "On March 20, 2019, the European People's Party suspended Fidesz's membership pending a review of its conduct, following a government billboard campaign targeting EU Commission President Jean-Claude Juncker and George Soros. EPP leaders cited violations of EPP statutes on European values. The suspension denied Fidesz voting rights and committee positions within the EPP group. The Orbán government dismissed the suspension as political interference and continued its anti-EU messaging ahead of European Parliament elections.",
+        "sources": [
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "karacsony-budapest-mayor-2019",
+        "year": "Oct 13, 2019",
+        "title": "Opposition Wins Budapest and Major Cities — Karácsony Becomes Mayor",
+        "type": "election",
+        "detail": "On October 13, 2019, in municipal elections, Gergely Karácsony of Párbeszéd/Greens defeated incumbent Fidesz-backed Mayor István Tarlós with 50.86% of the runoff vote to become Budapest Mayor. Opposition candidates also won mayoral races in Miskolc, Pécs, Győr, and Győr for the first time in a decade. The results demonstrated that a united opposition could defeat Fidesz under Hungary's first-past-the-post system and provided the strategic template for the 2022 united opposition PM candidate strategy.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "444.hu",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "ceu-fully-leaves-budapest-2019",
+        "year": "Dec 2019",
+        "title": "CEU Completes Relocation to Vienna — Expelled From Budapest by Lex CEU",
+        "type": "milestone",
+        "detail": "In December 2019, Central European University completed its relocation to Vienna, two years after Lex CEU's passage. The Budapest campus was forced to move its US-accredited programs to Vienna since the Orbán government refused to sign the required bilateral treaty with the United States, despite pressure from the Trump administration's State Department. The Budapest campus continued limited Hungarian-law programs. The episode became the canonical example of Hungary's academic freedom crisis and was referenced in virtually every subsequent rule-of-law assessment.",
+        "sources": [
+          {
+            "name": "Guardian",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "covid-emergency-powers-2020",
+        "year": "Mar 30, 2020",
+        "title": "Parliament Grants Orbán Indefinite Emergency Powers by Decree",
+        "type": "legislation",
+        "detail": "On March 30, 2020, Hungary's parliament passed the COVID Authorization Act granting the government authority to rule by decree for an indefinite period, suspend or postpone elections, and impose sentences of up to 5 years for spreading 'false information' about the pandemic. The law passed with Fidesz's supermajority against opposition objections. The Venice Commission, European Commission, and 13 EU heads of state issued warnings. Critics drew parallels to the 1933 German 'Enabling Act.' Orbán used emergency powers to pass unrelated legislation including restricting gender recognition.",
+        "sources": [
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Venice Commission",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "emergency-powers-lifted-2020",
+        "year": "Jun 16, 2020",
+        "title": "Emergency Powers Formally Lifted After 77 Days — Replaced by Parallel Framework",
+        "type": "legislation",
+        "detail": "On June 16, 2020, Hungary's parliament voted to terminate the indefinite emergency powers granted in March, after 77 days. However, parliament simultaneously passed a new 'medical state of danger' framework that preserved substantial government decree-making authority. Critics noted the new framework still bypassed normal parliamentary procedures. Orbán's government defended the outcome as proportionate and highlighted Hungary's COVID response — including early vaccine procurement from Russia (Sputnik V) and China (Sinopharm) — as among Europe's most proactive.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "eu-budget-veto-2020",
+        "year": "Nov 26, 2020",
+        "title": "Hungary and Poland Veto EU Budget Over Rule-of-Law Conditionality",
+        "type": "diplomacy",
+        "detail": "On November 26, 2020, Hungary and Poland blocked the EU's €1.8 trillion multi-year budget framework (MFF 2021-2027) and COVID Recovery Fund by vetoing the rule-of-law conditionality mechanism linking EU funds to respect for judicial independence. The veto threatened to delay disbursement of COVID recovery funds across all 27 member states. After two weeks of intensive negotiations, both countries accepted a political declaration that they interpreted as limiting the mechanism's scope — a compromise critics said granted them nothing substantive while giving them cover to capitulate.",
+        "sources": [
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "European Council",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fidesz-quits-epp-2021",
+        "year": "Mar 3, 2021",
+        "title": "Fidesz Quits EPP After 27 Years — End of Center-Right Alliance",
+        "type": "milestone",
+        "detail": "On March 3, 2021, Fidesz quit the European People's Party group after 27 years of membership, just days before the EPP was set to vote on rule changes enabling expulsion of member parties by simple majority — a rule clearly aimed at Fidesz. The exit ended Fidesz's role in the EU's largest political family and marked its definitive break with mainstream European center-right politics. Fidesz subsequently sat as non-attached MEPs before aligning with the Patriots for Europe group formed in 2024 around Orbán, French RN, and Austrian FPÖ.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "anti-lgbtq-law-2021",
+        "year": "Jun 15, 2021",
+        "title": "'Child Protection' Law Bans LGBTQ Content for Minors — EU Launches Challenge",
+        "type": "legislation",
+        "detail": "On June 15, 2021, Hungary's parliament passed a law banning content depicting or promoting homosexuality or gender reassignment for anyone under 18, linking LGBTQ themes to pedophilia in its preamble. The law also banned LGBTQ content in school education and advertising. EU Commission President von der Leyen called it 'a shame' and launched infringement proceedings. Seventeen EU leaders signed a joint letter condemning it. The CJEU issued a partial ruling finding audiovisual provisions violated EU law in October 2022. Orbán announced a concurrent referendum on the law.",
+        "sources": [
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "pegasus-spyware-hungary-2021",
+        "year": "Jul 18, 2021",
+        "title": "Pegasus Project Reveals Hungarian Journalists and Politicians Surveilled",
+        "type": "scandal",
+        "detail": "On July 18, 2021, the Pegasus Project — a consortium of international investigative journalists including Hungarian outlet Direkt36 — revealed that Hungary was among the heaviest users of the NSO Group's Pegasus spyware, deploying it against journalists, lawyers, opposition politicians, and businesspeople. At least 10 Hungarian journalists and media figures were confirmed as targets, including personnel from Direkt36 and 444.hu. The Hungarian government denied wrongdoing. The European Parliament launched an inquiry, and NSO Group subsequently faced international sanctions pressure.",
+        "sources": [
+          {
+            "name": "Direkt36",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Guardian",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "fidesz-2022-election-win",
+        "year": "Apr 3, 2022",
+        "title": "Fidesz Wins Fourth Consecutive Supermajority Despite United Opposition",
+        "type": "election",
+        "detail": "On April 3, 2022, Fidesz-KDNP won 54.13% of the vote and 135 of 199 seats — its best ever result — securing a fourth consecutive two-thirds supermajority. The election was held 39 days after Russia's invasion of Ukraine; Orbán ran on a 'peace and security' platform against the united six-party opposition coalition led by Péter Márki-Zay. OSCE/ODIHR found 'a fundamental imbalance' in the campaign with 'no equal opportunity to compete.' EU simultaneously froze €7.5B in cohesion funds citing rule-of-law concerns.",
+        "sources": [
+          {
+            "name": "OSCE/ODIHR",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "hogyan-kesma-media-monopoly",
+        "year": "Nov 2018",
+        "title": "500+ Pro-Government Outlets Merged Into KESMA Foundation — Media Market Monopolized",
+        "type": "milestone",
+        "detail": "In November 2018, over 500 media outlets — including newspapers, TV and radio channels, news portals, and regional papers — were donated to the Central European Press and Media Foundation (KESMA) by their oligarch owners close to Fidesz, without any competition authority review. KESMA instantly became the dominant force in Hungarian media, controlling over 80% of the market by reach. The Competition Authority declined to review the merger, citing a government decision exempting it on 'national strategic' grounds. RSF said it was the largest media consolidation in EU history.",
+        "sources": [
+          {
+            "name": "Reporters Without Borders",
+            "tier": 3,
+            "pole": "international"
+          },
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "EU Confrontation & Opposition Rise (2022–2025)",
+    "events": [
+      {
+        "id": "eu-cohesion-funds-suspended-2022",
+        "year": "Nov 22, 2022",
+        "title": "EU Council Suspends €7.5B in Hungarian Cohesion Funds",
+        "type": "diplomacy",
+        "detail": "On November 22, 2022, the EU Council formally suspended €7.5 billion in Hungarian cohesion funds under the rule-of-law conditionality mechanism — the first time this instrument had been used against an EU member state. The European Commission had recommended the suspension in September 2022. Hungary had made some judicial reform commitments but was found to have implemented only superficial changes. Combined with €10.4B frozen from the Recovery and Resilience Facility (RRF), total frozen EU funds reached approximately €17 billion by year-end.",
+        "sources": [
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "hungary-ukraine-aid-blockades",
+        "year": "2022–2024",
+        "title": "Hungary Repeatedly Blocks EU Military and Financial Aid for Ukraine",
+        "type": "diplomacy",
+        "detail": "From 2022 through 2024, Hungary under Orbán repeatedly vetoed or threatened to veto EU decisions on military and financial support for Ukraine, using its unanimity veto power on multiple occasions. Orbán argued for negotiated peace rather than weapons supplies, framing Hungary as a 'peace party.' Critics — including most EU allies and US officials — saw the pattern as serving Russian interests. Hungary held up the €50B Ukraine Facility for months in 2023-2024 before yielding under intense diplomatic pressure in February 2024.",
+        "sources": [
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "novak-pardon-scandal-public-2024",
+        "year": "Feb 2, 2024",
+        "title": "Novák Pardon of Child Abuse Accomplice Revealed — Political Earthquake",
+        "type": "scandal",
+        "detail": "On February 2, 2024, Hungarian investigative portal Direkt36 revealed that President Katalin Novák had secretly pardoned Endre Kónya, the former deputy director of the Kossuth Zsuzsa Children's Home who had been convicted of pressuring child sexual abuse victims not to testify. The pardon, countersigned by Justice Minister Judit Varga, had been issued in April 2023 but kept secret. Public outrage was immediate and explosive, cutting across political lines. Both Novák and Varga resigned within eight days.",
+        "sources": [
+          {
+            "name": "Direkt36",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "novak-varga-resignations-2024",
+        "year": "Feb 10, 2024",
+        "title": "President Novák and Minister Varga Resign Over Pardon Scandal",
+        "type": "scandal",
+        "detail": "On February 10, 2024, Hungarian President Katalin Novák resigned, stating 'I made a mistake when I signed the pardon.' Justice Minister Judit Varga — who had countersigned the pardon — also resigned the same day from all political positions and withdrew from leading Fidesz's EP election list. The scandal was the most severe blow to Fidesz since its 2010 return. Novák's ex-husband Péter Magyar, who had been quietly critical of the government, went public with viral interviews and became an overnight opposition figure.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "magyar-emerges-opposition-2024",
+        "year": "Feb 2024",
+        "title": "Péter Magyar Emerges as Opposition Figure — Announces Tisza Party",
+        "type": "politics",
+        "detail": "In February 2024, Péter Magyar — a former EU liaison official and state institution executive who was the ex-husband of resigning Justice Minister Judit Varga — appeared on independent outlet Partizán with explosive accusations of government corruption and political interference in justice. His interview went viral. Magyar organized mass protests and announced the formation of Tisza Párt (TISZA — Tisztelet és Szabadság / 'Respect and Freedom'). His insider credibility and willingness to sacrifice his career gave the opposition a new, credible voice.",
+        "sources": [
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "sweden-nato-approved-2024",
+        "year": "Feb 26, 2024",
+        "title": "Hungary Finally Ratifies Sweden's NATO Membership — Last Holdout Steps Aside",
+        "type": "diplomacy",
+        "detail": "On February 26, 2024, Hungary's parliament voted 188-6 to ratify Sweden's NATO accession, nearly two years after Sweden had applied following Russia's Ukraine invasion. Hungary had been the final NATO member to ratify, after Turkey had agreed in December 2023. Budapest had demanded commitments on defense cooperation and F-16 jet deliveries before agreeing. Sweden became NATO's 32nd member state on March 7, 2024. The delay had been widely seen as Orbán extracting bilateral concessions while shielding Russia from NATO expansion.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "magyar-march-rally-100k-2024",
+        "year": "Mar 15, 2024",
+        "title": "Magyar Leads 100,000+ Rally on Hungarian National Day",
+        "type": "protest",
+        "detail": "On March 15, 2024 — Hungary's national holiday marking the 1848 revolution — an estimated 100,000 people joined Péter Magyar's Tisza Párt rally in Budapest. Formed less than six weeks earlier, Tisza had already mobilized Hungary's largest opposition demonstration in over a decade. The crowd chanted for 'a normal Hungary,' 'Europe,' and an end to Orbán's 'mafia state.' Magyar pledged to join the European Public Prosecutor's Office and restore judicial independence. The rally demonstrated that Magyar was not a flash-in-the-pan but a sustained mass movement.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "ep-elections-hungary-2024",
+        "year": "Jun 9, 2024",
+        "title": "Tisza Wins 29.6% in EP Elections — Fidesz Posts Worst Result in 18 Years",
+        "type": "election",
+        "detail": "On June 9, 2024, in European Parliament elections, Fidesz-KDNP won 44.8% of the vote and 11 MEPs — its lowest share since 2006, an 11-point drop from its 2022 general election performance. Péter Magyar's Tisza Párt, formed only four months earlier, won 29.6% and 7 MEPs — an extraordinary debut for a brand-new party. Smaller opposition parties failed to reach the 5% threshold, consolidating the political landscape into a two-party race ahead of the 2026 national election. The result put Tisza on a credible path to government.",
+        "sources": [
+          {
+            "name": "European Parliament",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "hungary-eu-presidency-2024",
+        "year": "Jul 1, 2024",
+        "title": "Hungary Assumes EU Council Presidency — 'Make Europe Great Again'",
+        "type": "diplomacy",
+        "detail": "On July 1, 2024, Hungary assumed the rotating six-month presidency of the EU Council with the slogan 'Make Europe Great Again' — a deliberate echo of Donald Trump's MAGA branding. The presidency was immediately undermined: within days Orbán traveled to Moscow to meet Putin, then to Beijing to meet Xi Jinping on unauthorized 'peace missions.' EU leaders were furious. Multiple governments boycotted informal ministerial meetings held in Hungary, and senior Commission and Council officials refused to travel to Budapest for scheduled events.",
+        "sources": [
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "orban-moscow-visit-2024",
+        "year": "Jul 5, 2024",
+        "title": "Orbán Visits Putin in Moscow Without EU Mandate — Condemned by Allies",
+        "type": "diplomacy",
+        "detail": "On July 5, 2024, just days into Hungary's EU Council presidency, Viktor Orbán flew to Moscow and met Russian President Vladimir Putin — the first EU leader to visit Moscow since Russia's 2022 invasion of Ukraine. Orbán framed the trip as a 'peace mission' for Ukraine, but held no EU mandate to negotiate. EU foreign policy chief Josep Borrell stated Orbán was 'not entitled to speak on behalf of the EU.' France, Germany, Poland, and the Baltic states condemned the visit. Ukrainian President Zelenskyy called it 'a disaster for European unity.'",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "orban-trump-inauguration-2025",
+        "year": "Jan 20, 2025",
+        "title": "Orbán Attends Trump's Second Inauguration — Positions Hungary as MAGA's EU Ally",
+        "type": "diplomacy",
+        "detail": "On January 20, 2025, Viktor Orbán attended Donald Trump's second presidential inauguration in Washington, D.C., one of the few EU leaders to receive a prominent invitation. Orbán was photographed with Trump, Elon Musk, and other MAGA figures. The optics reinforced Budapest's self-positioning as the primary European partner of Trump's America First movement. Orbán had cultivated Trump ties since his first term; Trump supporters and figures like Tucker Carlson frequently praised Hungary as a model conservative state. EU allies were deeply uncomfortable.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "tisza-leads-polls-2025",
+        "year": "2025",
+        "title": "Tisza Overtakes Fidesz in National Polls for First Time",
+        "type": "politics",
+        "detail": "By mid-2025, polling firms including Závecz Research and Medián showed Tisza Párt polling ahead of Fidesz for the first time in national voting intention surveys. The trend reflected sustained public anger over corruption scandals, economic stagnation (GDP grew only 0.6% in 2024), and the cumulative damage of Hungary's worst inflation episode since 1992 (25.7% peak in January 2023) on household budgets. Orbán's personal approval rating dropped to its lowest level since 2010. Fidesz responded with sustained negative campaigning targeting Magyar's personal life.",
+        "sources": [
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Pre-Election Surge (2025–2026)",
+    "events": [
+      {
+        "id": "magyar-march-rally-200k-2025",
+        "year": "Mar 15, 2025",
+        "title": "Magyar Leads Largest March 15 Rally in Post-Communist History",
+        "type": "protest",
+        "detail": "On March 15, 2025 — Hungary's national revolution anniversary — an estimated 150,000-200,000 people joined Péter Magyar's annual rally in Budapest, making it the largest opposition demonstration in Hungary's post-1989 democratic history. The crowd overflowed Heroes' Square and surrounding streets. Magyar promised a 'new 1848' democratic renewal. Orbán held a separate official government ceremony simultaneously. Independent crowd estimates varied; government media minimized attendance, while opposition outlets cited police data. Both sides prepared for the April 2026 election.",
+        "sources": [
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "paks2-unit5-first-concrete-2026",
+        "year": "Feb 5, 2026",
+        "title": "Paks II Unit 5 First Concrete Poured — Construction Begins Despite War",
+        "type": "milestone",
+        "detail": "On February 5, 2026, the first concrete was poured for the foundation of Paks II Unit 5, officially beginning construction of Hungary's €12.5 billion Russian-built nuclear reactor expansion. The Rosatom project, financed 80% by a €10 billion Russian state loan, proceeded despite Russia's ongoing war in Ukraine and Western sanctions pressures on Rosatom. EU partners expressed alarm about deepening dependency on Russian nuclear infrastructure. Orbán touted it as securing Hungary's long-term energy security and low-carbon electricity supply.",
+        "sources": [
+          {
+            "name": "World Nuclear News",
+            "tier": 3,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "tisza-election-manifesto-2026",
+        "year": "Feb 2026",
+        "title": "Tisza Publishes Election Manifesto — EU Integration, EPPO, Anti-Corruption",
+        "type": "politics",
+        "detail": "In February 2026, Péter Magyar's Tisza Party published its comprehensive election manifesto. Key pledges included joining the European Public Prosecutor's Office (EPPO); restoring judicial and media independence; repealing Stop Soros laws; withdrawing from Belt and Road agreements conflicting with EU rules; reviewing the Paks II nuclear contract; and normalizing Hungary's Ukraine policy and EU solidarity posture. The manifesto aligned closely with European Commission expectations for unlocking €17 billion in frozen EU funds.",
+        "sources": [
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "orban-calls-election-2026",
+        "year": "Nov 2025",
+        "title": "Election Date Set for April 12, 2026 — Final Countdown Begins",
+        "type": "politics",
+        "detail": "In November 2025, the April 12, 2026 parliamentary election date was formalized per Hungary's constitutional calendar. With Tisza Párt consistently polling 6-14 points ahead of Fidesz in most surveys, Orbán launched aggressive counter-campaigning targeting Magyar's personal life and alleged foreign funding connections. State television ran continuous negative coverage of Magyar. OSCE election observers began advance team deployments in early 2026. Tisza volunteers canvassed rural constituencies Fidesz had never lost since 2010.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "eu-pre-election-funds-talks-2026",
+        "year": "Mar 2026",
+        "title": "EU Commission Pre-Negotiates Frozen Funds Roadmap With Tisza Team",
+        "type": "diplomacy",
+        "detail": "In March 2026, the European Commission held preliminary discussions with Tisza Párt representatives about the roadmap for unlocking approximately €17 billion in frozen EU funds after a potential change of government. Discussions covered required legislative changes on judicial independence, anti-corruption measures, EPPO membership, and media law reforms. EU officials expressed cautious optimism that a post-Orbán government would rapidly fulfill conditions that had been blocked for nearly four years, with the August 31, 2026 RRF deadline creating urgency.",
+        "sources": [
+          {
+            "name": "Euractiv",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      },
+      {
+        "id": "campaign-final-weeks-2026",
+        "year": "Apr 2026",
+        "title": "Final Campaign Weeks — Fidesz Deploys Full State Arsenal Against Magyar",
+        "type": "politics",
+        "detail": "In the final weeks before Hungary's April 12, 2026 election, the campaign reached fever pitch. Fidesz deployed state media, public billboard advertising, and social media attacks against Magyar, including alleged leaked private videos and accusations of foreign funding. Independent polling showed Tisza consistently 8-14 points ahead. Voter registration was at record highs and mobilization unprecedented. International OSCE observers noted 'significant imbalance' in media coverage. Rural Tisza canvassing in traditional Fidesz strongholds generated intense enthusiasm among first-time voters.",
+        "sources": [
+          {
+            "name": "Telex.hu",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-26T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Post-Orbán Transition (2026–)",
+    "events": [
+      {
+        "id": "tisza-election-victory-apr12",
+        "year": "2026",
+        "title": "Tisza Party Wins Historic Supermajority",
+        "type": "milestone",
+        "active": true,
+        "detail": "Péter Magyar's Tisza Party wins 53.6% of the vote and 138 of 199 parliamentary seats on April 12, 2026 — Hungary's first change of government in 16 years. Orbán concedes, describing the loss as 'clear' and 'painful'. Voter turnout hit 79.6%, the highest since 1990.",
+        "sources": [
+          {
+            "name": "CNN",
+            "tier": 1,
+            "url": "https://edition.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar",
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 1,
+            "url": "https://www.aljazeera.com/news/2026/4/12/hungary-election-early-results-show-magyars-tisza-ahead-of-orbans-fidesz",
+            "pole": "international"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://edition.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar",
+            "caption": "Tisza Party wins Hungary's parliamentary election",
+            "source": "CNN",
+            "thumbnail": "https://edition.cnn.com/2026/04/12/world/live-news/hungary-election-orban-magyar"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-18T14:42:00.000Z"
+      },
+      {
+        "id": "orban-concedes-apr13",
+        "year": "2026",
+        "title": "Orbán Concedes, 16-Year Rule Ends",
+        "type": "milestone",
+        "active": true,
+        "detail": "On April 13, 2026, Viktor Orbán officially concedes Hungary's election, ending 16 consecutive years as prime minister. Péter Magyar is confirmed as prime minister-elect. The result marks the end of Hungary's period of democratic backsliding that had put it at odds with EU institutions.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 1,
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/4/13/viktor-orban-swept-from-power-after-16-years-ruling-hungary",
+            "pole": "international"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "url": "https://www.npr.org/2026/04/12/nx-s1-5782671/hungary-viktor-orban-concedes-defeat",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/4/13/viktor-orban-swept-from-power-after-16-years-ruling-hungary",
+            "caption": "Orbán concedes defeat after 16 years ruling Hungary",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/reuters_69dd0534-1776092468.jpg?resize=1920%2C1440"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-18T14:42:00.000Z"
+      },
+      {
+        "id": "eu-ukraine-loan-veto-lifted-apr23",
+        "year": "2026",
+        "title": "Hungary Drops Ukraine Loan Veto — EU Approves €90B Package",
+        "type": "diplomacy",
+        "active": true,
+        "detail": "On April 23, 2026, the EU approved a €90 billion loan for Ukraine after Hungary lifted its veto — a direct consequence of Péter Magyar's election victory. Caretaker PM Orbán dropped the blockade following the restoration of Druzhba oil pipeline flows to Hungary and Slovakia. At an informal EU summit in Cyprus the same day, Orbán was absent for the first time in 16 years, with Ukrainian President Zelenskyy attending in his place. Hungary's transformed political trajectory effectively ended two years of Budapest's obstruction of EU Ukraine aid.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/04/23/eu-approves-90-billion-loan-for-ukraine-after-hungary-lifts-controversial-veto",
+            "pole": "western"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "url": "https://www.npr.org/2026/04/24/nx-s1-5798455/eu-approves-a-106-billion-loan-package-to-help-ukraine-after-hungary-lifts-its-veto",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/04/23/eu-approves-90-billion-loan-for-ukraine-after-hungary-lifts-controversial-veto",
+            "caption": "Hungary drops €90B Ukraine loan veto at Cyprus EU summit",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/73/10/30/1536x864_cmsv2_66180046-37e6-5502-9393-919568b78719-9731030.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-24T14:45:00.000Z"
+      },
+      {
+        "id": "orban-exits-parliament-apr25",
+        "year": "2026",
+        "title": "Orbán Quits Parliament After 36 Years — Gulyás to Lead Opposition",
+        "type": "milestone",
+        "active": true,
+        "detail": "On April 25, 2026, Viktor Orbán announced he would not take up his parliamentary seat following his landslide election defeat, ending 36 years of near-continuous service since 1990. Gergely Gulyás will lead Fidesz's parliamentary faction as opposition leader. Orbán retains the party chairmanship, positioning himself for a potential comeback, but his exit from the legislature removes his direct influence over the new parliament convening May 9.",
+        "sources": [
+          {
+            "name": "Ukrainska Pravda",
+            "tier": 2,
+            "url": "https://www.pravda.com.ua/eng/news/2026/04/25/8031836/",
+            "pole": "western"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "url": "https://www.nbcnews.com/world/hungary/hungarys-viktor-orban-steps-parliament-landslide-defeat-vows-rebuild-rcna342037",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.pravda.com.ua/eng/news/2026/04/25/8031836/",
+            "caption": "Orbán exits parliament after 36 years, handing opposition faction to Gulyás",
+            "source": "Ukrainska Pravda",
+            "thumbnail": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/1/b/817135/1b85c10ca4535f7f826d6f2046182776.jpeg?w=900&q=90"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-26T14:28:00.000Z"
+      },
+      {
+        "id": "parliament-may9-session-set",
+        "year": "2026",
+        "title": "May 9 Set for Parliament Inaugural Session — Europe Day Chosen",
+        "type": "milestone",
+        "active": true,
+        "detail": "All parties that won seats in Hungary's April 12 election agreed at consultations convened by President Tamás Sulyok to hold the new National Assembly's inaugural session on May 9 at 10:00 a.m. Péter Magyar is expected to be elected prime minister and take his oath of office the same day. The date carries historical resonance: May 9 is Europe Day, the anniversary of the Schuman Declaration that launched European integration in 1950.",
+        "sources": [
+          {
+            "name": "The Budapest Times",
+            "tier": 2,
+            "url": "https://www.budapesttimes.hu/hungary/parliament-inaugural-session-set-for-may-9/",
+            "pole": "western"
+          },
+          {
+            "name": "Hungary Today",
+            "tier": 3,
+            "url": "https://hungarytoday.hu/national-assembly-aims-for-may-9-inaugural-session/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.budapesttimes.hu/hungary/parliament-inaugural-session-set-for-may-9/",
+            "caption": "May 9 confirmed as Hungary's new parliament inaugural session date",
+            "source": "The Budapest Times",
+            "thumbnail": "https://media.cnn.com/api/v1/images/stellar/prod/2026-04-17t115440z-1647694764-rc2zqkaa8njj-rtrmadp-3-hungary-politics-magyara.JPG?c=original&q=w_1041,c_fill"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-22T14:56:31.000Z"
+      },
+      {
+        "id": "eu-magyar-funds-agreement-apr19",
+        "year": "2026",
+        "title": "EU and Magyar Agree on Frozen Funds Roadmap",
+        "type": "diplomacy",
+        "active": true,
+        "detail": "On April 19, 2026, European Commission chief of staff Björn Seibert led high-level talks with Magyar's team in Budapest, reaching agreement on a roadmap to unlock €17 billion in frozen EU funds. The €10.4 billion Recovery and Resilience Facility tranche faces an August 31 deadline. Magyar pledged to join the European Public Prosecutor's Office and restore judicial and media independence.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/04/19/eu-and-hungarys-magyar-agreed-to-work-together-for-release-of-eu-cash-after-weekend-talks",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-04-19/magyar-sets-out-steps-to-regain-hungary-s-funds-after-eu-talks",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/04/19/eu-and-hungarys-magyar-agreed-to-work-together-for-release-of-eu-cash-after-weekend-talks",
+            "caption": "EU agrees on roadmap to unlock Hungary's €17B frozen funds",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/72/72/38/1536x864_cmsv2_849550d5-9e08-5fcd-afc2-8f9992537632-9727238.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-20T00:00:00.000Z"
+      },
+      {
+        "id": "eu-funds-negotiations-apr16",
+        "year": "2026",
+        "title": "EU Delegation Arrives to Negotiate €17B in Frozen Funds",
+        "type": "diplomacy",
+        "active": true,
+        "detail": "On April 16, 2026, a European Commission delegation rushed to Budapest to negotiate the release of €17 billion in frozen EU funds tied to rule-of-law conditions. Magyar agreed with Commission President von der Leyen to fast-track judicial independence and anti-corruption reforms.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/04/16/eu-rushes-to-budapest-talks-with-magyar-team-to-unlock-frozen-funds-amid-ukraine-tensions",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/04/16/eu-rushes-to-budapest-talks-with-magyar-team-to-unlock-frozen-funds-amid-ukraine-tensions",
+            "caption": "EU delegation arrives in Budapest for frozen funds talks",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/71/95/72/1536x864_cmsv2_affac12a-2be9-5a69-9793-68393f1ece5f-9719572.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-18T14:42:00.000Z"
+      },
+      {
+        "id": "new-govt-formation-may-apr15",
+        "year": "2026",
+        "title": "Magyar Sets Early May for New Government",
+        "type": "politics",
+        "active": true,
+        "detail": "On April 15, 2026, Magyar announced Hungary's new government would take power at the beginning of May — with the constitutional deadline of May 12 for electing a prime minister. He demanded the resignation of the president and heads of state-controlled institutions, and pledged to overhaul state media.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/04/15/hungarys-peter-magyar-says-new-government-could-take-power-at-beginning-of-may",
+            "pole": "western"
+          },
+          {
+            "name": "Washington Post",
+            "tier": 1,
+            "url": "https://www.washingtonpost.com/world/2026/04/15/hungary-magyar-orban-new-government-election-tisza/f98e8658-38b8-11f1-90c4-9772c7fabc03_story.html",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/04/15/hungarys-peter-magyar-says-new-government-could-take-power-at-beginning-of-may",
+            "caption": "Magyar announces government transition timeline",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/72/29/99/1536x864_cmsv2_22293130-b71e-5fd3-ae64-b8408fd6b44a-9722999.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-04-18T14:42:00.000Z"
+      },
+      {
+        "id": "magyar-brussels-vonderleyen-apr29",
+        "year": "Apr 29, 2026",
+        "title": "Magyar Meets Von der Leyen in Brussels — First Commission Summit; Late-May Deal Target Set",
+        "type": "diplomacy",
+        "active": true,
+        "detail": "On April 29, 2026, Péter Magyar traveled to Brussels for his first formal meetings with European Commission President Ursula von der Leyen and European Council President António Costa. Both meetings were described as 'constructive and productive.' Magyar committed to returning the week of May 25 to conclude a formal political agreement unlocking Hungary's €17 billion in frozen EU funds. The talks covered the 27 'super milestones' Hungary must fulfill — including EPPO membership, judicial independence reforms, and an anti-corruption law — ahead of the August 31, 2026 deadline for the €10.4B RRF tranche. The meeting marked a sharp break from the Orbán era's confrontational EU posture.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/04/29/magyar-to-meet-von-der-leyen-as-hungary-races-to-unlock-eu-cash",
+            "pole": "western"
+          },
+          {
+            "name": "RTE News",
+            "tier": 2,
+            "url": "https://www.rte.ie/news/europe/2026/0430/1570981-magyar-eu/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/04/29/magyar-to-meet-von-der-leyen-as-hungary-races-to-unlock-eu-cash",
+            "caption": "Magyar meets von der Leyen in Brussels — first EU Commission summit for Hungary's incoming PM",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/73/95/28/1536x864_cmsv2_17260638-b67d-55a3-80cc-182f57d1304d-9739528.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-05-04T12:31:00.000Z"
+      },
+      {
+        "id": "hungary-eu-164b-deal-may29",
+        "year": "May 29, 2026",
+        "title": "Hungary Signs €16.4B EU Funds Deal — Largest Post-Orbán EU Unlock",
+        "type": "diplomacy",
+        "active": true,
+        "detail": "PM Péter Magyar and EC President von der Leyen signed an agreement on May 29 releasing €16.4 billion in previously frozen EU funds: €10 billion RRF and €6.4 billion cohesion. Hungary must meet 27 'super-milestones' by August 31, 2026, including EPPO membership, judicial independence reforms, and anti-corruption measures. First disbursements expected Q4 2026. The deal caps five weeks of Brussels negotiations and represents the definitive end of the Orbán era's adversarial EU posture.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/05/29/hungary-unlocks-164bn-in-eu-funds-after-magyar-secures-deal-with-brussels",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-05-29/eu-to-unlock-10-billion-of-frozen-funds-to-hungary",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.euronews.com/my-europe/2026/05/29/hungary-unlocks-164bn-in-eu-funds-after-magyar-secures-deal-with-brussels",
+            "caption": "Hungary signs €16.4B EU funds deal — ending Orbán-era standoff with Brussels",
+            "source": "Euronews",
+            "thumbnail": "https://www.euronews.com/my-europe/2026/05/29/hungary-unlocks-164bn-in-eu-funds-after-magyar-secures-deal-with-brussels"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "confidence": "high",
+        "lastUpdated": "2026-06-01T16:31:33.000Z"
+      },
+      {
+        "id": "magyar-constitutional-amendment-presidential-removal-jun1",
+        "year": "Jun 1, 2026",
+        "title": "Magyar Announces Constitutional Amendment to Enable Presidential Removal — Sulyok Deadline Expired",
+        "type": "legislation",
+        "active": true,
+        "detail": "After President Sulyok and Prosecutor General Nagy both refused May 31 resignation deadlines, PM Magyar announced on June 1 that the government will amend the Fundamental Law to create a framework enabling parliamentary removal of fixed-term constitutional officeholders. The amendment is framed as a general mechanism, not targeted legislation. Tisza holds 141/199 seats — above the two-thirds threshold — and the process is expected to take one month. This is the second use of Tisza's constitutional majority following the 16th Amendment (eight-year PM term limits, May 2026).",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/06/01/hungarian-government-to-amend-constitution-to-allow-removal-of-president",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-06-01/hungary-to-amend-constitution-to-oust-president-magyar-says",
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/6/1/hungarys-magyar-to-amend-the-constitution-to-remove-president-tamas-sulyok",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.euronews.com/my-europe/2026/06/01/hungarian-government-to-amend-constitution-to-allow-removal-of-president",
+            "caption": "Magyar announces constitutional amendment to remove Orbán-era president after deadline refusal",
+            "source": "Euronews",
+            "thumbnail": "https://www.euronews.com/my-europe/2026/06/01/hungarian-government-to-amend-constitution-to-allow-removal-of-president"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "confidence": "high",
+        "lastUpdated": "2026-06-01T16:31:33.000Z"
+      },
+      {
+        "id": "magyar-cabinet-announced-may02-timeline",
+        "year": "May 2, 2026",
+        "title": "Magyar Unveils 16-Member Expert Cabinet Ahead of May 9 Swearing-In",
+        "type": "politics",
+        "active": true,
+        "detail": "On May 2, 2026, Péter Magyar announced his complete 16-member cabinet. Key appointments: Anita Orbán (no relation to Viktor Orbán) as Foreign Minister — ending the Szijjártó era's Eastern Opening; András Kármán as Finance Minister; István Kapitány as Minister for Economy and Energy; Romulusz Ruszin-Szendi (career military officer) as Defense Minister, signaling NATO recommitment; Zsolt Hegedűs as Health Minister. The expert-led cabinet structure departs sharply from Orbán's centralized model and is pre-briefed on all 27 EU 'super milestones' required for the €17B frozen funds deal.",
+        "sources": [
+          {
+            "name": "Hungarian Conservative",
+            "tier": 2,
+            "url": "https://www.hungarianconservative.com/articles/current/tisza-government-cabinet-finalized-hungary/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/04/29/magyar-to-meet-von-der-leyen-as-hungary-races-to-unlock-eu-cash",
+            "caption": "Magyar announces 16-member cabinet ahead of May 9 swearing-in ceremony",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/73/95/28/1536x864_cmsv2_17260638-b67d-55a3-80cc-182f57d1304d-9739528.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high",
+        "lastUpdated": "2026-05-04T12:31:00.000Z"
+      },
+      {
+        "id": "orban-reelected-fidesz-leader-jun13-timeline",
+        "year": "2026",
+        "title": "Orbán Re-Elected Fidesz Party Leader Despite Historic Election Loss",
+        "type": "political",
+        "detail": "At Fidesz's party congress on June 13, Viktor Orbán was re-elected party leader for another term, with 729 of 737 delegates voting in favour and none against — no rival candidate ran. The vote came two months after Fidesz's landslide defeat to Péter Magyar's Tisza party. Orbán took 'full responsibility' for the election loss but argued Fidesz needed structural changes — a broadened party presidency and stronger local organization — to function as an effective opposition capable of one day returning to government.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/6/13/hungarys-former-pm-orban-re-elected-party-leader-despite-election-loss",
+            "pole": "western"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2026/06/13/europe/hungary-viktor-orban-fidesz-reelection-intl",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/6/13/hungarys-former-pm-orban-re-elected-party-leader-despite-election-loss",
+            "caption": "Viktor Orbán addresses the Fidesz party congress ahead of his unopposed re-election as party leader, June 13, 2026",
+            "source": "Al Jazeera / Reuters",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/06/2026-06-13T143228Z_601116829_RC2XNKA9W3P2_RTRMADP_3_HUNGARY-POLITICS-ORBAN-1781371974.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "constitutional-amendment-sulyok-removed-jul13-timeline",
+        "year": "2026",
+        "title": "Parliament Passes 17th Constitutional Amendment, Ending Sulyok's Presidency 139–6",
+        "type": "legislation",
+        "active": true,
+        "detail": "Hungary's parliament passed the 17th amendment to the Fundamental Law on July 13 by 139–6, using Tisza's supermajority to end President Tamás Sulyok's term and terminate Constitutional Court head Péter Polt's tenure. The amendment also includes judicial-reform provisions, creates a new office to investigate financial abuses under the Orbán government, and imposes a 12-year term limit on MPs. Sulyok had five days to sign or refer it to the Constitutional Court; he signed it July 18, and his term formally ended July 20, with Speaker Ágnes Forsthoffer becoming interim head of state.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/14/hungarys-parliament-votes-to-oust-president-in-latest-anti-orban-move",
+            "pole": "western"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/07/13/hungarian-parliament-removes-president-tamas-sulyok-from-office",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/7/14/hungarys-parliament-votes-to-oust-president-in-latest-anti-orban-move",
+            "caption": "Hungary's parliament votes 139–6 to pass the constitutional amendment ending President Sulyok's term, July 13, 2026",
+            "source": "AFP / Al Jazeera",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/07/afp_6a557e3f8862-1783987775.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "sulyok-departs-forsthoffer-interim-president-jul20",
+        "year": "2026",
+        "title": "Sulyok's Term Ends; Forsthoffer Becomes Interim President",
+        "type": "legislation",
+        "active": true,
+        "detail": "President Tamás Sulyok signed the 17th constitutional amendment on July 18 rather than refer it to the Constitutional Court, calling it an abuse of political power but saying he was bound to fulfil his constitutional duty. His term ended at midnight on July 20, and National Assembly Speaker Ágnes Forsthoffer — a Tisza MP and the first non-Fidesz Speaker since 2010 — assumed the powers of interim head of state. Parliament must elect a permanent successor; the vote is scheduled for August 11, with Tisza nominee András Baka the sole qualified candidate.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/2026/07/18/hungarian-president-tamas-sulyok-signs-constitutional-amendment-ending-his-own-mandate",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-07-18/hungary-s-president-ends-his-own-term-in-bow-to-new-government",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/2026/07/18/hungarian-president-tamas-sulyok-signs-constitutional-amendment-ending-his-own-mandate",
+            "caption": "President Tamás Sulyok signs the constitutional amendment ending his own mandate, July 18, 2026",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/84/29/94/1536x864_cmsv2_999832ca-04da-5a8d-8665-02e3d7f81179-9842994.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "szijjarto-russia-ties-investigation-jul16-timeline",
+        "year": "2026",
+        "title": "Magyar Government Opens Investigation into Ex-FM Szijjártó's Russia Ties",
+        "type": "political",
+        "detail": "PM Péter Magyar announced on July 16 that authorities have opened a large-scale investigation into former Foreign Minister Péter Szijjártó's relations with Russia, covering classified government and foreign-policy materials. The probe follows the leak of recordings in which Szijjártó is heard briefing Russian FM Sergei Lavrov ahead of EU meetings and offering to help dilute EU sanctions on Moscow. Szijjártó had resigned his parliamentary seat days earlier to become global head of external affairs at Chinese EV maker BYD.",
+        "sources": [
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-07-16/hungary-probing-ex-foreign-minister-s-russia-ties-magyar-says",
+            "pole": "western"
+          },
+          {
+            "name": "Kyiv Independent",
+            "tier": 2,
+            "url": "https://kyivindependent.com/hungary-opens-investigation-into-former-fm-szijjartos-russia-ties/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://kyivindependent.com/hungary-opens-investigation-into-former-fm-szijjartos-russia-ties/",
+            "caption": "Former Hungarian Foreign Minister Péter Szijjártó meets Russian FM Sergei Lavrov in Moscow, March 2026 — now under investigation for his Russia ties",
+            "source": "AFP / Hungarian Conservative",
+            "thumbnail": "https://www.hungarianconservative.com/wp-content/uploads/2026/03/szijjarto-lavrov-intelligence-operation-hungary-election-scaled-e1774309496474.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "prosecutor-general-nagy-resigns-jul22-timeline",
+        "year": "2026",
+        "title": "Prosecutor General Gábor Bálint Nagy Resigns Under Pressure From Magyar",
+        "type": "political",
+        "detail": "Prosecutor General Gábor Bálint Nagy announced his resignation on July 22, asking that his mandate end August 25. Nagy said he was stepping down 'solely to safeguard the interests of the prosecutorial service,' after political attacks he said moved beyond legitimate debate. PM Péter Magyar, who had called Nagy 'another Orbán puppet' since Nagy defied a May 31 resignation deadline, welcomed the departure. Nagy becomes the second Fidesz-era constitutional officeholder to leave office in 2026, after President Sulyok.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/07/22/hungarys-prosecutor-resigns-under-pressure-in-political-win-for-magyar",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-07-22/hungary-s-top-prosecutor-quits-in-fresh-win-for-premier-magyar",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/07/22/hungarys-prosecutor-resigns-under-pressure-in-political-win-for-magyar",
+            "caption": "Prosecutor General Gábor Bálint Nagy announces his resignation under pressure from PM Péter Magyar, July 22, 2026",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/84/71/05/1536x864_cmsv2_d3ffad93-c05c-5b59-b499-72f9917c8328-9847105.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "tisza-nominates-baka-president-aug8-timeline",
+        "year": "2026",
+        "title": "Tisza Nominates Former Supreme Court Chief András Baka for President",
+        "type": "political",
+        "active": false,
+        "detail": "Hungary's ruling Tisza party nominated 73-year-old András Baka, former president of Hungary's Supreme Court and a onetime ECtHR judge, as its presidential candidate on August 8. Orbán's government removed Baka as Supreme Court chief in 2011, three years early; the European Court of Human Rights ruled in 2014 the dismissal breached his free-expression rights and damaged judicial independence. Baka secured the 140 parliamentary signatures required to qualify by August 10, becoming the sole valid candidate ahead of the parliamentary vote scheduled for August 11.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/9/hungary-nominates-former-supreme-court-chief-andras-baka-for-presidency",
+            "pole": "western"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "url": "https://www.nbcnews.com/world/hungary/hungarys-ruling-party-nominates-former-supreme-court-head-andras-baka-rcna591468",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/9/hungary-nominates-former-supreme-court-chief-andras-baka-for-presidency",
+            "caption": "András Baka, Tisza's nominee for the Hungarian presidency, pictured during an AFP interview in Budapest (file photo)",
+            "source": "AFP / Al Jazeera",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/08/afp_6a77bb9dec8f-1786231709.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "baka-elected-president-aug11-timeline",
+        "year": "2026",
+        "title": "Parliament Elects András Baka President; Fidesz Boycotts Vote",
+        "type": "political",
+        "active": false,
+        "detail": "Hungary's parliament elected András Baka president on August 11 in a secret ballot, 140 votes in favor and 6 against. Viktor Orbán's Fidesz party and ally KDNP boycotted the vote, calling the earlier removal of President Sulyok 'tyrannical' and 'illegitimate.' In his first address, Baka said Hungary had developed a system in which 'one party captured the state' with no functioning separation of powers, but warned that 'we cannot build the new Hungary on revenge.' He is scheduled to be sworn in August 19, succeeding interim President Ágnes Forsthoffer.",
+        "sources": [
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2026/08/11/europe/hungary-andras-baka-president-intl",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-08-11/hungary-elects-new-president-in-shift-from-orban-s-political-era",
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/11/hungary-elects-supreme-court-judge-ousted-by-orban-as-new-president",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/11/hungary-elects-supreme-court-judge-ousted-by-orban-as-new-president",
+            "caption": "András Baka addresses Hungary's parliament after being elected president, Budapest, August 11, 2026",
+            "source": "AFP / Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/08/afp_6a7b312b9b8c-1786458411.jpg?resize=770%2C513&quality=80"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "baka-sworn-in-president-aug19-timeline",
+        "year": "2026",
+        "title": "András Baka Sworn In as President of Hungary",
+        "type": "political",
+        "active": true,
+        "detail": "András Baka took the oath of office as Hungary's president on August 19, completing the transition begun with his August 11 parliamentary election (140–6, Fidesz/KDNP boycotting). He succeeds interim President Ágnes Forsthoffer and becomes the second Fidesz-era institutional post to change hands to a rule-of-law-minded figure after President Sulyok's July 20 departure. Baka's inauguration drew congratulations from world leaders including Chinese President Xi Jinping — a sign of foreign-policy continuity alongside the domestic overhaul.",
+        "sources": [
+          {
+            "name": "ABC News (AP)",
+            "tier": 2,
+            "url": "https://abcnews.com/International/wireStory/hungarys-parliament-taps-andrs-baka-president-part-orbn-135546737",
+            "pole": "western"
+          },
+          {
+            "name": "Kyiv Independent",
+            "tier": 3,
+            "url": "https://kyivindependent.com/hungarian-parliament-elects-new-president-after-dismissal-of-orban-ally/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://kyivindependent.com/hungarian-parliament-elects-new-president-after-dismissal-of-orban-ally/",
+            "caption": "András Baka at his swearing-in as president of Hungary, Budapest",
+            "source": "Janos Kummer/Getty Images via Kyiv Independent",
+            "thumbnail": "https://assets.kyivindependent.com/content/images/2026/08/GettyImages-2290025670--1-_20260811-150108.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "m1-news-resumes-after-blackout-aug20-timeline",
+        "year": "2026",
+        "title": "M1 Public Broadcaster Resumes News After 44-Day Blackout, Editorial Independence Questioned",
+        "type": "scandal",
+        "active": true,
+        "detail": "M1 resumed public-television news broadcasts on August 20, 44 days after Magyar's government suspended them on July 7 to rebuild the outlet as independent. The relaunch bulletin, Híradó, included opposition voices for the first time in years, and purged journalists Antónia Mészáros and Ádám Bősze returned for a one-day broadcast. But the reform's credibility was undercut by an August 4 episode in which interim managers' appointment of an editor-in-chief and presenter was reversed within 24 hours after PM Magyar publicly objected on Facebook — direct political interference in an outlet whose independence had just been proclaimed. Former Fidesz MP János Pócs accused Magyar of building 'a dictatorship.'",
+        "sources": [
+          {
+            "name": "Brussels Signal",
+            "tier": 3,
+            "url": "https://brusselssignal.eu/2026/08/hungarian-public-television-resumes-news-after-government-ordered-blackout/",
+            "pole": "western"
+          },
+          {
+            "name": "Daily News Hungary",
+            "tier": 2,
+            "url": "https://dailynewshungary.com/hungary-public-broadcaster-launches-news/",
+            "pole": "western"
+          },
+          {
+            "name": "Hungarian Conservative",
+            "tier": 3,
+            "url": "https://www.hungarianconservative.com/articles/current/m1-news-appointments-withdrawn/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://dailynewshungary.com/hungary-public-broadcaster-launches-news/",
+            "caption": "Máté Kis presents Híradó, M1's relaunched flagship news bulletin",
+            "source": "Facebook/Közmédia via Daily News Hungary",
+            "thumbnail": "https://dailynewshungary.b-cdn.net/wp-content/uploads/2026/08/Mate-Kis-presenter-of-Hirado-on-M1-public-broadcaster-1280x852.webp"
+          }
+        ],
+        "eventConfidence": "disputed",
+        "confidence": "high"
+      },
+      {
+        "id": "prosecutor-general-nagy-departs-aug25-timeline",
+        "year": "2026",
+        "title": "Prosecutor General Nagy's Resignation Takes Effect",
+        "type": "political",
+        "active": false,
+        "detail": "Gábor Bálint Nagy's resignation as Prosecutor General formally took effect August 25, five weeks after his July 22 announcement. His departure completes the removal of the last Orbán-era senior constitutional officeholder Magyar's government targeted since taking office, after President Sulyok and now Nagy. Magyar said Hungary had freed itself from 'another Orbán puppet.'",
+        "sources": [
+          {
+            "name": "Budapest Times",
+            "tier": 2,
+            "url": "https://www.budapesttimes.hu/hungary/chief-prosecutor-quits-warning-politics-is-swallowing-justice/",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-07-22/hungary-s-top-prosecutor-quits-in-fresh-win-for-premier-magyar",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.budapesttimes.hu/hungary/chief-prosecutor-quits-warning-politics-is-swallowing-justice/",
+            "caption": "Gábor Bálint Nagy, outgoing Prosecutor General of Hungary",
+            "source": "Budapest Times",
+            "thumbnail": "https://www.budapesttimes.hu/wp-content/uploads/2026/07/prosecutor_court.png"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      },
+      {
+        "id": "eu-funds-milestones-on-track-aug24-timeline",
+        "year": "2026",
+        "title": "Hungary on Track to Meet EU Funds Reform Deadline",
+        "type": "milestone",
+        "active": true,
+        "detail": "The European Commission said Hungary is on track to unlock roughly €10 billion in frozen RRF funds ahead of the August 31 deadline set under the May 29 Magyar-von der Leyen deal. Two-thirds of the 27 required super-milestones are complete, including all judicial-independence reforms and June's anti-corruption package; roughly 9 remain. A Commission source said 'we have every chance that Hungary can fulfil all criteria on time,' with disbursement expected by autumn.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/08/24/hungary-on-track-to-unlock-10bn-in-eu-funds-before-august-reform-deadline",
+            "pole": "western"
+          },
+          {
+            "name": "EUobserver",
+            "tier": 2,
+            "url": "https://euobserver.com/218182/this-week-magyar-heads-to-brussels-to-unlock-hungarys-frozen-eu-recovery-money-by-31-august/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/08/24/hungary-on-track-to-unlock-10bn-in-eu-funds-before-august-reform-deadline",
+            "caption": "Hungary's EU funds reform progress ahead of the August 31 deadline",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/88/61/22/1200x675_cmsv2_f4adabd3-a88e-57e9-adc8-3bca779cc308-9886122.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "confidence": "high"
+      }
+    ]
+  }
+]

@@ -1,0 +1,120 @@
+[
+  {
+    "id": "total-plastic-removed-ocean-cleanup",
+    "label": "Plastic Removed by The Ocean Cleanup",
+    "value": "50M kg",
+    "color": "green",
+    "source": "The Ocean Cleanup / National Today (Mar 13, 2026)",
+    "contested": false,
+    "delta": "+45.5M kg since Jan 2024",
+    "deltaNote": "50M kg (110M lbs) milestone crossed March 13, 2026. 2025 was most productive year on record at 25M kg. Combined GPGP ocean systems and river Interceptors including new Meycauayan River, Philippines deployment (May 2026).",
+    "trend": "up",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "annual-plastic-entering-ocean",
+    "label": "Plastic Entering Oceans Per Year",
+    "value": "11M metric tons",
+    "color": "red",
+    "source": "Pew Charitable Trusts / SYSTEMIQ (2020)",
+    "contested": true,
+    "contestNote": "Estimates range 8–23 million MT/year depending on methodology and year",
+    "trend": "up",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "ocean-plastic-accumulated",
+    "label": "Total Plastic Accumulated in World's Oceans",
+    "value": "~170M metric tons",
+    "color": "red",
+    "source": "Science Journal, Jambeck et al. (cumulative 2024 estimate)",
+    "contested": true,
+    "contestNote": "Sea floor and deep-water plastic largely unmeasured; actual total may exceed 200M MT",
+    "trend": "up",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "global-mpa-coverage",
+    "label": "Global Ocean Under Marine Protection",
+    "value": "10.01%",
+    "color": "amber",
+    "source": "UNEP-WCMC Protected Planet / Oceanographic Magazine (Apr 2026)",
+    "contested": false,
+    "delta": "Target: 30% by 2030",
+    "deltaNote": "Milestone crossed April 2026: 10% of oceans now designated protected or conserved. Only 1.3% has assessed management effectiveness. Kunming-Montreal 30x30 goal requires tripling in 4 years.",
+    "trend": "up",
+    "lastUpdated": "2026-04-21"
+  },
+  {
+    "id": "north-atlantic-right-whale-population",
+    "label": "North Atlantic Right Whale Population",
+    "value": "~380 individuals",
+    "color": "red",
+    "source": "NOAA Fisheries / IUCN Red List (May 2026)",
+    "contested": false,
+    "delta": "23 calves in 2025–2026 season — best in 15 years",
+    "deltaNote": "IUCN Critically Endangered. 23 calves confirmed in 2025–2026 season (Nov–Apr) — highest since 2009, first 15-year period with 20+ calves. ~70 reproductively active females. Trump administration backs H.R. 8509 to delay new rope regulations to 2035 (May 4, 2026), alarming conservation groups. Gear entanglement remains primary mortality driver.",
+    "trend": "down",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "gbr-bleaching-coverage-2024",
+    "label": "Global Coral Reef Area Bleached — 4th Global Event",
+    "value": "84.4%",
+    "color": "red",
+    "source": "NOAA Coral Reef Watch / ICRI (2026)",
+    "contested": false,
+    "delta": "Largest bleaching event ever recorded: Jan 2023 – Sep 2025",
+    "deltaNote": "4th global mass bleaching event impacted 84.4% of world reef area across 83 countries over 2.5 years. GBR: 73% of surveyed area bleached in 2024.",
+    "trend": "up",
+    "lastUpdated": "2026-04-21"
+  },
+  {
+    "id": "bbnj-treaty-parties",
+    "label": "High Seas Treaty (BBNJ) Parties — In Force",
+    "value": "92 ratifications",
+    "color": "blue",
+    "source": "UN BBNJ Agreement / High Seas Alliance (Apr 2026)",
+    "contested": false,
+    "delta": "Treaty entered into force Jan 17, 2026",
+    "deltaNote": "145 countries have signed; 92 have ratified as of April 2026. Australia ratified March 2026 (88th party). CoP1 scheduled January 11–22, 2027. PrepCom 3 concluded April 2, 2026.",
+    "trend": "up",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "coral-reefs-under-high-threat",
+    "label": "World's Coral Reefs Under Bleaching-Level Stress",
+    "value": "54%",
+    "color": "red",
+    "source": "NOAA Coral Reef Watch / ICRI (2024)",
+    "contested": true,
+    "contestNote": "Percentage fluctuates with ocean temperatures; El Niño years see spikes above 80%. Cumulative impact of 4th global bleaching event reached 84.4% by Sep 2025.",
+    "trend": "up",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "eastern-pacific-gray-whale-population",
+    "label": "Eastern Pacific Gray Whale Population",
+    "value": "~17,750 (NOAA official est.)",
+    "color": "amber",
+    "source": "NOAA Fisheries Southwest Fisheries Science Center (NOAA-TM-NMFS-SWFSC-737, Jul 2026)",
+    "contested": true,
+    "contestNote": "NOAA's official 2025/2026 migration survey (95% CI: 15,930–20,530) puts the population back within its pre-2024 range, in tension with PEER/independent researchers' 'catastrophic mortality event' framing based on 145 stranding deaths. NOAA has not formally re-declared an Unusual Mortality Event.",
+    "delta": "Rebound from ~11,700–14,200 (2024/25 est.)",
+    "deltaNote": "NOAA published a new abundance estimate on July 15, 2026 based on visual, infrared-camera, and drone surveys off Granite Canyon, California, putting the population at ~17,750 — a rebound from the 2024/2025 estimate and comparable to levels during the 2019–2023 Unusual Mortality Event. The finding complicates (but does not resolve) the 'catastrophic mortality event' narrative from mid-2026's 145 recorded strandings from Mexico to Alaska. NOAA scientists caution that calf production has remained near record lows since 2019, and flagged migration-timing or methodology questions requiring further study.",
+    "trend": "stable",
+    "lastUpdated": "2026-07-15"
+  },
+  {
+    "id": "our-ocean-conference-cumulative-commitments",
+    "label": "Our Ocean Conference — Cumulative Commitments Since 2014",
+    "value": "$176B",
+    "color": "blue",
+    "source": "Our Ocean Conference / World Resources Institute (Jun 2026)",
+    "contested": false,
+    "delta": "+$6.4B at OOC11 Mombasa (Jun 16–18, 2026)",
+    "deltaNote": "OOC11, the first Our Ocean Conference held in Africa, drew 5,000+ delegates from 100+ governments and organizations who announced 320 new commitments worth $6.4 billion — covering MPAs, fisheries transparency, coral reef resilience, and blue-economy investment. Since the series began in 2014, cumulative pledges now total over $176 billion across 3,200+ commitments, though implementation tracking of past promises remains contested.",
+    "trend": "up",
+    "lastUpdated": "2026-06-18"
+  }
+]

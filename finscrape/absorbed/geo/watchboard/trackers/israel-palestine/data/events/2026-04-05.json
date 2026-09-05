@@ -1,0 +1,56 @@
+[
+  {
+    "id": "idf-dog-mosque-west-bank-2026-04-05",
+    "year": "Apr 5, 2026",
+    "title": "IDF Military Dog Attacks Palestinian Man Inside West Bank Mosque",
+    "type": "military",
+    "active": true,
+    "detail": "Footage emerged on April 5, 2026 showing an IDF military dog attacking a Palestinian man inside a mosque in the West Bank. The video, circulated widely on social media, prompted renewed calls for accountability over Israeli military rules of engagement in the West Bank. Human rights organizations and Palestinian officials condemned the incident, describing it as a violation of the sanctity of a place of worship and an example of excessive force. The IDF had not immediately commented on the footage. The incident adds to a pattern of documented complaints by B'Tselem and other rights monitors regarding the conduct of Israeli forces during West Bank operations.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/5/footage-shows-idf-military-dog-attacking-palestinian-man-inside-mosque?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/5/footage-shows-idf-military-dog-attacking-palestinian-man-inside-mosque?traffic_source=rss",
+        "caption": "Footage shows IDF military dog attacking Palestinian man inside a mosque in the West Bank",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/video/newsfeed/2026/4/5/footage-shows-idf-military-dog-attacking-palestinian-man-inside-mosque?traffic_source=rss"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-04-05T10:04:23.000Z"
+  },
+  {
+    "id": "ben-gvir-death-row-plans-2026-04-05",
+    "year": "Apr 5, 2026",
+    "title": "Ben-Gvir Details Plans for Palestinian 'Death Row'",
+    "type": "political",
+    "active": true,
+    "detail": "Israeli National Security Minister Itamar Ben-Gvir detailed plans on April 5, 2026 to establish a Palestinian 'death row' inside Israeli prisons, signaling a further escalation of hardline policies toward Palestinian detainees. The announcement drew international condemnation from human rights groups and Palestinian officials, who warned the move would violate international law regarding the treatment of prisoners. Critics described the proposal as part of a broader pattern of punitive measures targeting Palestinian prisoners under Ben-Gvir's tenure as National Security Minister.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/5/israels-ben-gvir-details-plans-for-palestinian-death?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/5/israels-ben-gvir-details-plans-for-palestinian-death?traffic_source=rss",
+        "caption": "Israel's Ben-Gvir details plans for Palestinian 'death row'",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/video/newsfeed/2026/4/5/israels-ben-gvir-details-plans-for-palestinian-death?traffic_source=rss"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-04-05T15:41:18.000Z"
+  }
+]

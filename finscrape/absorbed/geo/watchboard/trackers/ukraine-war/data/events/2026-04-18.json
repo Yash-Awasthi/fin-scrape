@@ -1,0 +1,55 @@
+[
+  {
+    "id": "belarus-border-road-construction-apr18",
+    "year": "Apr 18, 2026",
+    "title": "Road Construction Near Belarusian Border Raises Fears of Re-Entry Into Ukraine Conflict",
+    "type": "military",
+    "detail": "New road construction near the Belarusian border with Ukraine is raising fears that Belarus may be preparing to re-enter the conflict, mirroring infrastructure activity observed before the February 2022 invasion. Analysts note the construction pattern echoes logistics staging seen in the buildup period, though Minsk has not made any official announcements.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbFhuSUZHbWNWX0s2MC15WnZaaFpHS3JkWjI1TFlxQkxlOWozRG1LeXQ3Ull0Wjh5UDlLcTZTRlhrcjk0RWpQQktaTld1U2t1NGZjeVZUZjZnYUlZSHlIejBLaEpyX2RPM2VQQnNZNHU5ZjlyTzlMRTBUQVFTMnVrMHJvNGJ4Q3ctbnJER1c2SlZieG5zeXc?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://en.wikipedia.org/wiki/Alexander_Lukashenko",
+        "source": "Wikipedia / Alexander Lukashenko",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Alexander_Lukashenko_%2814-03-2025%29_%283x4_cropped%29.jpg/330px-Alexander_Lukashenko_%2814-03-2025%29_%283x4_cropped%29.jpg"
+      }
+    ]
+  },
+  {
+    "id": "kyiv-grocery-store-shooting-apr18",
+    "year": "Apr 18, 2026",
+    "title": "Gunman Kills Six at Kyiv Grocery Store, Takes Hostages Before Being Shot Dead",
+    "type": "security",
+    "detail": "A gunman opened fire at a grocery store in Kyiv, killing at least six people and taking hostages before being shot dead by security forces. The attack marks a major domestic security incident in the wartime capital, raising questions about internal security amid the ongoing war with Russia.",
+    "sources": [
+      {
+        "name": "BBC",
+        "tier": 2,
+        "url": "https://www.bbc.com/news/articles/cm25r1vkx4lo?at_medium=RSS&at_campaign=rss",
+        "pole": "western"
+      },
+      {
+        "name": "New York Times",
+        "tier": 2,
+        "url": "https://www.nytimes.com/2026/04/18/world/europe/kyiv-ukraine-mass-shooting-hostages.html",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.bbc.com/news/articles/cm25r1vkx4lo?at_medium=RSS&at_campaign=rss",
+        "caption": "Scene of the mass shooting at a Kyiv grocery store",
+        "source": "BBC",
+        "thumbnail": "https://ichef.bbci.co.uk/news/1024/branded_news/f579/live/9699abd0-3b4d-11f1-879d-1b2f5c3919b8.png"
+      }
+    ]
+  }
+]

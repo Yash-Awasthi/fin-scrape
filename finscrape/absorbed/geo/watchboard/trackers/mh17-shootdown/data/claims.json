@@ -1,0 +1,212 @@
+[
+  {
+    "id": "was-mh17-shot-by-buk",
+    "question": "Was MH17 shot down by a Buk surface-to-air missile?",
+    "sideA": {
+      "label": "JIT / DSB / West",
+      "text": "Definitively confirmed by both the Dutch Safety Board (safety investigation) and the JIT (criminal investigation). The DSB final report (Oct 2015) identifies a 9N314M warhead from a 9M38-series Buk missile as the cause of the crash. Physical fragments of the warhead were recovered from the cockpit, fuselage, and victims' bodies. The JIT corroborated this with additional missile fragment analysis and social media evidence."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia has not disputed that a Buk missile caused the crash, but disputes the origin of the Buk. Russia presented its own radar data and claimed the trajectory analysis differs from JIT conclusions. Russian state media and MoD briefings argued the specific serial numbers pointed to a Soviet-era Buk transferred to Ukraine, rather than a current Russian military asset."
+    },
+    "resolution": "Confirmed by Tier 1 sources. DSB and JIT are in consensus. Russia's serial-number alternative theory was refuted by JIT analysis and Bellingcat.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "did-buk-come-from-russia",
+    "question": "Did the Buk TELAR come from Russia's military, or was it a Ukrainian weapon?",
+    "sideA": {
+      "label": "JIT / Bellingcat",
+      "text": "JIT confirmed with high confidence (May 2018) that the Buk TELAR came from the 53rd Anti-Aircraft Missile Brigade of the Russian Armed Forces, based in Kursk. The vehicle was identified through unique visual characteristics (markings, rust patterns, equipment) photographed in Kursk and in the convoy. Bellingcat's independent OSINT analysis — matching the specific unit to the 53rd Brigade — was corroborated by the JIT."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia's Ministry of Defence insisted the Buk serial numbers belong to a batch transferred to Ukraine in 1986 and never returned to Russia. Russia presented radar track data claiming to show the Buk was fired from Ukrainian military-controlled territory. A Russian MoD spokesperson claimed Buk serial number 332 was owned by the Ukrainian military, a claim disputed by JIT analysis of production records."
+    },
+    "resolution": "JIT concluded the Buk came from Russia's 53rd Brigade. Russia's counter-evidence was assessed as manipulated or fabricated by independent analysts.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "launch-site-location",
+    "question": "From where exactly was the Buk missile launched?",
+    "sideA": {
+      "label": "JIT",
+      "text": "JIT pinpointed the launch location as a field near the settlement of Pervomaysk, approximately 3km south of Snizhne, in separatist-controlled Donetsk Oblast. This was determined through social media geolocated posts showing the Buk at nearby locations, combined with acoustic and infrasound analysis, witness accounts, and reconstruction of the missile's trajectory based on DSB findings."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia claimed its radar data showed the launch came from near Zaroshchenske, an area then under Ukrainian government control — implying a Ukrainian military unit fired the missile. Russia presented a press conference in 2014 with radar imagery claiming to show launch coordinates south of the JIT's identified site, which would implicate Ukrainian forces."
+    },
+    "resolution": "JIT's Pervomaysk conclusion is accepted by international investigators. Russia's radar data was found by independent radar experts to be fabricated; the imagery appeared to use manipulated metadata from a different date.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "russian-state-responsibility",
+    "question": "Is Russia the Russian state — as opposed to individual actors — responsible for shooting down MH17?",
+    "sideA": {
+      "label": "Netherlands / Australia",
+      "text": "The Netherlands and Australia formally declared Russia state-responsible in May 2018, holding the Russian Federation legally accountable for deploying a military asset that caused the deaths of 298 people. This position is based on the principle of state attribution in international law: the Buk belonged to Russian Armed Forces and was deployed by Russian military personnel acting in an official capacity."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia categorically denies state responsibility and rejects the Netherlands and Australia's notification as 'politically motivated' and lacking legal basis. Russia argues no Russian state assets or personnel were involved, and the JIT investigation is biased against Russia because Ukraine (a conflict party) is a JIT member. Russia refuses ECHR and ICAO jurisdiction over the matter."
+    },
+    "resolution": "Netherlands and Australia maintain their position. ECHR and ICAO proceedings are ongoing. The Dutch District Court's 2022 criminal verdict implicitly supports state-level attribution.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "ukraine-su25-theory",
+    "question": "Was MH17 shot down by a Ukrainian Su-25 fighter jet?",
+    "sideA": {
+      "label": "JIT / Aviation Experts",
+      "text": "Definitively debunked. The Su-25 is a ground-attack aircraft with a service ceiling of approximately 23,000 feet — unable to reach MH17's cruising altitude of 33,000 feet. The cockpit damage pattern is inconsistent with air-to-air missiles. The Ukrainian Air Force confirmed no Su-25 was airborne in that area. JIT found no credible evidence supporting this claim."
+    },
+    "sideB": {
+      "label": "Russia (2014 claim)",
+      "text": "In July 2014, Russian Ministry of Defence claimed radar data showed a Ukrainian Su-25 climbing toward MH17 in the moments before the crash. Russian state television cited this as evidence Ukrainian forces shot down MH17. Russian military spokespeople implied the aircraft was involved in the shootdown."
+    },
+    "resolution": "Definitively debunked by aeronautical evidence and JIT investigation. The Su-25 cannot physically reach 33,000 feet. Russia has largely abandoned this specific claim in later communications.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "should-ukraine-have-closed-airspace",
+    "question": "Should Ukraine have closed its airspace to civilian traffic above FL320?",
+    "sideA": {
+      "label": "DSB / Aviation Safety Community",
+      "text": "The DSB final report criticized Ukraine for not closing higher altitudes and airlines for inadequate risk assessment. While the conflict below was known, the DSB found that the risk of a Buk missile reaching FL330 was not adequately assessed by Ukrainian authorities, airlines, or ICAO. The report recommended improved risk assessment mechanisms and better coordination between military and civil aviation authorities."
+    },
+    "sideB": {
+      "label": "Ukraine / Airlines",
+      "text": "Ukraine closed airspace below FL320 as required by regulations. No Buk attack had previously reached above FL320, making the threat at that altitude unforeseeable under standard aviation risk methodology. Several major airlines — including Lufthansa, British Airways, and Air France — were also routing through the same airspace at the time, suggesting the risk was not perceived as unacceptable by the industry."
+    },
+    "resolution": "DSB found Ukraine's risk assessment inadequate. ICAO has since strengthened guidelines for airspace risk assessment over conflict zones. The criminal responsibility for MH17 remains with those who fired the missile.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "bodies-and-evidence-looted",
+    "question": "Were human remains and crash evidence tampered with or looted at the crash site?",
+    "sideA": {
+      "label": "Victims' Families / JIT / OSCE",
+      "text": "OSCE monitors and JIT investigators documented bodies left uncollected for days in summer heat, personal effects scattered across fields, and reports of looting of luggage and passenger property. Evidence handling by separatist forces was chaotic. JIT noted that evidence may have been removed or compromised before international investigators gained full access. Victim families expressed outrage at the treatment of their loved ones."
+    },
+    "sideB": {
+      "label": "Separatist Forces (DNR)",
+      "text": "Separatist authorities and Russia argued that the ongoing military conflict made immediate crash site access impossible, and that separatists collected remains and evidence to the best of their ability under battlefield conditions. They denied deliberate looting or evidence tampering, attributing any problems to the chaos of war."
+    },
+    "resolution": "JIT and OSCE reports confirm delayed access and evidence management failures. While full evidence of deliberate evidence destruction was not proven, the conditions at the crash site were documented as severely problematic.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "jit-verdict-legitimacy",
+    "question": "Is the Dutch District Court's November 2022 verdict legitimate under international law?",
+    "sideA": {
+      "label": "Netherlands / JIT Countries",
+      "text": "The Netherlands has universal jurisdiction under Dutch criminal law for the murder of Dutch nationals abroad. The trial followed Dutch legal procedures, evidence standards, and due process norms. The court allowed the only defendant who wished representation (Pulatov) to be fully represented. International legal scholars broadly support the trial's legal basis, and the verdicts have been recognized by the Netherlands, Australia, Belgium, Malaysia, and Ukraine."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia rejected the verdict as a 'politicized' trial conducted by a biased court with predetermined conclusions. Russia argued the Netherlands could not conduct a fair trial while being a member of the JIT investigative team. Russia also contended that Ukraine — a conflict party and JIT member — influenced the investigation improperly. Russia refused to recognize the court's jurisdiction or extradite any suspects."
+    },
+    "resolution": "The verdict is internationally recognized by the five JIT member states and most Western nations. Russia's objections are not recognized under international legal frameworks. Enforcement remains impossible while suspects are in Russian custody.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "girkin-ordered-launch",
+    "question": "Did Igor Girkin personally order the Buk missile launch?",
+    "sideA": {
+      "label": "JIT",
+      "text": "JIT established that Girkin, as DNR 'defense minister', was responsible for requesting and directing the Buk system from Russia. The JIT presented intercepts showing Girkin was in communication with Russian handlers about obtaining air defense. While the specific order to fire was not attributed to Girkin by voice, his criminal responsibility was established at the command level, contributing to the conviction."
+    },
+    "sideB": {
+      "label": "Girkin (Defense)",
+      "text": "Girkin, through interviews and social media posts before his 2023 arrest, consistently denied ordering the launch of the Buk. He admitted the DNR had Buk systems and acknowledged seeking air defense, but denied personal responsibility for the specific firing decision. His lawyers did not participate in his trial (he was tried in absentia) and he was convicted despite not mounting a legal defense."
+    },
+    "resolution": "Dutch court found Girkin guilty of murder based on his command responsibility and role in procuring/directing the Buk system. The specific chain of orders to fire the missile was not required to be proven under the prosecution theory.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "un-tribunal-should-exist",
+    "question": "Should an international UN-backed tribunal have been established for MH17?",
+    "sideA": {
+      "label": "Netherlands / Australia / Malaysia / Belgium / Ukraine",
+      "text": "The five JIT nations, strongly supported by victims' families, argued that a UN international tribunal would provide greater legitimacy, wider jurisdiction, and better enforcement mechanisms than national courts. The effort was supported in the UNSC in July 2015 with votes from 11 of 15 members. An international tribunal would have allowed direct prosecution of Russian state actors with potential extradition mechanisms."
+    },
+    "sideB": {
+      "label": "Russia (veto)",
+      "text": "Russia vetoed the UNSC resolution creating a tribunal, arguing the investigation was incomplete and politically motivated, and that a tribunal would be used as a tool against Russia. China abstained. Russia contended that existing legal mechanisms — including Dutch national courts — were sufficient and that a special tribunal was unnecessary and legally dubious."
+    },
+    "resolution": "Russia's veto blocked the international tribunal. The case proceeded through Dutch national courts, resulting in the November 2022 convictions. Enforcement against Russia remains impossible.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "bellingcat-credibility",
+    "question": "Is Bellingcat's OSINT evidence credible and admissible?",
+    "sideA": {
+      "label": "JIT / Western Courts",
+      "text": "Bellingcat's identification of the specific Buk vehicle and its origin in Russia's 53rd Brigade was independently verified and corroborated by the JIT, which elevated Bellingcat's findings to Tier 1 evidence by confirming them through official channels. The Dutch District Court accepted evidence derived from OSINT methods. Bellingcat's methodology — open-source geolocation, photo analysis, satellite imagery — has been widely adopted by international investigators and journalists."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia has consistently attacked Bellingcat as a NATO-funded disinformation project with no intelligence credibility. Russian state media and officials dismissed Bellingcat evidence as fabricated or cherry-picked. Russia argued that social media photos used by Bellingcat could have been staged or manipulated, and that OSINT methods are inherently unreliable as criminal evidence."
+    },
+    "resolution": "Bellingcat's findings on MH17 have been corroborated by the JIT and accepted by the Dutch court. The organization is recognized as a leading open-source investigative outlet. Russia's credibility attacks have not persuaded international courts or investigators.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "russia-manipulated-radar-data",
+    "question": "Did Russia present manipulated radar data to the JIT?",
+    "sideA": {
+      "label": "JIT / Independent Radar Analysts",
+      "text": "JIT and independent radar experts found that Russian radar data submitted in 2014 appeared to contain manipulated metadata, including timestamps suggesting the data was from a different date than claimed. The data was submitted as evidence of a different launch location (near Zaroshchenske) but was assessed as unreliable. JIT issued a formal statement in 2018 saying Russia's radar data was not consistent with JIT's analysis."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia insisted its radar data was authentic and that it demonstrated the missile was launched from Ukrainian-controlled territory. Russia's MoD presented the data at official press conferences and maintained it exonerated Russia. Russia argued that JIT's rejection of Russian evidence demonstrated the investigation's anti-Russian bias."
+    },
+    "resolution": "JIT concluded Russian radar data was unreliable. Independent analysis by Almaz-Antey (the Russian Buk manufacturer) and academic radar experts found inconsistencies in Russia's claims. Russia's Zaroshchenske launch theory is not accepted by investigators.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "russia-extradition-obligation",
+    "question": "Is Russia legally obligated to extradite the three convicted MH17 murderers?",
+    "sideA": {
+      "label": "Netherlands / International Law Advocates",
+      "text": "Under international law and UN Security Council Resolution 2166, Russia is obligated to cooperate with justice for MH17. The Netherlands and Australia's formal declaration of Russia's state responsibility creates legal obligations under international law. The three convicted individuals — Girkin, Dubinsky, Kharchenko — have been found guilty of murder of 298 people by a competent national court."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Article 61 of the Russian Constitution prohibits the extradition of Russian citizens to foreign states. Russia argues it has no legal obligation to enforce a verdict it does not recognize from a court whose jurisdiction it rejects. For Kharchenko, a Ukrainian national, Russia also refuses to facilitate any extradition process."
+    },
+    "resolution": "Russia will not extradite suspects. The three convictees remain in Russia/occupied territory. The life sentences are symbolic pending capture. The Netherlands continues to seek accountability through ECHR, ICAO, and diplomatic channels.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "ukraine-jit-member-conflict",
+    "question": "Does Ukraine's membership in the JIT create a conflict of interest that undermines the investigation's impartiality?",
+    "sideA": {
+      "label": "Russia",
+      "text": "Russia argued repeatedly that including Ukraine — a direct party to the armed conflict in which MH17 was shot down — in the JIT compromised the investigation's neutrality. Russia claimed Ukraine had an interest in implicating Russia and would share intelligence selectively, potentially withholding evidence pointing to Ukrainian military involvement. Russia cited this as a reason its cooperation would be biased against."
+    },
+    "sideB": {
+      "label": "JIT / Netherlands",
+      "text": "The JIT was designed with safeguards to prevent any single member from blocking or manipulating the investigation. The Netherlands, as lead state, maintained editorial and investigative control. JIT members agreed that all participating states would share relevant evidence. Ukraine contributed intelligence that was valuable and corroborated by independent sources from non-Ukrainian partners."
+    },
+    "resolution": "The JIT structure was defended by its member states as appropriate given the victims' nationalities. The resulting investigation's conclusions were corroborated by independent entities including Bellingcat, DSB, and the Dutch court. Russia's conflict-of-interest argument was not accepted by international observers.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "families-compensation",
+    "question": "Are victims' families entitled to state compensation from Russia?",
+    "sideA": {
+      "label": "Victims' Families / Netherlands",
+      "text": "Following the criminal conviction and the declaration of Russia's state responsibility, victims' families pursued civil compensation claims. The Foundation MH17 (Stichting MH17) and individual families argue Russia as a state owes compensation for the loss of 298 lives due to its military's actions. ECHR individual applications by hundreds of family members seek just satisfaction under the European Convention."
+    },
+    "sideB": {
+      "label": "Russia",
+      "text": "Russia rejects any civil liability, denies state responsibility, and has declined to participate in proceedings at the ECHR. Russia's expulsion from the Council of Europe in March 2022 further complicates enforcement of any ECHR judgment. Russia has offered no compensation to victims' families and has stated it bears no responsibility for the crash."
+    },
+    "resolution": "Civil compensation proceedings are ongoing through Dutch civil courts and the ECHR. Enforcement against Russia of any judgment remains practically impossible given Russia's non-recognition of the proceedings.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  }
+]

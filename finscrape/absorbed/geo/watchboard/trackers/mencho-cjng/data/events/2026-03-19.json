@@ -1,0 +1,176 @@
+[
+  {
+    "id": "cjng-day25-sitrep",
+    "year": "Mar 19",
+    "title": "Day 25 Post-Mencho: O3 Reportedly Named New CJNG Leader; 'El Pepe' and 'Memo' Arrested; Succession Race Narrows",
+    "type": "arrest",
+    "detail": "Day 25 since El Mencho's killing at Tapalpa, Jalisco (February 22, 2026). Juan Carlos Valencia González 'O3,' El Mencho's stepson and commander of Grupo Élite, has reportedly been named the new CJNG leader per an anonymous cartel source — a claim assessed as credible by the U.S. National Counterterrorism Center (NCTC) which had designated him 'de facto second-in-command' prior to El Mencho's death. With El Doble R arrested March 11, El Tuli killed February 22, and El Sapo's status unconfirmed, O3's path to consolidation is clearer — though El Jardinero remains at large with significant regional power. Two more significant CJNG figures were arrested this week: 'El Pepe' (José N.) was captured March 16 in Tlajomulco de Zúñiga, Jalisco — he was the logistics operator who transported El Mencho's romantic partner to the Tapalpa hideout, the key surveillance chain that led to the operation. 'Memo' (Juan Carlos Dominguez Jimenez) was arrested March 17 in Mexico City as a high-ranking lieutenant integral to CJNG logistics, finances, and security. Four additional CJNG members were arrested in Tulum on March 15. Mexico's anti-cartel operations continue to demonstrate sustained strategic pursuit beyond the Tapalpa operation itself.",
+    "sources": [
+      {
+        "name": "InSight Crime",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "La Silla Rota",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "CBS News",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "SEDENA",
+        "tier": 1,
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-19T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.borderreport.com/news/report-u-s-citizen-now-in-charge-of-notorious-jalisco-cartel/",
+        "caption": "O3 (Juan Carlos Valencia González) reportedly named new CJNG leader after El Mencho's death",
+        "source": "Border Report"
+      }
+    ]
+  },
+  {
+    "id": "el-pepe-arrested-mar16",
+    "year": "Mar 16",
+    "title": "'El Pepe' Arrested — Logistics Operator Who Led Surveillance Chain to El Mencho",
+    "type": "arrest",
+    "detail": "Mexican Army special forces and National Guard arrested 'El Pepe' (José N.) in Tlajomulco de Zúñiga, Jalisco on March 16, 2026. El Pepe is the CJNG logistics operator who transported El Mencho's romantic partner to the Tapalpa mountain hideout — the piece of surveillance that began the tracking chain leading to the February 22 operation. His arrest closes a key intelligence gap and shows Mexico's security forces are systematically dismantling the operational network that protected El Mencho for years. El Pepe faced charges related to organized crime. This arrest demonstrates that Mexico is pursuing the entire support network around El Mencho, not just the cartel leadership.",
+    "sources": [
+      {
+        "name": "CBS News",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "La Silla Rota",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Mexican Army (SEDENA)",
+        "tier": 1,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-19T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.borderlandbeat.com/2026/03/pepe-of-cjng-has-been-captured-he.html",
+        "caption": "El Pepe arrested in Tlajomulco de Zuniga for transporting El Mencho's partner to Tapalpa hideout",
+        "source": "Borderland Beat",
+        "thumbnail": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ-UQutpyJpc5_LV988boovIPiKpspQlRN4dp2bBvf_iB4u1htQT8v0syU_fQEFT1PbZwBVDNzNITBgrqGF0vUbIQxPX-oUZLYsV6oGCF2quEJqC-x3d-KkOMH7Q-rtPNA7lXHnAV2pIQBjHdOpV5r_ArkSPcFmwl-I0-zdpg8V7Fayb2RiHIG29RtYwUG/w1200-h630-p-k-no-nu/IMG_2881.webp"
+      }
+    ]
+  },
+  {
+    "id": "memo-cjng-arrested-mar17",
+    "year": "Mar 17",
+    "title": "'Memo' (Juan Carlos Dominguez Jimenez) Arrested in Mexico City — Senior CJNG Logistics Lieutenant",
+    "type": "arrest",
+    "detail": "Juan Carlos Dominguez Jimenez, alias 'Memo,' was arrested by Mexican security forces in Mexico City on March 17, 2026. Described as a high-ranking CJNG lieutenant integral to the cartel's logistics, finances, and security infrastructure, Memo's arrest is expected to yield significant intelligence on CJNG's financial networks. The arrest of a senior figure in Mexico City — not a CJNG heartland state — underscores CJNG's national reach and Mexico's expanded anti-CJNG operations beyond Jalisco. Analysts believe his intelligence value for penetrating CJNG's financial infrastructure could rival that of the El Tuli financial chief who was killed on February 22.",
+    "sources": [
+      {
+        "name": "La Silla Rota",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "El Financiero",
+        "tier": 2,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-19T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://insightcrime.org/news/whats-next-for-mexicos-cjng-after-the-killing-of-el-mencho/",
+        "caption": "CJNG succession analysis following El Mencho's killing in Tapalpa",
+        "source": "InSight Crime",
+        "thumbnail": "https://insightcrime.org/wp-content/uploads/2026/02/Destacado_3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "o3-cjng-new-leader-reported-mar19",
+    "year": "Mar 19",
+    "title": "O3 (Juan Carlos Valencia González) Reportedly Named New CJNG Leader — US NCTC Concurs",
+    "type": "operation",
+    "detail": "An anonymous CJNG cartel source reported that Juan Carlos Valencia González 'O3,' El Mencho's stepson and commander of CJNG's paramilitary Grupo Élite, has been named the new cartel leader. The U.S. National Counterterrorism Center (NCTC) and State Department had assessed him as 'de facto second-in-command' prior to El Mencho's death. O3 was born September 12, 1984, in Santa Ana, California — giving him U.S. citizenship that creates legal complications for U.S. targeting operations. With El Doble R arrested, El Tuli dead, and El Sapo's status unconfirmed, O3 faces reduced internal competition. However, El Jardinero (Audias Flores Silva), who commands significant plazas in Jalisco, Nayarit, Zacatecas, and Colima and served as El Mencho's longtime security chief, remains a rival power center. Mexican authorities have not officially confirmed the succession. Security analysts caution that O3 is viewed by some cartel veterans as 'too young' and lacking in experience for full organizational consolidation.",
+    "sources": [
+      {
+        "name": "U.S. State Department",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "InSight Crime",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "IBTimes UK",
+        "tier": 3,
+        "pole": "western"
+      },
+      {
+        "name": "Colombia One",
+        "tier": 3,
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-19T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.latintimes.com/american-citizen-reportedly-takes-over-jalisco-cartel-could-complicate-us-efforts-target-him-595828",
+        "caption": "Juan Carlos Valencia Gonzalez (O3), El Mencho's stepson, reportedly named new CJNG leader",
+        "source": "Latin Times",
+        "thumbnail": "https://d.latintimes.com/en/full/586894/juan-carlos-valencia-gonzalez-el-menchos-stepson.jpg"
+      }
+    ]
+  },
+  {
+    "id": "tulum-cjng-arrests-mar15",
+    "year": "Mar 15",
+    "title": "Four Alleged CJNG Members Arrested in Tulum During Multi-Agency Operation",
+    "type": "arrest",
+    "detail": "Four alleged CJNG members were arrested in Tulum, Quintana Roo during a multi-agency operation on 14th Street South on March 15, 2026. Firearms, narcotics, communication radios, and tactical gear were seized. The Tulum arrests demonstrate CJNG's presence extending into Mexico's Caribbean tourist zone, where the cartel has been documented extorting local businesses and competing with Sinaloa-aligned groups for control of the lucrative tourist economy. Quintana Roo is a key money-laundering zone for CJNG through hotel and restaurant investments.",
+    "sources": [
+      {
+        "name": "Automotive Transportation News",
+        "tier": 3,
+        "pole": "western"
+      },
+      {
+        "name": "Local Mexican media",
+        "tier": 3,
+        "pole": "western"
+      }
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-19T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://laopinion.com/2026/03/20/operacion-enjambre-arrestan-a-5-funcionarios-de-michoacan-por-vinculos-con-el-cjng/",
+        "caption": "CJNG arrests in Tulum as part of broader anti-cartel operations across Mexico",
+        "source": "La Opinion",
+        "thumbnail": "https://laopinion.com/wp-content/uploads/sites/3/2026/03/Operacion-Enjambre-1.jpg?w=1200"
+      }
+    ]
+  }
+]

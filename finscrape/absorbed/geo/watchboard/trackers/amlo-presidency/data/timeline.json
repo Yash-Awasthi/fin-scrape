@@ -1,0 +1,1059 @@
+[
+  {
+    "era": "Inauguration & First Steps (Dec 2018 – Jun 2019)",
+    "events": [
+      {
+        "id": "amlo-inauguration",
+        "year": "Dec 1, 2018",
+        "title": "AMLO Inaugurated as 58th President",
+        "type": "political",
+        "detail": "Andrés Manuel López Obrador was inaugurated at the Legislative Palace of San Lázaro, becoming Mexico's 58th president. In his speech he denounced neoliberalism as 'a disaster and a calamity' and announced the 'Fourth Transformation' of Mexico — invoking Independence, the Reform War, and the Revolution as the three prior transformations. He immediately abolished the Presidential General Staff and opened Los Pinos to the public as a cultural center.",
+        "sources": [
+          { "name": "Bloomberg", "tier": 2, "url": "https://www.bloomberg.com/news/articles/2018-12-01/lopez-obrador-takes-the-reins-in-mexico-vowing-a-transformation" },
+          { "name": "Washington Post", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "national-security-plan-launch",
+        "year": "Dec 2018",
+        "title": "National Peace and Security Plan 2018–2024 Unveiled",
+        "type": "security",
+        "detail": "AMLO unveiled his National Peace and Security Plan structured around four pillars: social and economic programs for at-risk youth, an amnesty law for certain nonviolent drug crimes, possible drug legalization tied to rehabilitation investment, and compliance enforcement for human rights recommendations. The plan coined 'abrazos no balazos' (hugs not bullets) as the governing security doctrine, explicitly rejecting the militarized war on drugs of predecessors Calderón and Peña Nieto.",
+        "sources": [
+          { "name": "CSIS", "tier": 3, "url": "https://www.csis.org/analysis/abrazos-no-balazos-evaluating-amlos-security-initiatives" },
+          { "name": "Wilson Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "los-pinos-opens",
+        "year": "Dec 1, 2018",
+        "title": "Los Pinos Presidential Residence Opened to Public",
+        "type": "political",
+        "detail": "On his first day in office, AMLO converted the Los Pinos presidential residence — the official home of every Mexican president since 1934 — into a public cultural center, symbolizing his rejection of elite presidential privilege. He relocated executive offices to the historic National Palace on the Zócalo. He also announced a 60% cut to the presidential salary (to approximately US$5,000/month) and pledged to fly commercial rather than use the official Boeing 787.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2 },
+          { "name": "NPR", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "naim-cancellation-formalized",
+        "year": "Dec 27, 2018",
+        "title": "NAIM Texcoco Airport Cancellation Formalized",
+        "type": "political",
+        "detail": "Construction on the New International Airport of Mexico City (NAIM) at Texcoco — a $13.3 billion Peña Nieto megaproject roughly 30% complete — was formally suspended on December 27, 2018. A four-day referendum organized by Morena in late October had returned a 69% vote to cancel, though only 1.07 million of 90 million eligible voters participated. Markets reacted sharply: the peso suffered its largest single-day drop since Trump's 2016 election. A 2021 audit found the cancellation cost 184.55 billion pesos.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2, "url": "https://www.aljazeera.com/news/2018/10/29/mexico-referendum-rejects-part-built-14bn-airport-project" },
+          { "name": "Bloomberg", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "government-austerity-measures",
+        "year": "Dec 2018",
+        "title": "Sweeping Government Austerity Measures Implemented",
+        "type": "economic",
+        "detail": "AMLO implemented sweeping austerity from day one: cutting the presidential salary 60%, laying off 70% of non-unionized federal workers, ending government perks, and putting the presidential Boeing 787 up for sale (he flew commercial). The Supreme Court agreed to a 25% pay cut. In H1 2019, government spending fell 4.5% in nominal terms — the sharpest first-year contraction since the 1995 financial crisis. Critics noted hospitals lost personnel, scientific institutions were defunded, and vital public services were cut.",
+        "sources": [
+          { "name": "NPR", "tier": 2, "url": "https://www.npr.org/2019/08/20/752670451/critics-complain-mexico-s-austerity-plan-has-gone-too-far" },
+          { "name": "Oxford Business Group", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "national-guard-reform-passed",
+        "year": "Feb 28, 2019",
+        "title": "National Guard Constitutional Reform Passed",
+        "type": "reform",
+        "detail": "Congress passed the constitutional reform creating the Guardia Nacional (National Guard) on February 28, 2019, absorbing units from the Federal Police, Army Military Police, and Naval Infantry Police. The reform mandated civilian control be established within five years. The National Guard adopted the motto 'Justice and Peace' and was officially established June 30, 2019. Almost immediately after formation, AMLO deployed the bulk of the force to Mexico's southern border with Guatemala — fulfilling a deal with the Trump administration to curb Central American migration.",
+        "sources": [
+          { "name": "WOLA", "tier": 3, "url": "https://www.wola.org/analysis/one-year-national-guard-mexico/" },
+          { "name": "Wikipedia / National Guard Mexico", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pemex-rescue-plan",
+        "year": "Feb 2019",
+        "title": "107-Billion-Peso Pemex Rescue Package Announced",
+        "type": "economic",
+        "detail": "AMLO unveiled a 107-billion-peso (~US$5.5 billion) rescue package for Pemex, at the time the world's most indebted oil company with over $100 billion in debt. The plan included direct cash injections, an expanded tax break worth 90 billion pesos over six years, a commitment that Pemex would not issue new bonds in 2019, and draws from Mexico's stabilization fund to cover 73% of 2019 debt maturities. Analysts at JPMorgan called it insufficient, describing it as a 'one-off liquidity boost.' Total government support to Pemex during the sexenio eventually exceeded US$60 billion.",
+        "sources": [
+          { "name": "Mexico News Daily", "tier": 2 },
+          { "name": "Bloomberg", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "jovenes-construyendo-el-futuro",
+        "year": "Jan 10, 2019",
+        "title": "Jóvenes Construyendo el Futuro Program Launched",
+        "type": "social",
+        "detail": "Operational rules for Jóvenes Construyendo el Futuro (Youth Building the Future) were published in the Diario Oficial de la Federación on January 10, 2019. The program connected young people aged 18–29 who neither studied nor worked with registered work centers for up to 12 months of paid apprenticeship, providing a monthly stipend equal to minimum wage plus IMSS health insurance. The program was explicitly framed as a violence-prevention measure targeting the demographic most at risk of cartel recruitment. By 2021 it had registered over 2.3 million beneficiaries.",
+        "sources": [
+          { "name": "CEPAL/ECLAC", "tier": 1 },
+          { "name": "CSIS", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "sembrando-vida-launch",
+        "year": "Feb 1, 2019",
+        "title": "Sembrando Vida Agroforestry Program Launched",
+        "type": "social",
+        "detail": "AMLO launched Sembrando Vida ('Sowing Life'), a flagship agroforestry-based rural welfare program paying small farmers in marginalized areas approximately US$250/month to plant at least 2.5 hectares with timber and fruit trees combined with traditional milpa crops. Its stated goals were climate change mitigation, biodiversity restoration, and rural poverty reduction. By 2022 the program had reached over 442,000 beneficiaries across 20 states at a total cost of US$3.7 billion. Critics noted cases where enrollees cleared standing forest to qualify for replanting payments.",
+        "sources": [
+          { "name": "Dialogue Earth", "tier": 3 },
+          { "name": "MDPI academic study", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "becas-benito-juarez",
+        "year": "Feb 2019",
+        "title": "Becas Benito Juárez Student Scholarships Begin",
+        "type": "social",
+        "detail": "The Becas Benito Juárez program provided direct cash transfers to students at public upper secondary schools and public universities. The upper secondary scholarship granted 1,900 pesos every two months for up to 40 months; the higher education variant — Jóvenes Escribiendo el Futuro — granted 5,800 pesos bimestrally for up to 45 months. Transfers were made directly to beneficiaries without intermediaries, deliberately designed to reduce bureaucratic leakage and corruption. The program aimed to reduce school dropout rates among low-income students and eventually reached 12.5 million students.",
+        "sources": [
+          { "name": "Secretaría de Bienestar (gob.mx)", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Security Tests & Megaproject Launches (Jul–Dec 2019)",
+    "events": [
+      {
+        "id": "dos-bocas-groundbreaking",
+        "year": "Jun 2, 2019",
+        "title": "Dos Bocas 'Olmeca' Refinery Groundbreaking in Tabasco",
+        "type": "economic",
+        "detail": "AMLO traveled to Paraíso, Tabasco, for the ceremonial groundbreaking of the Dos Bocas refinery (officially the Olmeca Refinery) — Mexico's first new refinery since the 1970s. The project was managed directly by Pemex after AMLO rejected private bids as too costly. The 340,000-barrel-per-day facility was budgeted at 150 billion pesos (~$7.7 billion USD) with a 2022 completion target. Construction began before all required environmental permits were in hand. Final costs ballooned to approximately $16.8–20 billion USD — more than double the original budget.",
+        "sources": [
+          { "name": "Bloomberg", "tier": 2, "url": "https://www.bloomberg.com/news/articles/2019-06-02/mexico-starts-refinery-as-amlo-rallies-nation-amid-trump-tariffs" },
+          { "name": "Mexico News Daily", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "austerity-law-passed",
+        "year": "Oct 2019",
+        "title": "Ley de Austeridad Republicana Enacted",
+        "type": "reform",
+        "detail": "The Austerity Law (Ley de Austeridad Republicana) was passed in October 2019, formally codifying AMLO's belt-tightening policies. It barred government officials from taking private-sector jobs in fields they regulated for ten years, cut presidential pensions, and institutionalized pay caps at public agencies. The law reduced salary disparities across the federal bureaucracy and became a signature element of AMLO's anti-privilege narrative. Critics argued it drove talent out of the public sector and created perverse incentives by suppressing compensation at regulatory agencies.",
+        "sources": [
+          { "name": "NPR", "tier": 2 },
+          { "name": "Americas Quarterly", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "culiacanazo-ovidio-release",
+        "year": "Oct 17, 2019",
+        "title": "Culiacanazo: Ovidio Guzmán Captured and Released",
+        "type": "security",
+        "detail": "A 35-officer convoy detained Ovidio Guzmán López, son of imprisoned Sinaloa Cartel leader El Chapo, in Culiacán. Within hours, an estimated 700 armed gunmen deployed burning vehicle roadblocks, armored vehicles, and .50 caliber weapons throughout the city, taking eight soldiers hostage and triggering a prison break of 56 inmates. President AMLO ordered Guzmán released to halt the bloodshed, saying lives were more valuable than one arrest. At least 10 security forces, 19 cartel gunmen, and one officer were killed. The episode became the defining symbol of 'abrazos no balazos' doctrine's limits.",
+        "sources": [
+          { "name": "Wikipedia / Battle of Culiacán", "tier": 2 },
+          { "name": "Justice in Mexico", "tier": 3, "url": "https://justiceinmexico.org/ovidioguzman-culiacan/" }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "aifa-groundbreaking",
+        "year": "Oct 17, 2019",
+        "title": "AIFA Felipe Ángeles Airport Groundbreaking at Santa Lucía",
+        "type": "political",
+        "detail": "On the same day as the Culiacanazo, AMLO broke ground on the Felipe Ángeles International Airport (AIFA) at the existing Santa Lucía military airbase in Zumpango, Estado de México, approximately 35 km north of Mexico City. The project converted an active military airbase into a combined civilian-military facility at a projected cost far below the canceled NAIM. The Army (SEDENA) was put in charge of construction. The project overcame multiple judicial suspensions related to environmental and cultural heritage concerns before proceeding.",
+        "sources": [
+          { "name": "Wikipedia / Felipe Ángeles International Airport", "tier": 2 },
+          { "name": "BNamericas", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tren-maya-indigenous-referendum",
+        "year": "Dec 15, 2019",
+        "title": "Tren Maya Indigenous Consultation Held",
+        "type": "political",
+        "detail": "AMLO held a formal public consultation on the Tren Maya — a proposed 1,554 km inter-city railway traversing the Yucatán Peninsula — across the five affected states (Chiapas, Tabasco, Campeche, Yucatán, Quintana Roo). With only a 2.36% turnout, 92.3% voted in favor. Indigenous and environmental rights groups challenged the consultation as failing to comply with international free, prior, and informed consent standards. Full construction was slated to begin in 2020 — initially with a budget of approximately 150 billion pesos. This was Mexico's largest infrastructure project in decades.",
+        "sources": [
+          { "name": "Wikipedia / Tren Maya", "tier": 2 },
+          { "name": "Mexico News Daily", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cfe-dispatch-rules-change",
+        "year": "2019",
+        "title": "CFE Electricity Dispatch Rules Altered to Favor State Plants",
+        "type": "economic",
+        "detail": "Beginning in 2019, AMLO's government administratively reversed key elements of the 2013 energy reform: suspending electricity auctions that had attracted renewable investment at record-low prices, renegotiating natural gas infrastructure contracts, and modifying dispatch rules to prioritize electricity from the state utility CFE's aging thermoelectric and hydroelectric plants over cheaper private renewable generation. Foreign direct investment in the energy sector fell roughly 12% in 2020. These administrative measures preceded a more aggressive 2021 legislative push.",
+        "sources": [
+          { "name": "Dialogue Earth", "tier": 3 },
+          { "name": "S&P Global", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "federal-police-dissolution",
+        "year": "Dec 31, 2019",
+        "title": "Federal Police Formally Dissolved — National Guard Takes Over",
+        "type": "reform",
+        "detail": "On December 31, 2019, the Federal Police (PF) was formally dissolved after 20 years of operation, and the National Guard officially assumed all federal policing functions. The dissolution had been announced in October 2019 after the National Guard was fully operational. Thousands of Federal Police officers were offered transfers to the National Guard, the Army, or the Navy. Unions and officers protested, arguing the transition was mishandled, with many lacking clear assignments. The Federal Police had been one of Mexico's most scrutinized institutions due to documented corruption but its overnight dissolution left institutional knowledge gaps.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "WOLA", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "press-freedom-deterioration-begins",
+        "year": "2019",
+        "title": "Press Freedom Sharply Deteriorates Under Daily 'Mañaneras'",
+        "type": "political",
+        "detail": "Article 19 documented at least 179 hostile references to journalists in AMLO's daily morning press conferences (mañaneras) in the first year alone, where he frequently labeled critical reporters 'journalism mafia,' 'hypocrites,' and 'corrupt,' sometimes displaying their names and personal information publicly. In 2019 alone, 10 journalists were killed in Mexico. RSF (Reporters Without Borders) concluded that AMLO 'clearly failed to resolve this tragedy and to combat impunity.' Mexico became the world's deadliest country for journalists in a non-conflict zone.",
+        "sources": [
+          { "name": "RSF (Reporters Without Borders)", "tier": 2, "url": "https://rsf.org/en/mexico-has-made-no-progress-protecting-journalists-during-amlo-s-six-years-president" },
+          { "name": "Article 19", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "minimum-wage-increases-begin",
+        "year": "2019",
+        "title": "Historic Minimum Wage Increases Begin",
+        "type": "economic",
+        "detail": "AMLO began a series of historic minimum wage hikes: the daily minimum wage rose 16.2% in 2019, 20% in 2020, 15% in 2021, 22% in 2022, 20% in 2023, and 20% in January 2024 — reaching 248.93 pesos/day, up 182% from the 88.36 pesos/day baseline when AMLO took office. The OECD recognized it as the largest minimum wage increase of any member country between 2020 and 2023. The Northern Border Free Zone received even higher rates, reaching 375 pesos/day in 2024. An estimated 6.64 million people were lifted out of poverty solely due to these increases.",
+        "sources": [
+          { "name": "CONASAMI", "tier": 1 },
+          { "name": "Phenomenal World", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "COVID Crisis & Economic Collapse (2020)",
+    "events": [
+      {
+        "id": "covid-first-cases",
+        "year": "Feb 28, 2020",
+        "title": "Mexico Confirms First COVID-19 Cases",
+        "type": "social",
+        "detail": "Mexico confirmed its first three COVID-19 cases on February 28, 2020 — two in Mexico City and one in Sinaloa, all linked to travel in northern Italy. Despite WHO warnings from late January, AMLO did not convene the constitutionally mandated General Health Council until March 19. In late February and early March he continued to appear in public, kissed supporters, and encouraged Mexicans to continue dining out and attending fiestas, distributing religious cards he claimed protected against illness. He promoted the phrase 'Hugs, not bullets' was now adapted to 'hugs, not isolation.'",
+        "sources": [
+          { "name": "Wikipedia / COVID-19 timeline Mexico", "tier": 2 },
+          { "name": "Brookings Institution", "tier": 3, "url": "https://www.brookings.edu/articles/amlos-feeble-response-to-covid-19-in-mexico/" }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "covid-national-lockdown",
+        "year": "Mar 30, 2020",
+        "title": "National 'Jornada de Sana Distancia' Lockdown Declared",
+        "type": "social",
+        "detail": "A national lockdown (Jornada Nacional de Sana Distancia) was declared March 30, 2020, after non-essential activities were suspended March 26. Crucially, no enforcement of movement restrictions was imposed — the lockdown was advisory only. The national health authority did not recommend face masks for the general population through late June 2020. Mexico's per-capita testing rate was among the lowest in the Americas (17 tests/1,000 people). The economy contracted 18.9% in Q2 2020 year-on-year. By year-end Mexico ranked among the top 5 countries globally by absolute COVID-19 death count.",
+        "sources": [
+          { "name": "Brookings Institution", "tier": 3 },
+          { "name": "PMC/NIH", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "amnesty-law-passed",
+        "year": "Apr 2020",
+        "title": "Amnesty Law Adopted by Senate",
+        "type": "reform",
+        "detail": "A formal Amnesty Law, one of the four pillars of AMLO's security doctrine since his 2018 campaign, was adopted by the Senate in April 2020. The law established acquittal for secondary, nonviolent offenses including certain drug possession and transportation charges, abortion, and crimes committed by indigenous peoples denied due process — explicitly excluding murder, kidnapping, and use of firearms. Eligibility required victim forgiveness plus perpetrator reparations. Critics warned it could undermine rule of law; application of the law remained narrow in practice.",
+        "sources": [
+          { "name": "Brookings Institution", "tier": 3 },
+          { "name": "Wilson Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "gdp-collapse-2020",
+        "year": "2020",
+        "title": "Mexico GDP Contracts 8.6% — Deepest Recession in Decades",
+        "type": "economic",
+        "detail": "Mexico's GDP contracted 8.6% in 2020 — the deepest recession since the 1932 Great Depression and sharper than the regional average. Unlike Brazil, Chile, and Argentina, Mexico provided one of the smallest economic stimulus packages in the OECD — less than 1% of GDP — while regional peers deployed 8–10% of GDP in support. The government rejected IMF and World Bank recommendations for emergency stimulus, with AMLO arguing austerity was the correct medicine. Over 12 million formal jobs were destroyed temporarily; informal workers had no safety net.",
+        "sources": [
+          { "name": "INEGI", "tier": 1 },
+          { "name": "World Bank", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tren-maya-construction-begins",
+        "year": "Jun 2020",
+        "title": "Tren Maya Construction Begins Across Five States",
+        "type": "political",
+        "detail": "Full construction of the Tren Maya — a 1,554 km loop railway traversing Chiapas, Tabasco, Campeche, Yucatán, and Quintana Roo — began in June 2020. The project was assigned to FONATUR (National Tourism Fund) and ultimately placed under military engineering oversight via SEDENA. The construction required clearing approximately 9 million trees and broke through over 100 caverns and cenotes of the Yucatán cave system. Environmental groups filed dozens of legal injunctions. An International Rights of Nature Tribunal later found Mexico guilty of ecocide over the construction (August 2023).",
+        "sources": [
+          { "name": "Wikipedia / Tren Maya", "tier": 2 },
+          { "name": "Mexico News Daily", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "homicide-rate-record-2020",
+        "year": "2020",
+        "title": "Homicide Rate Hits Record 35,545 — Peak Year of AMLO Term",
+        "type": "security",
+        "detail": "Mexico recorded 35,545 homicide victims in 2020 (SESNSP data) — the single worst year under AMLO and a modern record. This occurred despite the pandemic lockdowns that reduced vehicle traffic and public gatherings. The murder rate reached approximately 27–28 per 100,000 population. Approximately two-thirds of homicides were attributed to organized crime. Total homicides under AMLO's six-year term ultimately reached approximately 166,193 murders plus 4,892 femicides (SESNSP), making it the most violent presidential sexenio in Mexican recorded history.",
+        "sources": [
+          { "name": "SESNSP (Secretaría de Seguridad)", "tier": 1 },
+          { "name": "Mexico News Daily", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pio-lopez-cash-scandal",
+        "year": "Aug 2020",
+        "title": "Video Shows AMLO's Brother Receiving Cash Envelopes — Anti-Corruption Narrative Shaken",
+        "type": "political",
+        "detail": "In August 2020, journalist Carlos Loret de Mola published video footage from 2015 showing AMLO's brother Pío López Obrador receiving cash-stuffed envelopes from a Chiapas businessman, saying 'it's the way to support the movement, we know it's wrong but there's no other way.' The businessman, David León, was later appointed as federal emergency coordinator by AMLO. AMLO defended his brother on camera as acting out of political necessity. The episode undercut the administration's central anti-corruption narrative and revealed the pre-government fundraising methods of the Morena movement.",
+        "sources": [
+          { "name": "Latinus / Carlos Loret de Mola", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "covid-excess-mortality",
+        "year": "2020",
+        "title": "COVID Excess Deaths Reach ~333,000 in 2020 Alone",
+        "type": "social",
+        "detail": "Independent researchers estimated Mexico's true pandemic death toll in 2020 alone at approximately 333,538 excess deaths — all-cause excess mortality compared to 2015–2019 baselines. Only 38.64% of these excess deaths were lab-confirmed COVID cases due to Mexico's minimal testing strategy. Mexico City suffered the highest excess death rate (106.17 per 10,000 population). Mexico's official confirmed COVID death count eventually exceeded 330,000 (ranking 4th globally), while excess mortality estimates across the full pandemic reached 455,000–655,000 by end of 2021.",
+        "sources": [
+          { "name": "PMC/NIH excess mortality study", "tier": 1, "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9230439/" },
+          { "name": "Al Jazeera", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Recovery & Energy Battles (2021)",
+    "events": [
+      {
+        "id": "electricity-industry-law-reform",
+        "year": "Mar 2021",
+        "title": "Electricity Industry Law Gives CFE Priority Dispatch Over Renewables",
+        "type": "reform",
+        "detail": "AMLO passed a new Electricity Industry Law giving CFE hydro and legacy thermal plants priority dispatch over privately-owned renewable energy installations, disrupting the economics of dozens of wind and solar projects across Mexico. The Supreme Court split 7–4 on unconstitutionality — just short of the 8-justice supermajority required — so the law remained in force. US, Canadian, and European companies with renewable investments filed arbitration claims under USMCA and other trade treaties. The Baker Institute estimated the policy would cost Mexico $150 billion in lost renewable investment.",
+        "sources": [
+          { "name": "Jones Day", "tier": 3, "url": "https://www.jonesday.com/en/insights/2022/05/legislative-setback-to-electrical-reform-in-mexico" },
+          { "name": "Baker Institute", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "gdp-recovery-2021",
+        "year": "2021",
+        "title": "Mexico GDP Rebounds 5.7% — But Below Pre-Pandemic Level",
+        "type": "economic",
+        "detail": "Mexico's economy recovered 5.7% in 2021 following the 2020 COVID collapse, driven by a strong US recovery that boosted exports and remittances. However, the recovery did not fully close the 2020 gap — Mexico's GDP per capita by end of AMLO's term was still 1.5% below 2018 levels (Banco Base/INEGI). The average annual growth rate under AMLO's full term was just 0.8% — the lowest average for any Mexican president since Miguel de la Madrid (1982–1988). Mexico lagged behind Chile, Brazil, Colombia, and Peru in pandemic recovery pace.",
+        "sources": [
+          { "name": "INEGI", "tier": 1 },
+          { "name": "Dallas Fed", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ine-reform-first-attempt",
+        "year": "Oct 2021",
+        "title": "AMLO Submits First INE Constitutional Reform — Fails",
+        "type": "reform",
+        "detail": "In October–November 2021, AMLO submitted his first constitutional reform initiative to overhaul the National Electoral Institute (INE), Mexico's independent electoral authority. The reform sought to make INE councilors elected by popular vote rather than chosen by Congress, restructure the institute's governance, and transfer several functions to state authorities. It required a two-thirds majority in Congress and failed decisively, as the opposition bloc held firm. AMLO vowed to continue his push to 'democratize' the INE, setting up two more reform attempts in 2022–2024.",
+        "sources": [
+          { "name": "Wilson Center", "tier": 3 },
+          { "name": "Mexico News Daily", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "military-extended-security-role",
+        "year": "Aug 2022",
+        "title": "Military Authorized for Domestic Security Until 2028",
+        "type": "reform",
+        "detail": "In August 2022, Congress passed a reform allowing the military to conduct domestic law enforcement and security functions until 2028 — extending a constitutional exception that was originally intended to be temporary. This formalized AMLO's de facto expansion of military roles in law enforcement, customs, immigration control, and public works construction. Critics, including the Inter-American Commission on Human Rights, warned that entrenching military roles in civilian law enforcement undermined human rights protections and police reform efforts. The military's budget grew substantially across the sexenio.",
+        "sources": [
+          { "name": "HRW World Report 2023", "tier": 2 },
+          { "name": "Inter-American Commission on Human Rights", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "remittances-record-2021",
+        "year": "2021",
+        "title": "Remittances Surge to Record $51.6 Billion",
+        "type": "economic",
+        "detail": "Mexico received a record $51.6 billion in remittances in 2021 — a 27% increase from 2020 — as the US economy boomed and the Mexican diaspora sent more money home. Remittances became Mexico's largest source of foreign exchange, surpassing both oil revenues and foreign direct investment. Banco de México reported 96.6% of remittances originated from the United States. Total remittances grew from $36 billion (2019) to $64.7 billion (2024) — nearly doubling over AMLO's term. This inflow significantly buffered poverty rates and consumer spending in rural areas.",
+        "sources": [
+          { "name": "Banco de México", "tier": 1 },
+          { "name": "BBVA Research", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "coneval-poverty-data-2020",
+        "year": "2021",
+        "title": "CONEVAL: Poverty Slightly Increased to 43.9% During COVID",
+        "type": "social",
+        "detail": "CONEVAL released its 2020 multidimensional poverty data showing Mexico's poverty rate had risen slightly to 43.9% — up from 41.9% in 2018 — reflecting COVID's impact. Critically, the number of people without access to health services surged from 20.1 million (2018) to over 35 million (2020) following the abrupt dismantling of Seguro Popular and its replacement with the underfunded IMSS-Bienestar model. Extreme poverty edged up to 8.5%. The data underscored that despite large social spending, COVID had erased early-term progress and exposed the health system's collapse.",
+        "sources": [
+          { "name": "CONEVAL", "tier": 1 },
+          { "name": "INEGI", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "covid-vaccination-launch",
+        "year": "Dec 24, 2020",
+        "title": "Mexico Begins COVID-19 Vaccination — Among First in Latin America",
+        "type": "social",
+        "detail": "Mexico launched COVID-19 vaccination on December 24, 2020 — Christmas Eve — beginning with frontline healthcare workers in Mexico City, making it among the first Latin American countries to begin inoculation. The first doses were of the Pfizer-BioNTech vaccine. AMLO eventually secured contracts covering 129% of the population through multiple suppliers including Pfizer, AstraZeneca, Sputnik V, CanSino, and Sinovac. Adults received vaccines gradually: 85% received at least one dose by April 2022. AMLO himself received the AstraZeneca vaccine publicly in April 2021 despite having earlier downplayed the pandemic.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "Gobierno de México", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-mexico-high-level-security-dialogue",
+        "year": "Oct 2021",
+        "title": "US–Mexico High-Level Security Dialogue Launched",
+        "type": "political",
+        "detail": "Mexico and the United States launched the High Level Security Dialogue (HLSD) with a 'Bicentennial Framework' intended to replace the Mérida Initiative and rebuild counternarcotics cooperation after AMLO's government released a US DEA collaborator (General Cienfuegos) and scaled back cooperation. The framework covered fentanyl trafficking, arms smuggling, migration, and border security. Analysts noted limited concrete outcomes: AMLO simultaneously claimed fentanyl was purely a US social problem and denied Mexican cartels synthesized the drug, straining bilateral trust.",
+        "sources": [
+          { "name": "NPR", "tier": 2 },
+          { "name": "Brookings Institution", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Megaprojects & Political Confrontations (2022)",
+    "events": [
+      {
+        "id": "aifa-inauguration",
+        "year": "Mar 21, 2022",
+        "title": "AIFA Felipe Ángeles Airport Inaugurated",
+        "type": "political",
+        "detail": "The Felipe Ángeles International Airport (AIFA) was officially inaugurated by AMLO in Zumpango, Estado de México, built by the Army in 886 days. The first commercial flight was operated by VivaAerobús from Guadalajara; the first international flight was Conviasa to Caracas. The airport was built at an officially stated cost of 74.53 billion pesos (~$4B), though El Universal reported over 115.98 billion pesos (~$6.2B) when subsequent allocations were included. Three weeks post-inauguration, AIFA was still under construction with only partial ground transport links to Mexico City. Total passengers in 2022 reached 876,000.",
+        "sources": [
+          { "name": "Wikipedia / Felipe Ángeles International Airport", "tier": 2 },
+          { "name": "NBC News", "tier": 2, "url": "https://www.nbcnews.com/news/latino/mexico-new-airport-still-missing-basics-big-inauguration-rcna24199" }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "casa-gris-scandal",
+        "year": "Jan 28, 2022",
+        "title": "'Casa Gris' Scandal: AMLO's Son Lived in Baker Hughes Executive's Home",
+        "type": "political",
+        "detail": "Investigative outlet Latinus and MCCI (Mexicans Against Corruption and Impunity) revealed that AMLO's eldest son, José Ramón López Beltrán, and his wife had lived for approximately one year in a luxury home in Houston, Texas, owned by a senior executive at Baker Hughes — an oil services company holding Pemex contracts worth over US$151 million. AMLO accused reporter Carlos Loret de Mola of being a 'mercenary at the service of the mafia of power.' A second Casa Gris in Mexico City was reported in May 2023, belonging to an associate of the pro-government newspaper La Jornada.",
+        "sources": [
+          { "name": "MCCI / Contralacorrupcion.mx", "tier": 2 },
+          { "name": "Mexico News Daily", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "constitutional-electricity-reform-fails",
+        "year": "Apr 17, 2022",
+        "title": "Constitutional Electricity Reform Rejected by Lower House",
+        "type": "reform",
+        "detail": "In a vote of 275 in favor and 223 against on Easter Sunday, the Chamber of Deputies rejected AMLO's constitutional electricity reform, which would have made CFE the dominant market player by limiting private generation to 44% of capacity. A two-thirds majority (~334 votes) was required; AMLO fell short by approximately 60. The opposition — PAN, PRI, PRD, Movimiento Ciudadano — voted in a unified bloc, the most disciplined display of opposition to AMLO in his term. AMLO had deliberately scheduled the vote for Easter Sunday to pressure opposition members.",
+        "sources": [
+          { "name": "Bloomberg", "tier": 2 },
+          { "name": "Baker Institute", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "lithium-nationalization",
+        "year": "Apr 18, 2022",
+        "title": "Mexico Nationalizes Lithium Mining Exclusively for the State",
+        "type": "economic",
+        "detail": "One day after the electricity reform defeat, AMLO pivoted to nationalize lithium mining: a bill reserving lithium extraction exclusively for the state was approved by the lower house on April 18 and the Senate on April 19, 2022. Mexico holds the world's eighth-largest lithium deposits, concentrated in Sonora. The nationalization was seen as a consolation win after the electricity reform failure. However, critics noted Mexico lacked the technical and financial capacity to exploit its lithium commercially without private sector involvement; production remained negligible.",
+        "sources": [
+          { "name": "Bloomberg", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "usmca-energy-dispute",
+        "year": "Jun 2022",
+        "title": "US Invokes USMCA Dispute Consultations Over Energy Policies",
+        "type": "political",
+        "detail": "The United States formally invoked USMCA (T-MEC) dispute settlement consultations against Mexico in June 2022, arguing AMLO's electricity policies discriminated against American companies and violated Article 32.11 of the treaty. US Trade Representative Katherine Tai stated US companies faced 'unfair treatment' under Mexico's energy regulations. Canada subsequently joined the complaint. The dispute represented the first significant USMCA arbitration and put pressure on Mexico's energy nationalism policies. A resolution panel was eventually formed in 2023.",
+        "sources": [
+          { "name": "S&P Global", "tier": 3 },
+          { "name": "Jones Day", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ine-defense-marches-nov-2022",
+        "year": "Nov 13, 2022",
+        "title": "Mass Marches in Defense of INE Electoral Authority",
+        "type": "political",
+        "detail": "The first major opposition march in defense of the INE (National Electoral Institute) took place in Mexico City and over 20 cities nationwide on November 13, 2022. Civil society and opposition parties organized the nonpartisan march; sole speaker was former IFE president José Woldenberg. Protesters wore white. The march responded to AMLO's legislative push — 'Plan B' — to gut the INE budget and limit its enforcement powers. Two weeks later, on November 27, AMLO held a counter-march marking four years in office, with approximately one million supporters walking down Reforma Avenue.",
+        "sources": [
+          { "name": "PBS NewsHour", "tier": 2 },
+          { "name": "NPR", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "plan-b-electoral-reform-passed",
+        "year": "Dec 2022",
+        "title": "Plan B Electoral Reform Passes Congress — Weakens INE",
+        "type": "reform",
+        "detail": "'Plan B,' a statutory (not constitutional) electoral reform requiring only a simple majority, was drafted after AMLO's constitutional INE overhaul failed. It obstructed INE operations, slashed its budget by 3.5 billion pesos, reduced its staff, limited its enforcement powers, and altered electoral calendar dates. Congress approved the final component on February 22, 2023. Critics argued it was designed to cripple the INE before the 2024 elections. The Supreme Court subsequently struck down both parts of Plan B in May–June 2023 on procedural grounds.",
+        "sources": [
+          { "name": "Mexico News Daily", "tier": 2 },
+          { "name": "Stanford Law School", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "journalists-killed-2022",
+        "year": "2022",
+        "title": "13 Journalists Killed — Deadliest Year for Press Under AMLO",
+        "type": "security",
+        "detail": "At least 13 journalists were murdered in Mexico in 2022 — the deadliest single year under AMLO. The most dangerous states were Sonora (7 cases) and Veracruz (5). The pattern of near-total impunity continued: Mexico's federal protection mechanism for journalists failed, with 8 enrolled journalists killed in the preceding 7 years. RSF ranked Mexico the deadliest country globally for press in a non-combat zone. AMLO's continued attacks on critical reporters at his mañaneras — including publicly displaying the phone number of NYT Mexico correspondent — were documented by CPJ and Amnesty International.",
+        "sources": [
+          { "name": "RSF (Reporters Without Borders)", "tier": 2 },
+          { "name": "Committee to Protect Journalists (CPJ)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Electoral Battles & Ovidio Capture (2023)",
+    "events": [
+      {
+        "id": "marea-rosa-march-feb-2023",
+        "year": "Feb 26, 2023",
+        "title": "Marea Rosa: Largest Anti-AMLO Protest of His Presidency",
+        "type": "political",
+        "detail": "The largest anti-AMLO protest of his presidency took place on February 26, 2023, as tens of thousands wearing pink and white overflowed Mexico City's Zócalo (capacity ~100,000), with crowds spilling onto adjoining streets. The march — nicknamed 'Marea Rosa' (Pink Tide) — opposed Plan B electoral reform. The movement included opposition parties (PAN, PRI, PRD, MC) plus nonpartisan civil society groups. AMLO the following morning acknowledged the marchers' right to protest. The mobilization was widely seen as a test run for broader opposition coordination ahead of the 2024 presidential election.",
+        "sources": [
+          { "name": "PBS NewsHour", "tier": 2, "url": "https://www.pbs.org/newshour/world/tens-of-thousands-march-against-mexico-presidents-proposed-overhaul-of-electoral-authority" },
+          { "name": "CNN", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ovidio-capture-jan-2023",
+        "year": "Jan 5, 2023",
+        "title": "Ovidio Guzmán Captured by Mexican Army in Culiacán",
+        "type": "security",
+        "detail": "Mexican Army forces intercepted a convoy of six armored trucks in Culiacán's Jesús María district, capturing Ovidio Guzmán López — son of El Chapo and alleged leader of the Los Chapitos Sinaloa Cartel faction. Authorities immediately transferred him to El Altiplano prison to prevent a repeat of the 2019 Culiacanazo. The capture triggered an unprecedented cartel retaliation: gunmen erected vehicle blockades and set fires across Culiacán, Los Mochis, Guasave, and Mazatlán. A military helicopter was shot down. Culiacán airport was shut down. A commercial Aeroméxico flight was struck by a bullet.",
+        "sources": [
+          { "name": "NPR", "tier": 2, "url": "https://www.npr.org/2023/01/06/1147342157/violence-hits-a-mexico-cartel-stronghold-as-the-son-of-el-chapo-is-captured" },
+          { "name": "Wikipedia / 2023 Sinaloa unrest", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "culiacan-violence-jan-2023",
+        "year": "Jan 5–6, 2023",
+        "title": "Cartel Violence Paralyzes Sinaloa After Ovidio Arrest",
+        "type": "security",
+        "detail": "Following Ovidio Guzmán's capture, the Sinaloa Cartel mobilized unprecedented force: truck-mounted .50-caliber machine guns, roadblocks, arson attacks on vehicles and infrastructure across multiple Sinaloa cities. A military helicopter was shot down; 10 soldiers including a colonel were killed in an ambush in Escuinapa. 19 cartel members and one police officer also died. Schools, government offices, and Culiacán airport shut down statewide for over 24 hours. The Defense Ministry deployed 3,586 soldiers. Order was restored only after Ovidio was confirmed at El Altiplano federal prison.",
+        "sources": [
+          { "name": "Small Wars Journal", "tier": 3 },
+          { "name": "Wikipedia / 2023 Sinaloa unrest", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "plan-b-struck-down",
+        "year": "May 8, 2023",
+        "title": "Supreme Court Strikes Down Plan B Electoral Reform",
+        "type": "reform",
+        "detail": "In a 9–2 vote on May 8, 2023, the Supreme Court (SCJN) invalidated the first part of Plan B, ruling that Congress violated procedural articles of the constitution by failing to allow adequate deliberation time. On June 22, 2023, the SCJN invalidated the second part on identical grounds. The full overturn guaranteed that INE's structure and the electoral rules governing the 2018 elections would remain in place for 2024. AMLO publicly condemned the ruling and vowed 'Plan C' — the popular election of all federal judges, including Supreme Court justices.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2, "url": "https://www.aljazeera.com/news/2023/5/8/mexicos-high-court-annuls-part-of-controversial-electoral-reform" },
+          { "name": "Stanford Law School", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ovidio-extradition-2023",
+        "year": "Sep 15, 2023",
+        "title": "Ovidio Guzmán Extradited to the United States",
+        "type": "security",
+        "detail": "Ovidio Guzmán López was extradited to the United States on September 15, 2023, marking a significant reversal from the 2019 Culiacanazo when Mexico released him under cartel pressure. He was transferred to face federal drug trafficking charges filed in Chicago, Illinois. In a subsequent plea agreement, Guzmán admitted to overseeing production and smuggling of cocaine, heroin, methamphetamine, marijuana, and fentanyl on a massive scale, and admitted to systematically bribing Mexican government officials at multiple levels. The extradition represented one of AMLO's most significant security deliverables to the United States.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "NPR", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tren-maya-inauguration",
+        "year": "Dec 15, 2023",
+        "title": "Tren Maya Inaugurated — Sections 2–4 Open to Passengers",
+        "type": "political",
+        "detail": "AMLO led the inaugural run of the Tren Maya on December 15, 2023, with public passenger service beginning on sections 2–4 covering 14 stations including Chichén Itzá, Valladolid, and Cancún Airport. AMLO declared it 'the most important public work in the world.' The train used 42 passenger units designed and assembled in Hidalgo state. Average ridership in the first seven months was just over 1,200 passengers per day — well below government targets. The total project cost had ballooned from the original 150 billion pesos estimate to approximately 500 billion pesos (~$27–30 billion USD).",
+        "sources": [
+          { "name": "Mexico News Daily", "tier": 2 },
+          { "name": "Wikipedia / Tren Maya", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "istmo-tehuantepec-inauguration",
+        "year": "Sep 2023",
+        "title": "Tren Interoceánico del Istmo de Tehuantepec Inaugurated",
+        "type": "economic",
+        "detail": "The Corredor Interoceánico del Istmo de Tehuantepec (Interoceanic Corridor) was inaugurated for freight in September 2023, later opening to passengers. This rail and industrial corridor connects the Pacific coast port of Salina Cruz, Oaxaca with the Gulf port of Coatzacoalcos, Veracruz — intended as a land bridge alternative to the Panama Canal, reducing Asia-to-US-Gulf Coast shipping time. Ten Special Economic Zones (ZEDEs) were planned along the 303 km route to attract industrial investment. Critics questioned whether sufficient private investment would materialize.",
+        "sources": [
+          { "name": "Mexico News Daily", "tier": 2 },
+          { "name": "Trade.gov", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mexico-top-us-trading-partner",
+        "year": "2023",
+        "title": "Mexico Becomes the United States' Top Trading Partner",
+        "type": "economic",
+        "detail": "In early 2023, Mexico overtook Canada and China to become the United States' largest trading partner — the first time since the early NAFTA era. Bilateral trade reached $798.5 billion in 2023. The nearshoring boom — spurred by US-China trade tensions and pandemic supply chain disruptions — drove record manufacturing investment in Mexico, particularly in the automotive, electronics, and medical devices sectors. Researchers estimated nearshoring added nearly 2% to Mexico's GDP. Monterrey in particular saw a flood of industrial investment in new manufacturing facilities.",
+        "sources": [
+          { "name": "US Census Bureau", "tier": 1 },
+          { "name": "Dallas Fed", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "coneval-poverty-improvement-2022",
+        "year": "2023",
+        "title": "CONEVAL: Poverty Falls to 36.3% in 2022 — 5.6M Lifted",
+        "type": "social",
+        "detail": "CONEVAL's 2022 multidimensional poverty measurement showed Mexico's poverty rate had fallen to 36.3% from 43.9% (2020) and 41.9% (2018), with 5.6 million fewer people in poverty compared to 2018. The main drivers were minimum wage increases and the expansion of Pension para Adultos Mayores. However, access to health services remained a major deficit: people without health access had risen to 44.7 million. Extreme poverty was 7.1% — virtually unchanged from 2018 (7.0%), showing that the poorest Mexicans benefited least from AMLO's policies.",
+        "sources": [
+          { "name": "CONEVAL", "tier": 1 },
+          { "name": "BBVA Research", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Judicial Reform & Presidential Succession (2024)",
+    "events": [
+      {
+        "id": "plan-c-judicial-reform-submitted",
+        "year": "Feb 5, 2024",
+        "title": "AMLO Submits 'Plan C' — Comprehensive Judicial Reform Package",
+        "type": "reform",
+        "detail": "On February 5, 2024, AMLO formally submitted his 'Plan C' constitutional reform package to Congress, including the judiciary overhaul that would replace all federal judges — including Supreme Court justices — with popularly elected officials. He cited judiciary injunctions (amparos) that had blocked his infrastructure projects as evidence of political bias. The plan also proposed reducing the Supreme Court from 11 to 9 justices, creating a Judicial Discipline Tribunal, and holding elections for all judicial positions by June 2025.",
+        "sources": [
+          { "name": "Wikipedia / 2024 Mexican judicial reform", "tier": 2 },
+          { "name": "AS/COA", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "sheinbaum-election-win",
+        "year": "Jun 2, 2024",
+        "title": "Claudia Sheinbaum Wins Presidency in Historic Landslide",
+        "type": "political",
+        "detail": "In general elections on June 2, 2024, Claudia Sheinbaum won with 58.3%–60.7% of the vote — the highest vote total ever recorded for a candidate in Mexican history. Her closest rival, opposition candidate Xóchitl Gálvez, received 26.6%–28.6%. Sheinbaum carried 31 of 32 states. Morena and its allies won a two-thirds supermajority in both the Chamber of Deputies and Senate. Sheinbaum became Mexico's first female president and the first president of Jewish background; she is also a climate scientist who contributed to the 2007 IPCC Nobel Peace Prize work.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2 },
+          { "name": "CNN", "tier": 2, "url": "https://www.cnn.com/2024/06/03/americas/mexico-election-result-first-female-president-intl-hnk/index.html" }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "marea-rosa-judicial-reform-protests",
+        "year": "Aug 2024",
+        "title": "Mass Protests Against Judicial Reform — Judiciary Employees Strike",
+        "type": "political",
+        "detail": "August 2024 saw mass protests in Mexico City and nationwide against AMLO's judicial reform, including a prolonged strike by federal judiciary employees who marched to the legislature to block the vote. Law students and civil society groups joined the demonstrations. The protests were large but failed to stop the reform process. Morena officials characterized the protestors as 'privileged' elites defending their entrenched interests in the judicial system. The marches represented the final major civil society mobilization of the AMLO era.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "The Guardian", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "judicial-reform-chamber",
+        "year": "Sep 4, 2024",
+        "title": "Chamber of Deputies Passes Judicial Reform 359–135",
+        "type": "reform",
+        "detail": "Due to protests blocking the legislative palace, the Chamber of Deputies relocated its vote to a gymnasium and in the early hours of September 4 passed the judicial reform 359 in favor and 135 against — comfortably clearing the two-thirds supermajority threshold. All major opposition parties voted against. The reform made Mexico the first country in the world to directly elect all members of its judiciary by popular vote. More than 6,500 judges, magistrates, and justices would be elected in June 2025 elections; the Supreme Court was reduced from 11 to 9 seats.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2 },
+          { "name": "Wikipedia / 2024 Mexican judicial reform", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "judicial-reform-senate",
+        "year": "Sep 11, 2024",
+        "title": "Senate Passes Judicial Reform 86–41 After Protesters Enter Chamber",
+        "type": "reform",
+        "detail": "Mexico's Senate approved the judicial reform with 86 votes in favor and 41 against on September 11, 2024, after a brief interruption by protesters who entered the chamber. Oaxaca ratified the reform the same day; by September 12 a majority of state legislatures had ratified it, completing the entire constitutional amendment process in under 48 hours. The US and Canadian ambassadors publicly criticized the reform as a threat to judicial independence and USMCA compliance. The UN Special Rapporteur on the Independence of Judges also expressed serious concern.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2, "url": "https://www.aljazeera.com/news/2024/9/11/mexico-senate-passes-judicial-reform-after-protesters-break-into-chamber" },
+          { "name": "AS/COA", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "supreme-court-justices-resign",
+        "year": "Sep 2024",
+        "title": "Eight Supreme Court Justices Resign Rather Than Face Election",
+        "type": "political",
+        "detail": "Following the passage of the judicial reform, Chief Justice Norma Piña and eight of eleven Supreme Court justices resigned rather than participate in the popular elections scheduled for June 2025. The mass resignation was unprecedented in Mexican history and represented a direct rejection of the reform's legitimacy by the sitting judiciary. AMLO dismissed the resignations as 'valid decisions' and insisted the reform would proceed. The three justices allied with Morena chose to remain and face election under the new rules.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "Al Jazeera", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "coneval-poverty-final-2024",
+        "year": "2024",
+        "title": "CONEVAL 2024: Poverty at Historic Low of 29.6% — 13.4M Lifted",
+        "type": "social",
+        "detail": "Mexico's 2024 poverty measurement showed 29.6% — the lowest in recorded history — down from 41.9% in 2018, representing 13.4 million fewer people in poverty across the sexenio. Extreme poverty fell to 5.3% from 7.0%. The World Bank acknowledged 9.5 million lifted from poverty. Expert Viri Ríos stated 'there has never been a single six-year term in which poverty has been reduced so significantly.' However, 70–73% of the reduction was attributed to minimum wage hikes rather than targeted social programs, and access to health services remained critically below 2018 baseline.",
+        "sources": [
+          { "name": "INEGI / CONEVAL", "tier": 1 },
+          { "name": "BBVA Research", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "amlo-final-day",
+        "year": "Sep 30, 2024",
+        "title": "AMLO's Final Day: Emotional Farewell at Last Mañanera",
+        "type": "political",
+        "detail": "AMLO held his final daily mañanera on September 30, 2024, visibly emotional, shedding tears as supporters serenaded him. He signed two laws: one elevating indigenous and Afro-Mexican peoples as subjects of public law. He left office with a 68% approval rating — the highest final-month approval of any Mexican president since Ernesto Zedillo (2000). He formally handed power to Claudia Sheinbaum at midnight, then retired to his ranch in Palenque, Chiapas. The mañanera — 1,833 total in six years — had been an unprecedented daily press event, though repeatedly used to attack critics and journalists.",
+        "sources": [
+          { "name": "NPR", "tier": 2, "url": "https://www.npr.org/2024/09/30/nx-s1-5130836/after-six-years-in-power-mexicos-president-is-about-to-leave-office" },
+          { "name": "Al Jazeera", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Post-Presidency: 4T Reforms Implemented (Oct 2024–2026)",
+    "events": [
+      {
+        "id": "tren-maya-sections-6-7-completion",
+        "year": "Dec 15, 2024",
+        "title": "Tren Maya Fully Completed — Sheinbaum Inaugurates Final Sections to Chetumal",
+        "type": "political",
+        "detail": "President Claudia Sheinbaum inaugurated the final sections of the Tren Maya (sections 6–7, Escárcega to Chetumal) on December 15, 2024, completing the entire 1,554 km railway loop one year after AMLO opened the first passenger sections. The southern terminus at Chetumal, Quintana Roo — on the Belize border — completes the network across all five southeastern states. Ridership grew 74% year-on-year by mid-2025, exceeding 1.3 million passengers, but the railway was projected to lose US$314 million in the first half of 2025 alone as operational costs far exceeded fare revenues. Total project cost had ballooned from the original 150 billion pesos (~$7.4B USD) to approximately 500 billion pesos (~$27–30B USD) — a 300% overrun.",
+        "sources": [
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/travel/maya-train-reality-check-freight-cargo-service/",
+            "pole": "western"
+          },
+          {
+            "name": "Mexico Solidarity Media",
+            "tier": 3,
+            "url": "https://mexicosolidarity.com/maya-train-passengers-increase-74-from-may-2024-to-2025/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://mexiconewsdaily.com/travel/maya-train-reality-check-freight-cargo-service/",
+            "caption": "Maya Train ridership growth vs. persistent financial losses as full network opens",
+            "source": "Mexico News Daily",
+            "thumbnail": "https://mexiconewsdaily.com/travel/maya-train-reality-check-freight-cargo-service/"
+          }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      },
+      {
+        "id": "mexico-judicial-elections-2025",
+        "year": "Jun 1, 2025",
+        "title": "Mexico Holds World's First National Judicial Elections — Morena Sweeps Supreme Court with 13% Turnout",
+        "type": "reform",
+        "detail": "On June 1, 2025, Mexico became the first country in history to elect its entire federal judiciary by popular vote, implementing AMLO's landmark September 2024 constitutional reform. Approximately 2,600 judicial positions were contested — 9 Supreme Court justices, 464 circuit magistrates, 386 district judges, plus Electoral and Judicial Disciplinary Tribunals. Voter turnout was approximately 13% — the lowest in Mexico's democratic history and among the lowest ever recorded for any Latin American electoral process (OAS). Morena-aligned candidates won 5 of 9 Supreme Court seats. Héctor Aguilar Ortiz, a Mixtec Indigenous lawyer from Oaxaca with ties to López Obrador, became Chief Justice — only the second person of indigenous heritage to lead the SCJN, after Benito Juárez. Civil society groups documented illegal Morena voter guides ('cheat sheets') steering voters to pro-government candidates; multiple elected judges had documented links to organized crime. HRW reported the process undermined judicial independence. Former President Zedillo called it 'the assassination of our young democracy.' AMLO voted — his first major public appearance since retirement.",
+        "sources": [
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2025/06/03/americas/mexico-morena-supreme-court-judicial-elections-intl-latam",
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/longform/2025/5/30/confusion-and-concern-loom-over-mexicos-historic-judicial-election",
+            "pole": "western"
+          },
+          {
+            "name": "Human Rights Watch",
+            "tier": 2,
+            "url": "https://www.hrw.org/news/2025/09/01/mexico-electoral-process-undermines-judicial-independence",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.cnn.com/2025/06/03/americas/mexico-morena-supreme-court-judicial-elections-intl-latam",
+            "caption": "Voters cast ballots in Mexico's historic first judicial elections, Oaxaca, June 1, 2025",
+            "source": "Reuters / CNN",
+            "thumbnail": "https://media.cnn.com/api/v1/images/stellar/prod/2025-06-01t232821z-575202198-rc2ztea2981t-rtrmadp-3-mexico-election-judges.jpg?c=16x9&q=h_833,w_1480,c_fill"
+          }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      },
+      {
+        "id": "amlo-grandeza-book-2025",
+        "year": "Nov 30, 2025",
+        "title": "AMLO Publishes 'Grandeza' — Only His Fourth Public Appearance Since Retirement",
+        "type": "political",
+        "detail": "On November 30, 2025, former president López Obrador made his fourth public appearance since retiring on October 1, 2024, releasing a video from his ranch 'La Chingada' in Palenque, Chiapas presenting his new book 'Grandeza' (Greatness), published by Editorial Planeta. The book explores the cultural greatness of pre-Hispanic Mexico — what AMLO frames as the 'negated civilization,' drawing on anthropologist Guillermo Bonfil Batalla's concept of 'Mexico profundo.' AMLO said he would not tour the country to promote it: 'I shouldn't overshadow President Sheinbaum.' He described his retirement routine — 5 km morning walks, writing from 9 a.m. to 2 p.m., avoiding media. Senate leader Adán Augusto López distributed 17,000 free copies to senators in December 2025. AMLO said he would only break his retirement under three conditions: serious threat to democracy, to Sheinbaum, or to national sovereignty.",
+        "sources": [
+          {
+            "name": "El Financiero",
+            "tier": 2,
+            "url": "https://www.elfinanciero.com.mx/nacional/2025/11/30/como-es-la-rutina-de-amlo-en-la-chingada-palenque-chiapas/",
+            "pole": "western"
+          },
+          {
+            "name": "Infobae México",
+            "tier": 2,
+            "url": "https://www.infobae.com/mexico/2025/11/30/reaparecio-amlo-presento-su-libro-grandeza-y-detalla-como-vive-su-retiro-en-la-chingada/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.elfinanciero.com.mx/nacional/2025/11/30/como-es-la-rutina-de-amlo-en-la-chingada-palenque-chiapas/",
+            "caption": "AMLO at La Chingada ranch in Palenque during retirement, presenting 'Grandeza', November 2025",
+            "source": "El Financiero",
+            "thumbnail": "https://www.elfinanciero.com.mx/resizer/v2/FC57WUAWLVF6XD5Y35ZXXDVUYA.jpg?smart=true&auth=69310202f823c25640d4023205eeb91d30c5b182fef4cbba4f137f088db8362d&width=400&height=225&quality=85"
+          }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      },
+      {
+        "id": "morena-senator-inzunza-cartel-indictment-2026",
+        "year": "2026",
+        "title": "U.S. Indicts Morena Senator Inzunza for Sinaloa Cartel Ties — AMLO Legacy Questioned",
+        "type": "political",
+        "detail": "On April 30, 2026, U.S. federal authorities unsealed an indictment against Enrique Inzunza Cázarez, Morena senator from Sinaloa, charging him with acting as a liaison between the Sinaloa Cartel's 'Los Chapitos' faction and the state government — providing protection, controlling law enforcement, and facilitating drug trafficking. Opposition parties demanded his immediate impeachment (desafuero). The scandal directly echoed critics' longstanding accusations about AMLO's 'abrazos no balazos' doctrine, and arrived less than two years after Ovidio Guzmán's 2024 U.S. plea deal confirmed systematic bribery of Mexican officials during the AMLO era.",
+        "sources": [
+          {
+            "name": "The Yucatan Times",
+            "tier": 2,
+            "url": "https://theyucatantimes.com/2026/05/enrique-inzunza-cazarez-the-morena-senator-accused-of-agreeing-to-protect-the-sinaloa-cartel/",
+            "pole": "western"
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/news/sinaloa-governor-indictment-mexicos-week-in-review-april-may-2026/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://theyucatantimes.com/2026/05/enrique-inzunza-cazarez-the-morena-senator-accused-of-agreeing-to-protect-the-sinaloa-cartel/",
+            "caption": "Morena senator Inzunza Cázarez indicted by U.S. for alleged Sinaloa Cartel ties, April 2026",
+            "source": "The Yucatan Times",
+            "thumbnail": "https://theyucatantimes.com/2026/05/enrique-inzunza-cazarez-the-morena-senator-accused-of-agreeing-to-protect-the-sinaloa-cartel/"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "morena-ariadna-montiel-president-2026",
+        "year": "2026",
+        "title": "Morena Names Ariadna Montiel as New National Party President",
+        "type": "political",
+        "detail": "On May 3, 2026, Mexico's ruling Morena party named Ariadna Montiel Reyes — former Secretaria de Bienestar under President Sheinbaum — as its new National President, succeeding Mario Delgado. Montiel's appointment signals continuity with the 4T's social-program identity AMLO built: she oversaw the expansion of the Bienestar welfare network and Pensión para Adultos Mayores that became cornerstones of AMLO's poverty-reduction record. The transition comes as Morena navigates the fallout from the Sinaloa senator cartel indictment and consolidates ahead of the 2027 midterm elections.",
+        "sources": [
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-05-03/mexico-s-ruling-morena-party-taps-montiel-as-new-leader",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.bloomberg.com/news/articles/2026-05-03/mexico-s-ruling-morena-party-taps-montiel-as-new-leader",
+            "caption": "Ariadna Montiel named Morena National President, continuing AMLO's 4T party structure",
+            "source": "Bloomberg",
+            "thumbnail": "https://www.bloomberg.com/news/articles/2026-05-03/mexico-s-ruling-morena-party-taps-montiel-as-new-leader"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "dos-bocas-safety-incidents-2026",
+        "year": "Apr 9, 2026",
+        "title": "Dos Bocas Olmeca Refinery: Four Safety Incidents in Three Weeks — Deadly March Fire Kills 5",
+        "type": "economic",
+        "detail": "AMLO's flagship Dos Bocas Olmeca Refinery in Tabasco suffered four safety incidents within 23 days in March–April 2026. The deadliest occurred on March 17, 2026: heavy rains caused overflow of hydrocarbon-contaminated water outside the perimeter wall; its ignition killed five people — one Pemex employee and four external security subcontractors whose vehicle was trapped by flames. Three more incidents followed. On April 9, fire broke out in the coke storage warehouse; 150+ Pemex personnel backed by the Navy, SEDENA, and Tabasco state forces responded. The fire was controlled by 6:25 p.m. with one minor injury. President Sheinbaum confirmed via social media the fire was localized; Pemex Director Víctor Rodríguez traveled personally to supervise. As of early 2026, the refinery operates at ~60% of its 340,000 bbl/day nameplate capacity — an improvement from 17% in late 2024 but still far short of the targets that were to justify its $20B+ total cost.",
+        "sources": [
+          {
+            "name": "Mexico Business News",
+            "tier": 3,
+            "url": "https://mexicobusiness.news/oilandgas/news/fire-dos-bocas-fourth-safety-incident-three-weeks",
+            "pole": "western"
+          },
+          {
+            "name": "InvestingLive",
+            "tier": 3,
+            "url": "https://investinglive.com/commodities/massive-dos-bocas-fire-adds-refining-risk-mexicos-flagship-refinery-stays-below-capacity-20260409/",
+            "pole": "western"
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/news/dos-bocas-refinery-pemex-second-fire/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://mexicobusiness.news/oilandgas/news/fire-dos-bocas-fourth-safety-incident-three-weeks",
+            "caption": "Fourth safety incident in three weeks at Dos Bocas Olmeca refinery, April 9, 2026",
+            "source": "Mexico Business News",
+            "thumbnail": "https://mexicobusiness.news/sites/default/files/2022-12/OilandGasEnvato-img-2022-%C2%A9-oil-and-gas-sea-platform-in-norway-energy-industr-1920x240-MBN.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T12:00:00Z"
+      },
+      {
+        "id": "sinaloa-governor-rocha-moya-indictment-2026",
+        "year": "2026",
+        "title": "U.S. Indicts Sitting Morena Governor Rocha Moya for Cartel Ties — Deepens 'Abrazos No Balazos' Legacy Debate",
+        "type": "political",
+        "detail": "On April 29, 2026, the U.S. Attorney's Office for the Southern District of New York unsealed a five-count indictment against Sinaloa Governor Rubén Rocha Moya and nine other current or former state officials, alleging Rocha Moya met with the 'Los Chapitos' Sinaloa Cartel faction before his 2021 election and agreed to install cartel-friendly officials in exchange for political support and bribes. Rocha Moya — a Morena governor first elected in 2021, during AMLO's presidency — requested a leave of absence on May 1, becoming the highest-ranking Mexican official ever indicted by the U.S. government. Local lawmakers approved the leave and appointed Yeraldine Bonilla Valverde as interim governor. The indictment, arriving one day after Morena senator Enrique Inzunza Cázarez was charged in a related scheme, marked the most severe escalation yet of cartel-accommodation allegations dogging AMLO's 'abrazos no balazos' security legacy — this time reaching a sitting state governor rather than a legislator.",
+        "sources": [
+          {
+            "name": "U.S. Department of Justice (SDNY)",
+            "tier": 1,
+            "url": "https://www.justice.gov/usao-sdny/pr/governor-sinaloa-and-nine-other-current-and-former-mexican-officials-charged-drug",
+            "pole": "western"
+          },
+          {
+            "name": "CBS News",
+            "tier": 2,
+            "url": "https://www.cbsnews.com/news/mexican-governor-accused-of-drug-trafficking-steps-down/",
+            "pole": "western"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2026/05/02/americas/mexico-sinaloa-governor-step-down-latam-intl",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.cbsnews.com/news/mexican-governor-accused-of-drug-trafficking-steps-down/",
+            "caption": "Sinaloa Governor Rubén Rocha Moya, indicted by U.S. prosecutors and stepping down on leave, May 2026",
+            "source": "CBS News",
+            "thumbnail": "https://assets2.cbsnewsstatic.com/hub/i/r/2026/05/02/abaa0460-c8e9-4fcb-b6c9-4b2f4edb56eb/thumbnail/620x413/8bb0755c5f3ed873f990c204298fe708/gettyimages-2175360646.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Indictment is an official DOJ filing; Rocha Moya denies the allegations and no conviction has occurred.",
+        "lastUpdated": "2026-07-16T00:00:00Z"
+      },
+      {
+        "id": "tren-maya-freight-54-percent-2026",
+        "year": "2026",
+        "title": "Tren Maya Freight Network Passes 54% Completion",
+        "type": "economic",
+        "detail": "Physical construction of the Tren Maya cargo (freight) network — a complement to the AMLO-era passenger line intended to connect southeastern ports, industrial zones, and the national rail grid — reached 54.05% completion as of June 25, 2026, per Mexico's defense ministry (SEDENA), which continues to build and operate the project. Four freight complexes are under construction in Palenque, Poxilá, Progreso, and Cancún, totaling 101 km of internal track across eight active work fronts and roughly 13,700 jobs generated. The Cancún cargo terminal alone represents a 7.78 billion peso investment and is billed as the largest complex in the freight system. All four complexes, plus the Progreso rail connection, are targeted for completion and operation by the end of 2026.",
+        "sources": [
+          {
+            "name": "PorEsto",
+            "tier": 2,
+            "url": "https://www.poresto.com/quintana-roo/cancun/2026/6/25/terminal-de-carga-del-tren-maya-en-cancun-supera-el-54-de-avance-estara-lista-este-2026.html",
+            "pole": "western"
+          },
+          {
+            "name": "Noticaribe",
+            "tier": 3,
+            "url": "https://noticaribe.com.mx/2026/06/25/reporta-sedena-avance-de-54-en-la-construccion-del-tren-maya-de-carga-en-el-sureste-del-pais/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.poresto.com/quintana-roo/cancun/2026/6/25/terminal-de-carga-del-tren-maya-en-cancun-supera-el-54-de-avance-estara-lista-este-2026.html",
+            "caption": "Tren Maya cargo terminal under construction in Cancún, June 2026",
+            "source": "PorEsto",
+            "thumbnail": "https://www.poresto.com/media/2026/6/25/terminal-de-carga-del-tren-maya-en-cancun.jpg"
+          }
+        ],
+        "confidence": "medium",
+        "lastUpdated": "2026-07-16T00:00:00Z"
+      },
+      {
+        "id": "fgr-no-evidence-rocha-moya-2026",
+        "year": "2026",
+        "title": "Mexico's FGR Says It Has Found No Evidence Against Rocha Moya, Stalling Extradition Case",
+        "type": "political",
+        "detail": "On July 8, 2026, Mexico's Attorney General's Office (FGR) said it had found no evidence meeting the country's minimum evidentiary threshold to act on the U.S. cartel-protection allegations against on-leave Sinaloa governor Rubén Rocha Moya and nine other officials, effectively stalling detention or extradition more than two months after the U.S. request became public. Two weeks later, on July 21, journalist Jesús Lemus Barajas reported that a lawyer for Rocha Moya had opened informal talks with the U.S. Attorney's Office for the Southern District of New York on terms for a possible surrender and cooperation as a protected witness — unconfirmed by any official party. The impasse fed opposition accusations of selective justice toward Morena-aligned officials and left Rocha Moya's status, and Sinaloa's interim governorship, unresolved into August.",
+        "sources": [
+          {
+            "name": "El Diario de Chihuahua",
+            "tier": 2,
+            "url": "https://www.eldiariodechihuahua.mx/nacional/2026/jul/08/dice-fgr-que-todavia-no-hay-pruebas-contra-rocha-moya-815613.html",
+            "pole": "western"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "url": "https://www.infobae.com/mexico/2026/07/21/ruben-rocha-moya-estaria-en-conversaciones-con-eeuu-para-entregarse-tras-acusaciones-de-nexos-con-los-chapitos-revela-jesus-lemus/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.eldiariodechihuahua.mx/nacional/2026/jul/08/dice-fgr-que-todavia-no-hay-pruebas-contra-rocha-moya-815613.html",
+            "caption": "FGR prosecutor David Boone de la Garza says Mexico lacks evidence to act on the U.S. request against Rocha Moya, July 8, 2026",
+            "source": "El Diario de Chihuahua",
+            "thumbnail": "https://www.eldiariodechihuahua.mx/core/dch/assets/images/2026/07/08/imagetransformer-J8IVGcaiW.jpg"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "unverified",
+        "confidenceReason": "FGR's evidentiary finding is an official statement; the protected-witness negotiation report relies on a single journalist's sourcing and is unconfirmed by any party.",
+        "lastUpdated": "2026-08-10T00:00:00Z"
+      }
+    ]
+  }
+]

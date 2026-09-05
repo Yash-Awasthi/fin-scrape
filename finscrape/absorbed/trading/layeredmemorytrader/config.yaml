@@ -1,0 +1,18 @@
+backtest:
+  full_data_path: historical_data.csv
+  news_data_path: historical_data_with_news.csv
+  testing_period:
+    end: '2024-08-31'
+    start: '2024-03-01'
+  training_period:
+    end: '2024-02-29'
+    start: '2020-08-01'
+memory_horizons:
+  long_term: 20160
+  mid_term: 2880
+  short_term: 120
+polling_intervals:
+  price_data: 60
+  sentiment_data: 3600
+thresholds:
+  mean_confidence_to_act: 0.6

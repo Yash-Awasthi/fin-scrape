@@ -1,0 +1,75 @@
+[
+  {
+    "id": "mapuche-huenchullan-arrest-temucuicui-may2026",
+    "year": "2026",
+    "title": "Fugitive Mapuche Werkén Jorge Huenchullán Arrested at Temucuicui in Major Joint Military-Police Operation",
+    "type": "legal",
+    "detail": "On May 19, 2026, a major joint operation by the Chilean Army, Carabineros, and the PDI (civilian police) resulted in the arrest of Jorge Huenchullán Cayul (49), werkén (spokesperson) of the Autonomous Community of Temucuicui in Ercilla, Araucanía. Huenchullán had been a fugitive since 2021, wanted on charges of drug trafficking and illegal possession of firearms. He was extracted by helicopter from his residence along with his partner Carolina Padilla Manquel, who also faces charges. The operation came five days after the Temucuicui community filed formal accusations against Carabineros for evidence planting during the May 14 armed raid on the community school. His arrest drew immediate criticism from Mapuche organizations and human rights advocates, who characterized it as part of a systematic pattern of state criminalization of the community's leadership. The operation unfolded under the state of emergency that has continuously governed Araucanía since May 2022, expanded under President Kast.",
+    "sources": [
+      {
+        "name": "Infobae",
+        "tier": 2,
+        "url": "https://www.infobae.com/america/america-latina/2026/05/19/la-policia-chilena-detuvo-a-un-lider-mapuche-profugo-desde-2021-fue-extraido-en-helicoptero-desde-temucuicui/",
+        "pole": "western"
+      },
+      {
+        "name": "Emol",
+        "tier": 2,
+        "url": "https://www.emol.com/noticias/Nacional/2026/05/19/1200398/jorge-huenchullan-perfil-comunero-temucuicui.html",
+        "pole": "western"
+      },
+      {
+        "name": "Mala Espina Check",
+        "tier": 3,
+        "url": "https://www.malaespinacheck.cl/pais/2026/05/19/quien-es-jorge-huenchullan-el-dirigente-mapuche-detenido-en-temucuicui/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.infobae.com/america/america-latina/2026/05/19/la-policia-chilena-detuvo-a-un-lider-mapuche-profugo-desde-2021-fue-extraido-en-helicoptero-desde-temucuicui/",
+        "caption": "Mapuche werkén Jorge Huenchullán arrested in helicopter operation at Temucuicui — Infobae, May 19, 2026",
+        "source": "Infobae",
+        "thumbnail": "https://www.infobae.com/america/america-latina/2026/05/19/la-policia-chilena-detuvo-a-un-lider-mapuche-profugo-desde-2021-fue-extraido-en-helicoptero-desde-temucuicui/"
+      }
+    ],
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "chile-kast-cabinet-reshuffle-may2026",
+    "year": "2026",
+    "title": "Kast Orders First Cabinet Reshuffle — Fastest Shuffle in Chile's Post-Dictatorship History",
+    "type": "political",
+    "detail": "On May 19, 2026 — just 69 days into his administration — President José Antonio Kast announced the first cabinet reshuffle of his government, marking the fastest ministerial change in Chile's post-1990 democratic era. Security Minister Trinidad Steinert and presidential spokesperson Mara Sedini were removed from their positions. Martín Arrau, previously Public Works Minister, was appointed to head the Security Ministry; Interior Minister Claudio Alvarado assumed a dual role as bi-minister for Interior and the government spokespersons' secretariat (Segegob); and Louis de Grange was confirmed as bi-minister for Public Works and Transportation. Political analysts attributed the reshuffle primarily to falling approval ratings (26-39%), public backlash over fuel price hikes (subsequently reversed), friction within the ruling coalition over budget cuts, and the perception of weak security results in Santiago and Araucanía despite escalating operations at Temucuicui.",
+    "sources": [
+      {
+        "name": "Infobae",
+        "tier": 2,
+        "url": "https://www.infobae.com/america/america-latina/2026/05/20/primer-cambio-de-gabinete-en-chile-kast-removio-a-las-ministras-de-seguridad-y-a-la-vocera-presidencial-a-dos-meses-de-asumir/",
+        "pole": "western"
+      },
+      {
+        "name": "BioBioChile",
+        "tier": 2,
+        "url": "https://www.biobiochile.cl/noticias/nacional/chile/2026/05/19/kast-anuncia-cambio-de-gabinete-ministras-sedini-y-steinert-saldrian-del-gabinete.shtml",
+        "pole": "western"
+      },
+      {
+        "name": "T13",
+        "tier": 2,
+        "url": "https://www.t13.cl/noticia/politica/con-salida-sedini-steinert-asi-quedo-nuevo-gabinete-del-presidente-jose-antonio-19-5-2026",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.infobae.com/america/america-latina/2026/05/20/primer-cambio-de-gabinete-en-chile-kast-removio-a-las-ministras-de-seguridad-y-a-la-vocera-presidencial-a-dos-meses-de-asumir/",
+        "caption": "Chile's fastest-ever post-dictatorship cabinet reshuffle — Infobae, May 20, 2026",
+        "source": "Infobae"
+      }
+    ],
+    "eventConfidence": "verified"
+  }
+]

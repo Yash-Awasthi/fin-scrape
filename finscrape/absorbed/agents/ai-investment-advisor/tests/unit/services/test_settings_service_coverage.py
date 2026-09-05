@@ -1,0 +1,150 @@
+"""
+Additional tests for Settings Service coverage.
+測試 Settings Service 提高覆蓋率。
+"""
+import pytest
+from unittest.mock import MagicMock, patch
+from src.services.settings_service import SettingsService
+
+class TestSettingsService:
+    
+    def test_init(self):
+        """Test service initialization."""
+        service = SettingsService(db_path=":memory:", user_id="test_user")
+        assert service.db_path == ":memory:"
+        assert service.user_id == "test_user"
+    
+    def test_get_all_settings(self):
+        """Test getting all settings for a user."""
+        mock_repo = MagicMock()
+        mock_repo.get_all.return_value = [("key1", "value1"), ("key2", "value2")]
+        
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        result = service.get_all_settings()
+        
+        assert result == {"key1": "value1", "key2": "value2"}
+        # v4.3.0: Only called once for target user_id (no SYSTEM fallback)
+        assert mock_repo.get_all.call_count == 1
+    
+    def test_get_all_settings_empty_table(self):
+        """Test getting settings when table doesn't exist."""
+        mock_repo = MagicMock()
+        mock_repo.get_all.side_effect = Exception("no such table")
+        
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        result = service.get_all_settings()
+        
+        assert result == {}
+    
+    def test_get_setting(self):
+        """Test getting a single setting."""
+        mock_repo = MagicMock()
+        mock_repo.get.return_value = "test_value"
+        
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        result = service.get_setting("test_key", default="default")
+        
+        assert result == "test_value"
+        # repo.get is called with user_id, key, and None as default
+        mock_repo.get.assert_called_once_with("user123", "test_key", "default")
+    
+    def test_get_setting_default(self):
+        """Test getting a single setting with default value."""
+        mock_repo = MagicMock()
+        mock_repo.get.return_value = "default_val"
+        
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        result = service.get_setting("missing_key", default="default_val")
+        
+        assert result == "default_val"
+    
+    def test_save_setting(self):
+        """Test saving a setting."""
+        mock_repo = MagicMock()
+        
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        success, msg = service.save_setting("key1", "new_value")
+        
+        assert success is True
+        mock_repo.set.assert_called_once_with("user123", "key1", "new_value")
+    
+    def test_save_setting_error(self):
+        """
+        A failed save reports a stable code, never the exception text.
+
+        2026-08-02 (CWE-209): this returned str(e). Its sibling
+        save_settings_bulk did the same and both callers put that string
+        straight into an HTTPException detail, leaking DB internals to API
+        clients. The returned message is now a code the caller can map.
+        回傳固定代碼而非例外內容 —— 這個字串會被呼叫端放進 HTTP 回應。
+        """
+        mock_repo = MagicMock()
+        mock_repo.set.side_effect = Exception("DB Error: relation does not exist")
+
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        success, msg = service.save_setting("key1", "value")
+
+        assert success is False
+        assert msg == "SETTINGS_SAVE_FAILED"
+        assert "DB Error" not in msg
+        assert "relation" not in msg
+    
+    def test_save_settings_bulk(self):
+        """
+        Bulk save must go through the atomic set_many(), not a per-key loop.
+        2026-08-02: looping over set() committed per key, leaving partial
+        writes on failure — see AlchemySettingsRepository.set_many.
+        """
+        mock_repo = MagicMock()
+
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        success, msg = service.save_settings_bulk({"k1": "v1", "k2": "v2"})
+
+        assert success is True
+        mock_repo.set_many.assert_called_once_with("user123", {"k1": "v1", "k2": "v2"})
+        assert mock_repo.set.call_count == 0
+    
+    @patch('src.services.settings_service.requests.get')
+    def test_fetch_openrouter_models(self, mock_get):
+        """Test fetching OpenRouter models."""
+        mock_get.return_value.status_code = 200
+        mock_get.return_value.json.return_value = {
+            "data": [
+                {"id": "model1"},
+                {"id": "model2"}
+            ]
+        }
+        
+        service = SettingsService()
+        result = service.fetch_openrouter_models()
+        
+        assert "model1" in result
+        assert "model2" in result
+    
+    @patch('src.services.settings_service.requests.get')
+    def test_fetch_openrouter_models_error(self, mock_get):
+        """Test handling error when fetching models."""
+        mock_get.side_effect = Exception("Network Error")
+        
+        service = SettingsService()
+        result = service.fetch_openrouter_models()
+        
+        assert result == []
+
+    def test_initialize_user_settings_generates_webhook_key(self):
+        """Test initialize_user_settings generates webhook_api_key if missing."""
+        mock_repo = MagicMock()
+        mock_repo.get_all.return_value = [("AI_MODEL", "smart"), ("auto_trade_threshold", "75")]
+        mock_repo.engine.connect.return_value.__enter__.return_value.execute.return_value.first.return_value = (1,)
+        
+        service = SettingsService(user_id="user123", settings_repo=mock_repo)
+        
+        # Mock get_setting to simulate key missing
+        with patch.object(service, 'get_setting', return_value=None), \
+             patch.object(service, 'save_setting') as mock_save:
+            
+            result = service.initialize_user_settings()
+            
+            # Assert webhook_api_key was saved
+            from unittest.mock import ANY
+            mock_save.assert_any_call("webhook_api_key", ANY, user_id="user123")

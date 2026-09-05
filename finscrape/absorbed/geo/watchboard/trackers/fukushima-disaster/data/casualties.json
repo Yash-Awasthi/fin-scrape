@@ -1,0 +1,68 @@
+[
+  {
+    "id": "direct-disaster-deaths-fukushima",
+    "category": "Direct earthquake/tsunami deaths (Fukushima Prefecture)",
+    "killed": "1,614",
+    "injured": "~180",
+    "source": "Fukushima Prefectural Police / National Police Agency",
+    "tier": 1,
+    "contested": "no",
+    "note": "Deaths directly caused by the March 11, 2011 earthquake and tsunami in Fukushima Prefecture. Lower than neighboring Iwate and Miyagi prefectures due to geography.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "disaster-related-deaths-evacuation",
+    "category": "Disaster-related deaths (evacuation stress, medical disruption)",
+    "killed": "2,337",
+    "injured": "n/a",
+    "source": "Fukushima Prefectural Government (as of March 2024)",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Deaths caused by the hardship of evacuation, disrupted medical care, psychological stress, and related illness — not direct radiation or trauma. This exceeds direct disaster deaths in Fukushima and includes deaths of hospital patients during emergency evacuation. Some categorization is disputed.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "radiation-workers-overdose",
+    "category": "TEPCO and contractor workers with exposures >100 mSv (lifetime, accident period)",
+    "killed": "0 confirmed (1 radiation-related death recognized 2018)",
+    "injured": "~170 workers received >100 mSv during acute phase",
+    "source": "TEPCO / Japan NRA / Ministry of Health, Labour and Welfare",
+    "tier": 1,
+    "contested": "partial",
+    "note": "In 2018, a TEPCO subcontractor who developed lung cancer after accumulating 195 mSv in the cleanup became the first officially recognized radiation-related death from the Fukushima nuclear accident (occupational). Multiple workers received skin beta burns and two workers were hospitalized for radiation injuries to their feet in 2011. No acute radiation syndrome deaths.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "hospital-evacuation-deaths",
+    "category": "Deaths during hospital/nursing home evacuation",
+    "killed": "~50+",
+    "injured": "n/a",
+    "source": "Fukushima Prefecture / Academic reports (Ohira et al.)",
+    "tier": 2,
+    "contested": "partial",
+    "note": "At least 21 patients at Futaba Hospital died during or immediately after emergency evacuation. Patients from other long-term care facilities also died during hasty evacuation. Exact numbers are disputed and some deaths are included in disaster-related deaths total.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "tohoku-overall-deaths",
+    "category": "Total Great East Japan Earthquake/Tsunami deaths (national)",
+    "killed": "15,900+",
+    "injured": "6,155+",
+    "source": "National Police Agency of Japan / Reconstruction Agency",
+    "tier": 1,
+    "contested": "no",
+    "note": "Total casualties across Iwate, Miyagi, and Fukushima prefectures and other areas from the M9.0 earthquake and resulting tsunami. Approximately 2,523 remain officially missing as of 2024. The nuclear disaster was one component of the wider Triple Disaster.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "thyroid-cancer-cohort",
+    "category": "Thyroid cancer detected in Fukushima Health Management Survey (cohort of ~380,000 children)",
+    "killed": "0 confirmed from radiation (disputed)",
+    "injured": "295+ surgically treated cancers",
+    "source": "Fukushima Health Management Survey (FHMS) — Fukushima Medical University",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "295+ cases of thyroid cancer detected in comprehensive ultrasound screening of ~380,000 Fukushima residents who were under 18 at the time of the accident. UNSCEAR and the Japanese government attribute cases primarily to screening detection effect. A minority of researchers argue a radiation contribution cannot be excluded. No cancer fatalities attributed to radiation exposure are confirmed.",
+    "lastUpdated": "2026-03-17"
+  }
+]

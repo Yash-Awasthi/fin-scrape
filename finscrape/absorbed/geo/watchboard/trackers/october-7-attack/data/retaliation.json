@@ -1,0 +1,74 @@
+[
+  {
+    "id": "idf-airstrike-day1",
+    "name": "IDF Air Campaign — Day 1 (Oct 7)",
+    "detail": "IAF struck 1,000+ Gaza targets on Oct 7 night, including Hamas rocket production, command centers, and military compounds in response to the attack. Operation Swords of Iron declared.",
+    "icon": "retaliation",
+    "time": "Oct 7, 2023 — Night",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-total-siege-oct9",
+    "name": "Total Siege of Gaza Announced",
+    "detail": "Defense Minister Gallant ordered complete siege — no electricity, water, fuel, or food to Gaza. IDF demanded evacuation of 1.1 million northern Gaza residents within 24 hours. International humanitarian law concerns raised.",
+    "icon": "retaliation",
+    "time": "Oct 9, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-reserve-mobilization",
+    "name": "360,000 Reservists Called Up",
+    "detail": "Largest IDF reserve mobilization since 1973 Yom Kippur War. Reservists deployed to Gaza Envelope, northern border (Hezbollah threat), and West Bank. Full mobilization completed within 72 hours.",
+    "icon": "retaliation",
+    "time": "Oct 7–8, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-ground-invasion-oct27",
+    "name": "IDF Ground Invasion of Northern Gaza",
+    "detail": "Israeli armored and infantry forces crossed into northern Gaza on Oct 27-28. Two-pronged advance toward Gaza City and Beit Hanoun. Objective: destroy Hamas's military infrastructure and tunnel network.",
+    "icon": "retaliation",
+    "time": "Oct 27–28, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-al-shifa-raid",
+    "name": "Al-Shifa Hospital Raid",
+    "detail": "IDF raided Al-Shifa Hospital on Nov 15, 2023, citing intelligence that Hamas used it as a command center. Found weapons cache, tunnel access, and surveillance equipment. Scale of Hamas use disputed.",
+    "icon": "retaliation",
+    "time": "Nov 15, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-khan-yunis-operation",
+    "name": "Khan Yunis Ground Operation",
+    "detail": "IDF 36th Division conducted extended ground operations in Khan Yunis (Jan–May 2024), targeting senior Hamas commanders including Marwan Issa (killed Mar 2024). Major tunnel network uncovered.",
+    "icon": "retaliation",
+    "time": "Jan–May 2024",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-rafah-operation",
+    "name": "Rafah Ground Operation",
+    "detail": "IDF began Rafah operation in May 2024 despite international objections. Controlled Rafah crossing, halting most humanitarian aid. Operation ultimately cleared out much of Hamas's southern Gaza presence and set conditions for Sinwar's death.",
+    "icon": "retaliation",
+    "time": "May–Oct 2024",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sinwar-killed-oct2024",
+    "name": "Yahya Sinwar Killed in IDF Operation",
+    "detail": "Hamas leader and October 7 mastermind Yahya Sinwar killed by IDF forces in Rafah, Oct 16, 2024 — confirmed by DNA testing. Found carrying cash and a suitcase, apparently mid-tunnel movement.",
+    "icon": "retaliation",
+    "time": "Oct 16, 2024",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  }
+]

@@ -1,0 +1,226 @@
+"""Cluster and membership storage operations."""
+
+from __future__ import annotations
+
+from typing import Any
+
+from psycopg.rows import dict_row
+
+from gdelt_event_pipeline.storage.database import get_pool
+
+
+def create_cluster(
+    *,
+    representative_title: str | None = None,
+    centroid_embedding: list[float] | None = None,
+    first_article_at: str | None = None,
+) -> dict[str, Any]:
+    pool = get_pool()
+    with pool.connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(
+                """
+                INSERT INTO clusters (representative_title, centroid_embedding,
+                                      first_article_at, last_article_at, article_count)
+                VALUES (%s, %s, %s, %s, 0)
+                RETURNING *
+                """,
+                (representative_title, centroid_embedding, first_article_at, first_article_at),
+            )
+            row = cur.fetchone()
+        conn.commit()
+    return row
+
+
+def assign_article_to_cluster(
+    article_id: str,
+    cluster_id: str,
+    *,
+    similarity_score: float | None = None,
+    assignment_method: str | None = None,
+) -> dict[str, Any]:
+    pool = get_pool()
+    with pool.connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(
+                """
+                INSERT INTO cluster_memberships
+                    (article_id, cluster_id, similarity_score, assignment_method)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (article_id, cluster_id) DO NOTHING
+                RETURNING *
+                """,
+                (article_id, cluster_id, similarity_score, assignment_method),
+            )
+            row = cur.fetchone()
+
+            # Update cluster denormalized fields
+            cur.execute(
+                """
+                UPDATE clusters SET
+                    article_count    = (SELECT count(*) FROM cluster_memberships
+                                        WHERE cluster_id = %s),
+                    first_article_at = (SELECT min(a.gdelt_timestamp)
+                                        FROM cluster_memberships cm
+                                        JOIN articles a ON a.id = cm.article_id
+                                        WHERE cm.cluster_id = %s),
+                    last_article_at  = (SELECT max(a.gdelt_timestamp)
+                                        FROM cluster_memberships cm
+                                        JOIN articles a ON a.id = cm.article_id
+                                        WHERE cm.cluster_id = %s),
+                    updated_at       = now()
+                WHERE id = %s
+                """,
+                (cluster_id, cluster_id, cluster_id, cluster_id),
+            )
+        conn.commit()
+    return row
+
+
+def find_nearest_cluster(
+    embedding: list[float], *, limit: int = 5, max_age_hours: int | None = 72
+) -> list[dict[str, Any]]:
+    """Find the nearest active clusters to a given embedding using cosine distance.
+
+    Returns clusters ordered by distance (closest first), each with a
+    'cosine_distance' field.  Cosine similarity = 1 - cosine_distance.
+
+    If *max_age_hours* is set, only clusters whose last article was added
+    within that many hours are considered.  Pass ``None`` to disable the
+    temporal window and search all active clusters.
+    """
+    pool = get_pool()
+    with pool.connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            if max_age_hours is not None:
+                cur.execute(
+                    """
+                    SELECT *, (centroid_embedding <=> %s::vector) AS cosine_distance
+                    FROM clusters
+                    WHERE is_active = true
+                      AND centroid_embedding IS NOT NULL
+                      AND last_article_at >= now() - make_interval(hours => %s)
+                    ORDER BY centroid_embedding <=> %s::vector
+                    LIMIT %s
+                    """,
+                    (embedding, max_age_hours, embedding, limit),
+                )
+            else:
+                cur.execute(
+                    """
+                    SELECT *, (centroid_embedding <=> %s::vector) AS cosine_distance
+                    FROM clusters
+                    WHERE is_active = true
+                      AND centroid_embedding IS NOT NULL
+                    ORDER BY centroid_embedding <=> %s::vector
+                    LIMIT %s
+                    """,
+                    (embedding, embedding, limit),
+                )
+            return cur.fetchall()
+
+
+def get_cluster_by_id(cluster_id: str) -> dict[str, Any] | None:
+    pool = get_pool()
+    with pool.connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute("SELECT * FROM clusters WHERE id = %s", (cluster_id,))
+            return cur.fetchone()
+
+
+def get_active_clusters(*, limit: int = 100, sort: str = "recent") -> list[dict[str, Any]]:
+    order_clause = {
+        "articles": "article_count DESC",
+        "oldest": "first_article_at ASC NULLS LAST",
+    }.get(sort, "last_article_at DESC NULLS LAST")
+
+    pool = get_pool()
+    with pool.connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(
+                f"""
+                SELECT * FROM clusters
+                WHERE is_active = true
+                ORDER BY {order_clause}
+                LIMIT %s
+                """,
+                (limit,),
+            )
+            return cur.fetchall()
+
+
+def get_cluster_articles(cluster_id: str) -> list[dict[str, Any]]:
+    pool = get_pool()
+    with pool.connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(
+                """
+                SELECT a.*, cm.similarity_score, cm.assignment_method, cm.assigned_at
+                FROM articles a
+                JOIN cluster_memberships cm ON cm.article_id = a.id
+                WHERE cm.cluster_id = %s
+                ORDER BY a.gdelt_timestamp DESC
+                """,
+                (cluster_id,),
+            )
+            return cur.fetchall()
+
+
+def get_cluster_entity_sample(cluster_id: str, *, limit: int = 5) -> list[dict[str, Any]]:
+    """Fetch entity fields from a single cluster's most recent articles."""
+    return get_cluster_entity_samples([cluster_id], limit=limit).get(cluster_id, [])
+
+
+def get_cluster_entity_samples(
+    cluster_ids: list[str], *, limit: int = 5
+) -> dict[str, list[dict[str, Any]]]:
+    """Fetch entity samples for several clusters in a single query.
+
+    Returns a dict mapping cluster_id → list of entity rows (locations,
+    persons, organizations) from each cluster's `limit` most recent articles.
+    Missing clusters are absent from the dict (caller should default to []).
+
+    Uses LATERAL to apply the per-cluster ORDER BY / LIMIT without a full
+    scan, so one RTT replaces up to N per-cluster queries.
+    """
+    if not cluster_ids:
+        return {}
+    pool = get_pool()
+    results: dict[str, list[dict[str, Any]]] = {cid: [] for cid in cluster_ids}
+    with pool.connection() as conn:
+        with conn.cursor(row_factory=dict_row) as cur:
+            cur.execute(
+                """
+                SELECT c.id::text AS cluster_id,
+                       s.locations, s.persons, s.organizations
+                FROM unnest(%s::uuid[]) AS c(id)
+                CROSS JOIN LATERAL (
+                    SELECT a.locations, a.persons, a.organizations
+                    FROM articles a
+                    JOIN cluster_memberships cm ON cm.article_id = a.id
+                    WHERE cm.cluster_id = c.id
+                    ORDER BY a.gdelt_timestamp DESC
+                    LIMIT %s
+                ) s
+                """,
+                (cluster_ids, limit),
+            )
+            for row in cur.fetchall():
+                cid = row.pop("cluster_id")
+                results[cid].append(row)
+    return results
+
+
+def update_cluster_centroid(cluster_id: str, centroid: list[float]) -> None:
+    pool = get_pool()
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(
+                """
+                UPDATE clusters
+                SET centroid_embedding = %s, updated_at = now()
+                WHERE id = %s
+                """,
+                (centroid, cluster_id),
+            )
+        conn.commit()

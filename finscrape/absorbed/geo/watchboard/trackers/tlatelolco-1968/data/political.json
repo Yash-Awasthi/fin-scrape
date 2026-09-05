@@ -1,0 +1,119 @@
+[
+  {
+    "id": "diaz-ordaz",
+    "name": "Gustavo Díaz Ordaz",
+    "role": "President of Mexico (1964–1970) — Ordered the massacre",
+    "avatar": "mx-gov",
+    "initial": "GDO",
+    "quote": "I take full moral and political responsibility for all actions I took as President of Mexico.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "echeverria",
+    "name": "Luis Echeverría Álvarez",
+    "role": "Interior Secretary 1968 / President 1970–1976 — Coordinated massacre and coverup",
+    "avatar": "mx-gov",
+    "initial": "LEA",
+    "quote": "The events of October 2 were the consequence of an armed assault by provocateurs against the armed forces of the Republic.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "garcia-barragan",
+    "name": "Gen. Marcelino García Barragán",
+    "role": "Secretary of National Defense (1968) — Commanded army at Tlatelolco",
+    "avatar": "mx-mil",
+    "initial": "MGB",
+    "quote": "The army did not initiate the attack. We responded to gunfire from the buildings. The responsibility lies with those who organized the ambush — not with the soldiers who defended themselves.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "corona-del-rosal",
+    "name": "Alfonso Corona del Rosal",
+    "role": "Head of the DDF (Mexico City Government, 1966–1970) — Local government authority",
+    "avatar": "mx-gov",
+    "initial": "ACR",
+    "quote": "The situation was brought under control by the forces of order. We cannot allow the peace necessary for the Olympic Games to be disrupted by violent agitators.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "hernandez-gamundi",
+    "name": "Félix Hernández Gamundi",
+    "role": "CNH Student Leader (UNAM) — Arrested on balcony, Lecumberri prisoner",
+    "avatar": "students",
+    "initial": "FHG",
+    "quote": "They were shooting at us from the buildings. We were completely surrounded. There was nowhere to run. I saw people falling everywhere. This was not self-defense — it was an ambush.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "pablo-gomez",
+    "name": "Pablo Gómez",
+    "role": "CNH Student Leader (IPN) — Detained after massacre, later politician",
+    "avatar": "students",
+    "initial": "PG",
+    "quote": "We went to Tlatelolco with a petition for dialogue, not weapons. What they did to us that night — and to the hundreds they killed and disappeared — was a crime against the Mexican people that has never been punished.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "poniatowska",
+    "name": "Elena Poniatowska",
+    "role": "Journalist / Author — Preserved survivor testimony in 'La Noche de Tlatelolco' (1971)",
+    "avatar": "intl",
+    "initial": "EP",
+    "quote": "The government killed them and then tried to kill the memory of them. But we will not let that happen. We owe it to the dead to remember what was done to them.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "barros-sierra",
+    "name": "Javier Barros Sierra",
+    "role": "UNAM Rector (1966–1970) — Led protest march, condemned army occupation",
+    "avatar": "students",
+    "initial": "JBS",
+    "quote": "Today is a day of mourning for the university. Freedom of thought and teaching are in jeopardy. I express solidarity with the students and condemn the police intervention in our campus.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "kate-doyle",
+    "name": "Kate Doyle",
+    "role": "Senior Analyst, National Security Archive — Led declassification effort of US/Mexican documents on 1968",
+    "avatar": "intl",
+    "initial": "KD",
+    "quote": "The declassified documents tell us that the U.S. government was aware of what happened at Tlatelolco in real time and did nothing. The CIA's relationship with the DFS was not incidental to this massacre — it was part of the architecture of repression.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "ignacio-carrillo-prieto",
+    "name": "Ignacio Carrillo Prieto",
+    "role": "Special Prosecutor, FEMOSPP (2001–2006) — Led the only formal investigation of the massacre",
+    "avatar": "mx-gov",
+    "initial": "ICP",
+    "quote": "The evidence is conclusive: crimes against humanity were committed at Tlatelolco, and the intellectual authors occupied the highest offices of the Mexican state. That charges were dismissed on procedural grounds does not diminish the historical and moral truth of what happened.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "raul-alvarez-garin",
+    "name": "Raúl Álvarez Garín",
+    "role": "CNH Student Leader / Survivor — Imprisoned at Lecumberri, lifelong activist",
+    "avatar": "students",
+    "initial": "RAG",
+    "quote": "They put us in prison, but they could not kill the idea. We were fighting for a democratic Mexico — a Mexico where the government would answer to the people, not shoot them in the plaza.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "amlo",
+    "name": "Andrés Manuel López Obrador (AMLO)",
+    "role": "President of Mexico (2018–2024) — Created Truth Commission for dirty war and 1968 massacre; left office October 2024",
+    "avatar": "mx-gov",
+    "initial": "AMLO",
+    "quote": "The truth about October 2, 1968 must be told fully. The state has a debt to the victims and their families. My government will open the archives and ensure that future generations know what happened.",
+    "lastUpdated": "2026-04-18"
+  },
+  {
+    "id": "sheinbaum",
+    "name": "Claudia Sheinbaum",
+    "role": "President of Mexico (2024–present) — Issued the first formal state apology for the Tlatelolco massacre on October 2, 2024",
+    "avatar": "mx-gov",
+    "initial": "CS",
+    "quote": "In the name of the Mexican state, I offer a public apology to the victims and families of the October 2, 1968 massacre at Tlatelolco. What happened was a crime against humanity, perpetrated by the government of Gustavo Díaz Ordaz. We commit to memory, truth, and non-repetition.",
+    "lastUpdated": "2026-04-18"
+  }
+]

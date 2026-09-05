@@ -1,0 +1,377 @@
+[
+  {
+    "id": "bay-of-pigs-cia-failure",
+    "question": "Was the Bay of Pigs a CIA failure or a Cuban military success?",
+    "sideA": {
+      "label": "CIA / US Assessment",
+      "text": "The Bay of Pigs was a catastrophic intelligence and operational failure. The CIA's Inspector General report (declassified 1998) concluded that the agency vastly underestimated Cuban military strength, failed to establish a functioning resistance network, and Kennedy's last-minute cancellation of air strikes doomed the operation. It was a failure of planning, not of the concept."
+    },
+    "sideB": {
+      "label": "Cuba / Revolutionary Narrative",
+      "text": "The Bay of Pigs (Playa Girón) was a decisive Cuban military victory that demonstrated the strength of the Revolution and the Cuban people's will to defend their sovereignty. Castro personally commanded the defense. The victory galvanized international support for Cuba and exposed US imperialism. Cuba celebrates April 19 as a national holiday."
+    },
+    "resolution": "Broadly accepted as a US foreign policy disaster; Kennedy publicly took responsibility. Cuba's military performance was genuine, though US air support cancellation was pivotal.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "missile-crisis-winner",
+    "question": "Who won the Cuban Missile Crisis — the US or the USSR?",
+    "sideA": {
+      "label": "US/Western View",
+      "text": "The United States won the Cuban Missile Crisis. Kennedy's firmness forced Khrushchev to publicly back down and remove the missiles. The naval quarantine worked without firing a shot. The US demonstrated resolve in the face of Soviet nuclear blackmail and maintained credibility with NATO allies."
+    },
+    "sideB": {
+      "label": "Soviet / Revisionist View",
+      "text": "The resolution was a genuine compromise. The Soviets secretly won the withdrawal of US Jupiter missiles from Turkey, which was a significant strategic gain. Khrushchev also secured Kennedy's no-invasion pledge for Cuba. Declassified documents show Kennedy viewed the Turkey withdrawal as a significant concession he kept secret from the public."
+    },
+    "resolution": "Historians now view it as a mutually face-saving compromise. Kennedy's no-invasion pledge and secret Turkey missile withdrawal were substantive concessions. Khrushchev's public backing down cost him credibility that contributed to his 1964 ouster.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-dictatorship-or-revolution",
+    "question": "Is Cuba's government a socialist revolution or a dictatorship?",
+    "sideA": {
+      "label": "Cuban Government / Supporters",
+      "text": "Cuba is a socialist state built on the revolutionary ideals of José Martí and the 26th of July Movement. Free universal healthcare, education through university, and the elimination of extreme poverty are genuine revolutionary achievements. Cuba's participatory democracy through mass organizations (CDRs, FMC) represents a different form of popular governance than liberal democracy."
+    },
+    "sideB": {
+      "label": "Dissidents / Human Rights Organizations",
+      "text": "Cuba is an authoritarian one-party dictatorship. The Castro government has imprisoned, exiled, and silenced political opponents for 65 years. There are no free elections, no independent press, no right to organize politically. Freedom House rates Cuba as 'Not Free' with one of the lowest civil and political rights scores in the world."
+    },
+    "resolution": "Ongoing dispute. Cuba consistently receives the lowest freedom ratings from independent organizations. The government maintains genuine popular support among segments of the population, particularly older generations, while facing growing dissent.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-embargo-legitimate",
+    "question": "Is the US embargo on Cuba a legitimate policy tool or an illegal blockade?",
+    "sideA": {
+      "label": "US Government Position",
+      "text": "The embargo is a legitimate foreign policy tool responding to Cuba's expropriation of $1.8 billion in US property without compensation, its human rights abuses, and its support for terrorism. US law (Helms-Burton) requires democratic transition before lifting the embargo. No country is legally entitled to trade with the US."
+    },
+    "sideB": {
+      "label": "Cuba / International Community",
+      "text": "The US embargo is an illegal economic war that causes humanitarian suffering and violates international law. The UN General Assembly has voted for its end every year since 1992, with only the US and Israel dissenting. Cuba calls it a 'blockade' because it targets third-country firms trading with Cuba, going beyond a bilateral trade restriction."
+    },
+    "resolution": "The UN General Assembly voted 187-2 against the embargo in 2023. The US maintains it is lawful under US domestic law. The extraterritorial reach of Helms-Burton Title III is widely condemned internationally.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "2021-protests-us-instigated",
+    "question": "Were the July 2021 protests spontaneous or US-instigated?",
+    "sideA": {
+      "label": "Cuban Government",
+      "text": "The July 11, 2021 protests were orchestrated by the United States through social media manipulation, NED funding of dissident groups, and direct incitement via Radio and TV Martí. The economic conditions that triggered the protests were themselves caused by the US embargo and COVID-related restrictions, not government failures. The 'Patria y Vida' song was a CIA-funded production."
+    },
+    "sideB": {
+      "label": "Protesters / International Observers",
+      "text": "The protests were a spontaneous, nationwide uprising driven by food shortages, medicine scarcity, 16-hour daily blackouts, and COVID-19 mismanagement. They spread organically via social media and occurred in over 50 cities simultaneously. The slogans ('Libertad', 'Patria y Vida') emerged from genuine popular frustration. Protesters included ordinary Cubans with no connection to exile groups."
+    },
+    "resolution": "No credible evidence of direct US coordination of the protests has emerged. The protests were driven by genuine domestic grievances. However, US-funded media and NGOs do operate in Cuba, giving the government a basis for its foreign interference narrative.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "che-guevara-hero-terrorist",
+    "question": "Was Che Guevara a revolutionary hero or a violent terrorist?",
+    "sideA": {
+      "label": "Left / Revolutionary Perspective",
+      "text": "Ernesto 'Che' Guevara was a selfless idealist who gave up a comfortable medical career to fight imperialism across three continents. He led the decisive Battle of Santa Clara, implemented Cuba's literacy campaign, and died fighting for Bolivian peasants. His image represents anti-imperialist struggle and solidarity with the Global South."
+    },
+    "sideB": {
+      "label": "Critics / Cuban Exiles",
+      "text": "Guevara was responsible for hundreds of executions at La Cabaña fortress in 1959, many without fair trials. He presided over revolutionary tribunals that executed former Batista officials, political opponents, and some innocent people. His failed guerrilla campaigns in Congo and Bolivia resulted in unnecessary deaths. He opposed pluralism and free expression."
+    },
+    "resolution": "Contested globally. His image became the world's most reproduced photograph. His historical role in Cuba is documented; the number of his executions and their legal basis remain debated. His supporters and detractors are roughly equal in numbers.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-healthcare-model",
+    "question": "Is Cuba's healthcare system a genuine model for developing nations?",
+    "sideA": {
+      "label": "WHO / PAHO / Cuba",
+      "text": "Cuba achieves health outcomes comparable to developed nations at a fraction of the cost: infant mortality of 4.3 per 1,000 (lower than the US), life expectancy of 78 years, and 8.2 doctors per 1,000 people (highest in the world). Cuba's community doctor-nurse program and preventive approach are studied worldwide. Cuba produced 5 COVID-19 vaccine candidates independently."
+    },
+    "sideB": {
+      "label": "Dissidents / Human Rights Groups",
+      "text": "Cuba's official health statistics are manipulated by a government with no independent verification mechanism. Hospitals lack basic medicines, equipment, and supplies — available only for hard currency. 'Medical diplomacy' abroad strips Cuba of doctors. The healthcare system is a political tool, not a genuine public service. Doctors sent abroad are coerced under state control."
+    },
+    "resolution": "Cuba's primary care outcomes are genuinely strong. Serious shortages exist, particularly of medicines. International monitoring is limited. The ILO has raised concerns about Cuban medical missions abroad as forced labor.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "havana-syndrome-cause",
+    "question": "What caused Havana Syndrome in US diplomats?",
+    "sideA": {
+      "label": "US Intelligence / Affected Diplomats",
+      "text": "A 2020 National Academies of Sciences report found directed, pulsed radiofrequency energy was the most plausible mechanism for the Havana Syndrome injuries. Some US officials pointed to Russian GRU involvement, citing similar incidents at other embassies worldwide. The injuries — hearing loss, cognitive impairment, balance problems — were real and debilitating."
+    },
+    "sideB": {
+      "label": "Cuba / Scientific Skeptics",
+      "text": "Cuba conducted its own investigation and found no weapon or acoustic device capable of causing the reported injuries. A 2023 report by US intelligence agencies concluded it was 'unlikely' a foreign adversary was responsible, attributing symptoms to factors including stress, environmental factors, and possible psychogenic illness. A review of 1,000+ cases found a small number could not be explained."
+    },
+    "resolution": "The 2023 US intelligence review concluded it was unlikely a foreign adversary caused Havana Syndrome as a systematic program. Some individual cases remain unexplained. No definitive weapon has been identified.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mariel-boatlift-security",
+    "question": "Did Cuba deliberately send criminals and mentally ill people during the Mariel Boatlift?",
+    "sideA": {
+      "label": "US Government / Cuban Exile Community",
+      "text": "The Cuban government deliberately mixed criminals, mental patients, and 'undesirables' into the Mariel exodus to embarrass the US and rid itself of unwanted populations. An estimated 2,500 known criminals and 1,000 mental patients were included among the 125,000 emigrants, creating social problems in Miami and providing Castro with a propaganda counter to the embarrassment of mass emigration."
+    },
+    "sideB": {
+      "label": "Cuba / Academic Researchers",
+      "text": "The Mariel emigrants were overwhelmingly ordinary Cubans seeking better lives. The proportion of criminals or mentally ill was exaggerated by US media and officials. Research shows Marielitos had similar crime rates to the existing Cuban-American population. The 'criminal' narrative was used politically to restrict Cuban immigration and scapegoat the newcomers."
+    },
+    "resolution": "Evidence supports Cuba did include some prisoners and patients. Research (e.g., Alejandro Portes) found Marielitos were not significantly more criminal than comparison groups. The total criminal contingent was far smaller than contemporary US reporting suggested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-angola-proxy-war",
+    "question": "Was Cuba's Angola intervention an act of internationalist solidarity or Soviet proxy warfare?",
+    "sideA": {
+      "label": "Cuba",
+      "text": "Cuba's intervention in Angola was a genuine act of Third World solidarity with an anti-colonial movement. Fidel Castro decided to intervene before fully consulting Moscow; the Soviet Union then followed Cuba's lead with material support. Cuba had historical ties with Africa through its African-descended population. Nelson Mandela credited Cuba's role in ending apartheid."
+    },
+    "sideB": {
+      "label": "US / South Africa / UNITA",
+      "text": "Cuba functioned as a Soviet proxy in Angola, fighting a Cold War battle on the USSR's behalf in exchange for the economic subsidies that kept Cuba afloat. Without Soviet logistical support and oil subsidies, Cuba could not have sustained a 50,000-troop deployment for 15 years. The intervention served Soviet geopolitical interests in gaining an African client state."
+    },
+    "resolution": "Historical evidence supports a nuanced view: Cuba acted with genuine ideological motivation, but Soviet economic leverage made the operation possible. Declassified records show Cuba led the initial decision; the Soviets were somewhat reluctant to be drawn in.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fidel-castro-legacy",
+    "question": "Was Fidel Castro a liberating revolutionary or a repressive dictator?",
+    "sideA": {
+      "label": "Supporters / Global South",
+      "text": "Castro transformed Cuba from a corrupt, inequality-ridden US client state into an independent nation with universal healthcare, free education, and one of Latin America's lowest infant mortality rates. He stood up to US imperialism for 57 years and inspired liberation movements worldwide. He provided Cuban doctors and teachers across the developing world."
+    },
+    "sideB": {
+      "label": "Dissidents / Human Rights Organizations",
+      "text": "Castro imprisoned or exiled over one million Cubans, executed hundreds after show trials, and maintained a police state that crushed political dissent for nearly six decades. He never allowed free elections, imprisoned LGBTQ+ people in labor camps (UMAP) in the 1960s, and drove over 1.5 million Cubans into exile. He died holding power he claimed was for 'the people.'"
+    },
+    "resolution": "Among the most contested legacies in modern history. Cuba's social gains are real and documented. The human rights abuses are equally documented. Both can be true simultaneously.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "embargo-vs-blockade",
+    "question": "Is US policy against Cuba an 'embargo' or an illegal 'blockade'?",
+    "sideA": {
+      "label": "US Government",
+      "text": "The correct term is 'embargo' — a sovereign nation's unilateral decision about which countries it will trade with. Cuba is free to trade with every other country in the world. A blockade is a military action involving the use of force to prevent ships from entering ports. The US has never established a naval blockade of Cuba, only during the 1962 Missile Crisis 'quarantine.'"
+    },
+    "sideB": {
+      "label": "Cuba / International Law Scholars",
+      "text": "Cuba calls it a 'blockade' because the Helms-Burton Act targets third-country companies doing business with Cuba, effectively forcing other nations to participate in the embargo. This extraterritorial application exceeds a simple bilateral trade restriction and constitutes an economic blockade. The UN and international trade law scholars have called Helms-Burton's extraterritoriality illegal."
+    },
+    "resolution": "The US maintains it is an 'embargo'; Cuba and most of the world use 'blockade.' The legal distinction matters: Helms-Burton's Title III extraterritorial reach goes beyond traditional embargo law and has been challenged in WTO proceedings.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "black-spring-political-prisoners",
+    "question": "Were the Black Spring 2003 detainees political prisoners or spies?",
+    "sideA": {
+      "label": "Cuban Government",
+      "text": "The 75 people arrested in March 2003 were not journalists or dissidents — they were paid agents of the United States operating under diplomatic cover to destabilize Cuba. James Cason, the US Interests Section chief, was openly meeting with dissident groups and distributing materials. Cuba acted in legitimate national security defense against a state-sponsored subversion operation."
+    },
+    "sideB": {
+      "label": "EU / Amnesty International / Dissidents",
+      "text": "The 75 arrested included independent journalists, librarians, economists, and human rights activists exercising their right to free expression and assembly. Sentences of 6–28 years for writing articles and lending books were wildly disproportionate. The EU suspended high-level contacts with Cuba over the crackdown. Amnesty International declared all 75 prisoners of conscience."
+    },
+    "resolution": "No credible evidence of espionage was presented in the trials. The international consensus was that those arrested were political prisoners. Most were released by 2011, including under a Catholic Church deal. Cuba insists they were mercenaries.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "brothers-rescue-provocation",
+    "question": "Were Brothers to the Rescue aircraft on a humanitarian mission or a provocation?",
+    "sideA": {
+      "label": "Brothers to the Rescue / US",
+      "text": "Brothers to the Rescue was founded to locate Cuban rafters in distress in the Florida Straits. The February 24, 1996 aircraft were on an unauthorized but humanitarian mission; even if they entered Cuban airspace, shooting down unarmed civilian aircraft over international waters constitutes murder. The ICAO found Cuba violated international aviation law."
+    },
+    "sideB": {
+      "label": "Cuba",
+      "text": "Brothers to the Rescue had repeatedly and illegally violated Cuban airspace, dropping anti-government leaflets over Havana in January 1996. Cuba had warned the US of consequences. The aircraft were engaging in psychological warfare operations directed at destabilizing Cuba. Cuba acted within its sovereign right to defend its airspace against repeated violations."
+    },
+    "resolution": "ICAO investigation confirmed the planes were shot down over international airspace, not Cuban airspace. Cuba violated international law. Congress responded by passing Helms-Burton within 10 days of the shootdown.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "batista-era-assessment",
+    "question": "Was the Batista regime a corrupt dictatorship or a period of economic progress?",
+    "sideA": {
+      "label": "Cuban Revolution / Historians",
+      "text": "Batista's regime was deeply corrupt, allied with the US mafia (Havana casinos), and maintained power through brutal repression. The secret police (SIM) tortured and killed thousands of opponents. Income inequality was extreme: a small elite prospered while rural peasants lived in poverty. The revolution had genuine popular support because Batista was genuinely hated."
+    },
+    "sideB": {
+      "label": "Cuban Exile Community / Business Community",
+      "text": "While Batista's regime had serious flaws, Cuba in 1958 had one of the highest per capita incomes in Latin America, a thriving middle class, strong labor unions, and relative press freedom compared to the Castro years. Many exiles recall a Cuba with more economic opportunity and pluralism than the subsequent 65-year communist government has provided."
+    },
+    "resolution": "Cuba's 1958 per capita income was among Latin America's highest, but heavily skewed by inequality. Batista's human rights record was poor. Both sides selectively use economic and social statistics to support their preferred narrative.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "guantanamo-bay-legality",
+    "question": "Is the US presence at Guantánamo Bay legal under international law?",
+    "sideA": {
+      "label": "United States",
+      "text": "US presence at Guantánamo Bay is based on the 1903 lease treaty, renewed in 1934, and supplemented by a 1934 treaty that makes the lease permanent unless both parties agree to end it. The lease is a legally binding international treaty. The US pays $4,085 per year in rent; Cuba has refused to cash these checks since 1959 but cannot unilaterally void the treaty."
+    },
+    "sideB": {
+      "label": "Cuba",
+      "text": "The 1903 Platt Amendment, under which the lease was signed, was imposed on Cuba as a condition of US withdrawal from occupation and was invalid under the doctrine of unequal treaties. Cuba never legitimately consented to the terms. The permanent lease provision is absurd under modern international law. Cuba demands immediate return of the territory as a matter of sovereignty."
+    },
+    "resolution": "The treaty is legally binding under international law; Cuba has not successfully challenged it. The UN has not ruled on the issue. The 1934 treaty's provisions make unilateral revocation by either party legally contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "special-period-responsibility",
+    "question": "Was the Special Period caused by the US embargo or by Cuba's economic model?",
+    "sideA": {
+      "label": "Cuba",
+      "text": "The Special Period economic crisis of the 1990s was caused by the sudden loss of Soviet subsidies combined with the intensified US embargo (Torricelli Act, 1992; Helms-Burton, 1996). Cuba managed a 35% GDP decline without social collapse or mass hunger, which demonstrates the resilience of the socialist system. The embargo prevented Cuba from accessing international credit to recover."
+    },
+    "sideB": {
+      "label": "Economists / Analysts",
+      "text": "Cuba's Special Period revealed the fundamental fragility of a command economy dependent on a single external patron. The Soviet subsidies — $5 billion per year — had masked the inefficiencies of Cuba's agricultural and industrial model. Other countries that lost Soviet support (Eastern Europe) recovered faster through market reforms. Cuba's refusal to reform prolonged the crisis."
+    },
+    "resolution": "Economists generally view the crisis as primarily structural, caused by ending Soviet subsidies and Cuba's state-run model's inefficiencies, with the US embargo as an aggravating factor. Cuba recovered slowly compared to Eastern European states that undertook market transitions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-education-achievement",
+    "question": "Is Cuba's education system a genuine achievement or a propaganda tool?",
+    "sideA": {
+      "label": "UNESCO / Cuba",
+      "text": "Cuba's literacy rate of 99.7% — achieved through the 1961 Literacy Campaign — is one of the world's highest. UNESCO TERCE studies show Cuban students outperform all other Latin American nations in reading and mathematics despite far lower spending. Universal free education through university is a genuine and measured achievement.",
+      "sources": []
+    },
+    "sideB": {
+      "label": "Cuban Teachers / Dissidents",
+      "text": "Cuba's education system prioritizes ideological conformity over critical thinking. History is taught as a one-sided narrative glorifying the Revolution. Teachers are required to report politically non-conforming students and parents. University access is conditioned on political loyalty. The system produces high literacy but suppresses independent thought.",
+      "sources": []
+    },
+    "resolution": "Cuba's measured academic outcomes are genuinely strong. The ideological content of Cuban education is also real — both can coexist. UNESCO data supports Cuba's quantitative educational claims.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "2021-protest-sentences",
+    "question": "Were the 2021 protest sentences proportionate or politically motivated?",
+    "sideA": {
+      "label": "Cuban Government",
+      "text": "Those sentenced after the July 11, 2021 protests were convicted of serious crimes including sedition, contempt, assault, and public disorder — not of simply protesting. Cuba's courts are independent and followed due process. The sentences reflect the seriousness of attempts to destabilize the state during a period of emergency. Foreign interference in Cuba's judicial proceedings is unacceptable."
+    },
+    "sideB": {
+      "label": "Human Rights Organizations / UN",
+      "text": "Sentences of 5–30 years for participation in peaceful protests are grossly disproportionate by any international standard. UN human rights experts described the trials as 'show trials' lacking basic due process guarantees. Defendants were denied adequate legal representation. Amnesty International declared all protest-related detainees prisoners of conscience.",
+      "sources": []
+    },
+    "resolution": "The UN Human Rights Council and multiple Special Rapporteurs condemned the trials. Cuba withdrew from the Human Rights Council in response. International human rights organizations universally criticized the sentences as disproportionate and politically motivated.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-terrorism-list",
+    "question": "Should Cuba be on the US State Sponsors of Terrorism list?",
+    "sideA": {
+      "label": "Trump Administration / Cuban Exile Groups",
+      "text": "Cuba hosts members of ELN (Colombian guerrillas), shelters US fugitives including Assata Shakur, harbors Basque ETA members, and provides a safe haven for Venezuelan Maduro officials accused of drug trafficking. Cuba's support for revolutionary movements globally qualifies it as a state sponsor of terrorism under US law. The Obama-era removal was a political decision unrelated to facts on the ground."
+    },
+    "sideB": {
+      "label": "Cuba / Biden Administration (when removed)",
+      "text": "Cuba was removed from the list by Obama in 2015 after meeting specific criteria. Cuba serves as a peace negotiations venue (FARC, ELN talks in Havana), demonstrating it is a constructive diplomatic actor. Harboring some fugitives does not meet the legal threshold for terrorist state designation, which requires ongoing significant state-sponsored terrorism. The redesignation was purely political."
+    },
+    "resolution": "Cuba has been added and removed from the list three times. The designation is politically contested. Cuba's hosting of ELN negotiations and some fugitives are documented; whether this meets the legal threshold depends on the administration's interpretation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-medical-missions-labor",
+    "question": "Are Cuba's overseas medical missions humanitarian solidarity or state-controlled forced labor?",
+    "sideA": {
+      "label": "Cuba / Venezuela / Host Countries",
+      "text": "Cuba's medical missions are a cornerstone of South-South solidarity, providing healthcare to underserved populations in over 60 countries. Doctors volunteer for missions, receive a stipend above their Cuban salary, and gain professional experience. The program has treated millions of patients globally. Cuba's 'Barrio Adentro' program in Venezuela provided healthcare to millions previously without access."
+    },
+    "sideB": {
+      "label": "ILO / Human Rights Watch / Cuban Doctors",
+      "text": "Cuban doctors on missions are effectively state employees forced to work abroad under threat of losing their licenses, facing up to 8 years imprisonment if they defect. They receive only 25% of the fees paid to Cuba for their services; the state keeps the rest. The ILO has investigated the program for forced labor elements. Thousands of Cuban doctors have defected rather than return to Cuba."
+    },
+    "resolution": "The Inter-American Commission on Human Rights has issued precautionary measures in several cases. The ILO Governing Body has examined complaints. Cuba denies all forced labor allegations. The program's structure gives the state extraordinary leverage over participating doctors.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-internet-censorship",
+    "question": "Does Cuba's internet control constitute censorship or necessary regulation?",
+    "sideA": {
+      "label": "Cuban Government",
+      "text": "Cuba regulates internet access to protect national security against US cyberattacks and destabilization campaigns funded through USAID and NED. The internet was opened to mobile access in 2018 as part of economic modernization. Cuba provides internet access within its economic means. The US weaponizes social media against the Cuban government, necessitating security measures."
+    },
+    "sideB": {
+      "label": "Freedom House / Reporters Without Borders",
+      "text": "Cuba has one of the world's most censored internets. Social media is blocked during protests (as in July 2021). Accessing anti-government sites is illegal. Cuba ranks near the bottom of Freedom House's Freedom on the Net index. Journalists face imprisonment for online reporting. The government has weaponized its monopoly on telecommunications (ETECSA) as a political control tool."
+    },
+    "resolution": "Freedom House rates Cuba 'Not Free' in internet freedom. The 2021 internet shutdown during protests demonstrated the government's willingness to use connectivity as a political tool. Structural censorship is documented and ongoing.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "obama-cuba-normalization-assessment",
+    "question": "Was Obama's Cuba normalization policy a success or a strategic mistake?",
+    "sideA": {
+      "label": "Obama Administration / Engagement Supporters",
+      "text": "Obama's normalization opened Cuba to American business, tourism, and cultural exchange, giving ordinary Cubans access to the world. It isolated Cuban hardliners, empowered reformers, and was backed by majorities of Cuban-Americans in polls. Engagement was more likely to produce democratic change than 54 years of failed embargo policy. It was praised internationally.",
+      "sources": []
+    },
+    "sideB": {
+      "label": "Cuban Exile Groups / Trump Administration",
+      "text": "Obama's normalization rewarded the Castro regime with sanctions relief and diplomatic legitimacy without extracting meaningful political concessions. The Cuban government used tourism revenue to strengthen its security apparatus. No political prisoners were durably freed; no elections held. The regime used engagement to consolidate rather than liberalize.",
+      "sources": []
+    },
+    "resolution": "There is no consensus. Cuban-American opinion shifted toward engagement by 2015 (especially among younger Cuban-Americans) but has hardened after 2021. The normalization produced measurable economic benefits for some Cubans; its political impact on the regime was minimal.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-nonaligned-contradiction",
+    "question": "Was Cuba genuinely 'non-aligned' or a Soviet satellite state?",
+    "sideA": {
+      "label": "Cuba",
+      "text": "Cuba's chairmanship of the Non-Aligned Movement (1979–1983) reflects its genuine leadership in the Global South. Cuba maintained positions independent of Moscow on several issues, including relations with China after the Sino-Soviet split. Cuba's development assistance (doctors, teachers, military) came with no conditions, unlike US aid. Cuba voted differently from the USSR on key UN issues.",
+      "sources": []
+    },
+    "sideB": {
+      "label": "US / Western Powers",
+      "text": "Cuba was economically and militarily dependent on the Soviet Union to the point of being a client state. Soviet subsidies ($5B/year) made Cuban independence impossible. Cuba's votes at the UN aligned with the USSR 99% of the time. Cuba served Soviet strategic interests in Africa, Latin America, and elsewhere. Leading the Non-Aligned Movement while being a Soviet client was a cynical contradiction.",
+      "sources": []
+    },
+    "resolution": "The academic consensus views Cuba as significantly constrained by Soviet dependency but with genuine autonomous ideological positions. Cuba occasionally diverged from Soviet preferences, particularly on African affairs where Cuban initiative preceded Soviet involvement.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuban-revolution-popular-support",
+    "question": "Does the Cuban government retain genuine popular support or rule purely by fear?",
+    "sideA": {
+      "label": "Cuban Government / Sociologists",
+      "text": "Polling (including by US-funded organizations) consistently shows significant segments of the Cuban population support the government and the Revolution's social achievements. Older Cubans who remember Batista's era retain loyalty. Healthcare, education, and security from crime are valued. The government's emergency food distribution during COVID won credit from many Cubans.",
+      "sources": []
+    },
+    "sideB": {
+      "label": "Dissidents / 2021 Protesters",
+      "text": "A government that must cut off the internet, deploy paramilitary groups, and sentence protesters to 30 years in prison does not govern by popular consent. The July 2021 protests — the largest in 27 years — revealed widespread, pan-class discontent. Over 10% of the population has emigrated in recent years, the strongest possible vote against the system.",
+      "sources": []
+    },
+    "resolution": "Both dynamics coexist. Genuine support among older generations and beneficiaries of the system coexists with deep frustration among younger Cubans. The mass emigration of 2022–2024 suggests the balance has shifted significantly toward dissatisfaction.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-2026-oil-blockade-characterization",
+    "question": "Is the 2026 US oil blockade targeted sanctions pressure or collective punishment of the Cuban people?",
+    "sideA": {
+      "label": "Trump Administration / US State Dept",
+      "text": "The blockade — cutting off Venezuelan oil transfers and sanctioning CUPET and GAESA — targets the Cuban regime's energy sector and military-linked conglomerates specifically, not the Cuban people. Officials argue Havana's leadership diverts fuel to the military, intelligence services, and elite interests while ordinary Cubans go without, and that pressure is needed to force political and economic reform.",
+      "sources": []
+    },
+    "sideB": {
+      "label": "UN Human Rights Office / Díaz-Canel Government",
+      "text": "UN High Commissioner Volker Türk said sanctions producing 'broad, indiscriminate and harsh effects on populations are incompatible with basic principles of international human rights law,' citing infant mortality nearly doubling and childhood cancer survival falling from 85% to 65%. Díaz-Canel has called it a 'genocidal oil blockade.' Critics note CUPET is Cuba's only fuel distributor, so sanctioning it necessarily cuts hospitals, food production, and households along with the military.",
+      "sources": []
+    },
+    "resolution": "Unresolved and actively contested. Independent UN reporting documents severe humanitarian harm to civilians (child health, medicine access, food production) that is difficult to disentangle from the blockade's stated regime-pressure aims, since CUPET controls the entire national fuel supply chain. On Aug 6, 2026, Human Rights Council-appointed independent experts escalated the warning further, saying Cuba risks becoming a 'silent Gaza' absent international intervention, and noted that a State Department terrorism-designation report offered no concrete evidence for its claims — while the sanctions list itself has widened well beyond energy and military targets to include the entire Ministry of Tourism, directly accelerating the exit of Cuba's last international hotel operators.",
+    "lastUpdated": "2026-08-06T00:00:00Z"
+  }
+]

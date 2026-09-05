@@ -1,0 +1,134 @@
+[
+  {
+    "id": "killed-rettig-confirmed",
+    "category": "Killed — Confirmed (Rettig/State)",
+    "killed": "2,279",
+    "injured": "N/A",
+    "source": "Rettig Commission (1991) + Updates",
+    "tier": 1,
+    "contested": "partial",
+    "note": "The Rettig Commission identified 2,279 victims of human rights violations resulting in death (including 957 executions, 1,102 disappearances, and 90 torture deaths). Subsequent updates raised confirmed total to ~3,216. Many cases were never reported.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "disappeared-total",
+    "category": "Forced Disappearances",
+    "killed": "1,102",
+    "injured": "N/A",
+    "source": "Rettig Commission (1991); Vicaría de la Solidaridad",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "Rettig documented 1,102 confirmed cases of forced disappearance. Bodies of approximately 300 victims have been found in mass graves since 1990. The whereabouts of over 800 remain unknown, with ongoing forensic investigations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "political-executions",
+    "category": "Extrajudicial Executions",
+    "killed": "957",
+    "injured": "N/A",
+    "source": "Rettig Commission (1991)",
+    "tier": 1,
+    "contested": "partial",
+    "note": "957 confirmed cases of extrajudicial execution by state agents. Includes victims of the Caravan of Death (75+), National Stadium executions (dozens in September 1973), and systematic DINA killings throughout the regime.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "torture-survivors-valech",
+    "category": "Confirmed Torture Survivors",
+    "killed": "0",
+    "injured": "40,018",
+    "source": "Valech Commission (2004) + 2011 update",
+    "tier": 1,
+    "contested": "no",
+    "note": "The Valech Commission received 35,868 testimonies and recognized 27,255 in its 2004 report. A 2011 update raised the figure to 40,018. Torture methods included electric shock, near-drowning (submarino), sexual violence, and severe beatings.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "coup-day-killed-sep11",
+    "category": "Killed on September 11, 1973",
+    "killed": "~100",
+    "injured": "~500",
+    "source": "Rettig Commission; Amnesty International (1974)",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Estimates of those killed on September 11, 1973 alone range from 50 to hundreds. The Rettig Commission counted total coup-day deaths; the military has disputed all casualty figures for the immediate coup period.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "caravan-of-death-victims",
+    "category": "Caravan of Death Executions",
+    "killed": "75",
+    "injured": "0",
+    "source": "Rettig Commission; Patricia Verdugo research",
+    "tier": 1,
+    "contested": "no",
+    "note": "General Arellano Stark's helicopter mission executed 75 prisoners already in military custody across Chile in October 1973. Victims were in Cauquenes (8), La Serena (15), Copiapó (13), Antofagasta (13), and Calama (26).",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "political-prisoners-total-all",
+    "category": "Total Estimated Political Prisoners (1973–1990)",
+    "killed": "N/A",
+    "injured": "~200,000",
+    "source": "Amnesty International; Human Rights Watch; Vicaría de la Solidaridad",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Estimated 200,000+ people were detained at some point during the 17-year dictatorship. The regime categorically denied this figure. Valech Commission's 40,000+ represents confirmed survivors who came forward; total detentions likely far higher.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "exiles-diaspora",
+    "category": "Forced Exile (Bannishments)",
+    "killed": "N/A",
+    "injured": "~200,000",
+    "source": "UNHCR; Vicaría de la Solidaridad",
+    "tier": 3,
+    "contested": "partial",
+    "note": "Estimated 200,000 Chileans fled or were expelled into exile during the Pinochet era. Communities formed in Argentina, Mexico, Cuba, Sweden, France, and other countries. The right of return was formally guaranteed only in 1988.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "national-stadium-detentions",
+    "category": "National Stadium Detainees (Sep–Oct 1973)",
+    "killed": "~72",
+    "injured": "~12,000",
+    "source": "Rettig Commission; Amnesty International",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Up to 12,000 people were held in the National Stadium in the weeks after the coup. At least 72 were killed there, including Víctor Jara. Others were transferred to longer-term detention sites. Many suffered torture during detention.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "villa-grimaldi-victims",
+    "category": "Villa Grimaldi DINA Site Victims",
+    "killed": "226",
+    "injured": "4,500",
+    "source": "Valech Commission; Corporación Parque por la Paz",
+    "tier": 1,
+    "contested": "no",
+    "note": "At least 4,500 people were detained at Villa Grimaldi between 1974 and 1978; at least 226 were killed or disappeared from this single site. The park memorial has documented individual cases for the majority of victims.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "protest-killings-1983-1987",
+    "category": "Killed in Anti-Pinochet Protests (1983–1987)",
+    "killed": "~250",
+    "injured": "~5,000",
+    "source": "Rettig Commission; Amnesty International annual reports",
+    "tier": 2,
+    "contested": "partial",
+    "note": "During the national protest days (1983-1987) security forces killed approximately 250 people. Rodrigo Rojas DeNegri (burned alive, 1986) and Father André Jarlan (shot in La Victoria, 1984) are among documented cases. Thousands were injured.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "condor-victims-region-wide",
+    "category": "Operation Condor Regional Victims (All Countries)",
+    "killed": "~600",
+    "injured": "N/A",
+    "source": "Paraguayan Archives of Terror; regional truth commissions; John Dinges research",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Operation Condor is estimated to have resulted in the disappearance or killing of approximately 600+ people across six countries (Chile, Argentina, Uruguay, Bolivia, Paraguay, Brazil). Chilean DINA was the initiating and leading agency.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

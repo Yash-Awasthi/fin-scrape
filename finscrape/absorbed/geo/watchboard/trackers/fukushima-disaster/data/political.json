@@ -1,0 +1,146 @@
+[
+  {
+    "id": "naoto-kan",
+    "name": "Naoto Kan",
+    "role": "Prime Minister of Japan during the disaster (DPJ, March–August 2011)",
+    "avatar": "jp-gov",
+    "initial": "K",
+    "quote": "The accident was not just a natural disaster — it was a man-made disaster rooted in the government and TEPCO's failure to implement safety measures. I feared a scenario where we would have to abandon eastern Japan. And when Abe says Fukushima is 'under control' — yes, under the control of the media!",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "masataka-shimizu",
+    "name": "Masataka Shimizu",
+    "role": "TEPCO President at time of disaster; resigned May 2011",
+    "avatar": "tepco",
+    "initial": "S",
+    "quote": "We did not anticipate that a tsunami of this magnitude could happen. We deeply apologize for the enormous damage and inconvenience caused to the people of Fukushima and the nation.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "shinzo-abe",
+    "name": "Shinzo Abe",
+    "role": "Prime Minister (LDP) 2012–2020; oversaw decommissioning, Olympics 2020 bid",
+    "avatar": "jp-gov",
+    "initial": "A",
+    "quote": "The situation has been under control as a whole. [Radioactive water] has never done and will never do any damage to Tokyo. [2013 IOC Session, Buenos Aires — the speech that secured the Tokyo 2020 Olympics]",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "yoshihide-suga",
+    "name": "Yoshihide Suga",
+    "role": "Prime Minister September 2020 – October 2021; approved ALPS water release decision",
+    "avatar": "jp-gov",
+    "initial": "Su",
+    "quote": "Based on the government's responsibility, we have decided that we have no choice but to release ALPS-treated water into the sea. We will implement all possible measures to ensure safety and prevent reputational damage.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "fumio-kishida",
+    "name": "Fumio Kishida",
+    "role": "Prime Minister October 2021 – October 2024; received IAEA safety report, oversaw commencement of ocean release",
+    "avatar": "jp-gov",
+    "initial": "Ki",
+    "quote": "The IAEA's comprehensive assessment confirms that Japan's plans for discharging ALPS-treated water are consistent with the global nuclear safety standards. We will continue to explain thoroughly to domestic and international stakeholders.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "sanae-takaichi",
+    "name": "Sanae Takaichi",
+    "role": "Prime Minister October 2024 – present; overseeing ongoing ALPS water releases, nuclear restarts, and third reconstruction period",
+    "avatar": "jp-gov",
+    "initial": "T",
+    "quote": "Japan's energy security and carbon neutrality goals require a pragmatic approach to nuclear energy. While we continue to ensure the highest safety standards, we cannot afford to abandon nuclear power. The third Reconstruction Period through 2030 reflects our commitment to Fukushima's full recovery.",
+    "lastUpdated": "2026-05-16"
+  },
+  {
+    "id": "haruki-madarame",
+    "name": "Haruki Madarame",
+    "role": "Chair, Nuclear Safety Commission (NSC) during disaster; later testified to inadequate preparedness",
+    "avatar": "regulator",
+    "initial": "M",
+    "quote": "We had been told that a severe accident would never happen in Japan. That assumption — that Japanese nuclear plants were safe by definition — was the biggest problem. We failed to prepare for the unimaginable.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "shunichi-tanaka",
+    "name": "Shunichi Tanaka",
+    "role": "Chair, Nuclear Regulation Authority (NRA), 2012–2019; first head of reformed regulator",
+    "avatar": "regulator",
+    "initial": "T",
+    "quote": "TEPCO has not adequately understood the situation in the field. I will be blunt — their crisis management capability is insufficient. The NRA exists precisely to ensure this never happens again, and we will not yield to pressure from industry.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "rafael-grossi",
+    "name": "Rafael Mariano Grossi",
+    "role": "IAEA Director General since 2019; led IAEA ALPS water safety review",
+    "avatar": "intl",
+    "initial": "G",
+    "quote": "The IAEA has concluded that Japan's plans and activities regarding the discharge of ALPS-treated water are consistent with IAEA safety standards. The expected radiological impact on people and the environment will be negligible.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "yukiya-amano",
+    "name": "Yukiya Amano",
+    "role": "IAEA Director General 2009–2019; led initial IAEA emergency response to Fukushima",
+    "avatar": "intl",
+    "initial": "Am",
+    "quote": "The IAEA has been fully engaged since the very beginning of the accident. We called this a very serious accident — one that has required a major international response. We are committed to a transparent, independent assessment.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "ruiko-muto",
+    "name": "Ruiko Muto",
+    "role": "Fukushima evacuee and founder of the Fukushima Collective Evacuation Trial; criminal complaint against TEPCO executives",
+    "avatar": "victims",
+    "initial": "Mu",
+    "quote": "We were robbed of our homeland, our health, and our lives. TEPCO and the government knew the risks and chose profit and convenience over our safety. We will not stop fighting for justice and real accountability.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "ichiro-takekuro",
+    "name": "Ichiro Takekuro",
+    "role": "TEPCO Vice President / Nuclear Advisor; on-site liaison to government during acute crisis; acquitted 2019",
+    "avatar": "tepco",
+    "initial": "Ta",
+    "quote": "When the tsunami came and we lost all power, we had no manual, no playbook for what happened. We were improvising at every step under unimaginable pressure while radiation levels were rising.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "kiyoshi-kurokawa",
+    "name": "Kiyoshi Kurokawa",
+    "role": "Chair, NAIIC (National Diet Independent Investigation Commission); author of the 'man-made disaster' report",
+    "avatar": "regulator",
+    "initial": "Ku",
+    "quote": "The accident was clearly 'man-made.' Its fundamental causes are to be found in the ingrained conventions of Japanese culture: our reflexive obedience; our reluctance to question authority; our devotion to 'sticking with the program.' This is a disaster 'Made in Japan.'",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "aileen-mioko-smith",
+    "name": "Aileen Mioko Smith",
+    "role": "Anti-nuclear activist, Green Action Japan; long-time nuclear safety critic",
+    "avatar": "other",
+    "initial": "Sm",
+    "quote": "Fukushima has exposed the myth of nuclear safety and has shown the world that Japan's nuclear industry was run without regard for public safety. The government is now forcing people to return to contaminated areas to hide the true human cost.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "hiroaki-koide",
+    "name": "Hiroaki Koide",
+    "role": "Nuclear reactor engineer, Kyoto University (ret.); prominent Japanese nuclear safety critic",
+    "avatar": "other",
+    "initial": "Ko",
+    "quote": "I have been warning about these dangers for decades and was dismissed. The accident has vindicated every concern we raised. Japan should decommission all its nuclear plants. They are incompatible with a seismically active archipelago.",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "hiroshi-kishi",
+    "name": "Hiroshi Kishi",
+    "role": "Chair, Japan Fisheries Cooperative (JF Zengyoren / JFUA); spokesperson for 70,000 fishermen opposed to ocean discharge",
+    "avatar": "victims",
+    "initial": "Fi",
+    "quote": "We strongly oppose the discharge of ALPS-treated water into the ocean. TEPCO promised it would never discharge this water without our understanding, but they have broken that promise. Consumer confidence in our seafood is irreparably damaged.",
+    "lastUpdated": "2026-03-17"
+  }
+]

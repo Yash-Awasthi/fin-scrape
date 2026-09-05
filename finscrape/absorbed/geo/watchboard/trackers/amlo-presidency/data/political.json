@@ -1,0 +1,254 @@
+[
+  {
+    "id": "amlo",
+    "name": "Andrés Manuel López Obrador",
+    "role": "President of Mexico (Dec 2018–Sep 2024); founder of Morena party",
+    "avatar": "amlo",
+    "initial": "A",
+    "quote": "No más mentiras. No más corrupción. No más impunidad. Esto es la Cuarta Transformación.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sheinbaum",
+    "name": "Claudia Sheinbaum",
+    "role": "Head of Government CDMX (2018–2023); President of Mexico (Oct 2024–present); AMLO's chosen successor",
+    "avatar": "morena",
+    "initial": "C",
+    "quote": "Soy alguien que toma decisiones con base en los datos. La ciencia y el humanismo guían nuestro gobierno.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ebrard",
+    "name": "Marcelo Ebrard",
+    "role": "Secretary of Foreign Affairs (2018–2023); Secretary of Economy (2024–present under Sheinbaum)",
+    "avatar": "morena",
+    "initial": "M",
+    "quote": "La relación bilateral siempre es difícil porque tenemos intereses diferentes, pero el diálogo debe prevalecer sobre las medidas unilaterales.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "adan-augusto",
+    "name": "Adán Augusto López Hernández",
+    "role": "Governor of Tabasco (2019–2021); Secretary of the Interior SEGOB (2021–2024)",
+    "avatar": "morena",
+    "initial": "A",
+    "quote": "Todo ciudadano que cumpla con los requisitos para participar, incluidos los militares, puede competir por la candidatura presidencial.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bartlett",
+    "name": "Manuel Bartlett Díaz",
+    "role": "Director General, CFE — Comisión Federal de Electricidad (2018–2024)",
+    "avatar": "amlo",
+    "initial": "M",
+    "quote": "Hemos emprendido el rescate de la CFE ante los cambios que la pusieron en peligro de extinción. No queremos comprar electricidad, queremos generarla.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rosa-icela",
+    "name": "Rosa Icela Rodríguez",
+    "role": "Secretary of Security and Citizen Protection SSPC (2020–2024); Secretary of the Interior (2024–present)",
+    "avatar": "morena",
+    "initial": "R",
+    "quote": "La seguridad de México y Estados Unidos es un asunto binacional que debe estar siempre guiado por el respeto a la soberanía y las leyes de cada país.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "monreal",
+    "name": "Ricardo Monreal Ávila",
+    "role": "Senate Majority Leader (2018–2024); key legislative broker for constitutional reforms",
+    "avatar": "morena",
+    "initial": "R",
+    "quote": "Lo que quiero es que se respete la Constitución. Aclaro que esto es un asunto estrictamente personal; no involucra al grupo parlamentario.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "galvez",
+    "name": "Xóchitl Gálvez Ruiz",
+    "role": "Senator PAN (2018–2023); 2024 opposition presidential candidate for Broad Front for Mexico (FAM)",
+    "avatar": "pan",
+    "initial": "X",
+    "quote": "Nadie tiene tanto poder como el Estado y hay que usarlo. Hay que usarlo con inteligencia pero con firmeza. La puerta que cerraron con mentiras, los ciudadanos la van a reabrir.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "creel",
+    "name": "Santiago Creel Miranda",
+    "role": "President of the Chamber of Deputies (2021–2024); PAN senator; former Fox-era Interior Secretary",
+    "avatar": "pan",
+    "initial": "S",
+    "quote": "Hoy anuncio que le doy mi apoyo total a Xóchitl Gálvez para que encabece el Frente Amplio por México. La reforma judicial destruye la independencia judicial.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cortes-pan",
+    "name": "Marko Cortés Mendoza",
+    "role": "National President, PAN (Partido Acción Nacional)",
+    "avatar": "pan",
+    "initial": "M",
+    "quote": "La incompetencia de AMLO se ha convertido en complicidad con el crimen organizado. México está en uno de los peores momentos de su historia.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "paredes",
+    "name": "Beatriz Paredes Rangel",
+    "role": "PRI Senator; former PRI national president (2007–2011); 2024 opposition presidential hopeful",
+    "avatar": "other",
+    "initial": "B",
+    "quote": "Es tiempo de que México tenga una mujer presidenta. Cuando los resultados mostraron que el triunfo de la otra candidata era irreversible, acepté la realidad.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "lopez-gatell",
+    "name": "Hugo López-Gatell Ramírez",
+    "role": "Undersecretary of Health for Prevention and Promotion (2018–2024); national COVID-19 spokesperson",
+    "avatar": "morena",
+    "initial": "H",
+    "quote": "No hay evidencia científica de que el cubrebocas reduzca el contagio; puede dar una falsa sensación de seguridad. El distanciamiento social es la medida más efectiva.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rodriguez-ceja",
+    "name": "Victoria Rodríguez Ceja",
+    "role": "Governor of Banco de México (2022–present); first woman to lead Mexico's central bank",
+    "avatar": "other",
+    "initial": "V",
+    "quote": "Mi compromiso es combatir la inflación, no tocar las reservas internacionales y cumplir con la autonomía del Banco de México.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ramirez-de-la-o",
+    "name": "Rogelio Ramírez de la O",
+    "role": "Secretary of Finance and Public Credit SHCP (2021–2025, continues under Sheinbaum)",
+    "avatar": "morena",
+    "initial": "R",
+    "quote": "Asumo esta responsabilidad después de muchos años observando y estudiando la economía mexicana, convencido de que una nueva política económica es necesaria.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "alcocer",
+    "name": "Jorge Alcocer Varela",
+    "role": "Secretary of Health (2018–2024); oversaw dismantling of Seguro Popular and COVID pandemic response",
+    "avatar": "morena",
+    "initial": "J",
+    "quote": "México adoptó una estrategia de vigilancia centinela para el COVID que nos permite tener una estimación confiable de la epidemia sin colapsar el sistema de pruebas.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "barcena",
+    "name": "Alicia Bárcena",
+    "role": "Secretary of Environment SEMARNAT (2023–2024); former Executive Secretary of ECLAC/CEPAL (2008–2022)",
+    "avatar": "morena",
+    "initial": "A",
+    "quote": "Estamos analizando cómo corregir algunos daños causados por el tren, incluyendo la deforestación de áreas protegidas y la ruptura de paredes de cuevas.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "herrera",
+    "name": "Arturo Herrera Gutiérrez",
+    "role": "Deputy Finance Minister (2018–2019); Secretary of Finance (2019–2021); later World Bank Global Director of Governance",
+    "avatar": "morena",
+    "initial": "A",
+    "quote": "Asumo esta responsabilidad después de haber pasado muchos años observando y estudiando la economía mexicana y el desempeño de varias regiones del país.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "olga-sanchez",
+    "name": "Olga Sánchez Cordero",
+    "role": "Secretary of the Interior SEGOB (2018–2021); former Supreme Court Justice",
+    "avatar": "morena",
+    "initial": "O",
+    "quote": "La Cuarta Transformación trae consigo no sólo un cambio de gobierno sino una profunda transformación del Estado mexicano y de la sociedad.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "norma-pina",
+    "name": "Norma Piña Hernández",
+    "role": "Chief Justice of the Supreme Court SCJN (2023–2024); resigned in protest of judicial reform",
+    "avatar": "other",
+    "initial": "N",
+    "quote": "La reforma judicial tal como fue aprobada pone en riesgo la independencia del Poder Judicial y la separación de poderes. No puedo legitimar con mi presencia este proceso.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "lorenzo-cordova",
+    "name": "Lorenzo Córdova Vianello",
+    "role": "President of INE (National Electoral Institute, 2014–2023); target of AMLO's electoral reform efforts",
+    "avatar": "other",
+    "initial": "L",
+    "quote": "El INE no se toca. Pretender debilitarlo es pretender debilitar la democracia. Defenderé la autonomía de la institución hasta el último día de mi mandato.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pio-lopez",
+    "name": "Pío López Obrador",
+    "role": "AMLO's brother; Chiapas state Morena coordinator; embroiled in cash-in-bag fundraising scandal (2020)",
+    "avatar": "amlo",
+    "initial": "P",
+    "quote": "[Al recibir dinero en efectivo de empresario]: Es la forma de apoyar al movimiento, sabemos que está mal pero no hay de otra.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jose-ramon-lopez",
+    "name": "José Ramón López Beltrán",
+    "role": "AMLO's eldest son; 'Casa Gris' controversy — lived rent-free in Houston home of Baker Hughes executive",
+    "avatar": "amlo",
+    "initial": "J",
+    "quote": "Siempre hemos actuado apegados a la ley. Rentamos esa casa de manera normal y no hay conflicto de interés alguno.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "loret-de-mola",
+    "name": "Carlos Loret de Mola",
+    "role": "Investigative journalist (Latinus); broke Casa Gris story; sued for 400M pesos by AMLO's brother after reporting",
+    "avatar": "other",
+    "initial": "C",
+    "quote": "El presidente de México revela públicamente mi teléfono celular, mis ganancias y parte de mi historial desde la más alta tribuna del país. Es intimidación.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "videgaray",
+    "name": "Luis Videgaray Caso",
+    "role": "Secretary of Finance (2012–2016) and Foreign Affairs (2016–2018) under Peña Nieto; architect of 2013 energy reform",
+    "avatar": "other",
+    "initial": "L",
+    "quote": "La reforma energética abrirá México al mundo para atraer la inversión que necesita en un sector que es el corazón del desarrollo económico.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jesus-orta",
+    "name": "Jesús Orta Martínez",
+    "role": "First Secretary of Security SSPC (2018–2020); oversaw National Guard creation and Federal Police dissolution",
+    "avatar": "morena",
+    "initial": "J",
+    "quote": "La Guardia Nacional representa un nuevo modelo de seguridad, de proximidad, de respeto a los derechos humanos, que superará al fallido modelo de la Policía Federal.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "aguilar-ortiz",
+    "name": "Héctor Aguilar Ortiz",
+    "role": "Chief Justice of Mexico's Supreme Court SCJN (Jun 2025–present); Mixtec Indigenous lawyer from Oaxaca; elected under AMLO's judicial reform with Morena backing; only second indigenous Chief Justice in Mexican history after Benito Juárez",
+    "avatar": "morena",
+    "initial": "H",
+    "quote": "La elección popular de jueces representa la voluntad del pueblo de recuperar el Poder Judicial. Seré un ministro independiente que sirva a todos los mexicanos, no a ningún partido.",
+    "lastUpdated": "2026-04-19T12:00:00Z"
+  },
+  {
+    "id": "ariadna-montiel",
+    "name": "Ariadna Montiel Reyes",
+    "role": "Secretary of Social Welfare (Bienestar) under Sheinbaum (2024–2026); National President of Morena party (May 3, 2026–present); chief administrator of AMLO's flagship Bienestar welfare network",
+    "avatar": "morena",
+    "initial": "A",
+    "quote": "El partido que creó el presidente López Obrador es el partido de la Cuarta Transformación y de los pueblos de México. Seguiremos el camino que él trazó.",
+    "lastUpdated": "2026-05-19T00:00:00Z"
+  },
+  {
+    "id": "rocha-moya",
+    "name": "Rubén Rocha Moya",
+    "role": "Morena Governor of Sinaloa (2021–present, on leave since May 1, 2026); indicted by U.S. federal prosecutors on cartel-protection charges, which he denies. Mexico's FGR said July 8, 2026 it lacks evidence to act on the U.S. extradition request; unconfirmed reports (Jul 21) say his defense has opened talks with U.S. prosecutors on a possible surrender.",
+    "avatar": "morena",
+    "initial": "R",
+    "quote": "He sido objeto de un linchamiento mediático con señalamientos y acusaciones que carecen de todo sustento fáctico y legal.",
+    "lastUpdated": "2026-08-10T00:00:00Z"
+  }
+]

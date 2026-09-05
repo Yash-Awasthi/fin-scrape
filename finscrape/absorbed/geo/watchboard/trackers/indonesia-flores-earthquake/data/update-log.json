@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-28T23:37:42.795Z",
+  "tracker": "indonesia-flores-earthquake",
+  "sections": {
+    "kpis": {
+      "count": 10,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 48,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 32,
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 15,
+      "status": "updated"
+    },
+    "econ": {
+      "count": 12,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 18,
+      "status": "updated"
+    },
+    "political": {
+      "count": 16,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

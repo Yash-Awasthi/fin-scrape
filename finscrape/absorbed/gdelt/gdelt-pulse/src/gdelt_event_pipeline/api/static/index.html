@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>gdelt-pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/pulse.css">
+<style>
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--sp-6) var(--sp-5);
+}
+
+/* ── Header ───────────────────────────────── */
+.header {
+  text-align: center;
+  padding: 10vh 0 var(--sp-9);
+  max-width: 520px;
+}
+
+.brand {
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(2rem, 5.5vw, 2.75rem);
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--sp-3);
+}
+
+.byline {
+  font-size: 0.75rem;
+  color: var(--text-3);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--sp-6);
+}
+.byline a { color: var(--text-2); }
+.byline a:hover { color: var(--text); }
+
+.desc {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-2);
+  line-height: 1.75;
+  max-width: 500px;
+}
+.desc strong { color: var(--text); font-weight: 500; }
+
+/* ── Cards ────────────────────────────────── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: var(--sp-10);
+}
+
+.card-feat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  transition: border-color var(--duration);
+  display: flex;
+  flex-direction: column;
+}
+.card-feat:hover { border-color: var(--border-hover); }
+
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--sp-5);
+  color: var(--accent-text);
+}
+.card-icon svg { width: 20px; height: 20px; }
+
+.card-feat h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--sp-3);
+}
+
+.card-feat p {
+  font-size: 0.8125rem;
+  color: var(--text-3);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.card-detail {
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--border);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.6875rem;
+  color: var(--text-3);
+  line-height: 1.8;
+}
+
+.card-detail span {
+  color: var(--text-2);
+}
+
+/* ── Code examples ────────────────────────── */
+.code-section {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: var(--sp-10);
+}
+
+.code-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--sp-3);
+}
+
+.code-tabs {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  margin-bottom: var(--sp-3);
+}
+
+.code-tab {
+  padding: 5px 14px;
+  border: none;
+  background: none;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-family: var(--font);
+  font-weight: 450;
+  color: var(--text-3);
+  cursor: pointer;
+  transition: all var(--duration);
+}
+.code-tab:hover { color: var(--text-2); }
+.code-tab.active { background: var(--surface-2); color: var(--text); }
+
+.code-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4) var(--sp-5);
+  overflow-x: auto;
+  display: none;
+}
+.code-block.active { display: block; }
+
+.code-block pre {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  white-space: pre;
+  margin: 0;
+}
+
+.code-block .cm { color: var(--text-3); }
+.code-block .str { color: var(--positive); }
+.code-block .kw { color: var(--accent-text); }
+.code-block .fn { color: var(--warning); }
+
+/* ── Try it ────────────────────────────────── */
+.try-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: var(--sp-10);
+}
+
+.try-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: var(--sp-3);
+}
+
+.try-form {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: var(--sp-3);
+}
+
+.try-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 52px 0 18px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-family: var(--font);
+  outline: none;
+  transition: border-color var(--duration);
+}
+.try-input:focus { border-color: var(--text-3); }
+.try-input::placeholder { color: var(--text-3); }
+
+.try-btn {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: background var(--duration);
+}
+.try-btn:hover { background: #3b5de7; }
+.try-btn svg { width: 18px; height: 18px; }
+
+.try-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: var(--sp-4);
+}
+
+.try-pill {
+  font-size: 0.6875rem;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-3);
+  font-family: var(--font);
+  cursor: pointer;
+  transition: border-color var(--duration), color var(--duration);
+}
+.try-pill:hover { border-color: var(--accent); color: var(--accent-text); }
+
+.try-results {
+  display: none;
+  width: 100%;
+  max-width: 560px;
+}
+.try-results.visible { display: block; animation: slideUp 0.25s var(--ease) both; }
+
+.try-meta {
+  font-size: 0.6875rem;
+  color: var(--text-3);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: var(--sp-2);
+}
+
+.try-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.try-card {
+  background: var(--surface);
+  padding: var(--sp-3) var(--sp-4);
+  transition: background var(--duration);
+}
+.try-card:hover { background: var(--surface-2); }
+
+.try-card-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.try-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.tbadge {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.625rem;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.tbadge-count { background: var(--accent-dim); color: var(--accent-text); }
+.tbadge-loc { background: rgba(52, 211, 153, 0.06); color: var(--positive); }
+.tbadge-theme { background: rgba(251, 191, 36, 0.06); color: var(--warning); }
+.tbadge-neg { background: rgba(248, 113, 113, 0.06); color: var(--negative); }
+.tbadge-pos { background: rgba(52, 211, 153, 0.06); color: var(--positive); }
+
+.try-empty {
+  text-align: center;
+  padding: var(--sp-5);
+  color: var(--text-3);
+  font-size: 0.8125rem;
+}
+
+.try-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: var(--sp-6);
+  color: var(--text-3);
+  font-size: 0.8125rem;
+}
+
+/* ── Links row ────────────────────────────── */
+.links-row {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-10);
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color var(--duration), background var(--duration);
+  min-width: 180px;
+}
+.link-card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-2);
+}
+
+.link-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+.link-card:hover .link-icon { color: var(--text-2); }
+.link-icon svg { width: 16px; height: 16px; }
+
+.link-text h4 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.link-text p {
+  font-size: 0.6875rem;
+  color: var(--text-3);
+}
+
+/* ── Footer ───────────────────────────────── */
+.foot {
+  margin-top: auto;
+  padding-top: var(--sp-5);
+}
+
+.foot a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6875rem;
+  color: var(--text-3);
+  transition: color var(--duration);
+}
+.foot a:hover { color: var(--text-2); }
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 768px) {
+  .page { padding: var(--sp-4); }
+  .header { padding: 6vh 0 var(--sp-7); }
+  .cards { grid-template-columns: 1fr; max-width: 480px; }
+  .links-row { flex-direction: column; width: 100%; max-width: 480px; }
+  .link-card { min-width: unset; }
+  .brand { font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- Header -->
+<div class="header">
+  <div class="brand">[gdelt-pulse]</div>
+  <div class="byline">by <a href="https://github.com/UnbubbleHub" target="_blank" rel="noopener">UnbubbleHub</a></div>
+  <p class="desc">
+    Open API that continuously ingests <strong>GDELT's global news feed</strong>,
+    clusters related articles into events, and exposes them through
+    <strong>semantic search</strong> with rich entity metadata.
+  </p>
+</div>
+
+<!-- Try it -->
+<section class="try-section">
+  <div class="try-label">Try it</div>
+  <form class="try-form" id="sf">
+    <input class="try-input" id="si" type="text" placeholder="Search clusters..." autocomplete="off">
+    <button class="try-btn" type="submit">
+      <svg viewBox="0 0 18 18" fill="none"><path d="M3.75 9H14.25M9.75 4.5L14.25 9L9.75 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </form>
+  <div class="try-pills">
+    <button class="try-pill" type="button" data-q="climate policy">climate policy</button>
+    <button class="try-pill" type="button" data-q="AI regulation">AI regulation</button>
+    <button class="try-pill" type="button" data-q="military conflict">military conflict</button>
+  </div>
+  <div class="try-results" id="res">
+    <div class="try-meta" id="resMeta"></div>
+    <div id="resBody"></div>
+  </div>
+</section>
+
+<!-- Feature cards -->
+<div class="cards">
+
+  <div class="card-feat">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </div>
+    <h3>Hybrid search</h3>
+    <p>Combine semantic vector search with keyword matching. Adjustable weighting lets you tune precision vs. recall. Filter results by location, person, organization, theme, source domain, or date range.</p>
+    <div class="card-detail">
+      <span>GET</span> /api/search?q=...&amp;location=...&amp;clusters=true
+    </div>
+  </div>
+
+  <div class="card-feat">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="5" r="2"/><line x1="14.5" y1="9.5" x2="17.5" y2="6.5"/><line x1="9.5" y1="9.5" x2="6.5" y2="6.5"/></svg>
+    </div>
+    <h3>Event clusters</h3>
+    <p>Articles are automatically grouped into story clusters using vector similarity on embeddings. Browse clusters by recency, article count, or filter by entity and location to find trending events.</p>
+    <div class="card-detail">
+      <span>GET</span> /api/clusters?sort=articles&amp;theme=...
+    </div>
+  </div>
+
+  <div class="card-feat">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    </div>
+    <h3>Rich metadata</h3>
+    <p>Every article carries extracted themes, geolocated places with coordinates, persons, organizations, tone analysis scores, and source attribution — all parsed from the GDELT Global Knowledge Graph.</p>
+    <div class="card-detail">
+      <span>GET</span> /api/articles?location=...&amp;theme=...
+    </div>
+  </div>
+
+</div>
+
+<!-- Code examples -->
+<section class="code-section">
+  <div class="code-label">Quick start</div>
+  <div class="code-tabs">
+    <button class="code-tab active" data-lang="curl">curl</button>
+    <button class="code-tab" data-lang="python">Python</button>
+    <button class="code-tab" data-lang="js">JavaScript</button>
+  </div>
+
+  <div class="code-block active" id="code-curl">
+<pre><span class="cm"># Search clusters by topic</span>
+curl <span class="str">"<span class="bu"></span>/api/search?q=climate+policy&amp;clusters=true&amp;limit=5"</span>
+
+<span class="cm"># Browse clusters with filters</span>
+curl <span class="str">"<span class="bu"></span>/api/clusters?sort=articles&amp;location=Europe&amp;limit=10"</span>
+
+<span class="cm"># Filter articles by theme and location</span>
+curl <span class="str">"<span class="bu"></span>/api/articles?theme=ENV_CLIMATECHANGE&amp;location=Europe"</span>
+
+<span class="cm"># Higher rate limits with API key</span>
+curl -H <span class="str">"X-API-Key: gdp_..."</span> \
+  <span class="str">"<span class="bu"></span>/api/search?q=trade+war&amp;clusters=true"</span></pre>
+  </div>
+
+  <div class="code-block" id="code-python">
+<pre><span class="kw">import</span> requests
+
+API = <span class="str">"<span class="bu"></span>/api"</span>
+
+data = requests.<span class="fn">get</span>(f<span class="str">"{API}/search"</span>, params={
+    <span class="str">"q"</span>: <span class="str">"climate policy"</span>,
+    <span class="str">"clusters"</span>: <span class="str">"true"</span>,
+    <span class="str">"location"</span>: <span class="str">"Europe"</span>,
+    <span class="str">"limit"</span>: 10,
+}).<span class="fn">json</span>()
+
+<span class="kw">for</span> c <span class="kw">in</span> data[<span class="str">"clusters"</span>]:
+    cl = c[<span class="str">"cluster"</span>]
+    <span class="fn">print</span>(f<span class="str">"{cl['representative_title']}  ({cl['article_count']} articles)"</span>)</pre>
+  </div>
+
+  <div class="code-block" id="code-js">
+<pre><span class="kw">const</span> data = <span class="kw">await</span> <span class="fn">fetch</span>(
+  <span class="str">"<span class="bu"></span>/api/search?q=climate+policy&amp;clusters=true"</span>
+).<span class="fn">then</span>(r => r.<span class="fn">json</span>());
+
+data.clusters.<span class="fn">forEach</span>(({ cluster }) =>
+  console.<span class="fn">log</span>(<span class="str">`${cluster.representative_title} (${cluster.article_count})`</span>)
+);</pre>
+  </div>
+</section>
+
+<!-- Navigation links -->
+<div class="links-row">
+
+  <a class="link-card" href="/api/docs">
+    <div class="link-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <div class="link-text">
+      <h4>API Docs</h4>
+      <p>Interactive Swagger UI</p>
+    </div>
+  </a>
+
+  <a class="link-card" href="/developers">
+    <div class="link-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+    </div>
+    <div class="link-text">
+      <h4>Reference</h4>
+      <p>Endpoints, params, examples</p>
+    </div>
+  </a>
+
+  <a class="link-card" href="/dashboard">
+    <div class="link-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </div>
+    <div class="link-text">
+      <h4>Dashboard</h4>
+      <p>Get your API key</p>
+    </div>
+  </a>
+
+</div>
+
+<!-- Footer -->
+<footer class="foot">
+  <a href="https://github.com/UnbubbleHub/gdelt-pulse" target="_blank" rel="noopener">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    Open source on GitHub
+  </a>
+</footer>
+
+</div>
+
+<script>
+const B = location.origin;
+document.querySelectorAll('.bu').forEach(e => { e.textContent = B; });
+
+document.querySelectorAll('.code-tab').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.code-tab').forEach(x => x.classList.remove('active'));
+    document.querySelectorAll('.code-block').forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById('code-' + t.dataset.lang).classList.add('active');
+  });
+});
+
+// Fake demo data — instant, no API calls
+const DEMO = {
+  "climate policy": [
+    { title: "EU Carbon Border Tax Takes Effect as Trade Partners Push Back", count: 347, locs: ["Brussels", "Beijing"], themes: ["ENV_CLIMATECHANGE"], tone: -2.1 },
+    { title: "G7 Leaders Pledge $300B Climate Finance Package for Developing Nations", count: 283, locs: ["Rome"], themes: ["ECON_DEBT"], tone: 1.4 },
+    { title: "India Accelerates Coal Phase-Out Timeline After Record Heatwave Deaths", count: 198, locs: ["New Delhi"], themes: ["ENV_CLIMATECHANGE"], tone: -3.5 },
+    { title: "US Strengthens Paris Climate Accord Targets Amid Domestic Opposition", count: 156, locs: ["Washington"], themes: ["ENV_CLIMATECHANGE"], tone: 2.8 },
+  ],
+  "AI regulation": [
+    { title: "EU AI Act Enforcement Begins with First Wave of Compliance Audits", count: 412, locs: ["Brussels"], themes: ["REGULATION"], tone: -0.8 },
+    { title: "China Mandates AI Watermarking for All Synthetically Generated Content", count: 289, locs: ["Beijing"], themes: ["MEDIA_CENSORSHIP"], tone: -1.9 },
+    { title: "OpenAI and Google Face Congressional Hearings on Foundation Model Safety", count: 231, locs: ["Washington"], themes: ["LEGISLATION"], tone: -2.4 },
+    { title: "UK Establishes AI Safety Institute with $500M Government Backing", count: 174, locs: ["London"], themes: ["SCIENCE"], tone: 3.1 },
+  ],
+  "military conflict": [
+    { title: "UN Security Council Emergency Session on Escalating Middle East Tensions", count: 587, locs: ["New York", "Gaza"], themes: ["MILITARY_CONFLICT"], tone: -5.2 },
+    { title: "NATO Deploys Additional Forces to Eastern European Borders", count: 423, locs: ["Warsaw", "Bucharest"], themes: ["MILITARY_CONFLICT"], tone: -3.8 },
+    { title: "Peace Negotiations Resume in Geneva with New Ceasefire Proposal", count: 312, locs: ["Geneva"], themes: ["PEACE_NEGOTIATIONS"], tone: 1.2 },
+    { title: "Red Cross Reports Humanitarian Crisis as Civilian Casualties Mount", count: 276, locs: ["Gaza"], themes: ["HUMANITARIAN_AID"], tone: -6.1 },
+  ],
+};
+
+const sf = document.getElementById('sf');
+const si = document.getElementById('si');
+const res = document.getElementById('res');
+const resMeta = document.getElementById('resMeta');
+const resBody = document.getElementById('resBody');
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+function toneTag(t) {
+  if (t <= -2) return `<span class="tbadge tbadge-neg">tone ${t.toFixed(1)}</span>`;
+  if (t >= 2) return `<span class="tbadge tbadge-pos">tone +${t.toFixed(1)}</span>`;
+  return '';
+}
+
+function show(q) {
+  if (!q.trim()) return;
+  si.value = q;
+  const key = Object.keys(DEMO).find(k => q.toLowerCase().includes(k));
+  const clusters = key ? DEMO[key] : DEMO["climate policy"];
+  resMeta.textContent = `${clusters.length} clusters`;
+  resBody.innerHTML = '<div class="try-list">' + clusters.map(c => {
+    const locs = (c.locs || []).map(l => `<span class="tbadge tbadge-loc">${esc(l)}</span>`).join('');
+    const themes = (c.themes || []).slice(0, 1).map(t => `<span class="tbadge tbadge-theme">${esc(t)}</span>`).join('');
+    return `<div class="try-card">
+      <div class="try-card-title">${esc(c.title)}</div>
+      <div class="try-badges">
+        <span class="tbadge tbadge-count">${c.count} articles</span>
+        ${locs}${themes}${toneTag(c.tone || 0)}
+      </div>
+    </div>`;
+  }).join('') + '</div>';
+  res.classList.add('visible');
+}
+
+sf.addEventListener('submit', e => { e.preventDefault(); show(si.value); });
+document.querySelectorAll('.try-pill').forEach(p => {
+  p.addEventListener('click', () => show(p.dataset.q));
+});
+</script>
+</body>
+</html>

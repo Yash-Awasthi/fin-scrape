@@ -1,0 +1,39 @@
+[
+  {
+    "id": "crs34-launch-may13-2026",
+    "date": "2026-05-13",
+    "year": "2026",
+    "title": "CRS-34 Cargo Dragon Scrubbed a Second Time on May 13 at T-30s — Third Attempt Retargeted to May 15 at 6:05 p.m. EDT",
+    "type": "milestone",
+    "detail": "SpaceX's CRS-34 Cargo Dragon mission suffered its second consecutive weather scrub on May 13, 2026, when the Falcon 9 countdown was halted approximately 30 seconds before liftoff from Space Launch Complex 40 (SLC-40) at Cape Canaveral Space Force Station due to anvil cloud and lightning constraints in the flight path. This was the second scrub in as many days — May 12 saw the first weather abort at T-4 minutes. With two consecutive weather holds exhausted, NASA and SpaceX immediately retargeted the third launch attempt for Friday, May 15, 2026, at 6:05 p.m. EDT (22:05 UTC) from SLC-40. The revised ISS docking target shifted to approximately 7:00 a.m. EDT on Sunday, May 17, 2026, as Dragon C209 (6th flight) requires approximately 36 hours of transit for the Harmony module forward port rendezvous. Booster B1096 (6th flight) will target a Return-to-Launch-Site landing at Landing Zone 40 (LZ-40). Dragon C209 carries approximately 6,500 pounds (2,950 kg) of science experiments including time-sensitive biological research, crew supplies, and hardware for the Expedition 74 crew. If CRS-34 succeeds on May 15, it will be SpaceX's 58th orbital mission of 2026 and the company's 611th cumulative booster recovery. The consecutive weather scrubs — rare for Cape Canaveral in spring — are attributed to an unusually active convective weather pattern over central Florida. IFT-12 Starship Block 3 remains firmly on track for NET May 19 from Starbase OLP-2.",
+    "sources": [
+      {
+        "name": "NASA",
+        "tier": 1,
+        "url": "https://www.nasa.gov/blogs/spacestation/2026/05/13/nasa-spacex-target-may-15-for-resupply-mission-launch/",
+        "pole": "western"
+      },
+      {
+        "name": "Spaceflight Now",
+        "tier": 2,
+        "url": "https://spaceflightnow.com/2026/05/12/live-coverage-nasa-spacex-to-launch-34th-cargo-dragon-mission-to-the-space-station/",
+        "pole": "western"
+      },
+      {
+        "name": "NASASpaceFlight",
+        "tier": 2,
+        "url": "https://www.nasaspaceflight.com/2026/05/crs-34-launch/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.nasa.gov/blogs/spacestation/2026/05/13/nasa-spacex-target-may-15-for-resupply-mission-launch/",
+        "caption": "NASA and SpaceX retarget CRS-34 to May 15 after second consecutive weather scrub — Dragon C209 to ISS Harmony, docking now May 17",
+        "source": "NASA Space Station Blog",
+        "thumbnail": "https://www.nasa.gov/blogs/spacestation/2026/05/13/nasa-spacex-target-may-15-for-resupply-mission-launch/"
+      }
+    ]
+  }
+]

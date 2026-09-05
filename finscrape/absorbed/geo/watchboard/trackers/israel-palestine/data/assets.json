@@ -1,0 +1,93 @@
+[
+  {
+    "id": "idf-ground-forces-gaza",
+    "type": "Ground Forces",
+    "name": "IDF Multi-Front Ground Forces (Gaza, West Bank, Lebanon, Iran war)",
+    "detail": "At peak Gaza operation, approximately 5 division-equivalents (~100,000 troops) deployed: 162nd, 36th, 99th, 143rd divisions, Paratroopers, Golani, and Egoz units. As of March 2026, IDF Chief of Staff Zamir warned the security cabinet of 'force sustainability crisis' across five simultaneous fronts: Iran war, Lebanon (Hezbollah), Syria, West Bank, and residual Gaza operations. Lebanon invasion units have been diverted to the West Bank to contain the surge in organized settler violence. Zamir stated 'I am raising 10 red flags before the IDF collapses into itself.'",
+    "lastUpdated": "2026-03-29T19:47:23.000Z"
+  },
+  {
+    "id": "iaf-strike-capability",
+    "type": "Air Force",
+    "name": "Israeli Air Force (IAF) Strike Fleet",
+    "detail": "IAF flew ~29,000 sorties in Gaza in first year of war. F-35I Adir (50+), F-16I Sufa (350+), F-15I Ra'am, Apache attack helicopters. Dropped over 70,000 bombs including 2,000-lb GBU-31 JDAM bunker-busters. IAF precision and scale unprecedented; Amnesty documented use of unguided 'dumb bombs' in civilian areas.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "iron-dome",
+    "type": "Air Defense",
+    "name": "Iron Dome (Rafael / IAF)",
+    "detail": "Short-range air defense system intercepting rockets and mortar rounds at 4–70km range. Deployed in 10 batteries across Israel. Demonstrated ~90%+ interception rate against Hamas rockets. Cost per interceptor: ~$50,000 vs Hamas rocket: ~$800. US has provided ~$1.6B for Iron Dome production since 2011.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "arrow-missile-defense",
+    "type": "Air Defense",
+    "name": "Arrow 2/3 Long-Range Air Defense",
+    "detail": "Endo- and exo-atmospheric ballistic missile defense. Arrow 3 intercepted Houthi ballistic missiles in space (first operational exo-atmospheric intercept in combat history). Arrow 2 engaged Iranian ballistic missiles in the April 2024 Iranian barrage on Israel. Jointly developed with the US; provides Israel's upper-tier missile shield.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "david-sling",
+    "type": "Air Defense",
+    "name": "David's Sling (Rafael / Raytheon)",
+    "detail": "Mid-tier air defense for medium to long-range rockets and cruise missiles. Fills gap between Iron Dome and Arrow. Used in 2024 to intercept Hezbollah missiles and Iranian drones. First operational use in war was October 2023. 10 batteries operational.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-naval-forces",
+    "type": "Naval",
+    "name": "Israeli Navy — Sa'ar Corvette Fleet",
+    "detail": "Sa'ar 5 and Sa'ar 6 corvettes enforced Gaza naval blockade and conducted offshore bombardments. INS Sa'ar class equipped with Barak-8 air defense and Harpoon anti-ship missiles. Navy maintained 3-nautical-mile exclusion zone off Gaza coast. Also responsible for counter-smuggling operations.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-qassam-brigades",
+    "type": "Armed Faction",
+    "name": "Hamas — Al-Qassam Brigades",
+    "detail": "Hamas's military wing with estimated 20,000–40,000 fighters pre-October 7 (Israeli estimates). Maintains battalion-level organization in Gaza governorates. Equipped with AK-47s, RPGs, Kornet anti-tank missiles, IEDs, and homemade Qassam rockets. Relied on 500+ km tunnel network beneath Gaza for logistics, command, and concealment. Still operational in parts of Gaza as of 2026.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-rocket-arsenal",
+    "type": "Weapons",
+    "name": "Hamas / PIJ Rocket Arsenal",
+    "detail": "Estimated 30,000 rockets pre-Oct 7. Types include: Qassam I-IV (range 3–17km), M-75 (75km, reaches Tel Aviv), R-160 (160km, reaches Haifa), Ayyash (250km+). Primarily manufactured in Gaza from steel pipe and fertilizer explosives. Tunnels used for storage. Significant degradation during war but Hamas continued rocket fire through 2025.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-tunnel-network",
+    "type": "Infrastructure",
+    "name": "Hamas Tunnel Network ('Metro')",
+    "detail": "Estimated 500+ km of tunnels beneath Gaza, up to 50m deep and wide enough for vehicles. Used for command, troop movement, weapons storage, and hostage holding. Partially destroyed by IDF but impossible to map comprehensively. Hamas built tunnels beneath hospitals, schools, UN facilities. IDF used underground flooding, controlled demolition, and AI-assisted targeting to map/destroy tunnels.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "pij-forces",
+    "type": "Armed Faction",
+    "name": "Palestinian Islamic Jihad (PIJ) — Al-Quds Brigades",
+    "detail": "Second-largest armed faction in Gaza; estimated 8,000–12,000 fighters. Iran-backed; more militant than Hamas on negotiations. Participated in October 7 attack. Primarily rocket force with some anti-tank capability. Responsible for most of the Gaza-Sderot rocket fire in pre-2023 period. PIJ's rocket misfire likely caused Al-Ahli hospital explosion (Oct 2023).",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-intelligence-unit-8200",
+    "type": "Intelligence",
+    "name": "IDF Unit 8200 — SIGINT",
+    "detail": "Israel's premier signals intelligence unit (equivalent to NSA/GCHQ). Responsible for intercepting Hamas communications, AI-assisted target generation ('Lavender' and 'Gospel' systems), and cyber operations. Received warnings before Oct 7 that were not acted upon. Post-attack, 8200 intelligence formed backbone of target identification for Gaza campaign.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "merkava-tank",
+    "type": "Armored Vehicle",
+    "name": "Merkava Mk.4 Main Battle Tank",
+    "detail": "Israel's frontline MBT; 360+ deployed in Gaza operations. Unique rear-entry design for infantry. Equipped with active protection system (Trophy/Windbreaker) that defeated many Hamas Kornet missiles. Despite Trophy, dozens lost to RPGs and IEDs in close-quarters urban fighting. Weight 65 tons limited mobility in dense Gaza alleyways.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "unrwa-humanitarian-ops",
+    "type": "Humanitarian",
+    "name": "UNRWA Gaza Operations",
+    "detail": "UNRWA operates 279 schools (converted to shelters), 22 health centers, and distribution networks in Gaza. Prior to October 2023: served 1.3M registered refugees. During war: 280+ staff killed, HQ damaged, facilities repeatedly hit. Israel enacted law banning UNRWA from Israeli territory (effective Jan 2025), severely disrupting Erez-area operations. Critical to surviving population's basic needs.",
+    "lastUpdated": "2026-03-20"
+  }
+]

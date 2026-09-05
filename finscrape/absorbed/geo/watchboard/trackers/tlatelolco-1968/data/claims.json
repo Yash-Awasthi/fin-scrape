@@ -1,0 +1,212 @@
+[
+  {
+    "id": "death-toll-true",
+    "question": "How many people were killed in the Tlatelolco massacre?",
+    "sideA": {
+      "label": "Government / Official Record",
+      "text": "The Interior Ministry announced 30 dead within 24 hours and the government has never revised this figure. Defense Secretary General Marcelino García Barragán maintained the army acted in self-defense after armed agitators fired first. Official documents from 1968 list 30 fatalities."
+    },
+    "sideB": {
+      "label": "Survivors, Researchers & International Record",
+      "text": "Declassified CIA and NSA cables, hundreds of survivor testimonies compiled by Elena Poniatowska, and the FEMOSPP investigation all point to a death toll of 200–400. Bodies were systematically removed by army trucks overnight, and no independent forensic investigation was permitted. The government's ability to suppress the true count was noted in real-time by US intelligence."
+    },
+    "resolution": "The true death toll cannot be established with certainty due to deliberate destruction of evidence. The official figure of 30 is rejected by virtually all independent researchers. Estimates of 200–400 are most widely cited. The FEMOSPP (2006) concluded that the coverup of casualties constituted part of the crime.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "who-fired-first",
+    "question": "Who fired first at Tlatelolco?",
+    "sideA": {
+      "label": "Government Narrative",
+      "text": "The army and Interior Ministry maintained that armed provocateurs among the protesters opened fire on soldiers first, forcing the military to respond in self-defense. The government presented this as a confrontation with violent agitators, not a massacre of peaceful protesters."
+    },
+    "sideB": {
+      "label": "Historical Consensus",
+      "text": "The FEMOSPP investigation and declassified documents establish that the Olympia Battalion — an elite paramilitary unit under presidential command — fired from buildings above the plaza as a deliberate signal to begin the operation. The army, believing it was under attack from the crowd, then opened fire on protesters. Survivors describe being fired on while fleeing. The use of the Olympia Battalion as 'agent provocateurs' was part of the planned operation."
+    },
+    "resolution": "The weight of documentary evidence — including declassified SEDENA, DFS, and US intelligence records — establishes that the Olympia Battalion initiated shooting from above as a pre-planned signal, not in response to crowd violence. The historical consensus condemns the government's self-defense narrative as false.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "who-ordered-massacre",
+    "question": "Who personally ordered the Tlatelolco massacre?",
+    "sideA": {
+      "label": "Echeverría / Military (Contested)",
+      "text": "Some accounts point primarily to President Díaz Ordaz as the sole decision-maker, with Echeverría executing orders. General García Barragán's posthumously published memoirs suggest Echeverría gave the final operational order, and that García Barragán himself was unaware of the Olympia Battalion's role. This would partially exculpate the conventional military command."
+    },
+    "sideB": {
+      "label": "FEMOSPP / Human Rights Consensus",
+      "text": "The FEMOSPP concluded that President Díaz Ordaz ordered the massacre, with Interior Secretary Echeverría as chief coordinator. The Olympia Battalion operated under presidential authority. Echeverría's control of the DFS and his coordination of the post-massacre coverup make him a primary perpetrator. Both men bear command responsibility."
+    },
+    "resolution": "The FEMOSPP formally charged both Díaz Ordaz (deceased by 2006) and Echeverría with genocide and crimes against humanity. Courts ultimately dismissed charges against Echeverría on procedural grounds, not because of exculpatory evidence. No perpetrator has been convicted. The command responsibility of both leaders is widely accepted by scholars.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "olympia-battalion-role",
+    "question": "What was the role of the Olympia Battalion?",
+    "sideA": {
+      "label": "Government (1968 account)",
+      "text": "The government initially denied the existence of any special unit. The Olympia Battalion was not publicly acknowledged for decades. When its existence became undeniable, some officials characterized it as a legitimate security unit responding to armed threats during the Olympics."
+    },
+    "sideB": {
+      "label": "Historical Record",
+      "text": "The Batallón Olimpia was a secret paramilitary-military unit assembled under direct presidential command for the 1968 Olympics. On October 2, members infiltrated the crowd in civilian clothing, identified by white gloves on their left hands. They fired from buildings to initiate the operation, arrested the CNH leadership mid-speech, and participated in rounding up and beating detainees. Their use was a deliberate act of deception — designed to create a false pretext for military intervention."
+    },
+    "resolution": "The existence and role of the Olympia Battalion is now established fact, confirmed by FEMOSPP, declassified documents, and survivor testimony. Its deployment constituted a planned provocation — not a legitimate security response. The unit is considered a key instrument of the massacre.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "cia-us-involvement",
+    "question": "Was the US government (CIA/NSA) involved in or complicit in the massacre?",
+    "sideA": {
+      "label": "US Government Position",
+      "text": "The US government has acknowledged that CIA and NSA personnel monitored the student movement and reported on the massacre in real time, but maintained this was standard intelligence collection. The US did not direct or authorize Mexican security operations. The CIA had liaison relationships with the DFS (Mexican secret police) as part of Cold War anti-communist cooperation, but this did not extend to operational control of Mexican military actions."
+    },
+    "sideB": {
+      "label": "Critics / National Security Archive",
+      "text": "Declassified documents show the CIA had deep penetration of the DFS and shared intelligence on student leaders with Mexican authorities. The NSA was intercepting CNH communications. While no document directly authorizes the massacre, the CIA's close relationship with DFS operatives who planned and executed the operation — combined with silence in the immediate aftermath — constitutes at minimum complicity by inaction. Some researchers argue the US-Mexico Cold War security relationship created the conditions for the massacre."
+    },
+    "resolution": "No declassified document establishes direct US operational involvement in the massacre. However, US intelligence was aware of the operation in real time and did not intervene. The CIA-DFS relationship and the US government's strategic priority of Mexican stability over human rights created enabling conditions. Full disclosure of all relevant US records has not been achieved.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "bodies-disposal",
+    "question": "What happened to the bodies of those killed?",
+    "sideA": {
+      "label": "Government",
+      "text": "The government acknowledged 30 dead, whose identities were officially recorded. No information was provided about any additional bodies. The government denied that bodies were systematically removed or hidden."
+    },
+    "sideB": {
+      "label": "Survivors and Investigators",
+      "text": "Multiple witnesses report seeing army trucks loading bodies throughout the night of October 2–3. Survivors claim they saw soldiers stacking corpses. The FEMOSPP and National Security Archive investigations concluded that bodies were transported to Campo Militar No. 1. Some testimonies and journalistic accounts allege bodies were disposed of at sea or in mass graves. No remains beyond the officially acknowledged 30 have ever been forensically located."
+    },
+    "resolution": "The systematic removal of bodies is strongly supported by eyewitness accounts and is the most credible explanation for why only 30 deaths were officially recorded despite witnesses describing hundreds of victims. The disposition of the 'missing' bodies has never been officially investigated or disclosed. Military archives that might clarify this have been withheld.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "echeverria-genocide-charge",
+    "question": "Did Echeverría commit genocide at Tlatelolco?",
+    "sideA": {
+      "label": "Mexican Courts (Final Ruling)",
+      "text": "Mexican federal courts ultimately dismissed genocide charges against Echeverría in 2009, ruling that the statute of limitations had expired and that procedural requirements for genocide prosecutions had not been met. The Supreme Court did not rule on whether the events constituted genocide on the merits."
+    },
+    "sideB": {
+      "label": "FEMOSPP / Human Rights Organizations",
+      "text": "The FEMOSPP's draft final report concluded that the 1968 massacre and 1971 Halconazo constituted genocide under Mexican and international law, with Echeverría bearing principal responsibility for the Halconazo and co-responsibility for Tlatelolco. Human rights organizations including Amnesty International and Human Rights Watch supported the genocide characterization. The dismissal of charges on procedural grounds does not exonerate Echeverría on the merits."
+    },
+    "resolution": "No Mexican court has ruled on the merits of the genocide characterization for Tlatelolco. Charges were dismissed on procedural grounds. The scholarly and human rights consensus holds that the events of 1968 (and 1971) meet the legal definition of crimes against humanity, with Echeverría bearing significant command responsibility. He died in 2022 without conviction.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "student-movement-legitimacy",
+    "question": "Were the student demands of 1968 legitimate?",
+    "sideA": {
+      "label": "Díaz Ordaz Government",
+      "text": "The government characterized the student movement as a communist-inspired destabilization effort, pointing to alleged links between the CNH and Cuba, the Soviet Union, and other foreign powers. Díaz Ordaz insisted that the movement threatened public order and Mexico's international reputation ahead of the Olympics. He later stated he took 'full moral responsibility' for restoring order."
+    },
+    "sideB": {
+      "label": "Students / Historical Consensus",
+      "text": "The CNH's six demands — dialogue, freedom for political prisoners, dissolution of the Granaderos, dismissal of police leadership, indemnification for victims, and repeal of authoritarian laws — were civic and democratic demands. The movement sought political liberalization within the PRI's one-party state. Subsequent declassified records show no evidence of foreign direction. Mexican society's subsequent democratization (achieved by 2000) vindicated many of the movement's demands."
+    },
+    "resolution": "Historical consensus holds that the student movement's demands were legitimate civic and democratic demands reflecting the broader global 1968 movements. The government's claim of communist subversion was a Cold War pretext. Mexico's eventual political opening (1977–2000) addressed many of the issues the students raised.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "number-detained-total",
+    "question": "How many people were detained after the massacre?",
+    "sideA": {
+      "label": "Interior Ministry / DFS",
+      "text": "Government figures acknowledged approximately 1,000–1,500 detentions in the immediate aftermath. Many were identified as 'agitators' and released after questioning. Formal charges were filed against several hundred."
+    },
+    "sideB": {
+      "label": "CNDH / Human Rights Organizations",
+      "text": "Estimates from the CNDH and Amnesty International put the number detained on October 2–3 at 1,500–2,500. Many were held at Campo Militar No. 1 — an extrajudicial detention site not officially acknowledged. Detainees report torture, forced confessions, and denial of legal counsel. The exact number of people held at military facilities, as opposed to civilian jails, remains unknown."
+    },
+    "resolution": "The total number detained was between 1,500 and 2,500. The discrepancy between official and civil society figures reflects the use of extrajudicial military detention. CNDH documentation identifies hundreds of formally charged individuals; undocumented military detentions may account for additional hundreds.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "press-freedom-coverup",
+    "question": "Was there a systematic press coverup of the massacre?",
+    "sideA": {
+      "label": "Government",
+      "text": "The government maintained that the press reported freely and that only 30 deaths were confirmed because only 30 occurred. Officials argued that foreign press coverage was exaggerated or politically motivated."
+    },
+    "sideB": {
+      "label": "Journalists / Researchers",
+      "text": "Most Mexican newspapers in 1968 were economically dependent on government advertising and operated under self-censorship. Reporters who attempted to document the massacre were arrested or their film was confiscated. Excélsior was one of the few outlets to push back. Foreign correspondents were surveilled and expelled. The 'blackout' of accurate information was systematic and coordinated by the Interior Ministry under Echeverría."
+    },
+    "resolution": "The press blackout of 1968 is well-documented. Mexican press freedom was severely constrained in 1968 through economic and legal mechanisms. The full story of the massacre emerged only gradually over decades through oral histories, exile publications, and eventually declassified documents. No Mexican newspaper accurately reported the scale of the massacre in October 1968.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "femospp-report-suppressed",
+    "question": "Was the FEMOSPP investigation suppressed by the Fox government?",
+    "sideA": {
+      "label": "Fox Administration",
+      "text": "President Fox created FEMOSPP in good faith to deliver truth and justice. The final published report reflects the evidentiary record and legal constraints prosecutors faced. Differences between the leaked draft and published report reflect normal prosecutorial judgment about what was legally provable."
+    },
+    "sideB": {
+      "label": "Special Prosecutor / Human Rights Community",
+      "text": "The leaked draft of the FEMOSPP report (February 2006) was far more explicit in naming Díaz Ordaz and Echeverría for genocide than the published final version. Researchers at the National Security Archive and civil society organizations documented dozens of passages deleted or softened between draft and publication. Special Prosecutor Carrillo Prieto stated he faced political interference. Critics charge that Fox, constrained by PRI political allies and fear of institutional conflict, allowed the report to be diluted."
+    },
+    "resolution": "Documentary comparison of the draft and final FEMOSPP reports confirms significant deletions and softening of conclusions between versions. The National Security Archive published both versions, enabling direct comparison. Whether this constitutes political suppression or prosecutorial judgment is disputed, but the effect was a less damning published record.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "social-dissolution-law",
+    "question": "Was the 'social dissolution' law used to imprison students legally defensible?",
+    "sideA": {
+      "label": "Government (1968 position)",
+      "text": "Articles 145 and 145-bis of the Federal Penal Code criminalized 'social dissolution' — broadly defined to include advocacy for foreign ideologies or actions that disturbed public order. The government maintained that CNH leaders had engaged in precisely such activity and were lawfully prosecuted."
+    },
+    "sideB": {
+      "label": "Legal Scholars / Students",
+      "text": "The 'social dissolution' statute was a Cold War-era law whose constitutionality was widely disputed. It was vague enough to criminalize virtually any political opposition. The CNH's six-point petition — peaceful, civic demands — did not constitute 'social dissolution' under any reasonable legal interpretation. The Inter-American Commission on Human Rights criticized Mexico's use of this law to imprison political activists."
+    },
+    "resolution": "The 'social dissolution' articles were eventually repealed in 1970 under Echeverría's 'Democratic Opening.' Their use against the 1968 student movement is now universally condemned as legally and constitutionally indefensible — a tool of political repression rather than legitimate criminal law enforcement.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "mexico-olympic-host-decision",
+    "question": "Did the upcoming Olympics cause or accelerate the massacre?",
+    "sideA": {
+      "label": "Government",
+      "text": "The Olympics were irrelevant to the government's decision — the crackdown was about restoring public order in response to months of destabilization. The government had shown restraint throughout the summer; the October 2 operation was forced by continued provocations."
+    },
+    "sideB": {
+      "label": "Historians / International Critics",
+      "text": "The timing — 10 days before the Olympics opening — is widely considered decisive. The Díaz Ordaz government feared international embarrassment and was determined to project stability to the world. The Olympics created a hard deadline by which the movement had to be suppressed. FEMOSPP and multiple historians conclude that the Olympics timeline was a primary factor in the decision to use lethal force rather than continuing negotiations."
+    },
+    "resolution": "Historical consensus holds that the proximity of the Olympics was a significant — possibly decisive — factor in the government's choice to use lethal force on October 2, 1968. The games provided both a motivation (international image) and a timeline (hard deadline) for suppressing the movement.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "military-archives-access",
+    "question": "Have Mexican military archives related to Tlatelolco been fully disclosed?",
+    "sideA": {
+      "label": "SEDENA / Government",
+      "text": "The Mexican Army has progressively opened relevant archives under successive governments. Key records have been transferred to AGN. SEDENA cooperated with FEMOSPP and the Truth Commission within legal parameters protecting national security and ongoing operations."
+    },
+    "sideB": {
+      "label": "Researchers / NGOs",
+      "text": "Critical military archives — particularly those identifying Olympia Battalion commanders, documenting what happened to detainees at Campo Militar No. 1, and accounting for bodies removed from Tlatelolco — have never been disclosed. Some files are reportedly missing or destroyed. Researchers from the National Security Archive and Centro Prodh argue that SEDENA's partial disclosures have been strategic, withholding the most incriminating documents."
+    },
+    "resolution": "As of 2026, full disclosure of military archives related to Tlatelolco has not been achieved. The files that would most directly establish the chain of command for the Olympia Battalion and the fate of bodies and disappeared persons remain unavailable. This is a key outstanding demand of victims' families and the Truth Commission.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "amlo-truth-commission-effectiveness",
+    "question": "Has the Mexican state delivered accountability for 1968 under the 4T governments (AMLO/Sheinbaum)?",
+    "sideA": {
+      "label": "Government (4T / Morena)",
+      "text": "AMLO's Truth Commission (created 2019) documented state violence across the dirty war era. On October 2, 2024, President Claudia Sheinbaum issued a formal public apology on behalf of the Mexican state — the first in 56 years — recognizing Tlatelolco as a crime against humanity and signing a presidential decree on memory, truth, and non-repetition. The Truth Commission identified 8,594 victims and 591 responsible individuals. The UN Human Rights Office welcomed the apology as a historic step."
+    },
+    "sideB": {
+      "label": "Human Rights Organizations / Victims' Families",
+      "text": "While the 2024 state apology was welcomed as a long-overdue symbolic step, the Comité del 68 and human rights groups note that accountability is still incomplete: full military archives identifying the Olympia Battalion commanders remain withheld, no final comprehensive report on the 1968 massacre specifically has been published, and the true death toll has never been formally acknowledged. The perpetrators are all deceased, but families continue to demand formal recognition of the full victim list, symbolic reparations, and the opening of Campo Militar No. 1 records."
+    },
+    "resolution": "The 2024 state apology by President Sheinbaum represents the most significant formal acknowledgment of state responsibility for Tlatelolco in 56 years, welcomed by the Comité del 68 and the UN. Criminal accountability is impossible given the deaths of all principal perpetrators (Díaz Ordaz 1979, Echeverría 2022). A significant setback followed the apology: Segob replaced the Truth Commission's 3,510-page final report with an 8-page summary, stripping chapters on LGBTQ+ victims and other marginalized groups — compared by critics to the 2006 FEMOSPP suppression. Outstanding demands — full archive disclosure, formal victim list, symbolic reparations, and restoration of the full Truth Commission report — remain unmet as of May 2026.",
+    "lastUpdated": "2026-05-18"
+  }
+]

@@ -1,0 +1,447 @@
+[
+  {
+    "id": "kashmir-accession-legitimacy",
+    "question": "Was the 1947 Instrument of Accession of Jammu & Kashmir to India legally valid?",
+    "sideA": {
+      "label": "India",
+      "text": "The accession was fully legal under the Indian Independence Act 1947 and the terms by which princely states joined either India or Pakistan. Maharaja Hari Singh had sovereign right to accede to either dominion, and his decision was valid regardless of Kashmir's Muslim-majority population. The subsequent UN resolutions were advisory, not binding, and were rendered moot by Pakistan's continued aggression."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "The accession was obtained under duress — Pakistan's tribal forces had not yet reached Srinagar when the Maharaja signed. Under the two-nation theory and religious demographics, Muslim-majority Kashmir should have acceded to Pakistan. The UN resolutions mandating a plebiscite must still be honored; the people of Kashmir have never been given a free choice."
+    },
+    "resolution": "Legally contested; UN resolutions never implemented. Both countries' positions hardened over 75 years.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kargil-military-vs-militants",
+    "question": "Were the Kargil intruders Pakistani regular soldiers or militant volunteers?",
+    "sideA": {
+      "label": "India / International Community",
+      "text": "The Kargil intruders were Pakistan Army's Northern Light Infantry (NLI) regulars, proven by military insignia, service numbers, and communications intercepted by India. Pakistani Army paybooks and dog-tags were recovered. Pakistan's initial refusal to accept its own soldiers' bodies was damning evidence. The operation was planned at the highest military levels, possibly including COAS Musharraf."
+    },
+    "sideB": {
+      "label": "Pakistan (Official Initial Position)",
+      "text": "Pakistan initially insisted the intruders were Kashmiri mujahideen not under Pakistani command. PM Nawaz Sharif later acknowledged the military was not under civilian control. Pakistan's post-crisis internal narrative acknowledged the NLI connection but argued the mission was a response to India's forward position along the LOC."
+    },
+    "resolution": "Pakistani military origins confirmed by overwhelming evidence. Pakistan eventually acknowledged NLI involvement; soldiers were posthumously decorated.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "balakot-casualty-claims",
+    "question": "How many militants were killed in India's Balakot airstrike (Feb 26, 2019)?",
+    "sideA": {
+      "label": "India",
+      "text": "India's government and media claimed 200–350 militants were killed at the JeM training camp. Foreign Secretary Vijay Gokhale stated India targeted a 'very large training camp' of JeM. Senior officials briefed that SPICE-2000 precision bombs hit the madrasa complex directly, causing mass casualties."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan's ISPR stated Indian bombs fell in forested areas causing no casualties — only trees were hit. Pakistan invited journalists to the site who filmed an undamaged madrasa. Satellite imagery analysts found limited visible damage to the target building. Independent researchers including Reuters could not verify any mass casualty event."
+    },
+    "resolution": "Disputed; independent evidence suggests limited physical damage to target structures. Actual casualty figures remain unknown.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-pakistan-1971-civilian-casualties",
+    "question": "How many people were killed by Pakistani forces during the 1971 East Pakistan operations?",
+    "sideA": {
+      "label": "Bangladesh / India",
+      "text": "Bangladesh's official position and Indian accounts cite 3 million killed by Pakistani forces in Operation Searchlight and subsequent operations between March–December 1971. Bangladeshi historians and early post-war accounts support this figure. Rape of 200,000–400,000 women is also alleged. This is characterized as genocide."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan's Hamoodur Rahman Commission (1974, declassified 2000) put the figure at 26,000. Pakistani historians argue the 3 million figure was politically inflated for narrative purposes. The actual death toll was substantial but reflected a brutal civil war in which all parties committed atrocities, including Mukti Bahini forces targeting Biharis."
+    },
+    "resolution": "Unresolved. Estimated deaths range from 300,000 to 3 million in scholarly literature. No international tribunal has examined the question.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mumbai-26-11-pak-state-involvement",
+    "question": "Did the Pakistani state direct or approve the 26/11 Mumbai attacks?",
+    "sideA": {
+      "label": "India / US",
+      "text": "India and US prosecutors established that LeT with ISI links planned and executed 26/11. David Headley (US-Pakistan dual national, DEA informant turned LeT operative) testified in a Chicago court about ISI officer 'Major Iqbal' directing the operation with money and support. NSA intercepts and Headley's testimony implicated Pakistani state actors at the operational level."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan acknowledges that Lashkar-e-Taiba (operating as Jamaat-ud-Dawah) conducted 26/11 and has arrested suspects. Pakistan denies ISI directed the operation as state policy, characterizing any ISI connection as rogue actors. Pakistan's trials of Hafiz Saeed and Zaki-ur-Rehman Lakhvi were conducted; Saeed was convicted on terrorism financing charges in 2020."
+    },
+    "resolution": "ISI officer links documented in US court proceedings. Pakistan's prosecutions internationally criticized as insufficient. Hafiz Saeed remains in Pakistan.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "surgical-strikes-2016-cross-loc",
+    "question": "Did Indian Special Forces actually cross the LOC in the September 2016 'surgical strikes'?",
+    "sideA": {
+      "label": "India",
+      "text": "Indian DGMO Lt. Gen. Ranbir Singh publicly announced on September 29, 2016 that special forces crossed the LOC and conducted strikes on 7 terrorist launch pads in Pakistan-administered Kashmir, killing large numbers of militants. India maintained this position and PM Modi reiterated it. Multiple Indian officials confirmed the strikes, which became politically significant ahead of elections."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan's ISPR flatly denied any Indian forces crossed the LOC, calling it a 'fabricated' claim by India. Pakistan's army said what occurred was an exchange of fire at the LOC. Independent analysts note no video evidence was released, Pakistani sources show no unusual activity, and the casualty figures India claimed were never verifiable."
+    },
+    "resolution": "India stands by its account. No independent verification. Pakistan denies. The truth remains contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "f16-india-claims-kargil",
+    "question": "Did India shoot down a Pakistani F-16 during the February 2019 aerial engagement?",
+    "sideA": {
+      "label": "India",
+      "text": "India claimed Wing Commander Abhinandan's MiG-21 Bison shot down a Pakistani F-16 before his own aircraft was hit. India presented heat-seeking missile debris (AIM-120 AMRAAM) recovered from Indian territory as evidence of F-16 use. US officials reportedly later told American media they conducted an informal count of Pakistan's F-16 fleet and found one missing."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan denied any F-16 was lost, insisting it only shot down the MiG-21 and another Indian aircraft (a Su-30, India denied this). Pakistan's ISPR showed full complement of F-16s on parade. US officially stated it could not confirm any F-16 was shot down. AMRAAM debris could have come from a fired missile that missed.",
+      "resolution": "Unresolved. F-16 use confirmed by AMRAAM evidence; loss disputed. One report indicated US count found missing F-16 but this was never officially confirmed."
+    },
+    "resolution": "F-16 use confirmed; whether one was lost remains disputed between governments.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kashmir-plebiscite-feasibility",
+    "question": "Can and should a UN-mandated plebiscite in Kashmir still be held?",
+    "sideA": {
+      "label": "Pakistan / Kashmiri Independence Groups",
+      "text": "Pakistan maintains the plebiscite mandated by UN Security Council resolutions remains legally obligatory and must be held to respect Kashmiri self-determination. After India's 2019 revocation of Article 370 and direct central rule, Pakistan argues the urgency is even greater. The Kashmiri people's right to determine their future cannot be overridden by India's unilateral actions."
+    },
+    "sideB": {
+      "label": "India",
+      "text": "India argues the plebiscite condition was contingent on Pakistan's prior withdrawal from occupied Kashmir, which Pakistan never did. Further, India contends that subsequent democratic elections in J&K have periodically expressed the will of the population. The 1972 Simla Agreement's bilateralism framework supersedes old UN resolutions. J&K's integration into India is complete and irreversible."
+    },
+    "resolution": "Deadlocked. Neither side accepts the other's framework. The UN resolutions remain on record but have had no operational effect since 1948.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "azad-kashmir-gilgit-status",
+    "question": "Is Azad Kashmir / Gilgit-Baltistan legitimate Pakistani territory or illegally occupied?",
+    "sideA": {
+      "label": "India",
+      "text": "India considers Azad Kashmir and Gilgit-Baltistan to be 'Pakistan-Occupied Kashmir' (PoK), integral parts of J&K that Pakistan has illegally occupied since 1947 tribal invasion. India's maps show these as Indian territory. India objects to any infrastructure development (including CPEC) in these areas as endorsement of illegal occupation."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Azad Kashmir and Gilgit-Baltistan are administered by Pakistan as free territories pending a UN plebiscite, not as integral Pakistani provinces. Pakistan administers them as self-governing entities under federal oversight. CPEC investment is development for the benefit of the local population awaiting their right to self-determination."
+    },
+    "resolution": "Contested sovereignty. Both territories are administered by Pakistan but not formally annexed; Pakistan's legal position is technically they are 'disputed territories under Pakistani administration.' Pakistan held AJK Assembly elections in phases on July 27 and August 2, 2026 (Poonch Division phase postponed on security grounds); PML(N) won a narrow plurality (44 seats) over the PPP (43 seats) amid a boycott movement and reduced turnout. India's MEA called the polls a 'farce'; Pakistan's Foreign Office said India has 'neither the standing nor the moral authority' to comment (August 7, 2026).",
+    "lastUpdated": "2026-08-10T14:22:18.000Z"
+  },
+  {
+    "id": "pakistan-isi-terrorist-support",
+    "question": "Does Pakistan's ISI actively support militant groups targeting India?",
+    "sideA": {
+      "label": "India / US / Western Intelligence",
+      "text": "India, the US, FATF, and multiple Western intelligence agencies have documented ISI material and financial support for LeT, JeM, and Hizbul Mujahideen. The 26/11 trial in Chicago, Indian NIA investigations, and FATF grey-listing of Pakistan all point to state-level complicity. Pakistan's tolerance of groups like JuD and JeM despite international pressure is cited as evidence of continued state support."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan denies ISI direction of militant groups targeting India. Pakistani officials distinguish between banned militant organizations (which Pakistan has prosecuted) and legitimate Kashmiri political groups expressing rights. Pakistan frames its position as supporting Kashmiri self-determination, not terrorism. Pakistan's crackdowns on TTP show it acts against terrorism threatening Pakistan itself."
+    },
+    "resolution": "FATF removed Pakistan from its grey list in October 2022 after regulatory improvements, but US and India maintain ISI maintains ties with anti-India groups.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "indus-waters-treaty-suspension-legality",
+    "question": "Is India's 2025 suspension of the Indus Waters Treaty legal under international law?",
+    "sideA": {
+      "label": "India",
+      "text": "India argues that Pakistan's continued support for terrorism — culminating in Pahalgam — constitutes a fundamental change of circumstances (rebus sic stantibus) that allows treaty suspension under the Vienna Convention on the Law of Treaties. India also cites Article XII of the treaty which allows modification, and argues Pakistan violated the treaty's spirit through CPEC projects near water infrastructure.",
+      "resolution": "Under active international legal dispute."
+    },
+    "sideB": {
+      "label": "Pakistan / International Legal Scholars",
+      "text": "Pakistan declared the suspension illegal under international law. The Vienna Convention's rebus sic stantibus exception cannot apply to treaties specifically designed to manage disputes between hostile neighbors. The World Bank brokered the treaty precisely because India-Pakistan relations were hostile. Water treaties cannot be suspended over unrelated security disputes."
+    },
+    "resolution": "Legally disputed. On May 15, 2026, the Permanent Court of Arbitration issued a Supplemental Award of Competence ruling unanimously that 'it was not open to India to suspend proceedings unilaterally,' affirming the treaty remains in force unless both parties agree to terminate it. India's MEA spokesperson Randhir Jaiswal rejected the award on May 17 as 'null and void' issued by an 'illegally constituted' tribunal. Pakistan hailed the May 15 ruling as a 'huge legal win.' On April 24, 2026 — marking exactly one year since India's suspension — Pakistan formally escalated to the UN Security Council. On June 5, 2026, India's MEA formally reaffirmed the IWT remains 'in abeyance' and will not be restored until Pakistan 'credibly and irrevocably' ends cross-border terrorism support. The dispute is the most complex legal dimension of the post-Sindoor freeze; no enforcement mechanism for the PCA ruling exists against India.",
+    "lastUpdated": "2026-06-05T14:30:00.000Z"
+  },
+  {
+    "id": "nuclear-first-use-doctrines",
+    "question": "What are the nuclear doctrines of India and Pakistan, and which is more destabilizing?",
+    "sideA": {
+      "label": "India",
+      "text": "India's official doctrine is No First Use (NFU) — only retaliating after a nuclear attack. India maintains a credible minimum deterrent with a nuclear triad (land, air, sea). India argues its NFU posture is stabilizing. However, India's 2003 doctrine allows use against chemical/biological attacks, and some officials have hinted NFU may not be absolute if faced with threat of overwhelming conventional defeat."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan rejects NFU, maintaining deliberate ambiguity about first-use thresholds to deter India's conventional military superiority. Pakistan has declared four redlines: spatial (deep advance into Pakistani territory), military (destruction of large armed forces), economic (blockade), and political (destabilization). Tactical nuclear weapons (Nasr/Hatf-IX) operationally deployed to battlefield level are widely seen as destabilizing by Western analysts."
+    },
+    "resolution": "Ongoing strategic debate. Most analysts view Pakistan's first-use posture as more destabilizing but driven by conventional inferiority.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kashmiri-pandit-exodus-cause",
+    "question": "What caused the 1990 exodus of Kashmiri Pandits from the Kashmir Valley?",
+    "sideA": {
+      "label": "Indian Government / Kashmiri Pandit Organizations",
+      "text": "The exodus was caused by targeted killings, death threats broadcast over mosque loudspeakers ('convert, leave, or die'), and a campaign of ethnic cleansing organized by Islamist militants, particularly JKLF and Hizb-ul-Mujahideen. Approximately 100,000–500,000 Pandits fled. The then-Governor Jagmohan is accused by some of encouraging the exodus to enable a harder crackdown."
+    },
+    "sideB": {
+      "label": "Some Kashmiri Muslims / Pakistani Narrative",
+      "text": "While acknowledging that some killings occurred, this narrative emphasizes Governor Jagmohan's role in facilitating or even engineering the exodus to justify a crackdown on the broader Muslim population. Pandit community organizations were in contact with the Governor prior to the exodus. Pakistan denies directing any campaign targeting Pandits.",
+      "resolution": "Contested. Both explanations contain documented elements. Indian courts and HRW investigations support that militant targeting was a primary cause."
+    },
+    "resolution": "Contested. Both Islamist violence and possible administrative actions contributed. No conclusive independent inquiry completed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "simla-agreement-bilateral-vs-un",
+    "question": "Does the Simla Agreement (1972) make the Kashmir dispute strictly bilateral, excluding UN involvement?",
+    "sideA": {
+      "label": "India",
+      "text": "The Simla Agreement's Article 1(ii) commits both sides to resolve disputes bilaterally — this legally supersedes the UN resolutions of 1948–49. Pakistan agreed to this framework in return for the release of 93,000 POWs. India consistently objects to any third-party mediation or UN involvement, citing Simla as the governing framework."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "The Simla Agreement does not nullify UN resolutions — it only commits to bilateral means as a first step. The agreement does not explicitly renounce the plebiscite. Moreover, if bilateral talks fail (as they have), recourse to UN mechanisms remains valid. Pakistan has repeatedly raised Kashmir at the UN General Assembly, which it considers its right."
+    },
+    "resolution": "Legally ambiguous. India's bilateral interpretation dominates in practice. UN has not taken operative action on Kashmir since 1965.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "article-370-revocation-constitutionality",
+    "question": "Was India's revocation of Article 370 in August 2019 constitutionally valid?",
+    "sideA": {
+      "label": "Indian Government / Supreme Court Majority",
+      "text": "India's Supreme Court upheld the revocation in a landmark December 2023 judgment, ruling it was constitutionally valid. The court held the President had the power to revoke Article 370 and that J&K's integration was complete. The court also called for restoration of statehood (not yet implemented). The government argued Article 370 was always 'temporary' as its text stated."
+    },
+    "sideB": {
+      "label": "Pakistan / Kashmiri Politicians / Legal Dissenters",
+      "text": "Pakistan declared the revocation illegal under international law and UN resolutions. Indian opposition leaders and some Kashmiri parties argued the revocation was done without J&K's legislative assembly's consent (it was under Presidential rule) and was therefore unconstitutional. The Supreme Court's judgment was criticized for validating what critics called an abuse of Presidential rule."
+    },
+    "resolution": "Upheld by India's Supreme Court in December 2023. Pakistan continues to contest at international forums. Statehood restoration outstanding. On the seventh anniversary (August 5, 2026 / Youm-e-Istehsal), PM Shehbaz Sharif and FM Ishaq Dar again called the revocation illegal under international law; India's MEA spokesperson Randhir Jaiswal rejected the criticism, stating Pakistan 'has no locus standi to comment on matters that are strictly internal to India.'",
+    "lastUpdated": "2026-08-10T14:22:18.000Z"
+  },
+  {
+    "id": "partition-responsibility-for-violence",
+    "question": "Who bears primary responsibility for the communal violence of the 1947 Partition?",
+    "sideA": {
+      "label": "Indian Congress Narrative",
+      "text": "British colonial policy of 'divide and rule,' combined with Muslim League's direct action campaign and Jinnah's two-nation theory, created the conditions for partition violence. The hasty timeline (Mountbatten moved independence up by 10 months) and the Radcliffe Line's rushed drawing created impossible demographic situations. Congress had tried to keep India unified."
+    },
+    "sideB": {
+      "label": "Pakistani / Muslim League Narrative",
+      "text": "Congress and the Hindu Mahasabha's refusal to share power adequately in a united India and their dominance of the independence movement made partition inevitable to protect Muslim rights. The RSS and Hindu nationalist groups organized attacks on Muslim populations. The violence was mutual — both communities committed atrocities, and any effort to assign primary blame is selective."
+    },
+    "resolution": "Historically contested. Scholarly consensus emphasizes multiple causes: British mismanagement, nationalist extremism on all sides, and Mountbatten's acceleration of the timeline.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "siachen-who-controls-legitimately",
+    "question": "Who legitimately controls and should control the Siachen Glacier?",
+    "sideA": {
+      "label": "India",
+      "text": "India occupies Siachen legitimately because the 1949 Karachi Agreement's ambiguous northern terminus ('thence north to the glaciers') did not explicitly give Siachen to either side, and India physically established presence in Operation Meghdoot (1984) before Pakistan could do so. Pakistan was planning its own occupation with German mountaineering expedition permits as cover."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan argues the LOC was traditionally understood to end at NJ9842 with no defined boundary beyond — meaning both sides tacitly accepted the area was neither's exclusive territory. India's unilateral seizure violated this understanding. Pakistan holds the lower Gayari sector; resolution would require mutual withdrawal and international demilitarization of the glacier."
+    },
+    "resolution": "Military standoff since 1984. Multiple peace talks about Siachen demilitarization failed (1992, 2006, 2011) over authentication of current positions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "aq-khan-proliferation-pakistan-state",
+    "question": "Did the Pakistani state authorize A.Q. Khan's nuclear proliferation network?",
+    "sideA": {
+      "label": "US / Western Intelligence / India",
+      "text": "A.Q. Khan's network transferred nuclear weapons technology to Libya, North Korea, and Iran. Multiple intelligence sources indicate Khan could not have operated the network at this scale without at minimum tacit approval of senior Pakistani military officials. The Obama-era 'Kerry-Lugar' Congressional testimony suggested some Army knowledge. The network generated substantial foreign exchange and strategic benefits for Pakistan."
+    },
+    "sideB": {
+      "label": "Pakistan (Official Position)",
+      "text": "Pakistan acknowledged Khan's network but characterized it as entirely his personal entrepreneurial activity, conducted without governmental knowledge or approval. Khan confessed on Pakistani television in 2004 and was granted amnesty by President Musharraf. Pakistan rejected US demands to interrogate Khan. Pakistan argues it has taken responsibility and the network was shut down."
+    },
+    "resolution": "Khan pardoned in Pakistan; key details of state authorization never fully disclosed. US-Pakistan relations managed around this ambiguity.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pahalgam-attacker-identity-2025",
+    "question": "Were the 2025 Pahalgam attackers directly linked to Pakistani intelligence?",
+    "sideA": {
+      "label": "India",
+      "text": "India attributed the Pahalgam attack to The Resistance Front (TRF), an LeT offshoot, with Pakistani ISI backing. India presented intercepts and investigative findings linking TRF's operational handlers in Pakistan to the attack. India's suspension of the Indus Waters Treaty and Operation Sindoor were explicitly justified as responses to Pakistan-backed terrorism.",
+      "resolution": "India acted on these findings; independent verification ongoing."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan condemned the Pahalgam attack and denied any involvement. Pakistan offered to cooperate in the investigation. After Operation Sindoor, Pakistan characterized India's response as based on fabricated or exaggerated links and demanded international arbitration. Pakistan noted that TRF initially retracted its claim of responsibility.",
+      "resolution": "Pakistan's counter-narrative emphasizes insufficient investigation before India's military response."
+    },
+    "resolution": "India acted militarily based on its assessment. Independent verification of Pakistani state involvement remains limited publicly.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-water-wars-indus",
+    "question": "Is India using the Indus Waters Treaty as a political weapon against Pakistan?",
+    "sideA": {
+      "label": "India",
+      "text": "India argues its suspension of the IWT was a legitimate response to Pakistan's continued sponsorship of terrorism. India also notes it has been extraordinarily patient — honoring the treaty through three wars, multiple militant attacks, and decades of hostile behavior. The treaty gives Pakistan 80% of the Indus water; India argues it has been disproportionately constrained in using western rivers for legitimate development.",
+      "resolution": "Matter referred to Permanent Court of Arbitration."
+    },
+    "sideB": {
+      "label": "Pakistan / International Legal Community",
+      "text": "Using water as a weapon violates international humanitarian law and treaty obligations regardless of provocation. Pakistan is a lower riparian state dependent on the Indus system for 90%+ of its agriculture. Weaponizing water threatens food security for 200+ million Pakistanis. International law (Vienna Convention) does not permit suspension of bilateral treaties over unrelated security events.",
+      "resolution": "Pakistan formally protested and initiated arbitration proceedings."
+    },
+    "resolution": "Under international arbitration. India suspended rather than terminated the treaty; full impact on water flow not immediately felt.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "1971-war-war-crimes",
+    "question": "Did Pakistani forces commit genocide in East Pakistan (Bangladesh) in 1971?",
+    "sideA": {
+      "label": "Bangladesh / India / Human Rights Organizations",
+      "text": "Bangladesh officially recognizes the 1971 killings as genocide. Multiple HRW, Amnesty International, and independent scholar reports document systematic targeting of Hindus, intellectuals, Awami League members, and Bengali civilians. The scope, organization, and intent of the killings (Hamoodur Rahman Report itself documented systematic killings) meet legal definitions of genocide under the Genocide Convention.",
+      "resolution": "Bangladesh has prosecuted Pakistani collaborators; Pakistan not prosecuted internationally."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan acknowledges atrocities occurred on all sides during the 1971 civil war but rejects the genocide characterization. The Hamoodur Rahman Commission documented Pakistani Army atrocities but Pakistani officials argue the conflict was a civil war in which Mukti Bahini and Indian forces also killed civilians, particularly Biharis. No international tribunal has declared it genocide.",
+      "resolution": "No international court has issued a ruling on genocide characterization."
+    },
+    "resolution": "Bangladesh characterizes it as genocide; Pakistan rejects. No binding international legal determination made.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nawaz-sharif-kargil-knowledge",
+    "question": "Did PM Nawaz Sharif know about the Kargil operation before it was launched?",
+    "sideA": {
+      "label": "Pakistani Civil Society / Opposition",
+      "text": "General Musharraf and other officers planned Kargil without fully informing civilian PM Nawaz Sharif — a major violation of civil-military norms. This was a deliberate military decision to present the PM with a fait accompli. Sharif's claims of ignorance at the Washington meeting were credible given Musharraf's subsequent admission that the operation was not fully disclosed to civilian leadership.",
+      "resolution": "General consensus: civilian government not fully briefed."
+    },
+    "sideB": {
+      "label": "Pakistani Military / Musharraf",
+      "text": "Musharraf's memoir 'In the Line of Fire' maintains Sharif was briefed on the broad outlines of the operation. Some accounts suggest Sharif attended briefings where Kargil-area operations were discussed. Musharraf accused Sharif of seeking Washington's help to pull back due to lack of political courage rather than lack of knowledge.",
+      "resolution": "Musharraf and Sharif gave contradictory accounts; truth likely lies between them."
+    },
+    "resolution": "Remains disputed between Sharif and Musharraf's accounts. Sharif was not fully informed of all details; how much he knew precisely is unclear.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kashmir-human-rights-crpf-pellet-guns",
+    "question": "Do Indian security forces systematically violate human rights in Kashmir?",
+    "sideA": {
+      "label": "HRW / Amnesty / UN / Pakistan",
+      "text": "Human Rights Watch, Amnesty International, and UN human rights bodies have documented systemic abuses: extrajudicial killings, enforced disappearances, sexual violence, and arbitrary detention under AFSPA. The use of pellet guns against protesters has blinded hundreds. The Armed Forces Special Powers Act (AFSPA) grants near-blanket immunity that has enabled abuse with impunity.",
+      "resolution": "India rejects most international findings."
+    },
+    "sideB": {
+      "label": "India",
+      "text": "India acknowledges specific incidents and has prosecuted some soldiers. However, India characterizes most international criticism as based on Pakistani disinformation, selective reporting, and failure to acknowledge the insurgency context. AFSPA is necessary to enable operations in a militancy-affected area. India's security forces operate under rules of engagement and a legal framework.",
+      "resolution": "India's NHRC has made some findings against security forces; AFSPA prosecutions rare."
+    },
+    "resolution": "Documented pattern of abuses acknowledged by India's own oversight bodies; accountability mechanisms systematically weak under AFSPA.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-second-strike-capability",
+    "question": "Does India have a credible nuclear second-strike capability?",
+    "sideA": {
+      "label": "Indian Government / DRDO",
+      "text": "India's Arihant-class nuclear-powered ballistic missile submarine (SSBN) operationalized in 2018 provides a sea-based second-strike capability that completes India's nuclear triad. With K-15 and K-4 submarine-launched ballistic missiles, India can survive a first strike and retaliate. India's nuclear deterrent is credible and survivable.",
+      "resolution": "Triad operational; submarine deterrent capability being expanded."
+    },
+    "sideB": {
+      "label": "Strategic Analysts / Pakistan",
+      "text": "India's SSBN program is nascent — Arihant has limited range missiles and the submarine has reportedly had incidents. The triad is not yet as robust as India claims. Survivability of land-based missiles against Pakistan's expanding tactical nuclear arsenal (Nasr) is questioned. Some strategic analysts argue India's deterrent faces specific vulnerabilities.",
+      "resolution": "Pakistan is developing MIRVed delivery systems; both sides in arms race."
+    },
+    "resolution": "India's triad exists but its full robustness is debated by independent analysts.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kashmir-elections-legitimacy",
+    "question": "Are elections in Indian-administered Kashmir free and fair?",
+    "sideA": {
+      "label": "India",
+      "text": "India has held multiple state assembly and parliamentary elections in J&K, citing turnout as evidence of democratic participation. The 2024 J&K assembly elections (first since 2019 reorganization) saw substantial participation. India argues elections demonstrate that Kashmiris participate in Indian democracy and that the separatist boycott represents a politically motivated minority, not the population's will.",
+      "resolution": "J&K elections held September 2024; NC-Congress alliance won."
+    },
+    "sideB": {
+      "label": "Pakistan / Kashmiri Separatists",
+      "text": "Elections in J&K occur under heavy military presence, with candidates required to sign loyalty oaths to the Indian constitution. Separatist groups have boycotted elections for decades. Voter participation is influenced by fear, inducements, and the lack of a genuine independence option on the ballot. International election monitors have limited access.",
+      "resolution": "International monitors have limited presence; genuine assessments difficult."
+    },
+    "resolution": "Participation levels have varied widely across elections; deep structural constraints on Kashmiri political expression acknowledged even by Indian courts.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cpec-sovereignty-violation",
+    "question": "Does China-Pakistan Economic Corridor (CPEC) violate Indian sovereignty?",
+    "sideA": {
+      "label": "India",
+      "text": "CPEC passes through Gilgit-Baltistan and Azad Kashmir, which India considers integral parts of J&K under Indian sovereignty. China's infrastructure investment in these territories amounts to an endorsement of Pakistan's illegal occupation. India has repeatedly raised this objection at bilateral meetings with China and boycotted BRI summits over CPEC.",
+      "resolution": "India officially protests; China and Pakistan proceed."
+    },
+    "sideB": {
+      "label": "Pakistan / China",
+      "text": "CPEC passes through Pakistani territory — Gilgit-Baltistan and Azad Kashmir are administered by Pakistan pending a plebiscite. CPEC is purely an economic development project with no sovereignty implications for third parties. India's objections reflect its desire to limit Pakistani and Chinese economic development, not genuine legal concerns.",
+      "resolution": "CPEC operationally active; sovereignty dispute unresolved."
+    },
+    "resolution": "CPEC is operational. India's protests have not affected the project materially. Sovereignty dispute unresolved.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "soc-kashmir-demographic-change",
+    "question": "Is India's demographic engineering changing the character of Kashmir post-Article 370?",
+    "sideA": {
+      "label": "Pakistan / Kashmiri Groups / International Critics",
+      "text": "India's revocation of Article 35A (which protected J&K domicile status) and subsequent domicile law changes allowing non-residents to buy land and settle in J&K represents a deliberate demographic engineering project. Pakistan compares this to Israeli settlements in the West Bank. UN Special Rapporteurs have raised concerns about land rights.",
+      "resolution": "India rejects the comparison; land laws have been modified."
+    },
+    "sideB": {
+      "label": "India",
+      "text": "Changes to domicile laws merely equalize J&K with the rest of India — no Indian state should have special exclusionary laws. Investment and development, not demographic engineering, are the goals. India notes that Jammu (Hindu-majority) and Ladakh (Buddhist-majority) benefit from integration and economic investment. Article 370 was used by separatists to exclude investment and development.",
+      "resolution": "Policy implemented; effects on demographic balance will be visible over time."
+    },
+    "resolution": "Ongoing policy change. Long-term demographic effects disputed; monitoring by international human rights bodies limited.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-pakistan-normalization-feasibility",
+    "question": "Is India-Pakistan normalization possible without resolving the Kashmir dispute?",
+    "sideA": {
+      "label": "Track-2 Diplomats / Business Community / Some Analysts",
+      "text": "India and Pakistan have $3B+ in bilateral trade potential, could gain enormously from transit trade to Central Asia, and share deep cultural ties. Normalizing economic and people-to-people relations while keeping the Kashmir dispute in a managed state ('cold peace') has precedent — both countries lived with this during Composite Dialogue years (2004–2008).",
+      "resolution": "Exploratory back-channel discussions have occurred periodically."
+    },
+    "sideB": {
+      "label": "Pakistani Army / Kashmiri Nationalists / Indian Nationalists (for different reasons)",
+      "text": "Pakistan's army derives significant institutional power from the India threat; genuine normalization would require a strategic reorientation that the establishment has resisted. Indian nationalist politics after BJP's ascendance increasingly frame Pakistan as fundamentally hostile. Kashmir remains a festering wound that prevents stable normalization regardless of economic incentives.",
+      "resolution": "Both sides' domestic politics make normalization politically costly for leaders."
+    },
+    "resolution": "No normalization has occurred. Back-channel efforts have periodically shown promise but collapsed (Musharraf-Manmohan 4-point formula; 2021 DGMO ceasefire).",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-abhinandan-aircraft-type",
+    "question": "What type of aircraft engaged Abhinandan's MiG-21, and did IAF lose a Su-30 in the same engagement?",
+    "sideA": {
+      "label": "India",
+      "text": "India confirmed only one aircraft loss — the MiG-21 Bison. India categorically denied any Su-30 was shot down. India's position is that its aircraft losses were limited to the MiG-21 and that no Su-30 debris was found on either side. Pakistan's claim of a second shootdown was dismissed as disinformation.",
+      "resolution": "India maintains one aircraft lost."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan claimed to have shot down two Indian aircraft — the MiG-21 and a Su-30 MKI. Pakistan's ISPR produced images of debris and showed two bodies in Pakistani custody (later clarified as one pilot). Pakistan displayed two crash sites. The Su-30 claim was later walked back by some Pakistani officials but never formally retracted.",
+      "resolution": "Pakistan never officially retracted the Su-30 claim but evidence insufficient."
+    },
+    "resolution": "One Indian aircraft confirmed lost. Su-30 claim disputed; no corroborating evidence for second loss found.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "shahzad-bhatti-network-isi-link",
+    "question": "Was the 'Shahzad Bhatti Network,' busted by Indian security agencies on August 17, 2026, actually backed by Pakistan's ISI?",
+    "sideA": {
+      "label": "India",
+      "text": "Home Minister Amit Shah said the network was Pakistan-backed and ISI-funded, citing IEDs and grenades bearing Pakistan Ordnance Factory markings seized from 200+ operatives across 14 states, and linking it to prior attacks in Jalandhar (Mar 2025), Sirsa (Nov 2025), and Ambala (Jan 2026)."
+    },
+    "sideB": {
+      "label": "Pakistan",
+      "text": "Pakistan's Foreign Office called the ISI-link claim a 'baseless assertion' and a 'malicious campaign' to deflect from India's domestic security problems, countering that India itself practices state-sponsored terrorism abroad, citing the Kulbhushan Jadhav case and Canadian/US allegations against Indian agents."
+    },
+    "resolution": "Unresolved. India presented physical evidence (Pakistan Ordnance Factory-marked munitions) and arrest records; Pakistan denies any state link and has not addressed the seized-materiel claims directly.",
+    "lastUpdated": "2026-08-22T00:00:00.000Z"
+  }
+]

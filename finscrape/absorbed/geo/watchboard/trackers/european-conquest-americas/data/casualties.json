@@ -1,0 +1,134 @@
+[
+  {
+    "id": "indigenous-americas-total-1492-1600",
+    "category": "Indigenous Americas — Total Demographic Collapse (1492–1600)",
+    "killed": "~45–56 million (est.)",
+    "injured": "Civilizational destruction",
+    "source": "Koch et al., The Lancet: Planetary Health (2019); Denevan (1992)",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Estimated 90% of a pre-contact population of c.54–65 million. Primary cause: epidemic disease (smallpox, measles, typhus) combined with violence, forced labor, and famine. Considered by many historians the largest demographic catastrophe in human history.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "taino-hispaniola-extinction",
+    "category": "Taíno of Hispaniola — Effective Extinction (1492–1550s)",
+    "killed": "400,000–1 million+ (est.)",
+    "injured": "Cultural annihilation",
+    "source": "Bartolomé de las Casas; Irving Rouse, The Tainos (1992)",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Taíno population on Hispaniola, perhaps 400,000–1 million at contact, reduced to approximately 27,000 by 1514 (Spanish census) and effectively extinct by the 1540s–1550s. Causes: smallpox (1518–19), brutal encomienda labor in gold mines, starvation, violence, and despair.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "siege-tenochtitlan-1521",
+    "category": "Siege of Tenochtitlan (1521)",
+    "killed": "100,000–240,000 (est. Aztec/allied; ~450 Spanish)",
+    "injured": "City destroyed",
+    "source": "Hernán Cortés, Third Letter (1522); Hugh Thomas, Conquest (1993)",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "75-day siege (May 22–August 13, 1521). Aztec defenders suffered catastrophically from smallpox (which killed Emperor Cuitlahuac during the siege), starvation, and urban combat. Spanish and Tlaxcalan allied losses were much smaller. The city was completely destroyed in fighting.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cajamarca-massacre-1532",
+    "category": "Massacre of Cajamarca (November 16, 1532)",
+    "killed": "2,000–8,000 Inca attendants",
+    "injured": "Thousands",
+    "source": "Pedro Pizarro, Relation of the Discovery (1571); John Hemming, Conquest of the Incas (1970)",
+    "tier": 1,
+    "contested": "yes",
+    "note": "In less than two hours, Pizarro's 168 men killed the unarmed attendants of Atahualpa's court in Cajamarca plaza. Not a single Spaniard died; dozens were wounded. The Spanish used cannon, cavalry, and shock to panic and slaughter unarmed civilians. Atahualpa was captured alive.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cholula-massacre-1519",
+    "category": "Cholula Massacre (October 1519)",
+    "killed": "3,000–6,000",
+    "injured": "Unknown",
+    "source": "Bernal Díaz del Castillo, Historia verdadera (c.1568); Camilla Townsend, Fifth Sun (2019)",
+    "tier": 1,
+    "contested": "yes",
+    "note": "Cortés and Tlaxcalan allies killed Cholulan nobles and warriors gathered in the main plaza, allegedly pre-empting an ambush. The conspiracy may have been real or fabricated. Cholula was the second-largest city in Mexico and a major religious center. The massacre terrorized central Mexico.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "potosi-mita-deaths-total",
+    "category": "Potosí Silver Mines — Mita Forced Labor Deaths (1545–1800)",
+    "killed": "~1–8 million (est. over 250 years)",
+    "injured": "~13,500/year exposed to toxic conditions",
+    "source": "Kris Lane, Potosí: The Silver City (2019); Bartolomé Arzáns de Orsúa (1736)",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Workers in Potosí were exposed to mercury amalgamation poisoning, silica dust, altitude sickness (4,100 meters), cave-ins, and extreme cold. Conservative estimates start at 1 million deaths over the full period; Galeano and others cite 8 million. Annual workforce was ~13,500 under mita obligation, plus wage workers.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "atlantic-slave-trade-middle-passage",
+    "category": "Transatlantic Slave Trade — Middle Passage Deaths",
+    "killed": "~1.8 million during crossing (1500–1866)",
+    "injured": "12.5 million enslaved and transported",
+    "source": "Trans-Atlantic Slave Trade Database (slavevoyages.org); Eltis & Richardson (2010)",
+    "tier": 2,
+    "contested": "no",
+    "note": "Approximately 12.5 million Africans were loaded onto slave ships; ~10.7 million survived to the Americas. Average mortality during crossing was ~12–15%. In the earliest period (1500–1600), mortality was higher — as much as 25–30%. Total enslaved to the Americas over four centuries: Brazil (4 million), British Caribbean (2.3M), Spanish Americas (1.3M), French Caribbean (1.1M).",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "aztec-empire-population-collapse",
+    "category": "Central Mexico — Population Collapse (1519–1600)",
+    "killed": "~15–25 million (est.)",
+    "injured": "Total societal disruption",
+    "source": "Woodrow Borah and Sherburne Cook, The Population of Central Mexico (1963); Alfred Crosby, The Columbian Exchange (1972)",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Central Mexico's pre-contact population estimated at 25–30 million (Borah/Cook) to 10–15 million (other estimates). By 1600, it had fallen to 1–2 million — a decline of 80–95%. Successive epidemic waves (1520, 1531, 1545, 1576) compounded by encomienda labor and violence.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "inca-empire-population-collapse",
+    "category": "Andean Population Collapse (1532–1620)",
+    "killed": "~6–9 million (est.)",
+    "injured": "Empire and civilization destroyed",
+    "source": "John Hemming, The Conquest of the Incas (1970); Cook, Noble David, Born to Die (1998)",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "The Inca Empire's population at contact was approximately 9–14 million. By 1620, it had fallen to roughly 600,000–1 million. Epidemic disease (smallpox killed Huayna Capac c.1528 before Pizarro arrived), civil war, conquest violence, and mita labor in Potosí all contributed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "la-noche-triste-spanish-losses",
+    "category": "La Noche Triste — Spanish and Allied Losses (June 30–July 1, 1520)",
+    "killed": "~450 Spanish, 4,000+ Tlaxcalan allies",
+    "injured": "Most of surviving force wounded",
+    "source": "Bernal Díaz del Castillo, Historia verdadera (c.1568); Hugh Thomas, Conquest (1993)",
+    "tier": 1,
+    "contested": "partial",
+    "note": "The catastrophic Spanish retreat from Tenochtitlan on the night of June 30–July 1, 1520. Nearly half the Spanish force killed; most horses, cannon, and the entire seized Aztec treasure (the 'ransom') lost in the lake. The worst Spanish military defeat of the conquest era.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "maya-yucatan-population-collapse",
+    "category": "Maya Yucatán — Population Collapse (1519–1600)",
+    "killed": "~1–2 million (est.)",
+    "injured": "Multiple polities destroyed",
+    "source": "Inga Clendinnen, Ambivalent Conquests (1987); Grant Jones, Conquest of the Last Maya Kingdom (1998)",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Pre-contact Yucatan Maya population estimated at 1.5–2 million. By 1600 it had collapsed by perhaps 80–90% from epidemic disease and brutal conquest campaigns. Bishop Diego de Landa's burning of Maya books at Mani in 1562 destroyed irreplaceable written knowledge — an act of cultural genocide.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "great-dying-global-climate-impact",
+    "category": "The Great Dying — Global Climate Impact",
+    "killed": "~55 million (estimated total indigenous Americans)",
+    "injured": "Civilizational destruction across two continents",
+    "source": "Alexander Koch et al., 'Earth system impacts of the European arrival and Great Dying in the Americas,' The Lancet: Planetary Health (2019)",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Koch et al. (2019) found the death of ~55 million indigenous Americans caused abandonment of ~56 million hectares of farmland, triggering forest regrowth that removed enough CO2 to cause a measurable global cooling event (the 'Little Ice Age' dip c.1610). The conquest reshaped Earth's climate as well as its human geography.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

@@ -1,0 +1,184 @@
+# Prometheus Alert Rules for AutoGen Financial Analysis System
+
+groups:
+  - name: system_health
+    rules:
+      # High CPU usage alert
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is above 80% for more than 5 minutes on instance {{ $labels.instance }}"
+
+      # Critical CPU usage alert
+      - alert: CriticalCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 90
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical CPU usage detected"
+          description: "CPU usage is above 90% for more than 2 minutes on instance {{ $labels.instance }}"
+
+      # High memory usage alert
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is above 85% for more than 5 minutes on instance {{ $labels.instance }}"
+
+      # Critical memory usage alert
+      - alert: CriticalMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 95
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical memory usage detected"
+          description: "Memory usage is above 95% for more than 2 minutes on instance {{ $labels.instance }}"
+
+  - name: application_health
+    rules:
+      # High HTTP error rate
+      - alert: HighHTTPErrorRate
+        expr: (rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m])) * 100 > 5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High HTTP error rate detected"
+          description: "HTTP 5xx error rate is above 5% for more than 5 minutes"
+
+      # High response time
+      - alert: HighResponseTime
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High response time detected"
+          description: "95th percentile response time is above 2 seconds for more than 5 minutes"
+
+      # Service down
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service is down"
+          description: "Service {{ $labels.instance }} has been down for more than 1 minute"
+
+  - name: database_health
+    rules:
+      # PostgreSQL high connections
+      - alert: PostgreSQLHighConnections
+        expr: pg_stat_database_numbackends / pg_settings_max_connections * 100 > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "PostgreSQL high connections detected"
+          description: "PostgreSQL connection usage is above 80% for more than 5 minutes"
+
+      # PostgreSQL slow queries
+      - alert: PostgreSQLSlowQueries
+        expr: rate(pg_stat_database_calls_total[5m]) > 100
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "PostgreSQL slow queries detected"
+          description: "PostgreSQL is experiencing high query load for more than 5 minutes"
+
+  - name: redis_health
+    rules:
+      # Redis high memory usage
+      - alert: RedisHighMemoryUsage
+        expr: (redis_memory_used_bytes / redis_memory_max_bytes) * 100 > 85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis high memory usage detected"
+          description: "Redis memory usage is above 85% for more than 5 minutes"
+
+      # Redis high connection count
+      - alert: RedisHighConnections
+        expr: redis_connected_clients > 100
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Redis high connection count detected"
+          description: "Redis has more than 100 connected clients for more than 5 minutes"
+
+  - name: api_health
+    rules:
+      # API high error rate
+      - alert: APIHighErrorRate
+        expr: (rate(api_requests_total{status=~"5.."}[5m]) / rate(api_requests_total[5m])) * 100 > 3
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "API high error rate detected"
+          description: "API error rate is above 3% for more than 3 minutes"
+
+      # API slow response time
+      - alert: APISlowResponseTime
+        expr: histogram_quantile(0.95, rate(api_request_duration_seconds_bucket[5m])) > 1
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "API slow response time detected"
+          description: "API 95th percentile response time is above 1 second for more than 3 minutes"
+
+      # Analysis task failures
+      - alert: AnalysisTaskFailures
+        expr: rate(analysis_tasks_failed_total[5m]) > 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Analysis task failures detected"
+          description: "Analysis tasks are failing at a rate higher than 0.1 per minute for more than 5 minutes"
+
+  - name: business_metrics
+    rules:
+      # Low task completion rate
+      - alert: LowTaskCompletionRate
+        expr: rate(analysis_tasks_completed_total[1h]) / rate(analysis_tasks_created_total[1h]) < 0.8
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low task completion rate detected"
+          description: "Task completion rate is below 80% for more than 15 minutes"
+
+      # High task queue length
+      - alert: HighTaskQueueLength
+        expr: analysis_tasks_pending > 50
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High task queue length detected"
+          description: "Task queue has more than 50 pending tasks for more than 5 minutes"
+
+      # Data collection failures
+      - alert: DataCollectionFailures
+        expr: rate(data_collection_errors_total[5m]) > 0.5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Data collection failures detected"
+          description: "Data collection is experiencing high error rate for more than 5 minutes"

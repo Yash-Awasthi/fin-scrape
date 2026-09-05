@@ -1,0 +1,588 @@
+[
+  {
+    "id": "tribal-forces-advance-1947",
+    "from": [
+      73.47,
+      34.36
+    ],
+    "to": [
+      74.8,
+      34.08
+    ],
+    "cat": "pakistan-op",
+    "label": "Pakistani Tribal Lashkar Advance (Oct 1947)",
+    "date": "1947-10-22",
+    "confidence": "high",
+    "notes": "Pakistani Pashtun tribal fighters advanced from Muzaffarabad toward Srinagar, reaching Uri and Baramulla before being halted by Indian troops airlifted on Oct 27.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-troops-airlift-1947",
+    "from": [
+      77.21,
+      28.61
+    ],
+    "to": [
+      74.8,
+      34.08
+    ],
+    "cat": "indian-op",
+    "label": "Indian Army Airlift to Srinagar (Oct 27, 1947)",
+    "date": "1947-10-27",
+    "confidence": "high",
+    "notes": "1st Sikh Regiment airlifted from Delhi to Srinagar in the first combat airlift in South Asian history, enabling defense of the capital.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-crossborder-lahore-1965",
+    "from": [
+      74.86,
+      32.74
+    ],
+    "to": [
+      74.34,
+      31.55
+    ],
+    "cat": "indian-op",
+    "label": "India Crosses International Border → Lahore (Sep 1965)",
+    "date": "1965-09-06",
+    "confidence": "high",
+    "notes": "Indian 15 Corps crossed the international border toward Lahore on September 6, 1965. Indian forces reached within 10km of Lahore before the UN ceasefire.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-operation-grand-slam-1965",
+    "from": [
+      74.37,
+      32.93
+    ],
+    "to": [
+      74.86,
+      32.74
+    ],
+    "cat": "pakistan-op",
+    "label": "Pakistan Op Grand Slam — Chamb to Akhnoor (Sep 1965)",
+    "date": "1965-09-01",
+    "confidence": "high",
+    "notes": "Pakistan's armored thrust in Chamb sector aimed to cut the Jammu-Srinagar road at Akhnoor. Pakistan made significant gains before India opened the Lahore front.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-sialkot-offensive-1965",
+    "from": [
+      74.86,
+      32.74
+    ],
+    "to": [
+      74.53,
+      32.5
+    ],
+    "cat": "indian-op",
+    "label": "India Attacks Sialkot — 1 Corps Offensive (Sep 1965)",
+    "date": "1965-09-08",
+    "confidence": "high",
+    "notes": "India's I Corps with 1st Armoured Division advanced toward Sialkot, triggering the largest tank battle since WWII. Pakistani armour halted the Indian advance.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-east-pakistan-offensive-1971",
+    "from": [
+      91.0,
+      22.5
+    ],
+    "to": [
+      90.4,
+      23.72
+    ],
+    "cat": "indian-op",
+    "label": "India's Three-Pronged Advance on Dhaka (Dec 1971)",
+    "date": "1971-12-03",
+    "confidence": "high",
+    "notes": "Indian forces advanced from three directions simultaneously toward Dhaka: from Agartala in the east, Meghalaya in the north, and West Bengal in the southwest.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-west-front-1971-lahore",
+    "from": [
+      74.86,
+      32.74
+    ],
+    "to": [
+      74.34,
+      31.55
+    ],
+    "cat": "indian-op",
+    "label": "India Western Front Advance — Lahore Sector (Dec 1971)",
+    "date": "1971-12-03",
+    "confidence": "high",
+    "notes": "India launched limited offensive on western front to prevent Pakistan from reinforcing East Pakistan. Indian forces made modest gains in Shakargarh bulge.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-kargil-infiltration-1999",
+    "from": [
+      76.13,
+      34.56
+    ],
+    "to": [
+      75.87,
+      34.51
+    ],
+    "cat": "pakistan-op",
+    "label": "Pakistan NLI Infiltration — Kargil Peaks (Winter 1998–99)",
+    "date": "1999-01-15",
+    "confidence": "high",
+    "notes": "Pakistani NLI soldiers infiltrated across LOC to occupy 130+ Kargil peaks in a covert operation. The operation extended along an 80km front.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "iaf-kargil-strikes-1999",
+    "from": [
+      74.77,
+      34.0
+    ],
+    "to": [
+      76.01,
+      34.65
+    ],
+    "cat": "indian-op",
+    "label": "IAF Strikes on Kargil Peaks (May–Jul 1999)",
+    "date": "1999-05-26",
+    "confidence": "high",
+    "weaponType": "drone",
+    "notes": "Indian Air Force conducted 550+ strike sorties against Kargil peaks. IAF operated under orders to stay on Indian side of LOC. Lost MiG-21, MiG-27, Mi-8 to Pakistani SAMs.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-surgical-strike-sept-2016",
+    "from": [
+      74.8,
+      34.08
+    ],
+    "to": [
+      73.9,
+      34.22
+    ],
+    "cat": "indian-op",
+    "label": "India Surgical Strikes Across LOC (Sep 28–29, 2016)",
+    "date": "2016-09-29",
+    "confidence": "medium",
+    "notes": "Indian Army Special Forces reportedly crossed LOC to destroy 7 militant launch pads. Pakistan denied any incursion. Exact targets and locations partially undisclosed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "iaf-balakot-strike-2019",
+    "from": [
+      74.77,
+      34.0
+    ],
+    "to": [
+      73.35,
+      34.55
+    ],
+    "cat": "indian-op",
+    "label": "IAF Balakot Strike — Mirage 2000s (Feb 26, 2019)",
+    "date": "2019-02-26",
+    "confidence": "high",
+    "weaponType": "cruise",
+    "launched": 12,
+    "notes": "12 IAF Mirage 2000 jets, each carrying 2 SPICE-2000 precision bombs, struck JeM camp near Balakot, KPK. First IAF strike inside Pakistan since 1971.",
+    "damage": "JeM Madrasa complex reportedly hit; Pakistani side disputed casualty claims",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "paf-retaliation-abhinandan-2019",
+    "from": [
+      73.07,
+      33.69
+    ],
+    "to": [
+      74.8,
+      34.08
+    ],
+    "cat": "pakistan-op",
+    "label": "PAF Incursion Into Indian Airspace (Feb 27, 2019)",
+    "date": "2019-02-27",
+    "confidence": "high",
+    "weaponType": "unknown",
+    "notes": "Pakistan Air Force jets entered Indian airspace near LOC the day after Balakot. India scrambled fighters including Wing Commander Abhinandan's MiG-21 Bison, which was shot down in aerial combat.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "indian-navy-blockade-karachi-1971",
+    "from": [
+      72.83,
+      18.92
+    ],
+    "to": [
+      67.01,
+      24.86
+    ],
+    "cat": "indian-op",
+    "label": "Indian Navy Blockades Karachi (Dec 1971)",
+    "date": "1971-12-04",
+    "confidence": "high",
+    "notes": "Indian Navy's Western Fleet blockaded Karachi port, sinking Pakistani warships PNS Khaibar, PNS Shah Jahan, and merchant ships. Operation Trident used indigenously-developed anti-ship missiles.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-meghdoot-1984",
+    "from": [
+      77.57,
+      34.14
+    ],
+    "to": [
+      77.1,
+      35.42
+    ],
+    "cat": "indian-op",
+    "label": "Operation Meghdoot — Troops Airlifted to Siachen (Apr 1984)",
+    "date": "1984-04-13",
+    "confidence": "high",
+    "notes": "India airlifted troops from Leh to occupy Siachen Glacier before Pakistan could establish presence. Established India's control over the world's highest battlefield.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-preemptive-strike-dec1971",
+    "from": [
+      74.53,
+      32.5
+    ],
+    "to": [
+      77.57,
+      34.14
+    ],
+    "cat": "pakistan-op",
+    "label": "Pakistani Pre-emptive Airstrikes on Indian Airbases (Dec 3, 1971)",
+    "date": "1971-12-03",
+    "confidence": "high",
+    "weaponType": "unknown",
+    "notes": "Pakistan launched pre-emptive strikes on Indian airbases including Ambala, Agra, Udhampur, Srinagar, Avantipur, Faridkot, Amritsar, and Uttarlai — emulating Israel's 1967 strike on Egypt. The strikes failed to achieve decisive results.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-sindoor-2025-bahawalpur",
+    "from": [
+      74.77,
+      34.0
+    ],
+    "to": [
+      71.68,
+      29.39
+    ],
+    "cat": "indian-op",
+    "label": "Operation Sindoor — Strike on Bahawalpur JeM Base (May 2025)",
+    "date": "2025-05-07",
+    "confidence": "high",
+    "weaponType": "cruise",
+    "notes": "IAF precision strike on JeM's Markaz Subhan Allah complex in Bahawalpur, one of nine targets hit in Operation Sindoor responding to the Pahalgam attack.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-sindoor-2025-muridke",
+    "from": [
+      74.77,
+      34.0
+    ],
+    "to": [
+      74.25,
+      31.82
+    ],
+    "cat": "indian-op",
+    "label": "Operation Sindoor — Strike on Muridke LeT HQ (May 2025)",
+    "date": "2025-05-07",
+    "confidence": "high",
+    "weaponType": "cruise",
+    "notes": "IAF precision strike on Lashkar-e-Taiba's Markaz Taiba complex in Muridke as part of Operation Sindoor. Pakistan claimed Indian missiles were intercepted.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-artillery-loc-response-2025",
+    "from": [
+      73.47,
+      34.36
+    ],
+    "to": [
+      74.8,
+      34.08
+    ],
+    "cat": "pakistan-op",
+    "label": "Pakistan Artillery Response Across LOC (May 2025)",
+    "date": "2025-05-07",
+    "confidence": "high",
+    "weaponType": "rocket",
+    "notes": "Pakistan responded to Operation Sindoor with heavy artillery fire along the LOC in multiple sectors, and drone/missile strikes targeting Indian military infrastructure near Jammu.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pak-gibraltar-infiltration-route-1965",
+    "from": [
+      73.47,
+      34.36
+    ],
+    "to": [
+      74.8,
+      34.08
+    ],
+    "cat": "pakistan-op",
+    "label": "Operation Gibraltar Infiltration Route (Aug 1965)",
+    "date": "1965-08-05",
+    "confidence": "high",
+    "notes": "Pakistani fighters infiltrated across multiple LOC crossing points into Kashmir in August 1965, attempting to spark a mass uprising. Local Kashmiris reported them, causing the operation to fail.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "china-aksai-chin-road",
+    "from": [
+      79.1,
+      35.2
+    ],
+    "to": [
+      80.5,
+      32.5
+    ],
+    "cat": "loc",
+    "label": "China G219 Highway Through Aksai Chin",
+    "date": "1957-01-01",
+    "confidence": "high",
+    "notes": "China built the G219 highway through Aksai Chin, connecting Tibet to Xinjiang, in 1957. India discovered this only in 1959, triggering the 1962 war. The road remains a key CPEC-linked strategic asset.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "let-sea-route-mumbai-2008",
+    "from": [
+      67.01,
+      24.86
+    ],
+    "to": [
+      72.83,
+      18.92
+    ],
+    "cat": "terror-attack",
+    "label": "LeT Sea Route — Karachi to Mumbai (26/11 Attack)",
+    "date": "2008-11-26",
+    "confidence": "high",
+    "notes": "Ten LeT operatives traveled by boat from Karachi, hijacking an Indian fishing trawler MV Kuber and landing by rubber dinghy at Colaba, Mumbai on November 26, 2008.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-navy-ibn-tufail-1971",
+    "from": [
+      72.83,
+      18.92
+    ],
+    "to": [
+      67.01,
+      24.86
+    ],
+    "cat": "indian-op",
+    "label": "INS Vikrant Blockade of East Pakistan (Dec 1971)",
+    "date": "1971-12-04",
+    "confidence": "high",
+    "notes": "India's aircraft carrier INS Vikrant blockaded East Pakistan coast, preventing Pakistani evacuation and supply by sea, contributing decisively to Pakistani surrender in December 1971.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-aq-khan-proliferation",
+    "from": [
+      73.39,
+      33.6
+    ],
+    "to": [
+      64.9,
+      28.87
+    ],
+    "cat": "nuclear",
+    "label": "Pakistan Uranium Enrichment Pipeline — Kahuta to Chagai",
+    "date": "1976-01-01",
+    "confidence": "high",
+    "notes": "Pakistan's nuclear weapons production pipeline ran from Kahuta enrichment plant to Wah ordnance complex for weapons fabrication, with testing at Chagai. A.Q. Khan's network also proliferated to Libya, North Korea, Iran.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-pokhran-to-aircraft-delivery",
+    "from": [
+      71.91,
+      27.0
+    ],
+    "to": [
+      77.57,
+      34.14
+    ],
+    "cat": "nuclear",
+    "label": "Indian Nuclear Deterrent — Pokhran to Delivery Systems",
+    "date": "1998-05-11",
+    "confidence": "medium",
+    "notes": "India's nuclear weapons are believed to be deliverable by Mirage 2000, Jaguar aircraft, and Agni ballistic missiles. The deterrence architecture was built after Pokhran-II confirmed India as nuclear state.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cpec-route-gwadar-kashgar",
+    "from": [
+      62.32,
+      25.12
+    ],
+    "to": [
+      75.42,
+      36.85
+    ],
+    "cat": "pakistan-op",
+    "label": "China-Pakistan Economic Corridor (CPEC)",
+    "date": "2015-04-20",
+    "confidence": "high",
+    "notes": "CPEC runs ~3,000km from Gwadar port to Kashgar, China. India strongly objects as it passes through Gilgit-Baltistan which India claims as its own sovereign territory.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "iaf-mig21-shoot-down-kargil",
+    "from": [
+      74.77,
+      34.0
+    ],
+    "to": [
+      76.13,
+      34.56
+    ],
+    "cat": "indian-op",
+    "label": "IAF MiG-27 Shot Down by Stinger SAM (May 1999)",
+    "date": "1999-05-27",
+    "confidence": "high",
+    "weaponType": "ballistic",
+    "notes": "Indian Air Force lost MiG-27 (Flt Lt K. Nachiketa) to Pakistani Stinger MANPADS on May 27, 1999. Pilot ejected into Pakistani territory and was captured, released later. This incident led to IAF operating at higher altitudes.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-agni-5-delivery-range",
+    "from": [
+      71.91,
+      27.0
+    ],
+    "to": [
+      64.9,
+      28.87
+    ],
+    "cat": "nuclear",
+    "label": "Agni-V ICBM Range Coverage",
+    "date": "2012-04-19",
+    "confidence": "medium",
+    "weaponType": "ballistic",
+    "notes": "India's Agni-V ICBM has range of 5,000+ km, covering all of Pakistan and China. Tests conducted since 2012. Pakistan's Shaheen-III (2,750km range) covers all of India. Both constitute mutual assured destruction.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-pakistan-partition-line-radcliffe",
+    "from": [
+      74.57,
+      31.6
+    ],
+    "to": [
+      74.0,
+      23.5
+    ],
+    "cat": "loc",
+    "label": "Radcliffe Line — India-Pakistan International Border",
+    "date": "1947-08-17",
+    "confidence": "high",
+    "notes": "The Radcliffe Line divided British India into India and Pakistan on August 17, 1947. Sir Cyril Radcliffe drew it in 5 weeks with no prior India knowledge. The hastily drawn line created disputes that persist to this day.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pak-india-1971-sindh-west",
+    "from": [
+      74.34,
+      31.55
+    ],
+    "to": [
+      68.37,
+      25.37
+    ],
+    "cat": "indian-op",
+    "label": "India-Pakistan Sindh-Rajasthan Front (Dec 1971)",
+    "date": "1971-12-06",
+    "confidence": "high",
+    "notes": "Indian forces advanced in the Sindh-Rajasthan sector in December 1971, taking Pakistani towns including Naya Chor. Indian advances were halted by ceasefire before reaching Hyderabad or Karachi.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "india-pak-bus-diplomacy-vajpayee",
+    "from": [
+      77.21,
+      28.61
+    ],
+    "to": [
+      74.34,
+      31.55
+    ],
+    "cat": "indian-op",
+    "label": "Vajpayee's Delhi-Lahore Bus Journey (Feb 1999)",
+    "date": "1999-02-20",
+    "confidence": "high",
+    "notes": "Indian PM Vajpayee's historic bus ride from Delhi to Lahore on February 20, 1999 symbolized a new era in India-Pakistan relations. Led to Lahore Declaration. The good will lasted only three months before Kargil.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-drone-samba-ib-may12-2026",
+    "from": [
+      74.82,
+      32.18
+    ],
+    "to": [
+      75.13,
+      32.56
+    ],
+    "cat": "strike",
+    "label": "Pakistani Drone Intrusions — Samba IB Sector (May 12, 2026)",
+    "date": "2026-05-12",
+    "weaponType": "drone_loitering",
+    "launched": 3,
+    "intercepted": 3,
+    "confidence": "medium",
+    "time": "20:30",
+    "status": "intercepted",
+    "platform": "Unknown UAV",
+    "notes": "Indian Army air defences intercepted small number of suspected Pakistani drones in Samba sector (International Border, Jammu division). Drone sightings also reported in Rajouri and Poonch LOC sectors same evening. All engaged; no casualties. Incident occurred on same day as DGMO hotline talks.",
+    "lastUpdated": "2026-05-12T22:30:00.000Z"
+  },
+  {
+    "id": "loc-firing-tarkundi-rajouri-jul19-2026",
+    "from": [
+      73.95,
+      33.55
+    ],
+    "to": [
+      74.15,
+      33.58
+    ],
+    "cat": "pakistan-op",
+    "label": "Pakistan Army Firing — Tarkundi Sector, Rajouri (Jul 17-19, 2026)",
+    "date": "2026-07-19",
+    "weaponType": "unknown",
+    "confidence": "medium",
+    "time": "22:00",
+    "status": "unknown",
+    "casualties": "None reported",
+    "notes": "First major cross-border small-arms firing incident since the May 10, 2025 Operation Sindoor ceasefire. Pakistani posts allegedly provided cover fire for an infiltration attempt; Indian White Knight Corps troops retaliated. No casualties.",
+    "lastUpdated": "2026-08-10T14:22:18.000Z"
+  },
+  {
+    "id": "loc-firing-balakote-poonch-jul19-2026",
+    "from": [
+      73.75,
+      33.86
+    ],
+    "to": [
+      73.95,
+      33.8
+    ],
+    "cat": "pakistan-op",
+    "label": "Pakistan Army Firing — Balakote Sector, Poonch (Jul 18-19, 2026)",
+    "date": "2026-07-19",
+    "weaponType": "unknown",
+    "confidence": "medium",
+    "time": "23:30",
+    "status": "unknown",
+    "casualties": "None reported",
+    "notes": "Heavy gunfire including small arms and machine guns exchanged for over two-and-a-half hours in the Rajouri-Poonch (Pir Panjal) sector, part of a three-day cluster of ceasefire violations breaking 435 days of LoC calm.",
+    "lastUpdated": "2026-08-10T14:22:18.000Z"
+  }
+]

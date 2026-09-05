@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-26T15:05:47.141Z",
+  "tracker": "climate-solutions",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 12
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 39
+    },
+    "econ": {
+      "status": "unchanged",
+      "count": 12
+    },
+    "claims": {
+      "status": "unchanged",
+      "count": 15
+    },
+    "political": {
+      "status": "unchanged",
+      "count": 16
+    },
+    "events": {
+      "status": "updated",
+      "count": 49
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

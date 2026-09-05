@@ -1,0 +1,1107 @@
+[
+  {
+    "era": "Texas Revolution — Prelude & Early Fighting (1835)",
+    "events": [
+      {
+        "id": "battle-gonzales",
+        "year": "Oct 2, 1835",
+        "title": "Battle of Gonzales — 'Come and Take It'",
+        "type": "battle",
+        "detail": "Mexican soldiers attempted to reclaim a small bronze cannon loaned to settlers at Gonzales, Texas. Texan colonists refused, raised a defiant flag reading 'Come and Take It,' and repelled the Mexican detachment in a brief skirmish. Widely considered the opening engagement of the Texas Revolution, the cannon remained in Texan hands.",
+        "sources": [
+          { "name": "Texas State Library and Archives Commission", "tier": 1, "url": "https://www.tsl.texas.gov/", "pole": "western" },
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2, "url": "https://utpress.utexas.edu/books/hardil", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Come_And_Take_It_Mural.jpg",
+            "caption": "Come and Take It mural at Gonzales, Texas — commemorating the defiant stand of October 2, 1835 that opened the Texas Revolution",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/05/Come_And_Take_It_Mural.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "capture-goliad-fort",
+        "year": "Oct 9, 1835",
+        "title": "Texans Capture La Bahía (Goliad)",
+        "type": "battle",
+        "detail": "A Texan force under Captain George Collinsworth stormed the presidio La Bahía at Goliad, capturing the Mexican garrison and a substantial supply of arms and gunpowder. The victory gave Texans control of the only port on the lower coast and secured crucial military supplies for the revolution.",
+        "sources": [
+          { "name": "Texas State Library and Archives Commission", "tier": 1 },
+          { "name": "Paul D. Lack, The Texas Revolutionary Experience (Texas A&M University Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-concepcion",
+        "year": "Oct 28, 1835",
+        "title": "Battle of Concepción",
+        "type": "battle",
+        "detail": "Near the mission Concepción outside San Antonio, James Bowie and James Fannin's Texan force used the natural terrain to repel a larger Mexican force under General Cos. Texan riflemen inflicted heavy casualties while suffering minimal losses, demonstrating that irregular Texan tactics could defeat regular Mexican troops in the field.",
+        "sources": [
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2 },
+          { "name": "Daughters of the Republic of Texas Library", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "consultation-of-1835",
+        "year": "Nov 3, 1835",
+        "title": "Consultation of 1835 — Texan Provisional Government Formed",
+        "type": "diplomatic",
+        "detail": "Texan delegates meeting at San Felipe de Austin established a provisional government, named Henry Smith as provisional governor, and Sam Houston as commander-in-chief of the Texas army. The Consultation initially declined to declare independence but issued a Declaration of Causes justifying armed resistance. It marked the institutional birth of the Texas Revolution's governing structure.",
+        "sources": [
+          { "name": "Texas State Library and Archives Commission — Consultation Records", "tier": 1 },
+          { "name": "Eugene C. Barker, The Life of Stephen F. Austin (University of Texas Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "grass-fight",
+        "year": "Nov 26, 1835",
+        "title": "The Grass Fight Near San Antonio",
+        "type": "battle",
+        "detail": "Texan scouts under James Bowie attacked a Mexican pack-mule train near San Antonio believing it carried silver payroll. The mules instead carried grass fodder for horses, but the engagement revealed severe supply difficulties facing the Mexican garrison under General Martín Perfecto de Cos inside Bexar.",
+        "sources": [
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2 },
+          { "name": "Handbook of Texas Online — Texas State Historical Association", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "storming-bexar",
+        "year": "Dec 5–10, 1835",
+        "title": "Storming of Bexar — Texans Capture San Antonio",
+        "type": "siege",
+        "detail": "After weeks of siege, Texan volunteers launched a house-to-house assault on San Antonio de Bexar under Benjamin Milam (who was killed in the fighting) and Frank Johnson. General Cos surrendered the city and the Alamo fortress on December 10, signing a parole agreement to withdraw his forces south of the Rio Grande. Texans now controlled all of Texas north of that river.",
+        "sources": [
+          { "name": "Texas General Land Office — Historical Records", "tier": 1 },
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Texas Revolution — Independence, Alamo & San Jacinto (1836)",
+    "events": [
+      {
+        "id": "santa-anna-march-north",
+        "year": "Jan 1836",
+        "title": "Santa Anna Marches North to Crush the Rebellion",
+        "type": "battle",
+        "detail": "President-General Antonio López de Santa Anna personally led an army of approximately 6,000 soldiers from San Luis Potosí northward to Texas. He declared the Texan rebels 'pirates' subject to execution under Mexican law, and vowed to expel or destroy all Anglo-American colonists. His winter march across the arid Coahuila plains caused significant attrition to his forces before battle was joined.",
+        "sources": [
+          { "name": "Will Fowler, Santa Anna of Mexico (University of Nebraska Press)", "tier": 2 },
+          { "name": "Archivo General de la Nación, Mexico City", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "texas-independence-declared",
+        "year": "Mar 2, 1836",
+        "title": "Texas Declaration of Independence",
+        "type": "diplomatic",
+        "detail": "Delegates at the Convention of 1836, meeting at Washington-on-the-Brazos, unanimously adopted a Declaration of Independence modeled on the US Declaration. George Childress was the primary author. The declaration accused the Mexican government of imposing military despotism and denying constitutional rights. Texas formally became the Republic of Texas — though the revolution was still undecided on the battlefield.",
+        "sources": [
+          { "name": "Texas Declaration of Independence — Texas State Library", "tier": 1, "url": "https://www.tsl.texas.gov/ref/abouttx/decoind.html", "pole": "western" },
+          { "name": "William C. Davis, Three Roads to the Alamo (HarperCollins)", "tier": 2, "url": "https://www.harpercollins.com/products/three-roads-to-the-alamo-william-c-davis", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Declaration_Broadside_from_transparency_1909_1_344.jpg",
+            "caption": "1836 broadside printing of the Texas Declaration of Independence, signed at Washington-on-the-Brazos on March 2, 1836",
+            "source": "Wikimedia Commons / Texas State Library",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Declaration_Broadside_from_transparency_1909_1_344.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "siege-alamo-begins",
+        "year": "Feb 23, 1836",
+        "title": "Siege of the Alamo Begins",
+        "type": "siege",
+        "detail": "Santa Anna's vanguard reached San Antonio on February 23, 1836, catching the garrison under Lt. Col. William Barret Travis and Jim Bowie largely unprepared. Approximately 182–189 defenders occupied the old mission converted to a fort. Travis sent his famous letter appealing for reinforcements: 'I shall never surrender or retreat... Victory or Death.' A small party of 32 volunteers from Gonzales slipped through to reinforce the garrison on March 1.",
+        "sources": [
+          { "name": "William Barret Travis letter, Feb 24, 1836 — Texas State Library", "tier": 1, "url": "https://www.tsl.texas.gov/treasures/republic/alamo/travis.html", "pole": "western" },
+          { "name": "William C. Davis, Three Roads to the Alamo (HarperCollins)", "tier": 2, "url": "https://www.harpercollins.com/products/three-roads-to-the-alamo-william-c-davis", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:1854_Alamo.jpg",
+            "caption": "The Alamo as it appeared in 1854, showing the distinctive chapel facade — the only portion still standing when the siege and fall occurred in 1836",
+            "source": "Wikimedia Commons / Edward Everett",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/dd/1854_Alamo.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "fall-of-alamo",
+        "year": "Mar 6, 1836",
+        "title": "Fall of the Alamo — All Defenders Killed",
+        "type": "battle",
+        "detail": "Before dawn on March 6, 1836, Santa Anna's army assaulted the Alamo in four columns. After roughly 90 minutes of intense fighting, all ~189 Texan defenders were killed, including William Barret Travis, Jim Bowie, and Davy Crockett. Mexican losses were approximately 400–600 killed and wounded. Santa Anna ordered the defenders' bodies burned. The battle became a rallying cry — 'Remember the Alamo!' — that galvanized Texan resistance.",
+        "sources": [
+          { "name": "Mexican Army official dispatch, Santa Anna to War Ministry, Mar 6, 1836", "tier": 1 },
+          { "name": "William C. Davis, Three Roads to the Alamo (HarperCollins)", "tier": 2 }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Fall-of-the-alamo-gentilz_1844.jpg",
+            "caption": "Fall of the Alamo, painting by Theodore Gentilz (c. 1844)",
+            "source": "Wikimedia Commons / Theodore Gentilz",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/30/Fall-of-the-alamo-gentilz_1844.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "battle-coleto-creek",
+        "year": "Mar 19–20, 1836",
+        "title": "Battle of Coleto Creek — Fannin's Force Surrounded",
+        "type": "battle",
+        "detail": "James Fannin's 300-man Texan force was intercepted by General José Urrea's Mexican cavalry and infantry on the open prairie near Coleto Creek. Caught in the open without water, the Texans formed a square and repulsed Mexican attacks but suffered heavy casualties. Promised the honors of war, Fannin surrendered on March 20. The prisoners were marched back to Goliad.",
+        "sources": [
+          { "name": "Harbert Davenport collection — Texas State Library", "tier": 1 },
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "goliad-massacre",
+        "year": "Mar 27, 1836",
+        "title": "Goliad Massacre — 342 Texan POWs Executed",
+        "type": "battle",
+        "detail": "On Palm Sunday, by direct order of Santa Anna invoking a Mexican law mandating execution of pirates, approximately 342 Texan prisoners including wounded soldiers were marched out of Presidio La Bahía and shot. Fannin was among the last executed. A small number escaped. The massacre, committed after surrender, deeply outraged US public opinion and became a second rallying cry alongside the Alamo.",
+        "sources": [
+          { "name": "Archivo de la Secretaría de Defensa Nacional, Mexico", "tier": 1 },
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "runaway-scrape-1836",
+        "year": "Mar–Apr 1836",
+        "title": "The Runaway Scrape — Texan Civilians Flee East",
+        "type": "diplomatic",
+        "detail": "News of the Alamo's fall on March 6 and the Goliad Massacre on March 27 triggered a mass flight of an estimated 30,000 Texan civilians eastward ahead of Santa Anna's advancing army — known as the 'Runaway Scrape.' Families abandoned farms, livestock, and possessions in a desperate exodus toward the Louisiana border through spring rains and mud. Sam Houston's controversial strategic retreat added to the panic: the provisional government itself fled to Galveston Island. The 'Runaway Scrape' represented the nadir of the Texas Revolution — a disorganized mass flight that nearly destroyed morale and government. Only Houston's surprise victory at San Jacinto on April 21 reversed the collapse.",
+        "sources": [
+          { "name": "Texas State Library and Archives Commission — Runaway Scrape eyewitness accounts", "tier": 1, "url": "https://www.tsl.texas.gov/", "pole": "western" },
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2, "url": "https://utpress.utexas.edu/books/hardil", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:The_Battle_of_San_Jacinto_%281895%29.jpg",
+            "caption": "The Battle of San Jacinto (1895) by Henry Arthur McArdle — the victory that ended the Runaway Scrape",
+            "source": "Wikimedia Commons / Henry Arthur McArdle",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/8b/The_Battle_of_San_Jacinto_%281895%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "battle-san-jacinto",
+        "year": "Apr 21, 1836",
+        "title": "Battle of San Jacinto — Texas Wins Independence",
+        "type": "battle",
+        "detail": "In a surprise 18-minute assault on Santa Anna's encamped army near the San Jacinto River, Sam Houston's 910-man Texan force attacked during the Mexican siesta hour. Shouting 'Remember the Alamo! Remember Goliad!', Texans killed approximately 630 Mexican soldiers and captured nearly 700. Houston was wounded. Santa Anna was captured disguised as a common soldier the following day. It was a decisive and total victory.",
+        "sources": [
+          { "name": "Sam Houston Papers — Texas State Archives", "tier": 1 },
+          { "name": "Stephen L. Hardin, Texian Iliad (University of Texas Press)", "tier": 2 }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:The_Battle_of_San_Jacinto_%281895%29.jpg",
+            "caption": "The Battle of San Jacinto, painting by Henry Arthur McArdle (1895)",
+            "source": "Wikimedia Commons / Henry Arthur McArdle",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/8b/The_Battle_of_San_Jacinto_%281895%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "treaties-velasco",
+        "year": "May 14, 1836",
+        "title": "Treaties of Velasco — Santa Anna Recognizes Texas",
+        "type": "treaty",
+        "detail": "As a captive of the Texan government, Santa Anna signed two Treaties of Velasco — one public and one secret. The public treaty ended hostilities and required Mexican withdrawal south of the Rio Grande. The secret treaty promised to work for Texas recognition and a boundary at the Rio Grande in exchange for his freedom. The Mexican government repudiated both treaties, asserting Santa Anna had no authority to sign under duress.",
+        "sources": [
+          { "name": "Treaties of Velasco text — Texas State Library", "tier": 1 },
+          { "name": "Andrés Tijerina, Tejanos and Texas Under the Mexican Flag (Texas A&M University Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "republic-texas-established",
+        "year": "Sep 1836",
+        "title": "Republic of Texas Established — Houston Elected President",
+        "type": "diplomatic",
+        "detail": "Texan voters ratified the new constitution and overwhelmingly elected Sam Houston as the first president of the Republic of Texas in September 1836. The same vote showed over 3,500 Texans favoring US annexation versus 91 opposed. Texas maintained de facto independence but Mexico never recognized it. The Republic struggled with debt, recurring Mexican raids, and unresolved relations with Native American tribes.",
+        "sources": [
+          { "name": "Texas State Library and Archives Commission — Election Records", "tier": 1 },
+          { "name": "Randolph B. Campbell, Gone to Texas: A History of the Lone Star State (Oxford University Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Republic of Texas & Road to War (1836–1845)",
+    "events": [
+      {
+        "id": "austin-arrest-imprisonment",
+        "year": "Jan 1834–Jul 1835",
+        "title": "Stephen F. Austin Arrested — 18-Month Imprisonment in Mexico City",
+        "type": "diplomatic",
+        "detail": "Traveling to Mexico City to present Texan petitions for separate statehood and constitutional reforms, Stephen F. Austin was arrested on orders of Vice President Valentín Gómez Farías in January 1834 on suspicion of sedition. Austin had written a letter urging Texans to form a state government without Mexico's approval if necessary. He was held in the Prison of the Inquisition for 18 months without trial before release on bond in July 1835. His imprisonment radicalized Austin — previously the most cautious voice for accommodation — toward support for independence. 'The fact is we must and ought to become part of the United States,' Austin wrote after his release. He returned to Texas in September 1835, weeks before the Battle of Gonzales, his transformation from empresario to revolutionary complete.",
+        "sources": [
+          {
+            "name": "Eugene C. Barker, The Life of Stephen F. Austin (University of Texas Press)",
+            "tier": 2,
+            "url": "https://utpress.utexas.edu/books/barkli",
+            "pole": "western"
+          },
+          {
+            "name": "Texas State Library and Archives Commission — Austin Papers",
+            "tier": 1,
+            "url": "https://www.tsl.texas.gov/arc/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Stephen_Fuller_Austin_Posthumous_Portrait.jpg",
+            "caption": "Stephen F. Austin, portrait by William Howard (c. 1840). Austin's 18-month imprisonment in Mexico City transformed the 'Father of Texas' from a moderate negotiator into a proponent of independence.",
+            "source": "Wikimedia Commons / William Howard",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Stephen_Fuller_Austin_Posthumous_Portrait.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "tejano-allies-revolution",
+        "year": "1835–1836",
+        "title": "Tejano Allies and Lorenzo de Zavala Join the Revolution",
+        "type": "diplomatic",
+        "detail": "Native Texans of Mexican descent — Tejanos — played vital roles in the revolution. Lorenzo de Zavala, a former Mexican governor and constitution-maker, became the Republic's first Vice-President. Juan Seguín led a Tejano cavalry company at San Jacinto. Plácido Benavides and other Tejano leaders sided with the rebels, demonstrating the revolution was not solely an Anglo-American uprising but had significant Mexican roots.",
+        "sources": [
+          { "name": "Andrés Tijerina, Tejanos and Texas Under the Mexican Flag (Texas A&M University Press)", "tier": 2 },
+          { "name": "Texas State Library and Archives Commission", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-recognizes-texas",
+        "year": "Mar 3, 1837",
+        "title": "United States Recognizes the Republic of Texas",
+        "type": "diplomatic",
+        "detail": "On his last day in office, President Andrew Jackson extended formal diplomatic recognition to the Republic of Texas. Jackson had deliberately delayed recognition to avoid inflaming sectional tensions and risking war with Mexico before the 1836 election. The recognition was the first step toward eventual annexation but fell short of the immediate union that Texan president Houston and most Texans desired.",
+        "sources": [
+          { "name": "US Department of State Archives — Diplomatic Recognition Records", "tier": 1 },
+          { "name": "Marquis James, The Raven: A Biography of Sam Houston", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "texas-annexation-rejected-1837",
+        "year": "Aug 1837",
+        "title": "Texas Annexation Request Rejected by US",
+        "type": "diplomatic",
+        "detail": "President Mirabeau Lamar's Texas government formally requested annexation to the United States in 1837, but President Martin Van Buren's administration declined. Northern congressmen feared adding a large slaveholding state would upset the sectional balance in Congress. Concerns about provoking war with Mexico also contributed. Texas remained an independent republic, accumulating debt and diplomatic uncertainty.",
+        "sources": [
+          { "name": "US Congressional Record, 25th Congress", "tier": 1 },
+          { "name": "David M. Pletcher, The Diplomacy of Annexation (University of Missouri Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "republic-rio-grande",
+        "year": "Jan–Nov 1840",
+        "title": "Republic of the Rio Grande — Federalist Secession in Northern Mexico",
+        "type": "diplomatic",
+        "detail": "Mexican Federalist rebels under General Antonio Canales Rosillo, opposed to Centralist President Anastasio Bustamante's abrogation of the Constitution of 1824, proclaimed the breakaway Republic of the Rio Grande at Laredo on January 17, 1840, claiming the states of Coahuila, Nuevo León, and Tamaulipas under president Jesús de Cárdenas. The Republic of Texas officially stayed neutral but President Mirabeau Lamar secretly encouraged Texans to volunteer and gave Canales access to Texan arms; officers Reuben Ross and Samuel Jordan led Texan contingents fighting alongside Canales's forces. Centralist General Mariano Arista crushed the rebellion at the Battle of Santa Rita de Morelos (March 24–25, 1840), and cavalry commander Antonio Zapata was captured and executed days later. After a further defeat at the Battle of Saltillo on October 25, Canales surrendered at Camargo on November 6, 1840, ending the 283-day republic. Though it collapsed six years before the Mexican-American War, the episode revealed deep Federalist-Centralist fractures on Mexico's northern frontier and an established precedent of Texan-Mexican cooperation against Mexico City that foreshadowed the divided Mexican defense US forces later exploited.",
+        "sources": [
+          { "name": "Texas State Historical Association, Handbook of Texas — Republic of the Rio Grande", "tier": 3, "url": "https://www.tshaonline.org/handbook/entries/republic-of-the-rio-grande", "pole": "western" },
+          { "name": "Texas State Historical Association, Handbook of Texas — Antonio Canales Rosillo", "tier": 3, "url": "https://www.tshaonline.org/handbook/entries/canales-rosillo-antonio", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Republic_of_the_Rio_Grande",
+            "caption": "Flag of the Republic of the Rio Grande, the Federalist breakaway state proclaimed at Laredo in January 1840",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Republic_of_the_Rio_Grande_%28historical%29.svg/500px-Flag_of_the_Republic_of_the_Rio_Grande_%28historical%29.svg.png"
+          }
+        ],
+        "lastUpdated": "2026-08-10T16:13:52Z"
+      },
+      {
+        "id": "mier-expedition",
+        "year": "Dec 1842–Feb 1844",
+        "title": "Mier Expedition — Texan Raiders Captured in Mexico",
+        "type": "battle",
+        "detail": "A Texan expedition of ~700 men crossed the Rio Grande on a punitive raid into northern Mexico and was defeated and captured at Mier by Mexican forces under General Pedro de Ampudia. During an escape attempt, 176 prisoners were recaptured. Santa Anna ordered that every tenth prisoner be killed — Mexican officers placed 17 black beans among 159 white beans; those who drew black beans were shot. The Decimation of Mier further inflamed Texan-Mexican hostility.",
+        "sources": [
+          { "name": "Texas State Library — Mier Expedition Records", "tier": 1 },
+          { "name": "Joseph Milton Nance, Attack and Counterattack (University of Texas Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tyler-annexation-treaty",
+        "year": "Apr 1844",
+        "title": "Tyler's Annexation Treaty Rejected by US Senate",
+        "type": "diplomatic",
+        "detail": "President John Tyler negotiated a treaty of annexation with Texas but the US Senate rejected it 35-16 in June 1844, far short of the two-thirds required. Opponents, led by Henry Clay and John Quincy Adams, argued annexation meant war with Mexico and expansion of slavery. The debate over Texas dominated the 1844 presidential election, which James K. Polk won on a platform of Texas annexation and 'Manifest Destiny.'",
+        "sources": [
+          { "name": "US Senate Journal, 28th Congress, 1st Session", "tier": 1 },
+          { "name": "David M. Pletcher, The Diplomacy of Annexation (University of Missouri Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "joint-resolution-annexation",
+        "year": "Mar 1, 1845",
+        "title": "Joint Resolution of Congress Annexes Texas",
+        "type": "treaty",
+        "detail": "To circumvent the Senate two-thirds requirement, President Tyler and incoming President Polk used a simple majority joint resolution to annex Texas in March 1845. Texas voters and a special convention approved the terms in July 1845. Mexico immediately broke diplomatic relations with the United States, calling annexation an act of aggression. The US-Mexico war was now a near-certainty.",
+        "sources": [
+          { "name": "Joint Resolution of Congress, March 1, 1845 — US National Archives", "tier": 1 },
+          { "name": "David M. Pletcher, The Diplomacy of Annexation (University of Missouri Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "texas-statehood",
+        "year": "Dec 29, 1845",
+        "title": "Texas Admitted as 28th US State",
+        "type": "diplomatic",
+        "detail": "President Polk signed the legislation admitting Texas as the 28th state on December 29, 1845. Texas entered as a slave state, claiming the Rio Grande as its southwestern boundary — a claim Mexico vigorously disputed, insisting the traditional border was the Nueces River approximately 130 miles to the north. This boundary dispute would be the immediate trigger for war.",
+        "sources": [
+          { "name": "An Act for the Admission of the State of Texas — US Statutes at Large", "tier": 1 },
+          { "name": "Randolph B. Campbell, Gone to Texas (Oxford University Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "slidell-mission-failure",
+        "year": "Nov 1845–Jan 1846",
+        "title": "Slidell Mission Fails — Diplomacy Collapses",
+        "type": "diplomatic",
+        "detail": "President Polk sent Louisiana politician John Slidell to Mexico City with authority to settle all disputes: recognize the Rio Grande boundary, purchase California and New Mexico for up to $25 million, and assume American claims against Mexico. The Mexican government, under intense political pressure, refused to receive Slidell as a full minister, viewing any negotiation as de facto recognition of Texas annexation. Polk was left without a diplomatic avenue and turned to military pressure.",
+        "sources": [
+          { "name": "John Slidell correspondence — US Department of State Archives", "tier": 1 },
+          { "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "santa-fe-expedition-lamar",
+        "year": "Jun–Dec 1841",
+        "title": "Santa Fe Expedition — Lamar's Disaster",
+        "type": "diplomatic",
+        "detail": "Republic of Texas President Mirabeau Lamar dispatched a 320-man commercial and diplomatic expedition to Santa Fe to assert Texas's claimed boundary at the Rio Grande and open trade with New Mexico. The expedition was a catastrophe: lost on the Llano Estacado, harassed by Kiowa raids, and finally captured by Mexican forces. Survivors endured a brutal death march to Mexico City. The expedition deepened Texas-Mexico hostility and embarrassed the Republic.",
+        "sources": [
+          { "name": "Texas State Library and Archives Commission — Santa Fe Expedition Records", "tier": 1 },
+          { "name": "Noel M. Loomis, The Texan-Santa Fe Pioneers (University of Oklahoma Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "woll-raid-san-antonio",
+        "year": "Sep 11, 1842",
+        "title": "Woll's Raid — Mexico Briefly Retakes San Antonio",
+        "type": "battle",
+        "detail": "General Adrián Woll led a 1,200-man Mexican force across the Rio Grande and captured San Antonio on September 11, 1842, holding it for nine days and capturing several Texas district court officials. Texan militia under Mathew Caldwell defeated Woll at the Battle of Salado Creek on September 18, forcing a Mexican withdrawal. The raid demonstrated that the Republic of Texas remained insecure and Mexico had not abandoned its territorial claims.",
+        "sources": [
+          { "name": "Texas State Library and Archives Commission — Woll Expedition Records", "tier": 1 },
+          { "name": "Joseph Milton Nance, Attack and Counterattack (University of Texas Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "taylor-advances-rio-grande",
+        "year": "Mar 8, 1846",
+        "title": "General Taylor Advances Army to the Rio Grande",
+        "type": "occupation",
+        "detail": "On orders from President Polk, General Zachary Taylor marched his Army of Occupation from Corpus Christi south to the north bank of the Rio Grande, directly opposite the Mexican city of Matamoros. Taylor's men began construction of Fort Texas (later Fort Brown) in view of Mexican positions. Mexico viewed this advance into the disputed zone between the Nueces and Rio Grande as an act of invasion. War was now imminent.",
+        "sources": [
+          { "name": "Zachary Taylor dispatch to Adjutant General, March 1846 — US National Archives", "tier": 1 },
+          { "name": "K. Jack Bauer, Zachary Taylor: Soldier, Planter, Statesman (Louisiana State University Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "War Begins — Opening Battles (April–August 1846)",
+    "events": [
+      {
+        "id": "thornton-affair",
+        "year": "Apr 25, 1846",
+        "title": "Thornton Affair — First Blood of the War",
+        "type": "battle",
+        "detail": "A Mexican cavalry force of approximately 1,600 men crossed the Rio Grande and ambushed a 63-man US dragoon patrol under Captain Seth Thornton north of the river near Rancho de Carricitos. Eleven Americans were killed, five wounded, and 49 captured. Polk used this clash to tell Congress: 'Mexico has passed the boundary of the United States, has invaded our territory and shed American blood upon the American soil.' Critics including Rep. Abraham Lincoln disputed that the site was 'American soil.'",
+        "sources": [
+          { "name": "President Polk War Message to Congress, May 11, 1846 — US National Archives", "tier": 1 },
+          { "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "siege-fort-texas",
+        "year": "May 3–9, 1846",
+        "title": "Siege of Fort Texas — Mexican Artillery Bombards US Position; Major Brown Killed",
+        "type": "siege",
+        "detail": "While General Taylor marched to Point Isabel on May 1–2 to secure supplies, the Mexican Army of the North under General Arista opened an artillery bombardment of the unfinished US earthwork fort constructed directly opposite Matamoros. Major Jacob Brown's garrison of ~500 soldiers returned fire and held the position under sustained bombardment for seven days. Brown was mortally wounded by a Mexican shell on May 6 and died on May 9 — the same day Taylor won the Battle of Resaca de la Palma. The fort was renamed Fort Brown in his honor; the city of Brownsville, Texas, grew around it after the war. The bombardment of a US military post reinforced Polk's war message to Congress and underscored the urgency of Taylor's relief march to Palo Alto.",
+        "sources": [
+          {
+            "name": "Zachary Taylor dispatch to Adjutant General, May 1846 — US National Archives",
+            "tier": 1,
+            "url": "https://catalog.archives.gov/",
+            "pole": "western"
+          },
+          {
+            "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)",
+            "tier": 2,
+            "url": "https://archive.org/details/mexicanwar184618000baue",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Nebel_Mexican_War_01_Battle_of_Palo_Alto_(cropped).jpg",
+            "caption": "US flying artillery in action near the Rio Grande — the same guns that defended Fort Texas during the Mexican bombardment of May 3–9, 1846",
+            "source": "Wikimedia Commons / Carl Nebel (1851)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/de/Nebel_Mexican_War_01_Battle_of_Palo_Alto_%28cropped%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "battle-palo-alto",
+        "year": "May 8, 1846",
+        "title": "Battle of Palo Alto — US Artillery Dominates",
+        "type": "battle",
+        "detail": "General Arista's 4,000-man Mexican army and Taylor's 2,300 Americans met at Palo Alto prairie north of the Rio Grande. US 'flying artillery' — light, fast-moving cannon — proved devastating against the massed Mexican infantry formations. The Mexicans suffered approximately 250–400 casualties to Taylor's 55. The battle established the pattern of the entire war: superior US artillery repeatedly shattered larger Mexican forces.",
+        "sources": [
+          { "name": "Zachary Taylor official report, May 1846 — US National Archives", "tier": 1 },
+          { "name": "John S. D. Eisenhower, So Far from God: The U.S. War with Mexico (Random House)", "tier": 2 }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Nebel_Mexican_War_01_Battle_of_Palo_Alto_(cropped).jpg",
+            "caption": "Battle of Palo Alto, hand-colored lithograph by Carl Nebel (1851)",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/de/Nebel_Mexican_War_01_Battle_of_Palo_Alto_%28cropped%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "battle-resaca-palma",
+        "year": "May 9, 1846",
+        "title": "Battle of Resaca de la Palma — Mexicans Routed",
+        "type": "battle",
+        "detail": "The day after Palo Alto, Taylor pursued Arista's retreating army into the dense chaparral brush near Resaca de la Palma. In close-quarters fighting the Mexicans were routed; Arista's army broke and fled across the Rio Grande in disarray, abandoning artillery, supplies, and their wounded. US forces captured General La Vega. Total Mexican casualties were approximately 547 killed or wounded; American losses were 122. General Taylor was hailed as 'Old Rough and Ready.'",
+        "sources": [
+          { "name": "Zachary Taylor official report — US National Archives", "tier": 1, "url": "https://catalog.archives.gov/", "pole": "western" },
+          { "name": "John S. D. Eisenhower, So Far from God (Random House)", "tier": 2, "url": "https://archive.org/details/sofar00eise", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Battle_of_Resaca_de_la_Palma.jpg",
+            "caption": "Battle of Resaca de la Palma, May 9, 1846 — US dragoons charging through chaparral brush to rout General Arista's Mexican army",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/43/Battle_of_Resaca_de_la_Palma.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "us-declares-war",
+        "year": "May 13, 1846",
+        "title": "US Congress Formally Declares War on Mexico",
+        "type": "diplomatic",
+        "detail": "After Polk's war message, the House voted 174-14 and the Senate 40-2 to declare war, but debate was fierce. The bill included a preamble asserting that Mexico had 'shed American blood upon American soil.' Many Whigs, led by Henry Clay and including first-term Congressman Abraham Lincoln, voted for war funding but disputed the pretext, with Lincoln later demanding to know the exact 'spot' where blood was shed. John Quincy Adams and 13 other representatives voted against the war entirely.",
+        "sources": [
+          { "name": "US Congressional Record, 29th Congress, 1st Session", "tier": 1 },
+          { "name": "Amy S. Greenberg, A Wicked War: Polk, Clay, Lincoln, and the 1846 U.S. Invasion of Mexico (Knopf)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "bear-flag-revolt",
+        "year": "Jun 14, 1846",
+        "title": "Bear Flag Republic Proclaimed in California",
+        "type": "occupation",
+        "detail": "American settlers and explorers in the Mexican province of Alta California, encouraged by Captain John C. Frémont and his armed surveyors, seized the town of Sonoma and raised the 'Bear Flag,' declaring an independent 'California Republic.' The revolt was short-lived — within days Commodore Sloat raised the American flag at Monterey. California would eventually be incorporated as a US territory following the war.",
+        "sources": [
+          { "name": "US National Archives — California Conquest Records", "tier": 1 },
+          { "name": "Neal Harlow, California Conquered: The Annexation of a Mexican Province (University of California Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "monterey-california-seized",
+        "year": "Jul 7, 1846",
+        "title": "Commodore Sloat Raises US Flag at Monterey, California",
+        "type": "occupation",
+        "detail": "Commodore John Drake Sloat of the US Pacific Squadron landed sailors and marines at Monterey, Alta California, and raised the American flag, claiming California for the United States. Acting on prior secret instructions and news of war, Sloat's bloodless occupation inaugurated the American conquest of California. Within days US forces occupied San Francisco (Yerba Buena) and other key ports.",
+        "sources": [
+          { "name": "Commodore Sloat dispatch to Secretary of the Navy, July 1846 — US National Archives", "tier": 1 },
+          { "name": "Neal Harlow, California Conquered (University of California Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "polk-santa-anna-deal-1846",
+        "year": "Aug 1846",
+        "title": "Polk's Gamble — Santa Anna Returns from Exile",
+        "type": "diplomatic",
+        "detail": "In a remarkable covert maneuver, President Polk allowed exiled Mexican general Antonio López de Santa Anna to pass through the US naval blockade at Veracruz and return to Mexico from Cuba in August 1846. Through intermediaries including Cuban merchant Alexander Atocha, Polk believed Santa Anna had secretly agreed that if restored to power he would negotiate a quick peace ceding California and New Mexico. Polk ordered the US Navy to let Santa Anna through. The gamble spectacularly backfired: Santa Anna landed to popular acclaim, rallied Mexican nationalism, took command of the army at San Luis Potosí, built a force of 20,000 men, and fought vigorously at Buena Vista, Cerro Gordo, and throughout the war. The episode illustrates Polk's willingness to use covert means to achieve his territorial goals.",
+        "sources": [
+          { "name": "James K. Polk Diary — Library of Congress Manuscript Division", "tier": 1, "url": "https://www.loc.gov/collections/james-k-polk-papers/", "pole": "western" },
+          { "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)", "tier": 2, "url": "https://archive.org/details/mexicanwar184618000baue", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Battle_of_Buena_Vista_Nebel.jpg",
+            "caption": "Battle of Buena Vista — Santa Anna's failed counteroffensive after his return, lithograph by Carl Nebel (1851)",
+            "source": "Wikimedia Commons / Carl Nebel",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Battle_of_Buena_Vista_Nebel.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "kearny-captures-santa-fe",
+        "year": "Aug 18, 1846",
+        "title": "Kearny's Army of the West Captures Santa Fe",
+        "type": "occupation",
+        "detail": "Brigadier General Stephen W. Kearny led his 1,700-man 'Army of the West' 900 miles from Fort Leavenworth, Kansas, along the Santa Fe Trail. The Mexican governor Manuel Armijo withdrew without a fight, and Kearny entered Santa Fe without opposition on August 18. He proclaimed US sovereignty over New Mexico and established a territorial government before continuing on to California.",
+        "sources": [
+          { "name": "Kearny's Proclamation at Santa Fe, August 22, 1846 — US National Archives", "tier": 1 },
+          { "name": "Dwight L. Clarke, Stephen Watts Kearny: Soldier of the West (University of Oklahoma Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-monterrey",
+        "year": "Sep 21–24, 1846",
+        "title": "Battle of Monterrey — Taylor Grants Armistice",
+        "type": "battle",
+        "detail": "After a bloody three-day assault on the fortified city of Monterrey, Nuevo León, General Taylor's forces penetrated both flanks while General Worth cut the Saltillo road. Mexican General Pedro de Ampudia surrendered the city, but Taylor controversially granted an 8-week armistice and allowed the Mexican army to withdraw with their weapons. Polk was furious, believing Taylor had let a beaten army escape. The armistice was eventually terminated.",
+        "sources": [
+          { "name": "Zachary Taylor official report — US National Archives", "tier": 1, "url": "https://catalog.archives.gov/", "pole": "western" },
+          { "name": "John S. D. Eisenhower, So Far from God (Random House)", "tier": 2, "url": "https://archive.org/details/sofar00eise", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Nebel_Mexican_War_02_Capture_of_Monterrey_(cropped).jpg",
+            "caption": "Capture of Monterrey, September 21–24, 1846, lithograph by Carl Nebel (1851) — US forces fighting through the fortified city's streets",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Nebel_Mexican_War_02_Capture_of_Monterrey_%28cropped%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Decisive Battles — Taylor's Northern Campaign & California (1846–1847)",
+    "events": [
+      {
+        "id": "tampico-occupied",
+        "year": "Nov 14, 1846",
+        "title": "US Navy Occupies Tampico Without Resistance",
+        "type": "occupation",
+        "detail": "Commodore David Conner's Gulf Squadron occupied the strategically vital port of Tampico after Mexican forces withdrew without fighting. Tampico's harbor would serve as a key staging base for General Scott's Veracruz expedition. Its peaceful capture reflected the deteriorating state of Mexican coastal defenses in the Gulf.",
+        "sources": [
+          { "name": "Commodore Conner dispatch — US National Archives", "tier": 1 },
+          { "name": "K. Jack Bauer, Surfboats and Horse Marines: U.S. Naval Operations in the Mexican War (Naval Institute Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "doniphan-brazito",
+        "year": "Dec 25, 1846",
+        "title": "Battle of Brazito — Doniphan's Christmas Victory",
+        "type": "battle",
+        "detail": "Colonel Alexander Doniphan's Missouri Volunteers, marching south from Santa Fe toward Chihuahua City, defeated a Mexican force at Brazito (near modern El Paso) on Christmas Day. Without artillery or defensive position, Doniphan's frontiersmen repelled a superior Mexican force in a sharp engagement. The victory opened the road to Chihuahua as part of the broadest geographic campaign in the war.",
+        "sources": [
+          { "name": "Alexander Doniphan official report — US National Archives", "tier": 1 },
+          { "name": "Roger D. Launius, Alexander William Doniphan (University of Nebraska Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-buena-vista",
+        "year": "Feb 22–23, 1847",
+        "title": "Battle of Buena Vista — Taylor's Last Stand",
+        "type": "battle",
+        "detail": "Santa Anna marched 20,000 men north from San Luis Potosí to destroy Taylor's 4,800-man army near the hacienda Buena Vista south of Saltillo. After two days of ferocious fighting in which US lines nearly broke, artillery under Captain Braxton Bragg and the Mississippi Rifles under Colonel Jefferson Davis held critical positions. Santa Anna withdrew after suffering ~2,100 casualties to Taylor's ~680. The battle made Taylor a national hero and launched his presidential campaign.",
+        "sources": [
+          { "name": "Zachary Taylor official report — US National Archives", "tier": 1 },
+          { "name": "John S. D. Eisenhower, So Far from God (Random House)", "tier": 2 }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Battle_of_Buena_Vista_Nebel.jpg",
+            "caption": "Battle of Buena Vista, lithograph by Carl Nebel (1851)",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Battle_of_Buena_Vista_Nebel.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "battle-sacramento-chihuahua",
+        "year": "Feb 28, 1847",
+        "title": "Battle of Sacramento — Doniphan Takes Chihuahua",
+        "type": "battle",
+        "detail": "Doniphan's 900 Missouri Volunteers and a train of 300+ trade wagons defeated a 4,000-man Mexican force entrenched on the Sacramento River north of Chihuahua City. US horse artillery devastated the Mexican position and a cavalry charge completed the rout. Doniphan captured Chihuahua City the following day, having marched nearly 2,000 miles from Fort Leavenworth in one of the most remarkable campaigns in American military history.",
+        "sources": [
+          { "name": "Alexander Doniphan official report — US National Archives", "tier": 1 },
+          { "name": "Roger D. Launius, Alexander William Doniphan (University of Nebraska Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-san-pasqual",
+        "year": "Dec 6, 1846",
+        "title": "Battle of San Pasqual — Kearny Ambushed in California",
+        "type": "battle",
+        "detail": "General Kearny's exhausted 100-man Army of the West was ambushed by 75–160 California lancers under Andrés Pico at San Pasqual, near modern Escondido. In the worst US defeat in California, 18 Americans were killed and 13 wounded — including Kearny himself — by skilled Mexican cavalry lance charges. US forces survived only because of the timely arrival of a naval rescue party from San Diego sent by Commodore Stockton.",
+        "sources": [
+          { "name": "Kearny dispatch to Adjutant General, December 1846 — US National Archives", "tier": 1 },
+          { "name": "Neal Harlow, California Conquered (University of California Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battles-los-angeles",
+        "year": "Jan 8–9, 1847",
+        "title": "Battles of San Gabriel and La Mesa — California Conquered",
+        "type": "battle",
+        "detail": "Commodore Robert Stockton and General Kearny's combined naval-land force defeated Mexican Californio forces at the San Gabriel River (Jan 8) and La Mesa (Jan 9) in the final significant battles of the California campaign. The American column entered Los Angeles on January 10. The Treaty of Cahuenga (Jan 13, 1847) formally ended resistance in California, guaranteeing the Californios' rights.",
+        "sources": [
+          { "name": "Stockton dispatch — US National Archives", "tier": 1 },
+          { "name": "Neal Harlow, California Conquered (University of California Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "taos-revolt",
+        "year": "Jan 19, 1847",
+        "title": "Taos Revolt — Governor Bent Assassinated; New Mexico Uprising Crushed",
+        "type": "battle",
+        "detail": "On January 19, 1847, Mexican residents and Taos Pueblo Indians rose against US occupation of New Mexico, killing newly appointed Territorial Governor Charles Bent and several other US officials in a predawn massacre at Taos. The revolt was the most significant challenge to Kearny's proclaimed US sovereignty over New Mexico. Colonel Sterling Price marched north from Santa Fe with approximately 350 soldiers and suppressed the uprising in a series of engagements, culminating in the storming of the Taos Pueblo church on February 4, 1847, where some 150 defenders were killed. Surviving revolt leaders were subsequently tried for treason and hanged — a prosecution many observers found unjust since New Mexico had only recently been declared US territory and the accused had never sworn allegiance to the United States. The revolt demonstrated that US conquest did not automatically produce US loyalty.",
+        "sources": [
+          {
+            "name": "Sterling Price official dispatch — US National Archives, Record Group 94",
+            "tier": 1,
+            "url": "https://catalog.archives.gov/",
+            "pole": "western"
+          },
+          {
+            "name": "David A. Clary, Eagles and Empire: The United States, Mexico, and the Struggle for a Continent (Bantam Books)",
+            "tier": 2,
+            "url": "https://archive.org/details/eaglesempireunit00clar",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Kit_Carson_-_Brady-Handy.jpg",
+            "caption": "Kit Carson, scout and frontiersman who served under General Kearny in New Mexico and aided Colonel Sterling Price in suppressing the January 1847 Taos Revolt",
+            "source": "Wikimedia Commons / Mathew Brady — Library of Congress Brady-Handy Collection",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/4/44/Kit_Carson_-_Brady-Handy.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-21T15:58:37Z"
+      },
+      {
+        "id": "wilmot-proviso",
+        "year": "Aug 8, 1846",
+        "title": "Wilmot Proviso — Slavery Question Ignites Congress",
+        "type": "diplomatic",
+        "detail": "Pennsylvania Congressman David Wilmot attached an amendment to a war appropriations bill prohibiting slavery in any territory acquired from Mexico. The House passed it; the Senate blocked it. The proviso, though never enacted, set off a fierce national debate that prefigured the Civil War, dividing both parties along sectional lines. President Polk privately opposed the proviso as unnecessarily inflammatory but had no power to stop the debate it unleashed.",
+        "sources": [
+          { "name": "US Congressional Record, 29th Congress, 1st Session", "tier": 1 },
+          { "name": "Eric Foner, Free Soil, Free Labor, Free Men (Oxford University Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Scott's Mexico City Campaign (1847)",
+    "events": [
+      {
+        "id": "veracruz-amphibious-landing",
+        "year": "Mar 9, 1847",
+        "title": "Veracruz Amphibious Landing — Largest US Seaborne Assault",
+        "type": "battle",
+        "detail": "General Winfield Scott's army of 12,000 men landed on the beaches south of Veracruz in specially designed surf boats — the largest amphibious operation in US history to that date. The landing itself was unopposed. Scott's forces encircled the walled city and its castle of San Juan de Ulúa in preparation for a siege. The operation was a masterpiece of joint army-navy coordination, planned meticulously by Scott and Captain Robert E. Lee.",
+        "sources": [
+          { "name": "Winfield Scott official report — US National Archives", "tier": 1 },
+          { "name": "Timothy D. Johnson, Winfield Scott: The Quest for Military Glory (University Press of Kansas)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "veracruz-bombardment-surrender",
+        "year": "Mar 22–29, 1847",
+        "title": "Veracruz Bombarded and Surrendered",
+        "type": "siege",
+        "detail": "Scott bombarded Veracruz for several days with army siege artillery, naval guns, and shells from naval vessels, firing approximately 6,700 rounds in 88 hours. The city, unable to withstand the bombardment and with no relief force coming, surrendered on March 29. Civilian casualties were significant and prompted protests from foreign consuls. The castle of San Juan de Ulúa surrendered days later. Veracruz became Scott's primary supply base for the march inland.",
+        "sources": [
+          { "name": "Winfield Scott official report — US National Archives", "tier": 1, "url": "https://catalog.archives.gov/", "pole": "western" },
+          { "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)", "tier": 2, "url": "https://archive.org/details/mexicanwar184618000baue", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Nebel_Mexican_War_04_Bombardment_of_Vera_Cruz_(cropped).jpg",
+            "caption": "Bombardment of Veracruz, March 1847, lithograph by Carl Nebel (1851) — US artillery firing on the walled city from land and sea",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Nebel_Mexican_War_04_Bombardment_of_Vera_Cruz_%28cropped%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "battle-cerro-gordo",
+        "year": "Apr 17–18, 1847",
+        "title": "Battle of Cerro Gordo — Scott Flanks Santa Anna",
+        "type": "battle",
+        "detail": "Santa Anna positioned his army of ~12,000 men in the mountain pass of Cerro Gordo, blocking the National Highway from Veracruz to Mexico City. Captain Robert E. Lee scouted a secret mule path around the Mexican left flank. US forces led by General David Twiggs attacked across this path, turning the Mexican position. Santa Anna barely escaped on foot as his army collapsed; the US captured 3,000 prisoners and 43 cannon. The road to Mexico City was open.",
+        "sources": [
+          { "name": "Winfield Scott official report — US National Archives", "tier": 1, "url": "https://catalog.archives.gov/", "pole": "western" },
+          { "name": "John S. D. Eisenhower, So Far from God (Random House)", "tier": 2, "url": "https://archive.org/details/sofar00eise", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Nebel_Mexican_War_05_Battle_of_Cerro_Gordo_(cropped).jpg",
+            "caption": "Battle of Cerro Gordo, April 17–18, 1847, lithograph by Carl Nebel (1851) — US forces attacking Santa Anna's mountain stronghold via the flanking route scouted by Capt. Robert E. Lee",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/00/Nebel_Mexican_War_05_Battle_of_Cerro_Gordo_%28cropped%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "scott-occupies-puebla",
+        "year": "May 15, 1847",
+        "title": "Scott Occupies Puebla Without Battle",
+        "type": "occupation",
+        "detail": "Mexico's second-largest city, Puebla, surrendered without resistance when Scott's advance guard arrived. Scott halted here for three months — waiting for reinforcements to replace departing short-term volunteers and for yellow fever (vómito negro) season to pass on the coast. The halt allowed Santa Anna time to reorganize Mexico's defenses around the capital but was strategically necessary. Scott used the pause to train and consolidate his army.",
+        "sources": [
+          { "name": "Winfield Scott official report — US National Archives", "tier": 1 },
+          { "name": "Timothy D. Johnson, Winfield Scott (University Press of Kansas)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trist-peace-mission",
+        "year": "May 1847",
+        "title": "Nicholas Trist Sent to Negotiate Peace",
+        "type": "diplomatic",
+        "detail": "President Polk sent State Department chief clerk Nicholas Trist to join Scott's army as peace commissioner, authorized to negotiate on the same terms as the failed Slidell Mission plus acquisition of Baja California and upper California. Trist and Scott initially clashed bitterly but later became close allies in pursuing peace. Trist would play the decisive role in producing the final treaty — even after Polk recalled him.",
+        "sources": [
+          { "name": "Nicholas Trist Papers — Library of Congress", "tier": 1 },
+          { "name": "Robert W. Merry, A Country of Vast Designs: James K. Polk and the Conquest of the American Continent (Simon & Schuster)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battles-contreras-churubusco",
+        "year": "Aug 19–20, 1847",
+        "title": "Battles of Contreras and Churubusco — Approach to Mexico City",
+        "type": "battle",
+        "detail": "In two battles on successive days, Scott's army shattered three Mexican armies south of Mexico City. At Contreras (Padierna), US forces used a night march through a lava field to attack the Mexican rear, routing General Valencia's force in 17 minutes. At Churubusco, Santa Anna's main force defended the fortified convent but was driven out with massive casualties. The San Patricio Battalion of Irish and immigrant US Army deserters fighting for Mexico made a notable last stand at Churubusco before being overwhelmed and captured.",
+        "sources": [
+          { "name": "Winfield Scott official report — US National Archives", "tier": 1, "url": "https://catalog.archives.gov/", "pole": "western" },
+          { "name": "John S. D. Eisenhower, So Far from God (Random House)", "tier": 2, "url": "https://archive.org/details/sofar00eise", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Nebel_Mexican_War_07_Battle_of_Churubusco_(cropped).jpg",
+            "caption": "Battle of Churubusco, August 20, 1847, lithograph by Carl Nebel (1851) — US forces storming the fortified Ex-convent of Churubusco where the San Patricio Battalion made their last stand",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Nebel_Mexican_War_07_Battle_of_Churubusco_%28cropped%29.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-19T00:00:00Z"
+      },
+      {
+        "id": "san-patricio-executions",
+        "year": "Sep 10–13, 1847",
+        "title": "San Patricio Battalion Prisoners Executed",
+        "type": "battle",
+        "detail": "Of 85 San Patricio (Saint Patrick) Battalion members captured at Churubusco, a court-martial condemned 72 to death for desertion. General Scott reduced some sentences; 50 were hanged in two batches — 16 at San Ángel on September 10, and 30 at Mixcoac on September 13. The Mixcoac executions were timed so the condemned had to watch the raising of the American flag over Chapultepec Castle. The San Patricios remain honored as heroes in Mexico to this day.",
+        "sources": [
+          { "name": "Winfield Scott order book — US National Archives", "tier": 1 },
+          { "name": "Robert Ryal Miller, Shamrock and Sword: The Saint Patrick's Battalion in the U.S.-Mexican War (University of Oklahoma Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "armistice-negotiations-fail",
+        "year": "Aug 24–Sep 7, 1847",
+        "title": "Armistice Negotiations Fail",
+        "type": "diplomatic",
+        "detail": "After Churubusco, Santa Anna proposed a ceasefire, and Scott agreed to an armistice to allow peace talks. Trist and Mexican commissioners met repeatedly but Mexico rejected all territorial cessions. When Scott discovered Mexico was using the armistice to resupply and refortify positions in violation of the terms, he terminated it on September 7. The battles for Mexico City resumed immediately.",
+        "sources": [
+          { "name": "Nicholas Trist Papers — Library of Congress", "tier": 1 },
+          { "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-molino-del-rey",
+        "year": "Sep 8, 1847",
+        "title": "Battle of Molino del Rey — Costly US Attack",
+        "type": "battle",
+        "detail": "Acting on faulty intelligence that Mexico was casting cannon at the Molino del Rey (King's Mill), General Worth's division stormed the fortified complex at dawn. The assault succeeded but at disproportionate cost — 116 Americans killed and 665 wounded, nearly 25% of the attacking force, one of the highest US casualty rates of the war. No cannon foundry was found. Critics viewed it as an avoidable blunder.",
+        "sources": [
+          { "name": "Winfield Scott official report — US National Archives", "tier": 1 },
+          { "name": "John S. D. Eisenhower, So Far from God (Random House)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-chapultepec",
+        "year": "Sep 12–13, 1847",
+        "title": "Battle of Chapultepec — Los Niños Héroes",
+        "type": "battle",
+        "detail": "Chapultepec Castle on its prominent hill was Mexico's military academy and the last major fortification before the capital's gates. After an artillery bombardment on September 12, US forces stormed the castle on September 13 using scaling ladders. Six young military cadets — the 'Niños Héroes' — died defending the castle rather than retreat; one reportedly wrapped himself in the Mexican flag and leaped from the ramparts. The castle fell in a few hours. Santa Anna abandoned Mexico City that night.",
+        "sources": [
+          { "name": "Winfield Scott official report — US National Archives", "tier": 1 },
+          { "name": "Héctor Aguilar Camín and Lorenzo Meyer, In the Shadow of the Mexican Revolution (University of Texas Press)", "tier": 2 }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Battle_of_Chapultepec.jpg",
+            "caption": "Battle of Chapultepec, lithograph by Carl Nebel (1851) — the Niños Héroes died here",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Battle_of_Chapultepec.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "fall-mexico-city",
+        "year": "Sep 14, 1847",
+        "title": "Fall of Mexico City — US Flag Over the Halls of Montezuma",
+        "type": "occupation",
+        "detail": "General Winfield Scott rode into Mexico City's main plaza, the Zócalo, on September 14, 1847 — fulfilling the Marines' Hymn line 'From the Halls of Montezuma.' Santa Anna resigned the presidency and attempted to mount guerrilla operations. A riotous mob attacked US soldiers from rooftops and windows in the city; Scott declared martial law. The occupation of the capital effectively ended organized Mexican military resistance, though guerrilla activity continued for months.",
+        "sources": [
+          { "name": "Winfield Scott dispatch — US National Archives", "tier": 1 },
+          { "name": "Timothy D. Johnson, Winfield Scott (University Press of Kansas)", "tier": 2 }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Carl_Nebel_-_Genl._Scott%27s_entrance_into_Mexico,_Plate_45.jpg",
+            "caption": "General Scott's entrance into Mexico City, September 14, 1847, lithograph by Carl Nebel (1851)",
+            "source": "Wikimedia Commons / Carl Nebel / Adolphe Jean-Baptiste Bayot",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Carl_Nebel_-_Genl._Scott%27s_entrance_into_Mexico%2C_Plate_45.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "siege-puebla-huamantla",
+        "year": "Sep 14–Oct 12, 1847",
+        "title": "Siege of Puebla & Battle of Huamantla — Santa Anna's Last Offensive",
+        "type": "siege",
+        "detail": "The same day Mexico City fell, Santa Anna withdrew north to Puebla hoping to cut Scott's supply and communication line to Veracruz, besieging the roughly 500-man garrison under Colonel Thomas Childs — many of them convalescents from a nearby hospital. Santa Anna personally led an unsuccessful assault on the defenders' fortified positions on September 22 and demanded surrender, which Childs refused. Meanwhile Brigadier General Joseph Lane marched a relief column of some 3,000 men inland from Veracruz, picking up garrisons along the National Road. Santa Anna moved to intercept Lane at Huamantla, Tlaxcala, on October 9; Texas Ranger captain Samuel Walker's cavalry vanguard engaged roughly 2,000 Mexican lancers, and Walker was shot dead by a sniper as his men drove the Mexicans back — enraged US troops sacked the town in retaliation. The defeat forced Santa Anna to lift the siege; Lane's column fought its way into Puebla on October 12, ending organized Mexican resistance to Scott's line of communications and marking Santa Anna's final battlefield command of the war.",
+        "sources": [
+          { "name": "United States Army Center of Military History — Puebla Under Siege", "tier": 1, "url": "https://www.army.mil/article/13049/puebla_under_siege_surrounded_american_soldiers_resist_guerilla_infiltration", "pole": "western" },
+          { "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)", "tier": 2, "url": "https://archive.org/details/mexicanwar184618000baue", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Siege_of_Puebla_1847.jpg",
+            "caption": "Siege of Puebla, 1847 — chromolithograph by Sarony & Major after James T. Shannon depicting Colonel Childs's garrison holding the city against Santa Anna",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/93/Siege_of_Puebla_1847.jpg"
+          },
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Walker-huamantla.jpg",
+            "caption": "The Death of Capt. Walker at Huamantla, October 9, 1847 — contemporary lithograph, Library of Congress",
+            "source": "Wikimedia Commons / Library of Congress",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Walker-huamantla.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-10T16:13:52Z"
+      }
+    ]
+  },
+  {
+    "era": "Treaty of Guadalupe Hidalgo & Aftermath (1847–1848)",
+    "events": [
+      {
+        "id": "california-statehood-1850",
+        "year": "Sep 9, 1850",
+        "title": "California Admitted as 31st US State",
+        "type": "diplomatic",
+        "detail": "California was admitted to the Union on September 9, 1850, as a free (non-slave) state — a direct consequence of the Wilmot Proviso debate sparked by the Mexican-American War. Its admission as a free state was part of the Compromise of 1850. The Gold Rush had brought 300,000 people to California by 1855, making it one of the most consequential of America's territorial acquisitions. California's statehood reignited the sectional crisis over slavery expansion that led to the Civil War.",
+        "sources": [
+          { "name": "California Admission Act — US Statutes at Large, 31st Congress", "tier": 1 },
+          { "name": "H. W. Brands, The Age of Gold (Doubleday)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trist-defies-recall",
+        "year": "Nov 1847",
+        "title": "Trist Defies Recall to Continue Peace Negotiations",
+        "type": "diplomatic",
+        "detail": "Frustrated by Mexican political paralysis and fearing more extreme US peace terms if war dragged on, Nicholas Trist refused Polk's order to return to Washington. Trist believed — correctly, as events proved — that only his immediate negotiations could produce an acceptable peace. Scott and Trist's British intermediary, Edward Thornton, helped arrange new talks. Polk was furious but ultimately accepted the treaty Trist negotiated, knowing that Congress and the public wanted peace.",
+        "sources": [
+          { "name": "Nicholas Trist Papers — Library of Congress", "tier": 1 },
+          { "name": "Robert W. Merry, A Country of Vast Designs (Simon & Schuster)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "lincoln-spot-resolutions",
+        "year": "Dec 22, 1847",
+        "title": "Lincoln's Spot Resolutions — Congress Challenges Polk's War Pretext",
+        "type": "diplomatic",
+        "detail": "First-term Whig congressman Abraham Lincoln of Illinois introduced a set of resolutions on December 22, 1847, demanding that President Polk identify the precise 'spot' on American soil where Mexican forces had shed American blood — the stated pretext for the war. Lincoln's 'Spot Resolutions' challenged the fundamental legitimacy of Polk's war message, arguing that the Thornton Affair occurred in genuinely disputed territory, not on proven American soil. Lincoln argued that Polk had 'a bewildered, confounded and miserably perplexed man' trying to justify an unjust aggression. The resolutions attracted limited support in Congress but damaged Polk's credibility. Lincoln paid a political price: he was not renominated for his seat and returned to law practice in Illinois. The episode is now considered one of the most principled stands against executive warmaking in early American history.",
+        "sources": [
+          {
+            "name": "Lincoln's Spot Resolutions, December 22, 1847 — US Congressional Globe, 30th Congress, 1st Session",
+            "tier": 1,
+            "url": "https://www.loc.gov/item/llcg024/",
+            "pole": "western"
+          },
+          {
+            "name": "Amy S. Greenberg, A Wicked War: Polk, Clay, Lincoln, and the 1846 U.S. Invasion of Mexico (Knopf)",
+            "tier": 2,
+            "url": "https://www.penguinrandomhouse.com/books/185695/a-wicked-war-by-amy-s-greenberg/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_by_Nicholas_H._Shepherd,_1846-crop.jpg",
+            "caption": "Abraham Lincoln, 1846 daguerreotype by Nicholas H. Shepherd — the earliest confirmed photograph of Lincoln, taken when he was a first-term congressman during the very period he introduced the Spot Resolutions",
+            "source": "Wikimedia Commons / Nicholas H. Shepherd — Library of Congress",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Abraham_Lincoln_by_Nicholas_H._Shepherd%2C_1846-crop.jpg"
+          }
+        ],
+        "lastUpdated": "2026-05-21T15:58:37Z"
+      },
+      {
+        "id": "treaty-guadalupe-hidalgo-signed",
+        "year": "Feb 2, 1848",
+        "title": "Treaty of Guadalupe Hidalgo Signed",
+        "type": "treaty",
+        "detail": "The Treaty of Guadalupe Hidalgo was signed at the Basilica of Guadalupe north of Mexico City on February 2, 1848. Mexico ceded approximately 525,000 square miles — over half its pre-war territory — including present-day California, Nevada, Utah, most of Arizona and New Mexico, and parts of Colorado, Wyoming, Kansas, and Oklahoma. The US paid Mexico $15 million and assumed $3.25 million in claims by American citizens against Mexico. The Rio Grande became the permanent US-Texas border.",
+        "sources": [
+          { "name": "Treaty of Guadalupe Hidalgo — US National Archives and Records Administration", "tier": 1 },
+          { "name": "Griswold del Castillo, The Treaty of Guadalupe Hidalgo: A Legacy of Conflict (University of Oklahoma Press)", "tier": 2 }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://commons.wikimedia.org/wiki/File:Treaty_of_Guadalupe_Hidalgo,_last_page.jpg",
+            "caption": "Final page of the Treaty of Guadalupe Hidalgo with signatures and seals, February 2, 1848",
+            "source": "US National Archives / Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Treaty_of_Guadalupe_Hidalgo%2C_last_page.jpg"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:23:00Z"
+      },
+      {
+        "id": "california-gold-discovery",
+        "year": "Jan 24, 1848",
+        "title": "Gold Discovered at Sutter's Mill — California Gold Rush Begins",
+        "type": "diplomatic",
+        "detail": "Nine days before the Treaty of Guadalupe Hidalgo was signed, James Marshall discovered gold at Sutter's Mill in the Sierra Nevada foothills of California — the future American territory. The discovery, kept quiet for months, triggered the California Gold Rush of 1849, bringing 300,000 migrants to California and accelerating statehood. The gold discovery dramatically validated the acquisition of California and transformed the debate over the war's legacy.",
+        "sources": [
+          { "name": "Sutter's Mill historical records — California State Library", "tier": 1 },
+          { "name": "H. W. Brands, The Age of Gold: The California Gold Rush and the New American Dream (Doubleday)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-senate-ratifies-treaty",
+        "year": "Mar 10, 1848",
+        "title": "US Senate Ratifies Treaty — With Amendments",
+        "type": "treaty",
+        "detail": "The US Senate ratified the Treaty of Guadalupe Hidalgo 38-14 on March 10, 1848, but stripped several provisions including Article 10, which guaranteed existing land grants under Spanish and Mexican law, and modified Article 9, which protected the citizenship rights of Mexicans remaining in the ceded territory. The Senate's modifications would later deprive many Mexican-heritage landowners of their properties despite the treaty's original promises.",
+        "sources": [
+          { "name": "US Senate Executive Journal, 30th Congress, 1st Session", "tier": 1 },
+          { "name": "Griswold del Castillo, The Treaty of Guadalupe Hidalgo (University of Oklahoma Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mexico-ratifies-treaty",
+        "year": "May 30, 1848",
+        "title": "Mexican Congress Ratifies Treaty at Querétaro",
+        "type": "treaty",
+        "detail": "Mexico's interim government under Manuel de la Peña y Peña, relocated from US-occupied Mexico City to Querétaro, ratified the amended treaty. The vote was 51-35 in the Chamber of Deputies and 33-4 in the Senate — narrower than the US vote, reflecting deep Mexican anguish over the territorial losses. Extreme nationalists denounced it as treasonous capitulation. Ratifications were formally exchanged on May 30, ending the war.",
+        "sources": [
+          { "name": "Archivo del Congreso General de la República Mexicana, 1848", "tier": 1 },
+          { "name": "Griswold del Castillo, The Treaty of Guadalupe Hidalgo (University of Oklahoma Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-troop-withdrawal",
+        "year": "Jun 12, 1848",
+        "title": "US Troops Evacuate Mexico City",
+        "type": "occupation",
+        "detail": "American occupation forces evacuated Mexico City on June 12, 1848, completing their withdrawal to Veracruz for repatriation. Scott had maintained a generally disciplined occupation, but the nearly 9-month presence of a foreign army in the capital left a lasting wound on Mexican national identity. The last US soldiers departed Veracruz by August 1848. Mexico was left to rebuild with a depleted treasury, shattered army, and diminished territory.",
+        "sources": [
+          { "name": "US Army Adjutant General records — US National Archives", "tier": 1 },
+          { "name": "K. Jack Bauer, The Mexican War 1846–1848 (Macmillan)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "gadsden-purchase",
+        "year": "Dec 30, 1853",
+        "title": "Gadsden Purchase — Final Territorial Adjustment",
+        "type": "treaty",
+        "detail": "US Minister James Gadsden negotiated with Santa Anna's government to purchase an additional 29,670 square miles of northern Sonora and Chihuahua for $10 million, to secure a southern route for a transcontinental railroad. The purchase defined the final US-Mexico border as it exists today. Mexico, still in financial crisis from the war, accepted. The Senate ratified the Gadsden Purchase on June 29, 1854, completing the territorial settlement of the Mexican-American War era.",
+        "sources": [
+          { "name": "Gadsden Treaty text — US National Archives", "tier": 1 },
+          { "name": "Paul Neff Garber, The Gadsden Treaty (University of Pennsylvania Press)", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  }
+]

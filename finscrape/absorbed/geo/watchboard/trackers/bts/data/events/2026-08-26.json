@@ -1,0 +1,66 @@
+[
+  {
+    "id": "chicago-early-merch-sale-waldron-deck-aug26",
+    "year": "2026",
+    "title": "Early Merch Sale Opens in Chicago Ahead of Soldier Field Shows",
+    "type": "concert",
+    "active": true,
+    "detail": "August 26, 2026 — Soldier Field opened early merchandise sales from 10 a.m. to 6 p.m. at the Waldron Deck and Stadium Green, offering free Waldron Deck parking to fans shopping ahead of BTS's two sold-out Soldier Field shows (Aug 27-28) — the group's first Chicago concerts in more than seven years, coinciding with Governor JB Pritzker's 'BTS Day' proclamation. Exterior merchandise locations open at 10 a.m. on both show days; parking lots open at 4 p.m., and the venue enforces a no-backpacks policy and cashless payments. Fans also gathered that evening for the 21+ 'ARMYRANG Chicago Pre-Party' at Bassline in the South Loop (10 p.m.-2 a.m.), part of a week of Chinatown and Downtown fan events tied to the shows.",
+    "sources": [
+      {
+        "name": "Soldier Field",
+        "tier": 1,
+        "url": "https://www.soldierfield.com/events/detail/bts-world-tour",
+        "pole": "western"
+      },
+      {
+        "name": "Time Out Chicago",
+        "tier": 3,
+        "url": "https://www.timeout.com/chicago/news/bts-is-bringing-its-massive-2026-world-tour-to-chicagoheres-how-to-get-tickets-011426",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.timeout.com/chicago/news/bts-is-bringing-its-massive-2026-world-tour-to-chicagoheres-how-to-get-tickets-011426",
+        "caption": "BTS's ARIRANG World Tour arrives in Chicago for two sold-out Soldier Field shows.",
+        "source": "Time Out Chicago",
+        "thumbnail": "https://media.timeout.com/images/106363068/750/422/image.jpg"
+      }
+    ],
+    "lastUpdated": "2026-08-26T14:15:00.000Z"
+  },
+  {
+    "id": "chicago-first-lady-fireworks-cruise-cta-aug26",
+    "year": "2026",
+    "title": "Chicago's First Lady Hosts Sold-Out BTS Fireworks Cruise; CTA Releases Choreography Video",
+    "type": "milestone",
+    "active": true,
+    "detail": "August 26, 2026 — Chicago's First Lady cruise line hosted a sold-out three-hour BTS-soundtracked fireworks cruise on Lake Michigan, with music from DJ Dorian Westwood, themed drinks, and a fireworks show, drawing ARMY who had bought merchandise earlier that day. Separately, the Chicago Transit Authority released a social media video encouraging fans to take public transit to Soldier Field, featuring CTA employees performing BTS choreography, part of a citywide buildup to the group's two sold-out Soldier Field shows (Aug 27-28) under Governor JB Pritzker's 'BTS Day' proclamation.",
+    "sources": [
+      {
+        "name": "FOX 32 Chicago",
+        "tier": 2,
+        "url": "https://www.fox32chicago.com/news/bts-takes-over-chicago-ahead-sold-out-soldier-field-concerts",
+        "pole": "western"
+      },
+      {
+        "name": "Yahoo Entertainment",
+        "tier": 2,
+        "url": "https://www.yahoo.com/entertainment/music/articles/bts-takes-over-chicago-ahead-023021041.html",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.fox32chicago.com/news/bts-takes-over-chicago-ahead-sold-out-soldier-field-concerts",
+        "caption": "BTS takes over Chicago ahead of sold-out Soldier Field concerts.",
+        "source": "FOX 32 Chicago",
+        "thumbnail": "https://images.foxtv.com/static.fox32chicago.com/www.fox32chicago.com/content/uploads/2026/08/1200/630/bts-world-tour-comes-to-chicago.jpg?ve=1&tl=1"
+      }
+    ],
+    "lastUpdated": "2026-08-27T14:00:00.000Z"
+  }
+]

@@ -1,0 +1,2956 @@
+import { useCallback, useRef, useEffect } from 'react';
+import { Layout, Model, type IJsonModel, type TabNode, type Action, Actions, DockLocation } from 'flexlayout-react';
+// CSS imported via index.css to avoid duplication
+
+import { lazy, Suspense } from 'react';
+import { NewsFeed } from '../panels/news-feed';
+import { StockPanel } from '../panels/stock-panel';
+import { AiInsights } from '../panels/ai-insights';
+import { TerminalLog } from '../layout/terminal-log';
+import { PanelErrorBoundary } from '../common/error-boundary';
+import { useAppStore } from '../../stores/use-app-store';
+import { translations, type TranslationKey } from '../../i18n/translations';
+
+// Lazy load heavy panels
+const WorldMapPanel = lazy(() => import('../panels/world-map-panel').then(m => ({ default: m.WorldMapPanel })));
+const TradingPanel = lazy(() => import('../panels/trading-panel').then(m => ({ default: m.TradingPanel })));
+const EconomicCalendarPanel = lazy(() => import('../panels/economic-calendar-panel').then(m => ({ default: m.EconomicCalendarPanel })));
+const AlertsPanel = lazy(() => import('../panels/alerts-panel').then(m => ({ default: m.AlertsPanel })));
+const SentimentPanel = lazy(() => import('../panels/sentiment-panel').then(m => ({ default: m.SentimentPanel })));
+const RiskCalculator = lazy(() => import('../panels/risk-calculator').then(m => ({ default: m.RiskCalculator })));
+const SectorRotationPanel = lazy(() => import('../panels/sector-rotation-panel').then(m => ({ default: m.SectorRotationPanel })));
+const EarningsCalendarPanel = lazy(() => import('../panels/earnings-calendar-panel').then(m => ({ default: m.EarningsCalendarPanel })));
+const OptionsFlowPanel = lazy(() => import('../panels/options-flow-panel').then(m => ({ default: m.OptionsFlowPanel })));
+const InsiderTradesPanel = lazy(() => import('../panels/insider-trades-panel').then(m => ({ default: m.InsiderTradesPanel })));
+const CorrelationMatrixPanel = lazy(() => import('../panels/correlation-matrix-panel').then(m => ({ default: m.CorrelationMatrixPanel })));
+const LiveStreamsPanel = lazy(() => import('../panels/live-streams-panel').then(m => ({ default: m.LiveStreamsPanel })));
+const PredictionTradingPanel = lazy(() => import('../panels/prediction-trading-panel').then(m => ({ default: m.PredictionTradingPanel })));
+const MissedOpportunitiesPanel = lazy(() => import('../panels/missed-opportunities-panel').then(m => ({ default: m.MissedOpportunitiesPanel })));
+const MarketMoversPanel = lazy(() => import('../panels/market-movers-panel').then(m => ({ default: m.MarketMoversPanel })));
+const ForexPanel = lazy(() => import('../panels/forex-panel').then(m => ({ default: m.ForexPanel })));
+const BondsPanel = lazy(() => import('../panels/bonds-panel').then(m => ({ default: m.BondsPanel })));
+const CommoditiesPanel = lazy(() => import('../panels/commodities-panel').then(m => ({ default: m.CommoditiesPanel })));
+const CryptoPanel = lazy(() => import('../panels/crypto-panel').then(m => ({ default: m.CryptoPanel })));
+const GlobalDashboardPanel = lazy(() => import('../panels/global-dashboard-panel').then(m => ({ default: m.GlobalDashboardPanel })));
+const ScannerPanel = lazy(() => import('../panels/scanner-panel').then(m => ({ default: m.ScannerPanel })));
+const ScreenerPanel = lazy(() => import('../panels/screener-panel').then(m => ({ default: m.ScreenerPanel })));
+const HeatMapPanel = lazy(() => import('../panels/heat-map-panel').then(m => ({ default: m.HeatMapPanel })));
+const ETFPanel = lazy(() => import('../panels/etf-panel').then(m => ({ default: m.ETFPanel })));
+const DividendPanel = lazy(() => import('../panels/dividend-panel').then(m => ({ default: m.DividendPanel })));
+const IPOPanel = lazy(() => import('../panels/ipo-panel').then(m => ({ default: m.IPOPanel })));
+const AnalystPanel = lazy(() => import('../panels/analyst-panel').then(m => ({ default: m.AnalystPanel })));
+const BreadthPanel = lazy(() => import('../panels/breadth-panel').then(m => ({ default: m.BreadthPanel })));
+const FinancialsPanel = lazy(() => import('../panels/financials-panel').then(m => ({ default: m.FinancialsPanel })));
+const FuturesPanel = lazy(() => import('../panels/futures-panel').then(m => ({ default: m.FuturesPanel })));
+const ComparisonPanel = lazy(() => import('../panels/comparison-panel').then(m => ({ default: m.ComparisonPanel })));
+const ShortInterestPanel = lazy(() => import('../panels/short-interest-panel').then(m => ({ default: m.ShortInterestPanel })));
+const OptionsCalcPanel = lazy(() => import('../panels/options-calc-panel').then(m => ({ default: m.OptionsCalcPanel })));
+const FXConverterPanel = lazy(() => import('../panels/fx-converter-panel').then(m => ({ default: m.FXConverterPanel })));
+const BondCalcPanel = lazy(() => import('../panels/bond-calc-panel').then(m => ({ default: m.BondCalcPanel })));
+const CompanyProfilePanel = lazy(() => import('../panels/company-profile-panel').then(m => ({ default: m.CompanyProfilePanel })));
+const PivotPointsPanel = lazy(() => import('../panels/pivot-points-panel').then(m => ({ default: m.PivotPointsPanel })));
+const MarketHoursPanel = lazy(() => import('../panels/market-hours-panel').then(m => ({ default: m.MarketHoursPanel })));
+const MarketCalendarPanel = lazy(() => import('../panels/market-calendar-panel').then(m => ({ default: m.MarketCalendarPanel })));
+const PairsPanel = lazy(() => import('../panels/pairs-panel').then(m => ({ default: m.PairsPanel })));
+const VolatilityPanel = lazy(() => import('../panels/volatility-panel').then(m => ({ default: m.VolatilityPanel })));
+const FibonacciPanel = lazy(() => import('../panels/fibonacci-panel').then(m => ({ default: m.FibonacciPanel })));
+const MortgageCalcPanel = lazy(() => import('../panels/mortgage-calc-panel').then(m => ({ default: m.MortgageCalcPanel })));
+const InvestmentCalcPanel = lazy(() => import('../panels/investment-calc-panel').then(m => ({ default: m.InvestmentCalcPanel })));
+const RelativeStrengthPanel = lazy(() => import('../panels/relative-strength-panel').then(m => ({ default: m.RelativeStrengthPanel })));
+const WatchlistPanel = lazy(() => import('../panels/watchlist-panel').then(m => ({ default: m.WatchlistPanel })));
+const EconomicIndicatorsPanel = lazy(() => import('../panels/economic-indicators-panel').then(m => ({ default: m.EconomicIndicatorsPanel })));
+const FXCrossPanel = lazy(() => import('../panels/fx-cross-panel').then(m => ({ default: m.FxCrossPanel })));
+const PortfolioAnalyticsPanel = lazy(() => import('../panels/portfolio-analytics-panel').then(m => ({ default: m.PortfolioAnalyticsPanel })));
+const FearGreedPanel = lazy(() => import('../panels/fear-greed-panel').then(m => ({ default: m.FearGreedPanel })));
+const SentimentHeatmapPanel = lazy(() => import('../panels/sentiment-heatmap-panel').then(m => ({ default: m.SentimentHeatmapPanel })));
+const YieldCurvePanel = lazy(() => import('../panels/yield-curve-panel').then(m => ({ default: m.YieldCurvePanel })));
+const CurrencyStrengthPanel = lazy(() => import('../panels/currency-strength-panel').then(m => ({ default: m.CurrencyStrengthPanel })));
+const MoneyFlowPanel = lazy(() => import('../panels/money-flow-panel').then(m => ({ default: m.MoneyFlowPanel })));
+const TechnicalChartPanel = lazy(() => import('../panels/technical-chart-panel').then(m => ({ default: m.TechnicalChartPanel })));
+const EarningsEstimatesPanel = lazy(() => import('../panels/earnings-estimates-panel').then(m => ({ default: m.EarningsEstimatesPanel })));
+const WorldEconomyPanel = lazy(() => import('../panels/world-economy-panel').then(m => ({ default: m.WorldEconomyPanel })));
+const CrossAssetPanel = lazy(() => import('../panels/cross-asset-panel').then(m => ({ default: m.CrossAssetPanel })));
+const HoldingsPanel = lazy(() => import('../panels/holdings-panel').then(m => ({ default: m.HoldingsPanel })));
+const SectorPerformancePanel = lazy(() => import('../panels/sector-performance-panel').then(m => ({ default: m.SectorPerformancePanel })));
+const ETFHoldingsPanel = lazy(() => import('../panels/etf-holdings-panel').then(m => ({ default: m.ETFHoldingsPanel })));
+const DrawdownPanel = lazy(() => import('../panels/drawdown-panel').then(m => ({ default: m.DrawdownPanel })));
+const MarketRegimePanel = lazy(() => import('../panels/market-regime-panel').then(m => ({ default: m.MarketRegimePanel })));
+const RelativeValuationPanel = lazy(() => import('../panels/relative-valuation-panel').then(m => ({ default: m.RelativeValuationPanel })));
+const ConfluencePanel = lazy(() => import('../panels/confluence-panel').then(m => ({ default: m.ConfluencePanel })));
+const IVSurfacePanel = lazy(() => import('../panels/iv-surface-panel').then(m => ({ default: m.IVSurfacePanel })));
+const SeasonalityPanel = lazy(() => import('../panels/seasonality-panel').then(m => ({ default: m.SeasonalityPanel })));
+const OrderFlowPanel = lazy(() => import('../panels/order-flow-panel').then(m => ({ default: m.OrderFlowPanel })));
+const PortfolioOptimizerPanel = lazy(() => import('../panels/portfolio-optimizer-panel').then(m => ({ default: m.PortfolioOptimizerPanel })));
+const BacktestPanel = lazy(() => import('../panels/backtest-panel').then(m => ({ default: m.BacktestPanel })));
+const MacroDashboardPanel = lazy(() => import('../panels/macro-dashboard-panel').then(m => ({ default: m.MacroDashboardPanel })));
+const EarningsSurprisePanel = lazy(() => import('../panels/earnings-surprise-panel').then(m => ({ default: m.EarningsSurprisePanel })));
+const FuturesCurvePanel = lazy(() => import('../panels/futures-curve-panel').then(m => ({ default: m.FuturesCurvePanel })));
+const CreditSpreadsPanel = lazy(() => import('../panels/credit-spreads-panel').then(m => ({ default: m.CreditSpreadsPanel })));
+const IntermarketPanel = lazy(() => import('../panels/intermarket-panel').then(m => ({ default: m.IntermarketPanel })));
+const SectorHeatmapPanel = lazy(() => import('../panels/sector-heatmap-panel').then(m => ({ default: m.SectorHeatmapPanel })));
+const EconomicSurprisesPanel = lazy(() => import('../panels/economic-surprises-panel').then(m => ({ default: m.EconomicSurprisesPanel })));
+const DispersionPanel = lazy(() => import('../panels/dispersion-panel').then(m => ({ default: m.DispersionPanel })));
+const FundFlowsPanel = lazy(() => import('../panels/fund-flows-panel').then(m => ({ default: m.FundFlowsPanel })));
+const VolTermStructurePanel = lazy(() => import('../panels/vol-term-structure-panel').then(m => ({ default: m.VolTermStructurePanel })));
+const MacroHeatmapPanel = lazy(() => import('../panels/macro-heatmap-panel').then(m => ({ default: m.MacroHeatmapPanel })));
+const FactorExposurePanel = lazy(() => import('../panels/factor-exposure-panel').then(m => ({ default: m.FactorExposurePanel })));
+const CapitalFlowsPanel = lazy(() => import('../panels/capital-flows-panel').then(m => ({ default: m.CapitalFlowsPanel })));
+const TailRiskPanel = lazy(() => import('../panels/tail-risk-panel').then(m => ({ default: m.TailRiskPanel })));
+const LiquidityPanel = lazy(() => import('../panels/liquidity-panel').then(m => ({ default: m.LiquidityPanel })));
+const CommoditySpreadsPanel = lazy(() => import('../panels/commodity-spreads-panel').then(m => ({ default: m.CommoditySpreadsPanel })));
+const SentimentDashboardPanel = lazy(() => import('../panels/sentiment-dashboard-panel').then(m => ({ default: m.SentimentDashboardPanel })));
+const RiskParityPanel = lazy(() => import('../panels/risk-parity-panel').then(m => ({ default: m.RiskParityPanel })));
+const MarketAnomaliesPanel = lazy(() => import('../panels/market-anomalies-panel').then(m => ({ default: m.MarketAnomaliesPanel })));
+const CarryTradePanel = lazy(() => import('../panels/carry-trade-panel').then(m => ({ default: m.CarryTradePanel })));
+const CotReportPanel = lazy(() => import('../panels/cot-report-panel').then(m => ({ default: m.CotReportPanel })));
+const IvRankPanel = lazy(() => import('../panels/iv-rank-panel').then(m => ({ default: m.IvRankPanel })));
+const PerformanceAttributionPanel = lazy(() => import('../panels/performance-attribution-panel').then(m => ({ default: m.PerformanceAttributionPanel })));
+const MarketMicrostructurePanel = lazy(() => import('../panels/market-microstructure-panel').then(m => ({ default: m.MarketMicrostructurePanel })));
+const CountryRiskPanel = lazy(() => import('../panels/country-risk-panel').then(m => ({ default: m.CountryRiskPanel })));
+const PositioningPanel = lazy(() => import('../panels/positioning-panel').then(m => ({ default: m.PositioningPanel })));
+const RepoRatesPanel = lazy(() => import('../panels/repo-rates-panel').then(m => ({ default: m.RepoRatesPanel })));
+const XccyBasisPanel = lazy(() => import('../panels/xccy-basis-panel').then(m => ({ default: m.XccyBasisPanel })));
+const StyleBoxPanel = lazy(() => import('../panels/style-box-panel').then(m => ({ default: m.StyleBoxPanel })));
+const SwapRatesPanel = lazy(() => import('../panels/swap-rates-panel').then(m => ({ default: m.SwapRatesPanel })));
+const TradeBlotterPanel = lazy(() => import('../panels/trade-blotter-panel').then(m => ({ default: m.TradeBlotterPanel })));
+const CorporateCdsPanel = lazy(() => import('../panels/corporate-cds-panel').then(m => ({ default: m.CorporateCdsPanel })));
+const EventDrivenPanel = lazy(() => import('../panels/event-driven-panel').then(m => ({ default: m.EventDrivenPanel })));
+const DebtMaturityPanel = lazy(() => import('../panels/debt-maturity-panel').then(m => ({ default: m.DebtMaturityPanel })));
+const EquityRiskPremiumPanel = lazy(() => import('../panels/equity-risk-premium-panel').then(m => ({ default: m.EquityRiskPremiumPanel })));
+const CentralBanksPanel = lazy(() => import('../panels/central-banks-panel').then(m => ({ default: m.CentralBanksPanel })));
+const VolSkewPanel = lazy(() => import('../panels/vol-skew-panel').then(m => ({ default: m.VolSkewPanel })));
+const GlobalRatesPanel = lazy(() => import('../panels/global-rates-panel').then(m => ({ default: m.GlobalRatesPanel })));
+const SupplyChainPanel = lazy(() => import('../panels/supply-chain-panel').then(m => ({ default: m.SupplyChainPanel })));
+const GammaExposurePanel = lazy(() => import('../panels/gamma-exposure-panel').then(m => ({ default: m.GammaExposurePanel })));
+const SovereignSpreadsPanel = lazy(() => import('../panels/sovereign-spreads-panel').then(m => ({ default: m.SovereignSpreadsPanel })));
+const EarningsRevisionsPanel = lazy(() => import('../panels/earnings-revisions-panel').then(m => ({ default: m.EarningsRevisionsPanel })));
+const DividendForecastPanel = lazy(() => import('../panels/dividend-forecast-panel').then(m => ({ default: m.DividendForecastPanel })));
+const CreditRatingsPanel = lazy(() => import('../panels/credit-ratings-panel').then(m => ({ default: m.CreditRatingsPanel })));
+const VolatilityConePanel = lazy(() => import('../panels/volatility-cone-panel').then(m => ({ default: m.VolatilityConePanel })));
+const TermStructurePanel = lazy(() => import('../panels/term-structure-panel').then(m => ({ default: m.TermStructurePanel })));
+const InstitutionalOwnershipPanel = lazy(() => import('../panels/institutional-ownership-panel').then(m => ({ default: m.InstitutionalOwnershipPanel })));
+const ImpliedCorrelationPanel = lazy(() => import('../panels/implied-correlation-panel').then(m => ({ default: m.ImpliedCorrelationPanel })));
+const EarningsQualityPanel = lazy(() => import('../panels/earnings-quality-panel').then(m => ({ default: m.EarningsQualityPanel })));
+const VolSurfacePanel = lazy(() => import('../panels/vol-surface-panel').then(m => ({ default: m.VolSurfacePanel })));
+const GlobalFlowsPanel = lazy(() => import('../panels/global-flows-panel').then(m => ({ default: m.GlobalFlowsPanel })));
+const RegressionAnalysisPanel = lazy(() => import('../panels/regression-analysis-panel').then(m => ({ default: m.RegressionAnalysisPanel })));
+const CovenantMonitorPanel = lazy(() => import('../panels/covenant-monitor-panel').then(m => ({ default: m.CovenantMonitorPanel })));
+const MarketInternalsPanel = lazy(() => import('../panels/market-internals-panel').then(m => ({ default: m.MarketInternalsPanel })));
+const ValuationMultiplesPanel = lazy(() => import('../panels/valuation-multiples-panel').then(m => ({ default: m.ValuationMultiplesPanel })));
+const FixedIncomeAnalyticsPanel = lazy(() => import('../panels/fixed-income-analytics-panel').then(m => ({ default: m.FixedIncomeAnalyticsPanel })));
+const InsiderSentimentPanel = lazy(() => import('../panels/insider-sentiment-panel').then(m => ({ default: m.InsiderSentimentPanel })));
+const CustomIndexPanel = lazy(() => import('../panels/custom-index-panel').then(m => ({ default: m.CustomIndexPanel })));
+const MbsAnalyticsPanel = lazy(() => import('../panels/mbs-analytics-panel').then(m => ({ default: m.MbsAnalyticsPanel })));
+const CdxIndexPanel = lazy(() => import('../panels/cdx-index-panel').then(m => ({ default: m.CdxIndexPanel })));
+const MuniBondsPanel = lazy(() => import('../panels/muni-bonds-panel').then(m => ({ default: m.MuniBondsPanel })));
+const CloAnalyticsPanel = lazy(() => import('../panels/clo-analytics-panel').then(m => ({ default: m.CloAnalyticsPanel })));
+const OnchainAnalyticsPanel = lazy(() => import('../panels/onchain-analytics-panel').then(m => ({ default: m.OnchainAnalyticsPanel })));
+const PrivateCreditPanel = lazy(() => import('../panels/private-credit-panel').then(m => ({ default: m.PrivateCreditPanel })));
+const VolRiskPremiumPanel = lazy(() => import('../panels/vol-risk-premium-panel').then(m => ({ default: m.VolRiskPremiumPanel })));
+const EsgRatingsPanel = lazy(() => import('../panels/esg-ratings-panel').then(m => ({ default: m.EsgRatingsPanel })));
+const FreightIndicesPanel = lazy(() => import('../panels/freight-indices-panel').then(m => ({ default: m.FreightIndicesPanel })));
+const AlternativeDataPanel = lazy(() => import('../panels/alternative-data-panel').then(m => ({ default: m.AlternativeDataPanel })));
+const TradeIdeasPanel = lazy(() => import('../panels/trade-ideas-panel').then(m => ({ default: m.TradeIdeasPanel })));
+const DebtIssuancePanel = lazy(() => import('../panels/debt-issuance-panel').then(m => ({ default: m.DebtIssuancePanel })));
+const FxOptionsPanel = lazy(() => import('../panels/fx-options-panel').then(m => ({ default: m.FxOptionsPanel })));
+const MultiFactorPanel = lazy(() => import('../panels/multi-factor-panel').then(m => ({ default: m.MultiFactorPanel })));
+const TreasuryAuctionsPanel = lazy(() => import('../panels/treasury-auctions-panel').then(m => ({ default: m.TreasuryAuctionsPanel })));
+const CommodityCurvesPanel = lazy(() => import('../panels/commodity-curves-panel').then(m => ({ default: m.CommodityCurvesPanel })));
+const EmBondsPanel = lazy(() => import('../panels/em-bonds-panel').then(m => ({ default: m.EmBondsPanel })));
+const ReitMonitorPanel = lazy(() => import('../panels/reit-monitor-panel').then(m => ({ default: m.ReitMonitorPanel })));
+const MoneyMarketPanel = lazy(() => import('../panels/money-market-panel').then(m => ({ default: m.MoneyMarketPanel })));
+const ConvertibleBondsPanel = lazy(() => import('../panels/convertible-bonds-panel').then(m => ({ default: m.ConvertibleBondsPanel })));
+const GlobalPmiPanel = lazy(() => import('../panels/global-pmi-panel').then(m => ({ default: m.GlobalPmiPanel })));
+const LeveragedLoansPanel = lazy(() => import('../panels/leveraged-loans-panel').then(m => ({ default: m.LeveragedLoansPanel })));
+const SwaptionVolPanel = lazy(() => import('../panels/swaption-vol-panel').then(m => ({ default: m.SwaptionVolPanel })));
+const DistressedDebtPanel = lazy(() => import('../panels/distressed-debt-panel').then(m => ({ default: m.DistressedDebtPanel })));
+const RateCapsFloorsPanel = lazy(() => import('../panels/rate-caps-floors-panel').then(m => ({ default: m.RateCapsFloorsPanel })));
+const DividendSwapsPanel = lazy(() => import('../panels/dividend-swaps-panel').then(m => ({ default: m.DividendSwapsPanel })));
+const SecuritiesLendingPanel = lazy(() => import('../panels/securities-lending-panel').then(m => ({ default: m.SecuritiesLendingPanel })));
+const VarianceSwapsPanel = lazy(() => import('../panels/variance-swaps-panel').then(m => ({ default: m.VarianceSwapsPanel })));
+const CarbonCreditsPanel = lazy(() => import('../panels/carbon-credits-panel').then(m => ({ default: m.CarbonCreditsPanel })));
+const WeatherDerivativesPanel = lazy(() => import('../panels/weather-derivatives-panel').then(m => ({ default: m.WeatherDerivativesPanel })));
+const DarkPoolPanel = lazy(() => import('../panels/dark-pool-panel').then(m => ({ default: m.DarkPoolPanel })));
+const TotalReturnSwapsPanel = lazy(() => import('../panels/total-return-swaps-panel').then(m => ({ default: m.TotalReturnSwapsPanel })));
+const CatBondsPanel = lazy(() => import('../panels/cat-bonds-panel').then(m => ({ default: m.CatBondsPanel })));
+const InflationLinkedBondsPanel = lazy(() => import('../panels/inflation-linked-bonds-panel').then(m => ({ default: m.InflationLinkedBondsPanel })));
+const EquityBasketSwapsPanel = lazy(() => import('../panels/equity-basket-swaps-panel').then(m => ({ default: m.EquityBasketSwapsPanel })));
+const CrossCurrencySwapsPanel = lazy(() => import('../panels/cross-currency-swaps-panel').then(m => ({ default: m.CrossCurrencySwapsPanel })));
+const CommodityOptionsPanel = lazy(() => import('../panels/commodity-options-panel').then(m => ({ default: m.CommodityOptionsPanel })));
+const LoanCdsPanel = lazy(() => import('../panels/loan-cds-panel').then(m => ({ default: m.LoanCdsPanel })));
+const ConvertibleArbPanel = lazy(() => import('../panels/convertible-arb-panel').then(m => ({ default: m.ConvertibleArbPanel })));
+const ShippingRatesPanel = lazy(() => import('../panels/shipping-rates-panel').then(m => ({ default: m.ShippingRatesPanel })));
+const CreditAuctionPanel = lazy(() => import('../panels/credit-auction-panel').then(m => ({ default: m.CreditAuctionPanel })));
+const MuniYieldCurvesPanel = lazy(() => import('../panels/muni-yield-curves-panel').then(m => ({ default: m.MuniYieldCurvesPanel })));
+const StructuredProductsPanel = lazy(() => import('../panels/structured-products-panel').then(m => ({ default: m.StructuredProductsPanel })));
+const PensionFundPanel = lazy(() => import('../panels/pension-fund-panel').then(m => ({ default: m.PensionFundPanel })));
+const SwapSpreadMonitorPanel = lazy(() => import('../panels/swap-spread-monitor-panel').then(m => ({ default: m.SwapSpreadMonitorPanel })));
+const EquityLinkedNotesPanel = lazy(() => import('../panels/equity-linked-notes-panel').then(m => ({ default: m.EquityLinkedNotesPanel })));
+const TradeFinancePanel = lazy(() => import('../panels/trade-finance-panel').then(m => ({ default: m.TradeFinancePanel })));
+const RepoMarketPanel = lazy(() => import('../panels/repo-market-panel').then(m => ({ default: m.RepoMarketPanel })));
+const CommodityInventoryPanel = lazy(() => import('../panels/commodity-inventory-panel').then(m => ({ default: m.CommodityInventoryPanel })));
+const SovereignWealthPanel = lazy(() => import('../panels/sovereign-wealth-panel').then(m => ({ default: m.SovereignWealthPanel })));
+const AgencyMbsTbaPanel = lazy(() => import('../panels/agency-mbs-tba-panel').then(m => ({ default: m.AgencyMbsTbaPanel })));
+const EtfFlowsPanel = lazy(() => import('../panels/etf-flows-panel').then(m => ({ default: m.EtfFlowsPanel })));
+const CreditFlowPanel = lazy(() => import('../panels/credit-flow-panel').then(m => ({ default: m.CreditFlowPanel })));
+const CommoditySeasonalityPanel = lazy(() => import('../panels/commodity-seasonality-panel').then(m => ({ default: m.CommoditySeasonalityPanel })));
+const FxVolatilityPanel = lazy(() => import('../panels/fx-volatility-panel').then(m => ({ default: m.FxVolatilityPanel })));
+const PrimaryDealerPanel = lazy(() => import('../panels/primary-dealer-panel').then(m => ({ default: m.PrimaryDealerPanel })));
+const RealEstateCapitalPanel = lazy(() => import('../panels/real-estate-capital-panel').then(m => ({ default: m.RealEstateCapitalPanel })));
+const ElectricityMarketsPanel = lazy(() => import('../panels/electricity-markets-panel').then(m => ({ default: m.ElectricityMarketsPanel })));
+const SyndicatedLoansPanel = lazy(() => import('../panels/syndicated-loans-panel').then(m => ({ default: m.SyndicatedLoansPanel })));
+const EmissionsTradingPanel = lazy(() => import('../panels/emissions-trading-panel').then(m => ({ default: m.EmissionsTradingPanel })));
+const InsuranceLinkedPanel = lazy(() => import('../panels/insurance-linked-panel').then(m => ({ default: m.InsuranceLinkedPanel })));
+const MetalsForwardPanel = lazy(() => import('../panels/metals-forward-panel').then(m => ({ default: m.MetalsForwardPanel })));
+const CentralBankWatchPanel = lazy(() => import('../panels/central-bank-watch-panel').then(m => ({ default: m.CentralBankWatchPanel })));
+const FreightDerivativesPanel = lazy(() => import('../panels/freight-derivatives-panel').then(m => ({ default: m.FreightDerivativesPanel })));
+const InflationBreakevensPanel = lazy(() => import('../panels/inflation-breakevens-panel').then(m => ({ default: m.InflationBreakevensPanel })));
+const MuniBondAuctionPanel = lazy(() => import('../panels/muni-bond-auction-panel').then(m => ({ default: m.MuniBondAuctionPanel })));
+const CommodityCurveAnalyticsPanel = lazy(() => import('../panels/commodity-curve-analytics-panel').then(m => ({ default: m.CommodityCurveAnalyticsPanel })));
+const CollateralMonitorPanel = lazy(() => import('../panels/collateral-monitor-panel').then(m => ({ default: m.CollateralMonitorPanel })));
+const SovereignCdsPanel = lazy(() => import('../panels/sovereign-cds-panel').then(m => ({ default: m.SovereignCdsPanel })));
+const CrossAssetMomentumPanel = lazy(() => import('../panels/cross-asset-momentum-panel').then(m => ({ default: m.CrossAssetMomentumPanel })));
+const CryptoDerivativesPanel = lazy(() => import('../panels/crypto-derivatives-panel').then(m => ({ default: m.CryptoDerivativesPanel })));
+const BondRelativeValuePanel = lazy(() => import('../panels/bond-relative-value-panel').then(m => ({ default: m.BondRelativeValuePanel })));
+const VolatilityArbitragePanel = lazy(() => import('../panels/volatility-arbitrage-panel').then(m => ({ default: m.VolatilityArbitragePanel })));
+const SystematicStrategyPanel = lazy(() => import('../panels/systematic-strategy-panel').then(m => ({ default: m.SystematicStrategyPanel })));
+const FundingRateMonitorPanel = lazy(() => import('../panels/funding-rate-monitor-panel').then(m => ({ default: m.FundingRateMonitorPanel })));
+const EmLocalRatesPanel = lazy(() => import('../panels/em-local-rates-panel').then(m => ({ default: m.EmLocalRatesPanel })));
+const PortfolioRiskAnalyticsPanel = lazy(() => import('../panels/portfolio-risk-analytics-panel').then(m => ({ default: m.PortfolioRiskAnalyticsPanel })));
+const CreditIndexMonitorPanel = lazy(() => import('../panels/credit-index-monitor-panel').then(m => ({ default: m.CreditIndexMonitorPanel })));
+const EquityFinancingPanel = lazy(() => import('../panels/equity-financing-panel').then(m => ({ default: m.EquityFinancingPanel })));
+const GlobalMacroDashboardPanel = lazy(() => import('../panels/global-macro-dashboard-panel').then(m => ({ default: m.GlobalMacroDashboardPanel })));
+const AbsRmbsMonitorPanel = lazy(() => import('../panels/abs-rmbs-monitor-panel').then(m => ({ default: m.AbsRmbsMonitorPanel })));
+const LiquidityRiskMonitorPanel = lazy(() => import('../panels/liquidity-risk-monitor-panel').then(m => ({ default: m.LiquidityRiskMonitorPanel })));
+const FiAttributionPanel = lazy(() => import('../panels/fi-attribution-panel').then(m => ({ default: m.FiAttributionPanel })));
+const RepoRateHeatmapPanel = lazy(() => import('../panels/repo-rate-heatmap-panel').then(m => ({ default: m.RepoRateHeatmapPanel })));
+const TradeCompressionPanel = lazy(() => import('../panels/trade-compression-panel').then(m => ({ default: m.TradeCompressionPanel })));
+const RegulatoryCapitalPanel = lazy(() => import('../panels/regulatory-capital-panel').then(m => ({ default: m.RegulatoryCapitalPanel })));
+const SettlementRiskPanel = lazy(() => import('../panels/settlement-risk-panel').then(m => ({ default: m.SettlementRiskPanel })));
+const SwapValuationPanel = lazy(() => import('../panels/swap-valuation-panel').then(m => ({ default: m.SwapValuationPanel })));
+const CommodityStoragePanel = lazy(() => import('../panels/commodity-storage-panel').then(m => ({ default: m.CommodityStoragePanel })));
+const CounterpartyExposurePanel = lazy(() => import('../panels/counterparty-exposure-panel').then(m => ({ default: m.CounterpartyExposurePanel })));
+const MarketImpactModelPanel = lazy(() => import('../panels/market-impact-model-panel').then(m => ({ default: m.MarketImpactModelPanel })));
+const StructuredNotesPanel = lazy(() => import('../panels/structured-notes-panel').then(m => ({ default: m.StructuredNotesPanel })));
+const SecuritiesFinancePanel = lazy(() => import('../panels/securities-finance-panel').then(m => ({ default: m.SecuritiesFinancePanel })));
+const CreditCurveBuilderPanel = lazy(() => import('../panels/credit-curve-builder-panel').then(m => ({ default: m.CreditCurveBuilderPanel })));
+const ExecutionAnalyticsPanel = lazy(() => import('../panels/execution-analytics-panel').then(m => ({ default: m.ExecutionAnalyticsPanel })));
+const BondAuctionCalendarPanel = lazy(() => import('../panels/bond-auction-calendar-panel').then(m => ({ default: m.BondAuctionCalendarPanel })));
+const FxCarryMonitorPanel = lazy(() => import('../panels/fx-carry-monitor-panel').then(m => ({ default: m.FxCarryMonitorPanel })));
+const EquityCapitalMarketsPanel = lazy(() => import('../panels/equity-capital-markets-panel').then(m => ({ default: m.EquityCapitalMarketsPanel })));
+const DebtCapitalMarketsPanel = lazy(() => import('../panels/debt-capital-markets-panel').then(m => ({ default: m.DebtCapitalMarketsPanel })));
+const HedgeFundMonitorPanel = lazy(() => import('../panels/hedge-fund-monitor-panel').then(m => ({ default: m.HedgeFundMonitorPanel })));
+const RiskDashboardPanel = lazy(() => import('../panels/risk-dashboard-panel').then(m => ({ default: m.RiskDashboardPanel })));
+const BenchmarkTrackerPanel = lazy(() => import('../panels/benchmark-tracker-panel').then(m => ({ default: m.BenchmarkTrackerPanel })));
+const LiquidityCoveragePanel = lazy(() => import('../panels/liquidity-coverage-panel').then(m => ({ default: m.LiquidityCoveragePanel })));
+const MarketSentimentIndexPanel = lazy(() => import('../panels/market-sentiment-index-panel').then(m => ({ default: m.MarketSentimentIndexPanel })));
+const PortfolioStressTestPanel = lazy(() => import('../panels/portfolio-stress-test-panel').then(m => ({ default: m.PortfolioStressTestPanel })));
+const GlobalLiquidityMonitorPanel = lazy(() => import('../panels/global-liquidity-monitor-panel').then(m => ({ default: m.GlobalLiquidityMonitorPanel })));
+const TradeRecapPanel = lazy(() => import('../panels/trade-recap-panel').then(m => ({ default: m.TradeRecapPanel })));
+const MacroSurpriseTrackerPanel = lazy(() => import('../panels/macro-surprise-tracker-panel').then(m => ({ default: m.MacroSurpriseTrackerPanel })));
+const FxVolatilitySurfacePanel = lazy(() => import('../panels/fx-volatility-surface-panel').then(m => ({ default: m.FxVolatilitySurfacePanel })));
+const CommodityFundamentalPanel = lazy(() => import('../panels/commodity-fundamental-panel').then(m => ({ default: m.CommodityFundamentalPanel })));
+const EtfFlowMonitorPanel = lazy(() => import('../panels/etf-flow-monitor-panel').then(m => ({ default: m.EtfFlowMonitorPanel })));
+const EquityFactorMonitorPanel = lazy(() => import('../panels/equity-factor-monitor-panel').then(m => ({ default: m.EquityFactorMonitorPanel })));
+const RatesStrategyPanel = lazy(() => import('../panels/rates-strategy-panel').then(m => ({ default: m.RatesStrategyPanel })));
+const CreditPortfolioPanel = lazy(() => import('../panels/credit-portfolio-panel').then(m => ({ default: m.CreditPortfolioPanel })));
+const MacroRegimeMonitorPanel = lazy(() => import('../panels/macro-regime-monitor-panel').then(m => ({ default: m.MacroRegimeMonitorPanel })));
+const DividendCalendarPanel = lazy(() => import('../panels/dividend-calendar-panel').then(m => ({ default: m.DividendCalendarPanel })));
+const ConvertibleArbitragePanel = lazy(() => import('../panels/convertible-arbitrage-panel').then(m => ({ default: m.ConvertibleArbitragePanel })));
+const RealtimePnlPanel = lazy(() => import('../panels/realtime-pnl-panel').then(m => ({ default: m.RealtimePnlPanel })));
+const MarketBreadthAdvancedPanel = lazy(() => import('../panels/market-breadth-advanced-panel').then(m => ({ default: m.MarketBreadthAdvancedPanel })));
+const VolatilityDashboardPanel = lazy(() => import('../panels/volatility-dashboard-panel').then(m => ({ default: m.VolatilityDashboardPanel })));
+const FiRelativeValuePanel = lazy(() => import('../panels/fi-relative-value-panel').then(m => ({ default: m.FiRelativeValuePanel })));
+const EquityScreenResultsPanel = lazy(() => import('../panels/equity-screen-results-panel').then(m => ({ default: m.EquityScreenResultsPanel })));
+const CrossAssetCorrelationPanel = lazy(() => import('../panels/cross-asset-correlation-panel').then(m => ({ default: m.CrossAssetCorrelationPanel })));
+const PortfolioAttributionPanel = lazy(() => import('../panels/portfolio-attribution-panel').then(m => ({ default: m.PortfolioAttributionPanel })));
+const MunicipalBondMonitorPanel = lazy(() => import('../panels/municipal-bond-monitor-panel').then(m => ({ default: m.MunicipalBondMonitorPanel })));
+const StructuredCreditPanel = lazy(() => import('../panels/structured-credit-panel').then(m => ({ default: m.StructuredCreditPanel })));
+const CurrencyOptionsPanel = lazy(() => import('../panels/currency-options-panel').then(m => ({ default: m.CurrencyOptionsPanel })));
+const SwapCurveMonitorPanel = lazy(() => import('../panels/swap-curve-monitor-panel').then(m => ({ default: m.SwapCurveMonitorPanel })));
+const FundFlowAnalyticsPanel = lazy(() => import('../panels/fund-flow-analytics-panel').then(m => ({ default: m.FundFlowAnalyticsPanel })));
+const TradeCostAnalysisPanel = lazy(() => import('../panels/trade-cost-analysis-panel').then(m => ({ default: m.TradeCostAnalysisPanel })));
+const WarrantConvertiblePanel = lazy(() => import('../panels/warrant-convertible-panel').then(m => ({ default: m.WarrantConvertiblePanel })));
+const GlobalTradeFlowPanel = lazy(() => import('../panels/global-trade-flow-panel').then(m => ({ default: m.GlobalTradeFlowPanel })));
+const RealEstateAnalyticsPanel = lazy(() => import('../panels/real-estate-analytics-panel').then(m => ({ default: m.RealEstateAnalyticsPanel })));
+const InflationMonitorPanel = lazy(() => import('../panels/inflation-monitor-panel').then(m => ({ default: m.InflationMonitorPanel })));
+const MergerArbitragePanel = lazy(() => import('../panels/merger-arbitrage-panel').then(m => ({ default: m.MergerArbitragePanel })));
+const SovereignDebtPanel = lazy(() => import('../panels/sovereign-debt-panel').then(m => ({ default: m.SovereignDebtPanel })));
+const EtfPremiumPanel = lazy(() => import('../panels/etf-premium-panel').then(m => ({ default: m.EtfPremiumPanel })));
+const CommodityDemandPanel = lazy(() => import('../panels/commodity-demand-panel').then(m => ({ default: m.CommodityDemandPanel })));
+const GlobalDividendPanel = lazy(() => import('../panels/global-dividend-panel').then(m => ({ default: m.GlobalDividendPanel })));
+const CdsIndexMonitorPanel = lazy(() => import('../panels/cds-index-monitor-panel').then(m => ({ default: m.CdsIndexMonitorPanel })));
+const MacroRiskPanel = lazy(() => import('../panels/macro-risk-panel').then(m => ({ default: m.MacroRiskPanel })));
+const FiAttributionAnalysisPanel = lazy(() => import('../panels/fi-attribution-analysis-panel').then(m => ({ default: m.FiAttributionAnalysisPanel })));
+const EquityStylePanel = lazy(() => import('../panels/equity-style-panel').then(m => ({ default: m.EquityStylePanel })));
+const CurrencyForecastPanel = lazy(() => import('../panels/currency-forecast-panel').then(m => ({ default: m.CurrencyForecastPanel })));
+const BondLadderPanel = lazy(() => import('../panels/bond-ladder-panel').then(m => ({ default: m.BondLadderPanel })));
+const SectorCreditSpreadPanel = lazy(() => import('../panels/sector-credit-spread-panel').then(m => ({ default: m.SectorCreditSpreadPanel })));
+const GlobalPmiDashboardPanel = lazy(() => import('../panels/global-pmi-dashboard-panel').then(m => ({ default: m.GlobalPmiDashboardPanel })));
+const EarningsWhisperPanel = lazy(() => import('../panels/earnings-whisper-panel').then(m => ({ default: m.EarningsWhisperPanel })));
+const PortfolioHedgingPanel = lazy(() => import('../panels/portfolio-hedging-panel').then(m => ({ default: m.PortfolioHedgingPanel })));
+const MarketDepthPanel = lazy(() => import('../panels/market-depth-panel').then(m => ({ default: m.MarketDepthPanel })));
+const IrsMonitorPanel = lazy(() => import('../panels/irs-monitor-panel').then(m => ({ default: m.IrsMonitorPanel })));
+const EquityCapitalRaisePanel = lazy(() => import('../panels/equity-capital-raise-panel').then(m => ({ default: m.EquityCapitalRaisePanel })));
+const VolatilitySmilePanel = lazy(() => import('../panels/volatility-smile-panel').then(m => ({ default: m.VolatilitySmilePanel })));
+const CentralBankBalanceSheetPanel = lazy(() => import('../panels/central-bank-balance-sheet-panel').then(m => ({ default: m.CentralBankBalanceSheetPanel })));
+const CorporateBuybackPanel = lazy(() => import('../panels/corporate-buyback-panel').then(m => ({ default: m.CorporateBuybackPanel })));
+const MarginDebtPanel = lazy(() => import('../panels/margin-debt-panel').then(m => ({ default: m.MarginDebtPanel })));
+const CorporateActionsPanel = lazy(() => import('../panels/corporate-actions-panel').then(m => ({ default: m.CorporateActionsPanel })));
+const FiscalPolicyPanel = lazy(() => import('../panels/fiscal-policy-panel').then(m => ({ default: m.FiscalPolicyPanel })));
+const BasisTradePanel = lazy(() => import('../panels/basis-trade-panel').then(m => ({ default: m.BasisTradePanel })));
+const FlowOfFundsPanel = lazy(() => import('../panels/flow-of-funds-panel').then(m => ({ default: m.FlowOfFundsPanel })));
+const GlobalSupplyChainPanel = lazy(() => import('../panels/global-supply-chain-panel').then(m => ({ default: m.GlobalSupplyChainPanel })));
+const TreasuryAnalyticsPanel = lazy(() => import('../panels/treasury-analytics-panel').then(m => ({ default: m.TreasuryAnalyticsPanel })));
+const CurveTradePanel = lazy(() => import('../panels/curve-trade-panel').then(m => ({ default: m.CurveTradePanel })));
+const PrivateEquityPanel = lazy(() => import('../panels/private-equity-panel').then(m => ({ default: m.PrivateEquityPanel })));
+const CapitalStructurePanel = lazy(() => import('../panels/capital-structure-panel').then(m => ({ default: m.CapitalStructurePanel })));
+const CrossBorderMaPanel = lazy(() => import('../panels/cross-border-ma-panel').then(m => ({ default: m.CrossBorderMaPanel })));
+const CreditRiskTransferPanel = lazy(() => import('../panels/credit-risk-transfer-panel').then(m => ({ default: m.CreditRiskTransferPanel })));
+const SwapExecutionPanel = lazy(() => import('../panels/swap-execution-panel').then(m => ({ default: m.SwapExecutionPanel })));
+const DebtCeilingPanel = lazy(() => import('../panels/debt-ceiling-panel').then(m => ({ default: m.DebtCeilingPanel })));
+const SecuritizationPanel = lazy(() => import('../panels/securitization-panel').then(m => ({ default: m.SecuritizationPanel })));
+const MunicipalCreditPanel = lazy(() => import('../panels/municipal-credit-panel').then(m => ({ default: m.MunicipalCreditPanel })));
+const CommoditySpreadPanel = lazy(() => import('../panels/commodity-spread-panel').then(m => ({ default: m.CommoditySpreadPanel })));
+const InflationSwapPanel = lazy(() => import('../panels/inflation-swap-panel').then(m => ({ default: m.InflationSwapPanel })));
+const CreditDefaultIndexPanel = lazy(() => import('../panels/credit-default-index-panel').then(m => ({ default: m.CreditDefaultIndexPanel })));
+const SovereignWealthFundPanel = lazy(() => import('../panels/sovereign-wealth-fund-panel').then(m => ({ default: m.SovereignWealthFundPanel })));
+const CollateralManagementPanel = lazy(() => import('../panels/collateral-management-panel').then(m => ({ default: m.CollateralManagementPanel })));
+const PrimeBrokeragePanel = lazy(() => import('../panels/prime-brokerage-panel').then(m => ({ default: m.PrimeBrokeragePanel })));
+const ElectionRiskPanel = lazy(() => import('../panels/election-risk-panel').then(m => ({ default: m.ElectionRiskPanel })));
+const CvaMonitorPanel = lazy(() => import('../panels/cva-monitor-panel').then(m => ({ default: m.CvaMonitorPanel })));
+const AlgoExecutionPanel = lazy(() => import('../panels/algo-execution-panel').then(m => ({ default: m.AlgoExecutionPanel })));
+const SecuritiesClassActionPanel = lazy(() => import('../panels/securities-class-action-panel').then(m => ({ default: m.SecuritiesClassActionPanel })));
+const ProxyVotingPanel = lazy(() => import('../panels/proxy-voting-panel').then(m => ({ default: m.ProxyVotingPanel })));
+const IndexRebalancePanel = lazy(() => import('../panels/index-rebalance-panel').then(m => ({ default: m.IndexRebalancePanel })));
+const ShareholderActivismPanel = lazy(() => import('../panels/shareholder-activism-panel').then(m => ({ default: m.ShareholderActivismPanel })));
+const FundFlowTrackerPanel = lazy(() => import('../panels/fund-flow-tracker-panel').then(m => ({ default: m.FundFlowTrackerPanel })));
+const InsiderTransactionPanel = lazy(() => import('../panels/insider-transaction-panel').then(m => ({ default: m.InsiderTransactionPanel })));
+const ShortSqueezePanel = lazy(() => import('../panels/short-squeeze-panel').then(m => ({ default: m.ShortSqueezePanel })));
+const SpacMonitorPanel = lazy(() => import('../panels/spac-monitor-panel').then(m => ({ default: m.SpacMonitorPanel })));
+const BlockTradePanel = lazy(() => import('../panels/block-trade-panel').then(m => ({ default: m.BlockTradePanel })));
+const RegulatoryFilingPanel = lazy(() => import('../panels/regulatory-filing-panel').then(m => ({ default: m.RegulatoryFilingPanel })));
+const TaxLossHarvestPanel = lazy(() => import('../panels/tax-loss-harvest-panel').then(m => ({ default: m.TaxLossHarvestPanel })));
+const DividendCapturePanel = lazy(() => import('../panels/dividend-capture-panel').then(m => ({ default: m.DividendCapturePanel })));
+const CreditRatingMigrationPanel = lazy(() => import('../panels/credit-rating-migration-panel').then(m => ({ default: m.CreditRatingMigrationPanel })));
+const MergerArbMonitorPanel = lazy(() => import('../panels/merger-arb-monitor-panel').then(m => ({ default: m.MergerArbMonitorPanel })));
+const MarketMakingPanel = lazy(() => import('../panels/market-making-panel').then(m => ({ default: m.MarketMakingPanel })));
+const RateProbabilityPanel = lazy(() => import('../panels/rate-probability-panel').then(m => ({ default: m.RateProbabilityPanel })));
+const FxForwardPanel = lazy(() => import('../panels/fx-forward-panel').then(m => ({ default: m.FxForwardPanel })));
+const CreditEventPanel = lazy(() => import('../panels/credit-event-panel').then(m => ({ default: m.CreditEventPanel })));
+const PortfolioMarginPanel = lazy(() => import('../panels/portfolio-margin-panel').then(m => ({ default: m.PortfolioMarginPanel })));
+const CorporateGovernancePanel = lazy(() => import('../panels/corporate-governance-panel').then(m => ({ default: m.CorporateGovernancePanel })));
+const TreasuryBillPanel = lazy(() => import('../panels/treasury-bill-panel').then(m => ({ default: m.TreasuryBillPanel })));
+const EquityLendingPanel = lazy(() => import('../panels/equity-lending-panel').then(m => ({ default: m.EquityLendingPanel })));
+const TradeSettlementPanel = lazy(() => import('../panels/trade-settlement-panel').then(m => ({ default: m.TradeSettlementPanel })));
+const IndexArbitragePanel = lazy(() => import('../panels/index-arbitrage-panel').then(m => ({ default: m.IndexArbitragePanel })));
+const AssetAllocationPanel = lazy(() => import('../panels/asset-allocation-panel').then(m => ({ default: m.AssetAllocationPanel })));
+const BondFuturesBasisPanel = lazy(() => import('../panels/bond-futures-basis-panel').then(m => ({ default: m.BondFuturesBasisPanel })));
+const RiskBudgetingPanel = lazy(() => import('../panels/risk-budgeting-panel').then(m => ({ default: m.RiskBudgetingPanel })));
+const MarketSurveillancePanel = lazy(() => import('../panels/market-surveillance-panel').then(m => ({ default: m.MarketSurveillancePanel })));
+const DurationManagementPanel = lazy(() => import('../panels/duration-management-panel').then(m => ({ default: m.DurationManagementPanel })));
+const SwapPricingPanel = lazy(() => import('../panels/swap-pricing-panel').then(m => ({ default: m.SwapPricingPanel })));
+const OptionStrategyBuilderPanel = lazy(() => import('../panels/option-strategy-builder-panel').then(m => ({ default: m.OptionStrategyBuilderPanel })));
+const CurrencyBasketPanel = lazy(() => import('../panels/currency-basket-panel').then(m => ({ default: m.CurrencyBasketPanel })));
+const LiquidityStressTestPanel = lazy(() => import('../panels/liquidity-stress-test-panel').then(m => ({ default: m.LiquidityStressTestPanel })));
+const TradeRepositoryPanel = lazy(() => import('../panels/trade-repository-panel').then(m => ({ default: m.TradeRepositoryPanel })));
+const SovereignRiskScorePanel = lazy(() => import('../panels/sovereign-risk-score-panel').then(m => ({ default: m.SovereignRiskScorePanel })));
+const CollateralOptimizationPanel = lazy(() => import('../panels/collateral-optimization-panel').then(m => ({ default: m.CollateralOptimizationPanel })));
+const CrossMarginingPanel = lazy(() => import('../panels/cross-margining-panel').then(m => ({ default: m.CrossMarginingPanel })));
+const FundManagerRankingPanel = lazy(() => import('../panels/fund-manager-ranking-panel').then(m => ({ default: m.FundManagerRankingPanel })));
+const PriceDiscoveryPanel = lazy(() => import('../panels/price-discovery-panel').then(m => ({ default: m.PriceDiscoveryPanel })));
+const OperationalRiskPanel = lazy(() => import('../panels/operational-risk-panel').then(m => ({ default: m.OperationalRiskPanel })));
+const TransitionManagementPanel = lazy(() => import('../panels/transition-management-panel').then(m => ({ default: m.TransitionManagementPanel })));
+const SecuritiesValuationPanel = lazy(() => import('../panels/securities-valuation-panel').then(m => ({ default: m.SecuritiesValuationPanel })));
+const BenchmarkAnalyticsPanel = lazy(() => import('../panels/benchmark-analytics-panel').then(m => ({ default: m.BenchmarkAnalyticsPanel })));
+const CounterpartyRiskPanel = lazy(() => import('../panels/counterparty-risk-panel').then(m => ({ default: m.CounterpartyRiskPanel })));
+const EquityValuationPanel = lazy(() => import('../panels/equity-valuation-panel').then(m => ({ default: m.EquityValuationPanel })));
+const MacroIndicatorsPanel = lazy(() => import('../panels/macro-indicators-panel').then(m => ({ default: m.MacroIndicatorsPanel })));
+const VolatilitySkewPanel = lazy(() => import('../panels/volatility-skew-panel').then(m => ({ default: m.VolatilitySkewPanel })));
+const OrderBookPanel = lazy(() => import('../panels/order-book-panel').then(m => ({ default: m.OrderBookPanel })));
+
+const FixedIncomeLadderPanel = lazy(() => import('../panels/fixed-income-ladder-panel').then(m => ({ default: m.FixedIncomeLadderPanel })));
+
+const CdsMonitorPanel = lazy(() => import('../panels/cds-monitor-panel').then(m => ({ default: m.CdsMonitorPanel })));
+const SovereignDebtMonitorPanel = lazy(() => import('../panels/sovereign-debt-monitor-panel').then(m => ({ default: m.SovereignDebtMonitorPanel })));
+const LiquidityDashboardPanel = lazy(() => import('../panels/liquidity-dashboard-panel').then(m => ({ default: m.LiquidityDashboardPanel })));
+const PreciousMetalsPanel = lazy(() => import('../panels/precious-metals-panel').then(m => ({ default: m.PreciousMetalsPanel })));
+const BankCapitalPanel = lazy(() => import('../panels/bank-capital-panel').then(m => ({ default: m.BankCapitalPanel })));
+const AgriculturalCommoditiesPanel = lazy(() => import('../panels/agricultural-commodities-panel').then(m => ({ default: m.AgriculturalCommoditiesPanel })));
+const EnergyTransitionPanel = lazy(() => import('../panels/energy-transition-panel').then(m => ({ default: m.EnergyTransitionPanel })));
+const GeopoliticalRiskPanel = lazy(() => import('../panels/geopolitical-risk-panel').then(m => ({ default: m.GeopoliticalRiskPanel })));
+const LaborMarketPanel = lazy(() => import('../panels/labor-market-panel').then(m => ({ default: m.LaborMarketPanel })));
+const HousingMarketPanel = lazy(() => import('../panels/housing-market-panel').then(m => ({ default: m.HousingMarketPanel })));
+const SupplyChainStressPanel = lazy(() => import('../panels/supply-chain-stress-panel').then(m => ({ default: m.SupplyChainStressPanel })));
+const CreditImpulsePanel = lazy(() => import('../panels/credit-impulse-panel').then(m => ({ default: m.CreditImpulsePanel })));
+const ConsumerConfidencePanel = lazy(() => import('../panels/consumer-confidence-panel').then(m => ({ default: m.ConsumerConfidencePanel })));
+const SovereignYieldPanel = lazy(() => import('../panels/sovereign-yield-panel').then(m => ({ default: m.SovereignYieldPanel })));
+const TradeBalancePanel = lazy(() => import('../panels/trade-balance-panel').then(m => ({ default: m.TradeBalancePanel })));
+const SemiconductorPanel = lazy(() => import('../panels/semiconductor-panel').then(m => ({ default: m.SemiconductorPanel })));
+const InfrastructureInvestmentPanel = lazy(() => import('../panels/infrastructure-investment-panel').then(m => ({ default: m.InfrastructureInvestmentPanel })));
+const InsuranceMarketPanel = lazy(() => import('../panels/insurance-market-panel').then(m => ({ default: m.InsuranceMarketPanel })));
+const ShippingIndexPanel = lazy(() => import('../panels/shipping-index-panel').then(m => ({ default: m.ShippingIndexPanel })));
+const VentureCapitalPanel = lazy(() => import('../panels/venture-capital-panel').then(m => ({ default: m.VentureCapitalPanel })));
+const DemographicTrendsPanel = lazy(() => import('../panels/demographic-trends-panel').then(m => ({ default: m.DemographicTrendsPanel })));
+const EconomicForecastPanel = lazy(() => import('../panels/economic-forecast-panel').then(m => ({ default: m.EconomicForecastPanel })));
+const GlobalIndexMonitorPanel = lazy(() => import('../panels/global-index-monitor-panel').then(m => ({ default: m.GlobalIndexMonitorPanel })));
+const LeagueTablesPanel = lazy(() => import('../panels/league-tables-panel').then(m => ({ default: m.LeagueTablesPanel })));
+const GDPNowcastPanel = lazy(() => import('../panels/gdp-nowcast-panel').then(m => ({ default: m.GDPNowcastPanel })));
+const RecessionProbabilityPanel = lazy(() => import('../panels/recession-probability-panel').then(m => ({ default: m.RecessionProbabilityPanel })));
+const FinancialConditionsPanel = lazy(() => import('../panels/financial-conditions-panel').then(m => ({ default: m.FinancialConditionsPanel })));
+const CommodityFundamentalsPanel = lazy(() => import('../panels/commodity-fundamentals-panel').then(m => ({ default: m.CommodityFundamentalsPanel })));
+const WageGrowthPanel = lazy(() => import('../panels/wage-growth-panel').then(m => ({ default: m.WageGrowthPanel })));
+const FiscalDeficitPanel = lazy(() => import('../panels/fiscal-deficit-panel').then(m => ({ default: m.FiscalDeficitPanel })));
+const CentralClearingPanel = lazy(() => import('../panels/central-clearing-panel').then(m => ({ default: m.CentralClearingPanel })));
+const MoneyVelocityPanel = lazy(() => import('../panels/money-velocity-panel').then(m => ({ default: m.MoneyVelocityPanel })));
+const ProductivityMonitorPanel = lazy(() => import('../panels/productivity-monitor-panel').then(m => ({ default: m.ProductivityMonitorPanel })));
+const BalanceOfPaymentsPanel = lazy(() => import('../panels/balance-of-payments-panel').then(m => ({ default: m.BalanceOfPaymentsPanel })));
+const GlobalTaxRatesPanel = lazy(() => import('../panels/global-tax-rates-panel').then(m => ({ default: m.GlobalTaxRatesPanel })));
+const SanctionsMonitorPanel = lazy(() => import('../panels/sanctions-monitor-panel').then(m => ({ default: m.SanctionsMonitorPanel })));
+const ClimateRiskPanel = lazy(() => import('../panels/climate-risk-panel').then(m => ({ default: m.ClimateRiskPanel })));
+const SovereignDefaultPanel = lazy(() => import('../panels/sovereign-default-panel').then(m => ({ default: m.SovereignDefaultPanel })));
+const BankStressTestPanel = lazy(() => import('../panels/bank-stress-test-panel').then(m => ({ default: m.BankStressTestPanel })));
+const EquityDerivativesPanel = lazy(() => import('../panels/equity-derivatives-panel').then(m => ({ default: m.EquityDerivativesPanel })));
+const MoneyMarketRatesPanel = lazy(() => import('../panels/money-market-rates-panel').then(m => ({ default: m.MoneyMarketRatesPanel })));
+const GlobalMAPanel = lazy(() => import('../panels/global-ma-panel').then(m => ({ default: m.GlobalMAPanel })));
+const CreditDefaultSwapsPanel = lazy(() => import('../panels/credit-default-swaps-panel').then(m => ({ default: m.CreditDefaultSwapsPanel })));
+const RealEstateInvestmentPanel = lazy(() => import('../panels/real-estate-investment-panel').then(m => ({ default: m.RealEstateInvestmentPanel })));
+const GlobalDebtClockPanel = lazy(() => import('../panels/global-debt-clock-panel').then(m => ({ default: m.GlobalDebtClockPanel })));
+const AITechCapexPanel = lazy(() => import('../panels/ai-tech-capex-panel').then(m => ({ default: m.AITechCapexPanel })));
+const CriticalMineralsPanel = lazy(() => import('../panels/critical-minerals-panel').then(m => ({ default: m.CriticalMineralsPanel })));
+const NuclearEnergyPanel = lazy(() => import('../panels/nuclear-energy-panel').then(m => ({ default: m.NuclearEnergyPanel })));
+const WaterMarketPanel = lazy(() => import('../panels/water-market-panel').then(m => ({ default: m.WaterMarketPanel })));
+const SpaceEconomyPanel = lazy(() => import('../panels/space-economy-panel').then(m => ({ default: m.SpaceEconomyPanel })));
+const CybersecurityPanel = lazy(() => import('../panels/cybersecurity-panel').then(m => ({ default: m.CybersecurityPanel })));
+const GlobalFoodPricePanel = lazy(() => import('../panels/global-food-price-panel').then(m => ({ default: m.GlobalFoodPricePanel })));
+const PharmaPipelinePanel = lazy(() => import('../panels/pharma-pipeline-panel').then(m => ({ default: m.PharmaPipelinePanel })));
+const EtfFlowPanel = lazy(() => import('../panels/etf-flow-panel').then(m => ({ default: m.EtfFlowPanel })));
+const VolatilitySurfacePanel = lazy(() => import('../panels/volatility-surface-panel').then(m => ({ default: m.VolatilitySurfacePanel })));
+const CreditSpreadPanel = lazy(() => import('../panels/credit-spread-panel').then(m => ({ default: m.CreditSpreadPanel })));
+const EarningsRevisionPanel = lazy(() => import('../panels/earnings-revision-panel').then(m => ({ default: m.EarningsRevisionPanel })));
+const SwapSpreadPanel = lazy(() => import('../panels/swap-spread-panel').then(m => ({ default: m.SwapSpreadPanel })));
+const BreakevenInflationPanel = lazy(() => import('../panels/breakeven-inflation-panel').then(m => ({ default: m.BreakevenInflationPanel })));
+const FxCarryPanel = lazy(() => import('../panels/fx-carry-panel').then(m => ({ default: m.FxCarryPanel })));
+const OptionsSkewPanel = lazy(() => import('../panels/options-skew-panel').then(m => ({ default: m.OptionsSkewPanel })));
+const QuantFactorPanel = lazy(() => import('../panels/quant-factor-panel').then(m => ({ default: m.QuantFactorPanel })));
+const CrossCurrencyBasisPanel = lazy(() => import('../panels/cross-currency-basis-panel').then(m => ({ default: m.CrossCurrencyBasisPanel })));
+const FundFlowPanel = lazy(() => import('../panels/fund-flow-panel').then(m => ({ default: m.FundFlowPanel })));
+const LeveragedLoanPanel = lazy(() => import('../panels/leveraged-loan-panel').then(m => ({ default: m.LeveragedLoanPanel })));
+const StructuredProductPanel = lazy(() => import('../panels/structured-product-panel').then(m => ({ default: m.StructuredProductPanel })));
+const MergerArbPanel = lazy(() => import('../panels/merger-arb-panel').then(m => ({ default: m.MergerArbPanel })));
+const GreenBondPanel = lazy(() => import('../panels/green-bond-panel').then(m => ({ default: m.GreenBondPanel })));
+const LiquidityMonitorPanel = lazy(() => import('../panels/liquidity-monitor-panel').then(m => ({ default: m.LiquidityMonitorPanel })));
+const CoveredBondPanel = lazy(() => import('../panels/covered-bond-panel').then(m => ({ default: m.CoveredBondPanel })));
+const InflationLinkedBondPanel = lazy(() => import('../panels/inflation-linked-bond-panel').then(m => ({ default: m.InflationLinkedBondPanel })));
+const CorrelationRiskPanel = lazy(() => import('../panels/correlation-risk-panel').then(m => ({ default: m.CorrelationRiskPanel })));
+const SubordinatedDebtPanel = lazy(() => import('../panels/subordinated-debt-panel').then(m => ({ default: m.SubordinatedDebtPanel })));
+const SmartBetaPanel = lazy(() => import('../panels/smart-beta-panel').then(m => ({ default: m.SmartBetaPanel })));
+const FactorRotationPanel = lazy(() => import('../panels/factor-rotation-panel').then(m => ({ default: m.FactorRotationPanel })));
+const EndowmentPanel = lazy(() => import('../panels/endowment-panel').then(m => ({ default: m.EndowmentPanel })));
+const FamilyOfficePanel = lazy(() => import('../panels/family-office-panel').then(m => ({ default: m.FamilyOfficePanel })));
+const HedgeFundReplicationPanel = lazy(() => import('../panels/hedge-fund-replication-panel').then(m => ({ default: m.HedgeFundReplicationPanel })));
+const InfrastructureDebtPanel = lazy(() => import('../panels/infrastructure-debt-panel').then(m => ({ default: m.InfrastructureDebtPanel })));
+const SupplyChainFinancePanel = lazy(() => import('../panels/supply-chain-finance-panel').then(m => ({ default: m.SupplyChainFinancePanel })));
+const CDSPanel = lazy(() => import('../panels/cds-panel').then(m => ({ default: m.CDSPanel })));
+const CLOPanel = lazy(() => import('../panels/clo-panel').then(m => ({ default: m.CLOPanel })));
+const InterestRateSwapPanel = lazy(() => import('../panels/interest-rate-swap-panel').then(m => ({ default: m.InterestRateSwapPanel })));
+const ShippingFreightPanel = lazy(() => import('../panels/shipping-freight-panel').then(m => ({ default: m.ShippingFreightPanel })));
+const ABSPanel = lazy(() => import('../panels/abs-panel').then(m => ({ default: m.ABSPanel })));
+const TotalReturnSwapPanel = lazy(() => import('../panels/total-return-swap-panel').then(m => ({ default: m.TotalReturnSwapPanel })));
+const VarianceSwapPanel = lazy(() => import('../panels/variance-swap-panel').then(m => ({ default: m.VarianceSwapPanel })));
+const ConvertibleBondPanel = lazy(() => import('../panels/convertible-bond-panel').then(m => ({ default: m.ConvertibleBondPanel })));
+const CreditIndexPanel = lazy(() => import('../panels/credit-index-panel').then(m => ({ default: m.CreditIndexPanel })));
+const DividendSwapPanel = lazy(() => import('../panels/dividend-swap-panel').then(m => ({ default: m.DividendSwapPanel })));
+const CentralBankPanel = lazy(() => import('../panels/central-bank-panel').then(m => ({ default: m.CentralBankPanel })));
+const CommercialPaperPanel = lazy(() => import('../panels/commercial-paper-panel').then(m => ({ default: m.CommercialPaperPanel })));
+const FxReservesPanel = lazy(() => import('../panels/fx-reserves-panel').then(m => ({ default: m.FxReservesPanel })));
+const EquityIndexFuturesPanel = lazy(() => import('../panels/equity-index-futures-panel').then(m => ({ default: m.EquityIndexFuturesPanel })));
+const PreferredStockPanel = lazy(() => import('../panels/preferred-stock-panel').then(m => ({ default: m.PreferredStockPanel })));
+const TreasuryStripsPanel = lazy(() => import('../panels/treasury-strips-panel').then(m => ({ default: m.TreasuryStripsPanel })));
+const CommodityWarehousePanel = lazy(() => import('../panels/commodity-warehouse-panel').then(m => ({ default: m.CommodityWarehousePanel })));
+const EtfCreationRedemptionPanel = lazy(() => import('../panels/etf-creation-redemption-panel').then(m => ({ default: m.EtfCreationRedemptionPanel })));
+const AgencyDebtPanel = lazy(() => import('../panels/agency-debt-panel').then(m => ({ default: m.AgencyDebtPanel })));
+const MoneyMarketFundPanel = lazy(() => import('../panels/money-market-fund-panel').then(m => ({ default: m.MoneyMarketFundPanel })));
+const LoanSyndicationPipelinePanel = lazy(() => import('../panels/loan-syndication-pipeline-panel').then(m => ({ default: m.LoanSyndicationPipelinePanel })));
+const SovereignBondAuctionPanel = lazy(() => import('../panels/sovereign-bond-auction-panel').then(m => ({ default: m.SovereignBondAuctionPanel })));
+const CrossCurrencyBasisSwapPanel = lazy(() => import('../panels/cross-currency-basis-swap-panel').then(m => ({ default: m.CrossCurrencyBasisSwapPanel })));
+const SecuritiesBorrowingLendingPanel = lazy(() => import('../panels/securities-borrowing-lending-panel').then(m => ({ default: m.SecuritiesBorrowingLendingPanel })));
+const EquityTotalReturnIndexPanel = lazy(() => import('../panels/equity-total-return-index-panel').then(m => ({ default: m.EquityTotalReturnIndexPanel })));
+const GlobalCreditMonitorPanel = lazy(() => import('../panels/global-credit-monitor-panel').then(m => ({ default: m.GlobalCreditMonitorPanel })));
+const BondIndexMonitorPanel = lazy(() => import('../panels/bond-index-monitor-panel').then(m => ({ default: m.BondIndexMonitorPanel })));
+const FxOptionVolMatrixPanel = lazy(() => import('../panels/fx-option-vol-matrix-panel').then(m => ({ default: m.FxOptionVolMatrixPanel })));
+const EquitySwapPricingPanel = lazy(() => import('../panels/equity-swap-pricing-panel').then(m => ({ default: m.EquitySwapPricingPanel })));
+const CreditValuationAdjustmentPanel = lazy(() => import('../panels/credit-valuation-adjustment-panel').then(m => ({ default: m.CreditValuationAdjustmentPanel })));
+const InterestRateVolSurfacePanel = lazy(() => import('../panels/interest-rate-vol-surface-panel').then(m => ({ default: m.InterestRateVolSurfacePanel })));
+const MunicipalCreditAnalysisPanel = lazy(() => import('../panels/municipal-credit-analysis-panel').then(m => ({ default: m.MunicipalCreditAnalysisPanel })));
+const StructuredProductsAnalyzerPanel = lazy(() => import('../panels/structured-products-analyzer-panel').then(m => ({ default: m.StructuredProductsAnalyzerPanel })));
+const RiskScenarioAnalysisPanel = lazy(() => import('../panels/risk-scenario-analysis-panel').then(m => ({ default: m.RiskScenarioAnalysisPanel })));
+const ConvertibleBondAnalyzerPanel = lazy(() => import('../panels/convertible-bond-analyzer-panel').then(m => ({ default: m.ConvertibleBondAnalyzerPanel })));
+const CommoditiesForwardCurvePanel = lazy(() => import('../panels/commodities-forward-curve-panel').then(m => ({ default: m.CommoditiesForwardCurvePanel })));
+const VarianceSwapMonitorPanel = lazy(() => import('../panels/variance-swap-monitor-panel').then(m => ({ default: m.VarianceSwapMonitorPanel })));
+const SecuritiesLendingRevenuePanel = lazy(() => import('../panels/securities-lending-revenue-panel').then(m => ({ default: m.SecuritiesLendingRevenuePanel })));
+const EquityMarketMicrostructurePanel = lazy(() => import('../panels/equity-market-microstructure-panel').then(m => ({ default: m.EquityMarketMicrostructurePanel })));
+const FxCarryTradeMonitorPanel = lazy(() => import('../panels/fx-carry-trade-monitor-panel').then(m => ({ default: m.FxCarryTradeMonitorPanel })));
+const PrivateCreditDashboardPanel = lazy(() => import('../panels/private-credit-dashboard-panel').then(m => ({ default: m.PrivateCreditDashboardPanel })));
+const SovereignCdsMonitorPanel = lazy(() => import('../panels/sovereign-cds-monitor-panel').then(m => ({ default: m.SovereignCdsMonitorPanel })));
+const EquityDividendForecastPanel = lazy(() => import('../panels/equity-dividend-forecast-panel').then(m => ({ default: m.EquityDividendForecastPanel })));
+const CloTrancheAnalyticsPanel = lazy(() => import('../panels/clo-tranche-analytics-panel').then(m => ({ default: m.CloTrancheAnalyticsPanel })));
+const EquityPairsTradingPanel = lazy(() => import('../panels/equity-pairs-trading-panel').then(m => ({ default: m.EquityPairsTradingPanel })));
+const TreasuryFuturesBasisPanel = lazy(() => import('../panels/treasury-futures-basis-panel').then(m => ({ default: m.TreasuryFuturesBasisPanel })));
+const CreditIndexTranchesPanel = lazy(() => import('../panels/credit-index-tranches-panel').then(m => ({ default: m.CreditIndexTranchesPanel })));
+const MortgagePrepaymentPanel = lazy(() => import('../panels/mortgage-prepayment-panel').then(m => ({ default: m.MortgagePrepaymentPanel })));
+const OptionSkewSurfacePanel = lazy(() => import('../panels/option-skew-surface-panel').then(m => ({ default: m.OptionSkewSurfacePanel })));
+const EquityShortInterestPanel = lazy(() => import('../panels/equity-short-interest-panel').then(m => ({ default: m.EquityShortInterestPanel })));
+const WarrantPricingPanel = lazy(() => import('../panels/warrant-pricing-panel').then(m => ({ default: m.WarrantPricingPanel })));
+const TradeExecutionQualityPanel = lazy(() => import('../panels/trade-execution-quality-panel').then(m => ({ default: m.TradeExecutionQualityPanel })));
+const FreightRateMonitorPanel = lazy(() => import('../panels/freight-rate-monitor-panel').then(m => ({ default: m.FreightRateMonitorPanel })));
+const PowerMarketPanel = lazy(() => import('../panels/power-market-panel').then(m => ({ default: m.PowerMarketPanel })));
+const SpecialSituationsPanel = lazy(() => import('../panels/special-situations-panel').then(m => ({ default: m.SpecialSituationsPanel })));
+const IndustrialMetalsPanel = lazy(() => import('../panels/industrial-metals-panel').then(m => ({ default: m.IndustrialMetalsPanel })));
+const SecuritizationPipelinePanel = lazy(() => import('../panels/securitization-pipeline-panel').then(m => ({ default: m.SecuritizationPipelinePanel })));
+const EquityAnalystRevisionsPanel = lazy(() => import('../panels/equity-analyst-revisions-panel').then(m => ({ default: m.EquityAnalystRevisionsPanel })));
+const NaturalGasStoragePanel = lazy(() => import('../panels/natural-gas-storage-panel').then(m => ({ default: m.NaturalGasStoragePanel })));
+const PreciousMetalsLeasePanel = lazy(() => import('../panels/precious-metals-lease-panel').then(m => ({ default: m.PreciousMetalsLeasePanel })));
+const CorporateActionCalendarPanel = lazy(() => import('../panels/corporate-action-calendar-panel').then(m => ({ default: m.CorporateActionCalendarPanel })));
+const SovereignDebtMaturityPanel = lazy(() => import('../panels/sovereign-debt-maturity-panel').then(m => ({ default: m.SovereignDebtMaturityPanel })));
+const AgriculturalFuturesPanel = lazy(() => import('../panels/agricultural-futures-panel').then(m => ({ default: m.AgriculturalFuturesPanel })));
+const BankEarningsPanel = lazy(() => import('../panels/bank-earnings-panel').then(m => ({ default: m.BankEarningsPanel })));
+const PrivateEquitySecondariesPanel = lazy(() => import('../panels/private-equity-secondaries-panel').then(m => ({ default: m.PrivateEquitySecondariesPanel })));
+const SukukMonitorPanel = lazy(() => import('../panels/sukuk-monitor-panel').then(m => ({ default: m.SukukMonitorPanel })));
+const FrontierMarketDebtPanel = lazy(() => import('../panels/frontier-market-debt-panel').then(m => ({ default: m.FrontierMarketDebtPanel })));
+const AircraftFinancePanel = lazy(() => import('../panels/aircraft-finance-panel').then(m => ({ default: m.AircraftFinancePanel })));
+const RareEarthBatteryMetalsPanel = lazy(() => import('../panels/rare-earth-battery-metals-panel').then(m => ({ default: m.RareEarthBatteryMetalsPanel })));
+const DataCenterInfrastructurePanel = lazy(() => import('../panels/data-center-infrastructure-panel').then(m => ({ default: m.DataCenterInfrastructurePanel })));
+const SportsMediaRightsPanel = lazy(() => import('../panels/sports-media-rights-panel').then(m => ({ default: m.SportsMediaRightsPanel })));
+const LuxuryCollectiblesIndexPanel = lazy(() => import('../panels/luxury-collectibles-index-panel').then(m => ({ default: m.LuxuryCollectiblesIndexPanel })));
+const FintechDigitalPaymentsPanel = lazy(() => import('../panels/fintech-digital-payments-panel').then(m => ({ default: m.FintechDigitalPaymentsPanel })));
+const CyberRiskInsurancePanel = lazy(() => import('../panels/cyber-risk-insurance-panel').then(m => ({ default: m.CyberRiskInsurancePanel })));
+
+function LazyWrap({ children }: { children: React.ReactNode }) {
+  return (
+    <Suspense fallback={
+      <div className="flex flex-col items-center justify-center h-full bg-black gap-2">
+        <div className="w-5 h-5 border-2 border-accent/30 border-t-accent animate-spin" />
+        <span className="text-[10px] font-mono text-neutral/40 uppercase tracking-widest">{translations[useAppStore.getState().locale]?.loading ?? 'Loading...'}</span>
+      </div>
+    }>
+      {children}
+    </Suspense>
+  );
+}
+
+const STORAGE_KEY = 'terminal-layout';
+const LAYOUT_VERSION_KEY = 'terminal-layout-version';
+const LAYOUT_VERSION = 32; // bump this when default layout changes to force reset
+
+export const PANEL_IDS = {
+  NEWS: 'news-feed',
+  MAP: 'world-map',
+  STOCKS: 'market-watch',
+  AI: 'ai-insights',
+  LOG: 'terminal-log',
+  TRADING: 'trading',
+  AI_CHAT: 'ai-chat',
+  ECON_CALENDAR: 'econ-calendar',
+  ALERTS: 'alerts',
+  SENTIMENT: 'sentiment',
+  RISK: 'risk-calculator',
+  SECTORS: 'sector-rotation',
+  EARNINGS: 'earnings-calendar',
+  OPTIONS: 'options-flow',
+  INSIDERS: 'insider-trades',
+  CORRELATIONS: 'correlation-matrix',
+  LIVE_STREAMS: 'live-streams',
+  PREDICTION: 'prediction-trading',
+  MISSED_OPP: 'missed-opportunities',
+  MARKET_MOVERS: 'market-movers',
+  FOREX: 'forex',
+  BONDS: 'bonds-rates',
+  COMMODITIES: 'commodities',
+  CRYPTO: 'crypto-overview',
+  GLOBAL_DASHBOARD: 'global-dashboard',
+  SCANNER: 'tech-scanner',
+  SCREENER: 'stock-screener',
+  HEAT_MAP: 'heat-map',
+  ETF: 'etf-explorer',
+  DIVIDENDS: 'dividends',
+  IPO: 'ipo-calendar',
+  ANALYST: 'analyst-ratings',
+  BREADTH: 'market-breadth',
+  FINANCIALS: 'financials',
+  FUTURES: 'futures',
+  PERFORMANCE: 'performance',
+  SHORT_INTEREST: 'short-interest',
+  OPTIONS_CALC: 'options-calc',
+  FX_CONVERTER: 'fx-converter',
+  BOND_CALC: 'bond-calc',
+  COMPANY_PROFILE: 'company-profile',
+  PIVOT_POINTS: 'pivot-points',
+  MARKET_HOURS: 'market-hours',
+  MARKET_CALENDAR: 'market-calendar',
+  PAIRS_TRADING: 'pairs-trading',
+  VOLATILITY: 'volatility',
+  FIBONACCI: 'fibonacci',
+  MORTGAGE_CALC: 'mortgage-calc',
+  INVESTMENT_CALC: 'investment-calc',
+  RELATIVE_STRENGTH: 'relative-strength',
+  WATCHLIST: 'watchlist',
+  ECON_INDICATORS: 'econ-indicators',
+  FX_CROSS: 'fx-cross-rates',
+  PORTFOLIO: 'portfolio-analytics',
+  FEAR_GREED: 'fear-greed',
+  SENTIMENT_HEATMAP: 'sentiment-heatmap',
+  YIELD_CURVE: 'yield-curve',
+  CURRENCY_STRENGTH: 'currency-strength',
+  MONEY_FLOW: 'money-flow',
+  TECHNICAL_CHART: 'technical-chart',
+  EARNINGS_ESTIMATES: 'earnings-estimates',
+  WORLD_ECONOMY: 'world-economy',
+  CROSS_ASSET: 'cross-asset',
+  HOLDINGS: 'holdings',
+  SECTOR_PERFORMANCE: 'sector-performance',
+  ETF_HOLDINGS: 'etf-holdings',
+  DRAWDOWN: 'drawdown',
+  MARKET_REGIME: 'market-regime',
+  RELATIVE_VALUATION: 'relative-valuation',
+  CONFLUENCE: 'technical-confluence',
+  IV_SURFACE: 'iv-surface',
+  SEASONALITY: 'seasonality',
+  ORDER_FLOW: 'order-flow',
+  PORTFOLIO_OPTIMIZER: 'portfolio-optimizer',
+  BACKTEST: 'backtest',
+  MACRO_DASHBOARD: 'macro-dashboard',
+  EARNINGS_SURPRISE: 'earnings-surprise',
+  FUTURES_CURVE: 'futures-curve',
+  CREDIT_SPREADS: 'credit-spreads',
+  INTERMARKET: 'intermarket',
+  SECTOR_HEATMAP: 'sector-heatmap',
+  ECONOMIC_SURPRISES: 'economic-surprises',
+  DISPERSION: 'dispersion',
+  FUND_FLOWS: 'fund-flows',
+  VOL_TERM_STRUCTURE: 'vol-term-structure',
+  MACRO_HEATMAP: 'macro-heatmap',
+  FACTOR_EXPOSURE: 'factor-exposure',
+  CAPITAL_FLOWS: 'capital-flows',
+  TAIL_RISK: 'tail-risk',
+  LIQUIDITY: 'liquidity',
+  COMMODITY_SPREADS: 'commodity-spreads',
+  SENTIMENT_DASHBOARD: 'sentiment-dashboard',
+  RISK_PARITY: 'risk-parity',
+  MARKET_ANOMALIES: 'market-anomalies',
+  CARRY_TRADE: 'carry-trade',
+  COT_REPORT: 'cot-report',
+  IV_RANK: 'iv-rank',
+  PERFORMANCE_ATTRIBUTION: 'performance-attribution',
+  MARKET_MICROSTRUCTURE: 'market-microstructure',
+  COUNTRY_RISK: 'country-risk',
+  POSITIONING: 'positioning',
+  REPO_RATES: 'repo-rates',
+  XCCY_BASIS: 'xccy-basis',
+  STYLE_BOX: 'style-box',
+  SWAP_RATES: 'swap-rates',
+  TRADE_BLOTTER: 'trade-blotter',
+  CORPORATE_CDS: 'corporate-cds',
+  EVENT_DRIVEN: 'event-driven',
+  DEBT_MATURITY: 'debt-maturity',
+  EQUITY_RISK_PREMIUM: 'equity-risk-premium',
+  CENTRAL_BANKS: 'central-banks',
+  VOL_SKEW: 'vol-skew',
+  GLOBAL_RATES: 'global-rates',
+  SUPPLY_CHAIN: 'supply-chain',
+  GAMMA_EXPOSURE: 'gamma-exposure',
+  SOVEREIGN_SPREADS: 'sovereign-spreads',
+  EARNINGS_REVISIONS: 'earnings-revisions',
+  DIVIDEND_FORECAST: 'dividend-forecast',
+  CREDIT_RATINGS: 'credit-ratings',
+  VOLATILITY_CONE: 'volatility-cone',
+  TERM_STRUCTURE: 'term-structure',
+  INSTITUTIONAL_OWNERSHIP: 'institutional-ownership',
+  IMPLIED_CORRELATION: 'implied-correlation',
+  EARNINGS_QUALITY: 'earnings-quality',
+  VOL_SURFACE: 'vol-surface',
+  GLOBAL_FLOWS: 'global-flows',
+  REGRESSION_ANALYSIS: 'regression-analysis',
+  COVENANT_MONITOR: 'covenant-monitor',
+  MARKET_INTERNALS: 'market-internals',
+  VALUATION_MULTIPLES: 'valuation-multiples',
+  FIXED_INCOME_ANALYTICS: 'fixed-income-analytics',
+  INSIDER_SENTIMENT: 'insider-sentiment',
+  CUSTOM_INDEX: 'custom-index',
+  MBS_ANALYTICS: 'mbs-analytics',
+  CDX_INDEX: 'cdx-index',
+  MUNI_BONDS: 'muni-bonds',
+  CLO_ANALYTICS: 'clo-analytics',
+  ONCHAIN_ANALYTICS: 'onchain-analytics',
+  PRIVATE_CREDIT: 'private-credit',
+  VOL_RISK_PREMIUM: 'vol-risk-premium',
+  ESG_RATINGS: 'esg-ratings',
+  FREIGHT_INDICES: 'freight-indices',
+  ALTERNATIVE_DATA: 'alternative-data',
+  TRADE_IDEAS: 'trade-ideas',
+  DEBT_ISSUANCE: 'debt-issuance',
+  FX_OPTIONS: 'fx-options',
+  MULTI_FACTOR: 'multi-factor',
+  TREASURY_AUCTIONS: 'treasury-auctions',
+  COMMODITY_CURVES: 'commodity-curves',
+  EM_BONDS: 'em-bonds',
+  REIT_MONITOR: 'reit-monitor',
+  MONEY_MARKET: 'money-market',
+  CONVERTIBLE_BONDS: 'convertible-bonds',
+  GLOBAL_PMI: 'global-pmi',
+  LEVERAGED_LOANS: 'leveraged-loans',
+  SWAPTION_VOL: 'swaption-vol',
+  DISTRESSED_DEBT: 'distressed-debt',
+  RATE_CAPS_FLOORS: 'rate-caps-floors',
+  DIVIDEND_SWAPS: 'dividend-swaps',
+  SECURITIES_LENDING: 'securities-lending',
+  VARIANCE_SWAPS: 'variance-swaps',
+  CARBON_CREDITS: 'carbon-credits',
+  WEATHER_DERIVATIVES: 'weather-derivatives',
+  DARK_POOL: 'dark-pool',
+  TOTAL_RETURN_SWAPS: 'total-return-swaps',
+  CAT_BONDS: 'cat-bonds',
+  INFLATION_LINKED_BONDS: 'inflation-linked-bonds',
+  EQUITY_BASKET_SWAPS: 'equity-basket-swaps',
+  CROSS_CURRENCY_SWAPS: 'cross-currency-swaps',
+  COMMODITY_OPTIONS: 'commodity-options',
+  LOAN_CDS: 'loan-cds',
+  CONVERTIBLE_ARB: 'convertible-arb',
+  SHIPPING_RATES: 'shipping-rates',
+  CREDIT_AUCTION: 'credit-auction',
+  MUNI_YIELD_CURVES: 'muni-yield-curves',
+  STRUCTURED_PRODUCTS: 'structured-products',
+  PENSION_FUND: 'pension-fund',
+  SWAP_SPREAD_MONITOR: 'swap-spread-monitor',
+  EQUITY_LINKED_NOTES: 'equity-linked-notes',
+  TRADE_FINANCE: 'trade-finance',
+  REPO_MARKET: 'repo-market',
+  COMMODITY_INVENTORY: 'commodity-inventory',
+  SOVEREIGN_WEALTH: 'sovereign-wealth',
+  AGENCY_MBS_TBA: 'agency-mbs-tba',
+  ETF_FLOWS: 'etf-flows',
+  CREDIT_FLOW: 'credit-flow',
+  COMMODITY_SEASONALITY: 'commodity-seasonality',
+  FX_VOLATILITY: 'fx-volatility',
+  PRIMARY_DEALER: 'primary-dealer',
+  REAL_ESTATE_CAPITAL: 'real-estate-capital',
+  ELECTRICITY_MARKETS: 'electricity-markets',
+  SYNDICATED_LOANS: 'syndicated-loans',
+  EMISSIONS_TRADING: 'emissions-trading',
+  INSURANCE_LINKED: 'insurance-linked',
+  METALS_FORWARD: 'metals-forward',
+  CENTRAL_BANK_WATCH: 'central-bank-watch',
+  FREIGHT_DERIVATIVES: 'freight-derivatives',
+  INFLATION_BREAKEVENS: 'inflation-breakevens',
+  MUNI_BOND_AUCTION: 'muni-bond-auction',
+  COMMODITY_CURVE_ANALYTICS: 'commodity-curve-analytics',
+  COLLATERAL_MONITOR: 'collateral-monitor',
+  SOVEREIGN_CDS: 'sovereign-cds',
+  CROSS_ASSET_MOMENTUM: 'cross-asset-momentum',
+  CRYPTO_DERIVATIVES: 'crypto-derivatives',
+  BOND_RELATIVE_VALUE: 'bond-relative-value',
+  VOLATILITY_ARBITRAGE: 'volatility-arbitrage',
+  SYSTEMATIC_STRATEGY: 'systematic-strategy',
+  FUNDING_RATE_MONITOR: 'funding-rate-monitor',
+  EM_LOCAL_RATES: 'em-local-rates',
+  PORTFOLIO_RISK_ANALYTICS: 'portfolio-risk-analytics',
+  CREDIT_INDEX_MONITOR: 'credit-index-monitor',
+  EQUITY_FINANCING: 'equity-financing',
+  GLOBAL_MACRO_DASHBOARD: 'global-macro-dashboard',
+  ABS_RMBS_MONITOR: 'abs-rmbs-monitor',
+  LIQUIDITY_RISK_MONITOR: 'liquidity-risk-monitor',
+  FI_ATTRIBUTION: 'fi-attribution',
+  REPO_RATE_HEATMAP: 'repo-rate-heatmap',
+  TRADE_COMPRESSION: 'trade-compression',
+  REGULATORY_CAPITAL: 'regulatory-capital',
+  SETTLEMENT_RISK: 'settlement-risk',
+  SWAP_VALUATION: 'swap-valuation',
+  COMMODITY_STORAGE: 'commodity-storage',
+  COUNTERPARTY_EXPOSURE: 'counterparty-exposure',
+  MARKET_IMPACT_MODEL: 'market-impact-model',
+  STRUCTURED_NOTES: 'structured-notes',
+  SECURITIES_FINANCE: 'securities-finance',
+  CREDIT_CURVE_BUILDER: 'credit-curve-builder',
+  EXECUTION_ANALYTICS: 'execution-analytics',
+  BOND_AUCTION_CALENDAR: 'bond-auction-calendar',
+  FX_CARRY_MONITOR: 'fx-carry-monitor',
+  EQUITY_CAPITAL_MARKETS: 'equity-capital-markets',
+  DEBT_CAPITAL_MARKETS: 'debt-capital-markets',
+  HEDGE_FUND_MONITOR: 'hedge-fund-monitor',
+  RISK_DASHBOARD: 'risk-dashboard',
+  BENCHMARK_TRACKER: 'benchmark-tracker',
+  LIQUIDITY_COVERAGE: 'liquidity-coverage',
+  MARKET_SENTIMENT_INDEX: 'market-sentiment-index',
+  PORTFOLIO_STRESS_TEST: 'portfolio-stress-test',
+  GLOBAL_LIQUIDITY_MONITOR: 'global-liquidity-monitor',
+  TRADE_RECAP: 'trade-recap',
+  MACRO_SURPRISE_TRACKER: 'macro-surprise-tracker',
+  FX_VOLATILITY_SURFACE: 'fx-volatility-surface',
+  COMMODITY_FUNDAMENTAL: 'commodity-fundamental',
+  ETF_FLOW_MONITOR: 'etf-flow-monitor',
+  EQUITY_FACTOR_MONITOR: 'equity-factor-monitor',
+  RATES_STRATEGY: 'rates-strategy',
+  CREDIT_PORTFOLIO: 'credit-portfolio',
+  MACRO_REGIME_MONITOR: 'macro-regime-monitor',
+  DIVIDEND_CALENDAR: 'dividend-calendar',
+  CONVERTIBLE_ARBITRAGE: 'convertible-arbitrage',
+  REALTIME_PNL: 'realtime-pnl',
+  MARKET_BREADTH_ADVANCED: 'market-breadth-advanced',
+  VOLATILITY_DASHBOARD: 'volatility-dashboard',
+  FI_RELATIVE_VALUE: 'fi-relative-value',
+  EQUITY_SCREEN_RESULTS: 'equity-screen-results',
+  CROSS_ASSET_CORRELATION: 'cross-asset-correlation',
+  PORTFOLIO_ATTRIBUTION: 'portfolio-attribution',
+  MUNICIPAL_BOND_MONITOR: 'municipal-bond-monitor',
+  STRUCTURED_CREDIT: 'structured-credit',
+  CURRENCY_OPTIONS: 'currency-options',
+  SWAP_CURVE_MONITOR: 'swap-curve-monitor',
+  FUND_FLOW_ANALYTICS: 'fund-flow-analytics',
+  TRADE_COST_ANALYSIS: 'trade-cost-analysis',
+  WARRANT_CONVERTIBLE: 'warrant-convertible',
+  GLOBAL_TRADE_FLOW: 'global-trade-flow',
+  REAL_ESTATE_ANALYTICS: 'real-estate-analytics',
+  INFLATION_MONITOR: 'inflation-monitor',
+  MERGER_ARBITRAGE: 'merger-arbitrage',
+  SOVEREIGN_DEBT: 'sovereign-debt',
+  ETF_PREMIUM: 'etf-premium',
+  COMMODITY_DEMAND: 'commodity-demand',
+  GLOBAL_DIVIDEND: 'global-dividend',
+  CDS_INDEX_MONITOR: 'cds-index-monitor',
+  MACRO_RISK: 'macro-risk',
+  FI_ATTRIBUTION_ANALYSIS: 'fi-attribution-analysis',
+  EQUITY_STYLE: 'equity-style',
+  CURRENCY_FORECAST: 'currency-forecast',
+  BOND_LADDER: 'bond-ladder',
+  SECTOR_CREDIT_SPREAD: 'sector-credit-spread',
+  GLOBAL_PMI_DASHBOARD: 'global-pmi-dashboard',
+  EARNINGS_WHISPER: 'earnings-whisper',
+  PORTFOLIO_HEDGING: 'portfolio-hedging',
+  MARKET_DEPTH: 'market-depth',
+  IRS_MONITOR: 'irs-monitor',
+  EQUITY_CAPITAL_RAISE: 'equity-capital-raise',
+  VOLATILITY_SMILE: 'volatility-smile',
+  CENTRAL_BANK_BALANCE_SHEET: 'central-bank-balance-sheet',
+  CORPORATE_BUYBACK: 'corporate-buyback',
+  MARGIN_DEBT: 'margin-debt',
+  CORPORATE_ACTIONS: 'corporate-actions',
+  FISCAL_POLICY: 'fiscal-policy',
+  BASIS_TRADE: 'basis-trade',
+  FLOW_OF_FUNDS: 'flow-of-funds',
+  GLOBAL_SUPPLY_CHAIN: 'global-supply-chain',
+  TREASURY_ANALYTICS: 'treasury-analytics',
+  CURVE_TRADE: 'curve-trade',
+  PRIVATE_EQUITY: 'private-equity',
+  CAPITAL_STRUCTURE: 'capital-structure',
+  CROSS_BORDER_MA: 'cross-border-ma',
+  CREDIT_RISK_TRANSFER: 'credit-risk-transfer',
+  SWAP_EXECUTION: 'swap-execution',
+  DEBT_CEILING: 'debt-ceiling',
+  SECURITIZATION: 'securitization',
+  MUNICIPAL_CREDIT: 'municipal-credit',
+  COMMODITY_SPREAD: 'commodity-spread',
+  INFLATION_SWAP: 'inflation-swap',
+  CREDIT_DEFAULT_INDEX: 'credit-default-index',
+  SOVEREIGN_WEALTH_FUND: 'sovereign-wealth-fund',
+  COLLATERAL_MANAGEMENT: 'collateral-management',
+  PRIME_BROKERAGE: 'prime-brokerage',
+  ELECTION_RISK: 'election-risk',
+  CVA_MONITOR: 'cva-monitor',
+  ALGO_EXECUTION: 'algo-execution',
+  SECURITIES_CLASS_ACTION: 'securities-class-action',
+  PROXY_VOTING: 'proxy-voting',
+  INDEX_REBALANCE: 'index-rebalance',
+  SHAREHOLDER_ACTIVISM: 'shareholder-activism',
+  FUND_FLOW_TRACKER: 'fund-flow-tracker',
+  INSIDER_TRANSACTION: 'insider-transaction',
+  SHORT_SQUEEZE: 'short-squeeze',
+  SPAC_MONITOR: 'spac-monitor',
+  BLOCK_TRADE: 'block-trade',
+  REGULATORY_FILING: 'regulatory-filing',
+  TAX_LOSS_HARVEST: 'tax-loss-harvest',
+  DIVIDEND_CAPTURE: 'dividend-capture',
+  CREDIT_RATING_MIGRATION: 'credit-rating-migration',
+  MERGER_ARB_MONITOR: 'merger-arb-monitor',
+  MARKET_MAKING: 'market-making',
+  RATE_PROBABILITY: 'rate-probability',
+  FX_FORWARD: 'fx-forward',
+  CREDIT_EVENT: 'credit-event',
+  PORTFOLIO_MARGIN: 'portfolio-margin',
+  CORPORATE_GOVERNANCE: 'corporate-governance',
+  TREASURY_BILL: 'treasury-bill',
+  EQUITY_LENDING: 'equity-lending',
+  TRADE_SETTLEMENT: 'trade-settlement',
+  INDEX_ARBITRAGE: 'index-arbitrage',
+  ASSET_ALLOCATION: 'asset-allocation',
+  BOND_FUTURES_BASIS: 'bond-futures-basis',
+  RISK_BUDGETING: 'risk-budgeting',
+  MARKET_SURVEILLANCE: 'market-surveillance',
+  DURATION_MANAGEMENT: 'duration-management',
+  SWAP_PRICING: 'swap-pricing',
+  OPTION_STRATEGY_BUILDER: 'option-strategy-builder',
+  CURRENCY_BASKET: 'currency-basket',
+  LIQUIDITY_STRESS_TEST: 'liquidity-stress-test',
+  TRADE_REPOSITORY: 'trade-repository',
+  SOVEREIGN_RISK_SCORE: 'sovereign-risk-score',
+  COLLATERAL_OPTIMIZATION: 'collateral-optimization',
+  CROSS_MARGINING: 'cross-margining',
+  FUND_MANAGER_RANKING: 'fund-manager-ranking',
+  PRICE_DISCOVERY: 'price-discovery',
+  OPERATIONAL_RISK: 'operational-risk',
+  TRANSITION_MANAGEMENT: 'transition-management',
+  SECURITIES_VALUATION: 'securities-valuation',
+  BENCHMARK_ANALYTICS: 'benchmark-analytics',
+  COUNTERPARTY_RISK: 'counterparty-risk',
+  EQUITY_VALUATION: 'equity-valuation',
+  MACRO_INDICATORS: 'macro-indicators',
+  VOLATILITY_SKEW: 'volatility-skew',
+  ORDER_BOOK: 'order-book',
+  FIXED_INCOME_LADDER: 'fixed-income-ladder',
+  CDS_MONITOR: 'cds-monitor',
+  SOVEREIGN_DEBT_MONITOR: 'sovereign-debt-monitor',
+  LIQUIDITY_DASHBOARD: 'liquidity-dashboard',
+  PRECIOUS_METALS: 'precious-metals',
+  BANK_CAPITAL: 'bank-capital',
+  AGRICULTURAL_COMMODITIES: 'agricultural-commodities',
+  ENERGY_TRANSITION: 'energy-transition',
+  GEOPOLITICAL_RISK: 'geopolitical-risk',
+  LABOR_MARKET: 'labor-market',
+  HOUSING_MARKET: 'housing-market',
+  SUPPLY_CHAIN_STRESS: 'supply-chain-stress',
+  CREDIT_IMPULSE: 'credit-impulse',
+  CONSUMER_CONFIDENCE: 'consumer-confidence',
+  SOVEREIGN_YIELD: 'sovereign-yield',
+  TRADE_BALANCE: 'trade-balance',
+  SEMICONDUCTOR: 'semiconductor',
+  INFRASTRUCTURE_INVESTMENT: 'infrastructure-investment',
+  INSURANCE_MARKET: 'insurance-market',
+  SHIPPING_INDEX: 'shipping-index',
+  VENTURE_CAPITAL: 'venture-capital',
+  DEMOGRAPHIC_TRENDS: 'demographic-trends',
+  ECONOMIC_FORECAST: 'economic-forecast',
+  GLOBAL_INDEX_MONITOR: 'global-index-monitor',
+  LEAGUE_TABLES: 'league-tables',
+  GDP_NOWCAST: 'gdp-nowcast',
+  RECESSION_PROBABILITY: 'recession-probability',
+  FINANCIAL_CONDITIONS: 'financial-conditions',
+  COMMODITY_FUNDAMENTALS: 'commodity-fundamentals',
+  WAGE_GROWTH: 'wage-growth',
+  FISCAL_DEFICIT: 'fiscal-deficit',
+  CENTRAL_CLEARING: 'central-clearing',
+  MONEY_VELOCITY: 'money-velocity',
+  PRODUCTIVITY_MONITOR: 'productivity-monitor',
+  BALANCE_OF_PAYMENTS: 'balance-of-payments',
+  GLOBAL_TAX_RATES: 'global-tax-rates',
+  SANCTIONS_MONITOR: 'sanctions-monitor',
+  CLIMATE_RISK: 'climate-risk',
+  SOVEREIGN_DEFAULT: 'sovereign-default',
+  BANK_STRESS_TEST: 'bank-stress-test',
+  EQUITY_DERIVATIVES: 'equity-derivatives',
+  MONEY_MARKET_RATES: 'money-market-rates',
+  GLOBAL_MA: 'global-ma',
+  CREDIT_DEFAULT_SWAPS: 'credit-default-swaps',
+  REAL_ESTATE_INVESTMENT: 'real-estate-investment',
+  GLOBAL_DEBT_CLOCK: 'global-debt-clock',
+  AI_TECH_CAPEX: 'ai-tech-capex',
+  CRITICAL_MINERALS: 'critical-minerals',
+  NUCLEAR_ENERGY: 'nuclear-energy',
+  WATER_MARKET: 'water-market',
+  SPACE_ECONOMY: 'space-economy',
+  CYBERSECURITY: 'cybersecurity',
+  GLOBAL_FOOD_PRICE: 'global-food-price',
+  PHARMA_PIPELINE: 'pharma-pipeline',
+  ETF_FLOW: 'etf-flow',
+  VOLATILITY_SURFACE: 'volatility-surface',
+  CREDIT_SPREAD: 'credit-spread',
+  EARNINGS_REVISION: 'earnings-revision',
+  SWAP_SPREAD: 'swap-spread',
+  BREAKEVEN_INFLATION: 'breakeven-inflation',
+  FX_CARRY: 'fx-carry',
+  OPTIONS_SKEW: 'options-skew',
+  QUANT_FACTOR: 'quant-factor',
+  CROSS_CURRENCY_BASIS: 'cross-currency-basis',
+  FUND_FLOW: 'fund-flow',
+  LEVERAGED_LOAN: 'leveraged-loan',
+  STRUCTURED_PRODUCT: 'structured-product',
+  MERGER_ARB: 'merger-arb',
+  GREEN_BOND: 'green-bond',
+  LIQUIDITY_MONITOR: 'liquidity-monitor',
+  COVERED_BOND: 'covered-bond',
+  INFLATION_LINKED_BOND: 'inflation-linked-bond',
+  CORRELATION_RISK: 'correlation-risk',
+  SUBORDINATED_DEBT: 'subordinated-debt',
+  SMART_BETA: 'smart-beta',
+  FACTOR_ROTATION: 'factor-rotation',
+  ENDOWMENT: 'endowment',
+  FAMILY_OFFICE: 'family-office',
+  HEDGE_FUND_REPLICATION: 'hedge-fund-replication',
+  INFRASTRUCTURE_DEBT: 'infrastructure-debt',
+  SUPPLY_CHAIN_FINANCE: 'supply-chain-finance',
+  CDS: 'cds',
+  CLO: 'clo',
+  INTEREST_RATE_SWAP: 'interest-rate-swap',
+  SHIPPING_FREIGHT: 'shipping-freight',
+  ABS: 'abs',
+  TOTAL_RETURN_SWAP: 'total-return-swap',
+  VARIANCE_SWAP: 'variance-swap',
+  CONVERTIBLE_BOND: 'convertible-bond',
+  CREDIT_INDEX: 'credit-index',
+  DIVIDEND_SWAP: 'dividend-swap',
+  CENTRAL_BANK: 'central-bank',
+  COMMERCIAL_PAPER: 'commercial-paper',
+  FX_RESERVES: 'fx-reserves',
+  EQUITY_INDEX_FUTURES: 'equity-index-futures',
+  PREFERRED_STOCK: 'preferred-stock',
+  TREASURY_STRIPS: 'treasury-strips',
+  COMMODITY_WAREHOUSE: 'commodity-warehouse',
+  ETF_CREATION_REDEMPTION: 'etf-creation-redemption',
+  AGENCY_DEBT: 'agency-debt',
+  MONEY_MARKET_FUND: 'money-market-fund',
+  LOAN_SYNDICATION_PIPELINE: 'loan-syndication-pipeline',
+  SOVEREIGN_BOND_AUCTION: 'sovereign-bond-auction',
+  CROSS_CURRENCY_BASIS_SWAP: 'cross-currency-basis-swap',
+  SECURITIES_BORROWING_LENDING: 'securities-borrowing-lending',
+  EQUITY_TOTAL_RETURN_INDEX: 'equity-total-return-index',
+  GLOBAL_CREDIT_MONITOR: 'global-credit-monitor',
+  BOND_INDEX_MONITOR: 'bond-index-monitor',
+  FX_OPTION_VOL_MATRIX: 'fx-option-vol-matrix',
+  EQUITY_SWAP_PRICING: 'equity-swap-pricing',
+  CREDIT_VALUATION_ADJUSTMENT: 'credit-valuation-adjustment',
+  INTEREST_RATE_VOL_SURFACE: 'interest-rate-vol-surface',
+  MUNICIPAL_CREDIT_ANALYSIS: 'municipal-credit-analysis',
+  STRUCTURED_PRODUCTS_ANALYZER: 'structured-products-analyzer',
+  RISK_SCENARIO_ANALYSIS: 'risk-scenario-analysis',
+  CONVERTIBLE_BOND_ANALYZER: 'convertible-bond-analyzer',
+  COMMODITIES_FORWARD_CURVE: 'commodities-forward-curve',
+  VARIANCE_SWAP_MONITOR: 'variance-swap-monitor',
+  SECURITIES_LENDING_REVENUE: 'securities-lending-revenue',
+  EQUITY_MARKET_MICROSTRUCTURE: 'equity-market-microstructure',
+  FX_CARRY_TRADE_MONITOR: 'fx-carry-trade-monitor',
+  PRIVATE_CREDIT_DASHBOARD: 'private-credit-dashboard',
+  SOVEREIGN_CDS_MONITOR: 'sovereign-cds-monitor',
+  EQUITY_DIVIDEND_FORECAST: 'equity-dividend-forecast',
+  CLO_TRANCHE_ANALYTICS: 'clo-tranche-analytics',
+  EQUITY_PAIRS_TRADING: 'equity-pairs-trading',
+  TREASURY_FUTURES_BASIS: 'treasury-futures-basis',
+  CREDIT_INDEX_TRANCHES: 'credit-index-tranches',
+  MORTGAGE_PREPAYMENT: 'mortgage-prepayment',
+  OPTION_SKEW_SURFACE: 'option-skew-surface',
+  EQUITY_SHORT_INTEREST: 'equity-short-interest',
+  WARRANT_PRICING: 'warrant-pricing',
+  TRADE_EXECUTION_QUALITY: 'trade-execution-quality',
+  FREIGHT_RATE_MONITOR: 'freight-rate-monitor',
+  POWER_MARKET: 'power-market',
+  SPECIAL_SITUATIONS: 'special-situations',
+  INDUSTRIAL_METALS: 'industrial-metals',
+  SECURITIZATION_PIPELINE: 'securitization-pipeline',
+  EQUITY_ANALYST_REVISIONS: 'equity-analyst-revisions',
+  NATURAL_GAS_STORAGE: 'natural-gas-storage',
+  PRECIOUS_METALS_LEASE: 'precious-metals-lease',
+  CORPORATE_ACTION_CALENDAR: 'corporate-action-calendar',
+  SOVEREIGN_DEBT_MATURITY: 'sovereign-debt-maturity',
+  AGRICULTURAL_FUTURES: 'agricultural-futures',
+  BANK_EARNINGS: 'bank-earnings',
+  PRIVATE_EQUITY_SECONDARIES: 'private-equity-secondaries',
+  SUKUK_MONITOR: 'sukuk-monitor',
+  FRONTIER_MARKET_DEBT: 'frontier-market-debt',
+  AIRCRAFT_FINANCE: 'aircraft-finance',
+  RARE_EARTH_BATTERY_METALS: 'rare-earth-battery-metals',
+  DATA_CENTER_INFRASTRUCTURE: 'data-center-infrastructure',
+  SPORTS_MEDIA_RIGHTS: 'sports-media-rights',
+  LUXURY_COLLECTIBLES_INDEX: 'luxury-collectibles-index',
+  FINTECH_DIGITAL_PAYMENTS: 'fintech-digital-payments',
+  CYBER_RISK_INSURANCE: 'cyber-risk-insurance',
+} as const;
+
+export const PANEL_NAMES: Record<string, string> = {
+  [PANEL_IDS.NEWS]: 'NEWS FEED',
+  [PANEL_IDS.MAP]: 'WORLD MAP',
+  [PANEL_IDS.STOCKS]: 'MARKET WATCH',
+  [PANEL_IDS.AI]: 'AI INSIGHTS',
+  [PANEL_IDS.LOG]: 'TERMINAL LOG',
+  [PANEL_IDS.TRADING]: 'STOCK TRADING',
+  [PANEL_IDS.AI_CHAT]: 'AI CHAT',
+  [PANEL_IDS.ECON_CALENDAR]: 'ECONOMIC CALENDAR',
+  [PANEL_IDS.ALERTS]: 'ALERTS',
+  [PANEL_IDS.SENTIMENT]: 'SENTIMENT',
+  [PANEL_IDS.RISK]: 'RISK CALCULATOR',
+  [PANEL_IDS.SECTORS]: 'SECTOR ROTATION',
+  [PANEL_IDS.EARNINGS]: 'EARNINGS CALENDAR',
+  [PANEL_IDS.OPTIONS]: 'OPTIONS FLOW',
+  [PANEL_IDS.INSIDERS]: 'INSIDER TRADES',
+  [PANEL_IDS.CORRELATIONS]: 'CORRELATIONS',
+  [PANEL_IDS.LIVE_STREAMS]: 'LIVE STREAMS',
+  [PANEL_IDS.PREDICTION]: 'PREDICTION TRADING',
+  [PANEL_IDS.MISSED_OPP]: 'MISSED OPPORTUNITIES',
+  [PANEL_IDS.MARKET_MOVERS]: 'MARKET MOVERS',
+  [PANEL_IDS.FOREX]: 'FOREX',
+  [PANEL_IDS.BONDS]: 'BONDS & RATES',
+  [PANEL_IDS.COMMODITIES]: 'COMMODITIES',
+  [PANEL_IDS.CRYPTO]: 'CRYPTO OVERVIEW',
+  [PANEL_IDS.GLOBAL_DASHBOARD]: 'GLOBAL DASHBOARD',
+  [PANEL_IDS.SCANNER]: 'TECHNICAL SCANNER',
+  [PANEL_IDS.SCREENER]: 'STOCK SCREENER',
+  [PANEL_IDS.HEAT_MAP]: 'HEAT MAP',
+  [PANEL_IDS.ETF]: 'ETF EXPLORER',
+  [PANEL_IDS.DIVIDENDS]: 'DIVIDENDS',
+  [PANEL_IDS.IPO]: 'IPO CALENDAR',
+  [PANEL_IDS.ANALYST]: 'ANALYST RATINGS',
+  [PANEL_IDS.BREADTH]: 'MARKET BREADTH',
+  [PANEL_IDS.FINANCIALS]: 'FINANCIALS',
+  [PANEL_IDS.FUTURES]: 'FUTURES',
+  [PANEL_IDS.PERFORMANCE]: 'PERFORMANCE',
+  [PANEL_IDS.SHORT_INTEREST]: 'SHORT INTEREST',
+  [PANEL_IDS.OPTIONS_CALC]: 'OPTIONS CALC',
+  [PANEL_IDS.FX_CONVERTER]: 'FX CONVERTER',
+  [PANEL_IDS.BOND_CALC]: 'BOND CALC',
+  [PANEL_IDS.COMPANY_PROFILE]: 'COMPANY PROFILE',
+  [PANEL_IDS.PIVOT_POINTS]: 'PIVOT POINTS',
+  [PANEL_IDS.MARKET_HOURS]: 'MARKET HOURS',
+  [PANEL_IDS.MARKET_CALENDAR]: 'MARKET CALENDAR',
+  [PANEL_IDS.PAIRS_TRADING]: 'PAIRS TRADING',
+  [PANEL_IDS.VOLATILITY]: 'VOLATILITY',
+  [PANEL_IDS.FIBONACCI]: 'FIBONACCI',
+  [PANEL_IDS.MORTGAGE_CALC]: 'MORTGAGE CALC',
+  [PANEL_IDS.INVESTMENT_CALC]: 'INVESTMENT CALC',
+  [PANEL_IDS.RELATIVE_STRENGTH]: 'RELATIVE STRENGTH',
+  [PANEL_IDS.WATCHLIST]: 'WATCHLIST',
+  [PANEL_IDS.ECON_INDICATORS]: 'ECONOMIC INDICATORS',
+  [PANEL_IDS.FX_CROSS]: 'FX CROSS RATES',
+  [PANEL_IDS.PORTFOLIO]: 'PORTFOLIO ANALYTICS',
+  [PANEL_IDS.FEAR_GREED]: 'FEAR & GREED',
+  [PANEL_IDS.SENTIMENT_HEATMAP]: 'SENTIMENT HEATMAP',
+  [PANEL_IDS.YIELD_CURVE]: 'YIELD CURVE',
+  [PANEL_IDS.CURRENCY_STRENGTH]: 'CURRENCY STRENGTH',
+  [PANEL_IDS.MONEY_FLOW]: 'MONEY FLOW',
+  [PANEL_IDS.TECHNICAL_CHART]: 'TECHNICAL CHART',
+  [PANEL_IDS.EARNINGS_ESTIMATES]: 'EARNINGS ESTIMATES',
+  [PANEL_IDS.WORLD_ECONOMY]: 'WORLD ECONOMY',
+  [PANEL_IDS.CROSS_ASSET]: 'CROSS-ASSET',
+  [PANEL_IDS.HOLDINGS]: 'INSTITUTIONAL HOLDINGS',
+  [PANEL_IDS.SECTOR_PERFORMANCE]: 'SECTOR PERFORMANCE',
+  [PANEL_IDS.ETF_HOLDINGS]: 'ETF HOLDINGS',
+  [PANEL_IDS.DRAWDOWN]: 'DRAWDOWN ANALYSIS',
+  [PANEL_IDS.MARKET_REGIME]: 'MARKET REGIME',
+  [PANEL_IDS.RELATIVE_VALUATION]: 'RELATIVE VALUATION',
+  [PANEL_IDS.CONFLUENCE]: 'TECHNICAL CONFLUENCE',
+  [PANEL_IDS.IV_SURFACE]: 'IV SURFACE',
+  [PANEL_IDS.SEASONALITY]: 'SEASONALITY',
+  [PANEL_IDS.ORDER_FLOW]: 'ORDER FLOW',
+  [PANEL_IDS.PORTFOLIO_OPTIMIZER]: 'PORTFOLIO OPTIMIZER',
+  [PANEL_IDS.BACKTEST]: 'STRATEGY BACKTEST',
+  [PANEL_IDS.MACRO_DASHBOARD]: 'MACRO DASHBOARD',
+  [PANEL_IDS.EARNINGS_SURPRISE]: 'EARNINGS SURPRISE',
+  [PANEL_IDS.FUTURES_CURVE]: 'FUTURES CURVE',
+  [PANEL_IDS.CREDIT_SPREADS]: 'CREDIT SPREADS',
+  [PANEL_IDS.INTERMARKET]: 'INTERMARKET DIVERGENCE',
+  [PANEL_IDS.SECTOR_HEATMAP]: 'SECTOR HEATMAP',
+  [PANEL_IDS.ECONOMIC_SURPRISES]: 'ECONOMIC SURPRISES',
+  [PANEL_IDS.DISPERSION]: 'DISPERSION MONITOR',
+  [PANEL_IDS.FUND_FLOWS]: 'FUND FLOWS',
+  [PANEL_IDS.VOL_TERM_STRUCTURE]: 'VOL TERM STRUCTURE',
+  [PANEL_IDS.MACRO_HEATMAP]: 'GLOBAL MACRO HEATMAP',
+  [PANEL_IDS.FACTOR_EXPOSURE]: 'FACTOR EXPOSURE',
+  [PANEL_IDS.CAPITAL_FLOWS]: 'GLOBAL CAPITAL FLOWS',
+  [PANEL_IDS.TAIL_RISK]: 'TAIL RISK MONITOR',
+  [PANEL_IDS.LIQUIDITY]: 'LIQUIDITY MONITOR',
+  [PANEL_IDS.COMMODITY_SPREADS]: 'COMMODITY SPREADS',
+  [PANEL_IDS.SENTIMENT_DASHBOARD]: 'SENTIMENT DASHBOARD',
+  [PANEL_IDS.RISK_PARITY]: 'RISK PARITY',
+  [PANEL_IDS.MARKET_ANOMALIES]: 'MARKET ANOMALIES',
+  [PANEL_IDS.CARRY_TRADE]: 'CARRY TRADE',
+  [PANEL_IDS.COT_REPORT]: 'COT REPORT',
+  [PANEL_IDS.IV_RANK]: 'IV RANK',
+  [PANEL_IDS.PERFORMANCE_ATTRIBUTION]: 'PERFORMANCE ATTRIBUTION',
+  [PANEL_IDS.MARKET_MICROSTRUCTURE]: 'MARKET MICROSTRUCTURE',
+  [PANEL_IDS.COUNTRY_RISK]: 'COUNTRY RISK',
+  [PANEL_IDS.POSITIONING]: 'POSITIONING & FLOWS',
+  [PANEL_IDS.REPO_RATES]: 'REPO RATE MONITOR',
+  [PANEL_IDS.XCCY_BASIS]: 'XCCY BASIS',
+  [PANEL_IDS.STYLE_BOX]: 'EQUITY STYLE BOX',
+  [PANEL_IDS.SWAP_RATES]: 'SWAP RATES',
+  [PANEL_IDS.TRADE_BLOTTER]: 'TRADE BLOTTER',
+  [PANEL_IDS.CORPORATE_CDS]: 'CORPORATE CDS',
+  [PANEL_IDS.EVENT_DRIVEN]: 'EVENT-DRIVEN MONITOR',
+  [PANEL_IDS.DEBT_MATURITY]: 'DEBT MATURITY PROFILE',
+  [PANEL_IDS.EQUITY_RISK_PREMIUM]: 'EQUITY RISK PREMIUM',
+  [PANEL_IDS.CENTRAL_BANKS]: 'CENTRAL BANK MONITOR',
+  [PANEL_IDS.VOL_SKEW]: 'VOL SKEW MONITOR',
+  [PANEL_IDS.GLOBAL_RATES]: 'GLOBAL RATES',
+  [PANEL_IDS.SUPPLY_CHAIN]: 'SUPPLY CHAIN MONITOR',
+  [PANEL_IDS.GAMMA_EXPOSURE]: 'GAMMA EXPOSURE',
+  [PANEL_IDS.SOVEREIGN_SPREADS]: 'SOVEREIGN SPREADS',
+  [PANEL_IDS.EARNINGS_REVISIONS]: 'EARNINGS REVISIONS',
+  [PANEL_IDS.DIVIDEND_FORECAST]: 'DIVIDEND FORECAST',
+  [PANEL_IDS.CREDIT_RATINGS]: 'CREDIT RATINGS',
+  [PANEL_IDS.VOLATILITY_CONE]: 'VOLATILITY CONE',
+  [PANEL_IDS.TERM_STRUCTURE]: 'TERM STRUCTURE',
+  [PANEL_IDS.INSTITUTIONAL_OWNERSHIP]: 'INSTITUTIONAL OWNERSHIP',
+  [PANEL_IDS.IMPLIED_CORRELATION]: 'IMPLIED CORRELATION',
+  [PANEL_IDS.EARNINGS_QUALITY]: 'EARNINGS QUALITY',
+  [PANEL_IDS.VOL_SURFACE]: 'VOL SURFACE',
+  [PANEL_IDS.GLOBAL_FLOWS]: 'GLOBAL FLOWS',
+  [PANEL_IDS.REGRESSION_ANALYSIS]: 'REGRESSION ANALYSIS',
+  [PANEL_IDS.COVENANT_MONITOR]: 'COVENANT MONITOR',
+  [PANEL_IDS.MARKET_INTERNALS]: 'MARKET INTERNALS',
+  [PANEL_IDS.VALUATION_MULTIPLES]: 'VALUATION MULTIPLES',
+  [PANEL_IDS.FIXED_INCOME_ANALYTICS]: 'FIXED INCOME ANALYTICS',
+  [PANEL_IDS.INSIDER_SENTIMENT]: 'INSIDER SENTIMENT',
+  [PANEL_IDS.CUSTOM_INDEX]: 'CUSTOM INDEX BUILDER',
+  [PANEL_IDS.MBS_ANALYTICS]: 'MBS ANALYTICS',
+  [PANEL_IDS.CDX_INDEX]: 'CDX / ITRAXX INDEX',
+  [PANEL_IDS.MUNI_BONDS]: 'MUNICIPAL BONDS',
+  [PANEL_IDS.CLO_ANALYTICS]: 'CLO ANALYTICS',
+  [PANEL_IDS.ONCHAIN_ANALYTICS]: 'ON-CHAIN ANALYTICS',
+  [PANEL_IDS.PRIVATE_CREDIT]: 'PRIVATE CREDIT',
+  [PANEL_IDS.VOL_RISK_PREMIUM]: 'VOL RISK PREMIUM',
+  [PANEL_IDS.ESG_RATINGS]: 'ESG RATINGS',
+  [PANEL_IDS.FREIGHT_INDICES]: 'FREIGHT INDICES',
+  [PANEL_IDS.ALTERNATIVE_DATA]: 'ALTERNATIVE DATA',
+  [PANEL_IDS.TRADE_IDEAS]: 'TRADE IDEAS',
+  [PANEL_IDS.DEBT_ISSUANCE]: 'DEBT ISSUANCE',
+  [PANEL_IDS.FX_OPTIONS]: 'FX OPTIONS',
+  [PANEL_IDS.MULTI_FACTOR]: 'MULTI-FACTOR MODEL',
+  [PANEL_IDS.TREASURY_AUCTIONS]: 'TREASURY AUCTIONS',
+  [PANEL_IDS.COMMODITY_CURVES]: 'COMMODITY CURVES',
+  [PANEL_IDS.EM_BONDS]: 'EM BONDS',
+  [PANEL_IDS.REIT_MONITOR]: 'REIT MONITOR',
+  [PANEL_IDS.MONEY_MARKET]: 'MONEY MARKET',
+  [PANEL_IDS.CONVERTIBLE_BONDS]: 'CONVERTIBLE BONDS',
+  [PANEL_IDS.GLOBAL_PMI]: 'GLOBAL PMI',
+  [PANEL_IDS.LEVERAGED_LOANS]: 'LEVERAGED LOANS',
+  [PANEL_IDS.SWAPTION_VOL]: 'SWAPTION VOL',
+  [PANEL_IDS.DISTRESSED_DEBT]: 'DISTRESSED DEBT',
+  [PANEL_IDS.RATE_CAPS_FLOORS]: 'RATE CAPS/FLOORS',
+  [PANEL_IDS.DIVIDEND_SWAPS]: 'DIVIDEND SWAPS',
+  [PANEL_IDS.SECURITIES_LENDING]: 'SECURITIES LENDING',
+  [PANEL_IDS.VARIANCE_SWAPS]: 'VARIANCE SWAPS',
+  [PANEL_IDS.CARBON_CREDITS]: 'CARBON CREDITS',
+  [PANEL_IDS.WEATHER_DERIVATIVES]: 'WEATHER DERIVATIVES',
+  [PANEL_IDS.DARK_POOL]: 'DARK POOL ANALYTICS',
+  [PANEL_IDS.TOTAL_RETURN_SWAPS]: 'TOTAL RETURN SWAPS',
+  [PANEL_IDS.CAT_BONDS]: 'CATASTROPHE BONDS',
+  [PANEL_IDS.INFLATION_LINKED_BONDS]: 'INFLATION LINKERS',
+  [PANEL_IDS.EQUITY_BASKET_SWAPS]: 'EQUITY BASKET SWAPS',
+  [PANEL_IDS.CROSS_CURRENCY_SWAPS]: 'CROSS-CURRENCY SWAPS',
+  [PANEL_IDS.COMMODITY_OPTIONS]: 'COMMODITY OPTIONS',
+  [PANEL_IDS.LOAN_CDS]: 'LOAN CDS',
+  [PANEL_IDS.CONVERTIBLE_ARB]: 'CONVERTIBLE ARB',
+  [PANEL_IDS.SHIPPING_RATES]: 'SHIPPING RATES',
+  [PANEL_IDS.CREDIT_AUCTION]: 'CREDIT AUCTION',
+  [PANEL_IDS.MUNI_YIELD_CURVES]: 'MUNI YIELD CURVES',
+  [PANEL_IDS.STRUCTURED_PRODUCTS]: 'STRUCTURED PRODUCTS',
+  [PANEL_IDS.PENSION_FUND]: 'PENSION FUND',
+  [PANEL_IDS.SWAP_SPREAD_MONITOR]: 'SWAP SPREAD MONITOR',
+  [PANEL_IDS.EQUITY_LINKED_NOTES]: 'EQUITY LINKED NOTES',
+  [PANEL_IDS.TRADE_FINANCE]: 'TRADE FINANCE',
+  [PANEL_IDS.REPO_MARKET]: 'REPO MARKET',
+  [PANEL_IDS.COMMODITY_INVENTORY]: 'COMMODITY INVENTORY',
+  [PANEL_IDS.SOVEREIGN_WEALTH]: 'SOVEREIGN WEALTH',
+  [PANEL_IDS.AGENCY_MBS_TBA]: 'AGENCY MBS TBA',
+  [PANEL_IDS.ETF_FLOWS]: 'ETF FLOWS',
+  [PANEL_IDS.CREDIT_FLOW]: 'CREDIT FLOW',
+  [PANEL_IDS.COMMODITY_SEASONALITY]: 'COMMODITY SEASONALITY',
+  [PANEL_IDS.FX_VOLATILITY]: 'FX VOLATILITY',
+  [PANEL_IDS.PRIMARY_DEALER]: 'PRIMARY DEALER',
+  [PANEL_IDS.REAL_ESTATE_CAPITAL]: 'REAL ESTATE CAPITAL',
+  [PANEL_IDS.ELECTRICITY_MARKETS]: 'ELECTRICITY MARKETS',
+  [PANEL_IDS.SYNDICATED_LOANS]: 'SYNDICATED LOANS',
+  [PANEL_IDS.EMISSIONS_TRADING]: 'EMISSIONS TRADING',
+  [PANEL_IDS.INSURANCE_LINKED]: 'INSURANCE LINKED',
+  [PANEL_IDS.METALS_FORWARD]: 'METALS FORWARD',
+  [PANEL_IDS.CENTRAL_BANK_WATCH]: 'CENTRAL BANK WATCH',
+  [PANEL_IDS.FREIGHT_DERIVATIVES]: 'FREIGHT DERIVATIVES',
+  [PANEL_IDS.INFLATION_BREAKEVENS]: 'INFLATION BREAKEVENS',
+  [PANEL_IDS.MUNI_BOND_AUCTION]: 'MUNI BOND AUCTION',
+  [PANEL_IDS.COMMODITY_CURVE_ANALYTICS]: 'COMMODITY CURVE ANALYTICS',
+  [PANEL_IDS.COLLATERAL_MONITOR]: 'COLLATERAL MONITOR',
+  [PANEL_IDS.SOVEREIGN_CDS]: 'SOVEREIGN CDS',
+  [PANEL_IDS.CROSS_ASSET_MOMENTUM]: 'CROSS-ASSET MOMENTUM',
+  [PANEL_IDS.CRYPTO_DERIVATIVES]: 'CRYPTO DERIVATIVES',
+  [PANEL_IDS.BOND_RELATIVE_VALUE]: 'BOND RELATIVE VALUE',
+  [PANEL_IDS.VOLATILITY_ARBITRAGE]: 'VOLATILITY ARBITRAGE',
+  [PANEL_IDS.SYSTEMATIC_STRATEGY]: 'SYSTEMATIC STRATEGY',
+  [PANEL_IDS.FUNDING_RATE_MONITOR]: 'FUNDING RATE MONITOR',
+  [PANEL_IDS.EM_LOCAL_RATES]: 'EM LOCAL RATES',
+  [PANEL_IDS.PORTFOLIO_RISK_ANALYTICS]: 'PORTFOLIO RISK ANALYTICS',
+  [PANEL_IDS.CREDIT_INDEX_MONITOR]: 'CREDIT INDEX MONITOR',
+  [PANEL_IDS.EQUITY_FINANCING]: 'EQUITY FINANCING',
+  [PANEL_IDS.GLOBAL_MACRO_DASHBOARD]: 'GLOBAL MACRO DASHBOARD',
+  [PANEL_IDS.ABS_RMBS_MONITOR]: 'ABS/RMBS MONITOR',
+  [PANEL_IDS.LIQUIDITY_RISK_MONITOR]: 'LIQUIDITY RISK MONITOR',
+  [PANEL_IDS.FI_ATTRIBUTION]: 'FI ATTRIBUTION',
+  [PANEL_IDS.REPO_RATE_HEATMAP]: 'REPO RATE HEATMAP',
+  [PANEL_IDS.TRADE_COMPRESSION]: 'TRADE COMPRESSION',
+  [PANEL_IDS.REGULATORY_CAPITAL]: 'REGULATORY CAPITAL',
+  [PANEL_IDS.SETTLEMENT_RISK]: 'SETTLEMENT RISK',
+  [PANEL_IDS.SWAP_VALUATION]: 'SWAP VALUATION',
+  [PANEL_IDS.COMMODITY_STORAGE]: 'COMMODITY STORAGE',
+  [PANEL_IDS.COUNTERPARTY_EXPOSURE]: 'COUNTERPARTY EXPOSURE',
+  [PANEL_IDS.MARKET_IMPACT_MODEL]: 'MARKET IMPACT MODEL',
+  [PANEL_IDS.STRUCTURED_NOTES]: 'STRUCTURED NOTES',
+  [PANEL_IDS.SECURITIES_FINANCE]: 'SECURITIES FINANCE',
+  [PANEL_IDS.CREDIT_CURVE_BUILDER]: 'CREDIT CURVE BUILDER',
+  [PANEL_IDS.EXECUTION_ANALYTICS]: 'EXECUTION ANALYTICS',
+  [PANEL_IDS.BOND_AUCTION_CALENDAR]: 'BOND AUCTION CALENDAR',
+  [PANEL_IDS.FX_CARRY_MONITOR]: 'FX CARRY MONITOR',
+  [PANEL_IDS.EQUITY_CAPITAL_MARKETS]: 'EQUITY CAPITAL MARKETS',
+  [PANEL_IDS.DEBT_CAPITAL_MARKETS]: 'DEBT CAPITAL MARKETS',
+  [PANEL_IDS.HEDGE_FUND_MONITOR]: 'HEDGE FUND MONITOR',
+  [PANEL_IDS.RISK_DASHBOARD]: 'RISK DASHBOARD',
+  [PANEL_IDS.BENCHMARK_TRACKER]: 'BENCHMARK TRACKER',
+  [PANEL_IDS.LIQUIDITY_COVERAGE]: 'LIQUIDITY COVERAGE',
+  [PANEL_IDS.MARKET_SENTIMENT_INDEX]: 'MARKET SENTIMENT INDEX',
+  [PANEL_IDS.PORTFOLIO_STRESS_TEST]: 'PORTFOLIO STRESS TEST',
+  [PANEL_IDS.GLOBAL_LIQUIDITY_MONITOR]: 'GLOBAL LIQUIDITY MONITOR',
+  [PANEL_IDS.TRADE_RECAP]: 'TRADE RECAP',
+  [PANEL_IDS.MACRO_SURPRISE_TRACKER]: 'MACRO SURPRISE TRACKER',
+  [PANEL_IDS.FX_VOLATILITY_SURFACE]: 'FX VOLATILITY SURFACE',
+  [PANEL_IDS.COMMODITY_FUNDAMENTAL]: 'COMMODITY FUNDAMENTAL',
+  [PANEL_IDS.ETF_FLOW_MONITOR]: 'ETF FLOW MONITOR',
+  [PANEL_IDS.EQUITY_FACTOR_MONITOR]: 'EQUITY FACTOR MONITOR',
+  [PANEL_IDS.RATES_STRATEGY]: 'RATES STRATEGY',
+  [PANEL_IDS.CREDIT_PORTFOLIO]: 'CREDIT PORTFOLIO',
+  [PANEL_IDS.MACRO_REGIME_MONITOR]: 'MACRO REGIME MONITOR',
+  [PANEL_IDS.DIVIDEND_CALENDAR]: 'DIVIDEND CALENDAR',
+  [PANEL_IDS.CONVERTIBLE_ARBITRAGE]: 'CONVERTIBLE ARBITRAGE',
+  [PANEL_IDS.REALTIME_PNL]: 'REAL-TIME P&L',
+  [PANEL_IDS.MARKET_BREADTH_ADVANCED]: 'MARKET BREADTH ADV',
+  [PANEL_IDS.VOLATILITY_DASHBOARD]: 'VOLATILITY DASHBOARD',
+  [PANEL_IDS.FI_RELATIVE_VALUE]: 'FI RELATIVE VALUE',
+  [PANEL_IDS.EQUITY_SCREEN_RESULTS]: 'EQUITY SCREEN RESULTS',
+  [PANEL_IDS.CROSS_ASSET_CORRELATION]: 'CROSS-ASSET CORRELATION',
+  [PANEL_IDS.PORTFOLIO_ATTRIBUTION]: 'PORTFOLIO ATTRIBUTION',
+  [PANEL_IDS.MUNICIPAL_BOND_MONITOR]: 'MUNICIPAL BOND MONITOR',
+  [PANEL_IDS.STRUCTURED_CREDIT]: 'STRUCTURED CREDIT',
+  [PANEL_IDS.CURRENCY_OPTIONS]: 'CURRENCY OPTIONS',
+  [PANEL_IDS.SWAP_CURVE_MONITOR]: 'SWAP CURVE MONITOR',
+  [PANEL_IDS.FUND_FLOW_ANALYTICS]: 'FUND FLOW ANALYTICS',
+  [PANEL_IDS.TRADE_COST_ANALYSIS]: 'TRADE COST ANALYSIS',
+  [PANEL_IDS.WARRANT_CONVERTIBLE]: 'WARRANT & CONVERTIBLE',
+  [PANEL_IDS.GLOBAL_TRADE_FLOW]: 'GLOBAL TRADE FLOW',
+  [PANEL_IDS.REAL_ESTATE_ANALYTICS]: 'REAL ESTATE ANALYTICS',
+  [PANEL_IDS.INFLATION_MONITOR]: 'INFLATION MONITOR',
+  [PANEL_IDS.MERGER_ARBITRAGE]: 'MERGER ARBITRAGE',
+  [PANEL_IDS.SOVEREIGN_DEBT]: 'SOVEREIGN DEBT',
+  [PANEL_IDS.ETF_PREMIUM]: 'ETF PREMIUM/DISCOUNT',
+  [PANEL_IDS.COMMODITY_DEMAND]: 'COMMODITY DEMAND',
+  [PANEL_IDS.GLOBAL_DIVIDEND]: 'GLOBAL DIVIDEND',
+  [PANEL_IDS.CDS_INDEX_MONITOR]: 'CDS INDEX MONITOR',
+  [PANEL_IDS.MACRO_RISK]: 'MACRO RISK',
+  [PANEL_IDS.FI_ATTRIBUTION_ANALYSIS]: 'FI ATTRIBUTION',
+  [PANEL_IDS.EQUITY_STYLE]: 'EQUITY STYLE',
+  [PANEL_IDS.CURRENCY_FORECAST]: 'CURRENCY FORECAST',
+  [PANEL_IDS.BOND_LADDER]: 'BOND LADDER',
+  [PANEL_IDS.SECTOR_CREDIT_SPREAD]: 'SECTOR CREDIT SPREAD',
+  [PANEL_IDS.GLOBAL_PMI_DASHBOARD]: 'GLOBAL PMI',
+  [PANEL_IDS.EARNINGS_WHISPER]: 'EARNINGS WHISPER',
+  [PANEL_IDS.PORTFOLIO_HEDGING]: 'PORTFOLIO HEDGING',
+  [PANEL_IDS.MARKET_DEPTH]: 'MARKET DEPTH',
+  [PANEL_IDS.IRS_MONITOR]: 'IRS MONITOR',
+  [PANEL_IDS.EQUITY_CAPITAL_RAISE]: 'EQUITY CAPITAL RAISE',
+  [PANEL_IDS.VOLATILITY_SMILE]: 'VOLATILITY SMILE',
+  [PANEL_IDS.CENTRAL_BANK_BALANCE_SHEET]: 'CB BALANCE SHEET',
+  [PANEL_IDS.CORPORATE_BUYBACK]: 'CORPORATE BUYBACK',
+  [PANEL_IDS.MARGIN_DEBT]: 'MARGIN DEBT',
+  [PANEL_IDS.CORPORATE_ACTIONS]: 'CORPORATE ACTIONS',
+  [PANEL_IDS.FISCAL_POLICY]: 'FISCAL POLICY',
+  [PANEL_IDS.BASIS_TRADE]: 'BASIS TRADE',
+  [PANEL_IDS.FLOW_OF_FUNDS]: 'FLOW OF FUNDS',
+  [PANEL_IDS.GLOBAL_SUPPLY_CHAIN]: 'SUPPLY CHAIN',
+  [PANEL_IDS.TREASURY_ANALYTICS]: 'TREASURY ANALYTICS',
+  [PANEL_IDS.CURVE_TRADE]: 'CURVE TRADE',
+  [PANEL_IDS.PRIVATE_EQUITY]: 'PRIVATE EQUITY',
+  [PANEL_IDS.CAPITAL_STRUCTURE]: 'CAPITAL STRUCTURE',
+  [PANEL_IDS.CROSS_BORDER_MA]: 'CROSS-BORDER M&A',
+  [PANEL_IDS.CREDIT_RISK_TRANSFER]: 'CREDIT RISK TRANSFER',
+  [PANEL_IDS.SWAP_EXECUTION]: 'SWAP EXECUTION',
+  [PANEL_IDS.DEBT_CEILING]: 'DEBT CEILING',
+  [PANEL_IDS.SECURITIZATION]: 'SECURITIZATION',
+  [PANEL_IDS.MUNICIPAL_CREDIT]: 'MUNICIPAL CREDIT',
+  [PANEL_IDS.COMMODITY_SPREAD]: 'COMMODITY SPREAD',
+  [PANEL_IDS.INFLATION_SWAP]: 'INFLATION SWAP',
+  [PANEL_IDS.CREDIT_DEFAULT_INDEX]: 'CREDIT DEFAULT INDEX',
+  [PANEL_IDS.SOVEREIGN_WEALTH_FUND]: 'SOVEREIGN WEALTH FUND',
+  [PANEL_IDS.COLLATERAL_MANAGEMENT]: 'COLLATERAL MANAGEMENT',
+  [PANEL_IDS.PRIME_BROKERAGE]: 'PRIME BROKERAGE',
+  [PANEL_IDS.ELECTION_RISK]: 'ELECTION RISK',
+  [PANEL_IDS.CVA_MONITOR]: 'CVA MONITOR',
+  [PANEL_IDS.ALGO_EXECUTION]: 'ALGO EXECUTION',
+  [PANEL_IDS.SECURITIES_CLASS_ACTION]: 'SECURITIES CLASS ACTION',
+  [PANEL_IDS.PROXY_VOTING]: 'PROXY VOTING',
+  [PANEL_IDS.INDEX_REBALANCE]: 'INDEX REBALANCE',
+  [PANEL_IDS.SHAREHOLDER_ACTIVISM]: 'SHAREHOLDER ACTIVISM',
+  [PANEL_IDS.FUND_FLOW_TRACKER]: 'FUND FLOW TRACKER',
+  [PANEL_IDS.INSIDER_TRANSACTION]: 'INSIDER TRANSACTION',
+  [PANEL_IDS.SHORT_SQUEEZE]: 'SHORT SQUEEZE',
+  [PANEL_IDS.SPAC_MONITOR]: 'SPAC MONITOR',
+  [PANEL_IDS.BLOCK_TRADE]: 'BLOCK TRADE',
+  [PANEL_IDS.REGULATORY_FILING]: 'REGULATORY FILING',
+  [PANEL_IDS.TAX_LOSS_HARVEST]: 'TAX LOSS HARVEST',
+  [PANEL_IDS.DIVIDEND_CAPTURE]: 'DIVIDEND CAPTURE',
+  [PANEL_IDS.CREDIT_RATING_MIGRATION]: 'CREDIT RATING MIGRATION',
+  [PANEL_IDS.MERGER_ARB_MONITOR]: 'MERGER ARB MONITOR',
+  [PANEL_IDS.MARKET_MAKING]: 'MARKET MAKING',
+  [PANEL_IDS.RATE_PROBABILITY]: 'RATE PROBABILITY',
+  [PANEL_IDS.FX_FORWARD]: 'FX FORWARD',
+  [PANEL_IDS.CREDIT_EVENT]: 'CREDIT EVENT',
+  [PANEL_IDS.PORTFOLIO_MARGIN]: 'PORTFOLIO MARGIN',
+  [PANEL_IDS.CORPORATE_GOVERNANCE]: 'CORPORATE GOVERNANCE',
+  [PANEL_IDS.TREASURY_BILL]: 'TREASURY BILL',
+  [PANEL_IDS.EQUITY_LENDING]: 'EQUITY LENDING',
+  [PANEL_IDS.TRADE_SETTLEMENT]: 'TRADE SETTLEMENT',
+  [PANEL_IDS.INDEX_ARBITRAGE]: 'INDEX ARBITRAGE',
+  [PANEL_IDS.ASSET_ALLOCATION]: 'ASSET ALLOCATION',
+  [PANEL_IDS.BOND_FUTURES_BASIS]: 'BOND FUTURES BASIS',
+  [PANEL_IDS.RISK_BUDGETING]: 'RISK BUDGETING',
+  [PANEL_IDS.MARKET_SURVEILLANCE]: 'MARKET SURVEILLANCE',
+  [PANEL_IDS.DURATION_MANAGEMENT]: 'DURATION MANAGEMENT',
+  [PANEL_IDS.SWAP_PRICING]: 'SWAP PRICING',
+  [PANEL_IDS.OPTION_STRATEGY_BUILDER]: 'OPTION STRATEGY BUILDER',
+  [PANEL_IDS.CURRENCY_BASKET]: 'CURRENCY BASKET',
+  [PANEL_IDS.LIQUIDITY_STRESS_TEST]: 'LIQUIDITY STRESS TEST',
+  [PANEL_IDS.TRADE_REPOSITORY]: 'TRADE REPOSITORY',
+  [PANEL_IDS.SOVEREIGN_RISK_SCORE]: 'SOVEREIGN RISK SCORE',
+  [PANEL_IDS.COLLATERAL_OPTIMIZATION]: 'COLLATERAL OPTIMIZATION',
+  [PANEL_IDS.CROSS_MARGINING]: 'CROSS MARGINING',
+  [PANEL_IDS.FUND_MANAGER_RANKING]: 'FUND MANAGER RANKING',
+  [PANEL_IDS.PRICE_DISCOVERY]: 'PRICE DISCOVERY',
+  [PANEL_IDS.OPERATIONAL_RISK]: 'OPERATIONAL RISK',
+  [PANEL_IDS.TRANSITION_MANAGEMENT]: 'TRANSITION MANAGEMENT',
+  [PANEL_IDS.SECURITIES_VALUATION]: 'SECURITIES VALUATION',
+  [PANEL_IDS.BENCHMARK_ANALYTICS]: 'BENCHMARK ANALYTICS',
+  [PANEL_IDS.COUNTERPARTY_RISK]: 'COUNTERPARTY RISK',
+  [PANEL_IDS.EQUITY_VALUATION]: 'EQUITY VALUATION',
+  [PANEL_IDS.MACRO_INDICATORS]: 'MACRO INDICATORS',
+  [PANEL_IDS.VOLATILITY_SKEW]: 'VOLATILITY SKEW',
+  [PANEL_IDS.ORDER_BOOK]: 'ORDER BOOK',
+  [PANEL_IDS.FIXED_INCOME_LADDER]: 'FIXED INCOME LADDER',
+  [PANEL_IDS.CDS_MONITOR]: 'CDS MONITOR',
+  [PANEL_IDS.SOVEREIGN_DEBT_MONITOR]: 'SOVEREIGN DEBT MONITOR',
+  [PANEL_IDS.LIQUIDITY_DASHBOARD]: 'LIQUIDITY DASHBOARD',
+  [PANEL_IDS.PRECIOUS_METALS]: 'PRECIOUS METALS',
+  [PANEL_IDS.BANK_CAPITAL]: 'BANK CAPITAL',
+  [PANEL_IDS.AGRICULTURAL_COMMODITIES]: 'AGRICULTURAL COMMODITIES',
+  [PANEL_IDS.ENERGY_TRANSITION]: 'ENERGY TRANSITION',
+  [PANEL_IDS.GEOPOLITICAL_RISK]: 'GEOPOLITICAL RISK',
+  [PANEL_IDS.LABOR_MARKET]: 'LABOR MARKET',
+  [PANEL_IDS.HOUSING_MARKET]: 'HOUSING MARKET',
+  [PANEL_IDS.SUPPLY_CHAIN_STRESS]: 'SUPPLY CHAIN STRESS',
+  [PANEL_IDS.CREDIT_IMPULSE]: 'CREDIT IMPULSE',
+  [PANEL_IDS.CONSUMER_CONFIDENCE]: 'CONSUMER CONFIDENCE',
+  [PANEL_IDS.SOVEREIGN_YIELD]: 'SOVEREIGN YIELD',
+  [PANEL_IDS.TRADE_BALANCE]: 'TRADE BALANCE',
+  [PANEL_IDS.SEMICONDUCTOR]: 'SEMICONDUCTOR',
+  [PANEL_IDS.INFRASTRUCTURE_INVESTMENT]: 'INFRASTRUCTURE INVESTMENT',
+  [PANEL_IDS.INSURANCE_MARKET]: 'INSURANCE MARKET',
+  [PANEL_IDS.SHIPPING_INDEX]: 'SHIPPING INDEX',
+  [PANEL_IDS.VENTURE_CAPITAL]: 'VENTURE CAPITAL',
+  [PANEL_IDS.DEMOGRAPHIC_TRENDS]: 'DEMOGRAPHIC TRENDS',
+  [PANEL_IDS.ECONOMIC_FORECAST]: 'ECONOMIC FORECAST CONSENSUS',
+  [PANEL_IDS.GLOBAL_INDEX_MONITOR]: 'WORLD EQUITY INDICES',
+  [PANEL_IDS.LEAGUE_TABLES]: 'LEAGUE TABLES',
+  [PANEL_IDS.GDP_NOWCAST]: 'GDP NOWCAST',
+  [PANEL_IDS.RECESSION_PROBABILITY]: 'RECESSION PROBABILITY',
+  [PANEL_IDS.FINANCIAL_CONDITIONS]: 'FINANCIAL CONDITIONS INDEX',
+  [PANEL_IDS.COMMODITY_FUNDAMENTALS]: 'COMMODITY FUNDAMENTALS',
+  [PANEL_IDS.WAGE_GROWTH]: 'WAGE GROWTH TRACKER',
+  [PANEL_IDS.FISCAL_DEFICIT]: 'FISCAL DEFICIT MONITOR',
+  [PANEL_IDS.CENTRAL_CLEARING]: 'CENTRAL CLEARING STATS',
+  [PANEL_IDS.MONEY_VELOCITY]: 'MONEY VELOCITY & SUPPLY',
+  [PANEL_IDS.PRODUCTIVITY_MONITOR]: 'PRODUCTIVITY MONITOR',
+  [PANEL_IDS.BALANCE_OF_PAYMENTS]: 'BALANCE OF PAYMENTS',
+  [PANEL_IDS.GLOBAL_TAX_RATES]: 'GLOBAL TAX RATES',
+  [PANEL_IDS.SANCTIONS_MONITOR]: 'SANCTIONS MONITOR',
+  [PANEL_IDS.CLIMATE_RISK]: 'CLIMATE RISK',
+  [PANEL_IDS.SOVEREIGN_DEFAULT]: 'SOVEREIGN DEFAULT',
+  [PANEL_IDS.BANK_STRESS_TEST]: 'BANK STRESS TEST',
+  [PANEL_IDS.EQUITY_DERIVATIVES]: 'EQUITY DERIVATIVES',
+  [PANEL_IDS.MONEY_MARKET_RATES]: 'MONEY MARKET RATES',
+  [PANEL_IDS.GLOBAL_MA]: 'GLOBAL M&A',
+  [PANEL_IDS.CREDIT_DEFAULT_SWAPS]: 'CREDIT DEFAULT SWAPS',
+  [PANEL_IDS.REAL_ESTATE_INVESTMENT]: 'REAL ESTATE INVESTMENT',
+  [PANEL_IDS.GLOBAL_DEBT_CLOCK]: 'GLOBAL DEBT CLOCK',
+  [PANEL_IDS.AI_TECH_CAPEX]: 'AI & TECH CAPEX',
+  [PANEL_IDS.CRITICAL_MINERALS]: 'CRITICAL MINERALS',
+  [PANEL_IDS.NUCLEAR_ENERGY]: 'NUCLEAR ENERGY',
+  [PANEL_IDS.WATER_MARKET]: 'WATER MARKET',
+  [PANEL_IDS.SPACE_ECONOMY]: 'SPACE ECONOMY',
+  [PANEL_IDS.CYBERSECURITY]: 'CYBERSECURITY',
+  [PANEL_IDS.GLOBAL_FOOD_PRICE]: 'GLOBAL FOOD PRICE',
+  [PANEL_IDS.PHARMA_PIPELINE]: 'PHARMA PIPELINE',
+  [PANEL_IDS.ETF_FLOW]: 'ETF FLOW',
+  [PANEL_IDS.VOLATILITY_SURFACE]: 'VOLATILITY SURFACE',
+  [PANEL_IDS.CREDIT_SPREAD]: 'CREDIT SPREAD',
+  [PANEL_IDS.EARNINGS_REVISION]: 'EARNINGS REVISION',
+  [PANEL_IDS.SWAP_SPREAD]: 'SWAP SPREAD',
+  [PANEL_IDS.BREAKEVEN_INFLATION]: 'BREAKEVEN INFLATION',
+  [PANEL_IDS.FX_CARRY]: 'FX CARRY',
+  [PANEL_IDS.OPTIONS_SKEW]: 'OPTIONS SKEW',
+  [PANEL_IDS.QUANT_FACTOR]: 'QUANT FACTOR',
+  [PANEL_IDS.CROSS_CURRENCY_BASIS]: 'CROSS-CURRENCY BASIS',
+  [PANEL_IDS.FUND_FLOW]: 'FUND FLOW',
+  [PANEL_IDS.LEVERAGED_LOAN]: 'LEVERAGED LOAN',
+  [PANEL_IDS.STRUCTURED_PRODUCT]: 'STRUCTURED PRODUCT',
+  [PANEL_IDS.MERGER_ARB]: 'MERGER ARB',
+  [PANEL_IDS.GREEN_BOND]: 'GREEN BOND',
+  [PANEL_IDS.LIQUIDITY_MONITOR]: 'LIQUIDITY MONITOR',
+  [PANEL_IDS.COVERED_BOND]: 'COVERED BOND',
+  [PANEL_IDS.INFLATION_LINKED_BOND]: 'INFLATION-LINKED BOND',
+  [PANEL_IDS.CORRELATION_RISK]: 'CORRELATION RISK',
+  [PANEL_IDS.SUBORDINATED_DEBT]: 'SUBORDINATED DEBT',
+  [PANEL_IDS.SMART_BETA]: 'SMART BETA',
+  [PANEL_IDS.FACTOR_ROTATION]: 'FACTOR ROTATION',
+  [PANEL_IDS.ENDOWMENT]: 'ENDOWMENT',
+  [PANEL_IDS.FAMILY_OFFICE]: 'FAMILY OFFICE',
+  [PANEL_IDS.HEDGE_FUND_REPLICATION]: 'HEDGE FUND REPLICATION',
+  [PANEL_IDS.INFRASTRUCTURE_DEBT]: 'INFRASTRUCTURE DEBT',
+  [PANEL_IDS.SUPPLY_CHAIN_FINANCE]: 'SUPPLY CHAIN FINANCE',
+  [PANEL_IDS.CDS]: 'CDS',
+  [PANEL_IDS.CLO]: 'CLO',
+  [PANEL_IDS.INTEREST_RATE_SWAP]: 'INTEREST RATE SWAP',
+  [PANEL_IDS.SHIPPING_FREIGHT]: 'SHIPPING & FREIGHT',
+  [PANEL_IDS.ABS]: 'ABS',
+  [PANEL_IDS.TOTAL_RETURN_SWAP]: 'TOTAL RETURN SWAP',
+  [PANEL_IDS.VARIANCE_SWAP]: 'VARIANCE SWAP',
+  [PANEL_IDS.CONVERTIBLE_BOND]: 'CONVERTIBLE BOND',
+  [PANEL_IDS.CREDIT_INDEX]: 'CREDIT INDEX',
+  [PANEL_IDS.DIVIDEND_SWAP]: 'DIVIDEND SWAP',
+  [PANEL_IDS.CENTRAL_BANK]: 'CENTRAL BANK',
+  [PANEL_IDS.COMMERCIAL_PAPER]: 'COMMERCIAL PAPER',
+  [PANEL_IDS.FX_RESERVES]: 'FX RESERVES',
+  [PANEL_IDS.EQUITY_INDEX_FUTURES]: 'EQUITY INDEX FUTURES',
+  [PANEL_IDS.PREFERRED_STOCK]: 'PREFERRED STOCK',
+  [PANEL_IDS.TREASURY_STRIPS]: 'TREASURY STRIPS',
+  [PANEL_IDS.COMMODITY_WAREHOUSE]: 'COMMODITY WAREHOUSE',
+  [PANEL_IDS.ETF_CREATION_REDEMPTION]: 'ETF CREATION/REDEMPTION',
+  [PANEL_IDS.AGENCY_DEBT]: 'AGENCY DEBT',
+  [PANEL_IDS.MONEY_MARKET_FUND]: 'MONEY MARKET FUND',
+  [PANEL_IDS.LOAN_SYNDICATION_PIPELINE]: 'LOAN SYNDICATION PIPELINE',
+  [PANEL_IDS.SOVEREIGN_BOND_AUCTION]: 'SOVEREIGN BOND AUCTION',
+  [PANEL_IDS.CROSS_CURRENCY_BASIS_SWAP]: 'XCCY BASIS SWAP',
+  [PANEL_IDS.SECURITIES_BORROWING_LENDING]: 'SECURITIES BORROWING & LENDING',
+  [PANEL_IDS.EQUITY_TOTAL_RETURN_INDEX]: 'EQUITY TOTAL RETURN INDEX',
+  [PANEL_IDS.GLOBAL_CREDIT_MONITOR]: 'GLOBAL CREDIT MONITOR',
+  [PANEL_IDS.BOND_INDEX_MONITOR]: 'BOND INDEX MONITOR',
+  [PANEL_IDS.FX_OPTION_VOL_MATRIX]: 'FX OPTION VOL MATRIX',
+  [PANEL_IDS.EQUITY_SWAP_PRICING]: 'EQUITY SWAP PRICING',
+  [PANEL_IDS.CREDIT_VALUATION_ADJUSTMENT]: 'CREDIT VALUATION ADJUSTMENT',
+  [PANEL_IDS.INTEREST_RATE_VOL_SURFACE]: 'INTEREST RATE VOL SURFACE',
+  [PANEL_IDS.MUNICIPAL_CREDIT_ANALYSIS]: 'MUNICIPAL CREDIT ANALYSIS',
+  [PANEL_IDS.STRUCTURED_PRODUCTS_ANALYZER]: 'STRUCTURED PRODUCTS ANALYZER',
+  [PANEL_IDS.RISK_SCENARIO_ANALYSIS]: 'RISK SCENARIO ANALYSIS',
+  [PANEL_IDS.CONVERTIBLE_BOND_ANALYZER]: 'CONVERTIBLE BOND ANALYZER',
+  [PANEL_IDS.COMMODITIES_FORWARD_CURVE]: 'COMMODITIES FORWARD CURVE',
+  [PANEL_IDS.VARIANCE_SWAP_MONITOR]: 'VARIANCE SWAP MONITOR',
+  [PANEL_IDS.SECURITIES_LENDING_REVENUE]: 'SECURITIES LENDING REVENUE',
+  [PANEL_IDS.EQUITY_MARKET_MICROSTRUCTURE]: 'EQUITY MARKET MICROSTRUCTURE',
+  [PANEL_IDS.FX_CARRY_TRADE_MONITOR]: 'FX CARRY TRADE MONITOR',
+  [PANEL_IDS.PRIVATE_CREDIT_DASHBOARD]: 'PRIVATE CREDIT DASHBOARD',
+  [PANEL_IDS.SOVEREIGN_CDS_MONITOR]: 'SOVEREIGN CDS MONITOR',
+  [PANEL_IDS.EQUITY_DIVIDEND_FORECAST]: 'EQUITY DIVIDEND FORECAST',
+  [PANEL_IDS.CLO_TRANCHE_ANALYTICS]: 'CLO TRANCHE ANALYTICS',
+  [PANEL_IDS.EQUITY_PAIRS_TRADING]: 'EQUITY PAIRS TRADING',
+  [PANEL_IDS.TREASURY_FUTURES_BASIS]: 'TREASURY FUTURES BASIS',
+  [PANEL_IDS.CREDIT_INDEX_TRANCHES]: 'CREDIT INDEX TRANCHES',
+  [PANEL_IDS.MORTGAGE_PREPAYMENT]: 'MORTGAGE PREPAYMENT',
+  [PANEL_IDS.OPTION_SKEW_SURFACE]: 'OPTION SKEW SURFACE',
+  [PANEL_IDS.EQUITY_SHORT_INTEREST]: 'EQUITY SHORT INTEREST',
+  [PANEL_IDS.WARRANT_PRICING]: 'WARRANT PRICING',
+  [PANEL_IDS.TRADE_EXECUTION_QUALITY]: 'TRADE EXECUTION QUALITY',
+  [PANEL_IDS.FREIGHT_RATE_MONITOR]: 'FREIGHT RATE MONITOR',
+  [PANEL_IDS.POWER_MARKET]: 'POWER MARKET',
+  [PANEL_IDS.SPECIAL_SITUATIONS]: 'SPECIAL SITUATIONS',
+  [PANEL_IDS.INDUSTRIAL_METALS]: 'INDUSTRIAL METALS',
+  [PANEL_IDS.SECURITIZATION_PIPELINE]: 'SECURITIZATION PIPELINE',
+  [PANEL_IDS.EQUITY_ANALYST_REVISIONS]: 'EQUITY ANALYST REVISIONS',
+  [PANEL_IDS.NATURAL_GAS_STORAGE]: 'NATURAL GAS STORAGE',
+  [PANEL_IDS.PRECIOUS_METALS_LEASE]: 'PRECIOUS METALS LEASE',
+  [PANEL_IDS.CORPORATE_ACTION_CALENDAR]: 'CORPORATE ACTION CALENDAR',
+  [PANEL_IDS.SOVEREIGN_DEBT_MATURITY]: 'SOVEREIGN DEBT MATURITY',
+  [PANEL_IDS.AGRICULTURAL_FUTURES]: 'AGRICULTURAL FUTURES',
+  [PANEL_IDS.BANK_EARNINGS]: 'BANK EARNINGS',
+  [PANEL_IDS.PRIVATE_EQUITY_SECONDARIES]: 'PE SECONDARIES',
+  [PANEL_IDS.SUKUK_MONITOR]: 'SUKUK MONITOR',
+  [PANEL_IDS.FRONTIER_MARKET_DEBT]: 'FRONTIER MARKET DEBT',
+  [PANEL_IDS.AIRCRAFT_FINANCE]: 'AIRCRAFT FINANCE',
+  [PANEL_IDS.RARE_EARTH_BATTERY_METALS]: 'RARE EARTH & BATTERY METALS',
+  [PANEL_IDS.DATA_CENTER_INFRASTRUCTURE]: 'DATA CENTER INFRASTRUCTURE',
+  [PANEL_IDS.SPORTS_MEDIA_RIGHTS]: 'SPORTS & MEDIA RIGHTS',
+  [PANEL_IDS.LUXURY_COLLECTIBLES_INDEX]: 'LUXURY & COLLECTIBLES',
+  [PANEL_IDS.FINTECH_DIGITAL_PAYMENTS]: 'FINTECH & PAYMENTS',
+  [PANEL_IDS.CYBER_RISK_INSURANCE]: 'CYBER RISK & INSURANCE',
+};
+
+/** Maps panel IDs to i18n translation keys */
+export const PANEL_NAME_KEYS: Record<string, TranslationKey> = {
+  [PANEL_IDS.NEWS]: 'panelNewsFeed',
+  [PANEL_IDS.MAP]: 'panelWorldMap',
+  [PANEL_IDS.STOCKS]: 'panelMarketWatch',
+  [PANEL_IDS.AI]: 'panelAiInsights',
+  [PANEL_IDS.LOG]: 'panelTerminalLog',
+  [PANEL_IDS.TRADING]: 'panelStockTrading',
+  [PANEL_IDS.AI_CHAT]: 'panelAiChat',
+  [PANEL_IDS.ECON_CALENDAR]: 'panelEconCalendar',
+  [PANEL_IDS.ALERTS]: 'panelAlerts',
+  [PANEL_IDS.SENTIMENT]: 'panelSentiment',
+  [PANEL_IDS.RISK]: 'panelRiskCalc',
+  [PANEL_IDS.SECTORS]: 'panelSectorRotation',
+  [PANEL_IDS.EARNINGS]: 'panelEarningsCalendar',
+  [PANEL_IDS.OPTIONS]: 'panelOptionsFlow',
+  [PANEL_IDS.INSIDERS]: 'panelInsiderTrades',
+  [PANEL_IDS.CORRELATIONS]: 'panelCorrelations',
+  [PANEL_IDS.LIVE_STREAMS]: 'panelLiveStreams',
+  [PANEL_IDS.PREDICTION]: 'panelPredictionTrading',
+  [PANEL_IDS.MISSED_OPP]: 'panelMissedOpportunities',
+  [PANEL_IDS.MARKET_MOVERS]: 'panelMarketMovers',
+  [PANEL_IDS.FOREX]: 'panelForex',
+  [PANEL_IDS.BONDS]: 'panelBonds',
+  [PANEL_IDS.COMMODITIES]: 'panelCommodities',
+  [PANEL_IDS.CRYPTO]: 'panelCrypto',
+  [PANEL_IDS.GLOBAL_DASHBOARD]: 'panelGlobalDashboard',
+  [PANEL_IDS.SCANNER]: 'panelScanner',
+  [PANEL_IDS.SCREENER]: 'panelScreener',
+  [PANEL_IDS.HEAT_MAP]: 'panelHeatMap',
+  [PANEL_IDS.ETF]: 'panelETF',
+  [PANEL_IDS.DIVIDENDS]: 'panelDividends',
+  [PANEL_IDS.IPO]: 'panelIPO',
+  [PANEL_IDS.ANALYST]: 'panelAnalyst',
+  [PANEL_IDS.BREADTH]: 'panelBreadth',
+  [PANEL_IDS.FINANCIALS]: 'panelFinancials',
+  [PANEL_IDS.FUTURES]: 'panelFutures',
+  [PANEL_IDS.PERFORMANCE]: 'panelPerformance',
+  [PANEL_IDS.SHORT_INTEREST]: 'panelShortInterest',
+  [PANEL_IDS.OPTIONS_CALC]: 'panelOptionsCalc',
+  [PANEL_IDS.FX_CONVERTER]: 'panelFXConverter',
+  [PANEL_IDS.BOND_CALC]: 'panelBondCalc',
+  [PANEL_IDS.COMPANY_PROFILE]: 'panelCompanyProfile',
+  [PANEL_IDS.PIVOT_POINTS]: 'panelPivotPoints',
+  [PANEL_IDS.MARKET_HOURS]: 'panelMarketHours',
+  [PANEL_IDS.MARKET_CALENDAR]: 'panelMarketCalendar',
+  [PANEL_IDS.PAIRS_TRADING]: 'panelPairs',
+  [PANEL_IDS.VOLATILITY]: 'panelVolatility',
+  [PANEL_IDS.FIBONACCI]: 'panelFibonacci',
+  [PANEL_IDS.MORTGAGE_CALC]: 'panelMortgage',
+  [PANEL_IDS.INVESTMENT_CALC]: 'panelInvestCalc',
+  [PANEL_IDS.RELATIVE_STRENGTH]: 'panelRelStrength',
+  [PANEL_IDS.WATCHLIST]: 'panelWatchlist',
+  [PANEL_IDS.ECON_INDICATORS]: 'panelEconIndicators',
+  [PANEL_IDS.FX_CROSS]: 'panelFXCross',
+  [PANEL_IDS.PORTFOLIO]: 'panelPortfolio',
+  [PANEL_IDS.FEAR_GREED]: 'panelFearGreed',
+  [PANEL_IDS.SENTIMENT_HEATMAP]: 'panelSentimentHeatmap',
+  [PANEL_IDS.YIELD_CURVE]: 'panelYieldCurve',
+  [PANEL_IDS.CURRENCY_STRENGTH]: 'panelCurrencyStrength',
+  [PANEL_IDS.MONEY_FLOW]: 'panelMoneyFlow',
+  [PANEL_IDS.TECHNICAL_CHART]: 'panelTechnicalChart',
+  [PANEL_IDS.EARNINGS_ESTIMATES]: 'panelEarningsEstimates',
+  [PANEL_IDS.WORLD_ECONOMY]: 'panelWorldEconomy',
+  [PANEL_IDS.CROSS_ASSET]: 'panelCrossAsset',
+  [PANEL_IDS.HOLDINGS]: 'panelHoldings',
+  [PANEL_IDS.SECTOR_PERFORMANCE]: 'panelSectorPerformance',
+  [PANEL_IDS.ETF_HOLDINGS]: 'panelETFHoldings',
+  [PANEL_IDS.DRAWDOWN]: 'panelDrawdown',
+  [PANEL_IDS.MARKET_REGIME]: 'panelMarketRegime',
+  [PANEL_IDS.RELATIVE_VALUATION]: 'panelRelativeValuation',
+  [PANEL_IDS.CONFLUENCE]: 'panelConfluence',
+  [PANEL_IDS.IV_SURFACE]: 'panelIVSurface',
+  [PANEL_IDS.SEASONALITY]: 'panelSeasonality',
+  [PANEL_IDS.ORDER_FLOW]: 'panelOrderFlow',
+  [PANEL_IDS.PORTFOLIO_OPTIMIZER]: 'panelPortfolioOptimizer',
+  [PANEL_IDS.BACKTEST]: 'panelBacktest',
+  [PANEL_IDS.MACRO_DASHBOARD]: 'panelMacroDashboard',
+  [PANEL_IDS.EARNINGS_SURPRISE]: 'panelEarningsSurprise',
+  [PANEL_IDS.FUTURES_CURVE]: 'panelFuturesCurve',
+  [PANEL_IDS.CREDIT_SPREADS]: 'panelCreditSpreads',
+  [PANEL_IDS.INTERMARKET]: 'panelIntermarket',
+  [PANEL_IDS.SECTOR_HEATMAP]: 'panelSectorHeatmap',
+  [PANEL_IDS.ECONOMIC_SURPRISES]: 'panelEconomicSurprises',
+  [PANEL_IDS.DISPERSION]: 'panelDispersion',
+  [PANEL_IDS.FUND_FLOWS]: 'panelFundFlows',
+  [PANEL_IDS.VOL_TERM_STRUCTURE]: 'panelVolTermStructure',
+  [PANEL_IDS.MACRO_HEATMAP]: 'panelMacroHeatmap',
+  [PANEL_IDS.FACTOR_EXPOSURE]: 'panelFactorExposure',
+  [PANEL_IDS.CAPITAL_FLOWS]: 'panelCapitalFlows',
+  [PANEL_IDS.TAIL_RISK]: 'panelTailRisk',
+  [PANEL_IDS.LIQUIDITY]: 'panelLiquidity',
+  [PANEL_IDS.COMMODITY_SPREADS]: 'panelCommoditySpreads',
+  [PANEL_IDS.SENTIMENT_DASHBOARD]: 'panelSentimentDashboard',
+  [PANEL_IDS.RISK_PARITY]: 'panelRiskParity',
+  [PANEL_IDS.MARKET_ANOMALIES]: 'panelMarketAnomalies',
+  [PANEL_IDS.CARRY_TRADE]: 'panelCarryTrade',
+  [PANEL_IDS.COT_REPORT]: 'panelCotReport',
+  [PANEL_IDS.IV_RANK]: 'panelIvRank',
+  [PANEL_IDS.PERFORMANCE_ATTRIBUTION]: 'panelPerformanceAttribution',
+  [PANEL_IDS.MARKET_MICROSTRUCTURE]: 'panelMarketMicrostructure',
+  [PANEL_IDS.COUNTRY_RISK]: 'panelCountryRisk',
+  [PANEL_IDS.POSITIONING]: 'panelPositioning',
+  [PANEL_IDS.REPO_RATES]: 'panelRepoRates',
+  [PANEL_IDS.XCCY_BASIS]: 'panelXccyBasis',
+  [PANEL_IDS.STYLE_BOX]: 'panelStyleBox',
+  [PANEL_IDS.SWAP_RATES]: 'panelSwapRates',
+  [PANEL_IDS.TRADE_BLOTTER]: 'panelTradeBlotter',
+  [PANEL_IDS.CORPORATE_CDS]: 'panelCorporateCds',
+  [PANEL_IDS.EVENT_DRIVEN]: 'panelEventDriven',
+  [PANEL_IDS.DEBT_MATURITY]: 'panelDebtMaturity',
+  [PANEL_IDS.EQUITY_RISK_PREMIUM]: 'panelEquityRiskPremium',
+  [PANEL_IDS.CENTRAL_BANKS]: 'panelCentralBanks',
+  [PANEL_IDS.VOL_SKEW]: 'panelVolSkew',
+  [PANEL_IDS.GLOBAL_RATES]: 'panelGlobalRates',
+  [PANEL_IDS.SUPPLY_CHAIN]: 'panelSupplyChain',
+  [PANEL_IDS.GAMMA_EXPOSURE]: 'panelGammaExposure',
+  [PANEL_IDS.SOVEREIGN_SPREADS]: 'panelSovereignSpreads',
+  [PANEL_IDS.EARNINGS_REVISIONS]: 'panelEarningsRevisions',
+  [PANEL_IDS.DIVIDEND_FORECAST]: 'panelDividendForecast',
+  [PANEL_IDS.CREDIT_RATINGS]: 'panelCreditRatings',
+  [PANEL_IDS.VOLATILITY_CONE]: 'panelVolatilityCone',
+  [PANEL_IDS.TERM_STRUCTURE]: 'panelTermStructure',
+  [PANEL_IDS.INSTITUTIONAL_OWNERSHIP]: 'panelInstitutionalOwnership',
+  [PANEL_IDS.IMPLIED_CORRELATION]: 'panelImpliedCorrelation',
+  [PANEL_IDS.EARNINGS_QUALITY]: 'panelEarningsQuality',
+  [PANEL_IDS.VOL_SURFACE]: 'panelVolSurface',
+  [PANEL_IDS.GLOBAL_FLOWS]: 'panelGlobalFlows',
+  [PANEL_IDS.REGRESSION_ANALYSIS]: 'panelRegressionAnalysis',
+  [PANEL_IDS.COVENANT_MONITOR]: 'panelCovenantMonitor',
+  [PANEL_IDS.MARKET_INTERNALS]: 'panelMarketInternals',
+  [PANEL_IDS.VALUATION_MULTIPLES]: 'panelValuationMultiples',
+  [PANEL_IDS.FIXED_INCOME_ANALYTICS]: 'panelFixedIncomeAnalytics',
+  [PANEL_IDS.INSIDER_SENTIMENT]: 'panelInsiderSentiment',
+  [PANEL_IDS.CUSTOM_INDEX]: 'panelCustomIndex',
+  [PANEL_IDS.MBS_ANALYTICS]: 'panelMbsAnalytics',
+  [PANEL_IDS.CDX_INDEX]: 'panelCdxIndex',
+  [PANEL_IDS.MUNI_BONDS]: 'panelMuniBonds',
+  [PANEL_IDS.CLO_ANALYTICS]: 'panelCloAnalytics',
+  [PANEL_IDS.ONCHAIN_ANALYTICS]: 'panelOnchainAnalytics',
+  [PANEL_IDS.PRIVATE_CREDIT]: 'panelPrivateCredit',
+  [PANEL_IDS.VOL_RISK_PREMIUM]: 'panelVolRiskPremium',
+  [PANEL_IDS.ESG_RATINGS]: 'panelEsgRatings',
+  [PANEL_IDS.FREIGHT_INDICES]: 'panelFreightIndices',
+  [PANEL_IDS.ALTERNATIVE_DATA]: 'panelAlternativeData',
+  [PANEL_IDS.TRADE_IDEAS]: 'panelTradeIdeas',
+  [PANEL_IDS.DEBT_ISSUANCE]: 'panelDebtIssuance',
+  [PANEL_IDS.FX_OPTIONS]: 'panelFxOptions',
+  [PANEL_IDS.MULTI_FACTOR]: 'panelMultiFactor',
+  [PANEL_IDS.TREASURY_AUCTIONS]: 'panelTreasuryAuctions',
+  [PANEL_IDS.COMMODITY_CURVES]: 'panelCommodityCurves',
+  [PANEL_IDS.EM_BONDS]: 'panelEmBonds',
+  [PANEL_IDS.REIT_MONITOR]: 'panelReitMonitor',
+  [PANEL_IDS.MONEY_MARKET]: 'panelMoneyMarket',
+  [PANEL_IDS.CONVERTIBLE_BONDS]: 'panelConvertibleBonds',
+  [PANEL_IDS.GLOBAL_PMI]: 'panelGlobalPmi',
+  [PANEL_IDS.LEVERAGED_LOANS]: 'panelLeveragedLoans',
+  [PANEL_IDS.SWAPTION_VOL]: 'panelSwaptionVol',
+  [PANEL_IDS.DISTRESSED_DEBT]: 'panelDistressedDebt',
+  [PANEL_IDS.RATE_CAPS_FLOORS]: 'panelRateCapsFloors',
+  [PANEL_IDS.DIVIDEND_SWAPS]: 'panelDividendSwaps',
+  [PANEL_IDS.SECURITIES_LENDING]: 'panelSecuritiesLending',
+  [PANEL_IDS.VARIANCE_SWAPS]: 'panelVarianceSwaps',
+  [PANEL_IDS.CARBON_CREDITS]: 'panelCarbonCredits',
+  [PANEL_IDS.WEATHER_DERIVATIVES]: 'panelWeatherDerivatives',
+  [PANEL_IDS.DARK_POOL]: 'panelDarkPool',
+  [PANEL_IDS.TOTAL_RETURN_SWAPS]: 'panelTotalReturnSwaps',
+  [PANEL_IDS.CAT_BONDS]: 'panelCatBonds',
+  [PANEL_IDS.INFLATION_LINKED_BONDS]: 'panelInflationLinkedBonds',
+  [PANEL_IDS.EQUITY_BASKET_SWAPS]: 'panelEquityBasketSwaps',
+  [PANEL_IDS.CROSS_CURRENCY_SWAPS]: 'panelCrossCurrencySwaps',
+  [PANEL_IDS.COMMODITY_OPTIONS]: 'panelCommodityOptions',
+  [PANEL_IDS.LOAN_CDS]: 'panelLoanCds',
+  [PANEL_IDS.CONVERTIBLE_ARB]: 'panelConvertibleArb',
+  [PANEL_IDS.SHIPPING_RATES]: 'panelShippingRates',
+  [PANEL_IDS.CREDIT_AUCTION]: 'panelCreditAuction',
+  [PANEL_IDS.MUNI_YIELD_CURVES]: 'panelMuniYieldCurves',
+  [PANEL_IDS.STRUCTURED_PRODUCTS]: 'panelStructuredProducts',
+  [PANEL_IDS.PENSION_FUND]: 'panelPensionFund',
+  [PANEL_IDS.SWAP_SPREAD_MONITOR]: 'panelSwapSpreadMonitor',
+  [PANEL_IDS.EQUITY_LINKED_NOTES]: 'panelEquityLinkedNotes',
+  [PANEL_IDS.TRADE_FINANCE]: 'panelTradeFinance',
+  [PANEL_IDS.REPO_MARKET]: 'panelRepoMarket',
+  [PANEL_IDS.COMMODITY_INVENTORY]: 'panelCommodityInventory',
+  [PANEL_IDS.SOVEREIGN_WEALTH]: 'panelSovereignWealth',
+  [PANEL_IDS.AGENCY_MBS_TBA]: 'panelAgencyMbsTba',
+  [PANEL_IDS.ETF_FLOWS]: 'panelEtfFlows',
+  [PANEL_IDS.CREDIT_FLOW]: 'panelCreditFlow',
+  [PANEL_IDS.COMMODITY_SEASONALITY]: 'panelCommoditySeasonality',
+  [PANEL_IDS.FX_VOLATILITY]: 'panelFxVolatility',
+  [PANEL_IDS.PRIMARY_DEALER]: 'panelPrimaryDealer',
+  [PANEL_IDS.REAL_ESTATE_CAPITAL]: 'panelRealEstateCapital',
+  [PANEL_IDS.ELECTRICITY_MARKETS]: 'panelElectricityMarkets',
+  [PANEL_IDS.SYNDICATED_LOANS]: 'panelSyndicatedLoans',
+  [PANEL_IDS.EMISSIONS_TRADING]: 'panelEmissionsTrading',
+  [PANEL_IDS.INSURANCE_LINKED]: 'panelInsuranceLinked',
+  [PANEL_IDS.METALS_FORWARD]: 'panelMetalsForward',
+  [PANEL_IDS.CENTRAL_BANK_WATCH]: 'panelCentralBankWatch',
+  [PANEL_IDS.FREIGHT_DERIVATIVES]: 'panelFreightDerivatives',
+  [PANEL_IDS.INFLATION_BREAKEVENS]: 'panelInflationBreakevens',
+  [PANEL_IDS.MUNI_BOND_AUCTION]: 'panelMuniBondAuction',
+  [PANEL_IDS.COMMODITY_CURVE_ANALYTICS]: 'panelCommodityCurveAnalytics',
+  [PANEL_IDS.COLLATERAL_MONITOR]: 'panelCollateralMonitor',
+  [PANEL_IDS.SOVEREIGN_CDS]: 'panelSovereignCds',
+  [PANEL_IDS.CROSS_ASSET_MOMENTUM]: 'panelCrossAssetMomentum',
+  [PANEL_IDS.CRYPTO_DERIVATIVES]: 'panelCryptoDerivatives',
+  [PANEL_IDS.BOND_RELATIVE_VALUE]: 'panelBondRelativeValue',
+  [PANEL_IDS.VOLATILITY_ARBITRAGE]: 'panelVolatilityArbitrage',
+  [PANEL_IDS.SYSTEMATIC_STRATEGY]: 'panelSystematicStrategy',
+  [PANEL_IDS.FUNDING_RATE_MONITOR]: 'panelFundingRateMonitor',
+  [PANEL_IDS.EM_LOCAL_RATES]: 'panelEmLocalRates',
+  [PANEL_IDS.PORTFOLIO_RISK_ANALYTICS]: 'panelPortfolioRiskAnalytics',
+  [PANEL_IDS.CREDIT_INDEX_MONITOR]: 'panelCreditIndexMonitor',
+  [PANEL_IDS.EQUITY_FINANCING]: 'panelEquityFinancing',
+  [PANEL_IDS.GLOBAL_MACRO_DASHBOARD]: 'panelGlobalMacroDashboard',
+  [PANEL_IDS.ABS_RMBS_MONITOR]: 'panelAbsRmbsMonitor',
+  [PANEL_IDS.LIQUIDITY_RISK_MONITOR]: 'panelLiquidityRiskMonitor',
+  [PANEL_IDS.FI_ATTRIBUTION]: 'panelFiAttribution',
+  [PANEL_IDS.REPO_RATE_HEATMAP]: 'panelRepoRateHeatmap',
+  [PANEL_IDS.TRADE_COMPRESSION]: 'panelTradeCompression',
+  [PANEL_IDS.REGULATORY_CAPITAL]: 'panelRegulatoryCapital',
+  [PANEL_IDS.SETTLEMENT_RISK]: 'panelSettlementRisk',
+  [PANEL_IDS.SWAP_VALUATION]: 'panelSwapValuation',
+  [PANEL_IDS.COMMODITY_STORAGE]: 'panelCommodityStorage',
+  [PANEL_IDS.COUNTERPARTY_EXPOSURE]: 'panelCounterpartyExposure',
+  [PANEL_IDS.MARKET_IMPACT_MODEL]: 'panelMarketImpactModel',
+  [PANEL_IDS.STRUCTURED_NOTES]: 'panelStructuredNotes',
+  [PANEL_IDS.SECURITIES_FINANCE]: 'panelSecuritiesFinance',
+  [PANEL_IDS.CREDIT_CURVE_BUILDER]: 'panelCreditCurveBuilder',
+  [PANEL_IDS.EXECUTION_ANALYTICS]: 'panelExecutionAnalytics',
+  [PANEL_IDS.BOND_AUCTION_CALENDAR]: 'panelBondAuctionCalendar',
+  [PANEL_IDS.FX_CARRY_MONITOR]: 'panelFxCarryMonitor',
+  [PANEL_IDS.EQUITY_CAPITAL_MARKETS]: 'panelEquityCapitalMarkets',
+  [PANEL_IDS.DEBT_CAPITAL_MARKETS]: 'panelDebtCapitalMarkets',
+  [PANEL_IDS.HEDGE_FUND_MONITOR]: 'panelHedgeFundMonitor',
+  [PANEL_IDS.RISK_DASHBOARD]: 'panelRiskDashboard',
+  [PANEL_IDS.BENCHMARK_TRACKER]: 'panelBenchmarkTracker',
+  [PANEL_IDS.LIQUIDITY_COVERAGE]: 'panelLiquidityCoverage',
+  [PANEL_IDS.MARKET_SENTIMENT_INDEX]: 'panelMarketSentimentIndex',
+  [PANEL_IDS.PORTFOLIO_STRESS_TEST]: 'panelPortfolioStressTest',
+  [PANEL_IDS.GLOBAL_LIQUIDITY_MONITOR]: 'panelGlobalLiquidityMonitor',
+  [PANEL_IDS.TRADE_RECAP]: 'panelTradeRecap',
+  [PANEL_IDS.MACRO_SURPRISE_TRACKER]: 'panelMacroSurpriseTracker',
+  [PANEL_IDS.FX_VOLATILITY_SURFACE]: 'panelFxVolatilitySurface',
+  [PANEL_IDS.COMMODITY_FUNDAMENTAL]: 'panelCommodityFundamental',
+  [PANEL_IDS.ETF_FLOW_MONITOR]: 'panelEtfFlowMonitor',
+  [PANEL_IDS.EQUITY_FACTOR_MONITOR]: 'panelEquityFactorMonitor',
+  [PANEL_IDS.RATES_STRATEGY]: 'panelRatesStrategy',
+  [PANEL_IDS.CREDIT_PORTFOLIO]: 'panelCreditPortfolio',
+  [PANEL_IDS.MACRO_REGIME_MONITOR]: 'panelMacroRegimeMonitor',
+  [PANEL_IDS.DIVIDEND_CALENDAR]: 'panelDividendCalendar',
+  [PANEL_IDS.CONVERTIBLE_ARBITRAGE]: 'panelConvertibleArbitrage',
+  [PANEL_IDS.REALTIME_PNL]: 'panelRealtimePnl',
+  [PANEL_IDS.MARKET_BREADTH_ADVANCED]: 'panelMarketBreadthAdvanced',
+  [PANEL_IDS.VOLATILITY_DASHBOARD]: 'panelVolatilityDashboard',
+  [PANEL_IDS.FI_RELATIVE_VALUE]: 'panelFiRelativeValue',
+  [PANEL_IDS.EQUITY_SCREEN_RESULTS]: 'panelEquityScreenResults',
+  [PANEL_IDS.CROSS_ASSET_CORRELATION]: 'panelCrossAssetCorrelation',
+  [PANEL_IDS.PORTFOLIO_ATTRIBUTION]: 'panelPortfolioAttribution',
+  [PANEL_IDS.MUNICIPAL_BOND_MONITOR]: 'panelMunicipalBondMonitor',
+  [PANEL_IDS.STRUCTURED_CREDIT]: 'panelStructuredCredit',
+  [PANEL_IDS.CURRENCY_OPTIONS]: 'panelCurrencyOptions',
+  [PANEL_IDS.SWAP_CURVE_MONITOR]: 'panelSwapCurveMonitor',
+  [PANEL_IDS.FUND_FLOW_ANALYTICS]: 'panelFundFlowAnalytics',
+  [PANEL_IDS.TRADE_COST_ANALYSIS]: 'panelTradeCostAnalysis',
+  [PANEL_IDS.WARRANT_CONVERTIBLE]: 'panelWarrantConvertible',
+  [PANEL_IDS.GLOBAL_TRADE_FLOW]: 'panelGlobalTradeFlow',
+  [PANEL_IDS.REAL_ESTATE_ANALYTICS]: 'panelRealEstateAnalytics',
+  [PANEL_IDS.INFLATION_MONITOR]: 'panelInflationMonitor',
+  [PANEL_IDS.MERGER_ARBITRAGE]: 'panelMergerArbitrage',
+  [PANEL_IDS.SOVEREIGN_DEBT]: 'panelSovereignDebt',
+  [PANEL_IDS.ETF_PREMIUM]: 'panelEtfPremium',
+  [PANEL_IDS.COMMODITY_DEMAND]: 'panelCommodityDemand',
+  [PANEL_IDS.GLOBAL_DIVIDEND]: 'panelGlobalDividend',
+  [PANEL_IDS.CDS_INDEX_MONITOR]: 'panelCdsIndexMonitor',
+  [PANEL_IDS.MACRO_RISK]: 'panelMacroRisk',
+  [PANEL_IDS.FI_ATTRIBUTION_ANALYSIS]: 'panelFiAttributionAnalysis',
+  [PANEL_IDS.EQUITY_STYLE]: 'panelEquityStyle',
+  [PANEL_IDS.CURRENCY_FORECAST]: 'panelCurrencyForecast',
+  [PANEL_IDS.BOND_LADDER]: 'panelBondLadder',
+  [PANEL_IDS.SECTOR_CREDIT_SPREAD]: 'panelSectorCreditSpread',
+  [PANEL_IDS.GLOBAL_PMI_DASHBOARD]: 'panelGlobalPmiDashboard',
+  [PANEL_IDS.EARNINGS_WHISPER]: 'panelEarningsWhisper',
+  [PANEL_IDS.PORTFOLIO_HEDGING]: 'panelPortfolioHedging',
+  [PANEL_IDS.MARKET_DEPTH]: 'panelMarketDepth',
+  [PANEL_IDS.IRS_MONITOR]: 'panelIrsMonitor',
+  [PANEL_IDS.EQUITY_CAPITAL_RAISE]: 'panelEquityCapitalRaise',
+  [PANEL_IDS.VOLATILITY_SMILE]: 'panelVolatilitySmile',
+  [PANEL_IDS.CENTRAL_BANK_BALANCE_SHEET]: 'panelCentralBankBalanceSheet',
+  [PANEL_IDS.CORPORATE_BUYBACK]: 'panelCorporateBuyback',
+  [PANEL_IDS.MARGIN_DEBT]: 'panelMarginDebt',
+  [PANEL_IDS.CORPORATE_ACTIONS]: 'panelCorporateActions',
+  [PANEL_IDS.FISCAL_POLICY]: 'panelFiscalPolicy',
+  [PANEL_IDS.BASIS_TRADE]: 'panelBasisTrade',
+  [PANEL_IDS.FLOW_OF_FUNDS]: 'panelFlowOfFunds',
+  [PANEL_IDS.GLOBAL_SUPPLY_CHAIN]: 'panelGlobalSupplyChain',
+  [PANEL_IDS.TREASURY_ANALYTICS]: 'panelTreasuryAnalytics',
+  [PANEL_IDS.CURVE_TRADE]: 'panelCurveTrade',
+  [PANEL_IDS.PRIVATE_EQUITY]: 'panelPrivateEquity',
+  [PANEL_IDS.CAPITAL_STRUCTURE]: 'panelCapitalStructure',
+  [PANEL_IDS.CROSS_BORDER_MA]: 'panelCrossBorderMa',
+  [PANEL_IDS.CREDIT_RISK_TRANSFER]: 'panelCreditRiskTransfer',
+  [PANEL_IDS.SWAP_EXECUTION]: 'panelSwapExecution',
+  [PANEL_IDS.DEBT_CEILING]: 'panelDebtCeiling',
+  [PANEL_IDS.SECURITIZATION]: 'panelSecuritization',
+  [PANEL_IDS.MUNICIPAL_CREDIT]: 'panelMunicipalCredit',
+  [PANEL_IDS.COMMODITY_SPREAD]: 'panelCommoditySpread',
+  [PANEL_IDS.INFLATION_SWAP]: 'panelInflationSwap',
+  [PANEL_IDS.CREDIT_DEFAULT_INDEX]: 'panelCreditDefaultIndex',
+  [PANEL_IDS.SOVEREIGN_WEALTH_FUND]: 'panelSovereignWealthFund',
+  [PANEL_IDS.COLLATERAL_MANAGEMENT]: 'panelCollateralManagement',
+  [PANEL_IDS.PRIME_BROKERAGE]: 'panelPrimeBrokerage',
+  [PANEL_IDS.ELECTION_RISK]: 'panelElectionRisk',
+  [PANEL_IDS.CVA_MONITOR]: 'panelCvaMonitor',
+  [PANEL_IDS.ALGO_EXECUTION]: 'panelAlgoExecution',
+  [PANEL_IDS.SECURITIES_CLASS_ACTION]: 'panelSecuritiesClassAction',
+  [PANEL_IDS.PROXY_VOTING]: 'panelProxyVoting',
+  [PANEL_IDS.INDEX_REBALANCE]: 'panelIndexRebalance',
+  [PANEL_IDS.SHAREHOLDER_ACTIVISM]: 'panelShareholderActivism',
+  [PANEL_IDS.FUND_FLOW_TRACKER]: 'panelFundFlowTracker',
+  [PANEL_IDS.INSIDER_TRANSACTION]: 'panelInsiderTransaction',
+  [PANEL_IDS.SHORT_SQUEEZE]: 'panelShortSqueeze',
+  [PANEL_IDS.SPAC_MONITOR]: 'panelSpacMonitor',
+  [PANEL_IDS.BLOCK_TRADE]: 'panelBlockTrade',
+  [PANEL_IDS.REGULATORY_FILING]: 'panelRegulatoryFiling',
+  [PANEL_IDS.TAX_LOSS_HARVEST]: 'panelTaxLossHarvest',
+  [PANEL_IDS.DIVIDEND_CAPTURE]: 'panelDividendCapture',
+  [PANEL_IDS.CREDIT_RATING_MIGRATION]: 'panelCreditRatingMigration',
+  [PANEL_IDS.MERGER_ARB_MONITOR]: 'panelMergerArbMonitor',
+  [PANEL_IDS.MARKET_MAKING]: 'panelMarketMaking',
+  [PANEL_IDS.RATE_PROBABILITY]: 'panelRateProbability',
+  [PANEL_IDS.FX_FORWARD]: 'panelFxForward',
+  [PANEL_IDS.CREDIT_EVENT]: 'panelCreditEvent',
+  [PANEL_IDS.PORTFOLIO_MARGIN]: 'panelPortfolioMargin',
+  [PANEL_IDS.CORPORATE_GOVERNANCE]: 'panelCorporateGovernance',
+  [PANEL_IDS.TREASURY_BILL]: 'panelTreasuryBill',
+  [PANEL_IDS.EQUITY_LENDING]: 'panelEquityLending',
+  [PANEL_IDS.TRADE_SETTLEMENT]: 'panelTradeSettlement',
+  [PANEL_IDS.INDEX_ARBITRAGE]: 'panelIndexArbitrage',
+  [PANEL_IDS.ASSET_ALLOCATION]: 'panelAssetAllocation',
+  [PANEL_IDS.BOND_FUTURES_BASIS]: 'panelBondFuturesBasis',
+  [PANEL_IDS.RISK_BUDGETING]: 'panelRiskBudgeting',
+  [PANEL_IDS.MARKET_SURVEILLANCE]: 'panelMarketSurveillance',
+  [PANEL_IDS.DURATION_MANAGEMENT]: 'panelDurationManagement',
+  [PANEL_IDS.SWAP_PRICING]: 'panelSwapPricing',
+  [PANEL_IDS.OPTION_STRATEGY_BUILDER]: 'panelOptionStrategyBuilder',
+  [PANEL_IDS.CURRENCY_BASKET]: 'panelCurrencyBasket',
+  [PANEL_IDS.LIQUIDITY_STRESS_TEST]: 'panelLiquidityStressTest',
+  [PANEL_IDS.TRADE_REPOSITORY]: 'panelTradeRepository',
+  [PANEL_IDS.SOVEREIGN_RISK_SCORE]: 'panelSovereignRiskScore',
+  [PANEL_IDS.COLLATERAL_OPTIMIZATION]: 'panelCollateralOptimization',
+  [PANEL_IDS.CROSS_MARGINING]: 'panelCrossMargining',
+  [PANEL_IDS.FUND_MANAGER_RANKING]: 'panelFundManagerRanking',
+  [PANEL_IDS.PRICE_DISCOVERY]: 'panelPriceDiscovery',
+  [PANEL_IDS.OPERATIONAL_RISK]: 'panelOperationalRisk',
+  [PANEL_IDS.TRANSITION_MANAGEMENT]: 'panelTransitionManagement',
+  [PANEL_IDS.SECURITIES_VALUATION]: 'panelSecuritiesValuation',
+  [PANEL_IDS.BENCHMARK_ANALYTICS]: 'panelBenchmarkAnalytics',
+  [PANEL_IDS.COUNTERPARTY_RISK]: 'panelCounterpartyRisk',
+  [PANEL_IDS.EQUITY_VALUATION]: 'panelEquityValuation',
+  [PANEL_IDS.MACRO_INDICATORS]: 'panelMacroIndicators',
+  [PANEL_IDS.VOLATILITY_SKEW]: 'panelVolatilitySkew',
+  [PANEL_IDS.ORDER_BOOK]: 'panelOrderBook',
+  [PANEL_IDS.FIXED_INCOME_LADDER]: 'panelFixedIncomeLadder',
+  [PANEL_IDS.CDS_MONITOR]: 'panelCdsMonitor',
+  [PANEL_IDS.SOVEREIGN_DEBT_MONITOR]: 'panelSovereignDebtMonitor',
+  [PANEL_IDS.LIQUIDITY_DASHBOARD]: 'panelLiquidityDashboard',
+  [PANEL_IDS.PRECIOUS_METALS]: 'panelPreciousMetals',
+  [PANEL_IDS.BANK_CAPITAL]: 'panelBankCapital',
+  [PANEL_IDS.AGRICULTURAL_COMMODITIES]: 'panelAgriculturalCommodities',
+  [PANEL_IDS.ENERGY_TRANSITION]: 'panelEnergyTransition',
+  [PANEL_IDS.GEOPOLITICAL_RISK]: 'panelGeopoliticalRisk',
+  [PANEL_IDS.LABOR_MARKET]: 'panelLaborMarket',
+  [PANEL_IDS.HOUSING_MARKET]: 'panelHousingMarket',
+  [PANEL_IDS.SUPPLY_CHAIN_STRESS]: 'panelSupplyChainStress',
+  [PANEL_IDS.CREDIT_IMPULSE]: 'panelCreditImpulse',
+  [PANEL_IDS.CONSUMER_CONFIDENCE]: 'panelConsumerConfidence',
+  [PANEL_IDS.SOVEREIGN_YIELD]: 'panelSovereignYield',
+  [PANEL_IDS.TRADE_BALANCE]: 'panelTradeBalance',
+  [PANEL_IDS.SEMICONDUCTOR]: 'panelSemiconductor',
+  [PANEL_IDS.INFRASTRUCTURE_INVESTMENT]: 'panelInfrastructureInvestment',
+  [PANEL_IDS.INSURANCE_MARKET]: 'panelInsuranceMarket',
+  [PANEL_IDS.SHIPPING_INDEX]: 'panelShippingIndex',
+  [PANEL_IDS.VENTURE_CAPITAL]: 'panelVentureCapital',
+  [PANEL_IDS.DEMOGRAPHIC_TRENDS]: 'panelDemographicTrends',
+  [PANEL_IDS.ECONOMIC_FORECAST]: 'panelEconomicForecast',
+  [PANEL_IDS.GLOBAL_INDEX_MONITOR]: 'panelGlobalIndexMonitor',
+  [PANEL_IDS.LEAGUE_TABLES]: 'panelLeagueTables',
+  [PANEL_IDS.GDP_NOWCAST]: 'panelGDPNowcast',
+  [PANEL_IDS.RECESSION_PROBABILITY]: 'panelRecessionProbability',
+  [PANEL_IDS.FINANCIAL_CONDITIONS]: 'panelFinancialConditions',
+  [PANEL_IDS.COMMODITY_FUNDAMENTALS]: 'panelCommodityFundamentals',
+  [PANEL_IDS.WAGE_GROWTH]: 'panelWageGrowth',
+  [PANEL_IDS.FISCAL_DEFICIT]: 'panelFiscalDeficit',
+  [PANEL_IDS.CENTRAL_CLEARING]: 'panelCentralClearing',
+  [PANEL_IDS.MONEY_VELOCITY]: 'panelMoneyVelocity',
+  [PANEL_IDS.PRODUCTIVITY_MONITOR]: 'panelProductivityMonitor',
+  [PANEL_IDS.BALANCE_OF_PAYMENTS]: 'panelBalanceOfPayments',
+  [PANEL_IDS.GLOBAL_TAX_RATES]: 'panelGlobalTaxRates',
+  [PANEL_IDS.SANCTIONS_MONITOR]: 'panelSanctionsMonitor',
+  [PANEL_IDS.CLIMATE_RISK]: 'panelClimateRisk',
+  [PANEL_IDS.SOVEREIGN_DEFAULT]: 'panelSovereignDefault',
+  [PANEL_IDS.BANK_STRESS_TEST]: 'panelBankStressTest',
+  [PANEL_IDS.EQUITY_DERIVATIVES]: 'panelEquityDerivatives',
+  [PANEL_IDS.MONEY_MARKET_RATES]: 'panelMoneyMarketRates',
+  [PANEL_IDS.GLOBAL_MA]: 'panelGlobalMA',
+  [PANEL_IDS.CREDIT_DEFAULT_SWAPS]: 'panelCreditDefaultSwaps',
+  [PANEL_IDS.REAL_ESTATE_INVESTMENT]: 'panelRealEstateInvestment',
+  [PANEL_IDS.GLOBAL_DEBT_CLOCK]: 'panelGlobalDebtClock',
+  [PANEL_IDS.AI_TECH_CAPEX]: 'panelAITechCapex',
+  [PANEL_IDS.CRITICAL_MINERALS]: 'panelCriticalMinerals',
+  [PANEL_IDS.NUCLEAR_ENERGY]: 'panelNuclearEnergy',
+  [PANEL_IDS.WATER_MARKET]: 'panelWaterMarket',
+  [PANEL_IDS.SPACE_ECONOMY]: 'panelSpaceEconomy',
+  [PANEL_IDS.CYBERSECURITY]: 'panelCybersecurity',
+  [PANEL_IDS.GLOBAL_FOOD_PRICE]: 'panelGlobalFoodPrice',
+  [PANEL_IDS.PHARMA_PIPELINE]: 'panelPharmaPipeline',
+  [PANEL_IDS.ETF_FLOW]: 'panelEtfFlow',
+  [PANEL_IDS.VOLATILITY_SURFACE]: 'panelVolatilitySurface',
+  [PANEL_IDS.CREDIT_SPREAD]: 'panelCreditSpread',
+  [PANEL_IDS.EARNINGS_REVISION]: 'panelEarningsRevision',
+  [PANEL_IDS.SWAP_SPREAD]: 'panelSwapSpread',
+  [PANEL_IDS.BREAKEVEN_INFLATION]: 'panelBreakevenInflation',
+  [PANEL_IDS.FX_CARRY]: 'panelFxCarry',
+  [PANEL_IDS.OPTIONS_SKEW]: 'panelOptionsSkew',
+  [PANEL_IDS.QUANT_FACTOR]: 'panelQuantFactor',
+  [PANEL_IDS.CROSS_CURRENCY_BASIS]: 'panelCrossCurrencyBasis',
+  [PANEL_IDS.FUND_FLOW]: 'panelFundFlow',
+  [PANEL_IDS.LEVERAGED_LOAN]: 'panelLeveragedLoan',
+  [PANEL_IDS.STRUCTURED_PRODUCT]: 'panelStructuredProduct',
+  [PANEL_IDS.MERGER_ARB]: 'panelMergerArb',
+  [PANEL_IDS.GREEN_BOND]: 'panelGreenBond',
+  [PANEL_IDS.LIQUIDITY_MONITOR]: 'panelLiquidityMonitor',
+  [PANEL_IDS.COVERED_BOND]: 'panelCoveredBond',
+  [PANEL_IDS.INFLATION_LINKED_BOND]: 'panelInflationLinkedBond',
+  [PANEL_IDS.CORRELATION_RISK]: 'panelCorrelationRisk',
+  [PANEL_IDS.SUBORDINATED_DEBT]: 'panelSubordinatedDebt',
+  [PANEL_IDS.SMART_BETA]: 'panelSmartBeta',
+  [PANEL_IDS.FACTOR_ROTATION]: 'panelFactorRotation',
+  [PANEL_IDS.ENDOWMENT]: 'panelEndowment',
+  [PANEL_IDS.FAMILY_OFFICE]: 'panelFamilyOffice',
+  [PANEL_IDS.HEDGE_FUND_REPLICATION]: 'panelHedgeFundReplication',
+  [PANEL_IDS.INFRASTRUCTURE_DEBT]: 'panelInfrastructureDebt',
+  [PANEL_IDS.SUPPLY_CHAIN_FINANCE]: 'panelSupplyChainFinance',
+  [PANEL_IDS.CDS]: 'panelCDS',
+  [PANEL_IDS.CLO]: 'panelCLO',
+  [PANEL_IDS.INTEREST_RATE_SWAP]: 'panelInterestRateSwap',
+  [PANEL_IDS.SHIPPING_FREIGHT]: 'panelShippingFreight',
+  [PANEL_IDS.ABS]: 'panelABS',
+  [PANEL_IDS.TOTAL_RETURN_SWAP]: 'panelTotalReturnSwap',
+  [PANEL_IDS.VARIANCE_SWAP]: 'panelVarianceSwap',
+  [PANEL_IDS.CONVERTIBLE_BOND]: 'panelConvertibleBond',
+  [PANEL_IDS.CREDIT_INDEX]: 'panelCreditIndex',
+  [PANEL_IDS.DIVIDEND_SWAP]: 'panelDividendSwap',
+  [PANEL_IDS.CENTRAL_BANK]: 'panelCentralBank',
+  [PANEL_IDS.COMMERCIAL_PAPER]: 'panelCommercialPaper',
+  [PANEL_IDS.FX_RESERVES]: 'panelFxReserves',
+  [PANEL_IDS.EQUITY_INDEX_FUTURES]: 'panelEquityIndexFutures',
+  [PANEL_IDS.PREFERRED_STOCK]: 'panelPreferredStock',
+  [PANEL_IDS.TREASURY_STRIPS]: 'panelTreasuryStrips',
+  [PANEL_IDS.COMMODITY_WAREHOUSE]: 'panelCommodityWarehouse',
+  [PANEL_IDS.ETF_CREATION_REDEMPTION]: 'panelEtfCreationRedemption',
+  [PANEL_IDS.AGENCY_DEBT]: 'panelAgencyDebt',
+  [PANEL_IDS.MONEY_MARKET_FUND]: 'panelMoneyMarketFund',
+  [PANEL_IDS.LOAN_SYNDICATION_PIPELINE]: 'panelLoanSyndicationPipeline',
+  [PANEL_IDS.SOVEREIGN_BOND_AUCTION]: 'panelSovereignBondAuction',
+  [PANEL_IDS.CROSS_CURRENCY_BASIS_SWAP]: 'panelCrossCurrencyBasisSwap',
+  [PANEL_IDS.SECURITIES_BORROWING_LENDING]: 'panelSecuritiesBorrowingLending',
+  [PANEL_IDS.EQUITY_TOTAL_RETURN_INDEX]: 'panelEquityTotalReturnIndex',
+  [PANEL_IDS.GLOBAL_CREDIT_MONITOR]: 'panelGlobalCreditMonitor',
+  [PANEL_IDS.BOND_INDEX_MONITOR]: 'panelBondIndexMonitor',
+  [PANEL_IDS.FX_OPTION_VOL_MATRIX]: 'panelFxOptionVolMatrix',
+  [PANEL_IDS.EQUITY_SWAP_PRICING]: 'panelEquitySwapPricing',
+  [PANEL_IDS.CREDIT_VALUATION_ADJUSTMENT]: 'panelCreditValuationAdjustment',
+  [PANEL_IDS.INTEREST_RATE_VOL_SURFACE]: 'panelInterestRateVolSurface',
+  [PANEL_IDS.MUNICIPAL_CREDIT_ANALYSIS]: 'panelMunicipalCreditAnalysis',
+  [PANEL_IDS.STRUCTURED_PRODUCTS_ANALYZER]: 'panelStructuredProductsAnalyzer',
+  [PANEL_IDS.RISK_SCENARIO_ANALYSIS]: 'panelRiskScenarioAnalysis',
+  [PANEL_IDS.CONVERTIBLE_BOND_ANALYZER]: 'panelConvertibleBondAnalyzer',
+  [PANEL_IDS.COMMODITIES_FORWARD_CURVE]: 'panelCommoditiesForwardCurve',
+  [PANEL_IDS.VARIANCE_SWAP_MONITOR]: 'panelVarianceSwapMonitor',
+  [PANEL_IDS.SECURITIES_LENDING_REVENUE]: 'panelSecuritiesLendingRevenue',
+  [PANEL_IDS.EQUITY_MARKET_MICROSTRUCTURE]: 'panelEquityMarketMicrostructure',
+  [PANEL_IDS.FX_CARRY_TRADE_MONITOR]: 'panelFxCarryTradeMonitor',
+  [PANEL_IDS.PRIVATE_CREDIT_DASHBOARD]: 'panelPrivateCreditDashboard',
+  [PANEL_IDS.SOVEREIGN_CDS_MONITOR]: 'panelSovereignCdsMonitor',
+  [PANEL_IDS.EQUITY_DIVIDEND_FORECAST]: 'panelEquityDividendForecast',
+  [PANEL_IDS.CLO_TRANCHE_ANALYTICS]: 'panelCloTrancheAnalytics',
+  [PANEL_IDS.EQUITY_PAIRS_TRADING]: 'panelEquityPairsTrading',
+  [PANEL_IDS.TREASURY_FUTURES_BASIS]: 'panelTreasuryFuturesBasis',
+  [PANEL_IDS.CREDIT_INDEX_TRANCHES]: 'panelCreditIndexTranches',
+  [PANEL_IDS.MORTGAGE_PREPAYMENT]: 'panelMortgagePrepayment',
+  [PANEL_IDS.OPTION_SKEW_SURFACE]: 'panelOptionSkewSurface',
+  [PANEL_IDS.EQUITY_SHORT_INTEREST]: 'panelEquityShortInterest',
+  [PANEL_IDS.WARRANT_PRICING]: 'panelWarrantPricing',
+  [PANEL_IDS.TRADE_EXECUTION_QUALITY]: 'panelTradeExecutionQuality',
+  [PANEL_IDS.FREIGHT_RATE_MONITOR]: 'panelFreightRateMonitor',
+  [PANEL_IDS.POWER_MARKET]: 'panelPowerMarket',
+  [PANEL_IDS.SPECIAL_SITUATIONS]: 'panelSpecialSituations',
+  [PANEL_IDS.INDUSTRIAL_METALS]: 'panelIndustrialMetals',
+  [PANEL_IDS.SECURITIZATION_PIPELINE]: 'panelSecuritizationPipeline',
+  [PANEL_IDS.EQUITY_ANALYST_REVISIONS]: 'panelEquityAnalystRevisions',
+  [PANEL_IDS.NATURAL_GAS_STORAGE]: 'panelNaturalGasStorage',
+  [PANEL_IDS.PRECIOUS_METALS_LEASE]: 'panelPreciousMetalsLease',
+  [PANEL_IDS.CORPORATE_ACTION_CALENDAR]: 'panelCorporateActionCalendar',
+  [PANEL_IDS.SOVEREIGN_DEBT_MATURITY]: 'panelSovereignDebtMaturity',
+  [PANEL_IDS.AGRICULTURAL_FUTURES]: 'panelAgriculturalFutures',
+  [PANEL_IDS.BANK_EARNINGS]: 'panelBankEarnings',
+  [PANEL_IDS.PRIVATE_EQUITY_SECONDARIES]: 'panelPrivateEquitySecondaries',
+  [PANEL_IDS.SUKUK_MONITOR]: 'panelSukukMonitor',
+  [PANEL_IDS.FRONTIER_MARKET_DEBT]: 'panelFrontierMarketDebt',
+  [PANEL_IDS.AIRCRAFT_FINANCE]: 'panelAircraftFinance',
+  [PANEL_IDS.RARE_EARTH_BATTERY_METALS]: 'panelRareEarthBatteryMetals',
+  [PANEL_IDS.DATA_CENTER_INFRASTRUCTURE]: 'panelDataCenterInfrastructure',
+  [PANEL_IDS.SPORTS_MEDIA_RIGHTS]: 'panelSportsMediaRights',
+  [PANEL_IDS.LUXURY_COLLECTIBLES_INDEX]: 'panelLuxuryCollectiblesIndex',
+  [PANEL_IDS.FINTECH_DIGITAL_PAYMENTS]: 'panelFintechDigitalPayments',
+  [PANEL_IDS.CYBER_RISK_INSURANCE]: 'panelCyberRiskInsurance',
+};
+
+/** Get localized panel name (non-hook, reads locale from store directly) */
+export function getLocalizedPanelName(panelId: string): string {
+  const locale = useAppStore.getState().locale;
+  const key = PANEL_NAME_KEYS[panelId];
+  if (key) {
+    return translations[locale]?.[key] ?? translations.en[key];
+  }
+  return PANEL_NAMES[panelId] || panelId;
+}
+
+export const ALL_PANEL_IDS = Object.values(PANEL_IDS);
+
+/** Panel IDs that exist in the DEFAULT_LAYOUT (core panels shown on first load) */
+const DEFAULT_PANEL_IDS: Set<string> = new Set([
+  PANEL_IDS.NEWS, PANEL_IDS.LIVE_STREAMS, PANEL_IDS.TECHNICAL_CHART,
+  PANEL_IDS.STOCKS, PANEL_IDS.INSIDERS, PANEL_IDS.MARKET_MOVERS,
+  PANEL_IDS.HEAT_MAP, PANEL_IDS.MACRO_HEATMAP,
+  PANEL_IDS.AI,
+  PANEL_IDS.TRADING, PANEL_IDS.PREDICTION,
+]);
+
+/*
+ * Bloomberg-style data-first layout — v30
+ *
+ * +-- 16% ---+------------ 52% --------------------+--------- 32% ---------+
+ * |           |                                      |                       |
+ * | HEAT MAP  | MARKET WATCH                         | NEWS FEED             |
+ * | (MACRO)   | (tab: TECHNICAL CHART)               |                       |
+ * |           |                                      |                       |
+ * | (60%)     | (55%)                                | (55%)                 |
+ * |           +-------------------+-----------------++                       |
+ * +-----------+ MARKET MOVERS     | AI INSIGHTS     |                       |
+ * | LIVE      | (tab: INSIDERS)   |                  | STOCK TRADING         |
+ * | STREAMS   |                   |                  | (tab: PREDICTION)     |
+ * | (40%)     | (55%)             | (45%)     (45%) | (45%)                 |
+ * +-----------+-------------------+-----------------+-----------------------+
+ */
+const DEFAULT_LAYOUT: IJsonModel = {
+  global: {
+    tabEnableClose: true,
+    tabEnableRename: false,
+    tabSetEnableMaximize: true,
+    tabSetEnableClose: false,
+    splitterSize: 2,
+    splitterExtra: 6,
+    tabSetMinHeight: 80,
+    tabSetMinWidth: 80,
+  },
+  borders: [],
+  layout: {
+    type: 'row',
+    weight: 100,
+    children: [
+      // Left column (16%): Heat Map + Live Streams
+      {
+        type: 'row',
+        weight: 16,
+        children: [
+          {
+            type: 'tabset',
+            weight: 60,
+            children: [
+              { type: 'tab', name: 'HEAT MAP', component: PANEL_IDS.HEAT_MAP, id: PANEL_IDS.HEAT_MAP },
+              { type: 'tab', name: 'GLOBAL MACRO HEATMAP', component: PANEL_IDS.MACRO_HEATMAP, id: PANEL_IDS.MACRO_HEATMAP },
+            ],
+          },
+          {
+            type: 'tabset',
+            weight: 40,
+            children: [
+              { type: 'tab', name: 'LIVE STREAMS', component: PANEL_IDS.LIVE_STREAMS, id: PANEL_IDS.LIVE_STREAMS },
+            ],
+          },
+        ],
+      },
+      // Center column (52%): Market Watch on top, Movers + AI on bottom
+      {
+        type: 'row',
+        weight: 52,
+        children: [
+          // Top: Market Watch (hero), Technical Chart as secondary tab
+          {
+            type: 'tabset',
+            weight: 55,
+            children: [
+              { type: 'tab', name: 'MARKET WATCH', component: PANEL_IDS.STOCKS, id: PANEL_IDS.STOCKS },
+              { type: 'tab', name: 'TECHNICAL CHART', component: PANEL_IDS.TECHNICAL_CHART, id: PANEL_IDS.TECHNICAL_CHART },
+            ],
+          },
+          // Bottom: Market Movers | AI Insights
+          {
+            type: 'row',
+            weight: 45,
+            children: [
+              {
+                type: 'tabset',
+                weight: 55,
+                children: [
+                  { type: 'tab', name: 'MARKET MOVERS', component: PANEL_IDS.MARKET_MOVERS, id: PANEL_IDS.MARKET_MOVERS },
+                  { type: 'tab', name: 'INSIDER TRADES', component: PANEL_IDS.INSIDERS, id: PANEL_IDS.INSIDERS },
+                ],
+              },
+              {
+                type: 'tabset',
+                weight: 45,
+                children: [
+                  { type: 'tab', name: 'AI INSIGHTS', component: PANEL_IDS.AI, id: PANEL_IDS.AI },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      // Right column (32%): News Feed on top, Trading on bottom
+      {
+        type: 'row',
+        weight: 32,
+        children: [
+          // Top: News Feed
+          {
+            type: 'tabset',
+            weight: 55,
+            children: [
+              { type: 'tab', name: 'NEWS FEED', component: PANEL_IDS.NEWS, id: PANEL_IDS.NEWS },
+            ],
+          },
+          // Bottom: Trading
+          {
+            type: 'tabset',
+            weight: 45,
+            children: [
+              { type: 'tab', name: 'STOCK TRADING', component: PANEL_IDS.TRADING, id: PANEL_IDS.TRADING },
+              { type: 'tab', name: 'PREDICTION TRADING', component: PANEL_IDS.PREDICTION, id: PANEL_IDS.PREDICTION },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+};
+
+/** Build a layout from default, excluding hidden panels */
+function buildLayout(hiddenPanels: string[]): IJsonModel {
+  if (hiddenPanels.length === 0) return DEFAULT_LAYOUT;
+
+  const layout = JSON.parse(JSON.stringify(DEFAULT_LAYOUT)) as IJsonModel;
+
+  function prune(node: any): boolean {
+    if (!node.children) return true;
+    node.children = node.children.filter((child: any) => {
+      // Remove hidden tabs
+      if (child.type === 'tab' && hiddenPanels.includes(child.id)) return false;
+      // Recurse
+      return prune(child);
+    });
+    // Remove empty tabsets or rows
+    if ((node.type === 'tabset' || node.type === 'row') && node.children.length === 0) return false;
+    return true;
+  }
+
+  prune(layout.layout);
+  return layout;
+}
+
+function loadModel(): Model {
+  // Check if a reset was requested
+  if (localStorage.getItem(RESET_FLAG)) {
+    localStorage.removeItem(RESET_FLAG);
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.setItem(LAYOUT_VERSION_KEY, String(LAYOUT_VERSION));
+    const hiddenPanels = useAppStore.getState().hiddenPanels;
+    return Model.fromJson(buildLayout(hiddenPanels));
+  }
+
+  // Force reset when layout version changes (e.g. new panels added)
+  const savedVersion = parseInt(localStorage.getItem(LAYOUT_VERSION_KEY) || '0', 10);
+  if (savedVersion < LAYOUT_VERSION) {
+    localStorage.removeItem(STORAGE_KEY);
+    localStorage.setItem(LAYOUT_VERSION_KEY, String(LAYOUT_VERSION));
+    // New panels not in DEFAULT_LAYOUT start hidden
+    const nonDefaultPanels = ALL_PANEL_IDS.filter(id => !DEFAULT_PANEL_IDS.has(id));
+    useAppStore.setState({ hiddenPanels: nonDefaultPanels });
+    return Model.fromJson(buildLayout(nonDefaultPanels));
+  }
+
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const json = JSON.parse(saved) as IJsonModel;
+      if (json.global) json.global.tabEnableClose = true;
+      return Model.fromJson(json);
+    }
+  } catch {
+    // corrupt data, fall through
+  }
+  const hiddenPanels = useAppStore.getState().hiddenPanels;
+  return Model.fromJson(buildLayout(hiddenPanels));
+}
+
+// Module-level model ref
+let _modelRef: Model | null = null;
+
+export function getModel(): Model | null {
+  return _modelRef;
+}
+
+/**
+ * Show a panel: if it exists in the model, select it; otherwise add it dynamically.
+ * For panels in DEFAULT_LAYOUT, falls back to rebuild + reload.
+ */
+export function showPanelInLayout(panelId: string) {
+  const model = _modelRef;
+  if (!model) {
+    localStorage.setItem(RESET_FLAG, '1');
+    window.location.reload();
+    return;
+  }
+
+  // If panel already exists in model, just select it
+  const existingNode = model.getNodeById(panelId);
+  if (existingNode) {
+    model.doAction(Actions.selectTab(panelId));
+    return;
+  }
+
+  // For default panels that were pruned, rebuild from DEFAULT_LAYOUT
+  if (DEFAULT_PANEL_IDS.has(panelId)) {
+    localStorage.setItem(RESET_FLAG, '1');
+    window.location.reload();
+    return;
+  }
+
+  // Dynamically add the panel as a new tab in the active tabset
+  const activeTabset = model.getActiveTabset();
+  if (activeTabset) {
+    model.doAction(Actions.addNode(
+      { type: 'tab', name: getLocalizedPanelName(panelId), component: panelId, id: panelId },
+      activeTabset.getId(),
+      DockLocation.CENTER,
+      -1,
+    ));
+  }
+}
+
+/**
+ * Hide a panel: remove its tab from the model.
+ */
+export function hidePanelInLayout(panelId: string) {
+  const model = _modelRef;
+  if (!model) return;
+  const node = model.getNodeById(panelId);
+  if (node) {
+    model.doAction(Actions.deleteTab(panelId));
+  }
+}
+
+// Component registry
+type PanelFactory = (node: TabNode) => React.ReactNode;
+const extraFactories: Map<string, PanelFactory> = new Map();
+
+export function addPanelFactory(id: string, factory: PanelFactory) {
+  extraFactories.set(id, factory);
+}
+
+export function DockLayout() {
+  const modelRef = useRef<Model>(loadModel());
+  const hidePanel = useAppStore((s) => s.hidePanel);
+  const locale = useAppStore((s) => s.locale);
+
+  useEffect(() => {
+    _modelRef = modelRef.current;
+    return () => { _modelRef = null; };
+  }, []);
+
+  const saveLayout = useCallback(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(modelRef.current.toJson()));
+    } catch { /* ignore */ }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', saveLayout);
+    return () => window.removeEventListener('beforeunload', saveLayout);
+  }, [saveLayout]);
+
+  const handleAction = useCallback((action: Action): Action | undefined => {
+    if (action.type === Actions.DELETE_TAB) {
+      const tabId = (action as any).data?.node;
+      if (tabId && ALL_PANEL_IDS.includes(tabId)) {
+        hidePanel(tabId);
+      }
+    }
+    return action;
+  }, [hidePanel]);
+
+  const factory = useCallback((node: TabNode) => {
+    const component = node.getComponent();
+    let content: React.ReactNode;
+    switch (component) {
+      case PANEL_IDS.NEWS: content = <NewsFeed />; break;
+      case PANEL_IDS.MAP: content = <LazyWrap><WorldMapPanel /></LazyWrap>; break;
+      case PANEL_IDS.STOCKS: content = <StockPanel />; break;
+      case PANEL_IDS.AI: content = <AiInsights />; break;
+      case PANEL_IDS.LOG: content = <TerminalLog />; break;
+      case PANEL_IDS.TRADING: content = <LazyWrap><TradingPanel /></LazyWrap>; break;
+      case PANEL_IDS.AI_CHAT: content = <div className="flex items-center justify-center h-full text-neutral/30 text-[10px] font-mono uppercase tracking-widest">{translations[locale]?.comingSoon ?? 'Coming soon...'}</div>; break;
+      case PANEL_IDS.ECON_CALENDAR: content = <LazyWrap><EconomicCalendarPanel /></LazyWrap>; break;
+      case PANEL_IDS.ALERTS: content = <LazyWrap><AlertsPanel /></LazyWrap>; break;
+      case PANEL_IDS.SENTIMENT: content = <LazyWrap><SentimentPanel /></LazyWrap>; break;
+      case PANEL_IDS.RISK: content = <LazyWrap><RiskCalculator /></LazyWrap>; break;
+      case PANEL_IDS.SECTORS: content = <LazyWrap><SectorRotationPanel /></LazyWrap>; break;
+      case PANEL_IDS.EARNINGS: content = <LazyWrap><EarningsCalendarPanel /></LazyWrap>; break;
+      case PANEL_IDS.OPTIONS: content = <LazyWrap><OptionsFlowPanel /></LazyWrap>; break;
+      case PANEL_IDS.INSIDERS: content = <LazyWrap><InsiderTradesPanel /></LazyWrap>; break;
+      case PANEL_IDS.CORRELATIONS: content = <LazyWrap><CorrelationMatrixPanel /></LazyWrap>; break;
+      case PANEL_IDS.LIVE_STREAMS: content = <LazyWrap><LiveStreamsPanel /></LazyWrap>; break;
+      case PANEL_IDS.PREDICTION: content = <LazyWrap><PredictionTradingPanel /></LazyWrap>; break;
+      case PANEL_IDS.MISSED_OPP: content = <LazyWrap><MissedOpportunitiesPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_MOVERS: content = <LazyWrap><MarketMoversPanel /></LazyWrap>; break;
+      case PANEL_IDS.FOREX: content = <LazyWrap><ForexPanel /></LazyWrap>; break;
+      case PANEL_IDS.BONDS: content = <LazyWrap><BondsPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITIES: content = <LazyWrap><CommoditiesPanel /></LazyWrap>; break;
+      case PANEL_IDS.CRYPTO: content = <LazyWrap><CryptoPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_DASHBOARD: content = <LazyWrap><GlobalDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.SCANNER: content = <LazyWrap><ScannerPanel /></LazyWrap>; break;
+      case PANEL_IDS.SCREENER: content = <LazyWrap><ScreenerPanel /></LazyWrap>; break;
+      case PANEL_IDS.HEAT_MAP: content = <LazyWrap><HeatMapPanel /></LazyWrap>; break;
+      case PANEL_IDS.ETF: content = <LazyWrap><ETFPanel /></LazyWrap>; break;
+      case PANEL_IDS.DIVIDENDS: content = <LazyWrap><DividendPanel /></LazyWrap>; break;
+      case PANEL_IDS.IPO: content = <LazyWrap><IPOPanel /></LazyWrap>; break;
+      case PANEL_IDS.ANALYST: content = <LazyWrap><AnalystPanel /></LazyWrap>; break;
+      case PANEL_IDS.BREADTH: content = <LazyWrap><BreadthPanel /></LazyWrap>; break;
+      case PANEL_IDS.FINANCIALS: content = <LazyWrap><FinancialsPanel /></LazyWrap>; break;
+      case PANEL_IDS.FUTURES: content = <LazyWrap><FuturesPanel /></LazyWrap>; break;
+      case PANEL_IDS.PERFORMANCE: content = <LazyWrap><ComparisonPanel /></LazyWrap>; break;
+      case PANEL_IDS.SHORT_INTEREST: content = <LazyWrap><ShortInterestPanel /></LazyWrap>; break;
+      case PANEL_IDS.OPTIONS_CALC: content = <LazyWrap><OptionsCalcPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_CONVERTER: content = <LazyWrap><FXConverterPanel /></LazyWrap>; break;
+      case PANEL_IDS.BOND_CALC: content = <LazyWrap><BondCalcPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMPANY_PROFILE: content = <LazyWrap><CompanyProfilePanel /></LazyWrap>; break;
+      case PANEL_IDS.PIVOT_POINTS: content = <LazyWrap><PivotPointsPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_HOURS: content = <LazyWrap><MarketHoursPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_CALENDAR: content = <LazyWrap><MarketCalendarPanel /></LazyWrap>; break;
+      case PANEL_IDS.PAIRS_TRADING: content = <LazyWrap><PairsPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOLATILITY: content = <LazyWrap><VolatilityPanel /></LazyWrap>; break;
+      case PANEL_IDS.FIBONACCI: content = <LazyWrap><FibonacciPanel /></LazyWrap>; break;
+      case PANEL_IDS.MORTGAGE_CALC: content = <LazyWrap><MortgageCalcPanel /></LazyWrap>; break;
+      case PANEL_IDS.INVESTMENT_CALC: content = <LazyWrap><InvestmentCalcPanel /></LazyWrap>; break;
+      case PANEL_IDS.RELATIVE_STRENGTH: content = <LazyWrap><RelativeStrengthPanel /></LazyWrap>; break;
+      case PANEL_IDS.WATCHLIST: content = <LazyWrap><WatchlistPanel /></LazyWrap>; break;
+      case PANEL_IDS.ECON_INDICATORS: content = <LazyWrap><EconomicIndicatorsPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_CROSS: content = <LazyWrap><FXCrossPanel /></LazyWrap>; break;
+      case PANEL_IDS.PORTFOLIO: content = <LazyWrap><PortfolioAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.FEAR_GREED: content = <LazyWrap><FearGreedPanel /></LazyWrap>; break;
+      case PANEL_IDS.SENTIMENT_HEATMAP: content = <LazyWrap><SentimentHeatmapPanel /></LazyWrap>; break;
+      case PANEL_IDS.YIELD_CURVE: content = <LazyWrap><YieldCurvePanel /></LazyWrap>; break;
+      case PANEL_IDS.CURRENCY_STRENGTH: content = <LazyWrap><CurrencyStrengthPanel /></LazyWrap>; break;
+      case PANEL_IDS.MONEY_FLOW: content = <LazyWrap><MoneyFlowPanel /></LazyWrap>; break;
+      case PANEL_IDS.TECHNICAL_CHART: content = <LazyWrap><TechnicalChartPanel /></LazyWrap>; break;
+      case PANEL_IDS.EARNINGS_ESTIMATES: content = <LazyWrap><EarningsEstimatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.WORLD_ECONOMY: content = <LazyWrap><WorldEconomyPanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_ASSET: content = <LazyWrap><CrossAssetPanel /></LazyWrap>; break;
+      case PANEL_IDS.HOLDINGS: content = <LazyWrap><HoldingsPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECTOR_PERFORMANCE: content = <LazyWrap><SectorPerformancePanel /></LazyWrap>; break;
+      case PANEL_IDS.ETF_HOLDINGS: content = <LazyWrap><ETFHoldingsPanel /></LazyWrap>; break;
+      case PANEL_IDS.DRAWDOWN: content = <LazyWrap><DrawdownPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_REGIME: content = <LazyWrap><MarketRegimePanel /></LazyWrap>; break;
+      case PANEL_IDS.RELATIVE_VALUATION: content = <LazyWrap><RelativeValuationPanel /></LazyWrap>; break;
+      case PANEL_IDS.CONFLUENCE: content = <LazyWrap><ConfluencePanel /></LazyWrap>; break;
+      case PANEL_IDS.IV_SURFACE: content = <LazyWrap><IVSurfacePanel /></LazyWrap>; break;
+      case PANEL_IDS.SEASONALITY: content = <LazyWrap><SeasonalityPanel /></LazyWrap>; break;
+      case PANEL_IDS.ORDER_FLOW: content = <LazyWrap><OrderFlowPanel /></LazyWrap>; break;
+      case PANEL_IDS.PORTFOLIO_OPTIMIZER: content = <LazyWrap><PortfolioOptimizerPanel /></LazyWrap>; break;
+      case PANEL_IDS.BACKTEST: content = <LazyWrap><BacktestPanel /></LazyWrap>; break;
+      case PANEL_IDS.MACRO_DASHBOARD: content = <LazyWrap><MacroDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.EARNINGS_SURPRISE: content = <LazyWrap><EarningsSurprisePanel /></LazyWrap>; break;
+      case PANEL_IDS.FUTURES_CURVE: content = <LazyWrap><FuturesCurvePanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_SPREADS: content = <LazyWrap><CreditSpreadsPanel /></LazyWrap>; break;
+      case PANEL_IDS.INTERMARKET: content = <LazyWrap><IntermarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECTOR_HEATMAP: content = <LazyWrap><SectorHeatmapPanel /></LazyWrap>; break;
+      case PANEL_IDS.ECONOMIC_SURPRISES: content = <LazyWrap><EconomicSurprisesPanel /></LazyWrap>; break;
+      case PANEL_IDS.DISPERSION: content = <LazyWrap><DispersionPanel /></LazyWrap>; break;
+      case PANEL_IDS.FUND_FLOWS: content = <LazyWrap><FundFlowsPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOL_TERM_STRUCTURE: content = <LazyWrap><VolTermStructurePanel /></LazyWrap>; break;
+      case PANEL_IDS.MACRO_HEATMAP: content = <LazyWrap><MacroHeatmapPanel /></LazyWrap>; break;
+      case PANEL_IDS.FACTOR_EXPOSURE: content = <LazyWrap><FactorExposurePanel /></LazyWrap>; break;
+      case PANEL_IDS.CAPITAL_FLOWS: content = <LazyWrap><CapitalFlowsPanel /></LazyWrap>; break;
+      case PANEL_IDS.TAIL_RISK: content = <LazyWrap><TailRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.LIQUIDITY: content = <LazyWrap><LiquidityPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_SPREADS: content = <LazyWrap><CommoditySpreadsPanel /></LazyWrap>; break;
+      case PANEL_IDS.SENTIMENT_DASHBOARD: content = <LazyWrap><SentimentDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.RISK_PARITY: content = <LazyWrap><RiskParityPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_ANOMALIES: content = <LazyWrap><MarketAnomaliesPanel /></LazyWrap>; break;
+      case PANEL_IDS.CARRY_TRADE: content = <LazyWrap><CarryTradePanel /></LazyWrap>; break;
+      case PANEL_IDS.COT_REPORT: content = <LazyWrap><CotReportPanel /></LazyWrap>; break;
+      case PANEL_IDS.IV_RANK: content = <LazyWrap><IvRankPanel /></LazyWrap>; break;
+      case PANEL_IDS.PERFORMANCE_ATTRIBUTION: content = <LazyWrap><PerformanceAttributionPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_MICROSTRUCTURE: content = <LazyWrap><MarketMicrostructurePanel /></LazyWrap>; break;
+      case PANEL_IDS.COUNTRY_RISK: content = <LazyWrap><CountryRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.POSITIONING: content = <LazyWrap><PositioningPanel /></LazyWrap>; break;
+      case PANEL_IDS.REPO_RATES: content = <LazyWrap><RepoRatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.XCCY_BASIS: content = <LazyWrap><XccyBasisPanel /></LazyWrap>; break;
+      case PANEL_IDS.STYLE_BOX: content = <LazyWrap><StyleBoxPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAP_RATES: content = <LazyWrap><SwapRatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_BLOTTER: content = <LazyWrap><TradeBlotterPanel /></LazyWrap>; break;
+      case PANEL_IDS.CORPORATE_CDS: content = <LazyWrap><CorporateCdsPanel /></LazyWrap>; break;
+      case PANEL_IDS.EVENT_DRIVEN: content = <LazyWrap><EventDrivenPanel /></LazyWrap>; break;
+      case PANEL_IDS.DEBT_MATURITY: content = <LazyWrap><DebtMaturityPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_RISK_PREMIUM: content = <LazyWrap><EquityRiskPremiumPanel /></LazyWrap>; break;
+      case PANEL_IDS.CENTRAL_BANKS: content = <LazyWrap><CentralBanksPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOL_SKEW: content = <LazyWrap><VolSkewPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_RATES: content = <LazyWrap><GlobalRatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.SUPPLY_CHAIN: content = <LazyWrap><SupplyChainPanel /></LazyWrap>; break;
+      case PANEL_IDS.GAMMA_EXPOSURE: content = <LazyWrap><GammaExposurePanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_SPREADS: content = <LazyWrap><SovereignSpreadsPanel /></LazyWrap>; break;
+      case PANEL_IDS.EARNINGS_REVISIONS: content = <LazyWrap><EarningsRevisionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.DIVIDEND_FORECAST: content = <LazyWrap><DividendForecastPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_RATINGS: content = <LazyWrap><CreditRatingsPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOLATILITY_CONE: content = <LazyWrap><VolatilityConePanel /></LazyWrap>; break;
+      case PANEL_IDS.TERM_STRUCTURE: content = <LazyWrap><TermStructurePanel /></LazyWrap>; break;
+      case PANEL_IDS.INSTITUTIONAL_OWNERSHIP: content = <LazyWrap><InstitutionalOwnershipPanel /></LazyWrap>; break;
+      case PANEL_IDS.IMPLIED_CORRELATION: content = <LazyWrap><ImpliedCorrelationPanel /></LazyWrap>; break;
+      case PANEL_IDS.EARNINGS_QUALITY: content = <LazyWrap><EarningsQualityPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOL_SURFACE: content = <LazyWrap><VolSurfacePanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_FLOWS: content = <LazyWrap><GlobalFlowsPanel /></LazyWrap>; break;
+      case PANEL_IDS.REGRESSION_ANALYSIS: content = <LazyWrap><RegressionAnalysisPanel /></LazyWrap>; break;
+      case PANEL_IDS.COVENANT_MONITOR: content = <LazyWrap><CovenantMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_INTERNALS: content = <LazyWrap><MarketInternalsPanel /></LazyWrap>; break;
+      case PANEL_IDS.VALUATION_MULTIPLES: content = <LazyWrap><ValuationMultiplesPanel /></LazyWrap>; break;
+      case PANEL_IDS.FIXED_INCOME_ANALYTICS: content = <LazyWrap><FixedIncomeAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.INSIDER_SENTIMENT: content = <LazyWrap><InsiderSentimentPanel /></LazyWrap>; break;
+      case PANEL_IDS.CUSTOM_INDEX: content = <LazyWrap><CustomIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.MBS_ANALYTICS: content = <LazyWrap><MbsAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CDX_INDEX: content = <LazyWrap><CdxIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.MUNI_BONDS: content = <LazyWrap><MuniBondsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CLO_ANALYTICS: content = <LazyWrap><CloAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.ONCHAIN_ANALYTICS: content = <LazyWrap><OnchainAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRIVATE_CREDIT: content = <LazyWrap><PrivateCreditPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOL_RISK_PREMIUM: content = <LazyWrap><VolRiskPremiumPanel /></LazyWrap>; break;
+      case PANEL_IDS.ESG_RATINGS: content = <LazyWrap><EsgRatingsPanel /></LazyWrap>; break;
+      case PANEL_IDS.FREIGHT_INDICES: content = <LazyWrap><FreightIndicesPanel /></LazyWrap>; break;
+      case PANEL_IDS.ALTERNATIVE_DATA: content = <LazyWrap><AlternativeDataPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_IDEAS: content = <LazyWrap><TradeIdeasPanel /></LazyWrap>; break;
+      case PANEL_IDS.DEBT_ISSUANCE: content = <LazyWrap><DebtIssuancePanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_OPTIONS: content = <LazyWrap><FxOptionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.MULTI_FACTOR: content = <LazyWrap><MultiFactorPanel /></LazyWrap>; break;
+      case PANEL_IDS.TREASURY_AUCTIONS: content = <LazyWrap><TreasuryAuctionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_CURVES: content = <LazyWrap><CommodityCurvesPanel /></LazyWrap>; break;
+      case PANEL_IDS.EM_BONDS: content = <LazyWrap><EmBondsPanel /></LazyWrap>; break;
+      case PANEL_IDS.REIT_MONITOR: content = <LazyWrap><ReitMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.MONEY_MARKET: content = <LazyWrap><MoneyMarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.CONVERTIBLE_BONDS: content = <LazyWrap><ConvertibleBondsPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_PMI: content = <LazyWrap><GlobalPmiPanel /></LazyWrap>; break;
+      case PANEL_IDS.LEVERAGED_LOANS: content = <LazyWrap><LeveragedLoansPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAPTION_VOL: content = <LazyWrap><SwaptionVolPanel /></LazyWrap>; break;
+      case PANEL_IDS.DISTRESSED_DEBT: content = <LazyWrap><DistressedDebtPanel /></LazyWrap>; break;
+      case PANEL_IDS.RATE_CAPS_FLOORS: content = <LazyWrap><RateCapsFloorsPanel /></LazyWrap>; break;
+      case PANEL_IDS.DIVIDEND_SWAPS: content = <LazyWrap><DividendSwapsPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIES_LENDING: content = <LazyWrap><SecuritiesLendingPanel /></LazyWrap>; break;
+      case PANEL_IDS.VARIANCE_SWAPS: content = <LazyWrap><VarianceSwapsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CARBON_CREDITS: content = <LazyWrap><CarbonCreditsPanel /></LazyWrap>; break;
+      case PANEL_IDS.WEATHER_DERIVATIVES: content = <LazyWrap><WeatherDerivativesPanel /></LazyWrap>; break;
+      case PANEL_IDS.DARK_POOL: content = <LazyWrap><DarkPoolPanel /></LazyWrap>; break;
+      case PANEL_IDS.TOTAL_RETURN_SWAPS: content = <LazyWrap><TotalReturnSwapsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CAT_BONDS: content = <LazyWrap><CatBondsPanel /></LazyWrap>; break;
+      case PANEL_IDS.INFLATION_LINKED_BONDS: content = <LazyWrap><InflationLinkedBondsPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_BASKET_SWAPS: content = <LazyWrap><EquityBasketSwapsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_CURRENCY_SWAPS: content = <LazyWrap><CrossCurrencySwapsPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_OPTIONS: content = <LazyWrap><CommodityOptionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.LOAN_CDS: content = <LazyWrap><LoanCdsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CONVERTIBLE_ARB: content = <LazyWrap><ConvertibleArbPanel /></LazyWrap>; break;
+      case PANEL_IDS.SHIPPING_RATES: content = <LazyWrap><ShippingRatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_AUCTION: content = <LazyWrap><CreditAuctionPanel /></LazyWrap>; break;
+      case PANEL_IDS.MUNI_YIELD_CURVES: content = <LazyWrap><MuniYieldCurvesPanel /></LazyWrap>; break;
+      case PANEL_IDS.STRUCTURED_PRODUCTS: content = <LazyWrap><StructuredProductsPanel /></LazyWrap>; break;
+      case PANEL_IDS.PENSION_FUND: content = <LazyWrap><PensionFundPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAP_SPREAD_MONITOR: content = <LazyWrap><SwapSpreadMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_LINKED_NOTES: content = <LazyWrap><EquityLinkedNotesPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_FINANCE: content = <LazyWrap><TradeFinancePanel /></LazyWrap>; break;
+      case PANEL_IDS.REPO_MARKET: content = <LazyWrap><RepoMarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_INVENTORY: content = <LazyWrap><CommodityInventoryPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_WEALTH: content = <LazyWrap><SovereignWealthPanel /></LazyWrap>; break;
+      case PANEL_IDS.AGENCY_MBS_TBA: content = <LazyWrap><AgencyMbsTbaPanel /></LazyWrap>; break;
+      case PANEL_IDS.ETF_FLOWS: content = <LazyWrap><EtfFlowsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_FLOW: content = <LazyWrap><CreditFlowPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_SEASONALITY: content = <LazyWrap><CommoditySeasonalityPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_VOLATILITY: content = <LazyWrap><FxVolatilityPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRIMARY_DEALER: content = <LazyWrap><PrimaryDealerPanel /></LazyWrap>; break;
+      case PANEL_IDS.REAL_ESTATE_CAPITAL: content = <LazyWrap><RealEstateCapitalPanel /></LazyWrap>; break;
+      case PANEL_IDS.ELECTRICITY_MARKETS: content = <LazyWrap><ElectricityMarketsPanel /></LazyWrap>; break;
+      case PANEL_IDS.SYNDICATED_LOANS: content = <LazyWrap><SyndicatedLoansPanel /></LazyWrap>; break;
+      case PANEL_IDS.EMISSIONS_TRADING: content = <LazyWrap><EmissionsTradingPanel /></LazyWrap>; break;
+      case PANEL_IDS.INSURANCE_LINKED: content = <LazyWrap><InsuranceLinkedPanel /></LazyWrap>; break;
+      case PANEL_IDS.METALS_FORWARD: content = <LazyWrap><MetalsForwardPanel /></LazyWrap>; break;
+      case PANEL_IDS.CENTRAL_BANK_WATCH: content = <LazyWrap><CentralBankWatchPanel /></LazyWrap>; break;
+      case PANEL_IDS.FREIGHT_DERIVATIVES: content = <LazyWrap><FreightDerivativesPanel /></LazyWrap>; break;
+      case PANEL_IDS.INFLATION_BREAKEVENS: content = <LazyWrap><InflationBreakevensPanel /></LazyWrap>; break;
+      case PANEL_IDS.MUNI_BOND_AUCTION: content = <LazyWrap><MuniBondAuctionPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_CURVE_ANALYTICS: content = <LazyWrap><CommodityCurveAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.COLLATERAL_MONITOR: content = <LazyWrap><CollateralMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_CDS: content = <LazyWrap><SovereignCdsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_ASSET_MOMENTUM: content = <LazyWrap><CrossAssetMomentumPanel /></LazyWrap>; break;
+      case PANEL_IDS.CRYPTO_DERIVATIVES: content = <LazyWrap><CryptoDerivativesPanel /></LazyWrap>; break;
+      case PANEL_IDS.BOND_RELATIVE_VALUE: content = <LazyWrap><BondRelativeValuePanel /></LazyWrap>; break;
+      case PANEL_IDS.VOLATILITY_ARBITRAGE: content = <LazyWrap><VolatilityArbitragePanel /></LazyWrap>; break;
+      case PANEL_IDS.SYSTEMATIC_STRATEGY: content = <LazyWrap><SystematicStrategyPanel /></LazyWrap>; break;
+      case PANEL_IDS.FUNDING_RATE_MONITOR: content = <LazyWrap><FundingRateMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.EM_LOCAL_RATES: content = <LazyWrap><EmLocalRatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.PORTFOLIO_RISK_ANALYTICS: content = <LazyWrap><PortfolioRiskAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_INDEX_MONITOR: content = <LazyWrap><CreditIndexMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_FINANCING: content = <LazyWrap><EquityFinancingPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_MACRO_DASHBOARD: content = <LazyWrap><GlobalMacroDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.ABS_RMBS_MONITOR: content = <LazyWrap><AbsRmbsMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.LIQUIDITY_RISK_MONITOR: content = <LazyWrap><LiquidityRiskMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.FI_ATTRIBUTION: content = <LazyWrap><FiAttributionPanel /></LazyWrap>; break;
+      case PANEL_IDS.REPO_RATE_HEATMAP: content = <LazyWrap><RepoRateHeatmapPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_COMPRESSION: content = <LazyWrap><TradeCompressionPanel /></LazyWrap>; break;
+      case PANEL_IDS.REGULATORY_CAPITAL: content = <LazyWrap><RegulatoryCapitalPanel /></LazyWrap>; break;
+      case PANEL_IDS.SETTLEMENT_RISK: content = <LazyWrap><SettlementRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAP_VALUATION: content = <LazyWrap><SwapValuationPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_STORAGE: content = <LazyWrap><CommodityStoragePanel /></LazyWrap>; break;
+      case PANEL_IDS.COUNTERPARTY_EXPOSURE: content = <LazyWrap><CounterpartyExposurePanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_IMPACT_MODEL: content = <LazyWrap><MarketImpactModelPanel /></LazyWrap>; break;
+      case PANEL_IDS.STRUCTURED_NOTES: content = <LazyWrap><StructuredNotesPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIES_FINANCE: content = <LazyWrap><SecuritiesFinancePanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_CURVE_BUILDER: content = <LazyWrap><CreditCurveBuilderPanel /></LazyWrap>; break;
+      case PANEL_IDS.EXECUTION_ANALYTICS: content = <LazyWrap><ExecutionAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.BOND_AUCTION_CALENDAR: content = <LazyWrap><BondAuctionCalendarPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_CARRY_MONITOR: content = <LazyWrap><FxCarryMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_CAPITAL_MARKETS: content = <LazyWrap><EquityCapitalMarketsPanel /></LazyWrap>; break;
+      case PANEL_IDS.DEBT_CAPITAL_MARKETS: content = <LazyWrap><DebtCapitalMarketsPanel /></LazyWrap>; break;
+      case PANEL_IDS.HEDGE_FUND_MONITOR: content = <LazyWrap><HedgeFundMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.RISK_DASHBOARD: content = <LazyWrap><RiskDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.BENCHMARK_TRACKER: content = <LazyWrap><BenchmarkTrackerPanel /></LazyWrap>; break;
+      case PANEL_IDS.LIQUIDITY_COVERAGE: content = <LazyWrap><LiquidityCoveragePanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_SENTIMENT_INDEX: content = <LazyWrap><MarketSentimentIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.PORTFOLIO_STRESS_TEST: content = <LazyWrap><PortfolioStressTestPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_LIQUIDITY_MONITOR: content = <LazyWrap><GlobalLiquidityMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_RECAP: content = <LazyWrap><TradeRecapPanel /></LazyWrap>; break;
+      case PANEL_IDS.MACRO_SURPRISE_TRACKER: content = <LazyWrap><MacroSurpriseTrackerPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_VOLATILITY_SURFACE: content = <LazyWrap><FxVolatilitySurfacePanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_FUNDAMENTAL: content = <LazyWrap><CommodityFundamentalPanel /></LazyWrap>; break;
+      case PANEL_IDS.ETF_FLOW_MONITOR: content = <LazyWrap><EtfFlowMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_FACTOR_MONITOR: content = <LazyWrap><EquityFactorMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.RATES_STRATEGY: content = <LazyWrap><RatesStrategyPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_PORTFOLIO: content = <LazyWrap><CreditPortfolioPanel /></LazyWrap>; break;
+      case PANEL_IDS.MACRO_REGIME_MONITOR: content = <LazyWrap><MacroRegimeMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.DIVIDEND_CALENDAR: content = <LazyWrap><DividendCalendarPanel /></LazyWrap>; break;
+      case PANEL_IDS.CONVERTIBLE_ARBITRAGE: content = <LazyWrap><ConvertibleArbitragePanel /></LazyWrap>; break;
+      case PANEL_IDS.REALTIME_PNL: content = <LazyWrap><RealtimePnlPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_BREADTH_ADVANCED: content = <LazyWrap><MarketBreadthAdvancedPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOLATILITY_DASHBOARD: content = <LazyWrap><VolatilityDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.FI_RELATIVE_VALUE: content = <LazyWrap><FiRelativeValuePanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_SCREEN_RESULTS: content = <LazyWrap><EquityScreenResultsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_ASSET_CORRELATION: content = <LazyWrap><CrossAssetCorrelationPanel /></LazyWrap>; break;
+      case PANEL_IDS.PORTFOLIO_ATTRIBUTION: content = <LazyWrap><PortfolioAttributionPanel /></LazyWrap>; break;
+      case PANEL_IDS.MUNICIPAL_BOND_MONITOR: content = <LazyWrap><MunicipalBondMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.STRUCTURED_CREDIT: content = <LazyWrap><StructuredCreditPanel /></LazyWrap>; break;
+      case PANEL_IDS.CURRENCY_OPTIONS: content = <LazyWrap><CurrencyOptionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAP_CURVE_MONITOR: content = <LazyWrap><SwapCurveMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.FUND_FLOW_ANALYTICS: content = <LazyWrap><FundFlowAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_COST_ANALYSIS: content = <LazyWrap><TradeCostAnalysisPanel /></LazyWrap>; break;
+      case PANEL_IDS.WARRANT_CONVERTIBLE: content = <LazyWrap><WarrantConvertiblePanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_TRADE_FLOW: content = <LazyWrap><GlobalTradeFlowPanel /></LazyWrap>; break;
+      case PANEL_IDS.REAL_ESTATE_ANALYTICS: content = <LazyWrap><RealEstateAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.INFLATION_MONITOR: content = <LazyWrap><InflationMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.MERGER_ARBITRAGE: content = <LazyWrap><MergerArbitragePanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_DEBT: content = <LazyWrap><SovereignDebtPanel /></LazyWrap>; break;
+      case PANEL_IDS.ETF_PREMIUM: content = <LazyWrap><EtfPremiumPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_DEMAND: content = <LazyWrap><CommodityDemandPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_DIVIDEND: content = <LazyWrap><GlobalDividendPanel /></LazyWrap>; break;
+      case PANEL_IDS.CDS_INDEX_MONITOR: content = <LazyWrap><CdsIndexMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.MACRO_RISK: content = <LazyWrap><MacroRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.FI_ATTRIBUTION_ANALYSIS: content = <LazyWrap><FiAttributionAnalysisPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_STYLE: content = <LazyWrap><EquityStylePanel /></LazyWrap>; break;
+      case PANEL_IDS.CURRENCY_FORECAST: content = <LazyWrap><CurrencyForecastPanel /></LazyWrap>; break;
+      case PANEL_IDS.BOND_LADDER: content = <LazyWrap><BondLadderPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECTOR_CREDIT_SPREAD: content = <LazyWrap><SectorCreditSpreadPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_PMI_DASHBOARD: content = <LazyWrap><GlobalPmiDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.EARNINGS_WHISPER: content = <LazyWrap><EarningsWhisperPanel /></LazyWrap>; break;
+      case PANEL_IDS.PORTFOLIO_HEDGING: content = <LazyWrap><PortfolioHedgingPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_DEPTH: content = <LazyWrap><MarketDepthPanel /></LazyWrap>; break;
+      case PANEL_IDS.IRS_MONITOR: content = <LazyWrap><IrsMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_CAPITAL_RAISE: content = <LazyWrap><EquityCapitalRaisePanel /></LazyWrap>; break;
+      case PANEL_IDS.VOLATILITY_SMILE: content = <LazyWrap><VolatilitySmilePanel /></LazyWrap>; break;
+      case PANEL_IDS.CENTRAL_BANK_BALANCE_SHEET: content = <LazyWrap><CentralBankBalanceSheetPanel /></LazyWrap>; break;
+      case PANEL_IDS.CORPORATE_BUYBACK: content = <LazyWrap><CorporateBuybackPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARGIN_DEBT: content = <LazyWrap><MarginDebtPanel /></LazyWrap>; break;
+      case PANEL_IDS.CORPORATE_ACTIONS: content = <LazyWrap><CorporateActionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.FISCAL_POLICY: content = <LazyWrap><FiscalPolicyPanel /></LazyWrap>; break;
+      case PANEL_IDS.BASIS_TRADE: content = <LazyWrap><BasisTradePanel /></LazyWrap>; break;
+      case PANEL_IDS.FLOW_OF_FUNDS: content = <LazyWrap><FlowOfFundsPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_SUPPLY_CHAIN: content = <LazyWrap><GlobalSupplyChainPanel /></LazyWrap>; break;
+      case PANEL_IDS.TREASURY_ANALYTICS: content = <LazyWrap><TreasuryAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CURVE_TRADE: content = <LazyWrap><CurveTradePanel /></LazyWrap>; break;
+      case PANEL_IDS.PRIVATE_EQUITY: content = <LazyWrap><PrivateEquityPanel /></LazyWrap>; break;
+      case PANEL_IDS.CAPITAL_STRUCTURE: content = <LazyWrap><CapitalStructurePanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_BORDER_MA: content = <LazyWrap><CrossBorderMaPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_RISK_TRANSFER: content = <LazyWrap><CreditRiskTransferPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAP_EXECUTION: content = <LazyWrap><SwapExecutionPanel /></LazyWrap>; break;
+      case PANEL_IDS.DEBT_CEILING: content = <LazyWrap><DebtCeilingPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIZATION: content = <LazyWrap><SecuritizationPanel /></LazyWrap>; break;
+      case PANEL_IDS.MUNICIPAL_CREDIT: content = <LazyWrap><MunicipalCreditPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_SPREAD: content = <LazyWrap><CommoditySpreadPanel /></LazyWrap>; break;
+      case PANEL_IDS.INFLATION_SWAP: content = <LazyWrap><InflationSwapPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_DEFAULT_INDEX: content = <LazyWrap><CreditDefaultIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_WEALTH_FUND: content = <LazyWrap><SovereignWealthFundPanel /></LazyWrap>; break;
+      case PANEL_IDS.COLLATERAL_MANAGEMENT: content = <LazyWrap><CollateralManagementPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRIME_BROKERAGE: content = <LazyWrap><PrimeBrokeragePanel /></LazyWrap>; break;
+      case PANEL_IDS.ELECTION_RISK: content = <LazyWrap><ElectionRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.CVA_MONITOR: content = <LazyWrap><CvaMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.ALGO_EXECUTION: content = <LazyWrap><AlgoExecutionPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIES_CLASS_ACTION: content = <LazyWrap><SecuritiesClassActionPanel /></LazyWrap>; break;
+      case PANEL_IDS.PROXY_VOTING: content = <LazyWrap><ProxyVotingPanel /></LazyWrap>; break;
+      case PANEL_IDS.INDEX_REBALANCE: content = <LazyWrap><IndexRebalancePanel /></LazyWrap>; break;
+      case PANEL_IDS.SHAREHOLDER_ACTIVISM: content = <LazyWrap><ShareholderActivismPanel /></LazyWrap>; break;
+      case PANEL_IDS.FUND_FLOW_TRACKER: content = <LazyWrap><FundFlowTrackerPanel /></LazyWrap>; break;
+      case PANEL_IDS.INSIDER_TRANSACTION: content = <LazyWrap><InsiderTransactionPanel /></LazyWrap>; break;
+      case PANEL_IDS.SHORT_SQUEEZE: content = <LazyWrap><ShortSqueezePanel /></LazyWrap>; break;
+      case PANEL_IDS.SPAC_MONITOR: content = <LazyWrap><SpacMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.BLOCK_TRADE: content = <LazyWrap><BlockTradePanel /></LazyWrap>; break;
+      case PANEL_IDS.REGULATORY_FILING: content = <LazyWrap><RegulatoryFilingPanel /></LazyWrap>; break;
+      case PANEL_IDS.TAX_LOSS_HARVEST: content = <LazyWrap><TaxLossHarvestPanel /></LazyWrap>; break;
+      case PANEL_IDS.DIVIDEND_CAPTURE: content = <LazyWrap><DividendCapturePanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_RATING_MIGRATION: content = <LazyWrap><CreditRatingMigrationPanel /></LazyWrap>; break;
+      case PANEL_IDS.MERGER_ARB_MONITOR: content = <LazyWrap><MergerArbMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_MAKING: content = <LazyWrap><MarketMakingPanel /></LazyWrap>; break;
+      case PANEL_IDS.RATE_PROBABILITY: content = <LazyWrap><RateProbabilityPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_FORWARD: content = <LazyWrap><FxForwardPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_EVENT: content = <LazyWrap><CreditEventPanel /></LazyWrap>; break;
+      case PANEL_IDS.PORTFOLIO_MARGIN: content = <LazyWrap><PortfolioMarginPanel /></LazyWrap>; break;
+      case PANEL_IDS.CORPORATE_GOVERNANCE: content = <LazyWrap><CorporateGovernancePanel /></LazyWrap>; break;
+      case PANEL_IDS.TREASURY_BILL: content = <LazyWrap><TreasuryBillPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_LENDING: content = <LazyWrap><EquityLendingPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_SETTLEMENT: content = <LazyWrap><TradeSettlementPanel /></LazyWrap>; break;
+      case PANEL_IDS.INDEX_ARBITRAGE: content = <LazyWrap><IndexArbitragePanel /></LazyWrap>; break;
+      case PANEL_IDS.ASSET_ALLOCATION: content = <LazyWrap><AssetAllocationPanel /></LazyWrap>; break;
+      case PANEL_IDS.BOND_FUTURES_BASIS: content = <LazyWrap><BondFuturesBasisPanel /></LazyWrap>; break;
+      case PANEL_IDS.RISK_BUDGETING: content = <LazyWrap><RiskBudgetingPanel /></LazyWrap>; break;
+      case PANEL_IDS.MARKET_SURVEILLANCE: content = <LazyWrap><MarketSurveillancePanel /></LazyWrap>; break;
+      case PANEL_IDS.DURATION_MANAGEMENT: content = <LazyWrap><DurationManagementPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAP_PRICING: content = <LazyWrap><SwapPricingPanel /></LazyWrap>; break;
+      case PANEL_IDS.OPTION_STRATEGY_BUILDER: content = <LazyWrap><OptionStrategyBuilderPanel /></LazyWrap>; break;
+      case PANEL_IDS.CURRENCY_BASKET: content = <LazyWrap><CurrencyBasketPanel /></LazyWrap>; break;
+      case PANEL_IDS.LIQUIDITY_STRESS_TEST: content = <LazyWrap><LiquidityStressTestPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_REPOSITORY: content = <LazyWrap><TradeRepositoryPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_RISK_SCORE: content = <LazyWrap><SovereignRiskScorePanel /></LazyWrap>; break;
+      case PANEL_IDS.COLLATERAL_OPTIMIZATION: content = <LazyWrap><CollateralOptimizationPanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_MARGINING: content = <LazyWrap><CrossMarginingPanel /></LazyWrap>; break;
+      case PANEL_IDS.FUND_MANAGER_RANKING: content = <LazyWrap><FundManagerRankingPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRICE_DISCOVERY: content = <LazyWrap><PriceDiscoveryPanel /></LazyWrap>; break;
+      case PANEL_IDS.OPERATIONAL_RISK: content = <LazyWrap><OperationalRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRANSITION_MANAGEMENT: content = <LazyWrap><TransitionManagementPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIES_VALUATION: content = <LazyWrap><SecuritiesValuationPanel /></LazyWrap>; break;
+      case PANEL_IDS.BENCHMARK_ANALYTICS: content = <LazyWrap><BenchmarkAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.COUNTERPARTY_RISK: content = <LazyWrap><CounterpartyRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_VALUATION: content = <LazyWrap><EquityValuationPanel /></LazyWrap>; break;
+      case PANEL_IDS.MACRO_INDICATORS: content = <LazyWrap><MacroIndicatorsPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOLATILITY_SKEW: content = <LazyWrap><VolatilitySkewPanel /></LazyWrap>; break;
+      case PANEL_IDS.ORDER_BOOK: content = <LazyWrap><OrderBookPanel /></LazyWrap>; break;
+      case PANEL_IDS.FIXED_INCOME_LADDER: content = <LazyWrap><FixedIncomeLadderPanel /></LazyWrap>; break;
+      case PANEL_IDS.CDS_MONITOR: content = <LazyWrap><CdsMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_DEBT_MONITOR: content = <LazyWrap><SovereignDebtMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.LIQUIDITY_DASHBOARD: content = <LazyWrap><LiquidityDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRECIOUS_METALS: content = <LazyWrap><PreciousMetalsPanel /></LazyWrap>; break;
+      case PANEL_IDS.BANK_CAPITAL: content = <LazyWrap><BankCapitalPanel /></LazyWrap>; break;
+      case PANEL_IDS.AGRICULTURAL_COMMODITIES: content = <LazyWrap><AgriculturalCommoditiesPanel /></LazyWrap>; break;
+      case PANEL_IDS.ENERGY_TRANSITION: content = <LazyWrap><EnergyTransitionPanel /></LazyWrap>; break;
+      case PANEL_IDS.GEOPOLITICAL_RISK: content = <LazyWrap><GeopoliticalRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.LABOR_MARKET: content = <LazyWrap><LaborMarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.HOUSING_MARKET: content = <LazyWrap><HousingMarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.SUPPLY_CHAIN_STRESS: content = <LazyWrap><SupplyChainStressPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_IMPULSE: content = <LazyWrap><CreditImpulsePanel /></LazyWrap>; break;
+      case PANEL_IDS.CONSUMER_CONFIDENCE: content = <LazyWrap><ConsumerConfidencePanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_YIELD: content = <LazyWrap><SovereignYieldPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_BALANCE: content = <LazyWrap><TradeBalancePanel /></LazyWrap>; break;
+      case PANEL_IDS.SEMICONDUCTOR: content = <LazyWrap><SemiconductorPanel /></LazyWrap>; break;
+      case PANEL_IDS.INFRASTRUCTURE_INVESTMENT: content = <LazyWrap><InfrastructureInvestmentPanel /></LazyWrap>; break;
+      case PANEL_IDS.INSURANCE_MARKET: content = <LazyWrap><InsuranceMarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.SHIPPING_INDEX: content = <LazyWrap><ShippingIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.VENTURE_CAPITAL: content = <LazyWrap><VentureCapitalPanel /></LazyWrap>; break;
+      case PANEL_IDS.DEMOGRAPHIC_TRENDS: content = <LazyWrap><DemographicTrendsPanel /></LazyWrap>; break;
+      case PANEL_IDS.ECONOMIC_FORECAST: content = <LazyWrap><EconomicForecastPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_INDEX_MONITOR: content = <LazyWrap><GlobalIndexMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.LEAGUE_TABLES: content = <LazyWrap><LeagueTablesPanel /></LazyWrap>; break;
+      case PANEL_IDS.GDP_NOWCAST: content = <LazyWrap><GDPNowcastPanel /></LazyWrap>; break;
+      case PANEL_IDS.RECESSION_PROBABILITY: content = <LazyWrap><RecessionProbabilityPanel /></LazyWrap>; break;
+      case PANEL_IDS.FINANCIAL_CONDITIONS: content = <LazyWrap><FinancialConditionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_FUNDAMENTALS: content = <LazyWrap><CommodityFundamentalsPanel /></LazyWrap>; break;
+      case PANEL_IDS.WAGE_GROWTH: content = <LazyWrap><WageGrowthPanel /></LazyWrap>; break;
+      case PANEL_IDS.FISCAL_DEFICIT: content = <LazyWrap><FiscalDeficitPanel /></LazyWrap>; break;
+      case PANEL_IDS.CENTRAL_CLEARING: content = <LazyWrap><CentralClearingPanel /></LazyWrap>; break;
+      case PANEL_IDS.MONEY_VELOCITY: content = <LazyWrap><MoneyVelocityPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRODUCTIVITY_MONITOR: content = <LazyWrap><ProductivityMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.BALANCE_OF_PAYMENTS: content = <LazyWrap><BalanceOfPaymentsPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_TAX_RATES: content = <LazyWrap><GlobalTaxRatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.SANCTIONS_MONITOR: content = <LazyWrap><SanctionsMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.CLIMATE_RISK: content = <LazyWrap><ClimateRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_DEFAULT: content = <LazyWrap><SovereignDefaultPanel /></LazyWrap>; break;
+      case PANEL_IDS.BANK_STRESS_TEST: content = <LazyWrap><BankStressTestPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_DERIVATIVES: content = <LazyWrap><EquityDerivativesPanel /></LazyWrap>; break;
+      case PANEL_IDS.MONEY_MARKET_RATES: content = <LazyWrap><MoneyMarketRatesPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_MA: content = <LazyWrap><GlobalMAPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_DEFAULT_SWAPS: content = <LazyWrap><CreditDefaultSwapsPanel /></LazyWrap>; break;
+      case PANEL_IDS.REAL_ESTATE_INVESTMENT: content = <LazyWrap><RealEstateInvestmentPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_DEBT_CLOCK: content = <LazyWrap><GlobalDebtClockPanel /></LazyWrap>; break;
+      case PANEL_IDS.AI_TECH_CAPEX: content = <LazyWrap><AITechCapexPanel /></LazyWrap>; break;
+      case PANEL_IDS.CRITICAL_MINERALS: content = <LazyWrap><CriticalMineralsPanel /></LazyWrap>; break;
+      case PANEL_IDS.NUCLEAR_ENERGY: content = <LazyWrap><NuclearEnergyPanel /></LazyWrap>; break;
+      case PANEL_IDS.WATER_MARKET: content = <LazyWrap><WaterMarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.SPACE_ECONOMY: content = <LazyWrap><SpaceEconomyPanel /></LazyWrap>; break;
+      case PANEL_IDS.CYBERSECURITY: content = <LazyWrap><CybersecurityPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_FOOD_PRICE: content = <LazyWrap><GlobalFoodPricePanel /></LazyWrap>; break;
+      case PANEL_IDS.PHARMA_PIPELINE: content = <LazyWrap><PharmaPipelinePanel /></LazyWrap>; break;
+      case PANEL_IDS.ETF_FLOW: content = <LazyWrap><EtfFlowPanel /></LazyWrap>; break;
+      case PANEL_IDS.VOLATILITY_SURFACE: content = <LazyWrap><VolatilitySurfacePanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_SPREAD: content = <LazyWrap><CreditSpreadPanel /></LazyWrap>; break;
+      case PANEL_IDS.EARNINGS_REVISION: content = <LazyWrap><EarningsRevisionPanel /></LazyWrap>; break;
+      case PANEL_IDS.SWAP_SPREAD: content = <LazyWrap><SwapSpreadPanel /></LazyWrap>; break;
+      case PANEL_IDS.BREAKEVEN_INFLATION: content = <LazyWrap><BreakevenInflationPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_CARRY: content = <LazyWrap><FxCarryPanel /></LazyWrap>; break;
+      case PANEL_IDS.OPTIONS_SKEW: content = <LazyWrap><OptionsSkewPanel /></LazyWrap>; break;
+      case PANEL_IDS.QUANT_FACTOR: content = <LazyWrap><QuantFactorPanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_CURRENCY_BASIS: content = <LazyWrap><CrossCurrencyBasisPanel /></LazyWrap>; break;
+      case PANEL_IDS.FUND_FLOW: content = <LazyWrap><FundFlowPanel /></LazyWrap>; break;
+      case PANEL_IDS.LEVERAGED_LOAN: content = <LazyWrap><LeveragedLoanPanel /></LazyWrap>; break;
+      case PANEL_IDS.STRUCTURED_PRODUCT: content = <LazyWrap><StructuredProductPanel /></LazyWrap>; break;
+      case PANEL_IDS.MERGER_ARB: content = <LazyWrap><MergerArbPanel /></LazyWrap>; break;
+      case PANEL_IDS.GREEN_BOND: content = <LazyWrap><GreenBondPanel /></LazyWrap>; break;
+      case PANEL_IDS.LIQUIDITY_MONITOR: content = <LazyWrap><LiquidityMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.COVERED_BOND: content = <LazyWrap><CoveredBondPanel /></LazyWrap>; break;
+      case PANEL_IDS.INFLATION_LINKED_BOND: content = <LazyWrap><InflationLinkedBondPanel /></LazyWrap>; break;
+      case PANEL_IDS.CORRELATION_RISK: content = <LazyWrap><CorrelationRiskPanel /></LazyWrap>; break;
+      case PANEL_IDS.SUBORDINATED_DEBT: content = <LazyWrap><SubordinatedDebtPanel /></LazyWrap>; break;
+      case PANEL_IDS.SMART_BETA: content = <LazyWrap><SmartBetaPanel /></LazyWrap>; break;
+      case PANEL_IDS.FACTOR_ROTATION: content = <LazyWrap><FactorRotationPanel /></LazyWrap>; break;
+      case PANEL_IDS.ENDOWMENT: content = <LazyWrap><EndowmentPanel /></LazyWrap>; break;
+      case PANEL_IDS.FAMILY_OFFICE: content = <LazyWrap><FamilyOfficePanel /></LazyWrap>; break;
+      case PANEL_IDS.HEDGE_FUND_REPLICATION: content = <LazyWrap><HedgeFundReplicationPanel /></LazyWrap>; break;
+      case PANEL_IDS.INFRASTRUCTURE_DEBT: content = <LazyWrap><InfrastructureDebtPanel /></LazyWrap>; break;
+      case PANEL_IDS.SUPPLY_CHAIN_FINANCE: content = <LazyWrap><SupplyChainFinancePanel /></LazyWrap>; break;
+      case PANEL_IDS.CDS: content = <LazyWrap><CDSPanel /></LazyWrap>; break;
+      case PANEL_IDS.CLO: content = <LazyWrap><CLOPanel /></LazyWrap>; break;
+      case PANEL_IDS.INTEREST_RATE_SWAP: content = <LazyWrap><InterestRateSwapPanel /></LazyWrap>; break;
+      case PANEL_IDS.SHIPPING_FREIGHT: content = <LazyWrap><ShippingFreightPanel /></LazyWrap>; break;
+      case PANEL_IDS.ABS: content = <LazyWrap><ABSPanel /></LazyWrap>; break;
+      case PANEL_IDS.TOTAL_RETURN_SWAP: content = <LazyWrap><TotalReturnSwapPanel /></LazyWrap>; break;
+      case PANEL_IDS.VARIANCE_SWAP: content = <LazyWrap><VarianceSwapPanel /></LazyWrap>; break;
+      case PANEL_IDS.CONVERTIBLE_BOND: content = <LazyWrap><ConvertibleBondPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_INDEX: content = <LazyWrap><CreditIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.DIVIDEND_SWAP: content = <LazyWrap><DividendSwapPanel /></LazyWrap>; break;
+      case PANEL_IDS.CENTRAL_BANK: content = <LazyWrap><CentralBankPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMERCIAL_PAPER: content = <LazyWrap><CommercialPaperPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_RESERVES: content = <LazyWrap><FxReservesPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_INDEX_FUTURES: content = <LazyWrap><EquityIndexFuturesPanel /></LazyWrap>; break;
+      case PANEL_IDS.PREFERRED_STOCK: content = <LazyWrap><PreferredStockPanel /></LazyWrap>; break;
+      case PANEL_IDS.TREASURY_STRIPS: content = <LazyWrap><TreasuryStripsPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITY_WAREHOUSE: content = <LazyWrap><CommodityWarehousePanel /></LazyWrap>; break;
+      case PANEL_IDS.ETF_CREATION_REDEMPTION: content = <LazyWrap><EtfCreationRedemptionPanel /></LazyWrap>; break;
+      case PANEL_IDS.AGENCY_DEBT: content = <LazyWrap><AgencyDebtPanel /></LazyWrap>; break;
+      case PANEL_IDS.MONEY_MARKET_FUND: content = <LazyWrap><MoneyMarketFundPanel /></LazyWrap>; break;
+      case PANEL_IDS.LOAN_SYNDICATION_PIPELINE: content = <LazyWrap><LoanSyndicationPipelinePanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_BOND_AUCTION: content = <LazyWrap><SovereignBondAuctionPanel /></LazyWrap>; break;
+      case PANEL_IDS.CROSS_CURRENCY_BASIS_SWAP: content = <LazyWrap><CrossCurrencyBasisSwapPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIES_BORROWING_LENDING: content = <LazyWrap><SecuritiesBorrowingLendingPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_TOTAL_RETURN_INDEX: content = <LazyWrap><EquityTotalReturnIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.GLOBAL_CREDIT_MONITOR: content = <LazyWrap><GlobalCreditMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.BOND_INDEX_MONITOR: content = <LazyWrap><BondIndexMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_OPTION_VOL_MATRIX: content = <LazyWrap><FxOptionVolMatrixPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_SWAP_PRICING: content = <LazyWrap><EquitySwapPricingPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_VALUATION_ADJUSTMENT: content = <LazyWrap><CreditValuationAdjustmentPanel /></LazyWrap>; break;
+      case PANEL_IDS.INTEREST_RATE_VOL_SURFACE: content = <LazyWrap><InterestRateVolSurfacePanel /></LazyWrap>; break;
+      case PANEL_IDS.MUNICIPAL_CREDIT_ANALYSIS: content = <LazyWrap><MunicipalCreditAnalysisPanel /></LazyWrap>; break;
+      case PANEL_IDS.STRUCTURED_PRODUCTS_ANALYZER: content = <LazyWrap><StructuredProductsAnalyzerPanel /></LazyWrap>; break;
+      case PANEL_IDS.RISK_SCENARIO_ANALYSIS: content = <LazyWrap><RiskScenarioAnalysisPanel /></LazyWrap>; break;
+      case PANEL_IDS.CONVERTIBLE_BOND_ANALYZER: content = <LazyWrap><ConvertibleBondAnalyzerPanel /></LazyWrap>; break;
+      case PANEL_IDS.COMMODITIES_FORWARD_CURVE: content = <LazyWrap><CommoditiesForwardCurvePanel /></LazyWrap>; break;
+      case PANEL_IDS.VARIANCE_SWAP_MONITOR: content = <LazyWrap><VarianceSwapMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIES_LENDING_REVENUE: content = <LazyWrap><SecuritiesLendingRevenuePanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_MARKET_MICROSTRUCTURE: content = <LazyWrap><EquityMarketMicrostructurePanel /></LazyWrap>; break;
+      case PANEL_IDS.FX_CARRY_TRADE_MONITOR: content = <LazyWrap><FxCarryTradeMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRIVATE_CREDIT_DASHBOARD: content = <LazyWrap><PrivateCreditDashboardPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_CDS_MONITOR: content = <LazyWrap><SovereignCdsMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_DIVIDEND_FORECAST: content = <LazyWrap><EquityDividendForecastPanel /></LazyWrap>; break;
+      case PANEL_IDS.CLO_TRANCHE_ANALYTICS: content = <LazyWrap><CloTrancheAnalyticsPanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_PAIRS_TRADING: content = <LazyWrap><EquityPairsTradingPanel /></LazyWrap>; break;
+      case PANEL_IDS.TREASURY_FUTURES_BASIS: content = <LazyWrap><TreasuryFuturesBasisPanel /></LazyWrap>; break;
+      case PANEL_IDS.CREDIT_INDEX_TRANCHES: content = <LazyWrap><CreditIndexTranchesPanel /></LazyWrap>; break;
+      case PANEL_IDS.MORTGAGE_PREPAYMENT: content = <LazyWrap><MortgagePrepaymentPanel /></LazyWrap>; break;
+      case PANEL_IDS.OPTION_SKEW_SURFACE: content = <LazyWrap><OptionSkewSurfacePanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_SHORT_INTEREST: content = <LazyWrap><EquityShortInterestPanel /></LazyWrap>; break;
+      case PANEL_IDS.WARRANT_PRICING: content = <LazyWrap><WarrantPricingPanel /></LazyWrap>; break;
+      case PANEL_IDS.TRADE_EXECUTION_QUALITY: content = <LazyWrap><TradeExecutionQualityPanel /></LazyWrap>; break;
+      case PANEL_IDS.FREIGHT_RATE_MONITOR: content = <LazyWrap><FreightRateMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.POWER_MARKET: content = <LazyWrap><PowerMarketPanel /></LazyWrap>; break;
+      case PANEL_IDS.SPECIAL_SITUATIONS: content = <LazyWrap><SpecialSituationsPanel /></LazyWrap>; break;
+      case PANEL_IDS.INDUSTRIAL_METALS: content = <LazyWrap><IndustrialMetalsPanel /></LazyWrap>; break;
+      case PANEL_IDS.SECURITIZATION_PIPELINE: content = <LazyWrap><SecuritizationPipelinePanel /></LazyWrap>; break;
+      case PANEL_IDS.EQUITY_ANALYST_REVISIONS: content = <LazyWrap><EquityAnalystRevisionsPanel /></LazyWrap>; break;
+      case PANEL_IDS.NATURAL_GAS_STORAGE: content = <LazyWrap><NaturalGasStoragePanel /></LazyWrap>; break;
+      case PANEL_IDS.PRECIOUS_METALS_LEASE: content = <LazyWrap><PreciousMetalsLeasePanel /></LazyWrap>; break;
+      case PANEL_IDS.CORPORATE_ACTION_CALENDAR: content = <LazyWrap><CorporateActionCalendarPanel /></LazyWrap>; break;
+      case PANEL_IDS.SOVEREIGN_DEBT_MATURITY: content = <LazyWrap><SovereignDebtMaturityPanel /></LazyWrap>; break;
+      case PANEL_IDS.AGRICULTURAL_FUTURES: content = <LazyWrap><AgriculturalFuturesPanel /></LazyWrap>; break;
+      case PANEL_IDS.BANK_EARNINGS: content = <LazyWrap><BankEarningsPanel /></LazyWrap>; break;
+      case PANEL_IDS.PRIVATE_EQUITY_SECONDARIES: content = <LazyWrap><PrivateEquitySecondariesPanel /></LazyWrap>; break;
+      case PANEL_IDS.SUKUK_MONITOR: content = <LazyWrap><SukukMonitorPanel /></LazyWrap>; break;
+      case PANEL_IDS.FRONTIER_MARKET_DEBT: content = <LazyWrap><FrontierMarketDebtPanel /></LazyWrap>; break;
+      case PANEL_IDS.AIRCRAFT_FINANCE: content = <LazyWrap><AircraftFinancePanel /></LazyWrap>; break;
+      case PANEL_IDS.RARE_EARTH_BATTERY_METALS: content = <LazyWrap><RareEarthBatteryMetalsPanel /></LazyWrap>; break;
+      case PANEL_IDS.DATA_CENTER_INFRASTRUCTURE: content = <LazyWrap><DataCenterInfrastructurePanel /></LazyWrap>; break;
+      case PANEL_IDS.SPORTS_MEDIA_RIGHTS: content = <LazyWrap><SportsMediaRightsPanel /></LazyWrap>; break;
+      case PANEL_IDS.LUXURY_COLLECTIBLES_INDEX: content = <LazyWrap><LuxuryCollectiblesIndexPanel /></LazyWrap>; break;
+      case PANEL_IDS.FINTECH_DIGITAL_PAYMENTS: content = <LazyWrap><FintechDigitalPaymentsPanel /></LazyWrap>; break;
+      case PANEL_IDS.CYBER_RISK_INSURANCE: content = <LazyWrap><CyberRiskInsurancePanel /></LazyWrap>; break;
+      default: {
+        const extra = extraFactories.get(component ?? '');
+        if (extra) return <PanelErrorBoundary>{extra(node)}</PanelErrorBoundary>;
+        return <div className="flex items-center justify-center h-full text-neutral text-xs font-mono uppercase">Unknown panel: {component}</div>;
+      }
+    }
+    return <PanelErrorBoundary>{content}</PanelErrorBoundary>;
+  }, []);
+
+  const onRenderTab = useCallback((node: TabNode, renderValues: { leading: React.ReactNode; content: React.ReactNode; buttons: React.ReactNode[] }) => {
+    const panelId = node.getComponent();
+    if (panelId) {
+      const key = PANEL_NAME_KEYS[panelId];
+      if (key) {
+        renderValues.content = translations[locale]?.[key] ?? translations.en[key];
+      }
+    }
+  }, [locale]);
+
+  return (
+    <Layout
+      model={modelRef.current}
+      factory={factory}
+      onRenderTab={onRenderTab}
+      onAction={handleAction}
+      onModelChange={saveLayout}
+    />
+  );
+}
+
+const RESET_FLAG = 'terminal-layout-reset';
+
+export function resetLayout() {
+  localStorage.setItem(RESET_FLAG, '1');
+  const nonDefaultPanels = ALL_PANEL_IDS.filter(id => !DEFAULT_PANEL_IDS.has(id));
+  useAppStore.setState({ hiddenPanels: nonDefaultPanels });
+  window.location.reload();
+}

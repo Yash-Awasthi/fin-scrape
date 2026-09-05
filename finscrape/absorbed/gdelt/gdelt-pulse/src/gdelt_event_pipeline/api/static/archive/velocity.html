@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090b">
+<title>Topic Velocity — GDELT Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/pulse.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+/* ── Velocity-specific styles ─────────────────────────── */
+body { padding-top: 56px; }
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 0 var(--sp-5) var(--sp-6);
+  flex-wrap: wrap;
+}
+
+.ctrl-btn {
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-3);
+  padding: 7px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: none;
+  transition: all var(--duration) var(--ease);
+}
+
+.ctrl-btn:hover {
+  color: var(--text-2);
+  border-color: var(--border-hover);
+}
+
+.ctrl-btn.on {
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--border-active);
+}
+
+/* ── Panel styling ────────────────────────────────────── */
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-4) var(--sp-5) var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.panel-head h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.panel-head .badge {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-variant-numeric: tabular-nums;
+}
+
+.badge-rising {
+  background: rgba(52, 211, 153, 0.08);
+  color: var(--positive);
+  border: 1px solid rgba(52, 211, 153, 0.12);
+}
+
+.badge-declining {
+  background: rgba(248, 113, 113, 0.08);
+  color: var(--negative);
+  border: 1px solid rgba(248, 113, 113, 0.12);
+}
+
+/* ── Topic rows ───────────────────────────────────────── */
+.topic-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: 10px var(--sp-5);
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: background var(--duration) var(--ease);
+}
+
+.topic-row:last-child { border-bottom: none; }
+.topic-row:hover { background: var(--surface-2); }
+
+.topic-row.active {
+  background: var(--surface-2);
+  border-left: 3px solid var(--text-2);
+}
+
+.t-rank {
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-3);
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.t-info { flex: 1; min-width: 0; }
+
+.t-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+.t-cat {
+  font-size: 0.5625rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  margin-top: 2px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.t-stats {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.t-count {
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-3);
+}
+
+.t-vel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  min-width: 60px;
+  text-align: right;
+}
+
+.t-vel.up { color: var(--positive); }
+.t-vel.down { color: var(--negative); }
+
+.t-bar-wrap {
+  width: 60px;
+  height: 4px;
+  background: var(--surface-3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.t-bar { height: 100%; border-radius: 2px; }
+
+/* ── Detail section ───────────────────────────────────── */
+.detail-section { margin-top: var(--sp-5); }
+
+.detail-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5);
+}
+
+.detail-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 2px;
+}
+
+.detail-card .detail-sub {
+  font-size: 0.6875rem;
+  color: var(--text-3);
+  margin-bottom: var(--sp-5);
+}
+
+.chart-wrap {
+  position: relative;
+  height: 260px;
+  margin-bottom: var(--sp-5);
+}
+
+.detail-stats {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+  flex-wrap: wrap;
+}
+
+.d-stat {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  text-align: center;
+  flex: 1;
+  min-width: 100px;
+}
+
+.d-stat-val {
+  font-size: 1.375rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.d-stat-lbl {
+  font-size: 0.5625rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+/* ── Articles list ────────────────────────────────────── */
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.articles-list h4 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+  letter-spacing: -0.01em;
+}
+
+.art-item {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  transition: border-color var(--duration) var(--ease);
+}
+
+.art-item:hover { border-color: var(--border-hover); }
+
+.art-item a {
+  color: var(--text);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color var(--duration);
+}
+
+.art-item a:hover { color: var(--text-2); }
+
+.art-meta {
+  font-size: 0.625rem;
+  color: var(--text-3);
+  margin-top: 4px;
+  display: flex;
+  gap: var(--sp-3);
+}
+
+/* ── Responsive ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .detail-stats { gap: var(--sp-2); }
+  .d-stat { min-width: 80px; padding: 10px 12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a class="topbar-back" href="/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    GDELT Pulse
+  </a>
+</nav>
+
+<section class="page-intro">
+  <h1>Topic Velocity</h1>
+  <p>See which topics are accelerating or fading in real-time. Track how the media agenda shifts hour by hour.</p>
+</section>
+
+<div class="controls">
+  <button class="ctrl-btn on" data-hours="48" onclick="setWindow(48)">48 Hours</button>
+  <button class="ctrl-btn" data-hours="24" onclick="setWindow(24)">24 Hours</button>
+  <button class="ctrl-btn" data-hours="72" onclick="setWindow(72)">72 Hours</button>
+  <button class="ctrl-btn" data-hours="168" onclick="setWindow(168)">7 Days</button>
+</div>
+
+<div class="container">
+  <div class="two-col" id="panels">
+    <div class="panel" id="risingPanel">
+      <div class="panel-head"><h3>Rising</h3><span class="badge badge-rising">Accelerating</span></div>
+      <div id="risingList"><div class="loading"><span class="spinner"></span>Loading</div></div>
+    </div>
+    <div class="panel" id="decliningPanel">
+      <div class="panel-head"><h3>Declining</h3><span class="badge badge-declining">Decelerating</span></div>
+      <div id="decliningList"><div class="loading"><span class="spinner"></span>Loading</div></div>
+    </div>
+  </div>
+
+  <div class="detail-section" id="detailSection" style="display:none">
+    <div class="detail-card">
+      <h3 id="detailTitle"></h3>
+      <div class="detail-sub" id="detailSub"></div>
+      <div class="detail-stats" id="detailStats"></div>
+      <div class="chart-wrap"><canvas id="timelineChart"></canvas></div>
+      <div class="articles-list" id="detailArticles"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CAT_COLORS = {conflict:'var(--cat-conflict)',economy:'var(--cat-economy)',politics:'var(--cat-politics)',health:'var(--cat-health)',environment:'var(--cat-environment)',technology:'var(--cat-technology)',society:'var(--cat-society)',general:'var(--cat-general)'};
+const CAT_HEX = {conflict:'#f87171',economy:'#fbbf24',politics:'#818cf8',health:'#34d399',environment:'#22d3ee',technology:'#a78bfa',society:'#fb923c',general:'#71717a'};
+
+let currentWindow = 48;
+let allData = null;
+let selectedTheme = null;
+let timelineChart = null;
+
+async function init() {
+  await loadTopics();
+}
+
+async function loadTopics() {
+  try {
+    const res = await fetch(`/api/velocity/topics?hours=${currentWindow}&limit=25`);
+    allData = await res.json();
+    renderLists();
+  } catch (e) {
+    document.getElementById('risingList').innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-3)">Failed to load</div>';
+    document.getElementById('decliningList').innerHTML = '';
+  }
+}
+
+function renderLists() {
+  const maxTotal = Math.max(
+    ...allData.rising.map(t => t.total_count),
+    ...allData.declining.map(t => t.total_count),
+    1
+  );
+
+  document.getElementById('risingList').innerHTML = allData.rising.map((t, i) => topicRow(t, i + 1, maxTotal, true)).join('');
+  document.getElementById('decliningList').innerHTML = allData.declining.map((t, i) => topicRow(t, i + 1, maxTotal, false)).join('');
+}
+
+function topicRow(t, rank, maxTotal, isRising) {
+  const col = CAT_HEX[t.category] || CAT_HEX.general;
+  const velStr = t.velocity_pct >= 0 ? `+${t.velocity_pct}%` : `${t.velocity_pct}%`;
+  const barPct = Math.round(t.total_count / maxTotal * 100);
+  const barCol = isRising ? 'var(--positive)' : 'var(--negative)';
+  const active = selectedTheme === t.theme ? 'active' : '';
+
+  return `<div class="topic-row ${active}" onclick="selectTopic('${esc(t.theme)}')">
+    <span class="t-rank">${rank}</span>
+    <div class="t-info">
+      <div class="t-name">${humanTheme(t.theme)}</div>
+      <span class="t-cat" style="background:${col}14;color:${col}">${t.category}</span>
+    </div>
+    <div class="t-stats">
+      <span class="t-count">${t.total_count}</span>
+      <div class="t-bar-wrap"><div class="t-bar" style="width:${barPct}%;background:${barCol}"></div></div>
+      <span class="t-vel ${isRising ? 'up' : 'down'}">${velStr}</span>
+    </div>
+  </div>`;
+}
+
+function setWindow(hours) {
+  currentWindow = hours;
+  document.querySelectorAll('.ctrl-btn').forEach(b => b.classList.toggle('on', parseInt(b.dataset.hours) === hours));
+  selectedTheme = null;
+  document.getElementById('detailSection').style.display = 'none';
+  document.getElementById('risingList').innerHTML = '<div class="loading"><span class="spinner"></span>Loading</div>';
+  document.getElementById('decliningList').innerHTML = '<div class="loading"><span class="spinner"></span>Loading</div>';
+  loadTopics();
+}
+
+async function selectTopic(theme) {
+  selectedTheme = theme;
+  renderLists(); // highlight active
+
+  const section = document.getElementById('detailSection');
+  section.style.display = 'block';
+  document.getElementById('detailTitle').textContent = humanTheme(theme);
+  document.getElementById('detailSub').textContent = `Theme: ${theme}`;
+  document.getElementById('detailStats').innerHTML = '<div class="loading"><span class="spinner"></span>Loading</div>';
+  document.getElementById('detailArticles').innerHTML = '';
+
+  try {
+    const res = await fetch(`/api/velocity/timeline?theme=${encodeURIComponent(theme)}&hours=${currentWindow}`);
+    const d = await res.json();
+    renderDetail(d);
+  } catch (e) {
+    document.getElementById('detailStats').innerHTML = '<div style="color:var(--text-3)">Failed to load</div>';
+  }
+
+  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function renderDetail(d) {
+  const totalArticles = d.timeline.reduce((a, b) => a + b.count, 0);
+  const avgTone = d.timeline.filter(t => t.avg_tone != null);
+  const meanTone = avgTone.length > 0
+    ? (avgTone.reduce((a, b) => a + b.avg_tone * b.count, 0) / avgTone.reduce((a, b) => a + b.count, 0))
+    : 0;
+  const peakHour = d.timeline.reduce((a, b) => b.count > a.count ? b : a, { count: 0 });
+  const col = CAT_HEX[d.category] || CAT_HEX.general;
+
+  document.getElementById('detailStats').innerHTML = `
+    <div class="d-stat"><div class="d-stat-val">${totalArticles}</div><div class="d-stat-lbl">Total Articles</div></div>
+    <div class="d-stat"><div class="d-stat-val" style="color:${meanTone >= 0 ? 'var(--positive)' : 'var(--negative)'}">${meanTone >= 0 ? '+' : ''}${meanTone.toFixed(2)}</div><div class="d-stat-lbl">Avg Tone</div></div>
+    <div class="d-stat"><div class="d-stat-val">${peakHour.count}</div><div class="d-stat-lbl">Peak Hour</div></div>
+    <div class="d-stat"><div class="d-stat-val" style="color:${col}">${d.category}</div><div class="d-stat-lbl">Category</div></div>
+  `;
+
+  // Timeline chart
+  if (timelineChart) timelineChart.destroy();
+  const ctx = document.getElementById('timelineChart');
+  timelineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: d.timeline.map(t => {
+        const dt = new Date(t.hour);
+        return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) + ' ' +
+               dt.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      }),
+      datasets: [{
+        label: 'Articles',
+        data: d.timeline.map(t => t.count),
+        borderColor: col,
+        backgroundColor: col + '14',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 1.5,
+        pointHoverRadius: 5,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#141416',
+          borderColor: 'rgba(255,255,255,0.06)',
+          borderWidth: 1,
+          titleFont: { family: "'Inter'", size: 11 },
+          bodyFont: { family: "'Inter'", size: 11 },
+          padding: 10,
+          cornerRadius: 8,
+          titleColor: '#a1a1aa',
+          bodyColor: '#fafafa',
+          callbacks: { label: ctx => `${ctx.raw} articles` }
+        }
+      },
+      scales: {
+        x: { grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#63636e', font: { family: "'Inter'", size: 9 }, maxTicksLimit: 10, maxRotation: 45 } },
+        y: { grid: { color: 'rgba(255,255,255,0.03)' }, ticks: { color: '#63636e', font: { family: "'Inter'", size: 9 } }, beginAtZero: true }
+      }
+    }
+  });
+
+  // Recent articles
+  if (d.recent_articles.length > 0) {
+    document.getElementById('detailArticles').innerHTML = `<h4>Recent Articles</h4>` +
+      d.recent_articles.map(a => {
+        const ts = a.gdelt_timestamp ? new Date(a.gdelt_timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
+        const toneCol = a.tone_score != null ? (a.tone_score >= 0 ? 'var(--positive)' : 'var(--negative)') : 'var(--text-3)';
+        return `<div class="art-item">
+          <a href="${esc(a.url)}" target="_blank">${esc(a.title)}</a>
+          <div class="art-meta">
+            <span>${esc(a.domain)}</span>
+            <span>${ts}</span>
+            ${a.tone_score != null ? `<span style="color:${toneCol};font-variant-numeric:tabular-nums;font-weight:600">${a.tone_score >= 0 ? '+' : ''}${a.tone_score.toFixed(1)}</span>` : ''}
+          </div>
+        </div>`;
+      }).join('');
+  }
+}
+
+function humanTheme(t) {
+  return t.replace(/^(WB_\d+_|USPEC_|ENV_|EPU_|TAX_|CRISISLEX_|GENERAL_|SOC_|UNGP_)/, '')
+          .replace(/_/g, ' ')
+          .toLowerCase()
+          .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+init();
+</script>
+</body>
+</html>

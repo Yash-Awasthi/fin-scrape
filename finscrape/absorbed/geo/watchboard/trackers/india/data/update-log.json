@@ -1,0 +1,48 @@
+{
+  "lastRun": "2026-08-19T06:33:38.516Z",
+  "tracker": "india",
+  "trigger": "nightly",
+  "sections": {
+    "events": {
+      "lastRun": "2026-08-19T06:33:38.516Z",
+      "status": "updated"
+    },
+    "kpis": {
+      "lastRun": "2026-06-28T07:33:33.585Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 43
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 34
+    },
+    "claims": {
+      "status": "ok",
+      "count": 25
+    },
+    "political": {
+      "status": "updated",
+      "count": 26
+    },
+    "econ": {
+      "status": "updated",
+      "count": 17
+    },
+    "meta": {
+      "lastRun": "2026-08-19T06:33:38.516Z",
+      "status": "updated"
+    },
+    "digests": {
+      "status": "updated",
+      "count": 2
+    },
+    "map-points": {
+      "lastRun": "2026-06-28T07:33:33.585Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 3
+}

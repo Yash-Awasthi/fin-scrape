@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoGen 金融分析系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        .metric-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+        }
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .status-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+        .analysis-result {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin: 20px 0;
+        }
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .sidebar .nav-link {
+            color: #adb5bd;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #495057;
+            color: white;
+        }
+        .sidebar .nav-link.active {
+            background-color: #667eea;
+            color: white;
+        }
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .websocket-status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        .websocket-connected {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .websocket-disconnected {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chart-line me-2"></i>
+                AutoGen 金融分析系统
+            </a>
+            <div class="navbar-nav ms-auto">
+                <span class="navbar-text">
+                    <i class="fas fa-circle text-success me-1"></i>
+                    系统正常
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 侧边栏 -->
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" onclick="showSection('dashboard')">
+                                <i class="fas fa-tachometer-alt me-2"></i>
+                                仪表板
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('analysis')">
+                                <i class="fas fa-chart-bar me-2"></i>
+                                财务分析
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('portfolio')">
+                                <i class="fas fa-briefcase me-2"></i>
+                                投资组合
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('risk')">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                风险分析
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('reports')">
+                                <i class="fas fa-file-alt me-2"></i>
+                                报告中心
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="showSection('settings')">
+                                <i class="fas fa-cog me-2"></i>
+                                系统设置
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- 主内容区 -->
+            <main class="col-md-10 ms-sm-auto px-md-4">
+                <!-- 仪表板 -->
+                <div id="dashboard-section" class="content-section">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">仪表板</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <div class="btn-group me-2">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="refreshDashboard()">
+                                    <i class="fas fa-sync-alt me-1"></i>刷新
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 系统状态卡片 -->
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="card metric-card">
+                                <div class="card-body">
+                                    <div class="metric-value" id="active-tasks">0</div>
+                                    <div class="metric-label">活跃任务</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card metric-card">
+                                <div class="card-body">
+                                    <div class="metric-value" id="completed-tasks">0</div>
+                                    <div class="metric-label">已完成任务</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card metric-card">
+                                <div class="card-body">
+                                    <div class="metric-value" id="system-uptime">0s</div>
+                                    <div class="metric-label">系统运行时间</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card metric-card">
+                                <div class="card-body">
+                                    <div class="metric-value" id="api-requests">0</div>
+                                    <div class="metric-label">API请求数</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 图表区域 -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>任务完成趋势</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <canvas id="taskChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>系统资源使用</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-container">
+                                        <canvas id="resourceChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 最近任务 -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>最近分析任务</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>任务ID</th>
+                                                    <th>股票代码</th>
+                                                    <th>分析类型</th>
+                                                    <th>状态</th>
+                                                    <th>创建时间</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="recent-tasks-tbody">
+                                                <!-- 动态填充 -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 财务分析 -->
+                <div id="analysis-section" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">财务分析</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>新建分析任务</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="analysis-form">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="symbols" class="form-label">股票代码</label>
+                                                    <input type="text" class="form-control" id="symbols" placeholder="输入股票代码，如：AAPL" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="analysis-type" class="form-label">分析类型</label>
+                                                    <select class="form-select" id="analysis-type">
+                                                        <option value="comprehensive">综合分析</option>
+                                                        <option value="quick">快速分析</option>
+                                                        <option value="detailed">详细分析</option>
+                                                        <option value="financial">财务分析</option>
+                                                        <option value="risk">风险分析</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="export-formats" class="form-label">导出格式</label>
+                                                    <select class="form-select" id="export-formats" multiple>
+                                                        <option value="html" selected>HTML</option>
+                                                        <option value="pdf">PDF</option>
+                                                        <option value="excel">Excel</option>
+                                                        <option value="json">JSON</option>
+                                                        <option value="csv">CSV</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="priority" class="form-label">优先级</label>
+                                                    <select class="form-select" id="priority">
+                                                        <option value="0">普通</option>
+                                                        <option value="1">高</option>
+                                                        <option value="2">紧急</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-play me-2"></i>开始分析
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>分析模板</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-outline-primary" onclick="loadTemplate('standard')">
+                                            标准分析模板
+                                        </button>
+                                        <button class="btn btn-outline-primary" onclick="loadTemplate('portfolio')">
+                                            投资组合分析模板
+                                        </button>
+                                        <button class="btn btn-outline-primary" onclick="loadTemplate('risk')">
+                                            风险评估模板
+                                        </button>
+                                        <button class="btn btn-outline-primary" onclick="loadTemplate('quick')">
+                                            快速分析模板
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 分析结果区域 -->
+                    <div id="analysis-results" class="mt-4" style="display: none;">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5>分析结果</h5>
+                            </div>
+                            <div class="card-body">
+                                <div id="analysis-content">
+                                    <!-- 动态填充分析结果 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 投资组合分析 -->
+                <div id="portfolio-section" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">投资组合分析</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>创建投资组合</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="portfolio-form">
+                                        <div class="mb-3">
+                                            <label for="portfolio-symbols" class="form-label">股票代码列表</label>
+                                            <textarea class="form-control" id="portfolio-symbols" rows="3" placeholder="输入股票代码，每行一个：&#10;AAPL&#10;MSFT&#10;GOOG" required></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="portfolio-weights" class="form-label">权重配置</label>
+                                            <div id="weights-input-container">
+                                                <!-- 动态生成权重输入 -->
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-chart-pie me-2"></i>分析投资组合
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>投资组合优化</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label for="optimization-goal" class="form-label">优化目标</label>
+                                        <select class="form-select" id="optimization-goal">
+                                            <option value="sharpe">最大化夏普比率</option>
+                                            <option value="return">最大化收益率</option>
+                                            <option value="risk">最小化风险</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="risk-tolerance" class="form-label">风险承受度</label>
+                                        <input type="range" class="form-range" id="risk-tolerance" min="1" max="10" value="5">
+                                        <div class="d-flex justify-content-between">
+                                            <small>保守</small>
+                                            <small>激进</small>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-success w-100" onclick="optimizePortfolio()">
+                                        <i class="fas fa-magic me-2"></i>优化配置
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 风险分析 -->
+                <div id="risk-section" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">风险分析</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>风险评估工具</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="risk-symbol" class="form-label">股票代码</label>
+                                                <input type="text" class="form-control" id="risk-symbol" placeholder="输入股票代码">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="risk-timeframe" class="form-label">时间范围</label>
+                                                <select class="form-select" id="risk-timeframe">
+                                                    <option value="1m">1个月</option>
+                                                    <option value="3m">3个月</option>
+                                                    <option value="6m">6个月</option>
+                                                    <option value="1y">1年</option>
+                                                    <option value="5y">5年</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-warning" onclick="analyzeRisk()">
+                                        <i class="fas fa-exclamation-triangle me-2"></i>进行风险分析
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 报告中心 -->
+                <div id="reports-section" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">报告中心</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>历史报告</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>报告名称</th>
+                                                    <th>股票代码</th>
+                                                    <th>生成时间</th>
+                                                    <th>格式</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="reports-tbody">
+                                                <!-- 动态填充 -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 系统设置 -->
+                <div id="settings-section" class="content-section" style="display: none;">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1 class="h2">系统设置</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>API配置</h5>
+                                </div>
+                                <div class="card-body">
+                                    <form id="api-config-form">
+                                        <div class="mb-3">
+                                            <label for="openai-api-key" class="form-label">OpenAI API Key</label>
+                                            <input type="password" class="form-control" id="openai-api-key" placeholder="输入OpenAI API密钥">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="alpha-vantage-key" class="form-label">Alpha Vantage API Key</label>
+                                            <input type="password" class="form-control" id="alpha-vantage-key" placeholder="输入Alpha Vantage API密钥">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">保存配置</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>系统信息</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <strong>API版本:</strong>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span id="api-version">1.0.0</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <strong>数据库状态:</strong>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span class="badge bg-success">正常</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <strong>缓存状态:</strong>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span class="badge bg-success">正常</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <strong>最后更新:</strong>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span id="last-update">--</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- WebSocket状态指示器 -->
+    <div id="websocket-status" class="websocket-status websocket-disconnected">
+        <i class="fas fa-circle me-1"></i>
+        <span id="websocket-status-text">连接断开</span>
+    </div>
+
+    <!-- 加载动画 -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">加载中...</span>
+        </div>
+        <p class="mt-2">正在处理，请稍候...</p>
+    </div>
+
+    <!-- 错误消息容器 -->
+    <div id="error-container"></div>
+
+    <!-- 成功消息容器 -->
+    <div id="success-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 全局变量
+        let websocket = null;
+        let reconnectInterval = null;
+        let currentTaskId = null;
+        let taskChart = null;
+        let resourceChart = null;
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            initializeWebSocket();
+            loadDashboardData();
+        });
+
+        // 初始化应用
+        function initializeApp() {
+            // 绑定表单提交事件
+            document.getElementById('analysis-form').addEventListener('submit', handleAnalysisSubmit);
+            document.getElementById('portfolio-form').addEventListener('submit', handlePortfolioSubmit);
+            document.getElementById('api-config-form').addEventListener('submit', handleApiConfigSubmit);
+
+            // 绑定股票代码输入事件
+            document.getElementById('portfolio-symbols').addEventListener('input', handlePortfolioSymbolsChange);
+
+            // 初始化图表
+            initializeCharts();
+        }
+
+        // 初始化WebSocket连接
+        function initializeWebSocket() {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsUrl = `${protocol}//${window.location.host}/ws`;
+
+            websocket = new WebSocket(wsUrl);
+
+            websocket.onopen = function() {
+                console.log('WebSocket连接已建立');
+                updateWebSocketStatus(true);
+            };
+
+            websocket.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+                handleWebSocketMessage(data);
+            };
+
+            websocket.onclose = function() {
+                console.log('WebSocket连接已关闭');
+                updateWebSocketStatus(false);
+                scheduleReconnect();
+            };
+
+            websocket.onerror = function(error) {
+                console.error('WebSocket错误:', error);
+                updateWebSocketStatus(false);
+            };
+        }
+
+        // 处理WebSocket消息
+        function handleWebSocketMessage(data) {
+            switch(data.type) {
+                case 'task_update':
+                    handleTaskUpdate(data);
+                    break;
+                case 'system_notification':
+                    handleSystemNotification(data);
+                    break;
+                case 'pong':
+                    // 心跳响应
+                    break;
+                default:
+                    console.log('未知消息类型:', data.type);
+            }
+        }
+
+        // 处理任务更新
+        function handleTaskUpdate(data) {
+            const taskId = data.task_id;
+            const updateData = data.data;
+
+            if (currentTaskId === taskId) {
+                updateCurrentTaskProgress(updateData);
+            }
+
+            // 更新仪表板
+            updateDashboardWithTaskUpdate(taskId, updateData);
+        }
+
+        // 更新当前任务进度
+        function updateCurrentTaskProgress(updateData) {
+            const progress = updateData.progress || 0;
+            const step = updateData.step || '';
+
+            if (progress >= 100) {
+                hideLoadingSpinner();
+                showSuccessMessage('分析完成！');
+            } else {
+                showLoadingSpinner();
+                updateLoadingProgress(progress, step);
+            }
+        }
+
+        // 更新WebSocket状态显示
+        function updateWebSocketStatus(connected) {
+            const statusElement = document.getElementById('websocket-status');
+            const statusText = document.getElementById('websocket-status-text');
+
+            if (connected) {
+                statusElement.className = 'websocket-status websocket-connected';
+                statusText.textContent = '已连接';
+            } else {
+                statusElement.className = 'websocket-status websocket-disconnected';
+                statusText.textContent = '连接断开';
+            }
+        }
+
+        // 安排重连
+        function scheduleReconnect() {
+            if (reconnectInterval) {
+                clearInterval(reconnectInterval);
+            }
+
+            reconnectInterval = setInterval(() => {
+                console.log('尝试重新连接WebSocket...');
+                initializeWebSocket();
+            }, 5000);
+        }
+
+        // 显示页面部分
+        function showSection(sectionId) {
+            // 隐藏所有部分
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // 显示指定部分
+            document.getElementById(sectionId + '-section').style.display = 'block';
+
+            // 更新侧边栏激活状态
+            const navLinks = document.querySelectorAll('.sidebar .nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // 加载相应数据
+            switch(sectionId) {
+                case 'dashboard':
+                    loadDashboardData();
+                    break;
+                case 'reports':
+                    loadReportsData();
+                    break;
+            }
+        }
+
+        // 处理分析表单提交
+        function handleAnalysisSubmit(event) {
+            event.preventDefault();
+
+            const formData = {
+                symbols: [document.getElementById('symbols').value],
+                analysis_type: document.getElementById('analysis-type').value,
+                export_formats: Array.from(document.getElementById('export-formats').selectedOptions).map(option => option.value),
+                priority: parseInt(document.getElementById('priority').value)
+            };
+
+            submitAnalysisRequest(formData);
+        }
+
+        // 提交分析请求
+        async function submitAnalysisRequest(formData) {
+            showLoadingSpinner();
+
+            try {
+                const response = await fetch('/api/v1/analysis', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    currentTaskId = result.request_id;
+                    showSuccessMessage(`分析任务已创建，任务ID: ${result.request_id}`);
+
+                    // 订阅任务更新
+                    if (websocket && websocket.readyState === WebSocket.OPEN) {
+                        websocket.send(JSON.stringify({
+                            type: 'subscribe_task',
+                            task_id: result.request_id
+                        }));
+                    }
+                } else {
+                    showErrorMessage(result.detail || '提交失败');
+                }
+            } catch (error) {
+                showErrorMessage('网络错误: ' + error.message);
+            }
+        }
+
+        // 处理投资组合表单提交
+        function handlePortfolioSubmit(event) {
+            event.preventDefault();
+            // 实现投资组合分析逻辑
+            showSuccessMessage('投资组合分析功能开发中...');
+        }
+
+        // 处理API配置表单提交
+        function handleApiConfigSubmit(event) {
+            event.preventDefault();
+            // 实现API配置保存逻辑
+            showSuccessMessage('配置已保存');
+        }
+
+        // 处理投资组合股票代码变化
+        function handlePortfolioSymbolsChange(event) {
+            const symbols = event.target.value.split('\\n').filter(s => s.trim());
+            const container = document.getElementById('weights-input-container');
+
+            container.innerHTML = '';
+            symbols.forEach(symbol => {
+                const weightInput = document.createElement('div');
+                weightInput.className = 'mb-2';
+                weightInput.innerHTML = `
+                    <label class="form-label">${symbol} 权重</label>
+                    <div class="input-group">
+                        <input type="number" class="form-control" min="0" max="1" step="0.01" value="${(1/symbols.length).toFixed(2)}">
+                        <span class="input-group-text">%</span>
+                    </div>
+                `;
+                container.appendChild(weightInput);
+            });
+        }
+
+        // 加载模板
+        function loadTemplate(templateType) {
+            const templates = {
+                standard: {
+                    symbols: 'AAPL',
+                    analysis_type: 'comprehensive',
+                    export_formats: ['html', 'pdf']
+                },
+                portfolio: {
+                    symbols: 'AAPL,MSFT,GOOG',
+                    analysis_type: 'portfolio',
+                    export_formats: ['excel', 'json']
+                },
+                risk: {
+                    symbols: 'AAPL',
+                    analysis_type: 'risk',
+                    export_formats: ['html', 'csv']
+                },
+                quick: {
+                    symbols: 'AAPL',
+                    analysis_type: 'quick',
+                    export_formats: ['html']
+                }
+            };
+
+            const template = templates[templateType];
+            if (template) {
+                document.getElementById('symbols').value = template.symbols;
+                document.getElementById('analysis-type').value = template.analysis_type;
+
+                // 设置导出格式
+                const exportSelect = document.getElementById('export-formats');
+                Array.from(exportSelect.options).forEach(option => {
+                    option.selected = template.export_formats.includes(option.value);
+                });
+            }
+        }
+
+        // 分析风险
+        function analyzeRisk() {
+            const symbol = document.getElementById('risk-symbol').value;
+            if (!symbol) {
+                showErrorMessage('请输入股票代码');
+                return;
+            }
+            showSuccessMessage(`风险分析功能开发中，股票代码: ${symbol}`);
+        }
+
+        // 优化投资组合
+        function optimizePortfolio() {
+            showSuccessMessage('投资组合优化功能开发中...');
+        }
+
+        // 加载仪表板数据
+        async function loadDashboardData() {
+            try {
+                // 获取系统状态
+                const statusResponse = await fetch('/api/v1/system/status');
+                const statusData = await statusResponse.json();
+
+                // 更新仪表板指标
+                document.getElementById('active-tasks').textContent = statusData.active_tasks;
+                document.getElementById('completed-tasks').textContent = statusData.completed_tasks;
+                document.getElementById('system-uptime').textContent = formatUptime(statusData.uptime);
+
+                // 获取最近任务
+                const tasksResponse = await fetch('/api/v1/analysis?limit=10');
+                const tasksData = await tasksResponse.json();
+
+                updateRecentTasksTable(tasksData);
+                updateTaskChart(tasksData);
+
+            } catch (error) {
+                console.error('加载仪表板数据失败:', error);
+            }
+        }
+
+        // 更新最近任务表格
+        function updateRecentTasksTable(tasks) {
+            const tbody = document.getElementById('recent-tasks-tbody');
+            tbody.innerHTML = '';
+
+            tasks.forEach(task => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${task.request.id.substring(0, 8)}...</td>
+                    <td>${task.request.symbols.join(', ')}</td>
+                    <td>${task.request.analysis_type}</td>
+                    <td>${getStatusBadge(task.status)}</td>
+                    <td>${formatDateTime(task.request.created_at)}</td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary" onclick="viewTaskDetails('${task.request.id}')">
+                            查看
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // 获取状态徽章
+        function getStatusBadge(status) {
+            const badges = {
+                'pending': '<span class="badge bg-warning">待处理</span>',
+                'running': '<span class="badge bg-info">运行中</span>',
+                'completed': '<span class="badge bg-success">已完成</span>',
+                'failed': '<span class="badge bg-danger">失败</span>',
+                'cancelled': '<span class="badge bg-secondary">已取消</span>'
+            };
+            return badges[status] || '<span class="badge bg-secondary">未知</span>';
+        }
+
+        // 初始化图表
+        function initializeCharts() {
+            // 任务完成趋势图
+            const taskCtx = document.getElementById('taskChart').getContext('2d');
+            taskChart = new Chart(taskCtx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: '完成任务数',
+                        data: [],
+                        borderColor: 'rgb(75, 192, 192)',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // 系统资源使用图
+            const resourceCtx = document.getElementById('resourceChart').getContext('2d');
+            resourceChart = new Chart(resourceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['CPU使用率', '内存使用率', '磁盘使用率'],
+                    datasets: [{
+                        data: [0, 0, 0],
+                        backgroundColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(54, 162, 235)',
+                            'rgb(255, 205, 86)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        // 更新任务图表
+        function updateTaskChart(tasks) {
+            // 简化实现，按天统计完成任务
+            const dailyStats = {};
+            tasks.forEach(task => {
+                if (task.status === 'completed' && task.completed_at) {
+                    const date = new Date(task.completed_at).toLocaleDateString();
+                    dailyStats[date] = (dailyStats[date] || 0) + 1;
+                }
+            });
+
+            const labels = Object.keys(dailyStats).sort();
+            const data = labels.map(label => dailyStats[label]);
+
+            taskChart.data.labels = labels;
+            taskChart.data.datasets[0].data = data;
+            taskChart.update();
+        }
+
+        // 更新仪表板任务更新
+        function updateDashboardWithTaskUpdate(taskId, updateData) {
+            // 实时更新仪表板显示
+            if (updateData.status === 'completed') {
+                loadDashboardData();
+            }
+        }
+
+        // 刷新仪表板
+        function refreshDashboard() {
+            loadDashboardData();
+            showSuccessMessage('仪表板已刷新');
+        }
+
+        // 查看任务详情
+        async function viewTaskDetails(taskId) {
+            try {
+                const response = await fetch(`/api/v1/analysis/${taskId}`);
+                const taskData = await response.json();
+
+                if (response.ok) {
+                    // 显示任务详情对话框
+                    alert(`任务详情:\\nID: ${taskData.request.id}\\n状态: ${taskData.status}\\n进度: ${taskData.progress}%`);
+                } else {
+                    showErrorMessage('获取任务详情失败');
+                }
+            } catch (error) {
+                showErrorMessage('网络错误: ' + error.message);
+            }
+        }
+
+        // 加载报告数据
+        async function loadReportsData() {
+            // 实现报告数据加载
+            console.log('加载报告数据...');
+        }
+
+        // 显示加载动画
+        function showLoadingSpinner() {
+            document.getElementById('loading-spinner').style.display = 'block';
+        }
+
+        // 隐藏加载动画
+        function hideLoadingSpinner() {
+            document.getElementById('loading-spinner').style.display = 'none';
+        }
+
+        // 更新加载进度
+        function updateLoadingProgress(progress, step) {
+            const spinner = document.getElementById('loading-spinner');
+            const progressText = spinner.querySelector('p');
+            progressText.textContent = `正在处理，请稍候... (${progress.toFixed(1)}%)`;
+            if (step) {
+                progressText.textContent += ` - ${step}`;
+            }
+        }
+
+        // 显示错误消息
+        function showErrorMessage(message) {
+            const container = document.getElementById('error-container');
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'error-message';
+            errorDiv.innerHTML = `
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                ${message}
+                <button type="button" class="btn-close float-end" onclick="this.parentElement.remove()"></button>
+            `;
+            container.appendChild(errorDiv);
+
+            // 5秒后自动移除
+            setTimeout(() => {
+                if (errorDiv.parentElement) {
+                    errorDiv.remove();
+                }
+            }, 5000);
+        }
+
+        // 显示成功消息
+        function showSuccessMessage(message) {
+            const container = document.getElementById('success-container');
+            const successDiv = document.createElement('div');
+            successDiv.className = 'success-message';
+            successDiv.innerHTML = `
+                <i class="fas fa-check-circle me-2"></i>
+                ${message}
+                <button type="button" class="btn-close float-end" onclick="this.parentElement.remove()"></button>
+            `;
+            container.appendChild(successDiv);
+
+            // 3秒后自动移除
+            setTimeout(() => {
+                if (successDiv.parentElement) {
+                    successDiv.remove();
+                }
+            }, 3000);
+        }
+
+        // 格式化时间
+        function formatDateTime(dateTimeString) {
+            const date = new Date(dateTimeString);
+            return date.toLocaleString('zh-CN');
+        }
+
+        // 格式化运行时间
+        function formatUptime(seconds) {
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = Math.floor(seconds % 60);
+
+            if (hours > 0) {
+                return `${hours}h ${minutes}m ${secs}s`;
+            } else if (minutes > 0) {
+                return `${minutes}m ${secs}s`;
+            } else {
+                return `${secs}s`;
+            }
+        }
+
+        // 心跳检测
+        setInterval(() => {
+            if (websocket && websocket.readyState === WebSocket.OPEN) {
+                websocket.send(JSON.stringify({
+                    type: 'ping'
+                }));
+            }
+        }, 30000);
+    </script>
+</body>
+</html>

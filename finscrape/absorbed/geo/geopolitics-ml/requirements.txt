@@ -1,0 +1,17 @@
+# Streamlit Cloud deployment — dashboard dependencies only
+# For full pipeline dependencies, see requirements-full.txt
+
+streamlit>=1.30.0
+pandas>=2.0.0
+numpy>=1.24.0
+xgboost>=2.0.0
+scikit-learn>=1.3.0
+onnxruntime>=1.16.0
+tokenizers>=0.15.0
+matplotlib>=3.7.0
+plotly>=5.15.0
+python-dotenv>=1.0.0
+click>=8.1.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+tenacity>=8.2.0

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "killed-2024-conflict",
+    "label": "Killed — 2024 Conflict",
+    "value": "~4,000",
+    "color": "red",
+    "source": "Lebanese Ministry of Public Health / UN OCHA",
+    "contested": true,
+    "contestNote": "Lebanese health ministry tallies; Hezbollah fighter deaths often not separated from civilian figures",
+    "delta": "+4,000 from Sep–Nov 2024",
+    "trend": "stable",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "displaced-2024",
+    "label": "Displaced — 2024 Peak",
+    "value": "1.2 million",
+    "color": "amber",
+    "source": "UNHCR / IOM (Oct 2024)",
+    "contested": false,
+    "delta": "Most returned after Nov 27 ceasefire",
+    "trend": "down",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "currency-devaluation",
+    "label": "Lira Devaluation 2019–2023",
+    "value": "~98%",
+    "color": "red",
+    "source": "Banque du Liban / IMF",
+    "contested": false,
+    "delta": "From 1,507 LBP/$ (official 2019) to ~90,000 LBP/$ (2023 Sayrafa)",
+    "trend": "stable",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "syrian-refugees",
+    "label": "Syrian Refugees in Lebanon",
+    "value": "~1.5 million",
+    "color": "amber",
+    "source": "UNHCR 2024",
+    "contested": true,
+    "contestNote": "Lebanese authorities estimate up to 2 million; many Syrians unregistered with UNHCR",
+    "trend": "down",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "presidential-vacuum-days",
+    "label": "Presidential Vacancy Duration",
+    "value": "791 days",
+    "color": "amber",
+    "source": "Lebanese Parliament records",
+    "contested": false,
+    "contestNote": "Nov 1, 2022 (Aoun's term ended) to Jan 9, 2025 (Joseph Aoun elected)",
+    "delta": "Ended Jan 9, 2025",
+    "trend": "stable",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "beirut-port-explosion-dead",
+    "label": "Killed — Beirut Port 2020",
+    "value": "217",
+    "color": "red",
+    "source": "Lebanese Red Cross / WHO",
+    "contested": true,
+    "contestNote": "Some sources cite 220+ including late-stage deaths; investigation blocked by political interference",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "killed-2026-conflict",
+    "label": "Killed — 2026 Lebanon War (since Mar 2)",
+    "value": "3,593+",
+    "color": "red",
+    "source": "Lebanese Ministry of Public Health / Al Jazeera (June 5, 2026)",
+    "contested": true,
+    "contestNote": "Official Lebanese health ministry figures; Hezbollah fighter deaths not always separated from civilian counts",
+    "delta": "~393+ since May 29; 35 killed Jun 1, 35 Jun 2, 48 Jun 3, 10 Jun 4, 21 Jun 5; Washington 'pilot zones' deal signed Jun 3 but rejected by Hezbollah Jun 4",
+    "trend": "up",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "displaced-2026-conflict",
+    "label": "Displaced — 2026 Lebanon War",
+    "value": "1.2 million+",
+    "color": "amber",
+    "source": "UNHCR / IOM (May 2026)",
+    "contested": false,
+    "delta": "87% outside organized shelters; 596 collective sites, 128,200+ IDPs in shelters",
+    "trend": "up",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "unifil-troops",
+    "label": "UNIFIL Troops Deployed",
+    "value": "7,478",
+    "color": "blue",
+    "source": "UN UNIFIL (June 2026)",
+    "contested": false,
+    "delta": "UN emergency appeal totals $639.9M through Aug 2026; mandate expiring Dec 31, 2026; Round 5 talks June 22",
+    "trend": "down",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "poverty-rate",
+    "label": "Population Below Poverty Line",
+    "value": ">80%",
+    "color": "red",
+    "source": "World Bank Lebanese Economic Monitor 2022",
+    "contested": true,
+    "contestNote": "World Bank multidimensional measure; slight improvement by 2025 due to remittances and dollarization",
+    "trend": "down",
+    "lastUpdated": "2026-04-25"
+  }
+]

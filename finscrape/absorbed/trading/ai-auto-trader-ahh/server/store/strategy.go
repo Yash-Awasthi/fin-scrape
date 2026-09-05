@@ -1,0 +1,647 @@
+package store
+
+import (
+	"database/sql"
+	"encoding/json"
+	"fmt"
+	"time"
+
+	"github.com/google/uuid"
+)
+
+// Strategy represents a trading strategy
+type Strategy struct {
+	ID          string         `json:"id"`
+	Name        string         `json:"name"`
+	Description string         `json:"description"`
+	IsActive    bool           `json:"is_active"`
+	Config      StrategyConfig `json:"config"`
+	CreatedAt   time.Time      `json:"created_at"`
+	UpdatedAt   time.Time      `json:"updated_at"`
+}
+
+// StrategyConfig holds all strategy configuration
+type StrategyConfig struct {
+	// Coin source configuration
+	CoinSource CoinSourceConfig `json:"coin_source"`
+
+	// Indicator configuration
+	Indicators IndicatorConfig `json:"indicators"`
+
+	// Risk control configuration
+	RiskControl RiskControlConfig `json:"risk_control"`
+
+	// AI configuration
+	AI AIConfig `json:"ai"`
+
+	// Custom AI prompt additions
+	CustomPrompt string `json:"custom_prompt"`
+
+	// Trading interval in minutes
+	TradingInterval int `json:"trading_interval"`
+
+	// Turbo Mode (Aggressive)
+	TurboMode bool `json:"turbo_mode"`
+
+	// Simple Mode (v1.4.7 style - disables extra features for cleaner trades)
+	SimpleMode bool `json:"simple_mode"`
+
+	// Trading Mode: "strategy" (default) or "copy_trade"
+	TradingMode string `json:"trading_mode"`
+
+	// Smart Find Auto-Refresh (cycles to find new risky symbols periodically)
+	SmartFindAutoRefresh bool   `json:"smart_find_auto_refresh"` // Enable auto-refresh of smart find
+	SmartFindRefreshMins int    `json:"smart_find_refresh_mins"` // Interval in minutes (30, 60, 120, etc.)
+	SmartFindUseOI       bool   `json:"smart_find_use_oi"`       // Use OI Ranking instead of Binance Tickers
+	SmartFindFilter      string `json:"smart_find_filter"`       // "volatility", "volume", "oi_change"
+
+	// Market Intelligence (Fear & Greed, News, CoinGecko data injected into AI prompts)
+	EnableMarketIntel bool `json:"enable_market_intel"` // Enable market intelligence data in AI prompts (default: false)
+}
+
+// AIConfig defines AI model settings
+type AIConfig struct {
+	// Enable reasoning mode (uses models like deepseek-r1 that show chain-of-thought)
+	EnableReasoning bool `json:"enable_reasoning"`
+
+	// Reasoning model to use when reasoning is enabled (default: deepseek/deepseek-r1)
+	ReasoningModel string `json:"reasoning_model"`
+}
+
+// CoinSourceConfig defines how to select coins
+type CoinSourceConfig struct {
+	SourceType        string   `json:"source_type"` // "static" | "dynamic" | "volume_top"
+	StaticCoins       []string `json:"static_coins"`
+	MaxListingAgeDays int      `json:"max_listing_age_days"` // 0 = disabled; filter to coins listed within N days
+	PreferNewListings bool     `json:"prefer_new_listings"`  // sort newer listings first within the age window
+}
+
+// IndicatorConfig defines which indicators to use
+type IndicatorConfig struct {
+	// Kline settings
+	PrimaryTimeframe string `json:"primary_timeframe"` // "1m", "5m", "15m", "1h", "4h"
+	KlineCount       int    `json:"kline_count"`
+
+	// Enabled indicators
+	EnableEMA    bool `json:"enable_ema"`
+	EnableMACD   bool `json:"enable_macd"`
+	EnableRSI    bool `json:"enable_rsi"`
+	EnableATR    bool `json:"enable_atr"`
+	EnableBOLL   bool `json:"enable_boll"`
+	EnableVolume bool `json:"enable_volume"`
+
+	// Indicator periods
+	EMAPeriods []int `json:"ema_periods"` // e.g., [9, 21]
+	RSIPeriod  int   `json:"rsi_period"`  // e.g., 14
+	ATRPeriod  int   `json:"atr_period"`  // e.g., 14
+	BOLLPeriod int   `json:"boll_period"` // e.g., 20
+	MACDFast   int   `json:"macd_fast"`   // e.g., 12
+	MACDSlow   int   `json:"macd_slow"`   // e.g., 26
+	MACDSignal int   `json:"macd_signal"` // e.g., 9
+
+	// Multi-Timeframe Confirmation
+	EnableMultiTF         bool   `json:"enable_multi_tf"`        // Check multiple timeframes before trading
+	ConfirmationTimeframe string `json:"confirmation_timeframe"` // Higher timeframe to confirm (e.g., "15m")
+}
+
+// RiskControlConfig defines risk management rules
+type RiskControlConfig struct {
+	// Position limits
+	MaxPositions int `json:"max_positions"`
+
+	// LEGACY fields (for backward compatibility with existing strategies)
+	MaxLeverage        int     `json:"max_leverage"`         // Legacy: single leverage for all symbols
+	MaxPositionPercent float64 `json:"max_position_percent"` // Legacy: % of balance per position
+
+	// NEW: Leverage limits (separate for BTC/ETH vs altcoins)
+	BTCETHMaxLeverage  int `json:"btc_eth_max_leverage"` // Max leverage for BTC/ETH (default: 10)
+	AltcoinMaxLeverage int `json:"altcoin_max_leverage"` // Max leverage for altcoins (default: 20)
+
+	// NEW: Position value ratios (position size = equity * ratio)
+	BTCETHMaxPositionValueRatio  float64 `json:"btc_eth_max_position_value_ratio"` // Max position value ratio for BTC/ETH (default: 5.0)
+	AltcoinMaxPositionValueRatio float64 `json:"altcoin_max_position_value_ratio"` // Max position value ratio for altcoins (default: 1.0)
+
+	// Minimum position sizes
+	MinPositionSize       float64 `json:"min_position_size"`         // Min position size for altcoins (default: 12 USDT)
+	MinPositionSizeBTCETH float64 `json:"min_position_size_btc_eth"` // Min position size for BTC/ETH (default: 60 USDT)
+	MinPositionUSD        float64 `json:"min_position_usd"`          // Legacy: single min for all (fallback)
+
+	// Margin and buffer
+	MaxMarginUsage float64 `json:"max_margin_usage"` // Max % of balance in margin (default: 90)
+	MarginBuffer   float64 `json:"margin_buffer"`    // Safety buffer multiplier (default: 0.98 = use 98% of max)
+
+	// AI decision thresholds
+	MinConfidence                int     `json:"min_confidence"`                  // Min AI confidence to trade (default: 70)
+	MinRiskRewardRatio           float64 `json:"min_risk_reward_ratio"`           // Min TP/SL ratio (default: 3.0), set to 0 to disable
+	HighConfidenceCloseThreshold float64 `json:"high_confidence_close_threshold"` // Min confidence to close in noise zone (default: 95)
+
+	// AI TP/SL Freedom - Let AI suggest TP/SL with minimal constraints
+	TrustAIForTPSL bool    `json:"trust_ai_for_tp_sl"` // Trust AI's TP/SL suggestions, only enforce minimums (default: false)
+	MinTPPercent   float64 `json:"min_tp_percent"`     // Minimum TP % floor (default: 3.0) - AI can suggest higher
+	MinSLPercent   float64 `json:"min_sl_percent"`     // Minimum SL % floor (default: 2.0) - AI can suggest higher
+	MaxSLPercent   float64 `json:"max_sl_percent"`     // Maximum SL % ceiling (default: 5.0) - prevents excessive risk
+
+	// NOISE ZONE PROTECTION - Prevent closing positions too early
+	EnableNoiseZoneProtection bool    `json:"enable_noise_zone_protection"` // Enable noise zone protection (default: true)
+	NoiseZoneLowerBound       float64 `json:"noise_zone_lower_bound"`       // Lower bound of noise zone, below this = allow close (default: -1.5%)
+	NoiseZoneUpperBound       float64 `json:"noise_zone_upper_bound"`       // Upper bound of noise zone, above this = allow close (default: 1.5%)
+	MinHoldBeforeClose        int     `json:"min_hold_before_close"`        // Min minutes to hold before AI can close (default: 10)
+
+	// Daily loss and drawdown limits
+	MaxDailyLossPct           float64 `json:"max_daily_loss_pct"`            // Max daily loss % before stopping (default: 5.0)
+	MaxDrawdownPct            float64 `json:"max_drawdown_pct"`              // Max drawdown % from peak to close position (default: 40.0)
+	StopTradingMins           int     `json:"stop_trading_mins"`             // Minutes to pause after daily loss triggered (default: 60)
+	ClosePositionsOnDailyLoss bool    `json:"close_positions_on_daily_loss"` // Close all positions when daily loss limit hit (default: false)
+
+	// Drawdown monitoring thresholds
+	DrawdownCloseThreshold float64 `json:"drawdown_close_threshold"` // Close position if drawdown from peak exceeds this % (default: 40.0)
+	MinProfitForDrawdown   float64 `json:"min_profit_for_drawdown"`  // Only apply drawdown close when profit > this % (default: 5.0)
+
+	// SAFETY: Emergency Shutdown
+	EnableEmergencyShutdown bool    `json:"enable_emergency_shutdown"` // Stop trading if balance drops below limit
+	EmergencyMinBalance     float64 `json:"emergency_min_balance"`     // Minimum balance to keep trading (default: 60 USD)
+
+	// TRAILING STOP LOSS - Lock in profits as price moves in your favor
+	EnableTrailingStop      bool    `json:"enable_trailing_stop"`       // Enable trailing stop loss feature
+	TrailingStopActivatePct float64 `json:"trailing_stop_activate_pct"` // Profit % to activate trailing stop (default: 1.0 = 1%)
+	TrailingStopDistancePct float64 `json:"trailing_stop_distance_pct"` // Distance behind peak price (default: 0.5 = 0.5%)
+
+	// GUARANTEED MINIMUM PROFIT - Lock in minimum profit once threshold reached
+	// Once position reaches ActivatePct profit, guarantee at least MinProfitPct on exit
+	EnableGuaranteedProfit      bool    `json:"enable_guaranteed_profit"`       // Enable guaranteed profit feature
+	GuaranteedProfitActivatePct float64 `json:"guaranteed_profit_activate_pct"` // Profit % to activate guarantee (default: 0.3%)
+	GuaranteedMinProfitPct      float64 `json:"guaranteed_min_profit_pct"`      // Minimum profit % to lock in (default: 0.1%)
+
+	// MAX HOLD DURATION - Force close positions held too long
+	EnableMaxHoldDuration bool `json:"enable_max_hold_duration"` // Enable max hold duration feature
+	MaxHoldDurationMins   int  `json:"max_hold_duration_mins"`   // Max minutes to hold a position (default: 240 = 4 hours)
+
+	// SMART LOSS CUT - Cut losses if position is down for extended time
+	EnableSmartLossCut bool    `json:"enable_smart_loss_cut"` // Enable time-based loss cutting
+	SmartLossCutMins   int     `json:"smart_loss_cut_mins"`   // Minutes before cutting losers (default: 30)
+	SmartLossCutPct    float64 `json:"smart_loss_cut_pct"`    // Loss % threshold for smart cut (default: -1.0 = -1%)
+
+	// MAX POSITION LOSS - Hard ROE cap regardless of price move or hold time
+	// Example: 25 = close when margin is down 25% (leverage-aware, triggers at price_move = 25/leverage %)
+	MaxPositionLossPct float64 `json:"max_position_loss_pct"` // Max ROE loss % before forced close (0 = disabled)
+
+	// SIGNAL CONFIRMATION - Verify signals before executing trades
+	// For medium confidence (75-89%), wait and re-verify with AI before executing
+	// For high confidence (90%+), execute immediately
+	EnableSignalConfirmation   bool    `json:"enable_signal_confirmation"`    // Enable signal re-verification (default: false)
+	SignalConfirmationDelaySec int     `json:"signal_confirmation_delay_sec"` // Seconds to wait before re-checking (default: 60)
+	HighConfidenceThreshold    float64 `json:"high_confidence_threshold"`     // Confidence above this executes immediately (default: 90)
+	PriceStabilityCheckPct     float64 `json:"price_stability_check_pct"`     // Max price movement % allowed during confirmation (default: 0.5)
+
+	// AUTO-AVOID WORST SYMBOLS - Automatically exclude symbols with recent losses
+	// This prevents the bot from repeatedly trading losing symbols
+	EnableAutoAvoidWorstSymbols bool    `json:"enable_auto_avoid_worst_symbols"` // Enable auto-avoid for worst performers (default: false)
+	AutoAvoidMinLoss24h         float64 `json:"auto_avoid_min_loss_24h"`         // Min total loss in 24h to trigger avoid (default: 5.0 USDT)
+	AutoAvoidMinTrades24h       int     `json:"auto_avoid_min_trades_24h"`       // Min trades in 24h to consider (default: 2)
+
+	// HIGH WICK WARNING - Warn AI about rejection wicks
+	EnableHighWickWarning bool `json:"enable_high_wick_warning"` // Enable high wick detection and warning
+
+	// ENTRY SAFETY THRESHOLDS - Configurable filters for entry quality
+	// These control the Go code's safety checks before executing trades
+	EnableEntrySafetyChecks bool    `json:"enable_entry_safety_checks"` // Enable/disable entry safety checks (default: true)
+	MinEMASpreadPct         float64 `json:"min_ema_spread_pct"`         // Min EMA spread % for entry (default: 0.3)
+	MinVolumeRatioPct       float64 `json:"min_volume_ratio_pct"`       // Min volume as % of average (default: 40)
+	MaxWickRejectionCount   int     `json:"max_wick_rejection_count"`   // Max rejection wicks to allow entry (default: 4)
+	ResistanceSupportPct    float64 `json:"resistance_support_pct"`     // Distance from high/low % to block entry (default: 1.0)
+	EMATrendTolerancePct    float64 `json:"ema_trend_tolerance_pct"`    // Tolerance % for counter-trend check (default: 0.2)
+}
+
+// SECURITY: Absolute maximum leverage limits (cannot be bypassed)
+const (
+	ABSOLUTE_MAX_LEVERAGE_BTCETH  = 50 // Maximum leverage for BTC/ETH (raised from 20)
+	ABSOLUTE_MAX_LEVERAGE_ALTCOIN = 25 // Maximum leverage for altcoins (raised from 15)
+	ABSOLUTE_MAX_LEGACY_LEVERAGE  = 50 // Maximum for legacy MaxLeverage field
+	ABSOLUTE_MIN_LEVERAGE         = 1  // Minimum leverage (must be at least 1x)
+)
+
+// ValidateStrategyConfig validates strategy configuration for security
+func ValidateStrategyConfig(cfg *StrategyConfig) error {
+	if cfg == nil {
+		return fmt.Errorf("strategy config cannot be nil")
+	}
+
+	// RiskControl is a value type, so we can access it directly
+	rc := &cfg.RiskControl
+
+	// SECURITY: Validate BTC/ETH leverage
+	if rc.BTCETHMaxLeverage < 0 {
+		return fmt.Errorf("BTC/ETH leverage cannot be negative (got %d)", rc.BTCETHMaxLeverage)
+	}
+	if rc.BTCETHMaxLeverage > ABSOLUTE_MAX_LEVERAGE_BTCETH {
+		return fmt.Errorf("BTC/ETH leverage %dx exceeds absolute maximum %dx", rc.BTCETHMaxLeverage, ABSOLUTE_MAX_LEVERAGE_BTCETH)
+	}
+
+	// SECURITY: Validate Altcoin leverage
+	if rc.AltcoinMaxLeverage < 0 {
+		return fmt.Errorf("Altcoin leverage cannot be negative (got %d)", rc.AltcoinMaxLeverage)
+	}
+	if rc.AltcoinMaxLeverage > ABSOLUTE_MAX_LEVERAGE_ALTCOIN {
+		return fmt.Errorf("Altcoin leverage %dx exceeds absolute maximum %dx", rc.AltcoinMaxLeverage, ABSOLUTE_MAX_LEVERAGE_ALTCOIN)
+	}
+
+	// SECURITY: Validate legacy leverage field
+	if rc.MaxLeverage < 0 {
+		return fmt.Errorf("Legacy max leverage cannot be negative (got %d)", rc.MaxLeverage)
+	}
+	if rc.MaxLeverage > ABSOLUTE_MAX_LEGACY_LEVERAGE {
+		return fmt.Errorf("Legacy max leverage %dx exceeds absolute maximum %dx", rc.MaxLeverage, ABSOLUTE_MAX_LEGACY_LEVERAGE)
+	}
+
+	// Validate max positions
+	if rc.MaxPositions < 0 {
+		return fmt.Errorf("Max positions cannot be negative (got %d)", rc.MaxPositions)
+	}
+	if rc.MaxPositions > 50 {
+		return fmt.Errorf("Max positions %d exceeds reasonable limit of 50", rc.MaxPositions)
+	}
+
+	// Validate position percentages
+	if rc.MaxPositionPercent < 0 || rc.MaxPositionPercent > 100 {
+		return fmt.Errorf("Max position percent must be between 0-100 (got %.2f)", rc.MaxPositionPercent)
+	}
+
+	// Validate daily loss percentage
+	if rc.MaxDailyLossPct < 0 || rc.MaxDailyLossPct > 100 {
+		return fmt.Errorf("Max daily loss percent must be between 0-100 (got %.2f)", rc.MaxDailyLossPct)
+	}
+
+	// Validate drawdown percentage
+	if rc.MaxDrawdownPct < 0 || rc.MaxDrawdownPct > 100 {
+		return fmt.Errorf("Max drawdown percent must be between 0-100 (got %.2f)", rc.MaxDrawdownPct)
+	}
+
+	return nil
+}
+
+// DefaultStrategyConfig returns a sensible default strategy
+func DefaultStrategyConfig() StrategyConfig {
+	return StrategyConfig{
+		CoinSource: CoinSourceConfig{
+			SourceType:  "static",
+			StaticCoins: []string{"BTCUSDT", "ETHUSDT"},
+		},
+
+		TradingMode: "strategy",
+		Indicators: IndicatorConfig{
+			PrimaryTimeframe: "5m",
+			KlineCount:       100,
+			EnableEMA:        true,
+			EnableMACD:       true,
+			EnableRSI:        true,
+			EnableATR:        true,
+			EnableBOLL:       false,
+			EnableVolume:     true,
+			EMAPeriods:       []int{9, 21},
+			RSIPeriod:        14,
+			ATRPeriod:        14,
+			BOLLPeriod:       20,
+			MACDFast:         12,
+			MACDSlow:         26,
+			MACDSignal:       9,
+
+			// Multi-Timeframe Confirmation (enabled by default)
+			EnableMultiTF:         true,
+			ConfirmationTimeframe: "15m",
+		},
+		RiskControl: RiskControlConfig{
+			MaxPositions: 3,
+
+			// Leverage limits (0 = use legacy MaxLeverage field)
+			MaxLeverage:        10,
+			BTCETHMaxLeverage:  0,
+			AltcoinMaxLeverage: 0,
+
+			// Position value ratios
+			BTCETHMaxPositionValueRatio:  5.0,
+			AltcoinMaxPositionValueRatio: 1.0,
+
+			// Minimum position sizes
+			MinPositionSize:       12.0, // USDT for altcoins
+			MinPositionSizeBTCETH: 60.0, // USDT for BTC/ETH
+
+			// Margin settings
+			MaxMarginUsage: 90.0,
+			MarginBuffer:   0.98, // Use 98% of max affordable
+
+			// AI thresholds
+			MinConfidence:                85,   // Raised from 70: Only trade on high confidence signals
+			MinRiskRewardRatio:           3.0,  // Minimum 3:1 reward/risk (set to 0 to disable)
+			HighConfidenceCloseThreshold: 95.0, // Raised from 85: Require very high confidence to close in noise zone
+
+			// AI TP/SL Freedom (disabled by default - opt-in for hybrid mode)
+			TrustAIForTPSL: false, // When true, trust AI's suggestions with only min/max floors
+			MinTPPercent:   3.0,   // Minimum TP floor (AI can suggest higher)
+			MinSLPercent:   2.0,   // Minimum SL floor (AI can suggest higher)
+			MaxSLPercent:   5.0,   // Maximum SL ceiling (prevents excessive risk)
+
+			// Noise Zone Protection defaults
+			EnableNoiseZoneProtection: true, // Enabled by default
+			NoiseZoneLowerBound:       -1.5, // Below -1.5% = allow close (significant loss)
+			NoiseZoneUpperBound:       1.5,  // Above 1.5% = allow close (profit taking)
+			MinHoldBeforeClose:        10,   // Must hold at least 10 mins before AI can close
+
+			// Daily loss and drawdown
+			MaxDailyLossPct:           15.0,  // Stop trading after 15% daily loss (better for high leverage)
+			MaxDrawdownPct:            40.0,  // Max drawdown threshold
+			StopTradingMins:           30,    // Pause 30 mins after trigger
+			ClosePositionsOnDailyLoss: false, // Don't auto-close positions by default
+
+			// Drawdown monitoring
+			DrawdownCloseThreshold: 40.0, // Close at 40% drawdown from peak
+			MinProfitForDrawdown:   5.0,  // Only apply when profit > 5%
+
+			// Emergency Shutdown
+			EnableEmergencyShutdown: true,
+			EmergencyMinBalance:     60.0,
+
+			// Trailing Stop Loss (disabled by default - opt-in)
+			EnableTrailingStop:      false,
+			TrailingStopActivatePct: 1.0, // Activate when profit reaches 1%
+			TrailingStopDistancePct: 0.5, // Trail 0.5% behind peak
+
+			// Max Hold Duration (disabled by default - opt-in)
+			EnableMaxHoldDuration: false,
+			MaxHoldDurationMins:   240, // 4 hours default
+
+			// Smart Loss Cut (disabled by default - opt-in)
+			EnableSmartLossCut: false,
+			SmartLossCutMins:   30,   // Cut if losing for 30 mins
+			SmartLossCutPct:    -1.0, // Only cut if loss > 1%
+
+			// Signal Confirmation (enabled by default - safer trading)
+			EnableSignalConfirmation:   true, // Verify signals before executing
+			SignalConfirmationDelaySec: 60,   // Wait 60 seconds before re-verifying
+			HighConfidenceThreshold:    90.0, // 90%+ confidence executes immediately
+			PriceStabilityCheckPct:     0.5,  // Max 0.5% price movement during confirmation
+
+			// Auto-Avoid Worst Symbols (disabled by default - opt-in)
+			EnableAutoAvoidWorstSymbols: false, // When enabled, skip symbols that lost money in last 24h
+			AutoAvoidMinLoss24h:         5.0,   // Min total loss in 24h to trigger avoid (5 USDT)
+			AutoAvoidMinTrades24h:       2,     // Min trades required to consider avoiding
+
+			// High Wick Warning (enabled by default)
+			EnableHighWickWarning: true,
+
+			// Entry Safety Thresholds (relaxed defaults for real market conditions)
+			EnableEntrySafetyChecks: true, // Enable entry safety checks by default
+			MinEMASpreadPct:         0.3,  // 0.3% EMA spread minimum (was hardcoded 0.6%)
+			MinVolumeRatioPct:       40.0, // 40% of average volume minimum (was hardcoded 60%)
+			MaxWickRejectionCount:   4,    // Allow up to 4 wick rejections (was hardcoded 3)
+			ResistanceSupportPct:    1.0,  // Block entry within 1% of high/low (was hardcoded 0.5%)
+			EMATrendTolerancePct:    0.2,  // 0.2% tolerance around EMA9
+		},
+		AI: AIConfig{
+			EnableReasoning: false,
+			ReasoningModel:  "deepseek/deepseek-r1",
+		},
+		CustomPrompt:    "",
+		TradingInterval: 5,
+
+		// Smart Find Auto-Refresh (disabled by default - opt-in)
+		SmartFindAutoRefresh: false,
+		SmartFindRefreshMins: 60,           // Default: 1 hour
+		SmartFindUseOI:       false,        // Default: use Binance
+		SmartFindFilter:      "volatility", // Default: find movers
+
+		// Market Intelligence (disabled by default - can cause noise in AI decisions)
+		EnableMarketIntel: false,
+	}
+}
+
+// applyConfigDefaults fills in default values for new config fields that may be missing
+// from old strategies stored in the database. This prevents Go's zero-value defaults
+// from being used (e.g., bool = false when we want true).
+func applyConfigDefaults(cfg *StrategyConfig) {
+	defaults := DefaultStrategyConfig()
+
+	// Entry Safety Thresholds - new fields that default to true/non-zero
+	// Only apply default if the value is the Go zero-value (unset)
+	if cfg.RiskControl.MinEMASpreadPct == 0 {
+		cfg.RiskControl.MinEMASpreadPct = defaults.RiskControl.MinEMASpreadPct
+	}
+	if cfg.RiskControl.MinVolumeRatioPct == 0 {
+		cfg.RiskControl.MinVolumeRatioPct = defaults.RiskControl.MinVolumeRatioPct
+	}
+	if cfg.RiskControl.MaxWickRejectionCount == 0 {
+		cfg.RiskControl.MaxWickRejectionCount = defaults.RiskControl.MaxWickRejectionCount
+	}
+	if cfg.RiskControl.ResistanceSupportPct == 0 {
+		cfg.RiskControl.ResistanceSupportPct = defaults.RiskControl.ResistanceSupportPct
+	}
+	if cfg.RiskControl.EMATrendTolerancePct == 0 {
+		cfg.RiskControl.EMATrendTolerancePct = defaults.RiskControl.EMATrendTolerancePct
+	}
+	// If EnableEntrySafetyChecks is false AND all threshold values were zero (unset/defaulted),
+	// it means this is an old strategy - set the toggle to true.
+	// Note: We check if thresholds match defaults (which we just set above if they were 0).
+	if !cfg.RiskControl.EnableEntrySafetyChecks && cfg.RiskControl.MinEMASpreadPct == defaults.RiskControl.MinEMASpreadPct {
+		// Old strategy with no entry safety config - enable by default
+		cfg.RiskControl.EnableEntrySafetyChecks = true
+	}
+
+	// Leverage - default to 10 if missing (0)
+	if cfg.RiskControl.MaxLeverage == 0 {
+		cfg.RiskControl.MaxLeverage = defaults.RiskControl.MaxLeverage
+	}
+
+	// Position value ratios - CRITICAL: 0 will block ALL trades
+	if cfg.RiskControl.BTCETHMaxPositionValueRatio == 0 {
+		cfg.RiskControl.BTCETHMaxPositionValueRatio = defaults.RiskControl.BTCETHMaxPositionValueRatio
+	}
+	if cfg.RiskControl.AltcoinMaxPositionValueRatio == 0 {
+		cfg.RiskControl.AltcoinMaxPositionValueRatio = defaults.RiskControl.AltcoinMaxPositionValueRatio
+	}
+
+	// Minimum position sizes - 0 is treated as "unset" and will use fallback defaults
+	if cfg.RiskControl.MinPositionSize == 0 {
+		cfg.RiskControl.MinPositionSize = defaults.RiskControl.MinPositionSize
+	}
+	if cfg.RiskControl.MinPositionSizeBTCETH == 0 {
+		cfg.RiskControl.MinPositionSizeBTCETH = defaults.RiskControl.MinPositionSizeBTCETH
+	}
+}
+
+// StrategyStore handles strategy persistence
+type StrategyStore struct{}
+
+func NewStrategyStore() *StrategyStore {
+	return &StrategyStore{}
+}
+
+func (s *StrategyStore) Create(strategy *Strategy) error {
+	if strategy.ID == "" {
+		strategy.ID = uuid.New().String()
+	}
+	strategy.CreatedAt = time.Now()
+	strategy.UpdatedAt = time.Now()
+
+	configJSON, err := json.Marshal(strategy.Config)
+	if err != nil {
+		return fmt.Errorf("failed to marshal config: %w", err)
+	}
+
+	_, err = db.Exec(`
+		INSERT INTO strategies (id, name, description, is_active, config, created_at, updated_at)
+		VALUES (?, ?, ?, ?, ?, ?, ?)
+	`, strategy.ID, strategy.Name, strategy.Description, strategy.IsActive, string(configJSON),
+		strategy.CreatedAt, strategy.UpdatedAt)
+
+	return err
+}
+
+func (s *StrategyStore) Update(strategy *Strategy) error {
+	strategy.UpdatedAt = time.Now()
+
+	configJSON, err := json.Marshal(strategy.Config)
+	if err != nil {
+		return fmt.Errorf("failed to marshal config: %w", err)
+	}
+
+	_, err = db.Exec(`
+		UPDATE strategies
+		SET name = ?, description = ?, is_active = ?, config = ?, updated_at = ?
+		WHERE id = ?
+	`, strategy.Name, strategy.Description, strategy.IsActive, string(configJSON),
+		strategy.UpdatedAt, strategy.ID)
+
+	return err
+}
+
+func (s *StrategyStore) Delete(id string) error {
+	_, err := db.Exec(`DELETE FROM strategies WHERE id = ?`, id)
+	return err
+}
+
+func (s *StrategyStore) Get(id string) (*Strategy, error) {
+	// Compute is_active based on whether any trader references this strategy
+	row := db.QueryRow(`
+		SELECT s.id, s.name, s.description, 
+			CASE WHEN COUNT(t.id) > 0 THEN 1 ELSE 0 END as is_active,
+			s.config, s.created_at, s.updated_at
+		FROM strategies s
+		LEFT JOIN traders t ON t.strategy_id = s.id
+		WHERE s.id = ?
+		GROUP BY s.id
+	`, id)
+
+	return s.scanStrategy(row)
+}
+
+func (s *StrategyStore) GetActive() (*Strategy, error) {
+	row := db.QueryRow(`
+		SELECT id, name, description, is_active, config, created_at, updated_at
+		FROM strategies WHERE is_active = 1 LIMIT 1
+	`)
+
+	strategy, err := s.scanStrategy(row)
+	if err == sql.ErrNoRows {
+		// Return default strategy if none active
+		return &Strategy{
+			ID:       "default",
+			Name:     "Default Strategy",
+			IsActive: true,
+			Config:   DefaultStrategyConfig(),
+		}, nil
+	}
+	return strategy, err
+}
+
+func (s *StrategyStore) List() ([]*Strategy, error) {
+	// Compute is_active based on whether any trader references this strategy
+	rows, err := db.Query(`
+		SELECT s.id, s.name, s.description, 
+			CASE WHEN COUNT(t.id) > 0 THEN 1 ELSE 0 END as is_active,
+			s.config, s.created_at, s.updated_at
+		FROM strategies s
+		LEFT JOIN traders t ON t.strategy_id = s.id
+		GROUP BY s.id
+		ORDER BY s.created_at DESC
+	`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var strategies []*Strategy
+	for rows.Next() {
+		strategy, err := s.scanStrategyRow(rows)
+		if err != nil {
+			return nil, err
+		}
+		strategies = append(strategies, strategy)
+	}
+
+	return strategies, rows.Err()
+}
+
+func (s *StrategyStore) SetActive(id string) error {
+	tx, err := db.Begin()
+	if err != nil {
+		return err
+	}
+	defer tx.Rollback()
+
+	// Deactivate all strategies
+	if _, err := tx.Exec(`UPDATE strategies SET is_active = 0`); err != nil {
+		return err
+	}
+
+	// Activate the selected one
+	if _, err := tx.Exec(`UPDATE strategies SET is_active = 1 WHERE id = ?`, id); err != nil {
+		return err
+	}
+
+	return tx.Commit()
+}
+
+func (s *StrategyStore) scanStrategy(row *sql.Row) (*Strategy, error) {
+	var strategy Strategy
+	var configJSON string
+
+	err := row.Scan(
+		&strategy.ID, &strategy.Name, &strategy.Description,
+		&strategy.IsActive, &configJSON,
+		&strategy.CreatedAt, &strategy.UpdatedAt,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	if err := json.Unmarshal([]byte(configJSON), &strategy.Config); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal config: %w", err)
+	}
+
+	// Apply defaults for new fields that may be missing from old strategies
+	applyConfigDefaults(&strategy.Config)
+
+	return &strategy, nil
+}
+
+func (s *StrategyStore) scanStrategyRow(rows *sql.Rows) (*Strategy, error) {
+	var strategy Strategy
+	var configJSON string
+
+	err := rows.Scan(
+		&strategy.ID, &strategy.Name, &strategy.Description,
+		&strategy.IsActive, &configJSON,
+		&strategy.CreatedAt, &strategy.UpdatedAt,
+	)
+	if err != nil {
+		return nil, err
+	}
+
+	if err := json.Unmarshal([]byte(configJSON), &strategy.Config); err != nil {
+		return nil, fmt.Errorf("failed to unmarshal config: %w", err)
+	}
+
+	// Apply defaults for new fields that may be missing from old strategies
+	applyConfigDefaults(&strategy.Config)
+
+	return &strategy, nil
+}

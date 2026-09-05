@@ -1,0 +1,97 @@
+[
+  {
+    "id": "civilian-deaths-aapp",
+    "label": "People Killed by Junta (AAPP)",
+    "value": "7,941+",
+    "color": "red",
+    "source": "AAPP (Mar 23, 2026)",
+    "contested": true,
+    "contestNote": "AAPP documents confirmed deaths; actual toll far higher — ACLED estimates 96,000+ total conflict deaths including combatants. UN OHCHR's Aug 26, 2026 report separately documented 8,075 confirmed civilian deaths (up to 15,731 estimated) since 2021 using its own methodology, and estimates 100,000+ deaths across all sides.",
+    "delta": "+1,455 since Apr 2025",
+    "deltaNote": "Killing rate accelerating in 2025–2026 as air attacks surge",
+    "trend": "up",
+    "lastUpdated": "2026-08-26"
+  },
+  {
+    "id": "idps-total",
+    "label": "Internally Displaced Persons",
+    "value": "~5.2 million",
+    "color": "amber",
+    "source": "UN OCHA / WFP (June 2026)",
+    "contested": false,
+    "delta": "Up from 3.6M in Nov 2025",
+    "deltaNote": "Accelerating displacement from SAC multi-front May–June 2026 offensive in Rakhine, Chin, Tanintharyi, Sagaing, Kachin; 16.2M require humanitarian assistance",
+    "trend": "up",
+    "lastUpdated": "2026-06-02"
+  },
+  {
+    "id": "political-prisoners",
+    "label": "Political Prisoners",
+    "value": "22,797",
+    "color": "red",
+    "source": "AAPP (Dec 2025)",
+    "contested": false,
+    "contestNote": "30,448 total arrested since coup; 129 facing the death penalty; 2,000+ died in detention",
+    "delta": "30,448 total arrested",
+    "deltaNote": "Includes deaths in custody from torture and denied healthcare",
+    "trend": "up",
+    "lastUpdated": "2026-08-09"
+  },
+  {
+    "id": "junta-territory",
+    "label": "SAC Territory Control",
+    "value": "~20%",
+    "color": "green",
+    "source": "SAC-M / NUG Defense Ministry (2025)",
+    "contested": true,
+    "contestNote": "SAC claims broader control; NUG estimates junta controls fewer than 100 of 350+ townships as of Aug 2024",
+    "delta": "Down from ~70% in 2021",
+    "trend": "down",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "days-since-coup",
+    "label": "Days Since Coup",
+    "value": "2,016",
+    "color": "amber",
+    "source": "Calculated from Feb 1, 2021",
+    "contested": false,
+    "lastUpdated": "2026-08-10"
+  },
+  {
+    "id": "airstrikes-documented",
+    "label": "Air Attacks Since Coup (ACLED)",
+    "value": "9,400+",
+    "color": "red",
+    "source": "ACLED (June 2026 cumulative)",
+    "contested": true,
+    "contestNote": "ACLED cumulative since Feb 2021; 3,800+ civilian deaths from airstrikes; 3,300+ attacks in 2025–2026 alone; junta conducting up to 50 airstrikes/day in Bhamo alone",
+    "delta": "+3,488 since Mar 2026 update",
+    "trend": "up",
+    "lastUpdated": "2026-06-02"
+  },
+  {
+    "id": "townships-resistance",
+    "label": "Townships Under Resistance Control",
+    "value": "250+",
+    "color": "blue",
+    "source": "NUG Ministry of Defense / Crisis Group (2024)",
+    "contested": true,
+    "contestNote": "Contested and dynamic; junta disputes these figures",
+    "delta": "Out of ~330 total townships",
+    "trend": "up",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "humanitarian-funding",
+    "label": "2025 Humanitarian Plan Funded",
+    "value": "26%",
+    "color": "amber",
+    "source": "UN OCHA Myanmar Humanitarian Needs and Response Plan 2026",
+    "contested": false,
+    "contestNote": "2025's $890M appeal ended just 26% funded; 2026 plan targets 4.9M of 16M+ in need at $521M for the hyper-prioritized 2.6M caseload — only ~1.6M reached by end-March 2026",
+    "delta": "One of the world's worst-funded humanitarian crises",
+    "trend": "down",
+    "lastUpdated": "2026-07-13"
+  }
+]

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090b">
+<title>Source DNA — GDELT Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/pulse.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+/* ── Page-specific styles (extending pulse.css) ── */
+
+.sort-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 0 var(--sp-5) var(--sp-6);
+  flex-wrap: wrap;
+}
+
+.sort-controls .btn.active {
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--border-active);
+}
+
+/* ── Stats row ── */
+.stats-row {
+  display: flex;
+  gap: var(--sp-3);
+  padding: 0 var(--sp-5) var(--sp-6);
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* ── Scatter section ── */
+.scatter-section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 var(--sp-5) var(--sp-6);
+}
+
+.scatter-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5);
+}
+
+.scatter-card .chart-wrap {
+  position: relative;
+  height: 360px;
+}
+
+/* ── Table extras ── */
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--sp-4) var(--sp-4) var(--sp-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.table-toolbar h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.src-name {
+  font-weight: 600;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tone-bar {
+  display: flex;
+  height: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100px;
+  background: var(--surface-3);
+}
+
+.tone-pos { background: var(--positive); height: 100%; }
+.tone-neg { background: var(--negative); height: 100%; }
+
+.theme-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+}
+
+.theme-tag {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* ── Modal internals ── */
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--sp-5);
+}
+
+.modal-head h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.modal-head .domain-tag {
+  font-size: 0.75rem;
+  font-weight: 450;
+  color: var(--text-3);
+  margin-left: var(--sp-3);
+}
+
+.modal-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+}
+
+.m-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+  text-align: center;
+}
+
+.m-stat-val {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.m-stat-lbl {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+}
+
+.modal-chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-4);
+}
+
+.modal-chart-card h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-2);
+  margin-bottom: var(--sp-3);
+}
+
+.modal-chart-wrap {
+  position: relative;
+  height: 200px;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.recent-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  transition: border-color var(--duration) var(--ease);
+}
+
+.recent-item:hover {
+  border-color: var(--border-hover);
+}
+
+.recent-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.recent-meta {
+  font-size: 0.6875rem;
+  color: var(--text-3);
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+}
+
+.tone-chip {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .stats-row { gap: var(--sp-2); }
+  .scatter-card .chart-wrap { height: 260px; }
+  .modal-stats { grid-template-columns: repeat(2, 1fr); }
+  .modal-grid { grid-template-columns: 1fr; }
+  .theme-tags { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+  <a class="topbar-back" href="/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    GDELT Pulse
+  </a>
+</nav>
+
+<!-- PAGE INTRO -->
+<section class="page-intro">
+  <h1>Source DNA</h1>
+  <p>Fingerprint every news source by what they cover, how they cover it, and where they focus.</p>
+</section>
+
+<!-- OVERVIEW STATS -->
+<div class="stats-row" id="statsRow">
+  <div class="stat-card">
+    <div class="stat-value t-num" id="statSources">--</div>
+    <div class="stat-label">Sources</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value t-num" id="statArticles">--</div>
+    <div class="stat-label">Articles</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value t-num" id="statAvgTone">--</div>
+    <div class="stat-label">Avg Tone</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value" id="statMostPositive">--</div>
+    <div class="stat-label">Most Positive</div>
+  </div>
+</div>
+
+<!-- SORT CONTROLS -->
+<div class="sort-controls">
+  <button class="btn btn-sm active" data-sort="articles" onclick="setSort('articles')">Most Articles</button>
+  <button class="btn btn-sm" data-sort="tone_positive" onclick="setSort('tone_positive')">Most Positive</button>
+  <button class="btn btn-sm" data-sort="tone_negative" onclick="setSort('tone_negative')">Most Negative</button>
+</div>
+
+<!-- SCATTER CHART -->
+<section class="scatter-section">
+  <div class="scatter-card">
+    <h3 class="t-overline">Source Landscape</h3>
+    <p class="t-caption t-dim" style="margin-bottom:var(--sp-4)">Bubble size = article count. X = avg tone. Y = polarity (spread between positive &amp; negative).</p>
+    <div class="chart-wrap"><canvas id="scatterChart"></canvas></div>
+  </div>
+</section>
+
+<!-- SOURCE TABLE -->
+<section class="container" style="padding-bottom:var(--sp-7)">
+  <div class="table-wrap">
+    <div class="table-toolbar">
+      <h3>All Sources</h3>
+      <input type="text" class="input" style="width:220px;padding:7px 14px;font-size:0.8125rem" placeholder="Filter sources..." oninput="filterTable(this.value)">
+    </div>
+    <div style="overflow-x:auto">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="sortable sorted" data-col="article_count" onclick="sortTable('article_count')">Articles <span class="arrow">&#9660;</span></th>
+            <th class="sortable" data-col="source_name" onclick="sortTable('source_name')">Source</th>
+            <th class="sortable" data-col="avg_tone" onclick="sortTable('avg_tone')">Tone</th>
+            <th class="sortable" data-col="avg_polarity" onclick="sortTable('avg_polarity')">Polarity</th>
+            <th>Tone Balance</th>
+            <th>Top Themes</th>
+          </tr>
+        </thead>
+        <tbody id="srcBody">
+          <tr><td colspan="6"><div class="loading"><span class="spinner"></span> Loading</div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL MODAL -->
+<div class="overlay" id="modalBg" onclick="closeModal()"></div>
+<div class="overlay" id="modalWrap" onclick="closeModal()" style="pointer-events:none">
+  <div class="modal" id="modal" onclick="event.stopPropagation()" style="pointer-events:auto">
+    <div class="modal-head">
+      <div style="display:flex;align-items:center"><h2 id="modalTitle"></h2><span class="domain-tag" id="modalDomain"></span></div>
+      <button class="modal-close" onclick="closeModal()">&#10005;</button>
+    </div>
+    <div id="modalBody">
+      <div class="loading"><span class="spinner"></span> Loading</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CAT_COLORS = {conflict:'#f87171',economy:'#fbbf24',politics:'#818cf8',health:'#34d399',environment:'#22d3ee',technology:'#a78bfa',society:'#fb923c',general:'#71717a'};
+
+let allSources = [];
+let currentSort = 'articles';
+let scatterChart = null;
+
+// ── INIT ─────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch('/api/sources/fingerprints?limit=100&min_articles=5');
+    allSources = await res.json();
+    renderStats();
+    renderScatter();
+    renderTable(allSources);
+  } catch (e) {
+    document.getElementById('srcBody').innerHTML = '<tr><td colspan="6"><div class="empty">Failed to load sources</div></td></tr>';
+  }
+}
+
+// ── STATS ────────────────────────────────────────────────────────────
+function renderStats() {
+  const s = allSources;
+  document.getElementById('statSources').textContent = s.length.toLocaleString();
+  const totalArticles = s.reduce((a,b) => a + b.article_count, 0);
+  document.getElementById('statArticles').textContent = totalArticles.toLocaleString();
+  const avgTone = s.reduce((a,b) => a + b.avg_tone * b.article_count, 0) / totalArticles;
+  document.getElementById('statAvgTone').textContent = avgTone.toFixed(2);
+  const mostPos = s.reduce((a,b) => b.avg_tone > a.avg_tone ? b : a);
+  document.getElementById('statMostPositive').textContent = truncate(mostPos.source_name, 18);
+}
+
+// ── SCATTER ──────────────────────────────────────────────────────────
+function renderScatter() {
+  const ctx = document.getElementById('scatterChart').getContext('2d');
+  const data = allSources.map(s => ({
+    x: s.avg_tone,
+    y: s.avg_polarity,
+    r: Math.max(4, Math.min(30, Math.sqrt(s.article_count) * 1.2)),
+    label: s.source_name,
+    domain: s.domain,
+    articles: s.article_count,
+    category: s.top_themes.length > 0 ? s.top_themes[0].category : 'general'
+  }));
+
+  if (scatterChart) scatterChart.destroy();
+  scatterChart = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+      datasets: [{
+        data: data,
+        backgroundColor: data.map(d => {
+          const c = CAT_COLORS[d.category] || CAT_COLORS.general;
+          return c + '44';
+        }),
+        borderColor: data.map(d => {
+          const c = CAT_COLORS[d.category] || CAT_COLORS.general;
+          return c + '99';
+        }),
+        borderWidth: 1.5,
+        hoverBorderWidth: 2.5
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(15,15,17,.95)',
+          borderColor: 'rgba(255,255,255,.06)',
+          borderWidth: 1,
+          titleFont: { family: "'Inter'", weight: '600', size: 13 },
+          bodyFont: { family: "'Inter'", size: 11 },
+          padding: 12,
+          cornerRadius: 10,
+          callbacks: {
+            title: ctx => ctx[0].raw.label,
+            label: ctx => [
+              `Tone: ${ctx.raw.x.toFixed(2)}`,
+              `Polarity: ${ctx.raw.y.toFixed(2)}`,
+              `Articles: ${ctx.raw.articles.toLocaleString()}`
+            ]
+          }
+        }
+      },
+      scales: {
+        x: {
+          title: { display: true, text: 'Average Tone', color: '#63636e', font: { family: "'Inter'", size: 11, weight: '500' } },
+          grid: { color: 'rgba(255,255,255,.04)' },
+          ticks: { color: '#63636e', font: { family: "'Inter'", size: 10 } }
+        },
+        y: {
+          title: { display: true, text: 'Polarity', color: '#63636e', font: { family: "'Inter'", size: 11, weight: '500' } },
+          grid: { color: 'rgba(255,255,255,.04)' },
+          ticks: { color: '#63636e', font: { family: "'Inter'", size: 10 } }
+        }
+      },
+      onClick: (evt, els) => {
+        if (els.length > 0) {
+          const d = data[els[0].index];
+          openModal(d.domain);
+        }
+      }
+    }
+  });
+}
+
+// ── TABLE ────────────────────────────────────────────────────────────
+function renderTable(sources) {
+  const tbody = document.getElementById('srcBody');
+  if (!sources.length) {
+    tbody.innerHTML = '<tr><td colspan="6"><div class="empty">No sources found</div></td></tr>';
+    return;
+  }
+  tbody.innerHTML = sources.map(s => {
+    const posW = s.avg_positive ? Math.round(s.avg_positive / (s.avg_positive + s.avg_negative) * 100) : 50;
+    const themes = (s.top_themes || []).slice(0, 3).map(t => {
+      const col = CAT_COLORS[t.category] || CAT_COLORS.general;
+      return `<span class="theme-tag" style="background:${col}18;color:${col}">${humanTheme(t.theme)}</span>`;
+    }).join('');
+    return `<tr onclick="openModal('${s.domain}')" style="cursor:pointer">
+      <td class="t-num" style="font-weight:600">${s.article_count.toLocaleString()}</td>
+      <td class="src-name">${esc(s.source_name)}</td>
+      <td class="t-num" style="color:${s.avg_tone >= 0 ? 'var(--positive)' : 'var(--negative)'}">${s.avg_tone >= 0 ? '+' : ''}${s.avg_tone.toFixed(2)}</td>
+      <td class="t-num">${s.avg_polarity.toFixed(2)}</td>
+      <td><div class="tone-bar"><div class="tone-pos" style="width:${posW}%"></div><div class="tone-neg" style="width:${100 - posW}%"></div></div></td>
+      <td><div class="theme-tags">${themes}</div></td>
+    </tr>`;
+  }).join('');
+}
+
+let tableSortCol = 'article_count';
+let tableSortAsc = false;
+
+function sortTable(col) {
+  if (tableSortCol === col) {
+    tableSortAsc = !tableSortAsc;
+  } else {
+    tableSortCol = col;
+    tableSortAsc = col === 'source_name';
+  }
+  document.querySelectorAll('thead th').forEach(th => {
+    th.classList.toggle('sorted', th.dataset.col === col);
+    const arrow = th.querySelector('.arrow');
+    if (arrow) arrow.textContent = th.dataset.col === col ? (tableSortAsc ? '\u25B2' : '\u25BC') : '';
+  });
+  const sorted = [...allSources].sort((a, b) => {
+    let va = a[col], vb = b[col];
+    if (typeof va === 'string') return tableSortAsc ? va.localeCompare(vb) : vb.localeCompare(va);
+    return tableSortAsc ? va - vb : vb - va;
+  });
+  renderTable(sorted);
+}
+
+function filterTable(q) {
+  q = q.toLowerCase();
+  const filtered = allSources.filter(s => s.source_name.toLowerCase().includes(q) || s.domain.toLowerCase().includes(q));
+  renderTable(filtered);
+}
+
+// ── SORT CONTROLS ────────────────────────────────────────────────────
+function setSort(sort) {
+  currentSort = sort;
+  document.querySelectorAll('.sort-controls .btn').forEach(b => b.classList.toggle('active', b.dataset.sort === sort));
+  fetch(`/api/sources/fingerprints?limit=100&min_articles=5&sort=${sort}`)
+    .then(r => r.json())
+    .then(data => {
+      allSources = data;
+      renderStats();
+      renderScatter();
+      tableSortCol = sort === 'articles' ? 'article_count' : 'avg_tone';
+      tableSortAsc = sort === 'tone_negative';
+      renderTable(allSources);
+    });
+}
+
+// ── MODAL ────────────────────────────────────────────────────────────
+let toneTimelineChart = null;
+let categoryChart = null;
+
+async function openModal(domain) {
+  document.getElementById('modalBg').classList.add('open');
+  document.getElementById('modalWrap').classList.add('open');
+  document.getElementById('modalWrap').style.pointerEvents = 'auto';
+  document.getElementById('modalTitle').textContent = 'Loading...';
+  document.getElementById('modalDomain').textContent = '';
+  document.getElementById('modalBody').innerHTML = '<div class="loading"><span class="spinner"></span> Loading</div>';
+
+  try {
+    const res = await fetch(`/api/sources/${encodeURIComponent(domain)}/detail`);
+    const d = await res.json();
+    renderModal(d);
+  } catch (e) {
+    document.getElementById('modalBody').innerHTML = '<div class="empty">Failed to load source details</div>';
+  }
+}
+
+function renderModal(d) {
+  document.getElementById('modalTitle').textContent = d.source_name;
+  document.getElementById('modalDomain').textContent = d.domain;
+
+  const toneColor = d.avg_tone >= 0 ? 'var(--positive)' : 'var(--negative)';
+
+  let html = `
+    <div class="modal-stats">
+      <div class="m-stat"><div class="m-stat-val t-num">${d.article_count.toLocaleString()}</div><div class="m-stat-lbl">Articles</div></div>
+      <div class="m-stat"><div class="m-stat-val t-num" style="color:${toneColor}">${d.avg_tone >= 0 ? '+' : ''}${d.avg_tone.toFixed(2)}</div><div class="m-stat-lbl">Avg Tone</div></div>
+      <div class="m-stat"><div class="m-stat-val t-num">${d.avg_polarity.toFixed(2)}</div><div class="m-stat-lbl">Polarity</div></div>
+      <div class="m-stat"><div class="m-stat-val t-num">${d.countries.length}</div><div class="m-stat-lbl">Countries</div></div>
+    </div>
+
+    <div class="modal-grid">
+      <div class="modal-chart-card">
+        <h4>Tone Over Time</h4>
+        <div class="modal-chart-wrap"><canvas id="toneTimeline"></canvas></div>
+      </div>
+      <div class="modal-chart-card">
+        <h4>Coverage Categories</h4>
+        <div class="modal-chart-wrap"><canvas id="categoryChart"></canvas></div>
+      </div>
+    </div>
+
+    <div class="modal-chart-card" style="margin-bottom:var(--sp-5)">
+      <h4>Top Themes</h4>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+        ${d.themes.slice(0, 15).map(t => {
+          const col = CAT_COLORS[t.category] || CAT_COLORS.general;
+          return `<span class="theme-tag" style="background:${col}18;color:${col};padding:4px 10px;font-size:0.6875rem">${humanTheme(t.theme)} <span style="opacity:.5;margin-left:2px">${t.count}</span></span>`;
+        }).join('')}
+      </div>
+    </div>
+
+    <div class="modal-chart-card">
+      <h4>Recent Articles</h4>
+      <div class="recent-list" style="margin-top:12px">
+        ${d.recent_articles.map(a => {
+          const tone = a.tone_score;
+          const col = tone != null ? (tone >= 0 ? 'var(--positive)' : 'var(--negative)') : 'var(--text-3)';
+          const ts = a.gdelt_timestamp ? new Date(a.gdelt_timestamp).toLocaleDateString('en-US', {month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '';
+          return `<a href="${esc(a.url)}" target="_blank" class="recent-item" style="text-decoration:none;color:var(--text)">
+            <div class="recent-title">${esc(a.title)}</div>
+            <div class="recent-meta">
+              <span>${ts}</span>
+              ${tone != null ? `<span class="tone-chip" style="background:${col}18;color:${col}">${tone >= 0 ? '+' : ''}${tone.toFixed(1)}</span>` : ''}
+            </div>
+          </a>`;
+        }).join('')}
+      </div>
+    </div>
+  `;
+
+  document.getElementById('modalBody').innerHTML = html;
+
+  // Render tone timeline chart
+  if (d.tone_timeline.length > 1) {
+    setTimeout(() => renderToneTimeline(d.tone_timeline), 50);
+  }
+  if (d.categories.length > 0) {
+    setTimeout(() => renderCategoryChart(d.categories), 50);
+  }
+}
+
+function renderToneTimeline(timeline) {
+  const ctx = document.getElementById('toneTimeline');
+  if (!ctx) return;
+  if (toneTimelineChart) toneTimelineChart.destroy();
+
+  toneTimelineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: timeline.map(t => {
+        const d = new Date(t.day);
+        return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      }),
+      datasets: [{
+        data: timeline.map(t => t.avg_tone),
+        borderColor: '#8b8bf5',
+        backgroundColor: 'rgba(139,139,245,.08)',
+        fill: true,
+        tension: 0.4,
+        pointRadius: 2,
+        pointHoverRadius: 5,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: {
+        backgroundColor: 'rgba(15,15,17,.95)',
+        borderColor: 'rgba(255,255,255,.06)',
+        borderWidth: 1,
+        titleFont: { family: "'Inter'", size: 11 },
+        bodyFont: { family: "'Inter'", size: 11 },
+        padding: 10,
+        cornerRadius: 8,
+        callbacks: {
+          label: ctx => `Tone: ${ctx.raw.toFixed(3)}`
+        }
+      }},
+      scales: {
+        x: { grid: { color: 'rgba(255,255,255,.04)' }, ticks: { color: '#63636e', font: { family: "'Inter'", size: 9 }, maxTicksLimit: 8 } },
+        y: { grid: { color: 'rgba(255,255,255,.04)' }, ticks: { color: '#63636e', font: { family: "'Inter'", size: 9 } } }
+      }
+    }
+  });
+}
+
+function renderCategoryChart(categories) {
+  const ctx = document.getElementById('categoryChart');
+  if (!ctx) return;
+  if (categoryChart) categoryChart.destroy();
+
+  categoryChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: categories.map(c => c.category.charAt(0).toUpperCase() + c.category.slice(1)),
+      datasets: [{
+        data: categories.map(c => c.pct),
+        backgroundColor: categories.map(c => (CAT_COLORS[c.category] || CAT_COLORS.general) + '66'),
+        borderColor: categories.map(c => (CAT_COLORS[c.category] || CAT_COLORS.general)),
+        borderWidth: 1.5
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '55%',
+      plugins: {
+        legend: {
+          position: 'right',
+          labels: { color: '#a1a1aa', font: { family: "'Inter'", size: 10, weight: '500' }, padding: 8, boxWidth: 10, boxHeight: 10, borderRadius: 3 }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(15,15,17,.95)',
+          bodyFont: { family: "'Inter'", size: 11 },
+          padding: 10,
+          cornerRadius: 8,
+          callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw}%` }
+        }
+      }
+    }
+  });
+}
+
+function closeModal() {
+  document.getElementById('modalBg').classList.remove('open');
+  document.getElementById('modalWrap').classList.remove('open');
+  document.getElementById('modalWrap').style.pointerEvents = 'none';
+  if (toneTimelineChart) { toneTimelineChart.destroy(); toneTimelineChart = null; }
+  if (categoryChart) { categoryChart.destroy(); categoryChart = null; }
+}
+
+// ── HELPERS ──────────────────────────────────────────────────────────
+function humanTheme(t) {
+  return t.replace(/^(WB_\d+_|USPEC_|ENV_|EPU_|TAX_|CRISISLEX_|GENERAL_|SOC_)/, '')
+          .replace(/_/g, ' ')
+          .toLowerCase()
+          .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+function truncate(s, n) { return s.length > n ? s.slice(0, n) + '...' : s; }
+function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+// Close modal on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+init();
+</script>
+</body>
+</html>

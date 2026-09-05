@@ -1,0 +1,90 @@
+[
+  {
+    "id": "killed-official",
+    "category": "Killed — Official Government Figure",
+    "killed": "30",
+    "injured": "~60",
+    "source": "Interior Ministry / DFS (1968)",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "The Díaz Ordaz government's official death toll of 30 was announced within 24 hours and has never been revised. The figure is widely rejected by survivors, researchers, and human rights organizations. It is believed to reflect only those bodies the government chose to acknowledge.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "killed-researcher-estimates",
+    "category": "Killed — Researcher / Journalist Estimates",
+    "killed": "200–400",
+    "injured": "Unknown (hundreds)",
+    "source": "Elena Poniatowska (1971); National Security Archive (1997); FEMOSPP (2006)",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Journalist Elena Poniatowska's oral history (La Noche de Tlatelolco, 1971) and decades of research point to a death toll far exceeding the official figure. Estimates from different sources range from 200 to 400 killed. The true number cannot be established because the army removed bodies overnight and no independent forensic investigation was permitted.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "killed-nsa-estimate",
+    "category": "Killed — US Intelligence Contemporaneous Estimate",
+    "killed": "20–28 (minimum)",
+    "injured": "Unknown",
+    "source": "NSA / CIA Mexico City Station cables, October 3–5, 1968 (declassified)",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Declassified NSA and CIA cables from October 3–5, 1968 provide contemporaneous US intelligence estimates of 20–28 dead. These cables note that the true figure was uncertain because access to the scene was restricted. The cables confirm that US intelligence was monitoring the situation in real time.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "detained-immediate",
+    "category": "Detained — Night of October 2–3, 1968",
+    "killed": "N/A",
+    "injured": "N/A",
+    "source": "DFS / CNDH",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Approximately 1,500–2,000 people were arrested in Tlatelolco on the night of October 2–3, 1968 and transported to the Campo Militar No. 1 and other facilities. The DFS maintained lists of many detainees, but not all arrests were documented. Some detainees were released within days; hundreds were transferred to Lecumberri Prison.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "imprisoned-lecumberri",
+    "category": "Imprisoned at Lecumberri (Medium/Long-term)",
+    "killed": "N/A",
+    "injured": "N/A",
+    "source": "Amnesty International (1969); CNDH",
+    "tier": 3,
+    "contested": "partial",
+    "note": "Approximately 300–500 students and activists were held at Lecumberri Prison for extended periods (weeks to years) under 'social dissolution' charges. Amnesty International documented at least 35 political prisoners from the 1968 movement held into 1969–1971. CNH leaders including Pablo Gómez, Félix Hernández Gamundi, and Luis Tomás Cervantes Cabeza de Vaca served prison terms.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "disappeared",
+    "category": "Forcibly Disappeared",
+    "killed": "Dozens (unconfirmed)",
+    "injured": "N/A",
+    "source": "FEMOSPP report (2006); CNDH",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "Families of victims reported that numerous people who were arrested or seen at Tlatelolco were never returned to their families — neither alive nor as acknowledged dead. The FEMOSPP report documents cases of enforced disappearances. Bodies allegedly transported in military trucks overnight and disposed of at sea cannot be accounted for. The total number of forcibly disappeared from October 2, 1968 remains unknown.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "wounded",
+    "category": "Wounded (Gunshot/Beatings)",
+    "killed": "N/A",
+    "injured": "200–500+",
+    "source": "Red Cross / Hospital General records; Poniatowska (1971)",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Hospital records from the night of October 2–3 documented hundreds of gunshot and beating injuries. The Red Cross treated many wounded at the scene before being expelled by soldiers. The true number of wounded is unknown — many injured were afraid to seek medical treatment for fear of arrest.",
+    "lastUpdated": "2026-03-19"
+  },
+  {
+    "id": "cumulative-dirty-war",
+    "category": "Killed/Disappeared — Broader 'Dirty War' (1965–1982)",
+    "killed": "~700–1,200 (estimated)",
+    "injured": "Unknown",
+    "source": "FEMOSPP report (2006); CNDH Informe Especial (2001)",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "The Tlatelolco massacre was the most visible event in a broader campaign of political repression by the Mexican state spanning 1965–1982, commonly called the 'guerra sucia' (dirty war). The FEMOSPP report and CNDH estimates suggest 700–1,200 individuals were killed or disappeared during this period. Survivors and victims' groups claim higher figures. Truth Commission work continues.",
+    "lastUpdated": "2026-03-19"
+  }
+]

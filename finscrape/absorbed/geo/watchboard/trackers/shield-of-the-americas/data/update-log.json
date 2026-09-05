@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-28T00:52:43.375Z",
+  "tracker": "shield-of-the-americas",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 8
+    },
+    "timeline": {
+      "status": "updated",
+      "count": 25
+    },
+    "mapPoints": {
+      "status": "ok",
+      "count": 24
+    },
+    "claims": {
+      "status": "updated",
+      "count": 15
+    },
+    "political": {
+      "status": "ok",
+      "count": 15
+    },
+    "assets": {
+      "status": "ok",
+      "count": 12
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

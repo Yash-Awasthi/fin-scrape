@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-10T16:03:24.695Z",
+  "tracker": "indonesia",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-05-27T19:03:36.054Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "updated",
+      "count": 56
+    },
+    "mapPoints": {
+      "status": "ok",
+      "count": 25
+    },
+    "casualties": {
+      "status": "updated",
+      "count": 11
+    },
+    "econ": {
+      "status": "updated",
+      "count": 8
+    },
+    "claims": {
+      "status": "ok",
+      "count": 20
+    },
+    "political": {
+      "status": "updated",
+      "count": 21
+    },
+    "events": {
+      "lastRun": "2026-05-27T19:03:36.054Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-05-27T19:03:36.054Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-05-27T19:03:36.054Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

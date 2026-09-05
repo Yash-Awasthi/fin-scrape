@@ -1,0 +1,127 @@
+# Test Configuration - Modified thresholds to trigger TIGHTEN-UP alert
+# This is a copy of config.yaml with lowered thresholds for testing
+
+monitoring:
+  enabled: true
+  check_interval_minutes: 60
+  data_retention_days: 365
+  max_retries: 3
+  timeout_seconds: 30
+
+# Trip-wire thresholds MODIFIED FOR TESTING
+trip_wires:
+  treasury_tail:
+    name: "10-yr Treasury Auction Tail"
+    enabled: true
+    source_type: "api"
+    url: "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query"
+    thresholds:
+      green: 1.0      # Lowered from 3.0
+      amber: 2.0      # Lowered from 7.0  
+      red: 999.0      # Any value above amber
+    unit: "basis_points"
+    
+  ice_detention:
+    name: "ICE Detention Bed Fill Rate"
+    enabled: true
+    source_type: "manual"
+    thresholds:
+      green: 0.50     # Lowered from 0.65
+      amber: 0.70     # Lowered from 0.85
+      red: 999.0      # Any value above amber
+    unit: "percentage"
+    
+  taiwan_exclusion:
+    name: "PLA Taiwan Exclusion Zone"
+    enabled: true
+    source_type: "rss_social"
+    sources:
+      - "https://twitter.com/CSIS_Taiwan"
+      - "Reuters Taiwan exclusion zone"
+    thresholds:
+      green: "NONE"
+      amber: "TEMP" 
+      red: "BLOCKADE"
+    unit: "status"
+    
+  hormuz_risk:
+    name: "Hormuz War Risk Premium"
+    enabled: true
+    source_type: "financial_data"
+    sources:
+      - "Lloyd's List WRI"
+      - "S&P Platts"
+    thresholds:
+      green: 0.5      # Lowered from 1.5%
+      amber: 0.7      # Lowered from 4.0%
+      red: 999.0      # Any value above amber
+    unit: "percentage"
+    
+  dod_autonomy:
+    name: "DoD Auto-Execute Wording"
+    enabled: true
+    source_type: "government_data"
+    url: "https://sam.gov"
+    search_terms: ["decision authority autonomous"]
+    thresholds:
+      green: "HUMAN VETO"
+      amber: "PILOT"
+      red: "REMOVED"
+    unit: "status"
+    
+  mbridge_crude:
+    name: "mBridge Gulf Crude Settlement"
+    enabled: true
+    source_type: "financial_report"
+    sources:
+      - "BIS Project mBridge"
+      - "IMF working papers"
+    thresholds:
+      green: 5.0      
+      amber: 10.0     # Lowered from 25.0
+      red: 999.0      # Any value above amber
+    unit: "percentage"
+
+# Alert system configuration
+alerts:
+  tighten_up_threshold: 2  # Number of red alerts to trigger "TIGHTEN-UP"
+  notification_methods:
+    - email
+    - desktop
+  
+  # Notification settings (actual credentials in secrets.yaml)
+  email:
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    from_email: "${EMAIL_FROM}"
+    to_emails:
+      - "${EMAIL_TO_PRIMARY}"
+      - "${EMAIL_TO_SECONDARY}"
+  
+  sms:
+    provider: "twilio"
+    account_sid: "${TWILIO_SID}"
+    auth_token: "${TWILIO_TOKEN}"
+    from_number: "${TWILIO_FROM}"
+    to_numbers:
+      - "${SMS_TO_PRIMARY}"
+
+# Phase mapping based on resilience roadmap document
+phases:
+  phase_0: "Foundations - skill & brain-set"
+  phase_1: "72-hour life-support bin"
+  phase_2: "Comms & digital resilience"
+  phase_3: "Air, health & mobile comms"
+  phase_4: "Dry-basement assurance"
+  phase_5: "Tank → generator plumbing prep"
+  phase_6: "Secure-shelter nook build"
+  phase_7: "Harden + standby generator"
+  phase_8: "Rainwater & circuits"
+  phase_9: "Optional ICC-500 safe-room"
+
+# Logging configuration
+logging:
+  level: "INFO"
+  file: "logs/monitoring.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 5

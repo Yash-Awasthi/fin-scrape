@@ -1,0 +1,66 @@
+{
+  "type": "TIGHTEN_UP",
+  "severity": "CRITICAL",
+  "timestamp": "2025-07-26T00:10:54.483806",
+  "red_count": 3,
+  "red_indicators": [
+    [
+      "Treasury",
+      "red"
+    ],
+    [
+      "ICEDetention",
+      "red"
+    ],
+    [
+      "MBridge",
+      "red"
+    ]
+  ],
+  "threat_levels": {
+    "Treasury": "red",
+    "ICEDetention": "red",
+    "TaiwanZone": "unknown",
+    "HormuzRisk": "green",
+    "DoDAutonomy": "unknown",
+    "MBridge": "red"
+  },
+  "readings": {
+    "Treasury": {
+      "value": 2.5,
+      "timestamp": "2025-07-26T00:10:54.483659",
+      "formatted": "2.5"
+    },
+    "ICEDetention": {
+      "value": 75.0,
+      "timestamp": "2025-07-26T00:10:54.483681",
+      "formatted": "75.0"
+    },
+    "TaiwanZone": {
+      "value": 8,
+      "timestamp": "2025-07-26T00:10:54.483689",
+      "formatted": "8"
+    },
+    "HormuzRisk": {
+      "value": 0.8,
+      "timestamp": "2025-07-26T00:10:54.483696",
+      "formatted": "0.8"
+    },
+    "DoDAutonomy": {
+      "value": 350,
+      "timestamp": "2025-07-26T00:10:54.483705",
+      "formatted": "350"
+    },
+    "MBridge": {
+      "value": 15.5,
+      "timestamp": "2025-07-26T00:10:54.483713",
+      "formatted": "15.5"
+    }
+  },
+  "actions": [
+    "Top off fuel & cash reserves",
+    "Charge all power banks and devices",
+    "Conduct family group briefing",
+    "Review trusted OSINT information feeds"
+  ]
+}

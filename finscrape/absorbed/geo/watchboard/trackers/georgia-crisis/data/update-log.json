@@ -1,0 +1,27 @@
+{
+  "lastRun": "2026-08-26T15:27:04.730Z",
+  "tracker": "georgia-crisis",
+  "sections": {
+    "kpis": {
+      "count": 8,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 52,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 22,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 15,
+      "status": "updated"
+    },
+    "political": {
+      "count": 15,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

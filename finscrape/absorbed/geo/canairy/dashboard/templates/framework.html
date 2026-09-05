@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H1-H6 Risk Analysis Framework - Brown Man Bunker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .framework-container {
+            max-width: 900px;
+            margin: 80px auto 60px;
+            padding: 20px;
+        }
+        .framework-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+        .hypothesis {
+            background: var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .hypothesis h3 {
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+        .hypothesis p {
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Brown Man Bunker</h1>
+            <p class="tagline">H1-H6 Risk Analysis Framework</p>
+        </div>
+    </header>
+
+    <div class="framework-container">
+        <a href="/" class="back-link">← Back to Dashboard</a>
+
+        <div class="framework-card">
+            <h2>Risk Analysis Framework Overview</h2>
+            <p>The Brown Man Bunker monitoring system tracks indicators across six hypothesis categories (H1-H6) that represent potential systemic risks to household stability. Each hypothesis encompasses specific threat vectors that could disrupt normal life patterns.</p>
+        </div>
+
+        <div class="framework-card">
+            <h2>The Six Risk Hypotheses</h2>
+            
+            <div class="hypothesis">
+                <h3>H1: Financial System Instability</h3>
+                <p><strong>Monitors:</strong> Treasury market volatility, mBridge currency adoption</p>
+                <p><strong>Risk:</strong> Banking crisis, currency devaluation, loss of savings</p>
+                <p><strong>Impact:</strong> Your money becomes inaccessible or worthless, credit freezes, economic collapse</p>
+            </div>
+
+            <div class="hypothesis">
+                <h3>H2: Geopolitical Conflicts</h3>
+                <p><strong>Monitors:</strong> Taiwan tensions, Strait of Hormuz shipping risk, military AI deployment</p>
+                <p><strong>Risk:</strong> Supply chain disruption, energy crisis, potential for wider conflict</p>
+                <p><strong>Impact:</strong> Critical goods unavailable, fuel shortages, economic disruption</p>
+            </div>
+
+            <div class="hypothesis">
+                <h3>H3: AI/Technology Disruption</h3>
+                <p><strong>Monitors:</strong> AGI development milestones, labor displacement rates, cyber vulnerabilities</p>
+                <p><strong>Risk:</strong> Mass unemployment, critical infrastructure attacks, social upheaval</p>
+                <p><strong>Impact:</strong> Job obsolescence, system failures, need for new economic models</p>
+            </div>
+
+            <div class="hypothesis">
+                <h3>H4: Social Cohesion Breakdown</h3>
+                <p><strong>Monitors:</strong> Immigration detention rates, school closures, luxury market collapse</p>
+                <p><strong>Risk:</strong> Civil unrest, community breakdown, increased crime</p>
+                <p><strong>Impact:</strong> Unsafe neighborhoods, disrupted services, need for self-reliance</p>
+            </div>
+
+            <div class="hypothesis">
+                <h3>H5: Infrastructure Failure</h3>
+                <p><strong>Monitors:</strong> Power grid outages, pharmacy shortages, critical system vulnerabilities</p>
+                <p><strong>Risk:</strong> Essential services offline, medication unavailable, cascading failures</p>
+                <p><strong>Impact:</strong> No power/water/heat, medical emergencies, inability to work</p>
+            </div>
+
+            <div class="hypothesis">
+                <h3>H6: Economic Collapse</h3>
+                <p><strong>Monitors:</strong> Unemployment claims, GDP growth, food inflation</p>
+                <p><strong>Risk:</strong> Job loss, inability to afford basics, recession/depression</p>
+                <p><strong>Impact:</strong> Can't pay bills, food insecurity, housing crisis</p>
+            </div>
+        </div>
+
+        <div class="framework-card">
+            <h2>Response Protocol: TIGHTEN-UP</h2>
+            <p>When 3 or more indicators reach RED status simultaneously, the system triggers a TIGHTEN-UP alert. This is your signal to implement basic preparedness measures:</p>
+            <ol>
+                <li>Top off all vehicle fuel tanks</li>
+                <li>Withdraw cash in small bills ($300-500)</li>
+                <li>Charge all devices and backup power banks</li>
+                <li>Check food, water, and medication supplies</li>
+                <li>Review emergency contact information</li>
+                <li>Test backup communication methods</li>
+                <li>Ensure important documents are accessible</li>
+            </ol>
+            <p style="margin-top: 16px;"><em>Remember: This is not about panic, but prudent preparation. Most alerts will resolve without incident, but being prepared ensures your family's comfort during disruptions.</em></p>
+        </div>
+
+        <div class="framework-card">
+            <h2>Resilience Phases</h2>
+            <p>Based on your preparedness level, you can progress through phases 0-9:</p>
+            <ul>
+                <li><strong>Phase 0:</strong> Foundation - Skills and mindset</li>
+                <li><strong>Phase 1:</strong> 72-hour emergency supplies</li>
+                <li><strong>Phase 2:</strong> Communications and digital resilience</li>
+                <li><strong>Phase 3:</strong> Air quality and mobile communications</li>
+                <li><strong>Phase 4:</strong> Water security and storage</li>
+                <li><strong>Phase 5:</strong> Backup power preparation</li>
+                <li><strong>Phase 6:</strong> Secure shelter improvements</li>
+                <li><strong>Phase 7:</strong> Standby generator installation</li>
+                <li><strong>Phase 8:</strong> Rainwater collection and electrical circuits</li>
+                <li><strong>Phase 9:</strong> Optional safe room construction</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="/">Dashboard</a> | 
+           <a href="/emergency">Emergency Procedures</a> | 
+           <a href="/manual-input">Manual Input</a>
+        </p>
+    </footer>
+</body>
+</html>

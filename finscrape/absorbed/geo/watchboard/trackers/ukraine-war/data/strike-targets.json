@@ -1,0 +1,164 @@
+[
+  {
+    "id": "strike-kyiv-energy-oct22",
+    "name": "Kyiv Energy Infrastructure",
+    "detail": "Russia launched coordinated mass strikes on Kyiv's power grid, heating infrastructure, and water systems beginning October 2022. Using Kalibr cruise missiles, Kh-101, and Shahed drones, Russia destroyed approximately 50% of Ukraine's power generation capacity by winter 2022–23. Millions experienced daily blackouts of 4–12 hours.",
+    "icon": "target",
+    "time": "Oct 2022",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-mariupol-theater",
+    "name": "Mariupol Drama Theater",
+    "detail": "Russian forces bombed the Mariupol Drama Theater on March 16, 2022, while it housed hundreds of civilian evacuees. 'Children' written in large Cyrillic letters was visible from satellite imagery outside the building. An estimated 300–600 civilians were killed. The attack was condemned as a war crime by the UN and Western governments.",
+    "icon": "target",
+    "time": "Mar 16, 2022",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-kramatorsk-station",
+    "name": "Kramatorsk Train Station",
+    "detail": "Russia struck Kramatorsk's train station on April 8, 2022, with two Tochka-U ballistic missiles killing 59 civilians and wounding 100+ who were evacuating the Donetsk region. The Ukrainian-markings on the missile were used by Russia to blame Ukraine, but Ukrainian military experts confirmed Russia was the only user of that specific missile variant in Kramatorsk's direction.",
+    "icon": "target",
+    "time": "Apr 8, 2022",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-dnipro-apartment-jan23",
+    "name": "Dnipro Residential Building",
+    "detail": "A Russian Kh-22 cruise missile struck a residential apartment building in Dnipro city on January 14, 2023, killing 46 civilians including children and wounding 80+. The building collapsed partially. The Kh-22 is a Soviet anti-ship missile repurposed for ground attack — it is highly inaccurate and cannot be intercepted by Ukraine's existing air defenses.",
+    "icon": "target",
+    "time": "Jan 14, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-zaporizhzhia-npp",
+    "name": "Zaporizhzhia Nuclear Power Plant",
+    "detail": "Russia has militarized and repeatedly shelled around Europe's largest nuclear plant since seizing it March 4, 2022. The plant lost external power 8 times since August 2022 — unprecedented in any nuclear plant's history. IAEA Director General Grossi made multiple missions to the site. All 6 reactors were eventually shut down but require continued cooling to prevent meltdown.",
+    "icon": "target",
+    "time": "Mar 4, 2022",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-odesa-cathedral-jul23",
+    "name": "Odesa UNESCO Cathedral",
+    "detail": "Russia struck the Transfiguration Cathedral of Odesa with a cruise missile in July 2023, severely damaging the UNESCO-listed structure. The attack came hours after Russia withdrew from the Black Sea Grain Initiative and targeted Odesa's port and city center. UNESCO condemned the cultural heritage destruction.",
+    "icon": "target",
+    "time": "Jul 23, 2023",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-kharkiv-shopping-center",
+    "name": "Kharkiv Shopping Mall Strike",
+    "detail": "Russian missile strikes repeatedly hit civilian commercial areas in Kharkiv, including a crowded shopping center on May 25, 2024 that killed 7 and wounded 16. Kharkiv has been struck nearly every day of the war due to its proximity to the Russian border (40km). Over 1,000 civilian structures in Kharkiv have been damaged or destroyed.",
+    "icon": "target",
+    "time": "May 25, 2024",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-ternopil-nov25",
+    "name": "Ternopil Missile Strike",
+    "detail": "Russia struck the western Ukrainian city of Ternopil on November 19, 2025 in one of the deadliest single attacks of 2025 — 38 civilians killed including 8 children. The attack targeted a densely populated residential area far from the frontline, underscoring Russia's continued targeting of civilian areas throughout Ukraine.",
+    "icon": "target",
+    "time": "Nov 19, 2025",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-azovstal-mariupol",
+    "name": "Azovstal Steel Plant Siege",
+    "detail": "Russian forces besieged the massive Azovstal steel plant complex in Mariupol from March to May 2022, where the last Ukrainian defenders (Azov regiment + regular troops) and over 1,000 civilians sheltered. Daily airstrikes, artillery, and naval fire reduced the facility. Ukraine ordered surrender on May 20, 2022. ~2,439 fighters taken prisoner.",
+    "icon": "target",
+    "time": "Mar–May 2022",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-ukrainian-hospitals",
+    "name": "Ukraine Hospital Strikes (250+)",
+    "detail": "By end of 2024, Russia had struck over 250 Ukrainian medical facilities, including maternity hospitals, pediatric centers, and trauma facilities. WHO's Health Cluster documented hundreds of attacks. The Mariupol maternity hospital was bombed March 9, 2022, killing 3 and wounding 17, including a pregnant woman who became an iconic image of Russian attacks on civilians.",
+    "icon": "target",
+    "time": "Ongoing 2022–2026",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-odesa-residential-merchant-ship-apr24",
+    "name": "Odesa Residential Neighborhoods + Merchant Ship (Apr 24, 2026)",
+    "detail": "Overnight April 24, Russia fired 107 Shahed-type drones and 2 ballistic missiles at Odesa. Ukrainian air defenses intercepted 96 drones, but 10 and both ballistic missiles struck targets. An elderly married couple (age 75) was killed in a residential building; 15 people were injured and 36 residents evacuated. Three residential buildings caught fire. A Saint Kitts and Nevis-flagged bulk carrier was struck in the Black Sea shipping corridor — no crew casualties. Part of Russia's ongoing systematic campaign against Odesa's port infrastructure and civilian areas.",
+    "icon": "target",
+    "time": "Apr 24, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-04-24T09:00:00Z"
+  },
+  {
+    "id": "strike-chornomorsk-residential-may2-2026",
+    "name": "Chornomorsk Residential Districts — 2 Killed, 35 Homes Damaged (May 2, 2026)",
+    "detail": "Russian drones struck residential areas of Chornomorsk (Odesa suburb) overnight May 2–3, 2026. Two people were killed (a mother born 1988 and a man born 1987) and 5 injured. At least 35 residential houses were damaged, 1 fully destroyed, along with port infrastructure. Chornomorsk is a key Ukrainian Black Sea export hub, having already suffered a major oil spill (6,000 tons of sunflower oil into the Black Sea) in an April 27 strike. Russia continued to target the port city as part of its campaign against Ukraine's maritime export capacity.",
+    "icon": "target",
+    "time": "May 2-3, 2026",
+    "tier": 2,
+    "lastUpdated": "2026-05-04T14:00:00Z"
+  },
+  {
+    "id": "strike-merefa-iskander-may4-2026",
+    "name": "Merefa Ballistic Missile Strike — 6 Killed Including Teenagers (May 4, 2026)",
+    "detail": "At 09:35 local time on May 4, 2026, Russia fired an Iskander-M ballistic missile at Merefa, a town in Kharkiv district. The strike hit a road near a commercial and residential zone — destroying or damaging a service station, shops, administrative buildings, and more than 10 residential structures. Death toll: 6 killed (3 women and 2 men confirmed; including two teenagers aged 16 and 17); 36 wounded with 3 in critical condition. The Merefa community declared 3 days of official mourning (May 5–7). The strike occurred the same day President Zelensky was at the European Political Community summit in Yerevan pressing allies for more air defense systems — a stark illustration of the gap between diplomacy and ongoing Russian attacks.",
+    "icon": "target",
+    "time": "May 4, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-05-04T14:00:00Z"
+  },
+  {
+    "id": "strike-kharkiv-apartment-ceasefire-day2-may10-2026",
+    "name": "Kharkiv Residential Building — Ceasefire Day 2 Strike (8 Wounded incl. 2 Children)",
+    "detail": "On May 10, Day 2 of the Trump-brokered 3-day ceasefire, a Russian drone struck a 9-story residential building in Kharkiv's Industrial district. Kharkiv Gov. Oleh Syniehubov confirmed 8 civilians wounded, including 2 children. Two 8-year-old boys suffered acute stress reactions. The attack demonstrates Russia's pattern of continuing strikes on civilian residential areas even during declared ceasefires. Kharkiv — Ukraine's second-largest city and located 40 km from the Russian border — has sustained nearly daily Russian drone, missile, and guided bomb strikes throughout the war.",
+    "icon": "target",
+    "time": "May 10, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-05-10T14:30:00Z"
+  },
+  {
+    "id": "strike-ukraine-victory-day-ceasefire-collapse-may8-2026",
+    "name": "Russia Violates Victory Day 'Ceasefire' — 850+ Drones, 208 Combat Engagements on May 8 (Day of Declared Truce)",
+    "detail": "Russia declared a unilateral ceasefire from midnight May 8 through May 10 to mark the 81st Victory Day anniversary. The ceasefire collapsed within minutes. By 7:00 a.m. on May 8, Ukraine documented 140+ attacks on frontline positions, 10 assault operations, and over 850 drone strikes — the same or higher tempo than any normal day of the war. Total combat engagements on May 8 reached 208, with 33 assault attempts in the Pokrovsk direction alone, 23 in Huliaipole, and 13 near Lyman. Russia deployed 9,113 kamikaze drones, launched 99 aerial bomb strikes dropping 292 guided bombs, fired at least one missile, and conducted 3,126 artillery barrages including 131 MLRS strikes. Russia also threatened a 'massive missile strike on the center of Kyiv' if Ukraine interfered with the May 9 parade. Foreign embassies in Kyiv received unofficial warnings to evacuate staff. The pattern is identical to Russia's Easter ceasefire (April 2026), which saw 10,721 Ukrainian-documented violations before ending.",
+    "icon": "target",
+    "time": "May 8, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-05-08T14:23:35Z"
+  },
+  {
+    "id": "strike-ukraine-overnight-may21-22-2026",
+    "name": "Russian Overnight Barrage — 5 Killed, 41 Injured Across Ukraine (May 21–22, 2026)",
+    "detail": "Russian forces conducted combined drone and missile strikes on Ukraine overnight May 21–22, 2026, killing at least 5 civilians and injuring 41 across multiple oblasts. The barrage continued Russia's near-nightly aerial campaign that has characterized May 2026 — following 116 Shaheds the preceding night (109 intercepted), 154 on May 19-20, and 209 on May 18-19. Ukrainian emergency services responded across multiple cities. The attacks targeted residential areas and civilian infrastructure as Russia maintained pressure even while Ukrainian long-range drones were simultaneously striking deep inside Russian territory. Day 1,548 of the full-scale invasion.",
+    "icon": "target",
+    "time": "May 22, 2026",
+    "tier": 2,
+    "lastUpdated": "2026-05-22T14:15:23Z"
+  },
+  {
+    "id": "strike-kyiv-podilskyi-building-collapse-jun2-2026",
+    "name": "Kyiv Podilskyi Residential Building Collapse — 6 Killed, 65 Wounded (June 2, 2026)",
+    "detail": "Russia launched one of its largest combined strikes of 2026 overnight June 1–2: 73 missiles including 8 Zircon hypersonic missiles (record single-use of Zircon in the war) plus 656 Shahed-type attack drones (602 intercepted; 40 missiles intercepted). In Kyiv's Podilskyi district, a 9-story residential building was partially collapsed by the strike, with people feared trapped in the rubble. Emergency services scrambled across 7 city districts as fires burned. 6 Kyiv residents were killed and 63–65 wounded — among the deadliest single-night attacks on the capital since May 23, 2026. Dnipro sustained 4+ killed and 16 wounded. Kharkiv suffered 10 wounded including a child (15 drones + 2 missiles). Zaporizhzhia, Poltava, Khmelnytskyi, and Sumy regions were also struck. Total nationwide: 17–18 killed, 100+ wounded. Zelensky responded by sending an urgent letter to Trump and US Congress demanding Patriot PAC-3 missile interceptors.",
+    "icon": "target",
+    "time": "Jun 2, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-06-02T14:00:00Z"
+  },
+  {
+    "id": "russia-independence-day-nationwide-barrage-aug24-2026",
+    "name": "Russia Kills 8, Injures 43 Nationwide on Ukraine's Independence Day",
+    "detail": "Russia marked Ukraine's 35th Independence Day (August 24, 2026) with a nationwide barrage: 2 Oniks anti-ship missiles, 6 Kh-31P/Kh-59 guided air-launched missiles, and 143 drones (roughly a third jet-powered), striking 22 locations. Ukrainian air defense downed 1 Oniks, 4 of the 6 guided missiles, 2 Banderol munitions, and 109 drones. The attacks killed at least 8 and injured 43 over 24 hours: Kharkiv Oblast was hit hardest (5 killed, 17 injured, railway infrastructure struck in Lozova); Kramatorsk (Donetsk Oblast) saw 2 killed, 1 injured; Sumy Oblast recorded 1 killed, 12 injured across 50+ strikes on 25 settlements; Zaporizhzhia Oblast logged 518 strikes on 38 settlements (3 injured); Dnipropetrovsk Oblast saw ~30 attacks (3 injured). Separately, a Russian Geran-5 jet-powered drone struck a 9-story residential building in central Chernihiv at midday, injuring 20 including 3 children — the third wave of strikes on the city that day.",
+    "icon": "target",
+    "time": "Aug 24, 2026",
+    "tier": 2,
+    "lastUpdated": "2026-08-24T15:43:31Z"
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "id": "somalia-blue-economy-ministry-curad1-apr23-2026",
+    "date": "2026-04-23",
+    "year": "2026",
+    "title": "President Mohamud Inaugurates Ministry of Ports and Marine Transport; Blue Economy Drive Advances as Curad-1 Offshore Drilling Continues",
+    "type": "political",
+    "detail": "On April 23, 2026, President Hassan Sheikh Mohamud inaugurated the new Ministry of Ports and Marine Transport headquarters in Mogadishu, framing Somalia's emerging blue economy as a transformative economic pillar. The ceremony accompanied progress reports on the Curad-1 offshore well being drilled by Turkish state oil company TPAO under a concession covering approximately 15,000 km² of Somali coastal waters — the first offshore oil exploration in Somalia's modern history. Turkish drillship Çağrı Bey arrived in Mogadishu on April 10, 2026 to commence drilling operations under the Turkey-Somalia hydrocarbon cooperation agreement. Mohamud's 'blue economy revolution' strategy encompasses fisheries, maritime transport, port development, and offshore energy, and the inauguration of the dedicated ministry signals an institutional commitment to the sector. The announcements come with 22 days remaining before Mohamud's presidential term expires (May 15), representing an effort by the administration to project economic momentum amid the deepening constitutional crisis. Critics and opposition members had previously questioned the terms of Turkey's offshore concession, with some alleging unfavorable revenue-sharing arrangements. The Curad-1 well, drilled in the Nogal Basin, is Somalia's first modern offshore exploratory well; if oil is confirmed in commercial quantities it would represent a historic economic transformation. Norway's Equinor and other international companies have also assessed Somali offshore blocks.",
+    "sources": [
+      {
+        "name": "Radio Dalsan",
+        "tier": 2,
+        "url": "https://radiodalsan.com/2026/04/23/somalia-sets-sail-for-a-blue-economy-revolution/",
+        "pole": "international"
+      },
+      {
+        "name": "Daily Sabah (TPAO drillship arrival, April 10, 2026)",
+        "tier": 2,
+        "url": "https://www.dailysabah.com/energy/2026/04/somalia-tpao-curad-offshore-drilling",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://radiodalsan.com/2026/04/23/somalia-sets-sail-for-a-blue-economy-revolution/",
+        "caption": "President Hassan Sheikh Mohamud inaugurates Ministry of Ports and Marine Transport HQ in Mogadishu, announcing Somalia's blue economy revolution as the Curad-1 offshore oil well is drilled by Turkish TPAO",
+        "source": "Radio Dalsan",
+        "thumbnail": "https://radiodalsan.com/2026/04/23/somalia-sets-sail-for-a-blue-economy-revolution/"
+      }
+    ]
+  },
+  {
+    "id": "eu-aussom-75m-epf-contribution-apr23-2026",
+    "date": "2026-04-23",
+    "year": "2026",
+    "title": "EU Approves €75M for AUSSOM Under European Peace Facility — Largest Single EU Contribution to AU Mission in Somalia",
+    "type": "diplomatic",
+    "detail": "The Political and Security Committee of the Council of the European Union approved €75 million in additional support under the European Peace Facility (EPF) for the military component of the African Union Support and Stabilisation Mission in Somalia (AUSSOM) on April 23, 2026 — the largest single EU contribution to AU-led missions in Somalia. Total EU support to successive AU missions in Somalia since AMISOM's founding in 2007 now reaches nearly €2.8 billion, firmly cementing the EU as AUSSOM's largest international backer. The funding covers troop allowances, non-lethal equipment, and related services to strengthen AUSSOM's operational readiness and mandate delivery, conditioned on compliance with international human rights law and international humanitarian law. The timing is critical: AUSSOM — authorized at 12,626 troops but operating below that ceiling due to chronic underfunding — faces simultaneous pressures from Al-Shabaab's intensified offensive (including the April 19 seizure of Adan Yabal), Somalia's deepening political-constitutional crisis (21 days to presidential term expiry on May 15), and the US veto of a UNSC resolution that would have enabled UN cost-sharing for AU peacekeeping in Somalia. Ethiopia remains excluded from AUSSOM at the FGS's insistence, reducing available troop commitments. The EU contribution partially offsets the US-created funding gap. A joint EU-AU press release confirmed the Council's determination on April 21, 2026, with formal announcement April 23.",
+    "sources": [
+      {
+        "name": "European External Action Service (EEAS)",
+        "tier": 1,
+        "url": "https://www.eeas.europa.eu/delegations/african-union-au/european-union-confirms-largest-contribution-au-mission-somalia-aussom_en",
+        "pole": "western"
+      },
+      {
+        "name": "African Union Peace and Security Dept.",
+        "tier": 1,
+        "url": "https://www.peaceau.org/en/article/european-union-confirms-the-largest-contribution-to-the-au-mission-in-somalia-aussom",
+        "pole": "international"
+      },
+      {
+        "name": "Garowe Online",
+        "tier": 2,
+        "url": "https://www.garoweonline.com/en/news/somalia/eu-approves-75-million-contribution-to-au-mission-in-somalia",
+        "pole": "international"
+      },
+      {
+        "name": "allAfrica / Horseed Media",
+        "tier": 2,
+        "url": "https://allafrica.com/stories/202604230369.html",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.eeas.europa.eu/delegations/african-union-au/european-union-confirms-largest-contribution-au-mission-somalia-aussom_en",
+        "caption": "EU approves €75 million for AUSSOM under the European Peace Facility — the largest single EU contribution to the AU mission in Somalia — bringing total EU support since 2007 to €2.8 billion",
+        "source": "European External Action Service / African Union",
+        "thumbnail": "https://www.eeas.europa.eu/delegations/african-union-au/european-union-confirms-largest-contribution-au-mission-somalia-aussom_en"
+      }
+    ]
+  }
+]

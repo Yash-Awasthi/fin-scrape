@@ -1,0 +1,68 @@
+[
+  {
+    "id": "fuel-subsidy-tier-introduced",
+    "year": "Dec 5",
+    "title": "New Fuel Subsidy Tier Raises Petrol Prices",
+    "type": "economic",
+    "detail": "The Iranian government introduces a new fuel subsidy tier that effectively raises petrol prices for most consumers. The base allocation of 60 liters per month remains at subsidized rates, but the second tier now costs 50% more than the previous rate. Analysts warn the move will cascade into transport and food delivery costs within days.",
+    "sources": [
+      { "name": "ISNA", "tier": 2, "pole": "middle_eastern" },
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.iranintl.com/en/202512131756",
+        "caption": "Iran officially rolls out higher gasoline prices under new three-tier fuel pricing system",
+        "source": "Iran International",
+        "thumbnail": "https://i.iranintl.com/images/rdk9umy0/production/3f74b3909849b1b3a1b1005cea03975ecccae55f-1000x667.png?rect=0,48,1000,525&w=1200&h=630&fit=max&auto=format"
+      }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "energy-crisis-deepens-dec",
+    "year": "Dec 5",
+    "title": "Electricity and Gas Disruptions Enter Second Winter",
+    "type": "humanitarian",
+    "detail": "Rolling blackouts and natural gas cuts continue across Iranian provinces for a second consecutive winter. Hospitals in Isfahan and Tabriz report operating on backup generators for up to 8 hours daily. The energy crisis, which began in late 2024 due to aging infrastructure and rising demand, is exacerbated by reduced fuel imports under snapback sanctions.",
+    "sources": [
+      { "name": "Euronews", "tier": 2, "pole": "western" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Human Rights Watch", "tier": 3, "pole": "international" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2025/8/10/irans-triple-crisis-is-reshaping-daily-life",
+        "caption": "Rolling blackouts and gas disruptions affect daily life across Iranian provinces during winter",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2025/08/afp_68988e614d2c-1754828385.jpg?resize=1920%2C1440"
+      }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "food-prices-72pct-yoy",
+    "year": "Dec 5",
+    "title": "Food Prices 72% Higher Year-Over-Year",
+    "type": "economic",
+    "detail": "Iran's Statistical Center reports food prices are 72% higher than December 2024. Bread, rice, and cooking oil have seen the steepest increases. The elimination of the preferential exchange rate for agricultural imports is expected to push prices even higher in coming weeks. Queues at government-subsidized stores stretch for blocks in working-class neighborhoods of Tehran and Mashhad.",
+    "sources": [
+      { "name": "Statistical Center of Iran", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" },
+      { "name": "NPR", "tier": 2, "pole": "western" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.iranintl.com/en/202601059822",
+        "caption": "Iranian families struggle with food prices 72% higher than the previous year amid economic collapse",
+        "source": "Iran International",
+        "thumbnail": "https://i.iranintl.com/images/rdk9umy0/production/ba46d3fba7f175f09e675f577747e63cc54d2c3e-640x427.jpg?rect=0,46,640,336&w=1200&h=630&fit=max&auto=format"
+      }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

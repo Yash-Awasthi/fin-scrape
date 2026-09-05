@@ -1,0 +1,112 @@
+[
+  {
+    "id": "explosion-direct-deaths",
+    "category": "Immediate Explosion Deaths",
+    "killed": "2",
+    "injured": "several",
+    "source": "IAEA INSAG-7; Soviet medical records",
+    "tier": 1,
+    "contested": "no",
+    "note": "Two workers killed by the explosion itself: Valery Khodemchuk (buried under rubble, body never recovered) and Vladimir Shashenok (died of injuries shortly after). These are uncontested.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "ars-first-responder-deaths",
+    "category": "Acute Radiation Syndrome Deaths (ARS)",
+    "killed": "28",
+    "injured": "106",
+    "source": "WHO; UNSCEAR 2008; Moscow Hospital No. 6 records",
+    "tier": 1,
+    "contested": "no",
+    "note": "28 emergency workers (firefighters, plant workers) died of ARS within 3 months of the explosion. 134 persons received ARS-level doses; 106 survived. This forms the core of the Soviet 'official' death toll.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "total-official-deaths",
+    "category": "Total Official Deaths (Soviet/IAEA)",
+    "killed": "31",
+    "injured": "N/A",
+    "source": "Soviet official report; IAEA INSAG-1 (1986)",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "The official Soviet count of 31 deaths (2 explosion + 28 ARS + 1 from cardiac arrest) was the figure repeated for decades. Independent researchers, TORCH, and Greenpeace strongly contest this as a severe underestimate of long-term cancer mortality.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "thyroid-cancer-deaths",
+    "category": "Thyroid Cancer Deaths (Children)",
+    "killed": "~15",
+    "injured": "6,000+ cases",
+    "source": "UNSCEAR 2008; WHO Chernobyl Report",
+    "tier": 1,
+    "contested": "no",
+    "note": "Over 6,000 cases of thyroid cancer in children and young adults who were under 18 in 1986. Approximately 15 have died. The link to iodine-131 exposure from Chernobyl is scientifically established. Most cases are treated successfully with surgery.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "cancer-deaths-un-estimate",
+    "category": "Estimated Long-Term Cancer Deaths (UN/WHO)",
+    "killed": "~4,000",
+    "injured": "N/A",
+    "source": "UN Chernobyl Forum Report (2005); UNSCEAR 2008",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "The Chernobyl Forum (IAEA, WHO, UNDP, and others) estimates up to 4,000 people among the most exposed populations will die of radiation-induced cancer. This is widely criticized by environmental groups and independent researchers as a significant undercount.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "cancer-deaths-torch-estimate",
+    "category": "Estimated Cancer Deaths — TORCH Report",
+    "killed": "30,000–60,000",
+    "injured": "N/A",
+    "source": "TORCH Report (Fairlie & Sumner, 2006) — commissioned by European Greens",
+    "tier": 3,
+    "contested": "yes",
+    "note": "The TORCH Report uses a linear no-threshold radiation model across the full exposed European population to estimate 30,000–60,000 additional cancer deaths from Chernobyl radiation across Europe. WHO and UNSCEAR dispute this methodology.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "cancer-deaths-greenpeace-estimate",
+    "category": "Estimated Deaths — Greenpeace Report",
+    "killed": "985,000",
+    "injured": "N/A",
+    "source": "Greenpeace — The Chernobyl Catastrophe: Consequences on Human Health (2006)",
+    "tier": 3,
+    "contested": "yes",
+    "note": "Greenpeace's 2006 report, citing a compilation of Soviet/Eastern European studies, estimates nearly 1 million premature deaths from Chernobyl globally. The UN Chernobyl Forum and UNSCEAR strongly dispute this figure as lacking scientific rigor.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "liquidator-health-impacts",
+    "category": "Liquidator Health Impacts",
+    "killed": "contested",
+    "injured": "600,000+ exposed",
+    "source": "UNSCEAR 2008; Russian liquidator registries",
+    "tier": 1,
+    "contested": "heavily",
+    "note": "Approximately 240,000 liquidators received higher doses (mean ~100 mSv). UNSCEAR documents elevated leukemia and cataract rates among highly exposed workers. Long-term mortality studies are hampered by poor record-keeping. Russian and Ukrainian veterans' groups report significantly higher mortality than official estimates.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "evacuee-health-psychosocial",
+    "category": "Evacuees — Psychological & Chronic Health",
+    "killed": "N/A",
+    "injured": "350,000+",
+    "source": "WHO; UNDP; UN Chernobyl Forum 2005",
+    "tier": 1,
+    "contested": "no",
+    "note": "The UN Chernobyl Forum identifies psychological trauma, stigma, and 'paralysis of self-reliance' as among the most serious long-term public health impacts of the disaster, affecting hundreds of thousands of evacuees and resettled persons.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "affected-population-contaminated-areas",
+    "category": "Population in Significantly Contaminated Areas",
+    "killed": "N/A",
+    "injured": "5,200,000+",
+    "source": "UNSCEAR 2008 — Areas with Cs-137 above 37 kBq/m²",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "Approximately 5.2 million people live in areas of Belarus, Russia, and Ukraine that received significant cesium-137 deposition (above 37 kBq/m²). This population's long-term health monitoring is the subject of ongoing research.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  }
+]

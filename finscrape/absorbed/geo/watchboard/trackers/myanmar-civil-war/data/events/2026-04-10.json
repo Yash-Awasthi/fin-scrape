@@ -1,0 +1,77 @@
+[
+  {
+    "id": "mah-sworn-in-president-apr10",
+    "date": "2026-04-10",
+    "year": "2026",
+    "title": "Min Aung Hlaing Officially Sworn In as President — China and India Attend Inauguration",
+    "type": "political",
+    "detail": "Myanmar junta chief Min Aung Hlaing was officially sworn in as the country's 11th president on April 10, 2026, formalizing the military's cosmetic transition from overt junta rule to a military-backed nominal civilian government. China sent special envoy Jiang Xinzhi and India dispatched Minister of State for External Affairs Kirti Vardhan Singh to attend the ceremony — the attendance of Myanmar's two most important regional partners conferring a degree of regional legitimacy on the transition that the NUG, UN, US, and EU have strongly condemned. The inauguration completes a months-long constitutional theater orchestrated by the SAC: Min Aung Hlaing retired as military Commander-in-Chief on March 30 to meet the civilian candidacy requirement under the 2008 constitution, was elected vice-president by the junta-packed lower house on April 1, and was selected as president by a junta-controlled electoral college on April 3 with 429 of 584 votes. China's engagement prioritizes protection of its Belt and Road Initiative investments — including the Kyaukpyu deep-sea port and trans-Myanmar pipelines — while India's attendance reflects New Delhi's longstanding policy of engaging the Tatmadaw as a strategic partner to check Chinese influence and secure its northeastern border. The NUG, which holds the legitimate democratic mandate, rejected the proceedings as illegal and called on the international community to deny recognition.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/10/myanmars-coup-leader-min-aung-hlaing-sworn-in-as-president?traffic_source=rss",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/news/2026/4/10/myanmars-coup-leader-min-aung-hlaing-sworn-in-as-president?traffic_source=rss",
+        "caption": "Myanmar's coup leader Min Aung Hlaing sworn in as president with China and India in attendance",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/news/2026/4/10/myanmars-coup-leader-min-aung-hlaing-sworn-in-as-president?traffic_source=rss"
+      }
+    ]
+  },
+  {
+    "id": "kinpwonchaung-gate-raid-ngape-apr10",
+    "date": "2026-04-10",
+    "year": "2026",
+    "title": "Joint Resistance Forces Kill 8 SAC Troops in Ngape Township Kinpwonchaung Gate Raid",
+    "type": "military",
+    "detail": "At approximately 5:00 AM on April 10, a joint resistance force comprising the People's Revolutionary Army–Magway (PRA-Magway), Chin Defense Force–Asho (CDF-Asho), New Society Army, Minbu District Battalion 8, and the Ngape Township People's Defence Team launched a coordinated assault on the Kinpwonchaung gate outpost in Ngape Township, Magway Region. The 2.5-hour battle resulted in 8 SAC troops killed and many others injured; resistance forces seized 1 MA-1 rifle, 2 carbines, and associated ammunition from the position before withdrawing. No resistance casualties were reported. Ngape Township lies in a contested corridor of Magway Region where the Arakan Army has been expanding operations alongside Magway-based PDF units, creating a widening multi-front pressure on junta positions across central Myanmar. The joint operation reflected growing coordination between ethnic armed organizations and PDF units in the region.",
+    "sources": [
+      {
+        "name": "MoeMaKa CDM Domestic News",
+        "tier": 3,
+        "url": "https://moemaka.net/eng/2026/04/april-12-2026-m-cdm-domestic-news/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://moemaka.net/eng/2026/04/april-12-2026-m-cdm-domestic-news/",
+        "caption": "Joint resistance forces raid Kinpwonchaung gate outpost in Ngape Township, killing 8 SAC troops",
+        "source": "MoeMaKa CDM",
+        "thumbnail": "https://moemaka.net/eng/wp-content/uploads/2026/01/M.CDM_.jpg"
+      }
+    ]
+  },
+  {
+    "id": "launglon-drone-strike-police-station-apr10",
+    "date": "2026-04-10",
+    "year": "2026",
+    "title": "Launglone Steel Butterfly Force Drone Strike Kills 2 Junta Personnel at Launglon Police Station",
+    "type": "military",
+    "detail": "At approximately 10:00 PM on April 10, the Launglone Steel Butterfly Force (LLSBF) dropped two drone bombs on junta military personnel who were gathered at a social event at the Launglon police station in Launglon town, Tanintharyi Region. The attack killed 2 junta personnel and seriously injured 7 others. The LLSBF is a resistance drone unit operating in the southern Tanintharyi Region, which borders Thailand and has seen growing resistance drone operations targeting junta security installations. Tanintharyi Region (also known as Tenasserim) extends along Myanmar's southern peninsula and has been subject to resistance drone attacks against junta checkpoints, police stations, and military convoys as PDF forces expand their operational reach into the deep south. The strike reflects the resistance's expanding drone campaign across multiple geographic fronts, compensating for limited conventional military capabilities with precise improvised strikes.",
+    "sources": [
+      {
+        "name": "MoeMaKa CDM Domestic News",
+        "tier": 3,
+        "url": "https://moemaka.net/eng/2026/04/april-12-2026-m-cdm-domestic-news/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://moemaka.net/eng/2026/04/april-12-2026-m-cdm-domestic-news/",
+        "caption": "Launglone Steel Butterfly Force conducts drone strike on Launglon police station, killing 2 junta troops",
+        "source": "MoeMaKa CDM",
+        "thumbnail": "https://moemaka.net/eng/wp-content/uploads/2026/01/M.CDM_.jpg"
+      }
+    ]
+  }
+]

@@ -1,0 +1,520 @@
+[
+  {
+    "date": "2026-08-26",
+    "title": "Breaking: Chinese semiconductor ETFs plunge following the CXMT listing surge, reflecting i",
+    "summary": "Chinese semiconductor ETFs plunge following the CXMT listing surge, reflecting investor concern over overvaluation and volatility in China's chip sector.",
+    "sectionsUpdated": [
+      "events",
+      "meta"
+    ],
+    "source": "breaking"
+  },
+  {
+    "date": "2026-08-24",
+    "title": "China Tech Revolution Tracker Update — Mon Aug 24, 2026",
+    "summary": "Xiaomi unveiled the Xring D100, a 3nm smart-driving chip built by TSMC targeting 2027 commercial deployment. Backfilled two earlier gap days: Shanghai Biren projected up to a 22-fold H1 2026 revenue surge (Aug 17), and Nvidia denied a report it planned a China-specific LPU chip by year-end (Aug 21). Added a claims entry tracking the Nvidia LPU dispute. Reassessed tracker as no longer breaking — the past week shows steady domestic chip-market progress rather than a new acute flashpoint.",
+    "sectionsUpdated": [
+      "events",
+      "claims",
+      "meta"
+    ]
+  },
+  {
+    "date": "2026-08-21",
+    "title": "China Tech Revolution Tracker Update — Fri Aug 21, 2026",
+    "summary": "Nvidia Denies Report It Plans China-Specific LPU AI Chip Rollout by Year-End.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-20",
+    "title": "China Tech Revolution Tracker Update — Thu Aug 20, 2026",
+    "summary": "Alibaba Net Income Plunges 75% as AI Capex Surges 75% to $10B; Cloud/AI Revenue Grows 45%.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "title": "China Tech Revolution Tracker Update — Wed Aug 19, 2026",
+    "summary": "Unitree Robotics Surges 460% in Shanghai STAR Market Debut, Becomes First Listed Humanoid Robot Maker in Mainland China. US Moves to Close Cloud Loophole After Chinese AI Firms Reportedly Rent Banned Nvidia Chip Capacity via Southeast Asia.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-17",
+    "title": "China Tech Revolution Tracker Update — Mon Aug 17, 2026",
+    "summary": "Shanghai Biren Projects Up to 22-Fold H1 2026 Revenue Surge as AI Chip Demand Booms.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-14",
+    "title": "China Tech Revolution Tracker Update — Fri Aug 14, 2026",
+    "summary": "SMIC Tops $3 Billion Quarterly Revenue for First Time, Raises Wafer Prices on AI Demand.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-13",
+    "title": "China Tech Revolution Tracker Update — Thu Aug 13, 2026",
+    "summary": "DeepSeek Formally Releases V4-Pro-0813, Raises API Prices, Open-Sources Agent Harness.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-10",
+    "title": "China Tech Revolution Tracker Update — Mon Aug 10, 2026",
+    "summary": "Moore Threads Plans Hong Kong Listing After 147% Surge in First-Half Revenue.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-09",
+    "title": "China Tech Revolution Tracker Update — Sun Aug 9, 2026",
+    "summary": "China Redirects $28 Trillion Capital Markets to Fund AI/Chip Race as CXMT Overtakes ICBC as Most Valuable Listed Company.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-07",
+    "title": "China Tech Revolution Tracker Update — Fri Aug 7, 2026",
+    "summary": "US BIS Reviews Chinese AI Firms' Offshore Access to Nvidia Chips via Overseas Cloud Rentals.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-06",
+    "title": "China Tech Revolution Tracker Update — Thu Aug 6, 2026",
+    "summary": "Unitree Robotics Prices Shanghai IPO at $9 Billion Valuation, Becoming Mainland China's First Listed Humanoid-Robot Maker.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-08-05",
+    "title": "China Tech Revolution Tracker Update — Wed Aug 5, 2026",
+    "summary": "DeepSeek's V4-Flash model took the No.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "title": "China Tech Revolution Tracker Update — Fri Jul 31, 2026",
+    "summary": "DeepSeek Releases Official V4-Flash Model with Enhanced Agent Capabilities and Further Cost Cuts, Skips V4-Pro.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "title": "China Tech Revolution Tracker Update — Thu Jul 30, 2026",
+    "summary": "Bipartisan Senate Group Demands Apple Commit to Rejecting CXMT/YMTC Memory Chips by August 21 Deadline.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-07-28",
+    "title": "China Tech Revolution Tracker Update — Tue Jul 28, 2026",
+    "summary": "FCC Adds Chinese Humanoid Robots, Quadrupeds and Power Inverters to Covered List, Blocking New US Imports.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-07-27",
+    "title": "China Tech Revolution Tracker Update — Mon Jul 27, 2026",
+    "summary": "CXMT Surges 466-531% on Shanghai STAR Market Debut, Becomes China's Most Valuable Listed Company After $8.6B IPO.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-07-18",
+    "title": "China Tech Revolution Tracker Update — Sat Jul 18, 2026",
+    "summary": "Moonshot AI Releases Kimi K3 — 2.8-Trillion-Parameter Open-Weight Model Rivaling OpenAI, Anthropic — Sparks Nasdaq Chip Stock Selloff.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "title": "China Tech Revolution Tracker Update — Mon Jun 22, 2026",
+    "summary": "China's MOFCOM Adds 10 US Firms — Including Rare-Earth Miners MP Materials, USA Rare Earth — to Export Control List in Retaliation for Pentagon Blacklist.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-06-08",
+    "title": "China Tech Revolution Tracker Update — Mon Jun 8, 2026",
+    "summary": "Nvidia CEO Jensen Huang Declines Senate Banking Committee Invitation to Testify on China AI Chip Sales.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-06-07",
+    "title": "China Tech Revolution Update — Jun 7, 2026",
+    "summary": "BIS chip loophole dispute dominated June 6 news: TechTimes and Tom's Hardware reported that hundreds of thousands of advanced AI chips (Nvidia Blackwell, AMD MI350x, HBM) may have entered China via Singapore/Malaysia subsidiaries before the June 1 global scope clarification, with Trump officials disputing the gap existed. Separately, CXMT won Shanghai IPO approval for a $4.4B listing (Q1 revenue +719% YoY, net profit 33B yuan), as YMTC prepares its own NAND listing and a new US FAR rule targets Chinese memory chips from federal procurement — dual escalation in the memory semiconductor war. On June 7, CGTN reported that the world's first prefabricated AI computing power center opened in Qingdao, cutting construction time by 70% and running on 100% green power — a new deployment methodology giving China structural AI infrastructure speed advantages beyond chip technology.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "mapPoints",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-06-06",
+    "title": "China Tech Revolution Tracker Update — Sat Jun 6, 2026",
+    "summary": "BIS AI Chip Loophole Closure Disputed — Hundreds of Thousands of Advanced Chips May Have Entered China via Singapore/Malaysia Subsidiaries. CXMT Wins Shanghai IPO Approval; YMTC Prepares Listing — China Memory Chip Giants Edge Closer to Challenging Korean Rivals Amid AI Demand Surge.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-06-05",
+    "title": "China Tech Revolution Update — Jun 5, 2026",
+    "summary": "Huawei Ascend 910C chips completed full-parameter post-training of DeepSeek's V4-Pro model (1.6 trillion parameters) — validating China's domestic AI silicon at frontier training scale for the first time (SCMP, June 5). China now possesses the complete AI development pipeline on domestic hardware without any Nvidia access. DeepSeek is simultaneously finalizing its $7.4B funding round at a $52–59B valuation (Bloomberg, June 3), led by founder Liang Wenfeng's $2.8B personal commitment alongside Tencent, CATL, and the National AI Fund. Tencent's WeChat AI agent regulatory filing (June 3) triggered a historic +10.46% share surge adding $53B in market cap (Caixin Global, June 4) — WeChat's 1.3 billion users are entering the AI agent era. Senator Warren invited Nvidia CEO Jensen Huang to testify before the Senate Banking Committee on June 11 on China AI chip sales. Zhongji Innolight overtook CATL as China's largest CSI 300 constituent at 5.3% weighting, signaling China's benchmark equity index has repriced from the EV era to the AI infrastructure era (SCMP, June 5).",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-06-04",
+    "title": "China Tech Revolution Tracker Update — Thu Jun 4, 2026",
+    "summary": "Tencent Surges 10.46%, Adds $53 Billion Market Cap in Single Session — WeChat AI Agent Triggers China Tech's Biggest Daily Rally in Three Years. Senator Elizabeth Warren (D-MA) sent a formal letter to Nvidia CEO Jensen Huang on June 4 inviting him to testify before the Senate Banking Committee on June 11, 2026, CNBC reported.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-06-03",
+    "title": "China Tech Revolution Tracker Update — Wed Jun 3, 2026",
+    "summary": "DeepSeek Finalizing $7.4B Funding at $52–59B Valuation — Historic AI Deal Led by Liang Wenfeng, Tencent, CATL, and National AI Fund. Tencent Submits WeChat AI Agent for Chinese Regulatory Approval — 1.3 Billion-User Super-App Enters AI Agent Era; Company Calls It 'Top Priority'.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-06-02",
+    "title": "China Tech Revolution Update — Jun 2, 2026",
+    "summary": "China completed its bilateral tech war regulatory architecture on June 2 with two simultaneous moves. New 'Regulations on Trade Secret Protection' (effective June 2) formally classify AI training data, model weights, and algorithms as legally protected trade secrets for the first time under Chinese law — providing civil and criminal enforcement tools against data exfiltration from DeepSeek, Huawei, SMIC, and CATL IP. Simultaneously, a Chinese government-affiliated research team published a 63-sector counter-sanctions framework identifying technology domains (rare earths ~80%, solar ~90%, batteries, drones, AI architectures) where China holds sufficient global market share to impose export restrictions on the US and allies — mirroring US Entity List architecture. Together with the June 1 simultaneous bilateral tightening (China outbound investment regulation + US BIS global clarification), the decoupling now operates across seven formal vectors. BYD's May 28 in-house autonomous driving chip debut was also captured — joining Xpeng, Huawei MDC, and Horizon Robotics in China's domestic automotive AI silicon ecosystem.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-06-01",
+    "title": "China Tech Revolution Update — Jun 1, 2026",
+    "summary": "China and the US enacted simultaneous bilateral technology control frameworks on June 1 in a historically notable policy symmetry. China's State Council published a 34-article outbound investment regulation (effective July 1) requiring approval for overseas tech, data, and personnel transfers — extending to HK, Macau, and Taiwan, granting retaliatory powers against discriminatory foreign entities, and completing Beijing's three-vector domestic containment architecture (capital in blocked, talent out travel-restricted, technology out reviewed). On the same day, US BIS clarified chip export restrictions apply to all Chinese-parented firms globally regardless of subsidiary location, closing a loophole exploited after the Trump administration reversed Biden's AI Diffusion Framework. The Wire China's May 31 analysis identified China's next AI challenge: compute cost pressure as agentic AI workflows replace chatbots, forcing Alibaba, Tencent, and Zhipu to raise prices while DeepSeek holds at $0.003625/M input tokens. KPIs and econ updated with new outbound investment regulation entry, US BIS global clarification, and AI service pricing dynamics.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-31",
+    "title": "China Tech Revolution Update — May 31, 2026",
+    "summary": "MiniMax Group filed for a mainland China IPO on May 30 (Bloomberg), months after its January 2026 Hong Kong IPO, with annualized revenue more than doubled to $300M+ and a new flagship model launch imminent — the latest milestone in China's AI capital supercycle. The combined valuation of China's AI unicorn wave reached ~$135B+ (DeepSeek ~$50B, MiniMax $40B+, Moonshot AI $20B, Kunlunxin $14.6B, Zhipu AI ~$14B), all funded by domestic capital without US market access. TrendForce (May 22) confirmed SMIC and Hua Hong raised foundry wafer pricing amid AI-driven capacity tightening, with Hua Hong flagging further 12-inch hikes through H2 2026 — signaling that domestic AI infrastructure buildout is now straining Chinese foundry supply. Econ updated with the AI IPO wave combined valuation increase to $135B+ and new wafer pricing entry; meta updated to reflect MiniMax mainland filing as headline development.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-30",
+    "title": "China Tech Revolution Tracker Update — Sat May 30, 2026",
+    "summary": "Chinese AI startup MiniMax Group Inc.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-29",
+    "title": "China Tech Revolution Update — May 29, 2026",
+    "summary": "Bloomberg's May 29 newsletter 'Huawei Aims to Narrow China's Semiconductor Gap With the US' quantified the Tau Scaling Law competitive gap: Huawei targets 1.4nm-equivalent density by 2031 versus TSMC's 2028 roadmap — a confirmed 3-year gap narrowing from 5-7 years in 2020, and one now outside the reach of ASML EUV export controls. Bloomberg's May 28 analysis confirmed China's yuan is on its sixth consecutive quarterly gain against the dollar (last seen 2013), driven by AI-linked exports generating $500M/hour — structurally changing Beijing's currency management calculus. Al Jazeera (May 28) identified China's energy infrastructure — 2x US electricity generation, data centers set to reach 60 GW by 2030 at $0.03-0.06/kWh versus US $0.08-0.15/kWh — as a structural AI compute cost advantage compounding DeepSeek's training efficiency moat. Gap days May 28-29 filled with 3 new events; KPIs updated with yuan strength and energy data center capacity metrics; econ updated with AI energy infrastructure and yuan appreciation entries.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-28",
+    "title": "China Tech Revolution Tracker Update — Thu May 28, 2026",
+    "summary": "China's AI Export Boom Makes Beijing Less Afraid of Stronger Yuan — AI-Driven Revenue Powers Sixth Consecutive Quarterly Gain Against Dollar. China's massive energy infrastructure is emerging as a structural competitive advantage in the global AI race, Al Jazeera reported in an investigative analysis on May 28.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-27",
+    "title": "China Tech Revolution Update — May 27, 2026",
+    "summary": "China formally expanded overseas travel restrictions to cover senior AI researchers and engineers at private tech firms including DeepSeek and Alibaba, requiring government approval before traveling abroad — Beijing's two-vector talent lock-in strategy combining financial retention (Big Fund $10B investment at ~$50B valuation) with legal mobility restrictions. DeepSeek made permanent its 75% price cut on V4 Pro ($0.003625/M input tokens, below Western rivals' compute cost per Semafor), deepening the global AI price war. Qualcomm struck an ASIC chip supply deal with ByteDance for AI data center workloads — ByteDance's first major external chip supplier — sending Qualcomm shares to an all-time high. SMIC's $6B acquisition of Semiconductor Manufacturing North China (SMNC) received final CSRC approval, consolidating ~900K wafers/month of mature-node Chinese foundry capacity into the largest STAR Market tech deal ever. Global analysts on May 27 assessed Huawei's Tau Scaling Law (unveiled May 25) as 'Another DeepSeek Moment' — SCMP, Bloomberg, and Tom's Hardware described LogicFolding's architectural bypass of ASML EUV as a paradigm shift in China's chip trajectory. Events filed for May 23, 26, and 27 gap days; KPIs, econ, and claims updated.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-26",
+    "title": "China Tech Revolution Tracker Update — Tue May 26, 2026",
+    "summary": "China Expands Travel Restrictions to AI Talent at Private Tech Firms — DeepSeek, Alibaba Employees Require Government Approval to Travel Abroad. DeepSeek Makes 75% Price Cut on V4 Pro Permanent — $0.003625/M Input Tokens, Deepening Global AI Price War Against OpenAI and US Rivals. Qualcomm reached an agreement with TikTok parent ByteDance to supply custom application-specific integrated circuits (ASICs) for AI data center infrastructure, Bloomberg reported on May 26, 2026.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-25",
+    "title": "China Tech Revolution Update — May 25, 2026",
+    "summary": "Huawei HiSilicon president He Tingbo unveiled the 'Tau (τ) Scaling Law' and 'LogicFolding' architecture at IEEE ISCAS 2026 in Shanghai — targeting 1.4nm-equivalent chip density by 2031 through signal-latency engineering rather than ASML EUV lithography, directly bypassing the primary Western export control chokepoint. Huawei confirmed 381 chips already mass-produced using Tau principles, with Fall 2026 Kirin chips as the first commercial LogicFolding products. A new KPI tracking the Tau Scaling Law roadmap was added. The ASML EUV monopoly contested claim was updated to reflect this architectural bypass strategy: EUV is now a throughput and cost constraint rather than an insurmountable performance ceiling. He Tingbo was added to the political figures section as the architect of Huawei's post-sanction chip design roadmap. The hero headline and meta were updated to reflect the week's full-spectrum milestones: Tau Scaling Law (May 25), Shenzhou-23 launch (May 24), DeepSeek AGI round (May 22), Nvidia's China market concession (May 21), and Alibaba Zhenwu M890 launch (May 20).",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "claims",
+      "political",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-24",
+    "title": "China Tech Revolution Update — May 24, 2026",
+    "summary": "China launched the Shenzhou-23 crewed spacecraft on May 24 with taikonaut Li Jiaying — the first Hong Kong-born person to reach space — marking the 40th Chinese crewed mission and the latest demonstration of China's full-stack aerospace self-sufficiency independent of US technology access. New KPI added tracking China's 5G infrastructure milestone: 4.958 million base stations serving 1.254 billion subscribers (68.3% penetration), with 5G-Advanced now commercially deployed. New economic data added on China AI app user base: ByteDance Doubao 340M MAU, Alibaba Qwen 170M MAU, DeepSeek 130M MAU, and Q1 2026 AI startup fundraising of 110 billion yuan ($15B+). Jiuquan Satellite Launch Center added to the map as a new tech-hub point reflecting China's crewed spaceflight capability.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "mapPoints",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-23",
+    "title": "China Tech Revolution Tracker Update — Sat May 23, 2026",
+    "summary": "SMIC Clears Final CSRC Regulatory Hurdle for $6B Acquisition of Semiconductor Manufacturing North China — Largest STAR Market Tech Deal.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-22",
+    "title": "China Tech Revolution Update — May 22, 2026",
+    "summary": "DeepSeek founder Liang Wenfeng declared AGI as the company's primary mission on May 22 as its first external funding round advanced toward close at approximately $50 billion valuation — led by China's national Big Fund III with Tencent participating, making it the largest external round ever for a Chinese AI lab. The 70 billion yuan (~$10B) round marks Beijing's formal treatment of DeepSeek as a strategic national asset. Simultaneously, APEC 2026 Trade Ministers convened in Suzhou under China's chairmanship — the first major multilateral AI governance forum of the year — where the US promoted its AI options across Asia-Pacific while China's Commerce Minister Li Chenggang advanced Beijing's 'open cooperation' AI governance vision. KPIs updated with revised DeepSeek ~$50B valuation; econ updated with elevated China AI IPO wave total (~$115B+); Liang Wenfeng's political profile updated with AGI mission declaration; China AI parity claim updated; new APEC Suzhou ministerial map point added.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "mapPoints",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-21",
+    "title": "China Tech Revolution Update — May 21, 2026",
+    "summary": "Back-to-back developments mark a structural milestone in China's domestic AI chip transition. On May 21, Nvidia CEO Jensen Huang publicly acknowledged that Nvidia has 'largely conceded' China's AI chip market to Huawei during Q1 FY2027 earnings ($81.62B, +85% YoY), describing the export ban as having 'largely backfired' commercially — the first CEO-level admission that US export controls have permanently transferred China's AI chip market to a domestic competitor. The previous day (May 20), Alibaba unveiled the Zhenwu M890 AI accelerator at its Cloud Summit in Hangzhou, claiming 3x performance over the Nvidia H20 with 560,000+ units already shipped to 400+ enterprise customers across 20 industries. Alibaba simultaneously released Qwen 3.7-Max, supporting 35-hour autonomous coding sessions. KPIs, econ, claims, and political sections updated to reflect Jensen Huang's concession statement and the Alibaba Zhenwu M890 chip launch.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-20",
+    "title": "China Tech Revolution Tracker Update — Wed May 20, 2026",
+    "summary": "Alibaba Cloud Summit: Zhenwu M890 AI Chip Claims 3x Nvidia H20 Performance, Qwen 3.7-Max Released for 35-Hour Agentic Coding.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-19",
+    "title": "China Tech Revolution Update — May 19, 2026",
+    "summary": "China's four-pillar technology dominance is crystallizing in the week following the Trump-Xi Beijing summit. In physical AI and robotics, China shipped ~90% of 13,000+ humanoid robots globally in 2025; State Grid Corporation allocated $1B (6.8B yuan) to procure 8,500 AI robots in 2026 — the first government utility-scale humanoid robot deployment globally. At HRTE 2026 (Hangzhou, May 14–16), Chinese manufacturers UBTECH and Unitree confirmed deployments across 60+ countries, with Bloomberg identifying the sector as China's next export dominance wave after EVs. Cambricon Technologies posted its first-ever profitable year, with Q1 2026 revenue of 2.88B yuan (+160% YoY) and net income of 1.01B yuan, targeting 500,000 AI chip units in 2026 driven by ByteDance demand — validating China's domestic AI chip ecosystem's commercial self-sufficiency. KPIs and econ data updated with Cambricon Q1 record profit and humanoid robot production share metrics; map points updated with HRTE 2026 hub in Hangzhou.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "mapPoints",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-18",
+    "title": "China Tech Revolution Update — May 18, 2026",
+    "summary": "CIBF 2026 post-show analysis (Car News China, May 18) confirmed China's battery supply chain has crossed from concept to industrial-scale deployment: CATL holds 47.2% of China's EV battery installations in April 2026, with 6.5-minute LFP fast-charging cells in commercial delivery and 3,000+ exhibitors at Shenzhen confirming full supply-chain manufacturing maturity. Digitimes' May 18 post-summit assessment found that US chip export controls were 'not a major part' of the Trump-Xi talks — zero Nvidia H200 units have been delivered, Chinese firms remain redirected to Huawei Ascend, and only a bilateral AI governance framework (mutual capability notification + incident sharing) was institutionalized. Forbes China published its 2026 AI Tech Enterprises Top 50 list featuring physical AI and humanoid robotics leaders alongside model and chip developers, signaling the consolidation of China's third AI pillar. KPIs and econ data updated with CATL April 2026 domestic market share figures.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-17",
+    "title": "China Tech Revolution Update — May 17, 2026",
+    "summary": "One week after the Trump-Xi Beijing summit (May 14–15), zero Nvidia H200 chips have shipped to China — the licensing framework reportedly requires Nvidia to remit 15–25% of China sales revenue to the US government, a condition Beijing uses to justify redirecting all procurement to domestic Huawei Ascend chips. Rare earth exports remain ~50% below pre-restriction levels with no post-summit normalization. Huawei Ascend 950PR planned 2026 shipments total ~750,000 units; ByteDance's $5.6B order covers ~50% of annual supply, and Huawei projects $12B in AI chip revenue (+60%+ YoY) as the domestic AI chip transition is now structurally sealed. MIIT Minister Li Lecheng added to the political section alongside a new 600-million-user China generative AI user base KPI (Bloomberg/CGTN, May 12). The Hua Hong Wuxi Fab 9B map point updated to reflect Q1 earnings ($660.9M, +22.2% YoY) and the $6B capital commitment. Two gap events created for May 17 documenting the post-summit bifurcation assessment and domestic chip pipeline acceleration.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "mapPoints",
+      "political",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-16",
+    "title": "China Tech Revolution Update — May 16, 2026",
+    "summary": "The Trump-Xi Beijing summit closed May 15 with zero Nvidia H200 chips shipped and no signed AI governance framework — the only institutionalized output is the US-China AI safety dialogue channel announced May 14. Beijing directed Chinese firms to pause Nvidia orders in favor of domestic Huawei Ascend chips; rare-earth exports remain ~50% below pre-restriction levels. SMIC reported Q1 2026 revenue of $2.51B with Q2 guidance +14–16% QoQ driven by AI orders, while smartphone revenue share hit its lowest since 2021 — confirming the foundry's AI pivot. Hua Hong committed $6B to its Wuxi fab expansion and reported Q1 revenue +22.2% YoY, pivoting to specialty AI/automotive chips despite US tool restrictions. MIIT Minister Li Lecheng (Bloomberg, May 16) reaffirmed China's manufacturing-AI integration strategy, deepening domestic chip demand independent of Nvidia access. Events for gap days May 15–16 created; KPIs, econ, claims, political, and meta sections updated.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-15",
+    "title": "China Tech Revolution Tracker Update — Fri May 15, 2026",
+    "summary": "The Trump-Xi Beijing summit (May 14–15, 2026) closed with warm symbolic rhetoric but no concrete technology outcomes. SMIC reported Q1 2026 financial results on May 15 with revenue of $2.51 billion and net profit of $197.4 million — the latter missing the $223.6 million analyst consensus, according to TrendForce. Hua Hong Commits $6B to Wuxi Fab Expansion — Q1 Revenue +22% YoY, AI Specialty Chip Strategy to Offset US 7nm Tool Restrictions.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-14",
+    "title": "China Tech Revolution Update — May 14, 2026",
+    "summary": "The Trump-Xi Beijing summit opened May 14 with an unprecedented tech CEO delegation (Musk, Cook, Fink, and last-minute addition Nvidia CEO Jensen Huang). Treasury Secretary Bessent announced the first US-China AI safety dialogue framework under the Trump administration, while the US Commerce Department cleared Nvidia H200 chip sales for ~10 Chinese firms — but China has placed zero orders, steering demand to domestic Huawei Ascend chips instead. Alibaba posted its first operating loss since the 2021 crackdown on May 13, signaling Chinese Big Tech is prioritizing AI dominance over profitability. The May 12 trade truce cut US tariffs from 145% to 30%; China's SAMR suspended antitrust probes into Nvidia, Qualcomm, and Intel as negotiating leverage. Events for gap days May 13–14 filled; KPIs, econ, claims, and political sections updated.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-13",
+    "title": "China Tech Revolution Tracker Update — Wed May 13, 2026",
+    "summary": "Nvidia CEO Jensen Huang Joins Trump's Beijing Delegation as Last-Minute Addition — Chip Sales Breakthrough at Top of Agenda. Alibaba Posts First Operating Loss Since 2021 Tech Crackdown — CEO Wu Prioritizes AI Growth Over Profitability.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-12",
+    "title": "China Tech Revolution Update — May 12, 2026",
+    "summary": "Bloomberg reported May 12 that China earns $500 million per hour from AI-supercharged exports, framing April 2026 trade data (exports +14.1% YoY, 2x the forecast; imports +25.3%) as direct evidence that export controls have failed to slow China's AI-driven industrial competitiveness. Trump departed for Beijing on May 11 with tech CEO delegation (Musk, Cook, Fink), making an AI deconfliction channel the US's primary tech objective at the May 14–15 summit — the Stanford AI Index confirms the US-China AI gap has 'effectively closed'. Moonshot AI raised $2B at a $20B valuation (led by Meituan), joining DeepSeek, MiniMax, and Zhipu AI as China's fourth 2026 AI unicorn. SMIC founder Richard Chang argued 80% of global chip demand lies outside advanced nodes, validating China's mature-node dominance strategy. Gap days May 11 and May 12 filled; KPIs, econ, claims, political, and map sections updated.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "mapPoints",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-11",
+    "title": "China Tech Revolution Tracker Update — Mon May 11, 2026",
+    "summary": "China April 2026 Trade Beats Forecasts 2-to-1 — Exports +14.1% YoY; AI Hardware & Semiconductors Fuel ~50% of Growth. Trump Flies to Beijing with Musk, Cook, and Fink; AI Deconfliction Channel Tops Tech Agenda at May 14–15 Summit.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  },
+  {
+    "date": "2026-05-10",
+    "title": "China Tech Revolution Update — May 10, 2026",
+    "summary": "Baidu's AI chip unit Kunlunxin (昆仑芯科技) is pursuing a dual IPO targeting HK$100B (~$14.6B) on the Hong Kong Stock Exchange and Shanghai STAR Market (Bloomberg/SCMP, May 8–10) — joining DeepSeek ($45B), MiniMax ($40B+), and Zhipu AI ($14B) in a China AI chip/model valuation constellation now exceeding $110B collectively, an industry that barely existed when US chip export controls began in October 2022. MIIT launched a national AI ethics review pilot program on May 10, establishing provincial ethics committees targeting algorithmic discrimination and emotional dependence risks — China's latest AI governance layer ahead of the Trump-Xi Beijing summit (May 14–15), where formal US-China AI dialogue on military AI safety is under consideration. The chip-controls-effectiveness claims resolution updated to reflect Kunlunxin's IPO as the clearest evidence yet that controls have created rather than destroyed China's domestic AI chip industry. KPIs, econ, map, political, and claims sections updated; May 10 gap day filled with two events.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "mapPoints",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-09",
+    "title": "China Tech Revolution Update — May 09, 2026",
+    "summary": "ByteDance raised its 2026 AI infrastructure capex 25% to 200 billion yuan ($29.4B), with a larger share now going to domestic Huawei Ascend chips over Nvidia GPUs — making ByteDance one of the world's top three AI infrastructure spenders and confirming that US export controls are directly accelerating China's domestic chip procurement. The Trump-Xi Beijing summit (May 14–15) is being considered as the venue for the first formal US-China AI dialogue under the Trump administration, focused on military AI safety and accidental escalation risk. The 28th Beijing International High-Tech Expo opened May 8 showcasing L4 autonomous vehicles, bionic robotic arms, and AI-eSIM drones, confirming China's physical AI deployment is commercially operational. Morgan Stanley (May 3) forecast $1.25–1.75B in passive inflows to Hong Kong's Hang Seng Tech Index when Zhipu AI and MiniMax join on June 8 — validating HK's emergence as China's AI capital formation hub. Gap days May 3, 8, and 9 filled; ByteDance capex KPI and econ updated; new Trump-Xi AI dialogue claim added; Trump political profile updated; Hong Kong AI IPO hub map point added.",
+    "sectionsUpdated": [
+      "events",
+      "kpis",
+      "econ",
+      "claims",
+      "political",
+      "mapPoints",
+      "meta"
+    ],
+    "source": "daily"
+  },
+  {
+    "date": "2026-05-08",
+    "title": "China Tech Revolution Tracker Update — Fri May 8, 2026",
+    "summary": "28th China Beijing International High-Tech Expo Opens — AI Robots, L4 Autonomous Vehicles, and Domestic Chip Innovations Confirm China's Physical AI Deployment Maturity. Trump Administration Eyes First Formal US-China AI Dialogue at May 14–15 Beijing Summit — Potential Milestone in Bilateral AI Governance Amid Intensifying Tech War.",
+    "sectionsUpdated": [
+      "events"
+    ]
+  }
+]

@@ -1,0 +1,421 @@
+import { signInWithCredential } from '@firebase/auth'
+import * as Sentry from '@sentry/react-native'
+import { ENV_CONFIG } from 'common/envs/constants'
+import { log } from 'components/logger'
+import { Text } from 'components/text'
+import {
+  AppleAuthenticationButton,
+  AppleAuthenticationButtonStyle,
+  AppleAuthenticationButtonType,
+  AppleAuthenticationScope,
+  isAvailableAsync,
+  signInAsync,
+} from 'expo-apple-authentication'
+import * as Google from 'expo-auth-session/providers/google'
+import { CryptoDigestAlgorithm, digestStringAsync } from 'expo-crypto'
+import {
+  GoogleAuthProvider,
+  OAuthProvider,
+  updateEmail,
+  updateProfile,
+} from 'firebase/auth'
+import React, { useEffect, useState } from 'react'
+import {
+  ActivityIndicator,
+  Alert,
+  Image,
+  Modal,
+  Platform,
+  StyleSheet,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native'
+import WebView from 'react-native-webview'
+import { auth } from '../init'
+
+export const AuthPage = () => {
+  const [loading, setLoading] = useState(false)
+  const [_, response, promptAsync] = Google.useIdTokenAuthRequest(
+    // @ts-ignore
+    ENV_CONFIG.expoConfig
+  )
+  const appleAuthAvailable = useAppleAuthentication()
+
+  // We can't just log in to google within the webview: see https://developers.googleblog.com/2021/06/upcoming-security-changes-to-googles-oauth-2.0-authorization-endpoint.html#instructions-ios
+  useEffect(() => {
+    if (response?.type === 'success') {
+      const { id_token } = response.params
+      const credential = GoogleAuthProvider.credential(id_token)
+      // Success needs nothing more here: App.tsx observes the auth state change
+      // and hands the user to the web client, with retries. Failures are async
+      // rejections (auth/user-disabled for a banned account, network failures,
+      // account-exists-with-different-credential), so only a .catch sees them.
+      signInWithCredential(auth, credential).catch((err) =>
+        reportSignInFailure('google sign in', err)
+      )
+    } else if (response?.type === 'error') {
+      // Backing out of Google's consent screen comes back as an OAuth
+      // access_denied error rather than a 'cancel'/'dismiss' result.
+      if (response.error?.code !== 'access_denied')
+        reportSignInFailure(
+          'google auth request',
+          response.error ?? new Error('Google sign-in failed')
+        )
+    }
+    setLoading(false)
+  }, [response])
+
+  async function triggerLoginWithApple() {
+    setLoading(true)
+    try {
+      const { credential, data } = await loginWithApple()
+      const { user } = await signInWithCredential(auth, credential)
+      // Signed in from here on (App.tsx picks up the auth state change and
+      // hands the user to the web). Filling in the profile fields Apple only
+      // provides on the first sign-in is best-effort and must not be reported
+      // as a failed sign-in.
+      try {
+        if (data?.email && !user.email) await updateEmail(user, data.email)
+        if (data?.displayName && !user.displayName)
+          await updateProfile(user, { displayName: data.displayName })
+      } catch (error) {
+        log('[apple profile update] Error:', error)
+        Sentry.captureException(error, {
+          tags: { authFlow: 'apple profile update' },
+        })
+      }
+    } catch (error) {
+      // Backing out of the Apple sheet isn't a failure worth reporting.
+      if (errorCode(error) !== 'ERR_REQUEST_CANCELED')
+        reportSignInFailure('apple sign in', error)
+    }
+    setLoading(false)
+  }
+
+  const loginWithApple = async () => {
+    log('Signing in with Apple...')
+    const state = Math.random().toString(36).substring(2, 15)
+    const rawNonce = Math.random().toString(36).substring(2, 10)
+    const requestedScopes = [
+      AppleAuthenticationScope.FULL_NAME,
+      AppleAuthenticationScope.EMAIL,
+    ]
+
+    try {
+      const nonce = await digestStringAsync(
+        CryptoDigestAlgorithm.SHA256,
+        rawNonce
+      )
+
+      const appleCredential = await signInAsync({
+        requestedScopes,
+        state,
+        nonce,
+      })
+
+      const { identityToken, email, fullName } = appleCredential
+
+      if (!identityToken) {
+        throw new Error('No identity token provided.')
+      }
+
+      const provider = new OAuthProvider('apple.com')
+
+      provider.addScope('email')
+      provider.addScope('fullName')
+
+      const credential = provider.credential({
+        idToken: identityToken,
+        rawNonce,
+      })
+
+      const displayName = fullName
+        ? `${fullName.givenName} ${fullName.familyName}`
+        : undefined
+      const data = { email, displayName }
+
+      return { credential, data }
+    } catch (error: any) {
+      throw error
+    }
+  }
+
+  return (
+    <View style={AuthPageStyles.container}>
+      <View style={AuthPageStyles.centerFlex}>
+        <Image
+          source={require('../assets/logo.png')}
+          style={AuthPageStyles.flappy}
+        />
+        {loading ? (
+          <ActivityIndicator
+            style={{ height: AuthPageStyles.authContent.height }}
+            size="large"
+            color="#0000ff"
+          />
+        ) : (
+          <View style={AuthPageStyles.authContent}>
+            <TouchableOpacity
+              style={AuthPageStyles.googleButton}
+              onPress={async () => {
+                setLoading(true)
+                await promptAsync({ showInRecents: true })
+                setLoading(false)
+              }}
+            >
+              <View style={AuthPageStyles.googleButtonContent}>
+                <Image
+                  source={require('../assets/square-google.png')}
+                  style={{
+                    height: 28,
+                    width: 28,
+                    resizeMode: 'contain',
+                  }}
+                />
+                <Text
+                  style={AuthPageStyles.googleText}
+                  maxFontSizeMultiplier={1}
+                >
+                  Sign in with Google
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            {appleAuthAvailable && (
+              <AppleAuthenticationButton
+                buttonType={AppleAuthenticationButtonType.SIGN_IN}
+                buttonStyle={AppleAuthenticationButtonStyle.BLACK}
+                cornerRadius={5}
+                style={{
+                  width: '100%',
+                  height: 48,
+                  marginTop: 16,
+                }}
+                onPress={triggerLoginWithApple}
+              />
+            )}
+            <Eula />
+          </View>
+        )}
+      </View>
+    </View>
+  )
+}
+
+// `log()` is a no-op in prod builds, so a sign-in failure must be surfaced to
+// the user and to Sentry explicitly or it vanishes.
+function reportSignInFailure(context: string, error: unknown) {
+  log(`[${context}] Error:`, error)
+  Sentry.captureException(error, { tags: { authFlow: context } })
+  Alert.alert('Could not sign in', signInErrorMessage(error))
+}
+
+// Firebase and expo errors carry a machine-readable `code`; read it without
+// assuming the shape of whatever was thrown.
+function errorCode(error: unknown) {
+  return typeof error === 'object' && error !== null && 'code' in error
+    ? String((error as { code: unknown }).code)
+    : undefined
+}
+
+function signInErrorMessage(error: unknown) {
+  const code = errorCode(error)
+  switch (code) {
+    case 'auth/user-disabled':
+      return 'This account has been disabled. Email info@manifold.markets if you think that is a mistake.'
+    case 'auth/network-request-failed':
+      return "We couldn't reach Manifold. Check your connection and try again."
+    case 'auth/account-exists-with-different-credential':
+      return 'An account already exists with this email using a different sign-in method. Try the other sign-in option.'
+    default: {
+      const message = error instanceof Error ? error.message : String(error)
+      // Firebase's stock messages are developer-facing ("Firebase: Error
+      // (auth/invalid-credential)."); show the code instead of that string.
+      const text =
+        !message ||
+        message.startsWith('Firebase: ') ||
+        message === '[object Object]'
+          ? `Something went wrong${code ? ` (${code})` : ''}.`
+          : message
+      return `${text}\n\nIf this keeps happening, email info@manifold.markets.`
+    }
+  }
+}
+
+function useAppleAuthentication() {
+  const [authenticationLoaded, setAuthenticationLoaded] =
+    useState<boolean>(false)
+
+  useEffect(() => {
+    async function checkAvailability() {
+      try {
+        const available = await isAvailableAsync()
+        setAuthenticationLoaded(available)
+      } catch (error: any) {
+        Alert.alert('Error', error?.message)
+      }
+    }
+
+    if (Platform.OS === 'ios' && !authenticationLoaded) {
+      checkAvailability()
+    }
+  }, [])
+
+  return authenticationLoaded
+}
+
+export const AuthPageStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: '#4337C9',
+  },
+  flappy: {
+    height: 175,
+    resizeMode: 'contain',
+    marginTop: 150,
+  },
+  googleButton: {
+    backgroundColor: 'white',
+    borderRadius: 5,
+    width: '100%',
+    height: 48,
+  },
+  googleButtonContent: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  googleText: {
+    color: '#4285F4',
+    marginLeft: -2,
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  centerFlex: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  authContent: {
+    width: 300,
+    paddingTop: 20,
+    padding: 35,
+    height: 180,
+    minHeight: 180,
+    alignItems: 'center',
+  },
+  modalView: {
+    margin: 20,
+    width: 300,
+    height: 500,
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    zIndex: 1,
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+    flexDirection: 'column',
+  },
+  modalOverlay: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  eulaContainer: {
+    marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap',
+  },
+  text: { fontSize: 11 },
+  eulaText: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  clickable: {
+    textDecorationLine: 'underline',
+  },
+})
+function Eula() {
+  const [expanded, setExpanded] = useState<'privacy' | 'tos' | null>()
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <View style={AuthPageStyles.eulaContainer}>
+        <Text style={AuthPageStyles.text}>By signing up, you agree to our</Text>
+        <TouchableOpacity
+          onPress={() => {
+            setOpen(true)
+            setExpanded('privacy')
+          }}
+        >
+          <Text style={[AuthPageStyles.clickable, AuthPageStyles.text]}>
+            Privacy Policy
+          </Text>
+        </TouchableOpacity>
+        <Text style={AuthPageStyles.text}> & </Text>
+
+        <TouchableOpacity
+          onPress={() => {
+            setOpen(true)
+            setExpanded('tos')
+          }}
+        >
+          <Text style={[AuthPageStyles.clickable, AuthPageStyles.text]}>
+            ToS
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={open}
+        onRequestClose={() => setOpen(false)}
+        style={{ flex: 1 }}
+      >
+        <View style={AuthPageStyles.centerFlex}>
+          <View style={AuthPageStyles.modalView}>
+            {expanded === 'tos' && (
+              <WebView
+                style={{ height: 500, width: 300 }}
+                source={{
+                  uri: 'https://docs.manifold.markets/terms-and-conditions',
+                }}
+              />
+            )}
+            {expanded === 'privacy' && (
+              <WebView
+                style={{ height: 500, width: 300 }}
+                source={{ uri: 'https://docs.manifold.markets/privacy-policy' }}
+              />
+            )}
+          </View>
+          <TouchableWithoutFeedback
+            onPress={() => {
+              setOpen(false)
+              setExpanded(null)
+            }}
+          >
+            <View style={AuthPageStyles.modalOverlay} />
+          </TouchableWithoutFeedback>
+        </View>
+      </Modal>
+    </>
+  )
+}

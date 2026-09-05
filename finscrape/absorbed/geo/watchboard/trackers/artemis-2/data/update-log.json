@@ -1,0 +1,40 @@
+{
+  "lastRun": "2026-08-24T14:53:53.226Z",
+  "tracker": "artemis-2",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-08-14T00:00:00.000Z",
+      "status": "unchanged",
+      "itemCount": 11
+    },
+    "timeline": {
+      "lastRun": "2026-08-14T00:00:00.000Z",
+      "status": "unchanged",
+      "itemCount": 56
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-05T14:20:00.000Z",
+      "status": "unchanged",
+      "itemCount": 25
+    },
+    "claims": {
+      "lastRun": "2026-08-12T00:00:00.000Z",
+      "status": "unchanged",
+      "itemCount": 15
+    },
+    "political": {
+      "lastRun": "2026-08-11T00:00:00.000Z",
+      "status": "unchanged",
+      "itemCount": 22
+    },
+    "events": {
+      "lastRun": "2026-08-14T00:00:00.000Z",
+      "status": "unchanged"
+    },
+    "meta": {
+      "lastRun": "2026-08-20T14:45:28.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 3
+}

@@ -1,0 +1,1669 @@
+[
+  {
+    "era": "CJNG Origins (2009–2014)",
+    "events": [
+      {
+        "id": "milenio-cartel-collapse",
+        "year": "Oct 2009",
+        "title": "Milenio Cartel Collapses — Power Vacuum Created",
+        "type": "arrest",
+        "detail": "Óscar Orlando Nava Valencia, head of the Milenio Cartel, is captured by Mexican authorities in October 2009. The arrest destabilizes the Guadalajara-based criminal network that had operated under the Sinaloa umbrella, creating the power vacuum that El Mencho would exploit.",
+        "sources": [
+          {
+            "name": "InSight Crime — CJNG Profile",
+            "tier": 3,
+            "url": "https://insightcrime.org/mexico-organized-crime-news/jalisco-cartel-new-generation/"
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "nacho-coronel-killed",
+        "year": "Jul 29, 2010",
+        "title": "Nacho Coronel Killed — Sinaloa Loses Jalisco Foothold",
+        "type": "operation",
+        "detail": "Mexican marines kill Ignacio 'Nacho' Coronel, the Sinaloa Cartel's chief in Jalisco, during a raid in Zapopan. His death eliminates the Sinaloa umbrella over Guadalajara, giving El Mencho the opening to seize control of the region independently.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "InSight Crime",
+            "tier": 3,
+            "url": "https://insightcrime.org/mexico-organized-crime-news/jalisco-cartel-new-generation/"
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "matazetas-veracruz-debut",
+        "year": "Sep 20, 2011",
+        "title": "CJNG Debuts as 'Matazetas' — Veracruz Massacre",
+        "type": "violence",
+        "detail": "35 alleged Zeta cartel members are found dumped on the Boca del Río highway in Veracruz with a narco-banner announcing the 'Matazetas' (Zeta killers). This is CJNG's first public announcement of its existence, framing itself as a cleansing force against the Zetas.",
+        "sources": [
+          {
+            "name": "El Universal",
+            "tier": 2
+          },
+          {
+            "name": "InSight Crime",
+            "tier": 3,
+            "url": "https://insightcrime.org/mexico-organized-crime-news/jalisco-cartel-new-generation/"
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-85-first-arrest",
+        "year": "Mar 9, 2012",
+        "title": "Co-founder El 85 Arrested in Zapopan",
+        "type": "arrest",
+        "detail": "Érick Valencia Salazar 'El 85,' one of CJNG's co-founders, is captured by the Mexican Army in Zapopan, Jalisco. The cartel immediately responds with 12 narcobloqueos — burning buses and blocking major roads across Guadalajara — demonstrating its capacity for rapid, disruptive retaliation.",
+        "sources": [
+          {
+            "name": "Reforma",
+            "tier": 2
+          },
+          {
+            "name": "InSight Crime — Érick Valencia Salazar",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-menchito-first-arrest",
+        "year": "Jan 30, 2014",
+        "title": "El Menchito Arrested — El Mencho's Son Captured",
+        "type": "arrest",
+        "detail": "Rubén Oseguera González 'El Menchito,' El Mencho's son and CJNG's second-in-command, is arrested by Mexican authorities. Despite capture, El Menchito continues directing cartel operations from inside prison for six years, showing CJNG's organizational resilience.",
+        "sources": [
+          {
+            "name": "FGR (Mexico Attorney General)",
+            "tier": 1
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "cjng-break-sinaloa",
+        "year": "2014",
+        "title": "CJNG Breaks from Sinaloa — Full Independence Declared",
+        "type": "political",
+        "detail": "CJNG formally severs its alliance with the Sinaloa Cartel and declares full organizational independence. This sets off years of brutal conflict in territories like Jalisco, Nayarit, and eventually Baja California, as each cartel attempts to push the other out.",
+        "sources": [
+          {
+            "name": "InSight Crime",
+            "tier": 3
+          },
+          {
+            "name": "Animal Político",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "us-doj-indictment-2014",
+        "year": "Mar 2014",
+        "title": "U.S. DOJ Indicts El Mencho on Drug Trafficking Charges",
+        "type": "arrest",
+        "detail": "The U.S. District Court for the District of Columbia issues the first federal indictment against El Mencho on charges of continuing criminal enterprise and conspiracy to distribute narcotics. This begins a decade-long legal effort that will culminate in multiple superseding indictments and billions in forfeiture demands.",
+        "sources": [
+          {
+            "name": "U.S. Department of Justice",
+            "tier": 1,
+            "url": "https://www.justice.gov/"
+          },
+          {
+            "name": "DEA",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.justice.gov/",
+            "source": "U.S. Department of Justice",
+            "thumbnail": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Expansion & Dominance (2015–2019)",
+    "events": [
+      {
+        "id": "ofac-el-mencho-sanction",
+        "year": "Apr 8, 2015",
+        "title": "U.S. Treasury Designates El Mencho Under Kingpin Act",
+        "type": "diplomatic",
+        "detail": "OFAC sanctions El Mencho under the Foreign Narcotics Kingpin Designation Act, freezing U.S.-based assets and prohibiting financial transactions with him or his associates. The DEA issues a $10 million bounty. This marks the U.S. government's formal recognition of CJNG as a top-tier transnational criminal organization.",
+        "sources": [
+          {
+            "name": "U.S. Treasury / OFAC",
+            "tier": 1,
+            "url": "https://home.treasury.gov/policy-issues/financial-sanctions/recent-actions"
+          },
+          {
+            "name": "DEA",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "police-ambush-jalisco-2015",
+        "year": "Apr 2015",
+        "title": "CJNG Kills 15 Police Officers in Jalisco Ambush",
+        "type": "violence",
+        "detail": "CJNG gunmen ambush a convoy of Jalisco state police officers, killing 15 in one of the deadliest attacks on law enforcement in the state's history. The massacre prompts a major government mobilization and is the prelude to even larger confrontations just weeks later.",
+        "sources": [
+          {
+            "name": "SSPC (Mexico Interior Ministry)",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "helicopter-shootdown-2015",
+        "year": "May 1, 2015",
+        "title": "CJNG Shoots Down Military Helicopter — Operation Jalisco Launched",
+        "type": "violence",
+        "detail": "CJNG gunmen use Russian-made RPG-27 rocket launchers to shoot down a Mexican military Cougar EC725 helicopter near Villa Purificación, Jalisco, killing 9 soldiers. The same day, the cartel deploys simultaneous narcobloqueos across the state — burning buses and blocking roads in 11 municipalities. The government responds with Operation Jalisco, mobilizing 10,000 troops and 300 armored vehicles.",
+        "sources": [
+          {
+            "name": "SEDENA (Mexican Defense Ministry)",
+            "tier": 1
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-latin-america-32573174"
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-cuini-arrested",
+        "year": "Jun 2015",
+        "title": "El Cuini Arrested — CJNG's Financial Architect Captured",
+        "type": "arrest",
+        "detail": "Abigael González Valencia 'El Cuini,' El Mencho's brother-in-law and the financial mastermind of Los Cuinis (CJNG's money-laundering arm), is arrested by Mexican authorities pursuant to a U.S. indictment. He fights extradition for nearly a decade, not reaching U.S. custody until 2025.",
+        "sources": [
+          {
+            "name": "FGR",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "guanajuato-expansion",
+        "year": "2016–2018",
+        "title": "CJNG Invades Guanajuato — Deadliest Corridor Opens",
+        "type": "violence",
+        "detail": "CJNG launches a major push into Guanajuato, challenging the entrenched Santa Rosa de Lima Cartel (CSRL) led by 'El Marro' over oil theft and drug routes. The conflict transforms Guanajuato — once peaceful — into Mexico's single most violent state by homicides, a title it holds for several consecutive years.",
+        "sources": [
+          {
+            "name": "Mexico Violence Resource Project",
+            "tier": 3
+          },
+          {
+            "name": "InSight Crime",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "michoacan-bridge-bodies",
+        "year": "Aug 13, 2019",
+        "title": "9 Bodies Hung from Uruapan Bridge — Michoacán War Escalates",
+        "type": "violence",
+        "detail": "CJNG hangs 9 bodies from a bridge in Uruapan, Michoacán, with 10 more found dismembered nearby. The attack is part of CJNG's campaign to wrest control of the Tierra Caliente region from Los Viagras, who control extortion rackets on the lucrative avocado and lime industries.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "Proceso",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-53-killed",
+        "year": "Jul 31, 2019",
+        "title": "CJNG Co-founder Martín Arzola Ortega 'El 53' Assassinated",
+        "type": "violence",
+        "detail": "Martín Arzola Ortega 'El 53,' a co-founder of CJNG who had been released from prison in 2018, is shot dead at a Zapopan shopping center by a 17-year-old CJNG hitman. His killing signals the increasingly brutal internal discipline El Mencho imposes on those perceived as disloyal or independent.",
+        "sources": [
+          {
+            "name": "Reforma",
+            "tier": 2
+          },
+          {
+            "name": "InSight Crime",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "bounty-increased-2018",
+        "year": "Oct 16, 2018",
+        "title": "U.S. Bounty on El Mencho Doubled to $10 Million",
+        "type": "diplomatic",
+        "detail": "The U.S. State Department doubles the Narcotics Rewards Program bounty on El Mencho from $5 million to $10 million, the maximum allowed at the time. The increase reflects CJNG's expanded footprint into fentanyl production and distribution into the U.S. market.",
+        "sources": [
+          {
+            "name": "U.S. State Department",
+            "tier": 1,
+            "url": "https://www.state.gov/"
+          },
+          {
+            "name": "DEA",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.state.gov/",
+            "source": "U.S. State Department",
+            "thumbnail": "https://www.state.gov/wp-content/uploads/2023/12/Asset-4.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "U.S. Pressure Campaign (2020–2025)",
+    "events": [
+      {
+        "id": "el-menchito-extradited",
+        "year": "Feb 21, 2020",
+        "title": "El Menchito Extradited to United States",
+        "type": "arrest",
+        "detail": "After six years in Mexican custody — during which he continued directing cartel operations from prison — Rubén Oseguera González 'El Menchito' is extradited to the United States. He faces charges of murder, drug trafficking, and firearms offenses in a D.C. federal court.",
+        "sources": [
+          {
+            "name": "U.S. Department of Justice",
+            "tier": 1,
+            "url": "https://www.justice.gov/"
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.justice.gov/",
+            "source": "U.S. Department of Justice",
+            "thumbnail": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--default.png"
+          }
+        ]
+      },
+      {
+        "id": "project-python",
+        "year": "Mar 11, 2020",
+        "title": "Operation Python: Largest Single U.S. Strike on CJNG",
+        "type": "operation",
+        "detail": "A DEA-led operation culminates in more than 600 arrests and 350 indictments targeting CJNG members across the United States and Mexico. Described by DEA Administrator Milgram as the single largest law enforcement operation ever conducted against CJNG, it disrupts supply chains from Mexico to 35 U.S. states.",
+        "sources": [
+          {
+            "name": "DEA",
+            "tier": 1,
+            "url": "https://www.dea.gov/press-releases/2020/03/11/dea-led-operation-nets-more-600-arrests-targeting-cartel-jalisco-nueva-1"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "garcia-harfuch-attack",
+        "year": "Jun 26, 2020",
+        "title": "CJNG Attempts to Assassinate Mexico City Security Secretary",
+        "type": "violence",
+        "detail": "Four groups of seven CJNG gunmen ambush Mexico City public security secretary Omar García Harfuch on Paseo de la Reforma, firing more than 400 rounds including .50-caliber Barrett rounds and fragmentation grenades. Two bodyguards and one civilian bystander are killed; García Harfuch survives with three bullet wounds. Fifteen hitmen are arrested the same day.",
+        "sources": [
+          {
+            "name": "SSPC",
+            "tier": 1
+          },
+          {
+            "name": "NYT",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "carteles-unidos-forms",
+        "year": "2019–2020",
+        "title": "Carteles Unidos Formed to Resist CJNG in Michoacán",
+        "type": "political",
+        "detail": "Los Viagras, Cartel de Tepalcatepec, La Nueva Familia Michoacana, and other regional groups form the Carteles Unidos coalition specifically to resist CJNG's Michoacán expansion. The coalition stages dramatic displays of force, including military-style convoys with armored vehicles, but ultimately fractures by 2023.",
+        "sources": [
+          {
+            "name": "InSight Crime",
+            "tier": 3,
+            "url": "https://insightcrime.org/mexico-organized-crime-news/carteles-unidos/"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "rosalinda-arrested",
+        "year": "Nov 2021",
+        "title": "Rosalinda González 'La Jefa' Arrested on Money Laundering",
+        "type": "arrest",
+        "detail": "Mexican authorities arrest El Mencho's wife, Rosalinda González Valencia 'La Jefa,' on money laundering charges. She is accused of managing a network of front businesses used to launder CJNG drug proceeds. Her 2023 sentencing to five years and early release in early 2025 for 'good conduct' spark intense controversy.",
+        "sources": [
+          {
+            "name": "FGR",
+            "tier": 1
+          },
+          {
+            "name": "Animal Político",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-tony-montana-arrested",
+        "year": "Dec 20, 2022",
+        "title": "El Tony Montana Arrested in Guadalajara",
+        "type": "arrest",
+        "detail": "Antonio Oseguera Cervantes 'El Tony Montana,' El Mencho's brother and CJNG's logistics and weapons coordinator, is arrested in a Guadalajara suburb. A significant cache of weapons is seized. He is extradited to the United States on February 27, 2025.",
+        "sources": [
+          {
+            "name": "SEDENA",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "cjng-fto-designation",
+        "year": "Feb 20, 2025",
+        "title": "CJNG Designated Foreign Terrorist Organization by U.S.",
+        "type": "diplomatic",
+        "detail": "U.S. Secretary of State Marco Rubio officially designates CJNG as a Foreign Terrorist Organization (FTO) and Specially Designated Global Terrorist (SDGT), implementing an executive order signed by President Trump on January 20, 2025. The designation enables asset seizures, travel bans, and criminal penalties for material support.",
+        "sources": [
+          {
+            "name": "U.S. State Department",
+            "tier": 1,
+            "url": "https://www.state.gov/designation-of-international-cartels"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.state.gov/designation-of-international-cartels",
+            "source": "U.S. State Department",
+            "thumbnail": "https://www.state.gov/wp-content/uploads/2025/01/Tarawera_social_template.png"
+          }
+        ]
+      },
+      {
+        "id": "mass-extraditions-feb-2025",
+        "year": "Feb 27, 2025",
+        "title": "Mass Extraditions: 29 CJNG Figures Sent to U.S.",
+        "type": "diplomatic",
+        "detail": "Mexico extradites 29 CJNG and Los Cuinis suspects to the United States in a single batch, including El Tony Montana (Antonio Oseguera Cervantes), El 85 (Érick Valencia Salazar), and El Cuini (Abigael González Valencia). The batch extradition is the largest single transfer of cartel figures in Mexican history.",
+        "sources": [
+          {
+            "name": "U.S. Department of Justice",
+            "tier": 1
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-menchito-sentenced",
+        "year": "Mar 7, 2025",
+        "title": "El Menchito Sentenced to Life Plus 30 Years in U.S.",
+        "type": "arrest",
+        "detail": "A U.S. federal judge sentences Rubén Oseguera González 'El Menchito' to life in prison plus 30 years and orders him to forfeit $6 billion. The sentence eliminates any prospect of El Mencho reconstituting control through his son and forces the cartel to accelerate succession planning.",
+        "sources": [
+          {
+            "name": "U.S. Department of Justice",
+            "tier": 1,
+            "url": "https://www.justice.gov/opa/pr/notorious-violent-mexican-cartel-leader-sentenced-life-plus-30-years-prison-international"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.justice.gov/opa/pr/notorious-violent-mexican-cartel-leader-sentenced-life-plus-30-years-prison-international",
+            "source": "U.S. Department of Justice",
+            "thumbnail": "https://www.justice.gov/themes/custom/usdoj_uswds/images/metatag-image--press-release.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Post-Mencho Era (Feb 2026–Present)",
+    "events": [
+      {
+        "id": "el-mencho-killed-tapalpa",
+        "year": "Feb 22, 2026",
+        "title": "El Mencho Killed in Tapalpa Military Operation",
+        "type": "operation",
+        "active": true,
+        "detail": "Nemesio Oseguera Cervantes 'El Mencho,' the founder and supreme leader of CJNG, is killed during a joint Mexican military operation in Tapalpa, Jalisco. The operation involves Army, National Guard, Air Force, and special forces units, with confirmed U.S. intelligence support. Security Secretary Omar García Harfuch — who survived a 2020 CJNG assassination attempt — announces the kill.",
+        "sources": [
+          {
+            "name": "SEDENA",
+            "tier": 1
+          },
+          {
+            "name": "SSPC",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/2/24/with-el-mencho-killed-whats-next-for-mexico-and-the-jalisco-cartel"
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2026/2/24/with-el-mencho-killed-whats-next-for-mexico-and-the-jalisco-cartel",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/02/2026-02-23T170117Z_839836365_RC2KRJAKTIU3_RTRMADP_3_MEXICO-VIOLENCE-MENCHO-1771869146.jpg?resize=1920%2C1440"
+          }
+        ]
+      },
+      {
+        "id": "cjng-fragmentation-begins",
+        "year": "Late Feb 2026",
+        "title": "CJNG Fragmentation — Regional Commanders Bid for Control",
+        "type": "political",
+        "active": true,
+        "detail": "Within days of El Mencho's death, intelligence assessments indicate CJNG's command structure has fractured. Juan Carlos Valencia González 'O3' (El Mencho's stepson), Ricardo Ruiz Velasco 'El Doble R,' and Audias Flores Silva 'El Jardinero' emerge as the principal succession candidates, each with regional power bases but none with El Mencho's unifying authority.",
+        "sources": [
+          {
+            "name": "InSight Crime",
+            "tier": 3
+          },
+          {
+            "name": "Crisis Group",
+            "tier": 3
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "rival-cartels-advance",
+        "year": "Late Feb–Mar 2026",
+        "title": "Rival Cartels Advance Into CJNG-Weakened Territories",
+        "type": "violence",
+        "active": true,
+        "detail": "Following news of El Mencho's death, the Sinaloa Cartel (weakened by its own internal Chapitos–Zambada split since 2024), Los Viagras in Michoacán, and regional groups in Guanajuato probe CJNG-held territories. Violence spikes in Colima and southern Jalisco as CJNG subgroups compete to fill the vacuum.",
+        "sources": [
+          {
+            "name": "Mexico Violence Resource Project",
+            "tier": 3
+          },
+          {
+            "name": "Proceso",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "us-bounty-increase-2024",
+        "year": "Dec 2024",
+        "title": "U.S. Raises El Mencho Bounty to $15 Million",
+        "type": "diplomatic",
+        "detail": "The U.S. State Department raises the Narcotics Rewards Program bounty on El Mencho to $15 million — the highest ever for a drug trafficker at the time — alongside a concurrent Mexican government reward of MXN $300 million. The escalation indicates intensified intelligence-sharing and pressure that contributes to the February 2026 operation.",
+        "sources": [
+          {
+            "name": "U.S. State Department",
+            "tier": 1
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "us-mexico-cooperation-deepened",
+        "year": "Mar 2026",
+        "title": "U.S.-Mexico Security Talks Intensify Post-Mencho",
+        "type": "diplomatic",
+        "active": true,
+        "detail": "U.S. and Mexican officials meet to discuss next steps following El Mencho's elimination. DEA and NORTHCOM representatives brief Mexican counterparts on remaining CJNG high-value targets. Both governments emphasize continued cooperation despite ongoing tensions over CJNG's FTO designation and the use of U.S. military intelligence on Mexican soil.",
+        "sources": [
+          {
+            "name": "White House Press Secretary",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "colima-violence-spike",
+        "year": "Mar 2026",
+        "title": "Colima Records Surge in Violence Amid CJNG Power Struggle",
+        "type": "violence",
+        "active": true,
+        "detail": "The state of Colima — already Mexico's most violent per capita with over 100 homicides per 100,000 residents in 2024 — records a significant spike in violence in March 2026 as CJNG factions contest control of Manzanillo port and surrounding corridors. The port is critical to fentanyl precursor imports from China.",
+        "sources": [
+          {
+            "name": "Milenio",
+            "tier": 2
+          },
+          {
+            "name": "InSight Crime",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "grupo-elite-activates",
+        "year": "Mar 2026",
+        "title": "Grupo Élite Consolidates Under 'O3' Leadership",
+        "type": "political",
+        "active": true,
+        "detail": "CJNG's paramilitary enforcement arm, Grupo Élite, is reported to have consolidated under Juan Carlos Valencia González 'O3' — El Mencho's stepson and a U.S. citizen born in California. O3 commands the most disciplined and heavily armed unit within CJNG, making him the primary candidate to enforce organizational cohesion, though his U.S. citizenship creates unique legal exposure.",
+        "sources": [
+          {
+            "name": "InSight Crime",
+            "tier": 3
+          },
+          {
+            "name": "HSToday",
+            "tier": 3,
+            "url": "https://www.hstoday.us/featured/el-mencho-killed-inside-the-mexican-military-operation-u-s-intelligence-role-and-what-it-means-for-cjng-and-the-u-s-fentanyl-crisis/"
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.hstoday.us/featured/el-mencho-killed-inside-the-mexican-military-operation-u-s-intelligence-role-and-what-it-means-for-cjng-and-the-u-s-fentanyl-crisis/",
+            "source": "HSToday",
+            "thumbnail": "https://www.hstoday.us/wp-content/uploads/2026/02/El-Mencho.webp"
+          }
+        ]
+      },
+      {
+        "id": "el-mencho-buried-zapopan",
+        "year": "Mar 3, 2026",
+        "title": "El Mencho Buried in Zapopan — FGR Released Remains to Family",
+        "type": "operation",
+        "detail": "El Mencho's remains were formally released to his family by the FGR (Mexico's Attorney General) on February 28, 2026, following DNA confirmation of his identity. He was buried in a golden casket in Zapopan, Guadalajara, on March 3, 2026. CJNG supporters gathered for a low-key ceremony. The burial marked the formal conclusion of his 15-year reign as CJNG's supreme leader and founder.",
+        "sources": [
+          {
+            "name": "FGR (Mexico Attorney General)",
+            "tier": 1
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-18T06:00:00.000Z"
+      },
+      {
+        "id": "el-doble-r-arrested-mexicali",
+        "year": "Mar 11, 2026",
+        "title": "CORRECTED — Mexicali 'Doble R' Arrest Was Mistaken Identity; Real El Doble R (Ricardo Ruiz Velasco) Confirmed At Large Aug 5",
+        "type": "arrest",
+        "active": false,
+        "detail": "CORRECTION (confirmed via multiple outlets by Aug 5, 2026): The individual arrested in Mexicali, Baja California on March 11, 2026 was Ángel Javier 'N,' a Mexicali-based CJNG liaison who shares the nickname 'El Doble R'/'RR' — NOT Ricardo Ruiz Velasco, CJNG's Jalisco-based Grupo Élite/special-forces commander and the actual leading succession candidate. Ángel Javier 'N' was captured on an outstanding homicide, terrorist-acts, and armed-robbery warrant tied to Mexicali roadblock/arson disturbances following El Mencho's death; he had no established link to Jalisco heartland succession politics. Ricardo Ruiz Velasco — now identified by DOJ/DEA under the alias 'Tripa' — was confirmed still at large when the U.S. State Department placed a $10 million reward on him as part of the August 5, 2026 eight-leader CJNG reward package, formally correcting the record on his status nearly five months after the Mexicali arrest was first misreported as his capture.",
+        "sources": [
+          {
+            "name": "La Silla Rota",
+            "tier": 2,
+            "url": "https://lasillarota.com/guanajuato/estado/2026/3/12/capturan-el-doble-r-principal-heredero-de-el-mencho-590199.html"
+          },
+          {
+            "name": "El Financiero",
+            "tier": 2,
+            "url": "https://www.elfinanciero.com.mx/estados/2026/03/13/es-heredero-de-el-mencho-detienen-al-doble-r-en-mexicali-ligado-al-cjng-por-quema-de-vehiculos/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/03/12/quien-es-el-doble-r-y-por-que-es-una-pieza-clave-al-interior-del-cartel-jalisco/"
+          },
+          {
+            "name": "Univision / N+",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.univision.com/noticias/estados-unidos/quienes-son-los-ocho-integrantes-del-cjng-por-los-que-eeuu-ofrece-mas-de-100-millones-de-dolares"
+          }
+        ],
+        "lastUpdated": "2026-08-09T14:45:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://lasillarota.com/guanajuato/estado/2026/3/12/capturan-el-doble-r-principal-heredero-de-el-mencho-590199.html",
+            "source": "La Silla Rota",
+            "thumbnail": "https://lasillarota.com/u/fotografias/m/2026/3/12/f1280x720-842060_973735_5050.jpg"
+          }
+        ]
+      },
+      {
+        "id": "mexico-homicide-drop-2025",
+        "year": "2025 (reported Mar 2026)",
+        "title": "Mexico Records 30% Homicide Drop in 2025 — Lowest Since 2016",
+        "type": "political",
+        "detail": "Mexico recorded approximately 23,374 total homicides in 2025, a 30% decline from 2024 and the lowest total since 2016, with a national rate of 17.5 per 100,000. The drop represents the fourth consecutive year of decline under Sheinbaum and AMLO policies. However, security analysts caution the decline may reflect criminal consolidation rather than genuine peace — and the post-Mencho CJNG fragmentation is expected to reverse the trend in 2026. Notably, the economic cost of violence rose for the first time since 2019 to $245B USD despite fewer homicides.",
+        "sources": [
+          {
+            "name": "SESNSP",
+            "tier": 1
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/news/mexico-homicide-rate-2026/"
+          },
+          {
+            "name": "Vision of Humanity",
+            "tier": 3,
+            "url": "https://www.visionofhumanity.org/el-mencho-is-dead-mexicos-fragile-peace-now-faces-its-biggest-test-in-years/"
+          }
+        ],
+        "lastUpdated": "2026-03-18T06:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.visionofhumanity.org/el-mencho-is-dead-mexicos-fragile-peace-now-faces-its-biggest-test-in-years/",
+            "source": "Vision of Humanity",
+            "thumbnail": "https://www.visionofhumanity.org/wp-content/uploads/2026/02/Mexico.png"
+          }
+        ]
+      },
+      {
+        "id": "shield-of-americas-summit",
+        "year": "Mar 2026",
+        "title": "Trump's 'Shield of the Americas' Anti-Cartel Summit — Mexico Excluded",
+        "type": "diplomatic",
+        "active": true,
+        "detail": "Trump hosted a 12-nation cartel coalition summit called 'Shield of the Americas,' focused on intelligence sharing, military cooperation, and countering cartels across the Western Hemisphere. Notably, Mexico was not invited — a deliberate signal of US frustration with Mexican sovereignty over cartel operations on its soil. Despite the slight, US-Mexico security cooperation deepened operationally, with 93 cartel figures transferred to US custody outside formal extradition procedures and CIA aerial surveillance flights consented to by President Sheinbaum.",
+        "sources": [
+          {
+            "name": "Wilson Center",
+            "tier": 3,
+            "url": "https://www.wilsoncenter.org/article/key-takeaways-2026-shield-americas-summit"
+          },
+          {
+            "name": "Chatham House",
+            "tier": 3,
+            "url": "https://www.chathamhouse.org/2026/03/mexicos-anti-cartel-operations-seek-prove-trump-it-serious-about-security-world-cup-looms"
+          }
+        ],
+        "lastUpdated": "2026-03-18T06:00:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.wilsoncenter.org/article/key-takeaways-2026-shield-americas-summit",
+            "source": "Wilson Center",
+            "thumbnail": "https://www.wilsoncenter.org/sites/default/files/styles/og_image/public/media/uploads/images/P20260307DT-0431%20%281200x800%29.png"
+          }
+        ]
+      },
+      {
+        "id": "sheinbaum-governors-letter-cia-governance-reform-apr25",
+        "year": "Apr 24-25, 2026",
+        "title": "Sheinbaum Sends Letter to All 32 Governors — CIA Sovereignty Governance Reform",
+        "type": "diplomatic",
+        "active": true,
+        "detail": "President Claudia Sheinbaum sent a formal letter to all 32 Mexican governors on April 24, 2026, requiring all security cooperation with foreign agencies to route through federal channels — specifically the Foreign Relations Ministry or the federal security cabinet. The letter targets opposition PAN Chihuahua Governor Maru Campos for authorizing CIA participation in drug lab raids without federal authorization, a structural failure exposed by the April 20 CIA vehicle crash in the Sierra de Chihuahua. The Mexican Senate simultaneously summoned Chihuahua Governor Maru Campos and AG César Jáuregui Moreno to testify. LA Times revealed four CIA agents participated in the April 20 operation (not two as initially reported) and this was the third CIA counter-narcotics operation in Chihuahua in 2026 — with CIA agents wearing Chihuahua State Investigative Agency uniforms. Sheinbaum frames the failure as state-level: 'The main failure lies with the state government.' The governance reform constrains state-level bilateral security autonomy while preserving the federal intelligence-sharing framework that underpins Operativo Enjambre and CJNG interdiction. Sheinbaum: 'There are no joint operations on land or in the air.'",
+        "sources": [
+          {
+            "name": "Latin Times",
+            "tier": 2,
+            "url": "https://www.latintimes.com/cia-deaths-mexico-trigger-sheinbaum-crackdown-state-level-us-security-ties-596877"
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/news/sheinbaum-blames-chihuahua-state-cia-new-evidence/"
+          },
+          {
+            "name": "The Yucatan Times",
+            "tier": 2,
+            "url": "https://theyucatantimes.com/2026/04/the-cia-has-participated-in-three-operations-in-mexico-there-were-four-agents-in-chihuahua-not-two-los-angeles-times/"
+          }
+        ],
+        "lastUpdated": "2026-04-25T14:30:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.latintimes.com/cia-deaths-mexico-trigger-sheinbaum-crackdown-state-level-us-security-ties-596877",
+            "source": "Latin Times",
+            "thumbnail": "https://d.latintimes.com/en/full/582880/claudia-sheinbaum-mexico.jpg"
+          }
+        ]
+      },
+      {
+        "id": "el-85-guilty-plea-apr7-2026",
+        "year": "Apr 7, 2026",
+        "title": "CJNG Co-founder El 85 Pleads Guilty in U.S. Federal Court",
+        "type": "arrest",
+        "detail": "Érick Valencia Salazar ('El 85'), one of the original co-founders of CJNG, pleaded guilty in U.S. District Court in Washington D.C. to conspiracy to distribute cocaine for importation into the United States — facing a mandatory minimum of 10 years and maximum of life in prison. Sentencing is scheduled for July 31, 2026 before Chief Judge James Boasberg. El 85 (age 49) was extradited to the U.S. on February 27, 2025 as part of the largest single CJNG extradition in history. After his 2012 arrest in Zapopan he broke from El Mencho and founded La Nueva Plaza, a CJNG rival. The guilty plea closes a major chapter in U.S. prosecution of CJNG's founding generation — three of the four original co-founders are now accounted for: El Mencho killed, El 53 killed, El 85 in U.S. custody.",
+        "sources": [
+          {
+            "name": "U.S. Department of Justice",
+            "tier": 1
+          },
+          {
+            "name": "Washington Post",
+            "tier": 2,
+            "url": "https://www.washingtonpost.com/politics/2026/04/07/cjng-founder-guilty-el-mencho-mexican-cartel/9061de36-32ba-11f1-b85b-2cd751275c1d_story.html"
+          },
+          {
+            "name": "Washington Times",
+            "tier": 2
+          },
+          {
+            "name": "Infobae México",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-04-08T14:45:55.000Z"
+      },
+      {
+        "id": "ofac-sanctions-el03-jul23-2026",
+        "year": "Jul 23, 2026",
+        "title": "OFAC Sanctions El 03 and 50+ CJNG Individuals/Entities — Largest Treasury Action Yet Against the Cartel",
+        "type": "operation",
+        "active": true,
+        "detail": "The U.S. Treasury's Office of Foreign Assets Control (OFAC) sanctioned more than 50 individuals and entities linked to CJNG on July 23, 2026, in what Treasury Secretary Scott Bessent described as the largest action ever targeting the cartel. The designation formally named Juan Carlos Valencia González ('El 03'/'El Pelón') as CJNG's confirmed leader — his U.S. federal drug-trafficking indictment in Washington D.C. remained active with the (then) $5 million State Department reward — alongside re-designations of Audias Flores Silva ('El Jardinero'), César Alejandro Villaseñor Olivares ('El Güero Conta'), Hugo Gonzalo Mendoza Gaytán ('El Sapo,' formally identified as CJNG's plaza boss for Puerto Vallarta, Jalisco), and roughly 20 other named CJNG members and financial facilitators. The action froze U.S.-jurisdiction assets tied to more than a dozen companies, including Petrocoda, Stella Servicios Comerciales y Empresariales, and Tequilera El Origen del Tequila. Bessent: 'The measure of today affects the leadership, financiers and criminal networks of the Jalisco New Generation Cartel, depriving it of resources used to traffic fentanyl, terrorize communities and threaten American lives.'",
+        "sources": [
+          {
+            "name": "El Financiero",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.elfinanciero.com.mx/nacional/2026/07/23/tesoro-de-eu-sanciona-a-juan-carlos-valencia-alias-el-03-y-a-50-personas-y-empresas/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/07/23/eeuu-emite-nuevas-sanciones-contra-juan-carlos-valencia-y-otros-lideres-del-cjng/"
+          },
+          {
+            "name": "U.S. Department of the Treasury",
+            "tier": 1,
+            "pole": "western",
+            "url": "https://home.treasury.gov/news/press-releases/sb0573"
+          }
+        ],
+        "lastUpdated": "2026-08-09T14:45:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.elfinanciero.com.mx/nacional/2026/07/23/tesoro-de-eu-sanciona-a-juan-carlos-valencia-alias-el-03-y-a-50-personas-y-empresas/",
+            "caption": "Juan Carlos Valencia González ('El 03'), sanctioned by U.S. Treasury OFAC as CJNG's confirmed leader, July 23, 2026",
+            "source": "El Financiero",
+            "thumbnail": "https://www.elfinanciero.com.mx/resizer/v2/ME6FPGNVY5GNDOI7YHFG6TL2OM.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "r1-los-rs-arrested-jul30-2026",
+        "year": "Jul 30, 2026",
+        "title": "'El R-1' (Los Rs Cell Leader) Arrested — Linked to Valeria Márquez Femicide and Mayor Carlos Manzo Assassination",
+        "type": "arrest",
+        "active": true,
+        "detail": "Ramón Ángel Álvarez Ayala ('El R-1'), leader of 'Los Rs,' a CJNG-linked armed cell operating across Jalisco and Michoacán, was captured July 30, 2026 during a federal special-forces operation in Atotonilco el Alto, Jalisco, following a brief armed confrontation in which one associate was killed. Security Secretary Omar García Harfuch stated investigators believe Álvarez Ayala ordered the May 2025 livestreamed femicide of TikTok influencer Valeria Márquez at the request of his son Francisco, who had dated and repeatedly threatened her. Authorities separately allege Álvarez Ayala financed and ordered the November 2025 assassination of Uruapan, Michoacán Mayor Carlos Manzo, an outspoken organized-crime critic — a case that had already led to 31 prior arrests. On August 7, 2026, a judge formally linked him to trial (vinculación a proceso) on weapons-possession and drug-trafficking charges — including possession of cartridges reserved for the armed forces and intent to traffic methamphetamine and cocaine — and ordered preventive detention at the Altiplano maximum-security prison, with a three-month window for supplementary investigation on the homicide charges. He has filed an amparo alleging torture and incommunicado detention to fight extradition to the U.S.",
+        "sources": [
+          {
+            "name": "Fox News",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.foxnews.com/world/mexican-cartel-boss-linked-influencers-livestreamed-murder-arrested-officials-say"
+          },
+          {
+            "name": "CNN en Español",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://cnnespanol.cnn.com/2026/07/31/mexico/detencion-r1-lider-cjng-autor-intelectual-carlos-manzo-orix"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/07/vinculan-a-proceso-a-ramon-alvarez-alias-r1-por-el-asesinato-de-carlos-manzo/"
+          }
+        ],
+        "lastUpdated": "2026-08-09T14:45:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.foxnews.com/world/mexican-cartel-boss-linked-influencers-livestreamed-murder-arrested-officials-say",
+            "caption": "Ramón Ángel Álvarez Ayala ('El R-1'), Los Rs/CJNG cell leader arrested July 30, 2026",
+            "source": "Fox News",
+            "thumbnail": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/08/1200/675/mexican-cartel-leader-1.jpg"
+          }
+        ]
+      },
+      {
+        "id": "dea-102m-rewards-aug5-2026",
+        "year": "Aug 5, 2026",
+        "title": "U.S. Announces $102M in Rewards + New Charges Against 8 CJNG Leaders; Doble R Status Corrected",
+        "type": "operation",
+        "active": true,
+        "detail": "The U.S. State Department, DOJ, DEA, FBI, HSI, IRS, and CBP jointly announced reward offers totaling up to $102 million for information leading to the arrest/conviction of eight CJNG leaders and financial facilitators on August 5, 2026 — the largest coordinated reward package of the post-Mencho campaign. Rewards: Juan Carlos Valencia González ('El 03'/'Pelón') — $25M (raised from $5M); Audias Flores Silva ('El Jardinero') — $15M; Hugo Gonzalo Mendoza Gaytán ('El Sapo') — $15M; Julio Alberto Castillo Rodríguez ('El Chorro,' El Mencho's son-in-law and Manzanillo plaza chief) — $15M; Ricardo Ruiz Velasco ('Tripa,' commander of CJNG's special-forces Grupo Élite) — $10M; Julio César Montero Pinzón ('El Tarjetas') — $10M; Carlos Andrés Rivera Varela ('La Firma,' linked to CJNG's timeshare-fraud network) — $10M; and Griselda Margarita Arredondo Pinzón (Montero Pinzón's sister, fraud-scheme facilitator, FBI-led case) — $2M. The announcement confirmed Ricardo Ruiz Velasco — the real 'El Doble R'/'RR,' CJNG's Jalisco special-forces commander — remains at large, correcting months of conflation with Ángel Javier 'N,' a different CJNG figure arrested in Mexicali on March 11, 2026 who shared the same nickname. DEA Administrator Terry Cole: 'If you traffic deadly drugs, profit from the suffering of others, or use public office to protect the cartels, this is your warning.' Acting Attorney General Todd Blanche: 'Narco-terrorist organizations like the Cártel de Jalisco Nueva Generación are responsible for countless deaths to Americans.'",
+        "sources": [
+          {
+            "name": "Washington Examiner",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.washingtonexaminer.com/news/justice/4676522/doj-puts-25-million-bounty-on-us-born-cartel-leader/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/05/eeuu-ofrece-usd-102-millones-por-ocho-lideres-del-cjng-juan-carlos-valencia-gonzalez-encabeza-la-lista/"
+          },
+          {
+            "name": "Univision / N+",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.univision.com/noticias/estados-unidos/quienes-son-los-ocho-integrantes-del-cjng-por-los-que-eeuu-ofrece-mas-de-100-millones-de-dolares"
+          },
+          {
+            "name": "U.S. Department of State",
+            "tier": 1,
+            "pole": "western",
+            "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/08/degrading-cjng-announcing-over-100-million-in-reward-offers-and-visa-restrictions"
+          }
+        ],
+        "lastUpdated": "2026-08-09T14:45:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/05/eeuu-ofrece-usd-102-millones-por-ocho-lideres-del-cjng-juan-carlos-valencia-gonzalez-encabeza-la-lista/",
+            "caption": "U.S. officials announce $102 million in combined rewards for eight CJNG leaders, August 5, 2026",
+            "source": "Infobae / Reuters",
+            "thumbnail": "https://st1.uvnimg.com/a4/da/e053c9cd4242805bc6c22cf430e9/2026-08-05t151412z-1234207363-rc2fsmar6jvn-rtrmadp-3-usa-justice-cartel.JPG"
+          }
+        ]
+      },
+      {
+        "id": "cjng-member-confirms-el03-documentary-aug7-2026",
+        "year": "Aug 7, 2026",
+        "title": "CJNG Operative Publicly Confirms 'El 03' as New Cartel Commander in German Documentary",
+        "type": "political",
+        "active": true,
+        "detail": "A member of CJNG's special-operations wing appeared on camera in the German documentary \"Los cárteles mexicanos: ¿El fin de la impunidad?\" (ARTEde), delivering the first public, on-camera acknowledgment from inside the organization that Juan Carlos Valencia González ('El 03'/'El Pelón') is now CJNG's commander following El Mencho's February 22 killing: 'El Mencho siempre será nuestro líder, pero ahora nuestro comandante es el 03. Es la autoridad y el poder... Quien desafíe su poder será castigado' ('El Mencho will always be our leader, but now our commander is El 03. He is the authority and the power... Whoever defies his power will be punished'). The confirmation follows the July 23 OFAC designation and August 5 DOJ/State reward package, both of which already named El 03 as confirmed leader — but this is the first on-the-record acknowledgment from within CJNG's own ranks, reinforcing the 'no fracture' assessment analysts have maintained since the succession crisis began.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/07/integrante-del-cjng-admite-en-documental-que-el-03-es-su-nuevo-lider-y-advierte-quien-desafie-su-poder-sera-castigado/"
+          },
+          {
+            "name": "La Opinión",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://laopinion.com/2026/08/08/quien-desafie-su-poder-sera-castigado-integrante-del-cjng-habla-en-un-documental-sobre-el-03/"
+          },
+          {
+            "name": "El Mañana de Nuevo Laredo",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://elmanana.com.mx/nacional/2026/8/7/narco-revela-en-documental-quien-es-el-03-senalado-como-nuevo-lider-del-cjng-tras-la-caida-de-el-men-178101.html"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/07/integrante-del-cjng-admite-en-documental-que-el-03-es-su-nuevo-lider-y-advierte-quien-desafie-su-poder-sera-castigado/",
+            "caption": "A CJNG operative confirms 'El 03' as the cartel's new commander in a German ARTEde documentary, August 7, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/KN533SELORFNNJEK7OAJBPCD54.jpg"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-12T14:45:00.000Z"
+      },
+      {
+        "id": "us-ambassador-johnson-warns-el03-aug8-2026",
+        "year": "Aug 8, 2026",
+        "title": "U.S. Ambassador Ronald Johnson Warns CJNG Leader 'El 03': 'Nowhere Left to Hide'",
+        "type": "diplomatic",
+        "active": true,
+        "detail": "U.S. Ambassador to Mexico Ronald Johnson posted a direct warning to Juan Carlos Valencia González ('El 03'/'El Pelón') on X on August 8, 2026, days after the State Department raised its bounty on him to $25 million: 'Ya no hay dónde esconderse. Los encontraremos y rendirán cuentas' ('There is nowhere left to hide. We will find them and they will be held accountable'). The post, accompanied by Valencia González's wanted poster, reinforced the August 5 reward package targeting eight CJNG leaders and came as fresh profiles of Valencia González's biography — U.S.-born in Santa Ana, California; stepson of El Mencho; son of Millennium Cartel founder Armando Valencia Cornelio ('El Maradona') and Rosalinda González Valencia of the Los Cuinis financial network — circulated widely in Mexican and U.S. media.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/08/ronald-johnson-envia-advertencia-a-el-pelon-hijastro-de-el-mencho-y-nuevo-lider-del-cjng-ya-no-hay-donde-esconderse/"
+          },
+          {
+            "name": "El Universal",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.eluniversal.com.mx/mundo/quien-es-juan-carlos-valencia-alias-03-el-nuevo-lider-del-cjng-su-historia-esta-ligada-a-el-mencho-y-los-cuinis/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/08/ronald-johnson-envia-advertencia-a-el-pelon-hijastro-de-el-mencho-y-nuevo-lider-del-cjng-ya-no-hay-donde-esconderse/",
+            "caption": "U.S. Ambassador Ronald Johnson's X post warning CJNG leader 'El 03,' August 8, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/RLZSJLLW5RDBBD6O3IYJTALSCM.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-12T14:45:00.000Z"
+      },
+      {
+        "id": "19-cjng-members-sentenced-18-years-aug10-2026",
+        "year": "Aug 10, 2026",
+        "title": "Mexican Court Sentences 19 CJNG Members to Up to 18 Years for 2022 Tizapán el Alto Arms Cache",
+        "type": "political",
+        "active": true,
+        "detail": "A Jalisco Tribunal de Enjuiciamiento sentenced 19 CJNG members to 16–18 years, 1 month, 22 days on August 10, 2026, for criminal association, stockpiling firearms, and possession of military-exclusive ammunition and magazines. Twelve defendants received the maximum 18-year term; seven received 16 years, 6 months. The case dates to a November 11, 2022 confrontation with SEDENA elements in Tizapán el Alto, Jalisco, where authorities seized 28 long firearms, 2,470 cartridges, 153 magazines, a grenade launcher, and 18 ballistic vests (four marked with CJNG insignia). The 19 will serve their sentences at the Puente Grande federal penitentiary complex in Jalisco, the same facility already holding 'El Cabo' and 'El R-1.'",
+        "sources": [
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/10/sociedad/sentencian-hasta-con-18-anos-de-prision-a-19-integrantes-de-cjng"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/11/condenan-a-19-presuntos-integrantes-del-cjng-con-hasta-18-anos-de-prision-tras-un-enfrentamiento-con-el-ejercito-en-jalisco/"
+          },
+          {
+            "name": "Vanguardia",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://vanguardia.com.mx/noticias/mexico/condenan-a-19-integrantes-del-cjng-con-hasta-18-anos-de-prision-por-participar-en-ataque-armado-en-jalisco-OD22748372"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/11/condenan-a-19-presuntos-integrantes-del-cjng-con-hasta-18-anos-de-prision-tras-un-enfrentamiento-con-el-ejercito-en-jalisco/",
+            "caption": "19 CJNG members sentenced to up to 18 years in prison over a 2022 Jalisco arms cache, August 10, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/SHRF4YSE5VASZMALUH2FU2RCTQ.jpg?auth=395fc7fd33514d51c98cf981c2d3d35572db56f0e8c2610e06aab54995ef2fc0&smart=true&width=350&height=197&quality=85"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-12T14:45:00.000Z"
+      },
+      {
+        "id": "four-cjng-members-charged-narcoterrorism-czech-aug11-2026",
+        "year": "Aug 11, 2026",
+        "title": "DOJ Unseals Narcoterrorism and Arms-Trafficking Charges Against 4 CJNG Members Arrested in Czech Republic",
+        "type": "arrest",
+        "active": true,
+        "detail": "The DOJ unsealed charges on August 11, 2026 against four alleged CJNG members arrested in the Czech Republic in June 2026: Edgar Alejandro López Velasco (44), Noé Díaz Jiménez (33), and José Miguel Alvarado Morales (23) — each charged with narcoterrorism conspiracy, material support to terrorism, drug importation, and firearms trafficking — plus Leobardo Gaxiola López, alias 'Bado' (63), charged with drug importation conspiracy and firearms trafficking. All face potential life sentences; two were extradited to the Middle District of Florida while two remain detained in Europe. Prosecutors allege López and Díaz negotiated the sale of European military-grade weapons — machine guns, rocket launchers, mortars, explosives — from the Czech Republic to Mexico in exchange for fentanyl and methamphetamine shipments, tied to a clandestine fentanyl lab dismantled in Zapopan, Jalisco on June 12, 2026. U.S. Attorney Gregory W. Kehoe (Middle District of Florida) announced the charges.",
+        "sources": [
+          {
+            "name": "El Imparcial",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.elimparcial.com/mexico/2026/08/11/eran-del-cjng-y-caen-en-republica-checa-eeuu-los-acusa-de-narcoterrorismo-y-trafico-de-armas/"
+          },
+          {
+            "name": "La Opinión",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://laopinion.com/2026/08/11/ee-uu-acusa-a-otros-4-miembros-del-cjng-por-narcoterrorismo-y-trafico-de-armas/"
+          },
+          {
+            "name": "TV Azteca",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.tvazteca.com/aztecanoticias/cjng-miembros-detenidos-acusados-narcoterrorismo-eu-armas-fentanilo"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://laopinion.com/2026/08/11/ee-uu-acusa-a-otros-4-miembros-del-cjng-por-narcoterrorismo-y-trafico-de-armas/",
+            "caption": "DOJ unseals narcoterrorism and arms-trafficking charges against four CJNG members arrested in the Czech Republic, August 11, 2026",
+            "source": "La Opinión",
+            "thumbnail": "https://laopinion.com/wp-content/uploads/sites/3/2026/08/Departamento-de-Justicia.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-12T14:45:00.000Z"
+      },
+      {
+        "id": "ambassador-johnson-international-reach-vulnerability-aug12-2026",
+        "year": "Aug 12, 2026",
+        "title": "U.S. Ambassador Johnson: CJNG's 'International Reach Is Also Its Vulnerability'",
+        "type": "diplomatic",
+        "active": true,
+        "detail": "Following the DOJ's August 11 unsealing of narcoterrorism and arms-trafficking charges against four CJNG members arrested in the Czech Republic, U.S. Ambassador to Mexico Ronald Johnson issued an on-record statement to Mexican press on August 12, 2026: 'El alcance internacional del CJNG también es su vulnerabilidad. Estos cargos envían un mensaje claro al CJNG y a otras organizaciones narcoterroristas: dondequiera que operen, los perseguiremos.' He added: 'Junto con nuestros socios en México y nuestra red de aliados alrededor del mundo, los encontraremos y haremos que rindan cuentas. No tienen dónde esconderse.' The statement reinforced his August 8 X post warning to El 03 and framed the Czech Republic case as evidence of expanding multilateral enforcement reach against the cartel.",
+        "sources": [
+          {
+            "name": "El Financiero",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.elfinanciero.com.mx/nacional/2026/08/12/embajador-de-eu-lanza-advertencia-al-cjng-los-encontraremos-no-tienen-donde-esconderse/"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/12/politica/cjng-es-vulnerable-a-su-propio-alcance-internacional-embajador-ronald-johnson"
+          },
+          {
+            "name": "Calibre 800",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://www.calibre800.com/2026/08/12/los-haremos-rendir-cuentas-no-tienen-donde-esconderse-advierte-el-embajador-ronald-johnson-al-cjng/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.elfinanciero.com.mx/nacional/2026/08/12/embajador-de-eu-lanza-advertencia-al-cjng-los-encontraremos-no-tienen-donde-esconderse/",
+            "caption": "U.S. Ambassador Ronald Johnson tells Mexican press CJNG's international reach is its vulnerability, August 12, 2026",
+            "source": "El Financiero",
+            "thumbnail": "https://www.elfinanciero.com.mx/resizer/v2/JJS74YHP5BCNXG3743YIPHI3JQ.jpg?smart=true&auth=152891b7d3250a4e9ef06aa1046ec44f0f8f49d68b0c7d455a2fc719e23c6ea5&width=400&height=225&quality=85"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-14T14:45:00.000Z"
+      },
+      {
+        "id": "dea-terry-cole-global-hunt-cjng-aug13-2026",
+        "year": "Aug 13, 2026",
+        "title": "DEA Administrator Terry Cole Declares 'Global Hunt' Against CJNG",
+        "type": "diplomatic",
+        "active": true,
+        "detail": "DEA Administrator Terry Cole announced an international law-enforcement campaign against CJNG at a press conference in Tampa, Florida on August 13, 2026, unveiled alongside the DOJ's narcoterrorism and arms-trafficking case against four CJNG members arrested in the Czech Republic. Cole said: 'CJNG, a designated foreign terrorist organization, is killing a record number of Americans. They are a terrorist organization and will be treated as such,' and 'La DEA nunca ha estado tan enfocada como hoy en combatir al CJNG y a sus líderes.' He pledged to pursue the cartel's operators, leadership, and finances through a coordinated 'global hunt' spanning DEA, ATF, FBI, DHS, and Coast Guard offices in Mexico City, Vienna, Cartagena, Portugal, Tampa, and New York, backed by the $102M reward package announced August 5. Cole closed with a direct warning: 'vamos por ustedes' (we're coming for you).",
+        "sources": [
+          {
+            "name": "La Razón de México",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.razon.com.mx/mexico/2026/08/13/dea-va-por-el-cjng-y-anuncia-una-caceria-global-contra-sus-integrantes/"
+          },
+          {
+            "name": "LatinUS",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://latinus.us/eu/2026/8/13/la-dea-nunca-ha-estado-tan-enfocada-como-hoy-en-combatir-al-cjng-sus-lideres-enfatiza-terry-cole-181503.html"
+          },
+          {
+            "name": "SDP Noticias",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.sdpnoticias.com/internacional/terry-cole-lanza-caceria-global-de-la-dea-contra-el-cjng/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.sdpnoticias.com/internacional/terry-cole-lanza-caceria-global-de-la-dea-contra-el-cjng/",
+            "caption": "DEA Administrator Terry Cole announces a 'global hunt' against CJNG in Tampa, Florida, August 13, 2026",
+            "source": "SDP Noticias",
+            "thumbnail": "https://www.sdpnoticias.com/resizer/v2/ICL6YH5JURAYPGIEPG33NG2HVQ.jpeg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-16T15:00:00.000Z"
+      },
+      {
+        "id": "la-piedad-michoacan-clash-three-killed-aug14-2026",
+        "year": "Aug 14, 2026",
+        "title": "Army and National Guard Kill 3 Presumed CJNG Members in La Piedad, Michoacán Clash",
+        "type": "violence",
+        "active": true,
+        "detail": "Mexican Army and National Guard personnel clashed with an armed group on the La Piedad–Zamora federal highway near 'Rancho Monteverde,' El Pandillo, municipality of La Piedad, Michoacán, around midday on August 14, 2026. Gunmen in two pickup trucks opened fire with assault rifles; the firefight extended roughly two kilometers. Three men were killed and a 16-year-old low-ranking member wearing tactical body armor was found seriously wounded and hospitalized. Authorities recovered four rifles, a grenade launcher, tactical vests, magazines, and a gray Renault. Prosecutors said cartel-marked items recovered at the scene suggest a CJNG cell, though formal identification remained pending.",
+        "sources": [
+          {
+            "name": "LatinUS",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://latinus.us/mexico/2026/8/14/enfrentamiento-en-michoacan-deja-tres-presuntos-integrantes-del-cjng-abatidos-hay-un-adolescente-herido-181609.html"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/14/estados/enfrentamiento-entre-soldados-y-civiles-armados-deja-tres-muertos-y-un-herido-en-la-piedad-michoacan"
+          },
+          {
+            "name": "Omnia",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.omnia.com.mx/noticia/438411/enfrentamiento-en-michoacan-deja-tres-presuntos-integrantes-del-cjng-abatidos-ha"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.omnia.com.mx/noticia/438411/enfrentamiento-en-michoacan-deja-tres-presuntos-integrantes-del-cjng-abatidos-ha",
+            "caption": "Army and National Guard clash with an armed group on the La Piedad–Zamora highway, Michoacán, August 14, 2026",
+            "source": "Omnia",
+            "thumbnail": "https://www.omnia.com.mx/public/cargas/noticias/2026/aug/14/obj438411/big_9x3fA.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-16T15:00:00.000Z"
+      },
+      {
+        "id": "costa-rica-one-ton-cocaine-seizure-cjng-network-aug16-2026",
+        "year": "Aug 16, 2026",
+        "title": "Costa Rica Seizes Nearly 1 Ton of Cocaine Tied to CJNG Network in Largest 2026 Bust",
+        "type": "operation",
+        "active": true,
+        "detail": "Costa Rican DIIC, UEA, and PCD forces, working with DEA intelligence, raided a vehicle and residence in La Guácima de Alajuela on August 16, 2026, arresting a Venezuelan and a Nicaraguan national and seizing roughly 991 kilograms of cocaine — Costa Rica's largest 2026 bust. Authorities said the network is believed tied to CJNG, which has used Costa Rican territory to move cocaine and methamphetamine toward Europe and the U.S.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/costa-rica/2026/08/16/costa-rica-incautan-una-tonelada-de-cocaina-atribuida-a-red-ligada-al-cartel-jalisco-nueva-generacion-el-mayor-decomiso-en-el-ano/"
+          },
+          {
+            "name": "Prensa Libre",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.prensalibre.com/internacional/costa-rica-decomisa-una-tonelada-de-cocaina-y-captura-a-dos-extranjeros-investigan-presunto-vinculo-con-el-cartel-jalisco-nueva-generacion/"
+          },
+          {
+            "name": "PJ Media",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://pjmedia.com/sarah-anderson/2026/08/17/cjng-showed-up-somewhere-you-might-not-expect-it-didnt-go-well-n4956225"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/costa-rica/2026/08/16/costa-rica-incautan-una-tonelada-de-cocaina-atribuida-a-red-ligada-al-cartel-jalisco-nueva-generacion-el-mayor-decomiso-en-el-ano/",
+            "caption": "Costa Rican security forces display roughly 1 ton of cocaine seized in La Guácima de Alajuela, tied to a CJNG-linked trafficking network, August 16, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/DLBNH3MT3VBKVGBUJZRTMKVEFM.jpg?auth=8cc484b718718dc6f0d79eb868d44984ad771ae7e8c3f21defbbbafa3b1a44ad&smart=true&width=1200&height=630&quality=85"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Seizure and arrests confirmed by Costa Rican authorities; the CJNG link is an official attribution pending further corroboration.",
+        "lastUpdated": "2026-08-18T14:45:00.000Z"
+      },
+      {
+        "id": "los-deltas-cjng-cell-zapopan-raids-11-linked-aug17-2026",
+        "year": "Aug 17, 2026",
+        "title": "11 Alleged Members of 'Los Deltas,' CJNG Armed Wing, Linked to Prosecution After Zapopan, Jalisco Raids",
+        "type": "arrest",
+        "active": true,
+        "detail": "SSPC and FGR announced August 17, 2026 that a judge formally linked 11 alleged members of 'Los Deltas' — a CJNG armed-wing cell founded in 2018 — to proceedings after three search-warrant raids in Zapopan, Jalisco (Mirador del Sol, Los Arcos de Guadalupe, and a rural recruitment-center ranch near Huaxtla). Authorities seized military-exclusive firearms, 48 loaded magazines, 1,700+ cartridges, and ketamine. All 11 are held at Puente Grande. FGR said SEMAR has now accumulated 2,900+ CJNG-linked arrests.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/17/procesan-a-cinco-integrantes-de-los-deltas-brazo-armado-del-cjng-tras-cateos-en-jalisco/"
+          },
+          {
+            "name": "El Financiero",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.elfinanciero.com.mx/estados/2026/08/17/integrantes-de-los-deltas-son-vinculados-a-proceso-permaneceran-en-puente-grande/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/17/procesan-a-cinco-integrantes-de-los-deltas-brazo-armado-del-cjng-tras-cateos-en-jalisco/",
+            "caption": "Weapons and ammunition seized from alleged 'Los Deltas' CJNG cell members after raids in Zapopan, Jalisco, August 17, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/2H45S4NUJBGEBH7VL4NS6YBSUU.jpg?auth=af3b681ff6e8b081bf9852ff06c66f80ce7a2e3c3fd1f2a01e6f435f91eac17e&smart=true&width=1200&height=630&quality=85"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-18T14:45:00.000Z"
+      },
+      {
+        "id": "loret-de-mola-audio-andy-lopez-beltran-circle-cjng-tanque-aug18-2026",
+        "year": "Aug 18, 2026",
+        "title": "Loret de Mola Releases 2023 Audio Linking Friends of AMLO's Son to CJNG Operative 'El Tanque' in Veracruz",
+        "type": "political",
+        "active": true,
+        "detail": "Carlos Loret de Mola published 2023 audio on August 18, 2026 in which Jorge Amílcar Olán Aparicio — a close friend and financial operator of Andrés 'Andy' López Beltrán (Morena's national secretary of organization and son of former president López Obrador) — discusses coordinating with a CJNG fuel-theft and extortion cell in Veracruz. A second recording has Olán's brother, Luis Alberto, citing his relationship with CJNG operator Iván Cazarín Molina ('El Tanque,' U.S.-sanctioned) to explain halting extortion of a gravel-mine supplier to the López Beltrán network. Loret's outlet first raised related allegations in May 2026, which López Beltrán denied as 'calumnias' from a 'periodista mercenario.' He had not specifically rebutted the August 18 audio as of this update.",
+        "sources": [
+          {
+            "name": "El Universal",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.eluniversal.com.mx/nacion/yo-conozco-a-el-tanque-loret-revela-audio-que-conecta-a-los-hermanos-olan-amigos-de-andy-con-el-cjng/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/18/andy-lopez-beltran-y-el-cjng-el-mapa-de-conexiones-que-revelan-audios-testimonios-y-documentos/"
+          },
+          {
+            "name": "Vanguardia",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://vanguardia.com.mx/noticias/pactaron-con-el-cjng-loret-revela-audios-que-ligan-a-andy-y-a-el-clan-con-el-cartel-jalisco-DB22898913"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.eluniversal.com.mx/nacion/yo-conozco-a-el-tanque-loret-revela-audio-que-conecta-a-los-hermanos-olan-amigos-de-andy-con-el-cjng/",
+            "caption": "Carlos Loret de Mola releases 2023 audio linking associates of Andy López Beltrán to CJNG operative 'El Tanque' in Veracruz, August 18, 2026",
+            "source": "El Universal",
+            "thumbnail": "https://www.eluniversal.com.mx/resizer/v2/KYAT5FUMLZE3PJOEK4T63BT3NI.jpg?auth=afca07efbb3891491304748cdeec3986369e35595a8eb1fc72f61dbf9f30beb9"
+          }
+        ],
+        "confidence": "low",
+        "eventConfidence": "disputed",
+        "confidenceReason": "Based on journalist-released 2023 audio not independently verified by prosecutors; López Beltrán has previously denied related allegations.",
+        "lastUpdated": "2026-08-18T14:45:00.000Z"
+      },
+      {
+        "id": "tio-lako-cell-michoacan-9-detained-blockades-aug19-2026",
+        "year": "2026",
+        "title": "9 CJNG Members Detained in Federal Raid on 'Tío Lako' Cell in Michoacán; Retaliatory Blockades Hit a Dozen Municipalities",
+        "type": "operation",
+        "detail": "SEDENA-led federal forces carried out a raid on August 19, 2026 in Tinaja de Vargas and Colesio, in the municipalities of Tanhuato and Ecuandureo, Michoacán, targeting a cell tied to Heraclio Guerrero Martínez, alias 'El Tío Lako' — a regional CJNG operator in Michoacán and Jalisco described by authorities as one of El Mencho's most trusted associates, head of the family-based 'Los Guerrero' cell rooted in Tinaja de Vargas, and allegedly responsible for ordering attacks on National Guard personnel after the February 22 Tapalpa operation (his son 'El R-1' died in that same operation but is distinct from the previously captured 'Los Rs' leader Ramón Ángel Álvarez Ayala). Nine people were detained, including Marisol 'N' and Lourdes 'N,' identified as Tío Lako's daughter and romantic partner. Authorities seized 2 properties, more than 60 vehicles (including 1 armored vehicle), a .50-caliber machine gun, 4 mini machine guns, 9 long guns, 1 handgun, 2 grenade launchers, 8 improvised explosive devices, a drone, 7 motorcycles, ammunition, drugs, and tactical gear. UPDATE (Aug 21): A confrontation between Army elements and armed civilians during the operation left a preliminary count of 5 civilians killed, per Infobae and corroborated by multiple Mexican outlets citing federal security sources — a correction to initial same-day reporting of zero casualties; SEDENA has not issued an independent casualty confirmation. Some outlets separately reported the detentions as '4 cabecillas' (cell leaders) captured in Zamora specifically, within the broader 9-person, multi-municipality total — detainee-count framing varies by source. Journalist Luis Chaparro reported Tío Lako himself was killed in the operation, but this remains unconfirmed by federal sources, who maintain he evaded capture. Within hours, CJNG-aligned gunmen mounted a retaliatory response: by mid-morning at least 11-24 roadblocks (reports vary) had gone up across roughly a dozen Michoacán municipalities — including Zamora, La Piedad, Pátzcuaro, Tzintzuntzan, Churintzio, Purépero, Chilchota, and Jiquilpan — with armed subjects forcing drivers to abandon vehicles that were then set ablaze to block federal highways. No casualties from the blockades were reported. Jalisco's state government reinforced surveillance along its border with Michoacán in response, and Guanajuato also raised its alert level; no blockades were confirmed in either neighboring state.",
+        "sources": [
+          {
+            "name": "Diario Las Américas",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.diariolasamericas.com/america-latina/golpe-al-narco-detienen-nueve-miembros-del-cartel-jalisco-nueva-generacion-mexico-n5400855"
+          },
+          {
+            "name": "Univision / N+",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.univision.com/noticias/america-latina/golpe-al-cjng-en-michoacan-caen-integrantes-de-la-celula-de-el-tio-lako-tras-operativo-que-desato-narcobloqueos-y-quema-de-autos"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/america/agencias/2026/08/19/detenidos-nueve-miembros-del-cartel-jalisco-nueva-generacion-en-michoacan/"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/19/estados/jalisco-refuerza-vigilancia-en-limites-con-michoacan-por-bloqueos-del-cjng"
+          },
+          {
+            "name": "NotiEspacioPV",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://notiespaciopv.com/2026/08/19/operativo-contra-el-cjng-desata-caos-en-michoacan-con-11-bloqueos-e-incendios/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/19/enfrentamiento-entre-elementos-de-la-defensa-y-civiles-armados-desata-bloqueos-en-michoacan/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/19/niegan-detencion-del-tio-lako-lider-regional-del-cjng-en-michoacan-sicarios-de-su-celula-fueron-capturados/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.diariolasamericas.com/america-latina/golpe-al-narco-detienen-nueve-miembros-del-cartel-jalisco-nueva-generacion-mexico-n5400855",
+            "caption": "Detained alleged members of the 'Tío Lako' CJNG cell after the August 19, 2026 raid in Tanhuato and Ecuandureo, Michoacán",
+            "source": "Diario Las Américas",
+            "thumbnail": "https://media.diariolasamericas.com/p/c01665d0c65b9bbaba10efe5a4ffd591/adjuntos/216/imagenes/100/276/0100276187/855x0/smart/detencion-miembros-del-cartel-jalisco-nueva-generacion.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "confidenceReason": "Detentions and seizures confirmed by SEDENA and corroborated across multiple Tier 2 outlets; the 5-civilian-casualty count is reported by Infobae and other Tier 2/3 outlets citing federal security sources but lacks independent SEDENA confirmation; exact blockade count (11 vs. 24), detainee framing, and Luis Chaparro's unconfirmed claim that Tío Lako was killed remain contested.",
+        "lastUpdated": "2026-08-22T14:42:38.000Z"
+      },
+      {
+        "id": "francisco-alvarez-hijo-r1-interview-valeria-marquez-aug21-2026",
+        "year": "Aug 21, 2026",
+        "title": "Son of Jailed CJNG Cell Leader 'El R-1' Breaks Silence on Valeria Márquez Case (Aug 21, 2026)",
+        "type": "political",
+        "detail": "Francisco Álvarez Solorio — son of Ramón Ángel Álvarez Ayala, alias 'El R-1,' the CJNG 'Los Rs' cell leader arrested July 30, 2026 in Atotonilco el Alto, Jalisco — gave his first public interview since going into hiding, speaking with journalist Luis Chaparro (Pie de Nota) in a video published August 21, 2026. Security Secretary Omar García Harfuch has publicly linked Álvarez Solorio to the May 13, 2025 femicide of influencer Valeria Márquez, alleging he had a romantic relationship with her, threatened her repeatedly, and asked his father to order her killing after she tried to end the relationship. In the interview, Álvarez Solorio said he feels 'a little terrified and attacked' since becoming a fugitive, described meeting Márquez in 2021 in Guadalajara nightlife, denied any role in ordering or knowing who ordered her death, and said the two had discussed reconciling before she was killed. Márquez was shot dead during a live TikTok broadcast at her Zapopan beauty salon. Álvarez Solorio remains a fugitive; no new charges were announced in connection with the interview.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/21/francisco-alvarez-hijo-del-r1-y-senalado-por-el-feminicidio-de-valeria-marquez-reaparece-en-entrevista-con-luis-chaparro/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/21/antros-y-una-relacion-de-celos-asi-conocio-el-hijo-del-r1-a-valeria-marquez/"
+          },
+          {
+            "name": "Proceso",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.proceso.com.mx/nacional/justicia/2026/8/21/vivieron-juntos-y-planeaban-reconciliarse-hijo-de-el-r1-revela-como-era-su-relacion-con-valeria-marq-378456.html"
+          },
+          {
+            "name": "El Heraldo de México",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://heraldodemexico.com.mx/nacional/2026/8/21/atemorizado-atacado-francisco-alvarez-hijo-del-r1-rompe-el-silencio-desde-la-clandestinidad-sobre-valeria-marquez-video-873466.html"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/21/francisco-alvarez-hijo-del-r1-y-senalado-por-el-feminicidio-de-valeria-marquez-reaparece-en-entrevista-con-luis-chaparro/",
+            "caption": "Francisco Álvarez Solorio, son of CJNG cell leader 'El R-1,' during his August 21, 2026 interview with journalist Luis Chaparro",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/FVJS7YUEKFC3NGY5UPW2SSOZSM.jpg?auth=ebc57618313e1eb39090857a9370cbe4e45aa64b111bf40d9da82517d9c35bf9&smart=true&width=350&height=197&quality=85"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "confidenceReason": "Interview and its content are directly verifiable (published video) and corroborated across multiple Tier 2 Mexican outlets; the underlying femicide allegation against Álvarez Solorio remains a prosecutorial claim (García Harfuch), not a court finding.",
+        "lastUpdated": "2026-08-22T14:42:38.000Z"
+      },
+      {
+        "id": "el-abulon-los-mezcales-cjng-second-command-captured-oaxaca-aug21-2026",
+        "year": "Aug 21, 2026",
+        "title": "'El Abulón,' Los Mezcales/CJNG Second-in-Command in Colima, Captured in Oaxaca",
+        "type": "arrest",
+        "detail": "C.M.M.M., alias 'El Abulón,' second-in-command of 'Los Mezcales' — an armed wing tied to CJNG in Colima, blamed for homicides, extortion, and territorial disputes in Colima, Villa de Álvarez, Tecomán, Armería, and the port city of Manzanillo — was captured August 21, 2026 in Ejido Guadalupe Victoria, Oaxaca, in a joint SEMAR/Oaxaca state prosecutor's office operation.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/22/el-abulon-segundo-al-mando-de-los-mezcales-es-detenido-en-oaxaca-lo-senalan-como-generador-de-violencia-en-colima/"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/22/politica/detienen-en-oaxaca-a-el-abulon-segundo-al-mando-de-los-mezcales-brazo-del-cjng"
+          },
+          {
+            "name": "Excélsior",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.excelsior.com.mx/nacional/cae-abulon-oaxaca-era-mandos-mezcales"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/22/el-abulon-segundo-al-mando-de-los-mezcales-es-detenido-en-oaxaca-lo-senalan-como-generador-de-violencia-en-colima/",
+            "caption": "'El Abulón' (C.M.M.M.), second-in-command of Los Mezcales, following his August 21, 2026 capture in Oaxaca",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/BM4PNKWCZNHK5JFM3XXJ524OHU.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "confidenceReason": "Capture confirmed by SEMAR/Oaxaca FGEO and corroborated across multiple Tier 2 Mexican outlets with consistent details.",
+        "lastUpdated": "2026-08-26T15:39:28.000Z"
+      },
+      {
+        "id": "cjng-six-months-power-reorganization-el-chorro-named-aug22-2026",
+        "year": "Aug 22, 2026",
+        "title": "Six-Month Retrospective Names 'El Chorro' as El Mencho's Son-in-Law and CJNG Lieutenant (Aug 22, 2026)",
+        "type": "political",
+        "detail": "Marking six months since El Mencho's killing at Tapalpa, Jalisco (February 22, 2026), Infobae published a reconstruction of CJNG's reorganized leadership, reaffirming Juan Carlos Valencia González ('El 03') as having assumed absolute control of an organization estimated at 15,000-20,000 members across 8 states (Jalisco, Nayarit, Colima, Veracruz, Guanajuato, Puebla, Querétaro, Hidalgo). The report named Julio Alberto Castillo Rodríguez ('El Chorro') — previously known only from the DOJ/State Department's $102M reward package — as El Mencho's son-in-law and a lieutenant reporting to El 03, alongside military-wing counterpart Hugo Gonzalo Mendoza Gaytán ('El Sapo'). Audias Flores Silva ('El Jardinero') remains detained following his April 27 capture.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/22/a-seis-meses-de-la-muerte-de-el-mencho-asi-se-ha-reacomodado-el-poder-dentro-del-cjng/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/22/a-seis-meses-de-la-muerte-de-el-mencho-asi-se-ha-reacomodado-el-poder-dentro-del-cjng/",
+            "caption": "Six months after El Mencho's killing, Infobae reconstructs CJNG's reorganized leadership under 'El 03'",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/PNE3X47ZQZCHLHE6PQQAFBNMHM.jpg?auth=8ecc651590707f445b6064ed7de57f8b416754cc49ac2b39d52592362f1865cb&smart=true&width=350&height=197&quality=85"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "El 03's leadership role is independently confirmed via DOJ statements and OFAC sanctions; the specific internal roles attributed to 'El Chorro' and 'El Sapo' rely on Infobae's sourcing and have not been independently corroborated by a second outlet as of publication.",
+        "lastUpdated": "2026-08-24T14:45:00.000Z"
+      },
+      {
+        "id": "harfuch-20-cjng-detained-hidalgo-jalisco-michoacan-exotic-animals-aug24-2026",
+        "year": "Aug 24, 2026",
+        "title": "20 More CJNG Members Detained Across Hidalgo, Jalisco and Michoacán; Tigers, Panthers Seized (Aug 24, 2026)",
+        "type": "operation",
+        "detail": "Security Secretary Omar García Harfuch announced August 24, 2026 that federal forces detained 20 alleged CJNG members in coordinated actions carried out August 21-23 across 36 properties in Hidalgo, Jalisco, and Michoacán. Seizures included firearms, drugs believed to be fentanyl, methamphetamine, and marijuana, 113 vehicles, a drone and drone signal inhibitor, cash, and communications equipment, along with tigers, panthers, and other animals and birds held in inadequate captivity conditions. The 20 detainees were flown by Mexican Navy aircraft to Mexico City and placed at the disposal of the FGR. Combined with the 12 detentions from the August 19 'Tío Lako' cell raid, the total reaches 32 alleged CJNG members captured in under a week.",
+        "sources": [
+          {
+            "name": "Quadratín México",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://mexico.quadratin.com.mx/caen-20-del-cjng-con-arsenal-vehiculos-tigres-y-panteras-harfuch/"
+          },
+          {
+            "name": "Quadratín México",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://mexico.quadratin.com.mx/trasladan-a-20-posibles-integrantes-del-cjng-a-cdmx/"
+          },
+          {
+            "name": "El Clarinete",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://elclarinete.com.mx/caen-20-presuntos-integrantes-del-cjng-les-decomisan-armas-y-hasta-tigres/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://mexico.quadratin.com.mx/caen-20-del-cjng-con-arsenal-vehiculos-tigres-y-panteras-harfuch/",
+            "caption": "Vehicles and weapons seized in the August 21-23 raids against CJNG cells in Hidalgo, Jalisco and Michoacán",
+            "source": "Quadratín México",
+            "thumbnail": "https://mexico.quadratin.com.mx/www/wp-content/uploads/2026/08/HQfYU6rXUAE-nMj.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "confidenceReason": "Announced directly by Security Secretary Omar García Harfuch and corroborated across multiple Mexican outlets citing the same federal figures; detainee identities and specific cell affiliations were not detailed at time of publication.",
+        "lastUpdated": "2026-08-24T14:45:00.000Z"
+      },
+      {
+        "id": "cnn-cjng-structure-retrospective-no-fracture-aug25-2026",
+        "year": "Aug 25, 2026",
+        "title": "CNN Retrospective: Six Months of Blows Have Not Fractured CJNG's Structure (Aug 25, 2026)",
+        "type": "political",
+        "detail": "CNN en Español's August 25, 2026 review of CJNG's post-Mencho structure found the cartel has absorbed a string of high-profile captures — El Jardinero, El Güero Conta, 'M4' (José Guadalupe Ahumada Villegas, arrested Jul 20), and El R-1 (arrested Jul 30) — without visible internal warfare. Analysts describe the organization as showing 'mucha disciplina,' with regional plaza bosses preserving operational continuity through the leadership transition to El 03. Overall assessment: CJNG remains 'still not weakened' despite having 'suffered blows.'",
+        "sources": [
+          {
+            "name": "CNN en Español",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://cnnespanol.cnn.com/2026/08/25/mexico/cartel-jalisco-reacomodo-liderazgo-presiones-muerte-mencho-orix"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cnnespanol.cnn.com/2026/08/25/mexico/cartel-jalisco-reacomodo-liderazgo-presiones-muerte-mencho-orix",
+            "caption": "CNN en Español's six-month retrospective on CJNG's post-Mencho structure, published August 25, 2026",
+            "source": "CNN en Español",
+            "thumbnail": "https://media.cnn.com/api/v1/images/stellar/prod/mencho.jpg?c=16x9&q=w_800,c_fill"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Underlying arrest dates and the August 5 bounty designation are independently confirmed via DOJ/OFAC; the 'no internal fracture' assessment is CNN's editorial synthesis of analyst commentary.",
+        "lastUpdated": "2026-08-28T00:00:00.000Z"
+      },
+      {
+        "id": "insight-crime-cjng-drone-unit-five-states-aug26-2026",
+        "year": "Aug 26, 2026",
+        "title": "InSight Crime: CJNG Drone Unit Extends Weaponized Attacks to Five Mexican States (Aug 26, 2026)",
+        "type": "operation",
+        "detail": "InSight Crime investigation reported via Infobae, August 26, 2026: CJNG's dedicated 'Operadores Droneros' unit (est. ~2020, identified by a circular skull patch) adapts commercial drones to drop explosive devices on security forces, vehicles, and buildings; ferry IEDs; deliver chemical-substance payloads; and, in one case, attack a military helicopter with combined gunfire and an IED. Weaponized-drone activity documented across Michoacán, Guanajuato, Chihuahua, Jalisco, and Baja California. Smaller groups (Cárteles Unidos, Los Ardillos) have also adopted drone tactics; Mexico and the U.S. signed a counter-drone cooperation agreement August 17, 2026.",
+        "sources": [
+          {
+            "name": "Infobae (citing InSight Crime)",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/26/cjng-perfecciona-ataques-con-drones-y-los-extiende-a-cinco-estados-de-mexico-alerta-insight-crime/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/26/cjng-perfecciona-ataques-con-drones-y-los-extiende-a-cinco-estados-de-mexico-alerta-insight-crime/",
+            "caption": "InSight Crime investigation into CJNG's 'Operadores Droneros' unit and its weaponized-drone reach across five Mexican states",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/GCITWOS37ZGEJKIIFTPHUC36IE.JPG?auth=64014df7792fa61903b561feb9d2f7ee28ceb414e866a3c60d393a2f73feeaa2&smart=true&width=1200&height=630&quality=85"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Based on InSight Crime's independent investigative reporting; specific incident attributions have not been independently confirmed by Mexican federal authorities.",
+        "lastUpdated": "2026-08-28T00:00:00.000Z"
+      },
+      {
+        "id": "r2-charged-los-rs-successor-dc-grand-jury-aug27-2026",
+        "year": "Aug 27, 2026",
+        "title": "U.S. Grand Jury Charges El R-1 and Brother El R-2 as 'Los Rs' Cell Reorganizes (Aug 27, 2026)",
+        "type": "political",
+        "detail": "A federal grand jury in Washington, D.C. indicted Ramón Ángel Álvarez Ayala ('El R-1,' arrested Jul 30, 2026, linked to the Nov 1, 2025 assassination of former Uruapan mayor Carlos Manzo) and his brother Rafael Álvarez Ayala ('El R-2') — identified by Mexican authorities as R-1's successor atop the CJNG-affiliated 'Los Rs' cell in Apatzingán, Uruapan, and Morelia, Michoacán. Both face conspiracy-to-distribute cocaine/methamphetamine and firearms charges carrying a 40-year mandatory minimum up to two consecutive life sentences; the underlying DEA-Los Angeles investigation spans 2004–Dec 2023. R-2 remains at large as a newly named U.S. target.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/27/el-cjng-pierde-a-r1-y-reacomoda-su-mando-eeuu-acusa-al-r2-senalado-como-su-sucesor-en-los-rs/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/27/el-cjng-pierde-a-r1-y-reacomoda-su-mando-eeuu-acusa-al-r2-senalado-como-su-sucesor-en-los-rs/",
+            "caption": "'El R-2' (Rafael Álvarez Ayala) named successor to 'El R-1' atop CJNG-linked 'Los Rs' cell after both brothers were charged by a Washington, D.C. federal grand jury",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/NYCGISFW2RDMJNMAKVVEKJJ7XM.jpg?auth=117b116aebf075c18a0b57c11d3bf1a54750722eab6b29beaa3bcd819302cfca&smart=true&width=1200&height=630&quality=85"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "confidenceReason": "Federal indictment and R-1's underlying arrest are independently verifiable court actions; R-2's status as 'successor' relies on Mexican authorities' assessment as reported by Infobae.",
+        "lastUpdated": "2026-08-28T00:00:00.000Z"
+      }
+    ]
+  }
+]

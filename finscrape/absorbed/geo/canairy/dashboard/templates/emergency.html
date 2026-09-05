@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Procedures - Household Resilience</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .emergency-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        .time-frame {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .print-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+            body {
+                font-size: 12pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="no-print">
+            <h1>📋 Emergency Procedures</h1>
+            <a href="/" class="action-button">← Back to Dashboard</a>
+        </header>
+
+        <div class="emergency-content">
+            <button onclick="window.print()" class="print-button no-print">🖨️ Print This Page</button>
+            
+            <h2>TIGHTEN-UP Alert Response Checklist</h2>
+            <p><strong>When you receive a TIGHTEN-UP alert (2+ Red Indicators), complete these actions within 48 hours:</strong></p>
+
+            <div class="time-frame">⏰ FIRST 6 HOURS - Fuel & Cash</div>
+            <ul class="checklist">
+                <li>Fill all vehicle gas tanks to full</li>
+                <li>Fill approved gas containers if available</li>
+                <li>Withdraw $500-1000 cash (prefer small bills)</li>
+                <li>Ensure each family member has some cash</li>
+            </ul>
+
+            <div class="time-frame">⏰ FIRST 12 HOURS - Power & Communications</div>
+            <ul class="checklist">
+                <li>Charge all cell phones & tablets to 100%</li>
+                <li>Charge all power banks & batteries</li>
+                <li>Charge flashlights & emergency radios</li>
+                <li>Charge laptops and other devices</li>
+                <li>Test emergency radio (NOAA weather channel)</li>
+                <li>Verify all family phone numbers work</li>
+                <li>Send test message to out-of-state contact</li>
+            </ul>
+
+            <div class="time-frame">⏰ FIRST 24 HOURS - Family Coordination</div>
+            <ul class="checklist">
+                <li>Hold family meeting to review this checklist</li>
+                <li>Confirm primary meeting location: _________________</li>
+                <li>Confirm secondary meeting location: _______________</li>
+                <li>Confirm out-of-state contact: ___________________</li>
+                <li>Practice communication plan with all members</li>
+                <li>Assign specific tasks to each family member</li>
+            </ul>
+
+            <div class="time-frame">⏰ 24-48 HOURS - Supplies & Readiness</div>
+            <ul class="checklist">
+                <li>Check water supply: 1 gallon per person per day (3 days)</li>
+                <li>Check food: Non-perishable for 3 days</li>
+                <li>Check medications: 7-day supply minimum</li>
+                <li>Verify first aid kit is complete</li>
+                <li>Test all flashlights & replace batteries</li>
+                <li>Locate important documents</li>
+                <li>Know how to shut off: water, gas, electricity</li>
+                <li>Clear paths to all exits</li>
+                <li>Test smoke/CO detectors</li>
+            </ul>
+
+            <h2>Family Contact Information</h2>
+            <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px;">
+                <p><strong>Out-of-State Contact:</strong><br>
+                Name: _________________________________<br>
+                Phone: ________________________________<br>
+                Email: ________________________________</p>
+                
+                <p><strong>Local Meeting Points:</strong><br>
+                Primary: ______________________________<br>
+                Address: ______________________________<br>
+                <br>
+                Secondary: ____________________________<br>
+                Address: ______________________________</p>
+            </div>
+
+            <h2>Communication If Networks Are Down</h2>
+            <ol>
+                <li><strong>Text before calling</strong> - Texts often work when calls don't</li>
+                <li><strong>Use social media</strong> - May work on WiFi when cellular doesn't</li>
+                <li><strong>Try email</strong> - Often works when other services are down</li>
+                <li><strong>Emergency radio</strong> - NOAA weather for official information</li>
+            </ol>
+
+            <h2>Important Reminders</h2>
+            <ul>
+                <li>Stay calm and avoid panic - preparation reduces anxiety</li>
+                <li>Monitor local news but avoid social media rumors</li>
+                <li>This is precautionary - most alerts resolve without incident</li>
+                <li>Focus on basic preparedness, not worst-case scenarios</li>
+                <li>Continue normal activities while completing preparations</li>
+            </ul>
+
+            <div class="no-print" style="margin-top: 40px; padding: 20px; background-color: #e8f5e9; border-radius: 5px;">
+                <h3>💡 Pro Tips:</h3>
+                <ul>
+                    <li>Keep this checklist printed and posted somewhere visible</li>
+                    <li>Review with family quarterly</li>
+                    <li>Update contact information regularly</li>
+                    <li>Practice makes perfect - do a drill twice a year</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

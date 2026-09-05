@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-28T00:22:24.744Z",
+  "tracker": "nato-airspace-incursions",
+  "sections": {
+    "kpis": {
+      "count": 8,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 36,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 28,
+      "status": "updated"
+    },
+    "mapLines": {
+      "count": 20,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 19,
+      "status": "updated"
+    },
+    "political": {
+      "count": 16,
+      "status": "updated"
+    },
+    "assets": {
+      "count": 12,
+      "status": "unchanged"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

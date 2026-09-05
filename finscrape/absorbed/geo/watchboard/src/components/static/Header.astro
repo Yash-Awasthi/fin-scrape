@@ -1,0 +1,118 @@
+---
+import type { Meta } from '../../lib/schemas';
+import type { NavSection } from '../../lib/tracker-config';
+import FreshnessBadge from '../islands/FreshnessBadge.tsx';
+
+interface Props {
+  meta: Meta;
+  navSections?: NavSection[];
+  trackerSlug?: string;
+  globeEnabled?: boolean;
+  statusLabel?: string;
+}
+
+const { meta, navSections, trackerSlug, globeEnabled = true, statusLabel = 'ACTIVE TRACKER' } = Astro.props;
+
+// Fallback for backward compat
+const sections = navSections ?? (await import('../../lib/constants')).NAV_SECTIONS;
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+const globeHref = trackerSlug ? `${basePath}${trackerSlug}/globe/` : `${basePath}globe/`;
+const aboutHref = trackerSlug ? `${basePath}${trackerSlug}/about/` : `${basePath}about/`;
+---
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <a class="home-link" href={basePath} title="Watchboard Home">WB</a>
+      <span class="header-sep">&middot;</span>
+      <span class="live-dot"></span>
+      <span class="header-title"><strong>{statusLabel}</strong> &mdash; {meta.operationName}</span>
+      <FreshnessBadge lastUpdated={meta.lastUpdated} client:load />
+    </div>
+    <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    <nav class="header-nav">
+      {sections.map(s => (
+        <a class="nav-btn" href={`#${s.id}`}>{s.label}</a>
+      ))}
+      {globeEnabled && <a class="nav-btn globe-nav-btn" href={globeHref}><span data-i18n data-es="Globo 3D" data-fr="Globe 3D" data-pt="Globo 3D">3D Globe</span></a>}
+      <a class="nav-btn about-nav-btn" href={aboutHref}><span data-i18n data-es="Acerca de" data-fr="À propos" data-pt="Sobre">About</span></a>
+    </nav>
+  </div>
+</header>
+
+<style>
+</style>
+
+<script>
+  // ── Mobile menu toggle ──
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('.header-nav');
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', nav.classList.contains('open').toString());
+    });
+    nav.querySelectorAll('.nav-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ── Scroll spy with immediate click update ──
+  const sections = document.querySelectorAll('[id^="sec-"]');
+  const navBtns = document.querySelectorAll('.nav-btn[href^="#"]');
+  let activeSection: string | null = null;
+  let clickOverride: string | null = null;
+  let clickTimer: number | undefined;
+
+  function setActiveNav(sectionId: string | null) {
+    activeSection = sectionId;
+    navBtns.forEach(btn => {
+      const matches = sectionId && btn.getAttribute('href') === `#${sectionId}`;
+      btn.classList.toggle('active', !!matches);
+    });
+  }
+
+  // Immediately highlight on nav click, then let observer take over
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const href = btn.getAttribute('href');
+      if (href?.startsWith('#')) {
+        clickOverride = href.slice(1);
+        setActiveNav(clickOverride);
+        clearTimeout(clickTimer);
+        clickTimer = window.setTimeout(() => { clickOverride = null; }, 1000);
+      }
+    });
+  });
+
+  const visibleSections = new Set<string>();
+  const navObserver = new IntersectionObserver(
+    entries => {
+      if (clickOverride) return; // Let click override persist briefly
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          visibleSections.add(entry.target.id);
+        } else {
+          visibleSections.delete(entry.target.id);
+        }
+      });
+      // Pick the topmost visible section (DOM order)
+      let topmost: string | null = null;
+      sections.forEach(s => {
+        if (visibleSections.has(s.id) && !topmost) topmost = s.id;
+      });
+      setActiveNav(topmost);
+    },
+    { rootMargin: '-56px 0px -70% 0px' }
+  );
+  sections.forEach(s => navObserver.observe(s));
+
+  // (Freshness indicator is now the FreshnessBadge React island —
+  // src/components/islands/FreshnessBadge.tsx — mounted above. The vanilla-JS
+  // implementation that lived here previously was deleted; both versions
+  // shared the .freshness-indicator/.freshness-text/.fresh/.stale class hooks
+  // styled in src/styles/global.css.)
+</script>

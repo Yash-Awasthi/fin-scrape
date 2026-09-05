@@ -1,0 +1,141 @@
+[
+  {
+    "id": "total-homicides",
+    "label": "Homicides Since Sep 9, 2024",
+    "value": "3,353+",
+    "color": "red",
+    "source": "Noroeste cumulative tally / ACLED",
+    "contested": true,
+    "contestNote": "Noroeste updated its cumulative conflict tally (June 6, 2026) to 3,353 homicides, 3,957 kidnappings, and 11,423 vehicle thefts since Sep 9, 2024 — attributed to the Guzmán-Zambada faction dispute. This figure is higher than the previous 2,560 count (which reflected only battlefield-classified deaths) and now aligns with the WSJ's May 17 estimate of 3,000+ killed. Official SNSP data remains lower. NGO Sabuesos Unidas: ~5,800 disappearances since Sep 2024. June 3: Culiacán records 10 homicides in one day; 30 in 72 hours — Army airlifts 90 Murciélagos. June 4: Defense Secretary + National Guard Commander emergency visit to Culiacán. June 5: FGR contradicts Sheinbaum on Interpol Red Notice for Rocha Moya. June 6: Two more targeted killings in Culiacán; Escuinapa enters 14th consecutive day of gunfire.",
+    "trend": "up",
+    "delta": "+793 (revised methodology)",
+    "deltaNote": "Noroeste June 6 cumulative count: 3,353 homicides since Sep 9, 2024 — revised upward from 2,560 to include all violence classified as faction-dispute-attributable. Monthly 2026: Jan 159, Feb 146, Mar 79–121, Apr ~112, May 123–135 (highest of 2026), Jun 116 (2nd-highest of 2026), Jul 138 statewide violent deaths (avg 4.5/day) per Noroeste's Ejecutómetro tally. July also closed as the most violent month of 2026 for women, with 12 femicide investigations statewide. Aug 1–13: 49 more murders statewide, with Sinaloa accounting for 35% of Mexico's national homicide count on Aug 13 alone — Infobae (Aug 15) reports the state on pace for a record homicide year.",
+    "lastUpdated": "2026-08-18T14:06:30.000Z"
+  },
+  {
+    "id": "families-displaced",
+    "label": "Families Displaced",
+    "value": "9,000+",
+    "color": "amber",
+    "source": "Universidad Autónoma de Sinaloa",
+    "contested": true,
+    "contestNote": "Official Sebides (state welfare) count as of March 31, 2026: ~3,800 families — nearly doubled from Oct 2025's 1,763. Academic estimates (UAS) remain 9,000+. At least 50 rural communities abandoned.",
+    "trend": "up",
+    "delta": "+115%",
+    "deltaNote": "Official displacement count nearly doubled Oct 2025–Mar 2026 (1,763 to 3,800 families); academic estimates higher still",
+    "lastUpdated": "2026-04-22T14:20:00.000Z"
+  },
+  {
+    "id": "disappeared-persons",
+    "label": "Persons Disappeared",
+    "value": "2,133+",
+    "color": "red",
+    "source": "Noroeste",
+    "contested": true,
+    "contestNote": "Disappearances are the primary lethal mechanism; many bodies never recovered",
+    "trend": "stable",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "trafficking-routes-lost",
+    "label": "Trafficking Routes Lost",
+    "value": "30 of 42",
+    "color": "amber",
+    "source": "SEDENA (Sec. Defense Trevilla Trejo)",
+    "contested": false,
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "fentanyl-pills-seized-2025",
+    "label": "Fentanyl Pills Seized (2025 YTD)",
+    "value": "44M+",
+    "color": "blue",
+    "source": "DEA / DOJ",
+    "contested": false,
+    "trend": "up",
+    "delta": "+38%",
+    "deltaNote": "Compared to same period 2024",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "fentanyl-price-culiacan",
+    "label": "Fentanyl Kg Price (Culiacán)",
+    "value": "$6,000",
+    "color": "red",
+    "source": "InSight Crime",
+    "contested": true,
+    "contestNote": "Pre-war price was ~$3,000/kg; market volatile",
+    "trend": "up",
+    "delta": "+100%",
+    "deltaNote": "Doubled since cartel war started",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "mayiza-territory-control",
+    "label": "La Mayiza Territory Control",
+    "value": "~90%",
+    "color": "amber",
+    "source": "Latin Times / InSight Crime",
+    "contested": true,
+    "contestNote": "Chapitos dispute figure; Culiacán city contested. 'Mayito Flaco' positioned to lead reconstituted Sinaloa Cartel.",
+    "trend": "up",
+    "delta": "~90%",
+    "deltaNote": "Consolidated from ~70% in mid-2025; 'Mayito Flaco' (Ismael Zambada García's son) leading reconstituted cartel. Shift may reduce fentanyl production in favor of cocaine/heroin.",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "days-of-war",
+    "label": "Days of Open Civil War",
+    "value": "764+",
+    "color": "red",
+    "source": "Watchboard / Noroeste",
+    "contested": false,
+    "lastUpdated": "2026-08-26T15:00:00.000Z"
+  },
+  {
+    "id": "drugs-seized-20mo",
+    "label": "Drugs Seized (Oct 2024–Jun 2026)",
+    "value": "94.5t",
+    "color": "blue",
+    "source": "SSPC / García Harfuch",
+    "contested": false,
+    "trend": "up",
+    "delta": "2,540 detained / 2,412 labs dismantled",
+    "deltaNote": "Reported Jul 7, 2026: 20 months of federal operations (~16,440 personnel deployed) produced 94.5 tonnes of drugs seized (incl. 2M fentanyl pills), 2,540 high-impact detentions, 5,900 firearms confiscated, and 2,412 clandestine labs dismantled — alongside a claimed 44% reduction in average daily homicides since June 2025.",
+    "lastUpdated": "2026-07-07T14:15:00.000Z"
+  },
+  {
+    "id": "cartel-factions",
+    "label": "Sinaloa Cartel Factions",
+    "value": "4",
+    "color": "amber",
+    "source": "International Crisis Group",
+    "contested": false,
+    "trend": "stable",
+    "delta": "20+ subordinate cells",
+    "deltaNote": "Jul 7, 2026 Crisis Group report 'La guerra de los herederos en Sinaloa': La Mayiza (Mayito Flaco, central Sinaloa/Culiacán), Los Chapitos (Iván Archivaldo + El Mochomito, southern Sinaloa), El Chapo Isidro faction (northern Sinaloa, fentanyl focus), El Guano faction (Aureliano Guzmán Loera, no fixed territory) — plus 20+ named subordinate cells (Los Ninis, Los Canobbio, Martínez Larios network, Ranas/40/Amigos, and others).",
+    "lastUpdated": "2026-07-07T14:15:00.000Z"
+  },
+  {
+    "id": "communities-abandoned",
+    "label": "Rural Communities Abandoned",
+    "value": "50+",
+    "color": "amber",
+    "source": "InSight Crime",
+    "contested": false,
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "us-overdose-fentanyl-2024",
+    "label": "US Fentanyl OD Deaths (2024)",
+    "value": "~48,422",
+    "color": "blue",
+    "source": "CDC / DEA NDTA 2025",
+    "contested": true,
+    "contestNote": "Down sharply from 76,282 in 2023; multiple causal factors debated",
+    "trend": "down",
+    "delta": "-37%",
+    "deltaNote": "Significant year-over-year decline",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  }
+]

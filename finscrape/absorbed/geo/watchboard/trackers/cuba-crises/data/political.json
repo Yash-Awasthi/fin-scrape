@@ -1,0 +1,209 @@
+[
+  {
+    "id": "fidel-castro",
+    "name": "Fidel Castro",
+    "role": "Prime Minister (1959–1976), President of Cuba (1976–2008)",
+    "avatar": "castro",
+    "initial": "F",
+    "quote": "History will absolve me.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "raul-castro",
+    "name": "Raúl Castro",
+    "role": "President of Cuba (2008–2018), PCC First Secretary (2011–2021); indicted by US grand jury on murder/conspiracy charges (May 2026)",
+    "avatar": "castro",
+    "initial": "R",
+    "quote": "We are not renouncing our ideas or our Revolution or our socialism.",
+    "lastUpdated": "2026-05-22T00:00:00Z"
+  },
+  {
+    "id": "che-guevara",
+    "name": "Ernesto 'Che' Guevara",
+    "role": "Minister of Industry (1961–1965), Guerrilla Commander",
+    "avatar": "castro",
+    "initial": "C",
+    "quote": "At the risk of seeming ridiculous, let me say that the true revolutionary is guided by a great feeling of love.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "john-f-kennedy",
+    "name": "John F. Kennedy",
+    "role": "US President (1961–1963); Bay of Pigs, Missile Crisis",
+    "avatar": "us",
+    "initial": "J",
+    "quote": "The United States, as the world knows, will never start a war. We do not want a war.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nikita-khrushchev",
+    "name": "Nikita Khrushchev",
+    "role": "Soviet Premier (1953–1964); deployed missiles to Cuba",
+    "avatar": "ussr",
+    "initial": "N",
+    "quote": "We will bury you! [referring to capitalism]",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fulgencio-batista",
+    "name": "Fulgencio Batista",
+    "role": "President of Cuba (1940–44, 1952–59); overthrown by Revolution",
+    "avatar": "other",
+    "initial": "F",
+    "quote": "I was the first president of the Americas to fight communism.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "camilo-cienfuegos",
+    "name": "Camilo Cienfuegos",
+    "role": "Revolutionary Commander; disappeared October 1959",
+    "avatar": "castro",
+    "initial": "C",
+    "quote": "Am I doing OK, Fidel? — to Fidel Castro after taking Camp Columbia",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "miguel-diaz-canel",
+    "name": "Miguel Díaz-Canel",
+    "role": "President of Cuba (2018–present), PCC First Secretary (2021–present)",
+    "avatar": "castro",
+    "initial": "M",
+    "quote": "Stepping down is not part of our vocabulary. — NBC Meet the Press, April 2026",
+    "lastUpdated": "2026-05-12T14:00:00Z"
+  },
+  {
+    "id": "yoani-sanchez",
+    "name": "Yoani Sánchez",
+    "role": "Blogger and opposition journalist; founder of 14ymedio",
+    "avatar": "opposition",
+    "initial": "Y",
+    "quote": "They cannot jail all of us. They cannot silence all of us.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hubert-matos",
+    "name": "Hubert Matos",
+    "role": "Revolutionary commander turned political prisoner (1959–1979); 20-year sentence",
+    "avatar": "opposition",
+    "initial": "H",
+    "quote": "Communism kills revolutions by taking them over from within.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "orlando-zapata-tamayo",
+    "name": "Orlando Zapata Tamayo",
+    "role": "Political prisoner; died after 83-day hunger strike, February 2010",
+    "avatar": "opposition",
+    "initial": "O",
+    "quote": "I am not a criminal. I am a man who loves freedom.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mcgeorge-bundy",
+    "name": "McGeorge Bundy",
+    "role": "US National Security Advisor; key ExComm member during Missile Crisis",
+    "avatar": "us",
+    "initial": "M",
+    "quote": "These [missiles] are clearly offensive weapons, and that's the end of it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "anatoly-dobrynin",
+    "name": "Anatoly Dobrynin",
+    "role": "Soviet Ambassador to the US (1962–1986); back-channel in Missile Crisis",
+    "avatar": "ussr",
+    "initial": "A",
+    "quote": "The back-channel was the only channel that mattered during those 13 days.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "robert-kennedy",
+    "name": "Robert F. Kennedy",
+    "role": "US Attorney General; key ExComm member; negotiated missile crisis back-channel",
+    "avatar": "us",
+    "initial": "R",
+    "quote": "We have to be very careful of what we do in the next few hours.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jose-marti",
+    "name": "José Martí",
+    "role": "Cuba's National Hero; poet, philosopher, independence fighter (1853–1895)",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "A man who does not speak the truth deserves to be cast from the society of those who love it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "osvaldo-dorticos",
+    "name": "Osvaldo Dorticós",
+    "role": "President of Cuba (1959–1976) during Missile Crisis",
+    "avatar": "castro",
+    "initial": "O",
+    "quote": "If the imperialists attack us, they will be annihilated.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "barak-obama",
+    "name": "Barack Obama",
+    "role": "US President (2009–2017); normalized relations with Cuba in 2014–2015",
+    "avatar": "us",
+    "initial": "B",
+    "quote": "I believe that we can do more to support the Cuban people and promote our values through engagement.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "donald-trump",
+    "name": "Donald Trump",
+    "role": "US President (2017–2021, 2025–); reversed Obama normalization, re-listed Cuba as terror state",
+    "avatar": "us",
+    "initial": "D",
+    "quote": "The United States will not lift sanctions on the Cuban regime until it delivers full political freedom for the Cuban people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "marta-beatriz-roque",
+    "name": "Marta Beatriz Roque",
+    "role": "Dissident economist; Black Spring 2003 prisoner; Cuba Assembly for Civil Society",
+    "avatar": "opposition",
+    "initial": "M",
+    "quote": "We want a Cuba where we can speak, write, and organize without fear.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "luis-manuel-otero-alcantara",
+    "name": "Luis Manuel Otero Alcántara",
+    "role": "Dissident artist and San Isidro Movement founder; Amnesty International prisoner of conscience; forcibly disappeared July 2026 after prison release date passed",
+    "avatar": "opposition",
+    "initial": "L",
+    "quote": "I'm not doing anything wrong. Art is not a crime.",
+    "lastUpdated": "2026-07-13T00:00:00Z"
+  },
+  {
+    "id": "pete-hegseth",
+    "name": "Pete Hegseth",
+    "role": "US Secretary of Defense; oversaw 2026 Pentagon review of Cuba military options",
+    "avatar": "us",
+    "initial": "P",
+    "quote": "It would be unwise for the government of Cuba to try to procure or get access to the types of weapons that could reach this base or the American homeland.",
+    "lastUpdated": "2026-07-16T00:00:00Z"
+  },
+  {
+    "id": "marco-rubio",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State (2026–present); architect of expanded sanctions on Cuban military and tourism sectors",
+    "avatar": "us",
+    "initial": "M",
+    "quote": "[Cuba] uses its military and intelligence services to spy on the U.S. — Aug 2026, announcing sanctions on Cuban officials",
+    "lastUpdated": "2026-08-06T00:00:00Z"
+  },
+  {
+    "id": "pope-john-paul-ii",
+    "name": "Pope John Paul II",
+    "role": "Made historic Cuba visit January 1998; called for opening and prisoner releases",
+    "avatar": "other",
+    "initial": "P",
+    "quote": "May Cuba, with all its magnificent potential, open itself up to the world, and may the world open itself up to Cuba.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

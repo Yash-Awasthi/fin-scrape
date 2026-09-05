@@ -1,0 +1,15 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#0D0D0D"/>
+  
+  <!-- Border -->
+  <rect width="30" height="30" x="1" y="1" rx="5" fill="none" stroke="#262626" stroke-width="1"/>
+  
+  <!-- BMB Letters -->
+  <text x="16" y="22" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#6366F1">
+    BMB
+  </text>
+  
+  <!-- Accent bar -->
+  <rect x="6" y="24" width="20" height="2" rx="1" fill="#6366F1"/>
+</svg>

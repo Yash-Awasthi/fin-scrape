@@ -1,0 +1,35 @@
+[
+  {
+    "id": "protest_massacres",
+    "year": "Jan 8–10",
+    "title": "Protest Massacres",
+    "type": "humanitarian",
+    "active": true,
+    "detail": "Regime kills thousands. Death toll estimates range from 3,117 (govt) to 43,000 (ICHR). 26,541 detained. Internet blackout imposed.",
+    "sources": [
+      {
+        "name": "HRANA",
+        "tier": 3,
+        "pole": "international"
+      },
+      {
+        "name": "HRW",
+        "tier": 3,
+        "pole": "international"
+      },
+      {
+        "name": "TIME",
+        "tier": 2,
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.hrw.org/news/2026/01/16/iran-growing-evidence-of-countrywide-massacres",
+        "caption": "Regime kills thousands in protest massacres as internet blackout conceals scale of violence",
+        "source": "Human Rights Watch"
+      }
+    ]
+  }
+]

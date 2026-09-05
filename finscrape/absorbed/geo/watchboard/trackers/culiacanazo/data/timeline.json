@@ -1,0 +1,812 @@
+[
+  {
+    "era": "Background: Sinaloa Cartel & the Chapitos (2016–2018)",
+    "events": [
+      {
+        "id": "chapo-extradition-2017",
+        "year": "Jan 19, 2017",
+        "title": "El Chapo Extradited to United States",
+        "type": "legal-political",
+        "detail": "Joaquín 'El Chapo' Guzmán Loera was extradited from Mexico to the United States, arriving at a New York federal facility. His sons Ovidio, Iván Archivaldo, Jesús Alfredo, and Joaquín Guzmán López immediately began consolidating control of the Sinaloa Cartel's operations under the 'Los Chapitos' faction. The extradition transferred day-to-day cartel command to a younger, more aggressive generation.",
+        "sources": [
+          { "name": "Reuters", "tier": 2, "url": "https://www.reuters.com/article/us-usa-mexico-guzman-idUSKBN14Z07K" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-indictment-2018",
+        "year": "2018",
+        "title": "U.S. Indicts Ovidio Guzmán López in Washington D.C.",
+        "type": "legal-political",
+        "detail": "A U.S. federal grand jury in Washington, D.C. indicted Ovidio Guzmán López on charges of manufacturing and distributing for illegal importation large quantities of cocaine, methamphetamine, and marijuana. A provisional arrest warrant was issued for extradition purposes, setting the legal foundation for Mexico's later attempts to detain him. Ovidio had been growing the Sinaloa Cartel's fentanyl logistics and distribution operations.",
+        "sources": [
+          { "name": "U.S. Department of Justice", "tier": 1, "url": "https://www.justice.gov/usao-ndil/pr/alleged-high-ranking-member-sinaloa-cartel-arraigned-federal-charges-following" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "chapitos-fentanyl-expansion",
+        "year": "2018–2019",
+        "title": "Los Chapitos Expand Fentanyl Production and Distribution",
+        "type": "cartel-action",
+        "detail": "Under Ovidio and his brothers, the Sinaloa Cartel dramatically scaled fentanyl synthesis and trafficking into the United States. Ovidio, nicknamed 'El Ratón,' oversaw supply chain logistics and distribution networks. The Chapitos developed pill-pressing operations across Sinaloa and formed supply deals with Chinese chemical precursor companies. Their growing wealth and violence further entrenched cartel control over Culiacán.",
+        "sources": [
+          { "name": "InSight Crime", "tier": 3, "url": "https://insightcrime.org/investigations/sinaloa-cartel-ovidio-guzman-lopez-fentanyl/" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "El Culiacanazo — October 17, 2019",
+    "events": [
+      {
+        "id": "raid-tres-rios-2019",
+        "year": "Oct 17, 2019 — ~2:00 PM",
+        "title": "Army Surrounds Ovidio's Compound in Tres Ríos",
+        "type": "military-op",
+        "detail": "A convoy of approximately 35 soldiers and National Guard officers from GAIN (Grupo de Análisis de Información del Narcotráfico) surrounded a walled compound in the Tres Ríos residential subdivision of Culiacán — an upscale development at the confluence of the Humaya and Tamazula rivers. Four individuals inside the compound were identified, including Ovidio Guzmán López. The government had no search warrant, leaving the legality of the operation in question from the outset.",
+        "sources": [
+          { "name": "Animal Político", "tier": 2, "url": "https://www.animalpolitico.com/seguridad/culiacanazo-octubre-2019" },
+          { "name": "InSight Crime", "tier": 3, "url": "https://insightcrime.org/news/culiacan-battle-ovidio-guzman-arrested-released/" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-detained-2019",
+        "year": "Oct 17, 2019 — ~2:45 PM",
+        "title": "Ovidio Guzmán López Detained by Army GAIN Unit",
+        "type": "military-op",
+        "detail": "Army intelligence unit GAIN elements entered the compound and detained Ovidio Guzmán López. Within minutes, word spread through the Sinaloa Cartel's enforcement arm, Los Chapitos. The cartel launched a near-immediate coordinated citywide counterattack. By approximately 3:45 PM, the Security Cabinet of the Mexican government informed President López Obrador of the operation.",
+        "sources": [
+          { "name": "Reuters", "tier": 2, "url": "https://www.reuters.com/article/us-mexico-security-culiacan-idUSKBN1WW1BO" },
+          { "name": "El Universal", "tier": 2, "url": "https://www.eluniversal.com.mx/nacion/culiacanazo-la-operacion-fracasada" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "cartel-convoy-response-2019",
+        "year": "Oct 17, 2019 — ~3:00 PM",
+        "title": "700–800 Cartel Gunmen Mobilize Across Culiacán",
+        "type": "cartel-action",
+        "detail": "The Sinaloa Cartel deployed between 700 and 800 gunmen across Culiacán using approximately 78 vehicles, including armored trucks equipped with .50 caliber Barrett rifles, machine guns, rocket launchers, and grenade launchers. The outnumbered security forces (approximately 350 personnel) were immediately overwhelmed. At least 19 narcobloqueos (roadblocks) were established across the city; 42 vehicles were forcibly seized and at least 9 burned to block all major roads and highways.",
+        "sources": [
+          { "name": "Justice in Mexico", "tier": 3, "url": "https://justiceinmexico.org/ovidioguzman-culiacan/" },
+          { "name": "BBC", "tier": 2, "url": "https://www.bbc.com/news/world-latin-america-50068846" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "military-barracks-seized-2019",
+        "year": "Oct 17, 2019 — Afternoon",
+        "title": "Cartel Seizes 9th Military Zone Housing; Soldiers' Families Taken Hostage",
+        "type": "cartel-action",
+        "detail": "In one of the most audacious elements of the cartel's response, armed gunmen seized the residential housing area of the Novena Zona Militar (9th Military Zone) barracks, taking families of soldiers hostage — including women and children. Eight soldiers were captured as hostages. The seizure of military dependents served as direct leverage on troops attempting to maintain the detention. One soldier was seized from the barracks in front of his children.",
+        "sources": [
+          { "name": "Proceso", "tier": 3, "url": "https://www.proceso.com.mx/nacional/2019/10/17/la-familia-es-lo-primero-la-logica-detras-del-culiacanazo" },
+          { "name": "Reforma", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "aguaruto-prison-break-2019",
+        "year": "Oct 17, 2019 — Afternoon",
+        "title": "51 Prisoners Escape Aguaruto Federal Penitentiary",
+        "type": "cartel-action",
+        "detail": "In a coordinated move, prisoners inside Culiacán's Aguaruto Federal Penitentiary staged a riot and stripped five guards of their weapons. Fifty-one inmates escaped in the chaos, with only 2 quickly recaptured. The prison break was widely interpreted as a coordinated distraction and resupply of armed personnel for the cartel. The C4 state command-and-control headquarters was also attacked during the same timeframe.",
+        "sources": [
+          { "name": "AP", "tier": 2, "url": "https://apnews.com/article/latin-america-mexico-9b4e756cfe1d4bf7887f38ca1c2dc2cf" },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-released-2019",
+        "year": "Oct 17, 2019 — 6:49 PM",
+        "title": "AMLO Orders Ovidio's Release to 'Preserve Lives'",
+        "type": "legal-political",
+        "detail": "The Security Cabinet, with the support of President Andrés Manuel López Obrador, ordered Mexican forces to stand down and withdraw from the compound. Ovidio Guzmán López was released. AMLO stated: 'The priority was to save lives.' He later explicitly acknowledged he personally gave the order. The decision became a defining symbol of cartel impunity and state weakness in Mexico's security debate.",
+        "sources": [
+          { "name": "Secretaría de Seguridad y Protección Ciudadana", "tier": 1 },
+          { "name": "El Universal", "tier": 2, "url": "https://www.eluniversal.com.mx/nacion/amlo-ordeno-liberacion-de-ovidio-culiacanazo" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "culiacanazo-casualties-2019",
+        "year": "Oct 17–18, 2019",
+        "title": "At Least 8–15 Killed in Day of Violence",
+        "type": "civilian-incident",
+        "detail": "Official government figures listed 8 dead (including 1 civilian), 16 wounded, and 68 military vehicles damaged by gunfire across 14 armed confrontations. However, local witnesses reported 'dozens' of bodies on the streets, and local authority tallies cited at least 15 dead — including 3 civilians in the Tres Ríos neighborhood alone. Civilian casualties included bystanders caught in crossfire and individuals carjacked at gunpoint. Schools closed and residents sheltered in place as gunfire echoed across the city for hours.",
+        "sources": [
+          { "name": "Secretaría de Seguridad y Protección Ciudadana", "tier": 1 },
+          { "name": "Aristegui Noticias", "tier": 2, "url": "https://aristeguinoticias.com/1710/mexico/bajas-culiacanazo-2019/" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "culiacanazo-government-press-conference",
+        "year": "Oct 18, 2019",
+        "title": "SEDENA Admits 'Poorly Organized' Operation; Durazo Acknowledges Failure",
+        "type": "legal-political",
+        "detail": "SEDENA Secretary Luis Cresencio Sandoval held a press conference acknowledging the October 17 convoy was carrying out an arrest warrant for extradition purposes — contradicting the government's initial claim of a 'routine patrol.' He conceded the operation was 'poorly organized, hasty, and underestimated the strength and mobilization capacity of the Sinaloa Cartel,' citing failures in intelligence gathering and failure to secure soldiers' families from cartel reprisals. Security Secretary Alfonso Durazo similarly acknowledged 'hasty planning, inadequate risk assessment, and bureaucratic oversights' that left senior leaders uninformed.",
+        "sources": [
+          { "name": "SEDENA (Secretaría de la Defensa Nacional)", "tier": 1 },
+          { "name": "CNN en Español", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Aftermath & Buildup (2019–2022)",
+    "events": [
+      {
+        "id": "amlo-troops-deployment-2019",
+        "year": "Oct 2019",
+        "title": "8,000 Troops Deployed to Sinaloa After Culiacanazo",
+        "type": "military-op",
+        "detail": "In the immediate aftermath of the Culiacanazo, AMLO deployed approximately 8,000 soldiers and police to Culiacán in a show of force following the humiliating release. Critics argued the deployment was far more than what was available during the actual operation, highlighting how unprepared the initial raid had been. Despite the reinforcement, Ovidio remained free and the Sinaloa Cartel faced no immediate accountability.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "durazo-resignation-2020",
+        "year": "Oct 2020",
+        "title": "Security Secretary Durazo Resigns to Run for Sonora Governor",
+        "type": "legal-political",
+        "detail": "Alfonso Durazo Montaño resigned as Secretary of Security and Citizen Protection in October 2020 to pursue the governorship of Sonora, which he won in 2021. He was replaced in November 2020 by Rosa Icela Rodríguez Velázquez, a former journalist and Mexico City official who became the first woman to lead Mexico's public security portfolio. His departure removed one of the faces most associated with the Culiacanazo's failure.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2 },
+          { "name": "Milenio", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "us-extradition-request-preparation",
+        "year": "2021–2022",
+        "title": "Mexico and U.S. Plan Second Capture Operation — 'Operation Mongoose Azteca'",
+        "type": "military-op",
+        "detail": "Planning for a second capture attempt began as early as late 2021 in collaboration between SEDENA, the National Guard, the National Intelligence Center, the Sinaloa Public Security Secretariat, and U.S. intelligence agencies. The covert operation, later codenamed Operation Mongoose Azteca, spanned August 1, 2022 to January 5, 2023. U.S. intelligence agencies intercepted cartel communications for months, tracking Ovidio's movements and routines. The military took the humiliation of the 2019 hostage-taking of soldiers' families as a personal affront requiring redress.",
+        "sources": [
+          { "name": "SEDENA", "tier": 1 },
+          { "name": "Small Wars Journal", "tier": 3, "url": "https://smallwarsjournal.com/2023/01/18/mexican-cartel-strategic-note-no-35-mexican-security-forces-arrest-ovidio-guzman/" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-public-profile-2022",
+        "year": "2022",
+        "title": "Ovidio Remains Visible in Sinaloa; Chapitos Consolidate Power",
+        "type": "cartel-action",
+        "detail": "Despite a U.S. extradition warrant, Ovidio Guzmán López lived openly in Sinaloa and was photographed at events. Under the Chapitos (Ovidio, Iván Archivaldo, Jesús Alfredo, and Joaquín Guzmán López), the Sinaloa Cartel expanded fentanyl production to unprecedented levels, contributing to tens of thousands of overdose deaths per year in the United States. U.S. pressure on Mexico to extradite Los Chapitos intensified throughout 2022.",
+        "sources": [
+          { "name": "InSight Crime", "tier": 3 },
+          { "name": "El País México", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Operation Ovidio — January 2023",
+    "events": [
+      {
+        "id": "jesus-maria-firefight-2023",
+        "year": "Jan 5, 2023 — Early Morning",
+        "title": "National Guard Confronts Ovidio's Convoy in Jesús María",
+        "type": "military-op",
+        "detail": "A National Guard patrol in the small town of Jesús María (approximately 25 km north of central Culiacán) identified a convoy of six armored bulletproof pickup trucks. When the patrol attempted to inspect the vehicles, the occupants opened fire, initiating an intense firefight. Ovidio Guzmán López and his security detail retreated to a fortified estate nearby, barricading themselves inside.",
+        "sources": [
+          { "name": "SEDENA", "tier": 1 },
+          { "name": "Reuters", "tier": 2, "url": "https://www.reuters.com/world/americas/mexico-deploys-thousands-troops-culiacan-after-cartel-gunmen-attack-troops-2023-01-05/" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-captured-2023",
+        "year": "Jan 5, 2023 — Morning",
+        "title": "Ovidio Guzmán López Arrested After Special Forces Storm Compound",
+        "type": "military-op",
+        "detail": "Mexican Army special forces units supported by helicopter gunships stormed Ovidio's fortified compound near Jesús María. After a battle lasting several hours, 18 individuals were arrested — including Ovidio Guzmán López. He was immediately loaded onto a military helicopter to prevent any possibility of negotiated release, repeating the scenario of 2019 in reverse. He was flown directly to Mexico City and transferred to El Altiplano maximum-security federal prison (CEFERESO No. 1 in Almoloya de Juárez) on January 6.",
+        "sources": [
+          { "name": "SEDENA", "tier": 1 },
+          { "name": "AP", "tier": 2, "url": "https://apnews.com/article/mexico-cartel-guzman-ovidio-arrest-9bb40e76c4ff5c3427cf0278c5e5c21e" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "culiacan-airport-attack-2023",
+        "year": "Jan 5, 2023",
+        "title": "Cartel Attacks Culiacán International Airport; Flights Suspended",
+        "type": "cartel-action",
+        "detail": "Cartel gunmen attacked Bachigualato Federal International Airport, targeting both the civilian terminal and Military Air Base No. 10. Armed men used .50 caliber rifles to shoot at military aircraft in flight. An Aeroméxico airliner and a Mexican military aircraft on the tarmac were struck by gunfire. The airport was temporarily closed. Aeroméxico diverted flights from Los Mochis and Mazatlán airports as violence spread; flights from Ciudad Obregón International Airport in Sonora were also cancelled after truck attacks on Highway 15.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "BBC", "tier": 2, "url": "https://www.bbc.com/news/world-latin-america-64177432" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "statewide-narcobloqueos-2023",
+        "year": "Jan 5–13, 2023",
+        "title": "Statewide Cartel Blockades and Violence Across Sinaloa",
+        "type": "cartel-action",
+        "detail": "The cartel response to Ovidio's capture spread across the entire state of Sinaloa. Multiple narcobloqueos with burning vehicles were established across Culiacán. Violence erupted in Los Mochis, Guasave, Ahome, and Mazatlán, where commercial establishments were set on fire and civilians seized. Neighboring Nayarit state was placed on high alert. Two military helicopters were forced down after taking heavy fire. Cartel forces used at least six truck-mounted .50 caliber machine guns against security forces.",
+        "sources": [
+          { "name": "El Universal", "tier": 2 },
+          { "name": "Animal Político", "tier": 2, "url": "https://www.animalpolitico.com/seguridad/operacion-ovidio-culiacan-bloqueos-2023" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "colonel-moreno-ambush-2023",
+        "year": "Jan 5, 2023 — 2:50 PM",
+        "title": "Infantry Colonel Juan José Moreno Orzua Ambushed and Killed in Escuinapa",
+        "type": "military-op",
+        "detail": "Infantry Colonel Juan José Moreno Orzua, commander of the 43rd Infantry Battalion based in Tepic, Nayarit, was ambushed by Los Chapitos hitmen near Escuinapa in southern Sinaloa along with his four bodyguards. All five were killed. The colonel died at approximately 2:50 PM from a gunshot wound to the right hemothorax. His killing was a targeted response to his unit's role in supporting Operation Ovidio and represented the most senior military casualty of the operation.",
+        "sources": [
+          { "name": "Milenio", "tier": 2 },
+          { "name": "SEDENA", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "operation-ovidio-casualties-total",
+        "year": "Jan 5–13, 2023",
+        "title": "Official Toll: 30 Dead, 35+ Injured Across Sinaloa",
+        "type": "civilian-incident",
+        "detail": "SEDENA official figures: 10 soldiers killed (including Colonel Moreno Orzua and his four escorts), 19 cartel gunmen killed, 1 police officer killed — total 30 dead. Additionally, 35+ wounded and 21 arrested. Weapons seized included four .50 caliber Barrett rifles, six .50 caliber machine guns, 26 long arms, 2 handguns, and 13 operational vehicles. Marcelo Ebrard (Foreign Affairs) stated 63% of the weapons seized originated in the United States.",
+        "sources": [
+          { "name": "SEDENA", "tier": 1 },
+          { "name": "Secretaría de Seguridad y Protección Ciudadana", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "order-restored-jan-13-2023",
+        "year": "Jan 13, 2023",
+        "title": "Interior Secretary Declares Order Restored in Sinaloa",
+        "type": "legal-political",
+        "detail": "Secretary of the Interior Adán Augusto López Hernández declared that 'order has been reestablished' in Sinaloa after eight days of cartel-driven violence. SEDENA reported deploying 3,586 soldiers during the operation, supported by Army Special Reaction Force units, the Parachute Riflemen Brigade, and the Special Forces Corps. The operation was widely seen as a reversal of the 2019 humiliation, demonstrating the government could withstand cartel retaliation.",
+        "sources": [
+          { "name": "Secretaría de Gobernación", "tier": 1 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Extradition & U.S. Prosecution (2023–2024)",
+    "events": [
+      {
+        "id": "us-extradition-request-2023",
+        "year": "Feb 2023",
+        "title": "United States Files Formal Extradition Request for Ovidio",
+        "type": "legal-political",
+        "detail": "Under the U.S.-Mexico extradition treaty, the United States had 60 days to file a formal extradition request after Ovidio's arrest. The U.S. submitted the formal request in February 2023 to the Mexican Foreign Ministry. A Mexican court subsequently recommended extradition in August 2023, and the Foreign Ministry approved the transfer. The process was unusually fast by extradition standards.",
+        "sources": [
+          { "name": "U.S. Department of Justice", "tier": 1, "url": "https://www.justice.gov/archives/opa/pr/statement-attorney-general-merrick-b-garland-extradition-ovidio-guzman-lopez-mexico-united" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-extradited-september-2023",
+        "year": "Sep 15, 2023",
+        "title": "Ovidio Guzmán López Extradited to United States",
+        "type": "legal-political",
+        "detail": "Ovidio Guzmán López was extradited to the United States on September 15, 2023 — approximately 8 months after his January 2023 capture. Attorney General Merrick Garland called it 'the most recent step in the Justice Department's effort to attack every aspect of the cartel's operations.' On September 18, 2023, Ovidio was arraigned before U.S. District Judge Sharon Johnson Coleman in the Northern District of Illinois (Chicago) on five counts within a nine-count superseding indictment: drug trafficking continuing criminal enterprise (CCE), money laundering, and firearm offenses covering 2008–2021. He pleaded not guilty and was held without bond.",
+        "sources": [
+          { "name": "U.S. Department of Justice", "tier": 1, "url": "https://www.justice.gov/usao-ndil/pr/alleged-high-ranking-member-sinaloa-cartel-arraigned-federal-charges-following" },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-mayo-captured-july-2024",
+        "year": "Jul 25, 2024",
+        "title": "Ismael 'El Mayo' Zambada and Joaquín Guzmán López Arrested in El Paso",
+        "type": "legal-political",
+        "detail": "In a stunning development, Ismael 'El Mayo' Zambada García — co-founder of the Sinaloa Cartel who had evaded law enforcement for over 40 years — arrived at a private airfield in El Paso, Texas and was arrested by U.S. authorities, alongside Joaquín Guzmán López (El Chapo's son). El Mayo alleged he had been kidnapped, drugged, bagged, zip-tied, and flown involuntarily to the U.S. by Joaquín Guzmán López's armed men disguised in military uniforms. Joaquín surrendered voluntarily; El Mayo was taken by force. Both were arraigned in U.S. federal court.",
+        "sources": [
+          { "name": "HSI / ICE", "tier": 1, "url": "https://www.ice.gov/about-ice/hsi/news/hsi-insider/notorious-sinaloa-cartel-leaders-arrested" },
+          { "name": "CBS News", "tier": 2, "url": "https://www.cbsnews.com/news/sinaloa-cartel-boss-bducted-drugged-plea-deal-el-chapo-son/" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-guilty-plea-2025",
+        "year": "Jul 2025",
+        "title": "Ovidio Guzmán López Pleads Guilty in Chicago Federal Court",
+        "type": "legal-political",
+        "detail": "Ovidio Guzmán López pleaded guilty in U.S. District Court in Chicago to two counts of drug distribution and two counts of participating in a continuing criminal enterprise. He faces up to life in prison and potential forfeiture of $80 million. Reports indicated Ovidio had been cooperating with U.S. authorities and potentially entered a federal witness protection arrangement. His sentencing has been postponed multiple times; as of May 2026, the next cooperation review hearing is scheduled for July 27, 2026.",
+        "sources": [
+          { "name": "The Hill", "tier": 2, "url": "https://thehill.com/homenews/state-watch/5397130-guzman-lopez-sinaloa-cartel-guilty-el-chapo-son/", "pole": "western" },
+          { "name": "U.S. Department of Justice", "tier": 1, "pole": "western" },
+          { "name": "Parriva", "tier": 3, "url": "https://www.parriva.com/news-digest/ovidio-guzman-will-have-to-wait-until-the-end-of-july-for-his-sentencing-hearing-in-the-us/", "pole": "western" }
+        ],
+        "lastUpdated": "2026-05-16T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Sinaloa Cartel Civil War (2024–Present)",
+    "events": [
+      {
+        "id": "sinaloa-civil-war-begins-2024",
+        "year": "Sep 9, 2024",
+        "title": "Sinaloa Civil War: Chapitos vs. La Mayiza",
+        "type": "cartel-action",
+        "detail": "Following El Mayo's arrest — and his accusation that Joaquín Guzmán López had orchestrated his kidnapping — Ismael 'Mayito Flaco' Zambada Sicairos, El Mayo's son, authorized coordinated strikes against Los Chapitos on September 9, 2024. 'El Comanche' issued synchronized attack orders across Sinaloa, formally triggering the Sinaloa Cartel civil war. The conflict pitted the Chapitos faction (led by Iván Archivaldo and Jesús Alfredo Guzmán Salazar) against La Mayiza.",
+        "sources": [
+          { "name": "ACLED", "tier": 3, "url": "https://acleddata.com/report/how-sinaloa-cartel-rift-redrawing-mexicos-criminal-map" },
+          { "name": "InSight Crime", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "sinaloa-war-toll-2024-2025",
+        "year": "Sep 2024 – Mar 2026",
+        "title": "~2,000 Killed in Sinaloa Civil War in One Year",
+        "type": "civilian-incident",
+        "detail": "The cartel civil war produced catastrophic civilian casualties in Sinaloa. Approximately 1,972 homicides were recorded in Sinaloa between September 2024 and August 2025 — averaging 5.4 per day, a 200%+ increase over the previous year — alongside approximately 1,949 kidnapping victims. At least 10,000 jobs were lost across the region. La Mayiza allied with Chapo Isidro and Los Cabrera; the Chapitos allied with CJNG for weapons and manpower in exchange for trafficking route access.",
+        "sources": [
+          { "name": "Latin Times", "tier": 2, "url": "https://www.latintimes.com/year-bloodshed-sinaloa-nearly-2000-dead-war-between-los-chapitos-la-mayiza-589356" },
+          { "name": "ACLED", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "el-mayo-guilty-plea-2025",
+        "year": "Aug 25, 2025",
+        "title": "El Mayo Zambada Pleads Guilty in U.S. Federal Court",
+        "type": "legal-political",
+        "detail": "Ismael 'El Mayo' Zambada García pleaded guilty on August 25, 2025 to racketeering conspiracy and continuing criminal enterprise in U.S. federal court in Brooklyn. His arrest and prosecution closed an era: the Sinaloa Cartel co-founder who had managed institutional corruption with a bribery budget estimated at $1 million per month, and who had evaded capture for over four decades, would spend the remainder of his life incarcerated. His son Mayito Flaco continues to lead La Mayiza in Sinaloa.",
+        "sources": [
+          { "name": "U.S. Department of Justice", "tier": 1, "url": "https://www.justice.gov/opa/pr/co-founder-sinaloa-cartel-ismael-el-mayo-zambada-garcia-pleads-guilty-engaging-continuing" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "mayiza-territorial-control-2026",
+        "year": "Early 2026",
+        "title": "La Mayiza Controls ~90% of Former Chapitos Territory",
+        "type": "cartel-action",
+        "detail": "By early 2026, La Mayiza reportedly controlled approximately 90% of the Sinaloa Cartel's former Chapitos-held territory. SEDENA stated the Sinaloa Cartel had lost control of 30 of 42 trafficking routes it previously dominated. Analysts warned of further fragmentation into smaller, more violent criminal groups as the dominant cartel structure fractured. Iván Archivaldo Guzmán Salazar faced $10 million U.S. bounties and multiple indictments while running the diminished Chapitos faction.",
+        "sources": [
+          { "name": "ACLED", "tier": 3, "url": "https://acleddata.com/report/how-sinaloa-cartel-rift-redrawing-mexicos-criminal-map", "pole": "international" },
+          { "name": "Reuters", "tier": 2, "pole": "western" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "sinaloa-homicide-decline-2026",
+        "year": "Mar–Apr 2026",
+        "title": "Sinaloa Homicide Rate Falls 63% From June 2025 Peak — But Injuries Rise 36%",
+        "type": "civilian-incident",
+        "detail": "By March 2026, Sinaloa recorded its lowest homicide rate since the cartel civil war began in September 2024: approximately 2.5 killings per day, down from a peak of 6.9 per day in June 2025 — a 63% reduction. Federal government data confirmed a 50% overall decline from the 2024 outbreak peak. However, the same period saw gunshot injuries rise 36%, suggesting cartel tactics were shifting toward incapacitation rather than killing — possibly reflecting negotiation dynamics or resource constraints. Sinaloa remained one of Mexico's three most violent states despite the statistical improvement, and La Mayiza's consolidation of territorial control rather than a peace agreement drove much of the reduction in fighting.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/2026/02/28/estados/021n1est?partner=rss", "pole": "western" },
+          { "name": "El Imparcial", "tier": 2, "url": "https://www.elimparcial.com/mexico/2026/02/27/violencia-en-sinaloa-cambia-de-tendencia-homicidios-disminuyen-50-desde-2024-pero-aumentan-36-las-personas-heridas-por-disparos-confirmo-el-gobierno-federal/", "pole": "western" },
+          { "name": "Entre Veredas", "tier": 3, "url": "https://www.entreveredas.com.mx/2026/04/marzo-de-2026-registra-el-nivel-mas.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.jornada.com.mx/2026/02/28/estados/021n1est?partner=rss",
+            "caption": "La Jornada: Sinaloa homicides fall 50% but violence continues",
+            "source": "La Jornada",
+            "thumbnail": "https://www.jornada.com.mx/2026/02/28/estados/021n1est?partner=rss"
+          }
+        ],
+        "lastUpdated": "2026-05-16T00:00:00.000Z"
+      },
+      {
+        "id": "rocha-moya-us-indictment-2026",
+        "year": "Apr 29, 2026",
+        "title": "U.S. Formally Indicts Sitting Sinaloa Governor Rocha Moya and Nine Officials",
+        "type": "legal-political",
+        "detail": "The U.S. Attorney's Office for the Southern District of New York unsealed a formal indictment on April 29, 2026 against sitting Sinaloa Governor Rubén Rocha Moya and nine current and former state officials — including Senator Enrique Inzunza Cázarez, former finance secretary Enrique Díaz Vega, deputy attorney general Dámaso Castro Zaavedra, and former investigative police chiefs Marco Antonio Almanza Avilés and Alberto Jorge Contreras Núñez ('Cholo'). Prosecutors alleged the group facilitated Los Chapitos' fentanyl, cocaine, heroin, and methamphetamine trafficking into the U.S. in exchange for bribes and political protection, and claimed Rocha Moya's 2021 gubernatorial election was itself driven by Sinaloa Cartel intimidation of rival candidates. It was among the highest-ranking Mexican officials — a sitting state governor — ever charged by the U.S. in connection with cartel corruption. Rocha Moya denied the charges as lacking any basis.",
+        "sources": [
+          {
+            "name": "Aristegui Noticias",
+            "tier": 2,
+            "url": "https://aristeguinoticias.com/2904/mexico/estos-son-los-cargos-de-ee-uu-contra-ruben-rocha-moya-y-9-funcionarios-mas-de-sinaloa/",
+            "pole": "western"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "url": "https://www.infobae.com/mexico/2026/04/30/de-denuncias-en-sinaloa-a-una-acusacion-de-eeuu-cronologia-de-los-senalamientos-contra-rocha-moya-por-presuntos-nexos-con-el-narco/",
+            "pole": "western"
+          },
+          {
+            "name": "Reforma",
+            "tier": 2,
+            "url": "https://www.reforma.com/acusan-en-eu-a-ruben-rocha-y-9-mas-por-narcotrafico/ar3195413",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.infobae.com/mexico/2026/04/30/de-denuncias-en-sinaloa-a-una-acusacion-de-eeuu-cronologia-de-los-senalamientos-contra-rocha-moya-por-presuntos-nexos-con-el-narco/",
+            "caption": "Timeline of U.S. accusations against Sinaloa Governor Rocha Moya",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/XRKFJQSFLVHR5FRQCMLUA4HX2M.jpg?auth=9b47bd951f2ed04c78812cd46b87aa8f2f49ca55df8bc0c0787079cd198f2898&smart=true&width=350&height=233&quality=85"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "rocha-moya-leave-of-absence-2026",
+        "year": "May 2, 2026",
+        "title": "Rocha Moya Takes Leave of Absence as Sinaloa Governor",
+        "type": "legal-political",
+        "detail": "Rubén Rocha Moya requested a temporary leave of absence from the Sinaloa state Congress on May 2, 2026, three days after the U.S. indictment, to focus on contesting the accusations. The state Congress approved the request and named Yeraldine Bonilla Valverde interim governor. Rocha Moya said he had 'a clear conscience' and would fight the charges. Mexico's Fiscalía General de la República (FGR) opened a parallel domestic investigation limited to the specific crimes named in the U.S. extradition request.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "url": "https://www.infobae.com/mexico/2026/05/02/ruben-rocha-moya-solicita-licencia-como-gobernador-de-sinaloa-para-enfrentar-investigaciones/",
+            "pole": "western"
+          },
+          {
+            "name": "CNN en Español",
+            "tier": 2,
+            "url": "https://cnnespanol.cnn.com/2026/05/02/mexico/gobernador-sinaloa-pide-separarse-cargo-acusacion-narcotrafico-eeuu-orix",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.infobae.com/mexico/2026/05/02/ruben-rocha-moya-solicita-licencia-como-gobernador-de-sinaloa-para-enfrentar-investigaciones/",
+            "caption": "Rocha Moya requests leave of absence as Sinaloa governor",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/XRKFJQSFLVHR5FRQCMLUA4HX2M.jpg?auth=9b47bd951f2ed04c78812cd46b87aa8f2f49ca55df8bc0c0787079cd198f2898&smart=true&width=350&height=233&quality=85"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "sinaloa-violence-resurgence-june2026",
+        "year": "Jun 2026",
+        "title": "Sinaloa Violence Resurges: June Second-Deadliest Month of 2026",
+        "type": "civilian-incident",
+        "detail": "After the March–April 2026 lull, Sinaloa violence resurged sharply: the state prosecutor's office recorded 124 intentional homicides in May 2026 and 116 in June 2026, making June the second most violent month of the year after May. La Jornada reported the homicide rate had rebounded as much as 232% above the earlier 2026 low. Culiacán bore a large share of the toll, with clusters of same-day killings spread across neighborhoods including Las Coloradas, República Mexicana, Los Girasoles, Alturas del Sur, and Buenos Aires — evidence the Chapitos–La Mayiza fighting had not actually ended despite the earlier reported decline. From September 2024 through May 2026, Sinaloa recorded roughly 2,829 intentional homicides tied to the cartel civil war.",
+        "sources": [
+          {
+            "name": "TV Azteca Sinaloa",
+            "tier": 2,
+            "url": "https://www.aztecasinaloa.com/noticias/junio-se-convierte-en-el-segundo-mes-mas-homicidios-en-sinaloa-en-2026-video",
+            "pole": "western"
+          },
+          {
+            "name": "CNN en Español",
+            "tier": 2,
+            "url": "http://cnnespanol.cnn.com/2026/07/07/mexico/batalla-cartel-sinaloa-grupos-violencia-orix",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aztecasinaloa.com/noticias/junio-se-convierte-en-el-segundo-mes-mas-homicidios-en-sinaloa-en-2026-video",
+            "caption": "June 2026 becomes Sinaloa's second-deadliest month of the year",
+            "source": "TV Azteca Sinaloa",
+            "thumbnail": "https://www.aztecasinaloa.com/noticias/junio-se-convierte-en-el-segundo-mes-mas-homicidios-en-sinaloa-en-2026-video"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "el-texas-killed-2026",
+        "year": "Jul 7–8, 2026",
+        "title": "Chapitos Culiacán Plaza Boss 'El Texas' Killed in Military Operation",
+        "type": "military-op",
+        "detail": "Cristhian Guadalupe Pérez Pérez, alias 'El Texas,' the Los Chapitos plaza boss for Culiacán since May 2025, was killed on the afternoon of July 7, 2026 when military and state security forces raided the Paralela Parque Residencial condominium complex in the Infonavit Humaya neighborhood, north Culiacán. Gunmen from his cell, 'Los Menores,' opened fire on the security forces, who returned fire, killing 'El Texas' and detaining four of his men. Security Secretary Omar García Harfuch confirmed the operation on July 8. Seized materiel included a machine gun, seven assault rifles, two fragmentation grenades, over 3,100 rounds of ammunition, and tactical/radio equipment. Officials linked El Texas to homicides, kidnappings, extortion, and vehicle theft across the capital.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "url": "https://www.infobae.com/mexico/2026/07/08/omar-garcia-harfuch-confirma-la-muerte-de-el-texas-en-culiacan-era-el-jefe-de-plaza-de-los-chapitos/",
+            "pole": "western"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "url": "https://www.jornada.com.mx/2026/07/09/politica/010n3pol",
+            "pole": "western"
+          },
+          {
+            "name": "Expansión Política",
+            "tier": 2,
+            "url": "https://politica.expansion.mx/mexico/2026/07/08/texas-jefe-de-plaza-de-los-chapitos-en-culiacan-es-abatido-durante-enfrentamiento",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.infobae.com/mexico/2026/07/08/omar-garcia-harfuch-confirma-la-muerte-de-el-texas-en-culiacan-era-el-jefe-de-plaza-de-los-chapitos/",
+            "caption": "García Harfuch confirms death of Chapitos Culiacán plaza boss 'El Texas'",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/H6HMMHKUTZAW3LICAJTZ7P2TPQ.webp?auth=14a7efc64a97f4c9d79ac56b0b95be22c5c4fdc53b88294e9da3821b7a5b143f&smart=true&width=350&height=198&quality=85"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "rocha-moya-extradition-docs-fgr-response-2026",
+        "year": "Jul 8–9, 2026",
+        "title": "SRE Publishes U.S. Extradition Request Documents; FGR Says Evidence Insufficient to Proceed",
+        "type": "legal-political",
+        "detail": "Mexico's Secretaría de Relaciones Exteriores (SRE) published three documents on July 8, 2026 detailing the U.S. provisional-detention-for-extradition requests against Rocha Moya, Senator Enrique Inzunza, and eight other Sinaloan officials, filed by the Southern District of New York on charges of narcotics conspiracy, drug trafficking, corruption, and firearms possession. The Fiscalía General de la República (FGR) said the following day that its domestic investigation — limited strictly to the crimes cited in the U.S. request — had not yet met Mexico's minimum evidentiary standard to seek arrest warrants, and that no evidence had been furnished confirming the accusations. The SRE said any further action would depend on evidence the FGR ultimately gathers.",
+        "sources": [
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "url": "https://www.jornada.com.mx/noticia/2026/07/08/politica/sre-revela-documentos-sobre-solicitud-de-extradicion-contra-rocha-moya",
+            "pole": "western"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "url": "https://www.infobae.com/mexico/2026/07/08/la-fgr-asegura-que-no-cuenta-con-pruebas-para-proceder-contra-rocha-moya-investigacion-sigue-en-curso/",
+            "pole": "western"
+          },
+          {
+            "name": "LatinUS",
+            "tier": 2,
+            "url": "https://latinus.us/mexico/2026/7/8/fgr-limita-investigacion-contra-rocha-moya-los-delitos-por-los-que-eu-solicita-su-extradicion-178385.html",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "chapitos-surrender-negotiations-may2026",
+        "year": "May 11, 2026",
+        "title": "Iván Archivaldo and Jesús Alfredo Guzmán Reportedly in DOJ Surrender Negotiations",
+        "type": "legal-political",
+        "detail": "Multiple Mexican and Latin American media outlets reported on May 11, 2026, citing a Los Angeles Times investigation, that Iván Archivaldo Guzmán Salazar ('El Chapito') and Jesús Alfredo Guzmán Salazar were in preliminary negotiations with the U.S. Department of Justice about a potential negotiated surrender. Reports indicated the brothers had already shared intelligence with U.S. authorities implicating Sinaloa Governor Rubén Rocha Moya in cartel bribery — a potential leverage chip for reduced charges or cooperation credit. The pattern mirrors Joaquín Guzmán López's December 2025 guilty plea and Ovidio's 2025 cooperation agreement. If confirmed, a dual surrender of the remaining Chapitos would complete the legal neutralization of El Chapo's four sons.",
+        "sources": [
+          { "name": "Infobae", "tier": 2, "url": "https://www.infobae.com/mexico/2026/05/11/ivan-archivaldo-y-jesus-alfredo-estarian-en-negociaciones-con-estados-unidos-para-una-posible-entrega-revela-los-angeles-times/", "pole": "western" },
+          { "name": "El Financiero", "tier": 2, "url": "https://www.elfinanciero.com.mx/mundo/2026/05/11/los-chapitos-intocables-ivan-y-alfredo-guzman-estarian-en-negociaciones-con-eu/", "pole": "western" },
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/05/11/mundo/los-chapitos-negocian-con-eu-para-posible-entrega-negociada-revela-los-angeles-times", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.infobae.com/mexico/2026/05/11/ivan-archivaldo-y-jesus-alfredo-estarian-en-negociaciones-con-estados-unidos-para-una-posible-entrega-revela-los-angeles-times/",
+            "caption": "Iván Archivaldo and Jesús Alfredo Guzmán reportedly negotiating surrender with U.S. DOJ",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/mexico/2026/05/11/ivan-archivaldo-y-jesus-alfredo-estarian-en-negociaciones-con-estados-unidos-para-una-posible-entrega-revela-los-angeles-times/"
+          }
+        ],
+        "lastUpdated": "2026-05-16T00:00:00.000Z"
+      },
+      {
+        "id": "joaquin-guzman-lopez-sentencing-2026",
+        "year": "2026",
+        "title": "Joaquín Guzmán López's Sentencing Hearing Postponed to August 31, 2026",
+        "type": "legal-political",
+        "detail": "Joaquín Guzmán López ('El Ratón'), who pleaded guilty in December 2025 to two counts of drug trafficking and continuing criminal enterprise, admitted in open court to orchestrating the kidnapping of El Mayo Zambada. His in-person hearing, originally set for June 1, 2026, was postponed by the Northern District of Illinois court on May 18–19, 2026 to August 31, 2026 at 1:30 PM — the fourth delay in his case. His cooperation is reportedly influencing his surviving brothers' (Iván and Alfredo) parallel negotiations with the DOJ. No final sentence has yet been set.",
+        "sources": [
+          { "name": "Latin Times", "tier": 2, "url": "https://www.latintimes.com/joaquin-guzman-lopez-son-el-chapo-confesses-kidnapping-el-mayo-zambada-when-pleading-guilty-592112", "pole": "western" },
+          { "name": "Infobae", "tier": 2, "url": "https://www.infobae.com/mexico/2026/05/19/aplazan-audiencia-en-eeuu-de-joaquin-guzman-hijo-del-chapo/", "pole": "western" },
+          { "name": "El Financiero", "tier": 2, "url": "https://www.elfinanciero.com.mx/mundo/2026/05/18/corte-mueve-de-nuevo-audiencia-de-joaquin-guzman-lopez/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.infobae.com/mexico/2026/05/19/aplazan-audiencia-en-eeuu-de-joaquin-guzman-hijo-del-chapo/",
+            "caption": "Joaquín Guzmán López's June hearing postponed to August 31, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/A4ZTF2UGEVDMLMSQPVTINKLREA.jpg?auth=c92bc7ed41c97a19bc434381e50dd4b68c85201309a406a2cfb89155a616aa39&smart=true&width=350&height=197&quality=85"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "sinaloa-security-chief-surrenders-2026",
+        "year": "May 15, 2026",
+        "title": "Former Sinaloa State Security Chief Surrenders to U.S.; Allegedly Received $100K/Month in Cartel Bribes",
+        "type": "legal-political",
+        "detail": "The former secretary of public security for Sinaloa state reportedly surrendered to U.S. federal authorities around May 15, 2026 and was transferred to a facility in New York. According to reporting by Latin Times, the official allegedly received approximately $100,000 per month in bribery payments from Los Chapitos in exchange for protecting cartel operations from state-level law enforcement. The surrender is part of a broader cascade of prosecutions stemming from the DOJ investigations opened after the extraditions of Ovidio (2023) and El Mayo (2024). The case further exposed the depth of cartel infiltration into Sinaloa's state security apparatus — an infiltration that directly contributed to the 2019 Culiacanazo operational failure.",
+        "sources": [
+          { "name": "Latin Times", "tier": 2, "url": "https://www.latintimes.com/former-sinaloa-security-chief-transferred-new-york-after-reportedly-surrendering-us-authorities-597418", "pole": "western" },
+          { "name": "Latin Times", "tier": 2, "url": "https://www.latintimes.com/los-chapitos-allegedly-shared-info-us-rocha-moya-probe-amid-surrender-talks-report-597350", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.latintimes.com/former-sinaloa-security-chief-transferred-new-york-after-reportedly-surrendering-us-authorities-597418",
+            "caption": "Former Sinaloa state security secretary transferred to New York after surrendering to U.S.",
+            "source": "Latin Times",
+            "thumbnail": "https://www.latintimes.com/former-sinaloa-security-chief-transferred-new-york-after-reportedly-surrendering-us-authorities-597418"
+          }
+        ],
+        "lastUpdated": "2026-05-16T00:00:00.000Z"
+      },
+      {
+        "id": "el-mayo-sentencing-scheduled-july2026",
+        "year": "Jul 13, 2026",
+        "title": "El Mayo Zambada Accepts Life Sentence Ahead of July 20 Brooklyn Hearing",
+        "type": "legal-political",
+        "detail": "Ahead of his July 20, 2026 sentencing before U.S. District Judge Brian Cogan in Brooklyn — the same judge who sentenced El Chapo and former Mexican security chief Genaro García Luna — El Mayo Zambada's defense filed a sentencing memorandum accepting the mandatory life term without seeking a reduction. His attorney instead asked the court to recommend placement in a medical-equipped federal facility given Zambada's age (76) and deteriorating health, citing his guilty plea and cooperation as having spared the government a lengthy trial. Zambada's sentencing closes the final chapter of the Sinaloa Cartel's founding leadership generation and is being watched closely as a signal for how the court may treat Ovidio and Joaquín's pending cooperation-credit hearings.",
+        "sources": [
+          {
+            "name": "Latin Times",
+            "tier": 2,
+            "url": "https://www.latintimes.com/el-mayo-zambada-asks-avoid-el-chapos-supermax-serve-his-life-sentence-prison-hospital-598148",
+            "pole": "western"
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/news/cartel-leader-el-mayo-zambada-accepts-life-sentence-asks-for-medical-care/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://mexiconewsdaily.com/news/cartel-leader-el-mayo-zambada-accepts-life-sentence-asks-for-medical-care/",
+            "caption": "El Mayo Zambada accepts life sentence ahead of July 20, 2026 Brooklyn hearing",
+            "source": "Mexico News Daily",
+            "thumbnail": "https://mexiconewsdaily.com/wp-content/uploads/2026/07/990448_Detencion-Ismael-Mayo-Zambada_impreso-696x463.jpg"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "ovidio-sentencing-postponed-july2026",
+        "year": "Jul 13, 2026",
+        "title": "Ovidio Guzmán's Sentencing Hearing Postponed to July 27, After El Mayo's Sentencing",
+        "type": "legal-political",
+        "detail": "Judge Sharon Johnson Coleman postponed Ovidio Guzmán López's Chicago sentencing hearing — previously set for July 10, 2026 — to July 27, 2026, so the court can fully review U.S. prosecutors' reports on his cooperation. The new date was deliberately set one week after El Mayo Zambada's July 20, 2026 sentencing in Brooklyn, allowing the court to weigh how that case resolves before addressing Ovidio's. It is at least the fourth postponement of Ovidio's sentencing since his July 2025 guilty plea. Under his plea deal, Ovidio agreed to forfeit $80 million; the extent of any sentence reduction for cooperation remains undetermined.",
+        "sources": [
+          {
+            "name": "Zeta Tijuana",
+            "tier": 2,
+            "url": "https://zetatijuana.com/2026/07/jueza-aplaza-audiencia-de-sentencia-de-ovidio-guzman-en-chicago-a-julio-27-ira-despues-de-la-condena-a-el-mayo/",
+            "pole": "western"
+          },
+          {
+            "name": "Metro World News",
+            "tier": 2,
+            "url": "https://www.metroworldnews.com/noticias/2026/07/13/ovidio-guzman-gana-tiempo-aplazan-audiencia-clave-sobre-su-sentencia/",
+            "pole": "western"
+          },
+          {
+            "name": "Parriva",
+            "tier": 2,
+            "url": "https://www.parriva.com/news-digest/ovidio-guzman-will-have-to-wait-until-the-end-of-july-for-his-sentencing-hearing-in-the-us/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://zetatijuana.com/2026/07/jueza-aplaza-audiencia-de-sentencia-de-ovidio-guzman-en-chicago-a-julio-27-ira-despues-de-la-condena-a-el-mayo/",
+            "caption": "Ovidio Guzmán's Chicago sentencing hearing postponed to July 27, 2026",
+            "source": "Zeta Tijuana",
+            "thumbnail": "https://zetatijuana.com/2026/07/jueza-aplaza-audiencia-de-sentencia-de-ovidio-guzman-en-chicago-a-julio-27-ira-despues-de-la-condena-a-el-mayo/"
+          }
+        ],
+        "lastUpdated": "2026-07-16T18:00:00.000Z"
+      },
+      {
+        "id": "el-mayo-life-sentence-2026",
+        "year": "Jul 20, 2026",
+        "title": "El Mayo Zambada Sentenced to Life in Prison, Ordered to Forfeit $15 Billion",
+        "type": "legal-political",
+        "detail": "U.S. District Judge Brian Cogan sentenced Ismael 'El Mayo' Zambada García to life in federal prison without the possibility of parole at a hearing in Brooklyn, New York, and ordered him to forfeit $15 billion in drug-trafficking proceeds — though prosecutors acknowledged most of the money has not been located. Zambada, 76, told the court 'Pido perdón' (I ask for forgiveness) and 'Acepto mi castigo, no estoy aquí para pedir compasión' (I accept my punishment, I am not here to ask for compassion). U.S. Attorney Joseph Nocella Jr. said the sentence closed the chapter on 'nearly four decades' of Zambada 'poisoning American communities.' Prosecutors warned that security concerns persist because lieutenants loyal to Zambada still control parts of the cartel. The sentencing closes the legal case against the Sinaloa Cartel's co-founder, two years after his July 2024 capture in New Mexico alongside Joaquín Guzmán López — an event that triggered the ongoing La Mayiza–Chapitos civil war.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/20/mexican-drug-lord-ismael-el-mayo-zambada-sentenced-to-life-in-us-prison",
+            "pole": "international"
+          },
+          {
+            "name": "U.S. Department of Justice",
+            "tier": 1,
+            "url": "https://www.justice.gov/opa/pr/co-founder-sinaloa-cartel-ismael-el-mayo-zambada-garcia-sentenced-life-prison-and-ordered",
+            "pole": "western"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "url": "https://www.nbcnews.com/news/us-news/former-mexican-drug-lord-ismael-el-mayo-zambada-set-sentenced-life-pri-rcna588347",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://grupoanimal.mx/seguridad/mayo-zambada-cadena-perpetua-mensaje",
+            "caption": "El Mayo Zambada sentenced to life in prison, ordered to forfeit $15 billion",
+            "source": "Grupo Animal",
+            "thumbnail": "https://grupoanimal.sfo3.cdn.digitaloceanspaces.com/uploads/2026/07/El-Mayo-tras-su-detencion.webp"
+          }
+        ],
+        "lastUpdated": "2026-08-10T00:00:00.000Z"
+      },
+      {
+        "id": "ovidio-sentencing-postponed-october2026",
+        "year": "Jul 16–17, 2026",
+        "title": "Ovidio Guzmán's Sentencing Hearing Postponed a Seventh Time, to October 28, 2026",
+        "type": "legal-political",
+        "detail": "Judge Sharon Johnson Coleman cancelled Ovidio Guzmán López's July 27, 2026 Chicago hearing and rescheduled it three months out, to October 28, 2026 at 1:30 PM — the seventh postponement of his sentencing since his July 2025 guilty plea and since court proceedings on the matter began in February 2025. The judge did not publicly disclose a reason, but the delay is widely attributed to the court's continued review of U.S. prosecutors' reports on the scope of Ovidio's cooperation. The October hearing will set the timing for final sentencing rather than deliver it. Under his plea deal, Ovidio agreed to forfeit $80 million; any sentence reduction for cooperation remains undetermined.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "url": "https://www.infobae.com/mexico/2026/07/17/corte-de-chicago-pospone-la-audiencia-de-ovidio-guzman-lopez-para-el-28-de-octubre/",
+            "pole": "western"
+          },
+          {
+            "name": "La Opinión",
+            "tier": 2,
+            "url": "https://laopinion.com/2026/07/17/posponen-la-audiencia-de-sentencia-de-ovidio-guzman-para-octubre/",
+            "pole": "western"
+          },
+          {
+            "name": "El Financiero",
+            "tier": 2,
+            "url": "https://www.elfinanciero.com.mx/mundo/2026/07/17/dan-mas-tiempo-a-ovidio-guzman-aplazan-otra-vez-audiencia-presencial-cual-es-la-nueva-fecha/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.infobae.com/mexico/2026/07/17/corte-de-chicago-pospone-la-audiencia-de-ovidio-guzman-lopez-para-el-28-de-octubre/",
+            "caption": "Ovidio Guzmán's Chicago sentencing hearing postponed a seventh time, to October 28, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/MWRASRAUJVC2RAOHHT7JXYVC5Q.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-10T00:00:00.000Z"
+      },
+      {
+        "id": "sinaloa-war-toll-3600-2026",
+        "year": "Jul 25, 2026",
+        "title": "Two Years After El Mayo's Capture: Sinaloa War Toll Passes 3,600 Killed, 4,000 Disappeared",
+        "type": "civilian-incident",
+        "detail": "Marking the two-year anniversary of Ismael 'El Mayo' Zambada's July 25, 2024 capture and Héctor Melesio Cuén's killing — the twin events that preceded the September 9, 2024 outbreak of open war between La Mayiza and Los Chapitos — Mexican outlets tallied more than 3,600 homicides and nearly 4,000 disappearances registered in Sinaloa since the conflict began. Coverage cited a sustained daily average of roughly six homicides and six disappearances, plus about 18 vehicle thefts per day, with over 94% of the roughly 3,000 homicides recorded through mid-2026 still unresolved. Despite a homicide decline reported earlier in 2026, the civil war has continued into its third year with no clear end in sight.",
+        "sources": [
+          {
+            "name": "Grupo Animal",
+            "tier": 2,
+            "url": "https://grupoanimal.mx/estados/captura-el-mayo-cumple-dos-anos-guerra-3-mil-600-homicidios-sinaloa",
+            "pole": "western"
+          },
+          {
+            "name": "Proceso",
+            "tier": 3,
+            "url": "https://www.proceso.com.mx/nacional/2026/7/25/la-guerra-que-devora-sinaloa-3-mil-homicidios-4-mil-desapariciones-y-1-gobernador-en-casa-376778.html",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://grupoanimal.mx/estados/captura-el-mayo-cumple-dos-anos-guerra-3-mil-600-homicidios-sinaloa",
+            "caption": "Two years after El Mayo's capture, Sinaloa's cartel war has claimed 3,600+ lives and 4,000 disappearances",
+            "source": "Grupo Animal",
+            "thumbnail": "https://grupoanimal.sfo3.cdn.digitaloceanspaces.com/uploads/2026/07/Captura-de-El-Mayo-cumple-dos-anos-guerra-que-suma-3-mil-600-homicidios-en-Sinaloa-1.webp"
+          }
+        ],
+        "lastUpdated": "2026-08-10T00:00:00.000Z"
+      }
+    ]
+  }
+]

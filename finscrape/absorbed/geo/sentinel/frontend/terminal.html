@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SENTINEL — Geopolitical Market Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#08090b; --panel:#0c0d10; --panel2:#0f1014; --border:#1c1e24; --border2:#252830;
+    --text:#9aa0b0; --dim:#454a58; --bright:#dde1ec;
+    --orange:#f07030; --orange2:#ff8c44;
+    --green:#2dd4a0; --red:#f04060; --yellow:#f0c030;
+    --blue:#4a9eff; --purple:#9d7dea; --cyan:#30c8d4;
+    --mono:'IBM Plex Mono',monospace; --sans:'IBM Plex Sans',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:var(--mono);font-size:11px;height:100vh;overflow:hidden;display:flex;flex-direction:column;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;background:#000;border-bottom:1px solid #1a1200;padding:0 14px;height:34px;flex-shrink:0;}
+  .logo{font-size:13px;font-weight:600;color:var(--orange);letter-spacing:5px;}
+  .logo span{color:var(--dim);font-size:8px;letter-spacing:2px;margin-left:10px;font-weight:400;}
+  .topbar-tabs{display:flex;margin-left:24px;}
+  .tab{padding:0 16px;height:34px;display:flex;align-items:center;color:var(--dim);border-right:1px solid var(--border);cursor:pointer;letter-spacing:1.5px;font-size:9px;transition:color 0.15s;user-select:none;}
+  .tab:hover{color:var(--text);} .tab.active{color:var(--orange);border-bottom:2px solid var(--orange);}
+  .topbar-right{display:flex;align-items:center;gap:14px;}
+  .live-badge{display:flex;align-items:center;gap:5px;color:var(--green);font-size:8px;letter-spacing:2px;}
+  .live-dot{width:5px;height:5px;border-radius:50%;background:var(--green);animation:pulse 1.5s infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.2}}
+  .clock{color:var(--bright);font-size:11px;}
+  .conn-status{font-size:8px;letter-spacing:1px;padding:2px 7px;border-radius:2px;}
+  .conn-status.connected{color:var(--green);border:1px solid var(--green);}
+  .conn-status.disconnected{color:var(--red);border:1px solid var(--red);}
+  .conn-status.connecting{color:var(--yellow);border:1px solid var(--yellow);}
+  .ticker-strip{background:#000;border-bottom:1px solid var(--border);height:26px;overflow:hidden;display:flex;align-items:center;flex-shrink:0;}
+  .ticker-label{background:var(--orange);color:#000;padding:0 9px;height:100%;display:flex;align-items:center;font-weight:600;font-size:8px;letter-spacing:2px;flex-shrink:0;}
+  .ticker-scroll{display:flex;animation:scroll-left 60s linear infinite;white-space:nowrap;}
+  @keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  .ticker-item{display:flex;align-items:center;gap:6px;padding:0 14px;border-right:1px solid var(--border);height:26px;cursor:pointer;}
+  .ticker-item:hover{background:#0f0f0f;}
+  .ticker-sym{color:var(--bright);font-weight:600;font-size:10px;}
+  .ticker-name{color:var(--dim);font-size:8px;}
+  .ticker-price{color:var(--text);font-size:10px;}
+  .ticker-chg.up{color:var(--green)}.ticker-chg.dn{color:var(--red)}
+  .page{display:none;flex:1;overflow:hidden;}
+  .page.active{display:flex;}
+  #pageOverview{flex-direction:row;}
+  .main-grid{display:grid;grid-template-columns:240px 1fr 260px;grid-template-rows:1fr 180px;gap:1px;background:var(--border);flex:1;overflow:hidden;}
+  .panel{background:var(--panel);display:flex;flex-direction:column;overflow:hidden;}
+  .ph{display:flex;align-items:center;justify-content:space-between;padding:6px 10px;border-bottom:1px solid var(--border2);background:#090a0c;flex-shrink:0;}
+  .pt{color:var(--orange);font-size:8px;letter-spacing:2.5px;font-weight:500;}
+  .ptag{font-size:7px;color:var(--dim);letter-spacing:1px;}
+  .pb{flex:1;overflow-y:auto;padding:8px;}
+  .pb::-webkit-scrollbar{width:2px;}.pb::-webkit-scrollbar-thumb{background:var(--border2);}
+  .news-item{border-bottom:1px solid var(--border);padding:8px 0;cursor:pointer;}
+  .news-item:hover{background:#0f1014;}
+  .news-meta{display:flex;align-items:center;gap:6px;margin-bottom:3px;}
+  .news-source{color:var(--orange);font-size:8px;letter-spacing:1px;}
+  .news-time{color:var(--dim);font-size:8px;}
+  .sev{font-size:7px;padding:1px 5px;border-radius:2px;letter-spacing:1px;font-weight:600;}
+  .sev-HIGH{background:#200010;color:var(--red);border:1px solid #401020;}
+  .sev-MED{background:#1a1200;color:var(--yellow);border:1px solid #302000;}
+  .sev-LOW{background:#001a10;color:var(--green);border:1px solid #002a18;}
+  .news-title{color:var(--bright);font-size:10px;line-height:1.5;font-family:var(--sans);}
+  .news-tags{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap;}
+  .news-tag{font-size:7px;color:var(--blue);border:1px solid #1a2840;padding:1px 5px;border-radius:2px;}
+  .agent-bar{display:flex;border-bottom:1px solid var(--border2);background:#090a0c;flex-shrink:0;}
+  .agent-pill{display:flex;align-items:center;gap:6px;padding:6px 10px;border-right:1px solid var(--border);flex:1;}
+  .a-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+  .a-dot.idle{background:var(--dim);} .a-dot.active{background:var(--green);animation:pulse 0.8s infinite;}
+  .a-dot.waiting{background:var(--yellow);} .a-dot.done{background:var(--blue);}
+  .a-name{color:var(--bright);font-size:9px;letter-spacing:1px;}
+  .a-status{color:var(--dim);font-size:8px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .sugg{display:flex;gap:6px;padding:6px 10px;border-bottom:1px solid var(--border2);background:#090a0c;flex-wrap:wrap;}
+  .sugg-lbl{color:var(--dim);font-size:8px;letter-spacing:1px;align-self:center;flex-shrink:0;}
+  .sugg-btn{background:#0f1014;border:1px solid var(--border2);color:var(--text);font-family:var(--mono);font-size:8px;padding:3px 8px;cursor:pointer;border-radius:2px;}
+  .sugg-btn:hover{border-color:var(--orange);color:var(--orange);}
+  .qbar{display:flex;align-items:center;gap:8px;padding:8px 10px;border-bottom:1px solid var(--border2);background:#090a0c;}
+  .qlbl{color:var(--orange);font-size:10px;letter-spacing:1px;flex-shrink:0;}
+  .qinp{flex:1;background:#0a0b0e;border:1px solid var(--border2);color:var(--bright);font-family:var(--mono);font-size:10px;padding:6px 10px;outline:none;border-radius:2px;}
+  .qinp:focus{border-color:var(--orange);} .qinp::placeholder{color:var(--dim);}
+  .qbtn{background:var(--orange);color:#000;border:none;font-family:var(--mono);font-size:9px;font-weight:700;padding:6px 14px;letter-spacing:1.5px;cursor:pointer;border-radius:2px;}
+  .qbtn:hover{background:var(--orange2);} .qbtn:disabled{background:var(--dim);cursor:not-allowed;}
+
+  /* ── RESULTS TABS (Fix #5) ──────────────────────────── */
+  .results-tabs{display:flex;border-bottom:1px solid var(--border2);background:#090a0c;flex-shrink:0;}
+  .rtab{padding:5px 12px;font-size:8px;letter-spacing:1.5px;color:var(--dim);cursor:pointer;border-right:1px solid var(--border);border-bottom:2px solid transparent;user-select:none;}
+  .rtab:hover{color:var(--text);}
+  .rtab.active{color:var(--orange);border-bottom-color:var(--orange);}
+  .rtab .rtab-dot{display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:4px;background:var(--dim);}
+  .rtab.ready .rtab-dot{background:var(--green);}
+  .rtab.streaming .rtab-dot{background:var(--yellow);animation:pulse 0.8s infinite;}
+  .result-pane{display:none;flex:1;overflow-y:auto;padding:12px 14px;}
+  .result-pane::-webkit-scrollbar{width:3px;}.result-pane::-webkit-scrollbar-thumb{background:var(--border2);}
+  .result-pane.active{display:block;}
+  .result-pane.streaming-in{animation:fadein 0.3s ease-out;}
+
+  .analysis-body{flex:1;display:flex;flex-direction:column;overflow:hidden;}
+  .asec{border-bottom:1px solid var(--border);padding:12px 14px;}
+  .asec-title{color:var(--orange);font-size:8px;letter-spacing:2.5px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .asec-title::after{content:'';flex:1;height:1px;background:var(--border);}
+  .score-row{display:flex;align-items:center;gap:10px;margin-bottom:5px;}
+  .score-label{color:var(--dim);font-size:9px;width:130px;flex-shrink:0;}
+  .score-track{flex:1;height:3px;background:var(--border2);border-radius:2px;}
+  .score-fill{height:3px;border-radius:2px;}
+  .score-val{color:var(--bright);font-size:9px;width:28px;text-align:right;}
+  .risk-table{width:100%;border-collapse:collapse;}
+  .risk-table th{text-align:left;color:var(--dim);font-size:8px;letter-spacing:1.5px;padding:4px 8px;border-bottom:1px solid var(--border2);}
+  .risk-table td{padding:7px 8px;border-bottom:1px solid var(--border);font-size:10px;vertical-align:middle;}
+  .risk-table tr:hover td{background:#0f1014;}
+  .risk-bar-wrap{width:70px;background:var(--border2);height:3px;border-radius:2px;display:inline-block;}
+  .risk-bar{height:3px;border-radius:2px;}
+  .badge{font-size:7px;padding:2px 6px;border-radius:2px;letter-spacing:1px;font-weight:600;}
+  .badge-HIGH{background:#200010;color:var(--red);border:1px solid #401020;}
+  .badge-MEDIUM{background:#1a1200;color:var(--yellow);border:1px solid #302000;}
+  .badge-LOW{background:#001a10;color:var(--green);border:1px solid #002a18;}
+  .ticker-full{color:var(--dim);font-size:8px;display:block;margin-top:1px;}
+  .prose{color:var(--text);font-size:10px;line-height:1.9;font-family:var(--sans);}
+  .prose strong{color:var(--bright);}
+  .prose .section-head{color:var(--orange);font-size:9px;letter-spacing:1.5px;font-family:var(--mono);margin-top:10px;margin-bottom:4px;display:block;}
+  .tool-output{background:#0a0b0e;border:1px solid var(--border2);padding:12px;}
+  .tool-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);}
+  .tool-row:last-child{border-bottom:none;}
+  .code-toggle{background:none;border:1px solid var(--border2);color:var(--dim);font-family:var(--mono);font-size:8px;padding:3px 8px;cursor:pointer;margin-top:8px;}
+  .code-toggle:hover{color:var(--text);}
+  .code-block{background:#07080a;border:1px solid var(--border);border-left:2px solid var(--dim);padding:10px;font-size:9px;color:#888;line-height:1.6;overflow-x:auto;max-height:300px;overflow-y:auto;margin-top:8px;display:none;}
+  .code-block.visible{display:block;}
+  .exec-summary{color:var(--text);font-size:10px;line-height:1.8;font-family:var(--sans);padding:10px;background:#0a0b0e;border:1px solid var(--border2);border-left:2px solid var(--orange);}
+  .sanctions-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);}
+  .s-dot{width:5px;height:5px;border-radius:50%;background:var(--red);margin-top:4px;flex-shrink:0;}
+  .s-name{color:var(--bright);font-size:9px;} .s-detail{color:var(--dim);font-size:8px;margin-top:2px;line-height:1.4;}
+  .s-prog{display:flex;gap:4px;margin-top:3px;flex-wrap:wrap;}
+  .s-prog span{font-size:7px;color:var(--red);border:1px solid #301020;padding:1px 4px;border-radius:2px;}
+  .s-date{color:var(--dim);font-size:7px;margin-top:2px;}
+  .metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+  .metric-card{background:var(--panel2);padding:10px;}
+  .m-label{color:var(--dim);font-size:7px;letter-spacing:1.5px;}
+  .m-value{color:var(--bright);font-size:18px;font-weight:500;margin:4px 0 2px;}
+  .m-sub{font-size:8px;color:var(--dim);} .m-sub.up{color:var(--green)} .m-sub.dn{color:var(--red)}
+  .bottom-panel{grid-column:1/-1;}
+  .log-body{flex:1;overflow-y:auto;padding:5px 10px;display:flex;flex-direction:column;gap:2px;}
+  .log-body::-webkit-scrollbar{width:2px;}.log-body::-webkit-scrollbar-thumb{background:var(--border2);}
+  .log-line{display:flex;align-items:baseline;gap:8px;font-size:9px;line-height:1.6;}
+  .log-time{color:var(--dim);flex-shrink:0;width:54px;}
+  .log-agent{flex-shrink:0;width:88px;font-weight:500;}
+  .log-agent.RESEARCHER{color:var(--blue);} .log-agent.CRITIC{color:var(--yellow);}
+  .log-agent.BUILDER{color:var(--green);} .log-agent.AUDITOR{color:var(--purple);}
+  .log-agent.JUDGE{color:var(--orange);} .log-agent.SYSTEM{color:var(--dim);}
+  .log-msg{color:var(--text);}
+  #pagePortfolio{flex-direction:column;overflow:hidden;}
+  .port-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);flex-shrink:0;}
+  .stock-card{background:var(--panel);padding:12px 14px;cursor:pointer;transition:background 0.15s;}
+  .stock-card:hover{background:var(--panel2);} .stock-card.selected{background:#0f1014;border-left:2px solid var(--orange);}
+  .sc-sym{color:var(--bright);font-size:13px;font-weight:600;letter-spacing:1px;}
+  .sc-name{color:var(--dim);font-size:8px;margin-top:1px;font-family:var(--sans);}
+  .sc-price{color:var(--bright);font-size:15px;font-weight:500;margin-top:6px;}
+  .sc-chg{font-size:10px;margin-top:2px;} .sc-chg.up{color:var(--green)} .sc-chg.dn{color:var(--red)}
+  .port-detail{flex:1;overflow-y:auto;padding:16px;background:var(--panel);}
+  .sparkline{width:100%;height:30px;}
+  #pageSanctions{flex-direction:column;overflow:hidden;}
+  .sanctions-header{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border);background:#090a0c;flex-shrink:0;}
+  .sanctions-count{color:var(--red);font-size:22px;font-weight:500;}
+  .sanctions-count-lbl{color:var(--dim);font-size:8px;letter-spacing:1px;margin-top:2px;}
+  .sanctions-filter{display:flex;gap:6px;margin-left:auto;}
+  .sf-btn{background:#0f1014;border:1px solid var(--border2);color:var(--dim);font-family:var(--mono);font-size:8px;padding:4px 10px;cursor:pointer;border-radius:2px;letter-spacing:1px;}
+  .sf-btn.active{border-color:var(--orange);color:var(--orange);}
+  .sanctions-grid{flex:1;overflow-y:auto;padding:12px 16px;display:grid;grid-template-columns:repeat(2,1fr);gap:8px;align-content:start;}
+  .sc-item{background:var(--panel2);border:1px solid var(--border);padding:10px 12px;}
+  .sci-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;}
+  .sci-dot{width:6px;height:6px;border-radius:50%;background:var(--red);margin-top:3px;flex-shrink:0;}
+  .sci-name{color:var(--bright);font-size:10px;font-family:var(--sans);font-weight:500;line-height:1.4;}
+  .sci-type{font-size:8px;color:var(--dim);margin-top:1px;}
+  .sci-detail{color:var(--dim);font-size:9px;line-height:1.5;font-family:var(--sans);margin-bottom:6px;}
+  .sci-footer{display:flex;align-items:center;justify-content:space-between;}
+  .sci-progs{display:flex;gap:4px;flex-wrap:wrap;}
+  .sci-prog{font-size:7px;color:var(--red);border:1px solid #301020;padding:1px 4px;border-radius:2px;}
+  .sci-date{color:var(--dim);font-size:8px;}
+  #pageSignals{flex-direction:column;overflow:hidden;}
+  .signals-body{flex:1;overflow-y:auto;padding:14px 16px;display:flex;flex-direction:column;gap:10px;}
+  .signal-card{background:var(--panel2);border:1px solid var(--border);padding:12px 14px;}
+  .sig-top{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .sig-strength{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;letter-spacing:0.5px;}
+  .sig-strength.BUY{background:#001a10;color:var(--green);border:2px solid var(--green);}
+  .sig-strength.SELL{background:#200010;color:var(--red);border:2px solid var(--red);}
+  .sig-strength.WATCH{background:#1a1200;color:var(--yellow);border:2px solid var(--yellow);}
+  .sig-meta{flex:1;}
+  .sig-ticker{color:var(--bright);font-size:13px;font-weight:600;letter-spacing:1px;}
+  .sig-company{color:var(--dim);font-size:8px;margin-top:1px;font-family:var(--sans);}
+  .sig-price{color:var(--text);font-size:10px;margin-top:2px;}
+  .sig-reason{color:var(--text);font-size:10px;line-height:1.7;font-family:var(--sans);}
+  .sig-tags{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap;}
+  .sig-tag{font-size:7px;color:var(--blue);border:1px solid #1a2840;padding:2px 6px;border-radius:2px;}
+  .sig-divider{display:flex;align-items:center;gap:10px;color:var(--dim);font-size:8px;letter-spacing:1.5px;}
+  .sig-divider::before,.sig-divider::after{content:'';flex:1;height:1px;background:var(--border);}
+  /* streaming pulse on result panes */
+  @keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+  .fadein{animation:fadein 0.3s ease-out;}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+  .streaming-cursor::after{content:'▋';color:var(--orange);animation:blink 1s infinite;margin-left:3px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div style="display:flex;align-items:center;">
+    <div class="logo">SENTINEL<span>GEOPOLITICAL INTELLIGENCE</span></div>
+    <div class="topbar-tabs">
+      <div class="tab active" onclick="switchTab('overview',this)">OVERVIEW</div>
+      <div class="tab" onclick="switchTab('portfolio',this)">PORTFOLIO</div>
+      <div class="tab" onclick="switchTab('sanctions',this)">SANCTIONS</div>
+      <div class="tab" onclick="switchTab('signals',this)">SIGNALS</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <span id="connStatus" class="conn-status connecting">CONNECTING</span>
+    <div class="live-badge"><div class="live-dot"></div>LIVE</div>
+    <div class="clock" id="clock"></div>
+  </div>
+</div>
+<div class="ticker-strip">
+  <div class="ticker-label">MKTS</div>
+  <div style="overflow:hidden;flex:1"><div class="ticker-scroll" id="tickerScroll"><div class="ticker-item"><span class="ticker-sym">—</span></div></div></div>
+</div>
+
+<!-- OVERVIEW -->
+<div id="pageOverview" class="page active">
+<div class="main-grid">
+  <div class="panel">
+    <div class="ph"><div class="pt">LIVE INTEL FEED</div><div class="ptag">AUTO-REFRESH</div></div>
+    <div class="pb" id="newsFeed"><div style="color:var(--dim);padding:20px;text-align:center">Loading intel…</div></div>
+  </div>
+
+  <!-- Centre panel: query + results with tabs -->
+  <div class="panel" style="flex-direction:column;">
+    <div class="agent-bar" id="agentBar"></div>
+    <div class="sugg">
+      <span class="sugg-lbl">QUICK:</span>
+      <button class="sugg-btn" onclick="setQuery('Chinese drone sanctions impact on US defense manufacturers')">Chinese drone sanctions</button>
+      <button class="sugg-btn" onclick="setQuery('Russia Ukraine war — NATO defense spending beneficiaries')">NATO spending plays</button>
+      <button class="sugg-btn" onclick="setQuery('Taiwan strait tensions — semiconductor supply chain risk')">Taiwan semiconductor risk</button>
+      <button class="sugg-btn" onclick="setQuery('Rare earth export controls impact on US defense manufacturers')">Rare earth controls</button>
+    </div>
+    <div class="qbar">
+      <div class="qlbl">QUERY›</div>
+      <input class="qinp" id="queryInput" placeholder="Enter geopolitical event or risk scenario…"/>
+      <button class="qbtn" id="analyzeBtn" onclick="runQuery()">ANALYZE ▶</button>
+    </div>
+
+    <!-- ── RESULTS TABS (Fix #5) ── -->
+    <div class="analysis-body">
+      <div class="results-tabs" id="resultsTabs">
+        <div class="rtab active" id="rtab-risk"    onclick="switchRTab('risk',this)">   <span class="rtab-dot"></span>RISK MATRIX</div>
+        <div class="rtab"        id="rtab-research" onclick="switchRTab('research',this)"><span class="rtab-dot"></span>RESEARCHER</div>
+        <div class="rtab"        id="rtab-critique" onclick="switchRTab('critique',this)"><span class="rtab-dot"></span>CRITIC</div>
+        <div class="rtab"        id="rtab-code"     onclick="switchRTab('code',this)">   <span class="rtab-dot"></span>BUILDER TOOL</div>
+        <div class="rtab"        id="rtab-judge"    onclick="switchRTab('judge',this)">  <span class="rtab-dot"></span>JUDGE</div>
+      </div>
+
+      <!-- Risk Matrix pane -->
+      <div class="result-pane active" id="pane-risk">
+        <div style="color:var(--dim);text-align:center;padding:50px 30px;">
+          <div style="font-size:20px;margin-bottom:14px;color:var(--orange);letter-spacing:4px;">SENTINEL</div>
+          <div style="font-size:10px;line-height:2.2;">Enter a geopolitical query above or click a quick filter.<br>The multi-agent pipeline analyzes, critiques, and delivers<br>a structured market intelligence report.</div>
+          <div style="margin-top:20px;font-size:8px;color:var(--dim);letter-spacing:1px;">AGENT PIPELINE</div>
+          <div style="margin-top:6px;display:flex;gap:8px;align-items:center;justify-content:center;font-size:8px;color:var(--dim);">
+            <span style="color:var(--blue)">RESEARCHER</span>→<span style="color:var(--yellow)">CRITIC</span>→<span style="color:var(--green)">BUILDER</span>→<span style="color:var(--purple)">AUDITOR</span>→<span style="color:var(--orange)">JUDGE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Researcher pane -->
+      <div class="result-pane" id="pane-research">
+        <div style="color:var(--dim);text-align:center;padding:40px;font-size:10px;">Researcher output will appear here after analysis.</div>
+      </div>
+
+      <!-- Critic pane -->
+      <div class="result-pane" id="pane-critique">
+        <div style="color:var(--dim);text-align:center;padding:40px;font-size:10px;">Critic assessment will appear here after analysis.</div>
+      </div>
+
+      <!-- Builder/Code pane -->
+      <div class="result-pane" id="pane-code">
+        <div style="color:var(--dim);text-align:center;padding:40px;font-size:10px;">Generated Python tool will appear here after analysis.</div>
+      </div>
+
+      <!-- Judge pane -->
+      <div class="result-pane" id="pane-judge">
+        <div style="color:var(--dim);text-align:center;padding:40px;font-size:10px;">Judge executive summary will appear here after analysis.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="ph"><div class="pt">ACTIVE SANCTIONS</div><div class="ptag" style="color:var(--red)">● MONITORING</div></div>
+    <div class="pb" id="sanctionsList" style="flex:1"></div>
+    <div class="ph" style="border-top:1px solid var(--border2)"><div class="pt">KEY METRICS</div></div>
+    <div class="metric-grid">
+      <div class="metric-card"><div class="m-label">QUERIES RUN</div><div class="m-value" id="metricQueries">0</div><div class="m-sub up">TODAY</div></div>
+      <div class="metric-card"><div class="m-label">SANCTIONS</div><div class="m-value" id="metricSanctCount">—</div><div class="m-sub dn">ACTIVE</div></div>
+      <div class="metric-card"><div class="m-label">TOOLS GEN.</div><div class="m-value" id="metricTools">0</div><div class="m-sub up">TODAY</div></div>
+      <div class="metric-card"><div class="m-label">AVG SCORE</div><div class="m-value" id="metricScore">—</div><div class="m-sub up">/100</div></div>
+    </div>
+  </div>
+
+  <div class="panel bottom-panel">
+    <div class="ph"><div class="pt">AGENT ACTIVITY LOG</div><div class="ptag">REAL-TIME</div></div>
+    <div class="log-body" id="agentLog"></div>
+  </div>
+</div>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="pagePortfolio" class="page">
+  <div style="display:flex;flex-direction:column;flex:1;overflow:hidden;">
+    <div class="ph" style="padding:8px 14px;border-bottom:1px solid var(--border);"><div class="pt">DEFENSE SECTOR PORTFOLIO MONITOR</div><div class="ptag">LIVE — YAHOO FINANCE</div></div>
+    <div class="port-grid" id="portGrid"><div style="color:var(--dim);padding:20px;grid-column:1/-1;text-align:center;font-size:10px;">Loading live portfolio data…</div></div>
+    <div class="port-detail" id="portDetail"><div style="color:var(--dim);text-align:center;padding:60px;font-size:10px;">Click any stock card above for detailed analysis</div></div>
+  </div>
+</div>
+
+<!-- SANCTIONS -->
+<div id="pageSanctions" class="page">
+  <div class="sanctions-header">
+    <div><div class="sanctions-count" id="sanctFullCount">—</div><div class="sanctions-count-lbl">ENTITIES MONITORED</div></div>
+    <div style="color:var(--dim);font-size:9px;line-height:1.8;margin-left:16px;">
+      Source: <span style="color:var(--text)">OFAC SDN List</span> (US Treasury)<br>
+      Filter: <span style="color:var(--text)">Defense · Tech · Energy · Semiconductors</span>
+    </div>
+    <div class="sanctions-filter">
+      <button class="sf-btn active" onclick="filterSanctions('ALL',this)">ALL</button>
+      <button class="sf-btn" onclick="filterSanctions('Individual',this)">INDIVIDUALS</button>
+      <button class="sf-btn" onclick="filterSanctions('Entity',this)">ENTITIES</button>
+      <button class="sf-btn" onclick="filterSanctions('Vessel',this)">VESSELS</button>
+    </div>
+  </div>
+  <div class="sanctions-grid" id="sanctFullList"><div style="color:var(--dim);padding:40px;text-align:center;grid-column:1/-1">Loading OFAC data from US Treasury…</div></div>
+</div>
+
+<!-- SIGNALS -->
+<div id="pageSignals" class="page">
+  <div class="ph" style="border-bottom:1px solid var(--border);"><div class="pt">GEOPOLITICAL MARKET SIGNALS</div><div class="ptag">AI-GENERATED · UPDATES AFTER EACH ANALYSIS</div></div>
+  <div class="signals-body" id="signalsBody">
+    <div style="color:var(--dim);padding:40px;text-align:center;font-size:10px;">Run a query on the Overview tab to generate market signals.</div>
+  </div>
+</div>
+
+<script>
+var ws=null,queriesRun=0,toolsGenerated=0,scores=[],tickerData={},allSanctions=[],lastAnalysis=null,sanctFilter='ALL';
+var TICKER_NAMES={
+  // 🇺🇸 United States
+  LMT:'Lockheed Martin',RTX:'RTX Corp (Raytheon)',NOC:'Northrop Grumman',
+  GD:'General Dynamics',BA:'Boeing',HII:'Huntington Ingalls',
+  LHX:'L3Harris Technologies',TXT:'Textron (Bell/Cessna)',
+  LDOS:'Leidos Holdings',BAH:'Booz Allen Hamilton',BWXT:'BWX Technologies',
+  KTOS:'Kratos Defense',AVAV:'AeroVironment',PLTR:'Palantir Technologies',
+  CACI:'CACI International',
+  // 🇮🇱 Israel
+  ESLT:'Elbit Systems',
+  // 🇫🇷 France
+  'AIR.PA':'Airbus SE','SAF.PA':'Safran SA','HO.PA':'Thales SA','AM.PA':'Dassault Aviation',
+  // 🇬🇧 United Kingdom
+  'BA.L':'BAE Systems','RR.L':'Rolls-Royce','QQ.L':'QinetiQ',
+  // 🇩🇪 Germany
+  'RHM.DE':'Rheinmetall AG','HEN3.DE':'Hensoldt AG',
+  // 🇮🇹 Italy
+  'LDO.MI':'Leonardo SpA',
+  // 🇸🇪 Sweden
+  'SAAB-B.ST':'Saab AB',
+  // 🇮🇳 India
+  'HAL.NS':'Hindustan Aeronautics','BEL.NS':'Bharat Electronics',
+  'SOL.NS':'Solar Industries','ASTRA.NS':'Astra Microwave',
+  // 🇰🇷 South Korea
+  '047810.KS':'Korea Aerospace Industries','012450.KS':'Hanwha Aerospace',
+  // 🇯🇵 Japan
+  '7011.T':'Mitsubishi Heavy Industries','7012.T':'Kawasaki Heavy Industries',
+  // 🇹🇷 Turkey
+  'ASELS.IS':'Aselsan',
+  // 🇧🇷 Brazil
+  'EMBR3.SA':'Embraer SA',
+  // 🇦🇺 Australia
+  'EOS.AX':'Electro Optic Systems'
+};
+var TICKER_COUNTRY={
+  LMT:'US',RTX:'US',NOC:'US',GD:'US',BA:'US',HII:'US',LHX:'US',TXT:'US',
+  LDOS:'US',BAH:'US',BWXT:'US',KTOS:'US',AVAV:'US',PLTR:'US',CACI:'US',
+  ESLT:'IL',
+  'AIR.PA':'FR','SAF.PA':'FR','HO.PA':'FR','AM.PA':'FR',
+  'BA.L':'GB','RR.L':'GB','QQ.L':'GB',
+  'RHM.DE':'DE','HEN3.DE':'DE',
+  'LDO.MI':'IT',
+  'SAAB-B.ST':'SE',
+  'HAL.NS':'IN','BEL.NS':'IN','SOL.NS':'IN','ASTRA.NS':'IN',
+  '047810.KS':'KR','012450.KS':'KR',
+  '7011.T':'JP','7012.T':'JP',
+  'ASELS.IS':'TR',
+  'EMBR3.SA':'BR',
+  'EOS.AX':'AU'
+};
+var COUNTRY_FLAGS={US:'🇺🇸',IL:'🇮🇱',FR:'🇫🇷',GB:'🇬🇧',DE:'🇩🇪',IT:'🇮🇹',SE:'🇸🇪',IN:'🇮🇳',KR:'🇰🇷',JP:'🇯🇵',TR:'🇹🇷',BR:'🇧🇷',AU:'🇦🇺'};
+function tickerFlag(sym){return COUNTRY_FLAGS[TICKER_COUNTRY[sym]]||'';}
+var agentStates={RESEARCHER:{state:'idle',status:'Idle'},CRITIC:{state:'idle',status:'Idle'},BUILDER:{state:'idle',status:'Idle'},AUDITOR:{state:'idle',status:'Idle'},JUDGE:{state:'idle',status:'Idle'}};
+var currentRTab='risk';
+
+// ── Results Tab Switching ────────────────────────────────────────
+function switchRTab(name, el){
+  document.querySelectorAll('.rtab').forEach(function(t){t.classList.remove('active');});
+  document.querySelectorAll('.result-pane').forEach(function(p){p.classList.remove('active');});
+  if(el) el.classList.add('active');
+  document.getElementById('pane-'+name).classList.add('active');
+  currentRTab = name;
+}
+
+function markRTabReady(name){
+  var t=document.getElementById('rtab-'+name);
+  if(t){t.classList.remove('streaming');t.classList.add('ready');}
+}
+function markRTabStreaming(name){
+  var t=document.getElementById('rtab-'+name);
+  if(t){t.classList.add('streaming');}
+}
+function resetRTabs(){
+  document.querySelectorAll('.rtab').forEach(function(t){
+    t.classList.remove('ready','streaming');
+  });
+}
+
+// ── Page Tab Switching ───────────────────────────────────────────
+function switchTab(name,el){
+  document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active');});
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  el.classList.add('active');
+  document.getElementById('page'+name.charAt(0).toUpperCase()+name.slice(1)).classList.add('active');
+  if(name==='portfolio')renderPortfolio();
+  if(name==='sanctions')renderSanctionsPage();
+  if(name==='signals')renderSignals();
+}
+
+function updateClock(){document.getElementById('clock').textContent=new Date().toUTCString().slice(17,25)+' UTC';}
+setInterval(updateClock,1000);updateClock();
+
+function connectWS(){
+  var protocol=location.protocol==='https:'?'wss:':'ws:';
+  ws=new WebSocket(protocol+'//'+location.host+'/ws');
+  ws.onopen=function(){document.getElementById('connStatus').textContent='CONNECTED';document.getElementById('connStatus').className='conn-status connected';addLog('SYSTEM','Connected to SENTINEL backend');};
+  ws.onclose=function(){document.getElementById('connStatus').textContent='DISCONNECTED';document.getElementById('connStatus').className='conn-status disconnected';setTimeout(connectWS,3000);};
+  ws.onerror=function(){document.getElementById('connStatus').textContent='ERROR';document.getElementById('connStatus').className='conn-status disconnected';};
+  ws.onmessage=function(e){handleWSMessage(JSON.parse(e.data));};
+}
+
+// ── WebSocket Message Handling (with streaming) ──────────────────
+function handleWSMessage(msg){
+  if(msg.type==='status'){
+    addLog('SYSTEM',msg.message);
+    setAgentState('RESEARCHER','active','Retrieving documents…');
+  }
+  else if(msg.type==='node_complete'){
+    // Streaming: each agent completing fires this
+    addLog(msg.agent, msg.message);
+    updateAgentFromLog(msg.agent, msg.message);
+
+    // Stream partial results into result panes immediately
+    var p = msg.partial || {};
+    if(p.research){
+      markRTabReady('research');
+      document.getElementById('pane-research').innerHTML = formatResearch(p.research);
+    }
+    if(p.critique){
+      markRTabReady('critique');
+      document.getElementById('pane-critique').innerHTML = formatCritique(p.critique);
+    }
+    if(p.generated_code){
+      markRTabReady('code');
+      document.getElementById('pane-code').innerHTML = formatCode(p.generated_code);
+    }
+    if(p.judgment){
+      markRTabReady('judge');
+      document.getElementById('pane-judge').innerHTML = formatJudge(p.judgment, p.score);
+    }
+
+    // Show which agent is currently active
+    var agentMap = {RESEARCHER:'research', CRITIC:'critique', BUILDER:'code', AUDITOR:'code', JUDGE:'judge'};
+    if(agentMap[msg.agent]) markRTabStreaming(agentMap[msg.agent]);
+  }
+  else if(msg.type==='log'){
+    addLog(msg.agent,msg.message);
+    updateAgentFromLog(msg.agent,msg.message);
+  }
+  else if(msg.type==='complete'){handleComplete(msg);}
+  else if(msg.type==='error'){
+    addLog('SYSTEM','ERROR: '+msg.message);
+    resetAgents();
+    document.getElementById('analyzeBtn').disabled=false;
+    document.getElementById('analyzeBtn').textContent='ANALYZE ▶';
+  }
+}
+
+function updateAgentFromLog(agent,message){
+  var s={RESEARCHER:'Analyzing market impact…',CRITIC:'Stress-testing findings…',BUILDER:'Generating tool…',AUDITOR:'Reviewing outputs…',JUDGE:'Scoring session…'};
+  if(agent in agentStates)setAgentState(agent,'active',s[agent]||message.slice(0,40));
+}
+
+function handleComplete(msg){
+  Object.keys(agentStates).forEach(function(a){setAgentState(a,'done','Complete ✓');});
+  lastAnalysis=msg;toolsGenerated++;scores.push(msg.score||0);
+  document.getElementById('metricTools').textContent=toolsGenerated;
+  document.getElementById('metricScore').textContent=Math.round(scores.reduce(function(a,b){return a+b;},0)/scores.length);
+
+  // Final render of all panes
+  renderRiskPane(msg);
+  if(msg.research)    {markRTabReady('research'); document.getElementById('pane-research').innerHTML=formatResearch(msg.research);}
+  if(msg.critique)    {markRTabReady('critique'); document.getElementById('pane-critique').innerHTML=formatCritique(msg.critique);}
+  if(msg.generated_code){markRTabReady('code');   document.getElementById('pane-code').innerHTML=formatCode(msg.generated_code);}
+  if(msg.judgment)    {markRTabReady('judge');    document.getElementById('pane-judge').innerHTML=formatJudge(msg.judgment,msg.score);}
+
+  // Remain on current tab, just update risk pane
+  document.getElementById('analyzeBtn').disabled=false;
+  document.getElementById('analyzeBtn').textContent='ANALYZE ▶';
+  addLog('SYSTEM','Session complete — score: '+msg.score+'/100');
+  renderSignals();
+}
+
+// ── Render Risk Matrix Pane ──────────────────────────────────────
+function renderRiskPane(data){
+  var risk=data.risk_data||{};
+  var colorMap={HIGH:'var(--red)',MEDIUM:'var(--yellow)',LOW:'var(--green)'};
+  var riskOrder=['HIGH','MEDIUM','LOW'];
+  var entries=Object.entries(risk).sort(function(a,b){return riskOrder.indexOf(a[1].risk_level)-riskOrder.indexOf(b[1].risk_level);});
+
+  var scoreHTML='';
+  if(data.score){
+    var breakdown=getScoreBreakdown(data.judgment||'');
+    scoreHTML='<div class="asec fadein" style="background:#09080c;border-left:3px solid var(--orange);">'+
+      '<div class="asec-title">SESSION SCORE</div>'+
+      '<div style="display:flex;align-items:center;gap:16px;margin-bottom:8px;">'+
+        '<div style="font-size:36px;font-weight:600;color:var(--orange);font-family:var(--mono);">'+data.score+'<span style="font-size:14px;color:var(--dim)">/100</span></div>'+
+        '<div style="flex:1;">'+
+          '<div style="font-size:9px;color:var(--dim);margin-bottom:8px;letter-spacing:1px;">'+getRiskLevel(data.score)+'</div>'+
+          breakdown+
+        '</div>'+
+      '</div>'+
+    '</div>';
+  }
+
+  var riskRows=entries.map(function(e){
+    var ticker=e[0],info=e[1],td=tickerData[ticker];
+    var col=colorMap[info.risk_level];
+    var chgCol=td&&td.change_pct>=0?'var(--green)':'var(--red)';
+    return '<tr>'+
+      '<td><span style="color:var(--bright);font-weight:600;font-size:11px;">'+ticker+'</span><span class="ticker-full">'+(TICKER_NAMES[ticker]||'')+'</span></td>'+
+      '<td><div style="display:flex;align-items:center;gap:6px;"><div class="risk-bar-wrap"><div class="risk-bar" style="width:'+info.score+'%;background:'+col+'"></div></div><span style="color:'+col+';font-size:10px;font-weight:500;">'+info.score+'</span></div></td>'+
+      '<td><span class="badge badge-'+info.risk_level+'">'+info.risk_level+'</span></td>'+
+      '<td style="color:'+chgCol+'">'+(td?'$'+td.price:'—')+'</td>'+
+      '<td style="color:'+chgCol+'">'+(td?(td.change_pct>=0?'+':'')+td.change_pct+'%':'—')+'</td>'+
+    '</tr>';
+  }).join('');
+  var kws=entries.length&&entries[0][1].matched_keywords?entries[0][1].matched_keywords.join(', '):'—';
+
+  document.getElementById('pane-risk').innerHTML=
+    scoreHTML+
+    '<div class="asec fadein"><div class="asec-title">EXPOSURE RISK MATRIX</div>'+
+      '<table class="risk-table"><thead><tr><th>COMPANY</th><th>EXPOSURE</th><th>RISK LEVEL</th><th>PRICE</th><th>24H CHG</th></tr></thead>'+
+      '<tbody>'+riskRows+'</tbody></table>'+
+      '<div style="color:var(--dim);font-size:8px;margin-top:8px;padding-top:6px;border-top:1px solid var(--border);">Matched keywords: '+kws+'</div>'+
+    '</div>';
+
+  markRTabReady('risk');
+  // Auto-switch to risk tab on completion
+  switchRTab('risk', document.getElementById('rtab-risk'));
+}
+
+function getRiskLevel(score){
+  if(score>=85)return 'EXCELLENT ANALYSIS — HIGH CONFIDENCE';
+  if(score>=70)return 'GOOD ANALYSIS — MODERATE CONFIDENCE';
+  if(score>=55)return 'ADEQUATE ANALYSIS — LOWER CONFIDENCE';
+  return 'POOR ANALYSIS — REVIEW RECOMMENDED';
+}
+
+function getScoreBreakdown(judgment){
+  var dims=[{key:'RESEARCH SCORE',label:'Research Quality'},{key:'CRITIQUE SCORE',label:'Critic Quality'},{key:'TOOL SCORE',label:'Tool Quality'},{key:'RELEVANCE SCORE',label:'Relevance'}];
+  return dims.map(function(d){
+    var m=judgment.match(new RegExp(d.key+':\\s*(\\d+)'));
+    var v=m?parseInt(m[1]):null;
+    if(!v)return '';
+    var pct=(v/25)*100;
+    var col=pct>80?'var(--green)':pct>55?'var(--yellow)':'var(--red)';
+    return '<div class="score-row"><div class="score-label">'+d.label+'</div>'+
+      '<div class="score-track"><div class="score-fill" style="width:'+pct+'%;background:'+col+'"></div></div>'+
+      '<div class="score-val" style="color:'+col+'">'+v+'/25</div></div>';
+  }).join('');
+}
+
+// ── Result Pane Formatters ───────────────────────────────────────
+function formatResearch(text){
+  if(!text)return '<div class="prose" style="color:var(--dim)">No research output.</div>';
+  var html=text
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/^#{1,3}\s+(.+)$/gm,'<span class="section-head">$1</span>')
+    .replace(/^\d+\.\s+\*\*(.+?)\*\*/gm,'<span class="section-head">$1</span>')
+    .replace(/\n{2,}/g,'</p><p>').replace(/\n/g,' ');
+  return '<div class="prose fadein"><p>'+html+'</p></div>';
+}
+
+function formatCritique(text){
+  if(!text||text.indexOf('sufficiently thorough')>-1)
+    return '<div class="fadein" style="padding:10px;background:#001a10;border:1px solid #002a18;border-radius:2px;color:var(--green);font-size:10px;font-family:var(--sans);">✓ Critic approved — analysis is sufficiently comprehensive after review.</div>';
+  var html=text
+    .replace(/^VERDICT:\s*(.+)$/gm,'<div style="margin-top:10px;padding:6px 10px;background:#1a1200;border-left:2px solid var(--yellow);font-size:10px;"><strong style="color:var(--yellow)">VERDICT:</strong> <span style="color:var(--bright)">$1</span></div>')
+    .replace(/^(ASSESSMENT|CHALLENGES|GAPS|MISSING ANALYSIS|ADDITIONAL STOCKS TO CONSIDER):(.*)$/gm,'<span class="section-head">$1</span><span style="color:var(--text);font-size:10px;font-family:var(--sans);">$2</span>')
+    .replace(/^- (.+)$/gm,'<div style="padding:3px 0 3px 12px;border-left:1px solid var(--border2);font-size:10px;margin:2px 0;font-family:var(--sans);">$1</div>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'');
+  return '<div class="prose fadein">'+html+'</div>';
+}
+
+function formatCode(code){
+  if(!code)return '<div style="color:var(--dim);padding:20px;font-size:10px;">No code generated yet.</div>';
+  var lineCount=code.split('\n').length;
+  var highlighted=code
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\b(import|from|def|return|if|else|elif|for|in|class|and|or|not|True|False|None|as|with|print|try|except|raise|while|break|continue|pass|yield|lambda|global|nonlocal)\b/g,'<span style="color:var(--purple)">$1</span>')
+    .replace(/(#[^\n]*)/g,'<span style="color:var(--dim);font-style:italic">$1</span>')
+    .replace(/(".*?"|\'.*?\')/g,'<span style="color:var(--green)">$1</span>')
+    .replace(/\b(\d+\.?\d*)\b/g,'<span style="color:var(--cyan)">$1</span>');
+  return '<div class="fadein">'+
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">'+
+      '<div style="color:var(--dim);font-size:9px;font-family:var(--sans);">AI-generated Python risk analysis tool — '+lineCount+' lines</div>'+
+      '<button class="code-toggle" onclick="var b=document.getElementById(\'fullCodeBlock\');b.classList.toggle(\'visible\');this.textContent=b.classList.contains(\'visible\')? \'COLLAPSE\':\'EXPAND FULL CODE\'">EXPAND FULL CODE</button>'+
+    '</div>'+
+    '<pre id="fullCodeBlock" class="code-block visible" style="max-height:500px;">'+highlighted+'</pre>'+
+    '<div style="margin-top:10px;padding:8px;background:#0a0b0e;border:1px solid var(--border2);color:var(--dim);font-size:8px;line-height:1.8;">'+
+      '⚡ Copy this script and run it locally with <span style="color:var(--green)">pip install yfinance</span> then <span style="color:var(--green)">python script.py</span>'+
+    '</div>'+
+  '</div>';
+}
+
+function formatJudge(judgment,score){
+  if(!judgment)return '<div class="prose" style="color:var(--dim)">No judgment output.</div>';
+  var summaryMatch=judgment.match(/EXECUTIVE SUMMARY:\s*\n([\s\S]*?)(?:\n\nKEY TICKERS|$)/);
+  var summary=summaryMatch?summaryMatch[1].trim():'';
+  if(!summary&&judgment.length>200)summary=judgment.slice(0,400)+'…';
+  var tickersMatch=judgment.match(/KEY TICKERS TO WATCH:\s*\n([\s\S]*?)(?:\n\nRISK LEVEL|$)/);
+  var tickersText=tickersMatch?tickersMatch[1].trim():'';
+  var riskMatch=judgment.match(/RISK LEVEL:\s*(\w+)/);
+  var riskLevel=riskMatch?riskMatch[1]:'';
+  var riskCol={HIGH:'var(--red)',MEDIUM:'var(--yellow)',LOW:'var(--green)'}[riskLevel]||'var(--dim)';
+  var tickerItems='';
+  if(tickersText){
+    tickerItems=tickersText.split('\n').filter(function(l){return l.startsWith('-');}).map(function(l){
+      var m=l.match(/- ([A-Z]+): (.+)/);
+      if(!m)return '';
+      return '<div style="padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;">'+
+        '<span style="color:var(--bright);font-weight:600;font-family:var(--mono);width:44px;flex-shrink:0;">'+m[1]+'</span>'+
+        '<span style="color:var(--text);font-size:9px;font-family:var(--sans);">'+m[2]+'</span></div>';
+    }).join('');
+  }
+  var scoreBar=score?'<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;padding:10px;background:#09080c;border:1px solid var(--border2);">'+
+    '<div style="font-size:32px;font-weight:600;color:var(--orange);">'+score+'<span style="font-size:12px;color:var(--dim)">/100</span></div>'+
+    '<div style="flex:1;"><div style="height:4px;background:var(--border2);border-radius:2px;"><div style="width:'+score+'%;height:4px;background:var(--orange);border-radius:2px;"></div></div>'+
+    '<div style="font-size:8px;color:var(--dim);margin-top:4px;">'+getRiskLevel(score)+'</div></div></div>':'';
+  return '<div class="fadein">'+scoreBar+
+    (riskLevel?'<div style="margin-bottom:10px;display:flex;align-items:center;gap:10px;"><div style="font-size:8px;color:var(--dim);letter-spacing:1px;">OVERALL RISK</div><div style="font-size:11px;font-weight:600;color:'+riskCol+';letter-spacing:2px;border:1px solid '+riskCol+';padding:2px 10px;">'+riskLevel+'</div></div>':'')+
+    (summary?'<div class="exec-summary" style="margin-bottom:12px;">'+summary+'</div>':'')+
+    (tickerItems?'<div style="font-size:8px;color:var(--dim);letter-spacing:1.5px;margin-bottom:6px;">KEY TICKERS TO WATCH</div>'+tickerItems:'')+
+  '</div>';
+}
+
+// ── Agent Bar ────────────────────────────────────────────────────
+function renderAgentBar(){
+  document.getElementById('agentBar').innerHTML=['RESEARCHER','CRITIC','BUILDER','AUDITOR','JUDGE'].map(function(name){
+    var a=agentStates[name];
+    return '<div class="agent-pill"><div class="a-dot '+a.state+'"></div><div style="flex:1;min-width:0"><div class="a-name">'+name+'</div><div class="a-status">'+a.status+'</div></div></div>';
+  }).join('');
+}
+function setAgentState(name,state,status){agentStates[name]={state:state,status:status};renderAgentBar();}
+function resetAgents(){Object.keys(agentStates).forEach(function(a){agentStates[a]={state:'idle',status:'Idle'};});renderAgentBar();}
+renderAgentBar();
+
+// ── Log ─────────────────────────────────────────────────────────
+var logs=[];
+function addLog(agent,message){
+  var now=new Date().toTimeString().slice(0,8);
+  logs.push({time:now,agent:agent,message:message});
+  if(logs.length>150)logs.shift();
+  var el=document.getElementById('agentLog');
+  el.innerHTML=logs.map(function(l){
+    return '<div class="log-line"><span class="log-time">'+l.time+'</span><span class="log-agent '+l.agent+'">'+l.agent+'</span><span class="log-msg">'+l.message+'</span></div>';
+  }).join('');
+  el.scrollTop=el.scrollHeight;
+}
+
+// ── News ─────────────────────────────────────────────────────────
+async function loadNews(){
+  try{
+    var res=await fetch('/api/news');var news=await res.json();
+    document.getElementById('newsFeed').innerHTML=news.length?news.map(function(n){
+      return '<div class="news-item" onclick="setQuery(\''+n.title.replace(/'/g,"\\'")+'\')">'+'<div class="news-meta"><span class="news-source">'+n.source+'</span><span class="news-time">'+n.time+'</span><span class="sev sev-'+n.severity+'">'+n.severity+'</span></div>'+
+        '<div class="news-title">'+n.title+'</div>'+
+        '<div class="news-tags">'+(n.tags||[]).map(function(t){return '<span class="news-tag">'+t+'</span>';}).join('')+'</div></div>';
+    }).join(''):'<div style="color:var(--dim);padding:20px;text-align:center;font-size:9px;">Add NEWS_API_KEY to .env for live news</div>';
+  }catch(e){document.getElementById('newsFeed').innerHTML='<div style="color:var(--dim);padding:10px;font-size:9px;">Backend offline — start main.py</div>';}
+}
+
+// ── Sanctions ────────────────────────────────────────────────────
+async function loadSanctions(){
+  try{
+    var res=await fetch('/api/sanctions');allSanctions=await res.json();
+    document.getElementById('metricSanctCount').textContent=allSanctions.length;
+    document.getElementById('sanctionsList').innerHTML=allSanctions.slice(0,12).map(function(s){
+      return '<div class="sanctions-item"><div class="s-dot"></div><div><div class="s-name">'+s.name+'</div><div class="s-detail">'+(s.detail||'OFAC SDN entity')+'</div>'+
+        (s.programs&&s.programs.length?'<div class="s-prog">'+s.programs.slice(0,2).map(function(p){return '<span>'+p+'</span>';}).join('')+'</div>':'')+'<div class="s-date">'+s.date+'</div></div></div>';
+    }).join('');
+    document.getElementById('sanctFullCount').textContent=allSanctions.length;
+    renderSanctionsPage();
+  }catch(e){}
+}
+function filterSanctions(f,btn){
+  sanctFilter=f;document.querySelectorAll('.sf-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');renderSanctionsPage();
+}
+function renderSanctionsPage(){
+  var filtered=sanctFilter==='ALL'?allSanctions:allSanctions.filter(function(s){return s.type===sanctFilter;});
+  document.getElementById('sanctFullList').innerHTML=filtered.length?filtered.map(function(s){
+    return '<div class="sc-item"><div class="sci-top"><div class="sci-dot"></div><div><div class="sci-name">'+s.name+'</div><div class="sci-type">'+(s.type||'Entity')+'</div></div></div>'+
+      '<div class="sci-detail">'+(s.detail||'OFAC SDN List entity')+'</div>'+
+      '<div class="sci-footer"><div class="sci-progs">'+(s.programs||[]).slice(0,3).map(function(p){return '<span class="sci-prog">'+p+'</span>';}).join('')+'</div><div class="sci-date">'+s.date+'</div></div></div>';
+  }).join(''):'<div style="color:var(--dim);padding:40px;text-align:center;grid-column:1/-1;font-size:10px;">No entities for this filter.</div>';
+}
+
+// ── Ticker ───────────────────────────────────────────────────────
+var fallbackTickers=[
+  {sym:'LMT',price:'537.21',chg:'+1.1%',up:true,name:'Lockheed Martin'},{sym:'RTX',price:'178.96',chg:'+1.3%',up:true,name:'RTX Corp'},
+    {sym:'ESLT',price:'328.50',chg:'+2.1%',up:true,name:'Elbit Systems'},{sym:'RHM.DE',price:'724.40',chg:'+3.2%',up:true,name:'Rheinmetall'},
+    {sym:'BA.L',price:'1245.00',chg:'+1.8%',up:true,name:'BAE Systems'},{sym:'HAL.NS',price:'4820.00',chg:'+0.9%',up:true,name:'HAL India'},
+    {sym:'SAAB-B.ST',price:'312.00',chg:'+2.4%',up:true,name:'Saab AB'},{sym:'AIR.PA',price:'178.50',chg:'+0.7%',up:true,name:'Airbus'},
+  {sym:'NOC',price:'559.29',chg:'+1.4%',up:true,name:'Northrop Grumman'},{sym:'GD',price:'348.96',chg:'+1.8%',up:true,name:'General Dynamics'},
+  {sym:'BA',price:'228.78',chg:'+2.0%',up:true,name:'Boeing'},{sym:'KTOS',price:'65.19',chg:'+13.8%',up:true,name:'Kratos Defense'},
+  {sym:'AVAV',price:'214.39',chg:'+18.3%',up:true,name:'AeroVironment'},{sym:'PLTR',price:'130.00',chg:'+1.0%',up:true,name:'Palantir'},
+];
+async function loadTicker(){
+  var items=fallbackTickers;
+  try{
+    var res=await fetch('/api/stocks');var data=await res.json();tickerData=data;
+    var fetched=Object.entries(data).filter(function(e){return !e[1].error;}).map(function(e){
+      return {sym:e[0],price:e[1].price,chg:(e[1].change_pct>=0?'+':'')+e[1].change_pct+'%',up:e[1].change_pct>=0,name:TICKER_NAMES[e[0]]||e[0]};
+    });
+    if(fetched.length)items=fetched;
+  }catch(e){}
+  var all=items.concat(items);
+  document.getElementById('tickerScroll').innerHTML=all.map(function(t){
+    return '<div class="ticker-item" onclick="setQuery(\''+t.name+' geopolitical risk analysis\')">'+
+      '<span class="ticker-sym">'+t.sym+'</span><span class="ticker-name">'+t.name+'</span>'+
+      '<span class="ticker-price">'+t.price+'</span><span class="ticker-chg '+(t.up?'up':'dn')+'">'+t.chg+'</span></div>';
+  }).join('');
+}
+
+// ── Portfolio ────────────────────────────────────────────────────
+function renderPortfolio(){
+  var tickers=Object.entries(tickerData).filter(function(e){return !e[1].error;});
+  if(!tickers.length){document.getElementById('portGrid').innerHTML='<div style="color:var(--dim);padding:30px;grid-column:1/-1;text-align:center;font-size:10px;">Start main.py to load live portfolio data.</div>';return;}
+  document.getElementById('portGrid').innerHTML=tickers.map(function(e){
+    var sym=e[0],v=e[1];var up=v.change_pct>=0;var col=up?'var(--green)':'var(--red)';
+    var hist=v.history_5d||[];var sparkSVG=hist.length>1?renderSparkline(hist,col):'';
+    var h=v['52w_high']||0,l=v['52w_low']||0;
+    var pos=h&&l?((v.price-l)/(h-l)*100).toFixed(0):null;
+    return '<div class="stock-card" onclick="showStockDetail(\''+sym+'\',this)">'+
+      '<div style="display:flex;justify-content:space-between;align-items:flex-start">'+
+        '<div><div class="sc-sym">'+sym+'</div><div class="sc-name">'+(TICKER_NAMES[sym]||v.name||sym)+'</div></div>'+
+        '<div style="text-align:right"><div class="sc-price">$'+v.price+'</div><div class="sc-chg '+(up?'up':'dn')+'">'+(up?'+':'')+v.change_pct+'%</div></div>'+
+      '</div>'+
+      (sparkSVG?'<svg class="sparkline" viewBox="0 0 80 30">'+sparkSVG+'</svg>':'')+
+      (pos!==null?'<div style="margin-top:8px;"><div style="display:flex;align-items:center;gap:5px;"><div style="color:var(--dim);font-size:7px;width:28px;">52W</div><div style="flex:1;height:2px;background:var(--border2);border-radius:1px;"><div style="width:'+pos+'%;height:2px;background:'+col+';border-radius:1px;"></div></div><div style="color:var(--dim);font-size:7px;width:24px;text-align:right;">'+pos+'%</div></div></div>':'')+
+    '</div>';
+  }).join('');
+}
+function renderSparkline(hist,col){
+  var min=Math.min.apply(null,hist),max=Math.max.apply(null,hist),range=max-min||1;
+  var pts=hist.map(function(v,i){return ((i/(hist.length-1))*80)+','+(30-((v-min)/range)*26);}).join(' ');
+  return '<polyline points="'+pts+'" fill="none" stroke="'+col+'" stroke-width="1.2" stroke-linejoin="round"/>';
+}
+function showStockDetail(sym,el){
+  var v=tickerData[sym];if(!v)return;
+  document.querySelectorAll('.stock-card').forEach(function(c){c.classList.remove('selected');});
+  el.classList.add('selected');
+  var up=v.change_pct>=0,col=up?'var(--green)':'var(--red)';
+  var hist=v.history_5d||[];var bigSpark='';
+  if(hist.length>1){
+    var min=Math.min.apply(null,hist),max=Math.max.apply(null,hist),range=max-min||1;
+    var pts=hist.map(function(p,i){return ((i/(hist.length-1))*200)+','+(60-((p-min)/range)*56);}).join(' ');
+    bigSpark='<svg width="100%" height="60" viewBox="0 0 200 60" preserveAspectRatio="none"><polyline points="'+pts+'" fill="none" stroke="'+col+'" stroke-width="1.5"/></svg>';
+  }
+  var mc=v.market_cap?'$'+(v.market_cap/1e9).toFixed(1)+'B':'—';
+  document.getElementById('portDetail').innerHTML='<div style="max-width:600px;">'+
+    '<div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;">'+
+      '<div><div style="font-size:22px;font-weight:600;color:var(--bright);letter-spacing:2px;">'+sym+'</div>'+
+        '<div style="color:var(--dim);font-family:var(--sans);font-size:12px;margin-top:3px;">'+(TICKER_NAMES[sym]||v.name)+'</div>'+
+        '<div style="color:var(--dim);font-size:9px;margin-top:4px;">'+(v.sector||'Defense & Aerospace')+'</div></div>'+
+      '<div style="text-align:right;"><div style="font-size:28px;font-weight:500;color:var(--bright);">$'+v.price+'</div>'+
+        '<div style="color:'+col+';font-size:12px;">'+(up?'+':'')+v.change_pct+'% today</div></div>'+
+    '</div>'+
+    '<div style="background:#0a0b0e;border:1px solid var(--border2);padding:10px;margin-bottom:12px;">'+bigSpark+'</div>'+
+    '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-bottom:12px;">'+
+      [['Market Cap',mc],['52W High','$'+(v['52w_high']||'—')],['52W Low','$'+(v['52w_low']||'—')]].map(function(r){
+        return '<div style="background:var(--panel2);padding:8px;"><div style="color:var(--dim);font-size:8px;letter-spacing:1px;">'+r[0]+'</div><div style="color:var(--bright);font-size:12px;margin-top:4px;">'+r[1]+'</div></div>';
+      }).join('')+
+    '</div>'+
+    (v.summary?'<div style="color:var(--dim);font-size:9px;line-height:1.8;font-family:var(--sans);padding:10px;background:#0a0b0e;border:1px solid var(--border2);">'+v.summary+'</div>':'')+
+    '<div style="margin-top:12px;"><button class="qbtn" onclick="setQuery(\''+(TICKER_NAMES[sym]||sym)+' geopolitical risk exposure\');switchTab(\'overview\',document.querySelectorAll(\'.tab\')[0])">ANALYZE '+sym+' ▶</button></div>'+
+  '</div>';
+}
+
+// ── Signals ──────────────────────────────────────────────────────
+function renderSignals(){
+  var body=document.getElementById('signalsBody');
+  if(!lastAnalysis){body.innerHTML='<div style="color:var(--dim);padding:40px;text-align:center;font-size:10px;">Run a query on the Overview tab to generate market signals.</div>';return;}
+  var risk=lastAnalysis.risk_data||{};
+  var colorMap={HIGH:'var(--red)',MEDIUM:'var(--yellow)',LOW:'var(--green)'};
+  var entries=Object.entries(risk).sort(function(a,b){return b[1].score-a[1].score;});
+  function getSignal(ticker,info){
+    var td=tickerData[ticker];
+    if(info.risk_level==='HIGH'&&td&&td.change_pct>0)return 'SELL';
+    if(info.risk_level==='HIGH')return 'WATCH';
+    if(info.risk_level==='LOW')return 'BUY';
+    return 'WATCH';
+  }
+  function getSignalReason(ticker,info){
+    var td=tickerData[ticker];var kws=(info.matched_keywords||[]).join(', ')||'this geopolitical event';
+    var name=TICKER_NAMES[ticker]||ticker;
+    if(info.risk_level==='HIGH')return name+' has significant exposure to '+kws+'. The company\'s contracts, supply chain, or revenues are likely directly impacted. '+(td&&td.change_pct>0?'Stock is already up '+td.change_pct+'% — consider whether this move fully prices in the risk.':'Monitor for contract or revenue impact.');
+    if(info.risk_level==='MEDIUM')return name+' has moderate indirect exposure. Current price '+(td?(td.change_pct>=0?'+':'')+td.change_pct+'%':'movement')+' — watch for secondary effects.';
+    return name+' has minimal direct exposure to '+kws+'. May attract capital rotation from higher-risk names if situation escalates.';
+  }
+  body.innerHTML='<div class="sig-divider">SIGNALS BASED ON LATEST ANALYSIS</div>'+
+    entries.map(function(e){
+      var ticker=e[0],info=e[1];var sig=getSignal(ticker,info);var td=tickerData[ticker];
+      var kws=(info.matched_keywords||[]).slice(0,4);
+      return '<div class="signal-card fadein"><div class="sig-top">'+
+        '<div class="sig-strength '+sig+'">'+sig+'</div>'+
+        '<div class="sig-meta"><div class="sig-ticker">'+ticker+'</div>'+
+          '<div class="sig-company">'+(TICKER_NAMES[ticker]||'')+'</div>'+
+          '<div class="sig-price">'+(td?'$'+td.price+' · '+(td.change_pct>=0?'+':'')+td.change_pct+'% today':'')+'</div>'+
+        '</div>'+
+        '<div style="text-align:right;">'+
+          '<div style="font-size:16px;font-weight:600;color:'+(info.risk_level==='HIGH'?'var(--red)':info.risk_level==='MEDIUM'?'var(--yellow)':'var(--green)')+';">'+info.score+'</div>'+
+          '<div style="font-size:8px;color:var(--dim);letter-spacing:1px;">EXPOSURE</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="sig-reason">'+getSignalReason(ticker,info)+'</div>'+
+      '<div class="sig-tags">'+kws.map(function(k){return '<span class="sig-tag">'+k.toUpperCase()+'</span>';}).join('')+'</div>'+
+    '</div>';}).join('')+
+    '<div style="color:var(--dim);font-size:8px;padding:10px;text-align:center;line-height:1.8;">⚠ AI-generated signals for research only · Not financial advice</div>';
+}
+
+// ── Run Query ────────────────────────────────────────────────────
+function setQuery(q){document.getElementById('queryInput').value=q;}
+function runQuery(){
+  var query=document.getElementById('queryInput').value.trim();if(!query)return;
+  if(!ws||ws.readyState!==1){addLog('SYSTEM','ERROR: Not connected — is main.py running?');return;}
+  resetAgents();resetRTabs();
+  document.getElementById('analyzeBtn').disabled=true;
+  document.getElementById('analyzeBtn').textContent='RUNNING…';
+  // Reset all panes to "working" state
+  document.getElementById('pane-risk').innerHTML='<div style="color:var(--dim);text-align:center;padding:50px 30px;"><div style="color:var(--orange);margin-bottom:10px;font-size:11px;letter-spacing:2px;">AGENTS WORKING</div><div style="font-size:10px;line-height:2;">Multi-agent pipeline running.<br>Watch the agent log below for real-time progress.</div><div style="margin-top:16px;display:flex;gap:8px;justify-content:center;font-size:8px;color:var(--dim);"><span style="color:var(--blue)">● RESEARCHER</span>→<span style="color:var(--yellow)">● CRITIC</span>→<span style="color:var(--green)">● BUILDER</span>→<span style="color:var(--purple)">● AUDITOR</span>→<span style="color:var(--orange)">● JUDGE</span></div></div>';
+  ['research','critique','code','judge'].forEach(function(p){
+    document.getElementById('pane-'+p).innerHTML='<div style="color:var(--dim);text-align:center;padding:40px;font-size:10px;">Waiting for agent…</div>';
+  });
+  queriesRun++;document.getElementById('metricQueries').textContent=queriesRun;
+  addLog('SYSTEM','New query: '+query);ws.send(JSON.stringify({query:query}));
+}
+document.getElementById('queryInput').addEventListener('keydown',function(e){if(e.key==='Enter')runQuery();});
+
+addLog('SYSTEM','SENTINEL terminal initialized');
+addLog('SYSTEM','Connecting to backend…');
+connectWS();loadNews();loadSanctions();loadTicker();
+setInterval(loadNews,60000);setInterval(loadTicker,30000);
+</script>
+</body>
+</html>

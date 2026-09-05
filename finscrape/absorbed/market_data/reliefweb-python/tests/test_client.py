@@ -1,0 +1,55 @@
+import unittest
+from reliefweb.client import ReliefWebClient
+from reliefweb.fields import get_fields_for_type
+
+class TestReliefWebClient(unittest.TestCase):
+    def setUp(self):
+        self.client = ReliefWebClient(appname="reliefweb-python-client-GA-runner-test")
+
+    def test_get_reports(self):
+      result = self.client.get_reports(limit=1, fields=get_fields_for_type("reports"))
+      self.assertIn('data', result)
+      self.assertIsInstance(result['data'], list)
+
+    def test_get_disasters(self):
+        result = self.client.get_disasters(limit=1, fields=get_fields_for_type("disasters"))
+        self.assertIn('data', result)
+        self.assertIsInstance(result['data'], list)
+
+    def test_get_jobs(self):
+        result = self.client.get_jobs(limit=1, fields=get_fields_for_type("jobs"))
+        self.assertIn("data", result)
+        self.assertIsInstance(result["data"], list)
+
+    def test_get_training(self):
+        result = self.client.get_training(limit=1, fields=get_fields_for_type("training"))
+        self.assertIn('data', result)
+        self.assertIsInstance(result['data'], list)
+
+    def test_get_sources(self):
+        result = self.client.get_sources(limit=1, fields=get_fields_for_type("sources"))
+        self.assertIn('data', result)
+        self.assertIsInstance(result['data'], list)
+
+    def test_get_countries(self):
+        result = self.client.get_countries(limit=1, fields=get_fields_for_type("countries"))
+        self.assertIn('data', result)
+        self.assertIsInstance(result['data'], list)
+
+    def test_get_blog(self):
+        result = self.client.get_blog(limit=1)
+        self.assertIn('data', result)
+        self.assertIsInstance(result['data'], list)
+
+    def test_get_book(self):
+        result = self.client.get_book(limit=1)
+        self.assertIn('data', result)
+        self.assertIsInstance(result['data'], list)
+
+    def test_get_references(self):
+        result = self.client.get_references(limit=1)
+        self.assertIn('data', result)
+        self.assertIsInstance(result['data'], dict)
+
+if __name__ == "__main__":
+    unittest.main()

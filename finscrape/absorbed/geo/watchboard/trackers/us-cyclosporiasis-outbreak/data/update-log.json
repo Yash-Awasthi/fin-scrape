@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-28T01:06:13.384Z",
+  "tracker": "us-cyclosporiasis-outbreak",
+  "sections": {
+    "timeline": {
+      "status": "updated",
+      "count": 35
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 24
+    },
+    "claims": {
+      "status": "updated",
+      "count": 16
+    },
+    "political": {
+      "status": "updated",
+      "count": 16
+    },
+    "kpis": {
+      "status": "updated",
+      "count": 8
+    },
+    "casualties": {
+      "status": "updated",
+      "count": 10
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

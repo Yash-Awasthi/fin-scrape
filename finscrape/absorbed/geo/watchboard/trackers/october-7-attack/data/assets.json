@@ -1,0 +1,72 @@
+[
+  {
+    "id": "idf-golani-brigade",
+    "type": "ground-infantry",
+    "name": "Golani Brigade (1st Infantry Brigade)",
+    "detail": "Elite IDF infantry brigade that led the ground clearing operation in kibbutzim on October 7 and subsequent northern Gaza ground invasion. Suffered significant casualties in close-quarters urban combat in Beit Hanoun and Shejaiya.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-givati-brigade",
+    "type": "ground-infantry",
+    "name": "Givati Brigade",
+    "detail": "IDF infantry brigade deployed to southern Gaza Envelope on October 7 for immediate kibbutz clearing. Later led Rafah operations in 2024. Took casualties at Be'eri and Kfar Aza.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-paratroopers-brigade",
+    "type": "ground-infantry",
+    "name": "Paratroopers Brigade (35th)",
+    "detail": "Airborne infantry brigade deployed to respond to initial Hamas infiltration on October 7. Later conducted urban combat operations in northern Gaza including the Shejaiya battle.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-armored-162nd-division",
+    "type": "armor",
+    "name": "162nd Armored Division ('Steel Formation')",
+    "detail": "Reserve armored division mobilized after October 7 and deployed in the Gaza ground operation. Led armored thrusts into northern Gaza in November 2023. Included Merkava Mk.4 tanks.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-36th-division",
+    "type": "armor",
+    "name": "36th Armored Division ('Ga'ash')",
+    "detail": "Regular armored division that participated in the ground campaign in southern Gaza, including operations in Khan Yunis. Heavy Merkava tank formations supported by Namer APCs.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-southern-command",
+    "type": "command",
+    "name": "IDF Southern Command",
+    "detail": "Responsible for the Gaza theater. Suffered major coordination breakdown on October 7 due to Re'im HQ attack. Commanded by Maj. Gen. Yaron Finkelman throughout Operation Swords of Iron.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "iron-dome-batteries",
+    "type": "air-defense",
+    "name": "Iron Dome Air Defense Batteries (10 operational)",
+    "detail": "Israel's mobile air defense system. 10 batteries active on October 7. Achieved ~85-90% interception overall but was overwhelmed in southern Israel by mass simultaneous launches. Each battery has 3-4 launchers with 20 Tamir interceptors each.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-air-force-f35",
+    "type": "air",
+    "name": "IAF F-35I Adir Strike Aircraft",
+    "detail": "Israel's most advanced fighter jets, used in precision strike missions against Hamas leadership targets, tunnel infrastructure, and weapons caches throughout Operation Swords of Iron. Israel was first country outside US to use F-35s in combat.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-shin-bet",
+    "type": "intelligence",
+    "name": "Shin Bet (Shabak) — Internal Security Service",
+    "detail": "Israel's internal security agency responsible for Gaza threat monitoring. Acknowledged catastrophic intelligence failure on October 7. Director Ronen Bar resigned March 2025 accepting responsibility. Shin Bet's Unit for Arab Affairs and Gaza monitoring team failed to anticipate the coordinated mass attack.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-unit-8200",
+    "type": "intelligence",
+    "name": "IDF Unit 8200 (SIGINT / Cyber Intelligence)",
+    "detail": "Israel's signals intelligence unit. Female analysts in Unit 8200 repeatedly warned superiors that Hamas was rehearsing the Jericho Wall attack plan in the weeks before October 7. These warnings were systematically dismissed by senior officers. The failure became central to the intelligence accountability investigation.",
+    "lastUpdated": "2026-03-20"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "khamenei-orders-consumption-reduction",
+    "year": "Dec 19",
+    "title": "Khamenei Orders Iranians to Reduce Consumption of Food, Water, and Energy",
+    "type": "diplomatic",
+    "detail": "Supreme Leader Ali Khamenei issues a directive ordering Iranians to reduce consumption of food, water, energy, and fuel. The unprecedented public call for austerity reflects the severity of Iran's economic crisis, with the rial in freefall, inflation above 42%, and foreign exchange reserves depleted. The directive is widely mocked on social media, where Iranians point out that many families are already unable to afford basic necessities. Opposition figures call it 'an admission of total economic failure.'",
+    "sources": [
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.iranintl.com/en/202512184991",
+        "caption": "Supreme Leader Khamenei issues unprecedented directive ordering Iranians to reduce consumption",
+        "source": "Iran International",
+        "thumbnail": "https://i.iranintl.com/images/rdk9umy0/production/c2c72f85f2036f228145d47b594cafbf3787bf81-1920x1430.jpg?rect=53,201,1814,952&w=1200&h=630&fit=max&auto=format"
+      }
+    ],
+    "lastUpdated": "2026-03-12"
+  },
+  {
+    "id": "cryptocurrency-adoption-surges",
+    "year": "Dec 19",
+    "title": "Iranians Turn to Cryptocurrency as Rial Collapses",
+    "type": "economic",
+    "detail": "With the rial in freefall and gold coin prices at historic highs, Iranian households increasingly turn to cryptocurrency as a store of value. VPN usage spikes as citizens access foreign exchanges despite government restrictions. Tether (USDT) and Bitcoin trading volumes on Iranian-accessible platforms reach record levels. Analysts note the trend mirrors behavior during the 2018 currency crisis but at far greater scale, reflecting deeper loss of confidence in the domestic financial system.",
+    "sources": [
+      { "name": "Iran International", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Bloomberg", "tier": 2, "pole": "western" },
+      { "name": "Donya-e Eqtesad", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cointelegraph.com/features/iran-s-currency-collapse-shows-why-bitcoin-is-seen-as-an-exit-option",
+        "caption": "Iranians turn to cryptocurrency as store of value as the rial collapses to historic lows",
+        "source": "CoinTelegraph",
+        "thumbnail": "https://images.cointelegraph.com/cdn-cgi/image/f=auto,onerror=redirect,w=1200/https://s3.cointelegraph.com/uploads/2026-01/019b93f7-4750-7f9f-a48b-1ee1c2346807.jpg"
+      }
+    ],
+    "lastUpdated": "2026-03-12"
+  },
+  {
+    "id": "medicine-rationing-provinces",
+    "year": "Dec 19",
+    "title": "Cancer Patients Rationing Chemotherapy Drugs Across Provinces",
+    "type": "humanitarian",
+    "detail": "Medical professionals report that cancer treatment delays have become widespread across multiple provinces as hospitals ration imported chemotherapy drugs. The elimination of the preferential exchange rate and the difficulty of securing letters of credit from sanctioned banks have made pharmaceutical imports three times more expensive. Insulin supplies are running critically low in several cities, forcing diabetic patients to reduce dosages. The Iran Medical Council warns that the healthcare system is approaching a 'point of no return.'",
+    "sources": [
+      { "name": "Iran Medical Council", "tier": 1, "pole": "middle_eastern" },
+      { "name": "Human Rights Watch", "tier": 3, "pole": "international" },
+      { "name": "NPR", "tier": 2, "pole": "western" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.iranintl.com/en/202512169061",
+        "caption": "Cancer patients rationing chemotherapy drugs across Iranian provinces amid pharmaceutical crisis",
+        "source": "Iran International",
+        "thumbnail": "https://i.iranintl.com/images/rdk9umy0/production/33b7fb45d06163959ac1fc6b6ce2055fb5ef4e36-1280x853.webp?rect=0,91,1280,672&w=1200&h=630&fit=max&auto=format"
+      }
+    ],
+    "lastUpdated": "2026-03-12"
+  }
+]

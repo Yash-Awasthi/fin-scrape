@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-26T12:38:28.683Z",
+  "tracker": "china",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-07-05T02:24:39.620Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 42
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 42
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 30
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 31
+    },
+    "casualties": {
+      "status": "ok",
+      "count": 10
+    },
+    "econ": {
+      "status": "updated",
+      "count": 10
+    },
+    "events": {
+      "lastRun": "2026-08-26T12:38:28.683Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-07-05T02:24:39.620Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-26T12:38:28.683Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-20T06:06:51.517Z",
+  "tracker": "peru",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-25T13:02:43.922Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 64,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 40,
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 10,
+      "status": "ok"
+    },
+    "econ": {
+      "count": 8,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 26,
+      "status": "updated"
+    },
+    "political": {
+      "count": 33,
+      "status": "updated"
+    },
+    "events": {
+      "lastRun": "2026-06-25T13:02:43.922Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-25T13:02:43.922Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-06-25T13:02:43.922Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

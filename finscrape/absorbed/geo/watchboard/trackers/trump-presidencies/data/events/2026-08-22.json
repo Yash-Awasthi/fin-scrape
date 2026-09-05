@@ -1,0 +1,34 @@
+[
+  {
+    "id": "trump-visa-ban-south-asia-court-strike-aug-2026",
+    "year": "Aug 22, 2026",
+    "title": "US Court Strikes Down Trump Visa Ban Affecting South Asian Nations",
+    "type": "legal",
+    "detail": "A US federal court struck down Trump's visa ban targeting several South Asian nations, ruling it exceeded executive authority. The decision marks a significant legal setback for the administration's immigration restrictions and could affect thousands of visa applicants from the affected countries.",
+    "sources": [
+      {
+        "name": "South China Morning Post",
+        "tier": 2,
+        "url": "https://www.scmp.com/news/world/united-states-canada/article/3364905/us-court-strikes-down-trump-visa-ban-affecting-south-asian-nations?utm_source=rss_feed",
+        "pole": "eastern"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "trump-blocks-bbc-subpoena-ivanka-don-jr-aug-2026",
+    "year": "Aug 22, 2026",
+    "title": "Trump Administration Seeks to Block BBC Subpoena Targeting Ivanka Trump and Donald Trump Jr.",
+    "type": "legal",
+    "detail": "The Trump administration moved to block a BBC subpoena targeting Ivanka Trump and Donald Trump Jr., adding a media-legal dimension to the administration's ongoing confrontations with press outlets. The effort to quash the subpoena represents a broadening of the administration's legal battles with media organizations.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/8/22/trump-seeks-to-block-the-bbcs-attempt-to-subpoena-ivanka-trump-trump-jr?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": []
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-10T16:57:57.611Z",
+  "tracker": "species-recovery",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 8
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 30
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 21
+    },
+    "claims": {
+      "status": "ok",
+      "count": 12
+    },
+    "political": {
+      "status": "ok",
+      "count": 12
+    },
+    "econ": {
+      "status": "ok",
+      "count": 6
+    },
+    "events": {
+      "status": "updated",
+      "count": 5
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

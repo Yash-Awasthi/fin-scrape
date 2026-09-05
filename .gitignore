@@ -37,3 +37,15 @@ node_modules/
 web/test-results/
 web/playwright-report/
 web/.playwright/
+secrets/
+
+# Absorbed reference repos (see reference/MANIFEST.md) — not part of the project
+reference/
+
+# Absorbed heavy data (benchmarks/datasets/binaries — reference code only)
+finscrape/absorbed/llm/evals/evals/registry/data/
+finscrape/absorbed/quant/machine-learning-for-trading/**/*.pkl
+*.jar
+*.db
+*.h5
+*.parquet

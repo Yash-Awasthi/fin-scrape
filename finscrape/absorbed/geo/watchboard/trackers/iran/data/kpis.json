@@ -1,0 +1,139 @@
+[
+  {
+    "id": "enrichment-level",
+    "label": "Uranium Enrichment Level",
+    "value": "60% (pre-war stockpile)",
+    "color": "red",
+    "source": "IAEA Board of Governors / Carnegie Endowment 2026",
+    "contested": true,
+    "contestNote": "IAEA has had no access to Iran's four declared enrichment facilities since February 2026. Stockpile of ~440.9 kg at 60% is pre-war figure; actual status unknown. Iran denies 'zero enrichment' as a precondition for peace.",
+    "delta": "IAEA access suspended since Feb 2026",
+    "trend": "up",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "advanced-centrifuges",
+    "label": "Advanced Centrifuges Operating (IR-2m+)",
+    "value": "~8,500 (pre-war estimate)",
+    "color": "amber",
+    "source": "IAEA Safeguards Report, Nov 2024 / Carnegie Endowment 2026",
+    "contested": true,
+    "contestNote": "IAEA cannot verify current centrifuge status after June 2025 conflict. Multiple facilities reportedly struck. Iran refuses IAEA access to sites hit during the 'Twelve-Day War.'",
+    "delta": "Status unknown since June 2025",
+    "trend": "down",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "years-islamic-republic",
+    "label": "Years of Islamic Republic",
+    "value": "47 years",
+    "color": "blue",
+    "source": "Islamic Republic declared 1 April 1979",
+    "contested": false,
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "peace-negotiations-status",
+    "label": "US-Iran Peace Negotiations",
+    "value": "No Formal Talks — Iran-Oman Hormuz Deal Nearing",
+    "color": "red",
+    "source": "NPR / CBS News / Al Jazeera (Aug 7-9, 2026)",
+    "contested": true,
+    "contestNote": "The 60-day ceasefire fell apart July 8 after Iran struck commercial vessels in the Strait of Hormuz without US-framework clearance; Trump declared the deal 'over' at the NATO summit in Ankara. No formal US-Iran talks have resumed. Iran instead reached a near-final bilateral arrangement with Oman for jointly managing Hormuz shipping traffic that bars US and Israeli vessels, while conditioning any full reopening of the strait on the US lifting its naval blockade, withdrawing regional forces, and ending the war.",
+    "delta": "Iran-Oman Hormuz management deal reported near-final Aug 7-8; no direct US-Iran negotiations confirmed",
+    "deltaNote": "Iranian officials say sanctions relief is 'desperately needed' as the blockade pushes the economy toward collapse, but Tehran maintains maximalist preconditions before engaging Washington directly.",
+    "trend": "down",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "supreme-leader-health-status",
+    "label": "Supreme Leader Public Status",
+    "value": "Unconfirmed — First Video Since March, Still No Verified Sighting",
+    "color": "amber",
+    "source": "Anadolu Agency / The Week / Iran International (Aug 8-10, 2026)",
+    "contested": true,
+    "contestNote": "Mojtaba Khamenei has made no confirmed public appearance since being named Supreme Leader in March 2026, following the Feb 28 strike that killed his father and reportedly injured him. Israeli media reported him in 'extremely critical condition' in early August; Iran's Mehr News released an undated 12-second video days later showing him with advisers, which resolved little given the lack of date/location markers. President Pezeshkian has said communication with him is 'very difficult.' Trump has claimed he is '90 percent gone.'",
+    "delta": "First video release since succession, but authenticity/timing unverified",
+    "trend": "stable",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "inflation-rate",
+    "label": "Annual Inflation Rate",
+    "value": "~88.6% (late June 2026) / 100%+ point-to-point",
+    "color": "red",
+    "source": "Statistical Centre of Iran / IMF World Economic Outlook 2026 / Fortune (Aug 8, 2026)",
+    "contested": true,
+    "contestNote": "Estimates vary by methodology: official 12-month figures earlier in 2026 ran ~54%, while more recent point-to-point/annualized reporting citing Iranian and Western economists puts the rate at 88.6% as of late June. Bread +140%, red meat +135%, oils/fats +219% YoY. IMF's 2026 full-year projection was 68.9% prior to the July-August blockade escalation.",
+    "delta": "Accelerating sharply since the July 8 ceasefire collapse and Aug naval blockade tightening",
+    "deltaNote": "IMF's 68.9% full-year projection now looks conservative given the 88.6% figure reported in early August amid the Kharg Island export halt.",
+    "trend": "up",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "rial-exchange-rate-2026",
+    "label": "Rial to USD (Free Market, 2026)",
+    "value": "~1.85 million IRR/USD",
+    "color": "red",
+    "source": "Alanchand / CNBC / IranWarRoom market data (Aug 9, 2026)",
+    "contested": false,
+    "delta": "New all-time low, continuing the slide from the July 14 blockade reimposition",
+    "deltaNote": "Pre-conflict rate was ~580,000 IRR/USD. Regime officials have acknowledged the blockade's devastating impact on trade; basic goods prices up 400%+ since the conflict began.",
+    "trend": "down",
+    "lastUpdated": "2026-08-09"
+  },
+  {
+    "id": "proven-oil-reserves",
+    "label": "Proven Oil Reserves (World Rank)",
+    "value": "155.6 Bn bbl (#4)",
+    "color": "green",
+    "source": "OPEC Annual Statistical Bulletin 2024",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "population",
+    "label": "Population",
+    "value": "87.9 million",
+    "color": "blue",
+    "source": "Statistical Centre of Iran / World Bank 2024",
+    "contested": false,
+    "delta": "+1.0% YoY",
+    "trend": "up",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "frozen-sanctioned-assets",
+    "label": "Frozen / Restricted Assets (Est.)",
+    "value": "$100–150B+",
+    "color": "amber",
+    "source": "US Treasury OFAC / Reuters analysis 2024",
+    "contested": true,
+    "contestNote": "Release of frozen assets is a key Iranian demand in peace negotiations. Iran claims higher amounts illegally seized.",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "nuclear-standoff-years",
+    "label": "Years of International Nuclear Standoff",
+    "value": "24 years",
+    "color": "red",
+    "source": "IAEA — Natanz facility publicly revealed August 2002",
+    "contested": false,
+    "deltaNote": "Now entering post-conflict phase; enrichment moratorium length (12–15 yr compromise range) is a core deal sticking point as of May 22",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "executions-2025-2026",
+    "label": "Executions in 2025 / 2026 YTD",
+    "value": "2,159 (2025) / 77+ executions in July 2026 alone",
+    "color": "red",
+    "source": "Iran Human Rights (Oslo) / Amnesty International / Iran HRM monthly report (Aug 8, 2026)",
+    "contested": false,
+    "contestNote": "Iran's 2025 figure is the highest since 1981. Political executions have surged to levels unseen since the 1980s. Iran HRM's July 2026 monthly review recorded at least 77 executions and 160 arrests; other monitors (Hengaw) counted 67+ for the month. The 12-defendant Isfahan 'Alikhani Square' protest case saw executions on July 19 and July 28 despite UN appeals to halt. Actual totals are higher as the regime conceals execution data.",
+    "delta": "Public hangings of Isfahan protesters July 19 and July 28; UN experts' July 23 halt appeal went unheeded",
+    "deltaNote": "Iran Human Rights (Oslo) and Iran HRM document dozens of political prisoners executed since the Feb 28 US-Israeli strikes, alongside expedited group trials, denial of independent counsel, and forced confessions under 'wartime conditions.'",
+    "trend": "up",
+    "lastUpdated": "2026-08-08"
+  }
+]

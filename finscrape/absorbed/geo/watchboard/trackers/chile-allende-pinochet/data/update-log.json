@@ -1,0 +1,38 @@
+{
+  "lastRun": "2026-08-10T15:24:35.833Z",
+  "tracker": "chile-allende-pinochet",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "itemCount": 13
+    },
+    "timeline": {
+      "status": "unchanged",
+      "itemCount": 67
+    },
+    "mapPoints": {
+      "status": "unchanged",
+      "itemCount": 43
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 26
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 21
+    },
+    "casualties": {
+      "status": "unchanged",
+      "itemCount": 12
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 9
+    },
+    "meta": {
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

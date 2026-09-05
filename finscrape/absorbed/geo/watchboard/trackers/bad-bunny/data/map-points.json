@@ -1,0 +1,105 @@
+[
+  {
+    "id": "estadio-hiram-bithorn",
+    "lon": -66.0601,
+    "lat": 18.4274,
+    "cat": "concert",
+    "label": "Estadio Hiram Bithorn",
+    "sub": "35,000-capacity stadium in San Juan, Puerto Rico. Site of Bad Bunny's first-ever stadium shows (Dec 2021, two nights, 50,000 total fans) and 2019 Marcha del Pueblo protest rally.",
+    "tier": 1,
+    "date": "2021-12-10",
+    "showLabel": true,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "coliseo-de-puerto-rico",
+    "lon": -66.0614,
+    "lat": 18.4190,
+    "cat": "concert",
+    "label": "Coliseo de Puerto Rico (El Choli)",
+    "sub": "18,000-capacity arena in San Juan, PR. Site of Bad Bunny's historic 30-night 'No Me Quiero Ir de Aquí' residency (July–Sept 2025) — first concert residency in Puerto Rico history. Also hosted 2019 three-night run ($3.7M gross).",
+    "tier": 1,
+    "date": "2025-07-11",
+    "showLabel": true,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "vega-baja-birthplace",
+    "lon": -66.3860,
+    "lat": 18.4444,
+    "cat": "milestone",
+    "label": "Vega Baja, Puerto Rico",
+    "sub": "Birthplace of Benito Antonio Martínez Ocasio (Bad Bunny), born March 10, 1994. Grew up here before uploading his first SoundCloud tracks and being discovered by DJ Luian in 2016.",
+    "tier": 2,
+    "date": "2016-03-22",
+    "showLabel": true,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "yankee-stadium",
+    "lon": -73.9262,
+    "lat": 40.8296,
+    "cat": "concert",
+    "label": "Yankee Stadium",
+    "sub": "50,000-capacity baseball stadium in the Bronx, NY. Bad Bunny sold out two nights at Yankee Stadium during the 2022 World's Hottest Tour — a landmark moment for Latin artists in American stadiums.",
+    "tier": 2,
+    "date": "2022-08-01",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "madison-square-garden",
+    "lon": -73.9934,
+    "lat": 40.7505,
+    "cat": "concert",
+    "label": "Madison Square Garden",
+    "sub": "Iconic 20,000-capacity arena in New York City. Bad Bunny performed four sold-out shows here in 2019, each grossing $1.9–$2.1 million, marking his arrival as a top-tier arena act in the US.",
+    "tier": 2,
+    "date": "2019-06-01",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "levis-stadium-super-bowl",
+    "lon": -121.9694,
+    "lat": 37.4033,
+    "cat": "milestone",
+    "label": "Levi's Stadium — Super Bowl LX",
+    "sub": "Site of the Apple Music Super Bowl LX Halftime Show on Feb 8, 2026. Bad Bunny became the first Spanish-language singer to headline the Super Bowl here, drawing 128.2 million US viewers and 4.157 billion global views in 24 hours.",
+    "tier": 1,
+    "date": "2026-02-08",
+    "showLabel": true,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "coachella-indio",
+    "lon": -116.2382,
+    "lat": 33.6818,
+    "cat": "concert",
+    "label": "Coachella Valley Music & Arts Festival",
+    "sub": "Indio, California. Bad Bunny headlined Coachella on April 14, 2023 — the first Spanish-language artist to headline the iconic festival. His set featured surprise guests including Post Malone and Jhay Cortez arriving by jet ski.",
+    "tier": 2,
+    "date": "2023-04-14",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "dolby-theatre-grammys",
+    "lon": -118.3392,
+    "lat": 34.1017,
+    "cat": "award",
+    "label": "Dolby Theatre — Grammy Awards",
+    "sub": "Los Angeles venue for the Grammy Awards ceremony. Bad Bunny won Grammy Album of the Year at the 68th Grammy Awards (Feb 2, 2026) — the first Spanish-language album to win in the category's history.",
+    "tier": 1,
+    "date": "2026-02-02",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "miami-latin-hub",
+    "lon": -80.1918,
+    "lat": 25.7617,
+    "cat": "milestone",
+    "label": "Miami — Latin Music Hub",
+    "sub": "Miami is a major hub for Latin music industry operations. Bad Bunny's Rimas Entertainment has offices here. The 2022 El Último Tour del Mundo arena tour concluded in Miami (April 3, 2022), closing out a run that grossed $116.8 million.",
+    "tier": 2,
+    "date": "2022-04-03",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

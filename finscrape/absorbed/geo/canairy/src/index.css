@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bunker-black: #0A0A0C;
+    --bunker-dark: #141416;
+    --bunker-border: #262626;
+    --bunker-success: #10B981;
+    --bunker-warning: #F59E0B;
+    --bunker-danger: #EF4444;
+    --bunker-primary: #F9FAFB;
+    --bunker-secondary: #9CA3AF;
+    --bunker-accent: #64748B;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-bmb-black text-white antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background: radial-gradient(ellipse at 50% 0%, #12121A 0%, #0A0A0C 70%);
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.06] rounded-2xl p-4 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:border-white/[0.12] hover:shadow-lg hover:shadow-black/30;
+  }
+
+  .btn {
+    @apply px-4 py-2 rounded-xl font-medium transition-all duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-primary {
+    @apply bg-white/10 text-white hover:bg-white/15 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white/5 text-white/70 border border-white/[0.08] hover:bg-white/[0.08] hover:text-white;
+  }
+
+  .btn-danger {
+    @apply bg-red-500/80 text-white hover:bg-red-500/90;
+  }
+
+  .input {
+    @apply bg-white/[0.04] border border-white/[0.08] rounded-xl px-3 py-2 text-white placeholder-white/20 focus:outline-none focus:ring-2 focus:ring-white/15 focus:border-transparent;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-1 rounded-lg text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-500/20 text-green-400 border border-green-500/30;
+  }
+
+  .badge-warning {
+    @apply bg-amber-500/20 text-amber-400 border border-amber-500/30;
+  }
+
+  .badge-danger {
+    @apply bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+
+  .tooltip {
+    @apply absolute z-50 px-2 py-1 text-xs font-medium text-white bg-[#1C1C1E] border border-white/[0.08] rounded-lg shadow-lg pointer-events-none;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-danger {
+    animation: pulse-danger 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .glow-success {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.15), 0 0 40px rgba(16, 185, 129, 0.05);
+  }
+
+  .glow-warning {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.15), 0 0 40px rgba(245, 158, 11, 0.05);
+  }
+
+  .glow-danger {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.15), 0 0 40px rgba(239, 68, 68, 0.05);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Custom scrollbar for news sidebar */
+  .custom-scrollbar::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Firefox scrollbar support */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.08) rgba(255, 255, 255, 0.02);
+  }
+}

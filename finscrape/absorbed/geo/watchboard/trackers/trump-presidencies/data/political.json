@@ -1,0 +1,326 @@
+[
+  {
+    "id": "donald-trump",
+    "name": "Donald J. Trump",
+    "role": "45th & 47th President of the United States (2017–2021, 2025–); Aug 21: US-Canada trade talks collapsed, 50% tariffs on ~$20B of Canadian goods took effect; Aug 24: vowed to raise Canada auto/parts/steel tariffs to 50% on Jan 1, 2027; Aug 25: State Dept moved to revoke up to 200,000 visas; Aug 26: claimed US Navy cleared all mines from the Strait of Hormuz, warning of 'zero tolerance' for new mine-laying",
+    "avatar": "trump",
+    "initial": "D",
+    "quote": "[Aug 20, 2026, Truth Social] Announcing 'the MOST CRUSHING ECONOMIC OPERATION EVER TAKEN AGAINST ANY COUNTRY' against Iran after accusing Tehran of failing to accept a deal: 'Economic Warfare and Isolation on an unprecedented scale.' Any nation providing Iran a lifeline will face 'TREMENDOUS Economic Consequences.'",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "jd-vance",
+    "name": "JD Vance",
+    "role": "Vice President of the United States (2025–); cast tie-breaking vote to pass 'One Big Beautiful Bill'; led Islamabad proximity talks Apr 11-12 (collapsed after 21 hours); arrived in Islamabad Apr 20 for second round with Witkoff and Kushner — Iran's Foreign Ministry refused to send delegation; Trump extended ceasefire Apr 21 indefinitely at Pakistan's request; IRGC seized 2 ships in Hormuz Apr 22",
+    "avatar": "republicans",
+    "initial": "J",
+    "quote": "The bad news is that we have not reached an agreement, and I think that's bad news for Iran much more than it's bad news for the United States. They have chosen not to accept our terms.",
+    "lastUpdated": "2026-04-20T14:00:00.000Z"
+  },
+  {
+    "id": "mike-pence",
+    "name": "Mike Pence",
+    "role": "Vice President under Trump (2017–2021); refused to block Electoral College certification on Jan. 6",
+    "avatar": "republicans",
+    "initial": "M",
+    "quote": "President Trump is wrong. I had no right to overturn the election. The presidency belongs to the American people and the American people alone.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "elon-musk",
+    "name": "Elon Musk",
+    "role": "Head of DOGE (Jan 2025–May 30, 2026); DOGE formally DISBANDED May 30, 2026 — Musk's SGE contract expired; functions absorbed by OPM; CEO of Tesla, SpaceX, and X",
+    "avatar": "other",
+    "initial": "E",
+    "quote": "I need to get back to my companies. Tesla needs me. I'll still spend a couple days a week on DOGE — the work isn't done — but the heavy lifting is done. [April 1, 2026 — announcing scale-back from DOGE; SGE contract expired May 30, 2026 — DOGE formally disbanded, functions absorbed by OPM; claimed $215B+ in savings; Cato Institute and GAO disputed figures]",
+    "lastUpdated": "2026-05-31T14:00:00.000Z"
+  },
+  {
+    "id": "nancy-pelosi",
+    "name": "Nancy Pelosi",
+    "role": "Speaker of the House (2019–2023); managed both Trump impeachments",
+    "avatar": "democrats",
+    "initial": "N",
+    "quote": "The president must be held accountable. No one is above the law.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mitch-mcconnell",
+    "name": "Mitch McConnell",
+    "role": "Senate Majority Leader (2015–2021, 2025); blocked Garland, confirmed Gorsuch/Kavanaugh/Barrett; voted to acquit Trump twice",
+    "avatar": "republicans",
+    "initial": "M",
+    "quote": "The mob was fed lies. They were provoked by the president and other powerful people, and they tried to use fear and violence to stop a specific proceeding of the first branch.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rudy-giuliani",
+    "name": "Rudy Giuliani",
+    "role": "Trump's Personal Attorney (2018–2021); led post-election legal challenges; disbarred in 2024",
+    "avatar": "trump",
+    "initial": "R",
+    "quote": "Truth is truth. We have many witnesses. The truth will set him free.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "steve-bannon",
+    "name": "Steve Bannon",
+    "role": "Trump's Chief Strategist (2017); founder of Breitbart; sentenced to prison in 2024 for contempt of Congress",
+    "avatar": "trump",
+    "initial": "S",
+    "quote": "Darkness is good. Dick Cheney. Darth Vader. Satan. That's power.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "robert-mueller",
+    "name": "Robert Mueller",
+    "role": "Special Counsel (2017–2019); former FBI Director; led Russia investigation resulting in 37 indictments",
+    "avatar": "courts",
+    "initial": "R",
+    "quote": "If we had had confidence that the president clearly did not commit a crime, we would have said so.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "liz-cheney",
+    "name": "Liz Cheney",
+    "role": "Republican Congresswoman, Wyoming (2017–2023); Vice Chair of Jan. 6 Select Committee; voted to impeach Trump; lost primary in 2022",
+    "avatar": "republicans",
+    "initial": "L",
+    "quote": "President Trump is a clear and present danger to our republic. I will do everything in my power to ensure he is never again near the Oval Office.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "adam-schiff",
+    "name": "Adam Schiff",
+    "role": "Chairman of House Intelligence Committee (2019–2023); lead impeachment manager in first trial; now US Senator, California",
+    "avatar": "democrats",
+    "initial": "A",
+    "quote": "The facts are not in dispute. The only question is whether we care enough about our democracy to defend it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mitt-romney",
+    "name": "Mitt Romney",
+    "role": "US Senator, Utah (2019–2025); only Republican to vote to convict Trump in both impeachment trials",
+    "avatar": "republicans",
+    "initial": "M",
+    "quote": "The president is guilty of an appalling abuse of public trust. This is the most difficult decision I have ever faced and I have paid careful heed to every argument advanced by the president's counsel.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jeff-sessions",
+    "name": "Jeff Sessions",
+    "role": "US Attorney General (2017–2018); recused from Russia investigation; fired by Trump via Twitter in November 2018",
+    "avatar": "republicans",
+    "initial": "J",
+    "quote": "I took control of the Department of Justice the day I was sworn in. Which I did — so that when they talk about collusion or whatever, they can say whatever they want to say.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "william-barr",
+    "name": "William Barr",
+    "role": "US Attorney General (2019–2020); released Mueller Report with controversial summary; said DOJ found no fraud to change 2020 result; resigned December 2020",
+    "avatar": "republicans",
+    "initial": "W",
+    "quote": "We have not seen fraud on a scale that could have effected a different outcome in the election.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mike-pompeo",
+    "name": "Mike Pompeo",
+    "role": "CIA Director (2017–2018); Secretary of State (2018–2021); led diplomatic negotiations with North Korea, Iran, and allies",
+    "avatar": "republicans",
+    "initial": "M",
+    "quote": "We will crush Iran's will to develop nuclear weapons. The Iranian people will come to see us as their friend.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "marco-rubio",
+    "name": "Marco Rubio",
+    "role": "Secretary of State (2025–); led pre-war nuclear negotiations with Iran; overseeing US-Iran peace diplomacy and US-Israel coordination; led Cuba sanctions May 19; Aug 26, 2026: told foreign counterparts the US is not expected to launch new strikes on Iran 'for the time being,' shifting focus to economic sanctions while not ruling out retaliatory strikes if Iran attacks first",
+    "avatar": "republicans",
+    "initial": "M",
+    "quote": "Additional designations are coming in the following days and weeks. The Cuban regime's repression and its threats to US national security and foreign policy will not be tolerated. [May 19, 2026 — announcing new sanctions on 11 Cuban government officials and 3 security agencies; as of May 27, managing Iran deal talks at a 'precarious moment' after White House denied Iranian state media's leaked MOU as a 'fabrication.']",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "jim-jordan",
+    "name": "Jim Jordan",
+    "role": "Republican Congressman, Ohio; Chairman House Judiciary Committee; one of Trump's most vocal congressional defenders and allies",
+    "avatar": "republicans",
+    "initial": "J",
+    "quote": "They have been trying to stop Donald Trump from day one. This is a coordinated effort by the Democrats to use the justice system against the leading presidential candidate.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jack-smith",
+    "name": "Jack Smith",
+    "role": "Special Counsel (2022–2024); led federal classified documents and January 6 prosecutions against Trump; dropped cases after Trump won 2024 election",
+    "avatar": "courts",
+    "initial": "J",
+    "quote": "The defendants conduct was fueled by his refusal to accept the fact of his defeat in the 2020 election. Men and women gave their lives to defeat fascism and protect the right of Americans to vote.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fani-willis",
+    "name": "Fani Willis",
+    "role": "Fulton County District Attorney; filed 2023 RICO indictment against Trump and 18 co-defendants for alleged conspiracy to overturn Georgia's 2020 election",
+    "avatar": "courts",
+    "initial": "F",
+    "quote": "I am not intimidated. I took an oath to the people of Fulton County. No amount of threats and harassment will make me abandon my oath.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mike-johnson",
+    "name": "Mike Johnson",
+    "role": "Speaker of the House (2023–); helped lead legal challenges to 2020 election results as a congressman; strong Trump ally",
+    "avatar": "republicans",
+    "initial": "M",
+    "quote": "We're going to make sure we have a government that functions for the people and spends their money wisely.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "marjorie-taylor-greene",
+    "name": "Marjorie Taylor Greene",
+    "role": "Republican Congresswoman, Georgia; prominent MAGA figure; introduced articles of impeachment against Biden on Day 1 of his term",
+    "avatar": "republicans",
+    "initial": "M",
+    "quote": "The only party trying to overthrow the government is the Democrat party. January 6th was just a riot at the Capitol.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hillary-clinton",
+    "name": "Hillary Clinton",
+    "role": "2016 Democratic presidential nominee; Secretary of State (2009–2013); lost to Trump in the 2016 electoral college",
+    "avatar": "democrats",
+    "initial": "H",
+    "quote": "What happened wasn't just about me. It was about every American who believes that we all deserve a president who puts the common good ahead of personal gain and wealth.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kamala-harris",
+    "name": "Kamala Harris",
+    "role": "Vice President (2021–2025); 2024 Democratic presidential nominee; lost to Trump 306-232 in the Electoral College",
+    "avatar": "democrats",
+    "initial": "K",
+    "quote": "Donald Trump has no plan for the future. All he offers is fear, anger, and chaos — we offer a vision for a brighter future for all Americans.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "john-kelly",
+    "name": "John Kelly",
+    "role": "White House Chief of Staff (2017–2019); former DHS Secretary; later publicly called Trump 'unfit for office'",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "He is fascist to the core. He would rule as a dictator if allowed to do so. I think he is the most flawed individual I've ever known.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "merrick-garland",
+    "name": "Merrick Garland",
+    "role": "US Attorney General (2021–2025); SCOTUS nominee blocked by McConnell in 2016; oversaw appointments of Special Counsel Jack Smith to investigate Trump",
+    "avatar": "democrats",
+    "initial": "M",
+    "quote": "The rule of law is not just some lawyers' business. It is the foundation on which everything else in our society depends.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "pete-hegseth",
+    "name": "Pete Hegseth",
+    "role": "Secretary of Defense (2025–); directed US-Israel joint strikes on Iran ('Operation Epic Fury'); Operation ended May 6, 2026 — Day 67 of conflict; confirmed ceasefire held despite IRGC attacks on US Navy and UAE",
+    "avatar": "republicans",
+    "initial": "P",
+    "quote": "The situation is incredibly tense but manageable. The ceasefire technically holds. Iran's attacks in Hormuz remain below the threshold of a ceasefire breach — but let me be clear: if they hit one of our warships, we will respond with overwhelming force within hours. [May 5, 2026 — confirming US-Iran ceasefire holds despite IRGC attacks on US Navy ships and UAE; 'Operation Epic Fury' declared ended May 6]",
+    "lastUpdated": "2026-05-06T14:00:00.000Z"
+  },
+  {
+    "id": "todd-blanche",
+    "name": "Todd Blanche",
+    "role": "Acting Attorney General (2025–); former Trump personal attorney who successfully defended him in the New York hush money trial; overseeing federal prosecution of WHCD shooting suspect Cole Allen; confirmed Allen was likely targeting Trump administration officials 'including the President'",
+    "avatar": "trump",
+    "initial": "T",
+    "quote": "The investigation has established a clear and specific intent by Cole Allen to target senior Trump administration officials, including the President of the United States. This was not a random act — this was premeditated.",
+    "lastUpdated": "2026-04-27T14:20:00.000Z"
+  },
+  {
+    "id": "kevin-warsh",
+    "name": "Kevin Warsh",
+    "role": "22nd Federal Reserve Chair (formally sworn in May 22, 2026 by Justice Clarence Thomas — White House East Room ceremony; confirmed 54-45 May 13 — most partisan Fed confirmation in history; Fetterman lone Democratic crossover; first FOMC June 16-17); describes agenda as 'regime change' at the Fed; inherits April CPI 3.8% y/y + PPI soaring 6%; markets give <3% odds of 2026 rate cut; Powell remains Board governor; Aug 19, 2026: four Senate Democrats (Van Hollen, Reed, Alsobrooks, Warren) demanded he disclose any calls with Trump since taking office, after reports of undisclosed contact despite his official calendar showing none",
+    "avatar": "republicans",
+    "initial": "K",
+    "quote": "The Fed must be credible on inflation, but it must also recognize that the economy is not static. A more dynamic approach to monetary policy is warranted in the current environment. [May 22, 2026: Warsh formally sworn in by Justice Clarence Thomas in a White House East Room ceremony; his 'regime change' agenda includes escaping 'static frameworks and models'; inherits April PPI at 6% and CPI at 3.8% — three-year high; first FOMC as Chair: June 16-17]",
+    "lastUpdated": "2026-08-19T00:00:00.000Z"
+  },
+  {
+    "id": "scott-bessent",
+    "name": "Scott Bessent",
+    "role": "Secretary of the Treasury (2025–); managing tariff regime restructuring after SCOTUS IEEPA ruling; Aug 24, 2026: unveiled 'economic D-Day' sanctions against Iran, calling it 'the single greatest financial offensive ever' aimed at severing Iran's remaining economic lifelines, particularly China's oil purchases",
+    "avatar": "republicans",
+    "initial": "S",
+    "quote": "We are allowing Iranian oil tankers to transit the Strait of Hormuz. Managing oil price impacts is our top economic priority. The General License U waiver is narrowly tailored and temporary — it is not a windfall for Tehran.",
+    "lastUpdated": "2026-08-24T00:00:00.000Z"
+  },
+  {
+    "id": "tom-homan",
+    "name": "Tom Homan",
+    "role": "White House Border Czar (2025–); former Acting ICE Director under Trump 45; leading mass deportation operations: ~1,200 ICE arrests/day, 500,000+ arrested in 1st year, 1.9M self-deported; advocating for ICE rebrand to 'NICE'",
+    "avatar": "trump",
+    "initial": "T",
+    "quote": "Mass deportations are coming. We are enforcing the laws Congress passed. ICE is making 1,200 arrests a day and we're not stopping. [May 7, 2026 — Border Security Expo, Phoenix, AZ; reaffirming Trump's deportation mandate as Senate prepares $72B ICE/CBP reconciliation bill vote week of May 11]",
+    "lastUpdated": "2026-05-07T14:37:46.000Z"
+  },
+  {
+    "id": "bill-cassidy",
+    "name": "Bill Cassidy",
+    "role": "US Senator, Louisiana (2015–2027); one of seven Republican senators who voted to convict Trump in the February 2021 impeachment trial; defeated in May 16, 2026 Louisiana GOP primary by Trump-backed Rep. Julia Letlow (~45%); Letlow–Fleming June 27 runoff; Cassidy term ends January 2027",
+    "avatar": "republicans",
+    "initial": "B",
+    "quote": "I voted to convict because the evidence was overwhelming that Donald Trump incited a mob to attack the US Capitol to stop the peaceful transfer of power. I took an oath to the Constitution. That oath doesn't have an asterisk. [Feb. 13, 2021 — after casting his conviction vote; now defeated in his May 16, 2026 Republican primary by Trump-backed challenger Julia Letlow]",
+    "lastUpdated": "2026-05-17T14:00:00.000Z"
+  },
+  {
+    "id": "tulsi-gabbard",
+    "name": "Tulsi Gabbard",
+    "role": "Director of National Intelligence (Jan 2025–Jun 30, 2026); former Democratic Congresswoman from Hawaii who switched to Republican Party in 2022; resigned from DNI effective June 30, replaced by acting DNI Bill Pulte",
+    "avatar": "trump",
+    "initial": "T",
+    "quote": "I'm deeply grateful to President Trump and the American people for the privilege and honor of serving as DNI. [June 2, 2026 — announced resignation effective June 30; Bill Pulte named acting DNI replacement; Pulte has no intelligence background]",
+    "lastUpdated": "2026-06-02T14:35:22.000Z"
+  },
+  {
+    "id": "bill-pulte",
+    "name": "Bill Pulte",
+    "role": "Acting Director of National Intelligence (Jun 2, 2026–); Director of Federal Housing Finance Agency (FHFA), overseeing Fannie Mae and Freddie Mac; social media philanthropist known for X giveaways; no prior intelligence background",
+    "avatar": "trump",
+    "initial": "B",
+    "quote": "I'm honored and humbled to serve. [June 2, 2026 — named by Trump as acting DNI, replacing Tulsi Gabbard who resigned effective June 30; Senate Minority Leader Schumer called him 'a partisan thug with no experience in intelligence']",
+    "lastUpdated": "2026-06-02T14:35:22.000Z"
+  },
+  {
+    "id": "john-bolton",
+    "name": "John Bolton",
+    "role": "National Security Adviser (2018–2019); fierce Trump critic after departure; agreed to plead guilty June 4, 2026 to retaining national security information — $2.25M restitution, up to 60 months possible; arraignment June 26",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "I will not be party to an unconstitutional order. [2019 — on refusing Trump's directives; Jun 4, 2026: agreed to plead guilty to 1 count of retaining national security information, resolving 18-count criminal case stemming from sharing classified diary entries with family members while preparing his memoir 'The Room Where It Happened'; $2.25M restitution; formal arraignment scheduled June 26, 2026]",
+    "lastUpdated": "2026-06-05T14:30:00.000Z"
+  },
+  {
+    "id": "andy-ogles",
+    "name": "Andy Ogles",
+    "role": "US Representative, TN-5 (House Freedom Caucus); under federal campaign-finance investigation; lost Aug 6, 2026 Republican primary to Charlie Hatcher despite Trump's endorsement",
+    "avatar": "republicans",
+    "initial": "A",
+    "quote": "[Aug 6, 2026 — lost renomination bid 47%-53% to establishment-backed Charlie Hatcher, becoming the third sitting House Republican defeated in a 2026 primary despite carrying Trump's endorsement]",
+    "lastUpdated": "2026-08-09T00:00:00.000Z"
+  },
+  {
+    "id": "karoline-leavitt",
+    "name": "Karoline Leavitt",
+    "role": "White House Press Secretary (Jan 2025–Aug 2026, youngest in history); departing Aug 2026 to focus on family; will remain a Trump 'outside advisor' and GOP voice ahead of midterms",
+    "avatar": "trump",
+    "initial": "K",
+    "quote": "The truth is since returning to the White House after the birth of my daughter, I have felt in my heart that I cannot be the best mom my two young children deserve while devoting the constant time, energy, and attention required of the White House Press Secretary. [Aug 12, 2026 — announcing her departure at the end of the month]",
+    "lastUpdated": "2026-08-16T00:00:00.000Z"
+  }
+]

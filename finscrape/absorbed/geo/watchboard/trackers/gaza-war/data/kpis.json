@@ -1,0 +1,131 @@
+[
+  {
+    "id": "total-palestinians-killed",
+    "label": "Palestinians Killed (Gaza)",
+    "value": "73,438+",
+    "color": "red",
+    "source": "Gaza Ministry of Health / UN OCHA / WAFA / IMEMC / Anadolu Agency (Aug 26, 2026)",
+    "contested": true,
+    "contestNote": "Israel disputes figures, argues Hamas fighters counted as civilians. Cumulative total since Oct 7, 2023, incl. 21,500+ children; 8,000+ people still missing under rubble Strip-wide. Lancet Mortality Survey (Mar 2026) estimates 75,200 violent deaths through Jan 5, 2025 — 34.7% higher than MoH for same period. Netanyahu rejected the US/Board of Peace 15-point Gaza roadmap Aug 9, 2026 despite Hamas acceptance; Israel says no IDF withdrawal until Hamas is genuinely disarmed. Board of Peace statement Aug 12 says IDF withdrawal beyond the Yellow Line awaits full Hamas decommissioning of light/heavy weapons and tunnels. 1,303+ killed and 4,336+ wounded since the Oct 2025 ceasefire took effect (last official Health Ministry update, Aug 26); UNICEF says 300+ children have been killed in the days since the ceasefire, an average of one per day. Board of Peace envoy Mladenov warned the UN Security Council Aug 26 that a ceasefire collapse would be a 'point of no return for everyone.'",
+    "delta": "Aug 27: Israeli strikes kill 3 more Palestinians — a tent near Shati camp west of Gaza City (IDF says it killed Hamas anti-tank cmdr Bilal Raqi'i), a drone strike on a displacement tent in al-Mawasi, Khan Younis (IDF says it killed Hamas Khan Younis Brigade member Azzam Abadala), and a drone strike on an electric bicycle at the Al-Sinaa intersection in Gaza City; Defense Minister Katz renews threat to evacuate Gaza areas over kite launches. Aug 26: Palestinian Health Ministry reports 7 killed in 24 hrs (5 new, 2 died of earlier wounds), plus separate drone strikes kill 1 more in a Khan Younis displacement tent and 1 more near the Ansar junction west of Gaza City; ceasefire-period toll reaches 1,303 killed, 4,336 wounded; Board of Peace envoy Mladenov warns UN Security Council of a ceasefire 'point of no return.' Aug 25: Israeli strikes kill 7 — 3 in a Beit Lahiya home strike near Kamal Adwan Hospital, 1 in an al-Mawasi (Khan Younis) drone strike, 3 from earlier wounds; a warehouse holding child-nutrition aid destroyed; Israel expels Dutch reps from the Kiryat Gat Gaza coordination center over a Dutch settlement-goods import ban. Aug 24: Strikes hit a mosque and desalination plant in Gaza City's Sheikh Radwan area and destroy the historic Abu Salim Mosque in Deir al-Balah (IDF says it targeted Hamas weapons storage); a Bureij refugee camp strike kills 4-year-old Hassan al-Hafi; separately IDF strikes kill 2 Hamas militants in Deir al-Balah, one an Oct 7 Nukhba fighter. Aug 23: Netanyahu and Katz threaten to 'intensify strikes' over kites landing near Nahal Oz; IAF strikes kill Hamas weapons-production cmdr Abu Ful in Maghazi and a 4-year-old boy in Az-Zawayda near an aid site; Khan Younis shelled along the Yellow Line; Israel raises concerns about Hamas disarmament provisions in deal framework.",
+    "trend": "up",
+    "lastUpdated": "2026-08-27T00:00:00.000Z"
+  },
+  {
+    "id": "palestinians-wounded",
+    "label": "Palestinians Wounded (Gaza)",
+    "value": "174,447+",
+    "color": "red",
+    "source": "Gaza Ministry of Health / UNRWA (Aug 26, 2026)",
+    "contested": true,
+    "contestNote": "Figures may undercount due to overwhelmed health system; 4,336+ wounded since Oct 2025 ceasefire alone. Several more wounded Aug 27 in strikes on Shati camp, al-Mawasi, and the Al-Sinaa intersection, incl. some critically.",
+    "trend": "up",
+    "lastUpdated": "2026-08-27T00:00:00.000Z"
+  },
+  {
+    "id": "displaced-palestinians",
+    "label": "Displaced Palestinians",
+    "value": "1.9M",
+    "color": "amber",
+    "source": "UNRWA / UN OCHA",
+    "contested": false,
+    "contestNote": "~90% of Gaza's 2.1M population displaced at peak",
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "israelis-killed-oct7",
+    "label": "Israelis Killed (Oct 7 Attack)",
+    "value": "1,139",
+    "color": "red",
+    "source": "IDF / Israeli PM Office",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hostages-taken",
+    "label": "Hostages Taken Oct 7",
+    "value": "251",
+    "color": "amber",
+    "source": "IDF / Israeli PM Office",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hostages-remaining",
+    "label": "Hostages Remaining in Gaza",
+    "value": "0",
+    "color": "green",
+    "source": "Hostages and Missing Families Forum / IDF",
+    "contested": false,
+    "contestNote": "All 251 hostages accounted for by Jan 26, 2026: ~105 released Nov 2023 truce, 33 in Phase 1 (Jan 2025), 20 alive + 28 bodies in Oct 2025 deal, remainder died in captivity or rescued",
+    "trend": "down",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "idf-soldiers-killed",
+    "label": "IDF Soldiers Killed (War Total)",
+    "value": "400+",
+    "color": "amber",
+    "source": "IDF Spokesperson",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "buildings-destroyed-gaza",
+    "label": "Structures Destroyed/Damaged in Gaza",
+    "value": "~60%",
+    "color": "red",
+    "source": "UNOSAT / UN Satellite Centre",
+    "contested": false,
+    "contestNote": "By late 2024, est. 60% of all structures damaged or destroyed",
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "aid-trucks-per-day",
+    "label": "Aid Trucks Entering Gaza (daily avg)",
+    "value": "~110/day",
+    "color": "red",
+    "source": "UN OCHA Humanitarian Situation Report (Apr 17, 2026)",
+    "contested": false,
+    "contestNote": "Aid inflows declined 37% from Jan 11–Apr 11 vs. first three months of ceasefire: <105,000 metric tons vs. 167,600 metric tons required. ~102–122 trucks/day entering mid-April vs. 600+ needed. Zikim Crossing reopened Apr 12 on alternating days; Kerem Shalom (Karem Abu Salem) primary active crossing; Kissufim remains closed. Jordan B2B route: 60 trucks twice weekly. Fuel compliance at 14%. 2026 Flash Appeal $4.1B req, only 9.7% funded. ~129 community kitchens serve 1.25M meals/day. Gaza Government Media Office said Aug 6, 2026 only ~35% of expected aid trucks have entered Gaza since the Oct 2025 ceasefire, alongside 4,091 documented ceasefire violations over 300 days.",
+    "trend": "up",
+    "lastUpdated": "2026-08-06T00:00:00.000Z"
+  },
+  {
+    "id": "healthcare-facilities-damaged",
+    "label": "Healthcare Facilities Damaged/Destroyed",
+    "value": "36 of 36",
+    "color": "red",
+    "source": "WHO / Gaza Ministry of Health (Aug 25, 2026)",
+    "contested": false,
+    "contestNote": "All 36 hospitals in Gaza damaged or destroyed; ~16 partially functional at peak. Gaza Health Ministry Director-General Dr. Munir al-Bursh warned Aug 25, 2026 that only 12 of 34 oxygen stations remain operational and just 4 of 30 cylinder-refill devices still function, threatening ICU, neonatal, and pediatric intensive care units.",
+    "trend": "stable",
+    "lastUpdated": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "famine-risk-ipc",
+    "label": "Population at IPC Phase 5 (Catastrophe) Risk",
+    "value": "~10% of population",
+    "color": "red",
+    "source": "OCHA oPt / IPC / FEWS NET (Aug 2026)",
+    "contested": true,
+    "contestNote": "Israel disputes famine characterization. OCHA's Justin Brady said ~10% of Gaza's population is now on the edge of starvation (Aug 2026); persistent famine risk despite some improvement since the August 2025 famine confirmation in Gaza governorate. Families generally survive on one nutritionally poor meal/day; some go entire days without eating, relying on rationing, borrowing, and scavenging. Aid access remains limited by looting and militarized distribution. 2026 Flash Appeal seeks $4.1B for 3.6M people across Gaza and the West Bank; still severely underfunded.",
+    "trend": "up",
+    "lastUpdated": "2026-08-06T00:00:00.000Z"
+  },
+  {
+    "id": "reconstruction-cost-estimate",
+    "label": "Gaza Reconstruction Cost Estimate",
+    "value": "$80–$90B",
+    "color": "amber",
+    "source": "World Bank / UNDP",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

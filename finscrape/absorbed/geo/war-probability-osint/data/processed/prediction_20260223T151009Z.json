@@ -1,0 +1,45 @@
+{
+  "timestamp": "20260223T151009Z",
+  "probability": 0.8978,
+  "risk_level": "CRITICAL",
+  "confidence": 0.7956,
+  "features": {
+    "military_flight_surge": 3.6,
+    "tanker_refueler_ratio": 0.1667,
+    "foot_traffic_anomaly": 0.9888,
+    "gdelt_negative_tone": 2.3793,
+    "gdelt_article_spike": 1.3,
+    "oil_price_z": 0.602,
+    "defense_stock_z": 0.3205,
+    "gold_price_z": 0.0723
+  },
+  "importances": {
+    "military_flight_surge": 0.0901,
+    "tanker_refueler_ratio": 0.2892,
+    "foot_traffic_anomaly": 0.2157,
+    "gdelt_negative_tone": 0.0962,
+    "gdelt_article_spike": 0.2052,
+    "oil_price_z": 0.0482,
+    "defense_stock_z": 0.0512,
+    "gold_price_z": 0.0041
+  },
+  "raw_summary": {
+    "timestamp": "2026-02-23T15:09:54.642032+00:00",
+    "total_aircraft": 177,
+    "military_aircraft": 30,
+    "military_ratio": 0.1694915254237288,
+    "tanker_count": 5,
+    "tanker_ratio": 0.16666666666666666,
+    "foot_traffic_mean_ratio": 1.9888199727774196,
+    "foot_traffic_max_ratio": 3.36,
+    "foot_traffic_venues": 5,
+    "gdelt_article_count": 43,
+    "gdelt_mean_tone": -2.3792648549328987,
+    "gdelt_min_tone": -11.592036175050884,
+    "gdelt_negative_pct": 0.7906976744186046,
+    "defense_stock_avg_z": 0.32054870529223234,
+    "oil_z": 0.601959232063568,
+    "gold_z": 0.07226746149832086,
+    "vix_z": 0.9373584773295993
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "lastRun": "2026-08-28T00:16:31.600Z",
+  "tracker": "libya-conflict",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 8
+    },
+    "timeline": {
+      "status": "updated",
+      "count": 21
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 26
+    },
+    "mapLines": {
+      "status": "updated",
+      "count": 15
+    },
+    "casualties": {
+      "status": "updated",
+      "count": 4
+    },
+    "econ": {
+      "status": "updated",
+      "count": 5
+    },
+    "claims": {
+      "status": "updated",
+      "count": 10
+    },
+    "political": {
+      "status": "updated",
+      "count": 12
+    },
+    "assets": {
+      "status": "updated",
+      "count": 11
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

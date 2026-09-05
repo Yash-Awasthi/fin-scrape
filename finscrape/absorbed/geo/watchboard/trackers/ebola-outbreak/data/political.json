@@ -1,0 +1,173 @@
+[
+  {
+    "id": "pol-tedros-who",
+    "name": "Dr. Tedros Adhanom Ghebreyesus",
+    "role": "Director-General, World Health Organization",
+    "avatar": "who",
+    "initial": "T",
+    "quote": "It's already the second-biggest Ebola epidemic on record, and it's moving faster than any previous Ebola outbreak. At its current pace, it's on track to eclipse the West African Ebola outbreak of 2014 to 2016.",
+    "lastUpdated": "2026-08-17"
+  },
+  {
+    "id": "pol-drc-moh-minister",
+    "name": "Dr. Samuel Kasongo Mwamba",
+    "role": "Minister of Health, Democratic Republic of the Congo",
+    "avatar": "drc-gov",
+    "initial": "S",
+    "quote": "DRC has confronted Ebola 17 times. We have the experience, the protocols, and the determination to end this outbreak. I call on all armed groups in Ituri to guarantee safe passage for our response teams. This is not politics — it is life and death.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-uganda-moh",
+    "name": "Dr. Jane Ruth Aceng",
+    "role": "Minister of Health, Uganda",
+    "avatar": "ug-gov",
+    "initial": "J",
+    "quote": "Uganda confirmed cross-border cases on 18 February. We activated our Emergency Operations Center within the hour. Our protocols from 2000, 2007, and 2022 have been updated. We are not waiting — contact tracing started the same day.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-msf-operations",
+    "name": "Dr. Isabelle Defourny",
+    "role": "Director of Operations, Médecins Sans Frontières",
+    "avatar": "msf",
+    "initial": "I",
+    "quote": "We are scaling up urgently — an 80-bed ETC opened in Goma on June 1, and we are constructing ETCs in Ituri, Bukavu, and Lwiro. But the response has still not caught up to the rapid spread of the epidemic. There is no licensed vaccine, no approved treatment, and 23% of the affected zone remains inaccessible. Fourteen health workers have already been infected. This is not sustainable.",
+    "lastUpdated": "2026-06-01"
+  },
+  {
+    "id": "pol-cdc-director",
+    "name": "Dr. Mandy Cohen",
+    "role": "Director, US Centers for Disease Control and Prevention",
+    "avatar": "cdc",
+    "initial": "M",
+    "quote": "Our modeling published today shows this outbreak could reach 10,000 to over 20,000 cases in the next three months — potentially rivaling the 2014 West Africa epidemic — if isolation rates stay at 20%. The world must act immediately. Isolating infected people and tracing contacts is the critical variable we can control. The US is adding $38 million today for a total commitment exceeding $200 million.",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "pol-gavi-ceo",
+    "name": "Dr. Sania Nishtar",
+    "role": "CEO, Gavi, the Vaccine Alliance",
+    "avatar": "other",
+    "initial": "S",
+    "quote": "Gavi has released 15,000 rVSV-ZEBOV doses from the emergency stockpile and is co-financing accelerated manufacturing of the investigational BDBV-targeted MVA formulation. A lack of a licensed Bundibugyo vaccine is a glaring gap in global preparedness that we must fix.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-ituri-governor",
+    "name": "Jean Bamanisa Safari",
+    "role": "Governor, Ituri Province, DRC",
+    "avatar": "drc-gov",
+    "initial": "J",
+    "quote": "I have personally gone to the villages to explain to our people what Ebola is, that the response teams are there to save lives, not to steal organs. We are working with chiefs, churches, and traditional healers. But the armed groups must stand down.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-who-afro-director",
+    "name": "Dr. Matshidiso Moeti",
+    "role": "Regional Director, WHO African Region (AFRO)",
+    "avatar": "who",
+    "initial": "M",
+    "quote": "Africa has faced Ebola 30 times in 50 years, and each time we have contained it. The African CDC and WHO AFRO are coordinating this response with African institutions at the lead. We are not starting from zero — we are building on hard-won experience.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-cepi-ceo",
+    "name": "Dr. Richard Hatchett",
+    "role": "CEO, Coalition for Epidemic Preparedness Innovations (CEPI)",
+    "avatar": "other",
+    "initial": "R",
+    "quote": "CEPI is committing $61.8 million across three Bundibugyo vaccine candidates: $50 million to Moderna's mRNA platform, $8.6 million to Oxford/Serum Institute's ChAdOx1 candidate, and $3.2 million to IAVI's rVSV BDBV platform. This is the fastest vaccine research mobilization for any Ebola strain beyond Zaire. The 100 Days Mission must cover non-Zaire Ebola strains — this outbreak makes that undeniable.",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "pol-peter-piot-historical",
+    "name": "Prof. Peter Piot",
+    "role": "Co-discoverer of Ebola (1976); Former Director, UNAIDS; London School of Hygiene",
+    "avatar": "other",
+    "initial": "P",
+    "quote": "I was 27 years old when we first isolated this virus in 1976 in a blue thermos from a Belgian nun. Fifty years later, Ebola is still killing people in the same forest zones. The virus has not changed. What must change is the global political will to fund surveillance and health systems before the next outbreak.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-drc-national-coordinator",
+    "name": "Dr. Jean-Jacques Muyembe Tamfum",
+    "role": "Director-General, National Institute for Biomedical Research (INRB), DRC",
+    "avatar": "drc-gov",
+    "initial": "J",
+    "quote": "I was also there in 1976 at Yambuku. I have spent my life fighting Ebola in my country. The 2026 outbreak is different — it is the Bundibugyo strain in Ituri, a new geographic context, and we must understand it on its own terms. My lab team is sequencing every isolate.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-monusco-chief",
+    "name": "Bintou Keita",
+    "role": "Special Representative of the UN Secretary-General (SRSG), MONUSCO",
+    "avatar": "other",
+    "initial": "B",
+    "quote": "MONUSCO is providing helicopter transport and armed escort for Ebola response teams in the most insecure parts of Ituri. We are coordinating closely with WHO and DRC FARDC. Protecting the health response is a peace and security issue, not just a humanitarian one.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-msf-field-coordinator",
+    "name": "Dr. Amani Mulit",
+    "role": "Field Coordinator, MSF Ebola Response, Bunia (DRC)",
+    "avatar": "msf",
+    "initial": "A",
+    "quote": "Inside the ETU here in Bunia I have seen patients who walked three days from their village to get here. Three days of potential contacts along the way. That is why contact tracing and community education must go hand in hand with ETUs. We cannot treat our way out of this.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-margaret-chan-historical",
+    "name": "Dr. Margaret Chan",
+    "role": "Former WHO Director-General (2006–2017); presided over 2014 PHEIC",
+    "avatar": "who",
+    "initial": "M",
+    "quote": "When I declared the West Africa outbreak a PHEIC in August 2014, we had 1,700 cases. We now know we should have acted much sooner. I said publicly in my 2015 review that WHO was not prepared for a sustained large-scale epidemic response. I was right, and that admission drove the reforms that make today's response faster.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "pol-africa-cdc-director",
+    "name": "Dr. Jean Kaseya",
+    "role": "Director-General, Africa Centres for Disease Control and Prevention (Africa CDC)",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "If we do not stop this outbreak, it will last more than a year and will be the largest in the world. Today, Africa CDC and WHO are launching a $518 million continental response plan — led by African institutions, for African countries. We are not waiting to be rescued. We are building the systems that will protect this continent: surveillance, laboratory capacity, treatment infrastructure, and community trust. Africa will contain this outbreak.",
+    "lastUpdated": "2026-08-13"
+  },
+  {
+    "id": "pol-un-ocha-fletcher",
+    "name": "Tom Fletcher",
+    "role": "UN Under-Secretary-General for Humanitarian Affairs / Emergency Relief Coordinator",
+    "avatar": "other",
+    "initial": "T",
+    "quote": "Ebola is winning in the Democratic Republic of the Congo. We cannot let the virus outrun our response. This is a wake-up call. We need speed, scale and solidarity before this virus gets even further ahead of us. The world needs to wake up and show up.",
+    "lastUpdated": "2026-08-14"
+  },
+  {
+    "id": "pol-un-senior-ebola-coordinator-harneis",
+    "name": "Julien Harneis",
+    "role": "UN Senior Ebola Coordinator",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "We're only covered for the next weeks, and very soon funding will run out. The outbreak is spreading faster and wider than we have seen. Every delay in funding means more transmission, higher costs, and more deaths.",
+    "lastUpdated": "2026-08-21"
+  },
+  {
+    "id": "pol-who-afro-janabi",
+    "name": "Dr. Mohamed Janabi",
+    "role": "WHO Regional Director for Africa",
+    "avatar": "who",
+    "initial": "M",
+    "quote": "This outbreak has reached a defining moment. The progress made over the past three months shows that stronger action delivers results — decisions we take today will determine how quickly we can bring this outbreak under control and save lives.",
+    "lastUpdated": "2026-08-24"
+  },
+  {
+    "id": "pol-africa-cdc-kaseya-true-burden",
+    "name": "Dr. Jean Kaseya",
+    "role": "Director-General, Africa Centres for Disease Control and Prevention (Africa CDC)",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "We may go further than what we've seen in West Africa. The current trajectory must change, and it should change.",
+    "lastUpdated": "2026-08-22"
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-10T16:15:27.625Z",
+  "tracker": "mexico-us-conflict",
+  "sections": {
+    "kpis": {
+      "status": "reviewed",
+      "itemCount": 12
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 66
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 63
+    },
+    "mapLines": {
+      "status": "reviewed",
+      "itemCount": 31
+    },
+    "claims": {
+      "status": "reviewed",
+      "itemCount": 20
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 18
+    },
+    "casualties": {
+      "status": "reviewed",
+      "itemCount": 12
+    },
+    "assets": {
+      "status": "reviewed",
+      "itemCount": 15
+    },
+    "strikeTargets": {
+      "status": "reviewed",
+      "itemCount": 12
+    },
+    "retaliation": {
+      "status": "reviewed",
+      "itemCount": 9
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

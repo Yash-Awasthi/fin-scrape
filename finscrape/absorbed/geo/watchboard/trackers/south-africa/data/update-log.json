@@ -1,0 +1,47 @@
+{
+  "lastRun": "2026-08-24T06:42:32.623Z",
+  "tracker": "south-africa",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-30T07:33:07.212Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 34,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 25,
+      "status": "ok"
+    },
+    "casualties": {
+      "count": 10,
+      "status": "ok"
+    },
+    "econ": {
+      "count": 8,
+      "status": "ok"
+    },
+    "claims": {
+      "count": 15,
+      "status": "ok"
+    },
+    "political": {
+      "count": 20,
+      "status": "ok"
+    },
+    "events": {
+      "lastRun": "2026-08-24T06:42:32.623Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-30T07:33:07.212Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-24T06:42:32.623Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

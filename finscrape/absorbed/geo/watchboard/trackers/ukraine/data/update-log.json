@@ -1,0 +1,66 @@
+{
+  "lastRun": "2026-08-28T00:54:49.081Z",
+  "tracker": "ukraine",
+  "sections": {
+    "events": {
+      "lastRun": "2026-08-20T16:05:00.000Z",
+      "status": "updated"
+    },
+    "mapLines": {
+      "lastRun": "2026-08-20T16:05:00.000Z",
+      "status": "updated",
+      "count": 112
+    },
+    "mapPoints": {
+      "lastRun": "2026-08-20T16:05:00.000Z",
+      "status": "updated",
+      "count": 79
+    },
+    "kpis": {
+      "lastRun": "2026-08-20T16:05:00.000Z",
+      "status": "updated"
+    },
+    "econ": {
+      "lastRun": "2026-06-07T14:28:00.000Z",
+      "status": "updated",
+      "count": 12
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 90
+    },
+    "claims": {
+      "lastRun": "2026-06-07T14:28:00.000Z",
+      "status": "updated",
+      "count": 26
+    },
+    "political": {
+      "lastRun": "2026-06-07T14:28:00.000Z",
+      "status": "updated",
+      "count": 29
+    },
+    "casualties": {
+      "lastRun": "2026-08-20T16:05:00.000Z",
+      "status": "updated",
+      "count": 15
+    },
+    "assets": {
+      "status": "ok",
+      "count": 13
+    },
+    "strikeTargets": {
+      "lastRun": "2026-06-07T14:28:00.000Z",
+      "status": "updated",
+      "count": 16
+    },
+    "meta": {
+      "lastRun": "2026-08-20T16:05:00.000Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-08-20T16:05:00.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

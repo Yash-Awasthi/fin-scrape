@@ -1,0 +1,134 @@
+[
+  {
+    "id": "hectares-burned-national",
+    "label": "Hectares Burned Nationally",
+    "value": "~4.1M ha (4,100,000+)",
+    "color": "red",
+    "source": "CIFFC / Public Safety Canada, as of Aug 18",
+    "contested": true,
+    "contestNote": "CIFFC and provincial agencies update tallies independently and frequently; figures can lag or diverge by a day or more. Season remains below the five-year average and below 2025's pace (7.7M ha by mid-August).",
+    "delta": "+~18,000 ha vs Aug 12 estimate",
+    "trend": "up",
+    "lastUpdated": "2026-08-21T14:45:21Z"
+  },
+  {
+    "id": "total-fires-national",
+    "label": "Total Wildfires This Season",
+    "value": "4,793",
+    "color": "amber",
+    "source": "CIFFC / Public Safety Canada, as of Aug 18",
+    "contested": false,
+    "delta": "+139 vs Aug 12",
+    "trend": "up",
+    "lastUpdated": "2026-08-21T14:45:21Z"
+  },
+  {
+    "id": "active-fires-current",
+    "label": "Active Wildfires (incl. Out of Control)",
+    "value": "582 active / 31 out of control",
+    "color": "amber",
+    "source": "Public Safety Canada, as of Aug 18",
+    "contested": false,
+    "trend": "down",
+    "lastUpdated": "2026-08-20T04:20:00Z"
+  },
+  {
+    "id": "total-evacuated",
+    "label": "People Evacuated (Season Total)",
+    "value": "~23,000 total (~11,000 still under evacuation order)",
+    "color": "amber",
+    "source": "Public Safety Canada — Aug 18 federal update",
+    "contested": false,
+    "deltaNote": "8,600 Indigenous people affected; 4,294 evacuated from 25 First Nations communities as of Aug 18",
+    "trend": "down",
+    "lastUpdated": "2026-08-21T14:45:21Z"
+  },
+  {
+    "id": "total-deaths",
+    "label": "Confirmed Deaths",
+    "value": "5",
+    "color": "red",
+    "source": "CBC News, CBS News, government statements",
+    "contested": false,
+    "deltaNote": "1 firefighter (NS), 3 aircrew/firefighters (NWT plane crash), 1 civilian (BC)",
+    "lastUpdated": "2026-08-20T04:20:00Z"
+  },
+  {
+    "id": "largest-fire-thunder-bay-36",
+    "label": "Largest Single Fire (Thunder Bay 36)",
+    "value": "301,240 ha",
+    "color": "red",
+    "source": "Ontario Aviation, Forest Fire and Emergency Services, as of Aug 24",
+    "contested": false,
+    "delta": "Revised down from ~320,000 ha estimate after perimeter remapping",
+    "deltaNote": "Still not under control; largest wildfire ever recorded in Ontario. Part of the Rinker Lake Complex; Ontario and Mexican crews using helicopter bucket/belly-tank support",
+    "trend": "stable",
+    "lastUpdated": "2026-08-26T15:02:41Z"
+  },
+  {
+    "id": "milwaukee-record-aqi",
+    "label": "Record US AQI Reading (Milwaukee)",
+    "value": "644",
+    "color": "blue",
+    "source": "Wisconsin DNR / Medical Daily",
+    "contested": false,
+    "deltaNote": "More than double Milwaukee's prior all-time record of 300 (1987)",
+    "lastUpdated": "2026-08-20T04:20:00Z"
+  },
+  {
+    "id": "us-population-under-air-quality-alerts",
+    "label": "US Population Under Air Quality Alerts (Peak)",
+    "value": "120 million+",
+    "color": "blue",
+    "source": "US National Weather Service / EPA AirNow",
+    "contested": false,
+    "deltaNote": "16+ US states under alerts, July 14–20",
+    "lastUpdated": "2026-08-20T04:20:00Z"
+  },
+  {
+    "id": "bald-range-fire-size",
+    "label": "Bald Range Fire Size (Summerland, BC)",
+    "value": "25,171 ha",
+    "color": "red",
+    "source": "BC Wildfire Service, as of Aug 25 (4pm update)",
+    "contested": false,
+    "delta": "+150 ha vs Aug 23 estimate — growth remains slow",
+    "deltaNote": "Down to 6 evacuation orders and 10 evacuation alerts (from 8 orders/13 alerts); all Peachland-area alerts fully rescinded, though the Faulder evacuation order remains where dozens of homes were destroyed. 322 firefighters assigned with 24-hour coverage; warmer, drier conditions expected to raise visible flame/smoke",
+    "trend": "stable",
+    "lastUpdated": "2026-08-26T15:02:41Z"
+  },
+  {
+    "id": "pear-lake-fire-size",
+    "label": "Pear Lake Fire Size (Cariboo, BC)",
+    "value": "164,745 ha",
+    "color": "red",
+    "source": "BC Wildfire Service, as of Aug 24",
+    "contested": false,
+    "delta": "Unchanged vs Aug 21 estimate — size steady after weekend rain",
+    "deltaNote": "Now the season's second-largest wildfire; 476 firefighters, 89 structure-protection personnel, 120 heavy equipment units and 21 helicopters deployed. Village of Clinton rescinded most evacuation alerts but some remain due to flood risk; a warming/drying trend could increase fire activity",
+    "trend": "stable",
+    "lastUpdated": "2026-08-26T15:02:41Z"
+  },
+  {
+    "id": "ainslie-creek-fire-size",
+    "label": "Ainslie Creek Fire Size (Merritt/Fraser Canyon, BC)",
+    "value": "67,722 ha",
+    "color": "red",
+    "source": "Thompson-Nicola Regional District / CFJC Today, as of Aug 24",
+    "contested": false,
+    "deltaNote": "Out of control since late July; TNRD downgraded response Aug 24 — 620 properties given all-clear, ~283 properties remain on evacuation alert and 58 on evacuation order across three electoral areas. No structure losses reported",
+    "trend": "stable",
+    "lastUpdated": "2026-08-26T15:02:41Z"
+  },
+  {
+    "id": "nwt-wildfire-total",
+    "label": "Northwest Territories Wildfire Total (Season)",
+    "value": "1,586,232 ha across 284 fires",
+    "color": "amber",
+    "source": "NWT Environment and Climate Change, as of Aug 24",
+    "contested": false,
+    "deltaNote": "219 active (211 out of control, 3 held, 5 under control); NWT accounts for more than a quarter of Canada's total burn area this season",
+    "trend": "up",
+    "lastUpdated": "2026-08-26T15:02:41Z"
+  }
+]

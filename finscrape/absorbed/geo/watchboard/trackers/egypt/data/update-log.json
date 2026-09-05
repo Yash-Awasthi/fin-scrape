@@ -1,0 +1,39 @@
+{
+  "lastRun": "2026-08-26T15:16:04.128Z",
+  "tracker": "egypt",
+  "sections": {
+    "kpis": {
+      "count": 9,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 42,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 34,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 17,
+      "status": "ok"
+    },
+    "political": {
+      "count": 23,
+      "status": "ok"
+    },
+    "casualties": {
+      "count": 11,
+      "status": "ok"
+    },
+    "econ": {
+      "count": 9,
+      "status": "updated"
+    },
+    "events": {
+      "count": 59,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

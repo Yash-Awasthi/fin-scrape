@@ -1,0 +1,66 @@
+[
+  {
+    "id": "artemis3-sls-core-stage-rollout-michoud-apr20",
+    "year": "Apr 20, 2026",
+    "title": "NASA Rolls Out Artemis III SLS Core Stage at Michoud Assembly Facility",
+    "type": "milestone",
+    "detail": "NASA's Michoud Assembly Facility in New Orleans hosted the rollout of the 'top four-fifths' of the Artemis III Space Launch System (SLS) rocket core stage — comprising the liquid hydrogen tank, intertank, liquid oxygen tank, engine section, and core stage avionics — marking a key manufacturing milestone in the Artemis III launch campaign. The core stage will be transported to Stennis Space Center in Mississippi for engine testing before final shipment to Kennedy Space Center for SLS integration. The rollout advances the Artemis III mission, currently redesignated as a low-Earth orbit Starship HLS rendezvous and docking test targeting a 2027 launch, and supports the broader campaign toward Artemis IV's first crewed lunar landing in 2028.",
+    "sources": [
+      {
+        "name": "NASA: Invites Media to Rollout Event for Artemis III Moon Rocket Stage",
+        "tier": 1,
+        "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-rollout-event-for-artemis-iii-moon-rocket-stage/",
+        "pole": "western"
+      },
+      {
+        "name": "Space Policy Online: NASA Rollout of Top Four-Fifths of Artemis III SLS Rocket",
+        "tier": 2,
+        "url": "https://spacepolicyonline.com/events/nasa-roll-out-of-top-four-fifths-of-artemis-iii-sls-rocket-apr-20-2026-new-orleans-la/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.nasa.gov/news-release/nasa-invites-media-to-rollout-event-for-artemis-iii-moon-rocket-stage/",
+        "caption": "NASA rolls out Artemis III SLS core stage at Michoud Assembly Facility in New Orleans, April 20, 2026",
+        "source": "NASA",
+        "thumbnail": "https://www.nasa.gov/news-release/nasa-invites-media-to-rollout-event-for-artemis-iii-moon-rocket-stage/"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "latvia-signs-artemis-accords-62nd-signatory-apr20",
+    "year": "Apr 20, 2026",
+    "title": "Latvia Signs Artemis Accords as 62nd Signatory at NASA Headquarters",
+    "type": "political",
+    "detail": "Latvia signed the Artemis Accords on April 20, 2026, in a ceremony at NASA Headquarters in Washington, D.C., becoming the 62nd nation to commit to the principles for safe, transparent, and sustainable space exploration. NASA welcomed Latvia's accession, which adds a Baltic NATO member to the growing international coalition supporting the U.S.-led lunar exploration framework. Latvia joins 29 other European nations among the signatories, further distinguishing the Artemis Accords bloc from China's competing International Lunar Research Station (ILRS) partnership. The signing came just nine days after Artemis II's historic crew splashdown, underscoring how the mission's success has reinforced international confidence in the Artemis program.",
+    "sources": [
+      {
+        "name": "NASA: NASA Welcomes Latvia as Newest Artemis Accords Signatory",
+        "tier": 1,
+        "url": "https://www.nasa.gov/news-release/nasa-welcomes-latvia-as-newest-artemis-accords-signatory/",
+        "pole": "western"
+      },
+      {
+        "name": "Eurasia Review: NASA Welcomes Latvia As 62nd Nation To Sign Artemis Accords",
+        "tier": 2,
+        "url": "https://www.eurasiareview.com/20042026-nasa-welcomes-latvia-as-newest-artemis-accords-signatory/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.nasa.gov/news-release/nasa-welcomes-latvia-as-newest-artemis-accords-signatory/",
+        "caption": "Latvia's Minister signs the Artemis Accords at NASA Headquarters, Washington D.C., April 20, 2026, becoming the 62nd signatory nation.",
+        "source": "NASA",
+        "thumbnail": "https://www.nasa.gov/wp-content/uploads/2026/04/nhq202604200001.jpg?w=2048"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  }
+]

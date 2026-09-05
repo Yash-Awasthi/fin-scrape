@@ -1,0 +1,1888 @@
+[
+  {
+    "era": "The Day of the Attacks — September 11, 2001",
+    "events": [
+      {
+        "id": "aa-flight-11-hijacked",
+        "year": "Sep 11, 2001 — 8:14 AM",
+        "title": "American Airlines Flight 11 Hijacked",
+        "type": "attack",
+        "detail": "Five al-Qaeda operatives led by Mohammed Atta seize American Airlines Flight 11 departing Boston Logan Airport en route to Los Angeles. Flight attendant Betty Ong alerts American Airlines ground staff, providing crucial early information on the hijacking. The aircraft, a Boeing 767 carrying 92 people, is turned south toward New York City.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1,
+            "url": "https://9-11commission.gov/report/"
+          },
+          {
+            "name": "NTSB Flight 11 Report",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Memorial & Museum",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/American_Airlines_Flight_11",
+            "source": "Wikipedia / American Airlines Flight 11",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/AA11_path.svg/330px-AA11_path.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "ua-flight-175-hijacked",
+        "year": "Sep 11, 2001 — 8:42 AM",
+        "title": "United Airlines Flight 175 Hijacked",
+        "type": "attack",
+        "detail": "Five al-Qaeda hijackers seize United Airlines Flight 175, also departing Boston Logan Airport for Los Angeles. A passenger calls to report a flight attendant has been stabbed. The Boeing 767 carrying 65 people is turned toward New York City, where it will strike the South Tower.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "FBI Investigation Files",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/United_Airlines_Flight_175",
+            "source": "Wikipedia / United Airlines Flight 175",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/UA175_path.svg/330px-UA175_path.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "aa-flight-77-hijacked",
+        "year": "Sep 11, 2001 — 8:51 AM",
+        "title": "American Airlines Flight 77 Hijacked",
+        "type": "attack",
+        "detail": "Five hijackers take control of American Airlines Flight 77 departing Washington Dulles International Airport, bound for Los Angeles. The Boeing 757 carrying 64 people executes a 330-degree turn and heads back toward Washington, D.C. Passengers make calls from the aircraft reporting the hijacking.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "NTSB Flight Path Study",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/American_Airlines_Flight_77",
+            "source": "Wikipedia / American Airlines Flight 77",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flightpath-AA77.gif/330px-Flightpath-AA77.gif"
+          }
+        ]
+      },
+      {
+        "id": "wtc-north-tower-struck",
+        "year": "Sep 11, 2001 — 8:46 AM",
+        "title": "WTC North Tower (1 WTC) Struck by Flight 11",
+        "type": "attack",
+        "detail": "American Airlines Flight 11, traveling at approximately 440 mph, strikes the North Tower of the World Trade Center between floors 93 and 99, instantly killing all on board and hundreds in the building. The impact severs all stairwells above the point of impact, trapping hundreds of people. Initially widely reported as an accident, the attack is confirmed as deliberate moments later.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "NIST WTC Investigation Report",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ua-flight-93-hijacked",
+        "year": "Sep 11, 2001 — 9:28 AM",
+        "title": "United Airlines Flight 93 Hijacked",
+        "type": "attack",
+        "detail": "Four al-Qaeda hijackers seize United Airlines Flight 93, a Boeing 757 that departed Newark Liberty International Airport bound for San Francisco, 46 minutes after takeoff. By this time, passengers and crew are already calling loved ones and learning of the WTC and Pentagon attacks, galvanizing a decision to attempt to retake the aircraft.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "Flight 93 National Memorial",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/United_Airlines_Flight_93",
+            "source": "Wikipedia / United Airlines Flight 93",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/UA93_path.svg/330px-UA93_path.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "wtc-south-tower-struck",
+        "year": "Sep 11, 2001 — 9:03 AM",
+        "title": "WTC South Tower (2 WTC) Struck by Flight 175",
+        "type": "attack",
+        "detail": "United Airlines Flight 175 strikes the WTC South Tower between floors 77 and 85, live on television as news cameras had already turned to the burning North Tower. The deliberate nature of the attacks is immediately apparent to the world. One staircase (Stairwell A) remains passable, allowing some above the impact zone to escape.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "NIST WTC Investigation",
+            "tier": 1
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2_World_Trade_Center",
+            "source": "Wikipedia / 2 World Trade Center",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Two_World_Trade_Center_photomontage%2C_Memorial_view_2.jpg/330px-Two_World_Trade_Center_photomontage%2C_Memorial_view_2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "faa-national-ground-stop",
+        "year": "Sep 11, 2001 — 9:26 AM",
+        "title": "FAA Issues National Ground Stop Order",
+        "type": "political",
+        "detail": "The Federal Aviation Administration orders a national ground stop, halting all civilian aircraft departures across the United States. This is the first such order in American aviation history. By 9:45 AM, the FAA orders all airborne civilian flights to land at the nearest airport, grounding approximately 4,500 planes already in the air.",
+        "sources": [
+          {
+            "name": "FAA Official Records",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "pentagon-struck",
+        "year": "Sep 11, 2001 — 9:37 AM",
+        "title": "Pentagon Struck by American Airlines Flight 77",
+        "type": "attack",
+        "detail": "American Airlines Flight 77 strikes the western facade of the Pentagon in Arlington, Virginia, killing all 64 aboard and 125 people inside the building for a total of 189 deaths. The Pentagon had recently been renovated in the struck section, and blast-resistant windows and reinforced construction prevented worse casualties. Survivors and nearby personnel immediately begin rescue operations.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "Department of Defense After-Action Report",
+            "tier": 1
+          },
+          {
+            "name": "Washington Post",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/American_Airlines_Flight_77",
+            "source": "Wikipedia / American Airlines Flight 77",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flightpath-AA77.gif/330px-Flightpath-AA77.gif"
+          }
+        ]
+      },
+      {
+        "id": "wtc-south-tower-collapses",
+        "year": "Sep 11, 2001 — 9:59 AM",
+        "title": "WTC South Tower Collapses",
+        "type": "attack",
+        "detail": "The South Tower of the World Trade Center collapses in approximately 10 seconds after burning for 56 minutes following the impact of Flight 175. The collapse begins at the impact floors, where steel had been weakened by jet fuel fires. Approximately 600 people are killed in the collapse, including first responders. A massive cloud of dust engulfs Lower Manhattan.",
+        "sources": [
+          {
+            "name": "NIST WTC Investigation Report NCSTAR 1",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "CNN",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Collapse_of_the_World_Trade_Center",
+            "source": "Wikipedia / Collapse of the World Trade Center",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/WTC_collapse_before_and_after.jpg/330px-WTC_collapse_before_and_after.jpg"
+          }
+        ]
+      },
+      {
+        "id": "flight-93-crashes-shanksville",
+        "year": "Sep 11, 2001 — 10:03 AM",
+        "title": "Flight 93 Crashes Near Shanksville, Pennsylvania",
+        "type": "attack",
+        "detail": "United Airlines Flight 93 crashes in a field near Shanksville, Pennsylvania, killing all 44 people on board. Passengers and crew, having learned of the other attacks by phone, voted to storm the cockpit and attempt to retake the aircraft. The hijacker-pilot rolled the aircraft and crashed it into a reclaimed strip mine. The intended target is believed to have been the U.S. Capitol or the White House.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "Flight 93 National Memorial",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Shanksville%2C_Pennsylvania",
+            "source": "Wikipedia / Shanksville%2C Pennsylvania",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Shanksville_main_street2.jpg/330px-Shanksville_main_street2.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wtc-north-tower-collapses",
+        "year": "Sep 11, 2001 — 10:28 AM",
+        "title": "WTC North Tower Collapses",
+        "type": "attack",
+        "detail": "The North Tower collapses 102 minutes after being struck by Flight 11, killing hundreds more people and additional first responders who had been conducting rescue operations inside. The collapse creates a massive debris field that damages or destroys several surrounding buildings. FDNY loses 343 firefighters and paramedics in total that morning — the largest loss of firefighters in history from a single incident.",
+        "sources": [
+          {
+            "name": "NIST NCSTAR 1 — WTC Report",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "FDNY Official Records",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Collapse_of_the_World_Trade_Center",
+            "source": "Wikipedia / Collapse of the World Trade Center",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/WTC_collapse_before_and_after.jpg/330px-WTC_collapse_before_and_after.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wtc7-collapses",
+        "year": "Sep 11, 2001 — 5:20 PM",
+        "title": "World Trade Center Building 7 Collapses",
+        "type": "attack",
+        "detail": "World Trade Center Building 7, a 47-story skyscraper housing the NYC Office of Emergency Management and offices of the CIA, DoD, and SEC, collapses due to fires ignited by debris from the North Tower collapse. The building had been burning for hours before emergency personnel, focused on surviving victims, were unable to fight the fires. The collapse is later investigated extensively by NIST.",
+        "sources": [
+          {
+            "name": "NIST NCSTAR 1A — WTC 7 Report",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Collapse_of_the_World_Trade_Center",
+            "source": "Wikipedia / Collapse of the World Trade Center",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/WTC_collapse_before_and_after.jpg/330px-WTC_collapse_before_and_after.jpg"
+          }
+        ]
+      },
+      {
+        "id": "bush-national-address",
+        "year": "Sep 11, 2001 — 8:30 PM",
+        "title": "President Bush Addresses the Nation from the Oval Office",
+        "type": "political",
+        "detail": "President George W. Bush delivers a prime-time address from the Oval Office, declaring: 'Today, our fellow citizens, our way of life, our very freedom came under attack.' He vows to find and punish those responsible and frames the attacks as an act of war. Bush had been at Emma E. Booker Elementary School in Florida at the time of the attacks and spent much of the day at secure locations before returning to Washington.",
+        "sources": [
+          {
+            "name": "White House Official Transcript",
+            "tier": 1
+          },
+          {
+            "name": "C-SPAN",
+            "tier": 2
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/George_W._Bush",
+            "source": "Wikipedia / George W. Bush",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/George-W-Bush_%28cropped_2%29.jpeg/330px-George-W-Bush_%28cropped_2%29.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Immediate Aftermath & Response (September–December 2001)",
+    "events": [
+      {
+        "id": "nineteen-hijackers-identified",
+        "year": "Sep 14, 2001",
+        "title": "FBI Confirms Identity of All 19 Hijackers",
+        "type": "investigation",
+        "detail": "The FBI releases names and photographs of all 19 hijackers across four flights. Fifteen are Saudi nationals, two are from the United Arab Emirates, one from Egypt, and one from Lebanon. The FBI identifies Mohammed Atta as the lead hijacker and operational coordinator. All were affiliated with al-Qaeda and had received training at camps in Afghanistan.",
+        "sources": [
+          {
+            "name": "FBI Official Press Release",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/D._B._Cooper",
+            "source": "Wikipedia / D. B. Cooper",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/CompositeB-FBI-1973.jpg/330px-CompositeB-FBI-1973.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ground-zero-rescue-operations",
+        "year": "Sep 12–30, 2001",
+        "title": "Ground Zero Search and Rescue Operations",
+        "type": "investigation",
+        "detail": "Thousands of firefighters, police, search and rescue workers, and volunteers begin the dangerous work of searching the 16-acre WTC debris pile for survivors. The last survivor is found on September 12 — Port Authority police officer Will Jimeno. The operation transitions from rescue to recovery as hopes of finding survivors fade. The debris pile, called 'the pile,' smolders for months.",
+        "sources": [
+          {
+            "name": "FDNY After-Action Report",
+            "tier": 1
+          },
+          {
+            "name": "New York City OEM Report",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "aumf-signed",
+        "year": "Sep 18, 2001",
+        "title": "Authorization for Use of Military Force Signed",
+        "type": "legal",
+        "detail": "President Bush signs the Authorization for Use of Military Force (AUMF), passed by Congress with only one dissenting vote (Rep. Barbara Lee). The resolution authorizes the president to use 'all necessary and appropriate force against those nations, organizations, or persons he determines planned, authorized, committed, or aided' the 9/11 attacks. This single resolution becomes the legal basis for the War on Terror for over two decades.",
+        "sources": [
+          {
+            "name": "Public Law 107-40",
+            "tier": 1
+          },
+          {
+            "name": "Congressional Record",
+            "tier": 1
+          },
+          {
+            "name": "Washington Post",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Authorization_for_Use_of_Military_Force_of_2001",
+            "source": "Wikipedia / Authorization for Use of Military Force of 2001",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/330px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "anthrax-attacks",
+        "year": "Oct 2001",
+        "title": "Anthrax Letters Kill 5, Infect 17",
+        "type": "attack",
+        "detail": "Letters containing anthrax spores are mailed to several news organizations and Democratic senators Tom Daschle and Patrick Leahy, killing five people and infecting 17 others. The attacks occur against a backdrop of heightened 9/11 fears, initially suspected as a second al-Qaeda operation. After a years-long FBI investigation (AMERITHRAX), the anthrax is determined to have originated from a U.S. Army biological defense laboratory at Fort Detrick, Maryland.",
+        "sources": [
+          {
+            "name": "FBI AMERITHRAX Investigation Report",
+            "tier": 1
+          },
+          {
+            "name": "CDC Official Reports",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2001_anthrax_attacks",
+            "source": "Wikipedia / 2001 anthrax attacks",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Anthrax_letter_sent_to_Senator_Leahy.jpg/330px-Anthrax_letter_sent_to_Senator_Leahy.jpg"
+          }
+        ]
+      },
+      {
+        "id": "patriot-act-signed",
+        "year": "Oct 26, 2001",
+        "title": "USA PATRIOT Act Signed into Law",
+        "type": "legal",
+        "detail": "President Bush signs the USA PATRIOT Act, dramatically expanding domestic surveillance powers of the FBI, CIA, and NSA. The act allows 'roving wiretaps,' access to business records under Section 215, and 'lone wolf' surveillance of non-US persons. Civil liberties advocates warn of overreach; the act is reauthorized multiple times, though key provisions expire or are scaled back after the 2013 Snowden revelations expose NSA bulk collection programs.",
+        "sources": [
+          {
+            "name": "Public Law 107-56",
+            "tier": 1
+          },
+          {
+            "name": "Department of Justice Official Report",
+            "tier": 1
+          },
+          {
+            "name": "ACLU",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Patriot_Act",
+            "source": "Wikipedia / Patriot Act",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/330px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "operation-enduring-freedom",
+        "year": "Oct 7, 2001",
+        "title": "Operation Enduring Freedom Launched in Afghanistan",
+        "type": "political",
+        "detail": "The United States, joined by the United Kingdom, begins air strikes on Taliban and al-Qaeda positions in Afghanistan after the Taliban refuses to hand over Osama bin Laden. This marks the beginning of the longest war in American history. The operation involves precision strikes on air defenses, command centers, and training camps. Northern Alliance ground forces receive U.S. air support to advance on Taliban positions.",
+        "sources": [
+          {
+            "name": "Department of Defense Official Statement",
+            "tier": 1
+          },
+          {
+            "name": "White House Press Release",
+            "tier": 1
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Operation_Enduring_Freedom",
+            "source": "Wikipedia / Operation Enduring Freedom",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/U.S._Soldiers_of_the_10th_Mountain_Division_during_Operation_Enduring_Freedom.jpg/330px-U.S._Soldiers_of_the_10th_Mountain_Division_during_Operation_Enduring_Freedom.jpg"
+          }
+        ]
+      },
+      {
+        "id": "taliban-kabul-falls",
+        "year": "Nov 13, 2001",
+        "title": "Taliban Abandons Kabul as Northern Alliance Advances",
+        "type": "political",
+        "detail": "Taliban forces abandon Kabul as Northern Alliance fighters, backed by U.S. air power and special operations forces, advance on the Afghan capital. The rapid collapse of Taliban control in major cities stuns observers. By December, Taliban control is effectively broken in all major Afghan cities; the Taliban leadership flees to Pakistan. An interim Afghan government is established under Hamid Karzai.",
+        "sources": [
+          {
+            "name": "Department of Defense",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2021_Taliban_offensive",
+            "source": "Wikipedia / 2021 Taliban offensive",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/2021_Taliban_Offensive.png/330px-2021_Taliban_Offensive.png"
+          }
+        ]
+      },
+      {
+        "id": "tora-bora-battle",
+        "year": "Dec 2001",
+        "title": "Battle of Tora Bora — Bin Laden Escapes",
+        "type": "attack",
+        "detail": "U.S. and Afghan forces battle al-Qaeda fighters entrenched in the Tora Bora mountain complex in eastern Afghanistan, where Osama bin Laden is believed to be hiding. Despite extensive bombing and coalition ground forces, bin Laden escapes, likely into Pakistan. The decision not to commit more U.S. ground troops to block escape routes becomes one of the most criticized decisions of the post-9/11 period. The Senate Foreign Relations Committee later concludes that bin Laden was 'within our grasp' at Tora Bora.",
+        "sources": [
+          {
+            "name": "Senate Foreign Relations Committee Report 2009",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Tora_Bora",
+            "source": "Wikipedia / Battle of Tora Bora",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Strikes_on_Tora_Bora.png/330px-Strikes_on_Tora_Bora.png"
+          }
+        ]
+      },
+      {
+        "id": "bin-laden-denies-then-claims",
+        "year": "Oct–Dec 2001",
+        "title": "Bin Laden Denies, Then Implicitly Claims 9/11 Responsibility",
+        "type": "political",
+        "detail": "In an initial statement after the attacks, Osama bin Laden denies direct responsibility for 9/11 but praises those who carried it out. However, a videotape recovered in November 2001 in Jalalabad, Afghanistan, shows bin Laden boasting about the attacks, discussing how the hijackers knew only their role (not the full plan), and acknowledging that the destruction exceeded his expectations. The tape is assessed as authentic by U.S. intelligence.",
+        "sources": [
+          {
+            "name": "Department of Defense — Translated Bin Laden Video Transcript",
+            "tier": 1
+          },
+          {
+            "name": "CIA Assessment of Bin Laden Video",
+            "tier": 1
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/George_W._Bush",
+            "source": "Wikipedia / George W. Bush",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/George-W-Bush_%28cropped_2%29.jpeg/330px-George-W-Bush_%28cropped_2%29.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "fresh-kills-evidence-processing",
+        "year": "Sep–Nov 2001",
+        "title": "Fresh Kills Landfill Used for WTC Evidence Processing",
+        "type": "investigation",
+        "detail": "More than 1.5 million tons of WTC debris are transported to the former Fresh Kills Landfill on Staten Island, where a massive evidence processing operation is established. Workers sift through debris by hand and with machinery, recovering human remains, personal effects, and physical evidence. The operation recovers hundreds of thousands of personal artifacts and approximately 300 human remains. The evidence processing continues for months.",
+        "sources": [
+          {
+            "name": "NYPD Official Reports",
+            "tier": 1
+          },
+          {
+            "name": "New York City Medical Examiner",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Casualties_of_the_September_11_attacks",
+            "source": "Wikipedia / Casualties of the September 11 attacks",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/330px-WTC_smoking_on_9-11.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "9/11 Commission Investigation (2002–2004)",
+    "events": [
+      {
+        "id": "joint-congressional-inquiry",
+        "year": "2002",
+        "title": "Joint Congressional 9/11 Inquiry Holds Hearings",
+        "type": "investigation",
+        "detail": "The joint House and Senate Intelligence Committees conduct a sweeping investigation into the intelligence failures preceding 9/11. Their 838-page report, completed in December 2002, reveals major failures in information sharing between the FBI and CIA. Critically, 28 pages of the report dealing with possible Saudi government connections to the hijackers are classified and withheld from the public, creating years of controversy.",
+        "sources": [
+          {
+            "name": "Joint Inquiry into Intelligence Community Activities Report",
+            "tier": 1
+          },
+          {
+            "name": "Congressional Record",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/September_11_attacks",
+            "source": "Wikipedia / September 11 attacks",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/330px-WTC_smoking_on_9-11.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "dhs-established",
+        "year": "Nov 25, 2002",
+        "title": "Department of Homeland Security Established",
+        "type": "political",
+        "detail": "President Bush signs the Homeland Security Act, creating the Department of Homeland Security — the largest reorganization of the federal government since 1947. The new department merges 22 federal agencies and 170,000 employees, including FEMA, the Secret Service, Coast Guard, and Border Patrol. Tom Ridge is named the first Secretary of Homeland Security. The creation reflects a central 9/11 Commission finding that the U.S. had failed to coordinate domestic security.",
+        "sources": [
+          {
+            "name": "Homeland Security Act of 2002, Public Law 107-296",
+            "tier": 1
+          },
+          {
+            "name": "Department of Homeland Security",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/United_States_Department_of_Homeland_Security",
+            "source": "Wikipedia / United States Department of Homeland Security",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Seal_of_the_United_States_Department_of_Homeland_Security.svg/330px-Seal_of_the_United_States_Department_of_Homeland_Security.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "911-commission-established",
+        "year": "Nov 27, 2002",
+        "title": "9/11 Commission Officially Established",
+        "type": "investigation",
+        "detail": "The National Commission on Terrorist Attacks Upon the United States (the '9/11 Commission') is established by Congress and signed into law by President Bush, following sustained pressure from victims' families. Former New Jersey Governor Thomas Kean is named chair and former Representative Lee Hamilton vice-chair. The Commission is charged with a full and complete account of the circumstances surrounding the September 11 attacks.",
+        "sources": [
+          {
+            "name": "Intelligence Authorization Act FY2003, Public Law 107-306",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Final Report",
+            "tier": 1
+          },
+          {
+            "name": "Washington Post",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/9%2F11_Commission",
+            "source": "Wikipedia / 9%2F11 Commission",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/911_commission_seal.svg/330px-911_commission_seal.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "ksm-captured",
+        "year": "Mar 1, 2003",
+        "title": "Khalid Sheikh Mohammed Captured in Pakistan",
+        "type": "investigation",
+        "detail": "Khalid Sheikh Mohammed (KSM), the principal architect of the 9/11 attacks and al-Qaeda's Head of External Operations, is captured in Rawalpindi, Pakistan, in a joint CIA-ISI operation. KSM is subsequently transferred to CIA black sites and subjected to waterboarding 183 times before being transferred to Guantanamo Bay in 2006. He is charged with the murders of the 2,976 victims of the 9/11 attacks and remains at Guantanamo awaiting military commission proceedings.",
+        "sources": [
+          {
+            "name": "CIA Official Statement",
+            "tier": 1
+          },
+          {
+            "name": "9/11 Commission Report",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Khalid_Sheikh_Mohammed",
+            "source": "Wikipedia / Khalid Sheikh Mohammed",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Khalid_Shaikh_Mohammed_2003_after_capture_%283x4_cropped%29.jpg/330px-Khalid_Shaikh_Mohammed_2003_after_capture_%283x4_cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "commission-public-hearings",
+        "year": "2003–2004",
+        "title": "9/11 Commission Holds Dramatic Public Hearings",
+        "type": "investigation",
+        "detail": "The 9/11 Commission holds 12 public hearings over more than a year, interviewing more than 1,200 people in 10 countries and reviewing over 2.5 million pages of documents. The most dramatic hearing features Richard Clarke, former National Coordinator for Security, Infrastructure Protection, and Counter-terrorism, who directly apologizes to the victims' families: 'Your government failed you.' Former National Security Advisor Condoleezza Rice testifies live on television after initially resisting doing so.",
+        "sources": [
+          {
+            "name": "9/11 Commission Official Hearing Transcripts",
+            "tier": 1
+          },
+          {
+            "name": "C-SPAN Hearing Records",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/September_11_attacks",
+            "source": "Wikipedia / September 11 attacks",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/330px-WTC_smoking_on_9-11.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "nist-wtc-investigation",
+        "year": "2002–2005",
+        "title": "NIST Launches Comprehensive WTC Collapse Investigation",
+        "type": "investigation",
+        "detail": "The National Institute of Standards and Technology (NIST) launches a $16 million, three-year investigation into the collapse of WTC 1, 2, and 7. The investigation employs over 200 engineers and scientists and examines 236 structural steel pieces recovered from the site, 12,000 photographs, 150 hours of video, and thousands of witness accounts. NIST's findings on WTC 1 and 2 are published in 2005; WTC 7 findings are published in 2008.",
+        "sources": [
+          {
+            "name": "NIST NCSTAR 1 Final Report",
+            "tier": 1
+          },
+          {
+            "name": "NIST NCSTAR 1A (WTC 7)",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "commission-report-published",
+        "year": "Jul 22, 2004",
+        "title": "9/11 Commission Report Published",
+        "type": "investigation",
+        "detail": "The 9/11 Commission releases its 567-page final report, which becomes a bestseller with over 1 million copies sold within weeks. The report concludes that the attacks were carried out by al-Qaeda under Osama bin Laden's direction, identifies systematic failures in U.S. intelligence, immigration, and aviation security, and makes 41 specific recommendations. It finds no 'credible evidence' of a collaborative relationship between Iraq and al-Qaeda. The report becomes a foundational document of national security reform.",
+        "sources": [
+          {
+            "name": "The 9/11 Commission Report — Official Release",
+            "tier": 1
+          },
+          {
+            "name": "Government Accountability Office",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/9%2F11_Commission_Report",
+            "source": "Wikipedia / 9%2F11 Commission Report",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/911report_cover_HIGHRES.png/330px-911report_cover_HIGHRES.png"
+          }
+        ]
+      },
+      {
+        "id": "abu-ghraib-scandal",
+        "year": "Apr 2004",
+        "title": "Abu Ghraib Prisoner Abuse Scandal Revealed",
+        "type": "political",
+        "detail": "CBS News and The New Yorker publish photographs and a detailed report of systematic abuse and torture of Iraqi prisoners by U.S. military personnel at Abu Ghraib prison in Iraq. The images provoke worldwide condemnation and raise fundamental questions about interrogation policy post-9/11. An Army investigation finds 'sadistic, blatant, and wanton' criminal abuses. The scandal severely damages U.S. credibility abroad and intensifies debate over enhanced interrogation techniques.",
+        "sources": [
+          {
+            "name": "Taguba Report — AR 15-6 Investigation",
+            "tier": 1
+          },
+          {
+            "name": "The New Yorker — Seymour Hersh",
+            "tier": 2
+          },
+          {
+            "name": "CBS 60 Minutes II",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Abu_Ghraib_torture_and_prisoner_abuse",
+            "source": "Wikipedia / Abu Ghraib torture and prisoner abuse",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/AbuGhraibAbuse-standing-on-box.jpg/330px-AbuGhraibAbuse-standing-on-box.jpg"
+          }
+        ]
+      },
+      {
+        "id": "clarke-apology",
+        "year": "Mar 24, 2004",
+        "title": "Richard Clarke Apologizes to Victims' Families",
+        "type": "political",
+        "detail": "In dramatic 9/11 Commission testimony, counterterrorism coordinator Richard Clarke directly apologizes to the families of the 9/11 victims: 'Your government failed you. Those entrusted with protecting you failed you. And I failed you. We tried hard, but that doesn't matter because we failed. And for that failure, I would ask — once unfair, I know, but I would ask — for your understanding and your forgiveness.' Clarke's testimony and subsequent book sharply criticize the Bush administration's pre-9/11 focus.",
+        "sources": [
+          {
+            "name": "9/11 Commission Hearing Transcript",
+            "tier": 1
+          },
+          {
+            "name": "CNN Live Broadcast",
+            "tier": 2
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "War on Terror & Accountability (2004–2011)",
+    "events": [
+      {
+        "id": "madrid-bombings",
+        "year": "Mar 11, 2004",
+        "title": "Madrid Train Bombings Kill 191",
+        "type": "attack",
+        "detail": "Coordinated terrorist bombings of four commuter trains in Madrid, Spain, kill 191 people and injure approximately 1,800 — the deadliest terrorist attack in European history at the time. Spanish authorities initially blame the Basque separatist group ETA, but evidence quickly points to al-Qaeda-inspired Islamic extremists. The bombings, occurring three days before Spain's general election, influence the election result and Spain's subsequent withdrawal from Iraq.",
+        "sources": [
+          {
+            "name": "Spanish National Court Records",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2004_Madrid_train_bombings",
+            "source": "Wikipedia / 2004 Madrid train bombings",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Atentado_11M.jpg/330px-Atentado_11M.jpg"
+          }
+        ]
+      },
+      {
+        "id": "london-bombings",
+        "year": "Jul 7, 2005",
+        "title": "London 7/7 Bombings Kill 52",
+        "type": "attack",
+        "detail": "Four coordinated suicide bombings during London's morning rush hour kill 52 people and injure over 700 on three Underground trains and one bus. The attackers are British Muslims, all British citizens. The bombings mark the deadliest terrorist attack on British soil and demonstrate the threat of 'homegrown' radicalized individuals. The attacks follow two weeks before a failed second bombing attempt on July 21.",
+        "sources": [
+          {
+            "name": "UK Home Office Official Report",
+            "tier": 1
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/7_July_2005_London_bombings",
+            "source": "Wikipedia / 7 July 2005 London bombings",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Russell_square_ambulances.jpg/330px-Russell_square_ambulances.jpg"
+          }
+        ]
+      },
+      {
+        "id": "nist-wtc-final-report",
+        "year": "Sep 2005",
+        "title": "NIST Releases Final Report on WTC 1 and 2 Collapse",
+        "type": "investigation",
+        "detail": "NIST publishes its final 10,000-page investigation into the collapse of the World Trade Center towers, concluding that the buildings collapsed due to structural failures caused by fire, not explosives. The fires weakened the steel structures leading to progressive floor failures that initiated the collapses. NIST finds no evidence that the buildings were intentionally demolished. The report's conclusions are rejected by 9/11 'Truth' movement adherents who point to the speed and manner of collapse.",
+        "sources": [
+          {
+            "name": "NIST NCSTAR 1 — Final Report on WTC 1 and 2",
+            "tier": 1
+          },
+          {
+            "name": "NIST Press Release Sep 2005",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Collapse_of_the_World_Trade_Center",
+            "source": "Wikipedia / Collapse of the World Trade Center",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/WTC_collapse_before_and_after.jpg/330px-WTC_collapse_before_and_after.jpg"
+          }
+        ]
+      },
+      {
+        "id": "moussaoui-convicted",
+        "year": "May 3, 2006",
+        "title": "Zacarias Moussaoui Convicted — Sentenced to Life",
+        "type": "legal",
+        "detail": "French citizen Zacarias Moussaoui, the only person convicted in U.S. courts in connection with the 9/11 attacks, is sentenced to life in prison without the possibility of parole. A federal jury rejects the death penalty after emotional testimony from victims' families. Moussaoui, who pleaded guilty in 2005 to conspiring to kill Americans, claimed he was to have piloted a fifth plane into the White House, though prosecutors and the 9/11 Commission expressed doubt about this claim.",
+        "sources": [
+          {
+            "name": "U.S. District Court Eastern District of Virginia Records",
+            "tier": 1
+          },
+          {
+            "name": "Department of Justice",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Zacarias_Moussaoui",
+            "source": "Wikipedia / Zacarias Moussaoui",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Zacarias_Moussaoui.jpg/330px-Zacarias_Moussaoui.jpg"
+          }
+        ]
+      },
+      {
+        "id": "cia-waterboarding-revealed",
+        "year": "Dec 2007",
+        "title": "CIA Confirms Waterboarding of 9/11 Suspects, Destruction of Tapes",
+        "type": "political",
+        "detail": "The CIA confirms it waterboarded three detainees — Abu Zubaydah (83 times), Abd al-Rahim al-Nashiri (2 times), and Khalid Sheikh Mohammed (183 times) — and that it destroyed 92 videotapes of interrogation sessions in 2005. The disclosure sparks congressional investigation and a criminal inquiry. A Senate Intelligence Committee investigation later concludes the torture program was ineffective in producing unique intelligence that prevented attacks.",
+        "sources": [
+          {
+            "name": "CIA Director Michael Hayden Testimony to Congress",
+            "tier": 1
+          },
+          {
+            "name": "Senate Intelligence Committee Report on Torture 2014",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/CIA_black_sites",
+            "source": "Wikipedia / CIA black sites",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/CIA_Secret_Prisons.svg/330px-CIA_Secret_Prisons.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "nist-wtc7-report",
+        "year": "Nov 20, 2008",
+        "title": "NIST Final Report on WTC 7 Collapse Released",
+        "type": "investigation",
+        "detail": "NIST concludes that WTC 7 collapsed due to fires on multiple floors ignited by debris from the North Tower's collapse. The fires burned without suppression because the building's water supply had been exhausted. A key finding is that 'thermal expansion' caused a critical column to fail, initiating a progressive collapse. NIST concludes 'the collapse was primarily due to fires' and not to any pre-planted explosives. This is the first time NIST attributed a major skyscraper collapse primarily to fire.",
+        "sources": [
+          {
+            "name": "NIST NCSTAR 1A — Final Report on WTC 7",
+            "tier": 1
+          },
+          {
+            "name": "NIST Press Conference Nov 2008",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/7_World_Trade_Center_(1987%E2%80%932001)",
+            "source": "Wikipedia / 7 World Trade Center (1987%E2%80%932001)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wtc7_from_wtc_observation_deck.jpg/330px-Wtc7_from_wtc_observation_deck.jpg"
+          }
+        ]
+      },
+      {
+        "id": "zadroga-act-signed",
+        "year": "Jan 2, 2011",
+        "title": "James Zadroga 9/11 Health and Compensation Act Signed",
+        "type": "legal",
+        "detail": "President Obama signs the James Zadroga 9/11 Health and Compensation Act, allocating $4.3 billion for health monitoring and treatment of first responders and others sickened by toxic exposure at Ground Zero. The act is named after NYPD officer James Zadroga, who died in 2006 of respiratory disease attributed to Ground Zero exposure. The bill passed after a sustained campaign by Jon Stewart and The Daily Show to highlight Congress's failure to act.",
+        "sources": [
+          {
+            "name": "Public Law 111-347",
+            "tier": 1
+          },
+          {
+            "name": "Department of Health and Human Services",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/James_Zadroga_9%2F11_Health_and_Compensation_Act",
+            "source": "Wikipedia / James Zadroga 9%2F11 Health and Compensation Act",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/330px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "cia-torture-report-released",
+        "year": "Dec 9, 2014",
+        "title": "Senate CIA Torture Report Executive Summary Released",
+        "type": "political",
+        "detail": "The Senate Intelligence Committee releases a 525-page executive summary of its 6,700-page report on the CIA's Detention and Interrogation Program. The report finds the CIA's use of enhanced interrogation techniques (EIT) was more brutal than disclosed to Congress and the White House, that the program failed to produce unique intelligence, and that the CIA misrepresented its effectiveness to policymakers. The report describes techniques including waterboarding, sleep deprivation for up to 180 hours, rectal feeding, and confinement in small boxes.",
+        "sources": [
+          {
+            "name": "Senate Select Committee on Intelligence — Report on CIA Detention and Interrogation Program",
+            "tier": 1
+          },
+          {
+            "name": "CIA Response to SSCI Report",
+            "tier": 1
+          },
+          {
+            "name": "Washington Post",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/U.S._Senate_report_on_CIA_torture",
+            "source": "Wikipedia / U.S. Senate report on CIA torture",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/US_Senate_Report_on_CIA_Detention_Interrogation_Program.pdf/page1-330px-US_Senate_Report_on_CIA_Detention_Interrogation_Program.pdf.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Justice, Legacy & Ongoing Consequences (2011–Present)",
+    "events": [
+      {
+        "id": "bin-laden-killed-abbottabad",
+        "year": "May 2, 2011",
+        "title": "Osama bin Laden Killed in Abbottabad, Pakistan",
+        "type": "investigation",
+        "detail": "U.S. Navy SEALs from SEAL Team Six raid a compound in Abbottabad, Pakistan — a military garrison town less than a mile from Pakistan's military academy — and kill Osama bin Laden, nearly 10 years after the 9/11 attacks. President Obama announces the death to the nation: 'Justice has been done.' Bin Laden's body is buried at sea from the USS Carl Vinson. Pakistan's intelligence service (ISI) denies knowing bin Laden was hiding in Abbottabad, fueling accusations of complicity.",
+        "sources": [
+          {
+            "name": "White House Official Announcement",
+            "tier": 1
+          },
+          {
+            "name": "Department of Defense",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Osama_bin_Laden's_compound_in_Abbottabad",
+            "source": "Wikipedia / Osama bin Laden's compound in Abbottabad",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/CIA_aerial_view_Osama_bin_Laden_compound_Abbottabad.jpg/330px-CIA_aerial_view_Osama_bin_Laden_compound_Abbottabad.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wtc-memorial-opens",
+        "year": "Sep 11, 2011",
+        "title": "National September 11 Memorial Opens on 10th Anniversary",
+        "type": "memorial",
+        "detail": "The National September 11 Memorial & Museum opens at Ground Zero on the 10th anniversary of the attacks. The memorial features two massive reflecting pools — 'Reflecting Absence' — set within the footprints of the original Twin Towers, with the names of all 2,983 victims (including 1993 WTC bombing victims) inscribed on bronze parapets. Waterfalls cascade into pools over 30 feet deep. The memorial is designed by Michael Arad and Peter Walker.",
+        "sources": [
+          {
+            "name": "National September 11 Memorial & Museum",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/National_September_11_Memorial_%26_Museum",
+            "source": "Wikipedia / National September 11 Memorial %26 Museum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/330px-9-11_Memorial_and_Museum_%2828815276064%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wtc-museum-opens",
+        "year": "May 21, 2014",
+        "title": "National September 11 Memorial Museum Opens",
+        "type": "memorial",
+        "detail": "The National September 11 Memorial Museum opens to the public, built 70 feet underground beneath the memorial's reflecting pools. The museum houses more than 10,000 artifacts, 23,000 photographs, nearly 2,000 oral histories, and 500 hours of video. Exhibits include the Vesey Street stairs (the 'Survivors' Stairs'), a portion of the antenna from the North Tower, a destroyed fire truck, and a Hall of Remembrance with photographs of every victim. The museum receives over 3 million visitors annually.",
+        "sources": [
+          {
+            "name": "National September 11 Memorial & Museum",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/National_September_11_Memorial_%26_Museum",
+            "source": "Wikipedia / National September 11 Memorial %26 Museum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/330px-9-11_Memorial_and_Museum_%2828815276064%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "one-wtc-opens",
+        "year": "Nov 3, 2014",
+        "title": "One World Trade Center Opens to Tenants",
+        "type": "memorial",
+        "detail": "One World Trade Center, the rebuilt centerpiece of the World Trade Center complex, opens for business at 1,776 feet — the symbolic height referencing the year of American independence, making it the tallest building in the Western Hemisphere. The structure has 104 floors and includes reinforced concrete walls, redundant stairways, and blast-resistant lobby features. Its construction, which took over a decade, symbolizes the rebuilding of Lower Manhattan after the attacks.",
+        "sources": [
+          {
+            "name": "Port Authority of New York and New Jersey",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/List_of_tenants_in_One_World_Trade_Center",
+            "source": "Wikipedia / List of tenants in One World Trade Center",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/One_World_Trade_Center_in_January_2024.jpg/330px-One_World_Trade_Center_in_January_2024.jpg"
+          }
+        ]
+      },
+      {
+        "id": "28-pages-declassified",
+        "year": "Jul 15, 2016",
+        "title": "'28 Pages' of Joint Inquiry Declassified",
+        "type": "investigation",
+        "detail": "The Obama administration declassifies the 28-page chapter of the 2002 Joint Congressional Inquiry that had been classified for 14 years. The documents reveal FBI investigations into connections between the hijackers and Saudi government officials, including Saudi consulate employee Omar al-Bayoumi, who assisted hijackers Nawaf al-Hazmi and Khalid al-Mihdhar in San Diego. The pages do not definitively establish Saudi government direction of the attacks but indicate significant contacts warranting investigation.",
+        "sources": [
+          {
+            "name": "Joint Inquiry into Intelligence Community Activities — Declassified Chapter",
+            "tier": 1
+          },
+          {
+            "name": "Office of the Director of National Intelligence",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "vcf-permanently-reauthorized",
+        "year": "Jul 29, 2019",
+        "title": "9/11 Victim Compensation Fund Permanently Reauthorized",
+        "type": "legal",
+        "detail": "President Trump signs the Never Forget the Heroes: James Zadroga, Ray Pfeifer, and Luis Alvarez Permanent Authorization of the September 11th Victim Compensation Fund Act, permanently funding the VCF through 2092. The legislation passes after first responders including comedian Jon Stewart, firefighter Ray Pfeifer (who died in 2017), and Marine Luis Alvarez (who died in 2019) made impassioned appeals to Congress. By March 2026, the VCF has awarded over $10.2 billion to more than 52,000 claimants.",
+        "sources": [
+          {
+            "name": "Public Law 116-34",
+            "tier": 1
+          },
+          {
+            "name": "September 11th Victim Compensation Fund — Annual Report",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/James_Zadroga_9%2F11_Health_and_Compensation_Act",
+            "source": "Wikipedia / James Zadroga 9%2F11 Health and Compensation Act",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/330px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "afghanistan-final-withdrawal",
+        "year": "Aug 30, 2021",
+        "title": "U.S. Completes Withdrawal from Afghanistan — Taliban Retakes Country",
+        "type": "political",
+        "detail": "The last U.S. military transport departs Kabul airport, completing America's withdrawal from Afghanistan after 20 years of war. The Taliban had swept to power faster than anticipated after the Afghan national army collapsed, retaking Kabul on August 15 — virtually without a fight. The chaotic evacuation includes a suicide bombing at the Kabul airport that kills 13 U.S. service members and 170 Afghans. The war that began as a response to 9/11 ends with the Taliban back in power.",
+        "sources": [
+          {
+            "name": "Department of Defense Official Statement",
+            "tier": 1
+          },
+          {
+            "name": "White House",
+            "tier": 1
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "biden-fbi-declassification-order",
+        "year": "Sep 3, 2021",
+        "title": "Biden Orders FBI to Declassify 9/11 Investigation Documents",
+        "type": "investigation",
+        "detail": "President Biden signs an executive order directing the Department of Justice and FBI to review and declassify documents related to the FBI's 9/11 investigation over the following six months. The order comes after victims' families threatened to boycott the 20th anniversary ceremonies if Biden did not act. The declassification releases previously secret FBI interview reports examining possible Saudi government connections to the 9/11 hijackers, including investigations of Saudi officials Omar al-Bayoumi and Fahad al-Thumairy.",
+        "sources": [
+          {
+            "name": "Executive Order — White House",
+            "tier": 1
+          },
+          {
+            "name": "Department of Justice",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/FBI_investigation_into_Donald_Trump's_handling_of_government_documents",
+            "source": "Wikipedia / FBI investigation into Donald Trump's handling of government documents",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Marine_One_at_Mar-a-Lago_%2833638029748%29_%28cropped%29.jpg/330px-Marine_One_at_Mar-a-Lago_%2833638029748%29_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "twentieth-anniversary",
+        "year": "Sep 11, 2021",
+        "title": "20th Anniversary Commemorations Held",
+        "type": "memorial",
+        "detail": "The 20th anniversary of the 9/11 attacks is marked by solemn ceremonies at the World Trade Center, Pentagon, and Shanksville memorial sites, attended by all living former U.S. presidents. The 'Tribute in Light' — twin beams visible for 60 miles — illuminates the Manhattan skyline for the 20th consecutive year. President Biden reads a poem; speakers include former Presidents Obama, Bush, and Clinton. The anniversary is shadowed by the Taliban's return to power in Afghanistan two weeks prior.",
+        "sources": [
+          {
+            "name": "National September 11 Memorial & Museum",
+            "tier": 1
+          },
+          {
+            "name": "White House",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Anzac_Day",
+            "source": "Wikipedia / Anzac Day",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Dawn_service_gnangarra_03.jpg/330px-Dawn_service_gnangarra_03.jpg"
+          }
+        ]
+      },
+      {
+        "id": "fbi-saudi-declassification-released",
+        "year": "Apr 2022",
+        "title": "FBI Releases First Batch of Declassified 9/11 Saudi Documents",
+        "type": "investigation",
+        "detail": "The FBI releases the first batch of declassified documents from its investigation into Saudi connections to the 9/11 hijackers. The documents include a 16-page FBI interview report from 2015 detailing connections between hijackers and Saudi embassy and consulate employees. The documents indicate that Omar al-Bayoumi — who helped hijackers find apartments and open bank accounts — may have been an agent of Saudi intelligence, though the Saudi government denies this. The documents are used in ongoing civil litigation by victims' families against Saudi Arabia.",
+        "sources": [
+          {
+            "name": "FBI Declassified Documents — FOIA Release",
+            "tier": 1
+          },
+          {
+            "name": "Department of Justice",
+            "tier": 1
+          },
+          {
+            "name": "New York Times",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Epstein_files",
+            "source": "Wikipedia / Epstein files",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Epstein_Files_Phase_1%2C_Part_C_%E2%80%93_Contact_Book_Redacted.pdf/page1-330px-Epstein_Files_Phase_1%2C_Part_C_%E2%80%93_Contact_Book_Redacted.pdf.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ksm-plea-deal-collapse",
+        "year": "2023–2024",
+        "title": "KSM Plea Deal Negotiations Collapse",
+        "type": "legal",
+        "detail": "Military commission prosecutors reach a pretrial agreement with Khalid Sheikh Mohammed and co-defendants that would have resulted in guilty pleas in exchange for a sentence of life imprisonment rather than the death penalty. However, Defense Secretary Lloyd Austin revokes the agreement, stating the decision on whether to seek the death penalty must rest with the Secretary of Defense. This revocation is challenged by defense attorneys. The case, pending since 2008, remains stalled over capital punishment issues as of 2026.",
+        "sources": [
+          {
+            "name": "Military Commission Trial Judiciary Records",
+            "tier": 1
+          },
+          {
+            "name": "Department of Defense",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "saudi-civil-lawsuit",
+        "year": "2002–Present",
+        "title": "Victims' Families Pursue Civil Lawsuit Against Saudi Arabia",
+        "type": "legal",
+        "detail": "Thousands of 9/11 victims' families pursue civil litigation against Saudi Arabia under the Justice Against Sponsors of Terrorism Act (JASTA), signed in 2016, which allows civil suits against foreign governments for U.S. terrorism deaths. In 2024, U.S. District Judge George Daniels rules that Saudi Arabia is not immune from the suit and allows discovery to proceed. Declassified FBI documents have added significant new evidence of possible Saudi government connections to the hijackers. The case is one of the largest terrorism suits in U.S. history.",
+        "sources": [
+          {
+            "name": "JASTA — Public Law 114-222",
+            "tier": 1
+          },
+          {
+            "name": "U.S. District Court Southern District of New York Records",
+            "tier": 1
+          },
+          {
+            "name": "Associated Press",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Saudi_Arabia%E2%80%93United_States_relations",
+            "source": "Wikipedia / Saudi Arabia%E2%80%93United States relations",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Saudi_Arabia_USA_Locator.svg/330px-Saudi_Arabia_USA_Locator.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "first-responder-health-monitoring",
+        "year": "2002–Present",
+        "title": "World Trade Center Health Program Monitors 140,000+ People",
+        "type": "investigation",
+        "detail": "The World Trade Center Health Program, established under the Zadroga Act and administered by NIOSH, monitors and treats more than 140,000 first responders, recovery workers, and others exposed to toxic dust and fumes at Ground Zero. Studies document elevated rates of cancer, respiratory disease, PTSD, and other illnesses among WTC Health Program members. By 2026, over 53,000 9/11-related cancers have been certified and over 9,000 WTC-exposed individuals have died from illness — surpassing the 2,977 killed on the day of the attacks. The program faced a staffing crisis in early 2026 when HHS reassigned staff to ICE enforcement duties, reducing workforce by 25%, before restoring staffing to authorized levels in April 2026 following bipartisan congressional pressure.",
+        "sources": [
+          {
+            "name": "NIOSH WTC Health Program Annual Report",
+            "tier": 1,
+            "url": "https://www.cdc.gov/wtc/index.html",
+            "pole": "western"
+          },
+          {
+            "name": "CDC",
+            "tier": 1,
+            "url": "https://www.cdc.gov/wtc/index.html",
+            "pole": "western"
+          },
+          {
+            "name": "ABC News",
+            "tier": 2,
+            "url": "https://abcnews.go.com/Health/kennedy-restores-staffing-911-health-program-ahead-capitol/story?id=132095466",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Health_effects_arising_from_the_September_11_attacks",
+            "source": "Wikipedia / Health effects arising from the September 11 attacks",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Manhattan_smoke_plume_on_September_11%2C_2001_from_International_Space_Station_%28Expedition_3_crew%29.jpg/330px-Manhattan_smoke_plume_on_September_11%2C_2001_from_International_Space_Station_%28Expedition_3_crew%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ksm-plea-deal-final-rejection-2026",
+        "year": "Jan 7, 2026",
+        "title": "D.C. Circuit Definitively Rejects KSM Plea Deals; Death Penalty Case Proceeds",
+        "type": "legal",
+        "detail": "The U.S. Court of Appeals for the D.C. Circuit declined on January 7, 2026 to reconsider its 2025 ruling invalidating the plea agreements for Khalid Sheikh Mohammed and two co-defendants. The plea deals — under which KSM would have pleaded guilty in exchange for life imprisonment rather than the death penalty — were struck down after Defense Secretary Lloyd Austin revoked the agreement in 2023. With the plea deals definitively dead and a Supreme Court cert petition pending, the case must now proceed as a full capital military commission. Pretrial hearings resumed in May 2026 at Guantanamo Bay, now the longest-pending war crimes prosecution in U.S. history at over 17 years.",
+        "sources": [
+          {
+            "name": "CBS News",
+            "tier": 2,
+            "url": "https://www.cbsnews.com/news/plea-deal-911-mastermind-khalid-sheikh-mohammed-thrown-out/",
+            "pole": "western"
+          },
+          {
+            "name": "U.S. Department of Defense",
+            "tier": 1,
+            "url": "https://www.defense.gov/News/Advisories/Advisory/Article/4410478/media-invitation-announced-for-united-states-v-khalid-shaikh-mohammad-et-al-pre/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Khalid_Sheikh_Mohammed",
+            "source": "Wikipedia / Khalid Sheikh Mohammed",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Khalid_Shaikh_Mohammed_2003_after_capture_%283x4_cropped%29.jpg/330px-Khalid_Shaikh_Mohammed_2003_after_capture_%283x4_cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "sept11-memorial-seventh-moment-silence-2026",
+        "year": "May 12, 2026",
+        "title": "9/11 Memorial Adds Permanent 7th Moment of Silence for Illness Deaths",
+        "type": "memorial",
+        "detail": "The National September 11 Memorial & Museum announced it will permanently add a 7th moment of silence to the annual September 11 commemoration ceremony, specifically honoring those who have died from 9/11-related illnesses. The addition reflects the growth of the illness death toll to over 9,000 — nearly three times the 2,977 killed on the day of the attacks. The announcement came ahead of the 25th anniversary commemoration scheduled for September 11, 2026, and was widely welcomed by first responder communities who have pressed for decades to have illness-related deaths recognized alongside those who died in the original attacks.",
+        "sources": [
+          {
+            "name": "ABC News",
+            "tier": 2,
+            "url": "https://abcnews.go.com/US/911-memorial-museum-adding-7th-moment-silence-victims/story?id=132890406",
+            "pole": "western"
+          },
+          {
+            "name": "NY1",
+            "tier": 2,
+            "url": "https://ny1.com/nyc/all-boroughs/news/2026/05/13/sept--11-ceremony-adds-new-moment-of-silence-for-illness-related-deaths",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/National_September_11_Memorial_%26_Museum",
+            "source": "Wikipedia / National September 11 Memorial & Museum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/330px-9-11_Memorial_and_Museum_%2828815276064%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "911-memorial-never-forget-fund-launch-2026",
+        "year": "Jun 3, 2026",
+        "title": "9/11 Memorial & Museum Launches $75M 'Never Forget Fund'",
+        "type": "memorial",
+        "detail": "The National September 11 Memorial & Museum launched the 'Never Forget Fund,' a $75 million campaign to educate the roughly 100 million Americans too young to remember the attacks ahead of the 25th anniversary. Former Mayor Michael Bloomberg pledged to match the next $25 million raised through Bloomberg Philanthropies, after the first $25 million was already secured. Funds will keep museum admission free for students, first responders, and veterans, and expand classroom and teacher-training programs.",
+        "sources": [
+          {
+            "name": "Fortune",
+            "tier": 2,
+            "url": "https://fortune.com/2026/06/03/mike-bloomberg-matches-25-million-fundraising-911/",
+            "pole": "western"
+          },
+          {
+            "name": "NY1",
+            "tier": 2,
+            "url": "https://ny1.com/nyc/all-boroughs/news/2026/06/04/9-11-memorial---museum-announces-campaign-to-educate-youth-about-sept--11",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://fortune.com/2026/06/03/mike-bloomberg-matches-25-million-fundraising-911/",
+            "source": "Fortune",
+            "thumbnail": "https://fortune.com/img-assets/wp-content/uploads/2026/06/AP26153768232126-e1780497793624.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wtc-responders-ptsd-accelerated-aging-study-2026",
+        "year": "Jun 25, 2026",
+        "title": "Study Links PTSD in WTC Responders to Accelerated Biological Aging",
+        "type": "investigation",
+        "detail": "Stony Brook University researchers published findings that World Trade Center responders with PTSD show biological markers of faster aging and increased frailty roughly 25 years after the attacks, compared to responders without PTSD, helping explain elevated chronic disease rates documented in long-term WTC Health Program surveillance.",
+        "sources": [
+          {
+            "name": "Fox News",
+            "tier": 2,
+            "url": "https://www.foxnews.com/health/scientists-discover-possible-link-between-9-11-accelerated-aging",
+            "pole": "western"
+          },
+          {
+            "name": "Stony Brook University News",
+            "tier": 3,
+            "url": "https://news.stonybrook.edu/newsroom/press-release/medical/faster-aging-chronic-disease-linked-to-wtc-responders-with-ptsd/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.foxnews.com/health/scientists-discover-possible-link-between-9-11-accelerated-aging",
+            "source": "Fox News",
+            "thumbnail": "https://static.foxnews.com/foxnews.com/content/uploads/2026/06/first-responders-9-11-wtc.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wtc-health-program-ischemic-heart-disease-petitions-denied-2026",
+        "year": "Jun 30, 2026",
+        "title": "WTC Health Program Denies Eight Ischemic Heart Disease Petitions",
+        "type": "political",
+        "detail": "The WTC Health Program Administrator denied eight petitions seeking to add ischemic heart disease to the List of WTC-Related Health Conditions, citing insufficient evidence after reviewing the scientific literature. Advocates said the denial came amid concerns that program staffing shortages and CDC leadership turnover were slowing the addition of new covered conditions.",
+        "sources": [
+          {
+            "name": "Federal Register",
+            "tier": 1,
+            "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13176/world-trade-center-health-program-petitions-024-042-046-047-051-056-058-and-067-ischemic-heart",
+            "pole": "western"
+          },
+          {
+            "name": "Justia Regulation Tracker",
+            "tier": 3,
+            "url": "https://regulations.justia.com/regulations/fedreg/2026/06/30/2026-13176.html",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.federalregister.gov/documents/2026/06/30/2026-13176/world-trade-center-health-program-petitions-024-042-046-047-051-056-058-and-067-ischemic-heart",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/330px-9-11_Memorial_and_Museum_%2828815276064%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "steel-across-america-tour-los-angeles-stop-2026",
+        "year": "Jun 30, 2026",
+        "title": "Steel Across America Tour Brings WTC Beam to Los Angeles",
+        "type": "memorial",
+        "detail": "The Tunnel to Towers Foundation's 'Steel Across America' tour, carrying a 16,000-pound steel beam recovered from the World Trade Center, stopped in Los Angeles, where retired FDNY firefighter John LaBarbera thanked LA first responders for mutual aid exchanged during the 2001 recovery effort and the January 2025 Southern California wildfires. The tour, which launched in Manhattan in May 2026, will cover 10,500 miles across 21 states before returning to Ground Zero for the 25th anniversary on September 11, 2026.",
+        "sources": [
+          {
+            "name": "CBS News Los Angeles",
+            "tier": 2,
+            "url": "https://www.cbsnews.com/losangeles/news/25-years-since-911-steel-across-america-los-angeles/",
+            "pole": "western"
+          },
+          {
+            "name": "Tunnel to Towers Foundation",
+            "tier": 3,
+            "url": "https://t2t.org/steel-across-america-tunnel-to-towers-foundation-commemorates-25-years-since-9-11-at-the-frank-hotchkin-memorial-training-center-in-los-angeles-california/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.cbsnews.com/losangeles/news/25-years-since-911-steel-across-america-los-angeles/",
+            "source": "CBS News Los Angeles",
+            "thumbnail": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/06/30/3b528665-9eac-4e5f-8cbf-f8873c3ff652/thumbnail/1200x630/84ba4483f480885ad4505688904ad2da/screenshot-2026-06-30-123633.png"
+          }
+        ]
+      },
+      {
+        "id": "wtc-responders-multiple-primary-cancers-study-2026",
+        "year": "Jul 1, 2026",
+        "title": "Study Finds Male 9/11 Responders at Elevated Risk of Multiple Primary Cancers",
+        "type": "investigation",
+        "detail": "A study in Cancer Epidemiology, Biomarkers & Prevention examined 4,815 male WTC Health Program responders diagnosed with cancer between 2002 and 2022, finding 10.9% developed multiple, unrelated primary cancers compared with 10.5% among 3.3 million male patients in the national SEER database. Researchers said WTC responders' exposure to a complex mix of carcinogens at Ground Zero warrants continued long-term cancer surveillance of the cohort.",
+        "sources": [
+          {
+            "name": "Renal and Urology News",
+            "tier": 3,
+            "url": "https://www.renalandurologynews.com/news/male-911-first-responders-increased-risk-multiple-primary-cancers/",
+            "pole": "western"
+          },
+          {
+            "name": "Cancer Therapy Advisor",
+            "tier": 3,
+            "url": "https://www.cancertherapyadvisor.com/news/male-911-first-responders-increased-risk-multiple-primary-cancers/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.renalandurologynews.com/news/male-911-first-responders-increased-risk-multiple-primary-cancers/",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/330px-9-11_Memorial_and_Museum_%2828815276064%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "wtc-health-program-john-howard-reappointment-letter-2026",
+        "year": "Jul 9, 2026",
+        "title": "Bipartisan Congress Letter Urges Reappointment of Dr. John Howard to Lead WTC Health Program",
+        "type": "political",
+        "detail": "A bipartisan, bicameral group of 26 members of Congress, led by Sen. Kirsten Gillibrand (D-NY) and Rep. Andrew Garbarino (R-NY), sent a letter to HHS Secretary Robert F. Kennedy Jr. urging him to reappoint Dr. John Howard to a further six-year term as Director of the National Institute for Occupational Safety and Health (NIOSH) and Administrator of the WTC Health Program ahead of the 25th anniversary of the attacks. The letter credited Howard's more than two decades of service to the 9/11 responder and survivor community and noted that Congress had recently secured permanent funding for the program, which covers more than 140,000 enrollees. Howard's current six-year term as program administrator was set to expire in November 2026. The letter followed months of bipartisan pressure over WTC Health Program staffing shortages and DOGE-era cuts that Kennedy had earlier pledged to reverse.",
+        "sources": [
+          {
+            "name": "FireRescue1",
+            "tier": 3,
+            "url": "https://www.firerescue1.com/9-11/lawmakers-urge-kennedy-to-reappoint-head-of-9-11-health-program",
+            "pole": "western"
+          },
+          {
+            "name": "EMS1",
+            "tier": 3,
+            "url": "https://www.ems1.com/9-11/lawmakers-urge-sec-kennedy-to-reappoint-head-of-9-11-health-program",
+            "pole": "western"
+          },
+          {
+            "name": "Brooklyn Eagle",
+            "tier": 2,
+            "url": "https://brooklyneagle.com/401502/congress-urges-reappointment-of-dr-john-howard-to-oversee-world-trade-center-health-program/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-10T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.ems1.com/9-11/lawmakers-urge-sec-kennedy-to-reappoint-head-of-9-11-health-program",
+            "caption": "HHS Secretary Robert F. Kennedy Jr., whose department oversees the WTC Health Program and received the bipartisan reappointment letter",
+            "source": "EMS1",
+            "thumbnail": "https://lexipol.brightspotcdn.com/dims4/default/af519bd/2147483647/strip/true/crop/1024x577+0+53/resize/1000x563!/quality/90/?url=https%3A%2F%2Fk1-prod-lexipol.s3.us-east-2.amazonaws.com%2Fbrightspot%2F94%2F87%2Ffc4c1bec44d1b6a56095b257ae61%2Fap25108597106790.jpg"
+          }
+        ]
+      },
+      {
+        "id": "steel-across-america-tour-utah-capitol-stop-2026",
+        "year": "Jul 23, 2026",
+        "title": "Steel Across America Tour Brings WTC Steel Beam to Utah State Capitol",
+        "type": "memorial",
+        "detail": "The Tunnel to Towers Foundation's Steel Across America tour made its 25th stop at the Utah State Capitol in Salt Lake City, displaying a 21-foot, 16,900-pound steel beam recovered from the South Tower of the World Trade Center. The ceremony, hosted by retired FDNY Lieutenant and Tunnel to Towers board member Jack Kielty, opened with a Color Guard and Pipes and Drums procession and featured retired FDNY firefighters who responded to Ground Zero on 9/11. Stephen Siller Jr., son of fallen FDNY firefighter Stephen Siller, presented a commemorative steel flag — a custom tribute incorporating original World Trade Center steel — to local law enforcement. The tour, which launched in Lower Manhattan on May 2, 2026, is traveling more than 10,500 miles across 21 states and Washington, D.C., with 35+ stops, before returning the beam to Ground Zero for the 25th anniversary on September 11, 2026.",
+        "sources": [
+          {
+            "name": "ABC4 Utah",
+            "tier": 2,
+            "url": "https://www.abc4.com/news/wasatch-front/steel-beam-world-trade-center-stop-in-slc-9-11/",
+            "pole": "western"
+          },
+          {
+            "name": "KSL.com",
+            "tier": 2,
+            "url": "https://www.ksl.com/article/51601392/911-steel-beam-stops-at-utah-capitol-ahead-of-25th-anniversary",
+            "pole": "western"
+          },
+          {
+            "name": "Tunnel to Towers Foundation",
+            "tier": 3,
+            "url": "https://t2t.org/steel-across-america-tunnel-to-towers-foundation-commemorates-25-years-since-9-11-at-utah-state-capitol-in-salt-lake-city-utah/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-10T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.ksl.com/article/51601392/911-steel-beam-stops-at-utah-capitol-ahead-of-25th-anniversary",
+            "caption": "A World Trade Center steel beam has traveled the country as part of the Tunnel to Towers Foundation's Steel Across America tour ahead of the 25th anniversary",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/330px-9-11_Memorial_and_Museum_%2828815276064%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "steel-across-america-tour-mount-rushmore-stop-2026",
+        "year": "Jul 28, 2026",
+        "title": "Steel Across America Tour Stops at Mount Rushmore with WTC Steel Beam",
+        "type": "memorial",
+        "detail": "The Tunnel to Towers Foundation's Steel Across America tour made its 26th stop at Mount Rushmore National Memorial in Keystone, South Dakota, displaying the 16,900-pound steel beam recovered from the World Trade Center's South Tower. At a ceremony honoring first responders, Stephen Siller Jr. — son of fallen FDNY firefighter Stephen Siller, for whom the Tunnel to Towers Foundation is named — told the crowd: \"Each of those leaders understood that freedom is not free, and that the greatness of America has always been built on the backs of those willing to give everything in its defense.\" The tour's next stop was scheduled for August 1 at the Wings Over the Rockies Air & Space Museum in Denver, Colorado, as the beam continues its more than 10,500-mile journey ahead of returning to Ground Zero on September 11, 2026.",
+        "sources": [
+          {
+            "name": "KOTA Territory News",
+            "tier": 2,
+            "url": "https://www.kotatv.com/2026/07/29/steel-across-america-tour-stops-mount-rushmore-ahead-911-anniversary/",
+            "pole": "western"
+          },
+          {
+            "name": "KOTA Radio",
+            "tier": 3,
+            "url": "https://www.kotaradio.com/2026/07/29/9-11-steel-beam-draws-crowd-at-mount-rushmore/",
+            "pole": "western"
+          },
+          {
+            "name": "Tunnel to Towers Foundation",
+            "tier": 3,
+            "url": "https://t2t.org/steel-across-america-tunnel-to-towers-foundation-commemorates-25-years-since-9-11-at-mount-rushmore-national-memorial-in-keystone-south-dakota/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-10T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.kotatv.com/2026/07/29/steel-across-america-tour-stops-mount-rushmore-ahead-911-anniversary/",
+            "caption": "A World Trade Center steel beam has traveled the country as part of the Tunnel to Towers Foundation's Steel Across America tour ahead of the 25th anniversary",
+            "source": "Wikimedia Commons",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/330px-9-11_Memorial_and_Museum_%2828815276064%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "911-memorial-museum-digital-learning-experience-launch-2026",
+        "year": "Aug 5, 2026",
+        "title": "9/11 Memorial & Museum Launches Digital Learning Experience Ahead of 25th Anniversary",
+        "type": "memorial",
+        "detail": "The National September 11 Memorial & Museum launched its Anniversary Digital Learning Experience for the 25th-anniversary generation, as roughly one-third of Americans alive today were either too young to remember the September 11 attacks or had not yet been born. The free program includes a 30-minute film with first-person accounts of the attacks and their aftermath plus a live chat with Museum staff, interpreted in American Sign Language with captioning, audio description, transcripts, and Spanish subtitles. The film becomes available to registered classrooms on September 11, 2026. The Museum said the program has already reached more than four million students across every U.S. state and 80 countries and territories, with a goal of reaching 20 million students by the 25th anniversary — part of the Memorial's broader push to expand 9/11 education, alongside the 'Never Forget Fund' campaign launched in June 2026.",
+        "sources": [
+          {
+            "name": "KOMO News",
+            "tier": 2,
+            "url": "https://komonews.com/news/arc-seattle/911-memorial-museum-launches-digital-learning-experience-ahead-of-25th-anniversary",
+            "pole": "western"
+          },
+          {
+            "name": "National September 11 Memorial & Museum",
+            "tier": 1,
+            "url": "https://www.911memorial.org/learn/students-and-teachers/anniversary-schools-DLE-Landing",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-08-10T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://komonews.com/news/arc-seattle/911-memorial-museum-launches-digital-learning-experience-ahead-of-25th-anniversary",
+            "caption": "The National September 11 Memorial & Museum in Lower Manhattan, which launched a new digital learning experience for students ahead of the 25th anniversary",
+            "source": "911memorial.org",
+            "thumbnail": "https://www.911memorial.org/resources/media2/16x9/1280/800/0x1/80/c2658f9e-a4db-448b-ae66-4f651255b788-NationalMemorialMuseum_0.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]

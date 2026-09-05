@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen antialiased text-gray-900 bg-gray-50;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-2xl border border-gray-200 shadow-lg;
+  }
+
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-md border border-gray-200 transition-all duration-300 hover:bg-white/80 hover:border-blue-300 hover:shadow-lg;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+:root {
+  font-family: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+}

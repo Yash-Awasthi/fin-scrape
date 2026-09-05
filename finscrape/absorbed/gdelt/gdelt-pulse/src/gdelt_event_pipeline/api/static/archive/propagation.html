@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#09090b">
+<title>Story Propagation — GDELT Pulse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;450;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/pulse.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+/* ── Page-specific layout ─────────────────────────────── */
+.prop-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 0;
+  min-height: calc(100dvh - 180px);
+}
+@media (max-width: 900px) {
+  .prop-layout { grid-template-columns: 1fr; min-height: auto; }
+}
+
+/* ── Story list (left panel) ──────────────────────────── */
+.story-list {
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  max-height: calc(100dvh - 180px);
+  padding: var(--sp-4);
+}
+@media (max-width: 900px) {
+  .story-list {
+    max-height: 300px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.story-list-heading {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  padding: 0 var(--sp-2) var(--sp-3);
+}
+
+.story-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  margin-bottom: var(--sp-2);
+  cursor: pointer;
+  transition: border-color var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+.story-card:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-2);
+}
+.story-card.active {
+  border-color: var(--border-active);
+  background: var(--surface-2);
+}
+
+.story-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--sp-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--text);
+}
+
+.story-meta {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: center;
+  font-size: 0.6875rem;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.story-meta .pill {
+  background: var(--accent-dim);
+  color: var(--accent-text);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  font-size: 0.6875rem;
+}
+
+/* ── Detail panel (right) ─────────────────────────────── */
+.detail {
+  padding: var(--sp-5);
+  overflow-y: auto;
+  max-height: calc(100dvh - 180px);
+}
+@media (max-width: 900px) {
+  .detail { max-height: none; }
+}
+
+.detail-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: var(--text-3);
+  font-size: 0.875rem;
+}
+
+.detail-head {
+  margin-bottom: var(--sp-5);
+}
+
+.detail-head h2 {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  margin-bottom: var(--sp-3);
+  color: var(--text);
+}
+
+.detail-stats {
+  display: flex;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.d-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--sp-3) var(--sp-4);
+  text-align: center;
+}
+
+.d-stat-val {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.d-stat-lbl {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-3);
+  margin-top: 2px;
+}
+
+/* ── Chart card ───────────────────────────────────────── */
+.chart-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-5);
+  margin-bottom: var(--sp-5);
+}
+
+.chart-card h4 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-1);
+  color: var(--text);
+}
+
+.chart-card .chart-sub {
+  font-size: 0.6875rem;
+  color: var(--text-3);
+  margin-bottom: var(--sp-4);
+}
+
+.chart-wrap {
+  position: relative;
+  height: 200px;
+}
+
+/* ── Source spread ────────────────────────────────────── */
+.source-spread {
+  margin-top: var(--sp-5);
+}
+
+.source-spread h4 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-4);
+  color: var(--text);
+}
+
+.spread-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+.spread-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spread-track {
+  flex: 1;
+  height: 6px;
+  background: var(--surface-2);
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.spread-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s var(--ease);
+}
+
+.spread-count {
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-3);
+  width: 40px;
+  text-align: right;
+}
+
+/* ── Timeline ─────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-left: 24px;
+  margin-top: var(--sp-5);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.tl-item {
+  position: relative;
+  padding-bottom: var(--sp-5);
+}
+
+.tl-dot {
+  position: absolute;
+  left: -21px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--text-3);
+  background: var(--bg);
+}
+
+.tl-item.first .tl-dot {
+  background: var(--text-2);
+  border-color: var(--text-2);
+}
+
+.tl-time {
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-3);
+  margin-bottom: 3px;
+}
+
+.tl-source {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.tl-title {
+  font-size: 0.8125rem;
+  font-weight: 450;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.tl-title a {
+  color: var(--text);
+  transition: color var(--duration);
+}
+.tl-title a:hover {
+  color: var(--text-2);
+}
+
+.tl-tone {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+  margin-top: var(--sp-1);
+}
+
+/* ── Section heading ──────────────────────────────────── */
+.section-heading {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-4);
+  color: var(--text);
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<nav class="topbar">
+  <a class="topbar-back" href="/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+    GDELT Pulse
+  </a>
+</nav>
+
+<!-- PAGE INTRO -->
+<section class="page-intro">
+  <h1>Story <span style="color:var(--text-3)">Propagation</span></h1>
+  <p>Track how breaking news spreads across media outlets over time. See which sources break stories first and how coverage cascades.</p>
+</section>
+
+<!-- MAIN LAYOUT -->
+<div class="prop-layout">
+  <!-- LEFT: story list -->
+  <div class="story-list" id="storyList">
+    <div class="story-list-heading">Top Multi-Source Stories</div>
+    <div class="loading"><span class="spinner"></span>Loading</div>
+  </div>
+
+  <!-- RIGHT: detail panel -->
+  <div class="detail" id="detail">
+    <div class="detail-empty">Select a story to see its propagation timeline</div>
+  </div>
+</div>
+
+<script>
+let stories = [];
+let activeStory = null;
+let histoChart = null;
+
+// ── INIT ─────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch('/api/propagation/stories?limit=30&min_sources=3');
+    stories = await res.json();
+    renderStoryList();
+    if (stories.length > 0) selectStory(stories[0].id);
+  } catch (e) {
+    document.getElementById('storyList').innerHTML = '<div style="padding:40px;text-align:center;color:var(--text-3)">Failed to load stories</div>';
+  }
+}
+
+// ── STORY LIST ───────────────────────────────────────────────────────
+function renderStoryList() {
+  const el = document.getElementById('storyList');
+  el.innerHTML = '<div class="story-list-heading">Top Multi-Source Stories</div>' + stories.map(s => {
+    const span = s.span_hours > 24 ? `${Math.round(s.span_hours / 24)}d` : `${Math.round(s.span_hours)}h`;
+    return `<div class="story-card" data-id="${s.id}" onclick="selectStory('${s.id}')">
+      <div class="story-title">${esc(s.title)}</div>
+      <div class="story-meta">
+        <span class="pill">${s.source_count} sources</span>
+        <span>${s.article_count} articles</span>
+        <span>${span} span</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── SELECT & LOAD DETAIL ─────────────────────────────────────────────
+async function selectStory(id) {
+  activeStory = id;
+  document.querySelectorAll('.story-card').forEach(c => c.classList.toggle('active', c.dataset.id === id));
+  const detail = document.getElementById('detail');
+  detail.innerHTML = '<div class="loading"><span class="spinner"></span>Loading</div>';
+
+  try {
+    const res = await fetch(`/api/propagation/${id}`);
+    const d = await res.json();
+    renderDetail(d);
+  } catch (e) {
+    detail.innerHTML = '<div class="detail-empty">Failed to load propagation data</div>';
+  }
+}
+
+// ── RENDER DETAIL ────────────────────────────────────────────────────
+function renderDetail(d) {
+  const detail = document.getElementById('detail');
+  const spanH = d.first_article_at && d.last_article_at
+    ? Math.round((new Date(d.last_article_at) - new Date(d.first_article_at)) / 3600000)
+    : 0;
+
+  // Source colors — muted palette matching design system
+  const srcColors = {};
+  const palette = ['#a1a1aa','#818cf8','#f87171','#fbbf24','#22d3ee','#a78bfa','#fb923c','#60a5fa','#e879f9','#34d399','#f97316','#71717a'];
+  d.sources.forEach((s, i) => { srcColors[s.domain] = palette[i % palette.length]; });
+
+  const maxArticles = Math.max(...d.sources.map(s => s.article_count));
+
+  let html = `
+    <div class="detail-head">
+      <h2>${esc(d.title)}</h2>
+      <div class="detail-stats">
+        <div class="d-stat"><div class="d-stat-val">${d.article_count}</div><div class="d-stat-lbl">Articles</div></div>
+        <div class="d-stat"><div class="d-stat-val">${d.source_count}</div><div class="d-stat-lbl">Sources</div></div>
+        <div class="d-stat"><div class="d-stat-val">${spanH}h</div><div class="d-stat-lbl">Time Span</div></div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h4>Article Volume Over Time</h4>
+      <div class="chart-sub">Hourly article count since first publication</div>
+      <div class="chart-wrap"><canvas id="histoChart"></canvas></div>
+    </div>
+
+    <div class="source-spread">
+      <h4>Source Cascade — Order of Pickup</h4>
+      ${d.sources.map(s => {
+        const col = srcColors[s.domain];
+        const pct = Math.round(s.article_count / maxArticles * 100);
+        const delay = s.order === 0 ? 'FIRST' :
+          (() => {
+            const firstTs = new Date(d.sources[0].first_timestamp);
+            const thisTs = new Date(s.first_timestamp);
+            const mins = Math.round((thisTs - firstTs) / 60000);
+            return mins < 60 ? `+${mins}m` : `+${Math.round(mins / 60)}h`;
+          })();
+        return `<div class="spread-bar">
+          <span class="spread-name" style="color:${col}">${esc(s.source_name)}</span>
+          <div class="spread-track"><div class="spread-fill" style="width:${pct}%;background:${col}"></div></div>
+          <span class="spread-count">${s.article_count}</span>
+          <span style="font-size:0.625rem;font-variant-numeric:tabular-nums;color:${s.order === 0 ? 'var(--text)' : 'var(--text-3)'};width:50px;text-align:right;font-weight:${s.order === 0 ? '600' : '400'}">${delay}</span>
+        </div>`;
+      }).join('')}
+    </div>
+
+    <div style="margin-top:var(--sp-6)">
+      <h4 class="section-heading">Propagation Timeline</h4>
+      <div class="timeline">
+        ${d.timeline.map((e, i) => {
+          const col = srcColors[e.domain];
+          const ts = new Date(e.timestamp);
+          const time = ts.toLocaleDateString('en-US', {month:'short',day:'numeric'}) + ' ' +
+                       ts.toLocaleTimeString('en-US', {hour:'2-digit',minute:'2-digit'});
+          const toneCol = e.tone != null ? (e.tone >= 0 ? 'var(--positive)' : 'var(--negative)') : null;
+          return `<div class="tl-item ${e.is_first_from_source ? 'first' : ''}">
+            <div class="tl-dot" style="border-color:${col};${e.is_first_from_source ? `background:${col}` : ''}"></div>
+            <div class="tl-time">${time}</div>
+            <div class="tl-source" style="color:${col}">${esc(e.source_name)} ${e.is_first_from_source ? '<span style="font-size:0.5625rem;background:'+col+'18;padding:1px 6px;border-radius:var(--radius-full);font-weight:500">NEW SOURCE</span>' : ''}</div>
+            <div class="tl-title"><a href="${esc(e.url)}" target="_blank">${esc(e.title)}</a></div>
+            ${e.tone != null ? `<span class="tl-tone" style="background:${toneCol}18;color:${toneCol}">${e.tone >= 0 ? '+' : ''}${e.tone}</span>` : ''}
+          </div>`;
+        }).join('')}
+      </div>
+    </div>
+  `;
+
+  detail.innerHTML = html;
+
+  // Render histogram
+  if (d.hourly_histogram.length > 0) {
+    setTimeout(() => renderHistogram(d.hourly_histogram), 50);
+  }
+}
+
+function renderHistogram(data) {
+  const ctx = document.getElementById('histoChart');
+  if (!ctx) return;
+  if (histoChart) histoChart.destroy();
+
+  histoChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: data.map(d => `+${d.hour}h`),
+      datasets: [{
+        data: data.map(d => d.count),
+        backgroundColor: 'rgba(161,161,170,.15)',
+        borderColor: 'rgba(161,161,170,.4)',
+        borderWidth: 1,
+        borderRadius: 4,
+        hoverBackgroundColor: 'rgba(161,161,170,.25)'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(9,9,11,0.95)',
+          borderColor: 'rgba(255,255,255,0.06)',
+          borderWidth: 1,
+          titleFont: { family: "'Inter'", size: 11, weight: 500 },
+          bodyFont: { family: "'Inter'", size: 11 },
+          padding: 10,
+          cornerRadius: 8,
+          titleColor: '#fafafa',
+          bodyColor: '#a1a1aa',
+          callbacks: { label: ctx => `${ctx.raw} articles` }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(255,255,255,0.03)' },
+          ticks: { color: '#63636e', font: { family: "'Inter'", size: 10 }, maxTicksLimit: 12 }
+        },
+        y: {
+          grid: { color: 'rgba(255,255,255,0.03)' },
+          ticks: { color: '#63636e', font: { family: "'Inter'", size: 10 }, stepSize: 1 }
+        }
+      }
+    }
+  });
+}
+
+function esc(s) { if (!s) return ''; const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "chile-pinochet-total",
+    "category": "Chile — Pinochet Dictatorship (1973–1990)",
+    "killed": "3,200+",
+    "injured": "40,000+ tortured",
+    "source": "Rettig Commission 1991; Valech Commission I (2004) & II (2011)",
+    "tier": 1,
+    "contested": "no",
+    "note": "Rettig Commission verified 2,279 killed/disappeared; Valech documented 38,000+ torture survivors. Human rights groups estimate up to 3,200 killed. 200,000+ exiled.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "argentina-dirty-war",
+    "category": "Argentina — Dirty War (1976–1983)",
+    "killed": "9,000–30,000",
+    "injured": "Thousands tortured at 340+ detention centers",
+    "source": "CONADEP (Nunca Más) 1984; Madres de Plaza de Mayo",
+    "tier": 1,
+    "contested": "yes",
+    "note": "CONADEP documented 8,960 verified disappeared; human rights organizations and Argentine state memorialization use 30,000 figure. 500 babies of disappeared mothers stolen and given to military families.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-condor-total",
+    "category": "Operation Condor — All Member States (1975–1983)",
+    "killed": "60,000+",
+    "injured": "Hundreds of thousands detained and tortured",
+    "source": "National Security Archive; UN Latin American Human Rights Commission",
+    "tier": 3,
+    "contested": "yes",
+    "note": "Aggregate estimate combining deaths in Argentina, Chile, Uruguay, Bolivia, Paraguay, and Brazil attributable to Condor coordination. Country-specific truth commission totals add to ~35,000 verified; 60,000 is the widely-cited estimate.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "guatemala-civil-war",
+    "category": "Guatemala — Civil War (1960–1996)",
+    "killed": "200,000+",
+    "injured": "45,000+ disappeared; millions displaced",
+    "source": "Guatemala Historical Clarification Commission (CEH) 1999",
+    "tier": 1,
+    "contested": "partial",
+    "note": "CEH attributed 93% of violations to state forces (backed by US military aid). 83% of identified victims were Maya indigenous. Genocide finding for Ixil region 1982–1983. 626 massacres documented.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nicaragua-contra-war",
+    "category": "Nicaragua — Contra War (1981–1990)",
+    "killed": "30,000+",
+    "injured": "Tens of thousands wounded; $12B economic damage",
+    "source": "Americas Watch; ICJ Nicaragua v. United States 1986",
+    "tier": 3,
+    "contested": "yes",
+    "note": "CIA-funded Contra war killed approximately 30,000 Nicaraguans. ICJ ruled US violated international law. Kerry Committee documented drug trafficking with CIA knowledge. US never paid ICJ-ordered reparations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "el-salvador-civil-war",
+    "category": "El Salvador — Civil War (1979–1992)",
+    "killed": "75,000",
+    "injured": "Thousands tortured; 500,000+ displaced",
+    "source": "UN El Salvador Truth Commission 1993",
+    "tier": 1,
+    "contested": "no",
+    "note": "Truth Commission attributed 85% of violations to government forces and allied death squads. US provided $6 billion in military and economic aid during the conflict. El Mozote massacre killed ~1,000 including 553 children.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "haiti-occupation-1915-1934",
+    "category": "Haiti — US Occupation (1915–1934)",
+    "killed": "2,000–15,000",
+    "injured": "Unknown; resistance movements suppressed",
+    "source": "Marine Corps Historical Division; HRW Historical Report",
+    "tier": 3,
+    "contested": "yes",
+    "note": "Haitian Cacos resistance fighters killed in US military operations. Low estimate (2,000) from US military records; higher estimates (up to 15,000) from Haitian historians. Precise records not maintained.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "panama-invasion-1989",
+    "category": "Panama — Operation Just Cause (1989)",
+    "killed": "202–1,000+",
+    "injured": "3,000+ wounded (Panamanian estimates)",
+    "source": "US DoD; Americas Watch 1990; Panamanian Human Rights Commission",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "US DoD acknowledged ~300 total Panamanian deaths; Americas Watch estimated 300+; Panamanian Human Rights Commission estimated 2,000–3,000. El Chorrillo neighborhood destroyed. 23 US soldiers killed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bay-of-pigs-1961",
+    "category": "Bay of Pigs — CIA Invasion (1961)",
+    "killed": "114",
+    "injured": "1,189 captured; many tortured",
+    "source": "CIA Inspector General Report (declassified 1998); Brigade 2506 Association",
+    "tier": 1,
+    "contested": "no",
+    "note": "114 Brigade 2506 members killed in combat; 1,189 captured by Cuban forces. Most were returned in December 1962 in exchange for $53 million in food and medicine. Cuban and US casualties on defense not included.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "grenada-invasion-1983",
+    "category": "Grenada — Operation Urgent Fury (1983)",
+    "killed": "45",
+    "injured": "116",
+    "source": "US Department of Defense; Grenadian government",
+    "tier": 1,
+    "contested": "partial",
+    "note": "19 US killed, 116 wounded; 45 Grenadians killed (including 24 psychiatric hospital patients killed in mistaken bombing); 24 Cubans killed. Grenadian civilian casualties disputed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "dominican-republic-1965",
+    "category": "Dominican Republic — US Intervention (1965)",
+    "killed": "3,000+",
+    "injured": "~6,000 wounded",
+    "source": "US State Department; Dominican human rights groups",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Estimates of Dominican deaths range from 2,000 to 6,000. 31 US soldiers killed. Constitutionalist forces and civilians were killed by US forces and their Dominican military allies. Precise figures were suppressed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-embargo-health-impact",
+    "category": "Cuba — Embargo Health Impact (1960–present)",
+    "killed": "Contested",
+    "injured": "Millions affected by medicine/food shortages",
+    "source": "American Association for World Health 1997; UN reports",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "American Association for World Health (1997) concluded the embargo 'has significantly increased suffering and death' in Cuba. Cuban government attributes all economic hardship to embargo; US disputes causal chain. Accurate mortality attribution is methodologically contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "el-mozote-massacre",
+    "category": "El Mozote Massacre — El Salvador (Dec 1981)",
+    "killed": "~1,000",
+    "injured": "Entire village destroyed; survivors traumatized",
+    "source": "UN Truth Commission 1993; forensic exhumations",
+    "tier": 1,
+    "contested": "no",
+    "note": "553 victims were children. Perpetrated by the Atlacatl Battalion, trained at US Army School of the Americas. Reagan administration initially denied the massacre. UN-sponsored forensic teams confirmed the scale through exhumations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "veracruz-1914-occupation",
+    "category": "Veracruz, Mexico — US Occupation (1914)",
+    "killed": "~200 Mexican, 19 US",
+    "injured": "Several hundred",
+    "source": "US Navy Historical Records; Mexican government records",
+    "tier": 1,
+    "contested": "partial",
+    "note": "US forces landed April 21, 1914. 19 Americans and approximately 126–200 Mexicans killed. The occupation lasted 7 months. Mexican civilian resistance was significant; the occupation deepened regional anti-US sentiment.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "venezuela-sanctions-deaths",
+    "category": "Venezuela — US Sanctions Impact (2017–2019)",
+    "killed": "~40,000 (estimated)",
+    "injured": "Millions denied medicines/food due to sanctions",
+    "source": "CEPR: Weisbrot & Sachs, 'Economic Sanctions as Collective Punishment' 2019",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "CEPR economists estimated 40,000 excess deaths 2017–2018 attributable to US sanctions effects on medicine/food access. US government disputes methodology. UN Special Rapporteur Douhan found sanctions caused significant harm. Causal attribution of specific deaths is methodologically contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "letelier-assassination-1976",
+    "category": "Orlando Letelier & Ronni Moffitt Assassination (1976)",
+    "killed": "2",
+    "injured": "1 (Moffitt's husband, Michael Moffitt, survived)",
+    "source": "FBI investigation files; US District Court conviction records",
+    "tier": 1,
+    "contested": "no",
+    "note": "Car bomb in Washington DC killed Chilean exile and former Foreign Minister Orlando Letelier and US citizen Ronni Moffitt on September 21, 1976. CIA-trained Cuban exile Michael Townley built the bomb for Chilean DINA. The attack was the worst act of foreign-sponsored terrorism on US soil prior to 9/11.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "brigade-2506-prisoners",
+    "category": "Bay of Pigs — Brigade 2506 POWs (1961–1962)",
+    "killed": "114",
+    "injured": "1,189 imprisoned (some tortured)",
+    "source": "CIA Inspector General Report; Brigade 2506 veteran accounts",
+    "tier": 1,
+    "contested": "no",
+    "note": "After the Bay of Pigs defeat, 1,189 prisoners were held in Cuban jails. Some reported mistreatment. They were released in December 1962 after Kennedy negotiated a ransom of $53 million in food and medicine.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "venezuela-operation-absolute-resolve-2026",
+    "category": "Venezuela — Operation Absolute Resolve (Jan 3, 2026)",
+    "killed": "100+",
+    "injured": "7 US service members; Venezuelan civilian toll unknown",
+    "source": "Venezuelan Interior Ministry; CNBC; CBS News; Washington Post (January 2026)",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Venezuelan Interior Ministry reported over 100 killed; US has not published official casualty figures. 7 US service members were injured. Independent verification was impeded by restricted access. The operation—the most direct US military intervention in Latin America since the 1989 Panama invasion—involved over 150 aircraft and a Delta Force ground raid on Maduro's compound.",
+    "lastUpdated": "2026-04-19T14:18:37Z"
+  },
+  {
+    "id": "operation-southern-spear-caribbean-2025-2026",
+    "category": "Operation Southern Spear — Caribbean & Eastern Pacific Interdiction (Sep 2025–Present)",
+    "killed": "221+",
+    "injured": "Unknown",
+    "source": "Pentagon; DEA officials via Washington Post, CNN (Jul 27, 2026)",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "US naval/air campaign against alleged drug-trafficking vessels, launched September 2025. As of late July 2026, at least 67 vessels destroyed and at least 221 people killed. The campaign went without a strike from Jun 21 to late Jul 2026, its longest pause to date; Pentagon and DEA officials say it has not meaningfully slowed cocaine entering the US, disputing the administration's claim it 'virtually ended' seaborne trafficking. Civilian fishermen's deaths have not been independently accounted for.",
+    "lastUpdated": "2026-08-10T00:00:00Z"
+  }
+]

@@ -1,0 +1,198 @@
+[
+  {
+    "id": "historical_truth_claim",
+    "question": "Were the 43 students incinerated at the Cocula garbage dump?",
+    "sideA": {
+      "label": "Government 'Historical Truth' (2014)",
+      "text": "Attorney General Murillo Karam claimed students were captured by Guerreros Unidos cartel, killed, and incinerated at the Cocula dump over 15 hours. Ashes were allegedly dumped in the San Juan River. Confessions from cartel members supported this version."
+    },
+    "sideB": {
+      "label": "GIEI / Independent Experts",
+      "text": "University of Innsbruck fire scientists proved the Cocula dump could not reach temperatures (>1,000°C) needed to fully incinerate 43 bodies in that timeframe. No physical evidence of a large fire was found at the dump. The GIEI determined the official narrative was fabricated and confessions were obtained through torture."
+    },
+    "resolution": "Officially debunked. The Mexican government's own Truth Commission (2022) declared the 'historical truth' a fabrication. The incineration scenario has been abandoned even by successor governments.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "state_involvement",
+    "question": "Was the Mexican military involved in the disappearance?",
+    "sideA": {
+      "label": "Mexican Military / PGR (2014–2018)",
+      "text": "Military initially denied any involvement. The 27th Infantry Battalion was present to 'maintain order.' The PGR stated the military had no prior knowledge or participation, and the crime was perpetrated solely by local police and the Guerreros Unidos cartel."
+    },
+    "sideB": {
+      "label": "GIEI / Truth Commission / Families",
+      "text": "The 27th Infantry Battalion monitored students in real time via C4 surveillance centers and informants, yet failed to protect them. General Rodríguez Pérez (27th Battalion commander) was accused of handing students to the cartel. The Truth Commission (2022) declared it a 'crime of state' involving military coordination with organized crime."
+    },
+    "resolution": "Partially established. General Rodríguez Pérez was arrested (2022) for forced disappearance. However, Mexican courts subsequently dismissed charges against several military defendants. The extent of military command responsibility remains unresolved.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "fifth_bus_heroin",
+    "question": "Were the students targeted because of a heroin shipment on the fifth bus?",
+    "sideA": {
+      "label": "GIEI / Investigative Journalists",
+      "text": "The GIEI identified a fifth bus (Estrella Roja #1531) that the students had commandeered, which may have been carrying a heroin shipment destined for Chicago. This could explain why the Guerreros Unidos cartel — which controlled the bus routes — ordered the students' abduction: to recover the drugs."
+    },
+    "sideB": {
+      "label": "PGR / Some Officials",
+      "text": "The original investigation did not acknowledge the fifth bus. Some officials and the initial prosecution argued the attack was triggered by a misidentification — the cartel allegedly confused the students with rival Los Rojos gang members. The heroin theory was not part of any official conviction."
+    },
+    "resolution": "Unresolved but significant. The GIEI's reporting on the fifth bus is documented in multiple reports and widely considered credible. The heroin theory does not fully explain what happened to the students after their abduction.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "torture_confessions",
+    "question": "Were the confessions supporting the 'historical truth' obtained through torture?",
+    "sideA": {
+      "label": "PGR (2014–2018)",
+      "text": "The Attorney General's office maintained that confessions from Guerreros Unidos members were voluntarily given and formed a reliable factual basis for the 'historical truth.' Prosecutors denied systematic torture in custody."
+    },
+    "sideB": {
+      "label": "GIEI / CNDH / HRW / Detainees",
+      "text": "The GIEI documented 17 cases of torture among the 44 suspects reviewed, including electric shocks, waterboarding, and beatings. Physical evidence corroborated torture allegations. Mexico's National Human Rights Commission also documented torture. Courts later excluded many confessions as inadmissible."
+    },
+    "resolution": "Substantiated. The CNDH, GIEI, and independent medical examiners confirmed widespread torture. Mexican courts have excluded torture-tainted confessions in subsequent proceedings, effectively invalidating the evidentiary basis of the 'historical truth.'",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "evidence_tampering_zeron",
+    "question": "Did government investigators plant evidence to support the 'historical truth'?",
+    "sideA": {
+      "label": "PGR Officials (2014–2018)",
+      "text": "The PGR maintained the San Juan River bone fragment was legitimately discovered in a search operation. Investigators denied any manipulation of evidence."
+    },
+    "sideB": {
+      "label": "GIEI / Truth Commission",
+      "text": "The GIEI documented that Tomás Zerón de Lucio (AIC chief) visited the San Juan River with a detainee before the official search and planted a bag containing a bone fragment from Alexander Mora Venancio. This evidence planting was central to constructing the Cocula dump narrative."
+    },
+    "resolution": "Warrants issued. Mexico issued an arrest warrant for Tomás Zerón for evidence tampering, torture, and forced disappearance. He fled to Israel in 2020. Mexico has sought his extradition, which remains pending as of 2026.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "federal_coordination",
+    "question": "Did federal authorities — beyond local police — coordinate in the disappearances?",
+    "sideA": {
+      "label": "Peña Nieto Government",
+      "text": "The federal government maintained the crime was a local-level conspiracy between Iguala municipal police and the Guerreros Unidos cartel. Federal and state authorities were not implicated in the initial investigation."
+    },
+    "sideB": {
+      "label": "Truth Commission / Families / GIEI",
+      "text": "The C4 surveillance system — which integrates federal, state, and municipal intelligence — monitored student movements in real time. Federal Police were present in the area. The Truth Commission (2022) documented that the pattern of coordination could not have been possible without federal-level knowledge and participation."
+    },
+    "resolution": "Asserted by Truth Commission but legally unresolved. The Commission declared it a 'crime of state' but prosecutions against federal officials (beyond local police and some military) remain limited. Full accountability for federal coordination has not been achieved.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "remains_identification",
+    "question": "How many of the 43 students have been positively identified?",
+    "sideA": {
+      "label": "Mexican Government",
+      "text": "The government has presented DNA matches confirming at least 3 of the 43 students — Alexander Mora Venancio, Christian Alfonso Rodríguez Telumbre, and Jhosivani Guerrero de la Cruz. Ongoing forensic work continues at multiple sites."
+    },
+    "sideB": {
+      "label": "EAAF / Families",
+      "text": "Only 3 students have been identified, even after 11 years of searching. The EAAF has conducted extensive forensic work but has repeatedly faced access limitations. Families argue the government has not invested adequate resources in forensic searches and that the cover-up of crime scenes has made identification nearly impossible."
+    },
+    "resolution": "3 confirmed identifications as of 2026 — a deeply inadequate result after 11 years. The vast majority of the 43 students remain unidentified and their fates unknown.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "abarca_cartel_connection",
+    "question": "Was Iguala Mayor José Luis Abarca directly linked to Guerreros Unidos cartel?",
+    "sideA": {
+      "label": "PGR / Federal Prosecutors",
+      "text": "Abarca and his wife Pineda Villa were charged with ordering the attacks and having direct connections to the Guerreros Unidos cartel. Pineda Villa's brothers were alleged cartel leaders. Abarca was accused of ordering police chief to use force against the students."
+    },
+    "sideB": {
+      "label": "Abarca's Defense / Some Observers",
+      "text": "Abarca's legal team contested the charges, arguing evidence was fabricated and the prosecution was politically motivated. Some analysts noted the government's focus on Abarca allowed it to avoid examining deeper federal and military complicity."
+    },
+    "resolution": "Convicted. Abarca was convicted of aggravated homicide and forced disappearance. His imprisonment became a political focal point, but families argued his conviction allowed the government to present a localized narrative that avoided accountability for state-level actors.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "military_files_sheinbaum_2026",
+    "question": "Has the military fully complied with orders to disclose intelligence files from the night of the disappearance?",
+    "sideA": {
+      "label": "President Sheinbaum / Defense Ministry (2026)",
+      "text": "President Sheinbaum publicly stated in March 2026 that the Defense Secretary had already delivered all required documentation related to the Ayotzinapa case. The government maintains that military cooperation with the investigation has been adequate under the Sheinbaum administration."
+    },
+    "sideB": {
+      "label": "Federal Judiciary / Families / Human Rights Groups",
+      "text": "A federal court ordered SEDENA in March 2026 to deliver an additional 853 intelligence dossiers — documents not yet disclosed. Families and rights organizations argue that the military continues to shield surveillance records from September 26, 2014 that could establish command-level responsibility for the students' fate. The GIEI has previously documented that key military archives remain classified despite court orders."
+    },
+    "resolution": "Unresolved. The federal court's March 2026 order for 853 files remains in dispute, with the Sheinbaum government's response calling the files already delivered. Families and independent experts maintain substantial military documentation has not been fully disclosed.",
+    "lastUpdated": "2026-04-09T14:46:12.000Z"
+  },
+  {
+    "id": "funeral_home_investigation_2026",
+    "question": "Is the Iguala funeral home/crematorium investigation a credible new lead, or a repeat of the 'historical truth' approach?",
+    "sideA": {
+      "label": "Sheinbaum Government / FGR (2026)",
+      "text": "President Sheinbaum cited 'very rigorous telephone analysis' as the basis for the crematorium investigation line. Owners of the 'El Ángel' funeral home in Iguala were arrested in March 2026 after phone records allegedly linked them to events from September 26, 2014. The government presented possible bone remains allegedly held at the facility for 12 years as a credible investigative lead."
+    },
+    "sideB": {
+      "label": "Families / Tlachinollan Human Rights Center",
+      "text": "Tlachinollan issued a statement (April 2026) calling the funeral home line 'incoherent' and incomplete. Families could not verify whose remains were found, why the site was not previously identified, or how this line connects to the other 40+ unidentified students. They drew explicit comparisons to the discredited 'historical truth' narrative, which also used carefully curated 'evidence' to foreclose rather than advance the investigation."
+    },
+    "resolution": "Disputed. On Jun 23, 2026 the FGR detained four more people tied to this line — relatives of the funeral home's owner and a former Iguala health official — over alleged clandestine cremations. Local residents and family members protested the arrests as procedurally irregular, with some accusing the FGR of fabricating charges and installing ovens 'where there weren't any.' Independent verification remains pending as of Jul 2026; the GIEI has since been ruled out from returning (May 29, 2026), removing the independent body families wanted to vet this line.",
+    "lastUpdated": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "covaj_truth_commission_2026",
+    "question": "Is the court-ordered new Truth Commission (COVAJ) functioning?",
+    "sideA": {
+      "label": "Federal Judiciary / Families",
+      "text": "A federal court ordered the formation of the Commission on Truth, Access to Justice, and Reparation (COVAJ) to replace the AMLO-era Truth Commission. The order designates the CNDH, FGR, and civil society representatives as members. Families view COVAJ as essential to restoring independent oversight of the investigation."
+    },
+    "sideB": {
+      "label": "CNDH / FGR",
+      "text": "The National Human Rights Commission (CNDH) formally refused to join COVAJ in February 2026, citing an 'insurmountable conflict of interest' as it would be reviewing its own prior resolutions. The FGR had similarly not designated a representative as of May 2026. Without these key members, the Commission cannot be constituted."
+    },
+    "resolution": "Non-functional as of Aug 2026. Both the CNDH and FGR have effectively blocked COVAJ's formation. On Jul 6, 2026 Mexico's Supreme Court (SCJN) agreed to hear four extraordinary appeals — filed by the FGR and the Presidency — reviewing whether a lower court can order COVAJ's creation via injunction at all, or whether that violates separation of powers; civil organizations said the review 'prolongs the legal uncertainty' rather than advancing truth and justice. Families and Tlachinollan call the underlying obstruction deliberate, while the CNDH frames its refusal as a legal conflict-of-interest issue. The commission remains a critical unresolved structural gap in the accountability process.",
+    "lastUpdated": "2026-08-16T14:33:04.000Z"
+  },
+  {
+    "id": "aguirre_arrest_significance_2026",
+    "question": "Does the arrest and trial-linking of former Governor Ángel Aguirre represent genuine accountability, or a distraction from federal and military responsibility?",
+    "sideA": {
+      "label": "FGR / Fiscal General Ernestina Godoy",
+      "text": "The FGR says Aguirre's August 2026 arrest follows a genuine reanalysis of the original 2014 investigation, backed by two protected witnesses describing his direct orders to destroy security-camera footage of bus 1531 being intercepted by police. Godoy called it 'a deliberate operation structured from the highest level of the State Executive' — the first arrest of a sitting-era governor in the case."
+    },
+    "sideB": {
+      "label": "Tlachinollan / Families",
+      "text": "Tlachinollan welcomed the arrest as 'a drop of hope in a sea of mysteries' but publicly feared it could become a distraction, stressing the investigation must not stop at state and municipal officials and must continue toward federal authorities and the Army. Families said the FGR failed to notify them directly before the arrest and demanded the FGR avoid 'acts of simulation.'"
+    },
+    "resolution": "Unresolved. Aguirre was formally linked to trial on Aug 12, 2026 for forced disappearance and crimes against the administration of justice, with four months granted for supplementary investigation; his defense announced Aug 13 it would appeal. Whether the case will extend to federal and military command responsibility — as families demand — remains untested.",
+    "lastUpdated": "2026-08-16T14:33:04.000Z"
+  },
+  {
+    "id": "cndh_recommendation_army_exoneration_2026",
+    "question": "Does the CNDH's July 2026 recommendation credibly exonerate the Army of institutional responsibility?",
+    "sideA": {
+      "label": "CNDH (Rosario Piedra Ibarra)",
+      "text": "Recommendation 208VG/2026 (860+ pages, Jul 9, 2026) concludes there is 'no institutional responsibility nor direct military participation' in the disappearances, limiting accountability to 20 individual soldiers already under criminal process, and finds no evidence of a military 'counter-insurgency' plan against the students. The report also questions the GIEI's and Truth Commission's (CoVAJ) conclusions and cites alleged foreign 'interference' in the case."
+      },
+    "sideB": {
+      "label": "Encinas / Amnesty International / Families",
+      "text": "Days after the recommendation, former Truth Commission head Alejandro Encinas released SEDENA documents showing disappeared student Julio César López Patolzin was a military intelligence asset embedded at the school since June 2014 — directly contradicting the CNDH's dismissal of infiltration claims. Amnesty International said the recommendation 'opted to back the actions of the State' and delegitimized international oversight. Families' lawyers noted the CNDH did not consult them before publishing, and that — unlike 22 other authorities — the report was pointedly not directed to SEDENA."
+    },
+    "resolution": "Unresolved and highly disputed. President Sheinbaum distanced her government from the CNDH report on Jul 13, 2026 and ordered Segob to review it. The contradiction between the CNDH's exoneration and Encinas's SEDENA documents on the infiltrated student remains unaddressed as of Jul 2026.",
+    "lastUpdated": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "lopez_patolzin_infiltration_2026",
+    "question": "Was disappeared student Julio César López Patolzin a Mexican military intelligence asset?",
+    "sideA": {
+      "label": "CNDH",
+      "text": "The CNDH's Jul 9, 2026 recommendation dismissed infiltration claims regarding students at the Ayotzinapa Normal School, asserting that military personnel could lawfully enroll as students without this implying an intelligence operation."
+    },
+    "sideB": {
+      "label": "Alejandro Encinas / SEDENA Documents",
+      "text": "Encinas published Defense Ministry records showing López Patolzin was formally assigned since June 2014 as an 'Órgano de Búsqueda de Información' (intelligence-gathering asset) inside the school, with activity reports dated September 26, 2014 and communications with superior officers — indicating the military had an embedded source reporting from within the group of disappeared students."
+    },
+    "resolution": "Unresolved. The SEDENA documents released Jul 13, 2026 have not been independently authenticated or addressed by the CNDH or Defense Ministry. If confirmed, it would establish that the military had a direct informational channel inside the targeted group on the night of the attack, contradicting both the CNDH's July recommendation and decades of official denials of prior military knowledge.",
+    "lastUpdated": "2026-07-16T00:00:00.000Z"
+  }
+]

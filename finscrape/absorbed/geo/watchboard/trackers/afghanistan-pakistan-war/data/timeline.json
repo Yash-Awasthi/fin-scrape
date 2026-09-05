@@ -1,0 +1,1552 @@
+[
+  {
+    "era": "US Invasion & Initial Campaign (Oct\u2013Dec 2001)",
+    "events": [
+      {
+        "id": "operation-enduring-freedom-launch",
+        "year": "Oct 7, 2001",
+        "title": "Operation Enduring Freedom Begins",
+        "type": "military",
+        "detail": "US and British forces launch air strikes against Taliban and al-Qaeda targets in Afghanistan, beginning Operation Enduring Freedom. President George W. Bush announced the strikes were in response to the September 11 attacks and Taliban refusal to surrender Osama bin Laden. Initial strikes targeted Taliban air defenses, military command centers, and al-Qaeda training camps.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com/news/world-us-canada-15259200",
+            "tier": 2
+          },
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "northern-alliance-advance",
+        "year": "Oct 2001",
+        "title": "Northern Alliance Advances with US Air Support",
+        "type": "military",
+        "detail": "The Afghan Northern Alliance, backed by CIA operatives and US Special Forces embedded with their units, begins rapid advances against Taliban positions following the opening US air campaign. CIA team Jawbreaker deployed first, followed by ODA 555 and other Special Forces A-Teams who called in precision airstrikes.",
+        "sources": [
+          {
+            "name": "Washington Post",
+            "url": "https://www.washingtonpost.com",
+            "tier": 2
+          },
+          {
+            "name": "CIA",
+            "url": "https://www.cia.gov",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mazar-e-sharif-falls",
+        "year": "Nov 9, 2001",
+        "title": "Mazar-e-Sharif Falls to Northern Alliance",
+        "type": "military",
+        "detail": "Northern Alliance forces, supported by US Special Forces and airpower, capture the strategic northern city of Mazar-e-Sharif from the Taliban. The fall of this key logistics hub marks the beginning of the Taliban's rapid military collapse across Afghanistan. Thousands of Taliban fighters surrendered or fled.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kabul-falls",
+        "year": "Nov 13, 2001",
+        "title": "Taliban Abandons Kabul",
+        "type": "military",
+        "detail": "Taliban forces withdraw from Kabul overnight as Northern Alliance forces enter the Afghan capital. The fall of Kabul signals the effective end of Taliban rule over most of Afghanistan within barely five weeks of the start of the US-led campaign. Taliban fighters retreated south toward Kandahar and into Pakistan.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "New York Times",
+            "url": "https://www.nytimes.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "bonn-agreement",
+        "year": "Dec 5, 2001",
+        "title": "Bonn Agreement Signed",
+        "type": "diplomatic",
+        "detail": "Afghan factions sign the Bonn Agreement in Germany, establishing a framework for transitional governance in Afghanistan. The agreement created a 30-member Afghan Interim Authority with Hamid Karzai as chairman, replacing the Taliban government. It also called for the creation of a loya jirga (grand assembly) and elections within two years.",
+        "sources": [
+          {
+            "name": "UN General Assembly",
+            "url": "https://www.un.org",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kandahar-falls",
+        "year": "Dec 7, 2001",
+        "title": "Kandahar Falls \u2014 Taliban Regime Ends",
+        "type": "military",
+        "detail": "Kandahar, the Taliban's spiritual heartland and seat of power, falls to anti-Taliban forces after weeks of fighting and negotiation. Taliban supreme leader Mullah Omar flees to Pakistan. The fall of Kandahar effectively marks the end of the Taliban regime's first period in power. Mullah Naqib, a Pashtun tribal leader, takes control of the city.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "tora-bora-battle",
+        "year": "Dec 2001",
+        "title": "Battle of Tora Bora \u2014 Bin Laden Escapes",
+        "type": "military",
+        "detail": "US forces and Afghan fighters battle al-Qaeda fighters in the Tora Bora mountain complex in Nangarhar province, where Osama bin Laden was believed to be hiding. Despite heavy bombing and ground fighting, bin Laden escapes into Pakistan, reportedly crossing into the Parachinar area of the Federally Administered Tribal Areas. The failure to capture bin Laden at Tora Bora would later be considered a critical missed opportunity.",
+        "sources": [
+          {
+            "name": "US Senate Foreign Relations Committee",
+            "url": "https://www.foreign.senate.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "karzai-sworn-in",
+        "year": "Dec 22, 2001",
+        "title": "Hamid Karzai Sworn In as Interim Leader",
+        "type": "political",
+        "detail": "Hamid Karzai is sworn in as head of the Afghan Interim Authority in Kabul. Karzai, a Pashtun tribal chief and former anti-Soviet mujahideen fighter, becomes Afghanistan's first post-Taliban leader. He is backed by the US, UN, and regional powers. ISAF (International Security Assistance Force) is established in Kabul to provide security.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "UN Security Council",
+            "url": "https://www.un.org",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Nation-Building & Taliban Regrouping (2002\u20132005)",
+    "events": [
+      {
+        "id": "operation-anaconda",
+        "year": "Mar 2002",
+        "title": "Operation Anaconda \u2014 Shah-i-Kot Valley",
+        "type": "military",
+        "detail": "US-led coalition forces conduct Operation Anaconda against al-Qaeda and Taliban fighters in the Shah-i-Kot Valley and Arma Mountains of Paktia province. The operation involves over 2,000 troops. Eight US soldiers are killed, 80 wounded, in the largest US ground battle of the war to that point. Al-Qaeda suffers heavy losses but many escape into Pakistan.",
+        "sources": [
+          {
+            "name": "CENTCOM",
+            "url": "https://www.centcom.mil",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "loya-jirga-2002",
+        "year": "Jun 2002",
+        "title": "Emergency Loya Jirga Elects Karzai",
+        "type": "political",
+        "detail": "A 1,500-delegate Emergency Loya Jirga (grand assembly) convenes in Kabul and elects Hamid Karzai as interim president for a two-year transitional period. The assembly also approves a transitional government structure. The event is seen as a significant step in Afghanistan's democratic transition, though critics note US interference in the candidate selection process.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "UN Assistance Mission in Afghanistan",
+            "url": "https://unama.unmissions.org",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "isaf-nato-takeover",
+        "year": "Aug 2003",
+        "title": "NATO Takes Command of ISAF",
+        "type": "military",
+        "detail": "NATO assumes command of the International Security Assistance Force (ISAF) in Kabul, marking the alliance's first operational role outside the Euro-Atlantic area. Initially ISAF's mandate is limited to Kabul, but it expands over subsequent years to cover all of Afghanistan. By 2006, NATO expands into dangerous southern provinces.",
+        "sources": [
+          {
+            "name": "NATO",
+            "url": "https://www.nato.int",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "afghanistan-constitution-2004",
+        "year": "Jan 4, 2004",
+        "title": "New Afghan Constitution Ratified",
+        "type": "political",
+        "detail": "A second loya jirga ratifies a new Afghan constitution establishing a presidential Islamic republic. The constitution guarantees equal rights for men and women and creates a bicameral parliament. It represents a significant milestone in Afghanistan's state-building process, though implementation challenges remain severe in most of the country.",
+        "sources": [
+          {
+            "name": "Afghan Government",
+            "url": "https://www.president.gov.af",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "karzai-elected-president",
+        "year": "Oct 9, 2004",
+        "title": "Karzai Wins Afghanistan's First Presidential Election",
+        "type": "political",
+        "detail": "Hamid Karzai wins Afghanistan's first direct presidential election with 55.4% of the vote, defeating 17 rivals. Despite reports of irregularities, international observers deem the vote credible. It is the first time in Afghan history that citizens have voted for their president. The election turnout exceeds 8 million voters, about 40% of registered voters.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "UN Assistance Mission in Afghanistan",
+            "url": "https://unama.unmissions.org",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "abu-ghraib-bagram-scandal",
+        "year": "2004",
+        "title": "Bagram Abuse Scandal Revealed",
+        "type": "humanitarian",
+        "detail": "Reports emerge of systematic abuse and torture of Afghan and Iraqi detainees at Bagram Air Base in Afghanistan and Abu Ghraib prison in Iraq. The abuses, documented through photographs and testimony, severely damage the US image in the Muslim world and undermine counterinsurgency efforts. Two Afghan detainees die at Bagram, ruled homicides by military pathologists.",
+        "sources": [
+          {
+            "name": "New York Times",
+            "url": "https://www.nytimes.com",
+            "tier": 2
+          },
+          {
+            "name": "Human Rights Watch",
+            "url": "https://www.hrw.org",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pakistan-red-mosque-roots",
+        "year": "2004",
+        "title": "TTP Predecessors Active in FATA",
+        "type": "attack",
+        "detail": "Pakistani Taliban (TTP predecessor groups) begin escalating attacks in the Federally Administered Tribal Areas (FATA) as Pakistani military operations in South Waziristan provoke violent backlash. Taliban militants consolidate control in tribal areas bordering Afghanistan. Cross-border movement of fighters increases significantly, complicating coalition operations.",
+        "sources": [
+          {
+            "name": "Dawn",
+            "url": "https://www.dawn.com",
+            "tier": 2
+          },
+          {
+            "name": "RAND Corporation",
+            "url": "https://www.rand.org",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "al-qaeda-zarqawi-network",
+        "year": "2004",
+        "title": "Al-Qaeda Network Reconstitutes in Pakistan",
+        "type": "military",
+        "detail": "US intelligence reports indicate al-Qaeda leadership, including Osama bin Laden and Ayman al-Zawahiri, has reconstituted a command structure in Pakistan's tribal belt, particularly in North Waziristan. The network provides training, financing, and strategic direction to Taliban insurgents in Afghanistan and affiliated groups globally.",
+        "sources": [
+          {
+            "name": "9/11 Commission Report",
+            "url": "https://9-11commission.gov",
+            "tier": 1
+          },
+          {
+            "name": "The Guardian",
+            "url": "https://www.theguardian.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Taliban Insurgency Escalates (2006\u20132008)",
+    "events": [
+      {
+        "id": "nato-expansion-south",
+        "year": "Jul 2006",
+        "title": "NATO Expands into Southern Afghanistan",
+        "type": "military",
+        "detail": "NATO-ISAF takes over command in the dangerous southern provinces of Helmand, Kandahar, Uruzgan, and Zabul from US-led coalition forces. British troops deploy to Helmand, Dutch to Uruzgan, and Canadians to Kandahar. All three forces suffer casualties far beyond initial expectations as the Taliban insurgency intensifies dramatically.",
+        "sources": [
+          {
+            "name": "NATO",
+            "url": "https://www.nato.int",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-panjwai",
+        "year": "Sep 2006",
+        "title": "Battle of Panjwai \u2014 Deadliest NATO Battle",
+        "type": "military",
+        "detail": "Operation Medusa, a NATO-led offensive in Panjwai district of Kandahar province, results in the largest Taliban defeat in the post-2001 era. Over 500 Taliban fighters are killed in two weeks of intense fighting. One Canadian soldier dies in a friendly fire incident involving a US A-10 airstrike. The battle temporarily clears the district but Taliban return within months.",
+        "sources": [
+          {
+            "name": "NATO",
+            "url": "https://www.nato.int",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ttp-formation",
+        "year": "Dec 2007",
+        "title": "Tehrik-i-Taliban Pakistan (TTP) Founded",
+        "type": "political",
+        "detail": "Baitullah Mehsud unifies Pakistani Taliban factions under the umbrella of Tehrik-i-Taliban Pakistan (TTP), forming a new organization pledging allegiance to Afghan Taliban supreme leader Mullah Omar. The TTP announces its primary goals as implementing Sharia law in Pakistan, fighting the Pakistani government, and expelling foreign forces from Afghanistan. Pakistan launches military operations in FATA in response.",
+        "sources": [
+          {
+            "name": "Dawn",
+            "url": "https://www.dawn.com",
+            "tier": 2
+          },
+          {
+            "name": "International Crisis Group",
+            "url": "https://www.crisisgroup.org",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "benazir-bhutto-assassination",
+        "year": "Dec 27, 2007",
+        "title": "Benazir Bhutto Assassinated in Rawalpindi",
+        "type": "attack",
+        "detail": "Former Pakistani Prime Minister Benazir Bhutto is assassinated in a suicide bombing attack at a campaign rally in Rawalpindi, Pakistan. Bhutto, who had returned from exile to lead her party in elections, is killed after addressing supporters. The TTP claims responsibility, though Pakistan initially blamed al-Qaeda. Her death triggers political crisis and widespread violence across Pakistan.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-drone-program-fata",
+        "year": "2008",
+        "title": "CIA Drone Strike Campaign Intensifies in FATA",
+        "type": "military",
+        "detail": "The CIA significantly expands its covert drone strike program targeting al-Qaeda and Taliban leaders in Pakistan's Federally Administered Tribal Areas (FATA). Under President Bush, and greatly accelerating under Obama, drones become the primary weapon against militant leadership. Pakistan officially protests the strikes while secretly approving them, creating a public-private contradiction that generates deep resentment.",
+        "sources": [
+          {
+            "name": "Bureau of Investigative Journalism",
+            "url": "https://www.thebureauinvestigates.com",
+            "tier": 3
+          },
+          {
+            "name": "New York Times",
+            "url": "https://www.nytimes.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kabul-hotel-siege-2008",
+        "year": "Jan 14, 2008",
+        "title": "Serena Hotel Attack, Kabul",
+        "type": "attack",
+        "detail": "Taliban gunmen storm the Serena Hotel in Kabul, killing eight people including a Norwegian diplomat and a journalist. The attack demonstrates the Taliban's reach into the supposedly secure Afghan capital and marks a significant escalation in urban terrorism. The attack is carefully planned, with gunmen posing as gym members to bypass security.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "indian-embassy-bombing-kabul",
+        "year": "Jul 7, 2008",
+        "title": "Indian Embassy Bombing in Kabul",
+        "type": "attack",
+        "detail": "A massive truck bomb explodes outside the Indian Embassy in Kabul, killing 58 people including an Indian defense attach\u00e9 and a political counselor. US intelligence officials conclude Pakistani intelligence (ISI) supported the attack, carried out by the Haqqani Network, to undermine Indian influence in Afghanistan. The incident severely strains India-Pakistan relations.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "New York Times",
+            "url": "https://www.nytimes.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Obama Surge & Peak NATO Presence (2009\u20132012)",
+    "events": [
+      {
+        "id": "obama-surge-announced",
+        "year": "Dec 1, 2009",
+        "title": "Obama Announces 30,000-Troop Surge",
+        "type": "military",
+        "detail": "President Obama announces at West Point the deployment of 30,000 additional US troops to Afghanistan, bringing the total to approximately 100,000. The surge aims to reverse Taliban momentum and buy time for the Afghan National Security Forces (ANSF) to develop. Obama simultaneously announces a July 2011 date to begin withdrawal, which critics argue undermines the strategy by giving Taliban a deadline to wait out.",
+        "sources": [
+          {
+            "name": "White House",
+            "url": "https://www.whitehouse.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mcchrystal-strategy-report",
+        "year": "Aug 2009",
+        "title": "McChrystal Report: Counterinsurgency Strategy",
+        "type": "military",
+        "detail": "General Stanley McChrystal's classified assessment of the Afghan war is leaked, warning that the mission will fail without additional troops and a new counterinsurgency strategy focused on protecting the Afghan population rather than killing insurgents. McChrystal requests 40,000 additional troops. The report triggers a major White House strategy review lasting 90 days.",
+        "sources": [
+          {
+            "name": "Washington Post",
+            "url": "https://www.washingtonpost.com",
+            "tier": 2
+          },
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "operation-moshtarak-marjah",
+        "year": "Feb 13, 2010",
+        "title": "Operation Moshtarak \u2014 Battle of Marjah",
+        "type": "military",
+        "detail": "NATO and Afghan forces launch Operation Moshtarak (Together), the largest military operation since 2001, to clear Taliban forces from Marjah, a key Taliban-controlled town in Helmand province. Over 15,000 troops participate. General McChrystal promises a 'government in a box' will follow to restore civil administration. The operation succeeds militarily but the governance component proves deeply problematic.",
+        "sources": [
+          {
+            "name": "NATO",
+            "url": "https://www.nato.int",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kandahar-offensive-2010",
+        "year": "Sep 2010",
+        "title": "Campaign for Kandahar",
+        "type": "military",
+        "detail": "US and NATO forces conduct a major campaign to secure Kandahar city and surrounding districts, the Taliban's spiritual heartland. Special operations raids, air strikes, and ground operations target Taliban networks. By late 2010, violence in Kandahar decreases significantly, but Taliban shadow governance remains entrenched in rural areas. General Petraeus describes the results as 'fragile and reversible.'",
+        "sources": [
+          {
+            "name": "ISAF",
+            "url": "https://www.nato.int",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "bin-laden-killed-abbottabad",
+        "year": "May 2, 2011",
+        "title": "Osama bin Laden Killed in Abbottabad",
+        "type": "military",
+        "detail": "US Navy SEAL Team 6 conducts Operation Neptune Spear, killing Osama bin Laden in his compound in Abbottabad, Pakistan, less than a mile from the Pakistani Military Academy. Bin Laden's death represents the culmination of the original mission to bring justice for 9/11. The operation is conducted without notifying Pakistan in advance. Pakistan's failure to detect bin Laden's presence triggers a major diplomatic crisis.",
+        "sources": [
+          {
+            "name": "White House",
+            "url": "https://www.whitehouse.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "haqqani-network-listed",
+        "year": "Sep 2012",
+        "title": "US Designates Haqqani Network as Terrorist Organization",
+        "type": "diplomatic",
+        "detail": "The United States formally designates the Haqqani Network as a Foreign Terrorist Organization (FTO). The network, led by Jalaluddin Haqqani and his son Sirajuddin Haqqani, is responsible for some of the deadliest attacks in Afghanistan including suicide bombings, kidnappings, and attacks on US forces. Pakistan's ISI's alleged links to the network remain a major source of tension.",
+        "sources": [
+          {
+            "name": "US State Department",
+            "url": "https://www.state.gov",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "koran-burning-protests",
+        "year": "Feb 2012",
+        "title": "Koran Burning Sparks Deadly Protests",
+        "type": "humanitarian",
+        "detail": "Protests erupt across Afghanistan after US military personnel at Bagram Air Base accidentally burn copies of the Quran among confiscated materials. At least 30 Afghans are killed in the subsequent protests and attacks on NATO bases. Six US soldiers are killed. President Obama issues an apology. The incident severely damages US-Afghan relations and provides major propaganda material for the Taliban.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "AP",
+            "url": "https://www.apnews.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "ANSF Transition & NATO Drawdown (2012\u20132014)",
+    "events": [
+      {
+        "id": "lisbon-transition-plan",
+        "year": "Nov 2010",
+        "title": "NATO Lisbon Summit \u2014 Transition Plan Set",
+        "type": "diplomatic",
+        "detail": "NATO leaders at the Lisbon Summit agree to transition security responsibility to Afghan forces by end of 2014, when ISAF's combat mission will end. All 28 NATO members reaffirm their commitment to Afghanistan's long-term security. The plan envisions Afghan forces taking the lead while NATO advisors remain in support. Transition begins in 2011 with the lowest-violence provinces.",
+        "sources": [
+          {
+            "name": "NATO",
+            "url": "https://www.nato.int",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "insider-attacks-2012",
+        "year": "2012",
+        "title": "Green-on-Blue Insider Attack Crisis",
+        "type": "attack",
+        "detail": "2012 becomes the worst year for insider attacks ('green on blue') as Afghan security personnel turn their weapons on NATO allies. Over 60 NATO troops are killed by Afghan colleagues during the year. The surge in attacks forces NATO to impose new 'guardian angel' protocols requiring armed escorts whenever NATO soldiers train with Afghan partners. The attacks undermine the training mission and erode trust.",
+        "sources": [
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "karzai-reelection-fraud",
+        "year": "Nov 2009",
+        "title": "Karzai Re-elected Amid Massive Fraud",
+        "type": "political",
+        "detail": "Hamid Karzai is declared winner of the 2009 presidential election after his main challenger Abdullah Abdullah withdraws from a runoff, citing the fraud that marred the first round. The Independent Election Commission finds that one-third of Karzai's votes were fraudulent. The scandal severely damages the legitimacy of the Afghan government and US counterinsurgency efforts.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "UN Assistance Mission in Afghanistan",
+            "url": "https://unama.unmissions.org",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "enduring-freedom-mission-ends",
+        "year": "Dec 28, 2014",
+        "title": "ISAF Combat Mission Ends \u2014 Resolute Support Begins",
+        "type": "military",
+        "detail": "NATO formally ends the ISAF combat mission in Afghanistan after 13 years, with a ceremony in Kabul. A new non-combat mission called Resolute Support begins on January 1, 2015, with approximately 13,000 troops focused on training, advising, and assisting Afghan security forces. The US also maintains a small counterterrorism force. At peak, ISAF had 130,000 troops from 50 nations.",
+        "sources": [
+          {
+            "name": "NATO",
+            "url": "https://www.nato.int",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "sigar-first-report",
+        "year": "2012",
+        "title": "SIGAR Reports Billions in Wasted Aid",
+        "type": "political",
+        "detail": "The Special Inspector General for Afghanistan Reconstruction (SIGAR) reports that billions of US reconstruction dollars have been wasted on projects that are unsustainable, incomplete, or serve no strategic purpose. SIGAR audits reveal systemic corruption at all levels of Afghan government. By 2021, the US will have spent over $145 billion on reconstruction, with SIGAR documenting pervasive waste and fraud.",
+        "sources": [
+          {
+            "name": "SIGAR",
+            "url": "https://www.sigar.mil",
+            "tier": 1
+          },
+          {
+            "name": "Washington Post",
+            "url": "https://www.washingtonpost.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Post-ISAF Conflict & Taliban Resurgence (2015\u20132018)",
+    "events": [
+      {
+        "id": "mullah-omar-death-revealed",
+        "year": "Jul 2015",
+        "title": "Taliban Confirms Mullah Omar Died in 2013",
+        "type": "political",
+        "detail": "The Afghan government reveals that Taliban supreme leader Mullah Mohammad Omar died in a Pakistani hospital in April 2013, a fact that has been concealed for two years. The revelation triggers a leadership crisis within the Taliban. Mullah Akhtar Mansour is selected as the new supreme leader. The deception raises questions about the authenticity of 'messages from Mullah Omar' issued by Taliban leadership during peace negotiations.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kunduz-falls-2015",
+        "year": "Sep 28, 2015",
+        "title": "Taliban Captures Kunduz City",
+        "type": "military",
+        "detail": "Taliban fighters capture Kunduz, the first Afghan provincial capital to fall since 2001. Afghan government forces and civilians flee the city as Taliban fighters enter. Afghan and US forces launch a counter-offensive and retake the city after 15 days. The fall of Kunduz is a major propaganda victory for the Taliban and demonstrates the fragility of Afghan security forces without coalition support.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "AP",
+            "url": "https://www.apnews.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "msf-hospital-bombing-kunduz",
+        "year": "Oct 3, 2015",
+        "title": "US Strikes MSF Hospital in Kunduz \u2014 42 Killed",
+        "type": "attack",
+        "detail": "A US AC-130 gunship repeatedly strikes the M\u00e9decins Sans Fronti\u00e8res (MSF) hospital in Kunduz over more than an hour, killing 42 people including 14 MSF staff and 24 patients. MSF had provided the coordinates to US and Afghan military before the strike. The attack is ultimately attributed to human and technical error by a US military investigation. MSF calls it a war crime.",
+        "sources": [
+          {
+            "name": "M\u00e9decins Sans Fronti\u00e8res",
+            "url": "https://www.msf.org",
+            "tier": 3
+          },
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "isis-k-declared",
+        "year": "Jan 2015",
+        "title": "ISIS-Khorasan (ISIS-K) Formally Established",
+        "type": "political",
+        "detail": "ISIS announces the establishment of its Khorasan Province (ISIS-K), covering Afghanistan and Pakistan. Initially composed of TTP defectors, Uzbek militants, and some Afghan Taliban, ISIS-K quickly establishes a presence in eastern Afghanistan, particularly Nangarhar province. ISIS-K competes violently with the Taliban and targets civilians, conducting brutal executions and bombings.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "url": "https://www.aljazeera.com",
+            "tier": 2
+          },
+          {
+            "name": "Wilson Center",
+            "url": "https://www.wilsoncenter.org",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mansour-killed-drone-strike",
+        "year": "May 21, 2016",
+        "title": "Taliban Leader Mansour Killed by US Drone in Pakistan",
+        "type": "military",
+        "detail": "Taliban supreme leader Mullah Akhtar Mansour is killed in a US drone strike in Baluchistan province, Pakistan \u2014 outside the traditional FATA zone of CIA operations. The strike represents the first acknowledged targeting of Taliban leadership on Pakistani territory. Haibatullah Akhundzada is subsequently appointed as Taliban supreme leader, a position he holds through 2026.",
+        "sources": [
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "moab-dropped-nangarhar",
+        "year": "Apr 13, 2017",
+        "title": "US Drops MOAB on ISIS-K Tunnels in Nangarhar",
+        "type": "military",
+        "detail": "The US military drops a GBU-43/B Massive Ordnance Air Blast (MOAB), the largest non-nuclear bomb ever used in combat, on ISIS-K tunnel complexes in Achin district, Nangarhar province. The strike kills 94 ISIS-K militants according to the Afghan government. The use of the MOAB is the first in combat and signals a loosening of targeting restrictions under President Trump.",
+        "sources": [
+          {
+            "name": "CENTCOM",
+            "url": "https://www.centcom.mil",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "south-asia-strategy-2017",
+        "year": "Aug 21, 2017",
+        "title": "Trump Announces New South Asia Strategy",
+        "type": "political",
+        "detail": "President Trump announces a new South Asia strategy, abandoning his earlier preference for withdrawal and committing to conditions-based US engagement in Afghanistan without setting a timeline for departure. He explicitly criticizes Pakistan as a haven for terrorist groups and threatens to cut US aid. The strategy calls for an increase in US troops from 8,400 to approximately 14,000 and an intensified air campaign.",
+        "sources": [
+          {
+            "name": "White House",
+            "url": "https://www.whitehouse.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Doha Peace Process (2018\u20132020)",
+    "events": [
+      {
+        "id": "peace-talks-begin",
+        "year": "Oct 2018",
+        "title": "US-Taliban Direct Talks Begin in Qatar",
+        "type": "diplomatic",
+        "detail": "The Trump administration initiates direct peace negotiations with the Taliban in Doha, Qatar, bypassing the Afghan government. Ambassador Zalmay Khalilzad is appointed Special Representative for Afghanistan Reconciliation and leads the US side. The Taliban, holding a political office in Doha, demands complete withdrawal of foreign forces and refuses to negotiate with what it calls the 'puppet' Kabul government.",
+        "sources": [
+          {
+            "name": "US State Department",
+            "url": "https://www.state.gov",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trump-cancels-talks",
+        "year": "Sep 9, 2019",
+        "title": "Trump Cancels Camp David Taliban Meeting",
+        "type": "diplomatic",
+        "detail": "President Trump cancels a secret planned meeting with Taliban leaders at Camp David following a Taliban attack in Kabul that killed an American soldier and 11 others. Trump announces the talks are 'dead' via Twitter. The cancellation causes a months-long pause in negotiations, which ultimately resume in January 2020.",
+        "sources": [
+          {
+            "name": "New York Times",
+            "url": "https://www.nytimes.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "doha-agreement-signed",
+        "year": "Feb 29, 2020",
+        "title": "US-Taliban Doha Agreement Signed",
+        "type": "diplomatic",
+        "detail": "The US and Taliban sign the Agreement for Bringing Peace to Afghanistan in Doha, Qatar. The US agrees to withdraw all forces within 14 months if the Taliban meets commitments including not hosting terrorist groups, beginning intra-Afghan peace talks, and reducing violence. The Afghan government is not a signatory and reacts with outrage. The deal commits the US to releasing 5,000 Taliban prisoners.",
+        "sources": [
+          {
+            "name": "US State Department",
+            "url": "https://www.state.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "prisoner-release-controversy",
+        "year": "Mar 2020",
+        "title": "Afghan Government Forced to Release Taliban Prisoners",
+        "type": "political",
+        "detail": "Under intense US pressure following the Doha Agreement, Afghan President Ashraf Ghani agrees to release up to 5,000 Taliban prisoners despite strong opposition from the Afghan government, security forces, and victims' groups. Among those released are senior Taliban commanders responsible for major attacks. The Taliban releases 1,000 Afghan security force prisoners in exchange.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "violence-increases-2020",
+        "year": "2020",
+        "title": "Violence Surges Despite Doha Agreement",
+        "type": "attack",
+        "detail": "Violence against Afghan civilians and security forces surges dramatically in 2020, even as the Taliban technically reduces attacks on US/NATO forces as required by the Doha Agreement. ACLED records over 4,800 violent events in 2020. Taliban assassinations target journalists, women, judges, and civil society figures. UNAMA records nearly 8,000 civilian casualties for the year.",
+        "sources": [
+          {
+            "name": "ACLED",
+            "url": "https://acleddata.com",
+            "tier": 3
+          },
+          {
+            "name": "UNAMA",
+            "url": "https://unama.unmissions.org",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "US Withdrawal & Taliban Takeover (2021)",
+    "events": [
+      {
+        "id": "biden-withdrawal-announcement",
+        "year": "Apr 14, 2021",
+        "title": "Biden Announces Full Withdrawal by September 11",
+        "type": "political",
+        "detail": "President Biden announces that all US troops will withdraw from Afghanistan by September 11, 2021 \u2014 the 20th anniversary of the 9/11 attacks \u2014 regardless of conditions on the ground. This supersedes the May 1, 2021 date in the Doha Agreement. The announcement triggers alarm among Afghan allies and NATO partners. Biden calls the continuation of the 'forever war' not in the national interest.",
+        "sources": [
+          {
+            "name": "White House",
+            "url": "https://www.whitehouse.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "bagram-handover",
+        "year": "Jul 2, 2021",
+        "title": "Bagram Air Base Quietly Handed Over",
+        "type": "military",
+        "detail": "The US hands over Bagram Airfield to the Afghan National Army without informing the new Afghan commander in advance. US forces depart overnight, leaving equipment and supplies. Afghan commanders discover the handover only after looters have broken into the base. Bagram, the largest US base in Afghanistan, had been the hub of US military operations for 20 years. Its abandonment shocks Afghan forces.",
+        "sources": [
+          {
+            "name": "AP",
+            "url": "https://www.apnews.com",
+            "tier": 2
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "provincial-capitals-fall",
+        "year": "Aug 2021",
+        "title": "Afghan Provincial Capitals Fall in Days",
+        "type": "military",
+        "detail": "In a rapid offensive beginning August 6, the Taliban captures Afghan provincial capitals at a stunning pace: Zaranj (Aug 6), Sheberghan (Aug 9), Kunduz (Aug 8), Sar-e-Pul, Taloqan, Faizabad, Farah, and multiple others fall within days. The speed of collapse shocks US intelligence which had estimated it would take 90 days to 2 years. Afghan security forces melt away or surrender en masse.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kabul-falls-taliban",
+        "year": "Aug 15, 2021",
+        "title": "Taliban Enters Kabul \u2014 Ghani Flees",
+        "type": "military",
+        "detail": "Taliban fighters enter Kabul as President Ashraf Ghani flees Afghanistan, ending the republic. Within hours Taliban fighters are in the presidential palace. The US Embassy is hastily evacuated by helicopter to Kabul airport in scenes reminiscent of Saigon 1975. Thousands of Afghans rush to Hamid Karzai International Airport desperate to flee. The rapid collapse shocks the world.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "AP",
+            "url": "https://www.apnews.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kabul-airport-evacuation",
+        "year": "Aug 15\u201331, 2021",
+        "title": "Chaotic Mass Evacuation from Kabul Airport",
+        "type": "humanitarian",
+        "detail": "The US and allies conduct a massive airlift from Hamid Karzai International Airport under Taliban guard, evacuating over 124,000 people in two weeks. Desperate Afghans crowd the airport perimeter. Taliban fighters control access, creating deadly crush conditions. The evacuation represents the largest airlift since Berlin 1948-49. Approximately 76,000 Afghans and 6,000 Americans are evacuated.",
+        "sources": [
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "abbey-gate-bombing",
+        "year": "Aug 26, 2021",
+        "title": "ISIS-K Suicide Bombing at Abbey Gate Kills 183",
+        "type": "attack",
+        "detail": "An ISIS-K suicide bomber detonates at Abbey Gate of Kabul airport, killing 13 US service members and 170 Afghan civilians \u2014 the deadliest day for US forces in a decade. A second explosion occurs near the Baron Hotel. ISIS-K claims responsibility, targeting both the evacuation and Taliban forces who were providing perimeter security. The US later conducts drone strikes targeting ISIS-K planners in Nangarhar.",
+        "sources": [
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "last-us-troops-depart",
+        "year": "Aug 30, 2021",
+        "title": "Last US Troops Leave Afghanistan",
+        "type": "military",
+        "detail": "General Kenneth McKenzie announces the withdrawal of the last US military personnel from Afghanistan at 11:59 PM local time on August 30. The final C-17 flight departs from Kabul airport, ending 20 years of US military presence. Taliban fire weapons into the air in celebration. The US leaves behind hundreds of Afghans who worked for American forces and held special visas.",
+        "sources": [
+          {
+            "name": "Pentagon",
+            "url": "https://www.defense.gov",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "zawahiri-drone-kabul",
+        "year": "Jul 31, 2022",
+        "title": "US Kills al-Qaeda Chief Zawahiri in Kabul Drone Strike",
+        "type": "military",
+        "detail": "A CIA drone strike kills al-Qaeda leader Ayman al-Zawahiri on a balcony of his Kabul safehouse in the upscale Sherpur neighborhood. Zawahiri, who helped plan 9/11, was living in a house belonging to a Haqqani Network leader. The strike demonstrates continued US over-the-horizon capability. The Taliban condemns the strike as a violation of the Doha Agreement.",
+        "sources": [
+          {
+            "name": "White House",
+            "url": "https://www.whitehouse.gov",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Taliban Governance & Post-Withdrawal (2021\u20132023)",
+    "events": [
+      {
+        "id": "ies-declared",
+        "year": "Sep 7, 2021",
+        "title": "Taliban Declares Islamic Emirate of Afghanistan",
+        "type": "political",
+        "detail": "The Taliban announces the formation of the Islamic Emirate of Afghanistan (IEA) and its interim government. Mullah Mohammad Hassan Akhund becomes caretaker Prime Minister, with Mullah Abdul Ghani Baradar as deputy. Sirajuddin Haqqani is appointed Minister of Interior. No country recognizes the government diplomatically. The government includes no women and no members of former republic.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "url": "https://www.aljazeera.com",
+            "tier": 2
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "afghan-assets-frozen",
+        "year": "Aug 2021",
+        "title": "US Freezes $9.5 Billion in Afghan Central Bank Assets",
+        "type": "diplomatic",
+        "detail": "The United States freezes approximately $9.5 billion in Afghan central bank assets held in American financial institutions, preventing the Taliban from accessing foreign exchange reserves. The freeze exacerbates the economic crisis as the Afghan financial system collapses. Debate ensues about whether to release funds for humanitarian purposes while denying them to the Taliban government.",
+        "sources": [
+          {
+            "name": "US Treasury",
+            "url": "https://www.treasury.gov",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "girls-secondary-school-ban",
+        "year": "Mar 23, 2022",
+        "title": "Taliban Bans Girls from Secondary Schools",
+        "type": "political",
+        "detail": "The Taliban reverses its brief promise to reopen girls' schools above 6th grade, ordering female students home on the day schools were supposed to reopen. The ban on girls' secondary education in Afghanistan means millions of girls are denied schooling. The decision contradicts assurances given to international community and triggers international condemnation. Girls' primary schools remain open.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Human Rights Watch",
+            "url": "https://www.hrw.org",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "university-ban-women",
+        "year": "Dec 20, 2022",
+        "title": "Taliban Bans Women from Universities",
+        "type": "political",
+        "detail": "Taliban authorities announce an immediate ban on women attending universities in Afghanistan. The ban applies to all universities, public and private. The announcement causes protests at some universities and mass resignations of male faculty in solidarity. The UN Secretary-General calls it 'a fundamental breach of human rights.' It effectively denies higher education to nearly 100,000 women.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "UN",
+            "url": "https://www.un.org",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ngos-banned-women-workers",
+        "year": "Dec 24, 2022",
+        "title": "Taliban Bans Women from Working for NGOs",
+        "type": "humanitarian",
+        "detail": "Taliban authorities order all national and international NGOs to suspend female Afghan staff from working. The ban, which includes UN agencies and international humanitarian organizations, severely undermines the aid response in Afghanistan. Several major organizations suspend operations in protest. The decision worsens the humanitarian crisis at a time when 28 million Afghans need assistance.",
+        "sources": [
+          {
+            "name": "UN OCHA",
+            "url": "https://www.unocha.org",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pakistan-launches-ttp-campaign",
+        "year": "Oct 2022",
+        "title": "TTP Ends Ceasefire, Attacks Escalate in Pakistan",
+        "type": "attack",
+        "detail": "TTP ends its ceasefire with Pakistan and dramatically escalates attacks across Khyber Pakhtunkhwa and Baluchistan provinces. Pakistan accuses the Taliban of sheltering TTP fighters and facilitating cross-border attacks. The escalation strains Pakistan-Taliban relations as Islamabad demands the Taliban expel TTP leaders from Afghan territory. Pakistan begins conducting airstrikes targeting TTP positions inside Afghanistan.",
+        "sources": [
+          {
+            "name": "Dawn",
+            "url": "https://www.dawn.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "herat-earthquake-2023",
+        "year": "Oct 7, 2023",
+        "title": "Herat Earthquake Kills Over 1,400",
+        "type": "humanitarian",
+        "detail": "A devastating 6.3-magnitude earthquake strikes Herat province in western Afghanistan, killing over 1,400 people and injuring thousands more. Multiple aftershocks compound the destruction. Entire villages are flattened. The Taliban government's limited capacity to respond highlights the impact of international sanctions and frozen assets on governance. The UN launches an emergency appeal for $100 million.",
+        "sources": [
+          {
+            "name": "UN OCHA",
+            "url": "https://www.unocha.org",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "ISIS-K Escalation & Pakistan-Afghan Crisis (2023\u20132026)",
+    "events": [
+      {
+        "id": "isis-k-moscow-attack",
+        "year": "Mar 22, 2024",
+        "title": "ISIS-K Attacks Moscow's Crocus City Hall",
+        "type": "attack",
+        "detail": "ISIS-K gunmen attack the Crocus City Hall concert venue near Moscow, killing over 140 people in the deadliest terrorist attack in Russia in decades. The attack demonstrates ISIS-K's growing global reach and capability to recruit operatives and plan attacks far from its Afghan base. Russia blames Ukraine despite ISIS-K's claim, reflecting geopolitical manipulation of the event.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pakistan-afghan-border-closure",
+        "year": "2023",
+        "title": "Pakistan Fortifies Afghan Border, Expels Afghan Refugees",
+        "type": "diplomatic",
+        "detail": "Pakistan announces mass deportation of undocumented Afghans \u2014 approximately 1.7 million people \u2014 and begins reinforcing the Afghan border with new fencing and surveillance. The move is driven by the surge in TTP attacks and Islamabad's frustration with Taliban unwillingness to rein in TTP. Pakistan-Afghanistan relations reach their lowest point in years.",
+        "sources": [
+          {
+            "name": "UNHCR",
+            "url": "https://www.unhcr.org",
+            "tier": 1
+          },
+          {
+            "name": "Dawn",
+            "url": "https://www.dawn.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pakistan-airstrikes-afghanistan",
+        "year": "Mar 2024",
+        "title": "Pakistan Conducts Airstrikes Inside Afghanistan",
+        "type": "military",
+        "detail": "Pakistan conducts airstrikes targeting TTP bases in Paktika province of Afghanistan, killing dozens of civilians and militants. The Taliban strongly condemns the strikes as a violation of Afghan sovereignty and fires artillery across the border in retaliation. The escalation brings the two countries to the brink of open conflict. Pakistan frames the strikes as necessary counterterrorism operations.",
+        "sources": [
+          {
+            "name": "Dawn",
+            "url": "https://www.dawn.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "isis-k-europe-plots",
+        "year": "2024",
+        "title": "ISIS-K Plots Disrupted Across Europe",
+        "type": "attack",
+        "detail": "European intelligence services disrupt multiple ISIS-K attack plots targeting major events including the Paris Olympics and concerts in Vienna. The plots demonstrate ISIS-K's external operations capability and recruitment in Europe, particularly among Afghan diaspora communities. The UK, Germany, Austria, and France all arrest suspects with ISIS-K connections.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ttp-peshawar-mosque-bombing",
+        "year": "Jan 30, 2023",
+        "title": "TTP Suicide Bomb Kills 100+ at Peshawar Mosque",
+        "type": "attack",
+        "detail": "A TTP suicide bomber targets a police mosque in Peshawar during Monday prayers, killing at least 100 people and injuring 220 \u2014 the deadliest attack in Pakistan in years. Most victims are Pakistani police officers. The attack leads to renewed Pakistani military operations in Khyber Pakhtunkhwa and escalating pressure on the Taliban to act against TTP.",
+        "sources": [
+          {
+            "name": "Geo News",
+            "url": "https://www.geo.tv",
+            "tier": 2
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "isis-k-kabul-attacks-2024",
+        "year": "2024",
+        "title": "ISIS-K Escalates Attacks on Taliban Officials",
+        "type": "attack",
+        "detail": "ISIS-K conducts a sustained campaign of bombings, assassinations, and suicide attacks targeting Taliban officials, police, military, and Shia Hazara communities across Afghanistan in 2024. ACLED records over 500 ISIS-K attacks during the year. The Taliban intensifies counterterrorism operations but ISIS-K adapts, shifting tactics to smaller, more dispersed cells.",
+        "sources": [
+          {
+            "name": "ACLED",
+            "url": "https://acleddata.com",
+            "tier": 3
+          },
+          {
+            "name": "Tolo News",
+            "url": "https://tolonews.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "doha-format-talks-2024",
+        "year": "2024",
+        "title": "UN Hosts Afghanistan Talks Without Taliban Recognition",
+        "type": "diplomatic",
+        "detail": "The UN convenes two rounds of talks in Doha in 2024 on Afghanistan, including representatives from the Taliban government along with other Afghan political forces and regional powers. The Taliban attends but rejects any conditions on recognition. International community insists on reversal of girls' education ban as precondition for normalization. No breakthrough is achieved.",
+        "sources": [
+          {
+            "name": "UN",
+            "url": "https://www.un.org",
+            "tier": 1
+          },
+          {
+            "name": "Al Jazeera",
+            "url": "https://www.aljazeera.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-over-horizon-operations-2025",
+        "year": "2025",
+        "title": "US Continues Over-the-Horizon Counterterrorism",
+        "type": "military",
+        "detail": "The US military continues conducting over-the-horizon counterterrorism operations targeting al-Qaeda, ISIS-K, and TTP leadership in Afghanistan and Pakistan. Operations are conducted primarily by CIA drones and Special Operations Command from bases in the Gulf region. The lack of bases in-country limits intelligence collection and response times.",
+        "sources": [
+          {
+            "name": "CENTCOM",
+            "url": "https://www.centcom.mil",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "taliban-poppy-ban-impact",
+        "year": "2023\u20132024",
+        "title": "Taliban Opium Ban Collapses Afghan Drug Economy",
+        "type": "political",
+        "detail": "The Taliban's 2022 ban on opium cultivation takes effect in 2023, causing a 95% reduction in poppy cultivation according to UNODC. While celebrated internationally as a counternarcotics success, the ban devastates the rural Afghan economy which depended heavily on poppy income. Millions of farmers lose their primary income source, deepening the humanitarian crisis.",
+        "sources": [
+          {
+            "name": "UNODC",
+            "url": "https://www.unodc.org",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pakistan-dec-2024-airstrikes",
+        "year": "Dec 25, 2024",
+        "title": "Pakistan Strikes Afghan Villages in Paktika \u2014 25 Killed",
+        "type": "military",
+        "detail": "Pakistani Air Force jets strike seven locations across four villages in Barmal District, Paktika province on Christmas Day, killing an estimated 20-25 people. Pakistan targets TTP commander Sher Zaman's compound and training facilities. Kabul says victims include civilians. Taliban retaliates with strikes on Pakistani border posts in Kurram and North Waziristan on December 28, marking the most serious Af-Pak military exchange to date.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          },
+          {
+            "name": "Dawn",
+            "url": "https://www.dawn.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "russia-recognizes-taliban",
+        "year": "Apr 2025",
+        "title": "Russia Becomes First Country to Formally Recognize Taliban Government",
+        "type": "diplomatic",
+        "detail": "President Putin signs a decree removing the Taliban from Russia's terrorist organizations list (where it had been since 2003), effectively becoming the first country to formally recognize the Islamic Emirate of Afghanistan. Russia's move is driven by strategic interests \u2014 countering NATO influence, securing access to Afghan minerals, and using Taliban as buffer against ISIS-K expansion into Central Asia. Taliban leadership welcomes the recognition.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          },
+          {
+            "name": "BBC News",
+            "url": "https://www.bbc.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "operation-khyber-storm",
+        "year": "Oct 9, 2025",
+        "title": "Pakistan Launches 'Operation Khyber Storm' \u2014 Strikes Kabul",
+        "type": "military",
+        "detail": "Pakistan strikes targets in Kabul, Khost, Jalalabad, and Paktika in 'Operation Khyber Storm', targeting TTP leader Noor Wali Mehsud (who survives). Taliban launches counterattacks on Pakistani border posts October 11-12, killing 23 Pakistani soldiers and wounding 29. UNAMA records at least 70 Afghan civilians killed and 478 injured between October-December 2025. Qatar and Turkey broker a ceasefire in Doha on October 19, the most serious Af-Pak interstate military confrontation in decades.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          },
+          {
+            "name": "UNAMA",
+            "url": "https://unama.unmissions.org",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-humanitarian-funding-suspension",
+        "year": "2025",
+        "title": "US Suspends Humanitarian Aid \u2014 Afghan Crisis Deepens",
+        "type": "humanitarian",
+        "detail": "The United States suspends its humanitarian aid contribution to Afghanistan, which had previously funded approximately 50% of all humanitarian operations in the country. By mid-2025, the UN's Humanitarian Needs and Response Plan is only 17% funded. OCHA projects 22.9 million Afghans \u2014 over half the population \u2014 require humanitarian assistance. The funding gap pushes an additional 4.7 million into emergency hunger levels, a 50%+ increase over the prior year.",
+        "sources": [
+          {
+            "name": "UN OCHA",
+            "url": "https://www.unocha.org",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "url": "https://www.reuters.com",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "igor-girkin",
+    "name": "Igor Girkin (Strelkov)",
+    "role": "Russian GRU Colonel; DNR 'Defence Minister' July 2014; convicted in absentia of MH17 murder, sentenced to life (Nov 2022); later arrested in Russia for domestic extremism (Jul 2023) and sentenced to 4 years (Jan 2024)",
+    "avatar": "russia",
+    "initial": "I",
+    "quote": "In the vicinity of Torez, we just downed a plane, an AN-26. It is lying somewhere in the Progress Mine. We have issued warnings not to fly in our airspace.",
+    "lastUpdated": "2026-05-16T15:04:04Z"
+  },
+  {
+    "id": "sergey-dubinsky",
+    "name": "Sergey Dubinsky",
+    "role": "Russian GRU intelligence officer; DNR intelligence chief; convicted in absentia of murder, sentenced to life imprisonment (Nov 2022)",
+    "avatar": "russia",
+    "initial": "S",
+    "quote": "All aviation has been shot down over Donetsk region. We warned — if you fly in our sky, you'll be shot down.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "leonid-kharchenko",
+    "name": "Leonid Kharchenko",
+    "role": "Ukrainian separatist field commander under DNR; convicted in absentia of murder, sentenced to life imprisonment (Nov 2022)",
+    "avatar": "ukraine",
+    "initial": "L",
+    "quote": "I was just a field commander. I had nothing to do with decisions about anti-aircraft systems.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "oleg-pulatov",
+    "name": "Oleg Pulatov",
+    "role": "Russian GRU officer; DNR deputy commander; the only MH17 suspect to appoint legal representation; acquitted November 2022",
+    "avatar": "russia",
+    "initial": "O",
+    "quote": "My client denies any involvement in the downing of MH17 and maintains he had no role in operations involving the Buk system.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "mark-rutte",
+    "name": "Mark Rutte",
+    "role": "Prime Minister of the Netherlands (2010–2024); led Dutch government response to MH17 including repatriation, investigation support, and accountability demands",
+    "avatar": "netherlands",
+    "initial": "M",
+    "quote": "We want the perpetrators to be brought to justice. The Netherlands will not rest until that goal is achieved.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "wilbert-paulissen",
+    "name": "Wilbert Paulissen",
+    "role": "Head of Dutch National Criminal Investigation Service; JIT lead investigator; announced 53rd Brigade link at May 2018 press conference",
+    "avatar": "jit",
+    "initial": "W",
+    "quote": "We are convinced that our findings justify the conclusions that the BUK-TELAR which was used came from the 53rd Brigade which is part of the military of the Russian Federation.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "fred-westerbeke",
+    "name": "Fred Westerbeke",
+    "role": "Chief National Prosecutor, Netherlands (2012–2019); led the JIT criminal investigation; announced the four suspects in June 2019",
+    "avatar": "jit",
+    "initial": "F",
+    "quote": "We are ready to prosecute these four suspects. We call on them to cooperate with the investigation. If they do not, we will prosecute them in absentia.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "dedy-woei-a-sioe",
+    "name": "Dedy Woei-A-Sioe",
+    "role": "Dutch Chief Prosecutor MH17 trial (2019–2022); led prosecution at Schiphol Judicial Complex; requested life imprisonment for all four defendants",
+    "avatar": "jit",
+    "initial": "D",
+    "quote": "The defendants caused the deaths of 298 people through their coordinated actions. The prosecution demands life imprisonment for all four suspects.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "vladimir-putin",
+    "name": "Vladimir Putin",
+    "role": "President of the Russian Federation; consistently denied Russian state involvement in MH17; blocked UN tribunal via UNSC veto (July 2015); refused extradition",
+    "avatar": "russia",
+    "initial": "V",
+    "quote": "Russia has nothing to do with this [MH17]. We need to draw objective and unbiased conclusions based on the investigation.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "najib-razak",
+    "name": "Najib Razak",
+    "role": "Prime Minister of Malaysia (2009–2018); led Malaysian response to MH17; negotiated black-box handover; joined JIT; was also embroiled in domestic 1MDB scandal",
+    "avatar": "malaysia",
+    "initial": "N",
+    "quote": "We are determined to see justice for the victims of MH17. Malaysia will not rest until we find answers.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "tony-abbott",
+    "name": "Tony Abbott",
+    "role": "Prime Minister of Australia (2013–2015); co-sponsored UNSC Resolution 2166; led Australian push for a UN tribunal; 27 Australian citizens killed",
+    "avatar": "other",
+    "initial": "T",
+    "quote": "We will not rest until the perpetrators of this crime are brought to justice. Russia must cooperate with the investigation.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "julie-bishop",
+    "name": "Julie Bishop",
+    "role": "Australian Foreign Minister (2013–2018); key advocate for MH17 accountability; led diplomatic push at UNSC; pursued Russia's liability at international forums",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "We will never stop pursuing justice for the 298 people who were killed on MH17.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "pieter-omtzigt",
+    "name": "Pieter Omtzigt",
+    "role": "Dutch MP (CDA); chairman of Dutch parliamentary committee on MH17; dogged advocate for families and accountability; pushed for international tribunal",
+    "avatar": "netherlands",
+    "initial": "P",
+    "quote": "Families deserve truth, justice, and reparation. We must pursue every legal avenue to hold Russia accountable for MH17.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "eliot-higgins",
+    "name": "Eliot Higgins",
+    "role": "Founder, Bellingcat; led OSINT investigation that identified the Buk as from Russia's 53rd Brigade; pioneered open-source accountability journalism",
+    "avatar": "jit",
+    "initial": "E",
+    "quote": "Using open-source methods we identified the specific Buk vehicle, traced it to Russia's 53rd Brigade, and documented its entire journey on July 17, 2014. The evidence is overwhelming.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "piet-ploeg",
+    "name": "Piet Ploeg",
+    "role": "Chairman, Association of Relatives of Victims of Disaster MH17 (Stichting Vliegramp MH17); lost brother, sister-in-law, and nephew; became leading voice for victims' families",
+    "avatar": "netherlands",
+    "initial": "P",
+    "quote": "We lost everything on July 17. We want justice — not just the verdict, but the actual sentencing of those responsible. The convictions mean everything to the families.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  }
+]

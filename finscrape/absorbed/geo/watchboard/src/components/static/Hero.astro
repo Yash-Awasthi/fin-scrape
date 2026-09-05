@@ -1,0 +1,44 @@
+---
+import type { Meta } from '../../lib/schemas';
+
+interface Props {
+  meta: Meta;
+}
+
+const { meta } = Astro.props;
+
+/** Strip HTML tags and decode common entities for safe text display */
+const cleanText = (s: string) =>
+  s.replace(/<[^>]+>/g, ' ')
+   .replace(/&amp;/g, '&')
+   .replace(/&lt;/g, '<')
+   .replace(/&gt;/g, '>')
+   .replace(/&quot;/g, '"')
+   .replace(/&#39;/g, "'")
+   .replace(/&middot;/g, '·')
+   .replace(/\s{2,}/g, ' ')
+   .trim();
+
+const updatedDate = new Date(meta.lastUpdated);
+const timeAgo = (() => {
+  const now = new Date();
+  const diffMs = now.getTime() - updatedDate.getTime();
+  const diffMins = Math.floor(diffMs / 60000);
+  if (diffMins < 60) return `${diffMins}m ago`;
+  const diffHrs = Math.floor(diffMins / 60);
+  if (diffHrs < 24) return `${diffHrs}h ago`;
+  return `${Math.floor(diffHrs / 24)}d ago`;
+})();
+const formattedDate = updatedDate.toISOString().split('T')[0];
+---
+<section class="hero">
+  <div class="hero-dateline">
+    {meta.dateline}
+    <span class="freshness-badge" title={`Last data update: ${meta.lastUpdated}`}>
+      <span class="freshness-dot"></span>
+      UPDATED {timeAgo} &middot; {formattedDate}
+    </span>
+  </div>
+  <h1>{cleanText(meta.heroHeadline)}</h1>
+  <p class="hero-subtitle">{meta.heroSubtitle}</p>
+</section>

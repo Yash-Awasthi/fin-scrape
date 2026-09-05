@@ -1,0 +1,108 @@
+[
+  {
+    "id": "oil-production",
+    "label": "Daily Oil Production (actual)",
+    "value": "6.77M bbl/day",
+    "color": "amber",
+    "source": "OPEC monthly report, Bloomberg, May 13 2026; Hormuz still effectively closed as of Aug 22, 2026",
+    "contested": false,
+    "delta": "The May 29 ceasefire and a June Trump-Iran MOU both proved short-lived; Hormuz remains effectively closed to commercial shipping (roughly 1-10 ships/day transiting vs ~73-100 pre-war). MBS met Macron in Paris Aug 23 to advance Hormuz-bypass pipeline routes via Aramco's East-West Pipeline; output shortfall vs quota persists.",
+    "trend": "up",
+    "lastUpdated": "2026-08-23T00:00:00.000Z"
+  },
+  {
+    "id": "gdp-2025",
+    "label": "GDP (2026 nominal est.)",
+    "value": "$1.31 trillion",
+    "color": "green",
+    "source": "Saudi Vision 2030 Annual Report / Arabian Business, May 2026",
+    "contested": false,
+    "delta": "Fivefold FDI growth since 2017; Vision 2030 final phase begins",
+    "trend": "up",
+    "lastUpdated": "2026-05-08T11:50:00.000Z"
+  },
+  {
+    "id": "aramco-market-cap",
+    "label": "Saudi Aramco Market Cap",
+    "value": "$1.76 trillion",
+    "color": "amber",
+    "source": "companiesmarketcap.com, Apr 2026; Q1 net income $33.6B (+26% YoY)",
+    "contested": false,
+    "delta": "Q1 2026 profit +26% YoY to $33.6B as higher oil prices offset volume shortfall",
+    "trend": "up",
+    "lastUpdated": "2026-05-10T00:00:00.000Z"
+  },
+  {
+    "id": "population-2026",
+    "label": "Population",
+    "value": "35.2 million",
+    "color": "blue",
+    "source": "Worldometers, 2026 projection",
+    "contested": false,
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "yemen-war-deaths",
+    "label": "Yemen War Total Deaths (est.)",
+    "value": "233,000+",
+    "color": "red",
+    "source": "UN OHCHR, Dec 2020",
+    "contested": true,
+    "contestNote": "Saudi-led coalition disputes indirect-cause methodology; HRW tallies 19,200+ direct coalition airstrike casualties. All parties bear responsibility.",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "non-oil-gdp-share",
+    "label": "Non-Oil Share of Real GDP",
+    "value": "55%",
+    "color": "green",
+    "source": "Saudi Vision 2030 Annual Report 2024",
+    "contested": true,
+    "contestNote": "Oil revenues still fund ~87% of government budget; Carnegie Endowment notes limited accountability in Vision 2030 self-reporting.",
+    "delta": "+10pp since 2016 baseline",
+    "trend": "up",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "proven-oil-reserves",
+    "label": "Proven Oil Reserves",
+    "value": "267 billion barrels",
+    "color": "amber",
+    "source": "OPEC / EIA (2025)",
+    "contested": true,
+    "contestNote": "Reserve figures have remained almost unchanged since 1990 despite decades of production; independent analysts question methodology of Saudi Aramco's reserve audits.",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "military-budget",
+    "label": "Defense Expenditure (2024)",
+    "value": "$80.3 billion",
+    "color": "red",
+    "source": "SIPRI Yearbook 2025",
+    "contested": false,
+    "delta": "Largest in Middle East; 7th globally",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "q1-2026-budget-deficit",
+    "label": "Q1 2026 Budget Deficit",
+    "value": "SAR 125.7B (~$33.5B)",
+    "color": "red",
+    "source": "Saudi Ministry of Finance / Gulf News, May 2026",
+    "contested": false,
+    "delta": "Largest single-quarter shortfall since 2018; driven by 26% military spending surge and Hormuz-driven oil revenue collapse",
+    "trend": "down",
+    "lastUpdated": "2026-05-22T00:00:00.000Z"
+  },
+  {
+    "id": "imf-2026-gdp-forecast",
+    "label": "IMF 2026 GDP Growth Forecast",
+    "value": "3.1%",
+    "color": "amber",
+    "source": "IMF World Economic Outlook, May 2026",
+    "contested": false,
+    "delta": "Downgraded 1.4pp from prior forecast due to Iran war impact on oil exports and FDI",
+    "trend": "down",
+    "lastUpdated": "2026-05-22T00:00:00.000Z"
+  }
+]

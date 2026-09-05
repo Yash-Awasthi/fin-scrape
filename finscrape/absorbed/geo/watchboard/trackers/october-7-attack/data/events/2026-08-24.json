@@ -1,0 +1,74 @@
+[
+  {
+    "id": "october-council-strategic-warning-report-aug24-2026",
+    "year": "2026",
+    "title": "October Council Report Warns Israel Is Repeating Pre-Oct. 7 'Conceptzia' Failures as Hamas Rebuilds",
+    "type": "political",
+    "active": true,
+    "detail": "The October Council, the advocacy group of October 7 bereaved and hostage families demanding a state commission of inquiry, published a report titled 'Strategic Warning: Default 2026' on Monday, August 24, 2026, warning that the IDF's pre-October 7 containment mentality (the 'conceptzia' that assumed Hamas was deterred) has persisted rather than disappeared, merely 'changing shape.' Citing testimony from anonymous IDF lookouts and reservists along the Gaza border, the report says Hamas has not been disarmed and continues to recruit, manufacture weapons, rebuild, and reestablish governing mechanisms in Gaza, while repeatedly testing IDF response times with crossings of the ceasefire 'Yellow Line' — an IDF report leaked in August reportedly recorded 14 violations in a single 24-hour window, 11 of them classified as an evolving threat to forces. The report also says field observers who raise alarms are pressured into silence by commanders who see them as troublemakers, mirroring pre-October 7 dynamics; one soldier's mother told the Council her daughter faced 'threats and silencing' when reporting security concerns. A senior security official cited in the report said Prime Minister Netanyahu 'received more than ten warnings' before October 7 and dismissed them as exaggeration, while another said billions were wasted on 'projects that were fantasies' focused on the Iranian arena as Hamas strengthened in Gaza. Chili Tropper, chairman of The Democrats party, said the report shows the price in human lives of the IDF 'evading' its responsibilities.",
+    "sources": [
+      {
+        "name": "The Jerusalem Post",
+        "tier": 2,
+        "url": "http://www.jpost.com/israel-news/article-906432",
+        "pole": "western"
+      },
+      {
+        "name": "Ynet News",
+        "tier": 2,
+        "url": "https://www.ynetnews.com/article/ry0n8jtwgg",
+        "pole": "western"
+      },
+      {
+        "name": "Israel Hayom",
+        "tier": 2,
+        "url": "https://www.israelhayom.com/2026/08/24/october-council-report-warns-hamas-rebuilding-idf-observers-silenced",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "media": [
+      {
+        "type": "image",
+        "url": "http://www.jpost.com/israel-news/article-906432",
+        "caption": "Members of the October Council announce their 'Strategic Warning: Default 2026' report, August 24, 2026",
+        "source": "The Jerusalem Post",
+        "thumbnail": "https://images.jpost.com/image/upload/f_auto,fl_lossy/q_auto/c_fill,g_faces:center,h_720,w_1280/735017"
+      }
+    ],
+    "lastUpdated": "2026-08-24"
+  },
+  {
+    "id": "abu-asaad-deir-al-balah-nukhba-eliminated-aug24-2026",
+    "year": "2026",
+    "title": "IDF Kills Nukhba Terrorist Who Infiltrated Israel on Oct. 7 in Deir al-Balah Strike",
+    "type": "military",
+    "active": true,
+    "detail": "The IDF said Monday, August 24, 2026 that it struck two Hamas operatives late Sunday night in the Deir al-Balah area of central Gaza, killing Mohammad Abd al-Nasser Jabr Abu Asaad, a Nukhba Force terrorist who infiltrated Israeli territory and took part in the October 7, 2023 massacre. The military said the two had recently been advancing plans for attacks against IDF troops and Israeli civilians and attempting to rehabilitate Hamas's capabilities, in systematic violation of the ceasefire, and that the strike used precise munitions and aerial surveillance to mitigate harm to civilians. The IDF said forces under the Southern Command remain deployed in the area under the ceasefire agreement and will continue operating to remove immediate threats. The strike is the latest in the IDF-Shin Bet 'Nili' campaign to track down and eliminate the roughly 5,000 people the military says took part in the October 7 attack.",
+    "sources": [
+      {
+        "name": "The Times of Israel",
+        "tier": 2,
+        "url": "https://www.timesofisrael.com/liveblog_entry/idf-says-hamas-commando-who-invaded-on-october-7-killed-in-overnight-strike/",
+        "pole": "western"
+      },
+      {
+        "name": "Israel National News",
+        "tier": 2,
+        "url": "https://www.israelnationalnews.com/news/432158",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.israelnationalnews.com/news/432158",
+        "caption": "IDF forces operate in Gaza after a strike killed Mohammad Abd al-Nasser Jabr Abu Asaad, a Nukhba terrorist who infiltrated Israel on October 7, 2026",
+        "source": "Israel National News / IDF Spokesperson",
+        "thumbnail": "https://2.a7.org/files/pictures/000/1219859.jpg"
+      }
+    ],
+    "lastUpdated": "2026-08-24"
+  }
+]

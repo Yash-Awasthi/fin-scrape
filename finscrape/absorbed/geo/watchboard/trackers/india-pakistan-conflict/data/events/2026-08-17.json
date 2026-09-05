@@ -1,0 +1,81 @@
+[
+  {
+    "id": "pakistan-removes-barricades-indian-high-commission-islamabad-aug17-2026",
+    "year": "2026",
+    "title": "Pakistan Quietly Removes Parking Poles, Barricades Outside Indian High Commission in Islamabad",
+    "type": "diplomatic",
+    "detail": "Pakistani authorities dismantled parking poles and security barricades stationed outside the Indian High Commission in Islamabad around August 17, 2026, according to multiple Indian outlets, which reported the action as having occurred 'three days' before New Delhi's reciprocal removal of structures outside the Pakistan High Commission on August 20. The Islamabad move altered the outer security perimeter of the Indian mission without affecting its functioning. Diplomatic sources described such adjustments to outer security arrangements as calibrated signals between the two capitals, coming amid the broader diplomatic freeze that has persisted since the April 2025 Pahalgam attack — no ambassadors, suspended trade, and reciprocal staff and access restrictions at both high commissions.",
+    "sources": [
+      {
+        "name": "OneIndia",
+        "tier": 2,
+        "url": "https://www.oneindia.com/india/india-pakistan-tensions-delhi-removes-barricades-outside-pak-high-commission-after-islamabad-move-8181679.html",
+        "pole": "eastern"
+      },
+      {
+        "name": "Deccan Chronicle",
+        "tier": 2,
+        "url": "https://www.deccanchronicle.com/nation/current-affairs/india-removes-security-barricades-outside-pakistan-high-commission-1980662",
+        "pole": "eastern"
+      },
+      {
+        "name": "WION",
+        "tier": 2,
+        "url": "https://www.wionews.com/india-news/authorities-clear-unauthorised-structures-outside-pakistan-high-commission-after-poles-removed-near-indian-mission-in-islamabad-1787160668417",
+        "pole": "eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.oneindia.com/india/india-pakistan-tensions-delhi-removes-barricades-outside-pak-high-commission-after-islamabad-move-8181679.html",
+        "caption": "Security barricades and parking poles outside the Indian High Commission in Islamabad were dismantled by Pakistani authorities in mid-August 2026",
+        "source": "OneIndia",
+        "thumbnail": "https://imagesvs.oneindia.com/img/2026/08/india-pakistan-02-93351787201431.jpg"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified",
+    "confidenceReason": "Exact date inferred from consistent 'three days before Aug 20' reporting across independent Indian outlets; no single source gave a direct August 17 dateline.",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  },
+  {
+    "id": "amit-shah-shahzad-bhatti-network-bust-200-arrests-aug17-2026",
+    "year": "2026",
+    "title": "Amit Shah Announces Bust of ISI-Backed 'Shahzad Bhatti Network', Over 200 Arrested Ahead of Independence Day",
+    "type": "terror-attack",
+    "detail": "Union Home Minister Amit Shah announced on August 17, 2026 that Indian security agencies had dismantled the Shahzad Bhatti Network (SBN) — a Pakistan-based, ISI-backed terror syndicate — and arrested more than 200 operatives in a coordinated multi-state operation conducted August 12 across 14 states, thwarting planned 'subversive attacks' timed around India's August 15 Independence Day. State-wise detentions included Uttar Pradesh (62), Haryana (52), Delhi (51), Punjab (44), Rajasthan (15), Maharashtra (8), Uttarakhand (5), and smaller numbers in Karnataka, Gujarat, Bihar, Telangana, Himachal Pradesh, J&K, and Kerala. Seizures included IEDs, grenades bearing Pakistan Ordnance Factory markings, pistols, live ammunition, and surveillance CCTV cameras. The NIA linked the network to a March 2025 grenade attack in Jalandhar, Punjab, and explosions at police stations in Sirsa (November 2025) and Ambala (January 2026).",
+    "sources": [
+      {
+        "name": "India TV News",
+        "tier": 2,
+        "url": "https://www.indiatvnews.com/news/india/isi-backed-shahzad-bhatti-network-busted-ahead-of-independence-day-over-200-arrested-amit-shah-latest-updates-2026-08-17-1051613",
+        "pole": "eastern"
+      },
+      {
+        "name": "The Federal",
+        "tier": 2,
+        "url": "https://thefederal.com/category/news/amit-shah-says-pakistan-backed-terror-network-dismantled-ahead-of-independence-day-253800",
+        "pole": "eastern"
+      },
+      {
+        "name": "Organiser",
+        "tier": 2,
+        "url": "https://organiser.org/2026/08/17/375679/bharat/amit-shah-hails-arrest-of-pakistan-linked-200-operatives-terror-plot-by-shahzad-bhatti-network-around-i-day-foiled/",
+        "pole": "eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://thefederal.com/category/news/amit-shah-says-pakistan-backed-terror-network-dismantled-ahead-of-independence-day-253800",
+        "caption": "Union Home Minister Amit Shah announces the dismantling of the ISI-backed Shahzad Bhatti Network and arrest of over 200 operatives, August 17, 2026",
+        "source": "The Federal",
+        "thumbnail": "https://thefederal.com/h-upload/2026/06/15/628208-pti06112026000348b.webp"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified",
+    "lastUpdated": "2026-08-22T00:00:00.000Z"
+  }
+]

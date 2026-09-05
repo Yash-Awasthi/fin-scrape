@@ -1,0 +1,62 @@
+[
+  {
+    "id": "lai-inspects-han-kuang-typhoon-rain-aug09-2026",
+    "year": "2026",
+    "title": "Lai Inspects Han Kuang Live-Fire Drills in Taoyuan Amid Typhoon Dolphin Downpour",
+    "type": "military",
+    "detail": "President Lai Ching-te, accompanied by Minister of National Defense Wellington Koo and National Security Council Secretary-General Joseph Wu, inspected troops in northern Taoyuan on August 9, 2026 — day five of the Han Kuang 42 live-fire drills — as heavy rain from Typhoon Dolphin swept the area, forcing Lai to wear a raincoat during the visit. Lai received briefings on military coordination against a simulated Chinese invasion and observed the 21st Artillery Command's Avenger air defense system, while Hsiung Feng II and Hsiung Feng III anti-ship missiles were tested separately in Penghu County. In a Facebook post, Lai thanked service members, saying the exercises show 'the country is safer and more capable of defending itself with better preparation.' Separately, Taiwan's MND recorded 4 PLA aircraft sorties (2 crossing the median line into the northern airspace) alongside 6 PLAN vessels and 9 official ships in the same 24-hour window.",
+    "sources": [
+      {
+        "name": "Taipei Times — Lai inspects troops during live-fire drills amid rain",
+        "tier": 2,
+        "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/08/10/2003862237",
+        "pole": "eastern"
+      },
+      {
+        "name": "The Tribune — Taiwan detects 4 PLA aircraft sorties, 6 PLAN vessels around territory",
+        "tier": 2,
+        "url": "https://www.tribuneindia.com/news/adiz/taiwan-detects-4-pla-aircraft-sorties-6-plan-vessels-around-territory",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.taipeitimes.com/News/taiwan/archives/2026/08/10/2003862237",
+        "caption": "President Lai Ching-te inspects Han Kuang 42 live-fire drills in the rain, Taoyuan, August 9, 2026",
+        "source": "Taipei Times",
+        "thumbnail": "https://img.taipeitimes.com/images/2026/08/10/P03-260810-323.jpg"
+      }
+    ]
+  },
+  {
+    "id": "taiwan-cabinet-2027-defense-budget-16-percent-aug09-2026",
+    "year": "2026",
+    "title": "Taiwan Cabinet to Propose 16% Rise in 2027 Defense Spending, First Time Topping NT$1 Trillion",
+    "type": "political",
+    "detail": "Taiwan's Cabinet will propose a 16% annual increase in defense spending for 2027, official Central News Agency reported on August 9, 2026, citing government sources. The proposed budget — expected to be formally unveiled August 20 — would exceed NT$1.1 trillion (roughly US$36 billion) for the first time, and would again exceed 3% of GDP as it has this year. The figure includes funding for the coast guard, veterans' affairs and special projects; the increase points to continued prioritization of asymmetric defense measures — drones, missiles, coastal-defense systems, air defense, surveillance, and reserve-force readiness. The proposal comes as Beijing sustains elevated military and gray-zone pressure and Washington continues pressing Taipei to raise its own defense spending toward 5% of GDP by 2030.",
+    "sources": [
+      {
+        "name": "Reuters (via Internazionale) — Taiwan's 2027 defence spending to rise 16%, official media reports",
+        "tier": 2,
+        "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/08/09/taiwan-s-2027-defence-spending-to-rise-16-official-media-reports",
+        "pole": "western"
+      },
+      {
+        "name": "CBC News — Taiwan's cabinet to propose 16% annual rise in defence spending as Taipei bolsters its military",
+        "tier": 2,
+        "url": "https://www.cbc.ca/news/world/taiwan-defence-spending-2027-9.7300966",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.japantimes.co.jp/news/2026/08/09/asia-pacific/taiwan-2027-defense-spending-rise/",
+        "caption": "Taiwan's 2027 defense budget proposal would rise 16% to over NT$1.1 trillion, officials say, August 9, 2026",
+        "source": "Japan Times",
+        "thumbnail": "https://www.japantimes.co.jp/news/2026/08/09/asia-pacific/taiwan-2027-defense-spending-rise/"
+      }
+    ]
+  }
+]

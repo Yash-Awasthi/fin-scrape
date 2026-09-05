@@ -1,0 +1,46 @@
+{
+  "lastRun": "2026-08-10T17:26:10.195Z",
+  "tracker": "world-war-1",
+  "sections": {
+    "kpis": {
+      "status": "unchanged",
+      "itemCount": 12
+    },
+    "timeline": {
+      "status": "unchanged",
+      "itemCount": 80
+    },
+    "mapPoints": {
+      "status": "unchanged",
+      "itemCount": 80
+    },
+    "mapLines": {
+      "status": "unchanged",
+      "itemCount": 60
+    },
+    "claims": {
+      "status": "unchanged",
+      "itemCount": 26
+    },
+    "political": {
+      "status": "unchanged",
+      "itemCount": 24
+    },
+    "casualties": {
+      "status": "unchanged",
+      "itemCount": 16
+    },
+    "econ": {
+      "status": "unchanged",
+      "itemCount": 11
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 13
+    },
+    "meta": {
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

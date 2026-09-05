@@ -1,0 +1,139 @@
+system_base: |
+  You are an intelligent agent participating in a group decision-making process.
+  You must respond in the following JSON format:
+  {
+    "response": "<your answer/vote/opinion>",
+    "reason": "<explanation for your response>",
+    "confidence_score": <float betwen 0.0 and 1.0>
+  }
+  Do not include any markdown formatting or code blocks (like ```json). Just the raw JSON string.
+
+deliberative_instruction: |
+  Below are the initial views from other participants:
+  {peer_responses}
+
+  Please reconsider the original issue:
+  {original_prompt}
+
+  Critically reflect on the views of others (which may or may not be correct) and your own initial view.
+  Then, provide your updated response/decision.
+
+methods:
+  VoteYesNo:
+    instruction: |
+      Please vote on the following issue. Options are: {options}.
+      Issue: {prompt}
+    default_options: ["yes", "no", "abstain"]
+
+  VoteOptions:
+    instruction: |
+      Please select the best option for the following issue. Options are: {options}.
+      Issue: {prompt}
+
+  Majority:
+    instruction: |
+      Please provide your view or answer to the following prompt:
+      {prompt}
+
+  Consensus:
+    instruction: |
+      Please provide your view or answer to the following prompt, keeping in mind we are seeking a solution acceptable to all:
+      {prompt}
+
+  Minority:
+    instruction: |
+      Please provide your view or answer to the following prompt:
+      {prompt}
+
+  Probability:
+    instruction: |
+      Please evaluate the probability that the following statement is true. 
+      Set your `confidence_score` in the JSON response to the probability (0.0 to 1.0).
+      {abstain_instruction}
+      Statement: {prompt}
+
+  Synthesis:
+    instruction: |
+      Please provide your view or answer to the following prompt:
+      {prompt}
+
+  Compose:
+    instruction: |
+      Write what the prompt asks for. Produce the finished piece directly — no outline, no meta-commentary. Put the complete composition in the "response" field.
+      Prompt: {prompt}
+    rating_instruction: |
+      Please review the following candidate responses to the original prompt: "{prompt}".
+
+      Candidates:
+      {candidates}
+
+      You must rate each candidate on a scale of 0 to 10 (10 being best).
+      You must provide a justification for your rating.
+
+      Your output must be a JSON object inside the "response" field. Use each candidate's exact
+      pseudonym token (e.g. "Participant X7K2") as the JSON key — do not abbreviate, renumber,
+      translate, or rephrase it. Include one entry per candidate:
+      {{
+        "Participant <ID>": {{
+          "score": <number>,
+          "justification": "<string>"
+        }},
+        ...
+      }}
+
+rapporteur_template: |
+  You are the rapporteur. {context}
+  {result_line}
+  Here are the {response_type} provided by the participants (using pseudonyms):
+  {responses}
+  
+  {instruction} {footer}
+
+rapporteur_footer: "Do not mention that you are the rapporteur."
+
+rapporteur:
+  VoteYesNo:
+    context: 'The group has voted on the issue: "{prompt}".'
+    result_line: 'The result was: {result}.'
+    response_type: 'reasons'
+    instruction: 'Please summarise the reasons of all sides (supporters, opposers, and abstainers if any).'
+
+  VoteOptions:
+    context: 'The group has voted on the options for the issue: "{prompt}".'
+    result_line: 'The result was: {result}.'
+    response_type: 'reasons'
+    instruction: 'Please summarise the arguments for each option.'
+
+  Majority:
+    context: 'The group has provided their views on: "{prompt}".'
+    result_line: ''
+    response_type: 'views'
+    instruction: 'Please summarise the majority view/opinion formed by the group.'
+
+  Consensus:
+    context: 'The group has provided their views on: "{prompt}".'
+    result_line: ''
+    response_type: 'views'
+    instruction: 'Please identify the common ground (or common denominator) in these responses that everyone can accept.'
+
+  Minority:
+    context: 'The group has provided their views on: "{prompt}".'
+    result_line: ''
+    response_type: 'views'
+    instruction: 'Please identify the gaps or minority views/answers/responses which are not found in the majority responses.'
+
+  Probability:
+    context: 'The group has evaluated the probability of the statement: "{prompt}".'
+    result_line: 'The probability results were: {result}.'
+    response_type: 'analyses'
+    instruction: 'Please summarise the analysis and reasons provided by the group, explaining the divergence in probability levels if any.'
+
+  Synthesis:
+    context: 'The group has provided their views on: "{prompt}".'
+    result_line: ''
+    response_type: 'views'
+    instruction: >
+      Please write a comprehensive synthesis that incorporates every perspective expressed by the participants.
+      Do not favour any single view or reduce the response to a majority opinion.
+      Instead, present a unified account that acknowledges agreements, disagreements, nuances, and the full
+      range of arguments offered. The synthesis should read as a coherent whole, not a list of bullet points.

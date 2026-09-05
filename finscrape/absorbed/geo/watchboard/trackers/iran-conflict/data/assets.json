@@ -1,0 +1,135 @@
+[
+  {
+    "id": "uk_hormuz_defensive_may18",
+    "type": "Allied Naval Force",
+    "name": "UK Royal Navy — Drones, Fighter Aircraft, Warship to Hormuz (May 18)",
+    "detail": "The United Kingdom announced on May 18, 2026 (Day 80) the deployment of drones, fighter aircraft, and a Royal Navy warship to conduct a defensive mission in the Strait of Hormuz. The deployment signals that key US allies are independently upgrading their defensive postures amid rising war-resumption fears, even as US-Iran talks collapse. The UK force joins a growing multinational defensive presence in the strait alongside existing US, French, and other allied assets.",
+    "lastUpdated": "2026-05-18T14:30:00.000Z"
+  },
+  {
+    "id": "hormuz_escort_force_may5",
+    "type": "Escort Force (announced)",
+    "name": "Hormuz Escort Mission — 15,000 Troops, 100+ Aircraft (Launching May 5)",
+    "detail": "Trump announced May 3 that the US will begin 'guiding' commercial vessels through the Strait of Hormuz starting May 5. Force package: ~15,000 US service members, 100+ aircraft (F/A-18s, F-35s, multi-domain unmanned platforms), guided-missile destroyers, mine-countermeasure vessels, and airborne surveillance assets. Iran's senior official Ebrahim Azizi warned the mission violates the April 8 ceasefire. IRGC issued ultimatum May 3 for US to choose 'impossible war or bad deal.' Analysts describe it as the most complex US naval escort operation since the 1987–88 Tanker War.",
+    "lastUpdated": "2026-05-04T14:30:00.000Z"
+  },
+  {
+    "id": "cvn72_lincoln",
+    "type": "Carrier",
+    "name": "USS Abraham Lincoln (CVN-72)",
+    "detail": "Arabian Sea. F/A-18s, F-35Cs. Now sole active US carrier in theater after USS Ford fire.",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "cvn78_ford",
+    "type": "Carrier (returned home)",
+    "name": "USS Gerald R. Ford (CVN-78) — RETURNED TO NORFOLK May 17",
+    "detail": "Returned to home port of Norfolk, Virginia on approximately May 17, 2026 (Day 79) after an 11-month deployment — the carrier that launched the initial cruise missile strikes on Tehran and Bandar Abbas on February 28 (Day 1) has completed its war rotation. Sustained 30-hour onboard fire Mar 18; departed theater for emergency repairs; rejoined operations before final return. Abraham Lincoln CSG remains deployed in theater.",
+    "lastUpdated": "2026-05-18T14:30:00.000Z"
+  },
+  {
+    "id": "f35",
+    "type": "Fighter",
+    "name": "F-35 Lightning II (~30)",
+    "detail": "RAF Lakenheath, Vermont ANG, VMFA-314",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "f22",
+    "type": "Fighter",
+    "name": "F-22 Raptor (~12)",
+    "detail": "First-ever combat deployment to Israel",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "b2",
+    "type": "Bomber",
+    "name": "B-2 Spirit",
+    "detail": "GBU-57A/B Massive Ordnance Penetrators",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "f15e",
+    "type": "Fighter",
+    "name": "F-15E Strike Eagle",
+    "detail": "3 lost to friendly fire in Kuwait",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "ea18g",
+    "type": "EW",
+    "name": "EA-18G Growler",
+    "detail": "Electronic attack from both carriers",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "ddg111_spruance",
+    "type": "Destroyer",
+    "name": "USS Spruance (DDG-111)",
+    "detail": "Confirmed Tomahawk launches",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "lucas_drones",
+    "type": "UAS",
+    "name": "LUCAS Drones",
+    "detail": "First-ever combat use (one-way attack)",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "troops_regional",
+    "type": "Troops",
+    "name": "~50,000 regional",
+    "detail": "Kuwait, Qatar, UAE, Bahrain bases",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "kc135_stratotanker",
+    "type": "Tanker (lost)",
+    "name": "KC-135 Stratotanker — Crashed Mar 13",
+    "detail": "4th US aircraft lost in conflict. Crashed in western Iraq supporting Epic Fury ops. CENTCOM: 'not due to hostile or friendly fire.' Islamic Resistance in Iraq claims shootdown. 6 crew onboard, no ejection seats.",
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "french_carrier_cdg",
+    "type": "Carrier",
+    "name": "French Aircraft Carrier (CDG)",
+    "detail": "French carrier joined US CENTCOM area. Pro-Iranian Iraq groups threatened French interests. French soldier CWO Arnaud Frion killed in Mala Qara base drone strike Mar 13.",
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "cvn77_bush",
+    "type": "Carrier",
+    "name": "USS George H.W. Bush (CVN-77) — ARRIVED CENTCOM AOR Apr 24",
+    "detail": "USS George H.W. Bush (CVN-77) entered the US Central Command area of responsibility on April 23–24, 2026, bringing total US carriers in the Middle East to THREE — the highest since 2003. Left Norfolk March 31, transited around the Cape of Good Hope (avoiding Houthis in Red Sea). Accompanied by three Arleigh Burke destroyers, an amphibious assault ship with ~2,500 Marines, and a dock landing ship. Carries CVW-8 with F/A-18 Super Hornets and F-35Cs. Now joined by USS Abraham Lincoln (CVN-72) in Arabian Sea for full theater coverage.",
+    "lastUpdated": "2026-04-24T14:30:00.000Z"
+  },
+  {
+    "id": "mcm_chief_pioneer",
+    "type": "Minesweeper",
+    "name": "USS Chief (MCM-14) & USS Pioneer (MCM-9) — DEPLOYED TO GULF",
+    "detail": "Avenger-class mine countermeasure vessels USS Chief and USS Pioneer were spotted transiting toward the Gulf region in mid-April as contingency for Iranian mine-laying operations in the Strait of Hormuz. Trump on April 23 ordered mine-clearing operations tripled. Pentagon assessment: clearing all Iranian mines from the strait could take approximately six months even after cessation of hostilities. Autonomous minehunting systems and mine-hunting helicopters also deployed.",
+    "lastUpdated": "2026-04-24T14:30:00.000Z"
+  },
+  {
+    "id": "ukraine_experts",
+    "type": "Partners",
+    "name": "Ukraine — 201 Military Experts Deployed to Gulf",
+    "detail": "Ukraine deployed 201 military experts to Gulf states on Day 19 to assist with countering Iranian drones, drawing on Ukrainian battlefield experience with Russian-supplied Shahed-type drones. Significant development in broader coalition-building around US Gulf operations.",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "82nd_airborne_centcom",
+    "type": "Troops",
+    "name": "82nd Airborne Division (~1,000+) — DEPLOYED",
+    "detail": "Elements of the 82nd Airborne Division (1st BCT + HQ staff + enablers, ~1,000+ paratroopers) deployed to CENTCOM AOR. Maj. Gen. Brandon Tegtmeier and division staff included. Mission unclear — analysts note possible Kharg Island seizure scenario (handles ~90% of Iranian oil exports). Total US forces in region now ~55,000+.",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "uss_tripoli_lha7",
+    "type": "Amphibious",
+    "name": "USS Tripoli (LHA-7) — 3,500 MARINES ARRIVED",
+    "detail": "USS Tripoli (LHA-7) America-class amphibious assault ship arrived in theater on March 29 with approximately 3,500 US Marines aboard. The deployment substantially increases US amphibious and ground assault capability. Analysts note the force package is consistent with a Kharg Island seizure mission or Hormuz enforcement operation — both scenarios Trump publicly referenced on March 29. Washington Post reported Pentagon preparing for 'weeks of ground operations,' potentially including special forces raids and conventional infantry. Iranian Parliament Speaker Ghalibaf warned a ground invasion would be 'met with force.'",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  }
+]

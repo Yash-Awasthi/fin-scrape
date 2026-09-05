@@ -1,0 +1,1 @@
+"""GPR Equity Observatory package."""

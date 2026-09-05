@@ -1,0 +1,43 @@
+{
+  "lastRun": "2026-08-28T00:48:32.944Z",
+  "tracker": "super-el-nino-2026",
+  "sections": {
+    "kpis": {
+      "status": "seeded",
+      "itemCount": 8
+    },
+    "timeline": {
+      "status": "seeded",
+      "itemCount": 30
+    },
+    "mapPoints": {
+      "status": "seeded",
+      "itemCount": 25
+    },
+    "casualties": {
+      "status": "seeded",
+      "itemCount": 10
+    },
+    "econ": {
+      "status": "seeded",
+      "itemCount": 10
+    },
+    "claims": {
+      "status": "seeded",
+      "itemCount": 15
+    },
+    "political": {
+      "status": "seeded",
+      "itemCount": 12
+    },
+    "events": {
+      "lastRun": "2026-08-23T18:22:21.133Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-23T18:22:21.133Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

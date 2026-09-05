@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-27T23:47:30.878Z",
+  "tracker": "canada-wildfires-2026",
+  "sections": {
+    "kpis": {
+      "count": 9,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 43,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 27,
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 10,
+      "status": "ok"
+    },
+    "econ": {
+      "count": 8,
+      "status": "ok"
+    },
+    "claims": {
+      "count": 15,
+      "status": "ok"
+    },
+    "political": {
+      "count": 13,
+      "status": "ok"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

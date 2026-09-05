@@ -1,0 +1,564 @@
+[
+  {
+    "era": "Shootdown — 17 July 2014",
+    "events": [
+      {
+        "id": "mh17-departs-amsterdam",
+        "year": "Jul 17, 2014",
+        "title": "MH17 Departs Amsterdam Schiphol",
+        "type": "investigation",
+        "detail": "Malaysia Airlines Flight 17, a Boeing 777-200ER (registration 9M-MRD), departs Amsterdam Schiphol Airport at 10:15 UTC bound for Kuala Lumpur. The flight carries 283 passengers and 15 crew — 298 people from 17 nationalities. All pre-flight checks were normal and the aircraft was airworthy.",
+        "sources": [
+          { "name": "Dutch Safety Board Final Report", "tier": 1, "url": "https://www.onderzoeksraad.nl/en/onderzoek/crash-mh17-17-july-2014/" },
+          { "name": "Malaysian Aviation Authority", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "mh17-enters-ukrainian-airspace",
+        "year": "Jul 17, 2014",
+        "title": "MH17 Enters Eastern Ukrainian Airspace at FL330",
+        "type": "investigation",
+        "detail": "MH17 enters the conflict zone over eastern Ukraine at cruising altitude of 33,000 feet (FL330). Ukrainian airspace below FL320 had been closed to civilian traffic due to the ongoing armed conflict, but MH17's altitude was above that restriction. The JIT later found that the risk assessment for flights above FL320 was inadequate.",
+        "sources": [
+          { "name": "Dutch Safety Board Final Report, Oct 2015", "tier": 1 },
+          { "name": "ICAO", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "buk-missile-fired",
+        "year": "Jul 17, 2014",
+        "title": "Buk Missile Fired from Pervomaysk Field",
+        "type": "investigation",
+        "detail": "At approximately 13:20 UTC, a 9M38 series Buk surface-to-air missile is launched from a field near Pervomaysk, south of Snizhne, in separatist-held eastern Ukraine. The missile detonates to the left and above the cockpit with a 9N314M warhead, releasing approximately 800 high-energy fragments into the aircraft structure.",
+        "sources": [
+          { "name": "Dutch Safety Board Final Report, Oct 2015", "tier": 1 },
+          { "name": "JIT Press Briefing, Sep 28 2016", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "mh17-disintegrates",
+        "year": "Jul 17, 2014",
+        "title": "MH17 Disintegrates at 32,998 Feet",
+        "type": "investigation",
+        "detail": "MH17 breaks apart within seconds of the missile detonation at 32,998 feet above sea level. The cockpit section separates first, followed by the forward fuselage. Wreckage and 298 victims scatter across approximately 50 square kilometers of farmland in eastern Ukraine near the village of Hrabove, Donetsk Oblast. Last contact with air traffic control is lost at 13:20 UTC.",
+        "sources": [
+          { "name": "Dutch Safety Board Final Report, Oct 2015", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "girkin-vk-post",
+        "year": "Jul 17, 2014",
+        "title": "Girkin Posts Claim of 'AN-26' Shootdown, Then Deletes It",
+        "type": "investigation",
+        "detail": "Within hours of the crash, Igor Girkin (Strelkov), the self-styled DNR 'Defense Minister', posts on VKontakte (VK): 'In the vicinity of Torez, we just downed a plane, an AN-26. It is lying somewhere in the Progress Mine. We have issued warnings not to fly in our airspace.' When it becomes clear the aircraft was a civilian Boeing 777, the post is deleted. The post is preserved by internet archives and becomes key evidence.",
+        "sources": [
+          { "name": "Bellingcat OSINT Archive", "tier": 3, "url": "https://www.bellingcat.com" },
+          { "name": "BBC News", "tier": 2 },
+          { "name": "JIT Evidence Compilation", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "buk-convoy-returns-russia",
+        "year": "Jul 17, 2014",
+        "title": "Buk TELAR Returns to Russia with One Missile Missing",
+        "type": "investigation",
+        "detail": "The Buk TELAR (transporter-erector-launcher-and-radar) is photographed in Luhansk on the return journey later on July 17, now visibly missing one missile from its original four. The Buk travels east via Luhansk and crosses back into Russia. Photos of both the outbound journey (four missiles) and inbound return (three missiles) become foundational OSINT evidence for JIT.",
+        "sources": [
+          { "name": "Bellingcat", "tier": 3, "url": "https://www.bellingcat.com/news/uk-and-europe/2014/11/08/origin-of-the-separatists-buk/" },
+          { "name": "JIT Press Briefing, Sep 28 2016", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Immediate Aftermath — July–August 2014",
+    "events": [
+      {
+        "id": "unsc-resolution-2166",
+        "year": "Jul 21, 2014",
+        "title": "UN Security Council Adopts Resolution 2166",
+        "type": "diplomatic",
+        "detail": "The UN Security Council unanimously adopts Resolution 2166, calling for a full, thorough and independent international investigation; demanding safe, full and unrestricted access to the crash site for investigators; and calling on all parties to cooperate. Australia sponsors the resolution. Russia — which normally would veto — votes in favor after text is negotiated (replacing 'shooting down' with 'downing').",
+        "sources": [
+          { "name": "UN Security Council", "tier": 1, "url": "https://press.un.org/en/2014/sc11483.doc.htm" },
+          { "name": "Australian Government DFAT", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "black-boxes-handed-over",
+        "year": "Jul 21, 2014",
+        "title": "Black Boxes Recovered and Handed to Malaysian Authorities",
+        "type": "investigation",
+        "detail": "Separatist forces hand over the Flight Data Recorder (FDR) and Cockpit Voice Recorder (CVR) — the 'black boxes' — to Malaysian aviation officials after international pressure. The black boxes, recovered from the crash site, show no evidence of tampering. They are analyzed in the United Kingdom by the Air Accidents Investigation Branch and later in the Netherlands.",
+        "sources": [
+          { "name": "Malaysian Ministry of Transport", "tier": 1 },
+          { "name": "BBC News", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "remains-repatriated-netherlands",
+        "year": "Jul 23, 2014",
+        "title": "First Repatriation Flights Land at Eindhoven",
+        "type": "memorial",
+        "detail": "The first aircraft carrying the remains of MH17 victims arrives at Eindhoven Air Base in the Netherlands. Dutch King Willem-Alexander, Queen Máxima, and Prime Minister Mark Rutte attend the solemn ceremony. The repatriation process takes many months as victim identification — complicated by the wide debris field — proceeds through DNA and dental analysis.",
+        "sources": [
+          { "name": "Dutch Government", "tier": 1 },
+          { "name": "NOS News", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "osce-monitors-access",
+        "year": "Jul 2014",
+        "title": "OSCE Monitors Granted Intermittent Crash-Site Access",
+        "type": "investigation",
+        "detail": "OSCE Special Monitoring Mission observers are granted intermittent access to the crash site in eastern Ukraine, where fighting between Ukrainian forces and Russian-backed separatists continues. Observers document bodies left unrecovered and evidence scattered across farmland. The chaotic conditions and ongoing fighting severely hamper early evidence collection and cause international outrage.",
+        "sources": [
+          { "name": "OSCE Special Monitoring Mission", "tier": 1 },
+          { "name": "The Guardian", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "jit-formed",
+        "year": "Aug 7, 2014",
+        "title": "Joint Investigation Team (JIT) Established",
+        "type": "investigation",
+        "detail": "The Netherlands, Australia, Belgium, Malaysia, and Ukraine formally establish the Joint Investigation Team (JIT) to conduct the criminal investigation into the crash. The Netherlands — as the state with the most victims — leads the JIT. The Dutch National Prosecutor's Office, led by Fred Westerbeke (and later Dedy Woei-A-Sioe), heads the prosecution. Russia is notably absent despite invitations to join.",
+        "sources": [
+          { "name": "Dutch Public Prosecution Service", "tier": 1, "url": "https://www.prosecutionservice.nl/topics/mh17-plane-crash/criminal-investigation-jit-mh17" },
+          { "name": "Government of the Netherlands", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "dsb-preliminary-report",
+        "year": "Sep 9, 2014",
+        "title": "DSB Preliminary Report: External Cause Confirmed",
+        "type": "investigation",
+        "detail": "The Dutch Safety Board (DSB) releases its preliminary safety report, confirming that MH17 broke apart in flight as a result of structural damage caused by 'a large number of high-energy objects that penetrated the aircraft from outside.' The report stops short of identifying the weapon but eliminates mechanical failure and pilot error, pointing decisively to an external projectile.",
+        "sources": [
+          { "name": "Dutch Safety Board (Onderzoeksraad voor Veiligheid)", "tier": 1, "url": "https://www.onderzoeksraad.nl/en/onderzoek/crash-mh17-17-july-2014/" }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "OSINT & Forensic Investigation — 2014–2015",
+    "events": [
+      {
+        "id": "bellingcat-first-buk-report",
+        "year": "Nov 2014",
+        "title": "Bellingcat Publishes Buk OSINT Investigation",
+        "type": "investigation",
+        "detail": "Open-source investigative outlet Bellingcat publishes 'Origin of the Separatists' Buk', using geolocated social media photos to trace the specific Buk TELAR (identified by unique markings) from Russia into eastern Ukraine on July 17 and back. Bellingcat's work — combining satellite imagery, social media posts, and photo analysis — eventually identifies the vehicle as belonging to the Russian military's 53rd Anti-Aircraft Missile Brigade in Kursk.",
+        "sources": [
+          { "name": "Bellingcat", "tier": 3, "url": "https://www.bellingcat.com/news/uk-and-europe/2014/11/08/origin-of-the-separatists-buk/" },
+          { "name": "The Guardian", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "russia-alternative-theories",
+        "year": "Jul–Dec 2014",
+        "title": "Russia Presents Multiple Contradictory Alternative Theories",
+        "type": "diplomatic",
+        "detail": "Russian authorities and state media advance several mutually contradictory alternative theories for MH17: (1) a Ukrainian Su-25 fighter shot down the plane; (2) a Ukrainian Buk fired the missile; (3) the missile was fired from Ukrainian army-controlled territory. Russian Ministry of Defence presents radar data and press conferences. JIT and independent analysts systematically debunk each theory.",
+        "sources": [
+          { "name": "Russian Ministry of Defence", "tier": 1 },
+          { "name": "Bellingcat", "tier": 3 },
+          { "name": "BBC News", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "russia-vetoes-tribunal",
+        "year": "Jul 29, 2015",
+        "title": "Russia Vetoes UN International Tribunal for MH17",
+        "type": "legal",
+        "detail": "Russia vetoes a UN Security Council resolution (sponsored by Malaysia, Australia, the Netherlands, Belgium, and Ukraine) that would have established an international criminal tribunal to prosecute those responsible for shooting down MH17. Russia casts the only vote against; China abstains. The veto forces the investigation to proceed through national Dutch courts. The Netherlands and Australia formally condemn Russia's veto.",
+        "sources": [
+          { "name": "UN Security Council", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "The Guardian", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "dsb-final-report",
+        "year": "Oct 13, 2015",
+        "title": "DSB Final Safety Report: Buk 9N314M Warhead Confirmed",
+        "type": "investigation",
+        "detail": "The Dutch Safety Board publishes its comprehensive 279-page final safety report. The report confirms that MH17 was struck by a 9N314M-type warhead carried by a 9M38-series Buk surface-to-air missile, detonating above and to the left of the cockpit. The report also criticizes Ukrainian authorities for not closing higher altitudes and notes inadequate risk assessment by airlines and aviation authorities.",
+        "sources": [
+          { "name": "Dutch Safety Board (Onderzoeksraad voor Veiligheid)", "tier": 1, "url": "https://www.onderzoeksraad.nl/en/onderzoek/crash-mh17-17-july-2014/" },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "victim-identification-ongoing",
+        "year": "2014–2016",
+        "title": "Victim Identification Process Spans Two Years",
+        "type": "investigation",
+        "detail": "The Dutch Forensic Institute (NFI) leads a painstaking identification process using DNA analysis, dental records, and fingerprints. The wide scatter of remains across the conflict zone, ongoing fighting, and looting at the crash site severely complicate efforts. The last victim was identified in 2019 — five years after the crash. The identification effort involves forensic teams from all victim nations.",
+        "sources": [
+          { "name": "Dutch Forensic Institute (NFI)", "tier": 1 },
+          { "name": "NRC Handelsblad", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Criminal Investigation — 2016–2019",
+    "events": [
+      {
+        "id": "jit-first-public-briefing",
+        "year": "Sep 28, 2016",
+        "title": "JIT First Public Briefing: Buk Convoy Photos and Intercepts Released",
+        "type": "investigation",
+        "detail": "The Joint Investigation Team holds its first major public briefing, presenting photographs of the Buk convoy traveling through Donetsk on July 17, 2014, telephone intercepts between separatist commanders and Russian handlers discussing the 'Buk' and MH17 aftermath, and witness testimony from 800+ people interviewed. JIT confirms MH17 was shot down by a 9M38 series Buk missile and calls on the public to provide further information.",
+        "sources": [
+          { "name": "JIT Press Briefing", "tier": 1, "url": "https://www.prosecutionservice.nl/topics/mh17-plane-crash/criminal-investigation-jit-mh17" },
+          { "name": "NOS", "tier": 2 },
+          { "name": "BBC News", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "bellingcat-53rd-brigade-identification",
+        "year": "2016",
+        "title": "Bellingcat Identifies Buk as 53rd Brigade's Unit 332",
+        "type": "investigation",
+        "detail": "Bellingcat researchers publish detailed analysis identifying the specific Buk TELAR as belonging to the 53rd Anti-Aircraft Missile Brigade of the Russian Ground Forces, based in Kursk, Russia. The unit number (332) is identified through side-by-side comparison of photos taken during the July 17 convoy with photos from known 53rd Brigade exercises. This finding is later corroborated and confirmed by the JIT.",
+        "sources": [
+          { "name": "Bellingcat", "tier": 3, "url": "https://www.bellingcat.com/news/uk-and-europe/2016/02/26/mh17-the-buk-brigade/" },
+          { "name": "JIT (confirming Tier 1 elevation)", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "jit-53rd-brigade-confirmation",
+        "year": "May 24, 2018",
+        "title": "JIT Confirms Buk from Russia's 53rd Anti-Aircraft Brigade, Kursk",
+        "type": "investigation",
+        "detail": "The JIT holds a major press conference confirming that the Buk TELAR that shot down MH17 belonged to the 53rd Anti-Aircraft Missile Brigade of the Russian Armed Forces, based in Kursk. Detective Chief Superintendent Wilbert Paulissen states: 'The BUK-TELAR which was used came from the 53rd Brigade which is part of the military of the Russian Federation.' Russia denies the finding and rejects JIT conclusions.",
+        "sources": [
+          { "name": "JIT Press Briefing, May 24 2018", "tier": 1, "url": "https://www.prosecutionservice.nl/topics/mh17-plane-crash/criminal-investigation-jit-mh17/speakers-text-jit-mh17-press-meeting-24-5-2018" },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "netherlands-australia-hold-russia-responsible",
+        "year": "May 25, 2018",
+        "title": "Netherlands and Australia Formally Hold Russia Responsible",
+        "type": "diplomatic",
+        "detail": "Following the JIT's May 24 briefing, the governments of the Netherlands and Australia jointly notify Russia that they hold it responsible under international law for the deployment of the Buk missile that shot down MH17. The declaration initiates a state responsibility process and creates the basis for potential civil litigation and inter-state proceedings at international bodies including the ECHR and ICAO.",
+        "sources": [
+          { "name": "Dutch Ministry of Foreign Affairs", "tier": 1 },
+          { "name": "Australian Department of Foreign Affairs and Trade", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "jit-names-four-suspects",
+        "year": "Jun 19, 2019",
+        "title": "JIT Names Four Suspects: Girkin, Dubinsky, Pulatov, Kharchenko",
+        "type": "legal",
+        "detail": "The JIT announces that four individuals will face prosecution for the murder of 298 people: Igor Girkin (Russian, former FSB colonel and DNR 'defense minister'), Sergey Dubinsky (Russian, GRU intelligence officer), Oleg Pulatov (Russian, deputy commander), and Leonid Kharchenko (Ukrainian, separatist commander). All are charged with causing the crash and murdering the 298 on board. An international arrest warrant is issued for all four.",
+        "sources": [
+          { "name": "Dutch Public Prosecution Service", "tier": 1, "url": "https://www.prosecutionservice.nl/topics/mh17-plane-crash/criminal-investigation-jit-mh17" },
+          { "name": "Al Jazeera", "tier": 2 },
+          { "name": "BBC News", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "russia-suspends-jit-cooperation",
+        "year": "2015–2019",
+        "title": "Russia Provides Limited Cooperation, Blocks Key Evidence",
+        "type": "diplomatic",
+        "detail": "Throughout the investigation Russia's level of cooperation with the JIT remains minimal. Russia refuses to extradite suspects (its constitution prohibits extradition of Russian citizens), fails to respond to formal requests for military records identifying the 53rd Brigade Buk owners, and submits radar data to JIT that analysts determine is manipulated. The JIT publicly criticizes Russia's lack of substantive cooperation multiple times.",
+        "sources": [
+          { "name": "JIT Public Statements", "tier": 1 },
+          { "name": "NRC Handelsblad", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Trial — 2020–2022",
+    "events": [
+      {
+        "id": "trial-opens-schiphol",
+        "year": "Mar 9, 2020",
+        "title": "Murder Trial Opens at Schiphol Judicial Complex",
+        "type": "legal",
+        "detail": "The criminal trial of the four MH17 suspects opens at the Schiphol Judicial Complex (Justitieel Complex Schiphol), a specially secured high-capacity courtroom near Amsterdam airport. Three defendants — Girkin, Dubinsky, and Kharchenko — are tried in absentia. Oleg Pulatov is the only suspect who appoints a legal defense team to represent him at trial.",
+        "sources": [
+          { "name": "Netherlands District Court", "tier": 1, "url": "https://www.courtmh17.com" },
+          { "name": "NOS", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "jit-evidence-presented-trial",
+        "year": "2020–2022",
+        "title": "JIT Presents Comprehensive Evidence Including OSINT and Intercepts",
+        "type": "legal",
+        "detail": "Over two years of proceedings, the JIT presents its full evidence package to the Dutch District Court: geolocated photographs of the Buk convoy, 150,000 intercepted phone and radio communications, satellite imagery, witness testimony from hundreds of witnesses, forensic analysis of Buk missile fragments recovered from the crash site and victims' bodies, and corroborating OSINT analysis.",
+        "sources": [
+          { "name": "Netherlands District Court", "tier": 1, "url": "https://www.courtmh17.com" },
+          { "name": "Bellingcat", "tier": 3 },
+          { "name": "BBC News", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "prosecution-requests-life-imprisonment",
+        "year": "2022",
+        "title": "Prosecution Requests Life Imprisonment for All Four Defendants",
+        "type": "legal",
+        "detail": "The Dutch prosecution concludes its case and requests life imprisonment for all four defendants, arguing that they knowingly caused the death of 298 civilians. Prosecutors argue that Girkin and Dubinsky were instrumental in requesting and directing the Buk system from Russia, and that all four bear criminal responsibility for the murder. Pulatov's defense team argues he was not in the vicinity of the launch.",
+        "sources": [
+          { "name": "Netherlands District Court", "tier": 1, "url": "https://www.courtmh17.com" },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "girkin-dubinsky-kharchenko-convicted",
+        "year": "Nov 17, 2022",
+        "title": "Girkin, Dubinsky, and Kharchenko Convicted of Murder; Life Sentences",
+        "type": "legal",
+        "detail": "The Netherlands District Court delivers its verdict: Igor Girkin, Sergey Dubinsky, and Leonid Kharchenko are convicted of murder and sentenced to life imprisonment in absentia. The court finds that all three caused the deaths of 298 people by directing or assisting the deployment of a Russian military Buk missile system to shoot down MH17. All three remain in Russia or occupied Ukraine.",
+        "sources": [
+          { "name": "Netherlands District Court, Nov 17 2022", "tier": 1, "url": "https://www.courtmh17.com/en/summaries-and-news/news/summary-of-the-day-in-court-17-november-2022-judgment.htm" },
+          { "name": "NOS", "tier": 2 },
+          { "name": "CNN", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "pulatov-acquitted",
+        "year": "Nov 17, 2022",
+        "title": "Pulatov Acquitted: Insufficient Evidence of Direct Criminal Intent",
+        "type": "legal",
+        "detail": "Oleg Pulatov, the only MH17 suspect with legal representation at trial, is acquitted. The court finds insufficient evidence that Pulatov was in the vicinity of the Buk launch site at the time of the launch, and there were no indications he could have intervened or changed the outcome. His acquittal is widely reported as the only partial legal victory for the Russian side.",
+        "sources": [
+          { "name": "Netherlands District Court, Nov 17 2022", "tier": 1, "url": "https://www.courtmh17.com" },
+          { "name": "Al Jazeera", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Accountability & Legacy — 2022–Present",
+    "events": [
+      {
+        "id": "russia-rejects-verdict",
+        "year": "Nov 2022",
+        "title": "Russia Rejects Conviction as 'Politically Motivated'",
+        "type": "diplomatic",
+        "detail": "Russia's Foreign Ministry and Kremlin reject the Dutch court's verdict, calling it 'politically motivated' and a 'mockery of justice.' Russia reiterates its denial of any involvement in the MH17 shootdown and refuses to extradite the convicted individuals. Russian state media portrays the verdict as an example of Western anti-Russian bias. The Russian constitution prohibits extradition of Russian citizens.",
+        "sources": [
+          { "name": "Russian Foreign Ministry", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "BBC News", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "girkin-arrested-russia-extremism",
+        "year": "Jul 2023",
+        "title": "Girkin Arrested in Russia on Domestic Extremism Charges",
+        "type": "legal",
+        "detail": "Igor Girkin, one of the three MH17 convictees, is arrested in Russia in July 2023 — not for MH17, but for inciting extremism through social media posts criticizing President Putin's handling of the Ukraine war. He had been posting sharp criticism of the Russian military command from his Telegram channel. His arrest is widely seen as a consequence of his political commentary rather than his MH17 conviction.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "BBC News", "tier": 2 },
+          { "name": "NOS", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "echr-interstate-proceedings",
+        "year": "2022–Present",
+        "title": "Netherlands and Ukraine Pursue Inter-State Case Against Russia at ECHR",
+        "type": "legal",
+        "detail": "The Netherlands files an inter-state application at the European Court of Human Rights (ECHR) against Russia over MH17. The case seeks to establish Russia's state responsibility under the European Convention on Human Rights. Following Russia's expulsion from the Council of Europe in March 2022, the legal proceedings continue under specific mechanisms. Victims' families also file individual ECHR applications.",
+        "sources": [
+          { "name": "European Court of Human Rights", "tier": 1 },
+          { "name": "Dutch Ministry of Foreign Affairs", "tier": 1 },
+          { "name": "The Guardian", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "icao-arbitration",
+        "year": "2020–Present",
+        "title": "Netherlands Files ICAO Complaint Against Russia",
+        "type": "legal",
+        "detail": "The Netherlands files a complaint with the International Civil Aviation Organization (ICAO) against Russia under the Convention on International Civil Aviation, arguing Russia violated international aviation law by deploying the Buk missile system that destroyed MH17 in civilian airspace. The ICAO arbitration process runs parallel to other proceedings and could result in binding findings on aviation safety obligations.",
+        "sources": [
+          { "name": "ICAO", "tier": 1 },
+          { "name": "Dutch Government", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "national-memorial-vijfhuizen",
+        "year": "Nov 2022",
+        "title": "National MH17 Memorial Unveiled at Vijfhuizen",
+        "type": "memorial",
+        "detail": "The Nationaal Monument MH17 at Vijfhuizen, near Amsterdam, serves as the permanent memorial to the 298 victims. Sunflower installations and individual memorial elements represent the victims. Annual commemoration services are held on July 17 each year. The memorial is a gathering point for families from the Netherlands, Australia, Malaysia, Indonesia, and other victim nations.",
+        "sources": [
+          { "name": "Stichting MH17 (Foundation MH17)", "tier": 1 },
+          { "name": "NOS", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "jit-final-report-published",
+        "year": "Feb 8, 2023",
+        "title": "JIT Shares Final Findings with Next of Kin",
+        "type": "investigation",
+        "detail": "On February 8, 2023, the Joint Investigation Team officially shares its final consolidated findings with the next of kin of MH17 victims. The JIT publishes a comprehensive summary of the criminal investigation covering all evidence gathered over nearly nine years. The JIT formally concludes its criminal investigation, though prosecution of the three convicted individuals remains pending their capture.",
+        "sources": [
+          { "name": "Dutch Public Prosecution Service", "tier": 1, "url": "https://www.prosecutionservice.nl/topics/mh17-plane-crash/criminal-investigation-jit-mh17" },
+          { "name": "NOS", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00Z"
+      },
+      {
+        "id": "girkin-russia-extremism-sentence-jan2024",
+        "year": "Jan 2024",
+        "title": "Girkin Sentenced in Russia to 4 Years for Extremism",
+        "type": "legal",
+        "detail": "Igor Girkin, convicted in absentia by The Hague for MH17 murder and sentenced to life, is convicted in Russia on a separate domestic charge of 'inciting extremism' through his Telegram channel, where he had sharply criticized Vladimir Putin and Russian military command over the conduct of the Ukraine war. A Moscow court sentences him to 4 years in prison — a stark contrast with his life sentence for MH17 that Russia refuses to enforce. The sentence effectively silences one of Russia's most prominent hardline nationalist voices.",
+        "sources": [
+          { "name": "Reuters", "tier": 2, "url": "https://www.reuters.com/world/europe/russian-court-sentences-igor-girkin-four-years-prison-extremism-2024-01-25/", "pole": "western" },
+          { "name": "BBC News", "tier": 2, "pole": "western" },
+          { "name": "NOS", "tier": 2, "pole": "western" }
+        ],
+        "lastUpdated": "2026-05-16T15:04:04Z"
+      },
+      {
+        "id": "echr-russia-responsible-mh17-jul2025",
+        "year": "Jul 9, 2025",
+        "title": "ECHR: Russia Legally Responsible for Downing MH17",
+        "type": "legal",
+        "detail": "The European Court of Human Rights issues a landmark inter-state judgment in Ukraine and Netherlands v. Russia, finding Russia legally responsible for the July 17, 2014 downing of MH17 and violations of four European Convention articles: the right to life (Article 2); investigative obligations; the prohibition of torture (Article 3 — Russia's denial causing additional suffering to families); and the right to effective remedy (Article 13). This is the first binding international court judgment finding Russia accountable for MH17. Russia dismisses the ruling as 'null and void.' The court's findings reinforce the November 2022 Dutch criminal convictions.",
+        "sources": [
+          { "name": "European Court of Human Rights", "tier": 1, "url": "https://www.echr.coe.int/documents/d/echr/press-q-a-ukraine-netherlands-russia-eng", "pole": "international" },
+          { "name": "Government of the Netherlands", "tier": 1, "url": "https://www.government.nl/latest/news/2025/07/09/european-court-of-human-rights-russia-responsible-for-downing-of-flight-mh17", "pole": "western" },
+          { "name": "Euronews", "tier": 2, "url": "https://www.euronews.com/my-europe/2025/07/09/top-european-court-rules-russia-violated-international-law-in-ukraine", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.government.nl/latest/news/2025/07/09/european-court-of-human-rights-russia-responsible-for-downing-of-flight-mh17",
+            "caption": "Dutch government statement on historic ECHR ruling finding Russia responsible for MH17",
+            "source": "Government of the Netherlands"
+          }
+        ],
+        "lastUpdated": "2026-05-16T15:04:04Z"
+      },
+      {
+        "id": "dutch-court-cabinet-papers-secret-apr2026",
+        "year": "Apr 21, 2026",
+        "title": "Dutch Court: MH17 Cabinet Papers May Remain Confidential",
+        "type": "legal",
+        "detail": "A Dutch court rules that the government does not have to disclose internal cabinet documents and ministerial meeting minutes from the days immediately following the MH17 crash. Dutch broadcasters NOS, RTL Nieuws, and Volkskrant had sued under the Government Information Act (Woo). The court finds authorities 'gave due consideration to the principles and criteria' in withholding the documents, and that 'very special circumstances' would be needed to compel disclosure.",
+        "sources": [
+          { "name": "DutchNews.nl", "tier": 2, "url": "https://www.dutchnews.nl/2026/04/government-can-keep-mh17-cabinet-papers-secret-court-rules/", "pole": "western" },
+          { "name": "Free Malaysia Today", "tier": 2, "url": "https://www.freemalaysiatoday.com/category/nation/2026/04/21/dutch-govt-can-keep-mh17-documents-secret-european-court-rules", "pole": "international" }
+        ],
+        "lastUpdated": "2026-05-16T15:04:04Z"
+      },
+      {
+        "id": "piet-ploeg-knight-orange-nassau-apr2026",
+        "year": "Apr 24, 2026",
+        "title": "MH17 Families Advocate Piet Ploeg Awarded Royal Knighthood",
+        "type": "memorial",
+        "detail": "Piet Ploeg, chairman of the MH17 victims' families foundation (Stichting MH17) and the leading public voice for the 298 families, is appointed Knight in the Order of Orange-Nassau during the Netherlands' King's Birthday honours. Ploeg lost his brother, sister-in-law, and nephew in the crash and has spent over a decade driving accountability proceedings including the Hague trial and ECHR litigation.",
+        "sources": [
+          { "name": "DutchNews.nl", "tier": 2, "url": "https://www.dutchnews.nl/2026/04/drag-queen-mh17-campaigner-awarded-kings-birthday-honours/", "pole": "western" },
+          { "name": "NL Times", "tier": 2, "url": "https://nltimes.nl/2026/04/24/decorated-actress-mh17-advocate-pride-leader-among-honoured-netherlands", "pole": "western" }
+        ],
+        "lastUpdated": "2026-05-16T15:04:04Z"
+      },
+      {
+        "id": "russia-files-icj-memorial-icao-appeal-jun2026",
+        "year": "2026",
+        "title": "Russia Submits ICJ Memorial Appealing ICAO's MH17 Reparations Ruling",
+        "type": "legal",
+        "detail": "On June 29, 2026, Russia submits its written Memorial to the International Court of Justice (ICJ) in its appeal against the ICAO Council's June 30, 2025 ruling that Russia is responsible for downing MH17. Russia initiated the ICJ case — 'Appeal from the ICAO Council decision dated 30 June 2025 (Russian Federation v. Australia and Netherlands)' — on September 18, 2025, after refusing to respond to Australian and Dutch notes verbales requesting the good-faith reparations negotiations that ICAO had ordered. In its Memorial, Russia claims to present evidence that the ICAO ruling was 'unsound' and reiterates objections to the Council's finding of state responsibility. The ICJ has set January 29, 2027 as the deadline for Australia and the Netherlands to file their Counter-Memorial. The filing marks Russia's latest avenue to avoid the reparations negotiations ICAO ordered after finding Russia breached the Chicago Convention by deploying the Buk missile system that destroyed the aircraft.",
+        "sources": [
+          { "name": "International Court of Justice", "tier": 1, "url": "https://www.icj-cij.org/case/201", "pole": "international" },
+          { "name": "The Moscow Times", "tier": 2, "url": "https://www.themoscowtimes.com/2025/09/20/russia-files-icj-appeal-over-mh17-plane-crash-ruling-a90580", "pole": "international" },
+          { "name": "American Society of International Law (ASIL)", "tier": 3, "url": "https://asil.org/ilib/russia-appeals-icao-council-decision-mh17-icj/", "pole": "international" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.themoscowtimes.com/2025/09/20/russia-files-icj-appeal-over-mh17-plane-crash-ruling-a90580",
+            "caption": "Russia appeals ICAO's MH17 reparations ruling to the International Court of Justice",
+            "source": "The Moscow Times",
+            "thumbnail": "https://static.themoscowtimes.com/image/og/fc/90580__fc8254a8124a99e22a4c16b53bdf7bd0.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-10T16:17:50Z"
+      },
+      {
+        "id": "mh17-12th-anniversary-vijfhuizen-jul2026",
+        "year": "2026",
+        "title": "12th Anniversary: Netherlands Commemorates MH17 as EU and Allies Renew Calls for Russian Accountability",
+        "type": "memorial",
+        "detail": "On July 17, 2026 — the 12th anniversary of the MH17 shootdown — surviving family members gather at the Nationaal Monument MH17 in Vijfhuizen, reading aloud the names of all 298 victims followed by two minutes of silence among the memorial's 298 trees, each planted for an individual victim. The European Union's High Representative issues a statement reiterating 'its call on the Russian Federation to accept its responsibility for this tragedy and to fully cooperate with efforts to serve justice,' citing the July 2025 ECHR judgment and the May 2025 ICAO Council decision that both found Russia responsible. Nine countries — Australia, Belgium, Canada, Germany, Ireland, Italy, Romania, the United Kingdom, and the Netherlands — issue a joint statement to the OSCE reaffirming their commitment to accountability. Ukraine's Ministry of Foreign Affairs and President Volodymyr Zelensky also mark the anniversary, calling for accountability for Russian crimes. Two days later, on July 19, relatives, Dutch officials, and members of the Ukrainian community — including Ukraine's ambassador to the Netherlands, Andriy Kostin, and Australia's ambassador — hold a further commemoration near Eindhoven Air Base, where the first repatriation flights carrying MH17 victims landed in 2014, laying sunflowers and observing a moment of silence.",
+        "sources": [
+          { "name": "Council of the European Union", "tier": 1, "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/07/17/ukraine-statement-by-the-high-representative-on-behalf-of-the-european-union-on-the-occasion-of-the-12th-anniversary-of-the-downing-of-malaysia-airlines-flight-mh17/", "pole": "western" },
+          { "name": "NL Times", "tier": 2, "url": "https://nltimes.nl/2026/07/17/netherlands-commemorates-12th-anniversary-mh17-downing", "pole": "western" },
+          { "name": "Kyiv Post", "tier": 2, "url": "https://www.kyivpost.com/post/80554", "pole": "western" },
+          { "name": "Ukrainska Pravda", "tier": 2, "url": "https://www.pravda.com.ua/eng/news/2026/07/17/8044575/", "pole": "western" },
+          { "name": "UA.News", "tier": 2, "url": "https://ua.news/en/world/v-eindgoveni-vshanuvali-pamiat-zhertv-katastrofi-reisu-mh17", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://nltimes.nl/2026/07/17/netherlands-commemorates-12th-anniversary-mh17-downing",
+            "caption": "Netherlands marks the 12th anniversary of the MH17 downing at the Vijfhuizen national monument",
+            "source": "NL Times",
+            "thumbnail": "https://nltimes.nl/sites/nltimes.nl/files/styles/news_article_full_desktop_2x/public/2023-07/Nationaal_Monument_MH17.jpg?h=827069f2"
+          },
+          {
+            "type": "article",
+            "url": "https://www.kyivpost.com/post/80554",
+            "caption": "12 years since MH17 was downed, killing all 298 aboard",
+            "source": "Kyiv Post",
+            "thumbnail": "https://static.kyivpost.com/storage/2026/07/18/3343793bac118d07d081ba64c8273eac.jpg?w=1200&q=90&f=jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-10T16:17:50Z"
+      }
+    ]
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "james-k-polk",
+    "name": "James K. Polk",
+    "role": "US President (1845–1849) — Architect of the War",
+    "avatar": "us",
+    "initial": "J",
+    "quote": "Mexico has passed the boundary of the United States, has invaded our territory and shed American blood upon the American soil.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "zachary-taylor",
+    "name": "Zachary Taylor",
+    "role": "US General — Northern Theater; later 12th US President",
+    "avatar": "us",
+    "initial": "Z",
+    "quote": "I have always done my duty. I am ready to die. My only regret is for the friends I leave behind me.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "winfield-scott",
+    "name": "Winfield Scott",
+    "role": "US General-in-Chief — Veracruz to Mexico City Campaign",
+    "avatar": "us",
+    "initial": "W",
+    "quote": "I have the honor to report that the flag of the United States floats over the National Palace of Mexico.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nicholas-trist",
+    "name": "Nicholas P. Trist",
+    "role": "US Peace Commissioner — Negotiated Treaty of Guadalupe Hidalgo",
+    "avatar": "us",
+    "initial": "N",
+    "quote": "If it were possible for me to have done what I considered right without disobeying orders, I would willingly have done it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "stephen-kearny",
+    "name": "Stephen W. Kearny",
+    "role": "US Brigadier General — Army of the West (New Mexico & California)",
+    "avatar": "us",
+    "initial": "S",
+    "quote": "The United States has proclaimed itself sovereign over this country. It is my duty to maintain that sovereignty.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "antonio-lopez-santa-anna",
+    "name": "Antonio López de Santa Anna",
+    "role": "Mexican President-General — Supreme Commander of Mexican Forces",
+    "avatar": "mx",
+    "initial": "A",
+    "quote": "I am the Napoleon of the West. If my fellow citizens sacrifice me in the hour of darkness, I will justify history's ultimate verdict.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mariano-arista",
+    "name": "Mariano Arista",
+    "role": "Mexican General — Army of the North; defeated at Palo Alto and Resaca de la Palma",
+    "avatar": "mx",
+    "initial": "M",
+    "quote": "The enemy's artillery was devastating. Our troops fought with courage but could not overcome the weight of their fire.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pedro-de-ampudia",
+    "name": "Pedro de Ampudia",
+    "role": "Mexican General — Defender of Monterrey; commanded Army of the North after Arista",
+    "avatar": "mx",
+    "initial": "P",
+    "quote": "I surrender Monterrey under terms that preserve the dignity of the Mexican army and the honor of its soldiers.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manuel-pena-y-pena",
+    "name": "Manuel de la Peña y Peña",
+    "role": "Mexican President (1847–1848) — Signed Treaty of Guadalupe Hidalgo",
+    "avatar": "mx",
+    "initial": "M",
+    "quote": "A dishonorable peace is infinitely preferable to a dishonorable war. We save what remains of the nation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sam-houston",
+    "name": "Sam Houston",
+    "role": "Commander, Texan Army; First President, Republic of Texas; later US Senator",
+    "avatar": "texas",
+    "initial": "S",
+    "quote": "Texas could have avoided this war if she had been willing to surrender her honor. But Texans do not surrender their honor.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "william-barret-travis",
+    "name": "William Barret Travis",
+    "role": "Lt. Col., Texas Army — Commander of the Alamo Garrison",
+    "avatar": "texas",
+    "initial": "W",
+    "quote": "I shall never surrender or retreat. Victory or Death. W. Barret Travis, Lt. Col. comdt.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "stephen-f-austin",
+    "name": "Stephen F. Austin",
+    "role": "'Father of Texas' — Founder of the Anglo-American Colonies; Texas Secretary of State",
+    "avatar": "texas",
+    "initial": "S",
+    "quote": "The cause of Philanthropy, of humanity, of liberty and of human happiness throughout the world, demands that Texas shall be filled with a civilized and industrious people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "henry-clay",
+    "name": "Henry Clay",
+    "role": "US Senator (KY), Whig Leader — Opponent of the War and Texas Annexation",
+    "avatar": "other",
+    "initial": "H",
+    "quote": "This is no war of defense, but one of unnecessary and of offensive aggression. It is Mexico that is defending her firesides, her castles and her altars, not we.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "abraham-lincoln",
+    "name": "Abraham Lincoln",
+    "role": "US Representative (IL, 1847–49) — Critic of Polk's War Pretext",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "Let him [Polk] answer, fully, fairly, and candidly. Let him answer with facts, and not with arguments. Let him remember he sits where Washington sat, and so remembering, let him answer, as Washington would answer.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "john-c-fremont",
+    "name": "John C. Frémont",
+    "role": "US Army Captain — Bear Flag Republic; US Military Governor of California",
+    "avatar": "us",
+    "initial": "J",
+    "quote": "The Bear Flag Republic is the first step in the destiny of the Pacific Coast to become American.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jose-urrea",
+    "name": "José de Urrea",
+    "role": "Mexican General — Coastal Sweep (1836); urged clemency after Goliad surrender",
+    "avatar": "mx",
+    "initial": "J",
+    "quote": "I begged for the lives of Fannin's men. I gave my word of honor. Santa Anna overruled me — a decision I will never cease to regret.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ulysses-grant",
+    "name": "Ulysses S. Grant",
+    "role": "US Lieutenant (Mexican War); later 18th President — War critic in retrospect",
+    "avatar": "other",
+    "initial": "U",
+    "quote": "The Mexican War was one of the most unjust ever waged by a stronger against a weaker nation. The Southern Rebellion was largely the outgrowth of the Mexican War.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mirabeau-lamar",
+    "name": "Mirabeau B. Lamar",
+    "role": "2nd President, Republic of Texas (1838–1841) — Expansionist; launched the Santa Fe Expedition",
+    "avatar": "texas",
+    "initial": "M",
+    "quote": "The wilderness which we now inhabit is the promised land of our future glory. Texas will be as great as the objects for which she contended.",
+    "lastUpdated": "2026-05-21T15:58:37Z"
+  }
+]

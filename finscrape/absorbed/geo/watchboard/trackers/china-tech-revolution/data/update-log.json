@@ -1,0 +1,39 @@
+{
+  "lastRun": "2026-08-27T23:53:37.692Z",
+  "tracker": "china-tech-revolution",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-07T14:56:19Z",
+      "status": "skipped"
+    },
+    "timeline": {
+      "lastRun": "2026-04-25T15:22:18.347Z",
+      "status": "skipped"
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-07T14:56:19Z",
+      "status": "skipped"
+    },
+    "econ": {
+      "lastRun": "2026-06-07T14:56:19Z",
+      "status": "skipped"
+    },
+    "claims": {
+      "lastRun": "2026-08-24T14:57:55Z",
+      "status": "updated"
+    },
+    "political": {
+      "lastRun": "2026-06-07T14:56:19Z",
+      "status": "skipped"
+    },
+    "events": {
+      "lastRun": "2026-08-26T00:49:03.094Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-26T00:49:03.094Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

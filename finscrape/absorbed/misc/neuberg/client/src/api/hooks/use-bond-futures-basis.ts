@@ -1,0 +1,10 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../client';
+
+export function useBondFuturesBasis() {
+  return useQuery({
+    queryKey: ['bond-futures-basis'],
+    queryFn: () => api.get<any>('/bond-futures-basis'),
+    staleTime: 60 * 60 * 1000,
+  });
+}

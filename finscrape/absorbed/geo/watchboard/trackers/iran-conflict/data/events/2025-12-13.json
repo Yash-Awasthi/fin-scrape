@@ -1,0 +1,68 @@
+[
+  {
+    "id": "gasoline-price-hike-three-tier",
+    "year": "Dec 13",
+    "title": "Iran Implements Three-Tier Gasoline Pricing System",
+    "type": "economic",
+    "detail": "Iran begins implementing a new three-tier fuel pricing system, the first gasoline price adjustment since the 2019 hike that triggered nationwide protests killing over 300 people. Tier 1 provides 60 liters per month at 15,000 rials per liter; Tier 2 covers the next 100 liters at 30,000 rials; Tier 3 charges 50,000 rials for any fuel beyond 160 liters or purchased without a smart card. Long queues form at gas stations hours before the new prices take effect at midnight.",
+    "sources": [
+      { "name": "Iran International", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Washington Post", "tier": 2, "pole": "western" },
+      { "name": "IRNA", "tier": 1, "pole": "middle_eastern" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://wanaen.com/iran-officially-launches-a-three-tier-gasoline-pricing-system/",
+        "caption": "Iran implements new three-tier gasoline pricing system, the first fuel price adjustment since 2019",
+        "source": "WANA",
+        "thumbnail": "https://wanaen.com/wp-content/uploads/2025/06/WANA-3-6.jpg?v=1750336907"
+      }
+    ],
+    "lastUpdated": "2026-03-12"
+  },
+  {
+    "id": "parchin-facility-concealment",
+    "year": "Dec 13",
+    "title": "Parchin Military Complex Partially Covered in Satellite Imagery",
+    "type": "military",
+    "detail": "Satellite imagery from December 13 shows Iran's Parchin military-nuclear complex has been partially covered with new structures designed to block overhead observation. Parchin, where Iran is suspected of having conducted high-explosive experiments relevant to nuclear warhead design, was struck during the June war. The concealment activity follows a pattern observed at Natanz and Isfahan, suggesting a coordinated effort to shield reconstruction work from satellite monitoring.",
+    "sources": [
+      { "name": "Planet Labs", "tier": 3, "pole": "western" },
+      { "name": "CSIS", "tier": 3, "pole": "western" },
+      { "name": "Jerusalem Post", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.csis.org/analysis/damage-irans-nuclear-program-can-it-rebuild",
+        "caption": "Satellite imagery shows Parchin military-nuclear complex partially covered with concealment structures",
+        "source": "CSIS",
+        "thumbnail": "https://csis-website-prod.s3.amazonaws.com/s3fs-public/2025-08/250806_Iran_Nuclear_Fig1_cropped.jpg?VersionId=9uvVOYIGMeUkLOUT8DNTTEsKZk3NPkD1"
+      }
+    ],
+    "lastUpdated": "2026-03-12"
+  },
+  {
+    "id": "fuel-hike-household-impact",
+    "year": "Dec 13",
+    "title": "Fuel Price Hike Squeezes Already Stretched Household Budgets",
+    "type": "humanitarian",
+    "detail": "The gasoline price increase immediately cascades into transport and delivery costs across Iran. Taxi and ride-sharing services in Tehran announce fare increases of 30-40%. Small business owners and delivery drivers report the new prices make their operations unsustainable. Economists warn the fuel hike will feed through to food prices within days, as the cost of transporting goods from farms and ports to urban markets rises sharply. The timing, amid a currency crisis and 42% inflation, maximizes the shock to household budgets.",
+    "sources": [
+      { "name": "Iran International", "tier": 2, "pole": "middle_eastern" },
+      { "name": "AFP", "tier": 2, "pole": "western" },
+      { "name": "ILNA", "tier": 2, "pole": "middle_eastern" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.iranintl.com/en/202512143753",
+        "caption": "Fuel price hike cascades into transport and food delivery costs, squeezing Iranian household budgets",
+        "source": "Iran International",
+        "thumbnail": "https://i.iranintl.com/images/rdk9umy0/production/4c4bec2b4295db4b84263d0e664dbb042a7e1a5b-992x661.png?rect=0,71,992,521&w=1200&h=630&fit=max&auto=format"
+      }
+    ],
+    "lastUpdated": "2026-03-12"
+  }
+]

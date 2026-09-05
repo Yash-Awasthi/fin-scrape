@@ -1,0 +1,299 @@
+[
+  {
+    "id": "allen-dulles",
+    "name": "Allen Dulles",
+    "role": "CIA Director 1953–1961; architect of Guatemala coup and Bay of Pigs",
+    "avatar": "cia",
+    "initial": "A",
+    "quote": "We had a success in Guatemala. We must not let Cuba become another Guatemala.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "richard-helms",
+    "name": "Richard Helms",
+    "role": "CIA Director 1966–1973; authorized Chile operations; convicted of lying to Congress",
+    "avatar": "cia",
+    "initial": "R",
+    "quote": "I have found no evidence that the CIA or any other US government agency sought to bring about a coup in Chile in September 1973.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "william-colby",
+    "name": "William Colby",
+    "role": "CIA Director 1973–1976; disclosed 'Family Jewels'; cooperated with Church Committee",
+    "avatar": "cia",
+    "initial": "W",
+    "quote": "The CIA's involvement in assassination plots is not something that the United States government should be proud of.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jacobo-arbenz",
+    "name": "Jacobo Árbenz",
+    "role": "President of Guatemala 1951–1954; overthrown by CIA Operation PBSUCCESS",
+    "avatar": "victim-gov",
+    "initial": "J",
+    "quote": "I was not alone. The people of Guatemala and all the anti-imperialist peoples of the world struggle with me.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "salvador-allende",
+    "name": "Salvador Allende",
+    "role": "President of Chile 1970–1973; overthrown and killed in CIA-backed coup",
+    "avatar": "victim-gov",
+    "initial": "S",
+    "quote": "History is ours, and people make history. These are my last words, and I am certain that the seed which we have planted in the good conscience of thousands and thousands of Chileans will not be shaken.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "augusto-pinochet",
+    "name": "Augusto Pinochet",
+    "role": "Chilean dictator 1973–1990; arrested in London 1998; died under house arrest 2006",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "I'm not a dictator. It's just that I have a grumpy face.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "henry-kissinger",
+    "name": "Henry Kissinger",
+    "role": "National Security Adviser / Secretary of State; architect of Chile policy; Nobel Peace Prize 1973",
+    "avatar": "us",
+    "initial": "H",
+    "quote": "I don't see why we need to stand by and watch a country go communist due to the irresponsibility of its own people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "dwight-eisenhower",
+    "name": "Dwight D. Eisenhower",
+    "role": "US President 1953–1961; authorized Guatemala coup (PBSUCCESS) and planned Bay of Pigs",
+    "avatar": "us",
+    "initial": "D",
+    "quote": "I have authorized the Department of State and the Department of Defense to plan the establishment of the Cuban exile government.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "john-f-kennedy",
+    "name": "John F. Kennedy",
+    "role": "US President 1961–1963; Bay of Pigs failure; authorized Operation Mongoose",
+    "avatar": "us",
+    "initial": "J",
+    "quote": "How could I have been so stupid, to let them go ahead?",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "lyndon-johnson",
+    "name": "Lyndon B. Johnson",
+    "role": "US President 1963–1969; authorized Brazil coup support (1964) and Dominican Republic invasion (1965)",
+    "avatar": "us",
+    "initial": "L",
+    "quote": "I sure don't want to wake up tomorrow morning and find out that Castro's taken over in the Dominican Republic.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "richard-nixon",
+    "name": "Richard Nixon",
+    "role": "US President 1969–1974; ordered CIA to 'make the economy scream' in Chile",
+    "avatar": "us",
+    "initial": "R",
+    "quote": "Make the economy scream in Chile to prevent Allende from coming to power or to unseat him.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ronald-reagan",
+    "name": "Ronald Reagan",
+    "role": "US President 1981–1989; authorized Contra war, Grenada invasion, backed El Salvador death squads",
+    "avatar": "us",
+    "initial": "R",
+    "quote": "The Contras are the moral equivalent of our Founding Fathers.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fidel-castro",
+    "name": "Fidel Castro",
+    "role": "Prime Minister/President of Cuba 1959–2008; survived 600+ CIA assassination attempts",
+    "avatar": "opposition",
+    "initial": "F",
+    "quote": "The United States has no right to enforce an economic blockade against Cuba, a blockade that affects the Cuban people and constitutes an international crime.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "che-guevara",
+    "name": "Ernesto 'Che' Guevara",
+    "role": "Cuban revolutionary; executed by CIA-backed Bolivian forces 1967",
+    "avatar": "opposition",
+    "initial": "E",
+    "quote": "The duty of every revolutionary is to make the revolution.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "daniel-ortega",
+    "name": "Daniel Ortega",
+    "role": "Sandinista leader; survived Contra war; turned authoritarian as president from 2007",
+    "avatar": "opposition",
+    "initial": "D",
+    "quote": "We have shown that socialism is possible. Nicaragua is proof that imperialism can be defeated.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manuel-noriega",
+    "name": "Manuel Noriega",
+    "role": "Panamanian dictator; CIA asset 20+ years; captured in US invasion 1989; died in prison 2017",
+    "avatar": "other",
+    "initial": "M",
+    "quote": "The US created me, nurtured me, and when I stopped being useful, they decided to destroy me.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hugo-chavez",
+    "name": "Hugo Chávez",
+    "role": "President of Venezuela 1999–2013; survived US-backed coup 2002; confronted US hegemony",
+    "avatar": "opposition",
+    "initial": "H",
+    "quote": "The devil came here yesterday, right here. It smells of sulfur still today. Yesterday, ladies and gentlemen, from this rostrum, the president of the United States, the gentleman to whom I refer as the devil, came here.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "anastasio-somoza-garcia",
+    "name": "Anastasio Somoza García",
+    "role": "Nicaraguan dictator 1936–1956; created with US support after Marine occupation",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "Yes, he may be a son of a bitch, but he is our son of a bitch. [attributed to FDR]",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jean-bertrand-aristide",
+    "name": "Jean-Bertrand Aristide",
+    "role": "Haitian president; overthrown 1991, restored 1994, removed 2004 in US-facilitated ouster",
+    "avatar": "victim-gov",
+    "initial": "J",
+    "quote": "I was kidnapped. Let that be on the record. I was put in a plane that the Americans controlled.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "efrain-rios-montt",
+    "name": "Efraín Ríos Montt",
+    "role": "Guatemalan dictator 1982–1983; convicted of genocide 2013 (overturned); US-backed with military aid",
+    "avatar": "other",
+    "initial": "E",
+    "quote": "We have no scorched earth policy. We have a policy of scorched communists.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "orlando-letelier",
+    "name": "Orlando Letelier",
+    "role": "Chilean Foreign Minister under Allende; DINA assassinated him in Washington DC, 1976",
+    "avatar": "victim-gov",
+    "initial": "O",
+    "quote": "Neoliberal economics and political repression are not contradictions but two sides of the same system.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "oscar-romero",
+    "name": "Archbishop Óscar Romero",
+    "role": "Archbishop of San Salvador; assassinated March 1980 by US-linked death squads",
+    "avatar": "victim-gov",
+    "initial": "O",
+    "quote": "I would like to make a special appeal to the men of the army...in the name of God, in the name of this suffering people whose cries rise to heaven more loudly each day, I implore you, I beg you, I order you: Stop the repression.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "smedley-butler",
+    "name": "Maj. Gen. Smedley Butler",
+    "role": "USMC General; two-time Medal of Honor; whistleblower who exposed corporate nature of US interventions",
+    "avatar": "us",
+    "initial": "S",
+    "quote": "I spent 33 years in the Marines...and during that period I spent most of my time as a high-class muscle man for Big Business, for Wall Street and for the bankers.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manuel-zelaya",
+    "name": "Manuel Zelaya",
+    "role": "Honduran president; ousted in 2009 coup; Obama administration did not restore him",
+    "avatar": "victim-gov",
+    "initial": "M",
+    "quote": "What happened on June 28, 2009 in Honduras was a coup d'état orchestrated by the Honduran oligarchy with the support of the United States.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "oliver-north",
+    "name": "Oliver North",
+    "role": "NSC staffer who ran Iran-Contra scheme; shredded documents; later pardoned",
+    "avatar": "us",
+    "initial": "O",
+    "quote": "I didn't think I was doing anything wrong. I was told what to do, and I did it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "evo-morales",
+    "name": "Evo Morales",
+    "role": "Bolivia's first indigenous president 2006–2019; ousted amid election controversy",
+    "avatar": "opposition",
+    "initial": "E",
+    "quote": "What happened in Bolivia is a civic, Christian, democratic coup. The United States is behind all this.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "felix-rodriguez",
+    "name": "Félix Rodríguez",
+    "role": "CIA officer; captured and interrogated Che Guevara; later Iran-Contra operative",
+    "avatar": "cia",
+    "initial": "F",
+    "quote": "I told Che that I had done everything I could for him...he died like a man.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "carlos-castillo-armas",
+    "name": "Carlos Castillo Armas",
+    "role": "CIA-installed Guatemalan president 1954–1957; reversed land reform; assassinated 1957",
+    "avatar": "other",
+    "initial": "C",
+    "quote": "The liberation movement is the work of the Guatemalan people, who have freed themselves from the communist menace.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "george-h-w-bush",
+    "name": "George H.W. Bush",
+    "role": "CIA Director 1976–1977; Vice President during Iran-Contra; ordered Panama invasion 1989",
+    "avatar": "us",
+    "initial": "G",
+    "quote": "This is not a military operation for the sake of imposing anything. We'll be in, we'll get our people out, and we'll be out.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nicolas-maduro",
+    "name": "Nicolás Maduro",
+    "role": "Venezuelan president 2013–2026; captured by US forces in Operation Absolute Resolve, January 2026",
+    "avatar": "victim-gov",
+    "initial": "N",
+    "quote": "They will not be able to defeat the Bolivarian revolution. The empire will fail, as it has always failed.",
+    "lastUpdated": "2026-04-19T14:18:37Z"
+  },
+  {
+    "id": "miguel-diaz-canel",
+    "name": "Miguel Díaz-Canel",
+    "role": "President of Cuba since 2019; governing under Trump's 2026 oil blockade; met CIA Director Ratcliffe via intelligence channels May 2026 as fuel reserves hit zero",
+    "avatar": "victim-gov",
+    "initial": "M",
+    "quote": "The blockade is not just a policy of maximum pressure — it is an act of genocide against the Cuban people.",
+    "lastUpdated": "2026-05-19T16:09:54Z"
+  },
+  {
+    "id": "john-ratcliffe",
+    "name": "John Ratcliffe",
+    "role": "CIA Director 2025–present; conducted secret Cuba diplomacy including rare Havana visit May 2026 to meet Cuban intelligence as blockade drove total fuel collapse",
+    "avatar": "cia",
+    "initial": "J",
+    "quote": "We will seriously engage with Cuba — but only if Cuba makes fundamental changes.",
+    "lastUpdated": "2026-05-19T16:09:54Z"
+  },
+  {
+    "id": "gustavo-petro",
+    "name": "Gustavo Petro",
+    "role": "President of Colombia; personally sanctioned by OFAC in 2025 after US decertified Colombia as counternarcotics partner",
+    "avatar": "opposition",
+    "initial": "G",
+    "quote": "The war on drugs is a failure. Prohibition has only given power to criminal cartels and destroyed societies.",
+    "lastUpdated": "2026-04-19T14:18:37Z"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "lastRun": "2026-08-26T15:29:56.470Z",
+  "tracker": "hungary-transition",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-02T14:12:33.000Z",
+      "status": "updated",
+      "itemCount": 8
+    },
+    "timeline": {
+      "lastRun": "2026-05-04T12:31:00.000Z",
+      "status": "unchanged",
+      "itemCount": 65
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-02T14:12:33.000Z",
+      "status": "updated",
+      "itemCount": 28
+    },
+    "mapLines": {
+      "lastRun": "2026-04-26T12:00:00.000Z",
+      "status": "unchanged",
+      "itemCount": 0
+    },
+    "claims": {
+      "lastRun": "2026-06-02T14:12:33.000Z",
+      "status": "updated",
+      "itemCount": 17
+    },
+    "political": {
+      "lastRun": "2026-06-02T14:12:33.000Z",
+      "status": "updated",
+      "itemCount": 25
+    },
+    "econ": {
+      "lastRun": "2026-06-02T14:12:33.000Z",
+      "status": "updated",
+      "itemCount": 8
+    },
+    "events": {
+      "lastRun": "2026-06-02T14:12:33.000Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-06-02T14:12:33.000Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

@@ -1,0 +1,80 @@
+---
+import type { KpiItem } from '../../lib/schemas';
+
+interface Props {
+  meta: {
+    dateline: string;
+    heroHeadline: string;
+    heroSubtitle: string;
+    lastUpdated?: string;
+    operationName?: string;
+    dayCount?: string | number;
+  };
+  kpis: KpiItem[];
+}
+
+const { meta, kpis } = Astro.props;
+
+const cleanText = (s: string) =>
+  s.replace(/<[^>]+>/g, ' ')
+   .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+   .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&middot;/g, '\u00B7')
+   .replace(/\s{2,}/g, ' ').trim();
+---
+<div class="hero-kpi-combo hero-kpi-strip">
+  <h1 class="hero-kpi-headline" title={cleanText(meta.heroHeadline)}>
+    {cleanText(meta.heroHeadline)}
+  </h1>
+  <div class="hero-kpi-right">
+    {kpis.slice(0, 7).map(k => (
+      <div class="hero-kpi-item">
+        <span class="hero-kpi-label">{k.label}</span>
+        <span class={`hero-kpi-value ${k.color}`}>
+          {k.value}
+          {k.trend && k.trend !== 'stable' && (
+            <span class={`hero-kpi-trend ${k.trend}`}>
+              {k.trend === 'up' ? '\u25B2' : '\u25BC'}
+            </span>
+          )}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .hero-kpi-strip {
+    display: block !important;
+    grid-template-columns: unset !important;
+    padding: 0.4rem 1rem !important;
+  }
+  .hero-kpi-strip .hero-kpi-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0 0 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hero-kpi-strip .hero-kpi-right {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 1rem !important;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+  .hero-kpi-strip .hero-kpi-item {
+    flex-shrink: 0;
+    min-width: max-content;
+  }
+  @media (max-width: 768px) {
+    .hero-kpi-strip { padding: 0.3rem 0.5rem !important; }
+    .hero-kpi-strip .hero-kpi-headline { font-size: 0.75rem; }
+    .hero-kpi-strip .hero-kpi-right { max-height: 50px; gap: 0.75rem !important; }
+  }
+</style>

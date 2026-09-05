@@ -1,0 +1,260 @@
+[
+  {
+    "id": "tsmc-global-foundry-share",
+    "label": "TSMC Global Foundry Share",
+    "value": "~72%",
+    "change": "+14.5% since 2021",
+    "direction": "up",
+    "sparkData": [
+      57,
+      60,
+      62,
+      65,
+      68,
+      70,
+      70.2,
+      72
+    ],
+    "color": "#2ecc71",
+    "source": "Focus Taiwan / TSMC Q2 2025",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "taiwan-defense-budget-usd",
+    "label": "Taiwan Special Defense Procurement Budget — NT$8.81B PASSED May 29 (3rd Reading); HIMARS NT$800M Down Payment MET May 31 (Executive Yuan Emergency Reserve Backstop); NT$295B Special Package Active",
+    "value": "$9.3B (NT$295B special pkg)",
+    "change": "NT$8.81B FY2026 annual tranche passed Legislative Yuan 3rd reading May 29 without opposition — clears HIMARS (82 launchers, NT$2.8B), M109A7 howitzers (NT$3.9B), anti-armor drones (NT$1.8B), Javelin + TOW 2B; NT$295B Cabinet-approved special package; NT$780B total LY authorization through 2033; HIMARS first payment (NT$800M) MET on May 31 deadline with Executive Yuan emergency reserve funds as backstop",
+    "direction": "up",
+    "sparkData": [
+      11.54,
+      13.0,
+      13.8,
+      16.0,
+      22.0,
+      28.0,
+      31.0,
+      9.3
+    ],
+    "color": "#e74c3c",
+    "source": "Focus Taiwan / Taipei Times — June 1, 2026",
+    "lastUpdated": "2026-06-01T06:00:00.000Z"
+  },
+  {
+    "id": "cross-strait-trade-volume",
+    "label": "Cross-Strait Trade Volume (USD Billions)",
+    "value": "$176B",
+    "change": "-34% from 2023 peak",
+    "direction": "down",
+    "sparkData": [
+      230,
+      267.8,
+      240,
+      210,
+      176.28
+    ],
+    "color": "#f39c12",
+    "source": "Taiwan Bureau of Foreign Trade / China SCIO 2024",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "us-arms-sales-taiwan-cumulative",
+    "label": "US Arms Sales to Taiwan (2015–2025, Cumulative USD)",
+    "value": "$39B+",
+    "change": "+$11.2B Dec 2025; Iran war has not delayed shipments",
+    "direction": "up",
+    "sparkData": [
+      2.0,
+      4.5,
+      8.0,
+      12.0,
+      18.0,
+      22.0,
+      27.0,
+      39.0
+    ],
+    "color": "#3498db",
+    "source": "DSCA / US DoD Foreign Military Sales records; US Congressional testimony Mar 2026",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "taiwan-gdp-growth",
+    "label": "Taiwan GDP Growth Rate (%) — Academia Sinica Raises 2026 Forecast to 10.16% (Jul 13, 2026), First Double-Digit Prediction",
+    "value": "10.16% (2026 forecast, Academia Sinica)",
+    "change": "Academia Sinica raised its 2026 forecast to 10.16% on Jul 13, 2026 — up sharply from 3.71% in Dec 2025 — the first Taiwanese think tank to predict double-digit growth; cites easing US tariff uncertainty and AI investment expansion; Q1 2026 grew 14.55% YoY; growth expected to moderate in H2 2026",
+    "direction": "up",
+    "sparkData": [
+      3.1,
+      2.5,
+      3.2,
+      2.8,
+      3.5,
+      3.8,
+      6.0,
+      9.64,
+      10.16
+    ],
+    "color": "#2ecc71",
+    "source": "Academia Sinica / Focus Taiwan / DigiTimes — July 13, 2026",
+    "lastUpdated": "2026-07-16T18:00:21.000Z"
+  },
+  {
+    "id": "tsmc-quarterly-revenue",
+    "label": "TSMC Revenue — Q2 2026 RECORD: NT$706.56B Net Income (+77.4% YoY, 5th Consecutive Record Quarter); $100B Additional Arizona Investment ($265B Total); FY2026 Outlook Raised to 40%+ Growth",
+    "value": "$40.2B Q2 2026 (NT$1,270.38B)",
+    "change": "Q2 2026: NT$1,270.38B revenue (+36.0% YoY, $40.20B USD +33.7% YoY); net income NT$706.56B (+77.4% YoY, EPS NT$27.25/$4.31 ADR) — record for 5th consecutive quarter, beating analyst estimates; CEO C.C. Wei announced additional $100B Arizona investment (total $265B committed); FY2026 revenue growth outlook raised from 30%+ to 40%+; FY2026 capex guidance lifted to $60-64B",
+    "direction": "up",
+    "sparkData": [
+      15.0,
+      16.8,
+      18.0,
+      20.0,
+      22.0,
+      25.0,
+      28.0,
+      35.0,
+      40.2
+    ],
+    "color": "#2ecc71",
+    "source": "TSMC SEC 6-K filing; Yahoo Finance; SemiWiki — July 16, 2026",
+    "lastUpdated": "2026-07-16T18:00:21.000Z"
+  },
+  {
+    "id": "tsmc-monthly-sales-jul2026",
+    "label": "TSMC Monthly Revenue — July 2026: NT$467.58B, +45% YoY on AI Hardware Demand",
+    "value": "NT$467.58B ($14.5B USD)",
+    "change": "+45% YoY (reported Aug 10, 2026)",
+    "direction": "up",
+    "sparkData": [280, 310, 330, 350, 380, 410, 430, 467.58],
+    "color": "#2ecc71",
+    "source": "TSMC monthly sales filing / Bloomberg — August 10, 2026",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "japan-defense-budget-gdp",
+    "label": "Japan Defense Budget (% GDP)",
+    "value": "1.6%",
+    "change": "Targeting 2% by 2027; Takaichi reaffirmed Taiwan Strait commitment",
+    "direction": "up",
+    "sparkData": [
+      1.0,
+      1.0,
+      1.1,
+      1.2,
+      1.4,
+      1.6
+    ],
+    "color": "#3498db",
+    "source": "Japan Ministry of Defense / Medium-Term Defense Buildup Plan",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "global-conflict-cost-estimate",
+    "label": "Estimated Global Economic Cost of Taiwan Conflict (USD Trillions)",
+    "value": "$10T",
+    "change": "One-time shock scenario",
+    "direction": "down",
+    "sparkData": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      10
+    ],
+    "color": "#e74c3c",
+    "source": "Bloomberg Economics / RAND wargame analysis",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "chips-act-us-investment",
+    "label": "US CHIPS Act Domestic Semiconductor Investment",
+    "value": "$52.7B",
+    "change": "Response to Taiwan supply concentration risk",
+    "direction": "up",
+    "sparkData": [
+      0,
+      5,
+      15,
+      28,
+      42,
+      52.7
+    ],
+    "color": "#9b59b6",
+    "source": "US Department of Commerce / CHIPS and Science Act",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "taiwan-semiconductor-export-share",
+    "label": "Semiconductor Share of Taiwan Exports (%)",
+    "value": "38%",
+    "change": "+8% since 2020 (AI boom); Taiwan stock index ~33,700–34,300 range Mar 2026",
+    "direction": "up",
+    "sparkData": [
+      30,
+      31,
+      33,
+      34,
+      36,
+      38
+    ],
+    "color": "#2ecc71",
+    "source": "Taiwan Ministry of Finance / Ministry of Economic Affairs; Focus Taiwan Mar 2026",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "middle-east-conflict-energy-impact",
+    "label": "Iran Conflict Energy Cost Impact on PLA Operations",
+    "value": "Elevated",
+    "change": "Middle East fuel cost spike contributed to PLA Two-Sessions lull",
+    "direction": "up",
+    "sparkData": [
+      1,
+      1,
+      1,
+      1.2,
+      1.5,
+      1.8,
+      2.0
+    ],
+    "color": "#f39c12",
+    "source": "Focus Taiwan analysts / Taipei Times Mar 2026",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "us-taiwan-trade-deal-jan2026",
+    "label": "US-Taiwan Tariff Rate (Post-Jan 2026 Deal)",
+    "value": "15%",
+    "change": "Down from 20%; $500B semiconductor manufacturing commitment",
+    "direction": "down",
+    "sparkData": [
+      20,
+      20,
+      20,
+      20,
+      20,
+      15
+    ],
+    "color": "#3498db",
+    "source": "US Department of Commerce / US-Taiwan Trade and Investment Agreement Jan 15, 2026",
+    "lastUpdated": "2026-03-27T00:00:00Z"
+  },
+  {
+    "id": "prc-defense-budget-2026",
+    "label": "PRC Defense Budget 2026 (USD Billions)",
+    "value": "~$278B",
+    "change": "+7% vs 2025; 34th consecutive annual increase",
+    "direction": "up",
+    "sparkData": [
+      178,
+      193,
+      209,
+      225,
+      240,
+      260,
+      278
+    ],
+    "color": "#e74c3c",
+    "source": "PRC State Council / National People's Congress, March 2026",
+    "lastUpdated": "2026-03-28T14:22:33.872Z"
+  }
+]

@@ -1,0 +1,136 @@
+{
+  "Crude Oil": {
+    "producer_source": "EIA (U.S. Energy Information Administration)",
+    "producers": [
+      {"country": "USA", "share": "18%"},
+      {"country": "Saudi Arabia", "share": "12%"},
+      {"country": "Russia", "share": "11%"},
+      {"country": "Canada", "share": "6%"},
+      {"country": "Iraq", "share": "5%"},
+      {"country": "China", "share": "5%"}
+    ],
+    "refiner_source": "EIA / BP Statistical Review",
+    "refiners": [
+      {"country": "USA", "share": "19%"},
+      {"country": "China", "share": "18%"},
+      {"country": "Russia", "share": "7%"},
+      {"country": "India", "share": "5%"},
+      {"country": "South Korea", "share": "3%"}
+    ],
+    "choke_point_source": "EIA World Oil Transit Chokepoints",
+    "choke_points": [
+      {"name": "Strait of Hormuz", "volume_flow": "21% of global petroleum liquids", "reliance_level": "High"},
+      {"name": "Strait of Malacca", "volume_flow": "16% of global petroleum liquids", "reliance_level": "High"},
+      {"name": "Suez Canal & SUMED Pipeline", "volume_flow": "10% of global petroleum liquids", "reliance_level": "Medium"}
+    ]
+  },
+  "Natural Gas": {
+    "producer_source": "EIA (U.S. Energy Information Administration)",
+    "producers": [
+      {"country": "USA", "share": "25%"},
+      {"country": "Russia", "share": "15%"},
+      {"country": "Iran", "share": "6%"},
+      {"country": "China", "share": "5%"},
+      {"country": "Canada", "share": "5%"}
+    ],
+    "refiner_source": "EIA (Liquefaction Export Capacity)",
+    "refiners": [
+      {"country": "USA", "share": "22%"},
+      {"country": "Australia", "share": "21%"},
+      {"country": "Qatar", "share": "21%"},
+      {"country": "Russia", "share": "8%"},
+      {"country": "Malaysia", "share": "7%"}
+    ],
+    "choke_point_source": "EIA World LNG Transit Chokepoints",
+    "choke_points": [
+      {"name": "Strait of Hormuz", "volume_flow": "20% of global LNG", "reliance_level": "High"},
+      {"name": "Strait of Malacca", "volume_flow": "10% of global LNG", "reliance_level": "Medium"},
+      {"name": "Panama Canal", "volume_flow": "Critical US-Asia Route", "reliance_level": "Medium"}
+    ]
+  },
+  "Gold": {
+    "producer_source": "USGS (U.S. Geological Survey) Mineral Commodity Summaries",
+    "producers": [
+      {"country": "China", "share": "10%"},
+      {"country": "Australia", "share": "10%"},
+      {"country": "Russia", "share": "10%"},
+      {"country": "Canada", "share": "6%"},
+      {"country": "USA", "share": "5%"}
+    ],
+    "refiner_source": "LBMA Good Delivery List",
+    "refiners": [
+      {"country": "Switzerland", "share": "70%"},
+      {"country": "China", "share": "10%"},
+      {"country": "India", "share": "5%"},
+      {"country": "UK", "share": "5%"}
+    ],
+    "choke_point_source": "World Gold Council / LBMA",
+    "choke_points": [
+      {"name": "Swiss Refining Hubs", "volume_flow": "~60% of unrefined gold", "reliance_level": "High"},
+      {"name": "London OTC Vaults", "volume_flow": "Primary global clearing hub", "reliance_level": "High"}
+    ]
+  },
+  "Silver": {
+    "producer_source": "USGS (U.S. Geological Survey) Mineral Commodity Summaries",
+    "producers": [
+      {"country": "Mexico", "share": "24%"},
+      {"country": "China", "share": "13%"},
+      {"country": "Peru", "share": "12%"},
+      {"country": "Chile", "share": "6%"},
+      {"country": "Poland", "share": "5%"}
+    ],
+    "refiner_source": "Silver Institute / LBMA",
+    "refiners": [
+      {"country": "China", "share": "25%"},
+      {"country": "Mexico", "share": "15%"},
+      {"country": "Switzerland", "share": "10%"},
+      {"country": "India", "share": "8%"}
+    ],
+    "choke_point_source": "Silver Institute / LBMA",
+    "choke_points": [
+      {"name": "London OTC Vaults", "volume_flow": "Primary global clearing hub", "reliance_level": "High"},
+      {"name": "Swiss & North American Refineries", "volume_flow": "Critical processing", "reliance_level": "Medium"}
+    ]
+  },
+  "Semiconductors (Chips)": {
+    "producer_source": "SIA (Semiconductor Industry Association) & TrendForce",
+    "producers": [
+      {"country": "Taiwan", "share": "60%"},
+      {"country": "South Korea", "share": "18%"},
+      {"country": "China", "share": "10%"},
+      {"country": "USA", "share": "6%"}
+    ],
+    "refiner_source": "SIA (OSAT - Assembly, Testing, Packaging)",
+    "refiners": [
+      {"country": "Taiwan", "share": "50%"},
+      {"country": "China", "share": "38%"},
+      {"country": "USA", "share": "4%"},
+      {"country": "South Korea", "share": "3%"}
+    ],
+    "choke_point_source": "CSIS (Center for Strategic and International Studies)",
+    "choke_points": [
+      {"name": "Taiwan Strait", "volume_flow": "88% of advanced chips", "reliance_level": "High"},
+      {"name": "South China Sea", "volume_flow": "33% of global shipping", "reliance_level": "High"}
+    ]
+  },
+  "Lithium": {
+    "producer_source": "USGS (U.S. Geological Survey) Mineral Commodity Summaries",
+    "producers": [
+      {"country": "Australia", "share": "47%"},
+      {"country": "Chile", "share": "26%"},
+      {"country": "China", "share": "16%"},
+      {"country": "Argentina", "share": "5%"}
+    ],
+    "refiner_source": "IEA Critical Minerals Report (Chemical Refining)",
+    "refiners": [
+      {"country": "China", "share": "65%"},
+      {"country": "Chile", "share": "29%"},
+      {"country": "Argentina", "share": "5%"}
+    ],
+    "choke_point_source": "IEA Critical Minerals Report",
+    "choke_points": [
+      {"name": "Strait of Malacca", "volume_flow": "Aus-China spodumene route", "reliance_level": "High"},
+      {"name": "Panama Canal", "volume_flow": "South America exports", "reliance_level": "Medium"}
+    ]
+  }
+}

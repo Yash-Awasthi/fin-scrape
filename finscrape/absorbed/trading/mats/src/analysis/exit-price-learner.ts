@@ -1,0 +1,330 @@
+// ─── Exit-Price Learner (PAEL) — v2.0.862 ─────────────────────────────
+//
+// Per-asset × per-direction MFE/MAE distribution model. Learns "how far does
+// THIS asset typically extend in my favour (MFE) and against me (MAE) after
+// an entry" from REAL trade position-value extremes — the data-driven answer
+// to "where should TP/SL be" that the owner asked for.
+//
+// The insight: TradeRecord.minValueReached/maxValueReached (position-value =
+// margin + unrealizedPnl) are recorded for 100% of real trades. Converting
+// them to price excursions (÷leverage) yields a per-asset distribution of
+// typical favourable/adverse extension. TP aimed at MFE p50×0.8 and SL floored
+// at MAE p95 is the "profit-maximising exit" for that asset.
+//
+// Design principles:
+//   - Per-asset × per-direction (SILVER and BTC have completely different
+//     personalities — never share distributions)
+//   - Percentile-based (median/p75/p90/p95) — outlier-immune robust stats,
+//     NOT sigmoid / mean (a single extreme trade cannot skew the profile)
+//   - Weighted by source: real=1.0, shadow=0.5 (shadow MFE is truncated by
+//     fixed SL/TP — lower-bound only), paper=0.3
+//   - Rolling window (newest N per cell) — MFE distributions drift with
+//     regime; stale samples must age out
+//   - Cold-start safe: < minSamples → null profile → caller falls back to
+//     existing S/R + ATR + candle-MFE logic (identical behaviour)
+//   - Phase A is LEARNING-ONLY: nothing consumes this in the execution path.
+//     Wired in (Phase C) only after the historical simulation (Phase B) proves
+//     it improves exit expectancy.
+//
+// Persistence: exit-price-state.json (atomic save, corruption-tolerant load).
+
+import { createLogger } from '../observability/logger.ts';
+import { safeLeverage } from '../trading/position-utils.ts';
+import fs from 'node:fs';
+
+const log = createLogger({ phase: 'exit-price' });
+
+// ─── Config ────────────────────────────────────────────────────────────
+
+export const exitPriceLearnerConfig = {
+  /** Below this many samples a cell yields NO profile (cold-start fallback). */
+  minSamples: 10,
+  /** Rolling-window cap per (symbol|side) — oldest records evicted. */
+  maxRecordsPerCell: 100,
+  /** v2.0.862-fund: TIME WINDOW — only records younger than this (days) are
+   *  used to build a profile. MFE/MAE distributions drift with regime; a
+   *  trade from 6 months ago says nothing about today's extension. Combined
+   *  with the count cap this guarantees profiles reflect RECENT trades. */
+  maxAgeDays: 60,
+  /** Learning weights by source. Shadow MFE is truncated by fixed SL/TP
+   *  (upper bound = TP distance) — it is a LOWER-BOUND estimate, hence 0.5. */
+  sourceWeights: { real: 1.0, shadow: 0.5, paper: 0.3 } as const,
+  /** Sane cap on price excursion (fraction). 50% in a minutes-to-hours
+   *  horizon is already extreme; anything above is corrupt data. */
+  maxExcursionPct: 0.5,
+} as const;
+
+// ─── Types ─────────────────────────────────────────────────────────────
+
+export interface ExitRecord {
+  symbol: string;           // normalized lowercase
+  side: 'buy' | 'sell';
+  /** Favourable price extension (fraction, >= 0; 0 = never went favourable). */
+  mfePricePct: number;
+  /** Adverse price excursion (fraction, >= 0). */
+  maePricePct: number;
+  source: 'real' | 'shadow' | 'paper';
+  timestamp: number;
+  /** Precomputed learning weight (real=1.0, shadow=0.5, paper=0.3). */
+  weight: number;
+}
+
+export interface ExitProfile {
+  symbol: string;
+  side: 'buy' | 'sell';
+  /** TP target anchor: 50th-pct favourable extension (aim at typical move). */
+  mfeP50: number;
+  /** Lock-profit zone: 75th-pct favourable extension. */
+  mfeP75: number;
+  /** Absolute TP cap: 90th-pct favourable extension. */
+  mfeP90: number;
+  /** SL noise floor: 95th-pct adverse excursion. */
+  maeP95: number;
+  samples: number;
+  updatedAt: number;
+}
+
+export interface RawPositionExtremes {
+  entryPrice: number;
+  quantity: number;
+  leverage: number;
+  minValueReached: number;
+  maxValueReached: number;
+}
+
+// ─── Conversion helper ─────────────────────────────────────────────────
+
+/**
+ * Convert position-value extremes (margin + unrealizedPnl) to price excursions.
+ *   margin = entry×qty / safeLeverage
+ *   MFE%   = (maxV − margin) / margin / leverage   (favourable price extension)
+ *   MAE%   = (margin − minV) / margin / leverage   (adverse excursion)
+ * Clamped to [0, maxExcursionPct] — negative (never favourable) → 0, and a
+ * >50% move in this horizon is corrupt. Returns null on any non-finite input.
+ */
+export function convertToPriceExtremes(
+  input: RawPositionExtremes,
+): { mfePricePct: number; maePricePct: number } | null {
+  const lev = safeLeverage(input.leverage); // rejects 0/NaN/Inf/neg/>50 → 1
+  const margin = (input.entryPrice * input.quantity) / lev;
+  if (!Number.isFinite(margin) || margin <= 0) return null;
+  const mfeMarginPct = (input.maxValueReached - margin) / margin;
+  const maeMarginPct = (margin - input.minValueReached) / margin;
+  const mfePricePct = mfeMarginPct / lev;
+  const maePricePct = maeMarginPct / lev;
+  if (!Number.isFinite(mfePricePct) || !Number.isFinite(maePricePct)) return null;
+  const cap = exitPriceLearnerConfig.maxExcursionPct;
+  return {
+    mfePricePct: Math.max(0, Math.min(cap, mfePricePct)),
+    maePricePct: Math.max(0, Math.min(cap, maePricePct)),
+  };
+}
+
+/** Weighted percentile — linear interpolation over cumulative weight.
+ *  Zero/negative weights fall back to unweighted. Pure, testable.
+ *  v2.0.862-attack (V1/V2): sanitize weights (NaN/Infinity → 0) and clamp
+ *  p to [0,1] — a NaN weight previously poisoned the cumulative sum and
+ *  silently returned the LAST element; a negative p produced sorted[-1]
+ *  → undefined → 0. Both are now neutralized. */
+export function weightedPercentile(
+  values: number[],
+  weights: number[],
+  p: number,
+): number {
+  const n = values.length;
+  if (n === 0) return 0;
+  if (n === 1) return Math.max(0, values[0] ?? 0);
+  // Sanitize p — clamp to [0,1]; NaN → 0.5 (median).
+  const pp = Number.isFinite(p) ? Math.max(0, Math.min(1, p)) : 0.5;
+  const pairs = values
+    .map((v, i) => ({
+      v: Math.max(0, Number.isFinite(v) ? v : 0),
+      w: Math.max(0, Number.isFinite(weights[i] as number) ? (weights[i] as number) : 0),
+    }))
+    .filter(x => Number.isFinite(x.v))
+    .sort((a, b) => a.v - b.v);
+  if (pairs.length === 0) return 0;
+  if (pairs.length === 1) return pairs[0]!.v;
+  const totalW = pairs.reduce((s, x) => s + x.w, 0);
+  const target = pp * totalW;
+  if (totalW <= 0 || target <= 0) {
+    const sorted = pairs.map(x => x.v);
+    const idx = Math.max(0, Math.min(sorted.length - 1, Math.floor(pp * sorted.length)));
+    return sorted[idx] ?? 0;
+  }
+  let cum = 0;
+  for (let i = 0; i < pairs.length; i++) {
+    const cur = pairs[i]!;
+    cum += cur.w;
+    if (cum >= target) {
+      if (i === 0) return cur.v;
+      const prev = pairs[i - 1]!;
+      const frac = (target - (cum - cur.w)) / cur.w;
+      return prev.v + (cur.v - prev.v) * Math.min(1, Math.max(0, frac));
+    }
+  }
+  return pairs[pairs.length - 1]!.v;
+}
+
+// ─── Learner ───────────────────────────────────────────────────────────
+
+const cellKey = (symbol: string, side: 'buy' | 'sell'): string =>
+  `${symbol.toLowerCase()}|${side}`;
+
+export class ExitPriceLearner {
+  private records: Record<string, ExitRecord[]> = {};
+  private persistPath: string;
+
+  constructor(persistPath = 'data/evolution/exit-price-state.json') {
+    this.persistPath = persistPath;
+  }
+
+  /** Record one resolved trade/shadow's exit extremes. Idempotent-safe:
+   *  callers must dedupe by trade id; the learner only appends. */
+  recordExit(rec: ExitRecord): void {
+    const clean = this.sanitizeRecord(rec);
+    if (!clean) return;
+    const key = cellKey(clean.symbol, clean.side);
+    const arr = this.records[key] ?? [];
+    arr.push(clean);
+    if (arr.length > exitPriceLearnerConfig.maxRecordsPerCell) {
+      arr.splice(0, arr.length - exitPriceLearnerConfig.maxRecordsPerCell);
+    }
+    this.records[key] = arr;
+  }
+
+  /** Robust stats for one (symbol, side). Null when sample-starved.
+   *  v2.0.862-fund: only records within maxAgeDays are used — the profile is
+   *  RECENT-trades-based (regime drift), not lifetime-based. */
+  getExitProfile(symbol: string, side: 'buy' | 'sell'): ExitProfile | null {
+    const key = cellKey(symbol, side);
+    const raw = this.records[key];
+    if (!raw || raw.length === 0) return null;
+    const cutoff = Date.now() - exitPriceLearnerConfig.maxAgeDays * 86_400_000;
+    // FIX: 只計 real 數據——shadow 數據 MAE=0 污染（shadow 用固定 SL/TP，未觸發就
+    // force-resolve（maxAgeCycles=12）——離場嗰刻價格 = entry 或順向——MAE 記錄唔到
+    // 真實逆向——大量零值拉低 percentile（實測 btc|buy 79/100 shadow 零值）。
+    // 量化金融: percentile 對零值污染敏感——shadow 零值令 MAE p95 偏細 → SL 校準太貼。
+    // A1: 單筆 getter-bomb/垃圾元素 → skip（唔中斷成個 filter）
+    const arr: Array<{ mfePricePct: number; maePricePct: number; weight: number; timestamp: number }> = [];
+    for (const r of raw) {
+      try {
+        if (r && typeof r === 'object' && r.timestamp >= cutoff && r.source === 'real') {
+          arr.push(r as { mfePricePct: number; maePricePct: number; weight: number; timestamp: number });
+        }
+      } catch { /* A1: 單筆失敗 skip */ }
+    }
+    if (arr.length < exitPriceLearnerConfig.minSamples) return null;
+    // E1: 時間衰減——舊數據唔再等權（同 success-pattern 一致）。
+    // 量化金融: 等權 percentile 被舊數據污染（實測 SKHX 等權 p95=10.24% vs
+    // 時間加權 2.90%——SKHX 極端逆向係舊數據——最近市場冇咁極端）。
+    // 時間權重 exp(-Δt/τ)，τ=7 日（60 日前權重 ≈ 0——實際用最近 ~2-3 週）。
+    const now = Date.now();
+    const TAU_MS = 7 * 24 * 3600 * 1000;
+    const mfe = arr.map(r => r.mfePricePct);
+    const mae = arr.map(r => r.maePricePct);
+    const w = arr.map(r => {
+      // A2: weight cap 100——1e308 污染值唔主導 percentile（單筆權重極大 → p95 被污染）
+      const base = Number.isFinite(r.weight) && r.weight > 0 ? Math.min(r.weight, 100) : 1;
+      const dt = Math.max(0, now - r.timestamp);
+      return base * Math.exp(-dt / TAU_MS);
+    });
+    return {
+      symbol: symbol.toLowerCase(),
+      side,
+      mfeP50: weightedPercentile(mfe, w, 0.5),
+      mfeP75: weightedPercentile(mfe, w, 0.75),
+      mfeP90: weightedPercentile(mfe, w, 0.9),
+      maeP95: weightedPercentile(mae, w, 0.95),
+      samples: arr.length,
+      updatedAt: Math.max(...arr.map(r => r.timestamp), 0),
+    };
+  }
+
+  /** Backfill from closed real trades (portfolio-state shape).
+   *  v2.0.862-fund: explicitly time-sorts so the rolling cap + time window
+   *  always keep the NEWEST trades (previously relied on portfolio order). */
+  backfillFromRealTrades(trades: Array<RawPositionExtremes & {
+    symbol: string; side: string; closedAt?: number; openTimestamp?: number;
+  }>): number {
+    const sorted = [...trades].sort((a, b) => (a.closedAt ?? a.openTimestamp ?? 0) - (b.closedAt ?? b.openTimestamp ?? 0));
+    let fed = 0;
+    for (const t of sorted) {
+      const side = t.side === 'sell' ? 'sell' : 'buy';
+      const converted = convertToPriceExtremes(t);
+      if (!converted) continue;
+      this.recordExit({
+        symbol: t.symbol.toLowerCase(),
+        side,
+        ...converted,
+        source: 'real',
+        timestamp: t.closedAt ?? t.openTimestamp ?? Date.now(),
+        weight: exitPriceLearnerConfig.sourceWeights.real,
+      });
+      fed++;
+    }
+    log.info(`[exit-price] backfilled ${fed} real-trade records`);
+    return fed;
+  }
+
+  getStats(): { cells: number; totalRecords: number } {
+    const cells = Object.keys(this.records).length;
+    const totalRecords = Object.values(this.records).reduce((s, a) => s + a.length, 0);
+    return { cells, totalRecords };
+  }
+
+  // ─── Persistence ────────────────────────────────────────────────────
+
+  save(): void {
+    try {
+      const data = JSON.stringify({ version: 1, savedAt: Date.now(), records: this.records });
+      fs.writeFileSync(this.persistPath, data, 'utf-8');
+    } catch (err) {
+      log.warn(`[exit-price] save failed: ${err instanceof Error ? err.message : String(err)}`);
+    }
+  }
+
+  load(): void {
+    try {
+      if (!fs.existsSync(this.persistPath)) return;
+      const raw = JSON.parse(fs.readFileSync(this.persistPath, 'utf-8')) as {
+        version?: number; records?: Record<string, ExitRecord[]>;
+      };
+      if (!raw.records || typeof raw.records !== 'object') return;
+      const clean: Record<string, ExitRecord[]> = {};
+      for (const [k, arr] of Object.entries(raw.records)) {
+        // v2.0.862-attack (V3): prototype-pollution keys must NEVER become
+        // record keys. JSON.parse creates an OWN '__proto__' property (no
+        // setter), so `clean[k] = ...` WOULD hit the setter on clean and
+        // silently reparent its prototype — corrupting every subsequent
+        // `this.records[key]` lookup semantics. Skip the danger set.
+        if (k === '__proto__' || k === 'constructor' || k === 'prototype') continue;
+        if (!Array.isArray(arr)) continue;
+        const filtered = arr
+          .map(r => this.sanitizeRecord(r))
+          .filter((r): r is ExitRecord => r !== null);
+        if (filtered.length > 0) clean[k] = filtered;
+      }
+      this.records = clean;
+      log.info(`[exit-price] loaded ${Object.keys(clean).length} cells`);
+    } catch (err) {
+      log.warn(`[exit-price] load failed (starting fresh): ${err instanceof Error ? err.message : String(err)}`);
+      this.records = {};
+    }
+  }
+
+  private sanitizeRecord(r: ExitRecord): ExitRecord | null {
+    if (!r || typeof r !== 'object') return null;
+    const symbol = typeof r.symbol === 'string' && r.symbol.length > 0 ? r.symbol.toLowerCase() : '';
+    if (!symbol) return null;
+    const side = r.side === 'sell' ? 'sell' : r.side === 'buy' ? 'buy' : null;
+    if (!side) return null;
+    const mfe = Number.isFinite(r.mfePricePct) ? Math.max(0, Math.min(exitPriceLearnerConfig.maxExcursionPct, r.mfePricePct)) : null;
+    const mae = Number.isFinite(r.maePricePct) ? Math.max(0, Math.min(exitPriceLearnerConfig.maxExcursionPct, r.maePricePct)) : null;
+    if (mfe === null || mae === null) return null;
+    const source = (r.source === 'real' || r.source === 'shadow' || r.source === 'paper') ? r.source : 'paper';
+    const weight = Number.isFinite(r.weight) && r.weight > 0 ? r.weight : exitPriceLearnerConfig.sourceWeights[source];
+    const timestamp = Number.isFinite(r.timestamp) ? r.timestamp : Date.now();
+    return { symbol, side, mfePricePct: mfe, maePricePct: mae, source, timestamp, weight };
+  }
+}

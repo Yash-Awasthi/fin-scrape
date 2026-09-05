@@ -1,0 +1,10 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../client';
+
+export function useEquityValuation() {
+  return useQuery({
+    queryKey: ['equity-valuation'],
+    queryFn: () => api.get<any>('/equity-valuation'),
+    staleTime: 60 * 60 * 1000,
+  });
+}

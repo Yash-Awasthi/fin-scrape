@@ -1,0 +1,4440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOATlens - Multi-Agent Investment Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --bg-primary: #09090b;
+            --bg-secondary: #111113;
+            --bg-card: #18181b;
+            --bg-card-hover: #1f1f23;
+            --bg-elevated: #27272a;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent-gold: #eab308;
+            --accent-gold-bright: #facc15;
+            --accent-gold-dim: rgba(234, 179, 8, 0.1);
+            --accent-green: #22c55e;
+            --accent-green-dim: rgba(34, 197, 94, 0.1);
+            --accent-red: #ef4444;
+            --accent-red-dim: rgba(239, 68, 68, 0.1);
+            --accent-blue: #3b82f6;
+            --accent-purple: #a855f7;
+            --border: #27272a;
+            --border-hover: #3f3f46;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Subtle gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 600px;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(234, 179, 8, 0.08) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Header */
+        header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(9, 9, 11, 0.9);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            font-size: 1.75rem;
+        }
+
+        .logo-text {
+            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-bright) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .help-btn {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            padding: 0.625rem 1.25rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .help-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            background: var(--accent-gold-dim);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Learn More Panel */
+        .learn-more-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .learn-more-panel.active {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .learn-more-header {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .scoring-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .scoring-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1.25rem;
+        }
+
+        .scoring-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .scoring-card .style {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.75rem;
+            font-weight: 500;
+        }
+
+        .scoring-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .score-legend {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .score-legend h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.green { background: var(--accent-green); }
+        .legend-dot.gold { background: var(--accent-gold); }
+        .legend-dot.red { background: var(--accent-red); }
+
+        /* Search Section */
+        .search-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-row {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .ticker-input {
+            font-family: var(--font-sans);
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-sm);
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            width: 140px;
+            transition: all 0.2s ease;
+        }
+
+        .ticker-input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 4px var(--accent-gold-dim);
+        }
+
+        .ticker-input::placeholder {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Time Period Selector */
+        .period-selector {
+            display: flex;
+            gap: 0.375rem;
+            background: var(--bg-secondary);
+            padding: 0.25rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+        }
+
+        .period-btn {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .period-btn:hover {
+            color: var(--text-secondary);
+            background: var(--bg-elevated);
+        }
+
+        .period-btn.active {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+        }
+
+        /* Investor Filter */
+        .investor-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .investor-chip {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.375rem;
+        }
+
+        .investor-chip:hover {
+            border-color: var(--border-hover);
+            color: var(--text-primary);
+        }
+
+        .investor-chip.active {
+            background: var(--accent-gold-dim);
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .investor-chip .check {
+            display: none;
+            font-size: 0.75rem;
+        }
+
+        .investor-chip.active .check {
+            display: inline;
+        }
+
+        .analyze-btn {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.875rem 2rem;
+            background: var(--accent-gold);
+            border: none;
+            border-radius: var(--radius-sm);
+            color: var(--bg-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .analyze-btn:hover:not(:disabled) {
+            background: var(--accent-gold-bright);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(234, 179, 8, 0.25);
+        }
+
+        .analyze-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .demo-link {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+
+        .demo-link:hover {
+            color: var(--text-secondary);
+        }
+
+        /* Loading State */
+        .loading {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem;
+            gap: 1.5rem;
+        }
+
+        .loading.active {
+            display: flex;
+        }
+
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        .loading-substeps {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        .substep {
+            opacity: 0.35;
+            transition: opacity 0.4s;
+        }
+
+        .substep.active {
+            opacity: 1;
+            color: var(--accent-gold);
+        }
+
+        .substep.done {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+
+        /* Error ticker suggestion buttons */
+        .error-ticker-btn {
+            background: var(--bg-elevated);
+            border: 1px solid var(--accent-red);
+            color: var(--text-primary);
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin: 0.2rem;
+        }
+
+        .error-ticker-btn:hover {
+            background: var(--accent-red-dim);
+        }
+
+        /* What's Next Panel */
+        .whats-next-panel {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .whats-next-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .whats-next-actions {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .whats-next-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-hover);
+            color: var(--text-primary);
+            padding: 0.7rem 1.25rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .whats-next-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-gold);
+        }
+
+        .whats-next-icon {
+            font-size: 1.1rem;
+        }
+
+        /* Error State */
+        .error-message {
+            display: none;
+            background: var(--accent-red-dim);
+            border: 1px solid var(--accent-red);
+            border-radius: var(--radius-sm);
+            color: var(--accent-red);
+            padding: 1rem 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .error-message.active {
+            display: block;
+        }
+
+        /* Results Section */
+        .results {
+            display: none;
+        }
+
+        .results.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Company Header */
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .company-ticker {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .company-info {
+            flex: 1;
+        }
+
+        .company-name {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .company-meta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .company-sector {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            padding: 0.25rem 0.75rem;
+            background: var(--bg-elevated);
+            border-radius: 50px;
+        }
+
+        .analysis-period {
+            font-size: 0.875rem;
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+
+        /* Consensus Panel */
+        .consensus-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .consensus-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .consensus-left {
+            flex: 1;
+        }
+
+        .consensus-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .consensus-verdict {
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .verdict-strong_buy { color: var(--accent-green); }
+        .verdict-buy { color: #4ade80; }
+        .verdict-hold { color: var(--accent-gold); }
+        .verdict-sell { color: #f87171; }
+        .verdict-strong_sell { color: var(--accent-red); }
+
+        .agreement-meter {
+            text-align: right;
+        }
+
+        .agreement-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .agreement-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .agreement-bar {
+            width: 140px;
+            height: 8px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-left: auto;
+            margin-top: 0.5rem;
+        }
+
+        .agreement-fill {
+            height: 100%;
+            background: var(--accent-gold);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .consensus-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .points-group h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .points-group h4::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .consensus-group h4::before {
+            background: var(--accent-green);
+        }
+
+        .divergence-group h4::before {
+            background: var(--accent-purple);
+        }
+
+        .points-group ul {
+            list-style: none;
+        }
+
+        .points-group li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .points-group li:last-child {
+            border-bottom: none;
+        }
+
+        /* Moat Section */
+        .moat-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .moat-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .moat-icon {
+            font-size: 1.75rem;
+        }
+
+        .moat-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .moat-trend {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .trend-strengthening { color: var(--accent-green); }
+        .trend-stable { color: var(--accent-gold); }
+        .trend-weakening { color: var(--accent-red); }
+        .trend-collapsed { color: var(--accent-red); }
+
+        /* Agents Grid */
+        .agents-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1rem;
+        }
+
+        .agent-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .agent-card:hover {
+            border-color: var(--border-hover);
+            background: var(--bg-card-hover);
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .agent-info h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .agent-style {
+            font-size: 0.875rem;
+            color: var(--accent-gold);
+            margin-top: 0.25rem;
+            font-weight: 500;
+        }
+
+        .agent-score-wrapper {
+            position: relative;
+        }
+
+        .agent-score {
+            font-size: 2rem;
+            font-weight: 700;
+            cursor: help;
+        }
+
+        .score-positive { color: var(--accent-green); }
+        .score-neutral { color: var(--accent-gold); }
+        .score-negative { color: var(--accent-red); }
+
+        /* Score Tooltip */
+        .score-tooltip {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 0.5rem;
+            width: 280px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.2s ease;
+            z-index: 50;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .score-tooltip::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            right: 20px;
+            width: 12px;
+            height: 12px;
+            background: var(--bg-elevated);
+            border-left: 1px solid var(--border);
+            border-top: 1px solid var(--border);
+            transform: rotate(45deg);
+        }
+
+        .agent-score-wrapper:hover .score-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .tooltip-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .agent-verdict-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.375rem 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            border-radius: 50px;
+        }
+
+        .badge-strong_buy { background: var(--accent-green-dim); color: var(--accent-green); }
+        .badge-buy { background: rgba(74, 222, 128, 0.1); color: #4ade80; }
+        .badge-hold { background: var(--accent-gold-dim); color: var(--accent-gold); }
+        .badge-sell { background: rgba(248, 113, 113, 0.1); color: #f87171; }
+        .badge-strong_sell { background: var(--accent-red-dim); color: var(--accent-red); }
+
+        .agent-insights, .agent-concerns {
+            margin-bottom: 0.75rem;
+        }
+
+        .agent-insights h5, .agent-concerns h5 {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .agent-insights ul, .agent-concerns ul {
+            list-style: none;
+        }
+
+        .agent-insights li, .agent-concerns li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            padding: 0.375rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .agent-insights li::before {
+            content: '+';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .agent-concerns li::before {
+            content: '−';
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+
+        /* Earnings Track Record */
+        .earnings-section {
+            margin-bottom: 2rem;
+        }
+
+        .earnings-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .earnings-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .earnings-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .earnings-title-icon {
+            font-size: 1.5rem;
+        }
+
+        .earnings-title-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .earnings-streak-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+
+        .streak-beat {
+            background: var(--accent-green-dim);
+            color: var(--accent-green);
+        }
+
+        .streak-miss {
+            background: var(--accent-red-dim);
+            color: var(--accent-red);
+        }
+
+        .streak-inline, .streak-unknown {
+            background: var(--accent-gold-dim);
+            color: var(--accent-gold);
+        }
+
+        .earnings-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .earnings-table th,
+        .earnings-table td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .earnings-table th {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: var(--bg-secondary);
+        }
+
+        .earnings-table td {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .earnings-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .earnings-table tbody tr:hover td {
+            background: var(--bg-card-hover);
+        }
+
+        .eps-value {
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .surprise-positive {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .surprise-negative {
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+
+        .surprise-inline {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .beat-miss-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+        }
+
+        .indicator-beat {
+            background: var(--accent-green-dim);
+            color: var(--accent-green);
+        }
+
+        .indicator-miss {
+            background: var(--accent-red-dim);
+            color: var(--accent-red);
+        }
+
+        .indicator-inline {
+            background: var(--accent-gold-dim);
+            color: var(--accent-gold);
+        }
+
+        .earnings-summary {
+            padding: 1rem 2rem;
+            border-top: 1px solid var(--border);
+            background: var(--bg-secondary);
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .earnings-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .earnings-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .earnings-stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        /* Charts Section */
+        .charts-section {
+            margin-bottom: 2rem;
+        }
+
+        .charts-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: visible;
+        }
+
+        .charts-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .charts-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .charts-title-icon {
+            font-size: 1.5rem;
+        }
+
+        .charts-title-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .chart-tab-selector {
+            display: flex;
+            gap: 0.25rem;
+            background: var(--bg-secondary);
+            padding: 0.25rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+
+        .chart-tab-btn {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.5rem 1.125rem;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chart-tab-btn:hover {
+            color: var(--text-secondary);
+            background: var(--bg-elevated);
+        }
+
+        .chart-tab-btn.active {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+        }
+
+        .chart-tab-btn .tab-icon {
+            font-size: 1rem;
+        }
+
+        .chart-view {
+            display: none;
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .chart-view.active {
+            display: block;
+        }
+
+        .chart-period-selector {
+            display: flex;
+            gap: 0.25rem;
+            background: var(--bg-secondary);
+            padding: 0.2rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .chart-period-btn {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.375rem 0.75rem;
+            background: transparent;
+            border: none;
+            border-radius: 4px;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .chart-period-btn:hover {
+            color: var(--text-secondary);
+            background: var(--bg-elevated);
+        }
+
+        .chart-period-btn.active {
+            background: var(--accent-gold);
+            color: var(--bg-primary);
+        }
+
+        .price-chart-container {
+            padding: 1rem 1rem 0 1rem;
+            height: 400px;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .price-chart-container .tv-lightweight-charts {
+            border-radius: 8px;
+        }
+
+        /* Next Earnings Badge */
+        .next-earnings-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .next-earnings-badge .countdown {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* EPS Bar Chart */
+        .eps-chart-section {
+            margin-bottom: 2rem;
+        }
+
+        .eps-chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .eps-chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eps-chart-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .eps-chart-title-icon {
+            font-size: 1.5rem;
+        }
+
+        .eps-chart-title-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .eps-chart-container {
+            padding: 1.5rem 2rem;
+            height: 300px;
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .eps-chart-legend {
+            display: flex;
+            gap: 1.5rem;
+            padding: 0 2rem 1rem;
+        }
+
+        .eps-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .eps-legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        .eps-legend-dot.actual { background: var(--accent-gold); }
+        .eps-legend-dot.estimate { background: var(--bg-elevated); }
+
+        .chart-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            gap: 0.75rem;
+        }
+
+        .chart-loading .mini-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--border);
+            border-top-color: var(--accent-gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* ── Earnings Reaction Insights (inside tab) ── */
+        .guidance-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .guidance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .guidance-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .growth-trend-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.375rem 0.875rem;
+            border-radius: 50px;
+        }
+
+        .trend-badge-accelerating {
+            background: var(--accent-green-dim);
+            color: var(--accent-green);
+        }
+
+        .trend-badge-stable {
+            background: var(--accent-gold-dim);
+            color: var(--accent-gold);
+        }
+
+        .trend-badge-decelerating {
+            background: var(--accent-red-dim);
+            color: var(--accent-red);
+        }
+
+        .trend-badge-unknown {
+            background: rgba(161, 161, 170, 0.1);
+            color: var(--text-muted);
+        }
+
+        .guidance-metrics {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .guidance-metric {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .guidance-metric-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .guidance-metric-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .guidance-metric-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .guidance-summary-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── "What's Next" Forward Comparison Card ── */
+        .guidance-comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .guidance-col {
+            background: var(--bg-secondary);
+            border-radius: var(--radius-sm);
+            padding: 1rem 1.25rem;
+            border: 1px solid var(--border);
+        }
+        .guidance-col-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .guidance-col-label.street { color: var(--accent-blue, #42a5f5); }
+        .guidance-col-label.last-year { color: var(--text-muted); }
+        .guidance-col-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.35rem 0;
+        }
+        .guidance-col-metric {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .guidance-col-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .guidance-col-growth {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+        }
+        .growth-up { color: var(--accent-green); background: rgba(76, 175, 80, 0.1); }
+        .growth-down { color: var(--accent-red); background: rgba(244, 67, 54, 0.1); }
+
+        .guidance-pt-row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            margin-top: 0.5rem;
+            border-top: 1px solid var(--border);
+        }
+        .guidance-pt-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .guidance-pt-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .guidance-pt-upside {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .guidance-analyst-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        /* ── Per-Quarter Story Cards ── */
+        .quarter-story-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+        .quarter-story-card:hover {
+            border-color: var(--border-hover);
+        }
+        .story-headline {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            flex-wrap: wrap;
+        }
+        .story-quarter {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            min-width: 60px;
+        }
+        .story-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+        .story-badge.beat { background: rgba(34, 197, 94, 0.15); color: var(--accent-green); }
+        .story-badge.miss { background: rgba(239, 68, 68, 0.15); color: var(--accent-red); }
+        .story-badge.inline { background: rgba(234, 179, 8, 0.15); color: var(--accent-gold); }
+        .story-stock-reaction {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-left: auto;
+        }
+        .story-guidance-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .story-guidance-tag.strong { background: rgba(34, 197, 94, 0.1); color: var(--accent-green); }
+        .story-guidance-tag.cautious { background: rgba(234, 179, 8, 0.1); color: var(--accent-gold); }
+        .story-guidance-tag.weak { background: rgba(239, 68, 68, 0.1); color: var(--accent-red); }
+        .story-guidance-tag.inline { background: var(--bg-secondary); color: var(--text-muted); }
+        .story-guidance-tag.unknown { background: var(--bg-secondary); color: var(--text-muted); }
+        .story-expand-icon {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            transition: transform 0.2s ease;
+        }
+        .story-expand-icon.open { transform: rotate(180deg); }
+
+        .story-body {
+            display: none;
+            padding: 0 1.5rem 1.25rem;
+        }
+        .story-body.open {
+            display: block;
+        }
+        .story-comparison {
+            margin-bottom: 1rem;
+        }
+        /* Comparison table — 3 columns: Metric | Company Delivered | Context */
+        .story-compare-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+        .story-compare-table th,
+        .story-compare-table td {
+            padding: 0.5rem 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .story-compare-table tr:last-child td { border-bottom: none; }
+        .story-compare-table th {
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            background: var(--bg-primary);
+        }
+        .story-compare-table th:nth-child(2) { color: var(--accent-green); }
+        .story-compare-table .metric-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            white-space: nowrap;
+            width: 1%;
+        }
+        .story-compare-table .metric-value {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .story-compare-table .metric-context {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-left: 0.5rem;
+        }
+        .story-compare-table .metric-context .up { color: var(--accent-green); }
+        .story-compare-table .metric-context .down { color: var(--accent-red); }
+        .story-explanation {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent-gold);
+            padding: 0.75rem 1rem;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        .story-explanation strong {
+            color: var(--text-primary);
+        }
+        .story-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .story-stat {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .story-stat-value {
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+        .story-border-beat { border-left: 3px solid var(--accent-green); }
+        .story-border-miss { border-left: 3px solid var(--accent-red); }
+        .story-border-inline { border-left: 3px solid var(--accent-gold); }
+
+        .insights-loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ── Custom earnings tooltip on stock chart ── */
+        .chart-earnings-tooltip {
+            position: absolute;
+            z-index: 60;
+            pointer-events: none;           /* so it doesn't block chart interaction */
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-hover);
+            border-radius: var(--radius-sm);
+            padding: 0.875rem 1rem;
+            min-width: 220px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.15s ease;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .chart-earnings-tooltip.visible {
+            opacity: 1;
+        }
+
+        .chart-earnings-tooltip .tooltip-quarter {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.375rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chart-earnings-tooltip .tooltip-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.15rem 0;
+        }
+
+        .chart-earnings-tooltip .tooltip-label {
+            color: var(--text-muted);
+        }
+
+        .chart-earnings-tooltip .tooltip-value {
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .chart-earnings-tooltip .tooltip-divider {
+            border-top: 1px solid var(--border);
+            margin: 0.375rem 0;
+        }
+
+        /* ── Legend below the stock price chart ── */
+        .price-chart-legend {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            padding: 0.75rem 1.5rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        .price-chart-legend .legend-entry {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .price-chart-legend .legend-circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .price-chart-legend .legend-line {
+            width: 18px;
+            height: 2px;
+            border-radius: 1px;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            margin-bottom: 2rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table th {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: var(--bg-secondary);
+        }
+
+        .comparison-table td {
+            font-size: 1rem;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tbody tr:hover td {
+            background: var(--bg-card-hover);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        /* About Panel (same slide-down pattern as learn-more-panel) */
+        .about-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        .about-panel.active {
+            max-height: 500px;
+            opacity: 1;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .about-panel h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 0 1.25rem;
+        }
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        .about-story {
+            flex: 1;
+        }
+        .about-story p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin: 0 0 0.5rem;
+        }
+        .about-story strong { color: var(--text-primary); }
+        .about-story .about-label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+        .about-connect {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+        .about-connect a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .about-connect a:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+        .about-connect svg { width: 16px; height: 16px; fill: currentColor; }
+        /* About panel small-screen override is now in the main responsive block below */
+
+        /* Scoring Details Modal */
+        .view-details-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .view-details-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .scoring-modal {
+            border: none;
+            border-radius: var(--radius);
+            padding: 0;
+            max-width: 900px;
+            width: 90vw;
+            max-height: 90vh;
+            background: var(--bg-card);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin: auto;
+            position: fixed;
+            top: 5vh;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .scoring-modal::backdrop {
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .modal-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+        }
+        .modal-close:hover {
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .modal-intro {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .agent-formula-section {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .agent-formula-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .agent-formula-header:hover {
+            background: var(--bg-secondary);
+        }
+        .agent-formula-header h3 {
+            margin: 0 0 0.25rem;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+        .agent-style {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .expand-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, color 0.2s;
+        }
+        .expand-btn.expanded {
+            transform: rotate(45deg);
+        }
+        .expand-btn:hover {
+            color: var(--accent-gold);
+        }
+
+        .agent-summary {
+            padding: 0 1.5rem 1rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .formula-details {
+            border-top: 1px solid var(--border);
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+        }
+
+        .formula-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        .formula-table th {
+            background: var(--bg-card);
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border);
+        }
+        .formula-table td {
+            padding: 0.6rem 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+        .formula-table tr:last-child td {
+            border-bottom: none;
+        }
+        .formula-table td:first-child {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .verdict-table {
+            margin-top: 1.5rem;
+        }
+        .verdict-table h4 {
+            font-size: 0.95rem;
+            margin: 0 0 0.75rem;
+            color: var(--text-primary);
+        }
+        .verdict-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .verdict-table td {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+        .verdict-table td:first-child {
+            font-weight: 600;
+            background: var(--bg-card);
+            color: var(--accent-gold);
+        }
+        .verdict-table td:last-child {
+            color: #fafafa !important;
+        }
+
+        .modal-disclaimer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Old scoring-modal responsive block removed — consolidated into main responsive block below */
+
+        .disclaimer {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE — Tablet & Mobile (≤768px)
+           Core rule: design for thumbs, not mice.
+           Min touch target: 44×44px.
+           ═══════════════════════════════════════════ */
+        @media (max-width: 768px) {
+
+            /* ── 1. Base spacing ── */
+            main {
+                padding: 1.5rem 1rem;
+            }
+            footer {
+                padding: 1.5rem 1rem;
+                margin-top: 2rem;
+            }
+
+            /* ── 2. Header ── */
+            .header-content {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 0.75rem 1rem;
+            }
+            .header-actions {
+                width: 100%;
+                justify-content: center;
+            }
+            .help-btn, .about-btn {
+                min-height: 44px;
+                padding: 0.5rem 1rem;
+            }
+
+            /* ── 3. Hero ── */
+            .hero {
+                margin-bottom: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+
+            /* ── 4. Search ── */
+            .search-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-input {
+                font-size: 1rem;
+                min-height: 44px;
+            }
+            .analyze-btn {
+                min-height: 44px;
+                font-size: 1rem;
+            }
+            .period-selector {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .period-btn {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 0.5rem 0.75rem;
+            }
+            .investor-filter {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .investor-btn {
+                min-height: 44px;
+                padding: 0.5rem 0.75rem;
+            }
+
+            /* ── 5. Loading steps ── */
+            .loading-steps {
+                font-size: 0.85rem;
+            }
+
+            /* ── 6. Company header / consensus ── */
+            .company-header {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+            .consensus-top {
+                flex-direction: column;
+                gap: 1.25rem;
+            }
+            .consensus-points {
+                grid-template-columns: 1fr;
+            }
+            .agreement-meter {
+                text-align: left;
+            }
+            .agreement-bar {
+                margin-left: 0;
+            }
+
+            /* ── 7. Moat section ── */
+            .moat-section {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+                padding: 1rem 1.25rem;
+            }
+            .moat-left {
+                justify-content: center;
+            }
+
+            /* ── 8. Charts card — tab + period selector ── */
+            .charts-header {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 1rem;
+            }
+            .chart-tab-selector {
+                width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                flex-wrap: nowrap;
+                gap: 0.15rem;
+                padding: 0.2rem;
+            }
+            .chart-tab-btn {
+                min-height: 44px;
+                padding: 0.5rem 0.75rem;
+                font-size: 0.8rem;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+            .chart-tab-btn .tab-icon {
+                font-size: 0.9rem;
+            }
+            .chart-period-selector {
+                width: 100%;
+                justify-content: center;
+            }
+            .chart-period-btn {
+                min-height: 44px;
+                min-width: 44px;
+                padding: 0.5rem 0.6rem;
+                font-size: 0.8rem;
+            }
+
+            /* ── 9. Price chart ── */
+            .price-chart-container {
+                height: 280px;
+                padding: 0.5rem;
+                width: 100%;
+                overflow-x: visible;
+            }
+            .price-chart-legend {
+                padding: 0.5rem 0.75rem;
+                gap: 0.75rem;
+            }
+            .price-chart-legend .legend-entry {
+                font-size: 0.7rem;
+            }
+            /* Tooltip: narrower on mobile, keep within viewport */
+            .chart-earnings-tooltip {
+                min-width: 180px;
+                max-width: 260px;
+                font-size: 0.8rem;
+                padding: 0.75rem;
+            }
+
+            /* ── 10. EPS chart ── */
+            .eps-chart-container {
+                height: 250px;
+                padding: 1rem 0.5rem;
+                width: 100%;
+                overflow-x: visible;
+            }
+            .eps-chart-legend {
+                padding: 0 1rem 0.75rem;
+                gap: 0.75rem;
+            }
+            .eps-chart-legend .legend-entry {
+                font-size: 0.7rem;
+            }
+
+            /* ── 11. Next earnings badge ── */
+            .next-earnings-badge {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.75rem;
+            }
+
+            /* ── 12. Forward guidance (Insights tab) ── */
+            .guidance-comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+            .guidance-col {
+                padding: 0.75rem 1rem;
+            }
+
+            /* ── 13. Story cards (Insights tab) ── */
+            .story-headline {
+                padding: 0.75rem 1rem;
+                gap: 0.5rem;
+            }
+            .story-quarter {
+                font-size: 0.9rem;
+                min-width: 50px;
+            }
+            .story-badge {
+                font-size: 0.7rem;
+                padding: 0.15rem 0.4rem;
+            }
+            .story-stock-reaction {
+                font-size: 0.85rem;
+            }
+            .story-guidance-tag {
+                font-size: 0.65rem;
+                padding: 0.1rem 0.35rem;
+            }
+            .story-body {
+                padding: 0 1rem 1rem;
+            }
+            /* Make comparison table horizontally scrollable if needed */
+            .story-comparison {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .story-compare-table th,
+            .story-compare-table td {
+                padding: 0.4rem 0.5rem;
+                font-size: 0.75rem;
+            }
+            .story-compare-table .metric-value {
+                font-size: 0.85rem;
+            }
+            .story-explanation {
+                font-size: 0.82rem;
+                padding: 0.6rem 0.75rem;
+            }
+            .story-stats {
+                gap: 0.75rem;
+            }
+            .story-stat {
+                font-size: 0.72rem;
+            }
+
+            /* ── 13b. Earnings Track Record table ── */
+            .earnings-header {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.75rem 1rem;
+                align-items: flex-start;
+            }
+            .earnings-title-text {
+                font-size: 1rem;
+            }
+            .earnings-title-icon {
+                font-size: 1.2rem;
+            }
+            .earnings-streak-badge {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.75rem;
+            }
+            /* Make the 6-col table scrollable + compact */
+            #chartViewTrackRecord {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .earnings-table th,
+            .earnings-table td {
+                padding: 0.5rem 0.5rem;
+                font-size: 0.75rem;
+                white-space: nowrap;
+            }
+            .earnings-table th {
+                font-size: 0.65rem;
+            }
+            .beat-miss-indicator {
+                font-size: 0.65rem;
+                padding: 0.15rem 0.35rem;
+            }
+            .earnings-summary {
+                padding: 0.75rem 1rem;
+                gap: 1rem;
+            }
+            .earnings-stat-value {
+                font-size: 1rem;
+            }
+            .earnings-stat-label {
+                font-size: 0.65rem;
+            }
+
+            /* ── 14. Agents grid ── */
+            .agents-grid {
+                grid-template-columns: 1fr;
+            }
+            .agent-card {
+                padding: 1.25rem;
+            }
+            .agent-info h3 {
+                font-size: 1.1rem;
+            }
+            .agent-score {
+                font-size: 1.75rem;
+            }
+
+            /* ── 15. Score tooltips — left-align on mobile ── */
+            .score-tooltip {
+                right: auto;
+                left: 0;
+                width: calc(100vw - 4rem);
+                max-width: 300px;
+            }
+            .score-tooltip::before {
+                right: auto;
+                left: 20px;
+            }
+
+            /* ── 16. Comparison table ── */
+            .comparison-table th,
+            .comparison-table td {
+                padding: 0.75rem 0.75rem;
+                font-size: 0.85rem;
+            }
+            .comparison-table th {
+                font-size: 0.75rem;
+            }
+
+            /* ── 17. Learn More panel ── */
+            .learn-more-panel.active {
+                padding: 1.25rem;
+            }
+            .learn-more-header {
+                font-size: 1.25rem;
+            }
+            .scoring-grid {
+                grid-template-columns: 1fr;
+            }
+            .scoring-card {
+                padding: 1rem;
+            }
+            .scoring-card h4 {
+                font-size: 1rem;
+            }
+
+            /* ── 18. About panel ── */
+            .about-panel.active {
+                padding: 1.25rem;
+            }
+            .about-panel h3 {
+                font-size: 1.1rem;
+            }
+            .about-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .about-connect {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .about-connect a {
+                min-height: 44px;
+            }
+
+            /* ── 19. Scoring details modal — full-width sheet on mobile ── */
+            .scoring-modal {
+                width: 100vw;
+                max-width: 100vw;
+                border-radius: 12px 12px 0 0;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                transform: none;
+                max-height: 90vh;
+            }
+            .modal-header {
+                padding: 1rem 1.25rem;
+            }
+            .modal-header h2 {
+                font-size: 1.15rem;
+            }
+            .modal-body {
+                padding: 1rem;
+            }
+            .agent-formula-header {
+                padding: 0.75rem;
+            }
+            .formula-details {
+                padding: 0.75rem;
+                overflow-x: auto;
+            }
+            .formula-table {
+                font-size: 0.75rem;
+            }
+            .formula-table th,
+            .formula-table td {
+                padding: 0.4rem;
+            }
+            .verdict-table {
+                font-size: 0.8rem;
+            }
+
+            /* ── 20. Disclaimer ── */
+            .disclaimer {
+                font-size: 0.65rem;
+                line-height: 1.4;
+            }
+
+            /* ── 21. Section headers ── */
+            .section-title {
+                font-size: 1.1rem;
+            }
+            .section-header {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+        }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE — Small phones (≤480px)
+           Extra tightening for very narrow screens.
+           ═══════════════════════════════════════════ */
+        @media (max-width: 480px) {
+            main {
+                padding: 1rem 0.75rem;
+            }
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
+            .price-chart-container {
+                height: 240px;
+                padding: 0.25rem;
+            }
+            .eps-chart-container {
+                height: 220px;
+                padding: 0.75rem 0.25rem;
+            }
+            .agent-score {
+                font-size: 1.5rem;
+            }
+            .chart-tab-btn {
+                font-size: 0.72rem;
+                padding: 0.4rem 0.5rem;
+            }
+            /* Stack story headline items on very small screens */
+            .story-headline {
+                display: grid;
+                grid-template-columns: auto auto 1fr auto;
+                align-items: center;
+                gap: 0.35rem 0.5rem;
+            }
+            .story-stock-reaction {
+                margin-left: 0;
+            }
+            .story-guidance-tag {
+                grid-column: 1 / -1;
+                justify-self: start;
+            }
+            /* Hide the "Date" column on tiny screens — quarter + data is enough */
+            .earnings-table th:nth-child(2),
+            .earnings-table td:nth-child(2) {
+                display: none;
+            }
+            .earnings-table th,
+            .earnings-table td {
+                padding: 0.4rem 0.35rem;
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🐐</span>
+                <span class="logo-text">GOATlens</span>
+            </div>
+            <div class="header-actions">
+                <button class="help-btn" id="helpBtn">
+                    <span>?</span> How It Works
+                </button>
+                <button class="help-btn" id="aboutBtn" style="margin-left: 0.5rem;">
+                    <span>i</span> About
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <div class="hero">
+            <h1>Analyze Stocks Like the Legends</h1>
+            <p>Get investment insights from 5 legendary investors. See where Buffett, Lynch, Graham, Munger, and Dalio agree—and where they'd debate.</p>
+        </div>
+
+        <!-- Learn More Panel -->
+        <div class="learn-more-panel" id="learnMorePanel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 class="learn-more-header" style="margin: 0;">How GOAT Scoring Works</h3>
+                <button class="view-details-btn" id="viewScoringDetailsBtn" onclick="openScoringDetailsModal()">View Scoring Details</button>
+            </div>
+            <div class="scoring-grid">
+                <div class="scoring-card">
+                    <h4>Warren Buffett</h4>
+                    <div class="style">Value + Quality</div>
+                    <p>ROE &gt;15%, high margins, low debt. Seeks durable moats and owner earnings. Rewards consistent earnings beats.</p>
+                </div>
+                <div class="scoring-card">
+                    <h4>Peter Lynch</h4>
+                    <div class="style">Growth at Reasonable Price</div>
+                    <p>PEG &lt;1, strong earnings growth, low institutional ownership. Hunts for "ten-baggers."</p>
+                </div>
+                <div class="scoring-card">
+                    <h4>Benjamin Graham</h4>
+                    <div class="style">Deep Value</div>
+                    <p>P/E &lt;15, P/B &lt;1.5, current ratio &gt;2. Demands margin of safety below intrinsic value.</p>
+                </div>
+                <div class="scoring-card">
+                    <h4>Charlie Munger</h4>
+                    <div class="style">Quality First</div>
+                    <p>Business quality, management, pricing power. Uses mental models. Heavy penalties for red flags.</p>
+                </div>
+                <div class="scoring-card">
+                    <h4>Ray Dalio</h4>
+                    <div class="style">Macro & Risk</div>
+                    <p>Debt cycles, risk-adjusted returns, diversification. Prefers all-weather performers.</p>
+                </div>
+            </div>
+            <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin: 0.75rem 0 0.5rem; font-style: italic;">Investment philosophies and thresholds are based on each investor's published writings. Scoring weights are GOATlens interpretations and not endorsed by these individuals.</p>
+            <div class="score-legend">
+                <h4>Score Scale (-100 to +100)</h4>
+                <div class="legend-items">
+                    <div class="legend-item"><span class="legend-dot green"></span> +60 to +100: Strong Buy</div>
+                    <div class="legend-item"><span class="legend-dot green"></span> +20 to +59: Buy</div>
+                    <div class="legend-item"><span class="legend-dot gold"></span> -19 to +19: Hold</div>
+                    <div class="legend-item"><span class="legend-dot red"></span> -20 to -59: Sell</div>
+                    <div class="legend-item"><span class="legend-dot red"></span> -60 to -100: Strong Sell</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Panel (slides open like "How It Works") -->
+        <div class="about-panel" id="aboutPanel">
+            <h3>Built by Pin</h3>
+            <div class="about-content">
+                <div class="about-story">
+                    <span class="about-label">Why I built this</span>
+                    <p>I wanted to develop my AI product sense and learning by building felt like the best starting point. GOATlens combines real financial data, multi-agent AI, and legendary investor frameworks into one tool.</p>
+                    <span class="about-label">Feedback welcome</span>
+                    <p>This is a work in progress. If you have ideas, see bugs, or just want to chat about AI &amp; investing, I'd love to hear from you.</p>
+                </div>
+                <div class="about-connect">
+                    <a href="https://github.com/pinnyeow/ai-investment-goatlens" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.79-.26.79-.58v-2.17c-3.34.73-4.04-1.42-4.04-1.42-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.02 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.19.7.8.58A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                        View Source
+                    </a>
+                    <a href="https://www.linkedin.com/in/pinmanee/" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+                        Connect
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-row">
+                <div class="input-group">
+                    <label>Ticker</label>
+                    <input type="text" class="ticker-input" id="tickerInput" placeholder="AAPL" maxlength="5">
+                </div>
+                <div class="input-group">
+                    <label>Time Period</label>
+                    <div class="period-selector">
+                        <button class="period-btn" data-period="ytd">YTD</button>
+                        <button class="period-btn" data-period="3m">3M</button>
+                        <button class="period-btn" data-period="6m">6M</button>
+                        <button class="period-btn active" data-period="1y">1Y</button>
+                        <button class="period-btn" data-period="5y">5Y</button>
+                    </div>
+                </div>
+                <div class="input-group" style="flex: 1;">
+                    <label>Investors</label>
+                    <div class="investor-filter">
+                        <button class="investor-chip active" data-investor="buffett"><span class="check">✓</span> Buffett</button>
+                        <button class="investor-chip active" data-investor="lynch"><span class="check">✓</span> Lynch</button>
+                        <button class="investor-chip active" data-investor="graham"><span class="check">✓</span> Graham</button>
+                        <button class="investor-chip active" data-investor="munger"><span class="check">✓</span> Munger</button>
+                        <button class="investor-chip active" data-investor="dalio"><span class="check">✓</span> Dalio</button>
+                    </div>
+                </div>
+            </div>
+            <div class="search-row" style="margin-top: 1.5rem;">
+                <button class="analyze-btn" id="analyzeBtn">Analyze Stock</button>
+                <span class="demo-link" id="demoBtn">or try demo with AAPL</span>
+            </div>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <div class="loading-text" id="loadingText">Consulting the GOATs...</div>
+            <div class="loading-substeps" id="loadingSubsteps">
+                <span class="substep active" id="stepFetch">Fetching financial data…</span>
+                <span class="substep" id="stepAgents">Running investor agents…</span>
+                <span class="substep" id="stepCharts">Loading charts…</span>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <!-- Company Header -->
+            <div class="company-header">
+                <span class="company-ticker" id="companyTicker">AAPL</span>
+                <div class="company-info">
+                    <div class="company-name" id="companyName">Apple Inc.</div>
+                    <div class="company-meta">
+                        <span class="company-sector" id="companySector">Technology</span>
+                        <span class="analysis-period" id="analysisPeriod">1 Year Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consensus Panel -->
+            <div class="consensus-panel">
+                <div class="consensus-top">
+                    <div class="consensus-left">
+                        <div class="consensus-label">Consensus Verdict</div>
+                        <div class="consensus-verdict" id="consensusVerdict">Buy</div>
+                    </div>
+                    <div class="agreement-meter">
+                        <div class="agreement-label">GOAT Agreement</div>
+                        <div class="agreement-value" id="agreementValue">72%</div>
+                        <div class="agreement-bar">
+                            <div class="agreement-fill" id="agreementFill" style="width: 72%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="consensus-points">
+                    <div class="points-group consensus-group">
+                        <h4>Where GOATs Agree</h4>
+                        <ul id="consensusList"></ul>
+                    </div>
+                    <div class="points-group divergence-group">
+                        <h4>Points of Debate</h4>
+                        <ul id="divergenceList"></ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moat Analysis -->
+            <div class="moat-section">
+                <div class="moat-left">
+                    <span class="moat-icon">🏰</span>
+                    <span class="moat-label">Competitive Moat Trend</span>
+                </div>
+                <span class="moat-trend" id="moatTrend">Stable</span>
+            </div>
+
+            <!-- Charts Section (Tabbed: Stock Price / EPS Comparison) -->
+            <section class="charts-section" id="chartsSection" style="display: none;">
+                <div class="section-header">
+                    <span class="section-title">Price History & Earnings</span>
+                    <span class="next-earnings-badge" id="nextEarningsBadge" style="display: none;">
+                        <span>📅</span>
+                        <span id="nextEarningsText">Next Earnings: —</span>
+                        <span class="countdown" id="nextEarningsCountdown"></span>
+                    </span>
+                </div>
+                <div class="charts-card">
+                    <div class="charts-header">
+                        <div class="chart-tab-selector">
+                            <button class="chart-tab-btn active" data-chart-tab="price">
+                                <span class="tab-icon">📈</span> Stock Price
+                            </button>
+                            <button class="chart-tab-btn" data-chart-tab="eps">
+                                <span class="tab-icon">📊</span> EPS
+                            </button>
+                            <button class="chart-tab-btn" data-chart-tab="insights">
+                                <span class="tab-icon">💡</span> Insights
+                            </button>
+                            <button class="chart-tab-btn" data-chart-tab="track-record">
+                                <span class="tab-icon">📋</span> Track Record
+                            </button>
+                        </div>
+                        <div class="chart-period-selector" id="chartPeriodSelector">
+                            <button class="chart-period-btn" data-chart-period="3mo">3M</button>
+                            <button class="chart-period-btn" data-chart-period="6mo">6M</button>
+                            <button class="chart-period-btn active" data-chart-period="1y">1Y</button>
+                            <button class="chart-period-btn" data-chart-period="2y">2Y</button>
+                            <button class="chart-period-btn" data-chart-period="5y">5Y</button>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Stock Price -->
+                    <div class="chart-view active" id="chartViewPrice">
+                        <div class="price-chart-container" id="priceChartContainer">
+                            <div class="chart-loading" id="chartLoading">
+                                <div class="mini-spinner"></div>
+                                Loading price data...
+                            </div>
+                            <!-- Tooltip: hidden by default, shown on crosshair hover -->
+                            <div class="chart-earnings-tooltip" id="chartEarningsTooltip"></div>
+                        </div>
+                        <!-- Legend explaining the colored dots -->
+                        <div class="price-chart-legend">
+                            <div class="legend-entry">
+                                <span class="legend-circle" style="background: var(--accent-green);"></span>
+                                Earnings Beat
+                            </div>
+                            <div class="legend-entry">
+                                <span class="legend-circle" style="background: var(--accent-red);"></span>
+                                Earnings Miss
+                            </div>
+                            <div class="legend-entry">
+                                <span class="legend-circle" style="background: var(--accent-gold);"></span>
+                                Inline
+                            </div>
+                            <div class="legend-entry">
+                                <span class="legend-line" style="background: var(--accent-gold);"></span>
+                                Stock Price
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: EPS Comparison -->
+                    <div class="chart-view" id="chartViewEps">
+                        <div class="eps-chart-header" style="border-bottom: none; padding-bottom: 0;">
+                            <div></div>
+                            <div class="eps-chart-legend">
+                                <div class="eps-legend-item"><span class="eps-legend-dot" style="background: var(--accent-green);"></span> Beat Estimate</div>
+                                <div class="eps-legend-item"><span class="eps-legend-dot" style="background: var(--accent-red);"></span> Missed Estimate</div>
+                                <div class="eps-legend-item"><span class="eps-legend-dot" style="background: var(--accent-gold);"></span> Inline</div>
+                                <div class="eps-legend-item"><span class="eps-legend-dot estimate"></span> Consensus Estimate</div>
+                            </div>
+                        </div>
+                        <div class="eps-chart-container">
+                            <canvas id="epsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Earnings Reaction Insights -->
+                    <div class="chart-view" id="chartViewInsights">
+                        <div style="padding: 1.5rem 2rem;">
+                            <!-- Forward Guidance Summary -->
+                            <div class="guidance-card" id="guidanceCard" style="display: none;"></div>
+                            <!-- Per-Quarter Insights -->
+                            <div id="reactionInsightsList">
+                                <div class="insights-loading">Select a stock to see earnings reaction insights.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Earnings Track Record -->
+                    <div class="chart-view" id="chartViewTrackRecord">
+                        <div class="earnings-header">
+                            <div class="earnings-title">
+                                <span class="earnings-title-icon">📊</span>
+                                <span class="earnings-title-text">EPS: Actual vs Consensus</span>
+                            </div>
+                            <div id="earningsStreakBadge" class="earnings-streak-badge streak-unknown"></div>
+                        </div>
+                        <table class="earnings-table">
+                            <thead>
+                                <tr>
+                                    <th>Quarter</th>
+                                    <th>Date</th>
+                                    <th>EPS Actual</th>
+                                    <th>EPS Estimate</th>
+                                    <th>Surprise</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody id="earningsBody"></tbody>
+                        </table>
+                        <div class="earnings-summary" id="earningsSummary"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Agent Cards -->
+            <section class="agents-section">
+                <div class="section-header">
+                    <span class="section-title">Individual GOAT Analysis</span>
+                </div>
+                <div class="agents-grid" id="agentsGrid"></div>
+            </section>
+
+            <!-- Comparison Table -->
+            <section class="comparison-section">
+                <div class="section-header">
+                    <span class="section-title">Side-by-Side Comparison</span>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Investor</th>
+                            <th>Style</th>
+                            <th>Verdict</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comparisonBody"></tbody>
+                </table>
+            </section>
+
+            <!-- What's Next CTA Panel -->
+            <div class="whats-next-panel">
+                <div class="whats-next-title">What would you like to do next?</div>
+                <div class="whats-next-actions">
+                    <button class="whats-next-btn" onclick="scrollToSearch()">
+                        <span class="whats-next-icon">🔍</span>
+                        <span>Analyze another stock</span>
+                    </button>
+                    <button class="whats-next-btn" onclick="shareResults()">
+                        <span class="whats-next-icon">🔗</span>
+                        <span id="shareBtn-label">Share these results</span>
+                    </button>
+                    <button class="whats-next-btn" onclick="compareStock()">
+                        <span class="whats-next-icon">⚖️</span>
+                        <span>Compare with a competitor</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scoring Details Modal -->
+    <dialog id="scoringDetailsModal" class="scoring-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>How GOAT Scores Are Calculated</h2>
+                <button class="modal-close" onclick="closeScoringDetailsModal()" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">Each GOAT agent evaluates companies using their unique investment philosophy. Below are the exact formulas and point allocations used to calculate scores from -100 to +100.</p>
+                
+                <!-- Buffett Section -->
+                <div class="agent-formula-section">
+                    <div class="agent-formula-header" onclick="toggleFormula('buffett')">
+                        <div>
+                            <h3>Warren Buffett</h3>
+                            <div class="agent-style">Value Investing with Quality Focus</div>
+                        </div>
+                        <button class="expand-btn" id="buffettExpand">+</button>
+                    </div>
+                    <div class="agent-summary">
+                        <p>ROE ≥15%, profit margins ≥10%, debt-to-equity ≤0.5. Rewards consistent earnings beats and durable competitive advantages.</p>
+                    </div>
+                    <div class="formula-details" id="buffettFormula" style="display: none;">
+                        <table class="formula-table">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Threshold</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td rowspan="2">ROE</td><td>≥15%</td><td>Up to +25 (scaled: ROE/15% × 15)</td></tr>
+                                <tr><td>&lt;15%</td><td>-15</td></tr>
+                                <tr><td rowspan="2">Profit Margin</td><td>≥10%</td><td>Up to +20 (scaled: margin/10% × 10)</td></tr>
+                                <tr><td>&lt;10%</td><td>-10</td></tr>
+                                <tr><td rowspan="3">Debt-to-Equity</td><td>≤0.5</td><td>+20</td></tr>
+                                <tr><td>≤1.0</td><td>+10</td></tr>
+                                <tr><td>&gt;1.0</td><td>-20</td></tr>
+                                <tr><td rowspan="3">Earnings Consistency</td><td>Beat rate ≥80%</td><td>+10</td></tr>
+                                <tr><td>Beat rate ≥60%</td><td>+5</td></tr>
+                                <tr><td>4+ consecutive beats</td><td>+5</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="verdict-table">
+                            <h4>Verdict Thresholds</h4>
+                            <table>
+                                <tr><td>≥60</td><td>Strong Buy</td></tr>
+                                <tr><td>≥20</td><td>Buy</td></tr>
+                                <tr><td>≥-20</td><td>Hold</td></tr>
+                                <tr><td>≥-60</td><td>Sell</td></tr>
+                                <tr><td>&lt;-60</td><td>Strong Sell</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lynch Section -->
+                <div class="agent-formula-section">
+                    <div class="agent-formula-header" onclick="toggleFormula('lynch')">
+                        <div>
+                            <h3>Peter Lynch</h3>
+                            <div class="agent-style">Growth at Reasonable Price (GARP)</div>
+                        </div>
+                        <button class="expand-btn" id="lynchExpand">+</button>
+                    </div>
+                    <div class="agent-summary">
+                        <p>PEG &lt;1.0, strong earnings growth, low institutional ownership. Rewards earnings momentum and "ten-bagger" potential.</p>
+                    </div>
+                    <div class="formula-details" id="lynchFormula" style="display: none;">
+                        <table class="formula-table">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Threshold</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td rowspan="5">PEG Ratio</td><td>&lt;0.5</td><td>+35</td></tr>
+                                <tr><td>&lt;1.0</td><td>+25</td></tr>
+                                <tr><td>&lt;1.5</td><td>+10</td></tr>
+                                <tr><td>&lt;2.0</td><td>-10</td></tr>
+                                <tr><td>≥2.0</td><td>-25</td></tr>
+                                <tr><td rowspan="3">Growth Category</td><td>Fast grower (≥20%)</td><td>+25</td></tr>
+                                <tr><td>Stalwart (10-15%)</td><td>+15</td></tr>
+                                <tr><td>Slow grower (&lt;5%)</td><td>-15</td></tr>
+                                <tr><td rowspan="3">Institutional Ownership</td><td>&lt;30%</td><td>+15</td></tr>
+                                <tr><td>&lt;50%</td><td>+10</td></tr>
+                                <tr><td>&gt;80%</td><td>-10</td></tr>
+                                <tr><td>Ten-Bagger Potential</td><td>Based on factors</td><td>Up to +25 (scaled × 0.25)</td></tr>
+                                <tr><td rowspan="2">Earnings Momentum</td><td>4+ consecutive beats</td><td>+15</td></tr>
+                                <tr><td>2+ consecutive beats</td><td>+8</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="verdict-table">
+                            <h4>Verdict Thresholds</h4>
+                            <table>
+                                <tr><td>≥60</td><td>Strong Buy</td></tr>
+                                <tr><td>≥20</td><td>Buy</td></tr>
+                                <tr><td>≥-20</td><td>Hold</td></tr>
+                                <tr><td>≥-60</td><td>Sell</td></tr>
+                                <tr><td>&lt;-60</td><td>Strong Sell</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graham Section -->
+                <div class="agent-formula-section">
+                    <div class="agent-formula-header" onclick="toggleFormula('graham')">
+                        <div>
+                            <h3>Benjamin Graham</h3>
+                            <div class="agent-style">Deep Value / Margin of Safety</div>
+                        </div>
+                        <button class="expand-btn" id="grahamExpand">+</button>
+                    </div>
+                    <div class="agent-summary">
+                        <p>P/E ≤15, P/B ≤1.5, current ratio ≥2.0. Demands margin of safety below intrinsic value. Rewards earnings stability.</p>
+                    </div>
+                    <div class="formula-details" id="grahamFormula" style="display: none;">
+                        <table class="formula-table">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Threshold</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td rowspan="4">Margin of Safety</td><td>≥33%</td><td>+40</td></tr>
+                                <tr><td>≥20%</td><td>+25</td></tr>
+                                <tr><td>≥10%</td><td>+10</td></tr>
+                                <tr><td>&lt;0%</td><td>-30</td></tr>
+                                <tr><td rowspan="4">P/E Ratio</td><td>≤10</td><td>+20</td></tr>
+                                <tr><td>≤15</td><td>+15</td></tr>
+                                <tr><td>≤20</td><td>+5</td></tr>
+                                <tr><td>&gt;20</td><td>-15</td></tr>
+                                <tr><td rowspan="3">Current Ratio</td><td>≥2.0</td><td>+15</td></tr>
+                                <tr><td>≥1.5</td><td>+5</td></tr>
+                                <tr><td>&lt;1.5</td><td>-15</td></tr>
+                                <tr><td rowspan="3">Dividend History</td><td>≥20 years</td><td>+15</td></tr>
+                                <tr><td>≥10 years</td><td>+10</td></tr>
+                                <tr><td>≥5 years</td><td>+5</td></tr>
+                                <tr><td>Net-Net Bonus</td><td>NCAV &gt; current price</td><td>+20</td></tr>
+                                <tr><td rowspan="2">Earnings Stability</td><td>0 misses (4+ quarters)</td><td>+10</td></tr>
+                                <tr><td>Miss rate ≤25%</td><td>+5</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="verdict-table">
+                            <h4>Verdict Thresholds</h4>
+                            <table>
+                                <tr><td>≥60</td><td>Strong Buy</td></tr>
+                                <tr><td>≥20</td><td>Buy</td></tr>
+                                <tr><td>≥-20</td><td>Hold</td></tr>
+                                <tr><td>≥-60</td><td>Sell</td></tr>
+                                <tr><td>&lt;-60</td><td>Strong Sell</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Munger Section -->
+                <div class="agent-formula-section">
+                    <div class="agent-formula-header" onclick="toggleFormula('munger')">
+                        <div>
+                            <h3>Charlie Munger</h3>
+                            <div class="agent-style">Quality-Focused Mental Models</div>
+                        </div>
+                        <button class="expand-btn" id="mungerExpand">+</button>
+                    </div>
+                    <div class="agent-summary">
+                        <p>Business quality over cheapness. High margins, ROIC, capital-light models. Heavy penalties for red flags. Rewards earnings quality.</p>
+                    </div>
+                    <div class="formula-details" id="mungerFormula" style="display: none;">
+                        <table class="formula-table">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Threshold</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Gross Margin</td><td>≥40%</td><td>+25</td></tr>
+                                <tr><td>Operating Margin</td><td>≥15%</td><td>+20</td></tr>
+                                <tr><td>ROIC</td><td>≥15%</td><td>+25</td></tr>
+                                <tr><td>Capex/Revenue</td><td>&lt;5%</td><td>+15</td></tr>
+                                <tr><td>Revenue Growth (5Y)</td><td>&gt;5%</td><td>+15</td></tr>
+                                <tr><td>Red Flags</td><td>Each flag</td><td>-20</td></tr>
+                                <tr><td rowspan="2">Management Ownership</td><td>≥10%</td><td>+15</td></tr>
+                                <tr><td>≥5%</td><td>+10</td></tr>
+                                <tr><td rowspan="2">Earnings Quality</td><td>Beat rate ≥80%</td><td>+10</td></tr>
+                                <tr><td>Beat rate ≥60%</td><td>+5</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="verdict-table">
+                            <h4>Verdict Thresholds</h4>
+                            <table>
+                                <tr><td>≥60</td><td>Strong Buy</td></tr>
+                                <tr><td>≥20</td><td>Buy</td></tr>
+                                <tr><td>≥-20</td><td>Hold</td></tr>
+                                <tr><td>≥-60</td><td>Sell</td></tr>
+                                <tr><td>&lt;-60</td><td>Strong Sell</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dalio Section -->
+                <div class="agent-formula-section">
+                    <div class="agent-formula-header" onclick="toggleFormula('dalio')">
+                        <div>
+                            <h3>Ray Dalio</h3>
+                            <div class="agent-style">Macro & Risk Parity</div>
+                        </div>
+                        <button class="expand-btn" id="dalioExpand">+</button>
+                    </div>
+                    <div class="agent-summary">
+                        <p>Risk-adjusted returns, debt cycle positioning, diversification benefit. Prefers predictable earnings for portfolio construction.</p>
+                    </div>
+                    <div class="formula-details" id="dalioFormula" style="display: none;">
+                        <table class="formula-table">
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>Threshold</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td rowspan="4">Risk-Adjusted Returns</td><td>Ratio ≥1.0</td><td>+30</td></tr>
+                                <tr><td>Ratio ≥0.5</td><td>+20</td></tr>
+                                <tr><td>Ratio ≥0.25</td><td>+10</td></tr>
+                                <tr><td>Ratio &lt;0</td><td>-20</td></tr>
+                                <tr><td>Diversification</td><td>Based on correlation</td><td>Up to +20 (scaled)</td></tr>
+                                <tr><td rowspan="2">Debt Cycle</td><td>Sustainable leverage</td><td>+15</td></tr>
+                                <tr><td>Unsustainable leverage</td><td>-20</td></tr>
+                                <tr><td rowspan="4">Cycle Phase</td><td>Moderate growth</td><td>+10</td></tr>
+                                <tr><td>Expansion</td><td>+5</td></tr>
+                                <tr><td>Deleveraging</td><td>-5</td></tr>
+                                <tr><td>Aggressive deleveraging</td><td>-15</td></tr>
+                                <tr><td rowspan="3">Beta</td><td>0.8-1.2</td><td>+15</td></tr>
+                                <tr><td>0.5-1.5</td><td>+10</td></tr>
+                                <tr><td>Other</td><td>-10</td></tr>
+                                <tr><td rowspan="2">Earnings Predictability</td><td>Avg surprise &lt;3%</td><td>+10</td></tr>
+                                <tr><td>Avg surprise &lt;5%</td><td>+5</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="verdict-table">
+                            <h4>Verdict Thresholds</h4>
+                            <table>
+                                <tr><td>≥60</td><td>Strong Buy</td></tr>
+                                <tr><td>≥20</td><td>Buy</td></tr>
+                                <tr><td>≥-20</td><td>Hold</td></tr>
+                                <tr><td>≥-60</td><td>Sell</td></tr>
+                                <tr><td>&lt;-60</td><td>Strong Sell</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="modal-disclaimer">Scoring weights are GOATlens interpretations based on each investor's published writings, not official formulas.</p>
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <p class="disclaimer">
+            Educational project only &mdash; not financial advice. Scores are AI-generated interpretations and may contain errors. Always do your own research. Data provided by Yahoo Finance &amp; Financial Modeling Prep.
+        </p>
+    </footer>
+
+    <script>
+        const API_BASE = window.location.origin;
+        let selectedPeriod = '1y';
+        let selectedInvestors = ['buffett', 'lynch', 'graham', 'munger', 'dalio'];
+        let currentTicker = '';
+        let priceChart = null;
+        let epsChartInstance = null;
+        let selectedChartPeriod = '1y';
+        let pendingEpsData = [];
+        
+        // Score tooltips for each investor
+        const investorTooltips = {
+            'Warren Buffett': 'Buffett scores based on ROE (25pts), profit margins (20pts), debt levels (20pts), and earnings consistency (15pts). Loves durable competitive advantages.',
+            'Peter Lynch': 'Lynch scores PEG ratio (35pts), growth rate (25pts), institutional ownership (15pts), and ten-bagger potential (25pts). Seeks growth at fair prices.',
+            'Benjamin Graham': 'Graham scores margin of safety (40pts), P/E ratio (20pts), current ratio (15pts), and dividend history (15pts). Demands deep value.',
+            'Charlie Munger': 'Munger scores business quality (100pts base) minus red flags (-20 each). Focuses on avoiding mistakes and finding quality.',
+            'Ray Dalio': 'Dalio scores risk-adjusted returns (30pts), diversification (20pts), debt cycle position (25pts), and beta (15pts). All-weather focused.'
+        };
+        
+        // DOM Elements
+        const tickerInput = document.getElementById('tickerInput');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const demoBtn = document.getElementById('demoBtn');
+        const helpBtn = document.getElementById('helpBtn');
+        const learnMorePanel = document.getElementById('learnMorePanel');
+        const aboutBtn = document.getElementById('aboutBtn');
+        const aboutPanel = document.getElementById('aboutPanel');
+        const loading = document.getElementById('loading');
+        const results = document.getElementById('results');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Period selector
+        document.querySelectorAll('.period-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedPeriod = btn.dataset.period;
+            });
+        });
+
+        // Investor filter
+        document.querySelectorAll('.investor-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                chip.classList.toggle('active');
+                const investor = chip.dataset.investor;
+                if (chip.classList.contains('active')) {
+                    if (!selectedInvestors.includes(investor)) {
+                        selectedInvestors.push(investor);
+                    }
+                } else {
+                    selectedInvestors = selectedInvestors.filter(i => i !== investor);
+                }
+            });
+        });
+
+        // Help toggle
+        helpBtn.addEventListener('click', () => {
+            learnMorePanel.classList.toggle('active');
+            helpBtn.innerHTML = learnMorePanel.classList.contains('active') 
+                ? '<span>✕</span> Close' 
+                : '<span>?</span> How It Works';
+        });
+
+        // About panel toggle (same pattern as How It Works)
+        aboutBtn.addEventListener('click', () => {
+            aboutPanel.classList.toggle('active');
+            aboutBtn.innerHTML = aboutPanel.classList.contains('active')
+                ? '<span>✕</span> Close'
+                : '<span>i</span> About';
+        });
+
+        // Scoring Details Modal
+        function openScoringDetailsModal() {
+            const modal = document.getElementById('scoringDetailsModal');
+            if (modal) {
+                modal.showModal();
+            }
+        }
+
+        function closeScoringDetailsModal() {
+            const modal = document.getElementById('scoringDetailsModal');
+            if (modal) {
+                modal.close();
+            }
+        }
+
+        // Close modal on backdrop click
+        const scoringModal = document.getElementById('scoringDetailsModal');
+        if (scoringModal) {
+            scoringModal.addEventListener('click', (e) => {
+                if (e.target === scoringModal) {
+                    closeScoringDetailsModal();
+                }
+            });
+        }
+
+        // Toggle formula expansion
+        function toggleFormula(agentId) {
+            const formula = document.getElementById(`${agentId}Formula`);
+            const expandBtn = document.getElementById(`${agentId}Expand`);
+            
+            if (formula && expandBtn) {
+                const isExpanded = formula.style.display !== 'none';
+                formula.style.display = isExpanded ? 'none' : 'block';
+                expandBtn.textContent = isExpanded ? '+' : '−';
+                expandBtn.classList.toggle('expanded', !isExpanded);
+            }
+        }
+
+        // Chart tab selector (Stock Price / EPS / Insights / Track Record)
+        const chartTabViews = {
+            'price': 'chartViewPrice',
+            'eps': 'chartViewEps',
+            'insights': 'chartViewInsights',
+            'track-record': 'chartViewTrackRecord',
+        };
+
+        document.querySelectorAll('.chart-tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.chart-tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const tab = btn.dataset.chartTab;
+
+                // Toggle all views
+                Object.entries(chartTabViews).forEach(([key, viewId]) => {
+                    document.getElementById(viewId).classList.toggle('active', key === tab);
+                });
+
+                // Show period selector only for price tab
+                document.getElementById('chartPeriodSelector').style.display =
+                    tab === 'price' ? 'flex' : 'none';
+
+                // Re-render EPS chart when switching to its tab (Chart.js needs visible canvas)
+                if (tab === 'eps' && pendingEpsData && pendingEpsData.length > 0) {
+                    renderEpsChart(pendingEpsData);
+                }
+
+                // Resize price chart when coming back
+                if (tab === 'price' && priceChart) {
+                    const container = document.getElementById('priceChartContainer');
+                    priceChart.applyOptions({ width: container.clientWidth });
+                }
+            });
+        });
+
+        // Chart period selector
+        document.querySelectorAll('.chart-period-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.chart-period-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedChartPeriod = btn.dataset.chartPeriod;
+                if (currentTicker) {
+                    loadPriceChart(currentTicker, selectedChartPeriod);
+                }
+            });
+        });
+
+        // Event Listeners
+        analyzeBtn.addEventListener('click', runAnalysis);
+        demoBtn.addEventListener('click', runDemo);
+        tickerInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') runAnalysis();
+        });
+
+        async function runAnalysis() {
+            const ticker = tickerInput.value.trim().toUpperCase();
+            if (!ticker) {
+                showError('Please enter a ticker symbol');
+                return;
+            }
+
+            if (selectedInvestors.length === 0) {
+                showError('Please select at least one investor');
+                return;
+            }
+
+            showLoading();
+            hideError();
+
+            // ── Fire ALL three API calls in parallel ──
+            // The analyze call is the slowest (~8-15s) because it runs the
+            // LangGraph pipeline (data fetch → agents → LLM consensus).
+            // Price history and earnings insights are independent — starting
+            // them at the same time means charts are often ready by the time
+            // the user sees the GOAT scores.
+            const analyzePromise = fetch(`${API_BASE}/api/analyze`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    ticker: ticker,
+                    time_period: selectedPeriod,
+                    agents: selectedInvestors
+                })
+            });
+            const pricePromise = fetch(`${API_BASE}/api/price-history/${ticker}?period=${selectedChartPeriod}`);
+            const earningsPromise = fetch(`${API_BASE}/api/earnings/${ticker}`);
+
+            // Stash the secondary promises so displayResults can use them
+            _pendingPricePromise = pricePromise;
+            _pendingEarningsPromise = earningsPromise;
+
+            // Animate loading steps for user feedback
+            _loadingTimer = setTimeout(() => {
+                setLoadingStep('stepAgents');
+            }, 3000);  // After ~3s, data is usually fetched; agents are running
+
+            try {
+                const response = await analyzePromise;
+                clearTimeout(_loadingTimer);
+                setLoadingStep('stepCharts');
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.detail || 'Analysis failed');
+                }
+
+                const data = await response.json();
+                displayResults(data);
+            } catch (err) {
+                clearTimeout(_loadingTimer);
+                showError(err.message);
+                hideLoading();
+            }
+        }
+
+        // Promises for secondary data (filled by runAnalysis, consumed by displayResults)
+        let _pendingPricePromise = null;
+        let _pendingEarningsPromise = null;
+        let _loadingTimer = null;
+
+        function setLoadingStep(activeId) {
+            document.querySelectorAll('.substep').forEach(el => {
+                if (el.id === activeId) {
+                    el.classList.add('active');
+                    el.classList.remove('done');
+                } else if (el.classList.contains('active') && el.id !== activeId) {
+                    el.classList.remove('active');
+                    el.classList.add('done');
+                }
+            });
+        }
+
+        async function runDemo() {
+            showLoading();
+            hideError();
+
+            try {
+                const response = await fetch(`${API_BASE}/api/demo`);
+                const data = await response.json();
+                displayResults(data);
+            } catch (err) {
+                showError('Failed to load demo data');
+                hideLoading();
+            }
+        }
+
+        function displayResults(data) {
+            hideLoading();
+            currentTicker = data.ticker;
+            
+            // Company Header
+            document.getElementById('companyTicker').textContent = data.ticker;
+            document.getElementById('companyName').textContent = data.company_name;
+            document.getElementById('companySector').textContent = data.sector;
+            document.getElementById('analysisPeriod').textContent = formatPeriod(selectedPeriod);
+
+            // Next Earnings Badge
+            renderNextEarnings(data.next_earnings_date);
+
+            // Consensus
+            const verdictEl = document.getElementById('consensusVerdict');
+            verdictEl.textContent = formatVerdict(data.consensus_verdict);
+            verdictEl.className = `consensus-verdict verdict-${data.consensus_verdict}`;
+
+            const agreementPct = Math.round(data.agreement_score * 100);
+            document.getElementById('agreementValue').textContent = agreementPct + '%';
+            document.getElementById('agreementFill').style.width = agreementPct + '%';
+
+            // Consensus & Divergence Points
+            const consensusList = document.getElementById('consensusList');
+            consensusList.innerHTML = data.consensus_points.length > 0
+                ? data.consensus_points.map(p => `<li>${p}</li>`).join('')
+                : '<li>No strong consensus points</li>';
+
+            const divergenceList = document.getElementById('divergenceList');
+            divergenceList.innerHTML = data.divergence_points.length > 0
+                ? data.divergence_points.map(p => `<li>${p}</li>`).join('')
+                : '<li>General agreement across agents</li>';
+
+            // Moat Trend
+            const moatTrendEl = document.getElementById('moatTrend');
+            moatTrendEl.textContent = formatMoatTrend(data.moat_trend);
+            moatTrendEl.className = `moat-trend trend-${data.moat_trend}`;
+
+            // Earnings Track Record (rendered inside the Track Record tab)
+            renderEarnings(data);
+
+            // Store EPS data for tab switching; render if EPS tab is active
+            pendingEpsData = data.earnings_history || [];
+            const epsTabActive = document.querySelector('.chart-tab-btn[data-chart-tab="eps"]')?.classList.contains('active');
+            if (epsTabActive) {
+                renderEpsChart(pendingEpsData);
+            }
+
+            // Reset to price tab (hide all other tab views)
+            document.querySelectorAll('.chart-tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector('.chart-tab-btn[data-chart-tab="price"]')?.classList.add('active');
+            Object.values(chartTabViews).forEach(viewId => {
+                document.getElementById(viewId).classList.remove('active');
+            });
+            document.getElementById('chartViewPrice').classList.add('active');
+            document.getElementById('chartPeriodSelector').style.display = 'flex';
+
+            // Load price chart — reuse the promise that was already fired in runAnalysis()
+            loadPriceChart(data.ticker, selectedChartPeriod, _pendingPricePromise);
+            _pendingPricePromise = null;  // consumed
+
+            // Load earnings reaction insights — reuse pre-fired promise
+            loadEarningsInsights(data.ticker, _pendingEarningsPromise);
+            _pendingEarningsPromise = null;  // consumed
+
+            // Agent Cards with Tooltips
+            const agentsGrid = document.getElementById('agentsGrid');
+            agentsGrid.innerHTML = data.agent_results.map(agent => `
+                <div class="agent-card">
+                    <div class="agent-header">
+                        <div class="agent-info">
+                            <h3>${agent.agent}</h3>
+                            <div class="agent-style">${agent.style}</div>
+                        </div>
+                        <div class="agent-score-wrapper">
+                            <div class="agent-score ${getScoreClass(agent.score)}">${agent.score > 0 ? '+' : ''}${agent.score}</div>
+                            <div class="score-tooltip">
+                                <div class="tooltip-title">How ${agent.agent.split(' ')[0]} Scores</div>
+                                ${investorTooltips[agent.agent] || 'Score based on investor-specific criteria.'}
+                            </div>
+                        </div>
+                    </div>
+                    <span class="agent-verdict-badge badge-${agent.verdict}">${formatVerdict(agent.verdict)}</span>
+                    ${agent.insights.length > 0 ? `
+                        <div class="agent-insights">
+                            <h5>Key Insights</h5>
+                            <ul>${agent.insights.slice(0, 3).map(i => `<li>${i}</li>`).join('')}</ul>
+                        </div>
+                    ` : ''}
+                    ${agent.concerns.length > 0 ? `
+                        <div class="agent-concerns">
+                            <h5>Concerns</h5>
+                            <ul>${agent.concerns.slice(0, 2).map(c => `<li>${c}</li>`).join('')}</ul>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+
+            // Comparison Table
+            const comparisonBody = document.getElementById('comparisonBody');
+            comparisonBody.innerHTML = data.agent_results.map(agent => `
+                <tr>
+                    <td><strong>${agent.agent}</strong></td>
+                    <td>${agent.style}</td>
+                    <td><span class="agent-verdict-badge badge-${agent.verdict}">${formatVerdict(agent.verdict)}</span></td>
+                    <td class="${getScoreClass(agent.score)}" style="font-weight: 600; font-size: 1.1rem;">${agent.score > 0 ? '+' : ''}${agent.score}</td>
+                </tr>
+            `).join('');
+
+            results.classList.add('active');
+        }
+
+        function renderEarnings(data) {
+            const earningsHistory = data.earnings_history || [];
+            const streak = data.earnings_streak;
+
+            if (!earningsHistory.length) {
+                return;
+            }
+
+            // Streak badge
+            const badge = document.getElementById('earningsStreakBadge');
+            if (streak && streak.total > 0) {
+                const streakClass = streak.streak_type === 'beat' ? 'streak-beat'
+                    : streak.streak_type === 'miss' ? 'streak-miss' : 'streak-inline';
+                badge.className = `earnings-streak-badge ${streakClass}`;
+                badge.textContent = streak.summary;
+            } else {
+                badge.style.display = 'none';
+            }
+
+            // Table rows
+            const tbody = document.getElementById('earningsBody');
+            tbody.innerHTML = earningsHistory.map(e => {
+                const surpriseClass = e.beat_miss === 'beat' ? 'surprise-positive'
+                    : e.beat_miss === 'miss' ? 'surprise-negative' : 'surprise-inline';
+                const indicatorClass = e.beat_miss === 'beat' ? 'indicator-beat'
+                    : e.beat_miss === 'miss' ? 'indicator-miss' : 'indicator-inline';
+                const indicatorIcon = e.beat_miss === 'beat' ? '▲' : e.beat_miss === 'miss' ? '▼' : '●';
+                const indicatorLabel = e.beat_miss === 'beat' ? 'BEAT' : e.beat_miss === 'miss' ? 'MISS' : 'INLINE';
+
+                const surpriseStr = e.surprise_pct != null
+                    ? `${e.surprise_pct > 0 ? '+' : ''}${e.surprise_pct.toFixed(1)}%`
+                    : '—';
+
+                return `<tr>
+                    <td><strong>${e.quarter || '—'}</strong></td>
+                    <td>${e.date || '—'}</td>
+                    <td class="eps-value">${e.eps_actual != null ? '$' + e.eps_actual.toFixed(2) : '—'}</td>
+                    <td class="eps-value" style="color: var(--text-muted);">${e.eps_estimate != null ? '$' + e.eps_estimate.toFixed(2) : '—'}</td>
+                    <td class="${surpriseClass}">${surpriseStr}</td>
+                    <td><span class="beat-miss-indicator ${indicatorClass}">${indicatorIcon} ${indicatorLabel}</span></td>
+                </tr>`;
+            }).join('');
+
+            // Summary stats
+            const summary = document.getElementById('earningsSummary');
+            if (streak && streak.total > 0) {
+                const beatPct = streak.total > 0 ? Math.round((streak.beats / streak.total) * 100) : 0;
+                summary.innerHTML = `
+                    <div class="earnings-stat">
+                        <span class="earnings-stat-label">Beats</span>
+                        <span class="earnings-stat-value" style="color: var(--accent-green);">${streak.beats}</span>
+                    </div>
+                    <div class="earnings-stat">
+                        <span class="earnings-stat-label">Misses</span>
+                        <span class="earnings-stat-value" style="color: var(--accent-red);">${streak.misses}</span>
+                    </div>
+                    <div class="earnings-stat">
+                        <span class="earnings-stat-label">Inline</span>
+                        <span class="earnings-stat-value" style="color: var(--accent-gold);">${streak.inline}</span>
+                    </div>
+                    <div class="earnings-stat">
+                        <span class="earnings-stat-label">Beat Rate</span>
+                        <span class="earnings-stat-value" style="color: var(--text-primary);">${beatPct}%</span>
+                    </div>
+                    <div class="earnings-stat">
+                        <span class="earnings-stat-label">Current Streak</span>
+                        <span class="earnings-stat-value" style="color: ${streak.streak_type === 'beat' ? 'var(--accent-green)' : streak.streak_type === 'miss' ? 'var(--accent-red)' : 'var(--accent-gold)'};">${streak.streak_count}× ${streak.streak_type.toUpperCase()}</span>
+                    </div>
+                `;
+            } else {
+                summary.innerHTML = '';
+            }
+        }
+
+        // ==========================================
+        // Next Earnings Badge
+        // ==========================================
+        function renderNextEarnings(dateStr) {
+            const badge = document.getElementById('nextEarningsBadge');
+            if (!dateStr) {
+                badge.style.display = 'none';
+                return;
+            }
+            const earningsDate = new Date(dateStr + 'T00:00:00');
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const diffMs = earningsDate - today;
+            const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+            if (diffDays < 0) {
+                badge.style.display = 'none';
+                return;
+            }
+
+            const formatted = earningsDate.toLocaleDateString('en-US', {
+                month: 'short', day: 'numeric', year: 'numeric'
+            });
+            document.getElementById('nextEarningsText').textContent = `Next Earnings: ${formatted}`;
+            document.getElementById('nextEarningsCountdown').textContent =
+                diffDays === 0 ? '(Today!)' :
+                diffDays === 1 ? '(Tomorrow)' :
+                `(${diffDays} days)`;
+            badge.style.display = 'inline-flex';
+        }
+
+        // ==========================================
+        // Price Chart (TradingView Lightweight Charts)
+        // ==========================================
+        async function loadPriceChart(ticker, period, prefetchedPromise) {
+            const section = document.getElementById('chartsSection');
+            const container = document.getElementById('priceChartContainer');
+            const loadingEl = document.getElementById('chartLoading');
+
+            section.style.display = 'block';
+            loadingEl.style.display = 'flex';
+
+            // Remove old chart
+            if (priceChart) {
+                priceChart.remove();
+                priceChart = null;
+            }
+            // Clear previous chart DOM (keep loading indicator)
+            Array.from(container.children).forEach(child => {
+                if (child.id !== 'chartLoading') child.remove();
+            });
+
+            try {
+                // Reuse the pre-started fetch if available (parallel with analyze),
+                // otherwise start a new one (e.g. when switching chart periods).
+                const resp = prefetchedPromise
+                    ? await prefetchedPromise
+                    : await fetch(`${API_BASE}/api/price-history/${ticker}?period=${period}`);
+                if (!resp.ok) throw new Error('Failed to load price data');
+                const data = await resp.json();
+
+                loadingEl.style.display = 'none';
+
+                if (!data.prices || data.prices.length === 0) {
+                    container.innerHTML = '<div class="chart-loading">No price data available</div>';
+                    return;
+                }
+
+                // Create chart
+                priceChart = LightweightCharts.createChart(container, {
+                    width: container.clientWidth,
+                    height: 380,
+                    layout: {
+                        background: { type: 'solid', color: '#18181b' },
+                        textColor: '#a1a1aa',
+                        fontSize: 12,
+                        fontFamily: "'Inter', -apple-system, sans-serif",
+                    },
+                    grid: {
+                        vertLines: { color: 'rgba(39, 39, 42, 0.5)' },
+                        horzLines: { color: 'rgba(39, 39, 42, 0.5)' },
+                    },
+                    crosshair: {
+                        mode: LightweightCharts.CrosshairMode.Normal,
+                        vertLine: { color: 'rgba(234, 179, 8, 0.3)', width: 1, style: 2 },
+                        horzLine: { color: 'rgba(234, 179, 8, 0.3)', width: 1, style: 2 },
+                    },
+                    rightPriceScale: {
+                        borderColor: '#27272a',
+                    },
+                    timeScale: {
+                        borderColor: '#27272a',
+                        timeVisible: false,
+                    },
+                    handleScroll: { vertTouchDrag: false },
+                });
+
+                // Area series for price
+                const areaSeries = priceChart.addAreaSeries({
+                    topColor: 'rgba(234, 179, 8, 0.28)',
+                    bottomColor: 'rgba(234, 179, 8, 0.02)',
+                    lineColor: '#eab308',
+                    lineWidth: 2,
+                    priceLineVisible: true,
+                    priceLineColor: 'rgba(234, 179, 8, 0.4)',
+                    lastValueVisible: true,
+                });
+
+                // Set price data
+                const priceData = data.prices.map(p => ({
+                    time: p.date,
+                    value: p.close,
+                }));
+                areaSeries.setData(priceData);
+
+                // ── Earnings markers: colored dots (details shown on hover) ──
+                // Build a lookup map so the crosshair handler can find marker
+                // data by date in O(1) instead of scanning the array each frame.
+                const earningsLookup = {};
+
+                if (data.earnings_markers && data.earnings_markers.length > 0) {
+                    const markers = data.earnings_markers
+                        .filter(e => e.date)
+                        .map(e => {
+                            // Store full data for tooltip lookup
+                            earningsLookup[e.date] = e;
+
+                            const isBeat = e.beat_miss === 'beat';
+                            const isMiss = e.beat_miss === 'miss';
+
+                            // Short label: "Q1'26" instead of the full text dump
+                            const shortLabel = (e.quarter || '').replace('Q', 'Q').replace(' 20', "'");
+
+                            return {
+                                time: e.date,
+                                position: 'belowBar',
+                                color: isBeat ? '#22c55e' : isMiss ? '#ef4444' : '#eab308',
+                                shape: 'circle',
+                                size: 2,
+                                text: shortLabel,
+                            };
+                        })
+                        .sort((a, b) => a.time < b.time ? -1 : 1);
+
+                    areaSeries.setMarkers(markers);
+                }
+
+                // ── Custom tooltip on crosshair hover ──
+                // When the user's crosshair lands on an earnings date, we
+                // show a rich tooltip. This is "progressive disclosure" —
+                // minimal visual (dot) with details on demand (hover).
+                const tooltip = document.getElementById('chartEarningsTooltip');
+
+                priceChart.subscribeCrosshairMove(param => {
+                    if (!param.time || !earningsLookup[param.time]) {
+                        tooltip.classList.remove('visible');
+                        return;
+                    }
+
+                    const e = earningsLookup[param.time];
+                    const isBeat = e.beat_miss === 'beat';
+                    const isMiss = e.beat_miss === 'miss';
+                    const badgeColor = isBeat ? 'var(--accent-green)' : isMiss ? 'var(--accent-red)' : 'var(--accent-gold)';
+                    const badgeBg = isBeat ? 'var(--accent-green-dim)' : isMiss ? 'var(--accent-red-dim)' : 'var(--accent-gold-dim)';
+                    const badgeText = isBeat ? '▲ BEAT' : isMiss ? '▼ MISS' : '● INLINE';
+
+                    const surpriseStr = e.surprise_pct != null
+                        ? `${e.surprise_pct > 0 ? '+' : ''}${e.surprise_pct.toFixed(1)}%` : '—';
+                    const r1d = e.price_reaction_1d != null
+                        ? `${e.price_reaction_1d > 0 ? '+' : ''}${e.price_reaction_1d}%` : '—';
+                    const r5d = e.price_reaction_5d != null
+                        ? `${e.price_reaction_5d > 0 ? '+' : ''}${e.price_reaction_5d}%` : '—';
+                    const r1dColor = e.price_reaction_1d > 0 ? 'var(--accent-green)' : e.price_reaction_1d < 0 ? 'var(--accent-red)' : 'var(--text-secondary)';
+                    const r5dColor = e.price_reaction_5d > 0 ? 'var(--accent-green)' : e.price_reaction_5d < 0 ? 'var(--accent-red)' : 'var(--text-secondary)';
+
+                    tooltip.innerHTML = `
+                        <div class="tooltip-quarter">
+                            ${e.quarter || e.date}
+                            <span style="font-size:0.75rem; padding:0.15rem 0.5rem; border-radius:50px; background:${badgeBg}; color:${badgeColor}; font-weight:600;">${badgeText}</span>
+                        </div>
+                        <div class="tooltip-row">
+                            <span class="tooltip-label">EPS Actual</span>
+                            <span class="tooltip-value" style="color:var(--text-primary);">$${e.eps_actual != null ? e.eps_actual.toFixed(2) : '—'}</span>
+                        </div>
+                        <div class="tooltip-row">
+                            <span class="tooltip-label">EPS Estimate</span>
+                            <span class="tooltip-value">$${e.eps_estimate != null ? e.eps_estimate.toFixed(2) : '—'}</span>
+                        </div>
+                        <div class="tooltip-row">
+                            <span class="tooltip-label">Surprise</span>
+                            <span class="tooltip-value" style="color:${badgeColor};">${surpriseStr}</span>
+                        </div>
+                        <div class="tooltip-divider"></div>
+                        <div class="tooltip-row">
+                            <span class="tooltip-label">1-Day Reaction</span>
+                            <span class="tooltip-value" style="color:${r1dColor};">${r1d}</span>
+                        </div>
+                        <div class="tooltip-row">
+                            <span class="tooltip-label">5-Day Reaction</span>
+                            <span class="tooltip-value" style="color:${r5dColor};">${r5d}</span>
+                        </div>
+                    `;
+
+                    // Position tooltip near the crosshair point
+                    const point = param.point;
+                    if (point) {
+                        const chartRect = container.getBoundingClientRect();
+                        let left = point.x + 16;
+                        // Flip to left side if too close to right edge
+                        if (left + 240 > chartRect.width) {
+                            left = point.x - 240;
+                        }
+                        let top = point.y - 60;
+                        if (top < 0) top = 10;
+
+                        tooltip.style.left = left + 'px';
+                        tooltip.style.top = top + 'px';
+                    }
+                    tooltip.classList.add('visible');
+                });
+
+                // Handle next earnings marker
+                if (data.next_earnings_date) {
+                    renderNextEarnings(data.next_earnings_date);
+                }
+
+                // Fit content
+                priceChart.timeScale().fitContent();
+
+                // Responsive resize
+                const resizeObserver = new ResizeObserver(entries => {
+                    for (const entry of entries) {
+                        if (priceChart) {
+                            priceChart.applyOptions({
+                                width: entry.contentRect.width,
+                            });
+                        }
+                    }
+                });
+                resizeObserver.observe(container);
+
+            } catch (err) {
+                loadingEl.style.display = 'none';
+                container.innerHTML = `<div class="chart-loading" style="color: var(--accent-red);">Failed to load chart: ${err.message}</div>`;
+            }
+        }
+
+        // ==========================================
+        // EPS Bar Chart (Chart.js)
+        // ==========================================
+        function renderEpsChart(earningsHistory) {
+            if (!earningsHistory || earningsHistory.length === 0) {
+                return;
+            }
+
+            // Destroy old chart
+            if (epsChartInstance) {
+                epsChartInstance.destroy();
+                epsChartInstance = null;
+            }
+
+            // Reverse so oldest is on the left
+            const sorted = [...earningsHistory].reverse();
+
+            const labels = sorted.map(e => e.quarter || e.date || '—');
+            const actuals = sorted.map(e => e.eps_actual);
+            const estimates = sorted.map(e => e.eps_estimate);
+
+            const ctx = document.getElementById('epsChart').getContext('2d');
+
+            epsChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Actual EPS',
+                            data: actuals,
+                            backgroundColor: sorted.map(e =>
+                                e.beat_miss === 'beat' ? 'rgba(34, 197, 94, 0.8)' :
+                                e.beat_miss === 'miss' ? 'rgba(239, 68, 68, 0.8)' :
+                                'rgba(234, 179, 8, 0.8)'
+                            ),
+                            borderColor: sorted.map(e =>
+                                e.beat_miss === 'beat' ? '#22c55e' :
+                                e.beat_miss === 'miss' ? '#ef4444' :
+                                '#eab308'
+                            ),
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            barPercentage: 0.6,
+                            categoryPercentage: 0.7,
+                        },
+                        {
+                            label: 'Consensus Estimate',
+                            data: estimates,
+                            backgroundColor: 'rgba(39, 39, 42, 0.8)',
+                            borderColor: '#3f3f46',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                            barPercentage: 0.6,
+                            categoryPercentage: 0.7,
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: {
+                        padding: {
+                            left: 0,
+                            right: 0,
+                            top: 0,
+                            bottom: 0
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index',
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#27272a',
+                            titleColor: '#fafafa',
+                            bodyColor: '#a1a1aa',
+                            borderColor: '#3f3f46',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            padding: 12,
+                            bodyFont: { family: "'Inter', sans-serif", size: 13 },
+                            titleFont: { family: "'Inter', sans-serif", size: 13, weight: '600' },
+                            callbacks: {
+                                label: function(context) {
+                                    const val = context.parsed.y;
+                                    if (val === null || val === undefined) return '';
+                                    const prefix = context.dataset.label;
+                                    return `${prefix}: $${val.toFixed(2)}`;
+                                },
+                                afterBody: function(tooltipItems) {
+                                    const idx = tooltipItems[0].dataIndex;
+                                    const e = sorted[idx];
+                                    if (!e) return '';
+                                    const lines = [];
+                                    if (e.surprise_pct != null) {
+                                        lines.push(`Surprise: ${e.surprise_pct > 0 ? '+' : ''}${e.surprise_pct.toFixed(1)}%`);
+                                    }
+                                    lines.push(`Result: ${(e.beat_miss || 'unknown').toUpperCase()}`);
+                                    return lines;
+                                },
+                            },
+                        },
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: 'rgba(39, 39, 42, 0.5)', drawBorder: false },
+                            ticks: {
+                                color: '#71717a',
+                                font: { family: "'Inter', sans-serif", size: 11 },
+                            },
+                        },
+                        y: {
+                            grid: { color: 'rgba(39, 39, 42, 0.5)', drawBorder: false },
+                            ticks: {
+                                color: '#71717a',
+                                font: { family: "'Inter', sans-serif", size: 11 },
+                                callback: function(value) { return '$' + value.toFixed(2); },
+                            },
+                            beginAtZero: false,
+                        },
+                    },
+                },
+            });
+        }
+
+        // ==========================================
+        // Earnings Reaction Insights
+        // ==========================================
+        async function loadEarningsInsights(ticker, prefetchedPromise) {
+            const guidanceCard = document.getElementById('guidanceCard');
+            const insightsList = document.getElementById('reactionInsightsList');
+
+            // Show loading state inside the tab
+            insightsList.innerHTML = '<div class="insights-loading"><div class="mini-spinner" style="display:inline-block; margin-right:0.5rem;"></div> Loading insights...</div>';
+
+            try {
+                // Reuse the pre-started fetch if available (parallel with analyze)
+                const resp = prefetchedPromise
+                    ? await prefetchedPromise
+                    : await fetch(`${API_BASE}/api/earnings/${ticker}`);
+                if (!resp.ok) throw new Error('Failed to load earnings insights');
+                const data = await resp.json();
+
+                // Render forward guidance summary
+                if (data.forward_guidance) {
+                    renderForwardGuidance(data.forward_guidance);
+                }
+
+                // Render per-quarter reaction insights
+                if (data.reaction_insights && data.reaction_insights.length > 0) {
+                    renderReactionInsights(data.reaction_insights);
+                } else {
+                    insightsList.innerHTML = '<div class="insights-loading">No reaction insight data available.</div>';
+                }
+            } catch (err) {
+                insightsList.innerHTML = `<div class="insights-loading" style="color: var(--accent-red);">Failed to load insights: ${err.message}</div>`;
+            }
+        }
+
+        /**
+         * renderForwardGuidance — "What's Next" card
+         *
+         * UX principle: answer the user's REAL question:
+         *   "What does Wall Street expect next, and how does that compare?"
+         *
+         * Layout: two columns — "Street Expects" vs "Last Year" — so the
+         * comparison is instant. No abstract bars or dots to decode.
+         */
+        function renderForwardGuidance(fg) {
+            const card = document.getElementById('guidanceCard');
+            if (!fg || (fg.growth_trend === 'unknown' && !fg.analyst_price_target_mean && (!fg.estimate_ranges || fg.estimate_ranges.length === 0))) {
+                card.style.display = 'none';
+                return;
+            }
+
+            card.style.display = 'block';
+
+            // Growth trend badge
+            const trendIcon = fg.growth_trend === 'accelerating' ? '↑' :
+                              fg.growth_trend === 'decelerating' ? '↓' :
+                              fg.growth_trend === 'stable' ? '→' : '?';
+            const trendLabel = fg.growth_trend.charAt(0).toUpperCase() + fg.growth_trend.slice(1);
+            const trendClass = `trend-badge-${fg.growth_trend}`;
+
+            // Helper: format large revenue numbers
+            const fmtRev = (v) => {
+                if (v == null) return '—';
+                if (v >= 1e9) return '$' + (v / 1e9).toFixed(1) + 'B';
+                if (v >= 1e6) return '$' + (v / 1e6).toFixed(0) + 'M';
+                return '$' + v.toFixed(0);
+            };
+            const fmtEps = (v) => v != null ? '$' + v.toFixed(2) : '—';
+            const fmtGrowth = (g) => {
+                if (g == null) return '';
+                const pct = (g * 100).toFixed(1);
+                const cls = g >= 0 ? 'growth-up' : 'growth-down';
+                return `<span class="guidance-col-growth ${cls}">${g >= 0 ? '+' : ''}${pct}% YoY</span>`;
+            };
+
+            // ── Build the side-by-side comparison for each period ──
+            const ranges = fg.estimate_ranges || [];
+            let comparisonHTML = '';
+
+            if (ranges.length > 0) {
+                comparisonHTML = ranges.map(r => {
+                    const hasEps = r.eps_avg != null;
+                    const hasRev = r.rev_avg != null;
+                    if (!hasEps && !hasRev) return '';
+
+                    return `
+                        <div style="margin-bottom: 1rem;">
+                            <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); margin-bottom: 0.5rem;">${r.period}</div>
+                            <div class="guidance-comparison-grid">
+                                <div class="guidance-col">
+                                    <div class="guidance-col-label street">Street Expects</div>
+                                    ${hasEps ? `
+                                        <div class="guidance-col-row">
+                                            <span class="guidance-col-metric">EPS</span>
+                                            <span class="guidance-col-value">${fmtEps(r.eps_avg)}</span>
+                                        </div>
+                                    ` : ''}
+                                    ${hasRev ? `
+                                        <div class="guidance-col-row">
+                                            <span class="guidance-col-metric">Revenue</span>
+                                            <span class="guidance-col-value">${fmtRev(r.rev_avg)}</span>
+                                        </div>
+                                    ` : ''}
+                                    ${r.eps_num_analysts ? `<div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.25rem;">${r.eps_num_analysts} analysts</div>` : ''}
+                                </div>
+                                <div class="guidance-col">
+                                    <div class="guidance-col-label last-year">Last Year Actual</div>
+                                    ${hasEps ? `
+                                        <div class="guidance-col-row">
+                                            <span class="guidance-col-metric">EPS</span>
+                                            <span class="guidance-col-value">${fmtEps(r.eps_year_ago)}</span>
+                                        </div>
+                                    ` : ''}
+                                    ${hasRev ? `
+                                        <div class="guidance-col-row">
+                                            <span class="guidance-col-metric">Revenue</span>
+                                            <span class="guidance-col-value">${fmtRev(r.rev_year_ago)}</span>
+                                        </div>
+                                    ` : ''}
+                                    ${hasEps && r.eps_growth != null ? fmtGrowth(r.eps_growth) : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // ── Price target row (simple, no abstract bar) ──
+            let ptHTML = '';
+            if (fg.analyst_price_target_mean != null) {
+                const upside = fg.analyst_price_target_upside_pct;
+                const upsideStr = upside != null ? `${upside > 0 ? '+' : ''}${upside}%` : '';
+                const upsideColor = upside > 5 ? 'var(--accent-green)' : upside < -5 ? 'var(--accent-red)' : 'var(--text-primary)';
+                ptHTML = `
+                    <div class="guidance-pt-row">
+                        <span class="guidance-pt-label">Analyst Price Target</span>
+                        <span class="guidance-pt-value" style="color: var(--text-primary);">$${fg.analyst_price_target_mean.toFixed(0)}</span>
+                        ${upsideStr ? `<span class="guidance-pt-upside" style="color: ${upsideColor};">${upsideStr} from current</span>` : ''}
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="guidance-header">
+                    <div class="guidance-title">
+                        <span>🔮</span> What's Next
+                    </div>
+                    <span class="growth-trend-badge ${trendClass}">
+                        ${trendIcon} ${trendLabel}
+                    </span>
+                </div>
+                ${comparisonHTML}
+                ${ptHTML}
+                <div class="guidance-summary-text">${fg.summary}</div>
+            `;
+        }
+
+        /**
+         * renderReactionInsights — Per-quarter "story cards"
+         *
+         * UX principle: Progressive Disclosure.
+         * Layer 1 (always visible): Quarter, Beat/Miss, Stock Reaction
+         * Layer 2 (click to expand): "Company delivered X vs Street expected Y"
+         *                            + plain-English explanation of WHY it moved
+         *
+         * This means the user gets a scannable list, then dives deeper
+         * only into quarters they care about.
+         */
+        function renderReactionInsights(insights) {
+            const container = document.getElementById('reactionInsightsList');
+
+            container.innerHTML = insights.map((ins, idx) => {
+                const bm = ins.eps_beat_miss;
+                const r1d = ins.price_reaction_1d;
+                const gs = ins.guidance_signal || 'unknown';
+
+                // Beat/Miss badge
+                const badgeClass = bm === 'beat' ? 'beat' : bm === 'miss' ? 'miss' : 'inline';
+                const badgeLabel = bm === 'beat' ? '▲ BEAT' : bm === 'miss' ? '▼ MISS' : '● INLINE';
+
+                // Stock reaction
+                const reactionStr = r1d != null ? `Stock: ${r1d > 0 ? '+' : ''}${r1d}%` : '';
+                const reactionColor = r1d > 0 ? 'var(--accent-green)' :
+                                      r1d < 0 ? 'var(--accent-red)' : 'var(--text-muted)';
+
+                // Guidance tag
+                const gsLabel = gs.charAt(0).toUpperCase() + gs.slice(1) + ' Guidance';
+
+                // Border color based on the "story" — did the stock agree with the result?
+                let borderClass = 'story-border-inline';
+                if (bm === 'beat' && r1d != null && r1d > 1) borderClass = 'story-border-beat';
+                else if (bm === 'beat' && r1d != null && r1d < -1) borderClass = 'story-border-miss';
+                else if (bm === 'miss') borderClass = 'story-border-miss';
+                else if (bm === 'beat') borderClass = 'story-border-beat';
+
+                // Helper: format dollars in billions
+                const fmtBn = (val) => val != null ? '$' + (val / 1e9).toFixed(1) + 'B' : '—';
+                const fmtEpsVal = (val) => val != null ? '$' + val.toFixed(2) : '—';
+                const fmtPct = (val) => val != null ? `${val > 0 ? '+' : ''}${val.toFixed(1)}%` : '';
+                const pctClass = (val) => val != null ? (val > 0 ? 'up' : val < 0 ? 'down' : '') : '';
+
+                // EPS values
+                const epsActual = fmtEpsVal(ins.eps_actual);
+                const epsEstimate = fmtEpsVal(ins.eps_estimate);
+
+                // Surprise
+                const surpriseStr = ins.eps_surprise_pct != null
+                    ? `${ins.eps_surprise_pct > 0 ? '+' : ''}${ins.eps_surprise_pct.toFixed(1)}%`
+                    : '';
+
+                // Build comparison table rows dynamically (graceful degradation)
+                // Simplified to 2 columns: Metric | Result + context
+                // No more confusing "Context / Prior" column with mixed meanings
+                let tableRows = '';
+
+                // Row 1: EPS — always present (Yahoo)
+                const epsSurprise = ins.eps_surprise_pct != null
+                    ? ` <span class="metric-context"><span class="${pctClass(ins.eps_surprise_pct)}">${fmtPct(ins.eps_surprise_pct)} vs est ${epsEstimate}</span></span>`
+                    : (ins.eps_estimate != null ? ` <span class="metric-context">est ${epsEstimate}</span>` : '');
+                tableRows += `<tr>
+                    <td class="metric-label">EPS</td>
+                    <td class="metric-value">${epsActual}${epsSurprise}</td>
+                </tr>`;
+
+                // Row 2: Revenue (FMP — only if data exists)
+                if (ins.revenue_actual != null) {
+                    const revYoY = ins.revenue_yoy_pct != null
+                        ? ` <span class="metric-context"><span class="${pctClass(ins.revenue_yoy_pct)}">${fmtPct(ins.revenue_yoy_pct)} YoY</span></span>`
+                        : '';
+                    tableRows += `<tr>
+                        <td class="metric-label">Revenue</td>
+                        <td class="metric-value">${fmtBn(ins.revenue_actual)}${revYoY}</td>
+                    </tr>`;
+                }
+
+                // Row 3: CapEx (FMP — only if data exists)
+                if (ins.capex != null) {
+                    const capexChange = ins.capex_qoq_pct != null
+                        ? ` <span class="metric-context"><span class="${pctClass(ins.capex_qoq_pct)}">${fmtPct(ins.capex_qoq_pct)} QoQ</span></span>`
+                        : '';
+                    const capexIntensity = ins.capex_pct_revenue != null
+                        ? ` <span class="metric-context">${ins.capex_pct_revenue.toFixed(0)}% of revenue</span>`
+                        : '';
+                    tableRows += `<tr>
+                        <td class="metric-label">CapEx</td>
+                        <td class="metric-value">${fmtBn(ins.capex)}${capexChange}${capexIntensity}</td>
+                    </tr>`;
+                }
+
+                // Row 4: FCF (FMP — only if CapEx shown)
+                if (ins.fcf != null && ins.capex != null) {
+                    tableRows += `<tr>
+                        <td class="metric-label">Free Cash Flow</td>
+                        <td class="metric-value">${fmtBn(ins.fcf)}</td>
+                    </tr>`;
+                }
+
+                // Stats for the expanded detail
+                const stats = [];
+                if (ins.pre_earnings_runup != null) stats.push({ label: 'Pre-Earnings Run-Up', value: `${ins.pre_earnings_runup > 0 ? '+' : ''}${ins.pre_earnings_runup}%` });
+                if (ins.price_reaction_5d != null) stats.push({ label: '5-Day Reaction', value: `${ins.price_reaction_5d > 0 ? '+' : ''}${ins.price_reaction_5d}%` });
+                if (ins.revenue_growth_yoy != null) stats.push({ label: 'Revenue Growth YoY', value: `${ins.revenue_growth_yoy > 0 ? '+' : ''}${ins.revenue_growth_yoy}%` });
+                const ups = ins.analyst_upgrades || 0;
+                const downs = ins.analyst_downgrades || 0;
+                if (ups || downs) stats.push({ label: 'Analyst Reactions', value: `${ups}↑ ${downs}↓` });
+
+                return `
+                    <div class="quarter-story-card ${borderClass}">
+                        <div class="story-headline" onclick="toggleStoryBody(${idx})">
+                            <span class="story-quarter">${ins.quarter || ins.date || '—'}</span>
+                            <span class="story-badge ${badgeClass}">${badgeLabel}${surpriseStr ? ' ' + surpriseStr : ''}</span>
+                            <span class="story-guidance-tag ${gs}">${gsLabel}</span>
+                            <span class="story-stock-reaction" style="color: ${reactionColor};">${reactionStr}</span>
+                            <span class="story-expand-icon" id="storyIcon${idx}">▾</span>
+                        </div>
+                        <div class="story-body" id="storyBody${idx}">
+                            <div class="story-comparison">
+                                <table class="story-compare-table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Company Delivered</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        ${tableRows}
+                                    </tbody>
+                                </table>
+                            </div>
+                            ${ins.insight ? `
+                                <div class="story-explanation">
+                                    <strong>Why it moved:</strong> ${ins.insight}
+                                </div>
+                            ` : ''}
+                            ${stats.length > 0 ? `
+                                <div class="story-stats">
+                                    ${stats.map(s => `<div class="story-stat">${s.label}: <span class="story-stat-value">${s.value}</span></div>`).join('')}
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function toggleStoryBody(idx) {
+            const body = document.getElementById(`storyBody${idx}`);
+            const icon = document.getElementById(`storyIcon${idx}`);
+            if (body) {
+                body.classList.toggle('open');
+                if (icon) {
+                    icon.classList.toggle('open');
+                }
+            }
+        }
+
+        function formatVerdict(verdict) {
+            const map = {
+                'strong_buy': 'Strong Buy',
+                'buy': 'Buy',
+                'hold': 'Hold',
+                'sell': 'Sell',
+                'strong_sell': 'Strong Sell'
+            };
+            return map[verdict] || verdict;
+        }
+
+        function formatMoatTrend(trend) {
+            const map = {
+                'strengthening': '↑ Strengthening',
+                'stable': '→ Stable',
+                'weakening': '↓ Weakening',
+                'collapsed': '⚠ Collapsed'
+            };
+            return map[trend] || trend;
+        }
+
+        function formatPeriod(period) {
+            const map = {
+                'ytd': 'Year to Date',
+                '3m': '3 Month Analysis',
+                '6m': '6 Month Analysis',
+                '1y': '1 Year Analysis',
+                '5y': '5 Year Analysis'
+            };
+            return map[period] || period;
+        }
+
+        function getScoreClass(score) {
+            if (score >= 20) return 'score-positive';
+            if (score <= -20) return 'score-negative';
+            return 'score-neutral';
+        }
+
+        function showLoading() {
+            loading.classList.add('active');
+            results.classList.remove('active');
+            analyzeBtn.disabled = true;
+            // Reset loading substeps
+            document.querySelectorAll('.substep').forEach(el => {
+                el.classList.remove('active', 'done');
+            });
+            document.getElementById('stepFetch')?.classList.add('active');
+        }
+
+        function hideLoading() {
+            loading.classList.remove('active');
+            analyzeBtn.disabled = false;
+        }
+
+        function showError(message) {
+            const popularTickers = ['AAPL', 'MSFT', 'NVDA', 'TSLA', 'AMZN', 'GOOGL'];
+            const isTickerError = /invalid|not found|analysis failed|ticker|symbol/i.test(message);
+            if (isTickerError) {
+                const suggestions = popularTickers.map(t =>
+                    `<button class="error-ticker-btn" onclick="document.getElementById('tickerInput').value='${t}'; hideError();">${t}</button>`
+                ).join('');
+                errorMessage.innerHTML = `
+                    <div><strong>Couldn't find that ticker.</strong> ${message}</div>
+                    <div style="margin-top:0.5rem; font-size:0.85rem; color:var(--text-secondary);">GoatLens supports US-listed equities. Enter the ticker symbol, not the company name.</div>
+                    <div style="margin-top:0.75rem;">Try one of these: ${suggestions}</div>
+                `;
+            } else {
+                errorMessage.textContent = message;
+            }
+            errorMessage.classList.add('active');
+        }
+
+        function hideError() {
+            errorMessage.classList.remove('active');
+        }
+
+        function scrollToSearch() {
+            document.getElementById('tickerInput').focus();
+            document.getElementById('tickerInput').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function shareResults() {
+            const ticker = currentTicker || '';
+            const url = ticker
+                ? `${window.location.origin}${window.location.pathname}?ticker=${ticker}`
+                : window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const label = document.getElementById('shareBtn-label');
+                label.textContent = 'Link copied!';
+                setTimeout(() => { label.textContent = 'Share these results'; }, 2500);
+            });
+        }
+
+        function compareStock() {
+            const competitor = prompt(`You're viewing ${currentTicker || 'this stock'}. Enter a competitor ticker to compare:`);
+            if (competitor) {
+                document.getElementById('tickerInput').value = competitor.trim().toUpperCase();
+                scrollToSearch();
+            }
+        }
+    </script>
+</body>
+</html>

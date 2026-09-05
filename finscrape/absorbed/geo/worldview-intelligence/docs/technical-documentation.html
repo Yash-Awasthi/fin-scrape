@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorldView Intelligence — Technical Documentation</title>
+<style>
+  :root {
+    --bg: #0a0e17;
+    --bg-surface: #111827;
+    --bg-elevated: #1a2332;
+    --bg-code: #0d1117;
+    --primary: #00b8f0;
+    --secondary: #6366f1;
+    --accent: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #1e293b;
+    --glow: rgba(0, 184, 240, 0.15);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+  }
+  a { color: var(--primary); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.8; text-decoration: underline; }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed; top: 0; left: 0; width: 280px; height: 100vh;
+    background: var(--bg-surface); border-right: 1px solid var(--border);
+    overflow-y: auto; z-index: 100; padding: 24px 0;
+  }
+  .sidebar-logo {
+    padding: 0 24px 20px; border-bottom: 1px solid var(--border); margin-bottom: 16px;
+  }
+  .sidebar-logo h2 {
+    font-size: 14px; letter-spacing: 0.12em; color: var(--primary);
+    font-family: 'Consolas', 'Courier New', monospace; font-weight: 700;
+  }
+  .sidebar-logo p { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+  .sidebar nav { padding: 0 12px; }
+  .sidebar nav a {
+    display: block; padding: 8px 12px; border-radius: 6px; font-size: 13px;
+    color: var(--text-muted); transition: all 0.15s; margin-bottom: 2px;
+    border-left: 2px solid transparent;
+  }
+  .sidebar nav a:hover { background: var(--glow); color: var(--text); text-decoration: none; border-left-color: var(--primary); }
+  .sidebar nav .section-title {
+    font-size: 10px; letter-spacing: 0.1em; color: var(--text-muted);
+    text-transform: uppercase; padding: 16px 12px 6px; font-weight: 700; opacity: 0.6;
+  }
+
+  /* Main Content */
+  .main { margin-left: 280px; padding: 40px 60px 80px; max-width: 960px; }
+  h1 {
+    font-size: 32px; font-weight: 800; margin-bottom: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .subtitle { font-size: 16px; color: var(--text-muted); margin-bottom: 40px; }
+  h2 {
+    font-size: 22px; font-weight: 700; color: var(--text); margin: 48px 0 16px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2 .icon { font-size: 20px; }
+  h3 { font-size: 17px; font-weight: 600; color: var(--primary); margin: 28px 0 12px; }
+  h4 { font-size: 14px; font-weight: 600; color: var(--text); margin: 20px 0 8px; }
+  p { margin-bottom: 14px; }
+
+  /* Code */
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background: var(--bg-code); color: var(--accent); padding: 2px 7px;
+    border-radius: 4px; font-size: 13px; border: 1px solid var(--border);
+  }
+  pre {
+    background: var(--bg-code); border: 1px solid var(--border); border-radius: 8px;
+    padding: 20px 24px; overflow-x: auto; margin: 14px 0 20px; line-height: 1.6;
+    font-size: 13px;
+  }
+  pre code { background: none; border: none; padding: 0; color: var(--text); }
+  .code-label {
+    font-size: 10px; letter-spacing: 0.1em; color: var(--text-muted);
+    text-transform: uppercase; margin-bottom: 6px; font-weight: 600;
+  }
+  .comment { color: #6a737d; }
+  .keyword { color: #ff7b72; }
+  .string { color: #a5d6ff; }
+  .fn { color: #d2a8ff; }
+  .type { color: #79c0ff; }
+
+  /* Tables */
+  table {
+    width: 100%; border-collapse: collapse; margin: 14px 0 20px;
+    font-size: 13px; border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--bg-elevated); color: var(--text-muted); font-weight: 600;
+    text-align: left; padding: 10px 14px; font-size: 11px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+  }
+  td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(0,184,240,0.03); }
+
+  /* Cards */
+  .card {
+    background: var(--bg-surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 20px 24px; margin: 14px 0;
+  }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin: 14px 0; }
+  .card h4 { margin-top: 0; color: var(--primary); }
+  .card p { margin-bottom: 0; font-size: 13px; color: var(--text-muted); }
+
+  /* Badges */
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+  }
+  .badge-blue { background: rgba(99,102,241,0.15); color: #818cf8; }
+  .badge-green { background: rgba(16,185,129,0.15); color: #34d399; }
+  .badge-red { background: rgba(239,68,68,0.15); color: #f87171; }
+  .badge-yellow { background: rgba(245,158,11,0.15); color: #fbbf24; }
+  .badge-cyan { background: rgba(0,184,240,0.15); color: #38bdf8; }
+
+  /* Callouts */
+  .callout {
+    border-left: 3px solid; border-radius: 6px; padding: 16px 20px;
+    margin: 16px 0; font-size: 14px;
+  }
+  .callout-info { border-color: var(--primary); background: rgba(0,184,240,0.06); }
+  .callout-warn { border-color: var(--warning); background: rgba(245,158,11,0.06); }
+  .callout-danger { border-color: var(--danger); background: rgba(239,68,68,0.06); }
+  .callout-success { border-color: var(--accent); background: rgba(16,185,129,0.06); }
+  .callout strong { display: block; margin-bottom: 4px; }
+
+  /* Lists */
+  ul, ol { margin: 10px 0 16px 24px; }
+  li { margin-bottom: 6px; }
+  li code { font-size: 12px; }
+
+  /* Architecture diagram */
+  .arch-diagram {
+    background: var(--bg-code); border: 1px solid var(--border); border-radius: 8px;
+    padding: 28px; margin: 20px 0; font-family: 'Consolas', monospace;
+    font-size: 12px; line-height: 1.5; color: var(--text-muted); overflow-x: auto;
+    white-space: pre;
+  }
+  .arch-diagram .highlight { color: var(--primary); font-weight: 700; }
+  .arch-diagram .green { color: var(--accent); }
+  .arch-diagram .yellow { color: var(--warning); }
+  .arch-diagram .red { color: #f87171; }
+
+  /* File tree */
+  .file-tree {
+    background: var(--bg-code); border: 1px solid var(--border); border-radius: 8px;
+    padding: 20px 24px; margin: 14px 0; font-family: 'Consolas', monospace;
+    font-size: 13px; line-height: 1.8; color: var(--text-muted);
+  }
+  .file-tree .dir { color: var(--primary); font-weight: 600; }
+  .file-tree .file { color: var(--text); }
+  .file-tree .desc { color: var(--text-muted); font-size: 11px; }
+
+  /* Step indicators */
+  .step {
+    display: flex; gap: 16px; margin: 16px 0; align-items: flex-start;
+  }
+  .step-num {
+    width: 32px; height: 32px; border-radius: 50%; background: var(--secondary);
+    color: white; display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px; flex-shrink: 0;
+  }
+  .step-content { flex: 1; padding-top: 4px; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 24px 20px 60px; }
+  }
+  @media print {
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    body { background: white; color: #1a1a1a; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ SIDEBAR ═══════════════════════════════════════════════════ -->
+<div class="sidebar">
+  <div class="sidebar-logo">
+    <h2>WORLDVIEW INTEL</h2>
+    <p>Technical Documentation v2.0</p>
+  </div>
+  <nav>
+    <div class="section-title">Getting Started</div>
+    <a href="#overview">Project Overview</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#tech-stack">Tech Stack</a>
+    <a href="#setup">Development Setup</a>
+    <a href="#docker">Docker Deployment</a>
+
+    <div class="section-title">Backend</div>
+    <a href="#backend-structure">Backend Structure</a>
+    <a href="#api-endpoints">API Endpoints</a>
+    <a href="#websocket">WebSocket Protocol</a>
+    <a href="#services">Data Services</a>
+    <a href="#caching">Caching Layer</a>
+
+    <div class="section-title">Frontend</div>
+    <a href="#frontend-structure">Frontend Structure</a>
+    <a href="#state-management">State Management</a>
+    <a href="#globe-rendering">Globe &amp; Layers</a>
+    <a href="#visual-modes">Visual Modes</a>
+
+    <div class="section-title">Guides</div>
+    <a href="#add-layer">Adding a New Layer</a>
+    <a href="#add-api">Adding an API Integration</a>
+    <a href="#environment">Environment Variables</a>
+    <a href="#known-issues">Known Issues</a>
+    <a href="#roadmap">Development Roadmap</a>
+  </nav>
+</div>
+
+<!-- ═══ MAIN CONTENT ══════════════════════════════════════════════ -->
+<div class="main">
+
+<h1>WorldView Intelligence</h1>
+<p class="subtitle">Technical Documentation for Developers</p>
+
+<!-- ── OVERVIEW ────────────────────────────────────────────────── -->
+<h2 id="overview"><span class="icon">&#128205;</span> Project Overview</h2>
+
+<p>WorldView Intelligence is a <strong>real-time global intelligence dashboard</strong> that combines a 3D CesiumJS globe with live OSINT (Open Source Intelligence) data feeds. It tracks aircraft, satellites, ships, earthquakes, conflict zones, missile launches, news, traffic, and weather — all rendered on an interactive globe with military-inspired visual modes.</p>
+
+<div class="card-grid">
+  <div class="card">
+    <h4>Real-Time Data</h4>
+    <p>WebSocket-driven live updates from multiple OSINT sources including OpenSky, USGS, CelesTrak, and RSS news feeds.</p>
+  </div>
+  <div class="card">
+    <h4>3D Visualization</h4>
+    <p>CesiumJS-powered interactive globe with satellite imagery, terrain, and custom entity rendering for each data layer.</p>
+  </div>
+  <div class="card">
+    <h4>9 Data Layers</h4>
+    <p>Aircraft, Satellites, Ships, Earthquakes, Conflicts, Missiles, News, Traffic, and Weather — each with dedicated rendering.</p>
+  </div>
+  <div class="card">
+    <h4>AI Intelligence</h4>
+    <p>Anomaly detection, situation reports, and escalation prediction with rule-based logic (OpenAI integration prepared).</p>
+  </div>
+</div>
+
+<!-- ── ARCHITECTURE ────────────────────────────────────────────── -->
+<h2 id="architecture"><span class="icon">&#127959;</span> Architecture</h2>
+
+<p>The application follows a <strong>client-server architecture</strong> with real-time data streaming. The backend fetches and caches data from external APIs, then pushes updates to connected frontends via WebSocket.</p>
+
+<div class="arch-diagram">
+<span class="yellow">External APIs</span> (OpenSky, USGS, CelesTrak, Open-Meteo, GDELT, RSS)
+        |
+        v
+<span class="highlight">Backend Services</span> (aircraft.ts, satellites.ts, earthquakes.ts, ...)
+        |
+        +----&gt; <span class="green">Redis / In-Memory Cache</span> (TTL per layer)
+        |
+        +----&gt; <span class="highlight">REST API</span> (/api/layers/*)  &lt;--- Frontend fetch (fallback)
+        |
+        \----&gt; <span class="highlight">WebSocket Server</span> (scheduled loops per layer)
+                    |
+                    v
+            Broadcast <span class="yellow">layer_update</span> to subscribed clients
+                    |
+                    v
+            Frontend <span class="green">websocket.ts</span> &rarr; <span class="green">appStore.setLayerData()</span>
+                    |
+                    v
+            <span class="highlight">GlobeView</span> subscribes to store &rarr; update*Layer() &rarr; <span class="red">Cesium entities</span>
+</div>
+
+<div class="callout callout-info">
+  <strong>Key Insight</strong>
+  The primary data path uses WebSocket push. The REST API serves as a fallback and is used for search, intelligence reports, and initial data loads.
+</div>
+
+<!-- ── TECH STACK ──────────────────────────────────────────────── -->
+<h2 id="tech-stack"><span class="icon">&#9881;</span> Tech Stack</h2>
+
+<table>
+  <tr><th>Layer</th><th>Technology</th><th>Version</th><th>Purpose</th></tr>
+  <tr>
+    <td><span class="badge badge-cyan">Frontend</span></td>
+    <td>React + TypeScript</td><td>18.3 / 5.6</td>
+    <td>UI framework and type safety</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-cyan">Frontend</span></td>
+    <td>CesiumJS</td><td>1.122</td>
+    <td>3D globe rendering and geospatial visualization</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-cyan">Frontend</span></td>
+    <td>Zustand</td><td>5.0</td>
+    <td>Lightweight state management</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-cyan">Frontend</span></td>
+    <td>Vite</td><td>6.0</td>
+    <td>Development server and build tool</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-cyan">Frontend</span></td>
+    <td>Turf.js</td><td>7.1</td>
+    <td>Geospatial analysis and calculations</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-blue">Backend</span></td>
+    <td>Node.js + Express</td><td>20 / 4.21</td>
+    <td>HTTP server and REST API</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-blue">Backend</span></td>
+    <td>ws (WebSocket)</td><td>8.18</td>
+    <td>Real-time bidirectional communication</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-blue">Backend</span></td>
+    <td>ioredis</td><td>5.4</td>
+    <td>Redis client for caching</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-blue">Backend</span></td>
+    <td>satellite.js</td><td>5.0</td>
+    <td>TLE orbital propagation for satellite tracking</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-blue">Backend</span></td>
+    <td>Zod</td><td>3.23</td>
+    <td>Runtime schema validation</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">Infra</span></td>
+    <td>Docker + Compose</td><td>3.8</td>
+    <td>Containerized deployment</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">Infra</span></td>
+    <td>PostgreSQL</td><td>16</td>
+    <td>Database (provisioned, not yet used)</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">Infra</span></td>
+    <td>Redis</td><td>7</td>
+    <td>In-memory data caching</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">Infra</span></td>
+    <td>Nginx</td><td>Latest</td>
+    <td>Production frontend serving and reverse proxy</td>
+  </tr>
+</table>
+
+<!-- ── DEVELOPMENT SETUP ──────────────────────────────────────── -->
+<h2 id="setup"><span class="icon">&#128187;</span> Development Setup</h2>
+
+<h3>Prerequisites</h3>
+<ul>
+  <li><strong>Node.js 20+</strong> — <a href="https://nodejs.org">Download here</a></li>
+  <li><strong>npm</strong> (comes with Node.js)</li>
+  <li><strong>Git</strong> — <a href="https://git-scm.com">Download here</a></li>
+  <li><strong>Docker &amp; Docker Compose</strong> (optional) — <a href="https://docker.com">Download here</a></li>
+  <li><strong>Cesium Ion Token</strong> (free) — <a href="https://cesium.com/ion/tokens">Get one here</a></li>
+</ul>
+
+<h3>Step-by-Step Setup</h3>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <h4>Clone the repository</h4>
+    <pre><code>git clone &lt;repository-url&gt;
+cd "WorldView Intelligence"</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <h4>Install Backend Dependencies</h4>
+    <pre><code>cd backend
+cp .env.example .env
+npm install</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <h4>Install Frontend Dependencies</h4>
+    <pre><code>cd ../frontend
+cp .env.example .env
+npm install</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">4</div>
+  <div class="step-content">
+    <h4>Configure the Cesium Token</h4>
+    <p>Open <code>frontend/.env</code> and add your Cesium Ion token:</p>
+    <pre><code>VITE_CESIUM_ION_TOKEN=your_cesium_ion_token_here</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">5</div>
+  <div class="step-content">
+    <h4>Start Redis (Optional)</h4>
+    <p>The app works without Redis using an in-memory fallback, but for production-like behavior:</p>
+    <pre><code>docker compose up redis -d</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">6</div>
+  <div class="step-content">
+    <h4>Start the Backend</h4>
+    <pre><code>cd backend
+npm run dev</code></pre>
+    <p>Backend starts on <code>http://localhost:3001</code> (HTTP) and <code>ws://localhost:3002</code> (WebSocket).</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">7</div>
+  <div class="step-content">
+    <h4>Start the Frontend (in a new terminal)</h4>
+    <pre><code>cd frontend
+npm run dev</code></pre>
+    <p>Frontend starts on <code>http://localhost:5173</code>. The Vite dev server proxies <code>/api</code> requests to the backend.</p>
+  </div>
+</div>
+
+<div class="callout callout-success">
+  <strong>You're up and running!</strong>
+  Open <code>http://localhost:5173</code> in your browser. You should see the landing page with a theme selector. Click "Enter Command Center" to access the globe.
+</div>
+
+<!-- ── DOCKER ──────────────────────────────────────────────────── -->
+<h2 id="docker"><span class="icon">&#128230;</span> Docker Deployment</h2>
+
+<p>For production or full-stack local testing, use Docker Compose to run everything:</p>
+
+<pre><code>docker compose up --build</code></pre>
+
+<p>This starts 4 services:</p>
+
+<table>
+  <tr><th>Service</th><th>Port</th><th>Description</th></tr>
+  <tr><td><code>frontend</code></td><td>80</td><td>Nginx serving the built React app</td></tr>
+  <tr><td><code>backend</code></td><td>3001, 3002</td><td>Express HTTP API + WebSocket server</td></tr>
+  <tr><td><code>postgres</code></td><td>5432</td><td>PostgreSQL database</td></tr>
+  <tr><td><code>redis</code></td><td>6379</td><td>Redis cache</td></tr>
+</table>
+
+<!-- ── BACKEND STRUCTURE ──────────────────────────────────────── -->
+<h2 id="backend-structure"><span class="icon">&#128451;</span> Backend Structure</h2>
+
+<div class="file-tree">
+<span class="dir">backend/</span>
+├── <span class="dir">src/</span>
+│   ├── <span class="file">index.ts</span>           <span class="desc">— Entry point: Express + WebSocket startup, graceful shutdown</span>
+│   ├── <span class="dir">routes/</span>
+│   │   └── <span class="file">api.ts</span>          <span class="desc">— All REST API route handlers</span>
+│   ├── <span class="dir">websocket/</span>
+│   │   └── <span class="file">server.ts</span>       <span class="desc">— WebSocket server: subscriptions, heartbeat, scheduled broadcasts</span>
+│   ├── <span class="dir">services/</span>           <span class="desc">— One file per data layer</span>
+│   │   ├── <span class="file">aircraft.ts</span>     <span class="desc">— OpenSky Network API integration</span>
+│   │   ├── <span class="file">satellites.ts</span>   <span class="desc">— CelesTrak TLE parsing + satellite.js propagation</span>
+│   │   ├── <span class="file">ships.ts</span>        <span class="desc">— Simulated AIS maritime positions</span>
+│   │   ├── <span class="file">earthquakes.ts</span>  <span class="desc">— USGS GeoJSON earthquake feed</span>
+│   │   ├── <span class="file">conflicts.ts</span>    <span class="desc">— Simulated ACLED zones + GDELT events</span>
+│   │   ├── <span class="file">missiles.ts</span>     <span class="desc">— Simulated missile launch trajectories</span>
+│   │   ├── <span class="file">news.ts</span>         <span class="desc">— RSS feed aggregation (Reuters, BBC, Al Jazeera, etc.)</span>
+│   │   ├── <span class="file">traffic.ts</span>      <span class="desc">— Simulated city traffic congestion</span>
+│   │   ├── <span class="file">weather.ts</span>      <span class="desc">— Open-Meteo weather API</span>
+│   │   └── <span class="file">intelligence.ts</span> <span class="desc">— AI anomaly detection and situation reports</span>
+│   ├── <span class="dir">middleware/</span>
+│   │   └── <span class="file">rateLimiter.ts</span>  <span class="desc">— 100 requests/minute per IP</span>
+│   ├── <span class="dir">types/</span>
+│   │   └── <span class="file">index.ts</span>        <span class="desc">— Shared TypeScript type definitions</span>
+│   └── <span class="dir">utils/</span>
+│       └── <span class="file">cache.ts</span>        <span class="desc">— Redis wrapper with in-memory fallback</span>
+├── <span class="file">package.json</span>
+├── <span class="file">tsconfig.json</span>
+├── <span class="file">Dockerfile</span>
+└── <span class="file">.env.example</span>
+</div>
+
+<h3>How the Backend Starts</h3>
+<p>The entry point <code>backend/src/index.ts</code> does the following in order:</p>
+<ol>
+  <li>Loads environment variables from <code>.env</code> via dotenv</li>
+  <li>Creates an Express app with CORS, JSON parsing, rate limiting, and API routes</li>
+  <li>Starts the HTTP server on port <code>3001</code></li>
+  <li>Starts the WebSocket server on port <code>3002</code></li>
+  <li>Registers graceful shutdown handlers for <code>SIGINT</code> and <code>SIGTERM</code></li>
+</ol>
+
+<!-- ── API ENDPOINTS ──────────────────────────────────────────── -->
+<h2 id="api-endpoints"><span class="icon">&#128279;</span> API Endpoints</h2>
+
+<table>
+  <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Parameters</th></tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/health</code></td>
+    <td>Server health check</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/aircraft</code></td>
+    <td>Aircraft positions</td>
+    <td><code>?bounds=lamin,lomin,lamax,lomax</code> (optional)</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/satellites</code></td>
+    <td>Satellite positions</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/ships</code></td>
+    <td>Ship positions</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/earthquakes</code></td>
+    <td>Earthquake events</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/conflicts</code></td>
+    <td>Conflict events</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/missiles</code></td>
+    <td>Missile launch data</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/news</code></td>
+    <td>News events</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/traffic</code></td>
+    <td>Traffic congestion</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/layers/weather</code></td>
+    <td>Weather data</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/intelligence/report</code></td>
+    <td>AI situation report</td>
+    <td><code>?region=global</code> (optional)</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">GET</span></td>
+    <td><code>/api/search</code></td>
+    <td>Search all layers</td>
+    <td><code>?q=search_term</code> (required)</td>
+  </tr>
+</table>
+
+<h3>Response Format</h3>
+<p>All layer endpoints return data in a consistent format:</p>
+<pre><code>{
+  "layer": "aircraft",
+  "data": [ ... ],
+  "timestamp": 1710000000000
+}</code></pre>
+
+<!-- ── WEBSOCKET ───────────────────────────────────────────────── -->
+<h2 id="websocket"><span class="icon">&#128225;</span> WebSocket Protocol</h2>
+
+<p>The WebSocket server runs on port <code>3002</code> and provides real-time data streaming with per-layer subscriptions.</p>
+
+<h3>Connecting</h3>
+<pre><code><span class="comment">// Connect to the WebSocket server</span>
+<span class="keyword">const</span> ws = <span class="keyword">new</span> <span class="fn">WebSocket</span>(<span class="string">'ws://localhost:3002'</span>);</code></pre>
+
+<h3>Subscribing to Layers</h3>
+<p>After connecting, send a subscribe message for each layer you want updates on:</p>
+<pre><code><span class="comment">// Subscribe to a layer</span>
+ws.<span class="fn">send</span>(JSON.<span class="fn">stringify</span>({
+  <span class="string">"action"</span>: <span class="string">"subscribe"</span>,
+  <span class="string">"layer"</span>: <span class="string">"aircraft"</span>
+}));
+
+<span class="comment">// Available layers:</span>
+<span class="comment">// aircraft, satellites, ships, earthquakes, conflicts,</span>
+<span class="comment">// missiles, news, traffic, weather</span></code></pre>
+
+<h3>Receiving Updates</h3>
+<p>The server broadcasts updates at configured intervals. Each message looks like:</p>
+<pre><code>{
+  <span class="string">"type"</span>: <span class="string">"layer_update"</span>,
+  <span class="string">"layer"</span>: <span class="string">"aircraft"</span>,
+  <span class="string">"data"</span>: [ ... ],
+  <span class="string">"timestamp"</span>: 1710000000000
+}</code></pre>
+
+<h3>Update Intervals per Layer</h3>
+<table>
+  <tr><th>Layer</th><th>Interval</th><th>Notes</th></tr>
+  <tr><td>Aircraft</td><td>10 seconds</td><td>Highest frequency — live flight tracking</td></tr>
+  <tr><td>Satellites</td><td>30 seconds</td><td>TLE data refreshed hourly</td></tr>
+  <tr><td>Ships</td><td>30 seconds</td><td>Simulated positions</td></tr>
+  <tr><td>Earthquakes</td><td>60 seconds</td><td>From USGS feed</td></tr>
+  <tr><td>Missiles</td><td>60 seconds</td><td>Simulated trajectory data</td></tr>
+  <tr><td>Traffic</td><td>60 seconds</td><td>Simulated city congestion</td></tr>
+  <tr><td>Conflicts</td><td>120 seconds</td><td>Lower frequency — events don't change fast</td></tr>
+  <tr><td>News</td><td>300 seconds</td><td>RSS feeds polled every 5 minutes</td></tr>
+  <tr><td>Weather</td><td>300 seconds</td><td>Weather changes slowly</td></tr>
+</table>
+
+<!-- ── SERVICES ────────────────────────────────────────────────── -->
+<h2 id="services"><span class="icon">&#128268;</span> Data Services</h2>
+
+<p>Each data layer has a dedicated service file in <code>backend/src/services/</code>. Every service follows the same pattern:</p>
+
+<ol>
+  <li><strong>Check cache</strong> — Look for cached data in Redis (or in-memory fallback)</li>
+  <li><strong>Fetch from source</strong> — If cache miss or expired, call the external API or generate simulated data</li>
+  <li><strong>Transform data</strong> — Normalize the response into the app's type schema</li>
+  <li><strong>Cache result</strong> — Store in cache with a TTL appropriate for that layer</li>
+  <li><strong>Return data</strong> — Return the normalized array to the caller</li>
+</ol>
+
+<h3>Real API Integrations</h3>
+
+<div class="card">
+  <h4>Aircraft — OpenSky Network</h4>
+  <p>Fetches live ADS-B aircraft positions. Supports optional authentication for higher rate limits. Returns callsign, position, velocity, heading, altitude, origin country, and aircraft category (commercial, military, cargo).</p>
+  <p>API: <code>https://opensky-network.org/api/states/all</code></p>
+</div>
+
+<div class="card">
+  <h4>Satellites — CelesTrak TLE</h4>
+  <p>Downloads Two-Line Element (TLE) sets from CelesTrak and propagates orbital positions using satellite.js. TLE data is refreshed hourly; position propagation runs every 30 seconds.</p>
+  <p>API: <code>https://celestrak.org/NORAD/elements/gp.php</code></p>
+</div>
+
+<div class="card">
+  <h4>Earthquakes — USGS</h4>
+  <p>Fetches GeoJSON earthquake data from the US Geological Survey. Includes magnitude, depth, location, and tsunami warnings.</p>
+  <p>API: <code>https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson</code></p>
+</div>
+
+<div class="card">
+  <h4>Weather — Open-Meteo</h4>
+  <p>Fetches weather conditions from the free Open-Meteo API. Returns temperature, wind speed, humidity, and weather condition.</p>
+  <p>API: <code>https://api.open-meteo.com/v1/forecast</code></p>
+</div>
+
+<div class="card">
+  <h4>News — RSS Feeds</h4>
+  <p>Aggregates RSS feeds from BBC, Reuters, Al Jazeera, The Guardian, and Sky News. News items are geocoded onto the map based on content analysis.</p>
+</div>
+
+<h3>Simulated Data</h3>
+<p>The following layers use algorithmically generated data that mimics real-world patterns:</p>
+<ul>
+  <li><strong>Ships</strong> — Positions along major international shipping routes with realistic vessel types, flags, and speeds</li>
+  <li><strong>Conflicts</strong> — Events in known conflict zones (Ukraine, Gaza, Syria, Sudan, Red Sea, Myanmar) with data structure matching ACLED format</li>
+  <li><strong>Missiles</strong> — Launch sites, parabolic trajectory arcs, and predicted impact zones</li>
+  <li><strong>Traffic</strong> — Congestion levels for major world cities (New York, London, Dubai, Tokyo, Paris, Singapore)</li>
+</ul>
+
+<!-- ── CACHING ─────────────────────────────────────────────────── -->
+<h2 id="caching"><span class="icon">&#128190;</span> Caching Layer</h2>
+
+<p>The caching system (<code>backend/src/utils/cache.ts</code>) provides a unified interface with automatic fallback:</p>
+
+<ol>
+  <li><strong>Primary: Redis</strong> — Connects via <code>ioredis</code> to the Redis instance specified in <code>REDIS_URL</code></li>
+  <li><strong>Fallback: In-Memory Map</strong> — If Redis is unavailable, uses a JavaScript <code>Map</code> with manual TTL expiry</li>
+</ol>
+
+<p>Each layer has its own cache key and TTL, matching its update interval.</p>
+
+<div class="callout callout-info">
+  <strong>For Development</strong>
+  You don't need Redis running locally. The app automatically falls back to in-memory caching with a console warning.
+</div>
+
+<!-- ── FRONTEND STRUCTURE ─────────────────────────────────────── -->
+<h2 id="frontend-structure"><span class="icon">&#127912;</span> Frontend Structure</h2>
+
+<div class="file-tree">
+<span class="dir">frontend/</span>
+├── <span class="dir">src/</span>
+│   ├── <span class="file">main.tsx</span>            <span class="desc">— React entry point, renders App</span>
+│   ├── <span class="file">App.tsx</span>             <span class="desc">— Main layout: top bar, side panels, bottom bar, globe</span>
+│   ├── <span class="dir">components/</span>
+│   │   ├── <span class="dir">Globe/</span>
+│   │   │   └── <span class="file">GlobeView.tsx</span>  <span class="desc">— CesiumJS viewer, visual mode shaders, entity interaction</span>
+│   │   ├── <span class="dir">LandingPage/</span>
+│   │   │   └── <span class="file">LandingPage.tsx</span> <span class="desc">— Theme selector entry screen</span>
+│   │   └── <span class="dir">SearchBar/</span>
+│   │       └── <span class="file">SearchBar.tsx</span>  <span class="desc">— Global search for cities, coordinates, entities</span>
+│   ├── <span class="dir">layers/</span>              <span class="desc">— Cesium entity renderers (one per data layer)</span>
+│   │   ├── <span class="file">aircraftLayer.ts</span>
+│   │   ├── <span class="file">satelliteLayer.ts</span>
+│   │   ├── <span class="file">shipLayer.ts</span>
+│   │   ├── <span class="file">earthquakeLayer.ts</span>
+│   │   ├── <span class="file">conflictLayer.ts</span>
+│   │   ├── <span class="file">missileLayer.ts</span>
+│   │   ├── <span class="file">newsLayer.ts</span>
+│   │   ├── <span class="file">trafficLayer.ts</span>
+│   │   └── <span class="file">weatherLayer.ts</span>
+│   ├── <span class="dir">stores/</span>
+│   │   └── <span class="file">appStore.ts</span>      <span class="desc">— Zustand store for all application state</span>
+│   ├── <span class="dir">services/</span>
+│   │   ├── <span class="file">api.ts</span>           <span class="desc">— REST API client (axios-like fetch wrappers)</span>
+│   │   ├── <span class="file">websocket.ts</span>     <span class="desc">— WebSocket connection manager</span>
+│   │   ├── <span class="file">globe.ts</span>         <span class="desc">— Cesium viewer singleton and camera utilities</span>
+│   │   └── <span class="file">icons.ts</span>         <span class="desc">— Icon/image utilities for entities</span>
+│   └── <span class="dir">types/</span>
+│       └── <span class="file">index.ts</span>         <span class="desc">— Frontend TypeScript type definitions</span>
+├── <span class="file">vite.config.ts</span>
+├── <span class="file">nginx.conf</span>
+├── <span class="file">Dockerfile</span>
+└── <span class="file">package.json</span>
+</div>
+
+<!-- ── STATE MANAGEMENT ────────────────────────────────────────── -->
+<h2 id="state-management"><span class="icon">&#128202;</span> State Management</h2>
+
+<p>The app uses <strong>Zustand</strong> for state management in <code>frontend/src/stores/appStore.ts</code>. This is a single, flat store that manages everything:</p>
+
+<table>
+  <tr><th>State Property</th><th>Type</th><th>Purpose</th></tr>
+  <tr><td><code>layers</code></td><td><code>LayerData</code></td><td>All entity data for every layer (aircraft[], satellites[], etc.)</td></tr>
+  <tr><td><code>layerVisibility</code></td><td><code>Record&lt;string, boolean&gt;</code></td><td>Toggle visibility for each layer on the globe</td></tr>
+  <tr><td><code>visualMode</code></td><td><code>VisualMode</code></td><td>Current visual mode (tactical, satellite, nightVision, thermal, radar)</td></tr>
+  <tr><td><code>selectedEntity</code></td><td><code>SelectedEntity | null</code></td><td>Currently selected entity for detail panel</td></tr>
+  <tr><td><code>anomalies</code></td><td><code>Anomaly[]</code></td><td>Detected anomalies from the intelligence service</td></tr>
+  <tr><td><code>isPlaying</code></td><td><code>boolean</code></td><td>Timeline playback state</td></tr>
+  <tr><td><code>timelinePosition</code></td><td><code>number</code></td><td>Timeline scrubber position (0 to 1, where 1 = live)</td></tr>
+  <tr><td><code>leftPanelOpen</code></td><td><code>boolean</code></td><td>Layer panel visibility</td></tr>
+  <tr><td><code>rightPanelOpen</code></td><td><code>boolean</code></td><td>Intelligence/detail panel visibility</td></tr>
+</table>
+
+<h3>How Data Flows into the Store</h3>
+<pre><code><span class="comment">// In websocket.ts — when a layer_update message arrives:</span>
+ws.<span class="fn">onmessage</span> = (event) => {
+  <span class="keyword">const</span> msg = JSON.<span class="fn">parse</span>(event.data);
+  <span class="keyword">if</span> (msg.type === <span class="string">'layer_update'</span>) {
+    useAppStore.<span class="fn">getState</span>().<span class="fn">setLayerData</span>(msg.layer, msg.data);
+  }
+};</code></pre>
+
+<!-- ── GLOBE & LAYERS ──────────────────────────────────────────── -->
+<h2 id="globe-rendering"><span class="icon">&#127758;</span> Globe &amp; Layer Rendering</h2>
+
+<p>The 3D globe is managed in <code>GlobeView.tsx</code>. Each layer has its own renderer file in <code>frontend/src/layers/</code>. Layer renderers are functions that take the Cesium viewer and data array, and create/update Cesium entities (billboards, polylines, labels, etc.).</p>
+
+<h3>Layer Rendering Pattern</h3>
+<pre><code><span class="comment">// Typical layer renderer signature (e.g., layers/aircraftLayer.ts)</span>
+<span class="keyword">export function</span> <span class="fn">updateAircraftLayer</span>(
+  viewer: Cesium.Viewer,
+  aircraft: Aircraft[],
+  visible: <span class="type">boolean</span>
+): <span class="type">void</span> {
+  <span class="comment">// 1. Remove stale entities</span>
+  <span class="comment">// 2. Create or update Cesium entities for each aircraft</span>
+  <span class="comment">// 3. Set entity show/hide based on visibility flag</span>
+}</code></pre>
+
+<p>Entity types used per layer:</p>
+<table>
+  <tr><th>Layer</th><th>Cesium Entity Type</th><th>Visual</th></tr>
+  <tr><td>Aircraft</td><td>Billboard + Label</td><td>Colored plane icon with callsign</td></tr>
+  <tr><td>Satellites</td><td>Point + Label</td><td>Colored dot with satellite name</td></tr>
+  <tr><td>Ships</td><td>Billboard + Label</td><td>Ship icon with vessel name</td></tr>
+  <tr><td>Earthquakes</td><td>Ellipse + Label</td><td>Pulsing circle sized by magnitude</td></tr>
+  <tr><td>Conflicts</td><td>Billboard + Polygon</td><td>Warning icon with zone overlay</td></tr>
+  <tr><td>Missiles</td><td>Polyline + Billboard</td><td>Trajectory arc with launch/impact markers</td></tr>
+  <tr><td>News</td><td>Billboard + Label</td><td>News pin with title</td></tr>
+  <tr><td>Traffic</td><td>Cylinder + Label</td><td>3D bar sized by congestion level</td></tr>
+  <tr><td>Weather</td><td>Billboard + Label</td><td>Weather condition icon</td></tr>
+</table>
+
+<!-- ── VISUAL MODES ────────────────────────────────────────────── -->
+<h2 id="visual-modes"><span class="icon">&#127912;</span> Visual Modes</h2>
+
+<p>The app features 5 visual modes that apply post-processing shaders to the Cesium viewer for different aesthetic effects:</p>
+
+<table>
+  <tr><th>Mode</th><th>Key</th><th>Effect</th><th>Use Case</th></tr>
+  <tr>
+    <td><span class="badge badge-cyan">Tactical</span></td><td>TAC</td>
+    <td>Desaturated, low-brightness base map</td>
+    <td>Default operational view</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-blue">Satellite</span></td><td>SAT</td>
+    <td>Standard Cesium satellite imagery</td>
+    <td>Realistic viewing</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">Night Vision</span></td><td>NVG</td>
+    <td>Green-tinted luminance shader</td>
+    <td>Low-light aesthetic</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-red">Thermal FLIR</span></td><td>THR</td>
+    <td>Blue &rarr; Red &rarr; Yellow heat ramp shader</td>
+    <td>Thermal imaging aesthetic</td>
+  </tr>
+  <tr>
+    <td><span class="badge badge-green">Radar CRT</span></td><td>RAD</td>
+    <td>Green with animated scan lines</td>
+    <td>Classic radar display</td>
+  </tr>
+</table>
+
+<p>Visual modes are implemented as GLSL fragment shaders applied via Cesium's <code>PostProcessStage</code> API in <code>GlobeView.tsx</code>.</p>
+
+<!-- ── ADDING A NEW LAYER ──────────────────────────────────────── -->
+<h2 id="add-layer"><span class="icon">&#10133;</span> Guide: Adding a New Data Layer</h2>
+
+<p>Follow these steps to add a new data layer (e.g., "Volcanoes"):</p>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <div class="step-content">
+    <h4>Define Types</h4>
+    <p>Add the new entity type in both <code>backend/src/types/index.ts</code> and <code>frontend/src/types/index.ts</code>:</p>
+    <pre><code><span class="keyword">export interface</span> <span class="type">Volcano</span> {
+  id: <span class="type">string</span>;
+  name: <span class="type">string</span>;
+  position: { lat: <span class="type">number</span>; lng: <span class="type">number</span> };
+  status: <span class="string">'active'</span> | <span class="string">'dormant'</span> | <span class="string">'erupting'</span>;
+  elevation: <span class="type">number</span>;
+}
+
+<span class="comment">// Add to the LayerData interface:</span>
+<span class="keyword">export interface</span> <span class="type">LayerData</span> {
+  <span class="comment">// ... existing layers ...</span>
+  volcanoes: <span class="type">Volcano</span>[];
+}</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <div class="step-content">
+    <h4>Create Backend Service</h4>
+    <p>Create <code>backend/src/services/volcanoes.ts</code> following the existing service pattern:</p>
+    <pre><code><span class="keyword">import</span> { cache } <span class="keyword">from</span> <span class="string">'../utils/cache'</span>;
+
+<span class="keyword">export async function</span> <span class="fn">fetchVolcanoes</span>(): Promise&lt;Volcano[]&gt; {
+  <span class="keyword">const</span> cached = <span class="keyword">await</span> cache.<span class="fn">get</span>(<span class="string">'volcanoes'</span>);
+  <span class="keyword">if</span> (cached) <span class="keyword">return</span> JSON.<span class="fn">parse</span>(cached);
+
+  <span class="comment">// Fetch from API or generate data</span>
+  <span class="keyword">const</span> data = <span class="keyword">await</span> <span class="fn">fetchFromSource</span>();
+
+  <span class="keyword">await</span> cache.<span class="fn">set</span>(<span class="string">'volcanoes'</span>, JSON.<span class="fn">stringify</span>(data), 300);
+  <span class="keyword">return</span> data;
+}</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <div class="step-content">
+    <h4>Add REST Route</h4>
+    <p>Add to <code>backend/src/routes/api.ts</code>:</p>
+    <pre><code>router.<span class="fn">get</span>(<span class="string">'/layers/volcanoes'</span>, <span class="fn">asyncHandler</span>(<span class="keyword">async</span> (_req, res) => {
+  <span class="keyword">const</span> data = <span class="keyword">await</span> <span class="fn">fetchVolcanoes</span>();
+  res.<span class="fn">json</span>({ layer: <span class="string">'volcanoes'</span>, data, timestamp: Date.<span class="fn">now</span>() });
+}));</code></pre>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">4</div>
+  <div class="step-content">
+    <h4>Add WebSocket Subscription</h4>
+    <p>In <code>backend/src/websocket/server.ts</code>, add the new layer to the subscription handler and create a scheduled fetch loop with the desired interval.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">5</div>
+  <div class="step-content">
+    <h4>Create Frontend Layer Renderer</h4>
+    <p>Create <code>frontend/src/layers/volcanoLayer.ts</code> to render Cesium entities for each volcano.</p>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">6</div>
+  <div class="step-content">
+    <h4>Update Frontend State &amp; UI</h4>
+    <ul>
+      <li>Add <code>volcanoes: []</code> to the store's initial <code>layers</code> state</li>
+      <li>Add the layer config in <code>App.tsx</code>'s <code>LAYER_CFG</code> array</li>
+      <li>Call the renderer from <code>GlobeView.tsx</code></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ── ADDING AN API INTEGRATION ──────────────────────────────── -->
+<h2 id="add-api"><span class="icon">&#128279;</span> Guide: Adding an API Integration</h2>
+
+<p>To integrate a new external data source:</p>
+
+<ol>
+  <li><strong>Add env vars</strong> — Add any API keys to <code>backend/.env.example</code> and <code>backend/.env</code></li>
+  <li><strong>Create the fetch function</strong> — In the relevant service file, use <code>axios</code> to call the API</li>
+  <li><strong>Handle errors gracefully</strong> — Always wrap API calls in try/catch and fall back to cached or simulated data</li>
+  <li><strong>Respect rate limits</strong> — Cache aggressively; most free APIs have strict rate limits</li>
+  <li><strong>Type the response</strong> — Use Zod schemas or TypeScript interfaces to validate API responses</li>
+</ol>
+
+<pre><code><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;
+<span class="keyword">import</span> { cache } <span class="keyword">from</span> <span class="string">'../utils/cache'</span>;
+
+<span class="keyword">export async function</span> <span class="fn">fetchFromExternalAPI</span>() {
+  <span class="keyword">const</span> cached = <span class="keyword">await</span> cache.<span class="fn">get</span>(<span class="string">'my-api-data'</span>);
+  <span class="keyword">if</span> (cached) <span class="keyword">return</span> JSON.<span class="fn">parse</span>(cached);
+
+  <span class="keyword">try</span> {
+    <span class="keyword">const</span> { data } = <span class="keyword">await</span> axios.<span class="fn">get</span>(<span class="string">'https://api.example.com/data'</span>, {
+      headers: { <span class="string">'Authorization'</span>: <span class="string">`Bearer ${process.env.MY_API_KEY}`</span> },
+      timeout: 10000,
+    });
+    <span class="keyword">const</span> normalized = <span class="fn">transformData</span>(data);
+    <span class="keyword">await</span> cache.<span class="fn">set</span>(<span class="string">'my-api-data'</span>, JSON.<span class="fn">stringify</span>(normalized), 120);
+    <span class="keyword">return</span> normalized;
+  } <span class="keyword">catch</span> (err) {
+    console.<span class="fn">error</span>(<span class="string">'[MyAPI] Fetch failed:'</span>, err);
+    <span class="keyword">return</span> <span class="fn">generateFallbackData</span>();
+  }
+}</code></pre>
+
+<!-- ── ENVIRONMENT VARIABLES ───────────────────────────────────── -->
+<h2 id="environment"><span class="icon">&#128273;</span> Environment Variables</h2>
+
+<h3>Backend (<code>backend/.env</code>)</h3>
+<table>
+  <tr><th>Variable</th><th>Default</th><th>Required</th><th>Description</th></tr>
+  <tr><td><code>PORT</code></td><td>3001</td><td>No</td><td>HTTP server port</td></tr>
+  <tr><td><code>WS_PORT</code></td><td>3002</td><td>No</td><td>WebSocket server port</td></tr>
+  <tr><td><code>DATABASE_URL</code></td><td>—</td><td>No</td><td>PostgreSQL connection string (not used yet)</td></tr>
+  <tr><td><code>REDIS_URL</code></td><td>—</td><td>No</td><td>Redis connection string (falls back to in-memory)</td></tr>
+  <tr><td><code>OPENSKY_USERNAME</code></td><td>—</td><td>No</td><td>OpenSky Network username for higher rate limits</td></tr>
+  <tr><td><code>OPENSKY_PASSWORD</code></td><td>—</td><td>No</td><td>OpenSky Network password</td></tr>
+  <tr><td><code>TOMTOM_API_KEY</code></td><td>—</td><td>No</td><td>TomTom API for real traffic data</td></tr>
+  <tr><td><code>N2YO_API_KEY</code></td><td>—</td><td>No</td><td>N2YO API for additional satellite tracking</td></tr>
+  <tr><td><code>NEWS_API_KEY</code></td><td>—</td><td>No</td><td>NewsAPI key for additional news sources</td></tr>
+  <tr><td><code>OPENAI_API_KEY</code></td><td>—</td><td>No</td><td>OpenAI API for AI-powered situation reports</td></tr>
+  <tr><td><code>CESIUM_ION_TOKEN</code></td><td>—</td><td>No</td><td>Cesium Ion token (backend-side, not currently used)</td></tr>
+</table>
+
+<h3>Frontend (<code>frontend/.env</code>)</h3>
+<table>
+  <tr><th>Variable</th><th>Required</th><th>Description</th></tr>
+  <tr><td><code>VITE_CESIUM_ION_TOKEN</code></td><td><strong>Yes</strong></td><td>Cesium Ion access token for 3D globe imagery</td></tr>
+</table>
+
+<div class="callout callout-warn">
+  <strong>Important</strong>
+  The <code>VITE_CESIUM_ION_TOKEN</code> is the only truly required environment variable. Without it, the globe will not render terrain or imagery. All other API keys are optional enhancements.
+</div>
+
+<!-- ── KNOWN ISSUES ────────────────────────────────────────────── -->
+<h2 id="known-issues"><span class="icon">&#9888;</span> Known Issues</h2>
+
+<table>
+  <tr><th>Issue</th><th>Severity</th><th>Details</th><th>Fix</th></tr>
+  <tr>
+    <td>Situation Report endpoint mismatch</td>
+    <td><span class="badge badge-red">Bug</span></td>
+    <td>Frontend calls <code>/api/intelligence/sitrep</code> but backend route is <code>/api/intelligence/report</code></td>
+    <td>Update frontend <code>api.ts</code> to use <code>/api/intelligence/report</code></td>
+  </tr>
+  <tr>
+    <td>WebSocket URL hardcoded</td>
+    <td><span class="badge badge-yellow">Config</span></td>
+    <td>Frontend uses <code>ws://localhost:3002</code> which won't work in production</td>
+    <td>Make configurable via <code>VITE_WS_URL</code> env var</td>
+  </tr>
+  <tr>
+    <td>PostgreSQL unused</td>
+    <td><span class="badge badge-cyan">Info</span></td>
+    <td>PostgreSQL is provisioned in Docker but not used by any code</td>
+    <td>Reserved for future persistent storage features</td>
+  </tr>
+  <tr>
+    <td>OpenAI not wired</td>
+    <td><span class="badge badge-cyan">Info</span></td>
+    <td>The <code>OPENAI_API_KEY</code> env var is referenced but intelligence uses rule-based logic</td>
+    <td>Planned: integrate OpenAI for enhanced situation reports</td>
+  </tr>
+  <tr>
+    <td>No authentication</td>
+    <td><span class="badge badge-yellow">Security</span></td>
+    <td>All endpoints and WebSocket connections are public</td>
+    <td>Implement auth middleware before any public deployment</td>
+  </tr>
+</table>
+
+<!-- ── ROADMAP ──────────────────────────────────────────────────── -->
+<h2 id="roadmap"><span class="icon">&#128640;</span> Development Roadmap</h2>
+
+<div class="card-grid">
+  <div class="card">
+    <h4>Phase 1 — Bug Fixes</h4>
+    <ul>
+      <li>Fix SITREP endpoint mismatch</li>
+      <li>Make WebSocket URL configurable</li>
+      <li>Add error boundaries in React</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>Phase 2 — Authentication</h4>
+    <ul>
+      <li>JWT-based authentication</li>
+      <li>Role-based access control</li>
+      <li>Secure WebSocket connections</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>Phase 3 — Database Integration</h4>
+    <ul>
+      <li>Use PostgreSQL for historical data</li>
+      <li>Event logging and audit trail</li>
+      <li>User preferences storage</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h4>Phase 4 — AI Enhancement</h4>
+    <ul>
+      <li>OpenAI-powered situation reports</li>
+      <li>Pattern recognition across layers</li>
+      <li>Predictive threat analysis</li>
+    </ul>
+  </div>
+</div>
+
+<div style="margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center;">
+  <p style="font-size: 12px; color: var(--text-muted);">
+    WorldView Intelligence Technical Documentation &bull; Version 2.0 &bull; MIT License
+  </p>
+</div>
+
+</div>
+</body>
+</html>

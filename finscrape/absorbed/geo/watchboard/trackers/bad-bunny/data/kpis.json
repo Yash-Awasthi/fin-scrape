@@ -1,0 +1,173 @@
+[
+  {
+    "id": "spotify-all-time-streams",
+    "label": "All-Time Spotify Streams",
+    "value": "100B+",
+    "color": "green",
+    "source": "Spotify 20th Anniversary Rankings, Apr 2026 — #2 all-time most-streamed artist",
+    "contested": false,
+    "delta": "#2 all-time behind Taylor Swift; #1 among non-English artists",
+    "trend": "up",
+    "lastUpdated": "2026-04-23T14:35:00.000Z"
+  },
+  {
+    "id": "spotify-most-streamed-years",
+    "label": "Spotify Global #1 Artist Years",
+    "value": "4×",
+    "color": "green",
+    "source": "Spotify Wrapped 2020–2022, 2025",
+    "contested": false,
+    "delta": "2020, 2021, 2022, 2025",
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "grammy-wins",
+    "label": "Grammy Awards Won",
+    "value": "6",
+    "color": "amber",
+    "source": "Recording Academy, Feb 2026",
+    "contested": false,
+    "delta": "+3 at 68th Grammys",
+    "trend": "up",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "latin-grammy-wins",
+    "label": "Latin Grammy Awards Won",
+    "value": "17",
+    "color": "amber",
+    "source": "Latin Recording Academy, Nov 2025",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hot100-entries",
+    "label": "Billboard Hot 100 Career Entries",
+    "value": "113",
+    "color": "blue",
+    "source": "Billboard, Jan 2025",
+    "contested": false,
+    "delta": "First Latin artist to surpass 100",
+    "trend": "up",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "uvst-streams",
+    "label": "Un Verano Sin Ti Spotify Streams",
+    "value": "22B+",
+    "color": "green",
+    "source": "Spotify 20th Anniversary Rankings, Apr 23 2026 — confirmed #1 album in Spotify history",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-04-23T14:35:00.000Z"
+  },
+  {
+    "id": "album-sales-total",
+    "label": "Career Album Sales (Equivalent)",
+    "value": "100M+",
+    "color": "green",
+    "source": "ChartMasters, Jan 2025",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "2022-touring-gross",
+    "label": "2022 Total Touring Gross",
+    "value": "$435M",
+    "color": "blue",
+    "source": "Billboard Boxscore — all-time calendar-year record",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "career-touring-gross",
+    "label": "Career Touring Gross",
+    "value": "$1.01B+",
+    "color": "green",
+    "source": "Pollstar, June 19, 2026 — reached May 22, 2026 in Barcelona",
+    "contested": false,
+    "delta": "First Latin artist past $1B; fastest of any artist this century (3,136 days)",
+    "trend": "up",
+    "lastUpdated": "2026-07-16T14:00:00.000Z"
+  },
+  {
+    "id": "super-bowl-viewership",
+    "label": "Super Bowl LX Halftime Viewers (US)",
+    "value": "128.2M",
+    "color": "amber",
+    "source": "NBC / Nielsen, Feb 8, 2026",
+    "contested": false,
+    "delta": "4th-largest halftime show audience in history",
+    "trend": "stable",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hot-latin-songs-entries",
+    "label": "Hot Latin Songs Career Entries",
+    "value": "189",
+    "color": "blue",
+    "source": "Billboard — most in chart history",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spotify-monthly-listeners",
+    "label": "Spotify Monthly Listeners",
+    "value": "114.1M",
+    "color": "green",
+    "source": "Spotify, May 2026 — tour-driven surge during European stadium leg",
+    "contested": false,
+    "delta": "+10.2M from April; rebounded to ~114M on Madrid residency opening momentum",
+    "trend": "up",
+    "lastUpdated": "2026-05-31T14:00:00.000Z"
+  },
+  {
+    "id": "dtmf-hot-latin-songs-weeks",
+    "label": "\"DtMF\" Weeks at No. 1, Hot Latin Songs",
+    "value": "67",
+    "color": "green",
+    "source": "Billboard, July 11, 2026 — all-time chart record, extending own record (broke \"Despacito\" at 57 wks)",
+    "contested": false,
+    "delta": "All-time Hot Latin Songs record; chart dated July 11, 2026",
+    "trend": "up",
+    "lastUpdated": "2026-07-16T14:00:00.000Z"
+  },
+  {
+    "id": "songs-with-1b-streams",
+    "label": "Songs with 1B+ Spotify Streams",
+    "value": "32",
+    "color": "green",
+    "source": "Spotify / RatingsGameMusic, May 2026 — sole all-time record holder",
+    "contested": false,
+    "delta": "\"Tarot\" & \"Qué Pasaría…\" = 31st & 32nd; surpassed The Weeknd's 31",
+    "trend": "up",
+    "lastUpdated": "2026-05-17T14:51:47.000Z"
+  },
+  {
+    "id": "dtmf-tour-final-gross",
+    "label": "Debí Tirar Más Fotos World Tour Final Gross",
+    "value": "$467.5M+",
+    "color": "green",
+    "source": "Billboard Boxscore — tour definitively closed Aug 23, 2026 in San Juan, PR, after 2 finale dates were added following the July 22 Brussels show",
+    "contested": false,
+    "delta": "57 shows, 3.1M+ tickets sold across 4 continents; highest-grossing tour ever by a Latin artist",
+    "trend": "stable",
+    "lastUpdated": "2026-08-24T14:30:00.000Z"
+  },
+  {
+    "id": "billboard-top-tours-number-ones",
+    "label": "Billboard Monthly Top Tours No. 1s",
+    "value": "10×",
+    "color": "blue",
+    "source": "Billboard, July 2026 — record-extending since the ranking launched in 2019",
+    "contested": false,
+    "delta": "Led the monthly Top Tours chart for December, January, and June",
+    "trend": "up",
+    "lastUpdated": "2026-08-09T14:00:00.000Z"
+  }
+]

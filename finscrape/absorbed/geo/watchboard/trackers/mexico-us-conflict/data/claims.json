@@ -1,0 +1,282 @@
+[
+  {
+    "id": "american-blood-american-soil",
+    "question": "Was 'American blood shed on American soil' as Polk claimed?",
+    "sideA": {
+      "label": "Polk / Pro-War Position",
+      "text": "The Thornton Affair of April 25, 1846, occurred north of the Rio Grande, which was American soil under the Texas annexation act of 1845 — Texas had always claimed the Rio Grande as its southern border, and Congress agreed when it admitted Texas. Mexican forces crossed into American territory to attack US soldiers, making the first act of war Mexico's, not the United States'."
+    },
+    "sideB": {
+      "label": "Anti-War / Mexican Position",
+      "text": "The Rio Grande was never legally Texas's border. The traditional border between Texas (Coahuila) and the rest of Mexico was the Nueces River, 130 miles north. Congressman Abraham Lincoln's 'Spot Resolutions' demanded Polk identify the precise 'spot' of bloodshed and whether it was actually within any previously recognized US jurisdiction. Mexico maintained the disputed zone was Mexican territory."
+    },
+    "resolution": "Historically contested; the Nueces Strip was genuinely disputed territory. Most historians today agree Polk deliberately provoked the incident to acquire a war pretext.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "treaties-velasco-validity",
+    "question": "Were the Treaties of Velasco legally valid?",
+    "sideA": {
+      "label": "Texan / US Position",
+      "text": "Santa Anna was the sitting President-General of Mexico with full executive authority when he signed the Treaties of Velasco. The public treaty established the Rio Grande boundary and required Mexican withdrawal. Texas honored the treaty. His subsequent revocation was a political maneuver to avoid accountability for a lost war."
+    },
+    "sideB": {
+      "label": "Mexican Position",
+      "text": "Santa Anna signed the treaties under military captivity and duress — conditions that invalidate any international agreement under customary law. The Mexican government and Congress immediately repudiated both treaties. A head of state cannot legally cede territory while a prisoner of war. Mexico never recognized Texan independence based on these documents."
+    },
+    "resolution": "Mexico never recognized the treaties; the US did not formally rely on them. The validity question was never adjudicated internationally. Texas independence was effectively secured by military fact, not treaty.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "war-of-aggression",
+    "question": "Was the Mexican-American War a war of aggression by the United States?",
+    "sideA": {
+      "label": "US Government Position",
+      "text": "Mexico fired the first shots, crossing into American territory to attack US troops. Mexico had also refused to pay $3.25 million in legitimate claims by American citizens; refused to receive a US envoy; and had been threatening war since the annexation of Texas. The US response was defensive. The Treaty of Guadalupe Hidalgo's $15 million payment acknowledged the acquisition was a purchase, not a conquest."
+    },
+    "sideB": {
+      "label": "Critics / Mexican Historians",
+      "text": "Ulysses S. Grant, who served in the war, later called it 'one of the most unjust wars ever waged by a stronger against a weaker nation.' Polk deliberately stationed troops in disputed territory to provoke an incident, then used manufactured pretext to declare war. The true motive was the acquisition of California and New Mexico — territory Mexico had never offered to sell — to expand US continental dominion."
+    },
+    "resolution": "Widely debated among historians. The consensus of modern scholarship leans toward the view that Polk engineered a pretext. Grant's condemnation is frequently cited. Mexican historiography unanimously describes the war as unjust aggression.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "alamo-defenders-warned",
+    "question": "Did the Alamo defenders have adequate warning and opportunity to retreat?",
+    "sideA": {
+      "label": "Pro-Defender Narrative",
+      "text": "Travis received limited reliable intelligence about Santa Anna's army. When the Mexicans arrived on February 23, 1836 — weeks ahead of Texan expectations due to the brutal winter march — retreat was no longer practical. Travis chose to hold the Alamo as a strategic delaying action, knowing his sacrifice would buy time for Houston to organize the army. His decision was heroic, not reckless."
+    },
+    "sideB": {
+      "label": "Critical Historians",
+      "text": "Sam Houston explicitly ordered Bowie to demolish the Alamo and retreat — orders that Bowie and Travis ignored. The garrison of ~189 men had no realistic chance against 1,500–5,000 Mexican troops. The decision to hold was arguably suicidal insubordination that sacrificed men unnecessarily. The 13-day siege did not meaningfully delay Santa Anna's advance toward Houston's retreating army."
+    },
+    "resolution": "Debated by historians; Travis and Bowie clearly chose to defend against Houston's preference for retreat. The military necessity of the sacrifice remains contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "goliad-massacre-war-crime",
+    "question": "Was the Goliad Massacre a war crime?",
+    "sideA": {
+      "label": "Texan / US Position",
+      "text": "Fannin's men surrendered under a formal promise of 'the honors of war,' meaning they would be treated as prisoners and repatriated. General Urrea himself recommended clemency. Santa Anna's order to execute 342 prisoners of war — including the wounded — was a flagrant violation of accepted laws of war and a war crime by any standard, then or now."
+    },
+    "sideB": {
+      "label": "Mexican Government Position (1836)",
+      "text": "Santa Anna invoked a Mexican law of December 1835 that classified anyone caught bearing arms against the Mexican government as a pirate subject to summary execution. The Texan rebels had renounced their Mexican citizenship and were engaged in armed insurrection. The law had been publicly announced; the rebels had fair notice. General Urrea's pleas for clemency were considered but overruled by executive authority."
+    },
+    "resolution": "Near-universally condemned as a war crime by historians; even Mexican scholars generally concede it was a strategic blunder that inflamed US opinion and galvanized Texan resistance.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "texas-independence-legality",
+    "question": "Was Texas independence under the 1824 Mexican Constitution legally justified?",
+    "sideA": {
+      "label": "Texan / US Position",
+      "text": "Santa Anna's dismantling of the 1824 federal Constitution and imposition of military centralism violated the founding compact under which American colonists had accepted Mexican citizenship and land grants. The colonists' rebellion was legally a defense of the constitution they had sworn to uphold. The Declaration of Independence explicitly invoked constitutional violations as justification."
+    },
+    "sideB": {
+      "label": "Mexican Position",
+      "text": "The American settlers in Texas were Mexican citizens subject to Mexican law. No constitution recognized a right of secession. The Zacatecas and other Mexican states also opposed Santa Anna's centralism but did not attempt independence. The real driver of the Texas revolt was slavery (banned in Mexico) and the desire of American land speculators to separate Texas from Mexico — not constitutional principle."
+    },
+    "resolution": "Contested; modern historians generally acknowledge that opposition to centralism was genuine among some Tejano allies but that Anglo land and slavery interests were primary drivers of independence.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "polk-manifest-destiny-slavery",
+    "question": "Was Polk's war primarily about Manifest Destiny or the expansion of slavery?",
+    "sideA": {
+      "label": "Manifest Destiny / National Expansion View",
+      "text": "Polk genuinely believed in American continental destiny: acquiring California's ports for Pacific trade, Oregon for settlement, Texas for security. His goals were strategic and national — not sectional. He offered to purchase California and New Mexico before the war. The Wilmot Proviso controversy was Congress's sectional obsession, not Polk's intent."
+    },
+    "sideB": {
+      "label": "Slavery Expansion View",
+      "text": "Polk was a Tennessee slaveholder who refused to support the Wilmot Proviso banning slavery in new territories. Abolitionists and Whigs, including John Quincy Adams, argued the war's true purpose was to extend the slave power's territory and gain additional slave states. Frederick Douglass called it 'a murderous war' waged for slavery. The debate opened by the Wilmot Proviso led directly to the Civil War crisis."
+    },
+    "resolution": "Modern historians generally conclude both motivations coexisted. The 'slavocracy' thesis has strong evidence; so does the genuine popular enthusiasm for continental expansion across party lines.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "guadalupe-hidalgo-land-grants",
+    "question": "Did the Treaty of Guadalupe Hidalgo protect the land rights of Mexican citizens?",
+    "sideA": {
+      "label": "US Government Position",
+      "text": "Article IX of the ratified treaty guaranteed full US citizenship and protection of property rights to Mexicans who remained in the ceded territory. The US Senate struck Article X (explicit land grant protection) as redundant — existing US law was deemed sufficient. The federal and state courts were available to adjudicate any land disputes."
+    },
+    "sideB": {
+      "label": "Mexican-American / Chicano Historical View",
+      "text": "The US Senate's deletion of Article X eliminated explicit protections for Spanish and Mexican land grants. In practice, Californio and Nuevomexicano landowners faced squatters, fraudulent legal proceedings, and discriminatory courts. By the 1870s most large Mexican-era landholders had lost their property. The US Protocol of Querétaro (1848) promised Article X's spirit would be honored — but was not ratified by Congress and was frequently ignored."
+    },
+    "resolution": "Historically documented: the preponderance of evidence shows massive displacement of Mexican-heritage landowners despite treaty promises. Affirmed by both Mexican-American and Anglo-American scholars.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "santa-anna-traitor-mexico",
+    "question": "Was Santa Anna a traitor to Mexico?",
+    "sideA": {
+      "label": "Accusation of Treachery",
+      "text": "Santa Anna signed the Treaties of Velasco under the duress of captivity, but also allegedly made secret deals to retake power. During the Mexican-American War, Polk covertly arranged for Santa Anna to return to Mexico from exile in 1846, believing he would negotiate peace in exchange for power. Instead Santa Anna took command of the Mexican army and fought vigorously. Critics argue his return prolonged the war unnecessarily."
+    },
+    "sideB": {
+      "label": "Santa Anna's Defense",
+      "text": "Santa Anna returned to Mexico in 1846, immediately organized the Army of the North at San Luis Potosí, and fought the United States at Buena Vista, Cerro Gordo, Contreras, Churubusco, and Chapultepec. Whatever his secret negotiations with Polk, he fought harder than any Mexican general. His ultimate failure was due to Mexico's material inferiority, not disloyalty."
+    },
+    "resolution": "Deeply contested in Mexican historiography. Santa Anna remains one of Mexico's most controversial figures — regarded both as the man who lost half of Mexico and as a general who fought against impossible odds.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-indemnity-adequate",
+    "question": "Was the $15 million US payment to Mexico adequate compensation for the ceded territory?",
+    "sideA": {
+      "label": "US Position",
+      "text": "The $15 million payment, plus assumption of $3.25 million in US claims against Mexico, was a generous indemnity for land that Mexico could not defend militarily. The US could have annexed all of Mexico, as 'All Mexico' advocates proposed, but chose to pay for specific territory. California alone generated billions in gold within a year, proving the land's value was unknowable at the time of negotiation."
+    },
+    "sideB": {
+      "label": "Mexican / Critical Position",
+      "text": "525,000 square miles of territory containing California, Nevada, Utah, and most of Arizona and New Mexico — approximately $0.03 per acre — is grotesquely inadequate. The $15 million was effectively a face-saving device to make a conquest look like a purchase. California alone produced $10 billion in gold by 1855. No willing seller would have accepted such terms; the payment was extracted through military force."
+    },
+    "resolution": "The inadequacy of the payment relative to the territory's subsequent value is not seriously contested. The payment was a legal device to avoid pure annexation, not a genuine market transaction.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "thornton-affair-provocation",
+    "question": "Did Polk deliberately provoke the Thornton Affair to start the war?",
+    "sideA": {
+      "label": "Polk's Position",
+      "text": "Taylor advanced to the Rio Grande under lawful orders to protect American territory. Mexico had been raiding, threatening war, and had broken diplomatic relations. The Thornton patrol was a standard reconnaissance mission in territory the US considered its own. The Mexican attack was unprovoked aggression. Polk had already drafted a war message before news arrived, but based on Mexico's other hostile acts."
+    },
+    "sideB": {
+      "label": "Polk Provocation Theory",
+      "text": "Polk had already prepared a war message to Congress based on the Slidell rejection before the Thornton incident. The decision to advance Taylor to the Rio Grande — into the disputed zone — was a deliberate provocation intended to force Mexico to fire first. Modern historians including Frederick Merk, Otis Singletary, and Amy Greenberg document that Polk's diary shows he had decided on war before any Mexican attack occurred."
+    },
+    "resolution": "Supported by strong historical evidence including Polk's own diary. The consensus of modern scholarship holds that Polk deliberately positioned US forces to create an incident.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bear-flag-republic-legitimacy",
+    "question": "Was the Bear Flag Republic a legitimate popular uprising or a US-orchestrated coup?",
+    "sideA": {
+      "label": "American Settler View",
+      "text": "American settlers in California had genuine grievances against Mexican rule: land insecurity, risk of expulsion, and political instability. The Bear Flag Revolt was a spontaneous response to rumors (some false) that Mexican authorities planned to expel American settlers. Frémont and his men provided support but the settlers acted on their own initiative."
+    },
+    "sideB": {
+      "label": "Mexican / Critical View",
+      "text": "The revolt was enabled and encouraged by Frémont's armed survey expedition that had no legitimate business being in California. Frémont had secret orders from Washington to assist a takeover of California if war broke out. The 'settlers' were largely armed men with military backgrounds. The entire sequence was a coordinated US government operation to seize California using plausible deniability."
+    },
+    "resolution": "Evidence supports significant US government foreknowledge and encouragement. Frémont's orders remain partially ambiguous, but the weight of historical evidence suggests US official involvement.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "niños-heroes-historical",
+    "question": "Did the 'Niños Héroes' (boy heroes) actually wrap themselves in the Mexican flag and leap from Chapultepec?",
+    "sideA": {
+      "label": "Mexican National Memory",
+      "text": "Six military cadets of the Colegio Militar — Agustín Melgar, Juan de la Barrera, Francisco Márquez, Fernando Montes de Oca, Vicente Suárez, and Juan Escutia — died defending Chapultepec Castle on September 13, 1847. Juan Escutia wrapped himself in the Mexican flag rather than allow it to be captured. Their sacrifice exemplifies Mexican patriotism and is commemorated at the site with a monument."
+    },
+    "sideB": {
+      "label": "Revisionist Historians",
+      "text": "While six cadets certainly died at Chapultepec, the specific legend of Juan Escutia leaping from the ramparts wrapped in the flag appears in no contemporary account and was developed in later decades as the incident was mythologized. Some historians note that most cadets were ordered to evacuate before the final US assault and that the symbolic elements may be embellishment of genuine, undeniable valor."
+    },
+    "resolution": "Six cadets did die at Chapultepec — historically documented. The specific flag-leap episode is likely legendary accretion. Their heroism is not in doubt; the specific circumstances are.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "san-patricio-battalion-deserters-or-heroes",
+    "question": "Were the San Patricio Battalion soldiers traitors or heroes of conscience?",
+    "sideA": {
+      "label": "US Military Position",
+      "text": "The San Patricios were US Army deserters who took up arms against their country in wartime — by any legal or military standard, traitors. Their execution was legally mandated by military law for desertion in the face of the enemy. That many were Irish Catholic immigrants does not excuse armed service against their sworn army."
+    },
+    "sideB": {
+      "label": "Irish / Mexican Position",
+      "text": "The San Patricios were largely Catholic Irish immigrants who faced intense anti-Catholic discrimination in the predominantly Protestant US Army and found common cause with Catholic Mexico. Many were recent immigrants who had not truly internalized American identity. They fought with extraordinary bravery at Churubusco. In Ireland and Mexico they are honored as heroes who followed their conscience over political allegiance."
+    },
+    "resolution": "Legally: deserters and traitors under US law. Morally and culturally: honored as heroes in Ireland and Mexico. Executions were legal but harsh — Scott spared some and reduced sentences for others.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexico-why-lost",
+    "question": "Why did Mexico lose the war — structural weakness or poor leadership?",
+    "sideA": {
+      "label": "Structural Disadvantage View",
+      "text": "Mexico was far weaker militarily and economically: the US had superior artillery, better-trained professional officers, logistical advantages, and a unified political war effort. Mexico's treasury was nearly bankrupt; its army poorly equipped and underpaid. The US mobilized 79,000 troops against a country unable to field more than 30,000 at any time. The outcome was largely predetermined by structural factors beyond any leader's control."
+    },
+    "sideB": {
+      "label": "Leadership Failure View",
+      "text": "Mexico's chronic political instability — five different presidents during the war — prevented coherent strategy. Santa Anna repeatedly made catastrophic tactical decisions: ignoring superior flanking positions, granting the armistice Scott exploited, and abandoning Mexico City before a final defense. Mexico's civilian population in occupied areas offered no organized guerrilla resistance comparable to successful 19th-century irregular campaigns elsewhere."
+    },
+    "resolution": "Modern historians generally attribute Mexico's defeat to both causes, with structural weakness foundational but leadership failures compounding losses at critical moments.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tayler-armistice-monterrey-mistake",
+    "question": "Was Taylor's armistice at Monterrey a serious military and political blunder?",
+    "sideA": {
+      "label": "Taylor's Defense",
+      "text": "Taylor's armistice was a reasonable humanitarian and tactical decision — his forces had suffered significant casualties in the three-day battle and allowing a bloodless Mexican withdrawal preserved troops for future operations. A prolonged siege to force unconditional surrender would have been costly and unnecessary. Taylor was fighting a war, not a vendetta, and the armistice served immediate military needs."
+    },
+    "sideB": {
+      "label": "Polk / Strategic Critique",
+      "text": "President Polk was furious, and rightly so. Allowing Ampudia's 7,303 soldiers to withdraw intact with their weapons meant Taylor let the enemy army escape to fight again — which it did at Buena Vista. Unconditional surrender was the only acceptable outcome. The armistice was a strategic blunder that prolonged the war. It was so harmful that Polk terminated it and began planning to transfer command to General Scott."
+    },
+    "resolution": "Generally viewed by military historians as a significant error; Ampudia's force did regroup and contribute to further Mexican resistance, though Taylor's standing remained strong enough to propel him to the presidency.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "texas-revolution-slavery",
+    "question": "Was slavery the primary cause of the Texas Revolution?",
+    "sideA": {
+      "label": "Slavery as Primary Cause",
+      "text": "Mexico had banned slavery in 1829 (with a partial Texas exemption) and was moving toward enforcement. American colonists in Texas had brought enslaved people and needed perpetual access to enslaved labor to make their plantations profitable. The Texas Revolution protected the institution of slavery, and the first Texas constitution explicitly enshrined it. Santa Anna's 'tyranny' was partly his insistence on enforcing existing Mexican antislavery law."
+    },
+    "sideB": {
+      "label": "Multiple-Cause View",
+      "text": "Slavery was one of many grievances including Santa Anna's abrogation of the 1824 Constitution, denial of separate statehood for Texas, tariff disputes, immigration restrictions, and genuine political and cultural differences between Anglo settlers and centralist Mexican government. Many Tejano allies of the revolution — including Lorenzo de Zavala — were not slaveholders but opposed Santa Anna's dictatorship on constitutional grounds."
+    },
+    "resolution": "Broadly supported by primary source evidence that slavery was a primary (though not sole) driver of the revolution. The historiographical consensus has shifted strongly toward recognizing slavery's centrality since the 1990s.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "scott-vs-taylor-who-won-war",
+    "question": "Who deserves primary credit for winning the Mexican-American War — Taylor or Scott?",
+    "sideA": {
+      "label": "Taylor's Partisans",
+      "text": "Taylor won the critical early battles (Palo Alto, Resaca de la Palma, Monterrey) that established US dominance in northern Mexico and destroyed the Army of the North. His Buena Vista victory against overwhelming odds was the most dramatic of the war. Taylor had far fewer troops and logistical support than Scott, yet won consistently. He earned the presidency on his war record — the ultimate measure of public esteem."
+    },
+    "sideB": {
+      "label": "Scott's Partisans",
+      "text": "Scott's campaign from Veracruz to Mexico City was a masterpiece of operational art — the first successful forced march on a defended capital by an expeditionary US force, modeled on Wellington's Peninsular campaign. He captured every city he targeted, fought eight battles in six months, and forced the peace terms. Wellington himself reportedly said Scott's Mexico City campaign was the greatest military operation of the age."
+    },
+    "resolution": "Military historians generally rate Scott the more brilliant operational commander; Taylor had greater popular appeal and political impact. Both were essential to US victory.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "all-mexico-debate",
+    "question": "Should the US have annexed all of Mexico rather than just the northern territories?",
+    "sideA": {
+      "label": "'All Mexico' Advocates (1847–48)",
+      "text": "Manifest Destiny journalists like John L. O'Sullivan and many Democrats argued the US should annex all of Mexico — its geography, ports, resources, and population would make the US the hemisphere's dominant power. Scott's occupation had pacified the country; the Mexican people, tired of corrupt oligarchy, might welcome US governance. Annexing all Mexico would end the conflict permanently and fulfill continental destiny."
+    },
+    "sideB": {
+      "label": "Against 'All Mexico'",
+      "text": "Senator John C. Calhoun and others argued that incorporating millions of 'mongrel' Mexican mestizos and Indians as US citizens was racially and constitutionally unacceptable — the US had only ever incorporated white European people. Abolitionists opposed annexation as too much territory over which the slavery question would explode. Polk himself never wanted all of Mexico — his precise territorial goals were California and New Mexico only."
+    },
+    "resolution": "The debate was resolved by the Treaty of Guadalupe Hidalgo's selective annexation. The 'All Mexico' faction was defeated by a coalition of racial conservatives and anti-slavery Northerners for contradictory reasons.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexican-american-war-civil-war-connection",
+    "question": "Did the Mexican-American War make the Civil War inevitable?",
+    "sideA": {
+      "label": "War as Civil War Catalyst",
+      "text": "Ulysses Grant wrote that 'the Southern Rebellion was largely the outgrowth of the Mexican War.' The acquisition of ~525,000 square miles reignited the slavery expansion controversy that the Missouri Compromise of 1820 had temporarily settled. The Wilmot Proviso, the Compromise of 1850, 'Bleeding Kansas,' and finally secession all trace directly to the question of slavery in territories won from Mexico. The war planted the seeds of disunion."
+    },
+    "sideB": {
+      "label": "War as Parallel Development",
+      "text": "The sectional conflict over slavery would have found expression through some other mechanism even without the Mexican War. The slavery controversy was fundamental to US society from the founding; the Missouri Compromise was already straining before 1845. Western expansion was inevitable given population growth and the Oregon settlement. The Mexican War accelerated an existing conflict but did not create it."
+    },
+    "resolution": "Strong causal connection is supported by most historians; Grant's observation is widely endorsed. The war's territorial acquisitions definitively reopened the slavery question that produced the Civil War.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

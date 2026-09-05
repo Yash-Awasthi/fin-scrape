@@ -1,0 +1,48 @@
+[
+  {
+    "id": "russia-strikes-7-civilians-aug09-2026",
+    "year": "Aug 9, 2026",
+    "title": "Russian Overnight Strikes Kill 7 Civilians, Injure Dozens Across Ukraine",
+    "type": "strike",
+    "detail": "Overnight Russian missile and drone strikes on Ukraine killed at least 7 civilians and injured dozens more. The attacks targeted residential and civilian infrastructure areas. Ukrainian emergency services responded across multiple oblasts. Ukraine's air force and air defense units worked to intercept incoming projectiles overnight.",
+    "sources": [
+      {
+        "name": "Google News / Reuters",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNeU1abHh4ZTByaFBRSGEydVdyVUJHQWZJTHVXX2lsdUozYjk0clpJOU1VeXl5NjRGd0pzcFQtcnQwdkx0Vm9xdU0xZGltTDU1OU9fS2FKd0w4SzREcnhtTzNRZ1RXVTJGWXF3UjNUOUNQVml4NlhSdDByYjBuN1FrdmM0bFlHZm5OUGpybHhELWg?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "russia-strikes-odesa-port-energy-aug9-2026",
+    "year": "2026",
+    "title": "Russia Strikes Odesa Port and Energy Grid, Zelensky Cites Threat to Food Security",
+    "type": "strike",
+    "detail": "Alongside overnight strikes across multiple oblasts, Russian ballistic, anti-ship, and anti-radar missiles plus 200+ Shahed drones struck Odesa's port and energy infrastructure on August 9, wounding eight and knocking out power to over 128,000 households in the region. President Zelenskyy said the strike on the Black Sea grain-export hub showed Russia is \"systematically waging war against global food security.\" The same nationwide barrage killed two in Kharkiv's Saltivskyi district, one in Kherson region, and wounded nine (including four children) in Pavlohrad; six civilians were also killed in a Ukrainian strike on Belgorod, Russia.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/8/9/russian-forces-kill-several-in-ukraine-launch-brutal-attack-in-odesa",
+        "pole": "western"
+      },
+      {
+        "name": "Ukrinform",
+        "tier": 2,
+        "url": "https://www.ukrinform.net/rubric-economy/4152617-energy-workers-restore-power-to-128000-consumers-in-odesa-region-after-russian-attack.html",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/8/9/russian-forces-kill-several-in-ukraine-launch-brutal-attack-in-odesa",
+        "caption": "Russia's strike on Odesa's port and energy grid cut power to over 128,000 households",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/08/reuters_6a784594-1786267028.jpg"
+      }
+    ]
+  }
+]

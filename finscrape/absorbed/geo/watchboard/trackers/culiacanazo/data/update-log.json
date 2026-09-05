@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-10T15:39:52.188Z",
+  "tracker": "culiacanazo",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "itemCount": 11
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 35
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 23
+    },
+    "casualties": {
+      "status": "updated",
+      "itemCount": 10
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 16
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 13
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 4
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

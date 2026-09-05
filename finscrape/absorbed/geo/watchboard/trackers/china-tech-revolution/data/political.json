@@ -1,0 +1,236 @@
+[
+  {
+    "id": "xi-jinping",
+    "name": "Xi Jinping",
+    "role": "General Secretary, CCP; President of China — directs tech self-reliance strategy",
+    "avatar": "china",
+    "initial": "X",
+    "quote": "Technology is the primary productive force. We must adhere to innovation-driven development, seize the commanding heights of technology, and strive to overcome key core technology chokepoints.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ren-zhengfei",
+    "name": "Ren Zhengfei",
+    "role": "Founder & CEO, Huawei — built China's most sanctioned but resilient tech company",
+    "avatar": "china",
+    "initial": "R",
+    "quote": "The United States has underestimated us. The pressure the US has put on us will only make us stronger. Cutting off our supply chain of semiconductors will backfire.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "meng-wanzhou",
+    "name": "Meng Wanzhou",
+    "role": "CFO, Huawei (Deputy Chair 2023–); Ren Zhengfei's daughter — center of US-China diplomatic crisis",
+    "avatar": "china",
+    "initial": "M",
+    "quote": "As a Huawei employee, I am proud to stand here. If I was in Huawei, it means I stand for something. The world has seen Huawei's resilience and determination to survive.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "zhang-yiming",
+    "name": "Zhang Yiming",
+    "role": "Founder, ByteDance ($550B valuation, Mar 2026) — resigned as CEO 2021; TikTok US divestiture deal finalized Jan 2026",
+    "avatar": "china",
+    "initial": "Z",
+    "quote": "I am not a social person. The most important thing I can contribute as ByteDance's co-founder is to ensure we have the right people to do the right things.",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "liang-wenfeng",
+    "name": "Liang Wenfeng",
+    "role": "Founder & CEO, DeepSeek — declared AGI as company's primary mission (May 22, 2026); first external funding round at ~$50B valuation, led by China Big Fund III; Tencent participating; 70B yuan (~$10B) round; V4 runs natively on Huawei Ascend; bootstrapped from High-Flyer quant fund until now",
+    "avatar": "china",
+    "initial": "L",
+    "quote": "We will prioritize groundbreaking research over commercialization. We believe full-scale open source is the right approach. The funding is to retain the team — our researchers are being recruited by competitors, and we need capital to keep them. Our goal is AGI: we are pursuing the frontier, not just benchmarks.",
+    "lastUpdated": "2026-05-22T14:15:00Z"
+  },
+  {
+    "id": "robin-li",
+    "name": "Robin Li (Li Yanhong)",
+    "role": "Co-founder & CEO, Baidu — China's leading search and AI company; ERNIE Bot creator; AI chip unit Kunlunxin pursuing $14.6B dual IPO (HKEX + STAR Market, May 2026)",
+    "avatar": "china",
+    "initial": "R",
+    "quote": "AI is the key to the next generation of the internet. When we built Kunlunxin, people doubted whether China could design competitive AI chips. The IPO process answers that question: our Kunlun accelerators power ERNIE Bot, Apollo, and our entire AI Cloud — a full-stack capability built on domestic silicon that no sanction can take away.",
+    "lastUpdated": "2026-05-10T15:45:00Z"
+  },
+  {
+    "id": "jack-ma",
+    "name": "Jack Ma (Ma Yun)",
+    "role": "Founder, Alibaba Group — symbol of China's tech crackdown after 2020 speech criticizing regulators",
+    "avatar": "china",
+    "initial": "J",
+    "quote": "Today's Alibaba is not my Alibaba anymore. Good entrepreneurs must be willing to give up control at the right time. I want to see Alibaba's technology serve the common people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "wang-chuanfu",
+    "name": "Wang Chuanfu",
+    "role": "Founder & CEO, BYD — leads China's dominance in global EV manufacturing",
+    "avatar": "china",
+    "initial": "W",
+    "quote": "Our biggest competitor is not Tesla. Our biggest competitor is China's own internal combustion engine manufacturers that we must replace. After that, we will compete globally.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gina-raimondo",
+    "name": "Gina Raimondo",
+    "role": "US Secretary of Commerce (2021–2025) — architect of sweeping chip export controls against China",
+    "avatar": "us",
+    "initial": "G",
+    "quote": "We will not allow China to use American technology against America and our allies. When national security is at stake, we will act — even if it costs US companies revenue in the short term.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jake-sullivan",
+    "name": "Jake Sullivan",
+    "role": "National Security Advisor (2021–2025) — designed 'small yard, high fence' tech containment strategy",
+    "avatar": "us",
+    "initial": "J",
+    "quote": "For a set of specific technologies with clear military and intelligence applications, we want to maintain as large a lead as possible. We are not trying to hold all of China's technology back.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "donald-trump",
+    "name": "Donald Trump",
+    "role": "US President (2017–21, 2025–) — Beijing summit (May 14–15, 2026) closed with warm rhetoric but no chip deal; only institutionalized output: US-China AI safety dialogue channel; H200 licenses issued for ~10 Chinese firms but zero chips shipped; May 12 trade truce (tariffs 145%→30%); rare earth standoff and semiconductor bifurcation continue post-summit",
+    "avatar": "us",
+    "initial": "D",
+    "quote": "China has been taking advantage of the United States for many years. We've now put 145% tariffs on China — they can absorb it. Nobody is going to be able to compete with us when we have American workers making American chips, American cars, American drugs. We want the pills made in America, the chips made in America.",
+    "lastUpdated": "2026-05-16T14:00:00Z"
+  },
+  {
+    "id": "joe-biden",
+    "name": "Joe Biden",
+    "role": "US President (2021–2025) — expanded chip controls, signed CHIPS Act, passed TikTok ban",
+    "avatar": "us",
+    "initial": "J",
+    "quote": "America invented the semiconductor. Let's make sure the future of semiconductors is made in America. We will invest in American manufacturing, American innovation, and American workers.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jensen-huang",
+    "name": "Jensen Huang",
+    "role": "CEO, Nvidia — Q1 FY2027: $81.62B (+85% YoY), China near-zero; publicly conceded China AI chip market 'largely' lost to Huawei; joined Trump's Beijing delegation (May 13–15) but summit produced zero H200 shipments. June 4: Sen. Warren invited Huang to testify at Senate Banking Committee June 11 (deadline: June 8). June 6: BIS loophole dispute — reports that hundreds of thousands of advanced chips entered China via Nvidia channel partners in Singapore/Malaysia subsidiaries. Huang faces parallel pressure: Warren demands accountability for loophole exploitation while Chinese customers pivot fully to Huawei Ascend after DeepSeek V4-Pro validated on Ascend 910C for frontier training.",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "Huawei is very, very strong. Their local ecosystem is thriving — because we've evacuated that market. The export ban has largely backfired on the U.S. side. We've largely conceded China's AI chip market to Huawei.",
+    "lastUpdated": "2026-06-07T14:56:19Z"
+  },
+  {
+    "id": "cc-wei",
+    "name": "C.C. Wei (Wei Zhe'an)",
+    "role": "CEO, TSMC — stewards the world's most strategically critical semiconductor fabs",
+    "avatar": "taiwan",
+    "initial": "C",
+    "quote": "TSMC is not just a Taiwanese company. We are a global company that serves global customers. But we comply fully with export control regulations and will not ship to restricted parties.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "morris-chang",
+    "name": "Morris Chang",
+    "role": "Founder, TSMC (Chairman Emeritus) — created the foundry model that made Taiwan a semiconductor superpower",
+    "avatar": "taiwan",
+    "initial": "M",
+    "quote": "Globalization is almost dead and free trade is almost dead. A lot of people still wish they would come back, but I don't think they will be back. The world will be a much more expensive place going forward.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ursula-von-der-leyen",
+    "name": "Ursula von der Leyen",
+    "role": "President, European Commission — leads EU's 'de-risking' strategy from China tech dependence",
+    "avatar": "eu",
+    "initial": "U",
+    "quote": "We want to de-risk, not de-couple, from China. The relationship is one of the most complex we face — simultaneously a partner for cooperation on global challenges, an economic competitor, and a systemic rival.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "peter-wennink",
+    "name": "Peter Wennink",
+    "role": "Former CEO, ASML (retired 2024) — led company whose EUV monopoly is central chokepoint in US-China chip war",
+    "avatar": "eu",
+    "initial": "P",
+    "quote": "The Chinese market is incredibly important to ASML. But we operate in a world where governments make geopolitical decisions and we must comply. We support export controls for national security, but overly broad restrictions will damage European industry.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "liu-he",
+    "name": "Liu He",
+    "role": "Vice Premier, China (2018–2023) — chief US-China trade negotiator for Phase 1 deal and semiconductor talks",
+    "avatar": "china",
+    "initial": "L",
+    "quote": "Trade wars have no winners. Both China and the United States need each other, and the global economy needs both of us to cooperate. We can manage differences and find common ground.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "howard-lutnick",
+    "name": "Howard Lutnick",
+    "role": "US Secretary of Commerce (2025–) — managing chip export controls; confirmed zero H200 chips sold to China (Apr 23, 2026)",
+    "avatar": "us",
+    "initial": "H",
+    "quote": "China has not bought any H200 chips as of today. We are striking a delicate balance. We are not selling our best chips to China under any circumstances — not H100, not Blackwell, not our next generation. China is choosing to keep investment focused on their domestic industry.",
+    "lastUpdated": "2026-04-23T14:45:00.000Z"
+  },
+  {
+    "id": "alan-estevez",
+    "name": "Alan Estevez",
+    "role": "US Under Secretary of Commerce for Industry and Security (2022–2025) — implemented October 2022 chip controls",
+    "avatar": "us",
+    "initial": "A",
+    "quote": "These controls are aimed at preventing China from using US technologies for military modernization, mass destruction weapons, and human rights abuses. We are targeting specific technologies while trying to minimize collateral damage to commercial trade.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sam-altman",
+    "name": "Sam Altman",
+    "role": "CEO, OpenAI — leads US AI frontier; sought US chip restrictions on rivals including DeepSeek",
+    "avatar": "us",
+    "initial": "S",
+    "quote": "I think DeepSeek's success is a reminder that we cannot take American AI leadership for granted. It motivates me and our team to work harder. The global AI race is very real and we need strong US policy support.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "he-xiaopeng",
+    "name": "He Xiaopeng (何小鹏)",
+    "role": "Founder & CEO, Xpeng (XPEV) — leading China's physical AI ecosystem: flying cars (Aridge, 7,000 pre-orders), IRON humanoid robot (Q4 2026), GX Level 4 robotaxi with in-house 3,000 TOPS Turing chips. Targets FSD lead over Tesla in China by August 2026.",
+    "avatar": "china",
+    "initial": "H",
+    "quote": "We are not following Tesla's path — we are building a different kind of AI-first mobility company. Our goal is simple: by August, Xpeng's intelligent driving will be the best in China. The future of mobility is not just electric — it is intelligent, physical, and integrated with every form of transportation including the sky.",
+    "lastUpdated": "2026-04-27T08:45:22.413Z"
+  },
+  {
+    "id": "richard-chang",
+    "name": "Richard Chang (张汝京)",
+    "role": "Founder, SMIC — semiconductor pioneer who built China's leading chipmaker; argued May 11, 2026 that China should target mature-node dominance (80% of global chip demand) rather than fight EUV battle; SMIC targeting 50K wafers/month at 7nm by June 2026",
+    "avatar": "china",
+    "initial": "R",
+    "quote": "Advanced nodes represent less than 20% of global chip demand by volume. China does not need to win the EUV race to win the semiconductor war. We can achieve strategic self-sufficiency in automotive, industrial, and IoT chips — which is where the volume is — without the tools the US is blocking.",
+    "lastUpdated": "2026-05-12T15:33:17Z"
+  },
+  {
+    "id": "yang-zhilin",
+    "name": "Yang Zhilin (杨植麟)",
+    "role": "Co-founder & CEO, Moonshot AI (Kimi) — raised $2B at $20B valuation (May 2026), led by Meituan; total 2026 fundraising ~$3.9B; Kimi model competes with GPT-4 class internationally; youngest founder in China's AI unicorn tier",
+    "avatar": "china",
+    "initial": "Y",
+    "quote": "China's AI startups are not playing catch-up — we are competing for the frontier in real time. Kimi's context length, reasoning capabilities, and cost efficiency are world-class. The question is not whether Chinese AI can match American AI; the question is who builds the most useful products for users globally.",
+    "lastUpdated": "2026-05-12T15:33:17Z"
+  },
+  {
+    "id": "li-lecheng",
+    "name": "Li Lecheng (李乐成)",
+    "role": "Minister, MIIT (2024–) — May 16, 2026: directed that China's traditional manufacturing sectors must be 'modernized with AI and technology, not scrapped'; oversees chipmaking localization directives (70% domestic silicon wafer use by end-2026, 50% domestic equipment for new fab capacity) and the 15th Five-Year Plan AI+ action plan",
+    "avatar": "china",
+    "initial": "L",
+    "quote": "China's traditional manufacturing industries must not be abandoned — they must be modernized with technology and artificial intelligence. We are integrating intelligence into every layer of our industrial base, and this integration deepens the demand for our domestic AI chip ecosystem, creating a virtuous cycle that is independent of foreign technology access.",
+    "lastUpdated": "2026-05-17T10:45:32Z"
+  },
+  {
+    "id": "he-tingbo",
+    "name": "He Tingbo (何庭波)",
+    "role": "President, Huawei HiSilicon — unveiled the 'Tau (τ) Scaling Law' and LogicFolding architecture at IEEE ISCAS 2026 in Shanghai (May 25, 2026), targeting 1.4nm-equivalent chip density by 2031 through signal-latency engineering rather than EUV lithography. Led HiSilicon's sanction-era chip design pivot that produced the Kirin 9000S, Ascend AI chip series, and now the Tau Scaling Law roadmap for long-horizon performance parity.",
+    "avatar": "china",
+    "initial": "H",
+    "quote": "We have proposed the Tau Scaling Law — a new path for chip scaling focused on reducing signal travel time rather than simply shrinking transistors. Through LogicFolding, we shorten the physical wiring paths inside chips, achieving performance equivalent to 1.4nm processes by 2031. We have already mass-produced 381 chips over six years using these principles. The sanctions forced us to innovate differently — and different can be better.",
+    "lastUpdated": "2026-05-25T14:35:17Z"
+  }
+]

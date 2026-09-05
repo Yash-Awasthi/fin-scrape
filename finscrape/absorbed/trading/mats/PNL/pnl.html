@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MATS — Daily PnL (Private)</title>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  /* ═══ World-class minimal design system ═══
+     Principles: generous whitespace · no decorative boxes ·
+     tabular numerals · restrained accent (green/red for PnL only) ·
+     3 font sizes · hairline separators instead of card frames */
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: rgba(255,255,255,0.07);
+    --text: #f4f4f5;
+    --muted: #8b8b96;
+    --green: #34d399;
+    --red: #f87171;
+    --mono: 'SF Mono', 'Fira Code', monospace;
+    --sans: -apple-system, 'Helvetica Neue', sans-serif;
+    --fs-xl: 1.3rem;    /* 頁面/區塊標題(最大) */
+    --fs-lg: 1.05rem;   /* 交易頭行(BNB+PnL) */
+    --fs-md: 0.82rem;   /* 正文/標題 */
+    --fs-sm: 0.68rem;   /* 標籤/細節 */
+    --space: 8px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 40px 20px 48px;
+  }
+
+  /* ── 頂部區塊：同下面 module（860px）對齊——修復偏右 ── */
+  .top-block { width: 100%; max-width: 860px; }
+
+  /* ── Header:quiet, small, centered ── */
+  .header { text-align: center; margin-bottom: 28px; }
+  .header h1 { display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 auto; }
+  .header h1 svg { width: 1.3rem; height: 1.3rem; color: var(--text); }
+  .header h1 .mono { font-family: var(--mono); font-weight: 600; }
+  .header .date { font-size: var(--fs-sm); color: var(--muted); margin-top: 4px; font-family: var(--mono); }
+  .header .sub { font-size: var(--fs-sm); color: var(--muted); margin-top: 2px; }
+
+  /* ── Controls:minimal segmented control ── */
+  .controls { display: flex; gap: 10px; align-items: center; margin-bottom: 32px; flex-wrap: wrap; justify-content: center; }
+  .switch-group {
+    display: flex; border: 1px solid var(--border); border-radius: 7px; overflow: hidden;
+  }
+  .switch-btn {
+    padding: 7px 16px; border: none; background: transparent; color: var(--muted);
+    font-family: var(--mono); font-size: var(--fs-sm); font-weight: 500;
+    cursor: pointer; transition: all 0.15s;
+    min-width: 78px; text-align: center;
+  }
+  .switch-btn + .switch-btn { border-left: 1px solid var(--border); }
+  .switch-btn.active-paper, .switch-btn.active-real,
+  .switch-btn.active-period, .switch-btn.active-period2,
+  .switch-btn.active-unit, .switch-btn.active-unit2 {
+    background: var(--text); color: #000; font-weight: 600;
+  }
+  .switch-btn:not([class*='active']):hover { color: var(--text); }
+  .btn {
+    padding: 7px 16px; border: 1px solid var(--border); background: transparent;
+    color: var(--muted); font-family: var(--mono); font-size: var(--fs-sm); font-weight: 500;
+    border-radius: 7px; cursor: pointer; transition: all 0.15s;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+  .capture-drop { position: relative; }
+  .capture-menu {
+    position: absolute; top: calc(100% + 4px); right: 0; z-index: 20;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 4px; min-width: 140px; display: none;
+  }
+  .capture-menu.open { display: block; }
+  .capture-item {
+    display: block; width: 100%; text-align: left; padding: 8px 12px;
+    background: transparent; border: none; color: var(--text); font-family: var(--mono);
+    font-size: var(--fs-sm); border-radius: 6px; cursor: pointer;
+  }
+  .capture-item:hover { background: var(--surface2); }
+  .btn svg, .btn i { width: 13px; height: 13px; color: var(--muted); }
+
+  /* ── Stats:pure numbers, no boxes ── */
+  .stats { display: flex; justify-content: center; gap: 48px; margin-bottom: 32px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .label { font-size: var(--fs-sm); color: var(--muted); text-transform: uppercase; letter-spacing: 0.12em; }
+  .stat .value {
+    font-family: var(--mono); font-size: var(--fs-lg); font-weight: 500;
+    margin-top: 6px; font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Chart card:single quiet surface ── */
+  .chart-wrap { width: 100%; max-width: 860px; background: none; border: none; padding: 0; }
+  canvas { width: 100%; height: 340px; display: block; border-radius: 6px; }
+
+  /* ── Daily Trade Summary:vertical stacked cells, centered, no wasted side space ── */
+  .summary { display: flex; flex-direction: column; width: 100%; max-width: 860px; margin-bottom: 32px; }
+  .section-title { display: flex; align-items: center; gap: 7px; font-size: var(--fs-xl); font-weight: 600; color: var(--text); margin-bottom: 20px; }
+  .section-title svg, .records-header svg { width: 1.3rem; height: 1.3rem; color: var(--text); }
+  .summary .grid { display: flex; justify-content: space-between; gap: 16px; width: 100%; margin-top: 8px; }
+  .grid .cell { text-align: center; flex: 1; padding: 4px 0; }
+  .grid .cell .k { font-size: var(--fs-sm); color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  .grid .cell .v { font-family: var(--mono); font-size: var(--fs-md); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+  /* ── Trade Records:hairline separators, no card frames ── */
+  .records { width: 100%; max-width: 860px; margin-top: 40px; }
+  /* 同 Daily Trade Summary 完全一致:header 純 text label(冇容器/冇 border) */
+  .records .records-header { display: flex; align-items: center; gap: 7px; font-size: var(--fs-xl); font-weight: 600; color: var(--text); margin-bottom: 14px; }
+  .trade-card { padding: 16px 4px; border-bottom: 1px solid var(--border); }
+  .trade-card:last-child { border-bottom: none; }
+  .trade-card .tc-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: nowrap; }
+  .trade-card .tc-sym { display: flex; align-items: center; gap: 10px; font-size: var(--fs-lg); }
+  .trade-card .sym { font-family: var(--mono); font-weight: 600; }
+  .trade-card .side { font-family: var(--mono); font-size: var(--fs-sm); font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+  .trade-card .side-buy { color: var(--green); background: rgba(52,211,153,0.08); }
+  .trade-card .side-sell { color: var(--red); background: rgba(248,113,113,0.08); }
+  .trade-card .pnl { font-family: var(--mono); font-size: var(--fs-lg); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .trade-card .tc-meta { color: var(--muted); font-family: var(--mono); font-size: var(--fs-sm); margin-top: 6px; line-height: 1.6; }
+  .trade-card .tc-thesis { color: var(--muted); font-size: var(--fs-sm); margin-top: 6px; line-height: 1.6; }
+  .trade-card .tc-thesis b { color: var(--muted); font-weight: 600; }
+
+  .footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 32px; color: var(--muted); font-size: var(--fs-sm); font-family: var(--mono); flex-wrap: wrap; }
+  .foot-qrs { display: flex; gap: 14px; align-items: center; }
+  .qr-item { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .qr-item canvas, .qr-item img { border-radius: 6px; border: 1px solid var(--border); }
+  .qr-item .qr-ico { display: flex; align-items: center; justify-content: center; color: var(--muted); line-height: 1; }
+  .qr-item .qr-ico:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<div id="capture-root">
+<div class="top-block">
+<div class="header">
+  <h1><img src="MATS_icon.svg" alt="MATS" class="mats-icon" style="width:20px;height:28px;vertical-align:middle;"> <span class="rainbow-text" id="title-text">MATS</span> — <span id="title-sub">Daily</span> Cumulative PnL</h1>
+  <div class="date" id="date-label">—</div>
+  <div class="sub">AI-native multi-agent trading system · live cumulative PnL (local time GMT+8)</div>
+</div>
+
+<div class="controls">
+  <div class="switch-group" id="mode-switch">
+    <button class="switch-btn" data-mode="paper" id="btn-paper">PAPER</button>
+    <button class="switch-btn" data-mode="real" id="btn-real">REAL</button>
+  </div>
+  <div class="switch-group" id="period-switch">
+    <button class="switch-btn" id="btn-month1">1 MONTH</button>
+    <button class="switch-btn" id="btn-week2">2 WEEK</button>
+    <button class="switch-btn" id="btn-weekly">1 WEEK</button>
+    <button class="switch-btn" id="btn-yesterday">YESTERDAY</button>
+    <button class="switch-btn active-period2" id="btn-today">TODAY</button>
+  </div>
+  <div style="flex-basis:100%;height:0;"></div><!-- v2.0.870-pnl-range: 換行——unit/Refresh/Capture 落下一行 -->
+  <div class="switch-group" id="unit-switch">
+    <button class="switch-btn" id="btn-usd">$</button>
+    <button class="switch-btn active-unit2" id="btn-pct">%</button>
+  </div>
+  <button class="btn" id="btn-refresh"><i data-lucide="refresh-cw"></i> Refresh</button>
+  <div class="capture-drop">
+    <button class="btn" id="btn-capture"><i data-lucide="camera"></i> Capture <span class="caret">▾</span></button>
+    <div class="capture-menu" id="capture-menu">
+      <button class="capture-item" data-format="png">Save as PNG</button>
+      <button class="capture-item" data-format="pdf">Save as PDF</button>
+    </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="label">Cumulative PnL</div><div class="value" id="stat-pnl">—</div></div>
+  <div class="stat"><div class="label">Trades</div><div class="value" id="stat-trades">—</div></div>
+  <div class="stat"><div class="label">Win Rate</div><div class="value" id="stat-winrate">—</div></div>
+  <div class="stat"><div class="label">Avg Win / Loss</div><div class="value" id="stat-avg">—</div></div>
+</div>
+</div><!-- /top-block -->
+
+<div class="summary">
+  <h2 class="section-title"><i data-lucide="clipboard-list"></i> Daily Trade Summary</h2>
+  <div class="grid" id="summary-grid"></div>
+</div>
+
+<div class="chart-wrap" id="chart-card">
+  <canvas id="chart"></canvas>
+</div>
+
+<div class="records">
+  <div class="records-header"><i data-lucide="scroll-text"></i> Trade Records</div>
+  <div id="records-list"></div>
+</div>
+
+<div class="footer">
+  <div class="foot-left">MATS PNL Dashboard · data via /api/pnl · private</div>
+  <div class="foot-qrs">
+    <div class="qr-item" title="https://t.me/mats_trading"><div id="qr-tg"></div><span class="qr-ico" aria-label="Telegram"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span></div>
+    <div class="qr-item" title="https://x.com/yc_msg"><div id="qr-x"></div><span class="qr-ico" aria-label="X"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span></div>
+    <div class="qr-item" title="https://mats.trading/"><div id="qr-web"></div><span class="qr-ico" aria-label="Website"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span></div>
+  </div>
+</div>
+</div>
+
+<script>
+'use strict';
+
+// ═══ State ═══
+let data = null;
+let mode = 'real';      // paper | real——v2.0.870-P80: 預設 real（而家主要 real 交易——paper 冇 trade 會顯示「冇資料」）
+let period = 'today';    // today | yesterday | weekly | week2 | month1——v2.0.870-pnl-range: 2 WEEK + 1 MONTH
+// v2.0.870-P80: 讀取 localStorage 持久化嘅 mode（用戶上次選擇）
+try { const saved = localStorage.getItem('pnlMode'); if (saved === 'paper' || saved === 'real') mode = saved; } catch { /* non-fatal */ }
+// v2.0.870-pnl-range-fix: 初始化時同步按鈕顯示——HTML 硬編碼 active-paper 會令
+// 「一入去就 show PAPER」即使實際 mode 係 real（setMode 更新 class + 唔影響 data 未載入）
+setMode(mode);
+let unit = 'pct';         // usd | pct(% 模式:累計對比本金增長)——預設 %
+
+const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+  ? '' : '';
+
+// ═══ Fetch ═══
+async function load() {
+  try {
+    const res = await fetch(`${API_BASE}/api/pnl`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    data = await res.json();
+    document.getElementById('date-label').textContent = data.date || '—';
+    render();
+  } catch (e) {
+    document.getElementById('stat-pnl').textContent = '⚠ offline';
+    document.getElementById('date-label').textContent = 'cannot reach backend /api/pnl';
+  }
+}
+
+// ═══ Render ═══
+function render() {
+  if (!data) return;
+  // v2.0.870-pnl-title(主神):標題顯示實際日期/時期範圍——render 每次更新
+  updateTitleDate(period);
+  const p = data[period] || { date: '', paper: {}, real: {} };
+  const periodTitles = { weekly: 'LAST 7 DAYS', week2: 'LAST 14 DAYS', month1: 'LAST 30 DAYS' };
+  const periodTitle = periodTitles[period];
+  document.getElementById('date-label').textContent = periodTitle ? `${periodTitle} (GMT+8)` : `${p.date} (GMT+8)`;
+  const d = p[mode] || { points: [], total: 0, trades: 0, wins: 0 };
+  renderStats(d);
+  renderChart(d);
+  renderSummary(d);
+  renderRecords(d);
+}
+
+// ═══ Today's Trade Summary(交易紀錄頂部總結)═══
+function renderSummary(d) {
+  const grid = document.getElementById('summary-grid');
+  const pnls = (d.list || []).map(t => t.pnl || 0);
+  const wins = pnls.filter(p => p > 0);
+  const losses = pnls.filter(p => p < 0);
+  const avgWin = wins.length ? wins.reduce((a, b) => a + b, 0) / wins.length : 0;
+  const avgLoss = losses.length ? losses.reduce((a, b) => a + b, 0) / losses.length : 0;
+  const maxWin = wins.length ? Math.max(...wins) : 0;
+  const maxLoss = losses.length ? Math.min(...losses) : 0;
+  const periodLabelMap = { weekly: '1 WEEK', week2: '2 WEEK', month1: '1 MONTH', today: 'TODAY', yesterday: 'YESTERDAY' };
+  const periodLabel = periodLabelMap[period] || period.toUpperCase();
+  const modeLabel = `${mode === 'paper' ? 'PAPER' : 'REAL'} · ${periodLabel}`;
+  // % 模式:Avg/Best/Worst 用 pnl/principal(對比本金——主神 v2.0.868 指正)
+  const sumPrincipal = getPrincipal();
+  const pcts = (d.list || []).map(t => sumPrincipal > 0 ? (Number(t.pnl ?? 0) / sumPrincipal) * 100 : 0);
+  const winPcts = pcts.filter(p => p > 0);
+  const lossPcts = pcts.filter(p => p < 0);
+  const avgWinPct = winPcts.length ? winPcts.reduce((a, b) => a + b, 0) / winPcts.length : 0;
+  const avgLossPct = lossPcts.length ? lossPcts.reduce((a, b) => a + b, 0) / lossPcts.length : 0;
+  const maxWinPct = winPcts.length ? Math.max(...winPcts) : 0;
+  const maxLossPct = lossPcts.length ? Math.min(...lossPcts) : 0;
+  const fmtAvg = (usd, pct) => unit === 'pct'
+    ? `${pct >= 0 ? '+' : '-'}${Math.abs(pct).toFixed(2)}%`
+    : `${usd >= 0 ? '+' : '-'}$${Math.abs(usd).toFixed(2)}`;
+  const cells = [
+    ['Cumulative PnL', fmtPnl(d.total ?? 0), (d.total ?? 0) >= 0 ? 'var(--green)' : 'var(--red)'],
+    ['Trades', String(d.trades ?? 0), ''],
+    ['Win Rate', d.trades > 0 ? `${((d.wins ?? 0) / d.trades * 100).toFixed(1)}%` : '—', ''],
+    ['Best Trade', maxWin > 0 ? fmtAvg(maxWin, maxWinPct) : '—', 'var(--green)'],
+    ['Worst Trade', maxLoss < 0 ? fmtAvg(maxLoss, maxLossPct) : '—', 'var(--red)'],
+  ];
+  grid.innerHTML = cells.map(([k, v, c]) =>
+    `<div class="cell"><div class="k">${k}</div><div class="v" style="color:${c || 'var(--text)'}">${v}</div></div>`
+  ).join('');
+}
+
+
+
+function getPrincipal() {
+  const p = data[period] || {};
+  const balance = p.principal ? (mode === 'paper' ? p.principal.paper : p.principal.real) : 0;
+  // v2.0.868-fix(主神):% 應該係 Profit/(Balance−Profit)= 利潤/初始本金——
+  // 之前用 Profit/Balance(principal 係當前餘額——包含利潤——回報被低估)
+  const total = p[mode]?.total ?? 0;
+  const initial = balance - total; // 初始本金 = Balance − Profit
+  return initial > 0 ? initial : 0;
+}
+
+function fmtPnl(v) {
+  if (unit === 'pct') {
+    const principal = getPrincipal();
+    if (!principal) return `${v >= 0 ? '+' : ''}${v.toFixed(2)}%`;
+    const pct = (v / principal) * 100;
+    return `${pct >= 0 ? '+' : ''}${pct.toFixed(2)}%`;
+  }
+  return `${v >= 0 ? '+' : '-'}$${Math.abs(v).toFixed(2)}`;
+}
+
+function renderStats(d) {
+  const total = d.total ?? 0;
+  const trades = d.trades ?? 0;
+  const wins = d.wins ?? 0;
+  const el = (id, txt, cls) => {
+    const e = document.getElementById(id);
+    e.textContent = txt;
+    e.style.color = cls;
+  };
+  el('stat-pnl', fmtPnl(total), total >= 0 ? 'var(--green)' : 'var(--red)');
+  el('stat-trades', String(trades));
+  const wr = trades > 0 ? (wins / trades) * 100 : 0;
+  el('stat-winrate', trades > 0 ? `${wr.toFixed(1)}%` : '—');
+  // v2.0.868-fix:Avg Win / Loss 實現(用 d.list 平均贏/輸幅——unit-aware)
+  const pnls = (d.list || []).map(t => Number(t.pnl ?? 0));
+  const winVals = pnls.filter(p => p > 0);
+  const lossVals = pnls.filter(p => p < 0);
+  const avgWinU = winVals.length ? winVals.reduce((a, b) => a + b, 0) / winVals.length : 0;
+  const avgLossU = lossVals.length ? lossVals.reduce((a, b) => a + b, 0) / lossVals.length : 0;
+  // v2.0.868-fix(主神):% 對比本金(pnl/principal)——同 Trade Records 一致
+  const statsPrincipal = getPrincipal();
+  const pcts = (d.list || []).map(t => statsPrincipal > 0 ? (Number(t.pnl ?? 0) / statsPrincipal) * 100 : 0);
+  const winPcts = pcts.filter(p => p > 0);
+  const lossPcts = pcts.filter(p => p < 0);
+  const avgWinP = winPcts.length ? winPcts.reduce((a, b) => a + b, 0) / winPcts.length : 0;
+  const avgLossP = lossPcts.length ? lossPcts.reduce((a, b) => a + b, 0) / lossPcts.length : 0;
+  // v2.0.868-fix:Avg Win/Loss 分開顏色(win 綠、loss 紅、/ 灰)——唔係一個顏色
+  const avgEl = document.getElementById('stat-avg');
+  if (trades > 0 && (winVals.length > 0 || lossVals.length > 0)) {
+    if (unit === 'pct') {
+      avgEl.innerHTML = `<span style="color:var(--green)">+${avgWinP.toFixed(2)}%</span> <span style="color:var(--muted)">/</span> <span style="color:var(--red)">${avgLossP.toFixed(2)}%</span>`;
+    } else {
+      avgEl.innerHTML = `<span style="color:var(--green)">+$${avgWinU.toFixed(2)}</span> <span style="color:var(--muted)">/</span> <span style="color:var(--red)">-$${Math.abs(avgLossU).toFixed(2)}</span>`;
+    }
+  } else {
+    avgEl.textContent = '—';
+    avgEl.style.color = 'var(--text)';
+  }
+}
+
+function renderChart(d) {
+  const canvas = document.getElementById('chart');
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const W = canvas.clientWidth;
+  const H = canvas.clientHeight;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  // v2.0.868-fix:圖表背景 transparent(唔填色——顯示 body 背景)
+  ctx.clearRect(0, 0, W, H);
+
+  const pts = (d.points || []).slice();
+  if (pts.length === 0) {
+    ctx.fillStyle = '#8b8b96';
+    ctx.font = '14px monospace';
+    ctx.textAlign = 'center';
+    ctx.fillText('No trades closed today yet', W / 2, H / 2);
+    return;
+  }
+
+  // v2.0.868-fix:起點由零開始(開市累計 = 0)——line 由 0 起
+  // 用所選 period 嘅 date 做起點(今日/昨日)
+  const periodDate = (data[period] || {}).date;
+  const dayStart = new Date((periodDate || data.date || '') + 'T00:00:00').getTime();
+  const anchor = Number.isFinite(dayStart) ? dayStart : (pts[0].t - 24 * 3600 * 1000);
+  pts.unshift({ t: anchor, cum: 0 });
+
+  // v2.0.868-fix:% 模式——累計對比本金(principal)增長
+  const principal = getPrincipal();
+  const toVal = (cum) => (unit === 'pct' && principal ? (cum / principal) * 100 : cum);
+  const valPts = pts.map(p => ({ t: p.t, cum: toVal(p.cum) }));
+
+  // range(包含 0——起點)
+  const tMin = pts[0].t, tMax = pts[pts.length - 1].t;
+  let vMin = Math.min(...valPts.map(p => p.cum), 0);
+  let vMax = Math.max(...valPts.map(p => p.cum), 0);
+  const pad = (vMax - vMin) * 0.15 || 1;
+  vMin -= pad; vMax += pad;
+
+  const padL = 10, padR = 10, padT = 16, padB = 24;
+  const X = (t) => padL + ((t - tMin) / Math.max(1, tMax - tMin)) * (W - padL - padR);
+  const Y = (v) => padT + (1 - (v - vMin) / (vMax - vMin)) * (H - padT - padB);
+
+  // zero line
+  ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  ctx.moveTo(padL, Y(0)); ctx.lineTo(W - padR, Y(0));
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // grid + y labels
+  ctx.fillStyle = '#8b8b96';
+  ctx.font = '10px monospace';
+  ctx.textAlign = 'right';
+  for (let i = 0; i <= 4; i++) {
+    const v = vMin + ((vMax - vMin) * i) / 4;
+    const y = Y(v);
+    ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke();
+    ctx.fillText(`${v >= 0 ? '+' : ''}${v.toFixed(2)}`, W - padR - 4, y - 3);
+  }
+
+  // 日期標注(圖表頂部中央——主神要求)
+  ctx.fillStyle = '#e4e4e7';
+  ctx.font = 'bold 12px monospace';
+  ctx.textAlign = 'center';
+  const chartTitles = { weekly: 'LAST 7 DAYS (GMT+8)', week2: 'LAST 14 DAYS (GMT+8)', month1: 'LAST 30 DAYS (GMT+8)' };
+  ctx.fillText(chartTitles[period] || `${periodDate || ''} (GMT+8)`, W / 2, 12);
+
+  // peak / trough 標注(最高/最低累計點)——v2.0.868-fix:用 toVal 後值(% 模式顯示百分比)
+  const peak = valPts.reduce((a, b) => (b.cum > a.cum ? b : a));
+  const trough = valPts.reduce((a, b) => (b.cum < a.cum ? b : a));
+  ctx.font = '10px monospace';
+  const fmtVal = (v) => unit === 'pct' ? `${v >= 0 ? '+' : ''}${v.toFixed(2)}%` : `${v >= 0 ? '+' : '-'}$${Math.abs(v).toFixed(2)}`;
+  if (peak.cum > 0) {
+    ctx.fillStyle = '#34d399';
+    ctx.textAlign = 'left';
+    ctx.fillText(`PEAK ${fmtVal(peak.cum)}`, X(peak.t) + 6, Y(peak.cum) - 6);
+  }
+  if (trough.cum < 0) {
+    ctx.fillStyle = '#f87171';
+    ctx.textAlign = 'left';
+    ctx.fillText(`TROUGH ${fmtVal(trough.cum)}`, X(trough.t) + 6, Y(trough.cum) + 12);
+  }
+
+  // x axis labels
+  ctx.textAlign = 'center';
+  const fmt = (t) => {
+    const dt = new Date(t);
+    return `${String(dt.getHours()).padStart(2, '0')}:${String(dt.getMinutes()).padStart(2, '0')}`;
+  };
+  const fmtDay = (t) => {
+    const dt = new Date(t);
+    return `${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+  };
+  if (period === 'weekly' || period === 'week2' || period === 'month1') {
+    // v2.0.868-fix:多日範圍顯示日期標記(每日一個日期——唔係淨係 HH:MM)
+    // v2.0.870-pnl-range: 2 WEEK / 1 MONTH 間隔顯示（2 WEEK 每 2 日、1 MONTH 每 5 日）
+    const DAY = 24 * 3600 * 1000;
+    const days = period === 'weekly' ? 7 : period === 'week2' ? 14 : 30;
+    const stepDays = period === 'weekly' ? 1 : period === 'week2' ? 2 : 5;
+    for (let i = 0; i < days; i += stepDays) {
+      const t = tMin + i * DAY;
+      if (t > tMax) break;
+      const x = X(t);
+      ctx.fillStyle = '#6b7488';
+      ctx.fillText(fmtDay(t), x, H - 6);
+    }
+  } else {
+    ctx.fillStyle = '#6b7488';
+    ctx.fillText(fmt(tMin), padL, H - 6);
+    ctx.fillText(fmt(pts[Math.floor(pts.length / 2)].t), W / 2, H - 6);
+    ctx.fillText(fmt(tMax), W - padR, H - 6);
+  }
+
+  // cumulative line (green if final >= 0, red if < 0)
+  const color = (d.total ?? 0) >= 0 ? '#34d399' : '#f87171';
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2.5;
+  ctx.lineJoin = 'round';
+  ctx.beginPath();
+  valPts.forEach((p, i) => {
+    const x = X(p.t), y = Y(p.cum);
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // glow
+  ctx.strokeStyle = color + '44';
+  ctx.lineWidth = 8;
+  ctx.stroke();
+
+  // area fill
+  const grad = ctx.createLinearGradient(0, padT, 0, H - padB);
+  grad.addColorStop(0, color + '33');
+  grad.addColorStop(1, color + '00');
+  ctx.fillStyle = grad;
+  ctx.beginPath();
+  ctx.moveTo(X(tMin), Y(vMin));
+  valPts.forEach(p => ctx.lineTo(X(p.t), Y(p.cum)));
+  ctx.lineTo(X(tMax), Y(vMin));
+  ctx.closePath();
+  ctx.fill();
+
+  // 每 trade 點 marker(細點——每個 close 位置)
+  ctx.fillStyle = color;
+  for (let i = 1; i < valPts.length; i++) {
+    ctx.beginPath();
+    ctx.arc(X(valPts[i].t), Y(valPts[i].cum), 3, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // last point marker(大——目前值)
+  const last = valPts[valPts.length - 1];
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(X(last.t), Y(last.cum), 6, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.strokeStyle = '#0a0a0f';
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  // 目前值標注(unit-aware)
+  ctx.fillStyle = '#e4e4e7';
+  ctx.font = 'bold 11px monospace';
+  ctx.textAlign = 'left';
+  ctx.fillText(`now ${fmtPnl(d.total ?? 0)}`, X(last.t) + 10, Y(last.cum) - 8);
+}
+
+// ═══ Mode switch ═══
+document.getElementById('btn-paper').addEventListener('click', () => setMode('paper'));
+document.getElementById('btn-real').addEventListener('click', () => setMode('real'));
+document.getElementById('btn-month1').addEventListener('click', () => setPeriod('month1'));
+document.getElementById('btn-week2').addEventListener('click', () => setPeriod('week2'));
+document.getElementById('btn-weekly').addEventListener('click', () => setPeriod('weekly'));
+document.getElementById('btn-yesterday').addEventListener('click', () => setPeriod('yesterday'));
+document.getElementById('btn-today').addEventListener('click', () => setPeriod('today'));
+
+document.getElementById('btn-usd').addEventListener('click', () => setUnit('usd'));
+document.getElementById('btn-pct').addEventListener('click', () => setUnit('pct'));
+
+function setUnit(u) {
+  unit = u;
+  document.getElementById('btn-usd').className = `switch-btn${u === 'usd' ? ' active-unit' : ''}`;
+  document.getElementById('btn-pct').className = `switch-btn${u === 'pct' ? ' active-unit2' : ''}`;
+  render();
+}
+
+// v2.0.870-pnl-title(主神):標題「MATS — {date} Cumulative PnL」顯示實際日期
+//   Today/Yesterday →「21 Aug 2026」(單日)
+//   Weekly/2-Week/1-Month →「15-21 Aug 2026」/「22 Jul - 21 Aug 2026」(時期範圍)
+function updateTitleDate(p) {
+  const now = new Date();
+  const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const fmtFull = (d) => `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
+  const fmtDay = (d) => `${d.getDate()} ${MONTHS[d.getMonth()]}`;
+  const end = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // 今日 00:00(本地)
+  let label;
+  if (p === 'today') {
+    label = fmtFull(end);
+  } else if (p === 'yesterday') {
+    const y = new Date(end); y.setDate(y.getDate() - 1);
+    label = fmtFull(y);
+  } else {
+    const days = p === 'weekly' ? 7 : p === 'week2' ? 14 : 30;
+    const start = new Date(end); start.setDate(start.getDate() - (days - 1));
+    if (start.getMonth() === end.getMonth() && start.getFullYear() === end.getFullYear()) {
+      // 同月 →「15-21 Aug 2026」
+      label = `${start.getDate()}-${fmtFull(end)}`;
+    } else {
+      // 跨月/跨年 →「23 Jul - 21 Aug 2026」/「30 Dec - 5 Jan 2027」(end 帶年份,start 唔帶)
+      label = `${fmtDay(start)} - ${fmtFull(end)}`;
+    }
+  }
+  document.getElementById('title-sub').textContent = label;
+}
+
+function setPeriod(p) {
+  period = p;
+  // v2.0.870-pnl-title(主神):標題日期由 updateTitleDate() 處理(render 時更新)——
+  // 唔再用 Daily/Yesterday/1-Week 等固定字
+  document.getElementById('btn-month1').className = `switch-btn${p === 'month1' ? ' active-period' : ''}`;
+  document.getElementById('btn-week2').className = `switch-btn${p === 'week2' ? ' active-period' : ''}`;
+  document.getElementById('btn-weekly').className = `switch-btn${p === 'weekly' ? ' active-period' : ''}`;
+  document.getElementById('btn-yesterday').className = `switch-btn${p === 'yesterday' ? ' active-period' : ''}`;
+  document.getElementById('btn-today').className = `switch-btn${p === 'today' ? ' active-period2' : ''}`;
+  render();
+}
+
+function setMode(m) {
+  mode = m;
+  // v2.0.870-P80: localStorage 持久化——reload 後保持用戶選擇（唔 reset 返 paper）
+  try { localStorage.setItem('pnlMode', m) } catch { /* non-fatal */ }
+  document.getElementById('btn-paper').className = `switch-btn${m === 'paper' ? ' active-paper' : ''}`;
+  document.getElementById('btn-real').className = `switch-btn${m === 'real' ? ' active-real' : ''}`;
+  render();
+}
+
+// ═══ Refresh ═══
+document.getElementById('btn-refresh').addEventListener('click', load);
+
+// ═══ Capture (html2canvas CDN + canvas fallback) ═══
+// Footer QR codes(TG / X / WEB)——dark theme 配色
+(function initQr() {
+  if (!window.QRCode) return;
+  const defs = [
+    ['qr-tg', 'https://t.me/mats_trading'],
+    ['qr-x', 'https://x.com/yc_msg'],
+    ['qr-web', 'https://mats.trading/'],
+  ];
+  for (const [id, url] of defs) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    new QRCode(el, { text: url, width: 76, height: 76, colorDark: '#f5f5f7', colorLight: '#0a0a0f', correctLevel: QRCode.CorrectLevel.M });
+  }
+})();
+
+// Capture dropdown
+document.getElementById('btn-capture').addEventListener('click', (e) => {
+  e.stopPropagation();
+  document.getElementById('capture-menu').classList.toggle('open');
+});
+document.addEventListener('click', () => document.getElementById('capture-menu').classList.remove('open'));
+document.querySelectorAll('.capture-item').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const fmt = btn.dataset.format;
+    document.getElementById('capture-menu').classList.remove('open');
+    capture(fmt);
+  });
+});
+
+// 生成 PNG 或 PDF(html2canvas → jsPDF)
+let capturing = false;
+async function capture(fmt) {
+  if (capturing) return; // 防重複 click(lag 源頭之一)
+  capturing = true;
+  const btn = document.getElementById('btn-capture');
+  const orig = btn.innerHTML;
+  btn.innerHTML = 'Capturing…';
+  const root = document.getElementById('capture-root');
+  const title = document.getElementById('title-text');
+  try {
+    if (window.html2canvas) {
+      if (title) title.classList.add('no-anim');
+      await new Promise(r => setTimeout(r, 50));
+      // 動態 scale:長頁面 scale 1 防記憶體爆;PDF 強制 scale 1(唔使高清 + 防 hang)
+      const rootH = root.offsetHeight || 0;
+      const scale = (fmt === 'pdf' || rootH > 2500) ? 1 : 2;
+      const canvas = await html2canvas(root, {
+        backgroundColor: '#0a0a0f',
+        scale,
+        logging: false,
+        windowWidth: document.documentElement.scrollWidth,
+        windowHeight: document.documentElement.scrollHeight,
+        onclone: (doc) => {
+          // 移除 unload violation 來源(html2canvas 內部 window unload handler)
+          try { doc.defaultView.onbeforeunload = null; } catch { /* non-fatal */ }
+        },
+      });
+      if (title) title.classList.remove('no-anim');
+      if (fmt === 'pdf' && window.jspdf) {
+        // v2.0.868-fix:每頁獨立截取 canvas 子區域——每頁都有 top+bottom margin、
+        // 無縫接合(冇頁尾/頁頭重複)、深色背景、頁數上限防 hang
+        const pdf = new window.jspdf.jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+        const pw = pdf.internal.pageSize.getWidth();
+        const ph = pdf.internal.pageSize.getHeight();
+        const M = 10; // margin mm(上下左右每頁一致)
+        const availW = pw - 2 * M;
+        const availH = ph - 2 * M;
+        // 每頁顯示嘅 canvas 高度(像素)——保持比例
+        const pageCanvasH = Math.floor(availH * canvas.width / availW);
+        const MAX_PAGES = 30;
+        let srcY = 0, page = 0;
+        while (srcY < canvas.height && page < MAX_PAGES) {
+          const h = Math.min(pageCanvasH, canvas.height - srcY);
+          // 截取 canvas 子區域(獨立一頁——唔係「圖向上移」)
+          const tmp = document.createElement('canvas');
+          tmp.width = canvas.width; tmp.height = h;
+          const tctx = tmp.getContext('2d');
+          tctx.drawImage(canvas, 0, srcY, canvas.width, h, 0, 0, canvas.width, h);
+          const pageImg = tmp.toDataURL('image/jpeg', 0.9);
+          if (page > 0) pdf.addPage();
+          // 深色頁背景(防白底)
+          pdf.setFillColor(10, 10, 15);
+          pdf.rect(0, 0, pw, ph, 'F');
+          // 每頁都放喺 (M, M)——top+bottom margin 一致
+          pdf.addImage(pageImg, 'JPEG', M, M, availW, availH * (h / pageCanvasH), undefined, 'FAST');
+          srcY += h;
+          page++;
+        }
+        pdf.save(`MATS-PnL-${mode}-${new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-')}.pdf`);
+      } else {
+        download(canvas.toDataURL('image/png'));
+      }
+      return;
+    }
+    const c = document.getElementById('chart');
+    download(c.toDataURL('image/png'));
+  } catch {
+    if (title) title.classList.remove('no-anim');
+    const c = document.getElementById('chart');
+    download(c.toDataURL('image/png'));
+  } finally {
+    capturing = false;
+    btn.innerHTML = orig;
+  }
+}
+
+function download(dataUrl) {
+  const a = document.createElement('a');
+  a.href = dataUrl;
+  a.download = `MATS-PnL-${mode}-${new Date().toISOString().slice(0, 16).replace(/[:T]/g, '-')}.png`;
+  a.click();
+}
+
+// load html2canvas lazily on capture (offline fallback = canvas only)
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+script.onerror = () => { /* offline — fallback to canvas capture */ };
+document.head.appendChild(script);
+
+// ═══ Trade Records(每筆交易——unit-aware)═══
+function renderRecords(d) {
+  const list = document.getElementById('records-list');
+  // v2.0.868-fix:最新 close 排最頂(降序——fallback openedAt)
+  const records = [...(d.list || [])].sort((a, b) => {
+    const ta = Number(a.closedAt ?? a.openedAt ?? 0);
+    const tb = Number(b.closedAt ?? b.openedAt ?? 0);
+    return tb - ta;
+  });
+  if (records.length === 0) {
+    list.innerHTML = '<div class="trade-card"><div class="meta">No trades closed this period</div></div>';
+    return;
+  }
+  const fmtFull = (ts) => {
+    if (!ts) return '—';
+    return new Date(ts).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false });
+  };
+  const esc = (v) => String(v ?? '').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const cards = records.map((t) => {
+    const side = t.side === 'sell' ? 'SHORT' : 'LONG';
+    const sideCls = t.side === 'sell' ? 'side-sell' : 'side-buy';
+    const pnl = Number(t.pnl ?? 0);
+    // v2.0.868-fix(主神):每筆 trade 嘅 % = pnl / principal(對比總餘額)——
+    // 之前用 pnlPct(pnl/margin 槓杆後回報)——SILVER -$0.45 顯示 -9.43% 誤導
+    const tradePrincipal = getPrincipal();
+    const pnlPct = tradePrincipal > 0 ? (pnl / tradePrincipal) * 100 : 0;
+    const pnlCls = pnl >= 0 ? 'var(--green)' : 'var(--red)';
+    // v2.0.870-pnl-range-fix: 主神要求——所有 $ 轉 %，淨係顯示百分比
+    const pnlTxt = `${pnlPct >= 0 ? '+' : '-'}${Math.abs(pnlPct).toFixed(2)}%`;
+    const holdMin = t.openedAt && t.closedAt ? Math.max(0, Math.round((Number(t.closedAt) - Number(t.openedAt)) / 60000)) : null;
+    return `<div class="trade-card">
+      <div class="tc-head">
+        <div class="tc-sym"><span class="sym">${esc(String(t.symbol || '').replace(/^xyz:/i, '').toUpperCase())}</span> <span class="side ${sideCls}">${side}</span></div>
+        <div class="pnl" style="color:${pnlCls}">${pnlTxt}</div>
+      </div>
+      <div class="tc-meta">Entry $${Number(t.entryPrice ?? 0).toFixed(2)} → Exit $${Number(t.exitPrice ?? 0).toFixed(2)}${t.leverage ? ' · ' + t.leverage + 'x' : ''}${holdMin !== null ? ' · hold ' + holdMin + 'm' : ''} · ${fmtFull(t.openedAt)} → ${fmtFull(t.closedAt)}</div>
+      ${t.entryThesis ? `<div class="tc-thesis"><b>Entry Thesis:</b> ${esc(t.entryThesis)}</div>` : ''}
+      ${t.postReview ? `<div class="tc-thesis"><b>Post-Review:</b> ${esc(t.postReview)}</div>` : (t.exitThesis ? `<div class="tc-thesis"><b>Exit Thesis:</b> ${esc(t.exitThesis)}</div>` : '')}
+      ${t.closeReason ? `<div class="tc-thesis"><b>Close:</b> ${esc(t.closeReason)}</div>` : ''}
+    </div>`;
+  }).join('');
+  list.innerHTML = cards;
+}
+
+// ═══ Init ═══
+function initIcons() {
+  if (window.lucide) {
+    try { lucide.createIcons(); } catch { /* non-fatal */ }
+  }
+}
+// render 後(動態 icon——summary/records 內)都要 init
+const origRender = render;
+render = function() {
+  origRender();
+  initIcons();
+};
+document.addEventListener('DOMContentLoaded', initIcons);
+
+load();
+setInterval(load, 60_000); // auto refresh every minute
+</script>
+</body>
+</html>

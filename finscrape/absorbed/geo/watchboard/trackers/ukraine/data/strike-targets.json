@@ -1,0 +1,155 @@
+[
+  {
+    "id": "mariupol-theater-strike",
+    "name": "Mariupol Drama Theater",
+    "detail": "Bombed by Russian aviation on March 16, 2022 while hundreds of civilians sheltered inside. 'ДЕТИ' (Children) written outside. Casualties estimated 300-1,000+.",
+    "icon": "target",
+    "time": "March 16, 2022",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kramatorsk-station-strike",
+    "name": "Kramatorsk Railway Station",
+    "detail": "Tochka-U ballistic missile strike on the railway station crowded with evacuating civilians on April 8, 2022. 59 civilians killed, 108 wounded. Serial number traced to Russian 19th Missile Brigade.",
+    "icon": "target",
+    "time": "April 8, 2022",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "zaporizhzhia-npp-threats",
+    "name": "Zaporizhzhia Nuclear Power Plant",
+    "detail": "Seized by Russia March 4, 2022 after firefight. Used as military base throughout the war. IAEA documented multiple shelling incidents threatening nuclear safety. Europe's largest nuclear plant.",
+    "icon": "target",
+    "time": "March 4, 2022 – Present",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "dnipro-apartment-building",
+    "name": "Dnipro Apartment Building (Zhmailenka St.)",
+    "detail": "Russian Kh-22 cruise missile destroyed a 9-story apartment building in Dnipro on January 14, 2023, killing 46 civilians including 6 children and injuring 80. Worst single strike on a civilian building in 2023.",
+    "icon": "target",
+    "time": "January 14, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kyiv-children-hospital-2024",
+    "name": "Okhmatdyt Children's Hospital, Kyiv",
+    "detail": "Russian missile strike hit Ukraine's largest children's hospital on July 8, 2024, killing 4 and injuring 32 during a mass missile barrage. Russia denied deliberately targeting the hospital; physical evidence contradicts denial.",
+    "icon": "target",
+    "time": "July 8, 2024",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "ukraine-power-grid-winter-2022",
+    "name": "Ukrainian Power Grid — Winter 2022-23 Campaign",
+    "detail": "Russia's systematic campaign (Oct 2022-March 2023) targeting Ukrainian electricity and heating infrastructure. Over 40% of power capacity destroyed. Millions without heat or electricity in sub-zero temperatures. Over 90 strikes on energy infrastructure.",
+    "icon": "target",
+    "time": "October 2022 – March 2023",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "odesa-cathedral-2023",
+    "name": "Odesa Transfiguration Cathedral (UNESCO Heritage)",
+    "detail": "Russian cruise missile strike on July 23, 2023 damaged the 18th-century Odesa Transfiguration Cathedral — a UNESCO World Heritage Site — and surrounding buildings. Strike was 1 day after Russia exited the Black Sea Grain Initiative.",
+    "icon": "target",
+    "time": "July 23, 2023",
+    "tier": 2,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kherson-daily-shelling",
+    "name": "Kherson City — Daily Civilian Shelling",
+    "detail": "After Ukraine liberated Kherson in November 2022, Russian forces conducted daily artillery and missile attacks on the city from the left (eastern) bank of the Dnipro. Over 400 civilians killed in Kherson city through 2023.",
+    "icon": "target",
+    "time": "November 2022 – Present",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "moskva-flagship-sunk",
+    "name": "Moskva — Black Sea Fleet Flagship",
+    "detail": "The Russian guided missile cruiser Moskva was struck by two Ukrainian R-360 Neptune missiles on April 13, 2022 and sank the following day — the largest warship destroyed in combat since the Falklands War (1982). Russia admitted 1 KIA and 27 missing; actual losses higher.",
+    "icon": "retaliation",
+    "time": "April 13-14, 2022",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "azovstal-last-stand",
+    "name": "Azovstal Steel Plant — Last Stand",
+    "detail": "The 82-day siege of the Azovstal steelworks in Mariupol (March 11 – May 20, 2022) became a symbol of Ukrainian resistance. The garrison of Azov Regiment and marines protected thousands of civilians in underground tunnels before surrendering under a negotiated POW arrangement.",
+    "icon": "asset",
+    "time": "March 11 – May 20, 2022",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kerch-bridge-attack",
+    "name": "Kerch Bridge — Explosions (Oct 2022, July 2023)",
+    "detail": "The Kerch Bridge connecting Russia to occupied Crimea was damaged twice: October 8, 2022 (truck bomb/sea drone, 2 road sections collapsed) and July 17, 2023 (naval drone strike). Each attack disrupted Russian supply lines to Crimea and southern fronts.",
+    "icon": "retaliation",
+    "time": "October 8, 2022; July 17, 2023",
+    "tier": 1,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "novofedorivka-airbase-2022",
+    "name": "Novofedorivka Airbase, Crimea",
+    "detail": "Massive explosions destroyed multiple Russian warplanes at the Saky/Novofedorivka airbase in Crimea on August 9, 2022. Over 8 Su-24 and Su-30SM jets destroyed. Ukraine did not officially claim responsibility; attributed to sabotage or drone strike. Russia claimed 'ammunition explosion.'",
+    "icon": "retaliation",
+    "time": "August 9, 2022",
+    "tier": 2,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "odesa-primorskyi-residential-apr30-2026",
+    "name": "Odesa Primorskyi District — Residential High-Rises and Kindergarten",
+    "detail": "Russia launched a two-wave Shahed drone attack on Odesa's Primorskyi district on April 30, 2026, striking residential apartment buildings and a kindergarten. 18 people were injured (9 hospitalized, 2 critical). The attack occurred days after a separate April 27 strike injured 14 in the same city. Russia's systematic targeting of Odesa's civilian infrastructure — which included the historic Transfiguration Cathedral in 2023 — constitutes a pattern of attacks on protected objects.",
+    "icon": "target",
+    "time": "April 30, 2026",
+    "tier": 2,
+    "lastUpdated": "2026-04-30"
+  },
+  {
+    "id": "zaporizhzhia-glide-bomb-may5-2026",
+    "name": "Zaporizhzhia — KAB Guided Bomb Strike (Worst Attack on City in the War)",
+    "detail": "Russian Su-34/Su-35 aircraft dropped KAB (Guided Aerial Bomb) munitions on Zaporizhzhia on May 5, 2026, killing 12 civilians and wounding 43 — the deadliest single strike on the city since Russia's full-scale invasion began in 2022. A car repair workshop and multiple residential buildings were destroyed. The attack came hours before Ukraine's proposed open-ended ceasefire was to take effect at midnight, and was part of a broader campaign that killed 27 Ukrainians in a single day.",
+    "icon": "target",
+    "time": "May 5, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "naftogaz-poltava-kharkiv-iskander-may5-2026",
+    "name": "Naftogaz Gas Facilities — Poltava and Kharkiv (Deliberate Rescuer Strike)",
+    "detail": "Russia's May 4-5, 2026 attack on Naftogaz gas production facilities in Poltava and Kharkiv regions killed 5 people including 3 Naftogaz workers and 2 emergency rescuers who were deliberately killed in a follow-up 'double tap' strike as they responded to the initial attack. The tactic — firing a second missile at first responders — is documented as a war crime under the Geneva Conventions. It was the 107th Russian strike on Ukrainian energy infrastructure in 2026.",
+    "icon": "target",
+    "time": "May 5, 2026 (overnight May 4-5)",
+    "tier": 2,
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "kyiv-apartment-building-demolished-may14-2026",
+    "name": "Kyiv Residential Apartment Building — Completely Demolished",
+    "detail": "A multi-story residential apartment building in Kyiv was completely demolished by Russian drone and missile strikes during Russia's record 48-hour aerial assault of May 13-14, 2026. At least 24 people were killed — including 3 children (one a 15-year-old girl, one a 2-month-old infant) — and 48 were wounded in this single strike. Rescuers searched rubble for survivors for over 24 hours. Mayor Vitali Klitschko called the 48-hour campaign 'the largest-scale attack on the capital.' A school and veterinary clinic were also struck. Kyiv declared a day of mourning. The attack included 1,428 Shahed drones (a single-day record), over 50 missiles, and 302 guided aerial bombs — targeting 20 locations across the capital.",
+    "icon": "target",
+    "time": "May 14, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-05-14"
+  },
+  {
+    "id": "chornobyl-nfs-drone-jun7-2026",
+    "name": "Chornobyl Nuclear Fuel Storage — Shahed Drone Strike",
+    "detail": "At approximately 02:00 local time on June 7, 2026, a Russian Shahed-type kamikaze drone struck the fuel-reception building of the Chornobyl spent nuclear fuel storage facility in the Exclusion Zone. The building sustained significant structural damage (facade, windows, doors destroyed) and a ~40 m² fire was ignited and subsequently extinguished. Energoatom confirmed no spent fuel was stored in the targeted fuel-reception building during the attack. Radiation levels remained within normal limits. The IAEA immediately announced an emergency site visit. This was the most serious Russian attack on the Chornobyl nuclear site since Russian forces occupied it (Feb 24 – April 2, 2022). Zelensky condemned it as 'extremely vile' and 'sky-high arrogance.' No casualties at the nuclear site. This strike joins the Zaporizhzhia Nuclear Power Plant occupation and sustained ZNPP shelling as Russia's pattern of nuclear facility endangerment in Ukraine.",
+    "icon": "target",
+    "time": "June 7, 2026",
+    "tier": 1,
+    "lastUpdated": "2026-06-07"
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "id": "b-52-stratofortress",
+    "type": "Aircraft",
+    "name": "B-52H Stratofortress",
+    "detail": "USAF heavy bomber deployed from Diego Garcia and Whiteman AFB to conduct strategic bombing operations in Afghanistan since October 2001. Used for carpet bombing of al-Qaeda positions at Tora Bora and providing close air support throughout the war. Capable of carrying up to 70,000 lbs of munitions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ac-130-spectre",
+    "type": "Aircraft",
+    "name": "AC-130 Spectre/Spooky Gunship",
+    "detail": "US Air Force fixed-wing gunship used extensively for close air support of ground forces in Afghanistan. Armed with 25mm cannon, 40mm Bofors, and 105mm howitzer. Controversially used in October 2015 Kunduz MSF hospital bombing that killed 42 people. Provides persistent fire support for SOF operations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mq-9-reaper",
+    "type": "Unmanned Aerial Vehicle",
+    "name": "MQ-9 Reaper RPAS",
+    "detail": "Primary US combat drone used for both ISR and strike missions in Afghanistan and Pakistan. Carries Hellfire missiles and GBU-12 laser-guided bombs. CIA used Reapers for most drone strikes in FATA. US went from 40 drones in 2001 to over 7,000 by 2013. Killed numerous al-Qaeda and TTP leadership figures including Baitullah Mehsud.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ch-47-chinook",
+    "type": "Aircraft",
+    "name": "CH-47 Chinook Helicopter",
+    "detail": "Heavy-lift helicopter essential for moving troops and supplies in Afghanistan's mountainous terrain where roads were absent or too dangerous. Used by US, British, Canadian, and other NATO forces. A Chinook was shot down August 6, 2011, killing 30 Americans including 22 Navy SEALs — the single deadliest incident of the war for US forces.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "m1-abrams-limited",
+    "type": "Ground Vehicle",
+    "name": "M1A2 Abrams / Challenger 2 Tank",
+    "detail": "Coalition main battle tanks were deployed in limited numbers to Afghanistan despite terrain challenges. Canadian Leopard 2s were particularly prominent in Helmand operations. British Challenger 2s served in Helmand. Tanks proved useful in clearing Taliban-held urban areas but were logistically challenging to support.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mrap-vehicle",
+    "type": "Ground Vehicle",
+    "name": "MRAP (Mine-Resistant Ambush Protected)",
+    "detail": "The US deployed over 6,000 MRAP vehicles to Afghanistan as V-shaped hulls provided protection against IEDs which were Taliban's most lethal weapon. Development was rushed in response to spiraling IED casualties. Cost $1 million+ each. Most were destroyed or abandoned during withdrawal; Taliban inherited a fraction.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "a-10-warthog",
+    "type": "Aircraft",
+    "name": "A-10 Thunderbolt II (Warthog)",
+    "detail": "USAF close air support aircraft extensively deployed to Afghanistan for ground attack missions. Known for its 30mm GAU-8 Avenger rotary cannon. A-10 was involved in the September 2006 Panjwai friendly fire incident killing one Canadian soldier during Operation Medusa. Highly valued by ground troops for precision close air support.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "f-16-pakistan",
+    "type": "Aircraft",
+    "name": "PAF F-16 Fighting Falcon",
+    "detail": "Pakistan Air Force's primary combat aircraft used for counterterrorism strikes in FATA, KPK, and Afghan border areas. US provided Pakistan F-16s as part of military aid conditional on counterterrorism cooperation. Used in March 2024 strikes in Paktika province, Afghanistan, targeting TTP camps — crossing an escalatory threshold.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gbu-43-moab",
+    "type": "Weapon System",
+    "name": "GBU-43/B MOAB (Mother of All Bombs)",
+    "detail": "Massive Ordnance Air Blast bomb weighing 21,600 lbs — largest non-nuclear conventional bomb ever used in combat. Dropped on ISIS-K tunnel complex in Achin district, Nangarhar on April 13, 2017. Killed approximately 94 ISIS-K militants according to Afghan government. First combat use of the weapon; signaled loosened targeting rules under Trump.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hellfire-r9x",
+    "type": "Weapon System",
+    "name": "Hellfire R9X 'Flying Ginsu'",
+    "detail": "CIA modified Hellfire missile with pop-out blades instead of explosive warhead, designed for precision killing of single targets with minimal collateral damage. Used to kill al-Qaeda leader Ayman al-Zawahiri on his Kabul balcony on July 31, 2022, destroying only the balcony while leaving the building largely intact. Represents US over-the-horizon precision capability.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bagram-prt-system",
+    "type": "Military Base",
+    "name": "Provincial Reconstruction Teams (PRTs)",
+    "detail": "Approximately 26 NATO PRTs operated across Afghanistan combining military and civilian personnel for development and governance support. Led by different nations (UK in Helmand, Germany in Kunduz, US in various). SIGAR found PRTs created dependency rather than Afghan capacity, and most projects were unsustainable. PRTs dismantled during 2013-2014 transition.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "osprey-v22",
+    "type": "Aircraft",
+    "name": "MV-22 Osprey Tiltrotor",
+    "detail": "US Marine Corps tiltrotor aircraft combining helicopter vertical takeoff with fixed-wing speed used in Afghanistan for assault missions and troop insertion. Faster than helicopters for medical evacuation and personnel transport. First combat deployment of Osprey was in Afghanistan. Faced mechanical reliability criticisms but performed well in theater.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cobra-light-artillery",
+    "type": "Artillery",
+    "name": "M777 Lightweight Howitzer",
+    "detail": "155mm lightweight howitzer used extensively by US and Afghan forces for fire support. Helicopter-portable due to titanium construction; crucial for fire support in remote mountain areas. Later transferred to Ukraine. Afghan forces' M777s were abandoned during 2021 collapse; Taliban displayed several captured examples.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "taliban-motorcycle-network",
+    "type": "Taliban Asset",
+    "name": "Taliban Motorcycle Courier & IED Network",
+    "detail": "Taliban's primary military-logistics asset: motorcycle-borne fighters using simple IEDs, RPGs, and small arms. IEDs accounted for 60%+ of coalition casualties. The motorcycle network enabled rapid movement of fighters and materials. Impossible to interdict without targeting civilians. Taliban's asymmetric approach negated much of coalition's technological advantage.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "joint-special-ops-jsoc",
+    "type": "Special Operations",
+    "name": "JSOC Task Force (TF 714 / TF 373)",
+    "detail": "Joint Special Operations Command task forces conducted night raids, direct action, and high-value target operations throughout Afghanistan. At peak (2010-2012) conducted 10-12 raids per night. Responsible for capturing/killing thousands of Taliban and al-Qaeda leaders. DEVGRU (SEAL Team 6) conducted bin Laden raid; Delta Force led many Haqqani Network targeting operations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jf-17-thunder-paf",
+    "type": "Aircraft",
+    "name": "PAF JF-17 Thunder",
+    "detail": "Pakistan-China jointly developed multirole fighter jet serving as a backbone of the Pakistan Air Force. Used alongside F-16s in Operation Ghazab-il-Haq (2026) for strikes inside Afghanistan. The JF-17 provides Pakistan with a domestically-deployable precision strike capability not subject to US export restrictions, unlike F-16s. Pakistan has over 100 Block II/III JF-17s in service.",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "pak-army-m109-artillery",
+    "type": "Artillery",
+    "name": "Pakistan Army M109A5 / BM-21 Grad",
+    "detail": "Pakistan employs M109 self-propelled 155mm howitzers and BM-21 Grad 122mm multiple rocket launcher systems for cross-border fire missions into Afghanistan. Used extensively in Operation Ghazab-il-Haq (February-March 2026) to strike Taliban border positions and alleged TTP infrastructure in Kunar, Khost, and Paktika provinces. BM-21 was used for the 85-shell barrage on Kunar on March 25, 2026.",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "taliban-border-artillery",
+    "type": "Artillery",
+    "name": "Taliban IEA Border Force Artillery & Checkposts",
+    "detail": "Taliban Islamic Emirate border forces (Serhadi Quwat) operate inherited Afghan National Army artillery pieces including D-30 howitzers and SPG-9 recoilless rifles along the Durand Line. In the 2026 Af-Pak conflict, Taliban forces have returned fire from border checkposts, claiming destruction of Pakistani posts. Taliban also deployed infantry fighting vehicles and truck-mounted heavy weapons to reinforce border areas from February 2026.",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "taliban-rudimentary-drones-2026",
+    "type": "Drone",
+    "name": "Taliban 'Rudimentary' Strike Drones",
+    "detail": "Afghan Ministry of Defense forces have begun using small, described-as-'rudimentary' drones for cross-border strikes into Pakistani territory — first claimed June 19, 2026 against alleged ISIS-K sites in Balochistan and KP, then confirmed July 1, 2026 in the conflict's first-ever direct Taliban drone strikes onto Pakistani soil (4 drones, all intercepted by Pakistan per Islamabad). Marks an emerging Taliban aerial strike capability distinct from ground artillery and small-arms border exchanges.",
+    "lastUpdated": "2026-07-16T14:05:00.000Z"
+  }
+]

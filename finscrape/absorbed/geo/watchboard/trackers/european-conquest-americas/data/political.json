@@ -1,0 +1,200 @@
+[
+  {
+    "id": "christopher-columbus",
+    "name": "Christopher Columbus",
+    "role": "Admiral of the Ocean Sea; initiated European contact with the Americas (1492)",
+    "avatar": "spain",
+    "initial": "C",
+    "quote": "I should not proceed by land to the East, as is customary, but by a Westerly route, in which direction we have hitherto no certain evidence that anyone has gone.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hernan-cortes",
+    "name": "Hernán Cortés",
+    "role": "Conquistador; led the conquest of the Aztec Empire (1519–1521)",
+    "avatar": "spain",
+    "initial": "H",
+    "quote": "We Spaniards know a sickness of the heart that only gold can cure.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "francisco-pizarro",
+    "name": "Francisco Pizarro",
+    "role": "Conquistador; led the conquest of the Inca Empire (1532–1533)",
+    "avatar": "spain",
+    "initial": "F",
+    "quote": "I have not come for any such reasons. I have come to take away from them their gold.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "moctezuma-ii",
+    "name": "Moctezuma II (Motecuhzoma Xocoyotzin)",
+    "role": "Huey Tlatoani (Emperor) of the Aztec Triple Alliance; reigned 1502–1520",
+    "avatar": "aztec",
+    "initial": "M",
+    "quote": "What assurance can you give me that you are the true representatives of the great monarch you describe, and not impostors who have come to deprive us of our realm?",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "atahualpa",
+    "name": "Atahualpa (Ataw Wallpa)",
+    "role": "Sapa Inca; last independent emperor of the Inca Empire; captured and executed by Pizarro (1532–1533)",
+    "avatar": "inca",
+    "initial": "A",
+    "quote": "I will be no man's tributary. I am greater than any prince upon earth.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bartolome-de-las-casas",
+    "name": "Bartolomé de las Casas",
+    "role": "Dominican friar, Bishop of Chiapas; lifelong advocate for indigenous rights; author of A Short Account of the Destruction of the Indies (1542)",
+    "avatar": "spain",
+    "initial": "B",
+    "quote": "Into these gentle lambs, equipped with the natural qualities we have mentioned, there came some Spaniards who immediately behaved like ravening wolves, tigers, and lions that had been starving for many days.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuauhtemoc",
+    "name": "Cuauhtémoc",
+    "role": "Last Huey Tlatoani of Tenochtitlan; led defense during the 75-day siege; executed by Cortés in 1525",
+    "avatar": "aztec",
+    "initial": "C",
+    "quote": "I have done everything in my power to defend my kingdom and free it from your hands; and since my fortune has not favored me, take my life, which will be very just.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manco-inca",
+    "name": "Manco Inca Yupanqui",
+    "role": "Sapa Inca; initially a Spanish puppet, led the great siege of Cusco (1536) and founded Vilcabamba resistance state",
+    "avatar": "inca",
+    "initial": "M",
+    "quote": "My people, for eighteen months I have tried peaceful means to recover our lands and freedom. It has not worked. Now we must fight.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "malintzin-la-malinche",
+    "name": "Malintzin (La Malinche / Doña Marina)",
+    "role": "Nahua interpreter, advisor, and companion to Cortés; crucial translator between Nahuatl, Maya, and Spanish during the conquest",
+    "avatar": "aztec",
+    "initial": "M",
+    "quote": "I have been given by God and my fate to serve these lords, for which I thank no one and make no excuses.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "queen-isabella",
+    "name": "Queen Isabella I of Castile",
+    "role": "Catholic Monarch; commissioned Columbus's voyages; authorized (and occasionally restrained) the colonial enterprise; commissioned the New World's legal framework",
+    "avatar": "spain",
+    "initial": "I",
+    "quote": "Do not consent or allow that the Indians receive any injury in their persons or goods.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "king-charles-v",
+    "name": "Emperor Charles V (King Charles I of Spain)",
+    "role": "Holy Roman Emperor and King of Spain; condemned Atahualpa's execution; promulgated New Laws 1542; presided over the Valladolid Debate",
+    "avatar": "spain",
+    "initial": "C",
+    "quote": "Our will is that the Indians be well-treated and protected, as vassals and free persons of our crown, and not as serfs.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hatuey",
+    "name": "Hatuey",
+    "role": "Taíno chief of Hispaniola; fled to Cuba to warn its people; led guerrilla resistance against Diego Velázquez; first martyr of indigenous resistance (executed 1512)",
+    "avatar": "other",
+    "initial": "H",
+    "quote": "Do you know where you are going when you die? To heaven, to glory? I will not go where Spaniards go.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pedro-de-alvarado",
+    "name": "Pedro de Alvarado",
+    "role": "Cortés's most brutal lieutenant; perpetrated the Toxcatl Massacre (1520); later conquered Guatemala (1524)",
+    "avatar": "spain",
+    "initial": "P",
+    "quote": "We took the city by assault, set fire to it, and put all the people of it to the sword, both men and women, sparing none.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tupac-amaru-i",
+    "name": "Tupac Amaru I",
+    "role": "Last Sapa Inca of Vilcabamba; led final Inca resistance; beheaded by Viceroy Toledo in Cusco (1572)",
+    "avatar": "inca",
+    "initial": "T",
+    "quote": "Know that I am Christian and confess my sins. It was wrong of me to continue the war against those who serve God.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "vasco-nunez-de-balboa",
+    "name": "Vasco Núñez de Balboa",
+    "role": "Governor of Darién; first European to see the Pacific Ocean from the Americas (September 25, 1513)",
+    "avatar": "spain",
+    "initial": "V",
+    "quote": "I take possession of these seas and lands and coasts and ports and islands of the South, and all therein contained, in the name of the King of Castile.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "juan-gines-de-sepulveda",
+    "name": "Juan Ginés de Sepúlveda",
+    "role": "Spanish humanist and theologian; argued at Valladolid (1550–51) that indigenous people were 'natural slaves' who could justly be conquered",
+    "avatar": "spain",
+    "initial": "J",
+    "quote": "These men are as inferior to the Spanish as children are to adults, as women are to men, as the cruel are to the mild and the intemperate to the continent.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pope-alexander-vi",
+    "name": "Pope Alexander VI (Rodrigo Borgia)",
+    "role": "Issued the Inter caetera papal bulls (1493) dividing the non-Christian world between Spain and Portugal; legitimized the conquest theologically",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "We give, grant, and assign to you and your heirs and successors, kings of Castile and León, forever... all and singular the aforesaid countries and islands thus unknown.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "lautaro",
+    "name": "Lautaro (Leftraru)",
+    "role": "Young Mapuche warrior who served Valdivia and learned Spanish tactics; organized the rebellion that killed Valdivia at Tucapel (1553); military genius of Mapuche resistance",
+    "avatar": "other",
+    "initial": "L",
+    "quote": "We will take the enemy's horses and turn them against their masters. We will fight in rotation so we do not tire while they exhaust themselves.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "anacaona",
+    "name": "Anacaona (Golden Flower)",
+    "role": "Taíno cacica (chieftess) of Jaragua, Hispaniola; renowned poet and cultural leader; massacred by Governor Ovando at a feast and publicly hanged (1503)",
+    "avatar": "other",
+    "initial": "A",
+    "quote": "You call yourselves Christians. Your God is supposed to be a God of peace. But you have brought only death and suffering to my people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pope-paul-iii",
+    "name": "Pope Paul III",
+    "role": "Issued Sublimis Deus (1537) declaring indigenous people are true humans with souls capable of salvation, and that their enslavement was invalid",
+    "avatar": "other",
+    "initial": "P",
+    "quote": "The Indians are truly men and they are not only capable of understanding the Catholic Faith but, according to our information, they desire exceedingly to receive it.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "diego-de-landa",
+    "name": "Diego de Landa",
+    "role": "Franciscan bishop of Yucatán; burned 27 Maya codices at Maní (1562), destroying irreplaceable knowledge; paradoxically wrote the Relación de las cosas de Yucatán — the primary source for later scholars decoding Maya writing",
+    "avatar": "spain",
+    "initial": "D",
+    "quote": "We found a large number of books in these characters and, as they contained nothing in which were not to be seen as superstition and lies of the devil, we burned them all, which they (the Maya) regretted to an amazing degree, and which caused them much affliction.",
+    "lastUpdated": "2026-04-19T12:00:00Z"
+  },
+  {
+    "id": "felipe-guaman-poma",
+    "name": "Felipe Guaman Poma de Ayala",
+    "role": "Andean nobleman and chronicler; wrote the Nueva corónica y buen gobierno (c.1615), a 1,189-page illustrated petition to Philip III documenting Inca history and colonial abuses; the manuscript was lost for centuries until rediscovered in Copenhagen in 1908",
+    "avatar": "inca",
+    "initial": "G",
+    "quote": "In this kingdom, there is no one who defends the Indians. They weep and they are sad. There is no remedy. They want to die. They do not want to multiply because of the mistreatment and punishment they receive.",
+    "lastUpdated": "2026-04-19T12:00:00Z"
+  }
+]

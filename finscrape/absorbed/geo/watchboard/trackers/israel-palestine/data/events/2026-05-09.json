@@ -1,0 +1,92 @@
+[
+  {
+    "id": "oic-calls-end-occupation-may9",
+    "year": "May 8, 2026",
+    "title": "OIC Urges Immediate International Action to End Israeli Occupation of Palestinian Territories",
+    "type": "diplomatic",
+    "detail": "The Organisation of Islamic Cooperation (OIC) issued a formal call on May 8, 2026 for immediate international action to end Israeli occupation of Palestinian territories. The statement, reported by Middle East Eye, intensified diplomatic pressure on the international community as the Israel-Palestine conflict continued amid a fragile ceasefire. The OIC — representing 57 member states — demanded that the international community take concrete steps, including UN Security Council action, to compel Israeli withdrawal from occupied territories. The appeal came as the Board of Peace's diplomatic window was described by envoy Nickolay Mladenov as 'rapidly closing,' and as Israel's cabinet deliberated resuming full-scale military operations in Gaza following Hamas's refusal to accept a five-stage disarmament roadmap. The OIC statement added to a growing chorus of international condemnation following Israeli airstrikes that killed 33+ Palestinians in Gaza City on May 8.",
+    "sources": [
+      {
+        "name": "Middle East Eye",
+        "tier": 2,
+        "url": "https://www.middleeasteye.net/live-blog/live-blog-update/oic-urges-immediate-action-end-israeli-occupation-palestine",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.middleeasteye.net/live-blog/live-blog-update/oic-urges-immediate-action-end-israeli-occupation-palestine",
+        "caption": "OIC urges immediate international action to end Israeli occupation of Palestinian territories",
+        "source": "Middle East Eye",
+        "thumbnail": "https://www.middleeasteye.net/sites/default/files/2026-05/000_B24Z4K3.jpg"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "netanyahu-trump-alliance-fractures-may9",
+    "year": "May 9, 2026",
+    "title": "Netanyahu-Trump Alliance Shows Significant Fractures Over Gaza and Iran Policy",
+    "type": "diplomatic",
+    "detail": "The Guardian reported on May 9, 2026 that the alliance between Israeli Prime Minister Benjamin Netanyahu and US President Donald Trump has developed significant fractures, with sources from both sides saying the two leaders 'have screwed each other pretty badly.' The breakdown in trust carries major implications for US policy on Gaza — where Israel is weighing resuming full-scale military operations after Hamas rejected the Board of Peace's disarmament roadmap — and for the broader US-brokered negotiations over Iran's nuclear program. The rift reportedly stems from mutual grievances over diplomatic moves made without full coordination, and could complicate any joint strategy on Iran as US-Iran nuclear talks proceed. The development marks a notable strain in what had been a closely aligned relationship since Trump returned to office.",
+    "sources": [
+      {
+        "name": "The Guardian",
+        "tier": 2,
+        "url": "https://www.theguardian.com/world/2026/may/09/tensions-emerge-bejamin-netanyahu-donald-trump-alliance",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.theguardian.com/world/2026/may/09/tensions-emerge-bejamin-netanyahu-donald-trump-alliance",
+        "caption": "Fractures emerge in Netanyahu-Trump alliance over Gaza and Iran",
+        "source": "The Guardian",
+        "thumbnail": "https://i.guim.co.uk/img/media/4ceb29a473a210d13a9d205414f9d8ef9b28be12/0_0_2690_2153/master/2690.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=d3bf5a9a4d354acaa6b3bc4bd2f263b5"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "west-bank-sanur-cemetery-exhumation-may9",
+    "year": "2026",
+    "title": "Israeli Settlers Force Palestinian Family to Exhume Father's Body from Cemetery Near Re-established Sa-Nur Settlement",
+    "type": "humanitarian",
+    "detail": "On May 9, 2026, Israeli settlers in the northern West Bank forced a Palestinian family to exhume and rebury the freshly buried body of their 80-year-old father, Hussein Asasa, from a village cemetery in Al-Asasa village near the re-established Sa-Nur settlement. The settlers claimed the cemetery was too close to the settlement — approximately 300 meters — and demanded the body be moved. Although the family had coordinated the original burial in advance with Israeli security forces, settlers interfered. The family was given only 30 minutes to complete the exhumation and reburial. Israeli soldiers present at the scene did not stop the settlers. The Israeli military later issued a statement condemning the incident. The UN Human Rights Office cited the case as an example of 'growing dehumanization' of Palestinians by settlers. Sa-Nur settlement was originally evacuated under Israel's 2005 Gaza disengagement plan and has since been re-established. The incident drew international condemnation as one of the most viscerally disturbing examples of settler violence in weeks — coming days after IDF Central Command Chief Maj. Gen. Avi Bluth called settler violence 'Jewish terror' and EU foreign ministers moved toward sanctions.",
+    "sources": [
+      {
+        "name": "NPR",
+        "tier": 2,
+        "url": "https://www.npr.org/2026/05/10/nx-s1-5817496/israeli-settlers-palestinian-exhume-grave-west-bank-jenin",
+        "pole": "western"
+      },
+      {
+        "name": "Haaretz",
+        "tier": 2,
+        "url": "https://www.haaretz.com/west-bank/2026-05-09/ty-article/.premium/israeli-settlers-make-palestinians-exhume-body-buried-near-west-bank-settlement/0000019e-0bcf-d73c-a99e-dfff45ea0000",
+        "pole": "western"
+      },
+      {
+        "name": "Just Security",
+        "tier": 3,
+        "url": "https://www.justsecurity.org/138569/early-edition-may-11-2026/",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.npr.org/2026/05/10/nx-s1-5817496/israeli-settlers-palestinian-exhume-grave-west-bank-jenin",
+        "caption": "Settlers force Palestinian family to exhume father's body from cemetery near Sa-Nur settlement, West Bank, May 9, 2026",
+        "source": "NPR",
+        "thumbnail": "https://www.npr.org/2026/05/10/nx-s1-5817496/israeli-settlers-palestinian-exhume-grave-west-bank-jenin"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  }
+]

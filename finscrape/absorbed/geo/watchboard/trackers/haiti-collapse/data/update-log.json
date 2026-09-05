@@ -1,0 +1,43 @@
+{
+  "lastRun": "2026-08-28T00:06:09.926Z",
+  "tracker": "haiti-collapse",
+  "sections": {
+    "kpis": {
+      "status": "unchanged",
+      "itemCount": 10
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 174
+    },
+    "timeline": {
+      "status": "unchanged",
+      "itemCount": 63
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 62
+    },
+    "casualties": {
+      "status": "unchanged",
+      "itemCount": 24
+    },
+    "econ": {
+      "status": "unchanged",
+      "itemCount": 13
+    },
+    "claims": {
+      "status": "unchanged",
+      "itemCount": 22
+    },
+    "political": {
+      "status": "unchanged",
+      "itemCount": 19
+    },
+    "meta": {
+      "status": "updated",
+      "itemCount": 1
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

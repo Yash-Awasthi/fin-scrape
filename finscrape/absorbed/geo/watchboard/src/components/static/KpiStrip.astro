@@ -1,0 +1,33 @@
+---
+import type { KpiItem } from '../../lib/schemas';
+
+interface Props {
+  kpis: KpiItem[];
+}
+
+const { kpis } = Astro.props;
+---
+<section class="kpi-strip">
+  <div class="kpi-grid">
+    {kpis.map(k => (
+      <div class="kpi-card">
+        <div class="kpi-label">{k.label}</div>
+        <div class={`kpi-value ${k.color}`}>
+          {k.value}
+          {k.trend && k.trend !== 'stable' && (
+            <span class={`kpi-trend ${k.trend}`}>
+              {k.trend === 'up' ? '\u25B2' : '\u25BC'}
+            </span>
+          )}
+        </div>
+        <div class="kpi-source">
+          {k.delta && (
+            <span class={`kpi-delta ${k.trend || ''}`} title={k.deltaNote || undefined}>{k.delta}</span>
+          )}
+          {k.source}
+          {k.contested && <span class="kpi-contested" title={k.contestNote || undefined}>CONTESTED</span>}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

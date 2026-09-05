@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sac-air-force",
+    "type": "Air Force",
+    "name": "SAC Air Force (Tatmadaw Lay)",
+    "detail": "Myanmar Air Force operates ~100 aircraft including Russian Yak-130 jet trainers/light attack aircraft, MiG-29 fighters, Chinese FTC-2000G jets, Mi-35 attack helicopters, and Mi-17 transport helicopters. Airpower has been the SAC's primary advantage over resistance forces, used extensively for village bombing and civilian attacks. Aircraft losses to MANPADS have increased since 2023.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-ground-forces",
+    "type": "Infantry",
+    "name": "SAC Ground Forces (Tatmadaw Kyi)",
+    "detail": "SAC army of an estimated 150,000–200,000 active soldiers (down from 350,000 pre-coup due to CDM defections, combat losses, and desertion). Organized into light infantry divisions, regional military commands (7 commands), and special operations units. Morale and capability significantly degraded by sustained multi-front losses. Conscription law enacted Feb 2024 to compensate for manpower losses.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "sac-drones",
+    "type": "Drone / UAV",
+    "name": "SAC Armed Drone Fleet",
+    "detail": "The SAC has deployed Chinese-supplied armed drones (including Wing Loong II and TB-001 variants) and modified commercial drones for surveillance and attack missions. Drone strikes have targeted resistance positions, villages, and IDP camps. China reportedly supplied additional drones in 2024–2025. SAC has also deployed improvised drone-dropped munitions.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "pdf-guerrilla-network",
+    "type": "Guerrilla Force",
+    "name": "People's Defence Force (PDF)",
+    "detail": "NUG-affiliated armed wing with estimated 45,000–65,000 fighters across Myanmar (as of 2024). Organized into regional PDF units, urban defence teams, and special operations groups. Equipped with captured weapons, smuggled arms, and locally manufactured drones and explosives. Controls significant territory in Sagaing, Magway, Chin, and Bago regions. Increasingly effective with improved training and EAO coordination.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "arakan-army",
+    "type": "Ethnic Armed Organization",
+    "name": "Arakan Army (AA)",
+    "detail": "Estimated 30,000+ fighters; founded 2009 by Major General Twan Mrat Naing. AA is one of the most capable EAOs in Myanmar, controlling approximately 90% of Rakhine State by 2025. AA has its own civil administration (ULA), court system, taxation, and governance structures. Equipped with heavy weapons, artillery, and captured SAC equipment. Maintains disciplined command and control.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "kachin-independence-army",
+    "type": "Ethnic Armed Organization",
+    "name": "Kachin Independence Army (KIA)",
+    "detail": "Estimated 10,000–12,000 fighters; founded 1961. Has been in continuous armed conflict with the Tatmadaw since ceasefire breakdown in 2011. Operates across Kachin State and northern Shan State. KIA has captured multiple SAC outposts and presses on Myitkyina. Allied with NUG and Three Brotherhood Alliance. Well-equipped with heavy weapons including artillery pieces.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "three-brotherhood-alliance",
+    "type": "Military Coalition",
+    "name": "Three Brotherhood Alliance (MNDAA + TNLA + AA)",
+    "detail": "Coalition of MNDAA (Kokang; 8,000+ fighters), TNLA (Ta'ang; 8,000+ fighters), and AA (30,000+). Launched Operation 1027 on Oct 27, 2023 — the most successful resistance offensive since the coup. Captured Laukkai (Kokang capital), Lashio (N. Shan capital), and most of Rakhine State. China's diplomatic influence gives the alliance additional leverage; MNDAA and TNLA traditionally considered China-aligned.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "karen-national-liberation-army",
+    "type": "Ethnic Armed Organization",
+    "name": "Karen National Liberation Army (KNLA / KNU)",
+    "detail": "Armed wing of the Karen National Union (KNU); estimated 5,000–7,000 fighters. World's longest-running armed insurgency (since 1949). KNLA briefly captured Myawaddy in April 2024. Operates across Karen State (Kayin State), particularly near Thai border. Has signed cooperation framework with NUG. KNU also administers significant territory including Lay Kay Kaw model township.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "karenni-nationalities-forces",
+    "type": "Ethnic Armed Organization",
+    "name": "Karenni Nationalities Defence Force (KNDF) & Karenni Army (KA)",
+    "detail": "Combined Karenni resistance forces with estimated 10,000+ fighters in Kayah State. Among the first EAOs to align with PDF resistance after the 2021 coup. Controls most of Kayah State's rural territory and has surrounded Loikaw. KNDF includes diverse ethnic groups (Kayan, Kayah, Kekula, Bre). Has demonstrated effective combined arms tactics including use of captured artillery.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "pdf-drone-units",
+    "type": "Drone / UAV",
+    "name": "PDF / Resistance Drone Program",
+    "detail": "PDF and EAOs have developed significant improvised drone capability, including commercial quadcopters modified to drop grenades, mortar bombs, and IEDs on SAC positions. Resistance drone operators have successfully attacked SAC vehicles, outposts, and naval vessels. Some units have employed fixed-wing FPV drones for kamikaze strikes. The resistance drone program has been a significant force-multiplier, compensating for lack of airpower.",
+    "lastUpdated": "2026-03-20"
+  }
+]

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colosseum Report</title>
+  <link rel="stylesheet" href="/static/styles.css"/>
+</head>
+<body>
+<main class="arena report-shell">
+  <header class="arena-header report-header">
+    <p class="eyebrow">Battle Report</p>
+    <h1>COLOSSEUM</h1>
+    <p id="report-subtitle" class="tagline">Loading the judge ledger...</p>
+    <div class="report-actions">
+      <a href="/" class="text-btn text-btn-link">Back to Arena</a>
+      <button id="download-pdf-btn" class="btn-gold btn-pdf hidden">Download PDF</button>
+      <button id="download-md-btn" class="btn-gold btn-pdf hidden">Download Markdown</button>
+    </div>
+  </header>
+
+  <!-- Run metrics strip -->
+  <section id="report-hero" class="panel report-hero">
+    <div id="hero-content" class="muted">Loading run artifact...</div>
+  </section>
+
+  <!-- Human judge console (only shown while awaiting judgment) -->
+  <section id="human-judge-panel" class="panel hidden">
+    <h2 class="panel-title">Judge Console</h2>
+    <div id="human-judge-copy" class="report-copy"></div>
+    <div id="human-agenda" class="report-agenda-preview"></div>
+    <div class="judge-form-grid">
+      <div>
+        <label class="label" for="judge-action-select">Action</label>
+        <select id="judge-action-select" class="arena-input-sm">
+          <option value="request_round">Request another round</option>
+          <option value="select_winner">Select winner</option>
+          <option value="merge_plans">Merge plans</option>
+          <option value="request_revision">Request revision</option>
+        </select>
+      </div>
+      <div>
+        <label class="label" for="judge-round-type">Round Type</label>
+        <select id="judge-round-type" class="arena-input-sm">
+          <option value="critique">Critique</option>
+          <option value="rebuttal">Rebuttal</option>
+          <option value="synthesis">Synthesis</option>
+          <option value="final_comparison">Final Comparison</option>
+          <option value="targeted_revision">Targeted Revision</option>
+        </select>
+      </div>
+    </div>
+    <label class="label" for="judge-plan-picks">Plan Selection</label>
+    <div id="judge-plan-picks" class="judge-plan-picks"></div>
+    <label class="label" for="judge-instructions">Judge instructions</label>
+    <textarea id="judge-instructions" class="arena-input" rows="4" placeholder="Optional: override the next issue or add targeted instructions."></textarea>
+    <button id="judge-submit-btn" class="btn-gold">Submit Judge Action</button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       토론의 결론 — Debate Conclusion
+       Main section: verdict + report + agent opinions
+  ═══════════════════════════════════════════ -->
+  <section id="debate-conclusion" class="panel hidden">
+    <h2 class="panel-title">토론의 결론</h2>
+
+    <!-- One-line headline verdict -->
+    <div id="conclusion-headline" class="conclusion-headline hidden"></div>
+
+    <!-- Hallucination warnings (shown if flags exist) -->
+    <div id="hallucination-section" class="hidden">
+      <div class="hallucination-warning-header">
+        <span class="hallucination-icon">⚠</span> Credibility Alerts
+      </div>
+      <div id="hallucination-list"></div>
+    </div>
+
+    <!-- Verdict banner -->
+    <div id="verdict-banner-section"></div>
+
+    <!-- Final report: executive summary + conclusions + recommendations -->
+    <div id="final-report-content" class="conclusion-report-grid"></div>
+
+    <!-- Per-agent opinion breakdown -->
+    <div id="agent-opinions" class="hidden">
+      <h3 class="conclusion-subheader">각 에이전트 의견 요약</h3>
+      <div id="agent-opinions-grid" class="agent-opinions-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       Collapsible detail sections
+  ═══════════════════════════════════════════ -->
+  <details id="plans-report" class="panel panel-collapsible hidden">
+    <summary class="panel-title collapsible-summary">Opening Reports <span class="collapsible-hint">▸</span></summary>
+    <div id="report-plans-grid" class="plans-grid"></div>
+  </details>
+
+  <details id="timeline-report" class="panel panel-collapsible hidden">
+    <summary class="panel-title collapsible-summary">Debate Timeline <span class="collapsible-hint">▸</span></summary>
+    <div id="report-timeline" class="report-timeline"></div>
+  </details>
+
+  <details id="usage-report" class="panel panel-collapsible hidden">
+    <summary class="panel-title collapsible-summary">Usage Report <span class="collapsible-hint">▸</span></summary>
+    <div id="report-usage-grid" class="usage-grid"></div>
+  </details>
+
+  <section id="events-report" class="panel hidden">
+    <h2 class="panel-title">Runtime Notices</h2>
+    <div id="report-events-list" class="history-list"></div>
+  </section>
+</main>
+
+<div id="toast" class="toast hidden"></div>
+<script src="/static/report.js" defer></script>
+</body>
+</html>

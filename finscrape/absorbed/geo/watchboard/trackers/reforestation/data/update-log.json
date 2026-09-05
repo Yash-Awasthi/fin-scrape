@@ -1,0 +1,38 @@
+{
+  "lastRun": "2026-08-26T15:54:46.025Z",
+  "tracker": "reforestation",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 8
+    },
+    "timeline": {
+      "status": "updated",
+      "count": 32
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 38
+    },
+    "claims": {
+      "status": "updated",
+      "count": 15
+    },
+    "political": {
+      "status": "ok",
+      "count": 15
+    },
+    "econ": {
+      "status": "ok",
+      "count": 9
+    },
+    "events": {
+      "status": "updated",
+      "count": 34
+    },
+    "meta": {
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

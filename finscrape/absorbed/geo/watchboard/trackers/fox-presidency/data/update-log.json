@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-16T14:39:54.758Z",
+  "tracker": "fox-presidency",
+  "sections": {
+    "kpis": {
+      "status": "unchanged",
+      "itemCount": 10
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 53
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 23
+    },
+    "claims": {
+      "status": "unchanged",
+      "itemCount": 15
+    },
+    "political": {
+      "status": "unchanged",
+      "itemCount": 20
+    },
+    "econ": {
+      "status": "unchanged",
+      "itemCount": 10
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 11
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

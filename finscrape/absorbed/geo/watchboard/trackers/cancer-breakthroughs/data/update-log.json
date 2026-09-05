@@ -1,0 +1,48 @@
+{
+  "lastRun": "2026-08-25T14:58:58.804Z",
+  "tracker": "cancer-breakthroughs",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-09T07:22:46.038Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "lastRun": "2026-05-15T14:20:00.000Z",
+      "status": "unchanged",
+      "count": 39
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-07T14:20:33.000Z",
+      "status": "updated",
+      "count": 35
+    },
+    "claims": {
+      "lastRun": "2026-06-07T14:20:33.000Z",
+      "status": "updated",
+      "count": 17
+    },
+    "political": {
+      "lastRun": "2026-06-07T14:20:33.000Z",
+      "status": "updated",
+      "count": 19
+    },
+    "econ": {
+      "lastRun": "2026-06-07T14:20:33.000Z",
+      "status": "updated",
+      "count": 9
+    },
+    "events": {
+      "lastRun": "2026-06-09T07:22:46.038Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-06-09T07:22:46.038Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-09T07:22:46.038Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

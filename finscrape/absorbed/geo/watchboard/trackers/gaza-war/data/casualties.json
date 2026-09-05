@@ -1,0 +1,178 @@
+[
+  {
+    "id": "gazans-total-killed",
+    "category": "Palestinian Killed (Gaza)",
+    "killed": "73,438+ (~8,000 est. missing)",
+    "injured": "174,447+",
+    "source": "Gaza Ministry of Health / UN OCHA / WAFA / IMEMC / Anadolu Agency (Aug 26, 2026)",
+    "tier": 1,
+    "contested": "yes",
+    "note": "Israel disputes figures; UN agencies validate methodology. Includes 21,500+ children. Aug 26: Health Ministry reports 7 killed in 24 hrs (5 new, 2 died of wounds) plus 1 more killed in a separate Khan Younis displacement-tent drone strike; ceasefire-period toll reaches 1,303 killed, 4,336 wounded. Aug 25: Israeli strikes kill 7 — 3 in a Beit Lahiya home strike near Kamal Adwan Hospital, 1 in an al-Mawasi (Khan Younis) drone strike (3 wounded), 3 from earlier wounds; a warehouse holding child-nutrition aid destroyed; Israel expels Dutch representatives from the Kiryat Gat Gaza coordination center. Aug 24: Strikes hit a mosque and desalination plant in Gaza City's Sheikh Radwan area and destroy the historic Abu Salim Mosque in Deir al-Balah (IDF says it targeted Hamas weapons storage); a Bureij refugee camp strike kills 4-year-old Hassan al-Hafi; separately IDF strikes kill 2 Hamas militants in Deir al-Balah, one an Oct 7 Nukhba fighter, in an alleged ceasefire violation. Aug 23: Netanyahu and Katz threaten to 'intensify strikes' and evacuate areas over kites launched from Gaza landing near Nahal Oz; IAF strikes kill Hamas weapons-production commander Ismail Abu Ful in Maghazi camp and 4-year-old Mohammad Abdel-Salam Taha in Az-Zawayda (6+ wounded) near an aid distribution site; Khan Younis shelled along the Yellow Line. Aug 22: Israeli drone strike on the al-Hasanat family home in Deir al-Balah kills Hamas Deir al-Balah Battalion commander Sharif al-Hasanat (44), without warning, in an area crowded with displacement tents. Aug 20: Mass funeral held in Gaza City for 50 Palestinians (19 children) recovered from Dec 2023 strike rubble (Sawafiri, Batniji, Karam, Al-Af, Haraz, Raqiq families), buried at Al-Ahli cemetery, Zeitoun; Poland summons Israeli ambassador over dropped WCK aid-worker probe. Aug 19: Israeli strikes on Nuseirat (1 killed, Hamas Oct 7 commander) and a Gaza City police station (9 killed incl. 8 police officers and 13-yr-old Dana al-Jamasi, 15 wounded); IDF opens first-ever criminal investigation into the Jan 2024 killing of 5-year-old Hind Rajab, admitting for the first time that troops fired on her family's car. Lancet (Mar 2026): 75,200 violent deaths through Jan 5, 2025.",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "gazans-children-killed",
+    "category": "Palestinian Children Killed (Gaza)",
+    "killed": "20,179+",
+    "injured": "40,000+",
+    "source": "Gaza Ministry of Health / UN OCHA / UNICEF (Mar 2026)",
+    "tier": 1,
+    "contested": "yes",
+    "note": "Gaza MoH reported 20,179 children killed as of March 23, 2026. Save the Children and UNICEF tracked child casualties throughout. More children killed per day than any other conflict in recent history per UN.",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "gazans-women-killed",
+    "category": "Palestinian Women & Girls Killed (Gaza)",
+    "killed": "38,000+",
+    "injured": "~70,000+",
+    "source": "UN Women (Apr 25, 2026) / Gaza Ministry of Health",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "UN Women report (Apr 25, 2026): 38,000+ women and girls killed between Oct 2023 and Dec 2025, averaging 47 per day over 26 months. Figure includes girls and older women. Includes deaths from airstrikes, ground operations, famine, and disease. Women constituted disproportionate share of documented civilian deaths. Cited in ICJ and ICC proceedings.",
+    "lastUpdated": "2026-04-25T11:00:00.000Z"
+  },
+  {
+    "id": "israeli-oct7-civilians",
+    "category": "Israeli Civilians Killed (Oct 7 Attack)",
+    "killed": "~779",
+    "injured": "~4,000",
+    "source": "Israeli PM Office / Haaretz",
+    "tier": 1,
+    "contested": "no",
+    "note": "Revised figures: total Israeli killed Oct 7 = 1,139. Includes civilians and ~360 security personnel. 904 initially reported; revised down as duplicate counts resolved.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "idf-soldiers-killed-war",
+    "category": "IDF Soldiers Killed (Ground Operation Total)",
+    "killed": "400+",
+    "injured": "2,000+",
+    "source": "IDF Spokesperson",
+    "tier": 1,
+    "contested": "no",
+    "note": "Includes soldiers killed in Gaza ground operations from October 27, 2023 onward. Approximately 163 died in the first five weeks. Does not include Oct 7 attack victims.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "journalists-killed-gaza",
+    "category": "Journalists Killed in Gaza",
+    "killed": "294+",
+    "injured": "many",
+    "source": "OHCHR (Apr 10, 2026) / Committee to Protect Journalists / RSF",
+    "tier": 2,
+    "contested": "partial",
+    "note": "OHCHR April 10 statement confirmed 294 Palestinian journalists killed since October 7, 2023 — the highest journalist death toll in any conflict in CPJ's 30-year tracking history. Many died alongside family members in targeted strikes. Israel claimed some were Hamas members.",
+    "lastUpdated": "2026-04-20T14:00:00.000Z"
+  },
+  {
+    "id": "medics-healthcare-workers-killed",
+    "category": "Healthcare Workers Killed (Gaza)",
+    "killed": "1,000+",
+    "injured": "many",
+    "source": "WHO / Palestinian Ministry of Health",
+    "tier": 1,
+    "contested": "partial",
+    "note": "WHO documented the killing of over 1,000 healthcare workers. Multiple doctors, nurses, and paramedics killed in strikes on hospitals, ambulances, and clinics. Highest rate of healthcare worker deaths in modern conflict.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "unrwa-staff-killed",
+    "category": "UNRWA Staff Killed",
+    "killed": "397",
+    "injured": "many",
+    "source": "OHCHR (Apr 10, 2026) / UNRWA",
+    "tier": 1,
+    "contested": "no",
+    "note": "OHCHR April 10 statement confirmed 397 UN staff killed across all UN agencies. UNRWA's own count was 391 as of March 24, 2026. Highest number of UN workers killed in any conflict in UN history. Multiple strikes hit UNRWA-marked facilities.",
+    "lastUpdated": "2026-04-20T14:00:00.000Z"
+  },
+  {
+    "id": "aid-workers-killed",
+    "category": "Humanitarian Aid Workers Killed",
+    "killed": "589+",
+    "injured": "many",
+    "source": "OHCHR (Apr 10, 2026) / UN OCHA / Aid Worker Security Database",
+    "tier": 1,
+    "contested": "no",
+    "note": "Unprecedented death toll for aid workers including UNRWA, WHO, WCK, and other NGO staff. OHCHR April 10 statement confirmed 589 aid workers killed (including 397 UN staff). The April 2024 WCK convoy strike killing 7 was the most high-profile single incident.",
+    "lastUpdated": "2026-04-20T14:00:00.000Z"
+  },
+  {
+    "id": "west-bank-palestinians-killed",
+    "category": "West Bank Palestinians Killed (post-Oct 7)",
+    "killed": "1,096+",
+    "injured": "5,000+",
+    "source": "UN News / UN OCHA / B'Tselem (May 18, 2026)",
+    "tier": 1,
+    "contested": "partial",
+    "note": "UN News (May 18, 2026) reported 1,096 Palestinians killed in the West Bank since October 7, 2023, with ~20% being children. Includes IDF operations and settler violence. 33,000 Palestinians from Jenin, Tulkarem, and Nur Shams still cannot return home. Settlement expansion up 80% since current government took office; 102 new outposts added. Highest West Bank toll since Second Intifada.",
+    "lastUpdated": "2026-05-25T14:30:00.000Z"
+  },
+  {
+    "id": "hostages-killed-in-captivity",
+    "category": "Hostages Killed / Died in Gaza",
+    "killed": "~73",
+    "injured": "N/A",
+    "source": "IDF / Hostages and Missing Families Forum",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "Of 251 hostages: ~105 released Nov 2023 truce, 20 rescued/individually released, 33 in Jan 2025 Phase 1 deal, 20 alive in Oct 2025 deal, 28 bodies returned Oct 2025. ~73 died: some executed by Hamas, some in IDF rescue operations, some from medical neglect.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "civilians-displaced-internal",
+    "category": "Internally Displaced Persons (Gaza)",
+    "killed": "0",
+    "injured": "~1,900,000 displaced",
+    "source": "UNRWA / UN OCHA",
+    "tier": 1,
+    "contested": "no",
+    "note": "Over 90% of Gaza's 2.1 million population displaced at peak. Multiple waves of displacement as military operations shifted from north to south. People displaced 6-8 times on average.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "indirect-deaths-famine-disease",
+    "category": "Estimated Indirect Deaths (Famine, Disease, Medical Collapse)",
+    "killed": "est. 100,000+",
+    "injured": "N/A",
+    "source": "The Lancet (July 2024 projection)",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "The Lancet medical journal estimated indirect deaths could push total fatalities to 186,000 or more accounting for disease, starvation, and medical system collapse. Israel strongly disputes indirect death attributions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "lebanon-hezbollah-war-casualties",
+    "category": "Lebanon / Hezbollah Casualties (Israel-Lebanon 2024)",
+    "killed": "3,000+",
+    "injured": "13,000+",
+    "source": "Lebanese Ministry of Health / Reuters",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Casualties from Israeli military campaign against Hezbollah in Lebanon from September-November 2024. Included death of Hezbollah Secretary-General Hassan Nasrallah and dozens of senior commanders. ~1 million Lebanese displaced.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "israeli-northern-displacement",
+    "category": "Israeli Civilians Displaced (Northern Israel)",
+    "killed": "0",
+    "injured": "60,000–80,000 displaced",
+    "source": "Israeli Ministry of Interior",
+    "tier": 1,
+    "contested": "no",
+    "note": "Up to 80,000 Israeli residents of northern communities near Lebanon border displaced due to Hezbollah rocket and drone attacks. Most returned after November 2024 Lebanon ceasefire.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gaza-children-malnutrition",
+    "category": "Children with Acute Malnutrition (Gaza)",
+    "killed": "N/A",
+    "injured": "350,000+",
+    "source": "UNICEF / WHO / IPC",
+    "tier": 1,
+    "contested": "yes",
+    "note": "IPC and UNICEF documented severe and acute malnutrition in over 350,000 children, with thousands suffering life-threatening wasting. North Gaza declared in IPC Phase 5 (Catastrophe/Famine) conditions.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

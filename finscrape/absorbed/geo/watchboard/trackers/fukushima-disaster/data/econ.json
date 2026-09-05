@@ -1,0 +1,90 @@
+[
+  {
+    "id": "total-decommission-cost",
+    "label": "TEPCO Total Decommissioning & Cleanup Cost",
+    "value": "¥21.5 trillion (~$195B)",
+    "change": "+¥9.5T from original ¥12T estimate (2013)",
+    "direction": "up",
+    "sparkData": [12, 14, 16.5, 19, 21.5, 21.5, 21.5, 21.5],
+    "color": "red",
+    "source": "METI Nuclear Damage Liability Facilitation Fund (2016 revised estimate)",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "evacuee-compensation-paid",
+    "label": "TEPCO Compensation Paid to Evacuees & Businesses",
+    "value": "¥10.2 trillion (~$93B)",
+    "change": "+¥2T since 2020",
+    "direction": "up",
+    "sparkData": [1.2, 2.8, 4.5, 5.8, 7.1, 8.3, 9.1, 10.2],
+    "color": "amber",
+    "source": "TEPCO Compensation Division / Nuclear Damage Liability Facilitation Fund",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "fishing-industry-losses",
+    "label": "Japanese Seafood Export Losses (China Partial Ban, 2023–)",
+    "value": "~¥88B/yr (~$600M)",
+    "change": "China lifted total ban June 2025; partial restrictions on 10 prefectures including Fukushima remain",
+    "direction": "up",
+    "sparkData": [100, 100, 98, 95, 90, 30, 5, 15],
+    "color": "amber",
+    "source": "Ministry of Agriculture, Forestry and Fisheries (MAFF) / SeafoodSource (June 2025)",
+    "lastUpdated": "2026-05-16"
+  },
+  {
+    "id": "electricity-cost-fossil-fuels",
+    "label": "Additional Fossil Fuel Import Cost (Post-Fukushima Nuclear Shutdown)",
+    "value": "¥3.6 trillion/yr peak",
+    "change": "Peaked 2013–2014; reduced as some plants restarted (2015–)",
+    "direction": "down",
+    "sparkData": [0.5, 2.0, 3.6, 3.4, 3.1, 2.8, 2.4, 2.1],
+    "color": "amber",
+    "source": "Ministry of Economy, Trade and Industry (METI)",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "fukushima-agriculture-losses",
+    "label": "Fukushima Agricultural Production Value Loss",
+    "value": "¥180B cumulative (2011–2020)",
+    "change": "Recovering; 2023 output ~70% of pre-disaster levels",
+    "direction": "up",
+    "sparkData": [100, 40, 48, 55, 60, 63, 67, 70],
+    "color": "amber",
+    "source": "Fukushima Prefectural Government / MAFF",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "tepco-stock-value",
+    "label": "TEPCO Stock Price (Indexed, 2011=100)",
+    "value": "~18 (2024)",
+    "change": "-82% from pre-disaster level; government holds >50% stake",
+    "direction": "down",
+    "sparkData": [100, 22, 18, 15, 16, 17, 18, 18],
+    "color": "red",
+    "source": "Tokyo Stock Exchange / TEPCO financial reports",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "fukushima-tourism-recovery",
+    "label": "Fukushima Prefecture Tourism (Indexed, 2010=100)",
+    "value": "~88 (2023)",
+    "change": "+38pp recovery from 2011 low of ~50",
+    "direction": "up",
+    "sparkData": [100, 50, 55, 62, 68, 72, 78, 88],
+    "color": "green",
+    "source": "Fukushima Prefectural Government Tourism Division",
+    "lastUpdated": "2026-03-17"
+  },
+  {
+    "id": "contaminated-water-treatment-cost",
+    "label": "ALPS Water Treatment & Storage Ongoing Costs",
+    "value": "~¥60B/yr",
+    "change": "Ongoing; slight reduction as tank volumes release vs. generate",
+    "direction": "down",
+    "sparkData": [30, 45, 60, 62, 60, 58, 56, 55],
+    "color": "amber",
+    "source": "TEPCO / METI (estimate)",
+    "lastUpdated": "2026-03-17"
+  }
+]

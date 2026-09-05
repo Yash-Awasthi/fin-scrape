@@ -1,0 +1,1441 @@
+[
+  {
+    "era": "Medieval England (927–1485)",
+    "events": [
+      {
+        "id": "athelstan-unites-england",
+        "year": "927",
+        "title": "Athelstan Becomes First King of All English",
+        "type": "constitutional",
+        "detail": "Æthelstan, King of Wessex, receives submission of the kings of Strathclyde, Scotland, and Wales at Eamont Bridge near Penrith, acclaimed Rex totius Britanniae. He is the first king to rule a unified English kingdom from the Channel to the Humber and beyond, establishing the constitutional template for the future United Kingdom.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1,
+            "url": "https://www.nationalarchives.gov.uk"
+          },
+          {
+            "name": "BBC History",
+            "tier": 2,
+            "url": "https://www.bbc.co.uk/history"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/%C3%86thelstan",
+            "source": "Wikipedia / %C3%86thelstan",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Athelstan_%28cropped%29.jpg/330px-Athelstan_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-of-hastings-1066",
+        "year": "1066",
+        "title": "Battle of Hastings — Norman Conquest of England",
+        "type": "military",
+        "detail": "William, Duke of Normandy, defeats and kills King Harold II at Senlac Hill near Hastings on 14 October. Crowned at Westminster Abbey on Christmas Day, William transforms English language, law, aristocracy, and culture, introducing feudalism and Norman French. The conquest is the last successful foreign invasion of England.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Hastings",
+            "source": "Wikipedia / Battle of Hastings",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bayeux_Tapestry_scene57_Harold_death.jpg/330px-Bayeux_Tapestry_scene57_Harold_death.jpg"
+          }
+        ]
+      },
+      {
+        "id": "domesday-book-1086",
+        "year": "1086",
+        "title": "Domesday Book Compiled",
+        "type": "constitutional",
+        "detail": "William I orders the Great Survey — the Domesday Book — a comprehensive census of landholdings, livestock, and taxable wealth across England. Completed in 1086, it remains one of the most remarkable administrative records in European history and an invaluable source on Norman England's social structure.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1,
+            "url": "https://www.nationalarchives.gov.uk/domesday/"
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Domesday_Book",
+            "source": "Wikipedia / Domesday Book",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Domesday-book-1804x972.jpg/330px-Domesday-book-1804x972.jpg"
+          }
+        ]
+      },
+      {
+        "id": "magna-carta-1215",
+        "year": "1215",
+        "title": "Magna Carta Sealed at Runnymede",
+        "type": "constitutional",
+        "detail": "King John seals Magna Carta at Runnymede on 15 June under pressure from rebellious barons. The charter establishes for the first time that the king is subject to the rule of law, guarantees rights to free men, and forbids arbitrary imprisonment. Reissued in 1217 and 1225, it becomes the cornerstone of English constitutional tradition and later global human rights law.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1,
+            "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/originsofparliament/birthofparliament/overview/magnacarta/"
+          },
+          {
+            "name": "The National Archives",
+            "tier": 1
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Runnymede",
+            "source": "Wikipedia / Runnymede",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/RunnymedeMagnacartaisle.jpg/330px-RunnymedeMagnacartaisle.jpg"
+          }
+        ]
+      },
+      {
+        "id": "model-parliament-1295",
+        "year": "1295",
+        "title": "Model Parliament Established by Edward I",
+        "type": "constitutional",
+        "detail": "Edward I summons the 'Model Parliament' — the prototype of modern representative government — including knights from the shires, burgesses from towns, and representatives of the clergy alongside nobles. This establishes the broad composition of Parliament that persists, developing into the House of Commons and House of Lords over subsequent centuries.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1,
+            "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/originsofparliament/birthofparliament/overview/edwardianparliament/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "black-death-england-1348",
+        "year": "1348",
+        "title": "Black Death Reaches England",
+        "type": "political",
+        "detail": "Bubonic plague arrives at Weymouth, Dorset, in June 1348, spreading rapidly northward. By 1350, between a third and half of England's population — approximately 1.5 to 2.5 million people — has died. The catastrophic labour shortage accelerates the decline of feudalism and precipitates the Peasants' Revolt of 1381.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Black_Death_in_England",
+            "source": "Wikipedia / Black Death in England",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Atlas_Van_der_Hagen-KW1049B11_004-A_NEW_MAP_OF_THE_KINGDOME_of_ENGLAND%2C_Representing_the_Princedome_of_WALES%2C_and_other_PROVINCES%2C_CITIES%2C_MARKET_TOWNS%2C_with_the_ROADS_from_TOWN_to_TOWN.jpeg/330px-thumbnail.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "battle-of-agincourt-1415",
+        "year": "1415",
+        "title": "Battle of Agincourt — Henry V Defeats France",
+        "type": "military",
+        "detail": "Henry V leads an outnumbered English army to a stunning victory over a much larger French force at Agincourt on 25 October. The battle, celebrated in Shakespeare's Henry V, cements English claims in France under the Treaty of Troyes (1420) and demonstrates the dominance of the English longbow.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Agincourt",
+            "source": "Wikipedia / Battle of Agincourt",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Schlacht_von_Azincourt.jpg/330px-Schlacht_von_Azincourt.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-of-bosworth-1485",
+        "year": "1485",
+        "title": "Battle of Bosworth Field — Tudor Dynasty Begins",
+        "type": "military",
+        "detail": "Henry Tudor defeats and kills Richard III at Bosworth Field on 22 August, ending the Wars of the Roses (1455–1485). Henry VII becomes the first Tudor monarch, establishing a dynasty that rules until 1603 and ushering in the Early Modern period of English history. The Yorkist and Lancastrian civil wars cost tens of thousands of lives and reshape the English nobility.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Jasper_Tudor",
+            "source": "Wikipedia / Jasper Tudor",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Cardiff_castle_-_Eingangshalle_1b_Erkerfenster.jpg/330px-Cardiff_castle_-_Eingangshalle_1b_Erkerfenster.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Early Modern Britain (1485–1707)",
+    "events": [
+      {
+        "id": "henry-viii-act-of-supremacy-1534",
+        "year": "1534",
+        "title": "Henry VIII's Break with Rome — Act of Supremacy",
+        "type": "constitutional",
+        "detail": "Parliament passes the Act of Supremacy, declaring Henry VIII the 'Supreme Head of the Church of England' after Pope Clement VII refuses to annul his marriage to Catherine of Aragon. The English Reformation separates the Church of England from papal authority, dissolves the monasteries (1536–1541), and reshapes English religious, social, and political life for centuries.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1
+          },
+          {
+            "name": "The National Archives",
+            "tier": 1
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Henry_VIII",
+            "source": "Wikipedia / Henry VIII",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/After_Hans_Holbein_the_Younger_-_Portrait_of_Henry_VIII_-_Google_Art_Project.jpg/330px-After_Hans_Holbein_the_Younger_-_Portrait_of_Henry_VIII_-_Google_Art_Project.jpg"
+          }
+        ]
+      },
+      {
+        "id": "spanish-armada-1588",
+        "year": "1588",
+        "title": "Defeat of the Spanish Armada",
+        "type": "military",
+        "detail": "Philip II of Spain launches the Armada to invade Protestant England. The English fleet under Lord Howard and Sir Francis Drake, aided by storms dubbed the 'Protestant Wind', disperses the Armada in the English Channel. The defeat secures England's independence from Spanish dominance and underpins England's growing naval power.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Defeat_of_the_Spanish_Armada",
+            "source": "Wikipedia / Defeat of the Spanish Armada",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Loutherbourg-Spanish_Armada.jpg/330px-Loutherbourg-Spanish_Armada.jpg"
+          }
+        ]
+      },
+      {
+        "id": "english-civil-war-charles-i-execution-1649",
+        "year": "1649",
+        "title": "Execution of Charles I — English Republic Proclaimed",
+        "type": "constitutional",
+        "detail": "King Charles I is tried for high treason by a Rump Parliament and executed at Whitehall on 30 January 1649. England is declared a Commonwealth under Parliamentary rule, then comes under Oliver Cromwell's Protectorate (1653–1658). The regicide permanently establishes Parliament's supremacy over the Crown as a constitutional principle.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1
+          },
+          {
+            "name": "The National Archives",
+            "tier": 1
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "glorious-revolution-1688",
+        "year": "1688",
+        "title": "Glorious Revolution — Constitutional Monarchy Established",
+        "type": "constitutional",
+        "detail": "William of Orange lands at Brixham in November 1688; James II flees to France without bloodshed. William III and Mary II are proclaimed joint monarchs in 1689 following the Bill of Rights, which permanently limits royal prerogative, guarantees Parliamentary sovereignty, free elections, freedom of speech in Parliament, and prohibition of cruel punishment.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1,
+            "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/overview/billofrightsrevolution/"
+          },
+          {
+            "name": "The National Archives",
+            "tier": 1
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/July_Revolution",
+            "source": "Wikipedia / July Revolution",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/330px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg"
+          }
+        ]
+      },
+      {
+        "id": "acts-of-union-scotland-1707",
+        "year": "1707",
+        "title": "Acts of Union — Kingdom of Great Britain Created",
+        "type": "constitutional",
+        "detail": "The Acts of Union 1707 unite the Kingdom of England and the Kingdom of Scotland into the Kingdom of Great Britain, with a single Parliament at Westminster. Scotland retains its separate legal system (Scots law) and Presbyterian Church. The union is partly driven by the Darien Scheme disaster which bankrupted much of Scotland's capital — a union still contested in the 21st century.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1,
+            "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/act-of-union-1707/"
+          },
+          {
+            "name": "Scottish Parliament",
+            "tier": 1
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      }
+    ]
+  },
+  {
+    "era": "Imperial & Industrial Age (1707–1914)",
+    "events": [
+      {
+        "id": "act-of-union-ireland-1800",
+        "year": "1800",
+        "title": "Act of Union with Ireland — United Kingdom Created",
+        "type": "constitutional",
+        "detail": "The Act of Union 1800 merges Great Britain and Ireland into the United Kingdom of Great Britain and Ireland with effect from 1 January 1801. Irish MPs and peers join Westminster. Catholic Emancipation is withheld until 1829, fuelling Irish nationalist resentment that culminates in the 1916 Rising and partition in 1921.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1
+          },
+          {
+            "name": "The National Archives",
+            "tier": 1
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "battle-of-trafalgar-1805",
+        "year": "1805",
+        "title": "Battle of Trafalgar — British Naval Supremacy Secured",
+        "type": "military",
+        "detail": "Admiral Horatio Nelson defeats the combined Franco-Spanish fleet off Cape Trafalgar on 21 October, destroying Napoleon's invasion threat. Nelson is killed at the moment of victory. Trafalgar establishes British naval dominance for over a century, secures global trade routes, and enables the expansion of the British Empire.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar",
+            "source": "Wikipedia / Battle of Trafalgar",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/The_Battle_of_Trafalgar_by_William_Clarkson_Stanfield.jpg/330px-The_Battle_of_Trafalgar_by_William_Clarkson_Stanfield.jpg"
+          }
+        ]
+      },
+      {
+        "id": "abolition-slave-trade-1807",
+        "year": "1807",
+        "title": "Abolition of the Slave Trade Act",
+        "type": "constitutional",
+        "detail": "Parliament passes the Slave Trade Act 1807, abolishing the trade in enslaved people throughout the British Empire following a 20-year campaign led by William Wilberforce and the Clapham Sect. Slavery itself is abolished in 1833. The £20 million compensation paid to slave-owners — a debt repaid by British taxpayers only in 2015 — reflects the contested legacy of abolition.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1,
+            "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "great-reform-act-1832",
+        "year": "1832",
+        "title": "Great Reform Act — Parliamentary Democracy Expanded",
+        "type": "constitutional",
+        "detail": "The Reform Act 1832 eliminates 'rotten boroughs', extends the franchise to middle-class male property owners, and redistributes seats to industrial cities like Manchester, Birmingham, and Leeds. It doubles the electorate from around 400,000 to 800,000, beginning Britain's gradual democratisation toward universal suffrage in 1928.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1,
+            "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/houseofcommons/reformacts/overview/reformact1832/"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "victoria-coronation-empire-1838",
+        "year": "1838",
+        "title": "Queen Victoria's Coronation — Era of Empire",
+        "type": "political",
+        "detail": "Victoria is crowned Queen on 28 June 1838, beginning a 63-year reign coinciding with the zenith of British imperial power. By 1900, the British Empire covers roughly a quarter of the world's land surface and governs a quarter of its population. The Victorian era brings the Great Exhibition (1851), railways, telegraph, and a global Pax Britannica underwritten by the Royal Navy.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Coronation_of_Queen_Victoria",
+            "source": "Wikipedia / Coronation of Queen Victoria",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Coronation_portrait_of_Queen_Victoria_1838.jpg/330px-Coronation_portrait_of_Queen_Victoria_1838.jpg"
+          }
+        ]
+      },
+      {
+        "id": "james-watt-steam-engine-1769",
+        "year": "1769",
+        "title": "James Watt Patents the Steam Engine — Industrial Revolution Launches",
+        "type": "economic",
+        "detail": "James Watt patents his improved steam engine with a separate condenser in 1769, transforming manufacturing and transport. Britain becomes the world's first industrial nation: textile mills in Lancashire, iron foundries in the Black Country, and canals and later railways connecting them fuel unprecedented economic growth. By 1850, Britain produces half the world's iron and cotton cloth.",
+        "sources": [
+          {
+            "name": "Science Museum Group",
+            "tier": 3,
+            "url": "https://www.sciencemuseumgroup.org.uk"
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Second_Industrial_Revolution",
+            "source": "Wikipedia / Second Industrial Revolution",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Skglb_promo_1895.jpg/330px-Skglb_promo_1895.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "World Wars & Interwar (1914–1945)",
+    "events": [
+      {
+        "id": "wwi-declaration-1914",
+        "year": "1914",
+        "title": "Britain Declares War on Germany — WWI Begins",
+        "type": "military",
+        "detail": "Britain declares war on Germany on 4 August 1914 after Germany invades Belgium, triggering Britain's treaty obligations. The war costs Britain 703,000 military dead and over 1.6 million wounded. The Western Front's industrial-scale slaughter reshapes British society: conscription, women in the workforce, the decline of Liberal politics, and the rise of Labour. The Empire sends 2.5 million colonial troops.",
+        "sources": [
+          {
+            "name": "Imperial War Museum",
+            "tier": 3,
+            "url": "https://www.iwm.org.uk"
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/United_States_in_World_War_I",
+            "source": "Wikipedia / United States in World War I",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/U.S._Marines_during_the_Meuse-Argonne_Campaign.jpg/330px-U.S._Marines_during_the_Meuse-Argonne_Campaign.jpg"
+          }
+        ]
+      },
+      {
+        "id": "irish-free-state-1922",
+        "year": "1922",
+        "title": "Irish Free State Established — Partition of Ireland",
+        "type": "political",
+        "detail": "The Anglo-Irish Treaty (1921) creates the Irish Free State in 26 of 32 counties with effect from December 1922. The six northern counties of Ulster remain in the United Kingdom as Northern Ireland. The partition follows the 1916 Easter Rising and the War of Independence (1919–1921), and becomes the dominant political fault line of the island for a century.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Partition_of_Ireland",
+            "source": "Wikipedia / Partition of Ireland",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/British%E2%80%93European_Union_frontier_in_Ireland.svg/330px-British%E2%80%93European_Union_frontier_in_Ireland.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "munich-agreement-appeasement-1938",
+        "year": "1938",
+        "title": "Munich Agreement — Chamberlain's Appeasement Policy",
+        "type": "diplomatic",
+        "detail": "Prime Minister Neville Chamberlain signs the Munich Agreement with Adolf Hitler, ceding Czechoslovakia's Sudetenland to Germany and declaring 'peace for our time'. Within six months Hitler seizes the rest of Czechoslovakia. Munich becomes the defining symbol of the failure of appeasement; Chamberlain resigns in May 1940, replaced by Churchill.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Appeasement",
+            "source": "Wikipedia / Appeasement",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Bundesarchiv_Bild_146-1976-063-32%2C_Bad_Godesberg%2C_M%C3%BCnchener_Abkommen%2C_Vorbereitung.jpg/330px-Bundesarchiv_Bild_146-1976-063-32%2C_Bad_Godesberg%2C_M%C3%BCnchener_Abkommen%2C_Vorbereitung.jpg"
+          }
+        ]
+      },
+      {
+        "id": "dunkirk-evacuation-1940",
+        "year": "1940",
+        "title": "Dunkirk Evacuation — Churchill Becomes Prime Minister",
+        "type": "military",
+        "detail": "Operation Dynamo (26 May–4 June 1940) evacuates 338,226 Allied troops from the beaches of Dunkirk as German forces encircle them. Winston Churchill, who became Prime Minister on 10 May, transforms the near-disaster into a national rallying moment with his 'We shall fight on the beaches' speech. The Battle of Britain follows in the summer of 1940.",
+        "sources": [
+          {
+            "name": "Imperial War Museum",
+            "tier": 3,
+            "url": "https://www.iwm.org.uk"
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+            "source": "Wikipedia / Winston Churchill",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg/330px-Sir_Winston_Churchill_-_19086236948_%28restored%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "d-day-normandy-1944",
+        "year": "1944",
+        "title": "D-Day — Allied Invasion of Normandy",
+        "type": "military",
+        "detail": "Operation Overlord launches on 6 June 1944 with the largest seaborne invasion in history. Over 150,000 Allied troops land on five Normandy beaches; British and Canadian forces assault Gold, Juno, and Sword beaches. By late August Paris is liberated. Total British military deaths in WWII reach around 383,000.",
+        "sources": [
+          {
+            "name": "Imperial War Museum",
+            "tier": 3,
+            "url": "https://www.iwm.org.uk"
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Normandy_landings",
+            "source": "Wikipedia / Normandy landings",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg/330px-Into_the_Jaws_of_Death_23-0455M_edit.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ve-day-labour-landslide-1945",
+        "year": "1945",
+        "title": "VE Day and Labour Landslide — Welfare State Planned",
+        "type": "political",
+        "detail": "Germany surrenders on 8 May 1945 (VE Day). In the July 1945 general election, Labour under Clement Attlee wins a landslide majority of 146 seats despite Churchill's wartime leadership. Attlee's government launches the post-war welfare state, creates the NHS, and begins the rapid decolonisation of the British Empire.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/1945_United_Kingdom_general_election",
+            "source": "Wikipedia / 1945 United Kingdom general election",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Person_attlee2.jpg/330px-Person_attlee2.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Postwar & Decolonisation (1945–1979)",
+    "events": [
+      {
+        "id": "nhs-founded-1948",
+        "year": "1948",
+        "title": "National Health Service Founded",
+        "type": "constitutional",
+        "detail": "The National Health Service launches on 5 July 1948 under Health Secretary Aneurin 'Nye' Bevan, providing universal healthcare free at the point of need. Built on the Beveridge Report (1942), the NHS is the centrepiece of Attlee's welfare state. Over 75 years later, the NHS employs 1.3 million people and is consistently rated by the public as the greatest national achievement.",
+        "sources": [
+          {
+            "name": "NHS England",
+            "tier": 1,
+            "url": "https://www.england.nhs.uk/about/history/"
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "indian-independence-1947",
+        "year": "1947",
+        "title": "India and Pakistan Independence — Decolonisation Begins",
+        "type": "political",
+        "detail": "India and Pakistan gain independence on 14–15 August 1947 under the Mountbatten Plan. The partition is accompanied by catastrophic communal violence — estimates of 200,000 to 2 million dead and 10–20 million displaced. Indian independence marks the beginning of the rapid dissolution of the British Empire: by 1965, over 25 former colonies gain independence.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Independence_Day_(India)",
+            "source": "Wikipedia / Independence Day (India)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/A_still_of_Red_Fort%2C_during_the_62nd_Independence_Day_celebrations%2C_in_Delhi_on_August_15%2C_2008.jpg/330px-A_still_of_Red_Fort%2C_during_the_62nd_Independence_Day_celebrations%2C_in_Delhi_on_August_15%2C_2008.jpg"
+          }
+        ]
+      },
+      {
+        "id": "windrush-commonwealth-migration-1948",
+        "year": "1948",
+        "title": "Empire Windrush Arrives — Commonwealth Migration Begins",
+        "type": "political",
+        "detail": "The MV Empire Windrush arrives at Tilbury Docks on 22 June 1948, carrying 492 passengers from Jamaica and other Caribbean islands. The British Nationality Act 1948 grants full citizenship to all Commonwealth subjects. Between 1948 and 1971, around half a million Caribbean migrants arrive to fill labour shortages in the NHS, transport, and industry.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "suez-crisis-1956",
+        "year": "1956",
+        "title": "Suez Crisis — End of British Imperial Pretension",
+        "type": "diplomatic",
+        "detail": "Britain and France, colluding with Israel, invade Egypt following Nasser's nationalisation of the Suez Canal. Intense US pressure and a run on sterling forces Prime Minister Anthony Eden to order a humiliating ceasefire in November. Suez marks the definitive end of British great-power status and triggers Eden's resignation, reshaping the UK's 'special relationship' with the US.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Empire",
+            "source": "Wikipedia / Empire",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Modern_Empires.svg/330px-Modern_Empires.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "uk-joins-eec-1973",
+        "year": "1973",
+        "title": "UK Joins the European Economic Community",
+        "type": "diplomatic",
+        "detail": "The UK joins the European Economic Community (EEC) on 1 January 1973 under Prime Minister Edward Heath, alongside Ireland and Denmark. A 1975 referendum confirms membership with a 67% vote in favour. UK membership reshapes trade, law, and immigration over four decades before the Brexit vote of 2016 reverses it.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC History",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Commonwealth_of_Nations",
+            "source": "Wikipedia / Commonwealth of Nations",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Commonwealth_Flag_2013.svg/330px-Commonwealth_Flag_2013.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "northern-ireland-troubles-1969",
+        "year": "1969",
+        "title": "The Troubles Begin in Northern Ireland",
+        "type": "military",
+        "detail": "Sectarian violence escalates in Northern Ireland in 1969 after civil rights marches are attacked by loyalists. British troops are deployed in August 1969 in what becomes the longest deployment in UK military history. The conflict — between republican and unionist communities — lasts until the Good Friday Agreement in 1998, claiming over 3,500 lives.",
+        "sources": [
+          {
+            "name": "The National Archives",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/The_Troubles",
+            "source": "Wikipedia / The Troubles",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Map_of_Ireland%27s_capitals.png/330px-Map_of_Ireland%27s_capitals.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Thatcher to Blair (1979–2010)",
+    "events": [
+      {
+        "id": "thatcher-election-1979",
+        "year": "1979",
+        "title": "Margaret Thatcher Elected — Thatcherite Revolution",
+        "type": "political",
+        "detail": "Margaret Thatcher becomes the UK's first female Prime Minister on 4 May 1979 following a Conservative landslide. Her government embarks on radical economic transformation: privatisation of nationalised industries, deregulation of financial markets ('Big Bang', 1986), trade union reform, and reductions in public spending. Thatcherism fundamentally remakes the British economy, with enduring effects on inequality and regional divides.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Premiership_of_Margaret_Thatcher",
+            "source": "Wikipedia / Premiership of Margaret Thatcher",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Premier_Thatcher_932-7042_%28cropped%29.jpg/330px-Premier_Thatcher_932-7042_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "falklands-war-1982",
+        "year": "1982",
+        "title": "Falklands War — Argentina Invades British Territory",
+        "type": "military",
+        "detail": "Argentina invades and occupies the Falkland Islands on 2 April 1982. Britain dispatches a naval task force 8,000 miles to the South Atlantic. After 74 days of fighting, Argentine forces surrender on 14 June. Britain loses 255 military personnel; Argentina loses 649. The victory revives Thatcher's domestic popularity and is cited as a critical factor in her 1983 landslide re-election.",
+        "sources": [
+          {
+            "name": "Imperial War Museum",
+            "tier": 3,
+            "url": "https://www.iwm.org.uk"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Falklands_War",
+            "source": "Wikipedia / Falklands War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/HMS_Broadsword_and_Hermes%2C_1982_%28IWM%29.jpg/330px-HMS_Broadsword_and_Hermes%2C_1982_%28IWM%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "miners-strike-1984",
+        "year": "1984",
+        "title": "Miners' Strike — Thatcher vs. the Unions",
+        "type": "political",
+        "detail": "The National Union of Mineworkers under Arthur Scargill strikes for a year (March 1984–March 1985) against pit closures. The government wins: pits are closed, the NUM is broken, and Britain's coal industry is effectively destroyed. The strike and the Orgreave confrontation divide communities in Yorkshire, Wales, and the Midlands for generations.",
+        "sources": [
+          {
+            "name": "BBC News",
+            "tier": 2
+          },
+          {
+            "name": "The Guardian",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Premiership_of_Margaret_Thatcher",
+            "source": "Wikipedia / Premiership of Margaret Thatcher",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Premier_Thatcher_932-7042_%28cropped%29.jpg/330px-Premier_Thatcher_932-7042_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "blair-new-labour-1997",
+        "year": "1997",
+        "title": "Tony Blair's New Labour Landslide",
+        "type": "political",
+        "detail": "Labour wins a majority of 179 seats under Tony Blair on 1 May 1997, ending 18 years of Conservative rule. Blair's 'Third Way' embraces market economics with greater public investment. Key achievements include the Scottish Parliament, Welsh Assembly, minimum wage, Bank of England independence, Human Rights Act, and the Good Friday Agreement.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "good-friday-agreement-1998",
+        "year": "1998",
+        "title": "Good Friday Agreement — Northern Ireland Peace Deal",
+        "type": "diplomatic",
+        "detail": "The Belfast/Good Friday Agreement is signed on 10 April 1998 by the British and Irish governments and most Northern Ireland political parties, following negotiations chaired by US Senator George Mitchell. It establishes a power-sharing executive, a North-South Ministerial Council, and a framework for decommissioning paramilitary weapons — effectively ending three decades of the Troubles.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1
+          },
+          {
+            "name": "No. 10 Downing Street",
+            "tier": 1
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "iraq-war-2003",
+        "year": "2003",
+        "title": "UK Joins Iraq War Without UN Mandate",
+        "type": "military",
+        "detail": "The UK joins the US-led invasion of Iraq on 20 March 2003 on the basis of disputed intelligence claiming Saddam Hussein possessed weapons of mass destruction. No WMDs are found. The Chilcot Inquiry (2016) concludes the UK government presented the case for war with 'unwarranted certainty' and the legal basis was 'far from satisfactory'. The war splits the Labour Party and public opinion.",
+        "sources": [
+          {
+            "name": "The Chilcot Report / Iraq Inquiry",
+            "tier": 1,
+            "url": "https://webarchive.nationalarchives.gov.uk/ukgwa/20171123122743/http://www.iraqinquiry.org.uk/"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Iraq_War",
+            "source": "Wikipedia / Iran%E2%80%93Iraq War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Chemical_weapon1.jpg/330px-Chemical_weapon1.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Modern Britain (2010–2026)",
+    "events": [
+      {
+        "id": "coalition-austerity-2010",
+        "year": "2010",
+        "title": "Coalition Government and Austerity Programme",
+        "type": "economic",
+        "detail": "The Conservative-Liberal Democrat coalition under David Cameron wins the 2010 general election after Labour's 13-year rule following the 2008 financial crisis. Chancellor George Osborne launches the largest peacetime austerity programme since the 1920s, cutting public spending by £81 billion. Austerity reduces the deficit but is widely blamed for stagnating living standards and straining the NHS and public services.",
+        "sources": [
+          {
+            "name": "HM Treasury",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/United_Kingdom_government_austerity_programme",
+            "source": "Wikipedia / United Kingdom government austerity programme",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Uk_incomes.png/330px-Uk_incomes.png"
+          }
+        ]
+      },
+      {
+        "id": "scotland-independence-referendum-2014",
+        "year": "2014",
+        "title": "Scottish Independence Referendum — 55% Vote to Remain",
+        "type": "constitutional",
+        "detail": "Scotland votes on independence on 18 September 2014: 55.3% No, 44.7% Yes on a record 84.6% turnout. The SNP surges after the result; support for independence remains around 45–50% in subsequent polling. A second referendum (IndyRef2) remains a central SNP demand, consistently opposed by successive UK governments.",
+        "sources": [
+          {
+            "name": "Electoral Commission",
+            "tier": 1,
+            "url": "https://www.electoralcommission.org.uk"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2014_Scottish_independence_referendum",
+            "source": "Wikipedia / 2014 Scottish independence referendum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/2014_Scottish_Independence_Referendum_by_Council_Areas.svg/330px-2014_Scottish_Independence_Referendum_by_Council_Areas.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "brexit-referendum-2016",
+        "year": "2016",
+        "title": "Brexit Referendum — 52% Vote to Leave the EU",
+        "type": "constitutional",
+        "detail": "The UK votes 51.9% to 48.1% to leave the European Union on 23 June 2016 on a 72.2% turnout. England and Wales vote Leave; Scotland and Northern Ireland vote Remain. Prime Minister David Cameron resigns. The Leave campaign wins on slogans including 'Take Back Control' and '£350m/week for the NHS' — the latter widely criticised as misleading.",
+        "sources": [
+          {
+            "name": "Electoral Commission",
+            "tier": 1,
+            "url": "https://www.electoralcommission.org.uk"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Opinion_polling_for_the_United_Kingdom_European_Union_membership_referendum",
+            "source": "Wikipedia / Opinion polling for the United Kingdom European Union membership referendum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/UK_EU_referendum_polling.svg/330px-UK_EU_referendum_polling.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "covid-19-pandemic-uk-2020",
+        "year": "2020",
+        "title": "COVID-19 Pandemic — UK Enters Lockdown",
+        "type": "political",
+        "detail": "The UK enters its first national lockdown on 23 March 2020 under Boris Johnson following the COVID-19 pandemic. The UK records around 230,000 COVID-related deaths by 2023, one of the highest per-capita tolls in Europe. The government's vaccine rollout — first jab administered 8 December 2020 — is widely praised; the 'Partygate' scandal (illegal gatherings in Downing Street during lockdown) eventually forces Johnson's resignation in July 2022.",
+        "sources": [
+          {
+            "name": "No. 10 Downing Street",
+            "tier": 1
+          },
+          {
+            "name": "Office for National Statistics",
+            "tier": 1,
+            "url": "https://www.ons.gov.uk"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25"
+      },
+      {
+        "id": "charles-iii-accession-2022",
+        "year": "2022",
+        "title": "Queen Elizabeth II Dies — Charles III Accedes",
+        "type": "constitutional",
+        "detail": "Queen Elizabeth II dies at Balmoral Castle on 8 September 2022 at age 96, ending the longest reign in British history (70 years, 214 days). King Charles III automatically accedes to the throne. An estimated 4 billion people watch the state funeral on 19 September. Charles III's coronation takes place at Westminster Abbey on 6 May 2023.",
+        "sources": [
+          {
+            "name": "No. 10 Downing Street",
+            "tier": 1
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Elizabeth_II",
+            "source": "Wikipedia / Elizabeth II",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg/330px-Queen_Elizabeth_II_official_portrait_for_1959_tour_%28retouched%29_%28cropped%29_%283-to-4_aspect_ratio%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "starmer-labour-landslide-2024",
+        "year": "2024",
+        "title": "Starmer Labour Wins Landslide — 14 Years of Tory Rule End",
+        "type": "political",
+        "active": true,
+        "detail": "Labour under Keir Starmer wins the general election on 4 July 2024 with 412 seats, a majority of 174 — the second-largest in Labour's history — ending 14 years of Conservative government. The Conservatives are reduced to 121 seats, their worst result since 1906. Starmer becomes the 79th Prime Minister, inheriting a £22 billion 'black hole' in public finances and an NHS in crisis.",
+        "sources": [
+          {
+            "name": "Electoral Commission",
+            "tier": 1,
+            "url": "https://www.electoralcommission.org.uk"
+          },
+          {
+            "name": "BBC News",
+            "tier": 2
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-25",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Keir_Starmer",
+            "source": "Wikipedia / Keir Starmer",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg/330px-Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "starmer-resignation-burnham-succession-2026",
+        "year": "2026",
+        "title": "Starmer Resigns; Andy Burnham Becomes UK's Seventh PM in a Decade",
+        "type": "political",
+        "active": false,
+        "detail": "Keir Starmer resigned as Labour leader and Prime Minister on 22 June 2026 after a leadership crisis triggered by Labour's disastrous May 2026 local elections — in which the party lost roughly 1,496 council seats as Reform UK surged to become the largest party in local government — and by Andy Burnham's decisive Makerfield by-election win four days earlier, which cleared his path back into Parliament. Nominations for the Labour leadership closed on 16 July 2026 with Burnham as the sole candidate, backed by over 80% of Labour MPs. A special conference on 17 July formally confirmed him as leader, and Starmer gave an emotional farewell at his final PMQs on 15 July, telling MPs 'this is the end of my political journey.' Burnham was appointed Prime Minister on 20 July 2026 after a 35-minute audience with King Charles III at Buckingham Palace, becoming the UK's seventh PM in a decade, and immediately reshuffled the cabinet — John Healey to Chancellor, Ed Miliband to Foreign Secretary, Yvette Cooper to Health Secretary, Wes Streeting back as Defence Secretary, and Angela Rayner returning as Housing Secretary — dismissing around 15 ministers including outgoing Chancellor Rachel Reeves and Deputy PM David Lammy. Starmer's departure, after just two years in office, makes him the UK's sixth Prime Minister to leave office since 2016 and hands Burnham a party under existential pressure from Reform UK, which led national polling through much of mid-2026.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/6/22/why-has-keir-starmer-resigned-as-uk-prime-minister-and-who-will-take-over",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "url": "https://www.npr.org/2026/06/22/nx-s1-5866231/keir-starmer-resigns",
+            "pole": "western"
+          },
+          {
+            "name": "Labour Party",
+            "tier": 1,
+            "url": "https://labour.org.uk/labour-leadership-2026/labour-leadership-2026-plp-nominations/",
+            "pole": "western"
+          },
+          {
+            "name": "GOV.UK",
+            "tier": 1,
+            "url": "https://www.gov.uk/government/speeches/andy-burnhams-first-speech-as-prime-minister-20-july-2026",
+            "pole": "western"
+          },
+          {
+            "name": "ITV News",
+            "tier": 2,
+            "url": "https://www.itv.com/news/2026-07-20/prime-minister-andy-burnham-cabinet-announcements",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/7/20/andy-burnham-pledges-end-to-political-instability-as-he-becomes-uk-pm",
+            "caption": "Andy Burnham delivers his first speech as Prime Minister outside 10 Downing Street, 20 July 2026",
+            "source": "Al Jazeera",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/07/afp_6a5e1e831071-1784553091.jpg?resize=770%2C513&quality=80"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-18"
+      },
+      {
+        "id": "clacton-byelection-farage-reelected-2026",
+        "year": "2026",
+        "title": "Farage Re-Elected in Clacton By-Election Amid Finance Scrutiny",
+        "type": "political",
+        "active": true,
+        "detail": "Nigel Farage resigned as MP for Clacton on 7 July 2026 amid scrutiny over his personal finances — including a reported £5 million gift from crypto billionaire Christopher Harborne and questions over donations linked to Robert Jenrick's 2024 Conservative leadership bid — which he dismissed as an 'establishment smear,' triggering a by-election to re-contest his own seat. He won it back on 13 August 2026 with 63.3% of the vote and a 12,784-vote majority over novelty candidate Count Binface, on a record field of 34 candidates. While Farage's own seat was never in serious doubt, Reform UK's national polling has slipped since the resignation, with an Ipsos poll putting Labour on 28% against Reform's 25% and the Conservatives and Greens narrowing the gap for third.",
+        "sources": [
+          {
+            "name": "UK Parliament",
+            "tier": 1,
+            "url": "https://www.parliament.uk/business/news/2026/august-2026/nigel-farage-re-elected-as-member-of-parliament-for-clacton/",
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/8/12/clacton-reform-farage-elections",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/08/13/reform-uk-leader-nigel-farage-and-count-binface-go-head-to-head-in-snap-uk-poll",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/8/12/clacton-reform-farage-elections",
+            "caption": "Nigel Farage campaigns ahead of the Clacton by-election he triggered by resigning his own seat",
+            "source": "Al Jazeera",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/05/2026-05-07T094029Z_282944369_RC294LASL2S2_RTRMADP_3_BRITAIN-POLITICS-ELECTIONS-1778149005.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-18"
+      },
+      {
+        "id": "uk-wildfire-emergency-stourbridge-tinderbox-2026",
+        "year": "2026",
+        "title": "Record Wildfires Destroy Homes as Burnham Declares Britain a 'Tinderbox'",
+        "type": "political",
+        "active": false,
+        "detail": "England and Wales hit record wildfire levels on 14 August 2026 after the UK's hottest day of the year, with London reaching 38.1°C (100°F) — the fifth-hottest day on record. A blaze in Stourbridge, West Midlands destroyed around 19-20 homes and forced hundreds of evacuations; fire chiefs declared 11 major incidents in 24 hours, exceeding 2025's full-year wildfire total. The government issued a nationwide emergency alert to mobile phones in England and Wales at 18:00 GMT warning of 'very high risk' of wildfires, imposed a temporary ban on disposable barbecue sales, and appointed Judith Blake as Fire Minister. Prime Minister Andy Burnham visited Stourbridge and warned 'Britain is a tinderbox right now,' deploying military personnel alongside fire services and convening a COBRA meeting on the crisis.",
+        "sources": [
+          {
+            "name": "GOV.UK",
+            "tier": 1,
+            "url": "https://www.gov.uk/alerts/14-aug-2026-2",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters (via Yahoo News)",
+            "tier": 2,
+            "url": "https://www.yahoo.com/news/articles/wildfires-britain-hit-record-levels-124129006.html",
+            "pole": "western"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "url": "https://www.nbcnews.com/world/united-kingdom/tinderbox-britain-bans-disposable-barbecues-nationwide-fire-alert-rcna592600",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.yahoo.com/news/articles/wildfires-britain-hit-record-levels-124129006.html",
+            "caption": "Firefighters battle a blaze in Stourbridge, West Midlands as England hits record wildfire levels on its hottest day of 2026",
+            "source": "Reuters",
+            "thumbnail": "https://media.zenfs.com/en/reuters.com/4a741e62ad7c224fb1705c2df202490e.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20"
+      },
+      {
+        "id": "uk-unemployment-holds-4-9-percent-wages-august-2026",
+        "year": "2026",
+        "title": "Unemployment Holds at 4.9% as Wage Growth Beats Forecasts, Vacancies Hit 5-Year Low",
+        "type": "economic",
+        "active": false,
+        "detail": "The Office for National Statistics reported on 18 August 2026 that UK unemployment held at 4.9% for the three months to June 2026, missing the market forecast of 4.8%. Regular wage growth excluding bonuses came in at +3.5% year-on-year, beating the 3.4% forecast, though private-sector pay growth slowed to 2.8% — its weakest pace since 2020 — while public-sector pay accelerated to 6.1%. Payrolled employment fell by 13,000 in July to 30.3 million, down 94,000 on the year, and job vacancies dropped to 707,000 in the three months to July, the lowest level since late 2014. Economists said the weakening labour market reduced the likelihood of the Bank of England raising interest rates from 3.75% at its 17 September meeting.",
+        "sources": [
+          {
+            "name": "Office for National Statistics",
+            "tier": 1,
+            "url": "https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/bulletins/uklabourmarket/august2026",
+            "pole": "western"
+          },
+          {
+            "name": "Investing.com",
+            "tier": 2,
+            "url": "https://www.investing.com/news/economic-indicators/uk-wage-growth-holds-at-35-as-labour-market-weakens-4864362",
+            "pole": "western"
+          },
+          {
+            "name": "Proactive Investors",
+            "tier": 2,
+            "url": "https://www.proactiveinvestors.co.uk/companies/news/1097181/uk-unemployment-holds-at-4-9-as-payrolls-and-vacancies-fall-1097181.html",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.investing.com/news/economic-indicators/uk-wage-growth-holds-at-35-as-labour-market-weakens-4864362",
+            "caption": "UK labour market data released 18 August 2026 showed unemployment holding at 4.9% as vacancies fell to a five-year low",
+            "source": "Investing.com",
+            "thumbnail": "https://content-media.investing.com/news/world_news_2_69x52._800x533_L_1419494365.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20"
+      },
+      {
+        "id": "uk-inflation-rises-2-9-percent-july-2026",
+        "year": "2026",
+        "title": "CPI Inflation Rises to 2.9% in July, a Four-Month High, on Higher Energy Bills",
+        "type": "economic",
+        "active": true,
+        "detail": "The Office for National Statistics reported on 19 August 2026 that UK CPI inflation rose to 2.9% in the 12 months to July, up from 2.6% in June and its highest level since March — driven almost entirely by a 13% hike in Ofgem's household energy price cap that took effect on 1 July, which added around £221 to the average annual dual-fuel bill and pushed gas prices up 14.7% year-on-year, the largest gas price rise since October 2022. CPIH (including owner-occupiers' housing costs) rose to 3.1% from 2.8%, while core inflation held flat at 2.6%. Services inflation eased slightly to 3.4% from 3.6%, and food price inflation slowed to 1.3%, its lowest rate in nearly five years. Economists said the rise reflected the one-off energy cap reset rather than a broadening of price pressures, supporting expectations the Bank of England will hold Bank Rate at 3.75% at its 17 September meeting.",
+        "sources": [
+          {
+            "name": "Office for National Statistics",
+            "tier": 1,
+            "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/july2026",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters (via Investing.com)",
+            "tier": 2,
+            "url": "https://www.investing.com/news/economic-indicators/uk-july-cpi-rises-to-29-as-household-energy-costs-jump-4866463",
+            "pole": "western"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/business/2026/08/19/uk-inflation-hits-four-month-high-of-29-as-energy-bills-soar",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.investing.com/news/economic-indicators/uk-july-cpi-rises-to-29-as-household-energy-costs-jump-4866463",
+            "caption": "UK CPI inflation rose to 2.9% in July 2026, a four-month high driven by higher household energy bills",
+            "source": "Reuters",
+            "thumbnail": "https://content-media.investing.com/news/LYNXNPEB6U08A_L.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20"
+      },
+      {
+        "id": "uk-public-finances-deficit-july-2026",
+        "year": "2026",
+        "title": "UK Posts Surprise £1.8bn Budget Deficit in July, Piling Pressure on Chancellor Healey",
+        "type": "economic",
+        "active": true,
+        "detail": "The Office for National Statistics reported on 21 August 2026 that UK public sector net borrowing came in at £1.8 billion in July, confounding economist forecasts of a balanced month and defying the Office for Budget Responsibility's projection of a £500 million surplus. The shortfall was £0.7 billion higher than July 2025 and £2.3 billion above the OBR's forecast. Central government spending on social benefits rose £2 billion year-on-year and spending on goods and services rose £1.2 billion, outpacing a record £17.1 billion in self-assessed income tax receipts. Cumulative borrowing for the financial year to July reached £56.7 billion, £6.0 billion lower than the same period last year but £2.3 billion above the OBR's forecast, while public sector net debt stood at 94.1% of GDP, just under £3 trillion. Chancellor John Healey said 'fiscal discipline is the bedrock of our UK economic stability,' reaffirming his fiscal rules ahead of his first Budget on 28 October.",
+        "sources": [
+          {
+            "name": "Office for National Statistics",
+            "tier": 1,
+            "url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/july2026",
+            "pole": "western"
+          },
+          {
+            "name": "Proactive Investors (via Yahoo Finance)",
+            "tier": 2,
+            "url": "https://uk.finance.yahoo.com/news/uk-borrowing-hits-1-8-071600575.html",
+            "pole": "western"
+          },
+          {
+            "name": "Reuters (via Investing.com)",
+            "tier": 2,
+            "url": "https://www.investing.com/news/economic-indicators/uk-posts-unexpected-budget-deficit-in-july-as-spending-rises-4870880",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://uk.finance.yahoo.com/news/uk-borrowing-hits-1-8-071600575.html",
+            "caption": "UK public finances posted an unexpected £1.8bn deficit in July 2026, adding pressure on Chancellor John Healey ahead of the October Budget",
+            "source": "Proactive Investors",
+            "thumbnail": "https://media.zenfs.com/en/proactive_uk_164/a51ca2043e41c161c4453f4ebd058bac.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-28"
+      },
+      {
+        "id": "ofgem-price-cap-rise-october-2026",
+        "year": "2026",
+        "title": "Ofgem Confirms 4% Winter Price Cap Rise to £1,723 as Middle East-Driven Gas Costs Bite",
+        "type": "economic",
+        "active": true,
+        "detail": "Energy regulator Ofgem announced on 26 August 2026 that the quarterly energy price cap will rise 4% for the period 1 October to 31 December 2026, taking the typical dual-fuel direct-debit household bill from £1,663 to £1,723 a year — an increase of about £60 annually, or £5 a month. Ofgem attributed the rise to higher wholesale gas prices linked to ongoing Middle East conflict volatility, with gas unit rates up around 8.7% even as a temporary VAT cut on electricity held the electricity portion of the cap nearly flat. Around 22 million households on default tariffs are affected; roughly 11 million households on fixed-rate deals are unaffected. Analysts at Cornwall Insight forecast a further 9% rise in January 2027, which would take the typical annual bill to about £1,872. Energy debt among UK households reached a record £6 billion by June 2026, with over 3 million customers in arrears.",
+        "sources": [
+          {
+            "name": "Ofgem",
+            "tier": 1,
+            "url": "https://www.ofgem.gov.uk/press-release/energy-price-cap-will-rise-4-october-2026",
+            "pole": "western"
+          },
+          {
+            "name": "MoneySavingExpert",
+            "tier": 3,
+            "url": "https://www.moneysavingexpert.com/news/2026/08/martin-lewis-energy-price-cap-rise-october/",
+            "pole": "western"
+          },
+          {
+            "name": "IBTimes UK",
+            "tier": 3,
+            "url": "https://www.ibtimes.co.uk/uk-energy-price-cap-rise-october-2026-1816417",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.moneysavingexpert.com/news/2026/08/martin-lewis-energy-price-cap-rise-october/",
+            "caption": "Ofgem confirmed a 4% rise in the energy price cap to £1,723 a year from 1 October 2026",
+            "source": "MoneySavingExpert",
+            "thumbnail": "https://images.ctfassets.net/x1xkqhj4w3lh/RgYwRmZVVbVmTT1X0RcJc/71fadfd4244dc4153044230a659be668/hero-hompage-tip-fix-energy-now-calculator-light-bulb-piggy-bank.png"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-28"
+      },
+      {
+        "id": "burnham-belfast-border-poll-off-the-table-2026",
+        "year": "2026",
+        "title": "Burnham Rules Out Northern Ireland Border Poll on First Visit, Sparking Sinn Féin Rebuke",
+        "type": "constitutional",
+        "active": true,
+        "detail": "On his first official visit to Northern Ireland as Prime Minister on 27 August 2026, Andy Burnham told reporters in Belfast that a border poll on Irish unity was 'off the table,' saying: 'I will take a collaborative approach but some issues will be off the table, and that is one issue that will be off the table.' He pointed to the divisions left by the Brexit and Scottish independence referendums, arguing the government's focus should be on cost-of-living pressures and agreeing a Stormont budget rather than a fresh constitutional referendum. Sinn Féin leader Mary Lou McDonald rejected the remarks, saying Burnham had no authority to override the Good Friday Agreement's provision guaranteeing the people of Northern Ireland the right to determine their constitutional future, calling it a right that 'cannot be cast aside' by a UK prime minister. The Democratic Unionist Party welcomed Burnham's comments, with leader Gavin Robinson saying the PM had settled speculation over holding such a referendum. The visit, accompanied by Northern Ireland Secretary Chris Bryant, coincided with a stop at a wedding reception in Cultra, Co Down.",
+        "sources": [
+          {
+            "name": "Arab News (via Reuters)",
+            "tier": 2,
+            "url": "https://www.arabnews.com/node/2656073/world",
+            "pole": "international"
+          },
+          {
+            "name": "The Irish News",
+            "tier": 3,
+            "url": "https://www.irishnews.com/news/northern-ireland/sinn-feins-mary-lou-mcdonald-says-andy-burnham-has-no-right-to-rule-out-a-border-poll-NHEKYEV775C3TOL5NUKCDRCK4M/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.arabnews.com/node/2656073/world",
+            "caption": "PM Andy Burnham ruled out a Northern Ireland border poll during his first official visit to Belfast",
+            "source": "Arab News",
+            "thumbnail": "https://www.arabnews.com/sites/default/files/styles/n_670_395/public/main-image/2026/08/27/4744879-45496754.jpg?itok=Wr0kV54Y"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-28"
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "isgs-sanama-attack-mar25-2026",
+    "date": "2026-03-25",
+    "year": "2026",
+    "title": "IS-Sahel Kills 6 Niger Soldiers in Sanama, Tillabéri Region",
+    "type": "attack",
+    "detail": "Islamic State – Wilayat Sahel (IS-Sahel) claimed responsibility for an attack on Niger Army positions in Sanama, Tillabéri Region, killing 6 soldiers. The attack falls within the ongoing IS-Sahel pressure campaign against military positions in western Niger's Liptako-Gourma zone. Tillabéri has become one of the deadliest conflict zones in the central Sahel, with nearly 1,300 killed in the region in the preceding months according to ACLED. The attack coincides with the day analysts were warning about IS-Sahel's expanding operations in Tillabéri following the US forces' departure from Niger Air Base 101 and 201.",
+    "sources": [
+      { "name": "Pravda Burkina Faso — IS-Sahel Sanama/Tillaberi attack", "tier": 4, "pole": "eastern" },
+      { "name": "ACLED — Sahel conflict update", "tier": 3, "pole": "western" }
+    ]
+  },
+  {
+    "id": "jnim-gulf-of-guinea-expansion-warning-mar-2026",
+    "date": "2026-03-25",
+    "year": "2026",
+    "title": "Analysts Warn JNIM Jihadism Spreading South Toward Gulf of Guinea",
+    "type": "diplomatic",
+    "detail": "Security analysts and regional media issued warnings that JNIM's jihadist insurgency is migrating southward from the Sahel core toward coastal West Africa, placing the entire Gulf of Guinea at risk. JNIM has expanded active presence and recruitment into Benin, Togo, Côte d'Ivoire, Ghana, Mauritania, and Senegal, primarily by exploiting Fulani ethnic networks and community grievances. The southward trend follows Guinea's March 23–24 crackdowns on domestic JNIM networks, and comes amid JNIM's consolidation of territorial control in western Mali and ongoing pressure on Bamako. Analysts note the group now exerts more influence across Mali than at any prior point in the 13-year insurgency.",
+    "sources": [
+      { "name": "Pravda Guinea", "tier": 3, "pole": "eastern" },
+      { "name": "ACLED — Africa Overview March 2026", "tier": 3, "pole": "western" },
+      { "name": "Crisis Group", "tier": 3, "pole": "western" }
+    ]
+  }
+]

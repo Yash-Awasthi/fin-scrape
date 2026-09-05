@@ -1,0 +1,264 @@
+"""
+Web Search Service - DuckDuckGo Search Integration
+Provides real-time web search capability for Oracle AI chat.
+"""
+
+import asyncio
+import os
+from typing import List, Dict, Optional
+from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+
+# Cache for search results (5 minute TTL)
+_search_cache: Dict[str, tuple] = {}
+CACHE_TTL = 300  # 5 minutes
+
+# Budget for a single DuckDuckGo round-trip.
+#
+# This is the bound that actually decides how long a search may take. The
+# library's own default is 5s, which is short enough that a merely slow — not
+# broken — backend reads as "no results" and the turn answers without any web
+# context at all. The caller's asyncio timeout cannot help here: it fires on
+# the coroutine while the underlying thread keeps running, so widening the
+# outer bound alone would leak threads rather than buy patience.
+#
+# Keep this comfortably BELOW the caller's outer budget (chat_service.
+# WEB_TIMEOUT), so a stalled search is reported by the library and the thread
+# unwinds, instead of being abandoned mid-flight.
+SEARCH_TIMEOUT = float(os.environ.get("WEB_SEARCH_TIMEOUT", "15"))
+
+
+# Recency windows the search backends agree on.
+#
+# Validated rather than passed through, because two of the engines behind
+# `backend="auto"` index a dict by this value directly — brave.py maps
+# d/w/m/y to pd/pw/pm/py, bing.py to 1/2/3 — so an unrecognised string
+# raises KeyError inside the engine and takes the whole search down instead
+# of merely failing to narrow it. DuckDuckGo's own `df` parameter does accept
+# a "YYYY-MM-DD..YYYY-MM-DD" range, but only that one engine does, so a custom
+# range is not safe to offer here. Callers that need a specific window should
+# search wide and filter on `published_at` from `search_news` instead.
+_TIMELIMITS = frozenset({"d", "w", "m", "y"})
+
+
+def _clean_timelimit(timelimit: Optional[str]) -> Optional[str]:
+    """Return `timelimit` if a backend can act on it, else None."""
+    if timelimit is None:
+        return None
+    if timelimit in _TIMELIMITS:
+        return timelimit
+    logger.warning("Ignoring unsupported search timelimit %r", timelimit)
+    return None
+
+
+async def search_web(
+    query: str,
+    max_results: int = 5,
+    timeout: Optional[float] = None,
+    timelimit: Optional[str] = None,
+) -> List[Dict]:
+    """
+    Search the web using DuckDuckGo.
+
+    Args:
+        query: Search query string
+        max_results: Maximum number of results to return
+        timeout: Per-request budget in seconds; defaults to SEARCH_TIMEOUT
+        timelimit: Recency window, one of "d", "w", "m", "y". Anything else is
+            dropped with a warning rather than raised — a search that comes
+            back unnarrowed is worth more than no search at all.
+
+    Returns:
+        List of search results with title, snippet, and url
+    """
+    budget = SEARCH_TIMEOUT if timeout is None else timeout
+    window = _clean_timelimit(timelimit)
+
+    # Check cache first. The window is part of the key: the same query asked
+    # about this week and about this year are different questions.
+    cache_key = f"{query}:{max_results}:{window or 'all'}"
+    if cache_key in _search_cache:
+        cached_time, cached_results = _search_cache[cache_key]
+        if (datetime.now() - cached_time).total_seconds() < CACHE_TTL:
+            return cached_results
+
+    try:
+        # Run the sync DuckDuckGo search in a thread pool
+        from ddgs import DDGS
+
+        def do_search():
+            try:
+                ddgs = DDGS(timeout=budget)
+                results = ddgs.text(query, max_results=max_results, timelimit=window)
+                return [
+                    {
+                        "title": r.get("title", ""),
+                        "snippet": r.get("body", ""),
+                        "url": r.get("href", ""),
+                    }
+                    for r in results
+                ]
+            except Exception as e:
+                logger.error(f"DDGS search failed after {budget:.0f}s budget: {e}")
+                return []
+
+        results = await asyncio.to_thread(do_search)
+
+        # Only a hit is worth remembering. Caching an empty list would make one
+        # timed-out search answer the next five minutes of identical questions
+        # with silence — the opposite of what a longer budget is buying.
+        if results:
+            _search_cache[cache_key] = (datetime.now(), results)
+
+        return results
+
+    except Exception as e:
+        logger.error(f"Web search error for '{query}': {e}")
+        return []
+
+
+async def search_news(
+    query: str,
+    max_results: int = 6,
+    timeout: Optional[float] = None,
+    timelimit: Optional[str] = None,
+) -> List[Dict]:
+    """
+    Search news wires, carrying each item's publication date through.
+
+    The date is the whole point of this function existing beside `search_web`.
+    The text index answers "what is written about this", which cannot place an
+    event in time; a caller trying to work out *when* something happened — or
+    which story broke in the window a price moved — needs the timestamp, and
+    the text results do not carry one.
+
+    `published_at` is an ISO-8601 string when the backend supplied one and None
+    when it did not. It is deliberately not defaulted to "now": a story of
+    unknown age that gets stamped with today's date is indistinguishable from
+    breaking news, which is exactly the mistake a date is being fetched to
+    prevent. Callers must treat None as unknown, not as recent.
+
+    Returns:
+        List of results with title, snippet, url, published_at and source
+    """
+    budget = SEARCH_TIMEOUT if timeout is None else timeout
+    window = _clean_timelimit(timelimit)
+
+    cache_key = f"news:{query}:{max_results}:{window or 'all'}"
+    if cache_key in _search_cache:
+        cached_time, cached_results = _search_cache[cache_key]
+        if (datetime.now() - cached_time).total_seconds() < CACHE_TTL:
+            return cached_results
+
+    try:
+        from ddgs import DDGS
+
+        def do_search():
+            try:
+                ddgs = DDGS(timeout=budget)
+                results = ddgs.news(query, max_results=max_results, timelimit=window)
+                return [
+                    {
+                        "title": r.get("title", ""),
+                        "snippet": r.get("body", ""),
+                        "url": r.get("url", "") or r.get("href", ""),
+                        "published_at": r.get("date") or None,
+                        "source": r.get("source", ""),
+                    }
+                    for r in results
+                ]
+            except Exception as e:
+                logger.error(f"DDGS news search failed after {budget:.0f}s budget: {e}")
+                return []
+
+        results = await asyncio.to_thread(do_search)
+
+        if results:
+            _search_cache[cache_key] = (datetime.now(), results)
+
+        return results
+
+    except Exception as e:
+        logger.error(f"News search error for '{query}': {e}")
+        return []
+
+
+async def search_crypto_news(symbol: str) -> List[Dict]:
+    """
+    Search for recent crypto news about a specific symbol.
+    """
+    query = f"{symbol} cryptocurrency news today {datetime.now().strftime('%B %Y')}"
+    return await search_web(query, max_results=3)
+
+
+async def search_market_analysis(symbol: str) -> List[Dict]:
+    """
+    Search for market analysis and price predictions.
+    """
+    query = f"{symbol} price analysis technical analysis {datetime.now().strftime('%B %Y')}"
+    return await search_web(query, max_results=3)
+
+
+async def search_general_finance(query: str) -> List[Dict]:
+    """
+    Search for general financial information.
+    """
+    finance_query = f"{query} finance market {datetime.now().strftime('%Y')}"
+    return await search_web(finance_query, max_results=4)
+
+
+def _render_results(heading: str, results: List[Dict], limit: int) -> List[str]:
+    """
+    Format search hits for a prompt, carrying the source URL through.
+
+    The URL is not decoration: the assistant is required to cite web claims as
+    `[Source](url)`, and it can only do that honestly if the link reaches it.
+    """
+    if not results:
+        return []
+
+    lines = [f"\n**{heading}**"]
+    for i, r in enumerate(results[:limit], 1):
+        url = r.get("url") or ""
+        lines.append(f"{i}. {r.get('title', '')}" + (f" — {url}" if url else ""))
+        snippet = r.get("snippet") or ""
+        if snippet:
+            lines.append(f"   → {snippet[:250]}")
+    return lines
+
+
+async def get_enhanced_context(user_message: str, detected_symbol: Optional[str] = None) -> str:
+    """
+    Build enhanced context from web searches based on user message.
+
+    Returns formatted string with web search results.
+    """
+    context_parts: List[str] = []
+
+    try:
+        # If a specific symbol is detected, search for it
+        if detected_symbol:
+            news_results, analysis_results = await asyncio.gather(
+                search_crypto_news(detected_symbol),
+                search_market_analysis(detected_symbol),
+            )
+            context_parts += _render_results(
+                f"{detected_symbol} — recent web headlines", news_results, 3
+            )
+            context_parts += _render_results(
+                f"{detected_symbol} — web analysis", analysis_results, 2
+            )
+        else:
+            # General financial search based on user message
+            general_results = await search_general_finance(user_message)
+            context_parts += _render_results("Web search results", general_results, 3)
+
+        if context_parts:
+            return "\n".join(context_parts)
+        return ""
+
+    except Exception as e:
+        logger.error(f"Error building enhanced context: {e}")
+        return ""

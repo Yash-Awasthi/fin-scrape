@@ -1,0 +1,112 @@
+[
+  {
+    "id": "oil-production",
+    "label": "Oil Production",
+    "value": "~1.0 mb/d (est., early Aug 2026)",
+    "change": "No tankers loaded at Kharg Island (~90% of exports) for at least a week as of Aug 8",
+    "direction": "down",
+    "sparkData": [2.0, 1.8, 2.1, 2.4, 2.5, 2.7, 3.0, 1.5, 1.2, 1.0],
+    "color": "#e74c3c",
+    "source": "US EIA / OPEC / Fortune (Aug 8, 2026)",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "inflation-rate",
+    "label": "Annual Inflation Rate",
+    "value": "~88.6% (late June 2026, point-to-point)",
+    "change": "Sharply higher than the ~54% official 12-month figure reported in May; methodology differs by source",
+    "direction": "up",
+    "sparkData": [9, 15, 20, 30, 47, 44, 40, 54, 88.6],
+    "color": "#e74c3c",
+    "source": "Statistical Centre of Iran / IMF WEO 2026 / Fortune (Aug 8, 2026)",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "rial-exchange-rate",
+    "label": "Rial to USD (Free Market)",
+    "value": "~1,854,000 IRR/USD",
+    "change": "New all-time low; basic goods prices up 400%+ since the conflict began",
+    "direction": "down",
+    "sparkData": [42000, 80000, 250000, 420000, 500000, 560000, 900000, 1800000, 1830000, 1854000],
+    "color": "#e74c3c",
+    "source": "Alanchand / CNBC / IranWarRoom market data (Aug 9, 2026)",
+    "lastUpdated": "2026-08-09"
+  },
+  {
+    "id": "gdp-ppp",
+    "label": "GDP (PPP)",
+    "value": "$1.4 trillion (2026 est.)",
+    "change": "-5.4% to -10% real GDP contraction reported (estimates diverge by source); Fortune (Aug 8) cites -5.4% for the year",
+    "direction": "down",
+    "sparkData": [700, 800, 1000, 1050, 900, 1100, 1300, 1600, 1400, 1400],
+    "color": "#e74c3c",
+    "source": "IMF / Iranian economists symposium, Tehran (May 30) / Fortune (Aug 8, 2026)",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "oil-revenue",
+    "label": "Estimated Oil Export Revenue",
+    "value": "~$9B/year (est., early Aug 2026)",
+    "change": "Further decline from ~$11B as Kharg Island loading halted for a week amid the naval blockade",
+    "direction": "down",
+    "sparkData": [100, 40, 20, 15, 20, 25, 35, 15, 11, 9],
+    "color": "#e74c3c",
+    "source": "US EIA / Fortune oil sanctions coverage (Aug 8, 2026)",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "unemployment-rate",
+    "label": "Unemployment Rate",
+    "value": "9.1%–15% (2026 est., diverges by source)",
+    "change": "Fortune (Aug 8) cites an official 9.1% rate; independent estimates remain 12-15% given wartime job losses",
+    "direction": "up",
+    "sparkData": [11, 13, 14, 12, 11, 10.5, 10, 9.5, 13.5, 9.1],
+    "color": "#e74c3c",
+    "source": "Statistical Centre of Iran / Fortune (Aug 8, 2026)",
+    "lastUpdated": "2026-08-08"
+  },
+  {
+    "id": "natural-gas-reserves",
+    "label": "Proven Natural Gas Reserves",
+    "value": "34 trillion m³ (#1 World)",
+    "change": "Stable — world's largest proven reserves",
+    "direction": "up",
+    "sparkData": [27, 28, 29, 30, 31, 32, 33, 34, 34],
+    "color": "#2ecc71",
+    "source": "BP Statistical Review of World Energy 2024",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "sanctions-impact-gdp",
+    "label": "GDP Lost to Sanctions + War (Cumulative Est.)",
+    "value": "$1.2T+ (2012–2026)",
+    "change": "Accelerated dramatically since June 2025 conflict",
+    "direction": "down",
+    "sparkData": [10, 30, 80, 120, 150, 200, 250, 350, 450],
+    "color": "#9b59b6",
+    "source": "Atlantic Council / CNBC / IMF 2026 estimates",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "non-oil-exports",
+    "label": "Non-Oil Exports",
+    "value": "~$40B (2026 est.)",
+    "change": "-20% from 2024 ($50B) — sanctions tightening, Hormuz disruption",
+    "direction": "down",
+    "sparkData": [20, 25, 30, 35, 40, 42, 45, 50, 40],
+    "color": "#e74c3c",
+    "source": "Iran Trade Promotion Organization / Reuters 2026",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "petrochemical-sector",
+    "label": "Petrochemical Exports",
+    "value": "~$12B (2026 est.)",
+    "change": "Down from $17B (2024) — US sanctions on Chinese buyers hit hard",
+    "direction": "down",
+    "sparkData": [5, 6, 8, 9, 10, 12, 14, 17, 12],
+    "color": "#e74c3c",
+    "source": "NPC / Reuters / US Treasury OFAC May 2026",
+    "lastUpdated": "2026-05-09"
+  }
+]

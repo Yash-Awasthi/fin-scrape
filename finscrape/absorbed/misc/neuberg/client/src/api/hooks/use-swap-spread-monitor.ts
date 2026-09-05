@@ -1,0 +1,11 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../client';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function useSwapSpreadMonitor() {
+  return useQuery({
+    queryKey: ['swap-spread-monitor'],
+    queryFn: () => api.get<any>('/swap-spread-monitor'),
+    staleTime: 60 * 60 * 1000,
+  });
+}

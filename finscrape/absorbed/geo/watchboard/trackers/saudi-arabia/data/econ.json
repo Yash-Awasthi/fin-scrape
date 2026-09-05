@@ -1,0 +1,101 @@
+[
+  {
+    "id": "gdp-growth-2025",
+    "label": "Real GDP Growth Rate",
+    "value": "3.1% (2026 IMF forecast)",
+    "change": "Downgraded 1.4pp by IMF May 2026; 4.5% in 2025",
+    "direction": "down",
+    "sparkData": [1.1, 7.6, 2.4, 0.8, 4.5, 3.1],
+    "color": "amber",
+    "source": "IMF World Economic Outlook, May 2026",
+    "lastUpdated": "2026-05-22T00:00:00.000Z"
+  },
+  {
+    "id": "non-oil-gdp-share",
+    "label": "Non-Oil Share of Real GDP",
+    "value": "55% (2025)",
+    "change": "+10pp since 2016 baseline",
+    "direction": "up",
+    "sparkData": [40.0, 43.2, 46.0, 49.5, 52.0, 55.0],
+    "color": "green",
+    "source": "Saudi Vision 2030 Annual Report 2024",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "pif-assets-under-management",
+    "label": "PIF Assets Under Management",
+    "value": ">$900B AUM (2025 annual report)",
+    "change": "2025 annual report (Aug 17, 2026): revenue +9% YoY to $120B, net profit more than doubled to $17B; AUM up from $530B (2021) and $150B (2015); 2026-2030 strategy now underway prioritizing AI (HUMAIN), energy transition, advanced manufacturing, sports and entertainment",
+    "direction": "up",
+    "sparkData": [200, 350, 500, 650, 766, 900],
+    "color": "blue",
+    "source": "PIF 2025 Annual Report, Aug 17 2026; Trade Arabia, Saudi Gazette",
+    "lastUpdated": "2026-08-17T00:00:00.000Z"
+  },
+  {
+    "id": "fdi-inflows-2024",
+    "label": "Foreign Direct Investment Inflows",
+    "value": "$35.5B (2025); Q1 2026 est. -60–70% YoY",
+    "change": "Q1 2026 FDI estimated -60–70% YoY as Iran war collapses investor confidence; May 29 ceasefire may improve H2 2026 outlook",
+    "direction": "down",
+    "sparkData": [7.5, 14.9, 20.0, 25.6, 31.7, 35.5],
+    "color": "red",
+    "source": "Carnegie Endowment / Chatham House May 2026; PIF 2026-2030 strategy approved May 28",
+    "lastUpdated": "2026-05-31T00:00:00.000Z"
+  },
+  {
+    "id": "aramco-market-cap-trend",
+    "label": "Saudi Aramco Q1 2026 Net Income",
+    "value": "$33.6 billion (Q1 2026)",
+    "change": "+26% YoY from $26.6B in Q1 2025; East-West Pipeline at max 7M bpd capacity",
+    "direction": "up",
+    "sparkData": [1700, 2500, 2200, 1900, 1755, 33.6],
+    "color": "green",
+    "source": "Saudi Aramco Q1 2026 earnings, CNBC, May 10 2026",
+    "lastUpdated": "2026-05-10T00:00:00.000Z"
+  },
+  {
+    "id": "saudi-national-unemployment",
+    "label": "Saudi National Unemployment Rate",
+    "value": "7.2% (Q4 2025)",
+    "change": "-4.8pp since 2017 peak of 12%",
+    "direction": "down",
+    "sparkData": [12.8, 11.3, 9.7, 8.5, 7.8, 7.2],
+    "color": "green",
+    "source": "GASTAT — Saudi Labor Market Statistics Q4 2025",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "tourism-revenue-growth",
+    "label": "International Tourist Arrivals",
+    "value": "123 million (2025)",
+    "change": "+5.9% YoY; 100M target surpassed 6 years early",
+    "direction": "up",
+    "sparkData": [18, 30, 58, 80, 116, 123],
+    "color": "blue",
+    "source": "Saudi Tourism Authority / Vision 2030 Annual Report, May 2026",
+    "lastUpdated": "2026-05-08T11:50:00.000Z"
+  },
+  {
+    "id": "oil-government-revenue-share",
+    "label": "Oil Share of Government Revenue",
+    "value": "~87% (2025)",
+    "change": "-5pp since 2016 (was ~92%)",
+    "direction": "down",
+    "sparkData": [94, 92, 91, 89, 88, 87],
+    "color": "amber",
+    "source": "IMF / Saudi Ministry of Finance",
+    "lastUpdated": "2026-04-26T00:00:00.000Z"
+  },
+  {
+    "id": "q1-2026-budget-deficit",
+    "label": "Q1 2026 Budget Deficit",
+    "value": "SAR 125.7B (~$33.5B)",
+    "change": "Largest quarter since 2018; driven by +26% military spending and Hormuz oil revenue collapse",
+    "direction": "down",
+    "sparkData": [18, 25, 12, 35, 60, 125.7],
+    "color": "red",
+    "source": "Saudi Ministry of Finance / Gulf News, May 2026",
+    "lastUpdated": "2026-05-22T00:00:00.000Z"
+  }
+]

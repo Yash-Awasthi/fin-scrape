@@ -1,0 +1,48 @@
+{
+  "lastRun": "2026-08-25T15:07:49.960Z",
+  "tracker": "mexico",
+  "sections": {
+    "timeline": {
+      "status": "seeded",
+      "itemCount": 120
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 44
+    },
+    "kpis": {
+      "lastRun": "2026-05-26T00:49:39.475Z",
+      "status": "updated"
+    },
+    "claims": {
+      "status": "seeded",
+      "itemCount": 20
+    },
+    "political": {
+      "status": "seeded",
+      "itemCount": 25
+    },
+    "casualties": {
+      "status": "seeded",
+      "itemCount": 16
+    },
+    "econ": {
+      "status": "seeded",
+      "itemCount": 13
+    },
+    "meta": {
+      "lastRun": "2026-05-26T00:49:39.475Z",
+      "status": "updated"
+    },
+    "map-lines": "no-change",
+    "events": {
+      "lastRun": "2026-05-26T00:49:39.475Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-05-26T00:49:39.475Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

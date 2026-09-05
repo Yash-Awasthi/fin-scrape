@@ -1,0 +1,57 @@
+[
+  {
+    "id": "buk-convoy-russia-to-donetsk",
+    "from": [36.17, 51.73],
+    "to": [37.80, 48.00],
+    "cat": "buk_route",
+    "label": "Buk Convoy: Kursk (53rd Brigade) → Donetsk",
+    "date": "2014-07-17",
+    "confidence": "high",
+    "notes": "JIT-confirmed route of the 53rd Brigade Buk TELAR from its home base at Kursk, Russia, traveling south through Russian territory before crossing into Ukraine. Documented via social media photos, satellite imagery, and witness accounts.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "buk-convoy-donetsk-to-launch",
+    "from": [37.80, 48.00],
+    "to": [38.64, 48.03],
+    "cat": "buk_route",
+    "label": "Buk Convoy: Donetsk → Snizhne/Pervomaysk (Launch Site)",
+    "date": "2014-07-17",
+    "confidence": "high",
+    "notes": "Buk TELAR route from Donetsk city through Makiivka, Zuhres, and Torez to the launch field near Pervomaysk. Extensively documented by citizens who photographed the convoy in multiple towns.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "buk-convoy-return-to-russia",
+    "from": [38.64, 48.03],
+    "to": [39.52, 47.84],
+    "cat": "buk_route",
+    "label": "Buk Return: Launch Site → Russia (One Missile Missing)",
+    "date": "2014-07-17",
+    "confidence": "high",
+    "notes": "After the MH17 shootdown, the Buk TELAR returned toward Russia. The vehicle was photographed in Luhansk on the return journey, visibly missing one missile from its original four — a key piece of OSINT evidence.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "mh17-flight-path",
+    "from": [4.76, 52.31],
+    "to": [38.62, 48.14],
+    "cat": "investigation",
+    "label": "MH17 Flight Path: Amsterdam → Hrabove Crash Site",
+    "date": "2014-07-17",
+    "confidence": "high",
+    "notes": "Final flight path of Malaysia Airlines MH17 from departure at Amsterdam Schiphol (10:15 UTC) to the crash site near Hrabove, eastern Ukraine (13:20 UTC). The route passed over Germany, Poland, and Ukraine at FL330.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  },
+  {
+    "id": "buk-luhansk-to-russia-border",
+    "from": [39.33, 48.57],
+    "to": [39.52, 47.84],
+    "cat": "buk_route",
+    "label": "Buk Return: Luhansk → Russia Border (Izvaryne)",
+    "date": "2014-07-17",
+    "confidence": "high",
+    "notes": "Final leg of the Buk TELAR's return to Russia, from Luhansk to the Izvaryne border crossing point in eastern Luhansk Oblast.",
+    "lastUpdated": "2026-03-17T00:00:00Z"
+  }
+]

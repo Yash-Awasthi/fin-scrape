@@ -1,0 +1,322 @@
+[
+  {
+    "id": "columbus-1st-voyage-departure",
+    "from": [-6.89, 37.23],
+    "to": [-74.52, 24.05],
+    "cat": "spanish",
+    "label": "Columbus 1st Voyage (Aug–Oct 1492)",
+    "date": "1492-08-03",
+    "notes": "Columbus departs Palos de la Frontera with Niña, Pinta, Santa María. Stops at Canary Islands before crossing the Atlantic to make first landfall at San Salvador (Bahamas) on October 12, 1492.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "columbus-1st-voyage-san-salvador-hispaniola",
+    "from": [-74.52, 24.05],
+    "to": [-70.7, 19.0],
+    "cat": "spanish",
+    "label": "Columbus — Bahamas to Hispaniola (Oct–Dec 1492)",
+    "date": "1492-10-28",
+    "notes": "Columbus sails from San Salvador south through the Bahamas, reaches Cuba (October 28), then Hispaniola (December 5). Santa María runs aground Christmas Day; La Navidad garrison established.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "columbus-1st-voyage-return",
+    "from": [-70.7, 19.0],
+    "to": [-6.89, 37.23],
+    "cat": "spanish",
+    "label": "Columbus Return Voyage (Jan–Mar 1493)",
+    "date": "1493-01-16",
+    "notes": "Columbus departs Hispaniola on January 16, 1493. Severe storms separate the Niña from the Pinta. Both ships eventually reach Spain — Columbus arriving at Palos on March 15, 1493.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "columbus-2nd-voyage",
+    "from": [-6.30, 36.52],
+    "to": [-65.10, 18.0],
+    "cat": "spanish",
+    "label": "Columbus 2nd Voyage (Sep 1493)",
+    "date": "1493-09-25",
+    "notes": "Columbus departs Cádiz with 17 ships and 1,200 men. Sails a more southerly route, discovers the Lesser Antilles (Dominica, Guadeloupe, Puerto Rico) before returning to Hispaniola to find La Navidad destroyed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "columbus-3rd-voyage-south-america",
+    "from": [-6.30, 36.52],
+    "to": [-62.0, 11.0],
+    "cat": "spanish",
+    "label": "Columbus 3rd Voyage — Reaches South America (1498)",
+    "date": "1498-07-31",
+    "notes": "Columbus's third voyage reaches Trinidad and the mainland coast of South America (Venezuela/Orinoco Delta) on August 1, 1498 — the first European landfall on continental South America. Columbus believes he has found the Garden of Eden.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cabral-brazil-landfall",
+    "from": [-9.14, 38.73],
+    "to": [-39.07, -16.45],
+    "cat": "portuguese",
+    "label": "Cabral — Lisbon to Brazil (1500)",
+    "date": "1500-03-09",
+    "notes": "Pedro Álvares Cabral departs Lisbon on March 9, 1500, with 13 ships bound for India. Swinging west to catch the South Atlantic trades, he makes landfall on the Brazilian coast on April 22, 1500, claiming it for Portugal.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "balboa-darien-to-pacific",
+    "from": [-77.73, 8.40],
+    "to": [-79.52, 8.99],
+    "cat": "spanish",
+    "label": "Balboa Crosses Panama to the Pacific (1513)",
+    "date": "1513-09-01",
+    "notes": "Vasco Núñez de Balboa leads ~190 Spaniards and several hundred indigenous guides from the settlement of Darién across the Isthmus of Panama. On September 25, 1513, he becomes the first European to see the Pacific Ocean from the Americas.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cortes-cuba-to-veracruz",
+    "from": [-82.36, 23.14],
+    "to": [-96.13, 19.18],
+    "cat": "spanish",
+    "label": "Cortés — Cuba to Veracruz (Feb–Apr 1519)",
+    "date": "1519-02-18",
+    "notes": "Hernán Cortés defies Governor Velázquez and departs Cuba with 11 ships, 530 soldiers, 16 horses, and 14 cannon. Stops at Cozumel and Tabasco before establishing Villa Rica de la Vera Cruz on the Gulf Coast in April 1519.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cortes-veracruz-to-tenochtitlan",
+    "from": [-96.13, 19.18],
+    "to": [-99.13, 19.43],
+    "cat": "spanish",
+    "label": "Cortés — Veracruz to Tenochtitlan (Jul–Nov 1519)",
+    "date": "1519-07-16",
+    "notes": "After sinking most of his ships, Cortés marches inland through Cempoala, battles then allies with Tlaxcala (September), massacres Cholula (October), and enters Tenochtitlan on November 8, 1519, where Moctezuma II receives him.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cortes-retreat-to-tlaxcala",
+    "from": [-99.13, 19.43],
+    "to": [-98.23, 19.32],
+    "cat": "spanish",
+    "label": "Cortés — La Noche Triste Retreat to Tlaxcala (Jul 1520)",
+    "date": "1520-06-30",
+    "notes": "After La Noche Triste (June 30), the battered Spanish and allied force retreats to Tlaxcala pursued by Aztec armies. They barely survive the Battle of Otumba (July 7, 1520) before reaching the safety of Tlaxcala, where they regroup for the final conquest.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pizarro-panama-to-cajamarca",
+    "from": [-79.52, 8.99],
+    "to": [-78.51, -7.16],
+    "cat": "spanish",
+    "label": "Pizarro — Panama to Cajamarca (Dec 1531–Nov 1532)",
+    "date": "1531-12-27",
+    "notes": "Francisco Pizarro departs Panama with 168 men and 37 horses. He sails down the Pacific coast, establishes a base at Puna Island, lands near Tumbes in Peru, and marches inland through the Andes to reach Cajamarca in November 1532.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pizarro-cajamarca-to-cusco",
+    "from": [-78.51, -7.16],
+    "to": [-71.98, -13.52],
+    "cat": "spanish",
+    "label": "Pizarro — Cajamarca to Cusco (Nov 1533)",
+    "date": "1533-08-29",
+    "notes": "After executing Atahualpa (August 29, 1533), Pizarro marches south from Cajamarca, fighting several engagements, until occupying Cusco in November 1533. Puppet emperor Manco Inca is installed as he seizes the Inca capital.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "alvarado-mexico-to-guatemala",
+    "from": [-99.13, 19.43],
+    "to": [-90.53, 14.64],
+    "cat": "spanish",
+    "label": "Alvarado — Mexico to Guatemala (1524)",
+    "date": "1524-01-06",
+    "notes": "Pedro de Alvarado leads 400 Spanish soldiers and several thousand Nahua allies south from Mexico, conquering Guatemala's Quiché, Kaqchikel, and Tzutujil Maya through brutal campaigns (1524–27). Founds Santiago de Guatemala in 1524.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "de-soto-florida-to-mississippi",
+    "from": [-82.46, 27.95],
+    "to": [-90.49, 34.95],
+    "cat": "spanish",
+    "label": "De Soto — Florida to Mississippi (1539–42)",
+    "date": "1539-05-25",
+    "notes": "Hernando de Soto lands in Tampa Bay (May 1539) and leads 600 soldiers through Florida, Georgia, the Carolinas, Tennessee, and Alabama before reaching and crossing the Mississippi River in May 1541. De Soto dies on its banks in 1542.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "coronado-mexico-to-southwest",
+    "from": [-104.67, 22.15],
+    "to": [-105.94, 35.69],
+    "cat": "spanish",
+    "label": "Coronado — Mexico to New Mexico (1540–42)",
+    "date": "1540-02-23",
+    "notes": "Francisco Vásquez de Coronado leads 300 Spanish and 1,000 indigenous allies north from Culiacán seeking the Seven Cities of Gold (Cíbola). Reaches Zuni Pueblo (July 1540), then Pueblo communities of New Mexico; a detachment discovers the Grand Canyon; others reach Kansas.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "orellana-amazon-full",
+    "from": [-77.0, -0.5],
+    "to": [-50.0, -0.0],
+    "cat": "spanish",
+    "label": "Orellana — Amazon Descent (1541–42)",
+    "date": "1541-08-26",
+    "notes": "Francisco de Orellana separates from Gonzalo Pizarro's El Dorado expedition in the Ecuadorian Andes (August 1541) and follows rivers downstream. He navigates the entire Amazon River to the Atlantic, arriving August 26, 1542 — the first European to traverse the world's largest river system.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "valdivia-peru-to-chile",
+    "from": [-77.03, -12.05],
+    "to": [-70.65, -33.46],
+    "cat": "spanish",
+    "label": "Valdivia — Lima to Santiago (1540–41)",
+    "date": "1540-01-01",
+    "notes": "Pedro de Valdivia leads an expedition south from Lima through Peru and Argentina, crosses the Atacama Desert, and enters the Mapocho Valley to found Santiago de Chile on February 12, 1541. He faces immediate Mapuche resistance.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ponce-de-leon-florida",
+    "from": [-66.14, 18.47],
+    "to": [-81.31, 29.89],
+    "cat": "spanish",
+    "label": "Ponce de León — Puerto Rico to Florida (1513)",
+    "date": "1513-03-27",
+    "notes": "Juan Ponce de León sails from Puerto Rico, lands on the Florida coast near present-day St. Augustine on April 2, 1513 (Easter Sunday — 'Pascua Florida'), naming the land La Florida. He explores both Atlantic and Gulf coasts.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "grijalva-cuba-to-yucatan",
+    "from": [-82.36, 23.14],
+    "to": [-90.01, 21.0],
+    "cat": "spanish",
+    "label": "Grijalva — Cuba to Yucatán (1518)",
+    "date": "1518-04-08",
+    "notes": "Juan de Grijalva leads a follow-up expedition from Cuba to the Yucatán and Gulf Coast of Mexico (April–October 1518). He explores from Cozumel to Pánuco, trading for gold and establishing contact with Aztec tributary peoples. His reports directly inspire Cortés's conquest expedition.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manco-inca-escape-vilcabamba",
+    "from": [-71.98, -13.52],
+    "to": [-73.01, -13.37],
+    "cat": "spanish",
+    "label": "Manco Inca Retreat to Vilcabamba (1537)",
+    "date": "1537-01-01",
+    "notes": "After the failure of his great siege of Cusco, Manco Inca retreats into the remote jungle region of Vilcabamba with thousands of followers, establishing an independent Inca state that will resist Spanish conquest for 35 years.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "magellan-atlantic-pacific",
+    "from": [-5.99, 37.39],
+    "to": [-70.90, -52.66],
+    "cat": "spanish",
+    "label": "Magellan — Atlantic to Strait (1520)",
+    "date": "1519-09-20",
+    "notes": "Ferdinand Magellan departs Seville (September 1519) and navigates the strait at the southern tip of South America (Strait of Magellan, October–November 1520) before crossing the Pacific. He is killed in the Philippines in 1521; Elcano completes the first circumnavigation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manila-galleon-acapulco-to-manila",
+    "from": [-99.92, 16.86],
+    "to": [120.97, 14.60],
+    "cat": "spanish",
+    "label": "Manila Galleon Route (1565–1815)",
+    "date": "1565-11-21",
+    "notes": "Annual trade route between Acapulco, Mexico and Manila, Philippines. Ships carried American silver west and returned with Asian goods. The route operated for 250 years, creating the first transpacific trade link and integrating Asia into the global colonial economy. Coordinates at Acapulco; Manila is beyond map bounds.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cabeza-de-vaca-florida-to-mexico",
+    "from": [-82.46, 27.95],
+    "to": [-107.0, 29.0],
+    "cat": "spanish",
+    "label": "Cabeza de Vaca — Florida to Mexico (1528–36)",
+    "date": "1528-04-14",
+    "notes": "Álvar Núñez Cabeza de Vaca, sole survivor of Narváez's disastrous Florida expedition (1528), wanders for 8 years across the Gulf Coast and present-day Texas, New Mexico, and northern Mexico before reaching Mexico City in 1536 — one of history's great survival stories.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "montejo-yucatan-conquest-route",
+    "from": [-82.36, 23.14],
+    "to": [-89.62, 20.97],
+    "cat": "spanish",
+    "label": "Montejo — Yucatán Conquest (1527–1542)",
+    "date": "1527-01-01",
+    "notes": "Francisco de Montejo (father and son) conduct multiple expeditions against the Maya of the Yucatán Peninsula over 15 years (1527–1542), facing sustained resistance. Mérida is founded in 1542; the last independent Maya states are not conquered until the 1690s.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tupac-amaru-rebellion-route",
+    "from": [-71.98, -13.52],
+    "to": [-68.12, -16.50],
+    "cat": "spanish",
+    "label": "Tupac Amaru II Rebellion (1780–81)",
+    "date": "1780-11-04",
+    "notes": "José Gabriel Condorcanqui (Tupac Amaru II) launches his rebellion near Cusco in November 1780. At its height, rebel forces threaten La Paz (besieged by Tupac Katari) and reach into Bolivia, Argentina, and Chile. The largest Andean uprising of the colonial era.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "portuguese-atlantic-slave-trade",
+    "from": [14.0, -8.0],
+    "to": [-38.51, -12.97],
+    "cat": "portuguese",
+    "label": "Atlantic Slave Trade — Africa to Brazil",
+    "date": "1560-01-01",
+    "notes": "The main Middle Passage route of the transatlantic slave trade from West Central Africa (present-day Angola/Congo) to Salvador da Bahia and other Brazilian ports. Brazil received approximately 4 million enslaved Africans — more than any other destination. The trade continued until 1851.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "spanish-slave-trade-caribbean",
+    "from": [14.0, 5.0],
+    "to": [-69.90, 18.48],
+    "cat": "spanish",
+    "label": "Atlantic Slave Trade — Africa to Caribbean",
+    "date": "1510-01-01",
+    "notes": "Main Middle Passage route from West Africa to the Spanish Caribbean (Hispaniola, Cuba, Puerto Rico). As the indigenous Taíno population collapsed from disease and exploitation, enslaved Africans replaced them in mines and plantations. The trade grew massively through the 17th–19th centuries.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "veracruz-to-seville-silver-fleet",
+    "from": [-96.13, 19.18],
+    "to": [-5.99, 37.39],
+    "cat": "spanish",
+    "label": "Spanish Silver Fleet — Veracruz to Seville",
+    "date": "1565-01-01",
+    "notes": "The annual flota (fleet) system (formalized 1565) carried New Spain's silver, cochineal, and other goods from Veracruz across the Atlantic to Seville. Convoyed by warships against piracy. The fleet would rendezvous with Peruvian silver at Havana before the Atlantic crossing.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cortes-honduras-expedition",
+    "from": [-99.13, 19.43],
+    "to": [-87.21, 14.10],
+    "cat": "spanish",
+    "label": "Cortés — Honduras Expedition (1524–26)",
+    "date": "1524-10-12",
+    "notes": "Cortés leads a grueling 2,000 km overland march through the jungles of southern Mexico and Guatemala to Honduras (1524–26) to suppress a rebellious lieutenant. The expedition nearly destroys his army; he has Aztec leader Cuauhtémoc hanged en route. He returns to find his enemies have seized power in Mexico City.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "qhapaq-nan-royal-road",
+    "from": [-78.50, -0.22],
+    "to": [-71.98, -13.52],
+    "cat": "indigenous",
+    "label": "Qhapaq Ñan — Inca Royal Road",
+    "date": "1450-01-01",
+    "notes": "The Inca Royal Road (Qhapaq Ñan) ran 40,000 km along the length of the Andes from Quito to Santiago. The main Andean highway connected Quito to Cusco (over 2,000 km), enabling rapid troop movements, communication via relay runners (chasquis), and redistribution of goods. Pizarro followed its course south.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "onate-mexico-to-new-mexico",
+    "from": [-104.67, 22.15],
+    "to": [-105.94, 35.69],
+    "cat": "spanish",
+    "label": "Oñate — Mexico to New Mexico (1598)",
+    "date": "1598-01-26",
+    "notes": "Juan de Oñate leads 500 colonists and soldiers north from Santa Bárbara (Chihuahua) to colonize New Mexico, crossing the Rio Grande. He establishes San Juan de los Caballeros as the first capital. His brutal suppression of Acoma Pueblo (January 1599) establishes Spanish dominance over the Southwest Pueblos.",
+    "lastUpdated": "2026-04-19T12:00:00Z"
+  },
+  {
+    "id": "cabrillo-pacific-coast",
+    "from": [-104.02, 19.18],
+    "to": [-117.17, 32.74],
+    "cat": "spanish",
+    "label": "Cabrillo — Pacific Coast Exploration (1542–43)",
+    "date": "1542-06-27",
+    "notes": "Juan Rodríguez Cabrillo departs Navidad (Jalisco) in June 1542 on the first European expedition along the Pacific coast of North America. He reaches San Diego Bay (September 1542) and the Channel Islands. Cabrillo dies January 1543 from a battle wound; his pilot Ferrelo continues north to the Oregon coast.",
+    "lastUpdated": "2026-04-19T12:00:00Z"
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "lastRun": "2026-08-10T17:11:41.728Z",
+  "tracker": "usa-latam-interventions",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "itemCount": 17
+    },
+    "timeline": {
+      "status": "unchanged",
+      "itemCount": 83
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 76
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 34
+    },
+    "political": {
+      "status": "updated",
+      "itemCount": 33
+    },
+    "casualties": {
+      "status": "unchanged",
+      "itemCount": 19
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 10
+    },
+    "assets": {
+      "status": "unchanged",
+      "itemCount": 16
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

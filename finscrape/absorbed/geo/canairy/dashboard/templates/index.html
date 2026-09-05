@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown Man Bunker - All Indicators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>Brown Man Bunker</h1>
+            <p class="tagline">Trip-Wire Monitoring System</p>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- System Status -->
+            <div class="sidebar-card">
+                <h3>System Status</h3>
+                <div class="status-content">
+                    <div class="status-item">
+                        <span class="label">HOPI Score:</span>
+                        <span id="hopi-score" class="value">--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Confidence:</span>
+                        <span id="confidence" class="value">--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Phase:</span>
+                        <span id="current-phase" class="value">--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Active Alerts:</span>
+                        <span id="active-alerts" class="value red">0</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Last Update:</span>
+                        <span id="last-update" class="value">Loading...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">System:</span>
+                        <span id="system-status" class="status-indicator green">● Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="sidebar-card">
+                <h3>Quick Actions</h3>
+                <div class="action-list">
+                    <button onclick="refreshStatus()" class="sidebar-button">🔄 Refresh Now</button>
+                    <a href="/" class="sidebar-button">📊 Dashboard</a>
+                    <a href="/emergency" class="sidebar-button">📋 Emergency Plan</a>
+                    <a href="/framework" class="sidebar-button">📖 Risk Framework</a>
+                    <a href="/manual-input" class="sidebar-button">✏️ Manual Input</a>
+                    <button onclick="testAlert()" class="sidebar-button">🔔 Test Alert</button>
+                </div>
+            </div>
+
+            <!-- TIGHTEN-UP Rule -->
+            <div class="sidebar-card alert-info">
+                <h3>🚨 TIGHTEN-UP Rule</h3>
+                <p>
+                    When ANY 3 indicators turn RED, you'll get an alert. 
+                    This means: top off gas, get cash, charge devices, check supplies.
+                </p>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Alert Banner -->
+            <div id="alert-banner" class="alert-banner hidden">
+                <h2>🚨 TIGHTEN-UP ALERT ACTIVE</h2>
+                <p><span id="red-count">0</span> Red Conditions Detected - Immediate Action Required</p>
+                <a href="/emergency" class="action-button">View Emergency Procedures</a>
+            </div>
+            <!-- Indicators Grid -->
+            <div class="indicators-grid" id="indicators-grid">
+                <!-- Indicators will be populated by JavaScript -->
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Based on <a href="/framework">H1-H6 Risk Analysis Framework</a> | 
+           <a href="/emergency">Emergency Procedures</a> | 
+           <a href="#" onclick="showLegend()">Alert Legend</a>
+        </p>
+    </footer>
+
+    <!-- Modal for Indicator Details -->
+    <div id="indicator-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Indicator Details</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

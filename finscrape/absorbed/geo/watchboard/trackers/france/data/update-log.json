@@ -1,0 +1,59 @@
+{
+  "lastRun": "2026-08-26T15:23:39.887Z",
+  "tracker": "france",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-30T12:55:52.781Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "seeded",
+      "itemCount": 63
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-01T14:32:17.000Z",
+      "status": "updated",
+      "itemCount": 28
+    },
+    "claims": {
+      "lastRun": "2026-06-01T14:32:17.000Z",
+      "status": "updated",
+      "itemCount": 21
+    },
+    "political": {
+      "lastRun": "2026-06-01T14:32:17.000Z",
+      "status": "updated",
+      "itemCount": 20
+    },
+    "econ": {
+      "lastRun": "2026-06-01T14:32:17.000Z",
+      "status": "updated",
+      "itemCount": 8
+    },
+    "strikeTargets": {
+      "status": "seeded",
+      "itemCount": 13
+    },
+    "retaliation": {
+      "status": "seeded",
+      "itemCount": 10
+    },
+    "assets": {
+      "status": "seeded",
+      "itemCount": 8
+    },
+    "events": {
+      "lastRun": "2026-08-19T12:30:51.649Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-19T12:30:51.649Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-30T12:55:52.781Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

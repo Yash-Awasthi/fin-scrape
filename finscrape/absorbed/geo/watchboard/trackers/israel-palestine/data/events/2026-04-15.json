@@ -1,0 +1,179 @@
+[
+  {
+    "id": "west-bank-raids-demolitions-april-15",
+    "year": "Apr 15, 2026",
+    "title": "Israeli Forces Conduct Large-Scale Raids and Demolitions Across West Bank",
+    "type": "military",
+    "detail": "Israeli forces launched extensive military operations across multiple West Bank cities including Jericho, Hebron, and Ramallah, conducting raids and demolishing Palestinian structures. Operations included the demolition of an industrial site in Hebron and large-scale searches targeting Palestinian communities. The raids represent a continuation of increased Israeli military activity in the occupied West Bank.",
+    "sources": [
+      {
+        "name": "Middle East Eye",
+        "tier": 3,
+        "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-launch-large-scale-raids-demolitions-west-bank",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-launch-large-scale-raids-demolitions-west-bank",
+        "caption": "Israeli forces conduct operations in the occupied West Bank",
+        "source": "Middle East Eye",
+        "thumbnail": "https://www.middleeasteye.net/sites/default/files/2026-04/A%20child%20sits%20at%20the%20yard%20of%20an%20all-girls%20high%20school%2C%20turned%20into%20a%20shelter%20for%20displaced%20people%2C%20in%20Tyre%2C%20Lebanon%2C%20April%2012%2C%202026.%20REUTERS%3ALouisa%20Gouliamaki_0.JPG"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "palestinian-workers-garbage-truck-incident",
+    "year": "Apr 15, 2026",
+    "title": "Israeli Police Discover 70 Palestinians Hidden in Garbage Truck Attempting Entry",
+    "type": "humanitarian",
+    "detail": "Israeli police released video footage showing 70 Palestinians found hiding inside a garbage truck while attempting to enter Israel for work. The incident highlights ongoing restrictions on Palestinian movement and the desperate measures taken by workers seeking employment opportunities amid limited access through official channels.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNa0xwSzlaNFBuSGp6Xy1JQTFxY25lRS1yMFRjVWJVODIyOElJVERzT21FTjFKaFhMbXhzekxzczR1alg3ZGw5NDA1VHVxalQzMk9KSGJwV2xEenRvMVFmY2c1MVpyM0R2TklrUnZlS0JJeE5TWFZmNW1FZkJaU1pXalgya3BRbFY0WmYtbkcwQ1NsdV93T0xjU3RhdG5hSFR5LVVfWWJhS1FQUElFRFgzU2hFMmExM3ZncFV4QkNBdXBuZnkzMllPaHM4SHRhdGtYMGw2RkJkOTNmQlVDMFNORg?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNa0xwSzlaNFBuSGp6Xy1JQTFxY25lRS1yMFRjVWJVODIyOElJVERzT21FTjFKaFhMbXhzekxzczR1alg3ZGw5NDA1VHVxalQzMk9KSGJwV2xEenRvMVFmY2c1MVpyM0R2TklrUnZlS0JJeE5TWFZmNW1FZkJaU1pXalgya3BRbFY0WmYtbkcwQ1NsdV93T0xjU3RhdG5hSFR5LVVfWWJhS1FQUElFRFgzU2hFMmExM3ZncFV4QkNBdXBuZnkzMllPaHM4SHRhdGtYMGw2RkJkOTNmQlVDMFNORg?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Israeli police video shows Palestinians found hidden in garbage truck",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "hebron-industrial-site-demolition",
+    "year": "Apr 15, 2026",
+    "title": "Israeli Forces Demolish Industrial Site in Hebron",
+    "type": "settlement",
+    "detail": "Israeli military forces demolished an industrial site in Hebron as part of ongoing enforcement actions in the West Bank. The demolition is part of broader Israeli operations targeting Palestinian infrastructure and represents continued pressure on Palestinian economic activities in the occupied territories.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1rMnB2dzBwdk8xYUlLekxzZHhoWTZkeUJMd04zVzZzVGV3V0dVejZyNWgzUEVrSzZBeXFpdmxUSmVzbDJmZk1laEx0bkd5SDJRRHR0Y2NZX25DRUZ1ZGRPQnJuSmxRVVY1aEk2MFVveVFHbHVCOWtJeHFKVkEzZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1rMnB2dzBwdk8xYUlLekxzZHhoWTZkeUJMd04zVzZzVGV3V0dVejZyNWgzUEVrSzZBeXFpdmxUSmVzbDJmZk1laEx0bkd5SDJRRHR0Y2NZX25ERUZ1ZGRPQnJuSmxRVVY1aEk2MFVveVFHbHVCOWtJeHFKVkEzZw?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Israeli forces conduct demolition operations in Hebron",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "barghouti-prison-assaults-april-2026",
+    "year": "Apr 15, 2026",
+    "title": "Palestinian Leader Marwan Barghouti Reports Violent Assaults in Israeli Prison",
+    "type": "humanitarian",
+    "detail": "Marwan Barghouti, prominent Palestinian political leader imprisoned since 2002, has reportedly endured violent assaults while in Israeli custody. Barghouti, who is serving five life sentences for his role during the Second Intifada, remains a significant figure in Palestinian politics and has been mentioned as a potential leader in future negotiations. The reported incidents highlight ongoing concerns about treatment of Palestinian prisoners in Israeli detention facilities.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/15/palestinian-leader-barghouti-endures-violent-assaults-in-israeli-prisons?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/wp-content/uploads/2026/04/AFP__20260404__A6QV7AN__v3__HighRes__PalestinianIsraelConflictGazaExecution-1776236234.jpg?resize=1920%2C1440",
+        "caption": "Marwan Barghouti, Palestinian political leader imprisoned in Israel since 2002",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/AFP__20260404__A6QV7AN__v3__HighRes__PalestinianIsraelConflictGazaExecution-1776236234.jpg?resize=1920%2C1440"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim"
+  },
+  {
+    "id": "israel-approves-30-west-bank-outposts-april-2026",
+    "year": "Apr 15, 2026",
+    "title": "Israeli Government Secretly Approves Over 30 New West Bank Settler Outposts",
+    "type": "settlement",
+    "detail": "The Israeli government has reportedly given secret approval for the establishment of over 30 new settler outposts in the occupied West Bank, according to multiple sources. This development represents a significant expansion of settlement activity in territories considered illegal under international law. The move is expected to further complicate peace efforts and has drawn criticism from Palestinian officials and international observers who view settlements as violations of the Fourth Geneva Convention.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNXltVkM4M3NWNEFNU2NSTGpHeXpXZjFMTzB5VU5sZ3VMdmhlNlJSdzRvbGZmMjNvbDU4dElBUS11LW5zZ2VTWGNjUG5UZlFoWnFQQzdIb3NQYlNhRkY5RG4yWkFsNXFhY21wNllzSlB1SlZqQl9GX1piWWphMEdCaEg5NWZCcHN6RHRrbHNYNnh2dG0yeWZzc0p6U0JDeE1k?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNXltVkM4M3NWNEFNU2NSTGpHeXpXZjFMTzB5VU5sZ3VMdmhlNlJSdzRvbGZmMjNvbDU4dElBUS11LW5zZ2VTWGNjUG5UZlFoWnFQQzdIb3NQYlNhRkY5RG4yWkFsNXFhY21wNllzSlB1SlZqQl9GX1piWWphMEdCaEg5NWZCcHN6RHRrbHNYNnh2dG0yeWZzc0p6U0JDeE1k?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Israeli settlement expansion in the West Bank continues despite international criticism",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim"
+  },
+  {
+    "id": "palestinian-children-arrests-1700-since-oct-2023",
+    "year": "Apr 15, 2026",
+    "title": "Rights Group Reports 1,700 Palestinian Children Arrested Since October 2023",
+    "type": "humanitarian",
+    "detail": "Human rights organizations report that Israeli forces have arrested approximately 1,700 Palestinian children in the West Bank since October 7, 2023. The arrests are part of broader security operations following the Hamas attack and subsequent conflict. Rights groups have raised concerns about the treatment of minors in detention and the psychological impact on Palestinian youth. Israeli authorities maintain that arrests are conducted as part of necessary security measures to prevent violence and maintain order in the occupied territories.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNVVY3QWt6aG1lVWZDaFQwRFd0Rk12REp0RV9nZ3hxVGtDNEJDMndpbEpFVVRJQktGREdlOTIzSmtJZndreXVOTlJwa2RiQnBDQ3Zwc09WaVdaaVBjWG5DZlk4aVdzV295ckZwSkM0ZVVUN3RrbDNyN1o5RlZHSXJjazhjSFh4NFVNcDd3RXc2aUljRVFFbUJPRWdBV1BFRnhBaHh5YXFRUmJtMlFSN2ZmXzhfWXFQbmxGLVhiYzdNbW84QnVQVVlJN1prbFRiN2hh0gHWAUFVX3lxTE9MNWlncm9FOEd6VXJYQXFuWGZfUnZadGw3R1pabnVqWGpKQkdIaDJfQXhmVEVUTGxKOXJIQkJsY054RGtzd2E5ajlIRF80VmNCcXJqcHJmLVNadjRiVmtqUmExaXo1aTVJQlFNNnZmRHBwb25Hb28zd0UxbVlkN0NDXzRnV04tc2FEdHg3eHN4dWR0cXpGNm5DaWY3bnhyNVBIVFVTYkpYdWQ4dG1LZm9oQlJvTjgxVWdfMVE1YnF0VGk0MVBtOWxGZU43Z1l3ZlNRWnNERmc?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNVVY3QWt6aG1lVWZDaFQwRFd0Rk12REp0RV9nZ3hxVGtDNEJDMndpbEpFVVRJQktGREdlOTIzSmtJZndreXVOTlJwa2RiQnBDQ3Zwc09WaVdaaVBjWG5DZlk4aVdzV285ckZwSkM0ZVVUN3RrbDNyN1o5RlZHSXJjazhjSFh4NFVNcDd3RXc2aUljRVFFbUJPRWdBV1BFRnhBaHh5YXFRUmJtMlFSN2ZmXzhfWXFQbmxGLVhiYzdNbW84QnVQVVlJN1prbFRiN2hh0gHWAUFVX3lxTE9MNWlncm9FOEd6VXJYQXFuWGZfUnZadGw3R1pabnVqWGpKQkdIaDJfQXhmVEVUTGxKOXJIQkJsY054RGtzd2E5ajlIRF80VmNCcXJqcHJmLVNadjRiVmtqUmExaXo1aTVJQlFNNnZmRHBwb25Hb28zd0UxbVlkN0NDXzRnV04tc2FEdHg3eHN4dWR0cXpGNm5DaWY3bnhyNVBIVFVTYkpYdWQ4dG1LZm9oQlJvTjgxVWdfMVE1YnF0VGk0MVBtOWxGZU43Z1l3ZlNRWnNERmc?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Human rights groups document arrests of Palestinian children in West Bank operations",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "settlers-block-palestinian-school-road-april-2026",
+    "year": "Apr 15, 2026",
+    "title": "Israeli Settlers Block Road Used by Palestinian Children to Reach School",
+    "type": "humanitarian",
+    "detail": "Israeli settlers have blocked a road routinely used by Palestinian children to access their school, according to reports from the West Bank. The incident highlights ongoing tensions between settler communities and Palestinian residents, particularly affecting children's access to education. Palestinian officials have condemned the action as collective punishment, while Israeli authorities have not yet commented on measures to ensure safe passage for students. Such incidents are part of a broader pattern of restrictions on Palestinian movement in the occupied territories.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxORlhGRnhrS1dlX245bmVzRnkyVFRCeUJaZkI3bzFSdG5YMGtvV0U5ZEUtVE5sMmxfa3ZVcVBrN2pBMlEybG1DSFRmOGN0cDhlTGlFQ3hmVWtMQjhmQVREM0NWMVN2X2VSM2xGWi1LdjllSV93Y0VJalZmbkV5LUN0WElOeHB2eC1tNEs5eHg1dk9IdlBFbkJobnZQQWRaM2RsNmdaekJvb2lpckN0Q1JpTmlCNGh3MGVHMTU3cC1wdy1vRTB0YmdiNlgtMVhrbV82SkVlMHBwY2pKekNjS1NmOUJ6VUVYZlVkSF9WNEpSRTZUUDB1ZGltdG40TzdaMVBNRE5rZzV4ZjZJeDVBWGRuZA?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxORlhGRnhrS1dlX245bmVzRnkyVFRCeUJaZkI3bzFSdG5YMGtvV0U5ZEUtVE5sMmxfa3ZVcVBrN2pBMlEybG1DSFRmOGN0cDhlTGlFQ3hmVWtMQjhmQVREM0NWMVN2X2VSM2xGWi1LdjllSV93Y0VJalZmbkV5LUN0WElOeHB2eC1tNEs5eHg1dk9IdlBFbkJobnZQQWRaM2RsNmdaekJvb2lpckN0Q1JpTmlCNGh3MGVHMTU3cC1wdy1vRTB0YmdiNlgtMVhrbV82SkVlMHBwY2pKekNjS1NmOUJ6VUVYZlVkSF9WNEpSRTZUUDB1ZGltdG40TzdaMVBNRE5rZzV4ZjZJeDVBWGRuZA?oc=5&hl=en-US&gl=US&ceid=US:en",
+        "caption": "Palestinian students face access restrictions as settlers block school routes in West Bank",
+        "source": "Google News"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  }
+]

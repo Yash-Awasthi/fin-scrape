@@ -1,0 +1,45 @@
+[
+  {
+    "id": "gaza-eid-begins-third-year-blockade",
+    "date": "2026-03-20",
+    "year": "2026",
+    "title": "Eid al-Fitr Begins; Palestinians Mark Third Consecutive Eid Under Blockade and Strikes",
+    "type": "humanitarian",
+    "detail": "Eid al-Fitr began on March 20, marking the third consecutive year Palestinians in Gaza observed the Islamic festival amid conflict and blockade. Families crowded into displacement shelters with severely limited access to food, medicine, and clean water as the month-long Ramadan fasting period concluded. The October 2025 ceasefire framework remained technically in force but had been violated continuously since its enactment; Al Jazeera had tracked over 2,073 Israeli ceasefire violations through mid-March, with 680+ Palestinians killed since the ceasefire took effect. Only the Kerem Shalom crossing remained operational for cargo entry, having been briefly reopened for fuel and aid on March 3 after Israel blocked all crossings on February 28. UN OCHA reported 46% of essential medicines were out of stock and 66% of medical consumables depleted. The ICJ's March 22 ruling ordering Israel to ensure basic needs of Gaza's population were met had not yet issued.",
+    "sources": [
+      { "name": "UN OCHA", "tier": 1, "pole": "international" },
+      { "name": "Al Jazeera", "tier": 2, "pole": "middle_eastern" },
+      { "name": "UNRWA", "tier": 1, "pole": "international" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.npr.org/sections/the-picture-show/2026/03/20/nx-s1-5754623/gaza-eid-al-fitr-ramadan-palestinians",
+        "caption": "Palestinians celebrate Eid al-Fitr in Gaza amid fragile ceasefire and continued hardship",
+        "source": "NPR",
+        "thumbnail": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4032x2268+0+378/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fef%2F3b%2Ff1d7e0ce458ab85adedfc478ed1e%2Fimg-3755.jpg"
+      }
+    ]
+  },
+  {
+    "id": "gaza-board-of-peace-disarmament-proposal-submitted-haaretz",
+    "date": "2026-03-20",
+    "year": "2026",
+    "title": "Board of Peace Mediators Submit Formal Written Disarmament Proposal to Hamas",
+    "type": "diplomatic",
+    "detail": "According to Haaretz, the Board of Peace and international mediators formally submitted a written disarmament proposal to Hamas on March 20 as Eid al-Fitr began. The phased plan called for Hamas to surrender heavy weapons — rockets, missile launchers, and tunnel infrastructure maps — within the first 90 days, followed by gradual collection of lighter arms over a period of up to eight months. A financial 'buy-back' scheme incentivizing armed fighters to surrender personal weapons was part of the package. The proposal conditioned the unlocking of the $17+ billion Board of Peace reconstruction fund on Hamas compliance. Hamas leader Khaled Mashaal had previously stated Hamas would not disarm while Gaza remained under occupation. Arab officials briefed by the mediators expected Hamas to issue a formal counteroffer within days.",
+    "sources": [
+      { "name": "Haaretz", "tier": 2, "pole": "western" },
+      { "name": "The Times of Israel", "tier": 2, "pole": "western" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.npr.org/2026/03/19/nx-s1-5753798/hamas-weapons-trump-gaza-board-of-peace",
+        "caption": "Trump's Board of Peace presents Hamas with written disarmament proposal for Gaza",
+        "source": "NPR",
+        "thumbnail": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4000x2250+0+0/resize/1400/quality/85/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F76%2F13%2F55132e32430285bc0c5ed379d649%2Fgettyimages-2240962028.jpg"
+      }
+    ]
+  }
+]

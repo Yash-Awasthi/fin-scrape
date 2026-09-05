@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-27T23:52:02.852Z",
+  "tracker": "ceuta-schengen-crisis",
+  "sections": {
+    "timeline": {
+      "status": "updated",
+      "items": 50
+    },
+    "mapPoints": {
+      "status": "updated",
+      "items": 25
+    },
+    "claims": {
+      "status": "updated",
+      "items": 19
+    },
+    "political": {
+      "status": "updated",
+      "items": 23
+    },
+    "kpis": {
+      "status": "updated",
+      "items": 11
+    },
+    "casualties": {
+      "status": "updated",
+      "items": 12
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

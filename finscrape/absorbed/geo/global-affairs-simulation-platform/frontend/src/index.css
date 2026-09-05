@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-surface-950 text-slate-100 font-sans;
+    font-feature-settings: "cv01", "cv02", "cv03", "cv04";
+  }
+
+  .light body, body.light {
+    @apply bg-slate-50 text-slate-900;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-surface-700 rounded;
+  }
+}
+
+@layer components {
+  /* 卡片 */
+  .card {
+    @apply bg-surface-900 border border-surface-700/50 rounded-lg p-4;
+  }
+
+  .card-hover {
+    @apply card hover:border-brand-500/50 hover:bg-surface-800 transition-all cursor-pointer;
+  }
+
+  /* 标签 */
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  }
+
+  .badge-escalation {
+    @apply badge bg-red-500/20 text-red-400 border border-red-500/30;
+  }
+
+  .badge-stalemate {
+    @apply badge bg-amber-500/20 text-amber-400 border border-amber-500/30;
+  }
+
+  .badge-de_escalation {
+    @apply badge bg-green-500/20 text-green-400 border border-green-500/30;
+  }
+
+  /* 状态指示器 */
+  .status-live {
+    @apply text-green-400 text-xs flex items-center gap-1;
+  }
+
+  .status-mock {
+    @apply text-amber-400 text-xs flex items-center gap-1;
+  }
+
+  .status-empty {
+    @apply text-slate-500 text-xs flex items-center gap-1;
+  }
+
+  /* 概率条 */
+  .prob-bar {
+    @apply h-1.5 rounded-full bg-surface-700 overflow-hidden;
+  }
+
+  /* 侧边栏 */
+  .sidebar {
+    @apply w-64 bg-surface-900 border-r border-surface-700/50 flex flex-col h-screen;
+  }
+
+  /* 主内容区 */
+  .main-content {
+    @apply flex-1 overflow-auto bg-surface-950;
+  }
+
+  /* 节点类型颜色 */
+  .node-data { @apply border-blue-500; }
+  .node-inference { @apply border-purple-500; }
+  .node-hypothesis { @apply border-amber-500; }
+  .node-revision { @apply border-green-500; }
+}
+
+/* 地球容器 - GlobePage 使用 ref+className, 此 id 选择器已更新为 class */
+.globe-container {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #0a1628 0%, #020617 100%);
+  will-change: transform;
+}
+
+/* 推演树动画 */
+.scenario-step {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 数据源标识条 */
+.data-source-banner {
+  @apply fixed top-0 left-0 right-0 z-50 text-center text-xs py-1 font-medium;
+}
+
+.data-source-banner.mock {
+  @apply bg-amber-600/90 text-amber-50;
+}
+
+.data-source-banner.live {
+  @apply hidden;
+}
+
+/* --- 亮色模式覆盖 --- */
+.light .sidebar {
+  background: white;
+  border-color: #e2e8f0;
+}
+.light .main-content {
+  background: #f8fafc;
+}
+.light .bg-surface-900 {
+  background: white;
+  border-color: #e2e8f0;
+}
+.light .bg-surface-800 {
+  background: #f1f5f9;
+}
+.light .bg-surface-950 {
+  background: #f8fafc;
+}
+.light .text-slate-100 {
+  color: #0f172a;
+}
+.light .text-slate-300 {
+  color: #334155;
+}
+.light .text-slate-400 {
+  color: #475569;
+}
+.light .text-slate-500 {
+  color: #64748b;
+}
+.light .text-slate-600 {
+  color: #94a3b8;
+}
+.light .border-slate-700, .light .border-surface-700 {
+  border-color: #e2e8f0;
+}
+.light .border-slate-800 {
+  border-color: #cbd5e1;
+}

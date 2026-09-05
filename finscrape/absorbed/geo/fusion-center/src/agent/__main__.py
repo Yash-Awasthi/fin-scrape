@@ -1,0 +1,221 @@
+"""
+Project Overwatch - Deep Research Agent CLI.
+
+Usage:
+    python -m src.agent "Analyze military activity in Ukraine"
+    python -m src.agent --provider gemini "Check internet status in Iran"
+    python -m src.agent --provider ollama --model llama3.2 "Local analysis"
+    python -m src.agent --provider docker "Local analysis with Docker Model Runner"
+"""
+
+import argparse
+import asyncio
+import json
+import sys
+
+from src.shared.config import settings
+from src.shared.logger import get_logger
+
+logger = get_logger()
+
+
+def parse_args() -> argparse.Namespace:
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description="Project Overwatch - Deep Research Agent",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Supported Providers:
+  gemini    - Google Gemini (requires GOOGLE_API_KEY)
+  grok      - xAI Grok (requires XAI_API_KEY)
+  ollama    - Local Ollama (no key required)
+  docker    - Docker Model Runner (no key required)
+
+Examples:
+  # Use default provider (from .env)
+  python -m src.agent "Analyze military activity in Ukraine"
+
+  # Use Gemini
+  python -m src.agent --provider gemini "Monitor Iran situation"
+
+  # Use local Ollama
+  python -m src.agent --provider ollama --model llama3.2 "Analyze conflict"
+
+  # Use Docker Model Runner
+  python -m src.agent --provider docker "Local analysis with Docker"
+
+  # Use Grok
+  python -m src.agent --provider grok "Deep dive into Gaza conflict"
+
+  # Output as JSON
+  python -m src.agent --json "Search for news about protests"
+        """,
+    )
+    parser.add_argument(
+        "task",
+        nargs="?",  # Makes task optional
+        default=None,
+        help="Research task or question to investigate",
+    )
+    parser.add_argument(
+        "--model",
+        default=None,
+        help="Model name override (uses Ollama)",
+    )
+    parser.add_argument(
+        "--server",
+        default=None,
+        help="MCP server SSE endpoint URL",
+    )
+    parser.add_argument(
+        "--max-iter",
+        type=int,
+        default=settings.agent_max_iterations,
+        help=f"Maximum research iterations (default: {settings.agent_max_iterations})",
+    )
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Output results as JSON",
+    )
+    parser.add_argument(
+        "--context",
+        type=str,
+        default=None,
+        help="Additional context as JSON string",
+    )
+    parser.add_argument(
+        "--list-providers",
+        action="store_true",
+        help="List available providers and exit",
+    )
+    return parser.parse_args()
+
+
+def print_providers() -> None:
+    """Print available LLM providers."""
+    logger.divider("Available LLM Providers")
+    
+    logger.markdown(f"**ollama** ✅")
+    logger.markdown(f"  - Model: `{settings.agent_model}`")
+    logger.markdown(f"  - Base URL: `{settings.ollama_base_url}`")
+    logger.markdown("")
+    
+    logger.info("Using Ollama as the only provider")
+
+
+def print_report(state: dict) -> None:
+    """Print the SITREP intelligence report using Rich Markdown."""
+    from rich.console import Console
+    from rich.markdown import Markdown
+    
+    console = Console()
+    
+    # Check if we have the report content from finalize
+    report_content = state.get("report_content")
+    
+    if report_content:
+        # Print the full SITREP report as formatted markdown
+        console.print()
+        console.print(Markdown(report_content))
+        console.print()
+        
+        # Show where the report was saved
+        if state.get("output_paths"):
+            logger.info(f"Report saved to: [bold]{state['output_paths'].get('report', 'N/A')}[/bold]")
+    else:
+        # Fallback to old style if no report_content
+        logger.divider("Research Complete")
+        
+        if state.get("executive_summary"):
+            logger.panel(
+                state["executive_summary"],
+                title="📋 Executive Summary",
+                style="green",
+            )
+        
+        if state.get("key_insights"):
+            logger.divider("Key Insights")
+            for i, insight in enumerate(state["key_insights"][:5], 1):
+                if insight:
+                    logger.markdown(f"**{i}.** {insight}")
+        
+        if state.get("recommendations"):
+            logger.divider("Recommendations")
+            for i, rec in enumerate(state["recommendations"], 1):
+                logger.markdown(f"**{i}.** {rec}")
+        
+        if state.get("error"):
+            logger.error(f"Research encountered an error: {state['error']}")
+
+
+async def main() -> None:
+    """Run the Deep Research Agent."""
+    args = parse_args()
+    
+    # Handle --list-providers
+    if args.list_providers:
+        print_providers()
+        return
+    
+    # Check if task was provided
+    if not args.task:
+        logger.error("Please provide a research task. Example:")
+        logger.markdown('  `python -m src.agent "Analyze military activity in Ukraine"`')
+        logger.info("Use --help for more options")
+        sys.exit(1)
+    
+    # Parse optional context
+    context = None
+    if args.context:
+        try:
+            context = json.loads(args.context)
+        except json.JSONDecodeError:
+            logger.error("Invalid JSON context provided")
+            sys.exit(1)
+    
+    logger.info(f"Starting research: [bold]{args.task}[/bold]")
+    logger.info(f"Provider: [bold]ollama[/bold]")
+    logger.info(f"Model: [bold]{args.model or settings.agent_model}[/bold]")
+    logger.info(f"Max iterations: [bold]{args.max_iter}[/bold]")
+    
+    try:
+        from src.agent.graph import DeepResearchAgent
+        
+        agent = DeepResearchAgent(
+            mcp_server_url=args.server,
+            model=args.model,
+            max_iterations=args.max_iter,
+        )
+        
+        result = await agent.research(
+            task=args.task,
+            context=context,
+        )
+        
+        if args.json:
+            output = {
+                k: v for k, v in result.items()
+                if k != "messages"
+            }
+            print(json.dumps(output, indent=2, default=str))
+        else:
+            print_report(result)
+            
+    except ImportError as e:
+        logger.error(f"Missing dependencies. Run: uv pip install -e '.[agent]'")
+        logger.error(f"Details: {e}")
+        sys.exit(1)
+    except ConnectionError:
+        logger.error(f"Could not connect to MCP server. Is it running?")
+        logger.error(f"Start with: python -m src.mcp_server.server --transport sse")
+        sys.exit(1)
+    except Exception as e:
+        logger.error(f"Research failed: {e}")
+        if args.json:
+            print(json.dumps({"error": str(e)}, indent=2))
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

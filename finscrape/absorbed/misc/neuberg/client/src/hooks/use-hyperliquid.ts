@@ -1,0 +1,158 @@
+import { useQuery } from '@tanstack/react-query';
+import { useMemo } from 'react';
+import { useAccount } from 'wagmi';
+import {
+  getAllMids,
+  getL2Book,
+  getUserState,
+  getStockUserState,
+  getUserFills,
+  getOpenOrders,
+  getSpotBalances,
+  getMeta,
+  getPerpMetaAndCtxs,
+  getSpotMeta,
+  getStockPerpMetaAndCtxs,
+} from '../lib/hyperliquid/api';
+import type { AllMids } from '../lib/hyperliquid/types';
+
+// Refresh intervals
+const FAST = 5_000;    // prices, orderbook (was 3s)
+const MEDIUM = 15_000; // user state (was 10s)
+const SLOW = 60_000;   // fills, meta (was 30s)
+
+export function useAllMids() {
+  return useQuery({
+    queryKey: ['hl', 'allMids'],
+    queryFn: getAllMids,
+    refetchInterval: FAST,
+  });
+}
+
+export function useL2Book(coin: string | null) {
+  return useQuery({
+    queryKey: ['hl', 'l2Book', coin],
+    queryFn: () => getL2Book(coin!, 5),
+    enabled: !!coin,
+    refetchInterval: FAST,
+  });
+}
+
+export function useMeta() {
+  return useQuery({
+    queryKey: ['hl', 'meta'],
+    queryFn: getMeta,
+    refetchInterval: SLOW,
+  });
+}
+
+export function usePerpMetaAndCtxs() {
+  return useQuery({
+    queryKey: ['hl', 'perpMetaAndCtxs'],
+    queryFn: getPerpMetaAndCtxs,
+    refetchInterval: FAST,
+  });
+}
+
+export function useSpotMeta() {
+  return useQuery({
+    queryKey: ['hl', 'spotMeta'],
+    queryFn: getSpotMeta,
+    refetchInterval: SLOW,
+  });
+}
+
+export function useStockPerps() {
+  return useQuery({
+    queryKey: ['hl', 'stockPerps'],
+    queryFn: getStockPerpMetaAndCtxs,
+    refetchInterval: FAST,
+  });
+}
+
+/** Combined mid prices: regular allMids + stock perp markPx */
+export function useCombinedMids(): { data: AllMids | undefined } {
+  const { data: mids } = useAllMids();
+  const { data: stockPerps } = useStockPerps();
+
+  const data = useMemo(() => {
+    if (!mids && !stockPerps) return undefined;
+    const combined: AllMids = {};
+    if (mids) Object.assign(combined, mids);
+    if (stockPerps) {
+      const [meta, ctxs] = stockPerps;
+      for (let i = 0; i < meta.universe.length; i++) {
+        const markPx = ctxs[i]?.markPx;
+        if (markPx) combined[meta.universe[i].name] = markPx;
+      }
+    }
+    return combined;
+  }, [mids, stockPerps]);
+
+  return { data };
+}
+
+export function useHyperliquidAssets(): Set<string> {
+  const { data: perpData } = usePerpMetaAndCtxs();
+  const { data: spotMeta } = useSpotMeta();
+  return useMemo(() => {
+    const set = new Set<string>();
+    if (perpData) {
+      for (const a of perpData[0].universe) set.add(a.name);
+    }
+    if (spotMeta) {
+      for (const t of spotMeta.tokens) set.add(t.name);
+    }
+    return set;
+  }, [perpData, spotMeta]);
+}
+
+export function useUserState() {
+  const { address } = useAccount();
+  return useQuery({
+    queryKey: ['hl', 'userState', address],
+    queryFn: () => getUserState(address!),
+    enabled: !!address,
+    refetchInterval: MEDIUM,
+  });
+}
+
+export function useStockUserState() {
+  const { address } = useAccount();
+  return useQuery({
+    queryKey: ['hl', 'stockUserState', address],
+    queryFn: () => getStockUserState(address!),
+    enabled: !!address,
+    refetchInterval: MEDIUM,
+  });
+}
+
+export function useSpotBalances() {
+  const { address } = useAccount();
+  return useQuery({
+    queryKey: ['hl', 'spotBalances', address],
+    queryFn: () => getSpotBalances(address!),
+    enabled: !!address,
+    refetchInterval: MEDIUM,
+  });
+}
+
+export function useUserFills() {
+  const { address } = useAccount();
+  return useQuery({
+    queryKey: ['hl', 'userFills', address],
+    queryFn: () => getUserFills(address!),
+    enabled: !!address,
+    refetchInterval: SLOW,
+  });
+}
+
+export function useOpenOrders() {
+  const { address } = useAccount();
+  return useQuery({
+    queryKey: ['hl', 'openOrders', address],
+    queryFn: () => getOpenOrders(address!),
+    enabled: !!address,
+    refetchInterval: MEDIUM,
+  });
+}

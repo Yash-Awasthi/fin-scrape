@@ -1,0 +1,134 @@
+[
+  {
+    "id": "us-killed-in-action",
+    "category": "US Soldiers — Killed in Battle",
+    "killed": "1,733",
+    "injured": "4,152",
+    "source": "US War Department / Adjutant General records",
+    "tier": 1,
+    "contested": "no",
+    "note": "Covers all combat deaths of the Mexican-American War (1846–1848). Does not include Texas Revolution period losses.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-disease-deaths",
+    "category": "US Soldiers — Deaths from Disease",
+    "killed": "~11,550",
+    "injured": "N/A",
+    "source": "US Surgeon General records / K. Jack Bauer, The Mexican War",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Dysentery, yellow fever (vómito negro), and typhoid killed approximately 6.6 soldiers for every one killed in combat. Camargo and Veracruz were particularly deadly. Exact figures vary by source: 10,000–13,000.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mexican-military-casualties",
+    "category": "Mexican Soldiers — Killed and Wounded",
+    "killed": "~25,000",
+    "injured": "~50,000+",
+    "source": "Archivo de la Secretaría de Defensa Nacional / Various historians",
+    "tier": 2,
+    "contested": "heavily",
+    "note": "Mexican military records were poorly maintained during the conflict and many were lost. Estimates for killed range from 25,000 to 50,000. Wounded figures are essentially unverifiable. These include Texas Revolution period losses.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "alamo-defenders",
+    "category": "Texas Revolution — Alamo Garrison",
+    "killed": "~189",
+    "injured": "0 (none survived)",
+    "source": "Texas State Library and Archives Commission",
+    "tier": 1,
+    "contested": "partial",
+    "note": "All defenders were killed on March 6, 1836. Exact count disputed (182–189) due to incomplete pre-battle rosters. A small number of women, children, and enslaved people in the fort were spared. Mexican losses at the Alamo: estimated 400–600 killed and wounded.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "goliad-massacre",
+    "category": "Texas Revolution — Goliad Massacre",
+    "killed": "342",
+    "injured": "unknown (wounded executed with others)",
+    "source": "Texas State Library and Archives — Fannin's Command Records",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Texan POWs executed March 27, 1836, under Santa Anna's orders after formal surrender. Some sources cite 330; exact count is debated. A small number escaped. General Urrea had urged clemency.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "battle-san-jacinto-casualties",
+    "category": "Texas Revolution — Battle of San Jacinto",
+    "killed": "630 (Mexican) / 9 (Texan)",
+    "injured": "~208 (Mexican) / 26 (Texan)",
+    "source": "Sam Houston dispatch — Texas State Archives",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Decisive Texan victory in 18-minute battle. Mexican figures may be understated. Hundreds of Mexican prisoners were taken, including Santa Anna himself. Houston was wounded in the ankle.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "battle-buena-vista-casualties",
+    "category": "Battle of Buena Vista (Feb 22–23, 1847)",
+    "killed": "591 (Mexican killed) / 267 (US killed)",
+    "injured": "~1,539 (Mexican) / 456 (US)",
+    "source": "US and Mexican military reports / Eisenhower, So Far from God",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Two-day battle; total Mexican casualties ~2,100 (killed, wounded, missing). Total US casualties ~680. Santa Anna claimed victory but retreated; Taylor's stand made him a presidential candidate.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "scott-mexico-city-campaign",
+    "category": "Scott's Mexico City Campaign (Mar–Sep 1847)",
+    "killed": "~1,054 (US) / ~7,000+ (Mexican)",
+    "injured": "~3,000 (US) / ~20,000+ (Mexican est.)",
+    "source": "Winfield Scott official reports — US National Archives",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Encompasses Veracruz siege, Cerro Gordo, Contreras, Churubusco, Molino del Rey, and Chapultepec through fall of Mexico City. Mexican figures include prisoners. Civilian casualties from the Veracruz bombardment are unquantified.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mier-expedition-prisoners",
+    "category": "Mier Expedition (Dec 1842) — Texan POWs",
+    "killed": "17 (Black Bean execution) / 20+ (in captivity)",
+    "injured": "unknown",
+    "source": "Texas State Library — Mier Expedition Records / Nance, Attack and Counterattack",
+    "tier": 1,
+    "contested": "no",
+    "note": "176 recaptured Texan prisoners subjected to the Black Bean lottery: 17 drew black beans and were immediately shot by order of Santa Anna. An additional 20+ died of disease or abuse during captivity in Mexican prisons.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "san-patricio-executions",
+    "category": "San Patricio Battalion — Executed for Desertion",
+    "killed": "50 hanged",
+    "injured": "22 flogged and branded (others)",
+    "source": "Winfield Scott order book — US National Archives / Miller, Shamrock and Sword",
+    "tier": 1,
+    "contested": "no",
+    "note": "85 San Patricios captured at Churubusco; 72 sentenced to death. Scott reduced 22 sentences to flogging and branding. 16 hanged at San Ángel (Sep 10), 30 at Mixcoac (Sep 13 — timed to coincide with raising of US flag over Chapultepec).",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "veracruz-civilian-casualties",
+    "category": "Veracruz — Civilian Casualties from Bombardment",
+    "killed": "estimated 100–400+",
+    "injured": "unknown",
+    "source": "K. Jack Bauer, The Mexican War / Diplomatic correspondence of foreign consuls",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Foreign consuls protested US bombardment of a city with noncombatant civilians. Exact civilian toll unknown; some estimates are much higher. Mexican sources and critics of the war cited Veracruz as evidence of US ruthlessness.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "niños-heroes-chapultepec",
+    "category": "Chapultepec — Mexican Military Cadets ('Niños Héroes')",
+    "killed": "6 cadets killed in action",
+    "injured": "unknown",
+    "source": "Winfield Scott official report / Mexican military academy records",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Six young cadets of the Heroic Military College died defending Chapultepec on September 12–13, 1847: Juan de la Barrera, Juan Escutia, Francisco Márquez, Agustín Melgar, Fernando Montes de Oca, and Vicente Suárez. Revered in Mexico as national martyrs.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

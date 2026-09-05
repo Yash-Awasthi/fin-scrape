@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.canairy.api</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>-c</string>
+    <string>cd /Users/brownmanbrain/GitHub/canairy &amp;&amp; set -a &amp;&amp; source .env &amp;&amp; set +a &amp;&amp; export PYTHONPATH=src &amp;&amp; exec .venv/bin/python -m uvicorn api.main:app --host 127.0.0.1 --port 5555</string>
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>/tmp/canairy-api.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/canairy-api.err</string>
+</dict>
+</plist>

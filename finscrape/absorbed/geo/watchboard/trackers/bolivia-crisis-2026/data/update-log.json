@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-27T23:48:11.535Z",
+  "tracker": "bolivia-crisis-2026",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 9
+    },
+    "timeline": {
+      "status": "updated",
+      "count": 48
+    },
+    "mapPoints": {
+      "status": "unchanged",
+      "count": 25
+    },
+    "casualties": {
+      "status": "unchanged",
+      "count": 12
+    },
+    "econ": {
+      "status": "unchanged",
+      "count": 8
+    },
+    "claims": {
+      "status": "updated",
+      "count": 20
+    },
+    "political": {
+      "status": "updated",
+      "count": 20
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

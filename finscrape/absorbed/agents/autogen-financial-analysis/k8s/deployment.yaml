@@ -1,0 +1,260 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autogen-financial-analysis
+  labels:
+    app: autogen-financial-analysis
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: autogen-financial-analysis
+  template:
+    metadata:
+      labels:
+        app: autogen-financial-analysis
+    spec:
+      containers:
+      - name: autogen-api
+        image: autogen-financial-analysis:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: REDIS_URL
+          value: "redis://redis-service:6379"
+        - name: DATABASE_URL
+          value: "postgresql://postgres:password@postgres-service:5432/financial_db"
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: api-secrets
+              key: openai-api-key
+        - name: ALPHA_VANTAGE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: api-secrets
+              key: alpha-vantage-key
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        volumeMounts:
+        - name: output-volume
+          mountPath: /app/output
+        - name: logs-volume
+          mountPath: /app/logs
+      volumes:
+      - name: output-volume
+        persistentVolumeClaim:
+          claimName: output-pvc
+      - name: logs-volume
+        persistentVolumeClaim:
+          claimName: logs-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: autogen-service
+spec:
+  selector:
+    app: autogen-financial-analysis
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8000
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-service
+spec:
+  selector:
+    app: redis
+  ports:
+  - protocol: TCP
+    port: 6379
+    targetPort: 6379
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+spec:
+  selector:
+    app: postgres
+  ports:
+  - protocol: TCP
+    port: 5432
+    targetPort: 5432
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:7-alpine
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+        - name: redis-data
+          mountPath: /data
+      volumes:
+      - name: redis-data
+        persistentVolumeClaim:
+          claimName: redis-pvc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+    app: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:13
+        env:
+        - name: POSTGRES_DB
+          value: financial_db
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: postgres-secrets
+              key: password
+        ports:
+        - containerPort: 5432
+        volumeMounts:
+        - name: postgres-data
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: postgres-data
+        persistentVolumeClaim:
+          claimName: postgres-pvc
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: api-secrets
+type: Opaque
+data:
+  openai-api-key: ${OPENAI_API_KEY_BASE64}
+  alpha-vantage-key: ${ALPHA_VANTAGE_API_KEY_BASE64}
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-secrets
+type: Opaque
+data:
+  password: cGFzc3dvcmQ=  # base64 encoded "password"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: output-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: logs-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: autogen-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  tls:
+  - hosts:
+    - autogen.example.com
+    secretName: autogen-tls
+  rules:
+  - host: autogen.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: autogen-service
+            port:
+              number: 80

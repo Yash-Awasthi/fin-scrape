@@ -1,0 +1,908 @@
+[
+  {
+    "era": "Background: A Frozen Conflict Under Pressure",
+    "events": [
+      {
+        "id": "transnistria-attacks-2022",
+        "year": "Apr 26, 2022",
+        "title": "Unclaimed Blasts Hit Transnistrian Security Ministry and Radio Towers",
+        "type": "political",
+        "detail": "A series of unclaimed explosions struck Transnistria over April 25-27, 2022: RPG fire damaged the Ministry of State Security building in Tiraspol on April 25, and on April 26 two powerful radio transmitters rebroadcasting Russian channels were destroyed in the village of Maiac, Grigoriopol district. No one was hurt and no group claimed responsibility. Transnistrian authorities raised the territory's terrorist threat level to \"red,\" and the incidents — occurring two months into Russia's full-scale invasion of Ukraine — fuelled fears the breakaway region could become a new front in the war.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2022/4/26/blasts-hit-ministry-in-moldovas-transnistria-near-ukraine"
+          },
+          {
+            "name": "Militarnyi",
+            "tier": 3,
+            "url": "https://militarnyi.com/en/news/new-explosions-in-transnistria-towers-broadcasting-russian-radio-channels-destroyed/"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "disputed",
+        "confidenceReason": "Physical damage independently confirmed by multiple outlets; perpetrator and motive remain unclaimed and unattributed.",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "eu-referendum-oct2024",
+        "year": "Oct 20, 2024",
+        "title": "Moldova Narrowly Backs EU Membership in Contested Referendum",
+        "type": "political",
+        "detail": "Moldova's constitutional referendum on enshrining the goal of EU membership passed by a razor-thin 50.4% to 49.6% on October 20, 2024 — far narrower than pre-vote polling had suggested. President Maia Sandu said the vote had come under an \"unprecedented\" assault, alleging \"criminal groups\" tied to Russia attempted to buy up to 300,000 votes with tens of millions of euros. Sandu was separately forced into a runoff in the concurrent presidential election, ultimately winning re-election on November 3 with 55% against pro-Russia Socialist candidate Alexandr Stoianoglo.",
+        "sources": [
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2024/10/21/europe/moldova-eu-referendum-democracy-interference-intl/index.html"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2024-10-21/moldova-s-leader-sandu-dealt-setback-with-close-eu-referendum-result"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "eu-growth-plan-adopted",
+        "year": "Oct 10, 2024",
+        "title": "EU Adopts EUR 1.9 Billion Growth Plan for Moldova",
+        "type": "diplomatic",
+        "detail": "The European Commission proposed a Growth Plan for Moldova worth up to EUR 1.9 billion for 2025-2027 on October 10, 2024 — the largest EU financial support package for Moldova to date, combining EUR 385 million in non-repayable grants with up to EUR 1.5 billion in concessional loans under a Reform and Growth Facility. Disbursement is conditional on Moldova meeting reform benchmarks agreed in a bilateral Reform Agenda; by 2026 Moldova had unlocked roughly EUR 504 million under the facility, underpinning the country's response to the energy shock from the loss of Russian gas transit.",
+        "sources": [
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "url": "https://enlargement.ec.europa.eu/funding-technical-assistance/growth-plan-moldova_en"
+          },
+          {
+            "name": "Moldpres",
+            "tier": 1,
+            "url": "https://www.moldpres.md/eng/economy/eu-growth-plan-for-moldova-1-9-billion-to-modernize-local-communities-and-raise-citizens-living-standards"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "gas-transit-cutoff-jan1",
+        "year": "Jan 1, 2025",
+        "title": "Ukraine Ends Russian Gas Transit, Transnistria Loses Free Gas",
+        "type": "energy",
+        "detail": "The Ukraine-Russia gas transit agreement expired on January 1, 2025 and Kyiv declined to renew it, cutting off the pipeline route that had supplied free Russian gas to Transnistria for decades. The Cuciurgan (Moldavskaya GRES) power plant, which generated up to 80% of Moldova's electricity using that gas, lost its subsidised fuel source. Transnistria plunged into an energy emergency with heating and power cuts through the winter, while Chisinau scrambled to secure alternative electricity imports.",
+        "sources": [
+          {
+            "name": "CNBC",
+            "tier": 2,
+            "url": "https://www.cnbc.com/2025/01/03/moldova-ukraines-halt-of-russian-gas-throws-transnistria-into-crisis.html"
+          },
+          {
+            "name": "Balkan Insight",
+            "tier": 3,
+            "url": "https://balkaninsight.com/2025/01/03/cold-war-moldovas-breakaway-transnistria-freezes-amid-russian-gas-cut-off/"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "moldova-election-sep2025",
+        "year": "Sep 28, 2025",
+        "title": "PAS Wins Outright Majority in Parliamentary Election Marred by Russian Interference Claims",
+        "type": "political",
+        "detail": "President Maia Sandu's pro-EU Party of Action and Solidarity (PAS) won 50.2% of the vote and 55 of 101 seats in the September 28 parliamentary election, retaining an outright majority. The pro-Russian Patriotic Electoral Bloc, led by former president Igor Dodon, placed second with 24.6% and 26 seats. Turnout was 52.2%, with a record ~280,000 diaspora votes (78% for PAS) proving decisive. Sandu accused Russia of spending hundreds of millions of euros to sway the result; police separately alleged fugitive oligarch Ilan Shor financed a vote-buying and disinformation operation reaching over 150,000 voters.",
+        "sources": [
+          {
+            "name": "OSW Centre for Eastern Studies",
+            "tier": 3,
+            "url": "https://www.osw.waw.pl/en/publikacje/analyses/2025-09-29/election-moldova-pas-wins-outright-majority-once-again"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2025/09/29/europe/moldova-election-eu-russia-intl-hnk"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "peskov-veiled-threat",
+        "year": "Oct 12, 2025",
+        "title": "Kremlin Spokesman Peskov Warns Chisinau Not to Repeat Ukraine's \"Mistake\"",
+        "type": "political",
+        "detail": "Days after PAS's September 28 parliamentary election win, Kremlin spokesperson Dmitry Peskov said on October 12 that \"the current leadership of Moldova, in our view, is making a serious mistake,\" issuing a veiled warning that cited Ukraine's post-2014 trajectory. Moldovan officials dismissed the remarks as an attempt to intimidate the incoming pro-EU government. Igor Dodon, leader of the defeated pro-Russian Patriotic Electoral Bloc, separately claimed the election had been stolen and led protests outside parliament, while pledging his bloc would still \"restore dialogue with the Russian Federation.\"",
+        "sources": [
+          {
+            "name": "Kyiv Independent",
+            "tier": 2,
+            "url": "https://kyivindependent.com/kremlin-issues-veiled-threats-to-moldova-following-pro-eu-election-victory-cites-ukraine-as-warning/"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Q2 2026: Shoigu's Warning and the Passportisation Decree",
+    "events": [
+      {
+        "id": "shoigu-warning-apr",
+        "year": "Apr 22, 2026",
+        "title": "Shoigu Warns of Threats to \"220,000 Russian Citizens\" in Transnistria",
+        "type": "political",
+        "detail": "Russian Security Council Secretary Sergei Shoigu claimed more than 220,000 Russian citizens in Transnistria were \"under threat\" from Moldova and Ukraine, comparing the situation to Donbas after 2014 and asserting Russia would use \"all available methods\" to protect them. Moldova's Foreign Ministry rejected the claims as unfounded, saying the security situation nationwide was stable and rights of all residents were guaranteed regardless of citizenship.",
+        "sources": [
+          {
+            "name": "France 24 / TASS",
+            "tier": 2,
+            "url": "https://www.france24.com/en/russia-s-sergei-shoigu-says-safety-of-russians-in-transnistria-under-threat-tass-reports"
+          },
+          {
+            "name": "Euromaidan Press",
+            "tier": 3,
+            "url": "https://euromaidanpress.com/2026/04/22/we-will-use-all-available-methods-shoigu-threatened-moldova-over-transnistria-available-methods-are-limited-ukraine-is-in-the-way/"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Statement is a verified Russian official claim; the 220,000 figure is Moscow's own assertion and independent verification of the number is not public.",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "ogrf-commanders-persona-non-grata",
+        "year": "Apr 17, 2026",
+        "title": "Chisinau Declares Entire OGRF Command Persona Non Grata",
+        "type": "political",
+        "detail": "Moldovan authorities, announced by parliament speaker Igor Grosu on April 17, declared the full command of the Operational Group of Russian Forces (OGRF) in Transnistria persona non grata, including commander Dmitry Zelenkov, deputies Dmitry Opalev, Sergey Mashenko and Sergey Shirshov, chief of staff Marat Yarulin, and Alexei Bogomolov. The move, citing the force's \"illegal presence\" on Moldovan territory, restricts the officers to Transnistria — any attempt to leave the region risks expulsion and a permanent entry ban. Shoigu later cited the measure as evidence Moldova was trying to \"squeeze out\" the Russian contingent.",
+        "sources": [
+          {
+            "name": "Kyiv Post",
+            "tier": 2,
+            "url": "https://www.kyivpost.com/post/74088"
+          },
+          {
+            "name": "Euromaidan Press",
+            "tier": 3,
+            "url": "https://euromaidanpress.com/2026/04/16/soviet-14th-armys-heirs-just-became-persona-non-grata-in-moldova/"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "cuciurgan-coal-switch-feb",
+        "year": "Feb 10, 2026",
+        "title": "Cuciurgan Plant Switches From Gas to Coal Amid Supply Instability",
+        "type": "energy",
+        "detail": "The Cuciurgan (Moldavskaya GRES) power station temporarily switched from gas to coal generation in February 2026 due to gas supply instability, continuing to supply electricity to Transnistrian and Moldovan consumers without interruption. In early March, gas supplies to Transnistria dropped further after disruptions Moldovan and Transnistrian officials linked to the war in the Middle East affecting delivery and payment routes; Moldova's regulator extended Moldovagaz's authority to supply gas to Transnistria through July 1, 2026, with Swiss-based MET Group supplying gas via Moldovagaz and Tiraspoltransgaz since February 2025.",
+        "sources": [
+          {
+            "name": "CEENERGYNEWS",
+            "tier": 3,
+            "url": "https://ceenergynews.com/oil-gas/gas-shortages-transnistria-energy-crisis/"
+          },
+          {
+            "name": "Global Energy Monitor",
+            "tier": 3,
+            "url": "https://www.gem.wiki/Kuchurgan_power_station"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "imf-article-iv-growth-forecast",
+        "year": "Feb 27, 2026",
+        "title": "IMF Concludes Article IV Consultation, Forecasts 2.3% Growth Despite Shocks",
+        "type": "political",
+        "detail": "The IMF Executive Board concluded its 2025 Article IV consultation with Moldova on February 27, 2026, projecting the economy would recover from multiple shocks — including the loss of Russian gas transit and regional conflict spillovers — with growth of 2.7% in 2025 and 2.3% in 2026, supported by a strong harvest, domestic demand, and substantial EU financing. The Fund flagged inflation, which National Bank of Moldova officials said would remain a major challenge, as the principal risk to the outlook, alongside continued exposure to energy-price shocks and regional security risk.",
+        "sources": [
+          {
+            "name": "IMF",
+            "tier": 1,
+            "url": "https://www.imf.org/en/news/articles/2026/02/27/pr-26067-moldova-imf-executive-board-concludes-2025-article-iv-consultation"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "putin-passportisation-decree",
+        "year": "May 15, 2026",
+        "title": "Putin Signs Decree Fast-Tracking Russian Citizenship for Transnistria Residents",
+        "type": "citizenship",
+        "detail": "On May 15, Vladimir Putin signed a decree simplifying Russian citizenship for Transnistria residents: foreign nationals and stateless persons aged 18+ permanently residing in the region can apply through Russian diplomatic missions without the usual 5-year residency requirement, Russian-language proficiency test, or history/civics exam. Fewer than 40% of Transnistria's roughly 220,000 residents held Russian citizenship beforehand, leaving significant room for expansion. President Maia Sandu warned the following day that the decree could serve as a recruitment tool for Russia's war against Ukraine, framing it within a wider pattern of \"passportisation\" Moscow has used in Abkhazia, South Ossetia, and occupied Ukrainian territory.",
+        "sources": [
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-05-16/russia-eases-path-to-citizenship-for-moldova-s-transnistria"
+          },
+          {
+            "name": "Kyiv Independent",
+            "tier": 2,
+            "url": "https://kyivindependent.com/putin-signs-decree-simplifying-russian-citizenship-process-for-transnistria-residents/"
+          },
+          {
+            "name": "Meduza",
+            "tier": 2,
+            "url": "https://meduza.io/en/news/2026/05/16/putin-eases-path-to-russian-citizenship-for-residents-of-moldovan-breakaway-republic-transnistria"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "eu-first-cluster-fundamentals",
+        "year": "Jun 15, 2026",
+        "title": "EU Opens First Accession Negotiation Cluster With Moldova and Ukraine",
+        "type": "diplomatic",
+        "detail": "EU member states agreed on June 12 to open the first accession negotiations cluster — \"Fundamentals,\" covering rule of law, fundamental rights, democratic institutions, public administration reform and economic criteria — with Moldova and Ukraine. The cluster formally opened June 15 in Luxembourg under the Cypriot EU Council presidency. Commission President Ursula von der Leyen called it \"a historic milestone on your European journey\" during an EU-Moldova summit on June 22, recognising Moldova's reform progress despite Russian pressure. Moldova has stated a goal of being ready for accession by 2030.",
+        "sources": [
+          {
+            "name": "Council of the EU",
+            "tier": 1,
+            "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/15/enlargement-eu-and-moldova-reach-a-milestone-in-accession-talks-with-opening-of-the-first-negotiation-cluster/"
+          },
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "url": "https://enlargement.ec.europa.eu/news/statement-president-von-der-leyen-following-eu-moldova-summit-2026-06-22_en"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Q3 2026: Government Collapse and the Cultural Centre Closure",
+    "events": [
+      {
+        "id": "eu-second-cluster-external-relations",
+        "year": "Jul 14, 2026",
+        "title": "EU Opens Second Accession Cluster on External Relations",
+        "type": "diplomatic",
+        "detail": "EU countries unanimously agreed to open a second accession negotiation cluster — on external relations — with Moldova and Ukraine, with a formal ceremony held July 14. The EU-Moldova Association Committee subsequently called for the formal opening of all remaining clusters by the end of 2026, reflecting continued momentum despite the domestic political turbulence in Chisinau.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/07/03/ukraine-and-moldova-set-to-open-another-cluster-of-eu-accession-talks"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "munteanu-resignation",
+        "year": "Jul 3, 2026",
+        "title": "PM Munteanu Resigns, Collapsing Pro-EU Coalition Government",
+        "type": "political",
+        "detail": "Prime Minister Alexandru Munteanu, in office since November 2025, resigned on July 3, automatically triggering the government's collapse under Moldovan parliamentary procedure. He cited only that he could \"no longer exercise my mandate in accordance with my principles and beliefs,\" without stating a specific cause. The resignation followed mounting pressure from a RISE Moldova investigation into the state-owned company MoldATSA, which found Anastasia Taburceanu — a cousin of President Maia Sandu — was paid roughly EUR 50,000 in under a year as company spokesperson, about eight times the average Moldovan salary. Sandu began consultations with parliamentary groups to nominate a successor.",
+        "sources": [
+          {
+            "name": "Washington Post",
+            "tier": 2,
+            "url": "https://www.washingtonpost.com/world/2026/07/03/moldova-prime-minister-resignation-alexandru-munteanu-sandu/821484b6-76bf-11f1-b665-5f8be87f3787_story.html"
+          },
+          {
+            "name": "Romania Insider",
+            "tier": 2,
+            "url": "https://www.romania-insider.com/moldovan-prime-minister-alexandru-munteanu-announces-resignation-july-2026"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/3/moldovas-prime-minister-quits-triggering-governments-resignation"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "russian-cultural-centre-closure",
+        "year": "Jul 4, 2026",
+        "title": "Russian Cultural Centre in Chisinau Permanently Shuts Down",
+        "type": "diplomatic",
+        "detail": "The Russian Center for Science and Culture in Chisinau permanently ceased operations on July 4 after Moldova's parliament — which had ratified denunciation of the underlying 1998/2001 bilateral treaty on November 27, 2025 — terminated the agreement authorising its presence. The government framed the closure as a direct response to escalating security incidents, notably repeated Russian drone incursions into Moldovan airspace, and to long-standing accusations that the centre served as a front for state propaganda and hybrid-warfare operations. Moldova's parliament speaker separately described a Russian proposal to relocate the centre's functions to Tiraspol as a \"political provocation.\"",
+        "sources": [
+          {
+            "name": "Reuters (via Internazionale)",
+            "tier": 2,
+            "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/07/04/russian-cultural-centre-closes-in-moldova-after-government-order"
+          },
+          {
+            "name": "Moldova1",
+            "tier": 1,
+            "url": "https://moldova1.md/p/80012/moldova-permanently-shuts-down-russian-cultural-center-in-chisinau"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "tofan-elected-pm",
+        "year": "Jul 21, 2026",
+        "title": "Parliament Elects Investor Vasile Tofan as New Prime Minister",
+        "type": "political",
+        "detail": "President Sandu nominated Vasile Tofan, 44, a senior partner at Ukraine-focused investment firm Horizon Capital with degrees from Harvard Business School and Erasmus University, as prime minister. Moldova's PAS-controlled parliament elected Tofan on July 21 by a vote of 53–21 with 21 abstentions, backed by the governing Party of Action and Solidarity. Tofan pledged to continue Munteanu's reform agenda and push forward Moldova's EU accession bid amid ongoing corruption and energy pressures.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/21/moldova-chooses-new-prime-minister-as-it-pushes-for-eu-membership"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/11/moldovas-president-nominates-businessman-vasile-tofan-as-prime-minister"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "romania-moldova-interconnector",
+        "year": "May 1, 2026",
+        "title": "New Moldova-Romania Electricity Interconnector Comes Online",
+        "type": "energy",
+        "detail": "An additional high-voltage electricity interconnector linking Moldova's grid to Romania's was completed around May 2026, part of a EUR 270 million package financed by the EU, EIB (EUR 80m), EBRD (EUR 80m) and World Bank (EUR 70m loan plus a EUR 40m EU grant). The link is intended to reduce Moldova's reliance on electricity generated at the Russian-controlled Cuciurgan plant in Transnistria — which has supplied up to 80% of Moldova's power — with two further interconnectors planned by the end of 2027 and 2029 to eventually integrate Moldova into the European ENTSO-E grid.",
+        "sources": [
+          {
+            "name": "EEAS",
+            "tier": 1,
+            "url": "https://www.eeas.europa.eu/node/37716_en"
+          },
+          {
+            "name": "EU Neighbours East",
+            "tier": 1,
+            "url": "https://euneighbourseast.eu/news/latest-news/ebrd-lends-e30-8-million-to-moldova-to-link-to-european-electricity-grid-via-romania/"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "August 2026: The Drone Crisis",
+    "events": [
+      {
+        "id": "kremlin-files-nyt-report",
+        "year": "Aug 15, 2026",
+        "title": "NYT Report Details Kremlin Strategy to Target Moldova \"After Ukraine\"",
+        "type": "political",
+        "detail": "A New York Times investigation published August 15, drawing on leaked \"Kremlin files,\" reported that Vladimir Putin views Moldova as a next-stage target in his campaign to weaken NATO's eastern flank, describing coordinated use of Russian intelligence agents, Orthodox clergy networks, and vote-buying schemes to erode pro-EU sentiment. The report reinforced findings by Moldovan and independent investigators that fugitive oligarch Ilan Shor's network used billions of dollars in cryptocurrency to evade sanctions and fund influence operations, including AI-generated disinformation campaigns on TikTok and Meta platforms ahead of the 2025 election.",
+        "sources": [
+          {
+            "name": "New York Times (via ProtoThema)",
+            "tier": 2,
+            "url": "https://en.protothema.gr/2026/08/15/nyt-moldova-in-putins-crosshairs-as-he-seeks-to-strike-at-nato-russian-agents-priests-and-vote-buying/"
+          },
+          {
+            "name": "Kyiv Independent",
+            "tier": 2,
+            "url": "https://kyivindependent.com/russia-ally-used-8-billion-in-crypto-to-evade-sanctions-meddle-in-moldova-vote-study-finds/"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "disputed",
+        "confidenceReason": "Based on leaked-document reporting from a single outlet; core vote-buying/crypto findings are corroborated by separate Moldovan police and blockchain-analysis investigations, but the full \"Kremlin files\" cache is not independently published.",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "crocmaz-drone-explosion",
+        "year": "Aug 9, 2026",
+        "title": "First Drone Explosion Near Crocmaz Prompts Ambassador Recall",
+        "type": "drone-incident",
+        "detail": "An unidentified aerial object crashed and exploded on August 9 near the village of Crocmaz in Moldova's Ștefan Vodă district, close to the Ukrainian border, after apparently colliding with a tree at roughly 2.5 metres altitude. Debris recovered by Moldovan police contained components consistent with guided-missile/UAV technology — the first such find on Moldovan territory since Russia's 2022 invasion of Ukraine. Moldova recalled its ambassador to Russia for consultations in response. President Sandu called the incident a direct consequence of the Kremlin's aggression.",
+        "sources": [
+          {
+            "name": "The Moscow Times",
+            "tier": 2,
+            "url": "https://www.themoscowtimes.com/2026/08/10/moldova-recalls-ambassador-in-russia-after-drone-crashes-near-border-with-ukraine-a93449"
+          },
+          {
+            "name": "Militarnyi",
+            "tier": 3,
+            "url": "https://militarnyi.com/en/news/drone-enters-moldova-following-moldova-s-decision-to-recall-ambassador-from-russia/"
+          }
+        ],
+        "weaponTypes": [
+          "drone_ucav"
+        ],
+        "confidence": "medium",
+        "eventConfidence": "disputed",
+        "confidenceReason": "Wreckage type confirmed by Moldovan police forensics, but attribution to a specific Russian system is not conclusively established.",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "priozerne-drone-incursion",
+        "year": "Aug 10, 2026",
+        "title": "Second Incursion: Drone Crosses Into Moldova During Odesa Strike, Returns to Ukraine",
+        "type": "drone-incident",
+        "detail": "On the night of August 10, during a Russian aerial attack on Ukraine's Odesa region, an object detected by Moldova's Army Air Operations Service radar at 23:41 local time crossed from the direction of Stepankivka, Ukraine, into Moldovan airspace over the village of Priozerne in Slobozia district, before exiting back into Ukraine north of Stepankivka. No debris fell on Moldovan territory. The incident, the second in two days, deepened concern in Chisinau over the frequency of spillover from Russian strikes on Odesa.",
+        "sources": [
+          {
+            "name": "Moldovan Army Air Operations Service (via Kyiv Post)",
+            "tier": 1,
+            "url": "https://www.kyivpost.com/post/82537"
+          }
+        ],
+        "weaponTypes": [
+          "drone"
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "talmaza-drone-explosion",
+        "year": "Aug 17, 2026",
+        "title": "Third Airspace Breach in Nine Days: Object Explodes Near Talmaza",
+        "type": "drone-incident",
+        "detail": "An unidentified aerial object entered Moldovan airspace at 17:37 local time on August 17 and exploded shortly after in a cornfield near Talmaza, close to the Ukrainian border, sparking small forest fires. Investigators found a crater roughly 2 metres wide and 50cm deep, with blast damage spread across a 45x20 metre area; no injuries were reported. Recovered fragments included turbojet propulsion and flight-control components resembling those used in missile-type UAVs. Ukraine's Air Force said a Russian \"Banderol\" drone had crossed the border, but Moldovan investigators said the wreckage could not be conclusively identified. It marked Moldova's third reported drone incident in nine days, prompting a temporary partial airspace closure.",
+        "sources": [
+          {
+            "name": "Euromaidan Press",
+            "tier": 3,
+            "url": "https://euromaidanpress.com/2026/08/18/blast-marks-moldovas-third-airspace-breach-in-nine-days/"
+          },
+          {
+            "name": "Ukrainska Pravda",
+            "tier": 2,
+            "url": "https://www.pravda.com.ua/eng/news/2026/08/17/8049063/"
+          }
+        ],
+        "weaponTypes": [
+          "drone_ucav",
+          "unknown"
+        ],
+        "confidence": "medium",
+        "eventConfidence": "disputed",
+        "confidenceReason": "Ukrainian Air Force attributes the object to a Russian Banderol-type drone; Moldovan police say wreckage type could not be conclusively confirmed.",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "romania-galati-drone-shootdown",
+        "year": "Aug 16, 2026",
+        "title": "Spanish F/A-18 Shoots Down Drone Over Romania After It Crosses Via Moldova",
+        "type": "drone-incident",
+        "detail": "In the early hours of August 16, a Spanish Air and Space Force F/A-18 Hornet on NATO Air Policing patrol shot down a drone over southeastern Romania roughly 24km north of Galați, after radar detected the target entering Romanian airspace from the direction of Moldova. Moldova stated the drone was a Shahed-136/Geran-2 type that had crossed its territory coming from Ukrainian airspace. It was the fourth drone shot down over Romania in 2026 and followed a similar NATO intercept over Latvia on August 14, reinforcing concern that Russian-linked drone incursions were becoming a recurring test of NATO's eastern air defences.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/08/16/nato-fighter-jets-shoot-down-drone-over-romania-near-moldova-border"
+          },
+          {
+            "name": "Romania Insider",
+            "tier": 2,
+            "url": "https://www.romania-insider.com/fourth-drone-shot-down-romania-august-2026"
+          },
+          {
+            "name": "The Moscow Times",
+            "tier": 2,
+            "url": "https://www.themoscowtimes.com/2026/08/16/suspected-russian-drone-shot-down-in-romanian-airspace-a93508"
+          }
+        ],
+        "weaponTypes": [
+          "drone_loitering"
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "sandu-accidental-vs-deliberate",
+        "year": "Aug 17, 2026",
+        "title": "Sandu: Some Drones Hit Moldova by Accident, Others Sent on Purpose",
+        "type": "political",
+        "detail": "In an August 17 interview, President Maia Sandu said the pattern of drone trajectories offers a clue to whether Moldovan airspace violations are coincidental spillover from the Russia-Ukraine war or a deliberate test of the region's response capacity, saying \"some drones enter our airspace by accident, others are sent intentionally,\" and noting the same dual pattern in Romania and Poland. Her remarks followed the third airspace breach in nine days and came as Moldova pressed NATO and EU partners for enhanced air-defence and radar cooperation.",
+        "sources": [
+          {
+            "name": "Kyiv Post",
+            "tier": 2,
+            "url": "https://www.kyivpost.com/post/82537"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "krasnoselsky-osce-dialogue-call",
+        "year": "2026",
+        "title": "Krasnoselsky Calls on OSCE to Revive 5+2 Settlement Talks",
+        "type": "diplomatic",
+        "detail": "Transnistrian leader Vadim Krasnoselsky called on the OSCE to help resume dialogue on a Transnistrian settlement, as Tiraspol sought to reframe the region's position amid the energy collapse triggered by the loss of free Russian gas and mounting Chisinau pressure. Moscow has repeatedly said it is open to reviving the long-dormant \"5+2\" negotiation format (Moldova, Transnistria, Russia, Ukraine, OSCE, plus the EU and US as observers), while Chisinau has been cautious, wary that renewed talks could be used to legitimise the Russian military presence rather than advance reintegration.",
+        "sources": [
+          {
+            "name": "GMF",
+            "tier": 3,
+            "url": "https://www.gmfus.org/news/how-should-moldova-leverage-eu-support-transnistria"
+          }
+        ],
+        "confidence": "low",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Single institutional source without a precise date; treated as a low-confidence data point pending corroboration.",
+        "lastUpdated": "2026-08-20T00:00:00.000Z"
+      },
+      {
+        "id": "galuzin-transnistria-provocation-warning",
+        "year": "Aug 10, 2026",
+        "title": "Russia Warns Armed Provocations Against Transnistria Would Be Treated as an Attack on Russia",
+        "type": "political",
+        "detail": "Russian Deputy Foreign Minister Mikhail Galuzin warned on August 10 that Moscow would regard any armed provocations by Ukraine or Moldovan authorities against Transnistria as an attack on Russia itself, saying such actions would be viewed under international law as an act of aggression prompting a \"decisive and prompt\" response and that Russia would \"use all available means\" to protect its personnel, forces and peacekeepers in the region. Galuzin assessed the risk of direct armed provocations as currently low but said it could not be ruled out. The warning followed the August 9 Crocmaz drone explosion and Moldova's decision to recall its ambassador from Moscow, and repeated Russian claims — denied by NATO, which has no troops stationed in Moldova — about Western military buildup in the country.",
+        "sources": [
+          {
+            "name": "TASS",
+            "tier": 1,
+            "pole": "eastern",
+            "url": "https://tass.com/politics/2171013"
+          },
+          {
+            "name": "Anadolu Agency",
+            "tier": 2,
+            "pole": "international",
+            "url": "https://www.aa.com.tr/en/eurasia/russia-warns-moldova-ukraine-against-armed-provocations-in-transnistria/4023485"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Statement is a verified Russian MFA claim, independently corroborated by wire coverage; the underlying risk assessment is Moscow's own.",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aa.com.tr/en/eurasia/russia-warns-moldova-ukraine-against-armed-provocations-in-transnistria/4023485",
+            "caption": "Russian Deputy Foreign Minister Mikhail Galuzin warns Moldova and Ukraine over Transnistria",
+            "source": "Anadolu Agency",
+            "thumbnail": "https://web-cdnprod.aa.com.tr/uploads/Contents/2026/08/10/thumbs_b_c_741bbd141f4d9d75536b62b9f0fa6d0d.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-21T15:01:34.000Z"
+      },
+      {
+        "id": "transnistria-60k-citizenship-applications",
+        "year": "Aug 10, 2026",
+        "title": "Over 60,000 Transnistria Residents Apply for Russian Citizenship in Three Months",
+        "type": "citizenship",
+        "detail": "Transnistrian leader Vadim Krasnoselsky told the pro-Kremlin outlet Izvestia that more than 60,000 residents of the breakaway region had filed applications for Russian citizenship under the simplified procedure since Putin's May 15 decree, out of a population of roughly 500,000 of whom about 220,000 already held Russian citizenship. The figure emerged as consular fees for citizenship applications filed outside Russia had just risen nearly tenfold, from $65 to $600, effective August 1 — a change Krasnoselsky said was creating difficulties for Transnistrian applicants.",
+        "sources": [
+          {
+            "name": "Meduza",
+            "tier": 2,
+            "pole": "eastern",
+            "url": "https://meduza.io/en/news/2026/08/10/more-than-60-000-residents-of-moldovan-breakaway-republic-transnistria-applied-for-russian-citizenship-under-a-simplified-procedure"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Figure is self-reported by Transnistrian leadership via a Russian state-aligned outlet; no independent Russian consular data has been published.",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://meduza.io/en/news/2026/08/10/more-than-60-000-residents-of-moldovan-breakaway-republic-transnistria-applied-for-russian-citizenship-under-a-simplified-procedure",
+            "caption": "Transnistria citizenship applications surge under simplified Russian procedure",
+            "source": "Meduza",
+            "thumbnail": "https://logos-pres.md/wp-content/uploads/2026/08/russkoe-grazhdanstvo.png"
+          }
+        ],
+        "lastUpdated": "2026-08-21T15:01:34.000Z"
+      },
+      {
+        "id": "transnistria-citizenship-fee-cut",
+        "year": "Aug 20, 2026",
+        "title": "Russia Moves to Reverse Tenfold Citizenship Fee Hike for Transnistria, Abkhazia, South Ossetia",
+        "type": "citizenship",
+        "detail": "Russia's Foreign Ministry prepared a draft government resolution to restore the $65 consular fee for Russian citizenship applications filed by residents of Transnistria, Abkhazia and South Ossetia, reversing an August 1 hike that had raised the fee to $600 for applicants at consular offices outside Russia. Transnistrian leader Vadim Krasnoselsky had flagged that the increase was creating problems for residents applying under the simplified passportisation procedure, saying the issue was \"in the process of being resolved.\"",
+        "sources": [
+          {
+            "name": "Meduza",
+            "tier": 2,
+            "pole": "eastern",
+            "url": "https://meduza.io/en/news/2026/08/20/russia-plans-to-lower-citizenship-fees-for-residents-of-abkhazia-south-ossetia-and-transnistria-to-65-down-from-600"
+          },
+          {
+            "name": "Logos Press",
+            "tier": 3,
+            "pole": "eastern",
+            "url": "https://logos-pres.md/en/news/the-cost-of-applying-for-russian-citizenship-will-not-increase-for-transnistrians/"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Based on a draft government resolution, not yet a finalised decree; corroborated by two independent outlets.",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://logos-pres.md/en/news/the-cost-of-applying-for-russian-citizenship-will-not-increase-for-transnistrians/",
+            "caption": "Russia plans to roll back the citizenship application fee hike for Transnistria residents",
+            "source": "Logos Press",
+            "thumbnail": "https://logos-pres.md/wp-content/uploads/2026/08/russkoe-grazhdanstvo.png"
+          }
+        ],
+        "lastUpdated": "2026-08-21T15:01:34.000Z"
+      },
+      {
+        "id": "etulia-drone-crossing-aug19",
+        "year": "Aug 20, 2026",
+        "title": "Fourth Airspace Breach: Shahed Drone Crosses Into Gagauzia via Etulia, Returns in Six Minutes",
+        "type": "drone-incident",
+        "detail": "A military-type aerial object, assessed as a Shahed-type drone, entered Moldovan airspace at 03:16 local time on the night of August 19-20 from the direction of Kotlovyna (Bolboka) in Ukraine's Izmail district, crossing into southern Moldova near the village of Etulia in the Gagauz Autonomous Territorial Unit before exiting back toward Ukraine at 03:22 — a roughly six-minute incursion. Moldova's Defence Ministry confirmed the flight occurred during an overnight Russian aerial attack on Ukraine, the same night a separate drone violated Romanian airspace near Galați and Poland scrambled aircraft without confirming a violation. It was the fourth confirmed breach of Moldovan airspace since August 9.",
+        "sources": [
+          {
+            "name": "Moldovan Ministry of Defence (via European Pravda)",
+            "tier": 1,
+            "url": "https://www.eurointegration.com.ua/eng/news/2026/08/20/7243814/"
+          },
+          {
+            "name": "European Pravda",
+            "tier": 2,
+            "url": "https://www.eurointegration.com.ua/eng/news/2026/08/20/7243814/"
+          }
+        ],
+        "weaponTypes": [
+          "drone_loitering"
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.eurointegration.com.ua/eng/news/2026/08/20/7243814/",
+            "caption": "Shahed-type drone crosses into Moldova's Gagauzia region during a Russian strike on Ukraine",
+            "source": "European Pravda",
+            "thumbnail": "https://img.eurointegration.com.ua/images/doc/5/8/58485fd-------2.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-23T14:54:20.000Z"
+      },
+      {
+        "id": "tabachi-border-crossing-drone-strike",
+        "year": "Aug 21, 2026",
+        "title": "Russian Drones Damage Tabachi-Mirne Border Crossing Metres From Moldova",
+        "type": "drone-incident",
+        "detail": "Russian drones struck the Tabachi checkpoint on the Ukrainian side of the Tabachi (Ukraine)-Mirne (Moldova) border crossing at around 00:35 on August 21, roughly 300 metres from Moldovan territory, damaging crossing-point buildings and sparking fires that Ukraine's State Emergency Service contained. Ukraine's State Border Guard Service confirmed the strike and notified Moldovan authorities in Chisinau; the crossing was suspended, with traffic diverted to other checkpoints. Moldova's Interior Ministry said no drone fragments or other hazardous debris were found on Moldovan territory and no casualties were reported. It followed a similar drone strike on the nearby Reni crossing point the previous day.",
+        "sources": [
+          {
+            "name": "Moldpres",
+            "tier": 1,
+            "url": "https://www.moldpres.md/eng/society/border-crossing-point-between-ukraine-and-moldova-atacked-by-drones"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/08/21/russian-drones-hit-border-crossing-with-moldova-in-overnight-strike-ukraine-says"
+          }
+        ],
+        "weaponTypes": [
+          "drone_loitering"
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.moldpres.md/eng/society/border-crossing-point-between-ukraine-and-moldova-atacked-by-drones",
+            "caption": "Damage at the Tabachi-Mirne border crossing point after an overnight Russian drone strike",
+            "source": "Moldpres",
+            "thumbnail": "https://www.moldpres.md/uploads/0/images/large/990a848f8f3e33210195d64d3ffc574d_photo-2026-08-21-08-18-12_6a87e2858d512.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-23T14:54:20.000Z"
+      },
+      {
+        "id": "caplani-shahed138-crossing-aug22",
+        "year": "Aug 22, 2026",
+        "title": "Fifth Airspace Breach: Shahed-138 Crosses Near Caplani, Returns Within 17 Minutes",
+        "type": "drone-incident",
+        "detail": "A Shahed-138-type drone entered Moldovan airspace at 04:07 local time on August 22, crossing the border near the village of Caplani in Ștefan Vodă district after approaching from the direction of Krutoiarivka in Ukraine's Odesa region during an overnight Russian strike wave. Moldova's Defence Ministry said the drone exited Moldovan airspace at 04:24, crossing back toward Ukraine near the same settlement — the fifth confirmed breach of Moldovan airspace since August 9 and the second in the Ștefan Vodă border district after the August 17 Talmaza explosion.",
+        "sources": [
+          {
+            "name": "Moldovan Ministry of Defence (via Intent Press)",
+            "tier": 1,
+            "url": "https://intent.press/en/news/war/2026/a-shahed-drone-flew-into-moldova-during-an-attack-on-the-odesa-region/"
+          },
+          {
+            "name": "Mezha",
+            "tier": 3,
+            "url": "https://mezha.net/eng/bukvy/8f4c3b09_moldova_confirms_shahed/"
+          }
+        ],
+        "weaponTypes": [
+          "drone_loitering"
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://intent.press/en/news/war/2026/a-shahed-drone-flew-into-moldova-during-an-attack-on-the-odesa-region/",
+            "caption": "Shahed-138 drone crosses into Moldova's Ștefan Vodă district near Caplani",
+            "source": "Intent Press",
+            "thumbnail": "https://cdn.intent.press/cache/f1/9c/f19c151c6e55da6dc05406cae16af1ce.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-23T14:54:20.000Z"
+      },
+      {
+        "id": "vulcanesti-drone-overflight-aug24",
+        "year": "Aug 24, 2026",
+        "title": "Sixth Airspace Breach: Drone Crosses via Vulcănești, Debris Found in Romania",
+        "type": "drone-incident",
+        "detail": "A drone entered Moldovan airspace at 05:55 local time on August 24 from the direction of Vynohradivka in Ukraine's Odesa Oblast, crossing over the town of Vulcănești in Moldova's autonomous Gagauzia region before exiting near the village of Pașcani in Cahul district at roughly 06:09, continuing toward Romania. Romanian radar detected the object and scrambled two F-16s and an IAR-330 SOCAT helicopter from the 86th Air Base at Borcea; the air alert lasted until 08:52. The drone was later found crashed into a walnut tree near a home in Ciușlea, Vrancea County, prompting a precautionary evacuation of roughly 300 residents; Romania's Defence Ministry said it carried no explosive payload. It was the sixth confirmed breach of Moldovan airspace since August 9.",
+        "sources": [
+          {
+            "name": "Kyiv Post",
+            "tier": 2,
+            "url": "https://www.kyivpost.com/post/82985"
+          },
+          {
+            "name": "Romania Insider",
+            "tier": 2,
+            "url": "https://www.romania-insider.com/drone-crash-valcea-august-2026"
+          }
+        ],
+        "weaponTypes": ["unknown"],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.romania-insider.com/drone-crash-valcea-august-2026",
+            "caption": "Drone recovered near Ciușlea, Vrancea County, after crossing Moldova via Vulcănești",
+            "source": "Romania Insider",
+            "thumbnail": "https://cdn.romania-insider.com/sites/default/files/styles/article_large_image/public/2024-03/military_drone_-_photo_trentinness_dreamstime.com_.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-28T00:17:19.000Z"
+      },
+      {
+        "id": "vynohradivka-border-crossing-strike-aug25",
+        "year": "Aug 25, 2026",
+        "title": "Third Border-Crossing Strike in Two Weeks: Russian Drone Hits Vynohradivka Checkpoint",
+        "type": "drone-incident",
+        "detail": "A Russian Shahed-type drone struck the Vynohradivka border checkpoint on the Ukrainian side of the Ukraine-Moldova border in Odesa Oblast overnight on August 25, sparking a fire and damaging crossing infrastructure. Ukraine's State Border Guard Service suspended passenger and vehicle traffic, redirecting it to alternative checkpoints; the crossing reopened roughly 24 hours later on August 26. Foreign Minister Andrii Sybiha called it the third attack on a Ukraine-Moldova border crossing in two weeks — after the Reni and Tabachi-Mirne strikes — describing \"a clear pattern\" and accusing Russia of deliberately trying to disrupt connectivity between Ukraine and Moldova. No casualties were reported.",
+        "sources": [
+          {
+            "name": "Kyiv Independent",
+            "tier": 2,
+            "url": "https://kyivindependent.com/russian-drone-strikes-border-crossing-between-ukraine-and-moldova/"
+          },
+          {
+            "name": "UNN",
+            "tier": 2,
+            "url": "https://unn.ua/en/news/an-obvious-pattern-sybiha-on-russias-third-attack-on-a-border-crossing-with-moldova"
+          }
+        ],
+        "weaponTypes": ["drone_loitering"],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://kyivindependent.com/russian-drone-strikes-border-crossing-between-ukraine-and-moldova/",
+            "caption": "Vynohradivka border checkpoint damaged by a Russian Shahed-type drone strike",
+            "source": "Kyiv Independent",
+            "thumbnail": "https://assets.kyivindependent.com/content/images/2026/08/786470446_28113284231644611_2868389381186053416_n_20260825-105633.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-28T00:17:19.000Z"
+      },
+      {
+        "id": "palanca-tudora-drone-crossing-aug26",
+        "year": "Aug 26, 2026",
+        "title": "Seventh Airspace Breach: Drone Crosses Near Palanca, Exits Toward Tudora in Five Minutes",
+        "type": "drone-incident",
+        "detail": "An aerial object entered Moldovan airspace at 17:38 local time on August 26 near the village of Palanca in Ștefan Vodă district, coming from Ukrainian territory, before re-entering Ukraine near the settlement of Tudora at 17:43, heading toward Hradenytsi in Odesa Oblast. Moldova's Defence Ministry said the flight occurred amid a fresh wave of Russian air attacks on Ukraine. No debris fell on Moldovan territory and no casualties were reported. It was the seventh confirmed breach of Moldovan airspace since August 9, coming a day after the Vynohradivka border-checkpoint strike.",
+        "sources": [
+          {
+            "name": "Ukrinform",
+            "tier": 2,
+            "url": "https://www.ukrinform.net/rubric-ato/4158027-drone-violates-moldovas-airspace-again.html"
+          }
+        ],
+        "weaponTypes": ["unknown"],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.ukrinform.net/rubric-ato/4158027-drone-violates-moldovas-airspace-again.html",
+            "caption": "Moldova's Defence Ministry confirms a drone crossing near Palanca and Tudora",
+            "source": "Ukrinform",
+            "thumbnail": "https://static.ukrinform.com/photos/2026_08/thumb_files/630_360_1787768548-145.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-28T00:17:19.000Z"
+      },
+      {
+        "id": "independence-day-five-drone-incursion-aug27",
+        "year": "Aug 27, 2026",
+        "title": "Five Drones Breach Airspace Overnight Hours Before Moldova's 35th Independence Day",
+        "type": "drone-incident",
+        "detail": "Five separate drones crossed into Moldovan airspace between 03:56 and 06:02 local time on August 27, during a fresh Russian aerial attack on Ukraine, hours before Moldova marked 35 years of independence. All five crossings occurred along the southeastern Ștefan Vodă frontier, over or near the villages of Bălăbănești, Palanca, Starokozache, Căplani, Carahasani, Olănești, Purcari, Răscăieți and Pervomaisc, with individual flights lasting up to 12 minutes before returning to Ukrainian airspace. President Maia Sandu called the overflights \"intimidation,\" saying \"our airspace was repeatedly violated by Russian drones\" just hours before the independence anniversary, while Moldova's Foreign Affairs Ministry called it \"a serious violation of the sovereignty and territorial integrity of the Republic of Moldova.\" Despite the incursions, Moldova held its Independence Day military parade in Chisinau as planned, with Sandu reviewing more than 2,000 troops and roughly 100 pieces of equipment alongside Romanian President Nicusor Dan.",
+        "sources": [
+          {
+            "name": "European Pravda",
+            "tier": 2,
+            "url": "https://www.eurointegration.com.ua/eng/news/2026/08/27/7244273/"
+          },
+          {
+            "name": "Ukrainska Pravda",
+            "tier": 2,
+            "url": "https://www.pravda.com.ua/eng/news/2026/08/27/8050507/"
+          },
+          {
+            "name": "Moldpres",
+            "tier": 1,
+            "url": "https://www.moldpres.md/eng/society/moldovan-president-condemns-repeated-overflight-of-moldova-s-airspace-by-russian-drones"
+          }
+        ],
+        "weaponTypes": ["drone_loitering"],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.pravda.com.ua/eng/news/2026/08/27/8050507/",
+            "caption": "Shahed-type drones crossed Moldova's Ștefan Vodă district five times overnight ahead of Independence Day",
+            "source": "Ukrainska Pravda",
+            "thumbnail": "https://uimg.pravda.com.ua/buckets/upstatic/images/doc/4/a/900064/4ad5e4f0d81961c42300845c3f19f2e4.jpeg?w=900&q=90"
+          }
+        ],
+        "lastUpdated": "2026-08-28T00:17:19.000Z"
+      },
+      {
+        "id": "chisinau-basarabeasca-drone-crash-aug27",
+        "year": "Aug 27, 2026",
+        "title": "Drone Wreckage Found on Moldovan Soil Near Chisinau-Basarabeasca Highway",
+        "type": "drone-incident",
+        "detail": "A downed aerial object was discovered on the morning of August 27 along the Chisinau-Basarabeasca highway after a local resident spotted the wreckage and alerted police — only the second time debris has been confirmed on Moldovan territory during the August drone crisis, after the August 9 Crocmaz find. Moldova's General Police Inspectorate deployed specialised forensic and bomb-disposal teams to secure the site and determine the object's origin and payload; no casualties or structural damage were reported. The discovery followed the overnight wave of five drone crossings across the Ștefan Vodă frontier and came hours before Moldova's Independence Day commemorations.",
+        "sources": [
+          {
+            "name": "Moldova1",
+            "tier": 2,
+            "url": "https://moldova1.md/p/84049/moldova-probes-fallen-drone-as-five-breach-airspace-in-russian-raid"
+          }
+        ],
+        "weaponTypes": ["unknown"],
+        "confidence": "medium",
+        "eventConfidence": "disputed",
+        "confidenceReason": "Wreckage location and discovery are confirmed by Moldovan police; the object's exact type and origin remain under forensic investigation and have not been publicly identified.",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://moldova1.md/p/84049/moldova-probes-fallen-drone-as-five-breach-airspace-in-russian-raid",
+            "caption": "Forensic teams examine drone wreckage found near the Chisinau-Basarabeasca highway",
+            "source": "Moldova1",
+            "thumbnail": "https://storage.moldova1.md/images/4554a7a8-e457-44d2-9480-b063a4244fb2.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-28T00:17:19.000Z"
+      }
+    ]
+  }
+]

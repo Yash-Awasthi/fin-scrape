@@ -1,0 +1,101 @@
+[
+  {
+    "id": "gdp-growth-rate",
+    "label": "Real GDP Growth Rate",
+    "value": "4.4% (FY 2024–25 actual)",
+    "change": "+0.9pp vs IMF April 2025 forecast",
+    "direction": "up",
+    "sparkData": [5.6, 5.3, 3.3, 6.6, 3.3, 6.6, 3.5, 4.4],
+    "color": "#2ecc71",
+    "source": "IMF Egypt 5th/6th Review, February 2026",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "inflation-cpi",
+    "label": "Annual CPI Inflation",
+    "value": "14.9% (Jul 2026, urban headline)",
+    "change": "Up from 14.3% in June 2026; core inflation 14.7% (Jul); CBE held policy rate at 19.00% for a third straight meeting on July 9, projecting a gradual return toward single digits later in 2026",
+    "direction": "up",
+    "sparkData": [5.0, 8.0, 14.0, 23.0, 33.0, 40.0, 14.3, 14.9],
+    "color": "#e74c3c",
+    "source": "CAPMAS / Central Bank of Egypt, August 10 2026",
+    "lastUpdated": "2026-08-18T00:00:00Z"
+  },
+  {
+    "id": "suez-canal-revenue",
+    "label": "Suez Canal Annual Revenue",
+    "value": "$4.0B (FY2024/25); $8.0B forecast FY2026/27",
+    "change": "H1 FY2025/26 (Jul–Dec 2025): $1.97B, +17.5% YoY. SCA Chairman Rabie forecasts ~$8B for FY2026/27 as Red Sea shipping recovers post-Houthi disruptions. FM Abdelatty said Aug 25, 2026 that the Gaza war, Hormuz blockade, and Houthi Red Sea attacks together — a 'perfect storm' — have cost Egypt ~$11B in Canal revenue.",
+    "direction": "up",
+    "sparkData": [5.6, 6.3, 7.0, 8.0, 9.4, 7.2, 4.0, 5.5],
+    "color": "#3498db",
+    "source": "Suez Canal Authority / Arab News / Egyptian Streets, February–June 2026; The National, August 25 2026",
+    "lastUpdated": "2026-08-25T00:00:00Z"
+  },
+  {
+    "id": "tourism-revenue",
+    "label": "Tourism Revenue",
+    "value": "$5.1 billion (Q1 2026 alone)",
+    "change": "+34% vs Q1 2025; 5.6M visitors (+43%)",
+    "direction": "up",
+    "sparkData": [12.6, 11.9, 4.0, 9.8, 10.7, 13.6, 15.0, 5.1],
+    "color": "#c9a84c",
+    "source": "Middle East Observer / Egypt Tourism Authority, May 2026",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "remittances",
+    "label": "Workers' Remittances",
+    "value": "$29.4B in 8 months FY 2025–26",
+    "change": "+28% YoY; pace implies ~$44B full-year vs $22B in FY 2023–24",
+    "direction": "up",
+    "sparkData": [26.8, 29.6, 26.8, 28.3, 22.0, 18.3, 20.5, 29.4],
+    "color": "#9b59b6",
+    "source": "Central Bank of Egypt / Xinhua, May 2026",
+    "lastUpdated": "2026-05-16"
+  },
+  {
+    "id": "external-debt",
+    "label": "External Debt (Public + Private)",
+    "value": "$165 billion (2024)",
+    "change": "+8% year-on-year",
+    "direction": "up",
+    "sparkData": [80, 95, 112, 133, 145, 155, 153, 165],
+    "color": "#e74c3c",
+    "source": "Central Bank of Egypt / IMF 2024",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "foreign-reserves",
+    "label": "Net International Reserves",
+    "value": "$55.07 billion (June 2026, record high)",
+    "change": "+$2 bn in June alone (from $53.13 bn in May); first time above $55 bn",
+    "direction": "up",
+    "sparkData": [20.0, 35.0, 33.0, 34.5, 25.0, 36.0, 53.0, 55.07],
+    "color": "#2ecc71",
+    "source": "Central Bank of Egypt Monthly Release / PM Madbouly, July 16 2026",
+    "lastUpdated": "2026-07-16"
+  },
+  {
+    "id": "youth-unemployment",
+    "label": "Youth Unemployment Rate (15–24)",
+    "value": "19.8% (2024)",
+    "change": "−1.2pp vs 21% in 2022",
+    "direction": "down",
+    "sparkData": [26.0, 30.0, 27.6, 26.2, 23.6, 21.0, 20.5, 19.8],
+    "color": "#e74c3c",
+    "source": "CAPMAS Labor Force Survey 2024",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "egx30-stock-index",
+    "label": "EGX30 Stock Index (Year-to-Date 2026)",
+    "value": "~52,658 pts — approx. +28% YTD (early June 2026)",
+    "change": "+62% year-over-year; hit 52-week high of 54,978 on May 11, 2026; USD-denominated return ~28% YTD; foreign funds ~15% of turnover",
+    "direction": "up",
+    "sparkData": [2.0, 5.5, 9.0, 13.0, 16.5, 20.0, 26.4, 28.0],
+    "color": "#2ecc71",
+    "source": "Egyptian Exchange (EGX) / AGBI / Investing.com, June 2026",
+    "lastUpdated": "2026-06-07T14:42:00Z"
+  }
+]

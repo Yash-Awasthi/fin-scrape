@@ -1,0 +1,754 @@
+[
+  {
+    "era": "The Night of the Attack (Sep 26–27, 2014)",
+    "events": [
+      {
+        "id": "iguala_attack",
+        "year": "Sep 26, 2014",
+        "title": "43 Students Forcibly Disappeared in Iguala",
+        "type": "humanitarian",
+        "detail": "Students from the Ayotzinapa Rural Teachers' College ('Raúl Isidro Burgos') were attacked by Iguala municipal police in multiple locations across the city. 43 students were taken and have never been seen since. 6 people were killed and at least 25 injured in the attacks.",
+        "sources": [
+          { "name": "GIEI First Report", "tier": 1 },
+          { "name": "Associated Press", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "bus_commandeering",
+        "year": "Sep 26, 2014",
+        "title": "Students Commandeer Buses in Iguala",
+        "type": "humanitarian",
+        "detail": "Approximately 100 Ayotzinapa students traveled to Iguala to collect buses for transportation to a Mexico City march. This practice of commandeering buses was a known student tradition. They boarded five buses. Iguala mayor José Luis Abarca was hosting a public event at which his wife, María de los Ángeles Pineda Villa (alleged cartel affiliate), was speaking.",
+        "sources": [
+          { "name": "GIEI First Report", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "police_attacks_begin",
+        "year": "Sep 26, 2014",
+        "title": "Municipal Police Open Fire on Students",
+        "type": "humanitarian",
+        "detail": "Iguala municipal police blocked buses and opened fire at three separate locations: Juan N. Álvarez Street, Periférico Norte, and Pueblo Viejo neighborhood. Police from both Iguala and Cocula municipalities participated. Students Aldo Gutiérrez Solano, Julio César Mondragón (whose face was later found flayed), Daniel Solís Gallardo, Julio César Ramírez Nava, Víctor Manuel Lugo Ortiz, and Blanca Montiel Sánchez were among those killed on the night.",
+        "sources": [
+          { "name": "GIEI First Report", "tier": 1 },
+          { "name": "CNDH Report", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "27th_battalion_presence",
+        "year": "Sep 26, 2014",
+        "title": "Military's 27th Infantry Battalion Present During Attacks",
+        "type": "investigation",
+        "detail": "The Mexican Army's 27th Infantry Battalion, based in Iguala, was present and monitoring events during the attacks. Soldiers observed the situation but did not intervene to protect the students. This later became central to allegations of state involvement and military complicity.",
+        "sources": [
+          { "name": "GIEI Second Report", "tier": 1 },
+          { "name": "Truth Commission Report", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "iguala_football_team_attack",
+        "year": "Sep 26, 2014",
+        "title": "Avispones Football Team Bus Also Attacked",
+        "type": "humanitarian",
+        "detail": "In the confusion of the night, police also attacked a bus carrying the Avispones de Chilpancingo youth football team, killing three players and a coach's assistant. This attack later raised questions about cartel communications and whether the wrong buses were targeted.",
+        "sources": [
+          { "name": "GIEI First Report", "tier": 1 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "mondragons_body_found",
+        "year": "Sep 27, 2014",
+        "title": "Student Found with Face Flayed — Extremity of Violence Exposed",
+        "type": "humanitarian",
+        "detail": "The body of student Julio César Mondragón Fontes was found the morning after the attacks. His face had been flayed and his eyes gouged out, indicating extreme torture before or after death. This act of brutality drew national and international attention to the severity of the violence.",
+        "sources": [
+          { "name": "GIEI First Report", "tier": 1 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Initial Response & 'Historical Truth' (Oct–Nov 2014)",
+    "events": [
+      {
+        "id": "initial_search",
+        "year": "Oct 2014",
+        "title": "Mass Graves Discovered — But Not the Students",
+        "type": "investigation",
+        "detail": "Security forces and families began searching the mountains around Iguala. Mass graves containing bodies were discovered, but DNA testing ultimately revealed they belonged to other victims of cartel violence in Guerrero—not the 43 missing students. The discovery underscored the scale of disappearances in the region.",
+        "sources": [
+          { "name": "Proceso", "tier": 2 },
+          { "name": "Argentine Forensic Anthropology Team (EAAF)", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "abarca_arrested",
+        "year": "Nov 4, 2014",
+        "title": "Mayor José Luis Abarca and Wife Arrested",
+        "type": "legal",
+        "detail": "Iguala Mayor José Luis Abarca and his wife María de los Ángeles Pineda Villa were arrested in Mexico City after going into hiding. They were accused of ordering the attacks on the students. Abarca was allegedly linked to the Guerreros Unidos cartel. Both were charged with organized crime and murder.",
+        "sources": [
+          { "name": "PGR Mexico", "tier": 1 },
+          { "name": "El Universal", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "national_protests_oct",
+        "year": "Oct 22, 2014",
+        "title": "Massive National Protests Demand Return of Students",
+        "type": "political",
+        "detail": "Hundreds of thousands of Mexicans marched in cities across the country, particularly in Mexico City, demanding the return of the 43 students alive. The slogan 'Vivos se los llevaron, vivos los queremos' ('They were taken alive, we want them back alive') became the rallying cry for the movement.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "historical_truth",
+        "year": "Nov 7, 2014",
+        "title": "Government Announces 'Historical Truth'",
+        "type": "political",
+        "detail": "Attorney General Jesús Murillo Karam presents the 'historical truth' (verdad histórica): students were captured by Guerreros Unidos cartel members based on a mistaken order, killed, and incinerated at the Cocula garbage dump over 15 hours. Ashes were dumped in the San Juan River. This version implicated local police and cartel but exonerated federal and military authorities. It was later comprehensively debunked.",
+        "sources": [
+          { "name": "PGR Mexico", "tier": 1 },
+          { "name": "El Universal", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "zeron_evidence_planting",
+        "year": "Nov 2014",
+        "title": "CISEN Official Tomás Zerón Allegedly Plants Evidence",
+        "type": "investigation",
+        "detail": "Tomás Zerón de Lucio, head of the Criminal Investigation Agency (AIC) under the Attorney General, allegedly visited the San Juan River before the official search and planted a bag containing a bone fragment. The GIEI later identified this as evidence tampering. Zerón fled to Israel in 2020 when arrest warrants were issued.",
+        "sources": [
+          { "name": "GIEI Sixth Report", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "bag_fragment_found",
+        "year": "Dec 6, 2014",
+        "title": "Bone Fragment in Bag Found in San Juan River",
+        "type": "investigation",
+        "detail": "A plastic bag was 'discovered' in the San Juan River containing a bone fragment. The government claimed this was part of the incinerated remains. The Argentine Forensic Anthropology Team (EAAF) later identified DNA from this fragment as belonging to Alexander Mora Venancio, becoming one of only three students identified. However, the GIEI determined the bag had been planted there by investigators.",
+        "sources": [
+          { "name": "EAAF Report", "tier": 1 },
+          { "name": "GIEI First Report", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "GIEI Independent Investigation (2015–2016)",
+    "events": [
+      {
+        "id": "giei_established",
+        "year": "Mar 2015",
+        "title": "IACHR Establishes GIEI — Interdisciplinary Expert Group",
+        "type": "investigation",
+        "detail": "The Inter-American Commission on Human Rights (IACHR) established the Interdisciplinary Group of Independent Experts (GIEI) at the request of families and Mexican government. Led by experts including Claudia Paz y Paz (Guatemala), Francisco Cox Vial (Chile), Carlos Martín Beristain (Spain), Angela Buitrago (Colombia), and Alejandro Valencia Villa (Colombia).",
+        "sources": [
+          { "name": "IACHR / GIEI", "tier": 1 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "giei_first_report",
+        "year": "Sep 6, 2015",
+        "title": "GIEI First Report Debunks 'Historical Truth'",
+        "type": "investigation",
+        "detail": "The GIEI published its first comprehensive report concluding the government's version was scientifically impossible. Fire experiments by Austrian experts proved the Cocula dump could not reach temperatures needed to incinerate 43 bodies. The dump showed no evidence of a large fire. The report also revealed serious omissions in the official investigation and identified a fifth bus that authorities had ignored.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "fifth_bus_revelation",
+        "year": "Sep 2015",
+        "title": "GIEI Reveals Fifth Bus — Possible Heroin Shipment Connection",
+        "type": "investigation",
+        "detail": "The GIEI found that a fifth bus (the Estrella Roja #1531) — ignored by authorities — may have been carrying a heroin shipment for the Guerreros Unidos cartel. This introduced a new theory: the students may have been targeted because their bus inadvertently contained a drug shipment, implicating more complex cartel-government networks.",
+        "sources": [
+          { "name": "GIEI First Report", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "giei_second_report",
+        "year": "Apr 24, 2016",
+        "title": "GIEI Second Report — Military Intelligence Documented",
+        "type": "investigation",
+        "detail": "The GIEI's second and final report under its first mandate documented that the 27th Infantry Battalion had extensive intelligence on the events as they unfolded and failed to intervene. The report identified new crime scenes and witnesses. It also condemned the use of torture to extract confessions from suspects and raised concerns about evidence tampering by investigators.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "giei_expelled",
+        "year": "Apr 30, 2016",
+        "title": "GIEI Mandate Ends After Government Fails to Extend It",
+        "type": "political",
+        "detail": "The Mexican government under President Peña Nieto declined to extend the GIEI's mandate beyond its original term, effectively ending their access. The GIEI experts expressed frustration at government obstruction and unresolved questions. Families and civil society condemned the move as further evidence of a cover-up.",
+        "sources": [
+          { "name": "IACHR", "tier": 1 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "peña_nieto_dismissal",
+        "year": "Jan 2015",
+        "title": "President Peña Nieto Tells Journalist He's 'Tired' of Ayotzinapa",
+        "type": "political",
+        "detail": "In an interview, President Enrique Peña Nieto expressed fatigue with questions about Ayotzinapa, saying he was 'hartado' (fed up) with the subject. The remark provoked national outrage and was seen as emblematic of the government's dismissive attitude toward the case and the families' suffering.",
+        "sources": [
+          { "name": "El Universal", "tier": 2 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Peña Nieto Era Stagnation (2016–2018)",
+    "events": [
+      {
+        "id": "mora_venancio_identified",
+        "year": "Dec 2014",
+        "title": "Alexander Mora Venancio — First Student Identified",
+        "type": "investigation",
+        "detail": "The EAAF confirmed DNA from a bone fragment found in the San Juan River matched Alexander Mora Venancio, making him the first of the 43 to be positively identified. However, the GIEI later determined the fragment was found in suspicious circumstances suggesting evidence tampering.",
+        "sources": [
+          { "name": "EAAF Report", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "eaaf_suspends_work",
+        "year": "2016",
+        "title": "EAAF Suspends Work Citing Lack of Cooperation",
+        "type": "investigation",
+        "detail": "The Argentine Forensic Anthropology Team (EAAF) suspended its independent forensic work on the case, citing the Mexican government's lack of cooperation, incomplete transfer of evidence, and conditions that compromised the integrity of their investigation. The EAAF had been working with families since 2014.",
+        "sources": [
+          { "name": "EAAF Statement", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "anniversary_protests_2015",
+        "year": "Sep 26, 2015",
+        "title": "One-Year Anniversary Protests — Global Demonstrations",
+        "type": "political",
+        "detail": "On the first anniversary, massive protests erupted across Mexico and in cities worldwide including Buenos Aires, Madrid, London, Los Angeles, and New York. Families of the students led marches, maintaining their demand for the students' return alive and justice for those responsible.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "innsbruck_lab_dna",
+        "year": "2015–2017",
+        "title": "University of Innsbruck Conducts DNA Analysis",
+        "type": "investigation",
+        "detail": "The Institute of Legal Medicine at the University of Innsbruck, Austria, performed independent DNA analysis on remains recovered from the Cocula area. Their work was crucial in the forensic investigation. Scientists including Walther Parson led the analysis. Results confirmed that the Cocula dump scenario was scientifically implausible.",
+        "sources": [
+          { "name": "University of Innsbruck Research", "tier": 3 },
+          { "name": "GIEI Reports", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "pgr_obstructs",
+        "year": "2015–2018",
+        "title": "PGR Repeatedly Obstructs Independent Investigation",
+        "type": "investigation",
+        "detail": "Mexico's Attorney General's Office (PGR) under the Peña Nieto government repeatedly denied GIEI access to evidence, witnesses, and military records. Files were hidden, witnesses were intimidated, and military files were classified. The GIEI documented 17 cases of torture among suspects, confessions used to build the 'historical truth' narrative.",
+        "sources": [
+          { "name": "GIEI Second Report", "tier": 1 },
+          { "name": "Human Rights Watch", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "AMLO Government & Renewed Investigation (2018–2022)",
+    "events": [
+      {
+        "id": "amlo_elected",
+        "year": "Jul 1, 2018",
+        "title": "AMLO Elected — Promises Full Truth on Ayotzinapa",
+        "type": "political",
+        "detail": "Andrés Manuel López Obrador (AMLO) won Mexico's presidential election in a landslide, making the Ayotzinapa case a campaign promise. He pledged to resolve the case, invite GIEI back, and create a truth commission. Families met with him before and after his election.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "truth_commission_formed",
+        "year": "Jan 4, 2019",
+        "title": "Presidential Truth Commission Established",
+        "type": "political",
+        "detail": "President AMLO signed a decree creating the Ayotzinapa Truth and Access to Justice Commission. Alejandro Encinas was designated as Undersecretary of Human Rights and head of the Commission. The GIEI was reinvited to resume its work. The Commission was tasked with establishing truth, identifying remains, and prosecuting those responsible.",
+        "sources": [
+          { "name": "Mexican Government Decree", "tier": 1 },
+          { "name": "El Universal", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "giei_returns",
+        "year": "Mar 2019",
+        "title": "GIEI Resumes Work Under AMLO Government",
+        "type": "investigation",
+        "detail": "The GIEI resumed its independent investigation in March 2019 after AMLO's government invited them back. The group gained access to military archives and new evidence. They began reviewing thousands of documents and conducting new forensic searches.",
+        "sources": [
+          { "name": "IACHR / GIEI", "tier": 1 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "giei_third_report",
+        "year": "Nov 2020",
+        "title": "GIEI Third Report — New Crime Scenes and Evidence",
+        "type": "investigation",
+        "detail": "The GIEI published its third report documenting new evidence including identification of new crime scenes. The group found bones at Loma de Coyotes that were later subjected to DNA analysis. New witness testimonies and documentary evidence pointed to military intelligence failures and cover-up efforts.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "zeron_flees",
+        "year": "2020",
+        "title": "Tomás Zerón Flees to Israel — Arrest Warrant Issued",
+        "type": "legal",
+        "detail": "Tomás Zerón de Lucio, the former head of the Criminal Investigation Agency (AIC) under the PGR, fled to Israel after Mexican authorities issued an arrest warrant for him. He was accused of evidence tampering, torture, and obstruction of justice in connection with the Ayotzinapa investigation. Mexico requested his extradition; Israel has not complied.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "murillo_karam_arrested",
+        "year": "Aug 19, 2022",
+        "title": "Former AG Jesús Murillo Karam Arrested",
+        "type": "legal",
+        "detail": "Former Attorney General Jesús Murillo Karam — the author of the 'historical truth' — was arrested on charges of forced disappearance, torture, and obstruction of justice. He was the highest-ranking official arrested in connection with the case. He denied the charges and his legal team challenged the proceedings.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "truth_commission_crime_of_state",
+        "year": "Aug 18, 2022",
+        "title": "Truth Commission Declares Disappearances a 'Crime of State'",
+        "type": "political",
+        "detail": "The Ayotzinapa Truth Commission, led by Alejandro Encinas, issued its most comprehensive report declaring the disappearances a 'crime of state' (crimen de Estado). The report documented coordination among Iguala municipal police, Guerreros Unidos cartel, and elements of the federal government and military. It identified the Cocula dump narrative as a deliberate fabrication. Arrest warrants were issued for military officers and federal officials.",
+        "sources": [
+          { "name": "Mexican Government Truth Commission", "tier": 1 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "military_arrest_warrants",
+        "year": "Aug 2022",
+        "title": "Arrest Warrants Issued for Military Officers",
+        "type": "legal",
+        "detail": "Following the Truth Commission report, federal prosecutors issued arrest warrants for several military officers, including General José Rodríguez Pérez, former commander of the 27th Infantry Battalion, who was accused of handing students over to the Guerreros Unidos cartel. This represented the first time military personnel faced formal charges in the case.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "rodriquez_perez_arrested",
+        "year": "Sep 2022",
+        "title": "General Rodríguez Pérez Arrested",
+        "type": "legal",
+        "detail": "Retired Army General José Rodríguez Pérez, former commander of the 27th Infantry Battalion in Iguala, was arrested and charged with forced disappearance. He was accused of coordinating with Guerreros Unidos cartel to hand over the students. His arrest was seen as a milestone but families expressed concern it would not lead to full accountability.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Legal Setbacks & Continued Search (2023–2024)",
+    "events": [
+      {
+        "id": "giei_fourth_report",
+        "year": "Mar 2023",
+        "title": "GIEI Fourth Report — Heroin Bus Theory Strengthened",
+        "type": "investigation",
+        "detail": "The GIEI published its fourth report, further developing the theory that the Guerreros Unidos cartel targeted one of the buses because it was being used to transport a heroin shipment to Chicago. The report named additional military intelligence actors who monitored the students without intervening.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "judiciary_dismisses_charges",
+        "year": "2023",
+        "title": "Courts Begin Dismissing Charges Against Military Defendants",
+        "type": "legal",
+        "detail": "Mexican federal courts began dismissing or reducing charges against several military defendants in the Ayotzinapa case, citing insufficient evidence or procedural issues. Families and human rights organizations condemned the decisions as institutional protection of the military. The pattern of acquittals raised questions about the judiciary's independence.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "encinas_resigns",
+        "year": "Sep 2023",
+        "title": "Truth Commission Head Alejandro Encinas Resigns",
+        "type": "political",
+        "detail": "Alejandro Encinas, the Undersecretary of Human Rights and head of the Ayotzinapa Truth Commission, resigned from his position. His departure came amid tensions with the military and declining political support for the investigation. Families expressed frustration and fear the investigation would be further diminished.",
+        "sources": [
+          { "name": "Animal Político", "tier": 2 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "giei_fifth_report",
+        "year": "Sep 2023",
+        "title": "GIEI Fifth Report — Military Intelligence Files Sought",
+        "type": "investigation",
+        "detail": "The GIEI released its fifth report, criticizing the government's failure to fully open military intelligence files and noting evidence of ongoing cover-up. The report documented that key military archives remained classified despite court orders to disclose them.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "ten_year_anniversary",
+        "year": "Sep 26, 2024",
+        "title": "Ten-Year Anniversary — Families March, Demand Justice",
+        "type": "political",
+        "detail": "On the tenth anniversary, families of the 43 disappeared students marched in Mexico City and Guerrero, accompanied by thousands of supporters. The march called for the continued search for remains, extradition of Tomás Zerón from Israel, prosecution of military officers, and truth about what happened. Only 3 of the 43 students had been positively identified through DNA.",
+        "sources": [
+          { "name": "Animal Político", "tier": 2 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "giei_sixth_report",
+        "year": "Oct 2024",
+        "title": "GIEI Sixth Report — Pattern of Impunity Documented",
+        "type": "investigation",
+        "detail": "The GIEI published its sixth and most extensive report, documenting a systematic pattern of impunity protecting military and high-ranking government officials. The report criticized Mexico's judiciary for dismissing charges against army officers and called for continued investigations. The GIEI expressed concern that the Sheinbaum government had not made the case a priority.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "murillo_karam_acquitted",
+        "year": "2024",
+        "title": "Former AG Murillo Karam Released — Charges Partially Dropped",
+        "type": "legal",
+        "detail": "Former Attorney General Jesús Murillo Karam was released from custody after a federal court found procedural violations in his detention. Some charges were dropped or stayed. His release was condemned by families and human rights organizations as emblematic of the case's failure to achieve accountability.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "Proceso", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "sheinbaum_government",
+        "year": "Oct 2024",
+        "title": "President Sheinbaum Inherits Unresolved Case",
+        "type": "political",
+        "detail": "President Claudia Sheinbaum, who took office in October 2024, inherited the unresolved Ayotzinapa case. Families met with her administration seeking renewed commitments. Sheinbaum pledged to continue the investigation but critics noted the case had stalled significantly under AMLO's final years, with families increasingly frustrated by broken promises.",
+        "sources": [
+          { "name": "Animal Político", "tier": 2 },
+          { "name": "La Jornada", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "Current Status (2025–2026)",
+    "events": [
+      {
+        "id": "search_continues_2025",
+        "year": "2025",
+        "title": "Forensic Searches Continue in Guerrero Mountains",
+        "type": "investigation",
+        "detail": "Search operations continued in the mountains and ravines of Guerrero state. Human remains have been discovered at multiple sites, but the vast majority have not been identified as belonging to the 43 students. As of early 2026, only 3 students have been definitively identified: Alexander Mora Venancio, Christian Alfonso Rodríguez Telumbre, and Jhosivani Guerrero de la Cruz.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "EAAF Reports", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "zeron_extradition_stalled",
+        "year": "2025–2026",
+        "title": "Zerón Extradition from Israel Remains Blocked",
+        "type": "legal",
+        "detail": "Mexico's efforts to extradite Tomás Zerón de Lucio from Israel continued to face obstacles. Israeli courts reviewed the extradition request but had not issued a final ruling. Zerón's case was seen as a key test of accountability for those who allegedly obstructed the Ayotzinapa investigation.",
+        "sources": [
+          { "name": "FGR Mexico", "tier": 1 },
+          { "name": "Animal Político", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "status_march_2026",
+        "year": "Mar 2026",
+        "title": "11+ Years Later — Case Remains Unresolved",
+        "type": "political",
+        "detail": "As of March 2026, the full fate of the 43 students remains unknown. Only 3 students have been identified through DNA. No senior military officer has been convicted. The 'historical truth' has been officially discredited. The GIEI continues to monitor the case. Families of the students continue demanding justice and refuse to accept the case's closure without the truth.",
+        "sources": [
+          { "name": "GIEI / IACHR", "tier": 1 },
+          { "name": "Tlachinollan Human Rights Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-17T00:00:00.000Z"
+      },
+      {
+        "id": "court_orders_military_files_2026",
+        "year": "Mar 4, 2026",
+        "title": "Federal Court Orders Military to Release 853 Intelligence Files",
+        "type": "legal",
+        "detail": "A federal court ordered Mexico's Defense Ministry (SEDENA) to deliver 853 intelligence dossiers related to the Ayotzinapa case, covering the 27th Infantry Battalion's surveillance on the night of September 26, 2014. President Sheinbaum publicly disputed the order, claiming the Defense Secretary had already delivered all required information — drawing sharp criticism from families and rights groups who argue the military continues to shield key evidence.",
+        "sources": [
+          { "name": "Proceso", "tier": 2, "url": "https://www.proceso.com.mx/nacional/2026/3/4/juzgado-federal-ordena-al-ejercito-entregar-mas-de-800-folios-sobre-caso-ayotzinapa-369607.html", "pole": "western" },
+          { "name": "La Jornada", "tier": 2, "pole": "western" }
+        ],
+        "lastUpdated": "2026-04-09T14:46:12.000Z"
+      },
+      {
+        "id": "sheinbaum_un_giei_2026",
+        "year": "Mar 24, 2026",
+        "title": "Sheinbaum Seeks UN Support; Former GIEI Experts Invited to Return",
+        "type": "investigation",
+        "detail": "President Claudia Sheinbaum formally requested the UN High Commissioner for Human Rights to propose international specialists to evaluate the Ayotzinapa investigation. Former GIEI experts Ángela Buitrago and Carlos Martín Beristain were invited to return in a support capacity. A new investigative strategy using phone-record analysis from September 26, 2014 had already yielded 10+ arrests in November 2025 following court-ordered access to Iguala funeral homes and the local morgue.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/2026/03/24/politica/008n1pol?partner=rss", "pole": "western" },
+          { "name": "The Yucatan Times", "tier": 3, "url": "https://theyucatantimes.com/2026/03/mexico-seeks-un-support-in-ayotzinapa-case/", "pole": "western" }
+        ],
+        "lastUpdated": "2026-04-09T14:46:12.000Z"
+      },
+      {
+        "id": "anniversary_138_months_2026",
+        "year": "Mar 26, 2026",
+        "title": "138-Month Anniversary: Normalistas March, Demand Truth from Sheinbaum",
+        "type": "political",
+        "detail": "On the 138-month anniversary of the forced disappearances, students from the Normal Rural 'Raúl Isidro Burgos' school and families of the 43 held commemorative marches and blockades in Chilpancingo, Guerrero. Demonstrators demanded Sheinbaum reveal the students' whereabouts and pressed for concrete results from the new investigative strategy — warning that 11 years of broken promises cannot be repeated.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/03/26/estados/normalistas-marchan-en-chilpancingo-y-reclaman-avances-en-caso-ayotzinapa", "pole": "western" },
+          { "name": "Animal Político", "tier": 2, "pole": "western" }
+        ],
+        "lastUpdated": "2026-04-09T14:46:12.000Z"
+      },
+      {
+        "id": "families_reject_funeral_home_line_2026",
+        "year": "Apr 13, 2026",
+        "title": "Families Reject Iguala Funeral Home Investigation Line as 'Incoherent'",
+        "type": "investigation",
+        "detail": "Tlachinollan Human Rights Center published a statement on behalf of the families of the 43 declaring the new government investigative line — focused on an Iguala funeral home and crematorium (owners arrested March 23, 2026) — was 'incoherent' and reminiscent of the discredited 'historical truth.' Families said they left government briefings with 'more questions than answers' and could not verify whose remains were allegedly held at the facility for years. GIEI reintegration remained the primary unresolved demand.",
+        "sources": [
+          { "name": "SIPAZ (International Service for Peace)", "tier": 3, "url": "https://sipazen.wordpress.com/2026/04/15/guerrero-ayotzinapa-case-families-wary-of-new-lines-of-investigation/", "pole": "international" },
+          { "name": "Tlachinollan Human Rights Center", "tier": 3, "url": "https://www.tlachinollan.org/el-caso-ayotzinapa-en-el-atolladero", "pole": "western" }
+        ],
+        "lastUpdated": "2026-05-10T00:00:00.000Z"
+      },
+      {
+        "id": "un_turk_ayotzinapa_2026",
+        "year": "Apr 20, 2026",
+        "title": "UN High Commissioner Türk Hears Ayotzinapa Testimony During Mexico Visit",
+        "type": "investigation",
+        "detail": "UN High Commissioner for Human Rights Volker Türk visited Mexico for four days. On April 20–21, families of the 43 — including Cristina Bautista, mother of Benjamín Ascencio — testified before Türk, stating: 'After 11 years, we have not achieved the truth.' Families requested that Türk back referral of Mexico's disappearances crisis to the UN Committee on Enforced Disappearances. Türk stated he would 'continue accompanying the victims.' Forced disappearances, including Ayotzinapa, were the most discussed topic in all his meetings with Mexican authorities.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/04/21/politica/alto-comisionado-de-onudh-conoce-del-caso-ayotzinapa-en-reunion-con-victimas-de-diversas-violencias", "pole": "western" },
+          { "name": "Proceso", "tier": 2, "url": "https://www.proceso.com.mx/nacional/2026/4/22/trk-suplica-no-politizar-ni-polarizar-las-desapariciones-eso-no-hace-justicia-las-victimas-372717.html", "pole": "western" }
+        ],
+        "lastUpdated": "2026-05-10T00:00:00.000Z"
+      },
+      {
+        "id": "families_accuse_stagnation_139_months_2026",
+        "year": "Apr 26, 2026",
+        "title": "139th Global Action: Families Accuse Government of Stagnation; Call National Assembly",
+        "type": "political",
+        "detail": "At the 139th monthly global action, families publicly accused the Sheinbaum government of allowing the investigation to stagnate: five months had elapsed since their last meeting with the President with no new meeting scheduled and no written response to their demands. They reiterated demands for GIEI return, SEDENA file disclosure, and independent investigation of Army phone communications. Families announced a National Popular Assembly for May 9 at the Ayotzinapa school to define future mobilization strategy — marking a shift toward broader civil society coalition-building.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/04/26/politica/padres-de-los-43-acusan-estancamiento-en-investigaciones-encabezadas-por-gobierno-federal", "pole": "western" },
+          { "name": "El Imparcial", "tier": 2, "url": "https://www.elimparcial.com/mexico/2026/04/27/familiares-de-los-43-de-ayotzinapa-denuncian-que-no-han-recibido-respuesta-formal-del-gobierno-tras-reunion-con-sheinbaum-mientras-continuan-exigiendo-acceso-a-informacion-militar-y-nuevas-lineas-de-investigacion/", "pole": "western" }
+        ],
+        "lastUpdated": "2026-05-10T00:00:00.000Z"
+      },
+      {
+        "id": "national_popular_assembly_may2026",
+        "year": "May 9, 2026",
+        "title": "National Popular Assembly at Ayotzinapa School Defines Escalation Strategy",
+        "type": "political",
+        "detail": "Families of the 43 convened a National Popular Assembly at the Raúl Isidro Burgos Rural Normal School in Tixtla, Guerrero, inviting social organizations and collectives from across Mexico. The assembly was called to define escalation strategy amid what Tlachinollan described as the case being in 'an enormous deadlock.' The court-ordered Truth Commission (COVAJ) remained non-functional — the CNDH and FGR had both refused to designate representatives — while the 853 military intelligence files ordered by a federal court remained undelivered.",
+        "sources": [
+          { "name": "SIPAZ (International Service for Peace)", "tier": 3, "url": "https://sipaz.wordpress.com/2026/04/29/guerrero-nacional-familiares-de-los-43-de-ayotzinapa-reclaman-a-la-federacion-atencion-de-fondo-al-caso/", "pole": "international" },
+          { "name": "El Imparcial", "tier": 2, "url": "https://www.elimparcial.com/mexico/2026/04/27/familiares-de-los-43-de-ayotzinapa-denuncian-que-no-han-recibido-respuesta-formal-del-gobierno-tras-reunion-con-sheinbaum-mientras-continuan-exigiendo-acceso-a-informacion-militar-y-nuevas-lineas-de-investigacion/", "pole": "western" }
+        ],
+        "lastUpdated": "2026-05-10T00:00:00.000Z"
+      },
+      {
+        "id": "sheinbaum_giei_rejected_may2026",
+        "year": "May 29, 2026",
+        "title": "Sheinbaum Tells Families GIEI Will Not Return",
+        "type": "political",
+        "detail": "President Sheinbaum met families at Palacio Nacional and told them the return of the GIEI would not be possible, including a proposed UN-brokered scheme to reincorporate its members. She pledged to pursue an alternative international mechanism similar to the IACHR's prior role. Families called the meeting's results 'few advances,' with the 853 SEDENA intelligence files still undelivered.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/2026/05/29/politica/008n1pol", "pole": "western" },
+          { "name": "Infobae", "tier": 2, "url": "https://www.infobae.com/mexico/2026/05/29/caso-ayotzinapa-no-habra-regreso-del-giei-informa-claudia-sheinbaum-a-padres-de-normalistas/", "pole": "western" }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "iguala_funeral_home_detentions_june2026",
+        "year": "Jun 23, 2026",
+        "title": "Four Detained Over Alleged Clandestine Cremations at Iguala Funeral Home",
+        "type": "legal",
+        "detail": "FGR agents detained four people — relatives of the funeral home's owner and a former Iguala health official — accused of using crematory ovens at Funerales Rueda to clandestinely cremate remains connected to the case. Local residents and family members protested the arrests as procedurally irregular; some accused the FGR of fabricating charges.",
+        "sources": [
+          { "name": "El Faro de la Costa Chica", "tier": 2, "url": "https://www.elfarodelacostachica.com.mx/2026/06/ya-son-4-los-detenidos-por-la-presunta-cremacion-clandestina-en-iguala/", "pole": "western" },
+          { "name": "Proceso", "tier": 2, "url": "https://www.proceso.com.mx/nacional/2026/6/30/exigen-liberar-a-detenidos-por-caso-ayotzinapa-acusan-que-fgr-les-fabrico-delitos-375106.html", "pole": "western" }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "tlalpan_141_global_action_june2026",
+        "year": "Jun 26, 2026",
+        "title": "141st Global Action: Families Break Police Cordon at Tlalpan",
+        "type": "political",
+        "detail": "Families traveling from Guerrero for the 141st monthly Global Action were held over an hour at the Tlalpan tollbooth by police demanding bus searches — the third such 'national security' blockade since June 8. Families called it criminalization; after negotiations they proceeded to march from the Ángel de la Independencia to the Hemiciclo a Juárez, renewing demands for the 853 SEDENA files and extradition of Tomás Zerón and Ulises Bernabé García.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/06/26/politica/padres-de-los-43-y-normalistas-de-ayotzinapa-rechazan-inspeccion-a-sus-camiones-en-la-caseta-de-tlalpan", "pole": "western" }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "cndh_recommendation_208vg_2026",
+        "year": "Jul 9, 2026",
+        "title": "CNDH Issues 860-Page Recommendation Exonerating Army of Institutional Responsibility",
+        "type": "investigation",
+        "detail": "The CNDH's Recommendation 208VG/2026 recognized 92 victims of grave human rights violations — classifying 40 of the 43 as disappeared and 3 as extrajudicially executed — but concluded there was no institutional or direct military responsibility, limiting accountability to 20 soldiers already facing individual charges. Unlike 22 other notified authorities, the recommendation was not directed to SEDENA, and it directly criticized the GIEI and Truth Commission (CoVAJ) reports as building an 'anti-historical truth,' alleging foreign 'interference.'",
+        "sources": [
+          { "name": "Proceso", "tier": 2, "url": "https://www.proceso.com.mx/nacional/2026/7/10/en-nueva-recomendacion-sobre-ayotzinapa-la-cndh-exculpa-al-ejercito-y-critica-al-giei-375824.html", "pole": "western" },
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/07/09/politica/nueva-recomendacion-de-la-cndh-desautoriza-informes-del-giei-y-la-covaj-sobre-ayotzinapa", "pole": "western" }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "encinas_infiltrated_soldier_2026",
+        "year": "Jul 13, 2026",
+        "title": "Encinas Reveals Disappeared Student Was Military Intelligence Asset",
+        "type": "investigation",
+        "detail": "Alejandro Encinas, former Truth Commission head, released SEDENA documents showing disappeared student Julio César López Patolzin had been assigned since June 2014 as a military intelligence asset embedded at the Ayotzinapa school, with activity reports dated the night of the attack — directly contradicting the CNDH's dismissal of infiltration claims days earlier. President Sheinbaum simultaneously distanced her government from the CNDH recommendation, saying 'we did not participate in any way' and ordering Segob to review the report.",
+        "sources": [
+          { "name": "Infobae", "tier": 2, "url": "https://www.infobae.com/mexico/2026/07/13/cndh-exime-al-ejercito-en-ayotzinapa-pero-encinas-exhibe-documentos-sobre-soldado-infiltrado/", "pole": "western" },
+          { "name": "LatinUS", "tier": 2, "url": "https://latinus.us/mexico/2026/7/13/no-participamos-de-ninguna-manera-sheinbaum-se-deslinda-de-recomendacion-de-la-cndh-que-exonera-al-ejercito-del-caso-ayotzinapa-178757.html", "pole": "western" }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "amnesty_un_react_cndh_2026",
+        "year": "Jul 13–14, 2026",
+        "title": "Amnesty International and UN Push Back on CNDH Recommendation",
+        "type": "political",
+        "detail": "Amnesty International said the CNDH recommendation 'opted to back the actions of the State' and delegitimized international and civil-society oversight of the case, noting 17 Army members remain linked to legal proceedings despite the Defense Ministry's exoneration. Days later, the UN Human Rights Office in Mexico reiterated its commitment to the families and defended the value of international assistance, stating 'a wound remains open' nearly 12 years after the disappearances.",
+        "sources": [
+          { "name": "Infobae", "tier": 2, "url": "https://www.infobae.com/mexico/2026/07/13/amnistia-internacional-cuestiona-la-recomendacion-de-la-cndh-por-el-caso-ayotzinapa-ha-optado-por-respaldar-la-actuacion-del-estado/", "pole": "western" },
+          { "name": "Proceso", "tier": 2, "url": "https://www.proceso.com.mx/nacional/2026/7/14/onu-dh-defiende-asistencia-internacional-en-ayotzinapa-tras-la-critica-de-la-cndh-al-giei-376036.html", "pole": "western" }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "global_action_142_2026",
+        "year": "Jul 26, 2026",
+        "title": "142nd Global Action: Families March Nearly 12 Years On, Reject CNDH Report",
+        "type": "political",
+        "detail": "Normalista students and families of the 43 held the 142nd monthly Global Action for Ayotzinapa, marching from the Ángel de la Independencia to the Hemiciclo a Juárez. Parents said they remain 'far from knowing the truth' nearly 12 years after the disappearances, ratified their rejection of the CNDH's July 9 recommendation exonerating the Army, and presented a unified front ahead of the case's 12th anniversary.",
+        "sources": [
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/07/26/politica/padres-y-madres-de-los-43-afirman-que-estan-lejos-de-saber-la-verdad-a-casi-12-anos-de-la-desaparicion", "pole": "western" },
+          { "name": "Proceso", "tier": 2, "url": "https://www.proceso.com.mx/nacional/2026/7/27/en-marcha-por-ayotzinapa-ratifican-rechazo-a-la-cndh-y-descartan-division-376887.html", "pole": "western" }
+        ],
+        "lastUpdated": "2026-08-16T14:33:04.000Z"
+      },
+      {
+        "id": "aguirre_arrested_linked_to_trial_2026",
+        "year": "Aug 6–13, 2026",
+        "title": "Former Guerrero Governor Ángel Aguirre Arrested and Linked to Trial",
+        "type": "legal",
+        "detail": "The FGR arrested Ángel Aguirre Rivero — Guerrero's governor at the time of the 2014 disappearances, who resigned that October — in Tepotzotlán, State of Mexico on August 6, accusing him of ordering the destruction of security-camera footage from the Iguala Palace of Justice that captured police intercepting Estrella de Oro bus 1531. Fiscal General Ernestina Godoy called it 'a deliberate operation structured from the highest level of the State Executive.' A judge ordered preventive detention August 7 based on two protected witnesses' testimony, and after a 14-hour hearing formally linked Aguirre to trial for forced disappearance on August 12 — the highest-ranking civilian official charged in the case to date. Tlachinollan called it 'a drop of hope in a sea of mysteries' but warned accountability must extend to federal authorities and the Army; families demanded Aguirre remain imprisoned for life. His defense announced August 13 it would appeal the ruling.",
+        "sources": [
+          { "name": "Infobae", "tier": 2, "url": "https://www.infobae.com/mexico/2026/08/06/cae-angel-aguirre-exgobernador-de-guerrero-la-fgr-lo-captura-por-desaparicion-de-los-43-de-ayotzinapa/", "pole": "western" },
+          { "name": "NBC News", "tier": 2, "url": "https://www.nbcnews.com/world/mexico/decade-43-students-vanished-mexico-ex-governor-arrested-accused-cover-rcna591288", "pole": "western" },
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/noticia/2026/08/12/politica/vinculacion-de-angel-aguirre-una-gota-de-esperanza-en-caso-ayotzinapa-padres-de-los-43", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/06/cae-angel-aguirre-exgobernador-de-guerrero-la-fgr-lo-captura-por-desaparicion-de-los-43-de-ayotzinapa/",
+            "caption": "Former Guerrero Governor Ángel Aguirre Rivero, arrested August 6, 2026",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/Y5R77ONTIVCTZEFHDKHTNUTFNU.jpg?auth=a3dd90338c9f5398346b57a06311fab5306487263d5967056ca47f1e0cc91e9b&smart=true&width=350&height=197&quality=85"
+          }
+        ],
+        "lastUpdated": "2026-08-16T14:33:04.000Z"
+      },
+      {
+        "id": "pirita_ochoa_prison_ratified_2026",
+        "year": "Aug 14, 2026",
+        "title": "Appellate Court Ratifies Preventive Prison for Army Officer Pirita Ochoa",
+        "type": "legal",
+        "detail": "A collegiate appellate tribunal denied conditional release for Subteniente Fabián Alejandro Pirita Ochoa, a 27th Infantry Battalion officer present in Iguala on the night of the attack who faces forced-disappearance charges, ratifying his preventive imprisonment at Campo Militar 1-A. The ruling underscored that the case's military track continues on a separate, slower legal timeline than the newly opened civilian-official track against Ángel Aguirre.",
+        "sources": [
+          { "name": "El Universal", "tier": 2, "url": "https://www.eluniversal.com.mx/nacion/ratifican-prision-a-pirita-ochoa-militar-implicado-en-caso-ayotzinapa-queda-interno-en-el-campo-militar-1-a/", "pole": "western" },
+          { "name": "La Jornada", "tier": 2, "url": "https://www.jornada.com.mx/2026/08/15/politica/005n4pol", "pole": "western" }
+        ],
+        "lastUpdated": "2026-08-16T14:33:04.000Z"
+      }
+    ]
+  }
+]

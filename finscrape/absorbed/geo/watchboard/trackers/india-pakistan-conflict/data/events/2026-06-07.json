@@ -1,0 +1,75 @@
+[
+  {
+    "id": "pakistan-gb-elections-held-june07-2026",
+    "year": "2026",
+    "title": "Day 393: Pakistan Holds Gilgit-Baltistan Assembly Elections Despite India Sovereignty Protest — 958,480 Voters, 396 Candidates, PPP Leads",
+    "type": "political",
+    "detail": "June 7, 2026 marks Day 393 of the India-Pakistan ceasefire. Pakistan proceeded with elections to 24 of 33 Gilgit-Baltistan Assembly seats on June 7, 2026, despite India's formal diplomatic protest lodged on June 5 asserting the entire region is Indian sovereign territory illegally occupied by Pakistan. Approximately 958,480 registered voters participated across the high-altitude constituency; 396 candidates contested, with PPP fielding 23 candidates, PML-N 22, and PTI-backed independents numbering 19 among other parties and independents. Tight security was deployed across all polling stations in the strategically sensitive mountain territory. Polling concluded peacefully. Preliminary results showed PPP's Amjad Hussain winning GBLA-1 (Gilgit constituency) with 11,178 votes; the full official results for all 24 seats were still being tallied and certified. The 33-seat Gilgit-Baltistan Assembly requires 17 seats for a majority; nine seats were held in separate constituency elections on the same day. India's Foreign Ministry had formally protested the elections on June 5, calling GB 'an integral and inalienable part' of India and calling on Pakistan to 'vacate occupied territories' and refrain from 'any material change' to Indian territory under Pakistan's illegal occupation. Pakistan's Foreign Office dismissed India's protest as 'propagating fake narratives,' stating Kashmir must be resolved by UN-supervised plebiscite. The CPEC corridor passes through Gilgit-Baltistan — a key additional dimension of the sovereignty dispute. Pakistan upgraded GB to quasi-provincial status in 2020; the June 7 elections and separately announced August 2 local government elections together represent Pakistan's most sustained electoral governance drive in the territory. The ceasefire holds at Day 393 with no LOC violations since May 10, 2025; bilateral freeze — no ambassadors, $0 trade, IWT suspended — continues in full effect.",
+    "sources": [
+      {
+        "name": "Dawn",
+        "tier": 2,
+        "url": "https://www.dawn.com/news/2005670",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Geo News",
+        "tier": 2,
+        "url": "https://www.geo.tv/latest/667613-polling-begins-in-gilgit-baltistan-for-24-assembly-seats-amid-tight-security",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Arab News",
+        "tier": 2,
+        "url": "https://www.arabnews.com/node/2646126/pakistan",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.dawn.com/news/2005670",
+        "caption": "Pakistan holds Gilgit-Baltistan Assembly elections for 24 seats amid tight security — polling concludes peacefully as PPP leads in early results",
+        "source": "Dawn",
+        "thumbnail": "https://www.dawn.com/news/2005670"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified",
+    "lastUpdated": "2026-06-07T14:15:22.000Z"
+  },
+  {
+    "id": "pok-jkjaac-rawalakot-clashes-jun7-2026",
+    "year": "2026",
+    "title": "Pakistan-Administered Kashmir Protests Turn Deadly: 11 Killed in Rawalakot Clashes After JKJAAC Banned Under Anti-Terrorism Act",
+    "type": "political",
+    "detail": "On June 5, 2026, authorities in Pakistan-administered Jammu and Kashmir (PoK/AJK) proscribed the Jammu Kashmir Joint Awami Action Committee (JKJAAC) — a grassroots movement led by activist Shaukat Nawaz Mir campaigning on a 38-point demands charter (economic subsidies, infrastructure, official accountability) — under the region's Anti-Terrorism Act 2014, alleging it was 'engaged in terrorism' and 'creating anarchy in the State.' The immediate trigger was JKJAAC's opposition to 12 legislative seats reserved for refugees who live elsewhere in Pakistan, which protesters say dilutes local representation. Authorities suspended internet and mobile network signals region-wide from June 5 through June 12 ahead of planned demonstrations. Despite the ban, protests proceeded; clashes between security forces and JKJAAC supporters in Rawalakot on Sunday, June 7 killed 11 people and injured more than 70 (23 security personnel, 50 protesters), per local officials. Protests continued into June 9 despite the restrictions. Amnesty International warned the terrorism designation 'marks a dangerous escalation' in the crackdown on the protest movement. This is the deadliest unrest in Pakistan-administered Kashmir in years and would continue to escalate through June and July.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/6/9/deadly-protests-in-pakistan-administered-kashmir-whats-going-on",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Amnesty International",
+        "tier": 3,
+        "url": "https://www.amnesty.org/en/latest/news/2026/06/pakistan-terrorism-designation-of-protest-movement-marks-dangerous-escalation-in-jammu-and-kashmir-crackdown/",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/news/2026/6/9/deadly-protests-in-pakistan-administered-kashmir-whats-going-on",
+        "caption": "Deadly protests erupt in Pakistan-administered Kashmir after JKJAAC banned under anti-terrorism law",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/news/2026/6/9/deadly-protests-in-pakistan-administered-kashmir-whats-going-on"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "disputed",
+    "confidenceReason": "Casualty figures from local/regional reporting; not independently verified by international media or confirmed by Pakistani federal authorities.",
+    "lastUpdated": "2026-07-16T16:49:47.000Z"
+  }
+]

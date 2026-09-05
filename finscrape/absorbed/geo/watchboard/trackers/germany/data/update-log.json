@@ -1,0 +1,41 @@
+{
+  "lastRun": "2026-08-28T00:05:12.228Z",
+  "tracker": "germany",
+  "sections": {
+    "kpis": {
+      "count": 8,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 54,
+      "eras": 12,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 38,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 26,
+      "status": "ok"
+    },
+    "political": {
+      "count": 22,
+      "status": "ok"
+    },
+    "econ": {
+      "count": 8,
+      "status": "updated"
+    },
+    "events": {
+      "count": 4,
+      "filesAdded": [
+        "2026-08-23.json",
+        "2026-08-25.json",
+        "2026-08-26.json"
+      ],
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

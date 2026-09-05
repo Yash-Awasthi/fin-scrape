@@ -1,0 +1,115 @@
+from datetime import datetime, timedelta
+import pandas as pd
+from src.utils.time_utils import get_current_time
+
+class HRService:
+    """
+    Service for monitoring agent health and activity (HR Protocol).
+    HR 服務：負責監控 Agent 的健康狀況與活動（HR 協議）。
+    """
+    def __init__(self, db_path: str = None) -> None:
+        """
+        Initialize the HR service.
+        初始化 HR 服務。
+        """
+        self.db_path = db_path
+
+    def check_agent_health(self) -> pd.DataFrame:
+        """
+        Evaluate the health status of all agents based on their cached activity.
+        根據快照活動評估所有 Agent 的健康狀況。
+        
+        Returns:
+            pd.DataFrame: Audit log containing [Agent, Last Active, Status, Days Inactive]
+            pd.DataFrame: 包含 [Agent, Last Active, Status, Days Inactive] 的審核日誌。
+        """
+        try:
+            from sqlalchemy import text
+            from src.data.database import get_db_engine
+            
+            engine = get_db_engine(self.db_path)
+            with engine.connect() as conn:
+                query = text("""
+                    SELECT agent_name, MAX(timestamp) as last_active 
+                    FROM response_cache 
+                    GROUP BY agent_name
+                """)
+                df = pd.read_sql(query, conn)
+            
+            if df.empty:
+                return pd.DataFrame(columns=["Agent", "Last Active", "Status", "Days Inactive"])
+
+            # Process data
+            now = get_current_time()
+            if now.tzinfo is None:
+                now = now.replace(tzinfo=None) # Ensure naive if DB is naive
+            
+            results = []
+            
+            # Known Agents List (to detect those never active)
+            known_agents = ["Momentum", "Fundamental", "Macro", "CIO", "Dispatcher", "System Engineer", "Sentiment"]
+            
+            # Map existing data
+            agent_status_map = {}
+            
+            for _, row in df.iterrows():
+                agent_name = row['agent_name']
+                last_active_str = row['last_active']
+                
+                try:
+                    # Handle ISO format
+                    last_active = pd.to_datetime(last_active_str)
+                    if last_active.tzinfo is not None and now.tzinfo is None:
+                         last_active = last_active.tz_localize(None)
+                    elif last_active.tzinfo is None and now.tzinfo is not None:
+                         last_active = last_active.tz_localize(now.tzinfo)
+                         
+                except (ValueError, TypeError):
+                    last_active = now # Fallback
+                
+                diff = now - last_active
+                days_inactive = diff.days
+                
+                status = "✅ Active"
+                if days_inactive > 7:
+                    status = "🧟 Zombie"
+                elif days_inactive > 3:
+                     status = "⚠️ Idle"
+
+                agent_status_map[agent_name] = {
+                    "Last Active": last_active.strftime("%Y-%m-%d %H:%M"),
+                    "Status": status,
+                    "Days Inactive": days_inactive
+                }
+
+            # Merge with known agents
+            final_data = []
+            for agent in known_agents:
+                if agent in agent_status_map:
+                    row_data = agent_status_map[agent]
+                    final_data.append({
+                        "Agent": agent,
+                        **row_data
+                    })
+                else:
+                    final_data.append({
+                        "Agent": agent,
+                        "Last Active": "N/A",
+                        "Status": "👻 Missing",
+                        "Days Inactive": -1
+                    })
+                    
+            # Add any extra agents found in DB
+            for agent in agent_status_map:
+                if agent not in known_agents:
+                    row_data = agent_status_map[agent]
+                    final_data.append({
+                        "Agent": agent,
+                        **row_data
+                    })
+
+            return pd.DataFrame(final_data)
+        except Exception as e:
+            import logging
+            logging.getLogger(__name__).error(f"Failed to check agent health: {e}")
+            return pd.DataFrame(columns=["Agent", "Last Active", "Status", "Days Inactive"])

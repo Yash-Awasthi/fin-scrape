@@ -1,0 +1,263 @@
+[
+  {
+    "id": "zelensky",
+    "name": "Volodymyr Zelensky",
+    "role": "President of Ukraine (2019–present)",
+    "avatar": "ua-gov",
+    "initial": "Z",
+    "quote": "Russia hit the Chornobyl nuclear fuel storage facility. This is sky-high arrogance — an extremely vile act. It is time to end this war. But Russia's ruler wants to keep fighting. Ukraine's long-range strikes are long-range sanctions. Every blow against Russian military infrastructure and energy is our response to Russian terror.",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "sybiha",
+    "name": "Andrii Sybiha",
+    "role": "Foreign Minister of Ukraine (2024–present)",
+    "avatar": "ua-gov",
+    "initial": "S",
+    "quote": "Ukraine definitely does not support the candidacy of Schröder as a mediator. Without real negotiations, conditions will only get worse for Russia — there will be no safe places. We have warned Putin: every day of continuing the war means more Russian losses and more Ukrainian retaliation.",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "syrskyi",
+    "name": "Gen. Oleksandr Syrskyi",
+    "role": "Commander-in-Chief, Armed Forces of Ukraine (2024–present)",
+    "avatar": "ua-gov",
+    "initial": "S",
+    "quote": "Ukraine has seized the tactical initiative. Our offensive assault operations now outnumber Russian assaults — this is happening for the first time in the full-scale war. Russia has lost 141,500+ troops in 2026 alone; 83,000+ irreversible. They are looking for new soldiers and they cannot find enough. We will press this advantage.",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "zaluzhnyi",
+    "name": "Gen. Valerii Zaluzhnyi",
+    "role": "Cmdr-in-Chief, Armed Forces of Ukraine (2021–2024); Ambassador to UK",
+    "avatar": "ua-gov",
+    "initial": "Z",
+    "quote": "There will most likely be no deep and beautiful breakthrough. We have reached the level of technology that puts us into a stalemate.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "shmyhal",
+    "name": "Denys Shmyhal",
+    "role": "Prime Minister of Ukraine (2020–present)",
+    "avatar": "ua-gov",
+    "initial": "S",
+    "quote": "Ukraine will rebuild. Every destroyed home, every broken road, every damaged hospital is on Russia's account. We will present that bill.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "yermak",
+    "name": "Andriy Yermak",
+    "role": "Head of the Office of the President of Ukraine",
+    "avatar": "ua-gov",
+    "initial": "Y",
+    "quote": "Ukraine has the right to defend itself on the entire territory of the aggressor state. This is international law.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "poroshenko",
+    "name": "Petro Poroshenko",
+    "role": "President of Ukraine (2014–2019); Opposition Leader",
+    "avatar": "ua-gov",
+    "initial": "P",
+    "quote": "We are building an army. Give us weapons and we will stop Putin ourselves. Europe's security depends on Ukraine's victory.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "maliar",
+    "name": "Hanna Maliar",
+    "role": "Deputy Minister of Defence of Ukraine",
+    "avatar": "ua-gov",
+    "initial": "M",
+    "quote": "The enemy is digging in deep. We are destroying their logistics, command structures, and the will to fight. The war is long but the outcome is not in doubt.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "putin",
+    "name": "Vladimir Putin",
+    "role": "President of Russia (2000–2008, 2012–present)",
+    "avatar": "ru-gov",
+    "initial": "P",
+    "quote": "The war has entered a different paradigm. Ukraine's inhumane acts of terror against civilians forced our response. Russia remains open to peace negotiations — but the Kyiv regime must first acknowledge the realities on the ground and withdraw from Russian territory.",
+    "lastUpdated": "2026-06-02"
+  },
+  {
+    "id": "gerasimov",
+    "name": "Gen. Valery Gerasimov",
+    "role": "Chief of General Staff, Russian Armed Forces",
+    "avatar": "ru-gov",
+    "initial": "G",
+    "quote": "The Russian Armed Forces are systematically destroying the military infrastructure of the Kyiv regime. Our goals will be achieved.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "medvedev",
+    "name": "Dmitry Medvedev",
+    "role": "Deputy Chair, Russian Security Council; Former President",
+    "avatar": "ru-gov",
+    "initial": "M",
+    "quote": "Zelensky's dream to join NATO means World War III. Russia will use any means to protect its security, including nuclear weapons.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "lavrov",
+    "name": "Sergei Lavrov",
+    "role": "Foreign Minister of Russia",
+    "avatar": "ru-gov",
+    "initial": "L",
+    "quote": "The special military operation is proceeding according to plan. The West's escalation through arms supplies prolongs the suffering. Russia remains open to honest dialogue.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kadyrov",
+    "name": "Ramzan Kadyrov",
+    "role": "Head of the Chechen Republic; Russian military contributor",
+    "avatar": "ru-gov",
+    "initial": "K",
+    "quote": "Our Chechen fighters are at the forefront of every battle. We will crush the enemy wherever they hide. Victory will be ours.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "stoltenberg",
+    "name": "Jens Stoltenberg",
+    "role": "NATO Secretary-General (2014–2024)",
+    "avatar": "eu-nato",
+    "initial": "S",
+    "quote": "Ukraine's right to self-defense is clear under international law. NATO will support Ukraine for as long as it takes. Helping Ukraine is an investment in our own security.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "macron",
+    "name": "Emmanuel Macron",
+    "role": "President of France",
+    "avatar": "eu-nato",
+    "initial": "M",
+    "quote": "We cannot allow Russia to win this war. Everything is on the table, including deploying Western troops if Russian lines break through. Europe must awaken to the threat.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "scholz",
+    "name": "Olaf Scholz",
+    "role": "Chancellor of Germany (2021–2025)",
+    "avatar": "eu-nato",
+    "initial": "S",
+    "quote": "Germany stands firmly with Ukraine. We have approved Leopard 2 tanks, Patriot systems, and artillery. But we must avoid escalation to direct NATO-Russia conflict.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "merz",
+    "name": "Friedrich Merz",
+    "role": "Chancellor of Germany (2025–present); CDU party leader",
+    "avatar": "eu-nato",
+    "initial": "M",
+    "quote": "We want Ukraine to be in the EU — but we must be realistic about the timeline and the institutional changes needed. An 'associate' membership tier would give Ukraine a voice in Europe without waiting years for full accession. Germany remains Ukraine's strongest European partner.",
+    "lastUpdated": "2026-05-24"
+  },
+  {
+    "id": "kallas",
+    "name": "Kaja Kallas",
+    "role": "EU High Representative for Foreign Affairs; Former Estonian PM",
+    "avatar": "eu-nato",
+    "initial": "K",
+    "quote": "Those who border Russia know what Russia is. This is not just Ukraine's war — it is a war for the rules-based international order. Europe must spend more on defense now.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "sikorski",
+    "name": "Radosław Sikorski",
+    "role": "Foreign Minister of Poland; MEP",
+    "avatar": "eu-nato",
+    "initial": "S",
+    "quote": "Poland is on the front line of Europe's defense. We will not accept a Russian veto over Ukraine's choices. Poland is Europe's largest arms conduit to Ukraine.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "biden",
+    "name": "Joe Biden",
+    "role": "US President (2021–2025)",
+    "avatar": "us",
+    "initial": "B",
+    "quote": "America will stand with Ukraine as long as it takes. We will not abandon a democratic nation facing an autocrat's aggression. Putin will not prevail.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "trump",
+    "name": "Donald Trump",
+    "role": "US President (2017–2021, 2025–present)",
+    "avatar": "us",
+    "initial": "T",
+    "quote": "Russia and Ukraine have agreed to a 3-day ceasefire and a 1,000-for-1,000 prisoner exchange. Both sides are committed. We are making progress. This war must end — and we are working on it every day.",
+    "lastUpdated": "2026-05-10"
+  },
+  {
+    "id": "blinken",
+    "name": "Antony Blinken",
+    "role": "US Secretary of State (2021–2025)",
+    "avatar": "us",
+    "initial": "B",
+    "quote": "Russia committed the fundamental breach of the UN Charter — the violent seizure of another country's territory. That cannot stand, and we will not allow it.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "guterres",
+    "name": "António Guterres",
+    "role": "UN Secretary-General",
+    "avatar": "un-intl",
+    "initial": "G",
+    "quote": "The war in Ukraine is an earthquake with global shockwaves — the food crisis, the energy crisis, rising costs everywhere. We need peace in Ukraine for the sake of the world.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "grossi",
+    "name": "Rafael Grossi",
+    "role": "Director General, International Atomic Energy Agency",
+    "avatar": "un-intl",
+    "initial": "G",
+    "quote": "The IAEA is deeply concerned about the drone strike on the Chornobyl spent nuclear fuel storage facility on June 7. We are immediately sending experts to assess the damage. The Zaporizhzhia nuclear plant and Chornobyl are under constant threat. Attacks on nuclear sites must stop — nuclear safety knows no compromise.",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "lukashenko",
+    "name": "Alexander Lukashenko",
+    "role": "President of Belarus (1994–present)",
+    "avatar": "other",
+    "initial": "L",
+    "quote": "Belarus is not at war with Ukraine, but we must stand with Russia as a union state. Belarus provided territory but not troops. We seek peace with our neighbor.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "orban",
+    "name": "Viktor Orbán",
+    "role": "Former Prime Minister of Hungary (2010–2026); lost to Péter Magyar in April 2026",
+    "avatar": "other",
+    "initial": "O",
+    "quote": "Hungary wants peace, not war. We will not allow our territory to be used for weapons transfers. A ceasefire now could save hundreds of thousands of lives.",
+    "lastUpdated": "2026-04-26"
+  },
+  {
+    "id": "magyar",
+    "name": "Péter Magyar",
+    "role": "Prime Minister of Hungary (2026–present); defeated Orbán in April 12 election",
+    "avatar": "eu-nato",
+    "initial": "M",
+    "quote": "Hungary returns to the European mainstream. We stand with Ukraine and EU solidarity. The era of blocking European support for Ukraine is over.",
+    "lastUpdated": "2026-04-26"
+  },
+  {
+    "id": "erdogan",
+    "name": "Recep Tayyip Erdoğan",
+    "role": "President of Turkey",
+    "avatar": "other",
+    "initial": "E",
+    "quote": "Turkey can play a key mediating role. We have maintained dialogue with both sides throughout. The Grain Deal showed what's possible when goodwill exists.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "fico",
+    "name": "Robert Fico",
+    "role": "Prime Minister of Slovakia (2023–present)",
+    "avatar": "other",
+    "initial": "F",
+    "quote": "I have accepted the invitation to visit Kyiv. Slovakia wants peace in Ukraine and stability in Central Europe. We must find a path through dialogue.",
+    "lastUpdated": "2026-05-08"
+  }
+]

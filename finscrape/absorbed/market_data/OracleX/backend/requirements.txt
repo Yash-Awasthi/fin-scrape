@@ -1,0 +1,26 @@
+# Production runtime.
+#
+# Everything the application imports lives in requirements-base.txt. This file
+# adds only the three packages that are loaded lazily — each is pulled in by
+# the function that first needs it, not at module scope — and which together
+# account for most of the install size.
+
+-r requirements-base.txt
+
+# ── AI / RAG ─────────────────────────────────────────────────────────────────
+# The vector store. Imported inside get_chroma_collection / get_chroma_client.
+chromadb>=0.4.22
+# Bi-encoder embeddings on the "minilm" backend, and the cross-encoder reranker.
+# The default embedding backend is Ollama, which needs neither. Pulls torch.
+sentence-transformers>=2.2.0
+
+# ── Scraping ─────────────────────────────────────────────────────────────────
+# Rungs 2 and 3 of services/scrape_service.py: a replayed browser fingerprint
+# for publishers that answer 403 to plain clients, and a real browser for the
+# few hosts that serve a JavaScript shell with no prose in the HTML.
+#
+# The `fetchers` extra is what pulls in playwright/patchright; the base package
+# is just a parser. Browser *binaries* are a separate step and are not needed
+# unless SCRAPLING_ALLOW_BROWSER is on:
+#     ./venv/bin/scrapling install
+scrapling[fetchers]>=0.4.12

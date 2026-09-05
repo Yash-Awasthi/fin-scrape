@@ -1,0 +1,39 @@
+{
+  "lastRun": "2026-08-28T00:27:21.419Z",
+  "tracker": "moldova-transnistria",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "count": 10
+    },
+    "timeline": {
+      "status": "updated",
+      "count": 35
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 27
+    },
+    "mapLines": {
+      "status": "updated",
+      "count": 15
+    },
+    "claims": {
+      "status": "updated",
+      "count": 17
+    },
+    "political": {
+      "status": "updated",
+      "count": 17
+    },
+    "econ": {
+      "status": "updated",
+      "count": 12
+    },
+    "assets": {
+      "status": "updated",
+      "count": 8
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

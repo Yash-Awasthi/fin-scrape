@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-27T23:54:06.672Z",
+  "tracker": "colombia-earthquake-2026",
+  "sections": {
+    "kpis": {
+      "count": 8,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 53,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 34,
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 10,
+      "status": "updated"
+    },
+    "econ": {
+      "count": 13,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 15,
+      "status": "updated"
+    },
+    "political": {
+      "count": 21,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

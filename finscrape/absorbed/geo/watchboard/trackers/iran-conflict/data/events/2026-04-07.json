@@ -1,0 +1,161 @@
+[
+  {
+    "id": "tehran-synagogue-strike-2026-04-07",
+    "year": "Apr 7, 2026",
+    "title": "US-Israeli Projectile Strikes Tehran Synagogue",
+    "type": "military",
+    "active": true,
+    "detail": "Iran reports that a US-Israeli projectile struck a synagogue in Tehran on April 7, 2026 — a significant escalation targeting a civilian religious site inside the Iranian capital during ongoing US-Israeli military operations. The strike on a place of Jewish worship inside Iran is notable given the stated framing of the conflict and raises questions about targeting rationale. Iranian state media reported the incident; independent verification is pending. The event marks one of the first reported strikes on a civilian religious building within Tehran proper.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/7/iran-says-us-israeli-projectile-has-struck-a-synagogue-in-tehran?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "low",
+    "eventConfidence": "official_claim",
+    "confidenceReason": "Single source — Iranian state-adjacent media report; independent verification pending.",
+    "lastUpdated": "2026-04-07T06:03:57.000Z",
+    "media": []
+  },
+  {
+    "id": "istanbul-consulate-shooting-apr7",
+    "year": "Apr 7, 2026",
+    "title": "Three Killed in Shooting Near Israeli Consulate in Istanbul",
+    "type": "military",
+    "detail": "Three people were killed in a gun clash near the Israeli consulate in Istanbul, Turkey — a significant regional spillover security incident. The attack underscores the expanding geographic footprint of Iran-Israel conflict tensions beyond the immediate theater. Turkish authorities launched an investigation; attacker affiliation and potential Iranian connection remain under active investigation.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/7/three-people-killed-in-gun-clash-near-israeli-consulate-in-istanbul",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim",
+    "lastUpdated": "2026-04-07T10:07:18.000Z",
+    "media": []
+  },
+  {
+    "id": "northern-iran-strikes-buildings-apr7",
+    "year": "Apr 7, 2026",
+    "title": "US-Israeli Strikes Destroy Buildings in Northern Iran",
+    "type": "military",
+    "detail": "US-Israeli strikes reported to have destroyed multiple buildings in northern Iran on Day 39, with video footage documenting the latest destruction. The strikes continue the sustained aerial campaign targeting Iranian infrastructure. Exact targets not yet confirmed by CENTCOM or IDF; Al Jazeera footage shows structural collapses consistent with aerial bombardment.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/7/us-israeli-strikes-destroy-buildings-in-northern-iran",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim",
+    "lastUpdated": "2026-04-07T09:53:20.000Z",
+    "media": []
+  },
+  {
+    "id": "us-aircraft-attrition-report-apr7",
+    "year": "Apr 7, 2026",
+    "title": "Anadolu Agency Details US Military Aircraft Damage and Losses in Iran War",
+    "type": "military",
+    "active": true,
+    "detail": "Turkey's Anadolu Agency published a detailed breakdown of US military aircraft damage and losses sustained during ongoing Iran war operations. The report provides hardware attrition figures covering aircraft damaged or destroyed across the operational theater, offering a rare systematic accounting of US air power costs. The figures highlight the material toll of sustained high-intensity air operations against Iranian air defenses. Independent verification against CENTCOM reporting remains pending; the US military has not publicly acknowledged specific aircraft loss counts.",
+    "sources": [
+      {
+        "name": "Anadolu Agency",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA4SGRNTU9aLXpVaU5uenhTMnpBbHJQSm5yZktFcEdHT0F4NzZ6eWl0a2NTZVBBOUZ0amxJQXBrOUlvV1kwbVlXYlV3TEJ1Q1Z1eEFFb0drOWt2bzQ?oc=5",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim",
+    "confidenceReason": "Single regional outlet; US has not confirmed aircraft loss figures publicly.",
+    "lastUpdated": "2026-04-07T11:38:06.000Z",
+    "media": []
+  },
+  {
+    "id": "europe-nato-divided-us-access-iran-apr7",
+    "year": "Apr 7, 2026",
+    "title": "European NATO Allies Split Over US Basing and Overflight Rights for Iran Operations",
+    "type": "diplomatic",
+    "detail": "Anadolu Agency published an explainer detailing divisions among European NATO states over granting the United States access to military bases and overflight rights for operations against Iran. The report identifies a split among allies on the extent to which European territory and airspace should be made available to support US strikes — a fault line with significant implications for coalition cohesion and operational reach. Countries more aligned with Washington are willing to grant access; others, wary of entanglement and domestic political pressure, are restricting or conditioning their cooperation. The divisions mirror broader European debates over the legality and proportionality of the US-led campaign.",
+    "sources": [
+      {
+        "name": "Anadolu Agency",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPd3pFUjMwS0l5SHhUQTdIMGVmbkZGbHVaRGhkVUY4VTZ1Q25NUHIwLXpCVmNIMmtiYXhGaG5CZ2QxOGxURUFEYzRhQlBLY0p2UlROZkFkSWx0QWNXRzZLYS1RZHJsNExoYXc1SU1EQ0stX3l4QVFPOFJITzJaOXdoMm1kUHM4VEZBMFlHOWIteDB4M3BnSmcySy1JU1g4RHJTSDdzSzhNMUU?oc=5",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim",
+    "confidenceReason": "Single regional outlet; no independent Western confirmation of specific country positions.",
+    "lastUpdated": "2026-04-07T14:11:36.000Z",
+    "media": []
+  },
+  {
+    "id": "trump-suspends-iran-bombing-two-weeks-apr7",
+    "year": "Apr 7, 2026",
+    "title": "Trump Suspends Iran Bombing for Two Weeks Following Dire Threats",
+    "type": "diplomatic",
+    "active": true,
+    "detail": "President Trump announced a two-week suspension of US bombing operations against Iran on April 7, 2026 — a significant and sudden pause in US-Israeli military operations that marks the first halt in offensive strikes since the conflict began on February 28. The suspension follows unspecified 'dire threats,' suggesting Iran or intermediaries communicated escalatory warnings that prompted Washington to stand down temporarily. The pause opens a narrow diplomatic window but stops short of a ceasefire; US officials have not indicated whether the suspension is unconditional or tied to Iranian concessions. The announcement coincides with Pakistan's active mediation efforts and comes as international pressure mounts over civilian casualties and apocalyptic rhetoric from the White House.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/7/trump-suspends-iran-bombing-for-two-weeks-following-dire-threats?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim",
+    "confidenceReason": "Single Tier 2 source; US administration has not released formal statement confirmed by multiple outlets at time of filing.",
+    "lastUpdated": "2026-04-07T22:48:53.000Z",
+    "media": []
+  },
+  {
+    "id": "pakistan-proposes-iran-war-pause-apr7",
+    "year": "Apr 7, 2026",
+    "title": "Pakistan Proposes Formal Iran War Pause; Ceasefire Framework Outlined",
+    "type": "diplomatic",
+    "detail": "Pakistan formally proposed a pause in the Iran conflict on April 7, 2026, outlining a ceasefire framework as part of ongoing diplomatic mediation efforts. Islamabad has positioned itself as a neutral intermediary acceptable to both Tehran and Washington, leveraging its relationships with Iran, the US, and Gulf states. Details of the proposed framework — including duration, monitoring mechanisms, and conditions — were outlined in Pakistani foreign ministry communications reported by Al Jazeera. The proposal follows Trump's two-week bombing suspension announced the same day and represents a coordinated diplomatic push to convert the tactical pause into a structured ceasefire. Pakistan's role as mediator reflects its unique position as a Muslim-majority US-aligned state with longstanding ties to Iran.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/4/7/what-we-know-about-pakistans-proposed-iran-war-pause?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim",
+    "lastUpdated": "2026-04-07T22:24:13.000Z",
+    "media": []
+  },
+  {
+    "id": "intl-condemnation-trump-civilization-rhetoric-apr7",
+    "year": "Apr 7, 2026",
+    "title": "Global Condemnation of Trump Threat That Iran's 'Civilisation Will Die'",
+    "type": "diplomatic",
+    "detail": "International leaders and media organizations condemned President Trump's threat that Iran's 'civilisation will die,' with BBC and global officials characterizing the rhetoric as apocalyptic and potentially constituting incitement to war crimes. The statement drew widespread rebuke across European governments, the UN, and human rights organizations who argued the language dehumanizes the Iranian population and could be construed as a threat of collective punishment or genocide. Legal scholars cited in international reporting warned the rhetoric may cross thresholds under international humanitarian law. The condemnation adds diplomatic pressure on Washington at the precise moment it announced a two-week bombing pause, creating tension between the de-escalatory military action and the maximalist presidential rhetoric.",
+    "sources": [
+      {
+        "name": "BBC",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hY09TMUR5ZnA4enBjOWpFTU94NWROeUJYRFFORGxueFJ2LVk0Ny13ZTlNeHdaUzB4NlZMRmV1QUV1d0JPTGN5amZLZUo3ZHdhZHdDYjUxakpVZw?oc=5",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified",
+    "lastUpdated": "2026-04-07T21:56:02.000Z",
+    "media": []
+  }
+]

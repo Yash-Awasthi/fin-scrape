@@ -1,0 +1,50 @@
+{
+  "lastRun": "2026-08-25T18:30:13.234Z",
+  "tracker": "turkey",
+  "sections": {
+    "events": {
+      "lastRun": "2026-08-25T18:30:13.234Z",
+      "status": "updated"
+    },
+    "kpis": {
+      "lastRun": "2026-05-09T14:30:00.000Z",
+      "status": "unchanged",
+      "count": 8
+    },
+    "timeline": {
+      "lastRun": "2026-05-31T15:43:51.000Z",
+      "status": "updated",
+      "count": 49
+    },
+    "mapPoints": {
+      "lastRun": "2026-05-31T15:43:51.000Z",
+      "status": "updated",
+      "itemCount": 37
+    },
+    "casualties": {
+      "lastRun": "2026-04-25T00:00:00.000Z",
+      "status": "unchanged",
+      "count": 10
+    },
+    "econ": {
+      "lastRun": "2026-05-31T15:43:51.000Z",
+      "status": "updated",
+      "count": 10
+    },
+    "claims": {
+      "lastRun": "2026-05-24T14:30:00.000Z",
+      "status": "unchanged",
+      "itemCount": 26
+    },
+    "political": {
+      "lastRun": "2026-05-31T15:43:51.000Z",
+      "status": "updated",
+      "itemCount": 26
+    },
+    "meta": {
+      "lastRun": "2026-08-25T18:30:13.234Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

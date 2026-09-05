@@ -1,0 +1,164 @@
+[
+  {
+    "id": "total-deaths",
+    "label": "Estimated Deaths",
+    "value": "150,000+",
+    "color": "red",
+    "source": "US Special Envoy / UN estimates",
+    "contested": true,
+    "contestNote": "Estimates range from 27,000 (UN direct count) to 400,000 (US envoy estimate); 90% of Khartoum deaths go unrecorded",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "displaced-total",
+    "label": "People Displaced",
+    "value": "14 million+",
+    "color": "red",
+    "source": "UN News / UNHCR / OCHA Apr 2026",
+    "contested": false,
+    "contestNote": "9 million IDPs within Sudan + 4.4 million refugees in neighboring countries (Chad, Egypt, S. Sudan, Ethiopia); world's largest displacement crisis. Blue Nile alone: 73,000+ displaced into Ed Damazin since Eid; 4,000+ fled to Ethiopia in March from Blue Nile RSF-SPLM-N offensive.",
+    "trend": "up",
+    "lastUpdated": "2026-04-12T14:25:47.312Z"
+  },
+  {
+    "id": "food-insecure",
+    "label": "Acutely Food Insecure",
+    "value": "19.5 million (28.9M peak projected)",
+    "color": "red",
+    "source": "WFP/FAO/UNICEF Joint Report May 2026",
+    "contested": false,
+    "contestNote": "19.5 million Sudanese (2 in 5) face acute food insecurity (IPC 3+) as of mid-May 2026, per WFP/FAO/UNICEF joint report. Of these, 5 million are at emergency hunger (IPC 4) and 135,000 in catastrophic famine (IPC 5). IPC projects lean-season peak of 28.9 million (June–August 2026). Famine confirmed in El Fasher and Kadugli; 20+ additional areas at critical famine risk. UN appeal only ~20% funded.",
+    "trend": "up",
+    "lastUpdated": "2026-05-18T14:30:00.000Z"
+  },
+  {
+    "id": "famine-risk",
+    "label": "Facing Starvation (IPC5)",
+    "value": "400,000+",
+    "color": "red",
+    "source": "UN OCHA / IPC 2026",
+    "contested": false,
+    "contestNote": "Two famines formally declared: El-Fasher (North Darfur) and Kadugli (South Kordofan); 20+ additional areas at critical famine risk",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "children-displaced",
+    "label": "Displaced Children",
+    "value": "6 million+",
+    "color": "amber",
+    "source": "UNICEF 2024",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "children-out-of-school",
+    "label": "Children Out of School",
+    "value": "17 million",
+    "color": "amber",
+    "source": "UNICEF 2024",
+    "contested": false,
+    "trend": "stable",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "humanitarian-needs",
+    "label": "In Need of Aid",
+    "value": "34 million",
+    "color": "amber",
+    "source": "UN OCHA / Tom Fletcher Apr 22, 2026",
+    "contested": false,
+    "contestNote": "65% of Sudan's population in urgent need of humanitarian support as of April 22, 2026 (UN Emergency Relief Coordinator Tom Fletcher). 2026 appeal: $3B requested, only ~16% funded. World's largest humanitarian crisis.",
+    "trend": "up",
+    "lastUpdated": "2026-04-22T14:00:37.491Z"
+  },
+  {
+    "id": "healthcare-facilities-hit",
+    "label": "Killed in Healthcare Attacks",
+    "value": "2,052+",
+    "color": "red",
+    "source": "WHO / OCHA / Al Jazeera April 2026",
+    "contested": false,
+    "contestNote": "WHO documented 2,052 killed in 217+ healthcare attacks since April 2023. RSF drone strikes on Al-Jabalain Hospital (Apr 3, 2026) killed 10 including 7 medical staff; ongoing attacks have pushed the total above 2,052 as of April 20, 2026.",
+    "trend": "up",
+    "lastUpdated": "2026-04-20T14:00:00.000Z"
+  },
+  {
+    "id": "refugees-neighboring",
+    "label": "Refugees in Neighbors",
+    "value": "2.5 million",
+    "color": "blue",
+    "source": "UNHCR Dec 2024",
+    "contested": false,
+    "contestNote": "Primarily in Chad, Egypt, South Sudan, Ethiopia",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "mass-graves",
+    "label": "Mass Graves Discovered",
+    "value": "965",
+    "color": "red",
+    "source": "UN Fact-Finding Mission 2024",
+    "contested": false,
+    "contestNote": "Located in Gezira, Darfur, and Kordofan states",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "sexual-violence-cases",
+    "label": "Sexual Violence Cases (Reported)",
+    "value": "3,396+",
+    "color": "red",
+    "source": "MSF Darfur (Jan 2024–Nov 2025) / UN FFM 2024",
+    "contested": true,
+    "contestNote": "MSF treated 3,396 survivors (97% women/girls) in Darfur alone Jan 2024–Nov 2025 — called 'only a fraction of the true scale.' RSF fighters consistently identified as perpetrators.",
+    "trend": "up",
+    "lastUpdated": "2026-03-31T12:00:00.000Z"
+  },
+  {
+    "id": "aid-workers-killed",
+    "label": "Aid Workers Killed",
+    "value": "22+",
+    "color": "amber",
+    "source": "UN OCHA / Aid Worker Security Database",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "civilian-drone-deaths-q1-2026",
+    "label": "Civilians Killed by Drones (Jan–Apr 2026)",
+    "value": "880+",
+    "color": "red",
+    "source": "OHCHR / UN Human Rights Chief Türk, May 11, 2026",
+    "contested": false,
+    "contestNote": "At least 880 civilians killed and 770+ injured in drone strikes January–April 2026, per OHCHR high-alert statement issued May 11. Drone strikes accounted for over 80% of all conflict-related civilian deaths. Markets targeted 28+ times, health facilities 12+ times. Türk called on all parties and drone-supplying states to halt transfers and attacks. The Treaty of Jeddah (May 20) commits both parties to civilian protection but both sides continue drone operations.",
+    "trend": "up",
+    "lastUpdated": "2026-05-21T14:25:00.000Z"
+  },
+  {
+    "id": "famine-zones-active",
+    "label": "Active IPC Phase 5 Famine Zones",
+    "value": "2 declared (El Fasher + Kadugli)",
+    "color": "red",
+    "source": "WFP/FAO/UNICEF Joint Report May 2026",
+    "contested": false,
+    "contestNote": "IPC Phase 5 famine confirmed in El Fasher (North Darfur — under RSF siege/occupation since Oct 2025) and Kadugli (South Kordofan — SAF broke RSF-SPLM-N siege for 3rd time May 20; first supply convoy since January arrived same day, collapsing food prices). 20+ additional areas at critical famine risk. 135,000 in catastrophic IPC Phase 5 starvation nationwide.",
+    "trend": "up",
+    "lastUpdated": "2026-05-21T14:25:00.000Z"
+  },
+  {
+    "id": "cholera-khartoum-may2026",
+    "label": "Cholera Cases (Khartoum, May 2026)",
+    "value": "2,500+ (3 weeks)",
+    "color": "amber",
+    "source": "MSF / Khartoum Ministry of Health May 2026",
+    "contested": false,
+    "contestNote": "MSF reported 2,500 cholera cases in Khartoum in three weeks; Khartoum Ministry of Health recorded 633 cases and 24 deaths on May 23 alone. Over 1 million children at risk. Driven by near-total destruction of Khartoum water/sanitation infrastructure (80% of facilities damaged), collapsed sewage systems, and mass displacement returns. Reflects wider public health collapse: 37% of Sudan's health facilities non-functional.",
+    "trend": "up",
+    "lastUpdated": "2026-05-27T14:37:22.000Z"
+  }
+]

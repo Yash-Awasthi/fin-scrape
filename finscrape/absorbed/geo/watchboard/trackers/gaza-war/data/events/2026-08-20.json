@@ -1,0 +1,55 @@
+[
+  {
+    "id": "australia-anger-israel-drops-wck-case-aug20-2026",
+    "year": "Aug 20, 2026",
+    "title": "Australia Expresses Anger as Israel Drops World Central Kitchen Deaths Case",
+    "type": "diplomatic",
+    "detail": "Australia expressed strong anger after Israel dropped the case into the April 2024 strike that killed seven World Central Kitchen aid workers, including an Australian national. Canberra demanded accountability for the strike, which killed aid workers from Australia, Poland, the UK, and Gaza while they were delivering humanitarian supplies in coordination with the IDF. Israel had previously acknowledged the strike was a serious mistake but closing the case without criminal charges drew international condemnation.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/20/australian-anger-as-israel-drops-world-central-kitchen-deaths-case?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/8/20/australian-anger-as-israel-drops-world-central-kitchen-deaths-case?traffic_source=rss",
+        "caption": "Australia demands accountability as Israel closes case on World Central Kitchen strike that killed seven aid workers",
+        "source": "Al Jazeera"
+      }
+    ]
+  },
+  {
+    "id": "gaza-city-mass-funeral-50-victims-aug20-2026",
+    "year": "2026",
+    "title": "Gaza City Holds Mass Funeral for 50 Palestinians Recovered From Rubble of 2023 Strikes",
+    "type": "humanitarian",
+    "detail": "Thousands of Palestinians attended a mass funeral in Gaza City on August 20, 2026 for 50 people — including 19 children — whose remains civil defense teams recovered over the preceding two weeks from the rubble of homes bombed by Israel in the early months of the war. The victims belonged to the Sawafiri, Batniji, Karam, Al-Af, Haraz, and Raqiq families, killed when Israeli strikes hit their homes in Gaza City in December 2023. The funeral procession began at Al-Shifa Hospital, with political, community and tribal figures joining, before the flag-draped remains were taken for burial at Al-Ahli cemetery in the Zeitoun neighborhood.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/8/20/gaza-holds-mass-funeral-for-50-palestinians-killed-in-israeli-genocidal-war",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Kuwait Times",
+        "tier": 2,
+        "url": "https://kuwaittimes.com/article/48465/world/middle-east/funeral-held-for-50-martyrs-including-19-children-in-gaza/",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/8/20/gaza-holds-mass-funeral-for-50-palestinians-killed-in-israeli-genocidal-war",
+        "caption": "Mourners carry the bodies of 50 Palestinians recovered from rubble in Gaza City for burial, August 20, 2026",
+        "source": "Reuters",
+        "thumbnail": "https://ia.tmgrup.com.tr/c5aa40/806/378/0/115/800/490?u=https://i.tmgrup.com.tr/anews/v1/2026/08/20/gaza-palestinians-hold-funeral-for-50-people-killed-in-israeli-attacks-during-genocide-1787235920339.jpg"
+      }
+    ]
+  }
+]

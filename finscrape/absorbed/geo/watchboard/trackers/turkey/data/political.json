@@ -1,0 +1,236 @@
+[
+  {
+    "id": "osman-i",
+    "name": "Osman I",
+    "role": "Founder of the Ottoman Dynasty (r. c.1299–1323/4)",
+    "avatar": "military",
+    "initial": "O",
+    "quote": "I am the son of a great ghazi and I shall be a ghazi like my father.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "mehmed-ii-conqueror",
+    "name": "Mehmed II (the Conqueror)",
+    "role": "Ottoman Sultan — Conquered Constantinople (r. 1444–46, 1451–81)",
+    "avatar": "military",
+    "initial": "M",
+    "quote": "Either the city will be taken or I will take Constantinople, or I will find my death there.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "suleiman-the-magnificent",
+    "name": "Suleiman I (the Magnificent)",
+    "role": "Ottoman Sultan at Empire's Peak (r. 1520–1566)",
+    "avatar": "military",
+    "initial": "S",
+    "quote": "I am the Sultan of Sultans, the sovereign of sovereigns, the dispenser of crowns to the monarchs on the face of the earth.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "mustafa-kemal-ataturk",
+    "name": "Mustafa Kemal Atatürk",
+    "role": "Founder of the Turkish Republic; President 1923–1938",
+    "avatar": "military",
+    "initial": "A",
+    "quote": "Peace at home, peace in the world. (Yurtta sulh, cihanda sulh.)",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "ismet-inonu",
+    "name": "İsmet İnönü",
+    "role": "2nd President of Turkey (1938–1950); CHP leader; negotiated Treaty of Lausanne",
+    "avatar": "chp",
+    "initial": "İ",
+    "quote": "Democracy is not just a form of government but a way of life.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "adnan-menderes",
+    "name": "Adnan Menderes",
+    "role": "Prime Minister (1950–1960); executed after 1960 coup; Democrat Party",
+    "avatar": "akp",
+    "initial": "M",
+    "quote": "If the nation wills it, even the sharia can be reinstated.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "kenan-evren",
+    "name": "Gen. Kenan Evren",
+    "role": "Led 1980 Military Coup; 7th President of Turkey (1982–1989)",
+    "avatar": "military",
+    "initial": "E",
+    "quote": "We have taken over administration to save the country and to hand it back to the civilians in the shortest possible time.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "turgut-ozal",
+    "name": "Turgut Özal",
+    "role": "Prime Minister (1983–89); 8th President (1989–93); economic liberalization architect",
+    "avatar": "akp",
+    "initial": "Ö",
+    "quote": "We must integrate Turkey into the world economy and end the era of state control.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "necmettin-erbakan",
+    "name": "Necmettin Erbakan",
+    "role": "Islamist PM removed by '97 'Postmodern Coup'; Refah/Fazilet party founder; Erdoğan's mentor",
+    "avatar": "akp",
+    "initial": "E",
+    "quote": "Turkey will lead the Islamic world. Istanbul will be the center of an Islamic common market.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "abdullah-ocalan",
+    "name": "Abdullah Öcalan",
+    "role": "PKK founder and ideological leader; imprisoned on İmralı Island since 1999; called for PKK disarmament Feb 2025, triggering PKK dissolution vote",
+    "avatar": "kurds",
+    "initial": "Ö",
+    "quote": "The PKK should lay down arms and dissolve... A century of war has brought neither victory nor defeat — it is time for a democratic, political solution.",
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
+  },
+  {
+    "id": "recep-tayyip-erdogan",
+    "name": "Recep Tayyip Erdoğan",
+    "role": "Prime Minister (2003–14); President (2014–present); AKP co-founder",
+    "avatar": "akp",
+    "initial": "E",
+    "quote": "Democracy is like a tram. You ride it until you arrive at your destination, then you step off.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "abdullah-gul",
+    "name": "Abdullah Gül",
+    "role": "11th President of Turkey (2007–2014); AKP co-founder with Erdoğan",
+    "avatar": "akp",
+    "initial": "G",
+    "quote": "Turkey's integration with Europe is irreversible; it is Turkey's civilizational choice.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "fethullah-gulen",
+    "name": "Fethullah Gülen",
+    "role": "Islamic cleric; head of Gülenist movement (FETÖ); Erdoğan ally turned adversary; based in Pennsylvania until death 2024",
+    "avatar": "intl",
+    "initial": "G",
+    "quote": "Service to humanity is service to God.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "kemal-kilicdaroglu",
+    "name": "Kemal Kılıçdaroğlu",
+    "role": "CHP leader (2010–2023); lost 2023 presidential election to Erdoğan; court-reinstated as CHP chair May 21, 2026 after Özel's leadership was annulled; now leads a reduced 44-seat CHP bloc after Özel and 91 deputies split off to found Yeni Parti (Jul 24, 2026)",
+    "avatar": "chp",
+    "initial": "K",
+    "quote": "I will hold a clean, completely transparent congress — this party will choose its leader democratically.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "ozgur-ozel",
+    "name": "Özgür Özel",
+    "role": "CHP leader (Nov 2023–May 2026); led party to best result in 22 years (Mar 2024: 37.8%); removed by Ankara court ruling May 21, 2026; founded Yeni Parti (New Party) on Jul 24, 2026 with 91 breakaway CHP deputies, becoming leader of parliament's largest opposition bloc (44-seat CHP vs. Yeni Parti's new bloc)",
+    "avatar": "chp",
+    "initial": "Ö",
+    "quote": "We are establishing our new party by taking the first step together with the deputies chosen by our nation. These are the determined steps of a march toward governing Türkiye.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "selahattin-demirtas",
+    "name": "Selahattin Demirtaş",
+    "role": "HDP co-chair (2014–2018); presidential candidate; imprisoned since November 2016 — ECtHR orders release ignored",
+    "avatar": "kurds",
+    "initial": "D",
+    "quote": "We will not make you president. (to Erdoğan, in the 2014 presidential campaign)",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "ekrem-imamoglu",
+    "name": "Ekrem İmamoğlu",
+    "role": "Istanbul Mayor (2019–2025, suspended); CHP 2028 presidential candidate; on trial since March 2026 with 412 co-defendants on corruption charges; faces 2,430+ years if convicted",
+    "avatar": "chp",
+    "initial": "İ",
+    "quote": "They are trying to destroy the will of the people of Istanbul. But our struggle for justice does not end behind bars.",
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
+  },
+  {
+    "id": "devlet-bahceli",
+    "name": "Devlet Bahçeli",
+    "role": "MHP leader (1997–present); Erdoğan coalition partner; architect of 'People's Alliance'; May 2026 proposed 'peace coordinator' title for Öcalan to advance Kurdish political process",
+    "avatar": "akp",
+    "initial": "B",
+    "quote": "The next stage of the peace initiative requires political and legal steps — Öcalan's status can no longer be ignored.",
+    "lastUpdated": "2026-05-16T14:00:00.000Z"
+  },
+  {
+    "id": "ahmet-davutoglu",
+    "name": "Ahmet Davutoğlu",
+    "role": "PM (2014–2016); 'Strategic Depth' foreign policy architect; AKP founder turned opposition (Gelecek Party)",
+    "avatar": "chp",
+    "initial": "D",
+    "quote": "Turkey is the natural center of gravity of the Middle East, Balkans, and Caucasus.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "mansur-yavas",
+    "name": "Mansur Yavaş",
+    "role": "Ankara Mayor (2019–present); CHP; ranked among Turkey's most popular politicians; potential 2028 presidential candidate",
+    "avatar": "chp",
+    "initial": "Y",
+    "quote": "We govern for all Ankara residents, not for a political party.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "bulent-ecevit",
+    "name": "Bülent Ecevit",
+    "role": "PM multiple times (1970s–1999–2002); ordered Cyprus intervention 1974; social-democratic CHP faction leader",
+    "avatar": "chp",
+    "initial": "E",
+    "quote": "The Cyprus operation was not a war but a peace mission.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "abdulhamid-ii",
+    "name": "Abdülhamid II",
+    "role": "34th Ottoman Sultan (r. 1876–1909); suspended constitution, ruled autocratically; deposed by Young Turks in 1909",
+    "avatar": "military",
+    "initial": "A",
+    "quote": "I have no intention of abdicating. Fate has willed that I should govern this empire, and govern it I will.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "enver-pasha",
+    "name": "Enver Pasha (İsmail Enver)",
+    "role": "Ottoman War Minister 1914–1918; CUP triumvirate leader; architect of WWI alliance with Germany; died fighting Red Army in Central Asia 1922",
+    "avatar": "military",
+    "initial": "E",
+    "quote": "We shall reverse the defeats of the past century and build a great Turkic empire from Istanbul to Samarkand.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "meral-aksener",
+    "name": "Meral Akşener",
+    "role": "İYİ (Good) Party founder and leader (2017–present); former MHP; led opposition Table of Six coalition in 2023 elections",
+    "avatar": "chp",
+    "initial": "A",
+    "quote": "Turkey needs a strong leader who can say 'no' to Erdoğan's one-man rule and restore parliamentary democracy.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "hakan-fidan",
+    "name": "Hakan Fidan",
+    "role": "Turkish Foreign Minister (2023–present); former MIT intelligence chief (2010–2023); key Erdoğan ally and back-channel diplomat",
+    "avatar": "akp",
+    "initial": "F",
+    "quote": "Turkish foreign policy serves Turkey's strategic interests and those of regional stability — not any external power's agenda.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  },
+  {
+    "id": "ali-babacan",
+    "name": "Ali Babacan",
+    "role": "AKP co-founder; Economy and Finance Minister (2002–2015); DEVA Party founder (2020); pro-reform liberal opposition",
+    "avatar": "chp",
+    "initial": "B",
+    "quote": "Turkey deserves a rule-of-law democracy with an independent central bank, a free press, and an independent judiciary.",
+    "lastUpdated": "2026-04-25T00:00:00.000Z"
+  }
+]

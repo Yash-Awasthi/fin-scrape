@@ -1,0 +1,58 @@
+[
+  {
+    "id": "un-experts-condemn-shelter-attacks-west-bank-displacement-apr13-2026",
+    "year": "Apr 13, 2026",
+    "title": "UN Experts Condemn Israeli Attacks on Gaza Shelters and West Bank Forced Displacement",
+    "type": "diplomacy",
+    "detail": "UN human rights experts issued a condemnation of Israeli attacks targeting civilian shelters in Gaza and forced displacement operations in the West Bank, calling for international accountability measures. The experts urged member states to take concrete steps to hold perpetrators responsible and ensure protection of civilians under international humanitarian law.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/13/un-experts-slam-attacks-on-gaza-shelters-forced-displacement-in-west-bank",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/4/13/un-experts-slam-attacks-on-gaza-shelters-forced-displacement-in-west-bank",
+        "caption": "Displaced Palestinians amid rubble in Gaza as UN experts call for accountability",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/AA-20260412-41090943-41090928-DAILY_LIFE_FOR_DISPLACED_PALESTINIANS_AMONG_RUBBLES_OF_THE_ISLAMIC_UNIVERSITY_IN_GAZA____-1-1776109637.jpg?resize=1920%2C1440"
+      }
+    ]
+  },
+  {
+    "id": "idf-kills-hamas-mastermind-apr13-2026",
+    "year": "Apr 13, 2026",
+    "title": "IDF Kills Senior Hamas Operative Behind Deadliest Single Attack on Israeli Troops",
+    "type": "strike",
+    "detail": "The IDF announced it killed a senior Hamas operative identified as the mastermind behind the deadliest single attack on Israeli troops during the Gaza war, in a targeted strike. The operative was responsible for planning and executing an assault that caused more Israeli military casualties in a single incident than any other engagement of the conflict.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPMjVoS2ZFSTdpNDBsOWdMeUdaeUQtOWJlaGJmTWJZTjFBdUFQUE1SQlpuaU9tS3lQN2RSYWk0TDdXMkZuUzJjeUozUFdJSUZJcW9pTHJuWG5UdjNkWjdKMlBfRWd4ZWRIUkt4U1VlaHVuM0RVOWM2NjlzanJBa3VFV1BnLWRyeGdLRHlKRmJ2RmhodXRGakI1c1A3cExDemcwVl9LbThDZlppM3NhTU9pUjlEenN6NEtERjFQNGpCUk9aXzEtdHJJMjBDbw",
+        "pole": "western"
+      }
+    ],
+    "media": []
+  },
+  {
+    "id": "israel-strike-3-killed-ceasefire-talks-resume-apr13-2026",
+    "year": "Apr 13, 2026",
+    "title": "Israeli Strike Kills 3 Palestinians as Indirect Ceasefire Talks Resume",
+    "type": "strike",
+    "detail": "At least 3 Palestinians were killed in an Israeli strike on Gaza as indirect ceasefire mediation efforts resumed. Despite continued Israeli military operations, the mediation track — involving Qatar, Egypt, and the US — returned to active negotiations, with mediators working to bridge remaining gaps between Israel and Hamas on a potential deal.",
+    "sources": [
+      {
+        "name": "Google News",
+        "tier": 2,
+        "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWU1IMDNlc3ptLTNRb3JNcDNKV2d4T2dQbC0xUi1Yb2FPSFFMNUNPM1hsY1FtTkNRdnZmRUpPVWFwN0ZWYmlhSC13bjNPdFo4Qks5WDZKTHlEQWJXVlVaMXJYSGxTaXR4QzRHV3JXZEp6Z3pJYVVpcEdDbldsU0xENVZLUGNGM0hMOW90VXlKaw",
+        "pole": "western"
+      }
+    ],
+    "media": []
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "lastRun": "2026-08-25T14:57:49.343Z",
+  "tracker": "argentina",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-08-18T14:42:51Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 52,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 34,
+      "lastRun": "2026-06-07T14:40:00Z",
+      "status": "ok"
+    },
+    "casualties": {
+      "count": 8,
+      "status": "ok"
+    },
+    "econ": {
+      "count": 10,
+      "lastRun": "2026-08-18T14:42:51Z",
+      "status": "updated"
+    },
+    "claims": {
+      "count": 26,
+      "status": "ok"
+    },
+    "political": {
+      "count": 30,
+      "status": "ok"
+    },
+    "events": {
+      "lastRun": "2026-08-18T14:42:51Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-18T14:42:51Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-07T14:40:00Z",
+      "status": "ok"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Merriweather+Sans:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canairy-yellow: #FFE066;
+    --canairy-yellow-light: #FFF3C4;
+    --canairy-yellow-dark: #F9C74F;
+    --canairy-teal: #5EC6C7;
+    --canairy-teal-light: #A8DADC;
+    --canairy-teal-dark: #457B9D;
+    --canairy-neutral: #F7F8FA;
+    --canairy-neutral-dark: #E9ECEF;
+    --canairy-charcoal: #222831;
+    --canairy-charcoal-light: #495057;
+    --canairy-green: #6BCB77;
+    --canairy-amber: #FFD166;
+    --canairy-red: #FF6B6B;
+  }
+
+  * {
+    border-color: theme('colors.canairy.neutral-dark');
+  }
+
+  body {
+    @apply bg-canairy-neutral text-canairy-charcoal antialiased font-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-canairy-yellow text-canairy-charcoal;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-canairy-neutral-dark rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-canairy-yellow rounded-full hover:bg-canairy-yellow-dark;
+  }
+}
+
+@layer components {
+  /* Canairy Card Styles */
+  .card-canairy {
+    @apply bg-white border border-canairy-neutral-dark rounded-2xl p-6 transition-all duration-300 shadow-sm hover:shadow-nest;
+  }
+
+  .nest-egg {
+    @apply bg-gradient-to-br from-canairy-yellow-light to-white border-2 border-canairy-yellow rounded-egg p-6 transition-all duration-300 hover:scale-105 hover:shadow-nest cursor-pointer;
+  }
+
+  /* Canairy Buttons */
+  .btn-canairy {
+    @apply px-6 py-3 rounded-full font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-primary-canairy {
+    @apply bg-canairy-yellow text-canairy-charcoal hover:bg-canairy-yellow-dark hover:shadow-feather active:scale-95;
+  }
+
+  .btn-secondary-canairy {
+    @apply bg-canairy-teal text-white hover:bg-canairy-teal-dark hover:shadow-feather;
+  }
+
+  .btn-nest {
+    @apply bg-gradient-to-r from-canairy-yellow to-canairy-yellow-dark text-canairy-charcoal hover:shadow-nest;
+  }
+
+  /* Status Badges */
+  .badge-safe {
+    @apply bg-canairy-green/20 text-canairy-green border border-canairy-green/30 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-caution {
+    @apply bg-canairy-amber/20 text-canairy-charcoal border border-canairy-amber/30 px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-alert {
+    @apply bg-canairy-red/20 text-canairy-red border border-canairy-red/30 px-3 py-1 rounded-full text-sm font-medium animate-wiggle;
+  }
+
+  /* Family-friendly input */
+  .input-canairy {
+    @apply bg-white border-2 border-canairy-neutral-dark rounded-xl px-4 py-3 text-canairy-charcoal placeholder-canairy-charcoal-light focus:outline-none focus:ring-2 focus:ring-canairy-yellow focus:border-transparent transition-all duration-200;
+  }
+
+  /* Tooltip with friendly styling */
+  .tooltip-canairy {
+    @apply absolute z-50 px-3 py-2 text-sm font-medium text-canairy-charcoal bg-canairy-yellow-light rounded-lg shadow-nest pointer-events-none;
+  }
+
+  /* Sidebar nest styling */
+  .sidebar-nest {
+    @apply bg-gradient-to-b from-canairy-yellow-light/30 to-white border-r-2 border-canairy-yellow/20;
+  }
+
+  /* Header sunshine gradient */
+  .header-sunshine {
+    @apply bg-gradient-to-r from-canairy-yellow-light via-canairy-yellow to-canairy-yellow-dark;
+  }
+
+  /* Family checklist items */
+  .checklist-item {
+    @apply flex items-center gap-3 p-3 rounded-lg hover:bg-canairy-yellow-light/30 transition-colors duration-200;
+  }
+
+  .checklist-checkbox {
+    @apply w-5 h-5 rounded-full border-2 border-canairy-teal checked:bg-canairy-green checked:border-canairy-green transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  /* Canairy animations */
+  .canairy-glow {
+    @apply shadow-lg shadow-canairy-yellow/25;
+  }
+
+  .text-gradient-sunshine {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-canairy-yellow-dark to-canairy-yellow;
+  }
+
+  .feather-pattern {
+    background-image: 
+      radial-gradient(ellipse at top, rgba(255, 224, 102, 0.1), transparent),
+      radial-gradient(ellipse at bottom, rgba(94, 198, 199, 0.1), transparent);
+  }
+
+  /* Friendly transitions */
+  .transition-bounce {
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Accessibility helpers */
+  .focus-canairy {
+    @apply focus:outline-none focus:ring-4 focus:ring-canairy-yellow/50 focus:ring-offset-2;
+  }
+
+  /* Print styles for fridge sheet */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    .print-friendly {
+      @apply text-black bg-white;
+    }
+  }
+}

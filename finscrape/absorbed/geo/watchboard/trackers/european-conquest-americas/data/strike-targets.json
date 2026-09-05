@@ -1,0 +1,92 @@
+[
+  {
+    "id": "tenochtitlan-conquest",
+    "name": "Conquest of Tenochtitlan (1519–1521)",
+    "detail": "75-day siege ending August 13, 1521. Cortés deployed 13 brigantines on Lake Texcoco and allied with 200,000+ indigenous warriors, systematically demolishing the city. Emperor Cuauhtémoc captured attempting to flee by boat. The destruction of Tenochtitlan was total.",
+    "icon": "target",
+    "time": "1521-08-13",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cajamarca-ambush",
+    "name": "Ambush at Cajamarca — Atahualpa Captured (1532)",
+    "detail": "168 Spaniards ambushed Atahualpa's court of 5,000–8,000 unarmed attendants on November 16, 1532. Cannon and cavalry charged into the plaza; the Inca emperor was captured without the loss of a single Spanish soldier, delivering the decisive blow against the Inca empire.",
+    "icon": "target",
+    "time": "1532-11-16",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cholula-massacre",
+    "name": "Cholula Massacre — Cortés Eliminates Resistance (Oct 1519)",
+    "detail": "Cortés and Tlaxcalan allies massacred 3,000–6,000 Cholulan nobles gathered in the main plaza, allegedly pre-empting a planned ambush. The mass killing terrorized central Mexico and paved the way for the march to Tenochtitlan. Whether the conspiracy was real or fabricated remains debated.",
+    "icon": "target",
+    "time": "1519-10-18",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cusco-occupation",
+    "name": "Seizure of Cusco — Inca Capital Occupied (Nov 1533)",
+    "detail": "Pizarro's forces entered Cusco, the sacred capital of Tawantinsuyu, in November 1533 with puppet emperor Manco Inca. Spanish systematically looted the Temple of the Sun (Qorikancha), stripping gold and silver from walls and melting down priceless Inca artworks to bullion.",
+    "icon": "target",
+    "time": "1533-11-15",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cuba-conquest",
+    "name": "Conquest of Cuba under Velázquez (1511–1515)",
+    "detail": "Diego Velázquez conquered Cuba 1511–1515, overcoming Taíno resistance led by Chief Hatuey (burned at stake Feb 1512). Cuba became the staging base for all subsequent mainland expeditions, including Cortés's 1519 venture. The Taíno population collapsed almost immediately.",
+    "icon": "target",
+    "time": "1511-01-01",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "guatemala-conquest",
+    "name": "Alvarado Conquers Guatemala (1524–1527)",
+    "detail": "Pedro de Alvarado subjugated the Quiché, Kaqchikel, and Tzutujil Maya in brutal campaigns 1524–1527, founding Santiago de Guatemala on July 25, 1524. The Kaqchikel initially allied with Alvarado but revolted when he demanded impossible tribute. Indigenous highland Guatemala population fell by 80–90% in the first century.",
+    "icon": "target",
+    "time": "1524-07-25",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "vilcabamba-final-conquest",
+    "name": "Conquest of Vilcabamba — End of Inca Resistance (1572)",
+    "detail": "Viceroy Francisco de Toledo invaded the last Inca stronghold in remote Vilcabamba jungle (June 1572). Sapa Inca Tupac Amaru I was captured, tried, and publicly beheaded in Cusco's main plaza on September 24, 1572, before thousands of weeping Andean witnesses. 35 years of resistance ended.",
+    "icon": "target",
+    "time": "1572-09-24",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tayasal-last-maya",
+    "name": "Conquest of Tayasal — Last Independent Maya State (1697)",
+    "detail": "Spain conquered the Itza Maya of Tayasal (Lake Petén Itzá, Guatemala) on March 13, 1697 — 205 years after Columbus's first voyage. This was the last conquest of an independent indigenous state in Mesoamerica. The Itza had rebuffed or evaded Spanish contact for two centuries.",
+    "icon": "target",
+    "time": "1697-03-13",
+    "tier": 2,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "destruction-maya-books",
+    "name": "Landa Burns Maya Books at Mani (1562)",
+    "detail": "Bishop Diego de Landa burned approximately 27 Maya codices (books) and 5,000 ritual objects at Mani, Yucatán in July 1562 — an act of cultural destruction that eliminated irreplaceable written knowledge. Only three pre-Columbian Maya codices survive today. Landa himself later wrote the most important source on Maya culture.",
+    "icon": "target",
+    "time": "1562-07-12",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "execution-atahualpa",
+    "name": "Execution of Atahualpa Despite Ransom (Aug 29, 1533)",
+    "detail": "Francisco Pizarro had Atahualpa garrotted after accepting the full ransom — the largest in history. The execution was condemned by many Spanish contemporaries and later by Emperor Charles V as illegal and unjust. It represents the decisive moment when Spain's stated legal obligations in conquest were openly violated.",
+    "icon": "target",
+    "time": "1533-08-29",
+    "tier": 1,
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

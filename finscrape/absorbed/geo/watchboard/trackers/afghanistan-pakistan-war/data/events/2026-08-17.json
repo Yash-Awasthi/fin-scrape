@@ -1,0 +1,99 @@
+[
+  {
+    "id": "bannu-sorani-constable-killed-aug17-2026",
+    "date": "2026-08-17",
+    "year": "2026",
+    "title": "Constable Shot Dead by Unidentified Gunmen in Bannu's Sorani Area",
+    "type": "attack",
+    "detail": "Constable Saifullah Khan, a resident of Sorani, was returning home after finishing his shift at the Mirzabet Shah Surani Township police post when unidentified armed men opened fire on him as he entered his village. He sustained multiple bullet wounds and died at the scene. Police described the killing as an act of terrorism, tightened security in the area, and launched a search operation for the attackers.",
+    "sources": [
+      {
+        "name": "The Nation — Policeman martyred in Bannu attack",
+        "tier": 2,
+        "url": "https://www.nation.com.pk/17-Aug-2026/policeman-martyred-bannu-attack",
+        "pole": "eastern"
+      }
+    ],
+    "confidence": "medium",
+    "confidenceReason": "Single-sourced at time of writing; awaiting corroboration from a second outlet.",
+    "lastUpdated": "2026-08-18T14:43:33.000Z",
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.nation.com.pk/17-Aug-2026/policeman-martyred-bannu-attack",
+        "caption": "Constable Saifullah Khan shot dead by unidentified gunmen in Bannu's Sorani area.",
+        "source": "The Nation",
+        "thumbnail": "https://www.nation.com.pk/17-Aug-2026/policeman-martyred-bannu-attack"
+      }
+    ]
+  },
+  {
+    "id": "karachi-ttp-financier-arrest-aug17-2026",
+    "date": "2026-08-17",
+    "year": "2026",
+    "title": "Rangers, CTD Arrest TTP-Linked Financier in Karachi with Waziristan Ties",
+    "type": "military",
+    "detail": "Pakistan Rangers (Sindh) and the Counter Terrorism Department arrested Shahzad, alias 'Dunger,' in a joint operation in Jacob Lines, Jamshed Town, Karachi. Authorities said he joined the Mansoor faction of TTP in 2025 and was tasked with raising funds for the group in Karachi, collecting monthly contributions from Manghopir residents and transferring the money to Waziristan via Easypaisa accounts managed by an associate in Tank. He reportedly made multiple trips to Waziristan for meetings, including one with faction leader Mansoor in Birmal — an Afghan border area — in June 2026, where he was instructed to expand the network for terrorism and extortion in Karachi and allegedly received weapons and explosives for planned attacks on sensitive locations.",
+    "sources": [
+      {
+        "name": "The Nation — Rangers, CTD arrest TTP-linked terrorist in Karachi",
+        "tier": 2,
+        "url": "https://www.nation.com.pk/17-Aug-2026/rangers-ctd-arrest-ttp-linked-terrorist-karachi",
+        "pole": "eastern"
+      }
+    ],
+    "confidence": "medium",
+    "confidenceReason": "Single-sourced at time of writing; official claims from security agencies not independently verified.",
+    "lastUpdated": "2026-08-18T14:43:33.000Z",
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.nation.com.pk/17-Aug-2026/rangers-ctd-arrest-ttp-linked-terrorist-karachi",
+        "caption": "Rangers and CTD arrest a TTP-linked financier in Karachi with ties to Waziristan-based faction leadership.",
+        "source": "The Nation",
+        "thumbnail": "https://www.nation.com.pk/17-Aug-2026/rangers-ctd-arrest-ttp-linked-terrorist-karachi"
+      }
+    ]
+  },
+  {
+    "id": "kabul-dasht-e-barchi-school-grenade-blast-aug17-2026",
+    "date": "2026-08-17",
+    "year": "2026",
+    "title": "Grenade Blast Near Private School in Kabul's Dasht-e-Barchi Injures 52+",
+    "type": "attack",
+    "detail": "An explosion, caused by a hand grenade, struck near the Sham-e Hedayat private school in the Mahdia neighborhood of Kabul's Dasht-e-Barchi district — a predominantly Hazara Shia area — around 4:30pm local time, injuring more than 52 people, mostly students. Taliban police spokesperson Khalid Zadran confirmed the blast was caused by a hand grenade; witnesses said the device exploded while in the possession of a school student, who was among the wounded. No group has claimed responsibility, and Taliban authorities have not determined whether the detonation was accidental or deliberate. Dasht-e-Barchi has repeatedly been targeted by ISIS-K in past attacks on schools and mosques, though no such link has been confirmed here. Taliban authorities later detained four people, including the school principal, a teacher, and the father of two students, for questioning.",
+    "sources": [
+      {
+        "name": "Al Jazeera — Explosion reported at school in Afghan capital Kabul",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/8/17/explosion-reported-at-school-in-afghan-capital-kabul",
+        "pole": "international"
+      },
+      {
+        "name": "Aaj English TV — Students among 52 injured in grenade blast near Kabul school",
+        "tier": 2,
+        "url": "https://english.aaj.tv/news/330468325/students-among-52-injured-in-grenade-blast-near-kabul-school",
+        "pole": "eastern"
+      },
+      {
+        "name": "Khaama Press — Over 52 Injured in Grenade Blast Near School in Kabul",
+        "tier": 2,
+        "url": "https://www.khaama.com/over-52-injured-in-grenade-blast-near-school-in-kabul/",
+        "pole": "eastern"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "disputed",
+    "confidenceReason": "Cause of detonation (accidental vs. deliberate attack) remains undetermined by Taliban authorities; no group has claimed responsibility.",
+    "lastUpdated": "2026-08-20T00:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/8/17/explosion-reported-at-school-in-afghan-capital-kabul",
+        "caption": "A grenade blast near the Sham-e Hedayat school in Kabul's Dasht-e-Barchi district injured more than 52 people, mostly students.",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/08/reuters_6a833d44-1786985796.jpg"
+      }
+    ]
+  }
+]

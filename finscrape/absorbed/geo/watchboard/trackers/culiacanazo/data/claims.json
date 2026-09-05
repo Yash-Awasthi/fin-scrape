@@ -1,0 +1,226 @@
+[
+  {
+    "id": "was-2019-raid-planned",
+    "question": "Was the October 2019 operation a planned extradition arrest or a routine patrol?",
+    "sideA": {
+      "label": "Government (Initial)",
+      "text": "Security Secretary Alfonso Durazo initially claimed the military convoy in Tres Ríos was conducting a 'routine patrol' that came under cartel fire, and only then discovered Ovidio inside the compound. No arrest warrant was mentioned."
+    },
+    "sideB": {
+      "label": "Established Record",
+      "text": "SEDENA Secretary Luis Cresencio Sandoval acknowledged on October 18, 2019, that the convoy was executing a pre-planned extradition arrest warrant issued in connection with a U.S. extradition request. Foreign Affairs Secretary Marcelo Ebrard confirmed the operation was conducted at the request of the United States."
+    },
+    "resolution": "Resolved: Government admitted deception within 24 hours. The October 17 operation was a planned extradition attempt, not a routine patrol.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "who-ordered-release-2019",
+    "question": "Who made the decision to release Ovidio Guzmán López in October 2019?",
+    "sideA": {
+      "label": "AMLO (Initial)",
+      "text": "President López Obrador initially deflected personal responsibility for the release, attributing it to the 'Security Cabinet' acting collectively to preserve civilian lives and prevent mass bloodshed in Culiacán."
+    },
+    "sideB": {
+      "label": "Established Record / AMLO (Later)",
+      "text": "AMLO subsequently acknowledged publicly and repeatedly that he personally gave the order to release Ovidio. He defended it as consistent with his 'hugs not bullets' (abrazos no balazos) security doctrine, arguing no arrest was worth civilian lives."
+    },
+    "resolution": "Resolved: AMLO personally ordered the release, as he later confirmed. The initial deflection to the 'Security Cabinet' was characterized by critics as an attempt to diffuse political responsibility.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "death-toll-2019",
+    "question": "How many people were killed during the October 2019 Culiacanazo?",
+    "sideA": {
+      "label": "Official Government Figure",
+      "text": "SSPC officially reported 8 dead (including 1 civilian), 16 wounded, and 68 military vehicles damaged across 14 armed confrontations. Operational records were sealed and full details remained classified for five years."
+    },
+    "sideB": {
+      "label": "Local Authorities / Witnesses",
+      "text": "Local Culiacán officials cited at least 15 dead, including 3 civilians in the Tres Ríos neighborhood alone. Witness accounts described 'dozens of bodies' on streets and in vehicles. Journalists reported multiple civilian casualties not reflected in official tallies."
+    },
+    "resolution": "Disputed: Official figures are 8 dead; independent and local accounts suggest 13–15+ dead. Sealed records prevent definitive resolution.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "was-release-lawful",
+    "question": "Was the release of Ovidio Guzmán López legally justified under Mexican and international law?",
+    "sideA": {
+      "label": "Government / Legal Scholars (Pro-Release)",
+      "text": "The government lacked a Mexican search warrant; only a U.S.-requested provisional extradition warrant existed, which some legal scholars argued was insufficient for a warrantless raid. Moreover, Article 29 of Mexico's Constitution permits extraordinary measures to protect public order. The doctrine of proportionality — weighing one arrest against potential mass civilian casualties — provided a legal basis."
+    },
+    "sideB": {
+      "label": "Critics / Prosecutors",
+      "text": "The Fiscalía General de la República and numerous legal experts argued Mexico had a binding international obligation under the U.S.-Mexico extradition treaty. Releasing a detained individual under armed pressure was capitulation to terrorism, not a legally sanctioned action. The government's subsequent inability to charge cartel members for the hostage-taking reinforced the view that the release was extralegal."
+    },
+    "resolution": "Contested: No formal legal ruling has been issued on the release itself. Critics view it as unlawful surrender to criminal pressure; the government maintains it was a proportionate decision.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "abrazos-no-balazos-effectiveness",
+    "question": "Did AMLO's 'hugs not bullets' security doctrine reduce violence or enable cartel power?",
+    "sideA": {
+      "label": "AMLO / Morena Government",
+      "text": "The Culiacanazo showed what happens when confrontational security strategies are poorly planned and executed. AMLO argued that targeted arrests without social development, poverty reduction, and institutional reform would never defeat organized crime. The 2023 operation — more carefully planned and with broader state support — demonstrated that proportionate, prepared operations could succeed."
+    },
+    "sideB": {
+      "label": "Opposition / Security Analysts",
+      "text": "The Culiacanazo became the defining symbol of cartel impunity enabled by 'abrazos no balazos.' Releasing Ovidio at gunpoint emboldened the Sinaloa Cartel and other criminal organizations. Mexico's homicide rate remained near record highs throughout AMLO's term. InSight Crime documented a significant increase in cartel territorial control during 2019–2023."
+    },
+    "resolution": "Contested: Analysts remain divided. The 2023 Operation Ovidio partially rehabilitated the government's security record; the broader debate over AMLO's security approach continues.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "army-planning-failure-2019",
+    "question": "Was the 2019 Culiacanazo a failure of military planning, political leadership, or both?",
+    "sideA": {
+      "label": "SEDENA / Military",
+      "text": "SEDENA Secretary Sandoval acknowledged operational failures: 'hasty planning, inadequate risk assessment' and failure to protect soldiers' families from cartel reprisals. He attributed the disaster to intelligence gaps about cartel mobilization capacity. The military later used the 2019 failure as institutional motivation for the far more successful 2023 operation."
+    },
+    "sideB": {
+      "label": "Political Critics",
+      "text": "Critics argued AMLO's security policy systematically weakened the military's willingness to engage cartels, meaning frontline soldiers knew any risky operation would be abandoned by political leadership. The lack of a plan for cartel retaliation — including protection of soldiers' families — reflected not just military planning failures but deliberate political aversion to confronting cartels."
+    },
+    "resolution": "Acknowledged as both: SEDENA admitted operational failures; AMLO's political decision to release Ovidio is widely viewed as compounding a military planning disaster.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "cartel-weapons-us-origin",
+    "question": "Did the majority of weapons used by the cartel originate in the United States?",
+    "sideA": {
+      "label": "Mexican Government / Ebrard",
+      "text": "Foreign Affairs Secretary Marcelo Ebrard stated that 63% of weapons seized during the January 2023 Operation Ovidio originated in the United States, citing ATF gun tracing data. The Mexican government used this to support its lawsuit against U.S. gun manufacturers and its demands for U.S. action on firearms trafficking."
+    },
+    "sideB": {
+      "label": "U.S. Gun Industry / Critics of Methodology",
+      "text": "NRA and gun industry representatives disputed the methodology, arguing that only firearms submitted for tracing (a self-selected sample) were counted, not the full universe of cartel weapons. Critics noted that many cartel weapons came from military diversion, Central American stockpiles, and international black markets rather than U.S. retail gun shops."
+    },
+    "resolution": "Contested: The ATF tracing methodology has known limitations. Broad consensus among law enforcement agrees significant U.S.-origin weapons flow to Mexican cartels, but exact percentages are disputed.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "el-mayo-kidnapping",
+    "question": "Was Ismael 'El Mayo' Zambada kidnapped against his will in July 2024, or did he turn himself in?",
+    "sideA": {
+      "label": "El Mayo / His Attorneys",
+      "text": "El Mayo's attorneys stated he was lured to a meeting in Culiacán under false pretenses by Joaquín Guzmán López, then seized by armed men in military uniforms, drugged and sedated, hooded, zip-tied, and flown across the border to El Paso against his will. He had no knowledge he was being taken to the United States."
+    },
+    "sideB": {
+      "label": "U.S. Officials / Chapitos Perspective",
+      "text": "U.S. Ambassador Ken Salazar confirmed Zambada was taken 'forcibly' while Joaquín Guzmán López surrendered voluntarily at the El Paso airfield. Joaquín's defense attorneys did not challenge the core account but denied any kidnapping. U.S. authorities declined to characterize it as kidnapping in formal filings, treating it as a lawful arrest regardless of the circumstances of his delivery."
+    },
+    "resolution": "Partially confirmed: U.S. and Mexican officials acknowledged forcible delivery, with Joaquín Guzmán López voluntarily surrendering. Whether this constitutes kidnapping under international law is contested.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "soldiers-families-hostage-response",
+    "question": "Did the cartel's hostage-taking of soldiers' families directly cause the military to stand down in 2019?",
+    "sideA": {
+      "label": "Critics / Military Analysts",
+      "text": "The seizure of soldiers' families at the 9th Military Zone housing unit was specifically designed to paralyze the military's combat effectiveness. Multiple analysts and veterans argued that the targeting of military dependents was the decisive factor that made armed resistance psychologically impossible for deployed soldiers, and directly contributed to the release order."
+    },
+    "sideB": {
+      "label": "Government Position",
+      "text": "The official government position was that the release decision was based on a holistic assessment of civilian casualties across the city — not specifically the hostage situation at the barracks. AMLO's statements emphasized civilian lives generally, not the hostages at the military compound specifically."
+    },
+    "resolution": "Contested: The hostage-taking was almost certainly a major tactical factor, but the government attributed the release to broader civilian safety concerns. Both likely contributed.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "ovidio-cooperating-witnesses",
+    "question": "Is Ovidio Guzmán López cooperating with U.S. authorities as an informant?",
+    "sideA": {
+      "label": "Reporting / Circumstantial Evidence",
+      "text": "Multiple reports suggested Ovidio entered a cooperation agreement with the U.S. Department of Justice, potentially entering the federal witness protection program. His July 2025 guilty plea, with only two counts of drug distribution instead of the full 9-count indictment, was unusual and consistent with a cooperation deal. No formal charges were filed against him for specific murders despite documented cartel violence under his command."
+    },
+    "sideB": {
+      "label": "Official U.S. Filings",
+      "text": "The DOJ did not officially characterize Ovidio's plea as a cooperation agreement. Defense attorneys did not confirm protected witness status. Some analysts argued the streamlined plea simply reflected Ovidio's limited operational role compared to his brothers or El Mayo, and that the DOJ prioritized prosecuting higher-value targets."
+    },
+    "resolution": "Unconfirmed: Strong circumstantial evidence of cooperation but no official confirmation from DOJ. Sentencing postponed to July 2026.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "real-death-toll-2023",
+    "question": "How many people were killed during the January 2023 Sinaloa unrest?",
+    "sideA": {
+      "label": "SEDENA Official Count",
+      "text": "SEDENA reported exactly 30 dead: 10 soldiers (including Colonel Moreno Orzua and his four escorts), 19 cartel gunmen, and 1 police officer. 35+ wounded and 21 arrested. This figure covers January 5–13, 2023."
+    },
+    "sideB": {
+      "label": "Independent Reports",
+      "text": "Some independent tallies cited 29 rather than 30, excluding or including different ancillary deaths across the state. Borderland Beat and other cartel monitoring outlets noted cartel gunmen deaths were likely undercounted as some were removed from scenes before official tallies. Civilian bystander casualties were not comprehensively tracked."
+    },
+    "resolution": "Official figure: 30 dead. Minor discrepancy between 29 and 30 depending on methodology. More significant uncertainty exists around uncounted civilian casualties.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "sinaloa-civil-war-trigger",
+    "question": "Did Joaquín Guzmán López intentionally betray El Mayo Zambada, or was his arrest coincidental?",
+    "sideA": {
+      "label": "El Mayo / La Mayiza",
+      "text": "El Mayo's attorneys and his son Mayito Flaco alleged that Joaquín Guzmán López deliberately orchestrated El Mayo's kidnapping to eliminate his faction's leadership and seize control of the Sinaloa Cartel. According to El Mayo, armed men in military uniforms acting under Joaquín's orders seized him. The July 2024 arrests thus constituted a calculated internal coup."
+    },
+    "sideB": {
+      "label": "Chapitos / Guzmán Family Lawyers",
+      "text": "Defense attorneys for Joaquín Guzmán López denied the kidnapping allegations. Some cartel watchers suggested Joaquín primarily sought his own reduced sentence by surrendering voluntarily, with El Mayo's presence being a consequence rather than the goal of a premeditated betrayal."
+    },
+    "resolution": "Heavily contested: El Mayo's detailed account is circumstantially supported by U.S. Ambassador Salazar's statements, but Joaquín's lawyers deny intentional betrayal. The Sinaloa civil war erupted as if the cartel believed it was deliberate.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "airport-closure-severity-2023",
+    "question": "How severe was the January 2023 attack on Culiacán's airport?",
+    "sideA": {
+      "label": "Mexican Government",
+      "text": "The government acknowledged the airport was temporarily closed after gunfire struck aircraft. SEDENA confirmed an Aeroméxico airliner and a military aircraft were hit. The incident was characterized as serious but contained; the airport reopened within hours of the security situation improving."
+    },
+    "sideB": {
+      "label": "Aviation / Industry Sources",
+      "text": "The attack was extraordinary in its scope: military aircraft in flight were engaged by .50 caliber rifle fire — an anti-materiel weapon capable of destroying aircraft. Two military helicopters were forced to land after taking 'significant impacts.' Aeroméxico cancelled or diverted flights across multiple Sinaloa and Sonora airports, indicating the threat was perceived as more sustained than official accounts implied."
+    },
+    "resolution": "Partially disputed: The attack was clearly severe by any civilian standards. The government characterized it as 'contained'; aviation industry response suggests the threat radius was significantly wider.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "mexico-state-capacity-culiacanazo",
+    "question": "Did the Culiacanazo reveal that the Mexican state cannot control cartel violence in Sinaloa?",
+    "sideA": {
+      "label": "Security Analysts / Opposition",
+      "text": "The 2019 Culiacanazo demonstrated that the Sinaloa Cartel could deploy organized military-grade force exceeding local state capacity, take hostages from military installations, block all highways in a state capital, and force the national government to release a wanted cartel leader within hours. This revealed systemic state weakness in Sinaloa that exceeded a single operational failure."
+    },
+    "sideB": {
+      "label": "Government / AMLO Defenders",
+      "text": "The 2023 Operation Ovidio demonstrated the opposite: with proper planning, intelligence, and political will, the state could successfully capture a major cartel leader and withstand the cartel's retaliation. The Culiacanazo was a failure of one operation, not of state capacity generally. Mexico's security forces ultimately prevailed in 2023."
+    },
+    "resolution": "Contested: Both events together suggest state capacity is situational — achievable with preparation but not reliable as a sustained reality. The 2024–2026 Sinaloa civil war's ~2,000 deaths shows ongoing state inability to contain cartel violence.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "chapitos-surrender-negotiations-2026",
+    "question": "Are Los Chapitos' reported DOJ surrender negotiations a sign of cartel collapse or a tactical negotiation?",
+    "sideA": {
+      "label": "Strategic Collapse",
+      "text": "The Los Angeles Times and multiple Mexican outlets reported in May 2026 that Iván Archivaldo and Jesús Alfredo Guzmán López were in preliminary surrender talks with the U.S. DOJ. Combined with Ovidio's 2023 extradition, Joaquín's 2024 surrender and December 2025 guilty plea, and La Mayiza's dominance of 90% of former Chapitos territory in Sinaloa, the negotiations suggest the Chapitos faction has been militarily and judicially cornered — with surrender representing an exit from an unwinnable civil war."
+    },
+    "sideB": {
+      "label": "Tactical Leverage Play",
+      "text": "Analyst voices cautioned that preliminary DOJ contacts are common and do not necessarily lead to surrender. The reported intelligence-sharing about Governor Rocha Moya could be a way to gain credit or disrupt rivals' political protection without committing to arrest. Moreover, the Chapitos have demonstrated adaptive resilience — forming a CJNG alliance and continuing operations despite severe territorial losses. Negotiations could be a tactical pause rather than genuine capitulation."
+    },
+    "resolution": "Unresolved (May 2026): Reports of negotiations are credible and corroborated across multiple outlets, but no formal surrender has occurred. Sentencing hearings for Ovidio and Joaquín scheduled July 27, 2026 may clarify cooperation terms and signal the negotiations' seriousness.",
+    "lastUpdated": "2026-05-16T00:00:00.000Z"
+  },
+  {
+    "id": "chapitos-extradition-impact",
+    "question": "Did the arrests and extraditions of Los Chapitos ultimately weaken or transform the Sinaloa Cartel?",
+    "sideA": {
+      "label": "U.S. DOJ / Mexican Government",
+      "text": "U.S. officials characterized the extraditions of Ovidio (2023) and Joaquín Guzmán López (2024), combined with El Mayo's arrest, as a severe blow to Sinaloa Cartel leadership that disrupted trafficking operations and should reduce fentanyl flows to the United States. AG Merrick Garland cited it as 'attacking every aspect of the cartel's operations.'"
+    },
+    "sideB": {
+      "label": "Cartel Analysts / InSight Crime",
+      "text": "Rather than weakening organized crime, the Chapitos' removal triggered a catastrophic internal war that killed ~2,000 people in Sinaloa in one year. The Chapitos faction allied with CJNG — historically a bitter rival — demonstrating adaptive resilience. SEDENA noted the Sinaloa Cartel lost 30 of 42 trafficking routes, but those routes were taken over by other groups, not eliminated."
+    },
+    "resolution": "Contested: The arrests disrupted the Sinaloa Cartel but did not reduce overall organized crime in Mexico. The civil war produced record violence and further fragmentation rather than criminal demobilization.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  }
+]

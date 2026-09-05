@@ -1,0 +1,93 @@
+[
+  {
+    "id": "wagner-africa-corps-mali",
+    "type": "Foreign Paramilitary",
+    "name": "Wagner Group / Africa Corps — Mali",
+    "detail": "Approximately 2,000–2,500 Russian paramilitaries (The Sentry, April 2026 estimate). Rebranded Wagner Group under Russian MoD/GRU command. Arrived December 2021; deployed across northern and central Mali. Associated with civilian atrocity incidents including Moura. APRIL 2026 CRISIS: Africa Corps failed across all primary objectives in a single week — failed to protect Defence Minister Camara, lost Kidal, Tessalit, and Labbezanga, lost one Mi-35 helicopter (crew killed), and withdrew from all Kidal Region bases to Anéfis. STATUS AS OF JUNE 7, 2026: Africa Corps escalated weapons deployment in June 2026 to include Lancet loitering munitions (first confirmed strike June 2, Nazarak, Tombouctou Region — direct hit on militant pickup truck, video released) and FPV (first-person view) kamikaze drones. However, JNIM and IS-Sahel insurgents are simultaneously conducting their own drone attacks on Africa Corps/FAMa positions in the Gao-Ménaka-Ansongo corridor (Military Africa, June 2026) — the aerial battle is now contested on both sides. Africa Corps BMP-3 armored vehicles continue road-clearance and convoy escort operations on northern highways. Aviation struck FLA logistics nodes in northern Mali on June 4 (Pravda Mali — single source, unconfirmed by Tier 1-2). Russia's MFA maintains commitment despite June 1 acknowledgment that 'new militant attacks cannot be ruled out.' Africa Corps' role is narrowing from direct assault to aerial interdiction, precision-strike, infrastructure clearance, and regime-protection functions. The FSB reportedly took over Wagner's intelligence functions in Africa (Africanews, February 2026). Confirmed presence: Bamako compound, Gao operational hub, Timbuktu airbase, Anéfis repositioning base.",
+    "lastUpdated": "2026-06-07T00:00:00Z"
+  },
+  {
+    "id": "africa-corps-burkina-faso",
+    "type": "Foreign Paramilitary",
+    "name": "Africa Corps — Burkina Faso",
+    "detail": "Russia's Africa Corps (formerly Wagner) expanded to Burkina Faso following the September 2022 coup. Several hundred personnel deployed as trainers and combat advisers. Arrival coincides with French forces' expulsion in January 2023. Africa Corps in Burkina Faso has been linked to civilian killings in multiple ACLED-documented incidents.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-serval",
+    "type": "Foreign Military (Historical)",
+    "name": "Operation Serval — France (2013–2014)",
+    "detail": "French counter-insurgency operation launched January 11, 2013 in response to jihadist advance on Bamako. Deployed up to 4,500 troops, Mirage and Rafale fighter jets, Tiger attack helicopters, and Reaper drones. Liberated all major northern Malian cities within 3 weeks. Ended July 15, 2014 having killed approximately 625 militants. Cost: approximately €650M. Replaced by Operation Barkhane.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-barkhane",
+    "type": "Foreign Military (Historical)",
+    "name": "Operation Barkhane — France (2014–2022)",
+    "detail": "France's permanent counter-terrorism mission across the G5 Sahel states, headquartered in N'Djamena, Chad, with major bases in Gao (Mali) and Niamey (Niger). Peak deployment: 5,500 troops across Mali, Burkina Faso, Niger, Chad, Mauritania. Annual cost: ~€1 billion. Terminated November 9, 2022 (Macron announcement); last forces left Mali August 15, 2022 and Niger by December 2023. Killed approximately 50 French soldiers over 8 years.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "minusma",
+    "type": "UN Peacekeeping (Historical)",
+    "name": "MINUSMA — United Nations (2013–2023)",
+    "detail": "UN Multidimensional Integrated Stabilization Mission in Mali, established by UNSC Resolution 2100 (April 25, 2013). Peak strength: ~15,000 troops and personnel from 56 nations; 12 camps across northern and central Mali. Annual budget: ~$1.2 billion (most expensive UN mission). Mandate terminated June 30, 2023 at Mali junta's demand; final withdrawal December 31, 2023. Total deaths: 304 (175 malicious act) — deadliest UN mission in history.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "eutm-mali",
+    "type": "EU Training Mission",
+    "name": "EUTM Mali — European Union",
+    "detail": "European Union Training Mission Mali, established January 2013 to train and advise the Malian Armed Forces (FAMa). Deployed approximately 600 EU personnel (from 27 EU member states). Suspended active training activities in 2022 after the Malian junta restricted its operational freedom following Wagner Group's arrival. Formally ended mission in Bamako May 2023; reoriented to other Sahel states.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "task-force-takuba",
+    "type": "Multinational Special Forces (Historical)",
+    "name": "Task Force Takuba — European SOF",
+    "detail": "European special operations task force established in 2020 under French leadership, providing direct combat support and mentoring to Malian forces alongside Barkhane. Deployed approximately 900 personnel from 14 European nations (Sweden, Czech Republic, Denmark, Netherlands, etc.). Suspended March 2022 after Mali expelled French and Swedish forces; officially dissolved May 2022.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "us-africom-niger",
+    "type": "Foreign Military (Departed)",
+    "name": "US AFRICOM — Niger (2013–2024)",
+    "detail": "US Africa Command maintained approximately 1,000 troops in Niger at Air Base 101 (Niamey) and Air Base 201 (Agadez), the latter a purpose-built $110M drone and intelligence facility. Operations included Reaper drone flights tracking ISGS and JNIM leadership. Following the July 2023 coup, Niger demanded US forces withdraw; the final withdrawal was completed in August 2024, ending the US military's largest Sahel counter-terrorism platform.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "french-forces-chad",
+    "type": "Foreign Military",
+    "name": "French Forces — Chad (N'Djamena)",
+    "detail": "France retains approximately 1,000 troops in Chad at the N'Djamena base, down from a peak Barkhane headquarters staff of 2,000+. Chad remains the sole AES-adjacent state maintaining French military cooperation. The N'Djamena facility hosts Mirage jets and logistics for remaining French regional operations in Côte d'Ivoire and Senegal. Chad-France relations have also shown strain since 2023.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "g5-sahel-joint-force",
+    "type": "Regional Force (Dissolved)",
+    "name": "G5 Sahel Joint Force (FC-G5S)",
+    "detail": "Regional counter-terrorism force established in 2017, combining troops from Mali, Burkina Faso, Niger, Chad, and Mauritania across three sectors (West, Center, East) covering ~6,000 km of border zone. Peak authorized strength: 5,000 troops. Chronically underfunded; repeatedly attacked by JNIM and ISGS. Effectively dissolved after Mali (2022), Burkina Faso (December 2023), and Niger (December 2023) withdrew, with Chad and Mauritania invoking dissolution articles.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "russian-advisers-niger",
+    "type": "Foreign Military",
+    "name": "Russian Military Advisers — Niger",
+    "detail": "Following the expulsion of US and French forces in 2023–2024, Niger signed a military cooperation agreement with Russia. Approximately 100 Russian military advisers and trainers arrived by early 2025 to support the Nigerien Armed Forces (FAN). Russia also agreed to supply arms including armored vehicles and helicopters. Niger has also engaged Iran for drone procurement alongside its Russia alignment.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "aes-unified-military-force",
+    "type": "Regional Force",
+    "name": "AES Unified Military Force (FU-AES)",
+    "detail": "Alliance of Sahel States joint military command inaugurated December 20, 2025 in Bamako, integrating air, land, and intelligence assets from Mali, Burkina Faso, and Niger. The first regular meeting of the Committee of Chiefs of Staff of the Confederation (CCEMC) in Ouagadougou on April 16–17, 2026 confirmed an expansion of the force from 5,000 to 15,000 troops, with plans for imminent large-scale joint counter-terrorism operations. Key structural advantages over the defunct G5 Sahel include: full operational authority (troops deployable without prior national general staff approval), cross-border freedom of action across all three member states, and domestic financing via three national solidarity funds — avoiding external-donor dependency. Backed by Russian arms agreements finalized April 2025, including combat aircraft, armored vehicles, and communications equipment. Funded independently of any Western framework.",
+    "lastUpdated": "2026-04-21T14:12:00Z"
+  },
+  {
+    "id": "africa-corps-russian-air-logistics-network",
+    "type": "Logistics Network",
+    "name": "Africa Corps Russian Air Bridge (Multi-Airline Network)",
+    "detail": "C4ADS flight-tracking analysis (Aug 12, 2026) documented at least 75 military/military-linked flights supplying Africa Corps bases in the Central Sahel between January 2025 and July 2026: 56 to Burkina Faso, 38 to Mali, 6 to Niger. State-owned operators include the sanctioned Flight Unit 224 (Russian Ministry of Defense), the Russian Special Flight Squadron, and the Ministry for Emergency Situations, typically refueling at Khmeimim (Syria) and Libyan sites (Al-Khadim). Private carriers — including Kyrgyzstan-registered Sapsan Airlines, unsanctioned by the US/EU/UK — more often transit UAE, Algeria, and Turkey. C4ADS describes the findings as preliminary.",
+    "lastUpdated": "2026-08-16T00:00:00.000Z"
+  }
+]

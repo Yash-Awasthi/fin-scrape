@@ -1,0 +1,242 @@
+[
+  {
+    "id": "days-to-kickoff",
+    "label": "Tournament Status",
+    "value": "Concluded",
+    "color": "green",
+    "source": "FIFA.com — Final played Jul 19, 2026 at MetLife Stadium",
+    "contested": false,
+    "deltaNote": "Spain won the 2026 FIFA World Cup, beating Argentina 1-0 in extra time (Ferran Torres, 106') at MetLife Stadium, July 19 — Spain's second title, first since 2010. England beat France 6-4 in the third-place playoff (Jul 18, Hard Rock Stadium, Miami), England's best finish since 1966.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "teams-competing",
+    "label": "Teams Competing",
+    "value": "48",
+    "color": "blue",
+    "source": "FIFA.com",
+    "contested": false,
+    "delta": "+16 from 2022",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "total-matches",
+    "label": "Total Matches",
+    "value": "104",
+    "color": "blue",
+    "source": "FIFA.com",
+    "contested": false,
+    "delta": "+40 from 2022",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "host-cities",
+    "label": "Host Cities",
+    "value": "16",
+    "color": "green",
+    "source": "FIFA.com",
+    "contested": false,
+    "deltaNote": "11 USA, 3 Mexico, 2 Canada",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "prize-money",
+    "label": "Total Financial Distribution",
+    "value": "$871M",
+    "color": "green",
+    "source": "FIFA Council Vancouver — approved Apr 29, 2026",
+    "contested": false,
+    "delta": "+$144M from original $727M",
+    "deltaNote": "Preparation fee raised to $2.5M/team; qualification bonus $10M/team. Approved at FIFA Council Apr 29.",
+    "trend": "up",
+    "lastUpdated": "2026-04-29T14:17:58.000Z"
+  },
+  {
+    "id": "projected-revenue",
+    "label": "FIFA Tournament Revenue",
+    "value": "$11B+",
+    "color": "green",
+    "source": "FIFA / NPR",
+    "contested": false,
+    "deltaNote": "FIFA confirmed tournament revenue exceeding $11B, pushing its full 2023–2026 commercial cycle past $15B — up from roughly $7.5B in the 2022 cycle. Days later, a separate FIFA plan to sell a 20% stake in a new commercial entity valued at $20B (targeting up to $4.2B, buyer led by Joshua Kushner's Thrive Eternal) was scrapped July 31 after UEFA and European federations threatened to boycott.",
+    "trend": "up",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "global-viewers",
+    "label": "Expected Global Viewers",
+    "value": "~6 Billion",
+    "color": "blue",
+    "source": "FIFA / EMW Global",
+    "contested": false,
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "intl-visitors",
+    "label": "Expected International Visitors",
+    "value": "5 Million",
+    "color": "green",
+    "source": "FIFA Socioeconomic Impact Analysis",
+    "contested": true,
+    "contestNote": "Economists including Andrew Zimbalist warn US travel bans on 39 countries and aggressive immigration enforcement will suppress visitor numbers and economic returns below FIFA projections",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "us-gdp-contribution",
+    "label": "US Direct GDP Contribution",
+    "value": "$17.2B",
+    "color": "green",
+    "source": "FIFA Socioeconomic Impact Analysis",
+    "contested": false,
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "tournament-days",
+    "label": "Tournament Duration",
+    "value": "39 Days",
+    "color": "blue",
+    "source": "FIFA.com",
+    "contested": false,
+    "deltaNote": "Jun 11 – Jul 19, 2026",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "groups",
+    "label": "Group Stage Groups",
+    "value": "12",
+    "color": "blue",
+    "source": "FIFA.com",
+    "contested": false,
+    "deltaNote": "4 teams per group; top 2 + 8 best 3rd-place advance",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "tv-rights-revenue",
+    "label": "TV Rights Revenue",
+    "value": "$3.92B",
+    "color": "green",
+    "source": "FIFA Publications",
+    "contested": false,
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "jobs-created",
+    "label": "US Jobs Created (FTE)",
+    "value": "184,679",
+    "color": "amber",
+    "source": "FIFA Socioeconomic Impact Analysis",
+    "contested": false,
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "ticket-requests",
+    "label": "Ticket Applications Received",
+    "value": "500M+",
+    "color": "amber",
+    "source": "FIFA / NPR / Al Jazeera",
+    "contested": false,
+    "deltaNote": "Initial application window Dec 11, 2025 – Jan 13, 2026; final prices draw widespread fan backlash",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "final-ticket-ceiling",
+    "label": "Final Ticket Top Price (Resale)",
+    "value": "$143,750",
+    "color": "red",
+    "source": "FIFA Official Resale Platform / Al Jazeera",
+    "contested": true,
+    "contestNote": "Face value top tier is $8,680; resale on FIFA's own platform reached $143,750 per seat — 41x face value. Fan groups and UEFA critic Henry Winter called tournament at risk of becoming 'Corporate Games'.",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "travel-ban-nations",
+    "label": "Countries Under US Travel Ban",
+    "value": "39",
+    "color": "red",
+    "source": "American Immigration Council / National Immigration Forum",
+    "contested": false,
+    "deltaNote": "Includes 4 qualified teams: Haiti, Iran, Senegal, Ivory Coast. B-2 tourist visas blocked for fans from all 39 nations.",
+    "trend": "up",
+    "lastUpdated": "2026-03-22T06:00:00.000Z"
+  },
+  {
+    "id": "intercontinental-playoffs",
+    "label": "Intercontinental Play-offs",
+    "value": "Complete",
+    "color": "green",
+    "source": "FIFA.com / ESPN",
+    "contested": false,
+    "deltaNote": "Iraq & DR Congo qualify — last 2 spots filled. Iraq beat Bolivia 2-1 → Group I (France, Senegal, Norway); DR Congo beat Jamaica 1-0 AET → Group K (Portugal, Colombia, Uzbekistan)",
+    "lastUpdated": "2026-04-02T00:00:00.000Z"
+  },
+  {
+    "id": "usmnt-last-result",
+    "label": "USMNT Last Result",
+    "value": "1-4 BEL (Eliminated, R16)",
+    "color": "red",
+    "source": "ESPN / NBCUniversal — Lumen Field, Seattle (Jul 6)",
+    "contested": false,
+    "deltaNote": "USA was eliminated in the Round of 16, losing 1-4 to Belgium at Lumen Field, Seattle (Jul 6). The match nonetheless drew a US-record 33.086M viewers on Fox, the most-watched soccer telecast in American television history. USA won Group D and beat Bosnia & Herzegovina 2-0 in the Round of 32 before the Belgium loss ended their run.",
+    "trend": "down",
+    "lastUpdated": "2026-07-16T18:24:40.000Z"
+  },
+  {
+    "id": "teams-remaining",
+    "label": "Champion",
+    "value": "Spain",
+    "color": "green",
+    "source": "FIFA.com / ESPN",
+    "contested": false,
+    "deltaNote": "Spain beat Argentina 1-0 in extra time (Ferran Torres, 106') to win its second World Cup. Rodri (Spain) won the Golden Ball; Kylian Mbappé (France) won the Golden Boot (10 goals) for a second straight World Cup; Unai Simón (Spain) won the Golden Glove; Pau Cubarsí (Spain) won Best Young Player.",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "record-us-tv-viewership",
+    "label": "Most-Watched Soccer Telecast in US History",
+    "value": "33.1M",
+    "color": "green",
+    "source": "Hollywood Reporter / NBCUniversal",
+    "contested": false,
+    "deltaNote": "USA's Round of 16 elimination to Belgium (Jul 6, Lumen Field, Seattle) drew 33.086M viewers on Fox — the most-watched soccer telecast in US history. Spain-France semifinal drew 11.462M on Fox, the most-watched men's World Cup semifinal in US English-language TV history. Mexico-England Round of 16 drew 23.2M Total Audience Delivery on Telemundo/Peacock — most-watched soccer match in US Spanish-language media history.",
+    "trend": "up",
+    "lastUpdated": "2026-07-16T18:24:40.000Z"
+  },
+  {
+    "id": "record-attendance",
+    "label": "Total Tournament Attendance",
+    "value": "6.81M",
+    "color": "green",
+    "source": "FIFA.com / Forbes",
+    "contested": false,
+    "delta": "Nearly 2x the 1994 record",
+    "deltaNote": "A record 6,810,966 fans attended the 104 matches — nearly double the previous record set at the 1994 World Cup in the US — at 99.7% occupancy, averaging 65,351/match. The July 19 final sold out MetLife Stadium at 80,663.",
+    "trend": "up",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "final-tv-viewership",
+    "label": "World Cup Final US Viewership",
+    "value": "60M+",
+    "color": "green",
+    "source": "NBC New York / ESPN / Fox",
+    "contested": false,
+    "deltaNote": "The Spain-Argentina final drew 38.937M English-language viewers on Fox — a US record for a soccer broadcast — plus 22.6M on Telemundo, for 60M+ combined US viewers. FIFA projected the tournament's global broadcast audience at roughly 1.8 billion.",
+    "trend": "up",
+    "lastUpdated": "2026-08-10T00:00:00.000Z"
+  },
+  {
+    "id": "fifa-leadership-crisis",
+    "label": "FIFA Leadership Crisis",
+    "value": "Escalating",
+    "color": "red",
+    "source": "CNN / Al Jazeera / ESPN",
+    "contested": true,
+    "contestNote": "UEFA, CONCACAF, and the AFC accused Infantino of 'deception' and a 'fundamental breach of trust' (Aug 10 open letter) and demanded an independent review; Norway's FA president Lise Klaveness called for his resignation (Aug 7). FIFA's leadership publicly reaffirmed 'full support' for Infantino after an Aug 5 crisis meeting in Morocco, and President Trump defended him. The federation revolt widened through mid-August: Ireland (Aug 13), New Zealand — first Oceania break (Aug 14), Scotland (Aug 17), Israel (Aug 18), Montenegro/North Macedonia (Aug 20), and Italy's FIGC (Aug 26) all withdrew support; FIFA fired COO Kevin Lamour (Aug 17) after he publicly accused Infantino of misleading staff. Six Arab federations reaffirmed support (Aug 13) and Mexico remains CONCACAF's lone Infantino backer. Infantino defied a CONCACAF request and attended a Caribbean Football Union event (Aug 22); all six Nordic federations declared 'lost confidence' in him (Aug 23); UEFA's Čeferin ruled out a rival bid but said Infantino must quit or face a challenger, naming AFC's Sheikh Salman and CONCACAF's Montagliani as possibilities (Aug 24). The dispute escalated from political to legal on Aug 27, when court filings showed UEFA preparing a criminal complaint against Infantino in Switzerland for 'criminal mismanagement,' seeking FIFA documents from two Florida-based entities. No resolution yet ahead of the March 18, 2027 FIFA presidential election in Rabat.",
+    "trend": "down",
+    "lastUpdated": "2026-08-27T00:00:00.000Z"
+  }
+]

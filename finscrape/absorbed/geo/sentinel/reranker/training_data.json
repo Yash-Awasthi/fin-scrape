@@ -1,0 +1,102 @@
+[
+  {
+    "query": "LMT defense stock exposure risk",
+    "doc": "LOCKHEED MARTIN CORP (LMT) LOCKHEED MARTIN CORP annual report filed 2026-01-29. SIC: 3760 \u2014 Guided Missiles & Space Vehicles & Parts. Employees: 521893632.",
+    "label": 0.95
+  },
+  {
+    "query": "LOCKHEED MARTIN CORP annual report defense contracts",
+    "doc": "LOCKHEED MARTIN CORP (LMT) LOCKHEED MARTIN CORP annual report filed 2026-01-29. SIC: 3760 \u2014 Guided Missiles & Space Vehicles & Parts. Employees: 521893632.",
+    "label": 0.9
+  },
+  {
+    "query": "defense spending NATO military contracts",
+    "doc": "LOCKHEED MARTIN CORP (LMT) LOCKHEED MARTIN CORP annual report filed 2026-01-29. SIC: 3760 \u2014 Guided Missiles & Space Vehicles & Parts. Employees: 521893632.",
+    "label": 0.6
+  },
+  {
+    "query": "cryptocurrency bitcoin blockchain",
+    "doc": "LOCKHEED MARTIN CORP (LMT) LOCKHEED MARTIN CORP annual report filed 2026-01-29. SIC: 3760 \u2014 Guided Missiles & Space Vehicles & Parts. Employees: 521893632.",
+    "label": 0.05
+  },
+  {
+    "query": "RTX defense stock exposure risk",
+    "doc": "RTX Corp (RTX) RTX Corp annual report filed 2026-02-06. SIC: 3724 \u2014 Aircraft Engines & Engine Parts. Employees: 060570975.",
+    "label": 0.95
+  },
+  {
+    "query": "RTX Corp annual report defense contracts",
+    "doc": "RTX Corp (RTX) RTX Corp annual report filed 2026-02-06. SIC: 3724 \u2014 Aircraft Engines & Engine Parts. Employees: 060570975.",
+    "label": 0.9
+  },
+  {
+    "query": "defense spending NATO military contracts",
+    "doc": "RTX Corp (RTX) RTX Corp annual report filed 2026-02-06. SIC: 3724 \u2014 Aircraft Engines & Engine Parts. Employees: 060570975.",
+    "label": 0.6
+  },
+  {
+    "query": "cryptocurrency bitcoin blockchain",
+    "doc": "RTX Corp (RTX) RTX Corp annual report filed 2026-02-06. SIC: 3724 \u2014 Aircraft Engines & Engine Parts. Employees: 060570975.",
+    "label": 0.05
+  },
+  {
+    "query": "NOC defense stock exposure risk",
+    "doc": "NORTHROP GRUMMAN CORP /DE/ (NOC) NORTHROP GRUMMAN CORP /DE/ annual report filed 2026-01-27. SIC: 3812 \u2014 Search, Detection, Navigation, Guidance, Aeronautical Sys. Employees: 800640649.",
+    "label": 0.95
+  },
+  {
+    "query": "NORTHROP GRUMMAN CORP /DE/ annual report defense contracts",
+    "doc": "NORTHROP GRUMMAN CORP /DE/ (NOC) NORTHROP GRUMMAN CORP /DE/ annual report filed 2026-01-27. SIC: 3812 \u2014 Search, Detection, Navigation, Guidance, Aeronautical Sys. Employees: 800640649.",
+    "label": 0.9
+  },
+  {
+    "query": "defense spending NATO military contracts",
+    "doc": "NORTHROP GRUMMAN CORP /DE/ (NOC) NORTHROP GRUMMAN CORP /DE/ annual report filed 2026-01-27. SIC: 3812 \u2014 Search, Detection, Navigation, Guidance, Aeronautical Sys. Employees: 800640649.",
+    "label": 0.6
+  },
+  {
+    "query": "cryptocurrency bitcoin blockchain",
+    "doc": "NORTHROP GRUMMAN CORP /DE/ (NOC) NORTHROP GRUMMAN CORP /DE/ annual report filed 2026-01-27. SIC: 3812 \u2014 Search, Detection, Navigation, Guidance, Aeronautical Sys. Employees: 800640649.",
+    "label": 0.05
+  },
+  {
+    "query": "GD defense stock exposure risk",
+    "doc": "GENERAL DYNAMICS CORP (GD) GENERAL DYNAMICS CORP annual report filed 2026-01-30. SIC: 3730 \u2014 Ship & Boat Building & Repairing. Employees: 131673581.",
+    "label": 0.95
+  },
+  {
+    "query": "GENERAL DYNAMICS CORP annual report defense contracts",
+    "doc": "GENERAL DYNAMICS CORP (GD) GENERAL DYNAMICS CORP annual report filed 2026-01-30. SIC: 3730 \u2014 Ship & Boat Building & Repairing. Employees: 131673581.",
+    "label": 0.9
+  },
+  {
+    "query": "defense spending NATO military contracts",
+    "doc": "GENERAL DYNAMICS CORP (GD) GENERAL DYNAMICS CORP annual report filed 2026-01-30. SIC: 3730 \u2014 Ship & Boat Building & Repairing. Employees: 131673581.",
+    "label": 0.6
+  },
+  {
+    "query": "cryptocurrency bitcoin blockchain",
+    "doc": "GENERAL DYNAMICS CORP (GD) GENERAL DYNAMICS CORP annual report filed 2026-01-30. SIC: 3730 \u2014 Ship & Boat Building & Repairing. Employees: 131673581.",
+    "label": 0.05
+  },
+  {
+    "query": "BA defense stock exposure risk",
+    "doc": "BOEING CO (BA) BOEING CO annual report filed 2026-01-30. SIC: 3721 \u2014 Aircraft. Employees: 910425694.",
+    "label": 0.95
+  },
+  {
+    "query": "BOEING CO annual report defense contracts",
+    "doc": "BOEING CO (BA) BOEING CO annual report filed 2026-01-30. SIC: 3721 \u2014 Aircraft. Employees: 910425694.",
+    "label": 0.9
+  },
+  {
+    "query": "defense spending NATO military contracts",
+    "doc": "BOEING CO (BA) BOEING CO annual report filed 2026-01-30. SIC: 3721 \u2014 Aircraft. Employees: 910425694.",
+    "label": 0.6
+  },
+  {
+    "query": "cryptocurrency bitcoin blockchain",
+    "doc": "BOEING CO (BA) BOEING CO annual report filed 2026-01-30. SIC: 3721 \u2014 Aircraft. Employees: 910425694.",
+    "label": 0.05
+  }
+]

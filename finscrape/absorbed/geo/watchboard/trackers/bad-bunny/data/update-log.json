@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-27T23:46:41.147Z",
+  "tracker": "bad-bunny",
+  "sections": {
+    "kpis": {
+      "status": "unchanged",
+      "itemCount": 15
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 90
+    },
+    "political": {
+      "status": "unchanged",
+      "itemCount": 20
+    },
+    "map-points": {
+      "status": "unchanged",
+      "itemCount": 9
+    },
+    "meta": {
+      "status": "updated",
+      "itemCount": 1
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 88
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

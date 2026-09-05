@@ -1,0 +1,129 @@
+[
+  {
+    "id": "approved-crispr-therapies",
+    "label": "Jurisdictions with Approved CRISPR Therapy (Casgevy)",
+    "value": "10+",
+    "color": "green",
+    "source": "FDA (Dec 2023), EMA (Feb 2024), MHRA (Nov 2023); plus Saudi Arabia, UAE, Bahrain, Kuwait, Qatar, Canada, Switzerland",
+    "contested": false,
+    "delta": "US label now covers children as young as 2",
+    "deltaNote": "Casgevy (exagamglogene autotemcel) is the world's first and only approved CRISPR medicine. FDA approved a supplemental BLA on July 1, 2026 expanding eligibility from age 12+ down to age 2+ for sickle cell disease (recurrent VOCs) and transfusion-dependent beta-thalassemia — the first gene therapy approved for children this young with SCD, opening eligibility to ~5,500 additional US children.",
+    "trend": "up",
+    "lastUpdated": "2026-07-01"
+  },
+  {
+    "id": "active-clinical-trials",
+    "label": "Active CRISPR Clinical Trials (Global)",
+    "value": "~100",
+    "color": "blue",
+    "source": "ClinicalTrials.gov / IGI CRISPR Clinical Trials 2026 Update; FDA CBER Draft Guidance (Jun 2, 2026)",
+    "contested": false,
+    "delta": "Beam doses first patient in BEAM-302 AATD pivotal cohort (Aug 4); Fate FT839 dual-CAR T IND cleared (Jul 9)",
+    "deltaNote": "Covering SCD, beta-thalassemia, cancer immunotherapy, vision, liver (ATTR, dyslipidemia, HeFH, AATD), cardiovascular, autoimmune and rare disorders. Key milestones: Beam Therapeutics dosed the first patient in the global pivotal cohort of BEAM-302 for alpha-1 antitrypsin deficiency (Aug 4); Prime Medicine won binding arbitration confirming its right to develop PM647 in the same AATD indication, IND/CTA filing targeted Q3 2026 (Jul 8); Fate Therapeutics won FDA IND clearance for FT839, a dual CD19/CD38-targeting CAR-T therapy for autoimmune disease (Jul 9); Epicrispr completed dosing in its first-in-human EPI-321 trial for FSHD with positive interim biomarker/strength data (Jul 7); Allotera Therapeutics (formerly Wugen) raised $35M to advance its pivotal T-RRex trial of sofi-cel in T-cell leukemia/lymphoma (Jul 8). Intellia lonvo-z rolling BLA remains on track for completion in H2 2026, FDA acceptance targeted H2 2026, US launch targeted H1 2027 (per Q2 2026 update, Aug 6). Casgevy pediatric approval expanded to age 2+ on July 1, 2026.",
+    "trend": "up",
+    "lastUpdated": "2026-08-06"
+  },
+  {
+    "id": "casgevy-list-price",
+    "label": "Casgevy List Price (One-Time Treatment)",
+    "value": "$2.2M",
+    "color": "amber",
+    "source": "Vertex Pharmaceuticals (2023)",
+    "contested": true,
+    "contestNote": "Payers and patient advocates dispute cost-effectiveness vs. chronic standard-of-care; access barriers remain severe in low-income countries",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "patients-treated-casgevy",
+    "label": "Casgevy Patients Initiated Treatment (Global, Cumulative)",
+    "value": "500+",
+    "color": "green",
+    "source": "CRISPR Therapeutics Q1 2026 Financial Results, May 4, 2026; Q2 2026 Financial Results, Aug 4, 2026",
+    "contested": false,
+    "delta": "Q2 2026 Casgevy revenue $76M, +151% YoY",
+    "deltaNote": "500+ patients had initiated Casgevy treatment globally as of Q1 2026; 45+ authorized treatment centers (ATCs) active worldwide; ~90% US commercial reimbursement coverage. Q2 2026 Casgevy revenue reached $76 million (+78% QoQ, +151% YoY), reflecting accelerating uptake following the July 1, 2026 pediatric label expansion to age 2+ (~5,500 additional eligible US patients). Vertex sBLA for pediatric extension (ages 5–11, SCD/TDT) was approved July 1, 2026.",
+    "trend": "up",
+    "lastUpdated": "2026-08-04"
+  },
+  {
+    "id": "casgevy-q2-2026-revenue",
+    "label": "Casgevy Quarterly Revenue (Q2 2026)",
+    "value": "$76M",
+    "color": "green",
+    "source": "CRISPR Therapeutics Q2 2026 Financial Results, Aug 4, 2026",
+    "contested": false,
+    "delta": "+78% QoQ, +151% YoY",
+    "deltaNote": "CRISPR Therapeutics reported Q2 2026 Casgevy revenue of $76 million, up 78% quarter-over-quarter and 151% year-over-year — the sharpest growth quarter since commercial launch, driven by expanding treatment center capacity and the July 1, 2026 pediatric label expansion to age 2+.",
+    "trend": "up",
+    "lastUpdated": "2026-08-04"
+  },
+  {
+    "id": "global-crispr-market-2024",
+    "label": "Global CRISPR Therapeutics Market (2024)",
+    "value": "$3.2B",
+    "color": "blue",
+    "source": "Grand View Research / Evaluate Pharma (2024)",
+    "contested": false,
+    "delta": "CAGR ~24–26% projected to 2030",
+    "deltaNote": "Includes therapeutics, tools, diagnostics, and agricultural CRISPR",
+    "trend": "up",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "crispr-research-publications",
+    "label": "CRISPR Research Publications (PubMed)",
+    "value": "45,000+",
+    "color": "blue",
+    "source": "PubMed / NIH (2026)",
+    "contested": false,
+    "delta": "+8,000 papers in 2024",
+    "deltaNote": "Exponential growth since 2013; field expanding to base editing, prime editing, CRISPRi/a",
+    "trend": "up",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "us-sickle-cell-patients",
+    "label": "US Sickle Cell Patients (Potential Casgevy Eligibility)",
+    "value": "~100,000",
+    "color": "amber",
+    "source": "NIH / CDC / American Society of Hematology",
+    "contested": false,
+    "delta": "~16,000 severe SCD cases",
+    "deltaNote": "$2.2M price tag and complex treatment process create major access barriers; only a fraction will receive treatment",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "years-since-discovery",
+    "label": "Years Since CRISPR-Cas9 Discovery",
+    "value": "14",
+    "color": "green",
+    "source": "Science, Jun 28, 2012 (Doudna & Charpentier)",
+    "contested": false,
+    "deltaNote": "From first landmark Science paper to first approved human therapy: 11 years",
+    "lastUpdated": "2026-04-14"
+  },
+  {
+    "id": "in-vivo-crispr-phase3-milestone",
+    "label": "First In Vivo CRISPR Drug to Complete Phase 3 (lonvo-z / HAE)",
+    "value": "87% attack reduction",
+    "color": "green",
+    "source": "Intellia Therapeutics HAELO Phase 3 Results, Apr 27, 2026",
+    "contested": false,
+    "delta": "62% of patients fully attack-free vs 11% placebo",
+    "deltaNote": "Lonvoguran ziclumeran (lonvo-z) met all primary and key secondary endpoints in HAELO Phase 3 (n=80), published in NEJM; rolling BLA submission remains on track for completion in H2 2026 per Q2 2026 update (Aug 6), with FDA acceptance targeted H2 2026 and US launch targeted H1 2027 — on track to be the first approved in vivo gene editing therapy in history",
+    "trend": "up",
+    "lastUpdated": "2026-08-06"
+  },
+  {
+    "id": "approved-gene-therapies-count-2026",
+    "label": "FDA-Approved Gene Therapies (Cumulative, as of Apr 2026)",
+    "value": "30+",
+    "color": "green",
+    "source": "FDA CBER Gene Therapy Approvals List (2026); includes Casgevy, Otarmeni, Lyfgenia, Hemgenix, Zynrelef, and others",
+    "contested": false,
+    "delta": "+2 in Apr 2026 alone",
+    "deltaNote": "April 2026: FDA approved Otarmeni (hearing loss) and the HAELO Phase 3 results for lonvo-z bring a new approval to near-term pipeline; Casgevy remains the only approved CRISPR genome-editing therapy",
+    "trend": "up",
+    "lastUpdated": "2026-04-29"
+  }
+]

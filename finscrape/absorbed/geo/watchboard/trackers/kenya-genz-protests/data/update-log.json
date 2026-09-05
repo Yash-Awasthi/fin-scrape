@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-28T00:13:53.021Z",
+  "tracker": "kenya-genz-protests",
+  "sections": {
+    "kpis": {
+      "count": 8,
+      "status": "unchanged"
+    },
+    "timeline": {
+      "count": 37,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 21,
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 10,
+      "status": "unchanged"
+    },
+    "econ": {
+      "count": 8,
+      "status": "unchanged"
+    },
+    "claims": {
+      "count": 17,
+      "status": "updated"
+    },
+    "political": {
+      "count": 18,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

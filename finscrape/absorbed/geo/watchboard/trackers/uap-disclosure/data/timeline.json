@@ -1,0 +1,1322 @@
+[
+  {
+    "era": "Early Sightings & Project Blue Book (1947\u20131969)",
+    "events": [
+      {
+        "id": "roswell_incident_1947",
+        "year": "1947",
+        "title": "Roswell Incident",
+        "type": "military",
+        "detail": "US Army Air Forces recovers debris near Roswell, NM. Initial press release says 'flying disc.' Hours later retracted to 'weather balloon.' In 1994, USAF acknowledged the debris was from Project Mogul (nuclear test monitoring). In 1997, USAF report attributes 'alien body' reports to parachute test dummies.",
+        "sources": [
+          {
+            "name": "US Air Force",
+            "tier": 1
+          },
+          {
+            "name": "National Archives",
+            "tier": 1,
+            "url": "https://www.archives.gov"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.archives.gov",
+            "source": "National Archives",
+            "thumbnail": "https://www.archives.gov/sites/all/themes/nara/images/naralogo-og.png"
+          }
+        ]
+      },
+      {
+        "id": "project_sign_1948",
+        "year": "1948",
+        "title": "Project Sign Established",
+        "type": "institutional",
+        "detail": "US Air Force launches Project Sign, its first official UFO investigation program. The project's classified 'Estimate of the Situation' reportedly concluded some UFOs were interplanetary \u2014 the report was ordered destroyed by USAF Chief of Staff Gen. Hoyt Vandenberg.",
+        "sources": [
+          {
+            "name": "US Air Force Historical Division",
+            "tier": 1
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Project_Sign",
+            "source": "Wikipedia / Project Sign",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Project_Sign_report.pdf/page1-330px-Project_Sign_report.pdf.jpg"
+          }
+        ]
+      },
+      {
+        "id": "project_blue_book_1952",
+        "year": "1952",
+        "title": "Project Blue Book Begins",
+        "type": "institutional",
+        "detail": "USAF replaces Project Grudge with Project Blue Book, which will investigate 12,618 UFO reports over 17 years. Run from Wright-Patterson AFB. Astronomer J. Allen Hynek serves as scientific consultant.",
+        "sources": [
+          {
+            "name": "US Air Force",
+            "tier": 1
+          },
+          {
+            "name": "National Archives",
+            "tier": 1
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Project_Blue_Book_(TV_series)",
+            "source": "Wikipedia / Project Blue Book (TV series)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/Project_Blue_Book_%28TV_series%29.jpg/330px-Project_Blue_Book_%28TV_series%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "washington_dc_sightings_1952",
+        "year": "1952",
+        "title": "Washington D.C. UFO Incidents",
+        "type": "military",
+        "detail": "Multiple unidentified objects detected on radar at Washington National Airport and Andrews AFB over two consecutive weekends in July 1952. USAF jets scrambled. Objects tracked at speeds up to 7,000 mph. Largest press conference since WWII held by the Pentagon to address the sightings.",
+        "sources": [
+          {
+            "name": "National Archives",
+            "tier": 1
+          },
+          {
+            "name": "Washington Post (1952)",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/1952_Washington%2C_D.C._UFO_incident",
+            "source": "Wikipedia / 1952 Washington%2C D.C. UFO incident",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Washington_National_%281944%29.jpg/330px-Washington_National_%281944%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "robertson_panel_1953",
+        "year": "1953",
+        "title": "CIA Robertson Panel",
+        "type": "institutional",
+        "detail": "CIA convenes the Robertson Panel of scientists to review UFO evidence. Panel recommends debunking and public education campaign to reduce public interest in UFOs, citing national security concerns about clogging military channels with false reports.",
+        "sources": [
+          {
+            "name": "CIA FOIA Archive",
+            "tier": 1,
+            "url": "https://www.cia.gov"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Robertson_Panel",
+            "source": "Wikipedia / Robertson Panel",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Luis_Walter_Alvarez_1961.jpg/330px-Luis_Walter_Alvarez_1961.jpg"
+          }
+        ]
+      },
+      {
+        "id": "condon_report_1968",
+        "year": "1968",
+        "title": "Condon Report Published",
+        "type": "institutional",
+        "detail": "University of Colorado publishes the Condon Report, concluding that UFO study has not contributed to scientific knowledge and recommending termination of Project Blue Book. Critics note the report's own data showed ~30% of cases remained unexplained.",
+        "sources": [
+          {
+            "name": "University of Colorado",
+            "tier": 3
+          },
+          {
+            "name": "US Air Force",
+            "tier": 1
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Condon_Committee",
+            "source": "Wikipedia / Condon Committee",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/thumb/3/33/CondonReportJacket.jpg/330px-CondonReportJacket.jpg"
+          }
+        ]
+      },
+      {
+        "id": "blue_book_closes_1969",
+        "year": "1969",
+        "title": "Project Blue Book Closed",
+        "type": "institutional",
+        "detail": "USAF closes Project Blue Book after 17 years and 12,618 investigations. 701 cases (5.5%) classified as 'unidentified.' USAF concludes: no UFO investigated was a threat to national security, no evidence of extraterrestrial technology. This ends all publicly acknowledged US government UFO investigation for decades.",
+        "sources": [
+          {
+            "name": "US Air Force",
+            "tier": 1
+          },
+          {
+            "name": "National Archives",
+            "tier": 1
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Project_Blue_Book",
+            "source": "Wikipedia / Project Blue Book",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Project_Blue_Book%2C_complete_status_reports.pdf/page1-330px-Project_Blue_Book%2C_complete_status_reports.pdf.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Post-Blue Book & Black Programs (1970\u20132003)",
+    "events": [
+      {
+        "id": "freedom_of_info_act_ufo_1977",
+        "year": "1977",
+        "title": "FOIA Releases CIA UFO Files",
+        "type": "institutional",
+        "detail": "Following FOIA lawsuits, the CIA releases hundreds of previously classified UFO-related documents, revealing ongoing intelligence interest in UFOs despite public denials. Documents show CIA monitored UFO reports worldwide during the Cold War.",
+        "sources": [
+          {
+            "name": "CIA FOIA Archive",
+            "tier": 1
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/The_Black_Vault",
+            "source": "Wikipedia / The Black Vault",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/The_Black_Vault.jpg/330px-The_Black_Vault.jpg"
+          }
+        ]
+      },
+      {
+        "id": "rendlesham_forest_1980",
+        "year": "1980",
+        "title": "Rendlesham Forest Incident",
+        "type": "military",
+        "detail": "US Air Force personnel at RAF Woodbridge (UK) report close encounter with unidentified craft over multiple nights in December. Lt. Col. Charles Halt files official report (Halt Memo) to UK Ministry of Defence. Multiple military witnesses provide testimony. MOD investigated but concluded no threat to national security.",
+        "sources": [
+          {
+            "name": "UK Ministry of Defence",
+            "tier": 1
+          },
+          {
+            "name": "National Archives UK",
+            "tier": 1
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Rendlesham_Forest_incident",
+            "source": "Wikipedia / Rendlesham Forest incident",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/RAF_Woodbridge_East_Gate.jpg/330px-RAF_Woodbridge_East_Gate.jpg"
+          }
+        ]
+      },
+      {
+        "id": "belgium_wave_1989",
+        "year": "1989\u201390",
+        "title": "Belgian UFO Wave",
+        "type": "military",
+        "detail": "Thousands of witnesses including Belgian police report large triangular craft over Belgium. Belgian Air Force scrambles F-16s; radar confirms unknown targets. Belgian military holds unprecedented press conference acknowledging the sightings and releasing radar data. Over 2,000 reports collected.",
+        "sources": [
+          {
+            "name": "Belgian Air Force",
+            "tier": 1
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "phoenix_lights_1997",
+        "year": "1997",
+        "title": "Phoenix Lights",
+        "type": "cultural",
+        "detail": "Thousands of witnesses across Arizona report massive V-shaped formation of lights. Governor Fife Symington initially mocks the reports but later admits he also witnessed the phenomenon and calls it 'otherworldly.' USAF attributes some sightings to A-10 flare drops; explanation does not account for all reports.",
+        "sources": [
+          {
+            "name": "AP",
+            "tier": 2
+          },
+          {
+            "name": "CNN",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Phoenix_Lights",
+            "source": "Wikipedia / Phoenix Lights",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/3b/PhoenixLights1997model.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Nimitz Encounter & AATIP (2004\u20132016)",
+    "events": [
+      {
+        "id": "nimitz_encounter_2004",
+        "year": "2004",
+        "title": "USS Nimitz 'Tic Tac' Encounter",
+        "type": "military",
+        "detail": "Navy pilots from USS Nimitz carrier group encounter an anomalous aerial object ('Tic Tac') off San Diego coast during training exercises. Cmdr. David Fravor and Lt. Cmdr. Alex Dietrich observe object exhibiting no visible propulsion, no wings, no exhaust. Onboard systems (FLIR, radar, SPY-1) track the object. Pentagon later confirms the video (FLIR1) is authentic. Multiple witnesses across multiple platforms.",
+        "sources": [
+          {
+            "name": "US Navy",
+            "tier": 1
+          },
+          {
+            "name": "Pentagon",
+            "tier": 1
+          },
+          {
+            "name": "NYT",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Pentagon_UFO_videos",
+            "source": "Wikipedia / Pentagon UFO videos",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm/330px--FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm.jpg"
+          }
+        ]
+      },
+      {
+        "id": "aatip_created_2007",
+        "year": "2007",
+        "title": "AATIP Program Created",
+        "type": "institutional",
+        "detail": "The Advanced Aerospace Threat Identification Program (AATIP) is created within the Defense Intelligence Agency at the request of Sen. Harry Reid, with $22 million in funding secured through the DIA budget. Program investigates military UAP encounters. Run by Luis Elizondo from the Office of the Under Secretary of Defense for Intelligence.",
+        "sources": [
+          {
+            "name": "DIA",
+            "tier": 1
+          },
+          {
+            "name": "NYT",
+            "tier": 2,
+            "url": "https://www.nytimes.com/2017/12/16/us/politics/pentagon-program-ufo-harry-reid.html"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Luis_Elizondo",
+            "source": "Wikipedia / Luis Elizondo",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Elizondo_from_Moszkowicz_KFQ1uz6irPc.png/330px-Elizondo_from_Moszkowicz_KFQ1uz6irPc.png"
+          }
+        ]
+      },
+      {
+        "id": "roosevelt_encounters_2014",
+        "year": "2014\u201315",
+        "title": "USS Roosevelt 'Gimbal' & 'GoFast' Encounters",
+        "type": "military",
+        "detail": "Navy pilots from USS Theodore Roosevelt encounter anomalous objects daily during training exercises off the US East Coast from 2014 to 2015. Two key infrared videos \u2014 'Gimbal' and 'GoFast' \u2014 are recorded. Lt. Ryan Graves reports near-daily sightings. Pentagon later confirms both videos are authentic unclassified footage.",
+        "sources": [
+          {
+            "name": "US Navy",
+            "tier": 1
+          },
+          {
+            "name": "Pentagon",
+            "tier": 1
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Pentagon_UFO_videos",
+            "source": "Wikipedia / Pentagon UFO videos",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm/330px--FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "NY Times Revelations & AARO (2017\u20132022)",
+    "events": [
+      {
+        "id": "nyt_aatip_reveal_2017",
+        "year": "Dec 2017",
+        "title": "NY Times Reveals AATIP Program",
+        "type": "institutional",
+        "detail": "New York Times publishes groundbreaking story revealing the existence of the Pentagon's secret $22M AATIP program. Article includes declassified Navy encounter videos (FLIR1, Gimbal, GoFast). Luis Elizondo confirmed as former program director who resigned in protest over secrecy. To The Stars Academy (Tom DeLonge's organization) releases the videos publicly. Story triggers renewed mainstream interest in UAPs.",
+        "sources": [
+          {
+            "name": "NYT",
+            "tier": 2,
+            "url": "https://www.nytimes.com/2017/12/16/us/politics/pentagon-program-ufo-harry-reid.html"
+          },
+          {
+            "name": "Pentagon",
+            "tier": 1
+          }
+        ]
+      },
+      {
+        "id": "navy_uap_guidelines_2019",
+        "year": "2019",
+        "title": "Navy Establishes UAP Reporting Guidelines",
+        "type": "institutional",
+        "detail": "US Navy formally establishes guidelines for pilots to report UAP encounters, reversing decades of stigma. Navy confirms the three leaked videos (FLIR1, Gimbal, GoFast) are authentic and show 'unidentified aerial phenomena.' This represents a major institutional shift \u2014 military officially acknowledging UAP as a real phenomenon requiring formal reporting.",
+        "sources": [
+          {
+            "name": "US Navy",
+            "tier": 1
+          },
+          {
+            "name": "CNN",
+            "tier": 2
+          },
+          {
+            "name": "Politico",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Unidentified_flying_object",
+            "source": "Wikipedia / Unidentified flying object",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Gimbal_The_First_Official_UAP_Footage_from_the_USG_for_Public_Release.webm/330px--Gimbal_The_First_Official_UAP_Footage_from_the_USG_for_Public_Release.webm.jpg"
+          }
+        ]
+      },
+      {
+        "id": "pentagon_releases_videos_2020",
+        "year": "Apr 2020",
+        "title": "Pentagon Officially Releases UAP Videos",
+        "type": "institutional",
+        "detail": "Pentagon formally releases three UAP videos (FLIR1, Gimbal, GoFast) to 'clear up any misconceptions by the public on whether or not the footage that has been circulating was real.' DoD spokesperson confirms the videos depict 'unidentified aerial phenomena.' This marks the first time the US government officially acknowledges and releases UAP footage.",
+        "sources": [
+          {
+            "name": "DoD",
+            "tier": 1
+          },
+          {
+            "name": "BBC",
+            "tier": 2
+          },
+          {
+            "name": "CNN",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Pentagon_UFO_videos",
+            "source": "Wikipedia / Pentagon UFO videos",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm/330px--FLIR1_Official_UAP_Footage_from_the_USG_for_Public_Release.webm.jpg"
+          }
+        ]
+      },
+      {
+        "id": "uap_task_force_2020",
+        "year": "Aug 2020",
+        "title": "UAP Task Force Established",
+        "type": "institutional",
+        "detail": "Deputy Secretary of Defense establishes the Unidentified Aerial Phenomena Task Force (UAPTF) under the Office of Naval Intelligence (ONI) to detect, analyze, and catalog UAPs that could threaten US national security. First official DoD UAP investigation body since Project Blue Book ended in 1969.",
+        "sources": [
+          {
+            "name": "DoD",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "odni_preliminary_report_2021",
+        "year": "Jun 2021",
+        "title": "ODNI Preliminary Assessment on UAP",
+        "type": "institutional",
+        "detail": "Office of the Director of National Intelligence releases classified/unclassified preliminary assessment on UAP to Congress. Report examines 144 incidents (2004\u20132021). Of those, only 1 was identified (deflating balloon). The 143 remaining cases were unresolved. Report states UAP 'clearly pose a safety of flight issue and may pose a challenge to U.S. national security.' Notably does not rule out extraterrestrial origin.",
+        "sources": [
+          {
+            "name": "ODNI",
+            "tier": 1,
+            "url": "https://www.dni.gov"
+          },
+          {
+            "name": "NYT",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/UFO_Report_(U.S._Intelligence)",
+            "source": "Wikipedia / UFO Report (U.S. Intelligence)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Prelimary-Assessment-UAP-20210625%281%29.pdf/page1-330px-Prelimary-Assessment-UAP-20210625%281%29.pdf.jpg"
+          }
+        ]
+      },
+      {
+        "id": "first_congressional_hearing_2022",
+        "year": "May 2022",
+        "title": "First Congressional UAP Hearing in 50+ Years",
+        "type": "legislative",
+        "detail": "House Intelligence Subcommittee holds first open congressional hearing on UAPs in over 50 years. Under Secretary of Defense for Intelligence Ronald Moultrie and Deputy Director of Naval Intelligence Scott Bray testify. DoD shows previously unreleased UAP video. Witnesses acknowledge 400+ UAP reports from military personnel.",
+        "sources": [
+          {
+            "name": "Congress.gov",
+            "tier": 1
+          },
+          {
+            "name": "C-SPAN",
+            "tier": 1
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "aaro_established_2022",
+        "year": "Jul 2022",
+        "title": "AARO Established by DoD",
+        "type": "institutional",
+        "detail": "DoD establishes the All-domain Anomaly Resolution Office (AARO) to replace the UAPTF. Led by Dr. Sean Kirkpatrick. AARO has broader mandate: investigate UAPs across all domains (air, sea, space, transmedium). Mandated by FY2022 NDAA. First permanent UAP investigation office with dedicated funding and interagency coordination authority.",
+        "sources": [
+          {
+            "name": "DoD",
+            "tier": 1
+          },
+          {
+            "name": "DefenseScoop",
+            "tier": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Congressional Hearings & Disclosure Push (2023\u20132026)",
+    "events": [
+      {
+        "id": "sol_foundation_established_2023",
+        "year": "Jun 2023",
+        "title": "Sol Foundation Established",
+        "type": "institutional",
+        "detail": "Stanford immunologist Dr. Garry Nolan and anthropologist Peter Skafish co-found the Sol Foundation, a think tank for academic and policy research on UAP. First symposium held November 2023 at Stanford with Grusch, Elizondo, and Colonel Karl Nell. Marks a shift toward mainstream academic engagement with UAP research.",
+        "sources": [
+          {
+            "name": "Sol Foundation",
+            "tier": 3
+          },
+          {
+            "name": "The Debrief",
+            "tier": 3
+          }
+        ]
+      },
+      {
+        "id": "grusch_news_nation_2023",
+        "year": "Jun 2023",
+        "title": "David Grusch Goes Public as Whistleblower",
+        "type": "institutional",
+        "detail": "Former intelligence official David Grusch gives interview to NewsNation/The Debrief alleging the US government possesses retrieved non-human craft and biologics. Grusch filed a complaint with the Intelligence Community Inspector General (ICIG), who found it 'credible and urgent.' Grusch claims retaliation for his disclosures. He held Top Secret/SCI clearance and served on the UAP Task Force.",
+        "sources": [
+          {
+            "name": "NewsNation",
+            "tier": 2
+          },
+          {
+            "name": "The Debrief",
+            "tier": 3
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/David_Grusch_UFO_whistleblower_claims",
+            "source": "Wikipedia / David Grusch UFO whistleblower claims",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/2023_House_Oversight_and_Accountability_Hearing_on_UAP_%E2%80%93_Unidentified_Anomalous_Phenomena_%E2%80%93_Implications_on_National_Security%2C_Public_Safety%2C_and_Government_Transparency.webm/330px--thumbnail.webm.jpg"
+          }
+        ]
+      },
+      {
+        "id": "house_oversight_hearing_2023",
+        "year": "Jul 2023",
+        "title": "House Oversight UAP Hearing \u2014 Grusch Testifies Under Oath",
+        "type": "legislative",
+        "detail": "House Oversight Committee holds public hearing. David Grusch testifies under oath that the US has been recovering non-human craft for decades and has a 'multi-decade UAP crash retrieval program.' Navy pilots Ryan Graves and David Fravor also testify about their encounters. Grusch states he was told of 'non-human biologics' recovered from crash sites. Bipartisan interest \u2014 both Democratic and Republican members express alarm at alleged secrecy.",
+        "sources": [
+          {
+            "name": "Congress.gov",
+            "tier": 1
+          },
+          {
+            "name": "C-SPAN",
+            "tier": 1
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          },
+          {
+            "name": "NYT",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "schumer_uap_disclosure_act_2023",
+        "year": "Jul 2023",
+        "title": "Schumer Introduces UAP Disclosure Act",
+        "type": "legislative",
+        "detail": "Senate Majority Leader Chuck Schumer introduces the UAP Disclosure Act of 2023 as an amendment to the FY2024 NDAA. Bill would create a review board modeled on the JFK Assassination Records Act to declassify UAP records, establish eminent domain over any recovered materials, and mandate government disclosure within 25 years. Co-sponsored by Sen. Mike Rounds (R-SD). Bill passes Senate but key provisions stripped in House conference due to opposition from defense/intel committee leaders.",
+        "sources": [
+          {
+            "name": "Congress.gov",
+            "tier": 1
+          },
+          {
+            "name": "Politico",
+            "tier": 2
+          },
+          {
+            "name": "NYT",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/National_Defense_Authorization_Act_for_Fiscal_Year_2024",
+            "source": "Wikipedia / National Defense Authorization Act for Fiscal Year 2024",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Great_Seal_of_the_United_States_%28obverse%29.svg/330px-Great_Seal_of_the_United_States_%28obverse%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "aaro_historical_report_2024",
+        "year": "Mar 2024",
+        "title": "AARO Historical Report Volume I Released",
+        "type": "institutional",
+        "detail": "AARO releases Historical Record Report Volume I, covering US government investigation of UAP from 1945 to present. Report concludes: 'no empirical evidence' of extraterrestrial technology, no crash retrieval program, and no cover-up. Report states many UAP sightings are misidentified ordinary objects or classified programs. Whistleblowers and congressional UAP advocates strongly dispute the findings. ICIG previously found Grusch's claims 'credible and urgent' \u2014 contradicting AARO's conclusions.",
+        "sources": [
+          {
+            "name": "AARO/DoD",
+            "tier": 1
+          },
+          {
+            "name": "DefenseScoop",
+            "tier": 2
+          },
+          {
+            "name": "NYT",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "kirkpatrick_resigns_2023",
+        "year": "Dec 2023",
+        "title": "AARO Director Kirkpatrick Resigns",
+        "type": "institutional",
+        "detail": "Dr. Sean Kirkpatrick resigns as founding director of AARO. In subsequent media appearances, Kirkpatrick states he found no evidence of extraterrestrial technology but criticizes Congress for being 'convinced by conspiracy theorists.' UAP advocates accuse Kirkpatrick of not having been granted access to the most classified programs. Tim Phillips named acting director.",
+        "sources": [
+          {
+            "name": "DoD",
+            "tier": 1
+          },
+          {
+            "name": "Politico",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "senate_armed_services_2024",
+        "year": "Nov 2024",
+        "title": "Senate Armed Services UAP Hearing",
+        "type": "legislative",
+        "detail": "Senate Armed Services Committee holds hearing on UAP. Witnesses include DoD officials and intelligence community representatives. Committee members press for more disclosure and criticize pace of AARO's work. Multiple senators express frustration at being denied access to classified UAP programs. Hearing raises questions about whether AARO has been given full access to all relevant programs.",
+        "sources": [
+          {
+            "name": "Congress.gov",
+            "tier": 1
+          },
+          {
+            "name": "C-SPAN",
+            "tier": 1
+          },
+          {
+            "name": "Politico",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Sean_M._Kirkpatrick",
+            "source": "Wikipedia / Sean M. Kirkpatrick",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Sean_Kirkpatrick_31_May_2023.jpg/330px-Sean_Kirkpatrick_31_May_2023.jpg"
+          }
+        ]
+      },
+      {
+        "id": "langley_drone_incursions_2024",
+        "year": "Dec 2024",
+        "title": "Langley AFB Drone Incursions \u2014 17 Consecutive Nights",
+        "type": "military",
+        "detail": "Unknown drones penetrate restricted airspace over Langley Air Force Base for 17 consecutive nights. F-22 Raptors scrambled. Pentagon confirms incursions but cannot identify operators. Wall Street Journal breaks the story, reigniting debate over aerial intrusions at sensitive military sites.",
+        "sources": [
+          {
+            "name": "Wall Street Journal",
+            "tier": 2
+          },
+          {
+            "name": "Pentagon",
+            "tier": 1
+          },
+          {
+            "name": "CNN",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "uap_disclosure_act_gutted_2024",
+        "year": "Dec 2024",
+        "title": "UAP Disclosure Act Gutted in House Conference",
+        "type": "legislative",
+        "detail": "Schumer-Rounds UAP Disclosure Act stripped of eminent domain, subpoena power, and review board during FY2025 NDAA conference. Only recordkeeping provisions survive. Defense and intelligence committee leaders led the opposition, citing national security.",
+        "sources": [
+          {
+            "name": "Congress.gov",
+            "tier": 1
+          },
+          {
+            "name": "Politico",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "fy2025_ndaa_uap_provisions",
+        "year": "Dec 2024",
+        "title": "FY2025 NDAA UAP Provisions Signed",
+        "type": "legislative",
+        "detail": "FY2025 National Defense Authorization Act signed into law with UAP-related provisions including new whistleblower protections for UAP disclosures, expanded AARO authority, and requirements for additional reporting to Congress. Some elements of the original Schumer UAP Disclosure Act incorporated in weakened form.",
+        "sources": [
+          {
+            "name": "Congress.gov",
+            "tier": 1
+          },
+          {
+            "name": "DefenseScoop",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "aaro_historical_report_vol2_overdue_2025",
+        "year": "Mar 2025",
+        "title": "AARO Historical Review Volume 2 \u2014 Overdue",
+        "type": "institutional",
+        "detail": "AARO Historical Record Report Volume 2 remains unreleased past its expected delivery date. Volume 1 drew heavy criticism for concluding 'no empirical evidence.' The delay fuels speculation about internal disagreements, particularly following Kirkpatrick's departure and change in AARO leadership.",
+        "sources": [
+          {
+            "name": "AARO/DoD",
+            "tier": 1
+          },
+          {
+            "name": "DefenseScoop",
+            "tier": 2
+          }
+        ]
+      },
+      {
+        "id": "sol_foundation_2nd_symposium_2025",
+        "year": "Nov 2025",
+        "title": "Sol Foundation 2nd Annual Symposium",
+        "type": "institutional",
+        "detail": "Sol Foundation holds second annual symposium with expanded academic and government participation. Papers cover materials science, policy frameworks, and historical analysis. Growing institutional credibility signals mainstream academia's increasing engagement with UAP research.",
+        "sources": [
+          {
+            "name": "Sol Foundation",
+            "tier": 3
+          },
+          {
+            "name": "NewsNation",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Thor_Halvorssen_(human_rights_activist)",
+            "source": "Wikipedia / Thor Halvorssen (human rights activist)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Thor_Halvorssen_Oslo_Freedom_Forum_2018_%28095710%29.jpg/330px-Thor_Halvorssen_Oslo_Freedom_Forum_2018_%28095710%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trump_uap_disclosure_order_2026",
+        "year": "Feb 2026",
+        "title": "Trump Signs UAP Disclosure Executive Order",
+        "type": "legislative",
+        "detail": "President Trump signs executive order directing the Pentagon to release UAP and alien-related files to the public, marking the first presidential directive specifically targeting UAP disclosure. Order mandates a 90-day review of all classified UAP programs with public release timeline. Trump states 'the American people deserve to know.' Advocates call it the most significant UAP disclosure action ever taken by a sitting president.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1
+          },
+          {
+            "name": "Time",
+            "tier": 2,
+            "url": "https://time.com"
+          },
+          {
+            "name": "CNN",
+            "tier": 2
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://time.com",
+            "source": "Time",
+            "thumbnail": "https://gcp-na-images.contentstack.com/v3/assets/bltea6093859af6183b/bltde093bcdab65f2d0/6988d9b9bc6cfc69913e2a3c/time-logo.jpg?branch=production"
+          }
+        ]
+      },
+      {
+        "id": "trump-phoenix-rally-uap-apr2026",
+        "year": "Apr 2026",
+        "title": "Trump Tells Phoenix Rally: UAP Files Coming 'Very, Very Soon'",
+        "type": "institutional",
+        "detail": "At a Turning Point USA event in Phoenix, Arizona, President Trump announced that a Pentagon review of UAP files has uncovered 'many very interesting documents' and that 'the first releases will begin very, very soon.' Trump stated he recently spoke directly with Secretary of War Pete Hegseth about the release timeline. The remarks came amid growing congressional pressure \u2014 the Pentagon had missed Rep. Luna's April 14 deadline for 46 classified UAP videos \u2014 and 33 days before the executive order's May 20, 2026 90-day milestone. Trump's public description of the classified review content as 'interesting' was unprecedented and substantially escalated public expectations ahead of the deadline.",
+        "sources": [
+          {
+            "name": "Fox News",
+            "tier": 2,
+            "url": "https://www.foxnews.com/politics/trump-says-first-releases-pentagon-ufo-study-come-soon-phoenix-rally-tease"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "url": "https://www.nbcnews.com/politics/donald-trump/trump-says-review-ufo-files-found-interesting-documents-rcna333389"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.foxnews.com/politics/trump-says-first-releases-pentagon-ufo-study-come-soon-phoenix-rally-tease",
+            "caption": "Trump promises UAP file releases at Phoenix Turning Point USA rally",
+            "source": "Fox News",
+            "thumbnail": "https://assets.newsweek.com/wp-content/uploads/2025/08/2409185-ufo-uaps.jpg"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-04-25T15:03:32.000Z"
+      },
+      {
+        "id": "sullivan-whistleblower-death-fbi-probe-apr2026",
+        "year": "Apr 2026",
+        "title": "FBI Called to Probe Death of UAP Whistleblower Who Agreed to Testify",
+        "type": "institutional",
+        "detail": "Rep. Eric Burlison (R-MO) sent a letter to FBI Director Kash Patel urging investigation of the May 2024 death of Matthew James Sullivan, a Bronze Star recipient and veteran of classified programs at NASIC, the Air Force Intelligence Agency, and NSA. Sullivan had agreed to testify before Congress about UAP-related classified programs and was being assisted by David Grusch. The Virginia medical examiner ruled his death accidental (drug intoxication). The FBI confirmed it is 'spearheading the effort to look for connections into the missing and deceased scientists' in coordination with DoD and local law enforcement. The case resurged in April 2026 during the active disclosure push as a congressional inquiry into whistleblower safety.",
+        "sources": [
+          {
+            "name": "Bizpacreview",
+            "tier": 3,
+            "url": "https://www.bizpacreview.com/2026/04/25/mysterious-death-of-ufo-whistleblower-comes-after-he-agrees-to-testify-before-congress-1634701/",
+            "pole": "western"
+          },
+          {
+            "name": "IBTimes UK",
+            "tier": 3,
+            "url": "https://www.ibtimes.co.uk/mysterious-death-ufo-whistleblower-secrecy-concerns-1793789",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.bizpacreview.com/2026/04/25/mysterious-death-of-ufo-whistleblower-comes-after-he-agrees-to-testify-before-congress-1634701/",
+            "caption": "Rep. Burlison calls for FBI probe of UAP whistleblower Matthew Sullivan's death",
+            "source": "Bizpacreview",
+            "thumbnail": "https://assets.newsweek.com/wp-content/uploads/2025/08/2409185-ufo-uaps.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-04T15:45:58.000Z"
+      },
+      {
+        "id": "luna-subpoena-escalation-may2026",
+        "year": "Apr 2026",
+        "title": "Rep. Luna Escalates to Formal Subpoena for 46 Classified Pentagon UAP Videos",
+        "type": "legislative",
+        "detail": "Rep. Anna Paulina Luna confirmed she is coordinating with House Oversight Chairman James Comer on a formal subpoena for the 46 classified UAP videos the Pentagon failed to deliver by her April 14 deadline. Luna's March 31 letter to Defense Secretary Hegseth \u2014 requesting videos with whistleblower-provided titles such as 'Spherical UAP in clouds' \u2014 went unacknowledged until her office followed up. She stated: 'We are not waiting for a briefing.' The subpoena escalation, with 21 days to the May 20 EO deadline, represents the most aggressive congressional enforcement action in the current disclosure push.",
+        "sources": [
+          {
+            "name": "NewsNation",
+            "tier": 2,
+            "url": "https://www.newsnationnow.com/politics/pentagon-uap-video-deadline-luna/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.newsnationnow.com/politics/pentagon-uap-video-deadline-luna/",
+            "caption": "Rep. Luna escalates to formal subpoena for 46 classified Pentagon UAP videos",
+            "source": "NewsNation",
+            "thumbnail": "https://assets.newsweek.com/wp-content/uploads/2025/08/2409185-ufo-uaps.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-04T15:45:58.000Z"
+      },
+      {
+        "id": "trump-pilot-interviews-ufo-files-may2026",
+        "year": "May 2026",
+        "title": "Trump: Personally Interviewed Pilots Who 'Saw Things You Wouldn't Believe'",
+        "type": "institutional",
+        "detail": "President Trump told reporters that the Pentagon is preparing to release UAP files revealing 'things you wouldn't believe,' adding: 'I've interviewed people in my first term primarily, but I interviewed some pilots, very solid people, and they said they saw things that you wouldn't believe.' This is the first time Trump has publicly confirmed personal interviews with military UAP witnesses as informing his view. AARO is confirmed as coordinating with the White House on 'never-before-seen UAP information.' With 17 days to the May 20 EO deadline, Trump's personal testimony about pilot accounts marks the third escalating presidential disclosure statement of 2026.",
+        "sources": [
+          {
+            "name": "Newsweek",
+            "tier": 2,
+            "url": "https://www.newsweek.com/donald-trump-release-ufo-files-11896543",
+            "pole": "western"
+          },
+          {
+            "name": "ABC7 Chicago",
+            "tier": 2,
+            "url": "https://abc7chicago.com/post/donald-trump-ufo-files-president-gives-hints-whats-coming-new-batch-records/19029716/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.newsweek.com/donald-trump-release-ufo-files-11896543",
+            "caption": "Trump tells reporters he personally interviewed military pilots who saw UAP phenomena",
+            "source": "Newsweek",
+            "thumbnail": "https://assets.newsweek.com/wp-content/uploads/2025/08/2409185-ufo-uaps.jpg"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-05-04T15:45:58.000Z"
+      },
+      {
+        "id": "pursue-program-launch-may2026",
+        "year": "May 2026",
+        "title": "Pentagon PURSUE Program Launches \u2014 162 UAP Files Released at war.gov/UFO",
+        "type": "institutional",
+        "active": true,
+        "detail": "The Department of War launches PURSUE (Presidential Unsealing and Reporting System for UAP Encounters) at war.gov/UFO and releases Tranche 1: 162 declassified files including 120 PDF documents, 28 videos, and 14 images sourced from the FBI (56 files), DoD (82), NASA (12), and State Department (8). Highlights include 1969 Apollo 11 crew debriefings \u2014 Buzz Aldrin describes an unexplained 'sizeable' object near the moon and cabin light flashes \u2014 plus 2024 military UAP memos from Iraq and Syria, infrared footage of a football-shaped UAP near Japan, and State Department diplomatic cables from five countries. The official DoW statement says the files show 'no indication that the U.S. government has had any interaction with beings from other planets' and invites the public to 'make up their own minds.' Rep. Luna's 46 whistleblower-identified videos were not included; expected in Tranche 2 within 30 days. Rolling releases planned every few weeks. This marks the first-ever presidential UAP file declassification release under PURSUE.",
+        "sources": [
+          {
+            "name": "Department of War (Official)",
+            "tier": 1,
+            "url": "https://www.war.gov/News/Releases/Release/Article/4480582/department-of-war-releases-unidentified-anomalous-phenomena-files-in-historic-t/",
+            "pole": "western"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "url": "https://www.nbcnews.com/science/ufos-and-anomalous-phenomena/ufo-uap-files-pentagon-release-trump-rcna344204",
+            "pole": "western"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "url": "https://www.npr.org/2026/05/08/g-s1-121186/ufo-files-released-defense-department",
+            "pole": "western"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://edition.cnn.com/2026/05/08/politics/ufo-files-pentagon-release-aliens",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.nbcnews.com/science/ufos-and-anomalous-phenomena/ufo-uap-files-pentagon-release-trump-rcna344204",
+            "caption": "Pentagon PURSUE Tranche 1: 162 UAP files released at war.gov/UFO, May 8, 2026",
+            "source": "NBC News",
+            "thumbnail": "https://assets.newsweek.com/wp-content/uploads/2025/08/2409185-ufo-uaps.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-11T06:45:00.000Z"
+      },
+      {
+        "id": "luna-scif-nonhuman-origin-may2026",
+        "year": "May 2026",
+        "title": "Rep. Luna Reveals She Saw 'Nonhuman Origin' Evidence in SCIF",
+        "type": "legislative",
+        "detail": "Rep. Anna Paulina Luna (R-FL), chair of the House Oversight Task Force on the Declassification of Federal Secrets, disclosed to Newsweek and NewsNation that she has personally witnessed evidence of 'nonhuman origin' inside a Sensitive Compartmented Information Facility (SCIF): 'I have seen evidence in a SCIF that leads me to believe there are things we cannot explain. I have observed things that are of nonhuman origin and creation.' Luna deliberately avoided the term 'aliens,' using 'interdimensional beings' instead, and referenced objects she described as deflecting missiles and pyramid-shaped craft. She promised a public press conference once the relevant materials are officially declassified. This is the most explicit claim of non-human technology by a senior member of Congress. EDITORIAL NOTE: Luna's statement is an official congressional claim; AARO's formal position remains that no non-human technology has been verified.",
+        "sources": [
+          {
+            "name": "Newsweek",
+            "tier": 2,
+            "url": "https://www.newsweek.com/ufo-update-congresswoman-promises-to-show-things-of-nonhuman-origin-11893270",
+            "pole": "western"
+          },
+          {
+            "name": "NewsNation",
+            "tier": 2,
+            "url": "https://www.newsnationnow.com/space/ufo/luna-address-info-nonhuman-origin/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.newsweek.com/ufo-update-congresswoman-promises-to-show-things-of-nonhuman-origin-11893270",
+            "caption": "Rep. Luna tells Newsweek she personally observed 'nonhuman origin' evidence in a SCIF",
+            "source": "Newsweek",
+            "thumbnail": "https://assets.newsweek.com/wp-content/uploads/2025/08/2409185-ufo-uaps.jpg"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-05-18T15:53:23.000Z"
+      },
+      {
+        "id": "pursue-data-not-disclosure-institutional-critique-may2026",
+        "year": "May 2026",
+        "title": "DefenseScoop: 'Data Alone Is Not Disclosure' \u2014 Officials Critique PURSUE Framework",
+        "type": "institutional",
+        "detail": "DefenseScoop published an institutional analysis (May 14, 2026) featuring six officials deeply involved in UAP disclosure work who characterized PURSUE Tranche 1 as 'a historic yet incomplete step.' Core critique: releasing raw archival files without contextual review, analytical summaries, chain-of-custody documentation, or accountability mechanisms does not constitute meaningful disclosure. Critics argue the DoW framing \u2014 'no indication of alien contact' \u2014 risks becoming the official narrative that closes debate rather than enabling it. The analysis signals that pressure for substantive disclosure will continue even as the physical file count grows. Tranche 2 (including Rep. Luna's 46 whistleblower-identified videos) is expected around June 7, 2026.",
+        "sources": [
+          {
+            "name": "DefenseScoop",
+            "tier": 2,
+            "url": "https://defensescoop.com/2026/05/14/uap-trump-first-pursue-ufo-file-drop/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://defensescoop.com/2026/05/14/uap-trump-first-pursue-ufo-file-drop/",
+            "caption": "DefenseScoop analysis: six officials say PURSUE must do more than release raw files",
+            "source": "DefenseScoop",
+            "thumbnail": "https://assets.newsweek.com/wp-content/uploads/2025/08/2409185-ufo-uaps.jpg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-18T15:53:23.000Z"
+      },
+      {
+        "id": "grusch-capitol-steps-press-conference-jun2026",
+        "year": "Jun 2026",
+        "title": "Grusch and Bipartisan Lawmakers Hold Capitol Steps Press Conference",
+        "type": "legislative",
+        "detail": "David Grusch appeared with Reps. Luna, Burlison, Burchett, and Moskowitz on the Capitol steps June 9, formalizing demands for declassification of specific files, passage of the UAP Disclosure Act, and stronger whistleblower protections. Grusch alleged 'slush funds to the tune of billions of dollars per annum' operating outside oversight and accused the DIA of obstruction; the DIA did not respond. Burlison said he received a 'Tom Clancy-style dead drop' of sensitive UAP information including MQ-9 footage.",
+        "sources": [
+          {
+            "name": "Fox News",
+            "tier": 2,
+            "url": "https://www.foxnews.com/politics/ufo-whistleblower-claims-billions-secret-spending-hidden-from-congress",
+            "pole": "western"
+          },
+          {
+            "name": "NewsNation",
+            "tier": 2,
+            "url": "https://www.newsnationnow.com/prime/uap-disclosure-news-conference-june-9/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.foxnews.com/politics/ufo-whistleblower-claims-billions-secret-spending-hidden-from-congress",
+            "caption": "David Grusch speaks at the Capitol steps press conference, June 9, 2026",
+            "source": "Fox News",
+            "thumbnail": "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2026/06/1200/675/grusch-aliens.jpeg"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16T14:15:00.000Z"
+      },
+      {
+        "id": "pursue-tranche3-release-jun2026",
+        "year": "Jun 2026",
+        "title": "PURSUE Tranche 3 Released \u2014 72 Files, Western US Orb Incident",
+        "type": "institutional",
+        "detail": "Department of War published a third PURSUE release (June 12, 2026): 72 records (53 PDFs, 10 images, 6 videos, 3 audio) from FBI, CIA, DoW, and NASA. Centerpiece: a two-day October 2023 event at a sensitive Western US site with an AARO case-analysis update finding roughly 40% of documented phenomena unresolved but non-threatening. DoW reported 1.7B+ hits on the portal since its May 8 launch.",
+        "sources": [
+          {
+            "name": "LiveNOW from FOX",
+            "tier": 2,
+            "url": "https://www.livenowfox.com/news/third-batch-ufo-files-released-pentagon",
+            "pole": "western"
+          },
+          {
+            "name": "U.S. Department of War",
+            "tier": 1,
+            "url": "https://www.war.gov/News/Releases/Release/Article/4515408/department-of-war-publishes-third-release-of-unidentified-anomalous-phenomena-f/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.livenowfox.com/news/third-batch-ufo-files-released-pentagon",
+            "caption": "Pentagon releases third batch of declassified UAP files, June 12, 2026",
+            "source": "LiveNOW from FOX",
+            "thumbnail": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/06/764/432/ufo-sighting-july-2025.jpg"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-07-16T14:15:00.000Z"
+      },
+      {
+        "id": "uap-science-advisory-council-formed-jun2026",
+        "year": "Jun 2026",
+        "title": "White House UAP Science Advisory Council Formed, Chaired by Avi Loeb",
+        "type": "institutional",
+        "detail": "The Disclosure Foundation announced (June 14, 2026) that Harvard astrophysicist Avi Loeb will chair a new 12-member UAP Science Advisory Council, tasked by the White House, AARO, ODNI, and FBI to provide scientific guidance for UAP investigations. Loeb emphasized new empirical data collection over relitigating unverifiable older material.",
+        "sources": [
+          {
+            "name": "Disclosure Foundation",
+            "tier": 3,
+            "url": "https://disclosure.org/news/uap-science-advisory-council",
+            "pole": "western"
+          },
+          {
+            "name": "DefenseScoop",
+            "tier": 2,
+            "url": "https://defensescoop.com/2026/06/17/new-science-advisory-council-forms-to-help-us-government-resolve-the-uap-mystery/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://defensescoop.com/2026/06/17/new-science-advisory-council-forms-to-help-us-government-resolve-the-uap-mystery/",
+            "caption": "Avi Loeb named to lead the new UAP Science Advisory Council",
+            "source": "DefenseScoop",
+            "thumbnail": "https://defensescoop.com/wp-content/uploads/sites/8/2026/06/LL11.jpeg?w=1010"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-07-16T14:15:00.000Z"
+      },
+      {
+        "id": "disclosure-forum-2026-jun2026",
+        "year": "Jun 2026",
+        "title": "Disclosure Forum 2026 Convenes at Russell Senate Office Building",
+        "type": "legislative",
+        "detail": "The Disclosure Foundation's first-of-its-kind 'Disclosure Forum 2026' (June 25) in the Kennedy Caucus Room drew Sens. Rounds and Gillibrand, Reps. Luna, Burchett, Burlison, and Subramanyam, plus Avi Loeb and other scientists. Sen. Rounds pledged to revive the UAP Disclosure Act after its third consecutive NDAA exclusion; Rep. Luna said she is working with the White House on whistleblower immunity.",
+        "sources": [
+          {
+            "name": "NewsNation",
+            "tier": 2,
+            "url": "https://www.newsnationnow.com/space/ufo/uap-disclosure-2026-forum-takeaways/",
+            "pole": "western"
+          },
+          {
+            "name": "TodayWhy",
+            "tier": 3,
+            "url": "https://todaywhy.com/disclosure-forum-2026-uap-transparency/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://todaywhy.com/disclosure-forum-2026-uap-transparency/",
+            "caption": "Lawmakers and scientists convene at Disclosure Forum 2026",
+            "source": "TodayWhy",
+            "thumbnail": "https://todaywhy.com/wp-content/uploads/2026/06/disclosure-forum-2026-thumb.webp"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16T14:15:00.000Z"
+      },
+      {
+        "id": "pursue-tranche4-pantex-jul2026",
+        "year": "Jul 2026",
+        "title": "PURSUE Tranche 4 Released \u2014 Pantex Nuclear Facility Drone Intrusion",
+        "type": "institutional",
+        "detail": "Department of War released a fourth PURSUE batch (July 10, 2026): 40 records from the Pentagon, NASA, CIA, FBI, and Energy Department. The most detailed report covers a September 2015 incident at the Pantex nuclear-weapons plant near Amarillo, TX, where a silent, diamond-shaped object evaded pursuing security officers. Also included: a 2019 military aviator account and 2025 sightings near China's Yellow Sea and East China Sea.",
+        "sources": [
+          {
+            "name": "CBS News",
+            "tier": 2,
+            "url": "https://www.cbsnews.com/news/ufo-files-4th-release-pentagon/",
+            "pole": "western"
+          },
+          {
+            "name": "NewsChannel10 (KFDA)",
+            "tier": 2,
+            "url": "https://www.newschannel10.com/2026/07/15/declassified-documents-detail-2015-silent-ufo-sighting-near-pantex-nuclear-facility/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.newschannel10.com/2026/07/15/declassified-documents-detail-2015-silent-ufo-sighting-near-pantex-nuclear-facility/",
+            "caption": "Declassified documents detail a 2015 UFO sighting near the Pantex nuclear facility",
+            "source": "NewsChannel10 (KFDA)",
+            "thumbnail": "https://gray-kfda-prod.gtv-cdn.com/resizer/v2/NNKHNVGIXVHE5OFUMSBOLHHI3Y.png?auth=e03dabfe018f70cbe04a0ed874e9a50f17080e599a1668471560e7ba456d181a&width=980&height=665&smart=true"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-07-16T14:15:00.000Z"
+      },
+      {
+        "id": "aaro-fy2025-annual-report-released-2026-07-21",
+        "year": "Jul 2026",
+        "title": "AARO Releases FY2025 Annual UAP Report Months Late \u2014 319 New Cases",
+        "type": "institutional",
+        "detail": "AARO publicly released its FY2025 Consolidated Annual Report on UAP (covering June 2024\u2013May 2025), arriving months after the statutory deadline. The office received 319 new reports and resolved 114, leaving 205 unresolved; it also closed 256 previously unresolved cases, 238 via an expanded satellite-flare identification capability. The report's sole maritime case \u2014 a Navy report of roughly 100 unidentified objects and two uncrewed surface systems off Virginia's coast \u2014 drew particular attention; AARO said it is actively investigating.",
+        "sources": [
+          {
+            "name": "The Black Vault",
+            "tier": 3,
+            "url": "https://www.theblackvault.com/documentarchive/aaro-releases-fy2025-uap-report-months-after-statutory-deadline-citing-319-new-cases-and-expanded-satellite-analysis/",
+            "pole": "western"
+          },
+          {
+            "name": "DefenseScoop",
+            "tier": 2,
+            "url": "https://defensescoop.com/2026/07/21/pentagon-investigating-ufo-uap-event-near-virginia-coast/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.theblackvault.com/documentarchive/aaro-releases-fy2025-uap-report-months-after-statutory-deadline-citing-319-new-cases-and-expanded-satellite-analysis/",
+            "caption": "AARO's FY2025 Consolidated Annual Report on UAP, released July 21, 2026",
+            "source": "The Black Vault",
+            "thumbnail": "https://www.theblackvault.com/documentarchive/wp-content/uploads/2026/07/2026-07-21_05-42-39.jpg"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-10T14:15:00.000Z"
+      },
+      {
+        "id": "house-adopts-burlison-uap-disclosure-amendment-2026-07-22",
+        "year": "Jul 2026",
+        "title": "House Adopts Burlison UAP Disclosure Amendment to FY2027 NDAA",
+        "type": "legislative",
+        "detail": "The House adopted Rep. Eric Burlison's UAP Disclosure Act as an amendment to the FY2027 NDAA \u2014 clearing a hurdle a similar FY2026 amendment failed to reach. It would create a permanent UAP Records Collection at the National Archives, an independent Senate-confirmed Records Review Board with subpoena authority, extend disclosure duties to government contractors, and require record release within 25 years absent a presidential national-security certification. Senate concurrence is still required.",
+        "sources": [
+          {
+            "name": "Rep. Eric Burlison (Official Press Release)",
+            "tier": 1,
+            "url": "https://burlison.house.gov/media/press-releases/house-adopts-burlison-amendment-establishing-uap-disclosure-framework",
+            "pole": "western"
+          },
+          {
+            "name": "Newstalk KZRG",
+            "tier": 3,
+            "url": "https://www.newstalkkzrg.com/2026/07/23/house-approves-burlison-amendment-creating-framework-for-uap-records-disclosure/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.newstalkkzrg.com/2026/07/23/house-approves-burlison-amendment-creating-framework-for-uap-records-disclosure/",
+            "caption": "House approves Burlison amendment creating a statutory framework for UAP records disclosure",
+            "source": "Newstalk KZRG",
+            "thumbnail": "https://main.zimmer.marketing/api/files/clivjvqwqlvr1fd/a17dfzs481t9uf8/blirons_tdcjg3wlrq.JPG?thumb=1200x0"
+          }
+        ],
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10T14:15:00.000Z"
+      },
+      {
+        "id": "pursue-tranche-5-release-2026-08-07",
+        "year": "Aug 2026",
+        "title": "PURSUE Tranche 5 Released \u2014 Gulf of Oman Swarm, Afghanistan Triangle Accounts",
+        "type": "institutional",
+        "detail": "Department of War released a fifth PURSUE batch (August 7, 2026): 41 records from the Pentagon, FBI, CIA, State Department, and Executive Office of the President, dated 1950\u20132026. Highlights include a September 2021 Gulf of Oman incident where AC-130J-borne Special Operations forces observed ~25 unidentified objects at 250\u20131,300 mph reacting to cannon fire, and a 2002 account of a silent, 500-foot equilateral-triangle object near Bagram, Afghanistan. Cumulative PURSUE total: 379 files across five tranches since the May 8, 2026 launch.",
+        "sources": [
+          {
+            "name": "CBS News",
+            "tier": 2,
+            "url": "https://www.cbsnews.com/news/ufo-files-pentagon-5th-release-documents-videos/",
+            "pole": "western"
+          },
+          {
+            "name": "Just The News",
+            "tier": 2,
+            "url": "https://justthenews.com/government/security/pentagon-releases-fifth-batch-ufo-files-comprised-41-records",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "video",
+            "url": "https://www.cbsnews.com/news/ufo-files-pentagon-5th-release-documents-videos/",
+            "caption": "Pentagon releases fifth batch of UFO files, including Gulf of Oman and Afghanistan sighting accounts",
+            "source": "CBS News / Yahoo News",
+            "thumbnail": "https://media.zenfs.com/en/video.cbsnewsvideos.com/c4e71ef83ccefcdaa37f7902cc7d0562"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-10T14:15:00.000Z"
+      },
+      {
+        "id": "odni-nda-waiver-memo-uap-whistleblowers-2026-07-31",
+        "year": "Jul 2026",
+        "title": "ODNI Issues Formal Guidance Waiving NDAs for UAP Whistleblowers",
+        "type": "institutional",
+        "detail": "ODNI guidance (signed by Principal Deputy DNI Aaron Lukas, dated July 31, 2026) directs the Department of War and Intelligence Community to let current/former employees and contractors disclose UAP information to AARO or PURSUE Task Force representatives \"notwithstanding prior NDAs, oaths, or commitments.\" Public disclosure remains unauthorized; agencies must designate a PURSUE representative within 30 days. Implements Trump's earlier directive to remove legal barriers for whistleblowers.",
+        "sources": [
+          {
+            "name": "Fox News",
+            "tier": 2,
+            "url": "https://www.foxnews.com/politics/long-hidden-ufo-information-center-trump-push-free-former-officials",
+            "pole": "western"
+          },
+          {
+            "name": "NewsNation",
+            "tier": 2,
+            "url": "https://www.newsnationnow.com/space/ufo/uap-whistleblower-system-pentagon-intelligence/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.foxnews.com/politics/long-hidden-ufo-information-center-trump-push-free-former-officials",
+            "caption": "Trump administration directs agencies to waive NDAs for former officials with UAP information",
+            "source": "Fox News",
+            "thumbnail": "https://static.foxnews.com/foxnews.com/content/uploads/2026/07/morgan-ufo-1.gif"
+          }
+        ],
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-08-26T16:07:31.000Z"
+      }
+    ]
+  }
+]

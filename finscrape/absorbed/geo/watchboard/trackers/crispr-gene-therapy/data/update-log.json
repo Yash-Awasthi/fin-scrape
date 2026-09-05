@@ -1,0 +1,37 @@
+{
+  "lastRun": "2026-08-26T15:11:41.923Z",
+  "tracker": "crispr-gene-therapy",
+  "sections": {
+    "kpis": {
+      "status": "ok",
+      "count": 11
+    },
+    "timeline": {
+      "status": "ok",
+      "count": 45
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 32
+    },
+    "claims": {
+      "status": "ok",
+      "count": 16
+    },
+    "political": {
+      "status": "ok",
+      "count": 16
+    },
+    "econ": {
+      "status": "ok",
+      "count": 13
+    },
+    "events": {
+      "status": "updated"
+    },
+    "meta": {
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

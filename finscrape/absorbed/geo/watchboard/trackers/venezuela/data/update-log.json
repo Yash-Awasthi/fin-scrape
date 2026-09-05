@@ -1,0 +1,45 @@
+{
+  "lastRun": "2026-08-26T16:13:23.046Z",
+  "tracker": "venezuela",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-05T14:25:00Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "status": "ok",
+      "itemCount": 42
+    },
+    "mapPoints": {
+      "status": "ok",
+      "itemCount": 30
+    },
+    "casualties": {
+      "status": "ok",
+      "itemCount": 11
+    },
+    "econ": {
+      "status": "ok",
+      "itemCount": 10
+    },
+    "claims": {
+      "lastRun": "2026-06-05T14:25:00Z",
+      "status": "updated",
+      "itemCount": 24
+    },
+    "political": {
+      "lastRun": "2026-06-05T14:25:00Z",
+      "status": "updated",
+      "itemCount": 19
+    },
+    "events": {
+      "lastRun": "2026-06-05T14:25:00Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-06-05T14:25:00Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

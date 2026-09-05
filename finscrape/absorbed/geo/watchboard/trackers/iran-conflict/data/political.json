@@ -1,0 +1,821 @@
+[
+  {
+    "id": "rezaei-seismic-retaliation-aug23",
+    "name": "Mohsen Rezaei",
+    "role": "Secretary, Supreme National Security Council of Iran",
+    "avatar": "ir",
+    "initial": "MR",
+    "quote": "If [President Trump] wants to do something, we will retaliate in a seismic manner. Any country that takes part in imposing economic restrictions on us will be regarded as an enemy — not even a single drop of oil will leave the region.",
+    "lastUpdated": "2026-08-23T14:00:00.000Z"
+  },
+  {
+    "id": "bessent-economic-d-day-aug24",
+    "name": "Scott Bessent",
+    "role": "US Treasury Secretary",
+    "avatar": "us",
+    "initial": "SB",
+    "quote": "At dawn begins an economic D-Day. It is going to work in Iran, and we are going to collapse this regime. We are going to sever every economic lifeline that sustains the tyrannical regime.",
+    "lastUpdated": "2026-08-24T18:00:00.000Z"
+  },
+  {
+    "id": "trump",
+    "name": "Donald Trump",
+    "role": "US President",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "I rejected a plan to send US troops in to collect the 'nuclear dust' — I didn't want a Jimmy Carter moment. The nuclear material is now entombed. I'd accept 20 years [without enrichment] if there's a real commitment. I'm open to meeting the new Supreme Leader if there's a framework. [June 4 (Day 97) ABC News/CNBC — first disclosure of rejected 'nuclear dust' physical uranium collection plan. June 2 (Day 95): 'A deal is reachable within the next week' — ABC News; publicly constrained Israeli advance on Beirut; heated Trump-Netanyahu call. May 31 (Day 93): 'No hurry' on Iran deal — Fox News. MOU framework: unsigned as of June 5 (Day 98).]",
+    "lastUpdated": "2026-06-04T14:00:00.000Z"
+  },
+  {
+    "id": "vance",
+    "name": "JD Vance",
+    "role": "US Vice President",
+    "avatar": "us",
+    "initial": "JV",
+    "quote": "Both sides have made a lot of progress. [May 20 (Day 82): Vance signals diplomatic optimism after Trump softens ultimatum to 'few more days.' May 14 (Day 76): 'We are making progress' — the president needs to feel confident Iran will never have a nuclear weapon. Apr 12: 'They have chosen not to accept our terms' — after the first Islamabad round. Vance's planned second Islamabad trip was canceled April 22 when Iran refused to send a delegation.]",
+    "lastUpdated": "2026-05-21T14:27:30.000Z"
+  },
+  {
+    "id": "leavitt",
+    "name": "Karoline Leavitt",
+    "role": "White House Press Secretary",
+    "avatar": "us",
+    "initial": "KL",
+    "quote": "When the President determines Iran no longer poses a threat to the United States and the goals of Operation Epic Fury have been met, Iran will effectively be in a state of unconditional surrender. We expect the war to continue for approximately four to six more weeks.",
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "hegseth",
+    "name": "Pete Hegseth",
+    "role": "Secretary of Defense",
+    "avatar": "us",
+    "initial": "PH",
+    "quote": "We are in a ceasefire right now, which our understanding means the 60-day clock pauses or stops. The war has cost $25 billion to date — a price worth paying to permanently deny Iran nuclear weapons. We have struck 11,000+ targets. [May 1, 2026 — told senators the ceasefire argument sidesteps the WPR deadline; legal experts disputed the claim. Apr 30: Day 2 Senate Armed Services Committee testimony; confirmed $25B war cost. Democrats accused him of lying about nuclear war costs. Mar 11: 'Today will be, yet again, our most intense day of strikes inside Iran.']",
+    "lastUpdated": "2026-05-01T14:30:00.000Z"
+  },
+  {
+    "id": "mojtaba_khamenei",
+    "name": "Mojtaba Khamenei",
+    "role": "Supreme Leader of Iran (appointed Mar 8)",
+    "avatar": "ir",
+    "initial": "MK",
+    "quote": "Iran's new Hormuz management will bring calm to the region. [Apr 30, 2026 — 'Persian Gulf Day' statement asserting sovereign Iranian control of the Strait as a permanent long-term rearrangement. Apr 19: 'Iran's navy is ready to make the enemies taste the bitterness of new defeats.' Earlier: Hormuz will remain a tool of pressure; all US bases must close or be attacked; revenge is an open file.]",
+    "lastUpdated": "2026-04-30T14:00:00.000Z"
+  },
+  {
+    "id": "pezeshkian",
+    "name": "Masoud Pezeshkian",
+    "role": "President of Iran",
+    "avatar": "ir",
+    "initial": "MP",
+    "quote": "Tehran seeks dialogue but cites breach of commitments, blockade and threats as obstacles. [May 2, 2026 — Iran's 14-point peace proposal, submitted to US via Pakistani mediators, includes Pezeshkian government demands: lift blockade, withdraw US forces, release frozen assets, pay reparations, lift sanctions, end operations on all fronts including Lebanon — all within 30 days. Trump rejected the proposal as 'not satisfying.' Earlier: 'That we surrender unconditionally is a dream that they must take with themselves to the grave.']",
+    "lastUpdated": "2026-05-04T14:30:00.000Z"
+  },
+  {
+    "id": "larijani",
+    "name": "Ali Larijani",
+    "role": "National Security Council Secretary — KILLED (Mar 17–18, 2026)",
+    "avatar": "ir",
+    "initial": "AL",
+    "quote": "Iran will not negotiate with the US. The enemy is trying to plunder and disintegrate our nation. Any secessionist movement will face severe consequences. [Killed in US-Israeli airstrike — confirmed by IRGC statement March 18: 'in revenge for the killing of Larijani.']",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "irgc",
+    "name": "IRGC / Iran MoD",
+    "role": "Islamic Revolutionary Guard Corps / Ministry of Defence",
+    "avatar": "ir",
+    "initial": "IR",
+    "quote": "Iran reserves the right to full retaliation after CENTCOM's destruction of IRGC naval vessels. [May 28 (Day 90): IRGC launched ballistic missile at Kuwait — intercepted; CENTCOM destroyed 2 IRGC mine-laying vessels in Hormuz; IRGC warned of full retaliation. Iran fired on 4 merchant vessels. May 26 (Day 88): IRGC claimed MQ-9 Reaper downed, F-35 fired upon — most direct kinetic actions of post-ceasefire period. May 18 (Day 80): MoD spokesperson Reza Talaei-Nik declares Iran 'fully prepared' to confront any new aggression. May 4: Formal Hormuz maritime control zone — $1M+ tolls.]",
+    "lastUpdated": "2026-05-28T12:00:00.000Z"
+  },
+  {
+    "id": "shamkhani",
+    "name": "Ali Shamkhani",
+    "role": "Supreme Leader Advisor / Former SNSC Secretary",
+    "avatar": "ir",
+    "initial": "AS",
+    "quote": "Trump's desire to control our nuclear program is a fantasy. [May 26-27 (Days 88-89): Repeatedly dismissed US nuclear oversight demand as fundamentally unrealistic, maintaining Iran's red line on sovereign nuclear rights even as other deal parameters narrowed. May 16 (Day 78): 'Iran is ready to sign the nuclear deal in exchange for the quick removal of all financial sanctions. If the Americans remove the Bibi effect, they can easily sign the deal.']",
+    "lastUpdated": "2026-05-27T14:37:00.000Z"
+  },
+  {
+    "id": "kaine",
+    "name": "Tim Kaine",
+    "role": "US Senator (D-VA)",
+    "avatar": "us",
+    "initial": "TK",
+    "quote": "The Constitution says we are not supposed to be at war without a vote of Congress.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "guterres",
+    "name": "António Guterres",
+    "role": "UN Secretary-General",
+    "avatar": "un",
+    "initial": "AG",
+    "quote": "The world must pull back from the brink of a wider war. I deplore the military strikes across Iran by Israel and the United States of America, and the subsequent retaliatory strikes by Iran.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "massie",
+    "name": "Thomas Massie",
+    "role": "US Rep. (R-KY)",
+    "avatar": "us",
+    "initial": "TM",
+    "quote": "I am opposed to this War. This is not 'America First.'",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "erdogan",
+    "name": "Recep Tayyip Erdoğan",
+    "role": "President of Turkey",
+    "avatar": "other",
+    "initial": "RE",
+    "quote": "US-Israeli attacks violate Iran's sovereignty. However, Iran's retaliatory attacks on Gulf countries are also unacceptable.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "araghchi",
+    "name": "Abbas Araghchi",
+    "role": "Iranian Foreign Minister",
+    "avatar": "ir",
+    "initial": "AA",
+    "quote": "The ceasefire applies across the region including Lebanon — violations carry consequences for both the US and Israel. [June 2 (Day 95): Araghchi statement framing the Lebanon front as covered by the April 8 ceasefire — leaving a diplomatic door open if Trump constrains Israeli Lebanon ops; interpreted as a possible de-escalation signal contrasting Ghalibaf's harder line. June 1 (Day 94): Iran suspended all talks — 'no dialogue will take place' until Israel withdraws from Lebanon. May 27 (Day 89): 'I am unsure whether a deal is imminent' — cautious counter to Trump's 'close to finalizing' statement.]",
+    "lastUpdated": "2026-06-02T12:00:00.000Z"
+  },
+  {
+    "id": "rubio",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State",
+    "avatar": "us",
+    "initial": "MR",
+    "quote": "There's a pretty solid thing on the table — we're in the final steps. [May 29 (Day 91): Met Pakistan FM Ishaq Dar in Washington — Pakistan's top mediator reinforcing final-stage Iran peace talks ahead of expected Trump sign-off. Bloomberg reports 'US, Iran Agree to 60-Day Extension of Truce Pending Trump Signoff.' May 25 (Day 87): 'A pretty solid thing on the table' — MoU framework; Iran to commit to never possessing nuclear weapon, surrender HEU. May 24 (Day 86): 'Significant progress, although not final.' May 5: Declared Operation Epic Fury 'effectively over.']",
+    "lastUpdated": "2026-05-29T14:12:00.000Z"
+  },
+  {
+    "id": "netanyahu",
+    "name": "Benjamin Netanyahu",
+    "role": "Israeli Prime Minister",
+    "avatar": "il",
+    "initial": "BN",
+    "quote": "Israel is deepening its operation in Lebanon and fortifying security zones. [June 2 (Day 95): Heated phone call with Trump — Trump pressed Netanyahu to scale back Lebanon offensive and publicly declared Israeli forces would not advance on Beirut; Trump-Netanyahu tensions at highest point since Day 82. May 31 (Day 93): Golani Brigade captures Beaufort Castle — 'deepen and expand our hold.' May 27 (Day 89): Declared Israel expanding ground ops beyond Yellow Line — 31 killed. May 20 (Day 82): Tense Trump call — lobbied to resume strikes on Iran. Earlier: 'More than half of Iran's most senior leadership eliminated.']",
+    "lastUpdated": "2026-06-02T12:00:00.000Z"
+  },
+  {
+    "id": "lavrov",
+    "name": "Sergey Lavrov",
+    "role": "Russian Foreign Minister",
+    "avatar": "other",
+    "initial": "SL",
+    "quote": "The joint U.S.-Israeli military strikes on Iran are a preplanned and unprovoked act of armed aggression against a sovereign UN member state.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "pope_leo",
+    "name": "Pope Leo XIV",
+    "role": "Pope",
+    "avatar": "other",
+    "initial": "PL",
+    "quote": "I strongly condemn the escalating violence in Iran and the broader Middle East, warning against a 'spiral of violence' that could lead to irreversible division.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iravani",
+    "name": "Amir Saeid Iravani",
+    "role": "Iran's Ambassador to the UN",
+    "avatar": "ir",
+    "initial": "AI",
+    "quote": "This is not only an act of aggression; it is a war crime and a crime against humanity.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "waltz",
+    "name": "Mike Waltz",
+    "role": "US Ambassador to the UN",
+    "avatar": "us",
+    "initial": "MW",
+    "quote": "Iran cannot have a nuclear weapon. That principle is not a matter of politics. It's a matter of global security.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "danon",
+    "name": "Danny Danon",
+    "role": "Israel's UN Ambassador",
+    "avatar": "il",
+    "initial": "DD",
+    "quote": "We are stopping extremism before it becomes unstoppable. We will ensure that no radical regime armed with nuclear weapons and ballistic missiles can threaten our people or the entire world.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "najafi",
+    "name": "Reza Najafi",
+    "role": "Iran's Ambassador to the IAEA",
+    "avatar": "ir",
+    "initial": "RN",
+    "quote": "The accusations against Iran developing nuclear weapons are baseless. The attacks on Natanz are unlawful and must be condemned.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "johnson",
+    "name": "Mike Johnson",
+    "role": "US House Speaker",
+    "avatar": "us",
+    "initial": "MJ",
+    "quote": "Israel's imminent plans to act independently against Iran necessitated our preemptive involvement to avoid higher casualties.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "sharif",
+    "name": "Shehbaz Sharif",
+    "role": "Prime Minister of Pakistan",
+    "avatar": "other",
+    "initial": "SS",
+    "quote": "International law prohibits the targeting of heads of state. The killing of Iran’s leader is unacceptable.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "ramaphosa",
+    "name": "Cyril Ramaphosa",
+    "role": "President of South Africa",
+    "avatar": "other",
+    "initial": "CR",
+    "quote": "There can be no military solution to fundamentally political problems. The 'pre-emptive' justification for the war is questionable.",
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "xi",
+    "name": "Xi Jinping",
+    "role": "President of China",
+    "avatar": "other",
+    "initial": "XJ",
+    "quote": "The Strait of Hormuz must remain open to normal navigation. China opposes the militarization of the Strait and any effort to charge tolls for its use. [May 14 (Day 76): Trump-Xi summit in Beijing produces joint agreement — Hormuz 'must remain open,' Iran 'can never have nuclear weapon'; Xi voiced explicit opposition to IRGC toll-charging and militarization; expressed interest in buying more US oil to reduce Chinese Hormuz dependence. First joint US-China communiqué on Iran's Hormuz conduct since war began. May 13 (Day 75): Summit opened with trade the nominal agenda but Iran dominating; US had sanctioned 12 Chinese/Iranian entities May 11–12, prompting China to invoke a 'blocking rule' for first time. Apr 20: 'The Strait of Hormuz must remain open.' Earlier: 'It is unacceptable to blatantly kill the leader of a sovereign state.']",
+    "lastUpdated": "2026-05-14T14:10:00.000Z"
+  },
+  {
+    "id": "turk",
+    "name": "Volker Türk",
+    "role": "UN High Commissioner for Human Rights",
+    "avatar": "un",
+    "initial": "VT",
+    "quote": "I am appalled that — on top of the already severe impacts of the conflict — the rights of the Iranian people continue to be stripped. [Apr 30, 2026 — reporting 21 executions in Iran since Feb 28: 9 tied to anti-government protests, 10 for alleged opposition membership, 2 for espionage. Earlier: 'I deplore the military strikes across Iran by Israel and the United States.']",
+    "lastUpdated": "2026-04-30T14:00:00.000Z"
+  },
+  {
+    "id": "baghaei",
+    "name": "Esmaeil Baghaei",
+    "role": "Iran's Ministry of Foreign Affairs Spokesman",
+    "avatar": "ir",
+    "initial": "EB",
+    "quote": "Progress has been made on many issues — but no imminent agreement should be expected. [May 29 (Day 91): Tempered expectations as Bloomberg reported US-Iran framework agreement; confirmed progress while stressing no formal deal yet signed. May 24 (Day 86): Cautious optimism — confirmed positions narrowing while rejecting premature announcement. May 21 (Day 83): 'Reduced the gaps to some extent.' Apr 20: Withdrew from Islamabad talks after MV Touska seizure.]",
+    "lastUpdated": "2026-05-29T14:12:00.000Z"
+  },
+  {
+    "id": "ghalibaf",
+    "name": "Mohammad Bagher Ghalibaf",
+    "role": "Speaker of the Iranian Parliament",
+    "avatar": "ir",
+    "initial": "MBG",
+    "quote": "The Strait of Hormuz cannot remain open while the United States continues its acts of piracy and maritime robbery under the so-called blockade. Iran will not allow passage while its ports are blockaded. The strait has returned to its previous state. [Apr 17-18, 2026 — overrode Araghchi's opening declaration within hours]",
+    "lastUpdated": "2026-04-18T12:16:00.000Z"
+  },
+  {
+    "id": "danilov",
+    "name": "Oleksiy Danilov",
+    "role": "Secretary of the National Security and Defense Council of Ukraine",
+    "avatar": "other",
+    "initial": "OD",
+    "quote": "Ukraine stands ready to assist in counter-drone efforts to ensure regional stability.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "aljubeir",
+    "name": "Adel al-Jubeir",
+    "role": "Saudi Minister of State for Foreign Affairs",
+    "avatar": "other",
+    "initial": "AAJ",
+    "quote": "Iran's aggression and violations of the sovereignty of Gulf states will have grave consequences if continued.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "albusaidi",
+    "name": "Badr Albusaidi",
+    "role": "Oman's Foreign Minister",
+    "avatar": "other",
+    "initial": "BA",
+    "quote": "Active and serious negotiations have yet again been undermined. I urge the United States not to get sucked in further. This is not your war.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "von_der_leyen",
+    "name": "Ursula von der Leyen",
+    "role": "European Commission President",
+    "avatar": "other",
+    "initial": "UVL",
+    "quote": "The conflict is greatly concerning. All parties must exercise maximum restraint, protect civilians, and fully respect international law.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "costa",
+    "name": "Antonio Costa",
+    "role": "European Council President",
+    "avatar": "other",
+    "initial": "AC",
+    "quote": "We urge all parties to exercise maximum restraint, to protect civilians, and to fully respect international law.",
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "nawaf_salam",
+    "name": "Nawaf Salam",
+    "role": "Prime Minister of Lebanon",
+    "avatar": "other",
+    "initial": "NS",
+    "quote": "Lebanon sought by all means to avoid being dragged into this conflict. It is a war we did not want. We cannot accept in any way that Lebanon will return to being an open arena for others' wars.",
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "pezeshkian_peace",
+    "name": "Masoud Pezeshkian",
+    "role": "President of Iran — Peace Terms",
+    "avatar": "ir",
+    "initial": "MP",
+    "quote": "Iran would consider ending the war if three conditions are met: recognition of Tehran's legitimate rights, payment of reparations, and firm international guarantees against future aggression. That we surrender unconditionally is a dream they must take with themselves to the grave.",
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "macron",
+    "name": "Emmanuel Macron",
+    "role": "President of France",
+    "avatar": "other",
+    "initial": "EM",
+    "quote": "France lost a soldier today. Chief Warrant Officer Arnaud Frion was killed in a drone attack on our base in Iraqi Kurdistan. This attack is unacceptable. Our troops were there to fight ISIS, not to be targets. France will respond to this provocation with resolve.",
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "trump_day14",
+    "name": "Donald Trump",
+    "role": "US President — Day 14 Update",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "The war is going very well. Iran is losing badly. A KC-135 went down — we are looking into it — but the war is essentially won. There is nothing left in Iran to hit of significance. We are waiting for Iran to come to the table. Unconditional surrender is the only option.",
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "pentagon_day15",
+    "name": "Pentagon Spokesperson",
+    "role": "US Department of Defense — Day 15",
+    "avatar": "us",
+    "initial": "DoD",
+    "quote": "We are ramping up the military campaign against Iran. Today's strike on Kharg Island sends a clear message: Iran's ability to fund its aggression will not be spared. Oil facilities that sustain Iran's war machine are legitimate military targets. The campaign continues until Iran's unconditional surrender.",
+    "lastUpdated": "2026-03-14T06:00:00.000Z"
+  },
+  {
+    "id": "trump_no_ceasefire_mar15",
+    "name": "Donald Trump",
+    "role": "US President — Day 16 (Rejects Ceasefire)",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "I am not interested in ceasefire talks right now. Iran knows what they need to do — unconditional surrender. We have other nations sending warships to help secure the Strait of Hormuz. The world is watching and acting.",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "putin_trump_iran_call",
+    "name": "Vladimir Putin",
+    "role": "President of Russia",
+    "avatar": "other",
+    "initial": "VP",
+    "quote": "Russia is ready to act as a mediator to find a political and diplomatic solution to the conflict. We urge all parties to show restraint and begin immediate negotiations. The continuation of military operations threatens global stability.",
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "araghchi_cbs_mar15",
+    "name": "Abbas Araghchi",
+    "role": "Iranian Foreign Minister — CBS Face the Nation, Mar 15",
+    "avatar": "ir",
+    "initial": "AA",
+    "quote": "We never asked for a ceasefire, and we have never asked even for negotiation. We are ready to defend ourselves as long as it takes. Negotiate with the U.S. when we negotiated with them twice, and every time they attacked us in the middle of negotiations?",
+    "lastUpdated": "2026-03-16T06:00:00.000Z"
+  },
+  {
+    "id": "trump_day17",
+    "name": "Donald Trump",
+    "role": "US President — Day 17",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "Iran is ready to make a deal, but the terms are not good enough yet. I'm hearing their Supreme Leader is not alive — if he is, he should surrender. Other nations need to send warships to keep the Strait of Hormuz open. The US should not carry this burden alone.",
+    "lastUpdated": "2026-03-16T06:00:00.000Z"
+  },
+  {
+    "id": "hegseth_day17",
+    "name": "Pete Hegseth",
+    "role": "Secretary of Defense — Day 17",
+    "avatar": "us",
+    "initial": "PH",
+    "quote": "Iran's new Supreme Leader is likely disfigured. We are not going to stop until Iran surrenders unconditionally. We have thousands of targets remaining and the means to hit all of them. The campaign continues.",
+    "lastUpdated": "2026-03-16T06:00:00.000Z"
+  },
+  {
+    "id": "aboul_gheit_arab_league",
+    "name": "Ahmed Aboul Gheit",
+    "role": "Arab League Secretary-General",
+    "avatar": "other",
+    "initial": "AAG",
+    "quote": "Iran's attacks on Arab states are fully reprehensible and a grave strategic mistake. Arab nations did not ask to be drawn into this conflict. We call on Iran to immediately cease all attacks on its Arab neighbors.",
+    "lastUpdated": "2026-03-16T06:00:00.000Z"
+  },
+  {
+    "id": "starmer_mar15",
+    "name": "Keir Starmer",
+    "role": "Prime Minister of the United Kingdom",
+    "avatar": "other",
+    "initial": "KS",
+    "quote": "The UK condemns Iranian attacks on civilian populations and Arab neighbors. But we do not believe in regime change from the skies. All parties must protect civilians and adhere fully to international law.",
+    "lastUpdated": "2026-03-16T06:00:00.000Z"
+  },
+  {
+    "id": "fidan_mar17",
+    "name": "Hakan Fidan",
+    "role": "Foreign Minister of Turkey",
+    "avatar": "other",
+    "initial": "HF",
+    "quote": "I believe both the US and Iran now have sufficient political will to stop the conflict. [May 13 (Day 75): Cautiously optimistic diplomatic signal from Ankara as Trump meets Xi in Beijing; Fidan's reading of Iranian intent diverges from IRGC's simultaneous 'maximum readiness, no room for retreat' declaration. Mar 17: 'Turkey will not allow the complete destruction of a neighboring state. We are actively working with all parties to bring this conflict to an end.']",
+    "lastUpdated": "2026-05-13T14:05:00.000Z"
+  },
+  {
+    "id": "trump_day18",
+    "name": "Donald Trump",
+    "role": "US President — Day 18",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "It's unclear if Mojtaba Khamenei is alive or not. I'm hearing different things. If he's alive and wants to talk, he knows where to find us. The war is going very well — Iran has never been weaker. Dubai shows Iran is getting desperate, hitting airports now.",
+    "lastUpdated": "2026-03-17T06:00:00.000Z"
+  },
+  {
+    "id": "rubio_mar17",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State — Embassy Closure",
+    "avatar": "us",
+    "initial": "MR",
+    "quote": "I have ordered the immediate closure of the US Embassy in Kuwait following today's Iranian missile attack on the compound. This is an unprecedented attack on US diplomatic infrastructure. Iran will be held accountable. Our diplomats and staff are safe and are being relocated.",
+    "lastUpdated": "2026-03-17T06:00:00.000Z"
+  },
+  {
+    "id": "joe_kent_resignation",
+    "name": "Joe Kent",
+    "role": "Former National Counterterrorism Center Director — RESIGNED Day 19",
+    "avatar": "us",
+    "initial": "JK",
+    "quote": "Joe Kent, Trump's NCTC director and decorated Army Special Forces veteran, resigned his position on Day 19 — the highest-ranking US official to leave the administration over the Iran war. He reportedly told colleagues he was unable to defend the strategic rationale for Operation Epic Fury. His resignation is the most significant sign of internal dissent within the Trump national security apparatus.",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "netanyahu_nowruz",
+    "name": "Benjamin Netanyahu",
+    "role": "Israeli Prime Minister — Nowruz Message to Iranians",
+    "avatar": "il",
+    "initial": "BN",
+    "quote": "The IDF is watching you from the skies of Iran. [To the Iranian people on Nowruz:] We hope that you will soon be free from the regime that has brought so much suffering upon you. The assassinations of Iran's leadership will continue until Iran's threats to Israel and the world are permanently eliminated.",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "araghchi_hormuz_permanent",
+    "name": "Abbas Araghchi",
+    "role": "Iranian Foreign Minister — Hormuz Permanent Redesign Statement, Day 20",
+    "avatar": "ir",
+    "initial": "AA",
+    "quote": "Iran intends to permanently redesign the rules of navigation in the Strait of Hormuz even after the war ends. Multiple countries have approached Tehran to negotiate safe passage for their oil and gas vessels. We are open to those talks. But we will not negotiate with the United States and Israel while they continue bombing our country.",
+    "lastUpdated": "2026-03-19T06:00:00.000Z"
+  },
+  {
+    "id": "trump_day20",
+    "name": "Donald Trump",
+    "role": "US President — Day 20",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "We are not ready to leave Iran yet, but we will do so in the very near future. Iran knows what they need to do. We have hit more than 7,000 targets. There is practically nothing left to hit. Other nations need to send warships to keep the Strait of Hormuz open — the US should not carry this burden alone.",
+    "lastUpdated": "2026-03-19T06:00:00.000Z"
+  },
+  {
+    "id": "mojtaba_khamenei_dizzying_blow_mar21",
+    "name": "Mojtaba Khamenei",
+    "role": "Supreme Leader of Iran — Day 22 Statement",
+    "avatar": "ir",
+    "initial": "MK",
+    "quote": "Every martyr's blood fertilizes the roots of resistance. The enemy believed it could break Iran in days. Instead, it has revealed its true face to the world. Iran has delivered a dizzying blow to the enemy. The nation has demonstrated its willingness to resist at any cost. The enemy's defeat is certain.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "trump_no_ceasefire_day22",
+    "name": "Donald Trump",
+    "role": "US President — Day 22 (Rejects Ceasefire)",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "There is no ceasefire as long as Iran refuses to surrender. Anytime I want the war to end it will end — but it will end on our terms. These NATO countries, they sit back and watch us do all the work. They are cowards. They need to send their warships to protect the Strait of Hormuz.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "swiss_federal_council_mar21",
+    "name": "Swiss Federal Councillor",
+    "role": "Swiss Federal Council — Neutrality Declaration",
+    "avatar": "other",
+    "initial": "CH",
+    "quote": "Switzerland's neutrality is not passive. It requires us to take no actions that provide material military advantage to any belligerent power. We are halting pending US arms export authorizations and closing Swiss airspace to US military flights directly linked to the Iran campaign. Switzerland maintains its mission in Tehran on behalf of US interests and stands ready to facilitate dialogue.",
+    "lastUpdated": "2026-03-21T06:00:00.000Z"
+  },
+  {
+    "id": "araghchi_rejects_trump_plan_mar25",
+    "name": "Abbas Araghchi",
+    "role": "Iranian Foreign Minister — Rejects Trump's 15-Point Plan",
+    "avatar": "ir",
+    "initial": "AA",
+    "quote": "We do not want a ceasefire. We want the war to end on our own terms. Trump's 15-point plan is maximalist and unreasonable. A ceasefire would only lead to a vicious cycle of repeated war. Iran's conditions are clear: halt all aggression, pay reparations, end attacks on Hezbollah and Iraqi militias, and recognize Iranian authority over the Strait of Hormuz.",
+    "lastUpdated": "2026-03-25T06:00:00.000Z"
+  },
+  {
+    "id": "leavitt_48hr_ultimatum_mar26",
+    "name": "Karoline Leavitt",
+    "role": "White House Press Secretary — 48-Hour Hormuz Ultimatum",
+    "avatar": "us",
+    "initial": "KL",
+    "quote": "Iran will be hit harder than they have ever been hit before if it fails to accept the military reality and reopen the Strait of Hormuz. The President has given Iran 48 hours. We have postponed planned strikes on Iranian power plants to allow time for diplomacy. The President prefers peace, but Iran must accept reality.",
+    "lastUpdated": "2026-03-26T06:00:00.000Z"
+  },
+  {
+    "id": "irgc_no_deal_mar26",
+    "name": "IRGC Military Spokesperson",
+    "role": "Islamic Revolutionary Guard Corps — Response to Negotiations",
+    "avatar": "ir",
+    "initial": "IR",
+    "quote": "Has the level of your inner struggle reached the stage of you negotiating with yourself? No one like us will make a deal with you. Not now. Not ever. Iran is failing in this war? No — the enemy is failing. Iran has delivered a dizzying blow. Our resistance is total.",
+    "lastUpdated": "2026-03-26T06:00:00.000Z"
+  },
+  {
+    "id": "sharif_islamabad_summit_mar26",
+    "name": "Shehbaz Sharif",
+    "role": "Prime Minister of Pakistan — Islamabad Peace Summit",
+    "avatar": "other",
+    "initial": "SS",
+    "quote": "Islamabad stands ready to host peace negotiations between the United States and Iran. Pakistan has been in active contact with both sides and with our Egyptian and Turkish partners. A ceasefire and political dialogue is the only path to ending this catastrophe. Pakistan will not relent in its efforts to bring the parties to the table.",
+    "lastUpdated": "2026-03-26T06:00:00.000Z"
+  },
+  {
+    "id": "trump_april6_deadline_mar27",
+    "name": "Donald Trump",
+    "role": "US President — 2nd Hormuz Deadline Extension (April 6)",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "As per Iranian Government request, I am pausing the period of Energy Plant destruction by 10 Days to Monday, April 6, 2026, at 8 P.M., Eastern Time. They gave me ships — I gave them 10 days. If they don't do what they have to do, I will knock out their power plants. I gave them a 10-day period.",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "zamir_idf_strain_mar27",
+    "name": "Lt. Gen. Eyal Zamir",
+    "role": "IDF Chief of Staff — Manpower Warning",
+    "avatar": "il",
+    "initial": "EZ",
+    "quote": "The IDF is under severe strain. We face a manpower shortage of approximately 15,000 soldiers. We are simultaneously prosecuting major combat operations on five fronts: Iran, Lebanon, Gaza, Syria, and the West Bank. We need the government to take urgent decisions to address this shortfall. The campaign will continue — but its costs must be understood clearly.",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "trump_get_serious_mar28",
+    "name": "Donald Trump",
+    "role": "US President — Day 29 Negotiations Warning",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "They better get serious soon, before it is too late. Iran knows what they need to do. April 6 is the deadline — it is firm. We want peace, but unconditional surrender is the only path to peace.",
+    "lastUpdated": "2026-03-28T14:00:00.000Z"
+  },
+  {
+    "id": "rubio_who_speaks_iran_mar28",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State — Day 29 Negotiating Partner Statement",
+    "avatar": "us",
+    "initial": "MR",
+    "quote": "It remains unclear who will speak for Iran in any formal negotiations. We are in contact with multiple Iranian officials through multiple channels. But Iran has to decide who speaks for Iran.",
+    "lastUpdated": "2026-03-28T14:00:00.000Z"
+  },
+  {
+    "id": "aoun_condemns_strikes_mar28",
+    "name": "Joseph Aoun",
+    "role": "President of Lebanon",
+    "avatar": "other",
+    "initial": "JA",
+    "quote": "Lebanon condemns these strikes in the strongest terms. We did not choose this war. We will not accept our country being turned into a permanent war zone. I call on the international community to intervene to stop these attacks on Lebanese civilians and journalists.",
+    "lastUpdated": "2026-03-28T14:00:00.000Z"
+  },
+  {
+    "id": "trump_kharg_island_mar29",
+    "name": "Donald Trump",
+    "role": "US President — Financial Times Interview, Day 30",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "To be honest with you, my favourite thing is to take the oil in Iran. Maybe we take Kharg Island, maybe we don't. We have a lot of options. I don't think they have any defence. Iran has agreed to most of the 15 points. Why wouldn't they? They're agreeing with us on the plan. Talks are going very well.",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "rubio_concrete_progress_mar29",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State — Day 30 Diplomacy Update",
+    "avatar": "us",
+    "initial": "MR",
+    "quote": "We have made concrete progress in diplomatic talks. There is a growing amount of energy flowing through the Strait of Hormuz. It remains unclear who will even speak for the Iranians in formal negotiations. Diplomacy is an ongoing and fluid process — not one we're going to negotiate in the media.",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "ghalibaf_ground_invasion_mar29",
+    "name": "Mohammad Bagher Ghalibaf",
+    "role": "Speaker of the Iranian Parliament — Ground Invasion Warning",
+    "avatar": "ir",
+    "initial": "MBG",
+    "quote": "The United States is plotting a ground attack against Iran. Any US ground invasion will be met with overwhelming force. The enemy will regret any such adventure. Iran's resistance has delivered dizzying blows and will continue to do so.",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "irgc_university_ultimatum_mar29",
+    "name": "IRGC Military Spokesperson",
+    "role": "IRGC — University Strike Ultimatum",
+    "avatar": "ir",
+    "initial": "IR",
+    "quote": "The United States must condemn strikes on Iranian universities by March 30 or face expanded attacks. We warn people within 1 kilometer of US and Israeli-affiliated university campuses in the Gulf region — Texas A&M, Northwestern, NYU — to evacuate immediately. Iran will hold the United States accountable.",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "merz_regime_change_mar30",
+    "name": "Friedrich Merz",
+    "role": "Chancellor of Germany",
+    "avatar": "other",
+    "initial": "FM",
+    "quote": "If regime change in Iran is the goal of this war, I don't think you'll achieve it. History in Afghanistan and Iraq shows us that military campaigns aimed at toppling governments create chaos rather than stability. Europe urges all parties to engage in immediate ceasefire negotiations.",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "araghchi_back_channel_mar29",
+    "name": "Abbas Araghchi",
+    "role": "Iranian Foreign Minister — Day 30 Diplomacy",
+    "avatar": "ir",
+    "initial": "AA",
+    "quote": "There are back-channel exchanges occurring. But I signal deep skepticism. Iran's conditions are clear and have not changed: halt all aggression, pay war reparations, end attacks on Hezbollah and Iraqi militias, and recognize Iranian authority over the Strait of Hormuz. We will not negotiate under bombardment.",
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "baghaei_us_conditions_unrealistic_mar31",
+    "name": "Esmaeil Baghaei",
+    "role": "Iran Foreign Ministry Spokesman — Day 32 Counter-Reply",
+    "avatar": "ir",
+    "initial": "EB",
+    "quote": "The US ceasefire conditions are excessive, unrealistic and unreasonable. Iran has formally transmitted its counter-reply. Our conditions remain: end all hostilities, pay war reparations, provide international guarantees against future attacks, and recognize Iranian sovereignty over the Strait of Hormuz. We will not accept maximalist demands.",
+    "lastUpdated": "2026-03-31T14:49:00.000Z"
+  },
+  {
+    "id": "rubio_weeks_not_months_mar31",
+    "name": "Marco Rubio",
+    "role": "US Secretary of State — Day 32 Talks Update",
+    "avatar": "us",
+    "initial": "MR",
+    "quote": "Our objectives will be achieved in weeks, not months. Communications are ongoing through intermediaries. The Iranian officials now at the table are more reasonable than before. We remain focused on ensuring Iran cannot threaten the United States or the region.",
+    "lastUpdated": "2026-03-31T14:49:00.000Z"
+  },
+  {
+    "id": "trump_go_get_your_oil_mar31",
+    "name": "Donald Trump",
+    "role": "US President — Day 32 Response to Allies on Gas Prices",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "Go to the Strait and just TAKE IT. The United States won't be there to help you anymore. These other countries sit back and benefit while we do all the work. American gas is at $4 — that's what happens when you don't deal. Iran needs to open the Strait. April 6 is the deadline and it is firm.",
+    "lastUpdated": "2026-03-31T14:49:00.000Z"
+  },
+  {
+    "id": "salam_hezbollah_ban_mar31",
+    "name": "Nawaf Salam",
+    "role": "Prime Minister of Lebanon — Hezbollah Military Ban",
+    "avatar": "other",
+    "initial": "NS",
+    "quote": "Lebanon has notified the United Nations of our position: Hezbollah's military wing is not authorized to conduct operations in Lebanese territory. The IRGC is directing Hezbollah without our consent. Lebanon did not choose this war. We will not allow our country to be an open arena for others' conflicts. We are moving to classify Hezbollah's military activities as illegal.",
+    "lastUpdated": "2026-03-31T14:49:00.000Z"
+  },
+  {
+    "id": "mojtaba-khamenei-mou-endorsement-jun18",
+    "name": "Mojtaba Khamenei",
+    "role": "Supreme Leader of Iran",
+    "avatar": "ir",
+    "initial": "MK",
+    "quote": "Approving the negotiation process with the United States does not mean accepting its views.",
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "ghalibaf-existential-war-jul15",
+    "name": "Mohammed Bagher Ghalibaf",
+    "role": "Iran's Top Negotiator / Speaker of Parliament",
+    "avatar": "ir",
+    "initial": "MG",
+    "quote": "We are in an essential and existential war with America. The memorandum is void, and our forces have complete freedom of action — but we remain open to talks if the United States honors its commitments.",
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "netanyahu-lebanon-stay-jun25",
+    "name": "Benjamin Netanyahu",
+    "role": "Prime Minister of Israel",
+    "avatar": "il",
+    "initial": "BN",
+    "quote": "We will remain in Lebanon, Syria, and Gaza as long as required. We will not leave the security buffer zone.",
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "trump-power-plants-bridges-threat-jul14",
+    "name": "Donald Trump",
+    "role": "President of the United States",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "The strikes will continue until I say it's enough. If Iran doesn't negotiate, next week we'll expand targets to power plants and bridges.",
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "pezeshkian-frozen-assets-jun29",
+    "name": "Masoud Pezeshkian",
+    "role": "President of Iran",
+    "avatar": "ir",
+    "initial": "MP",
+    "quote": "Six billion dollars of Iran's frozen assets held in Qatar will be returned to Tehran as part of implementing the memorandum's provisions.",
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "baghaei-commitments-conditional-jul15",
+    "name": "Esmaeil Baghaei",
+    "role": "Spokesperson, Iranian Foreign Ministry",
+    "avatar": "ir",
+    "initial": "EB",
+    "quote": "Our commitments remain in effect only as long as the other side fulfils its pledges. There are no plans for further talks at this time.",
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "trump-total-control-wall-of-steel-aug12",
+    "name": "Donald Trump",
+    "role": "President of the United States",
+    "avatar": "us",
+    "initial": "DT",
+    "quote": "The U.S.A. has total control over the Strait of Hormuz. We call it 'a wall of steel.' At some point, maybe they'll do something, and then they get blown away.",
+    "lastUpdated": "2026-08-13T15:10:07.000Z"
+  },
+  {
+    "id": "rezaei-strait-stays-closed-aug12",
+    "name": "Mohsen Rezaei",
+    "role": "Secretary, Supreme National Security Council of Iran",
+    "avatar": "ir",
+    "initial": "MR",
+    "quote": "The strait will not reopen until the war and the US naval blockade end, sanctions are lifted, American forces withdraw from the region, Iran receives reparations, and the wars in Lebanon and Gaza end.",
+    "lastUpdated": "2026-08-13T15:10:07.000Z"
+  },
+  {
+    "id": "araghchi-fake-intelligence-aug13",
+    "name": "Abbas Araghchi",
+    "role": "Foreign Minister of Iran",
+    "avatar": "ir",
+    "initial": "AA",
+    "quote": "The U.S. has long miscalculated due to intelligence failures. Case in point: the war on Iran. Now, an even bigger miscalculation on the Strait of Hormuz. Worse than fake news is fake intelligence.",
+    "lastUpdated": "2026-08-13T15:10:07.000Z"
+  },
+  {
+    "id": "pezeshkian-position-of-strength-aug21",
+    "name": "Masoud Pezeshkian",
+    "role": "President of Iran",
+    "avatar": "ir",
+    "initial": "MP",
+    "quote": "It is better to end the war today, when we are in power and dignity, and the whole world acknowledges our victory.",
+    "lastUpdated": "2026-08-21T15:04:00.000Z"
+  },
+  {
+    "id": "gharibabadi-temporary-hormuz-corridor-aug26",
+    "name": "Kazem Gharibabadi",
+    "role": "Deputy Foreign Minister of Iran",
+    "avatar": "ir",
+    "initial": "KG",
+    "quote": "The agreed-upon transit route with Oman is a temporary route. [Full reopening of the Strait of Hormuz still requires the United States to fulfil its commitments under the June memorandum of understanding, including sanctions relief and the release of frozen Iranian assets.]",
+    "lastUpdated": "2026-08-26T18:00:00.000Z"
+  },
+  {
+    "id": "pezeshkian-gain-nothing-economic-pressure-aug26",
+    "name": "Masoud Pezeshkian",
+    "role": "President of Iran",
+    "avatar": "ir",
+    "initial": "MP",
+    "quote": "Our approach is understanding and resolving issues through interaction and negotiation, but at the same time, we have stood and will continue to stand firmly against economic pressure. [Aug 26, on the same day Iran and Oman agreed a temporary Hormuz navigation corridor — argued the US would 'gain nothing' from its sanctions campaign.]",
+    "lastUpdated": "2026-08-26T18:00:00.000Z"
+  },
+  {
+    "id": "albusaidi-hormuz-corridor-hopeful-aug26",
+    "name": "Badr Albusaidi",
+    "role": "Foreign Minister of Oman",
+    "avatar": "other",
+    "initial": "BA",
+    "quote": "I am hopeful we will soon announce a temporary corridor for the Strait of Hormuz and practical arrangements to restore safe navigation.",
+    "lastUpdated": "2026-08-26T18:00:00.000Z"
+  },
+  {
+    "id": "bessent-toughest-sanctions-aug21",
+    "name": "Scott Bessent",
+    "role": "US Treasury Secretary",
+    "avatar": "us",
+    "initial": "SB",
+    "quote": "It is a one-two punch. We have the blockade on Iran, and we are going to have the toughest sanctions in history.",
+    "lastUpdated": "2026-08-21T11:01:00.000Z"
+  }
+]

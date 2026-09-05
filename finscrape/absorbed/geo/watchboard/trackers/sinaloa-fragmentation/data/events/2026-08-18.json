@@ -1,0 +1,68 @@
+[
+  {
+    "id": "el-habal-woman-found-dead-highway-aug18-2026",
+    "date": "2026-08-18",
+    "year": "2026",
+    "title": "Day 756: Woman's Body Found With Signs of Violence on Mazatlán–Culiacán Highway",
+    "type": "clash",
+    "detail": "A woman's body was found around kilometer 8 of the free Mazatlán–Culiacán highway, near the El Habal area north of Mazatlán, on Tuesday, August 18, 2026. Motorists spotted the body on the shoulder of the south-to-north lanes and alerted authorities. The victim, wearing shorts, a blouse and black Croc-style sandals, showed apparent signs of violence; her identity had not been released as of the report. Elements from all three levels of government cordoned off the scene, and State Attorney General's Office (FGE) personnel ordered the body removed to the Forensic Medical Service for autopsy and identification.",
+    "sources": [
+      {
+        "name": "Café Negro Portal",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://cafenegroportal.com/localizan-a-mujer-sin-vida-y-con-huellas-de-violencia-junto-a-la-carretera-mazatlan-culiacan/"
+      },
+      {
+        "name": "El Sol de Mazatlán",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://oem.com.mx/elsoldemazatlan/local/hallan-muerta-a-mujer-junto-a-la-carretera-mazatlan-culiacan-31635400"
+      }
+    ],
+    "confidence": "medium",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cafenegroportal.com/localizan-a-mujer-sin-vida-y-con-huellas-de-violencia-junto-a-la-carretera-mazatlan-culiacan/",
+        "caption": "Woman's body found near El Habal on the Mazatlán–Culiacán highway, August 18, 2026",
+        "source": "Café Negro Portal",
+        "thumbnail": "https://i0.wp.com/cafenegroportal.com/wp-content/uploads/2026/08/Encuentra-una-mujer-sin-vida.jpeg?resize=600%2C330&ssl=1"
+      }
+    ],
+    "lastUpdated": "2026-08-20T15:08:34.000Z"
+  },
+  {
+    "id": "concordia-mazatlan-culiacan-federal-seizure-explosives-lab-aug18-2026",
+    "date": "2026-08-18",
+    "year": "2026",
+    "title": "Day 756: Federal Forces Seize 172 IEDs in Concordia, Dismantle Culiacán Synthetic Drug Lab, Net Barrett Rifle in Mazatlán",
+    "type": "seizure",
+    "detail": "Mexican Army, National Guard, Navy, SSPC and FGR personnel carried out coordinated operations across Concordia, Culiacán and Mazatlán on August 18–19, 2026. In Concordia (Aug 18), authorities seized 172 improvised explosive devices, 12 magazines, 2,420 cartridges of various calibers and tactical equipment. The same day in Culiacán, a clandestine synthetic-drug laboratory was located and disabled, yielding 2,450 liters of chemical precursor substances. In Mazatlán (Aug 19), forces seized a .50-caliber Barrett rifle, six additional long guns, 85 magazines and 5,675 cartridges of various calibers along with tactical gear — bringing the combined Concordia/Mazatlán haul to roughly 8,095 cartridges and 97 magazines. No arrests were reported; all seized material was turned over to the FGR for investigation.",
+    "sources": [
+      {
+        "name": "Infobae",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://www.infobae.com/mexico/2026/08/21/fuerzas-federales-decomisan-arsenal-y-desmantelan-laboratorio-clandestino-en-sinaloa/"
+      },
+      {
+        "name": "La Jornada",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://www.jornada.com.mx/2026/08/22/politica/007n2pol?partner=rss"
+      }
+    ],
+    "confidence": "high",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.marcrixnoticias.com.mx/operativos-en-sinaloa-dejan-172-explosivos-y-un-arsenal/",
+        "caption": "Seized explosive devices and weapons from the Concordia–Culiacán–Mazatlán federal operation, August 2026",
+        "source": "Marcrix Noticias",
+        "thumbnail": "https://www.marcrixnoticias.com.mx/wp-content/uploads/2026/08/780076449_1987328525120406_7743889704549529625_n.png.jpeg"
+      }
+    ],
+    "lastUpdated": "2026-08-24T14:00:00.000Z"
+  }
+]

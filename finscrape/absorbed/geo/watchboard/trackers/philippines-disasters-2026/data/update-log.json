@@ -1,0 +1,38 @@
+{
+  "lastRun": "2026-08-28T00:36:57.133Z",
+  "tracker": "philippines-disasters-2026",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "itemCount": 8
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 40
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 30
+    },
+    "claims": {
+      "status": "updated",
+      "itemCount": 15
+    },
+    "political": {
+      "status": "unchanged",
+      "itemCount": 14
+    },
+    "casualties": {
+      "status": "updated",
+      "itemCount": 14
+    },
+    "econ": {
+      "status": "updated",
+      "itemCount": 12
+    },
+    "meta": {
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

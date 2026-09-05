@@ -1,0 +1,308 @@
+[
+  {
+    "id": "muhammad-ali-jinnah",
+    "name": "Muhammad Ali Jinnah",
+    "role": "Founder and first Governor-General of Pakistan (1947)",
+    "avatar": "pakistan",
+    "initial": "J",
+    "quote": "Pakistan not only means freedom and independence but the Muslim Ideology which has to be preserved, which has come to us as a precious gift and treasure and which, we hope others will share with us.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jawaharlal-nehru",
+    "name": "Jawaharlal Nehru",
+    "role": "First Prime Minister of India (1947–1964)",
+    "avatar": "india",
+    "initial": "N",
+    "quote": "The man who has got blood on his hands thinks that by some hocus pocus he can wash them clean. I want you to know that the world does not forget.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "indira-gandhi",
+    "name": "Indira Gandhi",
+    "role": "Indian PM 1966–77, 1980–84. Led India in 1971 war; signed Simla Agreement",
+    "avatar": "india",
+    "initial": "I",
+    "quote": "You cannot shake hands with a clenched fist.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "zulfikar-ali-bhutto",
+    "name": "Zulfikar Ali Bhutto",
+    "role": "Pakistan PM 1973–77; signed Simla Agreement; launched nuclear program",
+    "avatar": "pakistan",
+    "initial": "B",
+    "quote": "We will eat grass, even go hungry, but we will get one of our own [an atomic bomb].",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pervez-musharraf",
+    "name": "Pervez Musharraf",
+    "role": "Pakistani President 2001–08; Army Chief 1998–2007; architect of Kargil War",
+    "avatar": "pakistan",
+    "initial": "M",
+    "quote": "I stand for a moderate, enlightened, and progressive Pakistan. I stand against extremism.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nawaz-sharif",
+    "name": "Nawaz Sharif",
+    "role": "Pakistani PM (multiple terms): signed Lahore Declaration (1999); ousted in Musharraf coup",
+    "avatar": "pakistan",
+    "initial": "N",
+    "quote": "Today, we took a bold, determined step to make peace with India. I am committed to seeing this through.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "atal-bihari-vajpayee",
+    "name": "Atal Bihari Vajpayee",
+    "role": "Indian PM 1998–2004; Pokhran-II, Lahore Declaration, Kargil War, Agra Summit",
+    "avatar": "india",
+    "initial": "V",
+    "quote": "You can change friends but not neighbors. We must live together with our neighbors.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "narendra-modi",
+    "name": "Narendra Modi",
+    "role": "Indian PM since 2014; ordered surgical strikes (2016), Balakot (2019), revoked Art. 370 (2019), Op. Sindoor (2025); on Operation Sindoor first anniversary (May 7, 2026): changed profile pictures across all platforms, honored armed forces, reaffirmed resolve against terrorism",
+    "avatar": "india",
+    "initial": "M",
+    "quote": "A year ago, our armed forces displayed unparalleled courage, precision and resolve during Operation Sindoor. Today, a year later, we remain as steadfast as ever in our resolve to defeat terrorism and destroy its enabling ecosystem.",
+    "lastUpdated": "2026-05-07T14:45:00.000Z"
+  },
+  {
+    "id": "imran-khan",
+    "name": "Imran Khan",
+    "role": "Pakistani PM 2018–2022; released Abhinandan; arrested 2023; political career under army pressure",
+    "avatar": "pakistan",
+    "initial": "K",
+    "quote": "We want to give peace a chance. The release of Wing Commander Abhinandan is a peace gesture.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hafiz-saeed",
+    "name": "Hafiz Saeed",
+    "role": "LeT founder; 26/11 planner; convicted in Pakistan (2020) for terrorism financing",
+    "avatar": "pakistan",
+    "initial": "S",
+    "quote": "We believe in jihad and we ask every Muslim to take up jihad.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "masood-azhar",
+    "name": "Masood Azhar",
+    "role": "JeM founder; mastermind of Parliament attack (2001), Pathankot (2016), Pulwama (2019); UN-designated terrorist",
+    "avatar": "pakistan",
+    "initial": "A",
+    "quote": "We will not rest until the freedom of Kashmir is achieved.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "syed-salahuddin",
+    "name": "Syed Salahuddin",
+    "role": "Chief of Hizbul Mujahideen; most prominent Kashmiri militant commander; US-designated terrorist (2017)",
+    "avatar": "kashmir",
+    "initial": "S",
+    "quote": "We will continue our struggle until Kashmir is liberated from Indian occupation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manmohan-singh",
+    "name": "Manmohan Singh",
+    "role": "Indian PM 2004–2014; 26/11 crisis management; Musharraf-Manmohan 4-point Kashmir formula negotiated",
+    "avatar": "india",
+    "initial": "S",
+    "quote": "Terrorism is a global challenge that requires a global response, including from Pakistan.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "farooq-abdullah",
+    "name": "Farooq Abdullah",
+    "role": "Three-time J&K CM; National Conference leader; supports special status for J&K within India",
+    "avatar": "kashmir",
+    "initial": "A",
+    "quote": "We are Indians first. But we want our special status that Article 370 gave us restored.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "omar-abdullah",
+    "name": "Omar Abdullah",
+    "role": "J&K CM (current); National Conference leader; won 2024 J&K Assembly elections after Article 370 revocation",
+    "avatar": "kashmir",
+    "initial": "O",
+    "quote": "The people of J&K have voted for development and their rights. We expect statehood to be restored.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "asim-munir",
+    "name": "Field Marshal Asim Munir",
+    "role": "Pakistan COAS & Chief of Defence Forces (since 2025); Field Marshal post-Sindoor; chaired 275th Corps Commanders' Conference (May 5, 2026) marking Marka-e-Haq anniversary — 'nation stands united, resilient, and fully prepared'; directed commanders to maintain 'highest levels of vigilance and operational readiness'",
+    "avatar": "pakistan",
+    "initial": "M",
+    "quote": "National commemoration of Marka-e-Haq sends a clear message to the Indian hubristic political mindset — the Pakistani nation stands united, resilient, and fully prepared.",
+    "lastUpdated": "2026-05-06T14:00:00.000Z"
+  },
+  {
+    "id": "antonio-guterres",
+    "name": "António Guterres",
+    "role": "UN Secretary-General; called for de-escalation after Balakot (2019) and Operation Sindoor (2025)",
+    "avatar": "un",
+    "initial": "G",
+    "quote": "I call on both India and Pakistan to exercise maximum restraint and to resume dialogue immediately.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "shehbaz-sharif",
+    "name": "Shehbaz Sharif",
+    "role": "Pakistan PM (2022–present); managed Operation Sindoor crisis May 2025; secured IMF $1.32B tranche (May 8, 2026); four-day state visit to China (May 23–26, 2026) — signed CPEC 2.0 expansion agreements, counterterrorism cooperation, and trade deals; both sides described ties as 'Two Souls, One Heart'; the visit cemented Pakistan's strategic hedging against India's post-Sindoor isolation strategy",
+    "avatar": "pakistan",
+    "initial": "S",
+    "quote": "Pakistan is a peace-loving nation committed to regional stability. Our role in facilitating dialogue proves that Pakistan is an indispensable partner for global peace.",
+    "lastUpdated": "2026-05-29T14:45:00.000Z"
+  },
+  {
+    "id": "rajnath-singh",
+    "name": "Rajnath Singh",
+    "role": "Indian Defence Minister since 2019; oversaw Operation Sindoor; at Joint Commanders' Conference (May 9, 2026): told armed forces to 'remain prepared for future conflicts'; inaugurated Shaurya Defence Technology Symposium (May 4–6, 2026); ANI Security Summit (Apr 30): disclosed Pakistan made nuclear bluff",
+    "avatar": "india",
+    "initial": "R",
+    "quote": "Operation Sindoor showed India's military capabilities to the world. We stopped it voluntarily, on our own terms. Pakistan is the epicentre of International Terrorism — and remain prepared: the next test will demand equal resolve.",
+    "lastUpdated": "2026-05-11T10:22:14.000Z"
+  },
+  {
+    "id": "khawaja-asif",
+    "name": "Khawaja Asif",
+    "role": "Pakistan Defence Minister (PML-N); at Marka-e-Haq book launch (May 6, 2026): 'Pakistan's reaction to any future aggression would be more intense and decisive — repeating would be equivalent to committing suicide'",
+    "avatar": "pakistan",
+    "initial": "A",
+    "quote": "Pakistan's reaction to any miscalculation in the future would be more intense and decisive. There is no space for dramatics, false flag operations, or miscalculations — repeating would be equivalent to committing suicide.",
+    "lastUpdated": "2026-05-06T14:00:00.000Z"
+  },
+  {
+    "id": "a-q-khan",
+    "name": "Dr. A.Q. Khan",
+    "role": "Father of Pakistan's nuclear bomb; ran global nuclear proliferation network sold to Iran, Libya, North Korea",
+    "avatar": "pakistan",
+    "initial": "K",
+    "quote": "I saved my country from a certain catastrophe. Pakistan needed the bomb, and I gave it to them.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "wc-abhinandan-varthaman",
+    "name": "Wing Commander Abhinandan Varthaman",
+    "role": "IAF pilot; shot down over Pakistan in Feb 2019 dogfight; captured and released; became national hero",
+    "avatar": "india",
+    "initial": "A",
+    "quote": "The Pakistani Army has been very good to me. I am sorry, I'm not supposed to say that.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ishaq-dar",
+    "name": "Ishaq Dar",
+    "role": "Pakistan Foreign Minister (2022–present); leading Pakistan's post-Sindoor diplomatic campaign; called for unconditional dialogue at multiple bilateral and international forums; declined to confirm back-channel contacts: 'If I was to comment, there would be no back channel' (May 23, 2026); escalated Indus Waters Treaty dispute to UN Security Council (April 24, 2026)",
+    "avatar": "pakistan",
+    "initial": "D",
+    "quote": "Pakistan is ready for unconditional dialogue with India. We seek a peaceful resolution to all outstanding issues, including Kashmir, through diplomatic means.",
+    "lastUpdated": "2026-05-24T14:06:00.000Z"
+  },
+  {
+    "id": "s-jaishankar",
+    "name": "S. Jaishankar",
+    "role": "Indian External Affairs Minister since 2019; principal architect of India's post-Sindoor diplomatic strategy; labeled Pakistan 'dalaal' (broker) nation in March 2026; deployed to UAE (April 11-12, 2026) as India's counter to Pakistan's Islamabad summit diplomacy; chaired BRICS Foreign Ministers' Summit at Bharat Mandapam, New Delhi (May 13-15, 2026) — summit closed May 15 without joint communique; on May 17–18, MEA formally rejected PCA's May 15 IWT supplemental award as 'null and void'; hosted Quad Foreign Ministers' Meeting in New Delhi (May 26, 2026) with US SecState Rubio, Australia FM, Japan FM — Rubio acknowledged Pakistan terrorism sponsorship from Pakistani soil and assured India that US-Pakistan ties would not come at expense of US-India relations; Rubio invited PM Modi to the White House; early US-India trade deal signalled as 'likely'",
+    "avatar": "india",
+    "initial": "J",
+    "quote": "Pakistan is trying to position itself as a dalaal. India's foreign policy is based on national interest, not on being anyone's broker or being brokered.",
+    "lastUpdated": "2026-05-27T15:37:13.000Z"
+  },
+  {
+    "id": "ahmed-sharif-chaudhry",
+    "name": "Lt Gen Ahmed Sharif Chaudhry",
+    "role": "Pakistan DG ISPR; led Marka-e-Haq anniversary press conference (May 7, 2026); on May 17, 2026 issued formal condemnation of Indian Army Chief Dwivedi's 'geography or history' warning, calling it 'madness and warmongering' and a reflection of a 'jingoistic and myopic mindset'; warned any attempt to push region toward conflict will have 'severe consequences'",
+    "avatar": "pakistan",
+    "initial": "C",
+    "quote": "Threatening a sovereign nuclear neighbour with elimination from 'geography' is not strategic signalling or brinkmanship; it is sheer bankruptcy of cognitive capacities. Any hostile design against Pakistan will be met with severe consequences.",
+    "lastUpdated": "2026-05-17T14:00:00.000Z"
+  },
+  {
+    "id": "upendra-dwivedi",
+    "name": "General Upendra Dwivedi",
+    "role": "Indian Army Chief of Army Staff (COAS) since 2024; at 'Sena Samwad' session, Manekshaw Centre, New Delhi (May 16, 2026): issued stark warning that Pakistan must 'decide whether they want to be part of geography or history' — the most direct escalatory threat by an Indian Army Chief in the post-Sindoor period; remarks triggered sharp ISPR condemnation on May 17, 2026",
+    "avatar": "india",
+    "initial": "D",
+    "quote": "Pakistan must decide whether they want to be part of geography or history.",
+    "lastUpdated": "2026-05-17T14:00:00.000Z"
+  },
+  {
+    "id": "pete-hegseth",
+    "name": "Pete Hegseth",
+    "role": "U.S. Secretary of Defense (2025–present); at IISS Shangri-La Dialogue, Singapore (May 31, 2026): endorsed President Trump's claim of brokering the May 10, 2025 India-Pakistan ceasefire — the most senior U.S. defense official to publicly validate this narrative. Called India a key Indo-Pacific partner. Statement creates dual U.S. posture alongside SecState Rubio's May 26 acknowledgment of Pakistan-sponsored terrorism.",
+    "avatar": "other",
+    "initial": "H",
+    "quote": "India is a key Indo-Pacific partner. American diplomatic leadership has helped maintain stability in the region.",
+    "lastUpdated": "2026-05-31T14:10:52.000Z"
+  },
+  {
+    "id": "anil-chauhan",
+    "name": "General Anil Chauhan",
+    "role": "Chief of Defence Staff (CDS) of India (2022–present); represented India at the 23rd Shangri-La Dialogue, Singapore (June 1, 2026): stated Operation Sindoor 'lies in the military domain and should offer lessons to our adversary,' reaffirming it as a permanent deterrence precedent — the most direct post-ceasefire warning to Pakistan by India's senior-most military officer at an international forum",
+    "avatar": "india",
+    "initial": "C",
+    "quote": "This operation lies in the military domain and should offer lessons to our adversary. Operation Sindoor has redefined India's red line on cross-border terrorism.",
+    "lastUpdated": "2026-06-01T09:23:45.000Z"
+  },
+  {
+    "id": "parvathaneni-harish",
+    "name": "Parvathaneni Harish",
+    "role": "India's Permanent Representative to the United Nations (2024–present); at UNGA debate on the Annual Report of the Security Council (June 6, 2026): delivered sharp rebuttal to Pakistan's envoy over Kashmir — 'Jammu and Kashmir was, is, and will always remain an integral part of India,' accusing Pakistan of a 'carefully choreographed attempt to conflate fact with fiction'",
+    "avatar": "india",
+    "initial": "H",
+    "quote": "Jammu and Kashmir was, is, and will always remain an integral part of India. Pakistan misuses this platform to peddle biased and false narratives in a carefully choreographed attempt to conflate fact with fiction.",
+    "lastUpdated": "2026-06-07T14:15:22.000Z"
+  },
+  {
+    "id": "sahir-shamshad-mirza",
+    "name": "General Sahir Shamshad Mirza",
+    "role": "Chairman Joint Chiefs of Staff Committee (CJCSC) of Pakistan; at the 23rd Shangri-La Dialogue, Singapore (June 1, 2026): warned 'the threshold of an escalatory war has come dangerously low' and called for moving 'beyond conflict management towards conflict resolution' — Pakistan's most direct public call for dialogue by a serving military officer since the May 10, 2025 ceasefire",
+    "avatar": "pakistan",
+    "initial": "M",
+    "quote": "The threshold of an escalatory war has come dangerously low. We must move beyond conflict management towards conflict resolution.",
+    "lastUpdated": "2026-06-01T09:23:45.000Z"
+  },
+  {
+    "id": "randhir-jaiswal",
+    "name": "Randhir Jaiswal",
+    "role": "Spokesperson, Indian Ministry of External Affairs; on August 21, 2026 dismissed Pakistan's protest over US Ambassador Sergio Gor's Kashmir remarks and called Delhi's barricade removal a 'proportionate action'",
+    "avatar": "india",
+    "initial": "J",
+    "quote": "Jammu, Kashmir, and Ladakh are integral and indivisible parts of India. They were, they are, and they will remain so. I see no reason to comment on Pakistan's frustration.",
+    "lastUpdated": "2026-08-21T00:00:00.000Z"
+  },
+  {
+    "id": "amit-shah",
+    "name": "Amit Shah",
+    "role": "Union Home Minister of India; on August 17, 2026 announced the bust of the ISI-backed Shahzad Bhatti Network and arrest of 200+ operatives ahead of Independence Day",
+    "avatar": "india",
+    "initial": "S",
+    "quote": "Security forces have dismantled the Pakistan-backed Shahzad Bhatti Network and foiled its plans for subversive attacks timed around Independence Day.",
+    "lastUpdated": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "id": "tahir-andrabi",
+    "name": "Tahir Andrabi",
+    "role": "Spokesperson, Pakistan Ministry of Foreign Affairs; on August 18, 2026 rejected India's Shahzad Bhatti Network allegations and accused India of 'state-sponsored terrorism' abroad",
+    "avatar": "pakistan",
+    "initial": "A",
+    "quote": "Unfounded Indian insinuations cannot divert international attention away from India's state-sponsored terrorism, targeted assassinations, and subversion in foreign territories.",
+    "lastUpdated": "2026-08-22T00:00:00.000Z"
+  },
+  {
+    "id": "sergio-gor",
+    "name": "Sergio Gor",
+    "role": "US Ambassador to India and Special Envoy for South and Central Asia; on his first visit to J&K, at a joint media briefing with CM Omar Abdullah in Srinagar (August 19, 2026), called Kashmir 'an important part of India,' prompting Pakistan to summon the US Chargé d'Affaires in Islamabad and lodge a formal protest",
+    "avatar": "other",
+    "initial": "G",
+    "quote": "Kashmir is an important part of India and an incredibly beautiful place.",
+    "lastUpdated": "2026-08-20T00:00:00.000Z"
+  }
+]

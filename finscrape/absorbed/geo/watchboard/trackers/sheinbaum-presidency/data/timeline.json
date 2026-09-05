@@ -1,0 +1,1375 @@
+[
+  {
+    "era": "Inauguration & Early Governance (Oct–Dec 2024)",
+    "events": [
+      {
+        "id": "sheinbaum-inauguration",
+        "year": "Oct 1, 2024",
+        "title": "Claudia Sheinbaum Inaugurated as Mexico's First Female President",
+        "type": "political",
+        "detail": "Claudia Sheinbaum Pardo was sworn in as Mexico's 66th president and first female head of state, also the first person of Jewish heritage to hold the office. Morena and its coalition allies held supermajorities in both chambers of Congress. She pledged to continue AMLO's Fourth Transformation while adding a 'second floor' of technocratic governance.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/americas/claudia-sheinbaum-takes-office-mexicos-first-female-president-2024-10-01/"
+          },
+          {
+            "name": "El Universal",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Claudia_Sheinbaum",
+            "source": "Wikipedia / Claudia Sheinbaum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Claudia_Sheinbaum_in_2025_%283x4_cropped%29.jpg/330px-Claudia_Sheinbaum_in_2025_%283x4_cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "diplomatic-reset-salazar",
+        "year": "Oct 2, 2024",
+        "title": "Diplomatic Reset: Normal Relations Resumed with US Ambassador Salazar",
+        "type": "diplomatic",
+        "detail": "The Sheinbaum administration resumed normal diplomatic protocols with U.S. Ambassador Ken Salazar, which had been suspended by AMLO after disputes over embassy activities. New protocols were established that prevented the ambassador from speaking directly with cabinet secretaries without prior coordination with the Foreign Ministry.",
+        "sources": [
+          {
+            "name": "Animal Político",
+            "tier": 2
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Presidency_of_Barack_Obama",
+            "source": "Wikipedia / Presidency of Barack Obama",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/330px-President_Barack_Obama.jpg"
+          }
+        ]
+      },
+      {
+        "id": "energy-nationalization-amendment",
+        "year": "Oct 30, 2024",
+        "title": "Energy Nationalization Constitutional Amendment Published",
+        "type": "political",
+        "detail": "A constitutional amendment reclassified CFE and Pemex from 'State Productive Companies' to 'State Public Companies,' reversing key elements of the 2013 energy reform. CFE was mandated to retain at least 54% of the national electricity market, curtailing private and foreign energy competition.",
+        "sources": [
+          {
+            "name": "Diario Oficial de la Federación",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Chilean_nationalization_of_copper",
+            "source": "Wikipedia / Chilean nationalization of copper",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Peso_Chileno_1933.jpg/330px-Peso_Chileno_1933.jpg"
+          }
+        ]
+      },
+      {
+        "id": "g20-rio-summit",
+        "year": "Nov 2024",
+        "title": "Sheinbaum Attends G20 Summit in Rio de Janeiro — First Foreign Trip",
+        "type": "diplomatic",
+        "detail": "On her first foreign trip as president, Sheinbaum attended the G20 Summit in Rio de Janeiro where she proposed allocating 1% of global military spending toward reforestation initiatives. She held bilateral meetings with U.S. President Biden, Canadian PM Trudeau, China's Xi Jinping, and French President Macron.",
+        "sources": [
+          {
+            "name": "Proceso",
+            "tier": 2
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/List_of_international_presidential_trips_made_by_Claudia_Sheinbaum",
+            "source": "Wikipedia / List of international presidential trips made by Claudia Sheinbaum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Viajes_internacionales_de_la_Presidenta_Claudia_Sheinbaum_Pardo.png/330px-Viajes_internacionales_de_la_Presidenta_Claudia_Sheinbaum_Pardo.png"
+          }
+        ]
+      },
+      {
+        "id": "autonomous-agencies-dissolved",
+        "year": "Nov 28, 2024",
+        "title": "Senate Dissolves INAI, COFECE, IFT and Four Other Autonomous Agencies",
+        "type": "judicial",
+        "detail": "The Morena-controlled Senate approved the dissolution of seven autonomous constitutional entities including INAI (transparency watchdog), COFECE (competition regulator), IFT (telecom regulator), and CONEVAL (poverty measurement). Their functions were absorbed by executive branch ministries. Critics called it a major blow to accountability; the reform was published in the Official Gazette on December 20, 2024.",
+        "sources": [
+          {
+            "name": "Diario Oficial de la Federación",
+            "tier": 1
+          },
+          {
+            "name": "Animal Político",
+            "tier": 2
+          },
+          {
+            "name": "Wilson Center",
+            "tier": 3,
+            "url": "https://www.wilsoncenter.org/article/mexicos-constitutional-reforms-series-elimination-autonomous-agencies"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.wilsoncenter.org/article/mexicos-constitutional-reforms-series-elimination-autonomous-agencies",
+            "source": "Wilson Center",
+            "thumbnail": "https://www.wilsoncenter.org/themes/custom/wilson/assets/images/og-image-wilson-center.jpg"
+          }
+        ]
+      },
+      {
+        "id": "social-programs-constitutionalized",
+        "year": "Dec 2, 2024",
+        "title": "Flagship Social Programs Elevated to Constitutional Status",
+        "type": "social",
+        "detail": "Several major social welfare programs inherited from the AMLO administration were elevated to constitutional law, making them significantly harder for future governments to repeal or defund. This included Bienestar pension programs, scholarships, and agricultural support programs.",
+        "sources": [
+          {
+            "name": "Diario Oficial de la Federación",
+            "tier": 1
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Racial_segregation_in_the_United_States",
+            "source": "Wikipedia / Racial segregation in the United States",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/1943_Colored_Waiting_Room_Sign.jpg/330px-1943_Colored_Waiting_Room_Sign.jpg"
+          }
+        ]
+      },
+      {
+        "id": "secretariat-women-created",
+        "year": "Dec 20, 2024",
+        "title": "New Secretariat of Women and Anticorruption Secretariat Created",
+        "type": "political",
+        "detail": "Reforms to the Organic Law of Federal Public Administration created the Secretariat of Women (replacing the National Institute for Women/INMUJERES) and the Secretariat of Anticorruption and Good Governance (SABG), which replaced the Secretariat of Civil Service and absorbed most functions of the dissolved INAI.",
+        "sources": [
+          {
+            "name": "Diario Oficial de la Federación",
+            "tier": 1
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Cabinet_of_Claudia_Sheinbaum",
+            "source": "Wikipedia / Cabinet of Claudia Sheinbaum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Signature_of_Claudia_Sheinbaum.svg/330px-Signature_of_Claudia_Sheinbaum.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "security-reform-sspc",
+        "year": "Dec 31, 2024",
+        "title": "Security Reform Expands SSPC Powers Over Intelligence System",
+        "type": "political",
+        "detail": "A year-end constitutional amendment expanded powers of the Secretariat of Security and Citizen Protection (SSPC), authorizing it to conduct criminal investigations and formally designating it as coordinating body of the National Intelligence System. The reform extended the militarized security model championed since 2022.",
+        "sources": [
+          {
+            "name": "Diario Oficial de la Federación",
+            "tier": 1
+          },
+          {
+            "name": "Animal Político",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Trump Tariff Crisis & Migration Negotiations (Jan–Mar 2025)",
+    "events": [
+      {
+        "id": "minimum-wage-hike-jan-2025",
+        "year": "Jan 1, 2025",
+        "title": "12% Minimum Wage Increase Takes Effect",
+        "type": "economic",
+        "detail": "Mexico's minimum wage rose 12% on January 1, 2025, outpacing the 3.76% inflation rate. This extended a remarkable trend: between 2021 and 2025, Mexico's real minimum wage rose 56.7%, the highest among OECD countries over that period. The increase was touted as a pillar of Sheinbaum's social equity agenda.",
+        "sources": [
+          {
+            "name": "INEGI",
+            "tier": 1
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Minimum_wage_in_the_United_States",
+            "source": "Wikipedia / Minimum wage in the United States",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Map_of_US_minimum_wage_by_state.svg/330px-Map_of_US_minimum_wage_by_state.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "pensión-mujeres-bienestar-launch",
+        "year": "Jan 2025",
+        "title": "Pensión Mujeres Bienestar Program Launched for Women Ages 60–64",
+        "type": "social",
+        "detail": "The Sheinbaum administration launched the Pensión Mujeres Bienestar, a new bimonthly payment program providing cash transfers to women aged 60–64 who do not yet qualify for the universal pension. The program extended Mexico's social safety net to a previously uncovered demographic gap.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Claudia_Sheinbaum",
+            "source": "Wikipedia / Claudia Sheinbaum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Claudia_Sheinbaum_in_2025_%283x4_cropped%29.jpg/330px-Claudia_Sheinbaum_in_2025_%283x4_cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trump-inauguration-fto-eo",
+        "year": "Jan 20, 2025",
+        "title": "Trump Signs Cartel FTO Executive Order on Inauguration Day",
+        "type": "diplomatic",
+        "detail": "On his first day back in office, President Trump signed Executive Order 14157 designating drug cartels as Foreign Terrorist Organizations. Sheinbaum quickly announced Mexico would accept deportations including non-Mexican nationals, and launched the 'Mexico Embraces You' (México te Abraza) repatriation program with nine border reception centers.",
+        "sources": [
+          {
+            "name": "White House Executive Order 14157",
+            "tier": 1,
+            "url": "https://www.whitehouse.gov/presidential-actions/2025/01/designating-cartels-and-other-organizations-as-foreign-terrorist-organizations-and-specially-designated-global-terrorists/"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Second_presidency_of_Donald_Trump",
+            "source": "Wikipedia / Second presidency of Donald Trump",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/330px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "mass-deportations-begin",
+        "year": "Jan 27, 2025",
+        "title": "Mass Deportations to Mexico Begin Under Trump; ~4,100 in First Week",
+        "type": "diplomatic",
+        "detail": "Within the first week of Trump's return to the presidency, approximately 4,094 people were deported to Mexico. The Sheinbaum government deployed nine border reception centers under the 'México te Abraza' program. By March 3, 2025, Sheinbaum reported receiving 19,663 total deportees, including some non-Mexican nationals redirected from other countries.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          },
+          {
+            "name": "Foreign Policy",
+            "tier": 3,
+            "url": "https://foreignpolicy.com/2025/01/24/trump-mexico-deportation-immigration-tariffs-trade-sheinbaum/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://foreignpolicy.com/2025/01/24/trump-mexico-deportation-immigration-tariffs-trade-sheinbaum/",
+            "source": "Foreign Policy",
+            "thumbnail": "https://foreignpolicy.com/wp-content/uploads/2025/01/mexico-sheinbaum-GettyImages-2194402345.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trump-25pct-tariffs-announced",
+        "year": "Feb 1, 2025",
+        "title": "Trump Announces 25% Tariffs on Mexican Imports Citing Fentanyl and Migration",
+        "type": "economic",
+        "detail": "President Trump announced executive orders using the International Emergency Economic Powers Act (IEEPA) to impose 25% tariffs on all Mexican imports, citing inadequate action on fentanyl trafficking and illegal immigration. The tariffs were set to take effect on February 4, threatening a major shock to Mexico's export-driven economy.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "Texas Tribune",
+            "tier": 2,
+            "url": "https://www.texastribune.org/2025/02/03/tariffs-us-mexico-negotiation/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.texastribune.org/2025/02/03/tariffs-us-mexico-negotiation/",
+            "source": "Texas Tribune",
+            "thumbnail": "https://i0.wp.com/www.texastribune.org/wp-content/uploads/2025/02/0120Mexico20Trade20Semi20Trucks20Wait20REUTERS20TT-scaled.jpg?fit=2560%2C1707&quality=100&ssl=1&w=1200&h=630"
+          }
+        ]
+      },
+      {
+        "id": "tariffs-paused-30-days",
+        "year": "Feb 3, 2025",
+        "title": "Tariffs Paused 30 Days After Sheinbaum Deploys 10,000 National Guard to Border",
+        "type": "diplomatic",
+        "detail": "After Sheinbaum announced the deployment of 10,000 additional National Guard troops to the northern and southern borders, President Trump agreed to delay the 25% tariffs by one month. The pause triggered immediate negotiations between U.S. Secretary of State Rubio and his Mexican counterparts.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "Texas Tribune",
+            "tier": 2,
+            "url": "https://www.texastribune.org/2025/02/03/tariffs-us-mexico-negotiation/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.texastribune.org/2025/02/03/tariffs-us-mexico-negotiation/",
+            "source": "Texas Tribune",
+            "thumbnail": "https://i0.wp.com/www.texastribune.org/wp-content/uploads/2025/02/0120Mexico20Trade20Semi20Trucks20Wait20REUTERS20TT-scaled.jpg?fit=2560%2C1707&quality=100&ssl=1&w=1200&h=630"
+          }
+        ]
+      },
+      {
+        "id": "cartel-fto-formally-designated",
+        "year": "Feb 6, 2025",
+        "title": "State Dept Formally Designates 8 Cartels as Foreign Terrorist Organizations",
+        "type": "diplomatic",
+        "detail": "Secretary of State Marco Rubio formally designated eight entities as both Foreign Terrorist Organizations and Specially Designated Global Terrorists: the Sinaloa Cartel, CJNG, CDN, CDG, LNFM, Cárteles Unidos, Tren de Aragua, and MS-13. The designations took effect February 20, 2025 in the Federal Register, triggering new legal liabilities for any person or entity providing material support.",
+        "sources": [
+          {
+            "name": "U.S. State Department",
+            "tier": 1
+          },
+          {
+            "name": "Federal Register",
+            "tier": 1,
+            "url": "https://www.federalregister.gov/documents/2025/02/20/2025-02873/foreign-terrorist-organization-designations-of-tren-de-aragua-mara-salvatrucha-cartel-de-sinaloa"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "sheinbaum-approval-peaks-85pct",
+        "year": "Feb 2025",
+        "title": "Sheinbaum Approval Rating Peaks at 85% — Most Popular Latin American Leader",
+        "type": "political",
+        "detail": "Amid the tariff standoff, Sheinbaum's approval rating peaked at approximately 85% in February 2025, according to polls. Standing firm against U.S. pressure while simultaneously cooperating on border deployments proved popular with the Mexican public. Analysts rated her the most popular president in Latin America at that moment.",
+        "sources": [
+          {
+            "name": "Enkoll",
+            "tier": 3
+          },
+          {
+            "name": "AS/COA Approval Tracker",
+            "tier": 3,
+            "url": "https://www.as-coa.org/articles/approval-tracker-mexicos-president-claudia-sheinbaum"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.as-coa.org/articles/approval-tracker-mexicos-president-claudia-sheinbaum",
+            "source": "AS/COA Approval Tracker",
+            "thumbnail": "https://www.as-coa.org/sites/default/files/styles/metatag_585x422/public/field/image/Claudia_Sheinbaum.jpeg?h=9994641b&amp;itok=Oe8vJDV4"
+          }
+        ]
+      },
+      {
+        "id": "teuchitlan-death-camp-discovered",
+        "year": "Mar 5, 2025",
+        "title": "CJNG Death Camp Discovered at Rancho Izaguirre, Teuchitlán, Jalisco",
+        "type": "social",
+        "detail": "Missing persons volunteers discovered Rancho Izaguirre in Teuchitlán, Jalisco — a CJNG-operated facility containing approximately 200 pairs of shoes, three makeshift crematoriums, charred human remains, and military-style training obstacle courses. Evidence pointed to forced recruitment of civilians via fake job advertisements on social media, followed by training and in some cases murder of those who refused.",
+        "sources": [
+          {
+            "name": "InSight Crime",
+            "tier": 3,
+            "url": "https://insightcrime.org/news/killing-camp-in-mexico-shows-horrors-of-cjng-forced-recruitment/"
+          },
+          {
+            "name": "AP",
+            "tier": 2
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Jalisco_extermination_camp",
+            "source": "Wikipedia / Jalisco extermination camp",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Velada_de_luto_nacional_por_Teuchitl%C3%A1n_en_Guadalajara%2C_Jalisco_24.jpg/330px-Velada_de_luto_nacional_por_Teuchitl%C3%A1n_en_Guadalajara%2C_Jalisco_24.jpg"
+          }
+        ]
+      },
+      {
+        "id": "sheinbaum-responds-teuchitlan",
+        "year": "Mar 10, 2025",
+        "title": "Sheinbaum Condemns Teuchitlán Camp; CJNG Leader Arrested",
+        "type": "political",
+        "detail": "President Sheinbaum called the findings at Rancho Izaguirre 'terrible' and confirmed that both the Jalisco state government and federal SSPC were addressing the case. CJNG leader 'El Comandante Lastra' (José Gregorio N.) was arrested as part of the response. Attorney General Gertz Manero later classified the ranch as a 'recruitment site' rather than an 'extermination camp,' a distinction rejected by victims' groups.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "Proceso",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Claudia_Sheinbaum",
+            "source": "Wikipedia / Claudia Sheinbaum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Claudia_Sheinbaum_in_2025_%283x4_cropped%29.jpg/330px-Claudia_Sheinbaum_in_2025_%283x4_cropped%29.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Judicial Elections & Security Consolidation (Apr–Jun 2025)",
+    "events": [
+      {
+        "id": "plan-mexico-announced",
+        "year": "Apr 3, 2025",
+        "title": "Plan México Announced: 18 Economic Initiatives and 15 Industrial Zones",
+        "type": "economic",
+        "detail": "Sheinbaum unveiled Plan México, an 18-initiative economic package that included 15 tax-incentivized industrial zones, accelerated housing construction, and a stated goal of reducing Mexico's reliance on Chinese imports. Economy Secretary Marcelo Ebrard framed it as a nearshoring strategy to leverage US tariffs on China to attract foreign investment and reach the goal of becoming the world's 10th largest economy by 2030.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "Wilson Center",
+            "tier": 3,
+            "url": "https://www.wilsoncenter.org/article/plan-mexico-claudia-sheinbaums-vision-sustainable-growth-and-national-prosperity"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.wilsoncenter.org/article/plan-mexico-claudia-sheinbaums-vision-sustainable-growth-and-national-prosperity",
+            "source": "Wilson Center",
+            "thumbnail": "https://www.wilsoncenter.org/sites/default/files/styles/og_image/public/media/uploads/images/shutterstock_2530932413.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trump-tariff-water-treaty-threat",
+        "year": "Apr 10, 2025",
+        "title": "Trump Threatens Tariffs Over Mexico's Failure to Meet 1944 Rio Grande Water Treaty",
+        "type": "diplomatic",
+        "detail": "Trump threatened additional tariffs and sanctions after Mexico failed to meet its 1944 Rio Grande water treaty obligations to the U.S. Mexico had delivered only ~880,000 acre-feet of the 1.75 million required in the 2020–2025 cycle, causing an estimated $994 million in Texas crop losses. Mexico cited extraordinary drought conditions as permitted under treaty provisions.",
+        "sources": [
+          {
+            "name": "AS/COA",
+            "tier": 3,
+            "url": "https://www.as-coa.org/articles/tracking-trump-and-latin-america-trade-tariffs-threatened-mexico-over-water-sharing"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.as-coa.org/articles/tracking-trump-and-latin-america-trade-tariffs-threatened-mexico-over-water-sharing",
+            "source": "AS/COA",
+            "thumbnail": "https://www.as-coa.org/sites/default/files/styles/metatag_585x422/public/field/image/AdobeStock_Trade_TAG.jpeg?h=11fc66ed&amp;itok=2NzI2l38"
+          }
+        ]
+      },
+      {
+        "id": "teuchitlan-mayor-arrested",
+        "year": "May 3, 2025",
+        "title": "Mayor of Teuchitlán Arrested on Organized Crime Charges Linked to CJNG Camp",
+        "type": "judicial",
+        "detail": "The mayor of Teuchitlán, José Murguía Santiago, was arrested on charges of organized crime and participation in forced disappearances linked to Rancho Izaguirre. His arrest marked a rare case of a sitting Mexican official being taken into custody for direct collaboration with the CJNG.",
+        "sources": [
+          {
+            "name": "Proceso",
+            "tier": 2
+          },
+          {
+            "name": "Animal Político",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Jalisco_extermination_camp",
+            "source": "Wikipedia / Jalisco extermination camp",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Velada_de_luto_nacional_por_Teuchitl%C3%A1n_en_Guadalajara%2C_Jalisco_24.jpg/330px-Velada_de_luto_nacional_por_Teuchitl%C3%A1n_en_Guadalajara%2C_Jalisco_24.jpg"
+          }
+        ]
+      },
+      {
+        "id": "historic-judicial-elections",
+        "year": "Jun 1, 2025",
+        "title": "Historic First Popular Election for Supreme Court Justices and Federal Judges",
+        "type": "judicial",
+        "detail": "Mexico held the world's first popular election for Supreme Court justices, Electoral Tribunal magistrates, and approximately half of all circuit and district judges — 2,681 judicial posts in total. Voter turnout was only 13%, a record low for any federal election in Mexican history. More than 20% of ballots were left blank or spoiled, signaling widespread public ambivalence about the judicial overhaul.",
+        "sources": [
+          {
+            "name": "INE",
+            "tier": 1
+          },
+          {
+            "name": "AS/COA",
+            "tier": 3,
+            "url": "https://www.as-coa.org/articles/six-facts-understand-mexicos-2025-judicial-elections"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2023_Wisconsin_Supreme_Court_election",
+            "source": "Wikipedia / 2023 Wisconsin Supreme Court election",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/2023_Wisconsin_Supreme_Court_election_results_map_by_county.svg/330px-2023_Wisconsin_Supreme_Court_election_results_map_by_county.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "morena-sweeps-scjn",
+        "year": "Jun 3, 2025",
+        "title": "Morena Sweeps All Nine Supreme Court Seats; OAS Raises Integrity Concerns",
+        "type": "judicial",
+        "detail": "All nine newly elected Supreme Court justices were candidates appearing on Morena's 'cheat sheet' (acordeón) distributed to voters. Hugo Aguilar Ortiz, a Mixtec Indigenous lawyer with ties to AMLO, was elected as the new Chief Justice. The OAS expressed serious concerns about the integrity of the election process; PRI filed a formal legal challenge citing ballot stuffing at multiple locations.",
+        "sources": [
+          {
+            "name": "Justice in Mexico",
+            "tier": 3,
+            "url": "https://justiceinmexico.org/morena-sweeps-scjn/"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2025/06/03/americas/mexico-morena-supreme-court-judicial-elections-intl-latam"
+          },
+          {
+            "name": "OAS",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://justiceinmexico.org/morena-sweeps-scjn/",
+            "source": "Justice in Mexico",
+            "thumbnail": "https://justiceinmexico.org/wp-content/uploads/2025/06/images.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Consolidation, Tariff Escalation & Security Gains (Jul–Dec 2025)",
+    "events": [
+      {
+        "id": "trump-30pct-tariff-threat-jul-2025",
+        "year": "Jul 12, 2025",
+        "title": "Trump Threatens 30% Tariffs on Mexico and EU Starting August 1",
+        "type": "economic",
+        "detail": "Trump announced 30% tariffs against the EU and Mexico to take effect August 1, 2025, escalating trade tensions. A bipartisan U.S. congressional delegation traveled to Mexico City to meet with Sheinbaum and discuss the economic fallout. USMCA-compliant goods — accounting for approximately 85% of Mexico's exports — remained exempt from the threatened tariffs.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "AS/COA",
+            "tier": 3,
+            "url": "https://www.as-coa.org/articles/tracking-trump-and-latin-america-trade-tariffs-threatened-mexico-over-water-sharing"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.as-coa.org/articles/tracking-trump-and-latin-america-trade-tariffs-threatened-mexico-over-water-sharing",
+            "source": "AS/COA",
+            "thumbnail": "https://www.as-coa.org/sites/default/files/styles/metatag_585x422/public/field/image/AdobeStock_Trade_TAG.jpeg?h=11fc66ed&amp;itok=2NzI2l38"
+          }
+        ]
+      },
+      {
+        "id": "new-scjn-inaugurated",
+        "year": "Sep 1, 2025",
+        "title": "Reconfigured Supreme Court Takes Office with Nine Justices, Down from Eleven",
+        "type": "judicial",
+        "detail": "The constitutionally redesigned Supreme Court (SCJN) was inaugurated with nine justices, reduced from eleven seats under the 2024 judicial reform. Three returning justices were joined by six newly elected ones, all perceived as aligned with Morena. Critics noted the loss of the full court's institutional independence, while the government hailed it as democratized justice.",
+        "sources": [
+          {
+            "name": "Diario Oficial de la Federación",
+            "tier": 1
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "rubio-54-point-demands",
+        "year": "Sep 2025",
+        "title": "Rubio Visits Mexico City with 54-Point List of U.S. Demands",
+        "type": "diplomatic",
+        "detail": "U.S. Secretary of State Marco Rubio traveled to Mexico City and delivered a formal list of 54 pending U.S. demands covering a wide range of topics including energy sector openness, intellectual property protections, agricultural market access, China relations, and cartel prosecution. The list was seen as a major escalation of U.S. leverage during USMCA renegotiation discussions.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2
+          },
+          {
+            "name": "Reforma",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Marco_Rubio",
+            "source": "Wikipedia / Marco Rubio",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Official_portrait_of_Secretary_Marco_Rubio_%28cropped%29%282%29.jpg/330px-Official_portrait_of_Secretary_Marco_Rubio_%28cropped%29%282%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "homicide-decline-24pct-2025",
+        "year": "Sep 2025",
+        "title": "SNSP Reports 24.7% Decline in Homicides Over First 8 Months of 2025",
+        "type": "social",
+        "detail": "The National Public Security System (SNSP) reported an average of 68.4 homicides per day in the first eight months of 2025, down 24.7% compared to the same period in 2024. The Sheinbaum administration credited SSPC Secretary Omar García Harfuch's security strategy including enhanced military deployments, cartel extraditions to the U.S., and targeted operations against leadership structures.",
+        "sources": [
+          {
+            "name": "SNSP",
+            "tier": 1
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/news/mexico-homicide-rate-2026/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "sheinbaum-first-annual-report",
+        "year": "Oct 1, 2025",
+        "title": "Sheinbaum Delivers Upbeat First Annual Government Report",
+        "type": "political",
+        "detail": "On the first anniversary of her presidency, Sheinbaum delivered her first constitutional government report (Informe de Gobierno), citing security gains, record FDI, social program expansion, and housing starts above target. Her approval rating stood at 78% (Enkoll). She announced that Mexico had surpassed its first-year housing goals with over 390,983 new homes initiated.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "Enkoll",
+            "tier": 3
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/news/sheinbaum-delivers-upbeat-first-government-report/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Assassination_of_Charlie_Kirk",
+            "source": "Wikipedia / Assassination of Charlie Kirk",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Charlie_Kirk_shooting_scene_aerial_view_close_up.png/330px-Charlie_Kirk_shooting_scene_aerial_view_close_up.png"
+          }
+        ]
+      },
+      {
+        "id": "fincen-sanctions-mexican-banks",
+        "year": "Oct 20, 2025",
+        "title": "U.S. Treasury FinCEN Sanctions Two Mexican Banks for Fentanyl Money Laundering",
+        "type": "economic",
+        "detail": "The U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) identified two mid-sized Mexican banks and a brokerage as money laundering concerns with links to fentanyl trafficking networks. Prohibitions on U.S. fund transfers to these institutions took effect October 20, 2025, marking the first direct U.S. financial sanctions against Mexican banking entities in the Sheinbaum era.",
+        "sources": [
+          {
+            "name": "U.S. Treasury Department",
+            "tier": 1
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trump-5pct-water-tariff",
+        "year": "Dec 9, 2025",
+        "title": "Trump Imposes 5% Tariff on Mexico Over 1944 Rio Grande Water Treaty Violations",
+        "type": "economic",
+        "detail": "Trump imposed a 5% tariff specifically targeting Mexico over its failure to deliver Rio Grande water owed to Texas under the 1944 International Boundary and Water Commission treaty. The action was triggered by Mexico delivering only 880,000 of the 1.75 million acre-feet required in the 2020–2025 cycle, causing significant agricultural losses in South Texas.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2025/12/9/trump-slaps-mexico-with-5-percent-tariff-over-violations-of-water-treaty"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2025/12/9/trump-slaps-mexico-with-5-percent-tariff-over-violations-of-water-treaty",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2025/12/AP25337779758556-1765240486.jpg?resize=1920%2C1440"
+          }
+        ]
+      },
+      {
+        "id": "water-treaty-agreement-dec-2025",
+        "year": "Dec 12, 2025",
+        "title": "US and Mexico Reach Water Treaty Agreement; Mexico Commits to Annual Deliveries",
+        "type": "diplomatic",
+        "detail": "The U.S. and Mexico reached a formal understanding resolving the water treaty dispute. Mexico agreed to release 202,000 acre-feet of water beginning December 15, 2025, and committed to annual deliveries of 0.35 million acre-feet starting in February 2026. The 5% tariff was lifted following the agreement.",
+        "sources": [
+          {
+            "name": "USDA",
+            "tier": 1,
+            "url": "https://www.usda.gov/about-usda/news/press-releases/2025/12/12/mexico-agrees-meet-water-treaty-obligations-farmers-american-southwest"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "fdi-record-surpassed-2025",
+        "year": "Dec 2025",
+        "title": "Mexico Breaks FDI Record: $40.9B in 9 Months Surpasses All of 2024",
+        "type": "economic",
+        "detail": "By September 2025, Mexico had already attracted $40.9 billion in foreign direct investment, surpassing the entire 2024 FDI total of $36.87 billion. Nearshoring-driven investment in automotive, aerospace, and ICT sectors in the Bajío, Monterrey, and border regions drove the record. Economy Secretary Ebrard cited Plan México and proximity to the U.S. market as key drivers.",
+        "sources": [
+          {
+            "name": "Secretaría de Economía",
+            "tier": 1
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/business/foreign-direct-investment-mexico-record/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Economy_of_Bangladesh",
+            "source": "Wikipedia / Economy of Bangladesh",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/2.%E0%A6%B6%E0%A6%BE%E0%A6%AA%E0%A6%B2%E0%A6%BE_%E0%A6%9A%E0%A6%A4%E0%A7%8D%E0%A6%AC%E0%A6%B0.jpg/330px-2.%E0%A6%B6%E0%A6%BE%E0%A6%AA%E0%A6%B2%E0%A6%BE_%E0%A6%9A%E0%A6%A4%E0%A7%8D%E0%A6%AC%E0%A6%B0.jpg"
+          }
+        ]
+      },
+      {
+        "id": "approval-declines-dec-2025",
+        "year": "Dec 2025",
+        "title": "Sheinbaum Approval Moderates to 69–72% as Corruption Concerns Rise",
+        "type": "political",
+        "detail": "Year-end polling by El Financiero and QM Estudios showed Sheinbaum's approval moderating from the February peak of 85% to approximately 69–72% by December 2025. The decline was attributed to public dissatisfaction with perceived corruption, with only 16% rating the government's anticorruption performance as good, and concerns about cartel violence in states like Sinaloa and Guanajuato.",
+        "sources": [
+          {
+            "name": "El Financiero",
+            "tier": 2
+          },
+          {
+            "name": "QM Estudios",
+            "tier": 3
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Pink_tide",
+            "source": "Wikipedia / Pink tide",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Foro_sao_paulo_members_%28August_2011%29.svg/330px-Foro_sao_paulo_members_%28August_2011%29.svg.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "2026: Economic Challenges, Energy Pivot, and Electoral Reform (Jan–Apr 2026)",
+    "events": [
+      {
+        "id": "inflation-rises-above-target-feb-2026",
+        "year": "Feb 2026",
+        "title": "Inflation Rises to 4.02%, First Month Above Banxico's 4% Upper Threshold",
+        "type": "economic",
+        "detail": "Mexico's annual inflation reached 4.02% in February 2026, the first month it had exceeded Banco de México's 4% upper target ceiling since mid-2025. Core inflation remained sticky at above 4%. Banxico was in an easing cycle with the benchmark rate at approximately 7.25–7.50%, following ten consecutive 25-basis-point cuts since late 2024.",
+        "sources": [
+          {
+            "name": "Banco de México",
+            "tier": 1
+          },
+          {
+            "name": "INEGI",
+            "tier": 1
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "housing-reform-initiative-mar-2026",
+        "year": "Mar 11, 2026",
+        "title": "Sheinbaum Sends Housing Reform Initiative to Congress",
+        "type": "social",
+        "detail": "Sheinbaum sent a legislative initiative to Congress to harmonize the constitutional definition of 'adequate housing' with international standards and the December 2024 housing reform. The initiative was part of the ongoing Housing for Wellbeing (Vivienda para el Bienestar) program targeting 1.3 million new homes by 2030.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "Mexico Business News",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "security-chatham-report-mar-2026",
+        "year": "Mar 5, 2026",
+        "title": "Chatham House Report: Mexico Pursues Anti-Cartel Operations to Demonstrate Seriousness Ahead of 2026 FIFA World Cup",
+        "type": "diplomatic",
+        "detail": "Chatham House published an analysis noting that Mexico was intensifying anti-cartel operations in part to demonstrate commitment to security to the Trump administration in the months leading up to the 2026 FIFA World Cup, which Mexico was co-hosting. Several stadiums and host cities were named as focal points for enhanced security coordination with U.S. authorities.",
+        "sources": [
+          {
+            "name": "Chatham House",
+            "tier": 3,
+            "url": "https://www.chathamhouse.org/2026/03/mexicos-anti-cartel-operations-seek-prove-trump-it-serious-about-security-world-cup-looms"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "sheinbaum-approval-72pct-mar-2026",
+        "year": "Mar 20, 2026",
+        "title": "Sheinbaum Maintains 72% Approval as Presidency Reaches 535 Days",
+        "type": "political",
+        "detail": "QM Estudios polling placed Sheinbaum's approval rating at 72% as her presidency reached 535 days, higher than any predecessor at the same point except AMLO. Despite challenges including trade tensions with the U.S., ongoing cartel violence in specific states, and rising inflation, her combination of social programs and economic management maintained solid public support.",
+        "sources": [
+          {
+            "name": "QM Estudios",
+            "tier": 3
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Women_in_government",
+            "source": "Wikipedia / Women in government",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Share_of_women_in_parliament%2C_World%2C_2024_%28cropped%29.svg/330px-Share_of_women_in_parliament%2C_World%2C_2024_%28cropped%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "transportistas-megablockade-resolution-apr2026",
+        "year": "Apr 6, 2026",
+        "title": "Transporters Megablockade Hits 20 States; Temporarily Paused After 'Responsible Agreement'",
+        "type": "political",
+        "detail": "ANTAC and the Frente Nacional para el Rescate del Campo Mexicano launched an indefinite national highway blockade on April 6 across at least 20 states — the largest domestic labor-agricultural protest of Sheinbaum's presidency. Demands included action against highway extortion and robbery, elimination of the IEPS diesel surcharge, and IMSS-Bienestar access for transport workers. After 30+ hours of disruption, ANTAC reached a provisional 'responsible agreement' with state officials and temporarily suspended blockades on April 7, warning new actions could follow if demands were not met. Sheinbaum attributed the mobilization to 'three or four leaders' and Interior Secretary Rodríguez confirmed ongoing dialogue.",
+        "sources": [
+          {
+            "name": "El Financiero",
+            "tier": 2
+          },
+          {
+            "name": "Infobae",
+            "tier": 2
+          },
+          {
+            "name": "UnoTV",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-04-09T00:00:00Z"
+      },
+      {
+        "id": "unconventional-gas-plan-energy-sovereignty-apr2026",
+        "year": "Apr 8, 2026",
+        "title": "Sheinbaum Announces Unconventional Gas Extraction Plan to Cut 75% U.S. Gas Dependence",
+        "type": "economic",
+        "detail": "Sheinbaum unveiled a national strategy to develop Mexico's unconventional (shale) natural gas deposits, aiming to reduce the country's 75% dependence on U.S. gas imports. She framed the initiative as 'sustainable extraction' rather than fracking, with a two-month technical committee to evaluate methods using non-potable water and reduced chemicals. She cited Europe's gas crisis and Middle East tensions as proof that energy sovereignty was vital. The announcement came the same day she met with BlackRock CEO Larry Fink; Sheinbaum later denied any connection between the meeting and the energy decision.",
+        "sources": [
+          {
+            "name": "AP",
+            "tier": 2
+          },
+          {
+            "name": "Infobae",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-04-09T00:00:00Z"
+      },
+      {
+        "id": "sistema-universal-salud-signed-apr2026",
+        "year": "Apr 8, 2026",
+        "title": "Sheinbaum Signs Universal Health System Decree: 87 Million Mexicans Can Access Any Public Facility",
+        "type": "social",
+        "detail": "Sheinbaum signed the Sistema Universal de Salud presidential decree on April 8, eliminating institutional barriers that previously prevented Mexicans from receiving care at any of the three public health systems (IMSS, ISSSTE, IMSS-Bienestar) regardless of their formal affiliation. The measure covers approximately 87 million Mexicans dependent on public healthcare. Registration for adults over 85 was set to begin April 13–30. The reform was hailed as the most significant structural health governance change since the dissolution of Seguro Popular.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "Infobae",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-04-09T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Mexico_City",
+            "source": "Wikipedia / Mexico City",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Sobrevuelos_CDMX_HJ2A4913_%2825514321687%29_%28cropped%29.jpg/330px-Sobrevuelos_CDMX_HJ2A4913_%2825514321687%29_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "electoral-reform-plan-b-approved-apr2026",
+        "year": "Apr 9, 2026",
+        "title": "Chamber of Deputies Passes 'Plan B' Electoral Reform; Must Be Enacted by April 30 for 2027 Elections",
+        "type": "political",
+        "detail": "The Chamber of Deputies approved the electoral reform 'Plan B' on April 9, with the Senate having already passed it in late March. The reform — a fallback after Sheinbaum's original constitutional electoral bill failed in November 2025 for lack of coalition votes — focuses on austerity measures for political institutions: reducing local congress seats, cutting Senate staffing, and aligning political salaries with the government's austerity mandate. The reform must be enacted by April 30 to apply to the 2027 midterm elections. Opposition PAN and Movimiento Ciudadano voted against the measure.",
+        "sources": [
+          {
+            "name": "El Financiero",
+            "tier": 2
+          },
+          {
+            "name": "Lopez Doriga",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-04-09T00:00:00Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Mark_Carney",
+            "source": "Wikipedia / Mark Carney",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/2025-11-14_InaugurationREM_Deux-Montagnes_Mark_Carney.jpg/330px-2025-11-14_InaugurationREM_Deux-Montagnes_Mark_Carney.jpg"
+          }
+        ]
+      },
+      {
+        "id": "universal-health-credential-enrollment-opens-apr2026",
+        "year": "Apr 13, 2026",
+        "title": "Universal Health Credential Enrollment Opens: 120 Million Mexicans Begin Registration",
+        "type": "social",
+        "detail": "The Universal Health Credential registration launched April 13 at over 2,059 Welfare Ministry modules, beginning with citizens aged 85 and older. The credential — created by presidential decree April 8 — enables any Mexican to access IMSS, ISSSTE, or IMSS-Bienestar facilities regardless of prior enrollment, ending the institutional siloing of Mexico's fragmented public health system. From 2027, the credential will also function as a national ID. Phase 1 enrollment (ages 85+) runs through April 30, organized alphabetically by surname. Full integration of all public health institutions is scheduled for January 1, 2027. International media praised the initiative as a landmark step toward genuine universal healthcare.",
+        "sources": [
+          {
+            "name": "Presidencia de México",
+            "tier": 1
+          },
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "url": "https://mexiconewsdaily.com/mexico-living/mexico-universal-health-service-registration/"
+          }
+        ],
+        "lastUpdated": "2026-04-18T00:00:00Z"
+      },
+      {
+        "id": "senate-national-femicide-reform-apr2026",
+        "year": "Apr 14, 2026",
+        "title": "Senate Passes National Femicide Reform: Uniform Standards for All 32 States",
+        "type": "judicial",
+        "detail": "The Senate approved a constitutional reform establishing uniform national criteria for femicide investigation, classification, and prosecution — replacing the patchwork of state standards that produced reclassification rates ranging from 4.2% (Guanajuato) to 100% (Campeche). All 32 states must adopt the new forensic protocols and minimum sentencing guidelines within 180 days of Diario Oficial publication. The reform was the last major legislative achievement of Secretariat of Women head Citlalli Hernández, who resigned the same day to lead Morena's 2027 election preparations.",
+        "sources": [
+          {
+            "name": "Quinto Poder",
+            "tier": 3,
+            "url": "https://quinto-poder.mx/politicos/2026/04/14/sheinbaum-impulsa-reforma-avalan-unificar-el-feminicidio-en-mexico-65858.html"
+          },
+          {
+            "name": "El Financiero",
+            "tier": 2
+          }
+        ],
+        "lastUpdated": "2026-04-18T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://quinto-poder.mx/politicos/2026/04/14/sheinbaum-impulsa-reforma-avalan-unificar-el-feminicidio-en-mexico-65858.html",
+            "source": "Quinto Poder",
+            "thumbnail": "https://blob.quinto-poder.mx/images/2026/04/15/claudia-sp-p-2d67cbfd-focus-0-0-1280-720.webp"
+          }
+        ]
+      },
+      {
+        "id": "sheinbaum-barcelona-gpm-summit-spain-reset-apr2026",
+        "year": "Apr 18, 2026",
+        "title": "Sheinbaum at Barcelona GPM Summit: Progressive Multilateralism, Mexico-Spain Diplomatic Reset",
+        "type": "diplomatic",
+        "detail": "President Sheinbaum participated in the Global Progressive Mobilisation (GPM) summit in Barcelona on April 18 — her first official international trip as president — joining Brazilian President Lula, Colombian President Petro, Uruguayan President Orsi, and Spanish Prime Minister Pedro Sánchez at the Fira Gran Via venue with ~3,000 participants from 100+ parties. The summit agenda addressed democratic resilience against global authoritarianism, digital platform regulation, multilateral strengthening, and inequality. The visit formally restored full Mexico-Spain diplomatic relations after a 2019–2024 estrangement initiated by AMLO's colonial apology demands. Mexico and Spain agreed to elevate ties to a 'strategic partnership.' Sheinbaum was careful to characterize the summit as 'not anti-Trump,' emphasizing multilateralism over confrontation.",
+        "sources": [
+          {
+            "name": "Washington Times",
+            "tier": 2,
+            "url": "https://www.washingtontimes.com/news/2026/apr/18/spain-mexico-put-diplomatic-tussle-colonial-past-behind/"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "url": "https://www.jornada.com.mx/noticia/2026/04/17/politica/llega-sheinbaum-a-barcelona-para-participar-en-cumbre-progresista"
+          },
+          {
+            "name": "Proceso",
+            "tier": 2,
+            "url": "https://www.proceso.com.mx/nacional/2026/4/16/sheinbaum-va-barcelona-para-sumarse-frente-internacional-contra-la-extrema-derecha-372293.html"
+          }
+        ],
+        "lastUpdated": "2026-04-18T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.washingtontimes.com/news/2026/apr/18/spain-mexico-put-diplomatic-tussle-colonial-past-behind/",
+            "source": "Washington Times",
+            "thumbnail": "https://twt-thumbs.washtimes.com/media/image/2026/04/18/Spain_Democracy_Summit_13573_c0-203-4874-3046_s1200x700.jpg?16397efd8409be962159556c6e0fe1d3221e1593"
+          }
+        ]
+      },
+      {
+        "id": "sheinbaum-bsc-mexico-2027-democracy-summit-host-apr2026",
+        "year": "Apr 19, 2026",
+        "title": "Sheinbaum Visits BSC; Mexico Confirmed to Host 2027 Summit in Defense of Democracy",
+        "type": "diplomatic",
+        "detail": "Closing her Barcelona trip on April 19, Sheinbaum visited the Barcelona Supercomputing Center (BSC-CNS) — home of Europe's MareNostrum 5 supercomputer — meeting with Catalan President Illa, Science Minister Morant, and BSC Director Valero to deepen Mexico-Spain AI and scientific collaboration, building on a 40-year institutional partnership. During the visit she encountered legendary singer-songwriter Joan Manuel Serrat and recognized him as 'a symbol of music and resistance.' Spanish PM Sánchez simultaneously announced that Mexico would host the 2027 Reunión en Defensa de la Democracia — the next progressive multilateral summit — following Sheinbaum's formal offer during the April 18 GPM meeting. Sheinbaum proposed the 2027 gathering focus on 'an economy centered on well-being.' The announcement marked Mexico's formal return to diplomatic multilateralism after years of AMLO-era self-isolation.",
+        "sources": [
+          {
+            "name": "Infobae / AFP",
+            "tier": 2,
+            "url": "https://www.infobae.com/america/agencias/2026/04/18/sheinbaum-ofrece-mexico-como-sede-de-la-cumbre-en-defensa-de-la-democracia-en-2027/"
+          },
+          {
+            "name": "El Financiero",
+            "tier": 2,
+            "url": "https://www.elfinanciero.com.mx/mundo/2026/04/18/es-una-gran-noticia-mexico-sera-sede-de-la-proxima-reunion-en-defensa-de-la-democracia/"
+          },
+          {
+            "name": "ABC Color / AFP",
+            "tier": 2,
+            "url": "https://www.abc.com.py/ciencia/2026/04/19/sheinbaum-visita-el-barcelona-supercomputing-center-para-reforzar-la-colaboracion-en-ia/"
+          }
+        ],
+        "lastUpdated": "2026-04-19T14:57:53Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.elfinanciero.com.mx/mundo/2026/04/18/es-una-gran-noticia-mexico-sera-sede-de-la-proxima-reunion-en-defensa-de-la-democracia/",
+            "source": "El Financiero",
+            "thumbnail": "https://www.elfinanciero.com.mx/resizer/v2/VU2X5226VZAOZGORSICYV7RXSA.jpg?smart=true&amp;auth=cee8d008204f36557cae415bd2c30812f0dc151ac8e748ecb3c5d77b744ede87&amp;width=1200&amp;height=630"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "USMCA Review Deadline & Mid-2026 Diplomacy (May–Aug 2026)",
+    "events": [
+      {
+        "id": "usmca-us-declines-full-extension-jul2026",
+        "year": "2026",
+        "title": "US Declines Full 16-Year USMCA Extension, Triggering Annual Joint Reviews",
+        "type": "diplomatic",
+        "detail": "The July 1, 2026 USMCA deadline passed without a clean 16-year renewal: the United States formally declined to extend the agreement in its current form, triggering the Article 34.7.4 rolling annual joint-review process that continues until the parties agree to an extension or the agreement expires in 2036. Round 3 talks (Mexico City, late July 2026) saw USTR Ambassador Jamieson Greer meet directly with Sheinbaum, covering economic security, labor, agriculture, e-payments, steel/aluminum, and autos; Economy Secretary Ebrard said the 'vast majority' of the U.S.'s original 54-item concern list had been resolved. Greer and Ebrard directed their teams to convene Round 4 in Washington, D.C. in September 2026. Section 232 tariffs (50% steel/aluminum, 25% non-USMCA-compliant autos) remain in force.",
+        "sources": [
+          {
+            "name": "USTR (Office of the U.S. Trade Representative)",
+            "tier": 1,
+            "pole": "western",
+            "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/united-states-and-mexico-convene-mexico-city-third-bilateral-negotiating-round-related-joint-review"
+          },
+          {
+            "name": "White & Case",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://www.whitecase.com/insight-alert/usmca-2026-joint-review-united-states-declines-extend-agreement-triggering-annual"
+          }
+        ],
+        "lastUpdated": "2026-08-14T15:00:00Z"
+      },
+      {
+        "id": "colombia-earthquake-diplomacy-aug2026",
+        "year": "2026",
+        "title": "Mexico's Earthquake Diplomacy: Aid to Colombia Complicated by Certification Dispute",
+        "type": "diplomatic",
+        "detail": "Following a 7.4-magnitude earthquake that struck Colombia's Chocó department on August 10, 2026, Sheinbaum pledged Mexico's full support and readied a 255-strong military relief brigade (Agrupamiento Cali). Colombia's government ultimately barred the Mexican rescue brigade from entering, citing a missing certification, so Mexico redirected its response into airlifted humanitarian aid — 58.5 tonnes of food, medicine, and supplies delivered via Air Force flights to Pereira, Manizales, Cali, and Quibdó over August 12–14. On August 17, Sheinbaum confirmed two Mexican nationals died in the earthquake; their remains were repatriated and the Mexican Embassy in Bogotá continued searching for a Mexican couple reported missing in Pereira.",
+        "sources": [
+          {
+            "name": "Mexico News Daily",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://mexiconewsdaily.com/politics/mexicos-military-rescue-brigade-never-entered-colombia-having-been-barred/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/12/mexico-envia-primeras-toneladas-de-ayuda-humanitaria-a-colombia-tras-peticion-de-gobierno-de-abelardo-de-la-espriella/"
+          },
+          {
+            "name": "El Universal",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.eluniversal.com.mx/nacion/la-mananera-de-sheinbaum-17-de-agosto-minuto-a-minuto/"
+          }
+        ],
+        "lastUpdated": "2026-08-17T15:00:00Z"
+      },
+      {
+        "id": "sheinbaum-carney-johnson-diplomacy-flu-aug2026",
+        "year": "2026",
+        "title": "Carney Call on USMCA, Deportee Dispute With US, and a First Presidential Sick Day",
+        "type": "diplomatic",
+        "detail": "On August 20, 2026, Sheinbaum held a call with Canadian PM Mark Carney reaffirming both sides' wish to renew USMCA \"as soon as possible\" ahead of Round 4 talks in Washington that September, with Carney thanking Mexico for sending 400+ firefighters to help combat Canadian wildfires. That same day, Interior Secretary Rosa Icela Rodríguez met U.S. Ambassador Ronald Johnson to formally object to Mexican deportees being routed through Guatemala, Honduras, and Costa Rica rather than returned directly to Mexico — Guatemala had received 2,284 Mexican deportees in transit during 2026. Rodríguez disclosed both the meeting and the objection the next morning, August 21, while standing in for Sheinbaum at the mañanera: the president had woken with a severe flu, cough, and fever and — for the first time in her term — did not lead the daily conference, instead working remotely and appearing masked in a virtual meeting with IMSS director Zoé Robledo.",
+        "sources": [
+          {
+            "name": "Prime Minister of Canada (official readout)",
+            "tier": 1,
+            "pole": "western",
+            "url": "https://www.pm.gc.ca/en/news/readouts/2026/08/20/prime-minister-carney-speaks-president-mexico-claudia-sheinbaum"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/21/rosa-icela-rodriguez-le-pidio-a-eeuu-no-deportar-a-migrantes-mexicanos-a-otros-paises-en-reunion-con-ronald-johnson/"
+          },
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/21/politica/sheinbaum-suspende-participacion-en-mananera-por-gripa-encabeza-secretaria-de-gobernacion"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/21/sheinbaum-amanece-con-gripa-muy-fuerte-tos-y-fiebre-encarga-la-mananera-a-rosa-icela-rodriguez/",
+            "caption": "Interior Secretary Rosa Icela Rodríguez leads the mañanera after Sheinbaum falls ill",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/2KAPBGSCABEOVIDGAE32JN6FVU.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-22T14:49:56Z"
+      },
+      {
+        "id": "rocha-moya-sinaloa-governor-crisis-aug2026",
+        "year": "2026",
+        "title": "Sinaloa Governor Rocha Moya Returns, Then Resigns Post Amid US Indictment; Domínguez Nava Named Interim Governor",
+        "type": "political",
+        "detail": "On August 21, 2026, Rubén Rocha Moya announced his reincorporation as constitutional governor of Sinaloa, ending a 112-day leave taken after an April 29 U.S. District Court (SDNY) indictment charged him and nine other current/former Sinaloa officials with conspiracy to import narcotics, weapons possession, and institutional protection of the Sinaloa Cartel's \"Los Chapitos\" faction. He returned without consulting the federal government or Morena leadership. President Sheinbaum publicly distanced herself the next day, warning against \"ambición desnuda del poder por el poder\" and saying no personal interest should outweigh those of Sinaloa and the nation; Morena and the Interior Secretariat also broke with him. Facing that pressure, Rocha requested an indefinite leave again on August 22, and the Sinaloa Congress unanimously approved it on August 23, deferring the interim-governor decision. Sheinbaum later called his brief return \"imprudente\" and said officials under investigation should generally step aside while cases proceed. On August 25, after a session originally set for August 24 was suspended and reconvened, the Sinaloa Congress voted 31-6 to name Graciela Domínguez Nava — a Morena sociologist, former state deputy and Secretary of Public Education and Culture, and federal deputy for Mazatlán — interim governor, the state's third governor of 2026.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/21/rocha-moya-retoma-gobierno-de-sinaloa-tras-ser-acusado-por-eeuu-de-presuntos-vinculos-con-el-narco-y-los-chapitos/"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/23/congreso-de-sinaloa-aprueba-por-unanimidad-la-licencia-indefinida-de-rocha-moya-como-gobernador/"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "pole": "international",
+            "url": "https://www.aljazeera.com/news/2026/8/24/mexicos-president-condemns-governor-brief-return-to-office"
+          },
+          {
+            "name": "Récord",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.record.com.mx/historia/quien-es-graciela-dominguez-nava-la-nueva-gobernadora-interina-de-sinaloa-que-sustituye-a-rocha-moya-2026082521043575015"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/21/rocha-moya-retoma-gobierno-de-sinaloa-tras-ser-acusado-por-eeuu-de-presuntos-vinculos-con-el-narco-y-los-chapitos/",
+            "caption": "Rubén Rocha Moya returns as governor of Sinaloa, defying the US DOJ indictment against him",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/KYXXEE4SDVH2JAJAT3QIH67LEY.png"
+          }
+        ],
+        "lastUpdated": "2026-08-25T20:00:00Z"
+      },
+      {
+        "id": "dual-nationality-reform-cabeza-de-vaca-aug2026",
+        "year": "2026",
+        "title": "Sheinbaum Proposes, Then Formally Files, Constitutional Ban on Dual Nationals as President or Governor",
+        "type": "judicial",
+        "detail": "At her August 25, 2026 mañanera, President Sheinbaum said her government is preparing a constitutional reform initiative to bar dual nationals from serving as president or state governor, arguing that \"un presidente, o una presidenta, es mexicano y no representa a otro país.\" The proposal was triggered by the case of Francisco Javier García Cabeza de Vaca, the former Tamaulipas governor who holds both Mexican and U.S. nationality and has lived in the United States since 2022 despite a Mexican arrest warrant for organized crime and money laundering; Mexico's extradition request has gone unanswered. Sheinbaum called him \"un prófugo de la ley.\" Cabeza de Vaca responded that the Mexican Constitution currently permits him to run for president. On August 27, the government formally filed the initiative in Congress: Legal Advisor Luisa María Alcalde detailed that it covers the presidency, governorships and the Mexico City head of government, requires dual nationals to renounce their other citizenship before registering as candidates, sets a 20-year minimum residency for presidential aspirants, and bars officeholders from acquiring another nationality or invoking foreign diplomatic protection while in office, with constitutional sanctions for violations.",
+        "sources": [
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/25/candidatos-no-deberian-tener-doble-nacionalidad-claudia-sheinbaum-alista-iniciativa-tras-caso-de-francisco-cabeza-de-vaca/"
+          },
+          {
+            "name": "El Heraldo de México",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://heraldodemexico.com.mx/nacional/2026/8/25/sheinbaum-va-por-cancelar-la-doble-nacionalidad-como-requisito-para-presidentes-gobernadores-tras-caso-cabeza-de-vaca-875945.html"
+          },
+          {
+            "name": "Expansión Política",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://politica.expansion.mx/presidencia/2026/08/25/sheinbaum-doble-nacionalidad-presidente-gobernador"
+          },
+          {
+            "name": "Infobae",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.infobae.com/mexico/2026/08/27/presentan-reforma-que-exige-renunciar-a-la-doble-nacionalidad-para-ser-presidente-o-gobernador-estos-son-los-puntos-clave/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.infobae.com/mexico/2026/08/27/presentan-reforma-que-exige-renunciar-a-la-doble-nacionalidad-para-ser-presidente-o-gobernador-estos-son-los-puntos-clave/",
+            "caption": "Legal advisor Luisa María Alcalde presents the formal dual-nationality reform initiative in Congress",
+            "source": "Infobae",
+            "thumbnail": "https://www.infobae.com/resizer/v2/6ENTTTN3BBHGPDVA6OLVCPOEKM.png"
+          }
+        ],
+        "lastUpdated": "2026-08-27T15:00:00Z"
+      },
+      {
+        "id": "sheinbaum-environmental-law-overhaul-aug2026",
+        "year": "2026",
+        "title": "Sheinbaum Signs Overhaul of Mexico's 38-Year-Old Core Environmental Law",
+        "type": "political",
+        "detail": "On August 26, 2026, President Sheinbaum signed an initiative to overhaul the Ley General del Equilibrio Ecológico y la Protección al Ambiente (LGEEPA), Mexico's core environmental statute, substantively unchanged since 1988 (last major update 1995). Environment Secretary Alicia Bárcena presented ten guiding principles built around ecological justice: earlier and broader Strategic Environmental Assessment for large projects, a ban on splitting projects into smaller pieces to dodge regional review, new river/mangrove/coastline/forest restoration programs, financial compensation for communities protecting natural areas, and new protections for environmental defenders. The bill, titled Ley General de Protección Ecológica y Justicia Ambiental, now goes to the Chamber of Deputies for debate.",
+        "sources": [
+          {
+            "name": "La Jornada",
+            "tier": 2,
+            "pole": "western",
+            "url": "https://www.jornada.com.mx/noticia/2026/08/26/politica/presenta-semarnat-iniciativa-para-actualizar-la-ley-general-del-equilibrio-ecologico-y-proteccion-ambiental"
+          },
+          {
+            "name": "Rio Times",
+            "tier": 3,
+            "pole": "western",
+            "url": "https://www.riotimesonline.com/mexico-environmental-law-initiative-congress-2026/"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.riotimesonline.com/mexico-environmental-law-initiative-congress-2026/",
+            "caption": "Sheinbaum signs the initiative overhauling Mexico's 38-year-old core environmental law",
+            "source": "Rio Times",
+            "thumbnail": "https://www.riotimesonline.com/wp-content/uploads/2026/08/rt-br-930a206783.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-26T16:00:00Z"
+      }
+    ]
+  }
+]

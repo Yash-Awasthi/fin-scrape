@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WorldView Intelligence — Business Overview</title>
+<style>
+  :root {
+    --bg: #0a0e17;
+    --bg-card: #111827;
+    --bg-elevated: #1a2332;
+    --primary: #00b8f0;
+    --secondary: #6366f1;
+    --accent: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --text: #e8ecf4;
+    --text-muted: #8899b0;
+    --border: #1e293b;
+    --gradient-1: linear-gradient(135deg, #00b8f0, #6366f1);
+    --gradient-2: linear-gradient(135deg, #6366f1, #a855f7);
+    --gradient-3: linear-gradient(135deg, #10b981, #06b6d4);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Navigation */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,14,23,0.92); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border); padding: 0 40px; height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-brand {
+    font-size: 14px; font-weight: 700; letter-spacing: 0.14em;
+    font-family: 'Consolas', monospace; color: var(--primary);
+  }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a {
+    color: var(--text-muted); text-decoration: none; font-size: 13px;
+    font-weight: 500; transition: color 0.2s; letter-spacing: 0.02em;
+  }
+  .nav-links a:hover { color: var(--primary); }
+
+  /* Sections */
+  section {
+    max-width: 1100px; margin: 0 auto; padding: 100px 40px 60px;
+  }
+  .section-label {
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--primary); font-weight: 700; margin-bottom: 12px;
+    font-family: 'Consolas', monospace;
+  }
+  .section-title {
+    font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 16px;
+  }
+  .section-subtitle {
+    font-size: 17px; color: var(--text-muted); max-width: 640px; margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 80px 40px; position: relative;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 50% at 50% 40%, rgba(0,184,240,0.08), transparent);
+  }
+  .hero-title {
+    font-size: 56px; font-weight: 900; line-height: 1.1; margin-bottom: 20px;
+    background: var(--gradient-1);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+  .hero-sub {
+    font-size: 20px; color: var(--text-muted); max-width: 600px;
+    margin-bottom: 40px; position: relative;
+  }
+  .hero-stats {
+    display: flex; gap: 40px; position: relative;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat-value {
+    font-size: 42px; font-weight: 800; font-family: 'Consolas', monospace;
+    background: var(--gradient-1);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero-stat-label {
+    font-size: 12px; color: var(--text-muted); letter-spacing: 0.1em;
+    text-transform: uppercase; margin-top: 4px;
+  }
+
+  /* Cards */
+  .card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; margin-top: 32px;
+  }
+  .card-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 28px 24px; transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover { transform: translateY(-2px); border-color: rgba(0,184,240,0.3); }
+  .card-icon {
+    width: 48px; height: 48px; border-radius: 10px; display: flex;
+    align-items: center; justify-content: center; font-size: 22px;
+    margin-bottom: 16px;
+  }
+  .card-icon-blue { background: rgba(99,102,241,0.12); color: #818cf8; }
+  .card-icon-cyan { background: rgba(0,184,240,0.12); color: #38bdf8; }
+  .card-icon-green { background: rgba(16,185,129,0.12); color: #34d399; }
+  .card-icon-red { background: rgba(239,68,68,0.12); color: #f87171; }
+  .card-icon-yellow { background: rgba(245,158,11,0.12); color: #fbbf24; }
+  .card-icon-purple { background: rgba(168,85,247,0.12); color: #c084fc; }
+  .card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* Feature highlight */
+  .feature-row {
+    display: flex; gap: 48px; align-items: center; margin: 60px 0;
+  }
+  .feature-row:nth-child(even) { flex-direction: row-reverse; }
+  .feature-text { flex: 1; }
+  .feature-visual {
+    flex: 1; background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 32px; min-height: 280px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Consolas', monospace; font-size: 13px;
+    color: var(--text-muted); line-height: 1.7; white-space: pre;
+  }
+
+  /* Data table */
+  table {
+    width: 100%; border-collapse: collapse; margin: 20px 0;
+    font-size: 14px; border: 1px solid var(--border); border-radius: 8px;
+    overflow: hidden;
+  }
+  th {
+    background: var(--bg-elevated); color: var(--text-muted); font-weight: 600;
+    text-align: left; padding: 12px 16px; font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border);
+  }
+  td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(0,184,240,0.02); }
+
+  /* Badges */
+  .badge {
+    display: inline-block; padding: 3px 10px; border-radius: 20px;
+    font-size: 11px; font-weight: 600;
+  }
+  .badge-live { background: rgba(16,185,129,0.15); color: #34d399; }
+  .badge-sim { background: rgba(245,158,11,0.15); color: #fbbf24; }
+  .badge-planned { background: rgba(99,102,241,0.15); color: #818cf8; }
+
+  /* CTA */
+  .cta {
+    text-align: center; padding: 80px 40px;
+    background: linear-gradient(180deg, transparent, rgba(0,184,240,0.04));
+    border-top: 1px solid var(--border);
+  }
+  .cta-title { font-size: 32px; font-weight: 800; margin-bottom: 12px; }
+  .cta-sub { font-size: 16px; color: var(--text-muted); margin-bottom: 32px; }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 32px; margin: 32px 0; }
+  .timeline::before {
+    content: ''; position: absolute; left: 11px; top: 0; bottom: 0;
+    width: 2px; background: var(--border);
+  }
+  .timeline-item { position: relative; margin-bottom: 32px; }
+  .timeline-dot {
+    position: absolute; left: -32px; top: 4px; width: 22px; height: 22px;
+    border-radius: 50%; background: var(--bg-card); border: 2px solid var(--primary);
+    display: flex; align-items: center; justify-content: center; font-size: 10px;
+  }
+  .timeline-dot.done { background: var(--primary); border-color: var(--primary); }
+  .timeline-phase {
+    font-size: 11px; letter-spacing: 0.1em; color: var(--primary);
+    text-transform: uppercase; font-weight: 700; margin-bottom: 4px;
+  }
+  .timeline-title { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+  .timeline-desc { font-size: 14px; color: var(--text-muted); }
+
+  /* Metrics bar */
+  .metrics {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+    margin: 32px 0;
+  }
+  .metric {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 24px 20px; text-align: center;
+  }
+  .metric-value {
+    font-size: 36px; font-weight: 800; font-family: 'Consolas', monospace;
+    background: var(--gradient-1);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .metric-label {
+    font-size: 12px; color: var(--text-muted); margin-top: 6px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+
+  /* Use case cards */
+  .use-case {
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 32px; margin-bottom: 20px;
+    display: flex; gap: 24px; align-items: flex-start;
+  }
+  .use-case-icon {
+    width: 52px; height: 52px; border-radius: 12px; display: flex;
+    align-items: center; justify-content: center; font-size: 24px;
+    flex-shrink: 0;
+  }
+  .use-case h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+  .use-case p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+  .use-case-tags { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+  .use-case-tag {
+    font-size: 11px; padding: 2px 10px; border-radius: 20px;
+    background: rgba(0,184,240,0.08); color: var(--primary); font-weight: 500;
+  }
+
+  /* Separator */
+  .divider {
+    height: 1px; background: var(--border); margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center; padding: 40px; font-size: 12px; color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-title { font-size: 36px; }
+    .hero-stats { flex-direction: column; gap: 20px; }
+    .feature-row, .feature-row:nth-child(even) { flex-direction: column; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+    .nav-links { display: none; }
+    section { padding: 60px 20px 40px; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: white; color: #1a1a1a; }
+    .nav { display: none; }
+    .hero { min-height: auto; padding: 40px; }
+    .card, .metric, .use-case { border-color: #ddd; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ════════════════════════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-brand">WORLDVIEW INTELLIGENCE</div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#data-sources">Data Sources</a>
+    <a href="#use-cases">Use Cases</a>
+    <a href="#technology">Technology</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#competitive">Competitive Edge</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="section-label" style="position:relative">Real-Time Global Intelligence Platform</div>
+  <h1 class="hero-title">WorldView Intelligence</h1>
+  <p class="hero-sub">A unified command center that visualizes live OSINT data across 9 intelligence layers on an interactive 3D globe, delivering real-time situational awareness to decision makers.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-value">9</div>
+      <div class="hero-stat-label">Data Layers</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">10K+</div>
+      <div class="hero-stat-label">Live Entities</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">5</div>
+      <div class="hero-stat-label">Visual Modes</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-value">&lt;10s</div>
+      <div class="hero-stat-label">Update Latency</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ EXECUTIVE SUMMARY ═════════════════════════════════════════ -->
+<section id="overview">
+  <div class="section-label">Executive Summary</div>
+  <h2 class="section-title">The Complete Intelligence Picture</h2>
+  <p class="section-subtitle">WorldView Intelligence consolidates fragmented open-source intelligence feeds into a single, real-time 3D command interface. Instead of monitoring dozens of separate dashboards, analysts get one unified view of the global situation.</p>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-value">6</div>
+      <div class="metric-label">Live API Feeds</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">24/7</div>
+      <div class="metric-label">Continuous Monitoring</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">5</div>
+      <div class="metric-label">Visual Display Modes</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">0</div>
+      <div class="metric-label">Manual Data Entry</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ CAPABILITIES ══════════════════════════════════════════════ -->
+<section id="capabilities">
+  <div class="section-label">Core Capabilities</div>
+  <h2 class="section-title">What WorldView Intelligence Does</h2>
+  <p class="section-subtitle">Nine distinct intelligence layers, each purpose-built for a specific domain, all rendered on a single interactive 3D globe with real-time streaming updates.</p>
+
+  <div class="card-grid card-grid-3">
+    <div class="card">
+      <div class="card-icon card-icon-cyan">&#9992;</div>
+      <h3>Aircraft Tracking</h3>
+      <p>Live flight positions from OpenSky Network. Tracks commercial, military, and cargo aircraft globally with callsign, speed, heading, and altitude data.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-purple">&#128752;</div>
+      <h3>Satellite Tracking</h3>
+      <p>Orbital positions propagated from CelesTrak TLE data using satellite.js. Monitors ISS, Starlink, military, and weather satellites in real time.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-green">&#9973;</div>
+      <h3>Maritime Monitoring</h3>
+      <p>Vessel positions along major global shipping routes. Displays ship type, flag, destination, and speed for maritime domain awareness.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-yellow">&#127754;</div>
+      <h3>Earthquake Detection</h3>
+      <p>Real-time USGS earthquake feed with magnitude visualization. Instantly displays seismic events with depth, location, and tsunami warnings.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-red">&#9888;</div>
+      <h3>Conflict Zone Monitoring</h3>
+      <p>Tracks active conflict zones globally — Ukraine, Gaza, Syria, Sudan, Red Sea, Myanmar — with event type, severity, and fatality data.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-red">&#128640;</div>
+      <h3>Missile / Launch Tracking</h3>
+      <p>Visualizes launch sites, parabolic trajectory arcs, and predicted impact zones for missile and rocket launches worldwide.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-yellow">&#128240;</div>
+      <h3>Global News Intelligence</h3>
+      <p>Aggregates RSS feeds from Reuters, BBC, Al Jazeera, The Guardian, and Sky News. Geocodes news items onto the map for spatial context.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-green">&#128663;</div>
+      <h3>Traffic Intelligence</h3>
+      <p>Congestion monitoring for major world cities — New York, London, Dubai, Tokyo, Paris, Singapore — with average speed and congestion level.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-cyan">&#127780;</div>
+      <h3>Weather Monitoring</h3>
+      <p>Global weather conditions from Open-Meteo API. Displays temperature, wind speed, humidity, and weather conditions across monitoring points.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;">
+    <h3 style="font-size:20px;font-weight:700;margin-bottom:20px;">Advanced Features</h3>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon card-icon-purple">&#129504;</div>
+        <h3>AI-Powered Intelligence</h3>
+        <p>Automated anomaly detection analyzes patterns across all layers. Generates situation reports and escalation predictions. OpenAI integration ready for enhanced natural-language analysis.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-cyan">&#127912;</div>
+        <h3>5 Visual Display Modes</h3>
+        <p>Tactical, Satellite, Night Vision, Thermal FLIR, and Radar CRT. Each mode applies real-time GPU shaders for specialized visualization aesthetics suitable for different operational contexts.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon card-icon-green">&#128269;</div>
+        <h3>Universal Search</h3>
+        <p>Search across all intelligence layers simultaneously — find aircraft by callsign, ships by name, earthquakes by location, conflicts by region, or fly to any city or coordinate on the globe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ DATA SOURCES ══════════════════════════════════════════════ -->
+<section id="data-sources">
+  <div class="section-label">Data Sources</div>
+  <h2 class="section-title">Intelligence Feed Overview</h2>
+  <p class="section-subtitle">WorldView ingests data from established OSINT providers and public APIs. Where real-time APIs are not yet available, high-fidelity simulations model realistic patterns.</p>
+
+  <table>
+    <tr><th>Layer</th><th>Source</th><th>Status</th><th>Update Rate</th><th>Authentication</th></tr>
+    <tr>
+      <td>&#9992; Aircraft</td>
+      <td>OpenSky Network ADS-B</td>
+      <td><span class="badge badge-live">LIVE</span></td>
+      <td>Every 10 seconds</td>
+      <td>Optional (higher limits)</td>
+    </tr>
+    <tr>
+      <td>&#128752; Satellites</td>
+      <td>CelesTrak TLE + satellite.js</td>
+      <td><span class="badge badge-live">LIVE</span></td>
+      <td>Every 30 seconds</td>
+      <td>None required</td>
+    </tr>
+    <tr>
+      <td>&#127754; Earthquakes</td>
+      <td>US Geological Survey (USGS)</td>
+      <td><span class="badge badge-live">LIVE</span></td>
+      <td>Every 60 seconds</td>
+      <td>None required</td>
+    </tr>
+    <tr>
+      <td>&#127780; Weather</td>
+      <td>Open-Meteo API</td>
+      <td><span class="badge badge-live">LIVE</span></td>
+      <td>Every 5 minutes</td>
+      <td>None required</td>
+    </tr>
+    <tr>
+      <td>&#128240; News</td>
+      <td>BBC, Reuters, Al Jazeera RSS</td>
+      <td><span class="badge badge-live">LIVE</span></td>
+      <td>Every 5 minutes</td>
+      <td>None required</td>
+    </tr>
+    <tr>
+      <td>&#9888; Conflicts</td>
+      <td>ACLED + GDELT patterns</td>
+      <td><span class="badge badge-sim">SIMULATED</span></td>
+      <td>Every 2 minutes</td>
+      <td>API ready</td>
+    </tr>
+    <tr>
+      <td>&#9973; Ships</td>
+      <td>AIS shipping patterns</td>
+      <td><span class="badge badge-sim">SIMULATED</span></td>
+      <td>Every 30 seconds</td>
+      <td>API ready</td>
+    </tr>
+    <tr>
+      <td>&#128640; Missiles</td>
+      <td>Launch site database</td>
+      <td><span class="badge badge-sim">SIMULATED</span></td>
+      <td>Every 60 seconds</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <td>&#128663; Traffic</td>
+      <td>City traffic patterns</td>
+      <td><span class="badge badge-sim">SIMULATED</span></td>
+      <td>Every 60 seconds</td>
+      <td>TomTom API ready</td>
+    </tr>
+  </table>
+
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:20px;">
+    <p style="font-size:14px;color:var(--text-muted);margin:0;">
+      <strong style="color:var(--accent);">&#10003; API-Ready Architecture:</strong>
+      All simulated layers are built with the same data interfaces as their real API counterparts. Switching from simulation to live data requires only changing the data fetch function — no UI or pipeline changes needed.
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ USE CASES ══════════════════════════════════════════════════ -->
+<section id="use-cases">
+  <div class="section-label">Use Cases</div>
+  <h2 class="section-title">Who Benefits from WorldView</h2>
+  <p class="section-subtitle">WorldView Intelligence serves organizations that need real-time global situational awareness across multiple domains.</p>
+
+  <div class="use-case">
+    <div class="use-case-icon card-icon-cyan">&#127970;</div>
+    <div>
+      <h3>Government &amp; Defense Agencies</h3>
+      <p>Monitor global security situations, track military aircraft movements, observe conflict zones, and receive AI-generated situation reports. The multi-layer view enables cross-domain threat assessment that would require dozens of separate tools otherwise.</p>
+      <div class="use-case-tags">
+        <span class="use-case-tag">Threat Assessment</span>
+        <span class="use-case-tag">OSINT Analysis</span>
+        <span class="use-case-tag">Situation Reports</span>
+        <span class="use-case-tag">Force Tracking</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="use-case">
+    <div class="use-case-icon card-icon-green">&#128230;</div>
+    <div>
+      <h3>Logistics &amp; Supply Chain</h3>
+      <p>Track global shipping routes, monitor weather disruptions, assess conflict zone impacts on trade corridors, and receive traffic intelligence for last-mile delivery optimization. Combines maritime, aviation, weather, and conflict data for end-to-end visibility.</p>
+      <div class="use-case-tags">
+        <span class="use-case-tag">Route Monitoring</span>
+        <span class="use-case-tag">Weather Disruptions</span>
+        <span class="use-case-tag">Port Traffic</span>
+        <span class="use-case-tag">Risk Assessment</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="use-case">
+    <div class="use-case-icon card-icon-yellow">&#128240;</div>
+    <div>
+      <h3>Media &amp; Journalism</h3>
+      <p>Visualize breaking news geographically, track developing situations in conflict zones, correlate news events with real-world data (earthquakes, flights, weather), and identify story leads through anomaly detection.</p>
+      <div class="use-case-tags">
+        <span class="use-case-tag">Breaking News</span>
+        <span class="use-case-tag">Event Correlation</span>
+        <span class="use-case-tag">Geospatial Context</span>
+        <span class="use-case-tag">Source Monitoring</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="use-case">
+    <div class="use-case-icon card-icon-red">&#128657;</div>
+    <div>
+      <h3>Emergency Management &amp; Disaster Response</h3>
+      <p>Monitor seismic activity in real time, track weather patterns, assess infrastructure impacts, and coordinate response logistics. The earthquake layer with tsunami warnings provides critical early-warning capability.</p>
+      <div class="use-case-tags">
+        <span class="use-case-tag">Earthquake Monitoring</span>
+        <span class="use-case-tag">Tsunami Warnings</span>
+        <span class="use-case-tag">Weather Alerts</span>
+        <span class="use-case-tag">Response Coordination</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="use-case">
+    <div class="use-case-icon card-icon-purple">&#127891;</div>
+    <div>
+      <h3>Education &amp; Research</h3>
+      <p>A powerful teaching tool for geopolitics, earth sciences, space technology, and data visualization. Students and researchers can explore real-world data across multiple domains in an engaging 3D interface.</p>
+      <div class="use-case-tags">
+        <span class="use-case-tag">Geopolitics</span>
+        <span class="use-case-tag">Earth Science</span>
+        <span class="use-case-tag">Space Studies</span>
+        <span class="use-case-tag">Data Visualization</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ TECHNOLOGY ═════════════════════════════════════════════════ -->
+<section id="technology">
+  <div class="section-label">Technology Platform</div>
+  <h2 class="section-title">Built for Performance &amp; Scale</h2>
+  <p class="section-subtitle">A modern, containerized architecture designed for real-time data processing with sub-second latency and horizontal scalability.</p>
+
+  <div class="feature-row">
+    <div class="feature-text">
+      <h3 style="font-size:22px;font-weight:700;margin-bottom:12px;">Real-Time Streaming Architecture</h3>
+      <p style="color:var(--text-muted);font-size:15px;margin-bottom:16px;">WebSocket-driven data pipeline pushes updates to all connected clients simultaneously. No polling, no delays — when data changes, every user sees it immediately.</p>
+      <ul style="color:var(--text-muted);font-size:14px;">
+        <li style="margin-bottom:8px;">WebSocket server with per-layer subscriptions</li>
+        <li style="margin-bottom:8px;">Redis caching with intelligent TTLs per data type</li>
+        <li style="margin-bottom:8px;">Graceful fallback to in-memory cache if Redis is unavailable</li>
+        <li>Configurable update intervals per layer (10s to 300s)</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+<span style="color:#fbbf24">External APIs</span>
+    │
+    ▼
+<span style="color:#38bdf8">Backend Services</span> ──► <span style="color:#34d399">Redis Cache</span>
+    │
+    ├──► REST API (fallback)
+    │
+    └──► <span style="color:#38bdf8">WebSocket Server</span>
+              │
+              ▼
+         <span style="color:#fbbf24">All Connected Clients</span>
+              │
+              ▼
+         <span style="color:#c084fc">3D Globe Rendering</span>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="feature-text">
+      <h3 style="font-size:22px;font-weight:700;margin-bottom:12px;">GPU-Accelerated Visualization</h3>
+      <p style="color:var(--text-muted);font-size:15px;margin-bottom:16px;">CesiumJS renders the full 3D globe with satellite imagery, terrain, and thousands of entities using WebGL. Custom GLSL shaders power the 5 visual display modes.</p>
+      <ul style="color:var(--text-muted);font-size:14px;">
+        <li style="margin-bottom:8px;">CesiumJS 3D globe with satellite imagery and terrain</li>
+        <li style="margin-bottom:8px;">10,000+ simultaneous entities without frame drops</li>
+        <li style="margin-bottom:8px;">Custom GLSL post-processing shaders for visual modes</li>
+        <li>Click-to-inspect any entity for detailed intelligence</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+<span style="color:#38bdf8">Visual Mode Shaders</span>
+
+&#9632; <span style="color:#818cf8">TAC</span>  Desaturated tactical map
+&#9632; <span style="color:#818cf8">SAT</span>  Standard satellite imagery
+&#9632; <span style="color:#34d399">NVG</span>  Green night vision filter
+&#9632; <span style="color:#f87171">THR</span>  Thermal FLIR heat ramp
+&#9632; <span style="color:#34d399">RAD</span>  Radar CRT with scan lines
+
+<span style="color:#fbbf24">All rendered via WebGL at 60fps</span>
+    </div>
+  </div>
+
+  <div class="feature-row">
+    <div class="feature-text">
+      <h3 style="font-size:22px;font-weight:700;margin-bottom:12px;">Containerized Deployment</h3>
+      <p style="color:var(--text-muted);font-size:15px;margin-bottom:16px;">One-command deployment with Docker Compose. The full stack — frontend, backend, database, and cache — runs in isolated containers with health checks and automatic restarts.</p>
+      <ul style="color:var(--text-muted);font-size:14px;">
+        <li style="margin-bottom:8px;">Docker Compose orchestrates all 4 services</li>
+        <li style="margin-bottom:8px;">Nginx reverse proxy for production frontend</li>
+        <li style="margin-bottom:8px;">PostgreSQL ready for persistent storage</li>
+        <li>Works with any cloud provider or on-premise infrastructure</li>
+      </ul>
+    </div>
+    <div class="feature-visual">
+<span style="color:#38bdf8">docker compose up --build</span>
+
+┌─────────────────────────────┐
+│  <span style="color:#34d399">&#9632; frontend</span>    (Nginx:80)    │
+│  <span style="color:#34d399">&#9632; backend</span>     (Node:3001)   │
+│  <span style="color:#34d399">&#9632; websocket</span>   (WS:3002)     │
+│  <span style="color:#fbbf24">&#9632; postgresql</span>  (PG:5432)     │
+│  <span style="color:#fbbf24">&#9632; redis</span>       (Redis:6379)  │
+└─────────────────────────────┘
+
+<span style="color:#818cf8">All services health-checked</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ ROADMAP ════════════════════════════════════════════════════ -->
+<section id="roadmap">
+  <div class="section-label">Product Roadmap</div>
+  <h2 class="section-title">What's Next</h2>
+  <p class="section-subtitle">A phased approach to expanding WorldView Intelligence from a powerful prototype to a production-ready enterprise platform.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot done">&#10003;</div>
+      <div class="timeline-phase">Phase 1 — Foundation (Completed)</div>
+      <div class="timeline-title">Core Platform &amp; 9 Data Layers</div>
+      <div class="timeline-desc">3D globe visualization, 9 intelligence layers, WebSocket streaming, 5 visual modes, AI anomaly detection, search, and Docker deployment.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">2</div>
+      <div class="timeline-phase">Phase 2 — Hardening</div>
+      <div class="timeline-title">Authentication, Security &amp; Reliability</div>
+      <div class="timeline-desc">JWT authentication, role-based access control, secure WebSocket connections, error boundaries, logging infrastructure, and automated testing.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">3</div>
+      <div class="timeline-phase">Phase 3 — Data Expansion</div>
+      <div class="timeline-title">Live API Integrations &amp; Historical Data</div>
+      <div class="timeline-desc">Replace simulated layers with live API feeds (AIS for ships, ACLED for conflicts, TomTom for traffic). PostgreSQL integration for historical data storage, playback, and trend analysis.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">4</div>
+      <div class="timeline-phase">Phase 4 — AI Enhancement</div>
+      <div class="timeline-title">Advanced AI &amp; Predictive Analytics</div>
+      <div class="timeline-desc">OpenAI-powered situation reports, natural-language queries, cross-layer pattern recognition, predictive threat modeling, and automated alerting.</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot">5</div>
+      <div class="timeline-phase">Phase 5 — Enterprise</div>
+      <div class="timeline-title">Multi-Tenant, API &amp; Collaboration</div>
+      <div class="timeline-desc">Multi-tenant architecture, public API for integrations, collaborative annotations, custom layer support, white-label deployment, and SLA-grade infrastructure.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ COMPETITIVE EDGE ══════════════════════════════════════════ -->
+<section id="competitive">
+  <div class="section-label">Competitive Advantage</div>
+  <h2 class="section-title">Why WorldView Intelligence</h2>
+  <p class="section-subtitle">WorldView Intelligence brings together capabilities that typically require multiple expensive enterprise tools into a single, modern, web-based platform.</p>
+
+  <table>
+    <tr><th>Capability</th><th>WorldView Intelligence</th><th>Traditional Tools</th></tr>
+    <tr>
+      <td>Multi-domain intelligence</td>
+      <td style="color:#34d399">9 layers in one view</td>
+      <td style="color:var(--text-muted)">Separate tools per domain</td>
+    </tr>
+    <tr>
+      <td>Real-time updates</td>
+      <td style="color:#34d399">WebSocket push (sub-second)</td>
+      <td style="color:var(--text-muted)">Manual refresh / polling</td>
+    </tr>
+    <tr>
+      <td>3D visualization</td>
+      <td style="color:#34d399">Full CesiumJS globe with 5 visual modes</td>
+      <td style="color:var(--text-muted)">2D maps or limited 3D</td>
+    </tr>
+    <tr>
+      <td>Deployment</td>
+      <td style="color:#34d399">One-command Docker deploy</td>
+      <td style="color:var(--text-muted)">Complex enterprise installation</td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td style="color:#34d399">Open source, free OSINT data</td>
+      <td style="color:var(--text-muted)">$10K-$500K+ annual licenses</td>
+    </tr>
+    <tr>
+      <td>AI capabilities</td>
+      <td style="color:#34d399">Built-in anomaly detection + OpenAI ready</td>
+      <td style="color:var(--text-muted)">Manual analysis or expensive add-ons</td>
+    </tr>
+    <tr>
+      <td>Customization</td>
+      <td style="color:#34d399">Fully open, extensible architecture</td>
+      <td style="color:var(--text-muted)">Vendor lock-in, limited APIs</td>
+    </tr>
+    <tr>
+      <td>Cross-platform</td>
+      <td style="color:#34d399">Any modern browser</td>
+      <td style="color:var(--text-muted)">Windows-only desktop clients</td>
+    </tr>
+  </table>
+
+  <div class="card-grid" style="margin-top:40px;">
+    <div class="card">
+      <div class="card-icon card-icon-green">&#128176;</div>
+      <h3>Cost Efficiency</h3>
+      <p>Built entirely on open-source technology and free OSINT data feeds. No per-seat licensing, no data subscription fees for core functionality. Enterprise-grade capability at a fraction of the cost.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-cyan">&#9889;</div>
+      <h3>Speed to Deploy</h3>
+      <p>From zero to fully operational in minutes with Docker. No complex infrastructure setup, no hardware requirements beyond a standard server. Scales from a laptop demo to cloud infrastructure.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon card-icon-purple">&#128295;</div>
+      <h3>Full Extensibility</h3>
+      <p>Add new data layers, integrate proprietary data sources, create custom visual modes, or build new AI analysis pipelines. The modular architecture makes extension straightforward for any development team.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ CTA ════════════════════════════════════════════════════════ -->
+<section class="cta">
+  <div class="cta-title">Ready to See It in Action?</div>
+  <div class="cta-sub">WorldView Intelligence transforms how organizations understand and respond to global events. From defense and logistics to journalism and education — real-time situational awareness for every mission.</div>
+  <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px 32px;text-align:center;">
+      <div style="font-size:13px;color:var(--text-muted);margin-bottom:4px;">Quick Start</div>
+      <code style="font-size:14px;">docker compose up --build</code>
+    </div>
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:20px 32px;text-align:center;">
+      <div style="font-size:13px;color:var(--text-muted);margin-bottom:4px;">Then Open</div>
+      <code style="font-size:14px;">http://localhost</code>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═════════════════════════════════════════════════════ -->
+<footer>
+  <p>WorldView Intelligence &bull; Real-Time Global Intelligence Platform &bull; MIT License</p>
+  <p style="margin-top:8px;">For technical details, see the companion <a href="technical-documentation.html">Technical Documentation</a>.</p>
+</footer>
+
+</body>
+</html>

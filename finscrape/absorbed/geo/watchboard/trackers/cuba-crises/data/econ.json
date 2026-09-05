@@ -1,0 +1,123 @@
+[
+  {
+    "id": "gdp-per-capita",
+    "label": "GDP per capita (current USD)",
+    "value": "$9,500",
+    "change": "-12% since 2019",
+    "direction": "down",
+    "sparkData": [9800, 10200, 10500, 8900, 7200, 8100, 8800, 9200, 9500],
+    "color": "red",
+    "source": "ECLAC / World Bank (2023 est.)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tourism-revenue",
+    "label": "Tourism Revenue",
+    "value": "$1.8B",
+    "change": "-55% vs 2019 peak ($4.1B)",
+    "direction": "down",
+    "sparkData": [3800, 4100, 3200, 800, 600, 1200, 1800, 1800, 1800],
+    "color": "amber",
+    "source": "Cuban MINTUR / UNWTO (2023)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "remittances",
+    "label": "Annual Remittances (est.)",
+    "value": "$3.5B",
+    "change": "+40% since 2020",
+    "direction": "up",
+    "sparkData": [2200, 2600, 2500, 3600, 3900, 3500, 3500, 3500, 3500],
+    "color": "green",
+    "source": "Inter-American Dialogue / ECLAC (2023 est.)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sugar-production",
+    "label": "Sugar Production",
+    "value": "0.5M tonnes",
+    "change": "-95% from 1970 peak (8.5M tonnes)",
+    "direction": "down",
+    "sparkData": [8500, 7200, 5500, 4800, 3500, 2200, 1800, 900, 500],
+    "color": "red",
+    "source": "Cuban MINAG / USDA FAS (2022–23)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "inflation-rate",
+    "label": "Official Inflation Rate",
+    "value": "30–40%",
+    "change": "+25pp since 2019",
+    "direction": "up",
+    "sparkData": [5, 6, 5, 77, 39, 35, 32, 30, 35],
+    "color": "red",
+    "source": "Cuban ONEI / IMF Article IV (2024 est.)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "venezuela-oil-imports",
+    "label": "Venezuelan Oil Imports",
+    "value": "~0 bbl/day",
+    "change": "-100% from 2012 peak; supply fully severed since Jan 2026, compounded by Jun 2026 CUPET sanctions",
+    "direction": "down",
+    "sparkData": [90, 100, 95, 80, 65, 60, 55, 55, 5, 0],
+    "color": "red",
+    "source": "Al Jazeera / S&P Global Commodity Insights (2026 est.)",
+    "lastUpdated": "2026-07-14T00:00:00Z"
+  },
+  {
+    "id": "nickel-exports",
+    "label": "Nickel & Cobalt Export Revenue",
+    "value": "$600M",
+    "change": "-20% over 5 years",
+    "direction": "down",
+    "sparkData": [750, 820, 790, 680, 620, 610, 600, 600, 600],
+    "color": "amber",
+    "source": "Cuban MINCOM / LME data (2023)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "private-sector-share",
+    "label": "Private Sector Share of Economy",
+    "value": "~15%",
+    "change": "+10pp since 2011 reforms",
+    "direction": "up",
+    "sparkData": [5, 5, 6, 7, 8, 10, 12, 14, 15],
+    "color": "green",
+    "source": "ONEI / Brookings Institution (2023)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "black-market-exchange-rate",
+    "label": "Informal USD/CUP Exchange Rate",
+    "value": "~670 CUP/$1",
+    "change": "vs official 24 CUP/$1; nearly doubled since May amid worsening blockade and repeated blackouts",
+    "direction": "up",
+    "sparkData": [24, 24, 35, 60, 100, 160, 200, 240, 350, 670],
+    "color": "red",
+    "source": "El Toque / 14ymedio / Cubalex (2026 est.)",
+    "lastUpdated": "2026-07-15T00:00:00Z"
+  },
+  {
+    "id": "hotel-brand-exodus",
+    "label": "Major International Hotel Chains Present",
+    "value": "0",
+    "change": "Down from 3 (Meliá, Iberostar, Barceló) since Jul 2026",
+    "direction": "down",
+    "sparkData": [3, 3, 3, 3, 3, 3, 2, 1, 0, 0],
+    "color": "red",
+    "source": "CiberCuba / Forbes España (Jul 2026)",
+    "lastUpdated": "2026-07-21T00:00:00Z"
+  },
+  {
+    "id": "medical-missions-earnings",
+    "label": "Medical Missions Hard Currency Earnings",
+    "value": "$6–8B/yr",
+    "change": "Largest single foreign exchange earner",
+    "direction": "up",
+    "sparkData": [2000, 3500, 6000, 8000, 7500, 6500, 6000, 6500, 7000],
+    "color": "green",
+    "source": "Cuban Foreign Ministry / Brookings Institution (2018 est.)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

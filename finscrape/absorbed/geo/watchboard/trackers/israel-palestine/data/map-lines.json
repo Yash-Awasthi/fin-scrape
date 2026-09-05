@@ -1,0 +1,2782 @@
+[
+  {
+    "id": "idf-strike-north-gaza-ceasefire-line-may14",
+    "from": [
+      34.54,
+      31.6
+    ],
+    "to": [
+      34.5,
+      31.55
+    ],
+    "cat": "strike",
+    "label": "IDF Kills Operative at Ceasefire Line — N. Gaza (May 14)",
+    "date": "2026-05-14",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "damage": "Operative killed at ceasefire crossing point",
+    "casualties": "1 Palestinian killed",
+    "notes": "IDF confirmed operative crossed ceasefire line and approached Israeli forces; killed as 'immediate threat'. Part of near-daily operations along Oct 2025 ceasefire boundary.",
+    "status": "hit",
+    "lastUpdated": "2026-05-14T14:35:00.000Z"
+  },
+  {
+    "id": "hamas-rocket-oct7-beersheba",
+    "from": [
+      34.47,
+      31.52
+    ],
+    "to": [
+      34.79,
+      31.25
+    ],
+    "cat": "conflict",
+    "label": "Hamas Rocket Barrage — Be'er Sheva",
+    "date": "2023-10-07",
+    "weaponType": "rocket",
+    "launched": 3000,
+    "intercepted": 900,
+    "confidence": "high",
+    "damage": "Multiple impacts; Iron Dome engaged",
+    "casualties": "Multiple killed/injured",
+    "notes": "Oct 7 opening barrage; ~3,000 rockets fired in first 24 hours toward multiple Israeli cities",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-rocket-oct7-ashkelon",
+    "from": [
+      34.47,
+      31.52
+    ],
+    "to": [
+      34.57,
+      31.67
+    ],
+    "cat": "conflict",
+    "label": "Hamas Rockets — Ashkelon",
+    "date": "2023-10-07",
+    "weaponType": "rocket",
+    "launched": 200,
+    "intercepted": 150,
+    "confidence": "high",
+    "damage": "Apartment buildings hit",
+    "notes": "Oct 7 attack; Ashkelon is 15km from northern Gaza",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-rocket-tel-aviv-oct7",
+    "from": [
+      34.47,
+      31.52
+    ],
+    "to": [
+      34.78,
+      32.08
+    ],
+    "cat": "conflict",
+    "label": "Hamas Rockets — Tel Aviv Area",
+    "date": "2023-10-07",
+    "weaponType": "rocket",
+    "launched": 500,
+    "intercepted": 430,
+    "confidence": "high",
+    "damage": "Multiple impacts in greater Tel Aviv",
+    "notes": "Oct 7; Hamas fired longest-range Ayyash rockets; Iron Dome largely effective",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-airstrike-gaza-oct-2023",
+    "from": [
+      34.6,
+      31.55
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "conflict",
+    "label": "IDF Air Campaign — Gaza City (Oct 2023)",
+    "date": "2023-10-08",
+    "weaponType": "mixed",
+    "launched": 6000,
+    "confidence": "high",
+    "damage": "Massive structural damage; northern Gaza largely destroyed by Nov 2023",
+    "casualties": "Thousands killed in first month",
+    "notes": "Israeli F-35I jets and F-16s conducted thousands of strikes; used 2,000-lb bombs in dense urban areas",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-ground-advance-northern-gaza",
+    "from": [
+      34.54,
+      31.56
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "conflict",
+    "label": "IDF Ground Advance — Northern Gaza (Oct 2023)",
+    "date": "2023-10-27",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "damage": "Multiple neighborhoods destroyed",
+    "notes": "IDF 162nd Division and 36th Division entered from the north; cut off Gaza City by late October",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-ground-khan-yunis",
+    "from": [
+      34.47,
+      31.4
+    ],
+    "to": [
+      34.3,
+      31.35
+    ],
+    "cat": "conflict",
+    "label": "IDF Ground Operation — Khan Yunis (Dec 2023)",
+    "date": "2023-12-01",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "damage": "Large swaths of Khan Yunis destroyed",
+    "notes": "Operation targeting Hamas's Khan Yunis brigade; IDF hunted Sinwar; operation lasted through April 2024",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-rafah-operation-2024",
+    "from": [
+      34.3,
+      31.35
+    ],
+    "to": [
+      34.25,
+      31.3
+    ],
+    "cat": "conflict",
+    "label": "IDF Rafah Operation (May 2024)",
+    "date": "2024-05-06",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "damage": "Rafah severely damaged; Philadelphi Corridor seized",
+    "casualties": "Hundreds killed in Rafah operations",
+    "notes": "Despite US warnings, Israel advanced into Rafah. Rafah border crossing closed; ~1.4M displaced persons forced to move again",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "aid-corridor-kerem-shalom",
+    "from": [
+      34.6,
+      31.52
+    ],
+    "to": [
+      34.28,
+      31.21
+    ],
+    "cat": "humanitarian",
+    "label": "Aid Corridor — Kerem Shalom",
+    "date": "2023-10-20",
+    "confidence": "high",
+    "notes": "Main humanitarian aid route into Gaza; capacity severely limited. UN demanded 500+ trucks/day; actual throughput peaked ~200/day. Repeatedly closed by Israeli decisions and Hamas mortar attacks.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-invasion-beeri-oct7",
+    "from": [
+      34.4,
+      31.47
+    ],
+    "to": [
+      34.52,
+      31.39
+    ],
+    "cat": "conflict",
+    "label": "Hamas Breach — Be'eri Infiltration",
+    "date": "2023-10-07",
+    "weaponType": "mixed",
+    "launched": 100,
+    "confidence": "high",
+    "damage": "108 residents killed; many homes burned",
+    "notes": "Hamas fighters breached fence and drove to kibbutzim; Be'eri was the bloodiest single community",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-invasion-nova-festival",
+    "from": [
+      34.4,
+      31.47
+    ],
+    "to": [
+      34.56,
+      31.47
+    ],
+    "cat": "conflict",
+    "label": "Hamas Attack — Nova Music Festival",
+    "date": "2023-10-07",
+    "weaponType": "mixed",
+    "launched": 200,
+    "confidence": "high",
+    "casualties": "364 killed",
+    "notes": "Approximately 3,500 attendees at the trance music festival; Hamas gunmen attacked from multiple directions",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-west-bank-jenin-2023",
+    "from": [
+      35.3,
+      32.42
+    ],
+    "to": [
+      35.3,
+      32.46
+    ],
+    "cat": "conflict",
+    "label": "IDF Operation — Jenin (2023-2025)",
+    "date": "2023-07-03",
+    "weaponType": "drone",
+    "confidence": "high",
+    "damage": "Jenin camp partially destroyed; electrical/water infrastructure damaged",
+    "notes": "IDF Operation Home and Garden (Jul 2023) — largest West Bank operation since 2002. Over 100 operations in Jenin/Tulkarm area through 2025.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "pij-rocket-sderot-2023",
+    "from": [
+      34.47,
+      31.52
+    ],
+    "to": [
+      34.6,
+      31.52
+    ],
+    "cat": "conflict",
+    "label": "PIJ / Hamas Rockets — Sderot",
+    "date": "2023-10-07",
+    "weaponType": "rocket",
+    "launched": 150,
+    "intercepted": 80,
+    "confidence": "high",
+    "damage": "Multiple structures hit; police station overrun on Oct 7",
+    "notes": "Sderot is 1.5km from the Gaza fence; among the earliest-impacted Israeli communities",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-airstrike-rafah-may-2024",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.25,
+      31.3
+    ],
+    "cat": "conflict",
+    "label": "IDF Airstrikes — Rafah (May 2024)",
+    "date": "2024-05-26",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "casualties": "45 killed in Tal al-Sultan strike",
+    "damage": "Massive fire in designated 'safe zone'",
+    "notes": "26 May 2024 strike on humanitarian zone killed 45; US temporarily paused transfer of 2,000-lb bombs",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-antitank-idf-vehicles",
+    "from": [
+      34.47,
+      31.52
+    ],
+    "to": [
+      34.54,
+      31.56
+    ],
+    "cat": "conflict",
+    "label": "Hamas Anti-Tank Fire — Northern Gaza",
+    "date": "2023-11-01",
+    "weaponType": "rocket",
+    "confidence": "medium",
+    "damage": "Multiple IDF armored vehicles damaged/destroyed",
+    "notes": "Hamas employed RPGs, anti-tank guided missiles (Kornet), and IEDs against IDF Merkava tanks during urban operations",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-gaza-naval-bombardment",
+    "from": [
+      34.37,
+      31.8
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "conflict",
+    "label": "Israeli Navy — Coastal Bombardment",
+    "date": "2023-10-08",
+    "weaponType": "cruise",
+    "confidence": "high",
+    "damage": "Coastal targets, port infrastructure",
+    "notes": "Israeli Sa'ar 5 and Sa'ar 6 corvettes conducted offshore bombardments of Hamas maritime infrastructure and coastal targets",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "egypt-aid-pipeline-sinai",
+    "from": [
+      34.18,
+      30.92
+    ],
+    "to": [
+      34.24,
+      31.28
+    ],
+    "cat": "humanitarian",
+    "label": "Egypt Aid Route — North Sinai to Rafah",
+    "date": "2023-10-20",
+    "confidence": "high",
+    "notes": "UN and NGO aid convoys via Al-Arish → Rafah. Egyptian military controlled access; entry into Gaza severely restricted. Egypt refused to absorb Palestinian refugees.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hamas-rocket-haifa-2024",
+    "from": [
+      34.47,
+      31.52
+    ],
+    "to": [
+      35.0,
+      32.82
+    ],
+    "cat": "conflict",
+    "label": "Hamas Long-Range Rocket — Haifa (2024)",
+    "date": "2024-10-07",
+    "weaponType": "rocket",
+    "launched": 20,
+    "intercepted": 17,
+    "confidence": "medium",
+    "notes": "Hamas demonstrated longer-range capability firing towards Haifa during Oct 7 anniversary; most intercepted by Iron Dome",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-airstrike-al-ahli-hospital",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "conflict",
+    "label": "Al-Ahli Hospital Explosion (Oct 17, 2023)",
+    "date": "2023-10-17",
+    "weaponType": "rocket",
+    "confidence": "medium",
+    "casualties": "US/Israeli intel: ~100-300; Hamas claimed 500",
+    "notes": "Major disputed event. US, Israeli, and multiple Western intelligence assessments concluded a misfired Palestinian Islamic Jihad rocket caused the explosion. Hamas and Arab media initially blamed an Israeli airstrike.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-drone-strike-sinwar-2024",
+    "from": [
+      34.6,
+      31.55
+    ],
+    "to": [
+      34.25,
+      31.3
+    ],
+    "cat": "conflict",
+    "label": "IDF Drone/Ground — Sinwar Elimination (Oct 16, 2024)",
+    "date": "2024-10-16",
+    "weaponType": "drone_ucav",
+    "confidence": "high",
+    "notes": "Sinwar discovered by IDF ground patrol in Rafah during routine operations; engaged and killed. IDF drone also fired on him during the encounter. Confirmed by DNA testing.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "ceasefire-corridor-phase1",
+    "from": [
+      34.28,
+      31.21
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "humanitarian",
+    "label": "Phase 1 Ceasefire Aid Surge (Jan–Mar 2025)",
+    "date": "2025-01-19",
+    "confidence": "high",
+    "notes": "During Phase 1 ceasefire, 600+ aid trucks per day entered Gaza. Humanitarian agencies reported partial easing of catastrophic conditions. Resumed operations in March 2025 again restricted aid.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "settler-attack-jalud-qaryut-march22",
+    "from": [
+      35.21,
+      32.05
+    ],
+    "to": [
+      35.25,
+      32.12
+    ],
+    "cat": "conflict",
+    "label": "Settler Rampage — Jalud & Qaryut Villages",
+    "date": "2026-03-22",
+    "weaponType": "unknown",
+    "launched": 100,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "3 hospitalized with head wounds; multiple vehicle and property attacks",
+    "damage": "10+ homes torched, 5+ vehicles burned, village council building burned, clinic arson attempted, fire truck attacked",
+    "notes": "~100 masked settlers descended on Jalud and Qaryut (south of Nablus); attacks spread to Deir Sharaf, Deir al-Hatab, and Burqa; IDF present on outskirts but made no arrests",
+    "status": "hit",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "idf-pursuit-shooting-hebron-hills-march25",
+    "from": [
+      35.1,
+      31.53
+    ],
+    "to": [
+      35.08,
+      31.45
+    ],
+    "cat": "conflict",
+    "label": "IDF Shooting — Workers' Vehicle Pursuit, Hebron Hills",
+    "date": "2026-03-25",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "1 killed, 3 wounded (1 by live fire)",
+    "notes": "IDF soldiers fired at vehicles transporting Palestinian workers near military checkpoint in southern Hebron Hills; footage showed vehicles moving away from checkpoint; victim had reentered vehicle before being shot",
+    "status": "hit",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "settler-shooting-mukhmas-march27",
+    "from": [
+      35.26,
+      31.95
+    ],
+    "to": [
+      35.33,
+      31.87
+    ],
+    "cat": "conflict",
+    "label": "Settler Shooting — Mukhmas (Palestinian-American Killed)",
+    "date": "2026-03-27",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "1 killed (Nasrallah Abu Siyam, Palestinian-American teenager)",
+    "notes": "Second Palestinian-American killed by Israeli settlers in under a year; village of Mukhmas northeast of Jerusalem; incident drew heightened attention due to victim's US citizenship",
+    "status": "hit",
+    "lastUpdated": "2026-03-27T06:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-strike-bani-suheila-march28",
+    "from": [
+      34.4,
+      31.3
+    ],
+    "to": [
+      34.35,
+      31.32
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Bani Suheila, East Khan Younis",
+    "date": "2026-03-28",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "1 killed, several wounded",
+    "notes": "IDF drone struck a car near the Bani Suheila roundabout east of Khan Younis; ceasefire violation cited; wounded taken to Nasser Hospital",
+    "status": "hit",
+    "lastUpdated": "2026-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-shejaiya-qaddoum-march28",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.49,
+      31.53
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Hamas Operatives, Shejaiya (Gaza City)",
+    "date": "2026-03-28",
+    "weaponType": "mixed",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "casualties": "2 killed (Fahmi and Saed Qaddoum, Hamas Deterrent Force operatives)",
+    "notes": "IAF targeted two Hamas operatives in Shejaiya neighborhood; Hamas Deterrent Force confirmed targets as resistance fighters; strike followed attack on IDF troops by armed operatives",
+    "status": "hit",
+    "lastUpdated": "2026-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "houthi-missile-negev-march28",
+    "from": [
+      34.8,
+      31.25
+    ],
+    "to": [
+      34.79,
+      31.25
+    ],
+    "cat": "retaliation",
+    "label": "Houthi Ballistic Missile — Negev (First Attack Since Nov 2025)",
+    "date": "2026-03-28",
+    "weaponType": "ballistic",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "08:00",
+    "casualties": "No casualties reported from this specific missile",
+    "notes": "First Houthi ballistic missile attack on Israel since November 2025 ceasefire freeze; sirens sounded across Beersheba/Negev; air defense activated; Houthis claimed targeting 'sensitive Israeli military sites in southern occupied Palestine'; struck open area in the Negev",
+    "status": "unknown",
+    "lastUpdated": "2026-03-28T12:00:00.000Z"
+  },
+  {
+    "id": "iran-missile-barrage-march29",
+    "from": [
+      36.5,
+      31.9
+    ],
+    "to": [
+      34.8,
+      31.25
+    ],
+    "cat": "retaliation",
+    "label": "Iranian Missile Barrage (6 Salvos) — Central Israel / Beersheba (March 29)",
+    "date": "2026-03-29",
+    "weaponType": "ballistic",
+    "launched": 6,
+    "intercepted": 5,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "No confirmed casualties; medics responded to industrial zone impact near Beersheba",
+    "notes": "Six separate missile salvos fired by Iran targeting Israel as US-Israel war on Iran enters second month; sirens across central Israel and West Bank; Arrow 2/3 and David's Sling batteries activated; Strait of Hormuz remains closed",
+    "status": "partial",
+    "lastUpdated": "2026-03-29T14:30:50.000Z"
+  },
+  {
+    "id": "houthi-second-wave-march29",
+    "from": [
+      34.6,
+      31.2
+    ],
+    "to": [
+      34.5,
+      31.6
+    ],
+    "cat": "retaliation",
+    "label": "Houthi Second Wave — Missiles/Drones (Within 24 Hours of First Attack)",
+    "date": "2026-03-29",
+    "weaponType": "mixed",
+    "launched": 3,
+    "intercepted": 3,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "No casualties — all projectiles intercepted",
+    "notes": "Second Houthi attack on Israel within 24 hours of resuming operations on March 28; mix of ballistic missiles and drones; all intercepted by Israeli air defense; Houthi spokesman pledged continued operations in solidarity with Iran, Gaza, Lebanon",
+    "status": "intercepted",
+    "lastUpdated": "2026-03-29T14:30:50.000Z"
+  },
+  {
+    "id": "hezbollah-rockets-tiberias-march29",
+    "from": [
+      35.55,
+      33.25
+    ],
+    "to": [
+      35.53,
+      32.8
+    ],
+    "cat": "retaliation",
+    "label": "Hezbollah Rocket Fire — Tiberias / Galilee (Coordinated Multi-Front Attack)",
+    "date": "2026-03-29",
+    "weaponType": "rocket",
+    "launched": 15,
+    "intercepted": 12,
+    "confidence": "medium",
+    "time": "13:00",
+    "casualties": "No immediate casualties reported",
+    "notes": "Hezbollah fired rockets at Tiberias and northern Israeli towns coinciding with Iranian missile salvos — part of coordinated Axis of Resistance multi-front assault designed to overwhelm Israeli air defense; sirens sounded across Galilee",
+    "status": "partial",
+    "lastUpdated": "2026-03-29T14:30:50.000Z"
+  },
+  {
+    "id": "idf-airstrike-khy-checkpoints-march29",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.28,
+      31.28
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrikes — Police Checkpoints, Southern Khan Younis (March 29)",
+    "date": "2026-03-29",
+    "weaponType": "mixed",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "6 killed including child, several wounded",
+    "notes": "Israeli airstrikes on two police checkpoints in southern Khan Younis; IDF claimed targets were armed Hamas-affiliated operatives; Gaza MoH confirmed fatalities and transfers to Nasser Hospital",
+    "status": "hit",
+    "lastUpdated": "2026-03-29T19:47:23.000Z"
+  },
+  {
+    "id": "idf-airstrike-shejaiya-brothers-march29",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.49,
+      31.53
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Two Brothers Killed Near Showa Roundabout, Shejaiya (March 29)",
+    "date": "2026-03-29",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "15:00",
+    "casualties": "2 killed (Palestinian brothers) near Showa roundabout",
+    "notes": "Two Palestinian brothers killed in IDF strike near the Showa roundabout in Shejaiya, Gaza City; second IDF strike in Shejaiya area in two days; area has been target of intermittent IDF operations despite ceasefire",
+    "status": "hit",
+    "lastUpdated": "2026-03-29T19:47:23.000Z"
+  },
+  {
+    "id": "idf-airstrike-zeitoun-march30",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Zeitoun Neighborhood, Gaza City (March 30)",
+    "date": "2026-03-30",
+    "weaponType": "mixed",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "3 killed, 2 wounded",
+    "notes": "IDF targeted alleged Hamas armed cell in Zeitoun neighborhood; dead and wounded transferred to Al-Shifa and Al-Ahli hospitals; part of continuing low-level operations despite October 2025 ceasefire",
+    "status": "hit",
+    "lastUpdated": "2026-03-31T16:30:00.000Z"
+  },
+  {
+    "id": "iran-missile-barrage-march30",
+    "from": [
+      36.5,
+      31.9
+    ],
+    "to": [
+      34.78,
+      31.25
+    ],
+    "cat": "retaliation",
+    "label": "Iranian Missile Barrage — Negev / Central Israel (Day 31, March 30)",
+    "date": "2026-03-30",
+    "weaponType": "ballistic",
+    "launched": 4,
+    "intercepted": 3,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "10 lightly wounded",
+    "damage": "Residential structures; 10 Israelis lightly wounded",
+    "notes": "Day 31 Iranian ballistic missile barrage; Arrow 2/3 and David's Sling activated; at least one impact wounded 10 Israelis; IDF conducted ~230 strikes on Iranian facilities in preceding 24 hours; HRW confirmed Iran used cluster munitions in prior strikes on Yehud and Ramat Gan",
+    "status": "partial",
+    "lastUpdated": "2026-03-31T16:30:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-gaza-city-march31",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrikes — Gaza City (Two Attacks, March 31)",
+    "date": "2026-03-31",
+    "weaponType": "mixed",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "5 killed",
+    "notes": "Two separate Israeli strikes in Gaza on March 31 killed at least 5 Palestinians; dead transferred to Al-Nasser and Al-Ahli hospitals; IDF cited ongoing Hamas ceasefire violations",
+    "status": "hit",
+    "lastUpdated": "2026-03-31T16:30:00.000Z"
+  },
+  {
+    "id": "idf-strike-mawasi-kamal-ayash-april1",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.27,
+      31.3
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Al-Mawasi (Hamas Anti-Tank Commander Killed, April 1)",
+    "date": "2026-04-01",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "4 killed including Hamas anti-tank corps commander Kamal Ayash",
+    "notes": "IDF drone strike in Al-Mawasi coastal area, southern Gaza; killed 4 Hamas operatives including Kamal Ayash, Hamas anti-tank corps commander; IDF cited ongoing ceasefire violations; dead transferred to Nasser Hospital",
+    "status": "hit",
+    "lastUpdated": "2026-04-02T06:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-jabalia-april1",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.49,
+      31.55
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Jabalia, Northern Gaza (April 1)",
+    "date": "2026-04-01",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "3 killed",
+    "notes": "IDF strikes on Jabalia (northern Gaza) killed three Palestinians; continuing low-level operations inside Gaza despite October 2025 ceasefire",
+    "status": "hit",
+    "lastUpdated": "2026-04-02T06:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-khan-younis-april1",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.28,
+      31.35
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Khan Younis Area (April 1)",
+    "date": "2026-04-01",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "2 killed",
+    "notes": "IDF strike in Khan Younis area killed two Palestinians; IDF cited Hamas armed activity",
+    "status": "hit",
+    "lastUpdated": "2026-04-02T06:00:00.000Z"
+  },
+  {
+    "id": "iran-passover-barrage-bnei-brak-april1",
+    "from": [
+      36.5,
+      31.9
+    ],
+    "to": [
+      34.83,
+      32.08
+    ],
+    "cat": "retaliation",
+    "label": "Iranian Passover Barrage — Bnei Brak / Tel Aviv (Day 33, April 1)",
+    "date": "2026-04-01",
+    "weaponType": "ballistic",
+    "launched": 10,
+    "intercepted": 9,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "10 injured including girl in critical condition",
+    "damage": "Strike on Bnei Brak residential area; girl critically wounded airlifted to Sheba Medical Center",
+    "notes": "Largest Iranian salvo in 3 weeks; timed to coincide with Passover start; most missiles carried cluster munitions per Israeli Army Radio; Arrow 2/3 and David's Sling activated; one missile impacted Bnei Brak; Amnesty condemned cluster munition use",
+    "status": "partial",
+    "lastUpdated": "2026-04-02T06:00:00.000Z"
+  },
+  {
+    "id": "houthi-coordinated-barrage-april1",
+    "from": [
+      34.6,
+      31.15
+    ],
+    "to": [
+      34.8,
+      31.25
+    ],
+    "cat": "retaliation",
+    "label": "Houthi Coordinated Barrage — Southern Israel (Joint Iran-Hezbollah Operation, April 1)",
+    "date": "2026-04-01",
+    "weaponType": "mixed",
+    "launched": 3,
+    "intercepted": 3,
+    "confidence": "medium",
+    "time": "16:00",
+    "casualties": "No casualties reported — all projectiles intercepted or struck open areas",
+    "notes": "Houthis claimed operation was conducted 'jointly with Iran and Hezbollah'; threatened Bab al-Mandeb closure; France condemned as 'irresponsible'; IDF air defense activated across south; continued three-front Axis of Resistance coordinated assault",
+    "status": "intercepted",
+    "lastUpdated": "2026-04-02T06:00:00.000Z"
+  },
+  {
+    "id": "iran-war-day35-strikes-april3",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "US-Israel Day 35 Strikes — Pasteur Institute & Industrial Sites, Iran (April 3)",
+    "date": "2026-04-03",
+    "weaponType": "mixed",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "Casualties part of cumulative 2,076 Iranians killed since Feb 28",
+    "damage": "Pasteur Institute (Tehran area) damaged; military bridge and two steel plants struck",
+    "notes": "Day 35 of US-Israel war on Iran; Pasteur Institute is Iran's premier biomedical research center founded 1920; international condemnation followed; Iran death toll reaches 2,076 killed, 26,500 wounded since Feb 28; Hormuz remains closed",
+    "status": "hit",
+    "lastUpdated": "2026-04-03T16:22:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-maghazi-camp-apr7",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.42,
+      31.42
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrikes — Maghazi Refugee Camp, Central Gaza (April 7)",
+    "date": "2026-04-07",
+    "weaponType": "mixed",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "10 killed near displaced persons school",
+    "damage": "Multiple strikes across three Maghazi locations; school-adjacent site hit",
+    "notes": "Israeli airstrikes on Maghazi after Israeli-backed Abu Nasira militia attempted abductions of Hamas Qassam Brigade members; residents and fighters resisted; IDF aircraft struck three locations; 10 killed. Underscores tensions around Israel-backed armed factions in Gaza.",
+    "status": "hit",
+    "lastUpdated": "2026-04-07T18:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-who-vehicle-khan-younis-apr6",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.35,
+      31.32
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — WHO Vehicle, Eastern Khan Younis (April 6)",
+    "date": "2026-04-06",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "1 killed (WHO driver Majdi Aslan, 54), 1 WHO doctor wounded, child critically injured",
+    "damage": "WHO-marked vehicle destroyed; WHO suspended all Gaza medical evacuations the following day",
+    "notes": "Israeli forces fired on WHO-contracted vehicle in eastern Khan Younis; WHO DG Tedros confirmed Israeli fire killed driver; IDF said troops 'identified vehicle as threat'; WHO had been coordinating medical evacuations via Egypt-Israel corridor for 18,000+ waiting patients; evacuations suspended April 7.",
+    "status": "hit",
+    "lastUpdated": "2026-04-07T14:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-beit-lahiya-apr16",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.5,
+      31.56
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Brothers Killed, Beit Lahiya (April 16)",
+    "date": "2026-04-16",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "2 killed (brothers Abdelmalek and Abdel Sattar al-Attar)",
+    "notes": "IDF drone strike in Beit Lahiya, northern Gaza; Civil Defence spokesman Mahmoud Bassal confirmed; witnesses said strike fell outside IDF-controlled zone under October 2025 ceasefire",
+    "status": "hit",
+    "lastUpdated": "2026-04-20T12:00:00.000Z"
+  },
+  {
+    "id": "idf-kills-zeitoun-child-apr16",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.49,
+      31.51
+    ],
+    "cat": "strike",
+    "label": "IDF Fire — 9-Year-Old Shot Dead, Zeitoun, Gaza City (April 16)",
+    "date": "2026-04-16",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 killed (9-year-old Saleh Badawi)",
+    "notes": "Israeli forces shot and killed 9-year-old Saleh Badawi in Zeitoun neighborhood east of Gaza City; one of three separate Israeli killing incidents in Gaza on April 16",
+    "status": "hit",
+    "lastUpdated": "2026-04-20T12:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-shujayea-water-apr17",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.5,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Water Desalination Station, Shujayea (April 17)",
+    "date": "2026-04-17",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "07:00",
+    "casualties": "3+ killed (brothers Mohammed and Eid Abu Warda + 1 at desalination station); 2 UNICEF-contracted drivers also killed at Mansoura filling station",
+    "damage": "Water desalination station destroyed; Mansoura water filling point struck — only operational Mekorot supply point for Gaza City",
+    "notes": "Multiple Israeli strikes on water infrastructure in Shujayea area; UNICEF suspended all contractor operations and called for immediate investigation; hundreds of thousands of Gazans lost water access",
+    "status": "hit",
+    "lastUpdated": "2026-04-20T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-central-gaza-apr21",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.42,
+      31.43
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Hamas Operative Anas Khaled Safi, Central Gaza (April 21)",
+    "date": "2026-04-21",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "1 killed (Anas Khaled Safi, Hamas operative planning imminent attack on IDF troops)",
+    "notes": "IDF targeted Hamas operative Anas Khaled Safi in central Gaza; IDF stated he was planning an imminent attack on troops; separate strike the previous day killed Ayman Housna who manufactured Hamas weapons",
+    "status": "hit",
+    "lastUpdated": "2026-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-sheikh-nasser-apr21",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.38,
+      31.34
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Sheikh Nasser Neighbourhood, East Khan Younis (April 21)",
+    "date": "2026-04-21",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "1 Palestinian man killed",
+    "notes": "Israeli drone struck a Palestinian man near the Sheikh Nasser neighbourhood east of Khan Younis; one of seven Palestinians killed in Gaza on April 21; witnesses said strike fell in ceasefire buffer zone",
+    "status": "hit",
+    "lastUpdated": "2026-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "idf-naval-beit-lahiya-apr21",
+    "from": [
+      34.37,
+      31.8
+    ],
+    "to": [
+      34.48,
+      31.57
+    ],
+    "cat": "strike",
+    "label": "Israeli Naval Shelling — Displaced Family Tents, NW Beit Lahiya (April 21)",
+    "date": "2026-04-21",
+    "weaponType": "cruise",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "casualties": "1 woman killed (displaced person sheltering in tent)",
+    "notes": "Israeli naval forces shelled displaced family tents northwest of Beit Lahiya in northern Gaza; woman killed in her tent; part of seven Palestinian deaths recorded in Gaza on April 21",
+    "status": "hit",
+    "lastUpdated": "2026-04-21T12:00:00.000Z"
+  },
+  {
+    "id": "iran-missile-neot-hovav-march29",
+    "from": [
+      36.5,
+      31.9
+    ],
+    "to": [
+      34.88,
+      31.14
+    ],
+    "cat": "retaliation",
+    "label": "Iranian Ballistic Missile — Ne'ot Hovav Chemical Zone, Negev (March 29)",
+    "date": "2026-03-29",
+    "weaponType": "ballistic",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "16:00",
+    "casualties": "1 injury; hazmat response deployed",
+    "damage": "Strike on chemical industrial zone; hazmat emergency protocols activated; evacuation ordered",
+    "notes": "Iranian ballistic missile bypassed Israeli air defense and struck Ne'ot Hovav (Ramat Hovav) chemical industrial complex 12km south of Beersheba; hazmat teams deployed over fears of toxic chemical release; second Iranian air defense penetration in two days after Eshtaol strike",
+    "status": "hit",
+    "lastUpdated": "2026-03-29T19:47:23.000Z"
+  },
+  {
+    "id": "settler-shooting-deir-dibwan-apr22",
+    "from": [
+      35.29,
+      31.97
+    ],
+    "to": [
+      35.24,
+      31.94
+    ],
+    "cat": "conflict",
+    "label": "Settler Shooting — Deir Dibwan (Apr 22)",
+    "date": "2026-04-22",
+    "confidence": "high",
+    "casualties": "1 Palestinian killed; multiple injured; 30 detained",
+    "notes": "Israeli settlers shot and killed one Palestinian in Deir Dibwan, east of Ramallah. IDF forces detained approximately 30 people. Part of a wave of settler violence during Israel's Independence Day period, one day after the al-Mughayyir school attack killed a 14-year-old student and a 32-year-old man.",
+    "lastUpdated": "2026-04-22T12:45:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-beit-lahia-apr23",
+    "from": [
+      34.72,
+      31.28
+    ],
+    "to": [
+      34.5,
+      31.55
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Al-Qassam Mosque Area, Beit Lahia, N. Gaza (Apr 23)",
+    "date": "2026-04-23",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "5 Palestinians killed, including 3 children",
+    "notes": "Israeli airstrike struck civilians near the Al-Qassam mosque in Beit Lahia, northern Gaza. Bodies transported to Al-Shifa Hospital. Part of 2,400+ documented ceasefire violations since October 2025.",
+    "status": "hit",
+    "lastUpdated": "2026-04-23T12:00:00.000Z"
+  },
+  {
+    "id": "settler-shooting-deir-dibwan-apr23",
+    "from": [
+      35.33,
+      31.97
+    ],
+    "to": [
+      35.24,
+      31.94
+    ],
+    "cat": "conflict",
+    "label": "Settler Shooting — Deir Dibwan (Apr 23, Awda Atef Awawdeh, 25)",
+    "date": "2026-04-23",
+    "confidence": "medium",
+    "casualties": "1 Palestinian killed (Awda Atef Awawdeh, 25)",
+    "notes": "Third fatal settler shooting in two days in the West Bank. Awda Atef Awawdeh (25) shot dead in Deir Dibwan east of Ramallah. Part of the April 21–23 settler violence wave — the deadliest three-day settler episode of 2026.",
+    "lastUpdated": "2026-04-23T12:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-maghazi-entrance-apr25",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.42,
+      31.42
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Maghazi Refugee Camp Entrance (April 25)",
+    "date": "2026-04-25",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "casualties": "3 killed, multiple wounded",
+    "notes": "Israeli airstrike targeted car at entrance to Maghazi refugee camp in central Gaza; 3 Palestinians killed on Palestinian election day",
+    "status": "hit",
+    "lastUpdated": "2026-04-25T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-sheikh-radwan-elections-apr25",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.43,
+      31.56
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Hamas Police, Sheikh Radwan, Gaza City (Election Day, April 25)",
+    "date": "2026-04-25",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "14:00",
+    "casualties": "Unknown — Hamas police targeted during election security deployment",
+    "notes": "Israeli strike near Hamas police station in Sheikh Radwan, western Gaza City; Hamas police were deployed for election-day security during first Gaza elections in 20 years",
+    "status": "hit",
+    "lastUpdated": "2026-04-25T14:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-kuwait-roundabout-apr26",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Motorcycle, Kuwait Roundabout, Gaza City (April 26)",
+    "date": "2026-04-26",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "2 killed on motorcycle; 3 more shot by quadcopter drone in same area",
+    "notes": "Israeli drone struck motorcycle at Kuwait Roundabout on Salah al-Din Street in Gaza City; quadcopter separately shot three additional Palestinians in the vicinity; part of multi-location strike wave killing 4+ on April 26",
+    "status": "hit",
+    "lastUpdated": "2026-04-26T12:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-al-mughraqa-apr26",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.37,
+      31.43
+    ],
+    "cat": "strike",
+    "label": "IDF Air Attack — Al-Mughraqa, Central Gaza (April 26)",
+    "date": "2026-04-26",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "casualties": "1 killed",
+    "notes": "Israeli air attack on Al-Mughraqa area in central Gaza; one Palestinian killed; part of multi-location strike wave confirmed by Al Jazeera and Middle East Monitor killing 4+ Palestinians on April 26",
+    "status": "hit",
+    "lastUpdated": "2026-04-26T12:00:00.000Z"
+  },
+  {
+    "id": "idf-forces-kill-woman-khan-younis-apr26",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.3,
+      31.35
+    ],
+    "cat": "strike",
+    "label": "IDF Forces Kill Woman (40) — Khan Younis (April 26)",
+    "date": "2026-04-26",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "13:00",
+    "casualties": "1 killed (40-year-old woman)",
+    "notes": "Israeli forces shot and killed a 40-year-old woman in Khan Younis on April 26; part of multi-location strike wave documented across Gaza on April 26",
+    "status": "hit",
+    "lastUpdated": "2026-04-26T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-khan-younis-police-vehicle-apr24",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.3,
+      31.35
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Police Vehicle, Khan Younis (April 24)",
+    "date": "2026-04-24",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "7–8 killed including civilian bystanders",
+    "notes": "Israeli airstrike struck Hamas police patrol vehicle in Khan Younis — deadliest single-incident attack since the October 2025 ceasefire; civilian bystanders among the dead; part of a multi-location wave that killed ~12 Palestinians on April 24",
+    "status": "hit",
+    "lastUpdated": "2026-04-27T10:00:00.000Z"
+  },
+  {
+    "id": "idf-artillery-kamal-adwan-beit-lahia-apr24",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.5,
+      31.56
+    ],
+    "cat": "strike",
+    "label": "IDF Artillery — Kamal Adwan Hospital Area, Beit Lahia (April 24)",
+    "date": "2026-04-24",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "casualties": "3 killed: Islam Al-Tanani (pregnant with twins), son Hamza, daughter Naya",
+    "damage": "Residential homes near Kamal Adwan Hospital struck; only functioning hospital in northern Gaza",
+    "notes": "Israeli artillery struck residential buildings near Kamal Adwan Hospital in Beit Lahia; killed a pregnant woman and two of her children; husband Khalid Al-Tanani survived. Funerals held April 25.",
+    "status": "hit",
+    "lastUpdated": "2026-04-27T10:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-hamas-cell-central-gaza-apr23",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.4,
+      31.45
+    ],
+    "cat": "strike",
+    "label": "IDF/IAF Strike — Hamas Cell (Oct. 7 Operative), Central Gaza (April 23, Announced April 27)",
+    "date": "2026-04-23",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "3 Hamas operatives killed: Hazem Rami Ali Aidi (Oct. 7 cell commander), Ibrahim Mansour (platoon commander), Maher Tantawi (military intelligence)",
+    "notes": "IAF/Shin Bet strike on Hamas cell planning imminent attacks on IDF in central Gaza. Hazem Rami Ali Aidi had participated in Oct. 7 massacre infiltration into Israel. IDF confirmed publicly on April 27; said precision munitions and aerial surveillance used to minimize civilian harm.",
+    "status": "hit",
+    "lastUpdated": "2026-04-27T10:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-kills-9yo-east-khan-younis-apr28",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.35,
+      31.34
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — 9-Year-Old Child Killed, Eastern Khan Younis (April 28)",
+    "date": "2026-04-28",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "1 killed: 9-year-old Adel Al-Najjar (collecting cardboard for cooking fuel)",
+    "notes": "Israeli drone strike in eastern Khan Younis killed 9-year-old Adel Al-Najjar while collecting cardboard. IDF said targeting a 'terror operative' near Yellow Line; incident placed under review. Total killed since Oct 2025 ceasefire rises to 824.",
+    "status": "hit",
+    "lastUpdated": "2026-04-29T14:30:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-alrimal-hamas-intel-apr28",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.46,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Hamas Intelligence Operative Killed, Al-Rimal, Gaza City (April 28)",
+    "date": "2026-04-28",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "4 killed including senior Hamas intelligence operative",
+    "notes": "Israeli airstrike struck vehicle in Al-Rimal neighborhood of Gaza City killing a senior Hamas intelligence operative and three others. JNS confirmed IDF eliminated a top Hamas intelligence figure in northern Gaza. Part of the same April 28 wave that killed 5 Palestinians total.",
+    "status": "hit",
+    "lastUpdated": "2026-04-29T14:30:00.000Z"
+  },
+  {
+    "id": "idf-raid-nablus-may3",
+    "from": [
+      35.3,
+      32.46
+    ],
+    "to": [
+      35.26,
+      32.22
+    ],
+    "cat": "conflict",
+    "label": "IDF Raid — Nablus Old City (May 3)",
+    "date": "2026-05-03",
+    "confidence": "medium",
+    "casualties": "1 killed, 3 wounded",
+    "notes": "Israeli military forces conducted overnight raid in Nablus Old City market, killing one Palestinian man and wounding three others. IDF claimed targeting of 'wanted militant'; Palestinian witnesses disputed the characterization. Part of sustained IDF operations in West Bank."
+  },
+  {
+    "id": "idf-fire-two-children-killed-may1",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Fire — Two Children Killed in Gaza (May 1, Despite Reported Halt)",
+    "date": "2026-05-01",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "12:00",
+    "casualties": "2 children killed (Palestinian Health Ministry confirmed)",
+    "notes": "Despite Israel's reported halt of most artillery fire in Gaza under US pressure on May 1, Palestinian Health Ministry confirmed at least two Palestinian children were killed by Israeli fire. Exact location in Gaza not independently confirmed; ceasefire continues to be violated on the day marking six months since Oct 2025 ceasefire.",
+    "status": "hit",
+    "lastUpdated": "2026-05-01T12:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-kalazani-al-mawasi-may6",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.22,
+      31.34
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Hamas Police Colonel al-Kalazani, al-Mawasi (May 6)",
+    "date": "2026-05-06",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "1 killed (Naseem al-Kalazani, Hamas anti-narcotics police colonel), 17 wounded",
+    "notes": "Israeli drone struck al-Kalazani's vehicle near al-Mawasi coastal area, Khan Younis; targeted killing of Hamas police force commander; 17 wounded in surrounding area; dead transported to Nasser Hospital; part of wave killing 5+ Palestinians on May 6",
+    "status": "hit",
+    "lastUpdated": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-sheikh-radwan-may6",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.43,
+      31.56
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Sheikh Radwan Neighborhood, Gaza City (May 6)",
+    "date": "2026-05-06",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 killed, 2 wounded",
+    "notes": "Israeli strike on Sheikh Radwan neighborhood in northwestern Gaza City; part of five-plus Palestinians killed on May 6 across multiple strike locations; dead transferred to Al-Shifa Hospital",
+    "status": "hit",
+    "lastUpdated": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-gaza-city-azzam-al-hayya-may6",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Gaza City (Wounds Son of Hamas Negotiator Khalil Al-Hayya, May 6)",
+    "date": "2026-05-06",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "13:00",
+    "casualties": "1 killed; Azzam Al-Hayya (son of Hamas negotiator Khalil Al-Hayya) wounded",
+    "notes": "IDF airstrike in Gaza City killed one Palestinian and wounded Azzam Al-Hayya, son of senior Hamas negotiator Khalil Al-Hayya; Khalil Al-Hayya has now had four family members harmed by Israeli fire; strike on same day as Board of Peace ultimatum on disarmament",
+    "status": "hit",
+    "lastUpdated": "2026-05-07T00:00:00.000Z"
+  },
+  {
+    "id": "idf-strikes-4-killed-may7",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.35,
+      31.34
+    ],
+    "cat": "strike",
+    "label": "IDF Strikes — Multiple Locations, Gaza (4 Killed, May 7)",
+    "date": "2026-05-07",
+    "weaponType": "drone_ucav",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "4 killed; cumulative ceasefire death toll reaches 834+",
+    "notes": "Two confirmed Israeli airstrikes on May 7: one targeting Hamas police force colonel in northern Gaza; second near al-Mawasi, eastern Khan Younis; ceasefire death toll rises to 834+; UNRWA warns of 'new humanitarian emergency within the ceasefire'",
+    "status": "hit",
+    "lastUpdated": "2026-05-07T14:00:00.000Z"
+  },
+  {
+    "id": "idf-strikes-restaurant-market-gaza-city-may8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Strikes — Last Restaurant + Market, Gaza City (33+ Killed, May 8)",
+    "date": "2026-05-08",
+    "weaponType": "mixed",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "33+ killed; cumulative ceasefire death toll reaches 870+",
+    "damage": "Last operating restaurant in Gaza City destroyed; adjacent market struck",
+    "notes": "Multiple Israeli airstrikes on Gaza City on May 8 — among highest single-day tolls since Oct 2025 ceasefire; last operating restaurant and crowded market targeted; IDF said all targets were armed operatives; journalists also among those killed",
+    "status": "hit",
+    "lastUpdated": "2026-05-08T15:10:00.000Z"
+  },
+  {
+    "id": "idf-strike-al-hayya-son-may8",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Son of Hamas Negotiator Khalil Al-Hayya Killed, Gaza City (May 8)",
+    "date": "2026-05-08",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "13:00",
+    "casualties": "1+ killed (son of Khalil Al-Hayya, Hamas chief negotiator)",
+    "notes": "IDF strike killed a son of Khalil Al-Hayya — fifth family member of the Hamas chief negotiator harmed since Oct 2025 ceasefire; Israel said target was an armed operative; occurrence further complicated disarmament negotiations",
+    "status": "hit",
+    "lastUpdated": "2026-05-08T15:10:00.000Z"
+  },
+  {
+    "id": "idf-strike-police-chief-khan-younis-may10",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.3,
+      31.35
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Criminal Police Chief Wessam Abdel-Hadi Killed, Khan Younis (May 10)",
+    "date": "2026-05-10",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "08:00",
+    "casualties": "2 killed (Wessam Abdel-Hadi, Khan Younis criminal police chief, and his aide)",
+    "notes": "IDF targeted Al-Amal neighborhood in Khan Younis; killed the head of the criminal police force and his aide; Hamas Interior Ministry condemned strike as targeting civil governance; part of sustained campaign against Hamas police structures during Oct 2025 ceasefire",
+    "status": "hit",
+    "lastUpdated": "2026-05-10T14:45:12.000Z"
+  },
+  {
+    "id": "idf-strike-maghazi-camp-may10",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.42,
+      31.44
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Maghazi Refugee Camp (May 10)",
+    "date": "2026-05-10",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "07:00",
+    "casualties": "1 killed",
+    "notes": "Israeli airstrike on Maghazi refugee camp in central Gaza killed one Palestinian; Maghazi is one of the original 1948 refugee camps; strike occurred same day as Khan Younis police chief killing; cumulative ceasefire death toll 873+",
+    "status": "hit",
+    "lastUpdated": "2026-05-10T14:45:12.000Z"
+  },
+  {
+    "id": "idf-drone-strike-ied-kfir-khan-younis-may11",
+    "from": [
+      34.5,
+      31.4
+    ],
+    "to": [
+      34.3,
+      31.35
+    ],
+    "cat": "strike",
+    "label": "IDF Kfir Brigade Drone Strike — IED Operative Killed, Khan Younis (May 11)",
+    "date": "2026-05-11",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:30",
+    "casualties": "1 killed (operative planting IED)",
+    "platform": "IDF UAV (Kfir Brigade)",
+    "notes": "IDF Kfir Brigade authorized drone strike targeting Palestinian operative in 'sector 900' of Khan Younis area who was planting an IED that posed imminent danger to ground troops; coordinated between IAF and Kfir Brigade; confirmed direct hit; IDF released footage; part of continuing operations under Oct 2025 ceasefire",
+    "status": "hit",
+    "lastUpdated": "2026-05-11T14:30:00.000Z"
+  },
+  {
+    "id": "idf-strikes-four-operatives-gaza-may12",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Strikes — Four Operatives Killed in Gaza (May 12)",
+    "date": "2026-05-12",
+    "weaponType": "drone_ucav",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "4 killed (Palestinian operatives confirmed by IDF)",
+    "notes": "IDF confirmed four Palestinian operatives killed in Gaza on May 12, continuing near-daily targeted operations under the Oct 2025 ceasefire; cumulative post-ceasefire Palestinian death toll reaches ~880; Hamas disarmament talks remain deadlocked",
+    "status": "hit",
+    "lastUpdated": "2026-05-12T15:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-sharbasi-azzam-hayya-shejaiya-may13",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.5,
+      31.53
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Hamza Sharbasi + Azzam Al-Hayya Killed, Shejaiya (May 13)",
+    "date": "2026-05-13",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "2+ killed: Hamas Shejaiya Battalion commander Hamza Sharbasi (Oct 7 Nahal Oz raid participant) and Azzam al-Hayya (23, son of Hamas chief negotiator Khalil al-Hayya)",
+    "platform": "IAF",
+    "notes": "IDF targeted Hamas operative Hamza Sharbasi in Shejaiya; strike also killed Azzam al-Hayya, son of Hamas chief negotiator Khalil al-Hayya — second son of Khalil al-Hayya killed since Oct 2025 ceasefire (previous son killed May 8); further complicates Hamas-Israel disarmament negotiations; Board of Peace 'losing patience' with Hamas same day",
+    "status": "hit",
+    "lastUpdated": "2026-05-13T12:00:00.000Z"
+  },
+  {
+    "id": "settler-riot-jaljilya-1-killed-may13",
+    "from": [
+      35.04,
+      32.12
+    ],
+    "to": [
+      35.04,
+      32.07
+    ],
+    "cat": "conflict",
+    "label": "Settler Riot + IDF Killing — Jaljilya, West Bank (May 13)",
+    "date": "2026-05-13",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "notes": "Israeli settlers entered Jaljilya village searching for stolen sheep; riot broke out on their departure; IDF and Border Police responded with riot-dispersal means and live fire; 1 Palestinian killed; incident typical of ongoing settler-triggered confrontations in West Bank",
+    "status": "hit",
+    "lastUpdated": "2026-05-13T12:00:00.000Z"
+  },
+  {
+    "id": "jerusalem-day-flag-march-route-may15",
+    "from": [
+      35.22,
+      31.78
+    ],
+    "to": [
+      35.23,
+      31.78
+    ],
+    "cat": "conflict",
+    "label": "Jerusalem Day Flag March — Muslim Quarter Route (May 15)",
+    "date": "2026-05-15",
+    "confidence": "high",
+    "notes": "Annual Flag March routes tens of thousands of ultranationalist Israeli marchers through the Muslim Quarter of the Old City; chants of 'Death to Arabs' and 'May your village burn'; 13 arrested; Ben-Gvir stormed Al-Aqsa compound; Palestinian shops shuttered; Jordanian condemnation. March marks Israel's 1967 reunification of Jerusalem, contested as occupation of East Jerusalem by Palestinians and international community.",
+    "lastUpdated": "2026-05-15T15:16:13.000Z"
+  },
+  {
+    "id": "idf-airstrike-haddad-rimal-may15",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.46,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Hamas Armed Wing Chief al-Haddad Killed, Rimal, Gaza City (May 15)",
+    "date": "2026-05-15",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "7 killed, 50+ wounded (incl. Hamas armed wing chief Izz al-Din al-Haddad)",
+    "damage": "Apartment building and vehicle struck in Rimal neighborhood",
+    "notes": "IDF struck Hamas armed wing (Qassam Brigades) chief in Gaza — one of the last surviving Oct 7 architects. Israeli official said al-Haddad was 'undermining Trump's Gaza plan.' Hamas confirmed death on May 16. Most senior Hamas military elimination since Oct 2025 ceasefire.",
+    "platform": "IAF",
+    "status": "hit",
+    "lastUpdated": "2026-05-17T14:30:00.000Z"
+  },
+  {
+    "id": "idf-airstrikes-rimal-residential-may16",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.46,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrikes — Rimal Residential Building, Gaza City (May 16)",
+    "date": "2026-05-16",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "Multiple casualties; damage filmed by Al Jazeera",
+    "damage": "Residential building in Rimal neighborhood severely damaged",
+    "notes": "IDF continued strikes in Rimal area of Gaza City on May 16, day after killing Hamas armed wing chief al-Haddad in the same neighborhood. Al Jazeera filmed aftermath showing structural collapse. Part of continuing operations under Oct 2025 ceasefire; cumulative ceasefire death toll ~900+.",
+    "platform": "IAF",
+    "status": "hit",
+    "lastUpdated": "2026-05-17T14:30:00.000Z"
+  },
+  {
+    "id": "idf-drone-strikes-deir-balah-may18",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.4,
+      31.42
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Deir al-Balah, Central Gaza (May 18)",
+    "date": "2026-05-18",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "3 killed/wounded in Deir al-Balah; 8+ killed across Gaza on May 18",
+    "notes": "Israeli drone strike in Deir al-Balah, central Gaza; part of multi-location strike wave killing 8+ Palestinians on May 18; PM Netanyahu told cabinet IDF is 'actively pushing past the Yellow Line' — the October 2025 ceasefire demarcation boundary, signaling de facto territorial expansion",
+    "status": "hit",
+    "lastUpdated": "2026-05-18T14:00:00.000Z"
+  },
+  {
+    "id": "idf-kills-yellow-line-operative-n-gaza-may20",
+    "from": [
+      34.54,
+      31.6
+    ],
+    "to": [
+      34.5,
+      31.55
+    ],
+    "cat": "strike",
+    "label": "IDF Kills Operative at Yellow Line — Northern Gaza (May 20)",
+    "date": "2026-05-20",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "1 Palestinian killed",
+    "notes": "IDF killed Palestinian suspect who crossed the Yellow Line ceasefire demarcation boundary and approached Israeli troops in northern Gaza on May 20; described as 'immediate security threat'; part of near-daily post-ceasefire operations",
+    "status": "hit",
+    "lastUpdated": "2026-05-20T12:00:00.000Z"
+  },
+  {
+    "id": "idf-kills-nukhba-operative-central-gaza-may20",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.4,
+      31.43
+    ],
+    "cat": "strike",
+    "label": "IDF Eliminates Hamas Nukhba Force Operative — Central Gaza (May 20)",
+    "date": "2026-05-20",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 Hamas Nukhba force operative killed",
+    "notes": "IDF targeted and killed a member of Hamas's elite Nukhba force — the commando unit that led the October 7 ground assault — in central Gaza on May 20; IDF has prioritized Nukhba elimination throughout the October 2025 ceasefire; cumulative post-ceasefire death toll 920+",
+    "platform": "IAF drone",
+    "status": "hit",
+    "lastUpdated": "2026-05-20T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-police-post-tawam-may23",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.5,
+      31.57
+    ],
+    "cat": "strike",
+    "label": "IDF Missile Strike — Police Post, at-Tawam, Northern Gaza (May 23)",
+    "date": "2026-05-23",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "5 Hamas police officers killed + 1 13-year-old civilian boy killed; 10+ wounded (1 critical)",
+    "notes": "IDF fired two missiles at Hamas police post in at-Tawam, northern Gaza; Hamas said Israel targeting police to 'create security vacuum'; cumulative post-ceasefire Palestinian toll rises to 940+",
+    "status": "hit",
+    "lastUpdated": "2026-05-24T12:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-nuseirat-family-may24",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.4,
+      31.43
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Family Killed (Incl. 6-Month-Old Infant), Nuseirat Refugee Camp (May 24)",
+    "date": "2026-05-24",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "06:00",
+    "casualties": "3 killed: Mohammad Abu Mallouh (father), Alaa Zaqlan (mother), 6-month-old infant Osama; ~10 wounded",
+    "damage": "Apartment building in Nuseirat refugee camp struck",
+    "notes": "Strike in Nuseirat camp (one of original 1948 Nakba refugee camps); bodies to Al-Aqsa Martyrs Hospital Deir el-Balah; post-ceasefire toll exceeds 943+",
+    "status": "hit",
+    "lastUpdated": "2026-05-24T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-rimal-odeh-qassam-chief-may26",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.46,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Hamas Qassam Brigades Chief Odeh Killed, Rimal, Gaza City (May 26)",
+    "date": "2026-05-26",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "6 killed (Mohammed Odeh + wife + son + 3 others), 20+ wounded",
+    "damage": "Apartment building in Rimal neighborhood struck",
+    "notes": "IDF targeted Mohammed Odeh, who assumed Qassam Brigades command 11 days after IDF killed his predecessor al-Haddad on May 15; second Hamas military wing chief eliminated in 12 days; Netanyahu announced target publicly May 26; Katz confirmed kill May 27",
+    "platform": "IAF",
+    "status": "hit",
+    "lastUpdated": "2026-05-27T10:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-tel-al-sultan-displacement-camp-may26",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.22,
+      31.27
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Tel al-Sultan Displacement Camp, Rafah (45+ Killed, May 26)",
+    "date": "2026-05-26",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "45+ killed in civilian tent area; Egypt-Israel border skirmish followed — Egyptian soldier killed",
+    "damage": "Displacement camp tent area struck; Egyptian soldier killed at border watchtower when IDF vehicle crossed boundary",
+    "notes": "Israel claimed targeting 2 senior Hamas officials; strike on Eid al-Adha triggered Egypt-Israel border confrontation — most serious bilateral incident since Oct 2023; Egypt summoned Israeli ambassador; deadliest single-day death toll since March 2026",
+    "status": "hit",
+    "lastUpdated": "2026-05-27T10:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-vehicle-khan-younis-may26",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.27,
+      31.34
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Vehicle, Western Khan Younis (May 26)",
+    "date": "2026-05-26",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "2 killed",
+    "notes": "Israeli drone struck vehicle in western Khan Younis area; part of multi-location strike wave on May 26; bodies to Nasser Hospital",
+    "status": "hit",
+    "lastUpdated": "2026-05-27T10:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-zeitoun-aslim-bik-brigade-commanders-may28",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.49,
+      31.5
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Hamas Brigade Commanders Aslim + Bik Killed, Zeitoun/Gaza City (May 28)",
+    "date": "2026-05-28",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "Hamas Gaza City Brigade Dep. Commander Imad Aslim + Northern Gaza Brigade Cdr. Izz al-Din Bik killed; additional casualties",
+    "damage": "Civilian residence struck in Zeitoun/Gaza City area; two brigade-level Hamas commanders killed in single strike",
+    "notes": "IDF struck residence where Aslim (dep. commander Gaza City Brigade, Zeitoun Battalion chief) and Bik (Northern Gaza Brigade commander) were meeting; IDF also confirmed separately killing Hamas financier Khreizim and weapons production chief Habash same day; part of post-ceasefire campaign eliminating Hamas command tier",
+    "platform": "IAF",
+    "status": "hit",
+    "lastUpdated": "2026-05-29T14:25:00.000Z"
+  },
+  {
+    "id": "idf-drone-dr-abu-aoun-deir-balah-may30",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.35,
+      31.42
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Dr. Jamal Abu Aoun (Anesthesia Dept. Head) Killed, Deir al-Balah (May 30)",
+    "date": "2026-05-30",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "1 killed: Dr. Jamal Abu Aoun, head of anaesthesia at Al-Yafa Medical Hospital; several wounded",
+    "damage": "Strike near Al-Aqsa Martyrs Hospital in Deir al-Balah; medical professional killed",
+    "notes": "Israeli drone struck near Al-Aqsa Martyrs Hospital in Deir al-Balah; killed Dr. Jamal Abu Aoun, head of anaesthesia dept at Al-Yafa Medical Hospital; adds to 1,000+ healthcare workers killed since Oct 2023; strike confirmed by Al Jazeera correspondents on the ground",
+    "status": "hit",
+    "lastUpdated": "2026-05-31T14:00:00.000Z"
+  },
+  {
+    "id": "idf-strikes-firas-market-al-bureij-may30",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.46,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Firas Market Area, Gaza City (May 30)",
+    "date": "2026-05-30",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 killed, several wounded near busy commercial market",
+    "damage": "Strike near Firas Market, one of Gaza City's busiest commercial areas",
+    "notes": "Israeli drone struck near Firas Market in Gaza City on Eid al-Adha; part of continued multi-location strike wave on May 30 along with artillery in Khan Younis and Al-Bureij camp; cumulative post-ceasefire death toll ~930",
+    "status": "hit",
+    "lastUpdated": "2026-05-31T14:00:00.000Z"
+  },
+  {
+    "id": "idf-artillery-khan-younis-east-may30",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.4,
+      31.33
+    ],
+    "cat": "strike",
+    "label": "IDF Artillery — East and South Khan Younis (May 30)",
+    "date": "2026-05-30",
+    "weaponType": "mixed",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "Unknown — multiple positions targeted",
+    "notes": "Israeli artillery shelled areas east and south of Khan Younis on May 30, 2026; part of multi-location attack wave across Gaza; Al-Bureij refugee camp in central Gaza also struck by artillery; Beit Lahiya homes demolished by IDF ground forces in same period",
+    "status": "hit",
+    "lastUpdated": "2026-05-31T14:00:00.000Z"
+  },
+  {
+    "id": "hezbollah-rockets-kiryat-shmona-may30",
+    "from": [
+      35.57,
+      33.38
+    ],
+    "to": [
+      35.57,
+      33.21
+    ],
+    "cat": "retaliation",
+    "label": "Hezbollah Rocket Fire — Kiryat Shmona (May 30, Both Intercepted)",
+    "date": "2026-05-30",
+    "weaponType": "rocket",
+    "launched": 2,
+    "intercepted": 2,
+    "confidence": "high",
+    "time": "15:00",
+    "casualties": "No casualties — both rockets intercepted",
+    "notes": "Hezbollah fired 2 rockets at Kiryat Shmona in northern Israel; both intercepted by Israeli air defense; air raid sirens triggered across the city; Bennett and Lapid publicly called for 'powerful response' to Hezbollah attacks; part of Axis of Resistance solidarity attacks with Gaza during Oct 2025 ceasefire",
+    "status": "intercepted",
+    "lastUpdated": "2026-05-31T14:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-vehicle-deir-balah-east-jun2",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.43,
+      31.4
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Vehicle East of Deir al-Balah (June 2)",
+    "date": "2026-06-02",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "1 killed, 4 wounded",
+    "notes": "IDF airstrike struck vehicle east of Deir al-Balah in central Gaza; 1 killed, 4 wounded; wounded transferred to Al-Aqsa Martyrs Hospital; part of June 2 multi-location strike wave",
+    "status": "hit",
+    "lastUpdated": "2026-06-02T14:52:37.000Z"
+  },
+  {
+    "id": "idf-strike-zawayda-jun2",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.38,
+      31.4
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Zawayda, Central Gaza (June 2)",
+    "date": "2026-06-02",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "1 killed, 1 wounded",
+    "notes": "Israeli strike in Zawayda area of central Gaza; 1 Palestinian killed, 1 wounded; part of June 2 multi-location strike wave",
+    "status": "hit",
+    "lastUpdated": "2026-06-02T14:52:37.000Z"
+  },
+  {
+    "id": "idf-gunfire-nw-khan-younis-jun2",
+    "from": [
+      34.5,
+      31.4
+    ],
+    "to": [
+      34.27,
+      31.38
+    ],
+    "cat": "strike",
+    "label": "IDF Gunfire — Palestinian Man Killed, NW Khan Younis (June 2)",
+    "date": "2026-06-02",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 Palestinian man killed",
+    "notes": "Israeli forces shot and killed a Palestinian man in northwest Khan Younis; part of June 2 multi-location strike wave across Gaza; body transferred to Nasser Hospital",
+    "status": "hit",
+    "lastUpdated": "2026-06-02T14:52:37.000Z"
+  },
+  {
+    "id": "idf-eliminates-nukhba-ramadan-jun2",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.5,
+      31.53
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Nukhba Force Dep. Cmdr. Youssef Ramadan (Oct 7 Hostage Abductor) Eliminated (June 2)",
+    "date": "2026-06-02",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "13:00",
+    "casualties": "1 killed: Youssef Ayesh Awad Ramadan, Nukhba Force deputy commander (participated in Oct 7 Re'im shelter abductions of Hersh Goldberg-Polin, Alon Ohel, Eliya Cohen, Or Levy)",
+    "notes": "IDF targeted and eliminated Nukhba Force deputy commander Youssef Ramadan; he personally participated in abducting hostages from Re'im bomb shelter on Oct 7, 2023; IDF also confirmed killing Salem Qariqa (Hamas Shejaiya Battalion), Saeed Shamali (Nukhba team cmdr), Ahmad Khallas (PIJ sniper cmdr), and two bomb-planting commanders on the same day; IDF stated all 5 were planning imminent attacks",
+    "platform": "IAF drone",
+    "status": "hit",
+    "lastUpdated": "2026-06-02T14:52:37.000Z"
+  },
+  {
+    "id": "idf-strike-pij-abu-mughaysib-southern-gaza-jun3",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.27,
+      31.3
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — PIJ Cell Commander Abu Mughaysib Killed, Southern Gaza (June 3)",
+    "date": "2026-06-03",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "casualties": "1 killed: Ahmed Abu Mughaysib, PIJ rocket-launching cell commander",
+    "notes": "IDF targeted and killed Ahmed Abu Mughaysib, head of a Palestinian Islamic Jihad rocket cell in southern Gaza; separate overnight strike in central Gaza also killed one Hamas operative; two more killed in al-Maghazi house strike; IDF Chief Zamir stated 'no ceasefire for our forces' in Lebanon",
+    "platform": "IAF UAV",
+    "status": "hit",
+    "lastUpdated": "2026-06-05T06:00:00.000Z"
+  },
+  {
+    "id": "idf-strikes-10-killed-gaza-jun4",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.4,
+      31.45
+    ],
+    "cat": "strike",
+    "label": "IDF Strikes — 10+ Killed Across Gaza (June 4)",
+    "date": "2026-06-04",
+    "weaponType": "mixed",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "10+ Palestinians killed across multiple locations in Gaza",
+    "notes": "At least 10 Palestinians killed in Israeli strikes across Gaza on June 4, 2026; US Embassy in Jerusalem issued security advisory warning of 'complex' security environment in Israel, West Bank, and Gaza; post-ceasefire toll exceeds 950+",
+    "status": "hit",
+    "lastUpdated": "2026-06-05T06:00:00.000Z"
+  },
+  {
+    "id": "settler-attack-idhna-village-jun5",
+    "from": [
+      35.09,
+      31.59
+    ],
+    "to": [
+      35.01,
+      31.57
+    ],
+    "cat": "conflict",
+    "label": "Settler Attack — Idhna Village, West Bank (June 5)",
+    "date": "2026-06-05",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "notes": "Israeli settlers attacked Idhna village in southern West Bank; 1 Palestinian beaten and injured; 1 additional Palestinian wounded by IDF gunfire when troops responded; settlers set fire to Palestinian agricultural fields; part of escalating settler violence pattern across the West Bank in 2026",
+    "status": "hit",
+    "lastUpdated": "2026-06-05T06:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-tent-camp-wedding-gaza-city-jun6",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Displaced Persons Tent Camp, Gaza City (Groom Killed, June 6)",
+    "date": "2026-06-06",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "casualties": "6+ killed (groom among dead), 15+ wounded",
+    "damage": "Tent camp housing displaced Palestinians struck; adjacent wedding tent impacted",
+    "notes": "IDF drone struck displaced persons tent camp in Gaza City; groom killed hours before wedding; women and children among casualties; IDF told AFP it 'targeted terrorists in that sector'; Hamas condemned as 'horrific massacre'; Al Jazeera reported 10+ across Gaza on June 6",
+    "status": "hit",
+    "lastUpdated": "2026-06-07T12:00:00.000Z"
+  },
+  {
+    "id": "idf-fire-kills-7month-baby-hebron-jun6",
+    "from": [
+      35.1,
+      31.53
+    ],
+    "to": [
+      35.1,
+      31.52
+    ],
+    "cat": "conflict",
+    "label": "IDF Fire — 7-Month-Old Baby Killed, Tel Rumeida, Hebron (June 6)",
+    "date": "2026-06-06",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "1 killed (Sam Fahd Abu Haikal, 7-month-old infant); both parents wounded",
+    "notes": "IDF soldiers fired on a vehicle in Tel Rumeida area south of Hebron; 7-month-old baby shot in face and killed; parents wounded; IDF initial inquiry found three Palestinians were uninvolved civilians; drew broad international condemnation",
+    "status": "hit",
+    "lastUpdated": "2026-06-07T12:00:00.000Z"
+  },
+  {
+    "id": "settler-attack-huwara-soldier-joins-jun6",
+    "from": [
+      35.28,
+      32.15
+    ],
+    "to": [
+      35.24,
+      32.12
+    ],
+    "cat": "conflict",
+    "label": "Settler Rampage — Huwara, South of Nablus (IDF Soldier Joins Beatings, June 6)",
+    "date": "2026-06-06",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "9 Palestinians wounded",
+    "notes": "Settlers attacked Huwara; surveillance footage captured IDF soldier in full military gear beating two Palestinians alongside settlers; IDF called actions 'serious and inconsistent with IDF values'; soldier to face disciplinary proceedings; ninth West Bank settler violence incident in 7 days",
+    "status": "hit",
+    "lastUpdated": "2026-06-07T12:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-police-post-khan-younis-jun7",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.28,
+      31.35
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Hamas Police Post Near Tent Camp, Khan Younis (June 7)",
+    "date": "2026-06-07",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "5 killed, 16 wounded",
+    "damage": "Hamas police post adjacent to large displacement tent camp struck",
+    "notes": "Israeli airstrike struck Hamas police post next to large tent camp of displaced families in Khan Younis; struck same day Egypt hosted new ceasefire talks in Cairo; cumulative post-ceasefire death toll ~965+; OHCHR has documented 12+ attacks on police posts since Jan 2026",
+    "status": "hit",
+    "lastUpdated": "2026-06-07T12:00:00.000Z"
+  },
+  {
+    "id": "idf-airstrike-vehicle-gaza-city-jun7",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Airstrike — Vehicle, Central Gaza City (June 7)",
+    "date": "2026-06-07",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "13:00",
+    "casualties": "4 killed, 4 wounded",
+    "notes": "Israeli drone struck vehicle in central Gaza City; 4 Palestinians killed, 4 wounded; second major strike of June 7 alongside Khan Younis police post attack; total 9 killed June 7 as Egypt hosts ceasefire talks",
+    "status": "hit",
+    "lastUpdated": "2026-06-07T12:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-strike-funeral-nuseirat-jul17",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.377,
+      31.452
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Funeral Procession, Nuseirat (July 17)",
+    "date": "2026-07-17",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:30",
+    "casualties": "8 killed, 20 wounded",
+    "damage": "Mourners struck outside Ahmad Yassin Mosque during funeral procession",
+    "notes": "Israel claimed the gathering included an Islamic Jihad cell without public substantiation; part of a wave that killed 14 across Gaza that day. UN human rights office: 57 Palestinians killed Jul 13-20.",
+    "status": "hit",
+    "lastUpdated": "2026-07-17T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-gaza-city-tower-aug2",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.47,
+      31.52
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Al-Sousi Tower, Gaza City (Aug 2)",
+    "date": "2026-08-02",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "casualties": "3 killed (Abdullah Abu Taif, pregnant wife, child)",
+    "notes": "Part of multi-site strike wave across Gaza killing at least 19; largest daily toll in weeks, days after Board of Peace disarmament announcement.",
+    "status": "hit",
+    "lastUpdated": "2026-08-02T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-al-qarara-khan-younis-aug2",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.31,
+      31.32
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Al-Qarara, Khan Younis Area (Aug 2)",
+    "date": "2026-08-02",
+    "weaponType": "mixed",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:30",
+    "casualties": "3 killed (Al-Hams family), 3 wounded",
+    "notes": "Part of multi-site strike wave across Gaza killing at least 19 on Aug 2.",
+    "status": "hit",
+    "lastUpdated": "2026-08-02T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-deir-al-balah-aug2",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.35,
+      31.42
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Deir al-Balah (Aug 2)",
+    "date": "2026-08-02",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:00",
+    "casualties": "4 killed (elderly couple + two brothers)",
+    "notes": "IDF said a related strike on an apartment in Deir al-Balah targeted two Nukhba force commanders. Part of Aug 2 multi-site strike wave.",
+    "status": "hit",
+    "lastUpdated": "2026-08-02T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-beit-lahia-tuktuk-aug12",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.5,
+      31.55
+    ],
+    "cat": "strike",
+    "label": "IDF Strike — Tuk-Tuk, Beit Lahia (Aug 12)",
+    "date": "2026-08-12",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "damage": "Tuk-tuk vehicle destroyed near Western Roundabout",
+    "casualties": "1 killed (Mohanad Saada), 5 wounded",
+    "notes": "First Israeli strike in Gaza in over a week. IDF said it targeted a Hamas commander planning attacks; Gaza Civil Defence said the vehicle carried municipal water-repair workers.",
+    "status": "hit",
+    "lastUpdated": "2026-08-12T12:00:00.000Z"
+  },
+  {
+    "id": "al-mughayyir-marj-si-vehicle-attack-aug20",
+    "from": [
+      35.34,
+      31.99
+    ],
+    "to": [
+      35.35,
+      31.98
+    ],
+    "cat": "conflict",
+    "label": "Settler Attack — Overturned Vehicle, Marj Si / al-Mughayyir",
+    "date": "2026-08-20",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "5-6 wounded (Musa Abu Alia, Lafi Abu Naim, Mustafa Abu Alia, Mukhlis Abu Alia, and his sister)",
+    "notes": "Settlers stormed the Marj Si area between al-Mughayyir and Abu Falah, northeast of Ramallah, and attacked a Palestinian vehicle, causing it to overturn, then assaulted passengers.",
+    "status": "hit",
+    "lastUpdated": "2026-08-20T12:00:00.000Z"
+  },
+  {
+    "id": "sair-hebron-teen-shalaldeh-aug21",
+    "from": [
+      35.16,
+      31.6
+    ],
+    "to": [
+      35.15,
+      31.59
+    ],
+    "cat": "conflict",
+    "label": "Settler Shooting — Karim Shalaldeh (17) Killed, Sa'ir/Hebron",
+    "date": "2026-08-21",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "1 killed (Karim Sanad Raja Shalaldeh, 17), 1 wounded (70-year-old man)",
+    "notes": "Armed settlers opened fire at Khirbet Hamroush near Sa'ir after Palestinians threw rocks at settlers conducting an 'unauthorized hike'; residents said settlers also torched homes.",
+    "status": "hit",
+    "lastUpdated": "2026-08-21T12:00:00.000Z"
+  },
+  {
+    "id": "jenin-fathi-khazem-idf-raid-aug21",
+    "from": [
+      35.28,
+      32.44
+    ],
+    "to": [
+      35.3,
+      32.46
+    ],
+    "cat": "conflict",
+    "label": "IDF Raid Shooting — Fathi Khazem Killed, Jenin",
+    "date": "2026-08-21",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "1 killed (Fathi Khazem, 58, retired PA National Security colonel)",
+    "notes": "Paratroopers Brigade soldiers shot Khazem during an overnight arrest raid on his Jenin home; IDF said he attacked a soldier with a knife. Palestinian officials said the body was withheld and medics were blocked from the house.",
+    "status": "hit",
+    "lastUpdated": "2026-08-21T12:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-strike-deir-al-balah-hasanat-aug22",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.35,
+      31.42
+    ],
+    "cat": "strike",
+    "label": "IDF Drone Strike — Hamas Commander Sharif al-Hasanat, Deir al-Balah",
+    "date": "2026-08-22",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 killed (Sharif al-Hasanat, Hamas Deir al-Balah Battalion company commander); 1 additional death reported by Palestinian medics, unconfirmed",
+    "notes": "IDF said al-Hasanat was rebuilding Hamas tunnel infrastructure and posed an imminent threat to troops; struck with precision munitions after aerial surveillance.",
+    "status": "hit",
+    "lastUpdated": "2026-08-22T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-zawayda-4yo-aug23",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.395,
+      31.432
+    ],
+    "cat": "strike",
+    "label": "IDF Strike on Warehouse — Az-Zawayda, 4-Year-Old Killed",
+    "date": "2026-08-23",
+    "weaponType": "unknown",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "2 killed (incl. Muhammad Abdel Salam Taha, 4), 6-7 wounded",
+    "notes": "Israeli aircraft fired missiles at a warehouse in Az-Zawayda, reducing it to rubble; IDF said it also struck a weapons-manufacturing site in the area. Came alongside Netanyahu/Katz threat to intensify strikes over kite launches.",
+    "platform": "IAF",
+    "status": "hit",
+    "lastUpdated": "2026-08-23T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-maghazi-abu-ful-aug23",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.394,
+      31.435
+    ],
+    "cat": "strike",
+    "label": "IDF Strike Kills Hamas Commander Ismail Abu Ful — Maghazi Camp",
+    "date": "2026-08-23",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 killed (Ismail Abu Ful, Hamas arms-production site commander)",
+    "notes": "IDF said Abu Ful commanded a Hamas weapons-manufacturing site in Maghazi refugee camp, central Gaza.",
+    "platform": "IAF",
+    "status": "hit",
+    "lastUpdated": "2026-08-23T12:00:00.000Z"
+  },
+  {
+    "id": "askar-camp-ajjouri-idf-raid-aug23",
+    "from": [
+      35.29,
+      32.222
+    ],
+    "to": [
+      35.291,
+      32.221
+    ],
+    "cat": "conflict",
+    "label": "IDF Raid Shooting — Islam Ajjouri (14) Killed, Askar Camp/Nablus",
+    "date": "2026-08-23",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "casualties": "1 killed (Islam Ahmad Ajjouri, 14)",
+    "notes": "Israeli forces shot the teenager in the chest as troops withdrew from the Askar refugee camp east of Nablus; IDF said it is reviewing the incident.",
+    "status": "hit",
+    "lastUpdated": "2026-08-23T12:00:00.000Z"
+  },
+  {
+    "id": "al-auja-stabbing-jordan-valley-aug23",
+    "from": [
+      35.453,
+      31.933
+    ],
+    "to": [
+      35.453,
+      31.933
+    ],
+    "cat": "retaliation",
+    "label": "Stabbing Attack on Israeli Soldier — Al-Auja, Jordan Valley",
+    "date": "2026-08-23",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "12:00",
+    "casualties": "1 wounded (Elhanan Hananya, 24, broken shoulder and internal bleeding)",
+    "notes": "A 16-year-old Palestinian from al-Auja stabbed an Israeli soldier several times from behind on a Jordan Valley highway; IDF launched an hours-long manhunt and arrested the suspect.",
+    "status": "hit",
+    "lastUpdated": "2026-08-23T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-deir-al-balah-nukhba-aug24",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.35,
+      31.42
+    ],
+    "cat": "strike",
+    "label": "IDF Strike Kills Nukhba October 7 Operative — Deir al-Balah",
+    "date": "2026-08-24",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "1:00",
+    "casualties": "2 killed (incl. Mohammad Abd al-Nasser Jabr Abu Asaad, Hamas Nukhba force, Oct 7 participant)",
+    "notes": "IDF said the two Hamas militants had been planning attacks on Israeli troops and civilians and were rehabilitating the organization in violation of the ceasefire.",
+    "platform": "IAF drone",
+    "status": "hit",
+    "lastUpdated": "2026-08-24T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-sheikh-radwan-mosque-desal-aug24",
+    "from": [
+      34.78,
+      32.08
+    ],
+    "to": [
+      34.454,
+      31.523
+    ],
+    "cat": "strike",
+    "label": "IDF Strike Hits Mosque and Desalination Plant — Sheikh Radwan, Gaza City",
+    "date": "2026-08-24",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "10:00",
+    "casualties": "No casualty figures immediately available",
+    "notes": "Israeli aircraft struck a mosque and a water desalination plant in the Sheikh Radwan neighborhood, according to Palestinian reports; IDF did not detail this target specifically.",
+    "platform": "IAF",
+    "status": "unknown",
+    "lastUpdated": "2026-08-24T12:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-beit-lahiya-home-aug25",
+    "from": [34.78, 32.08],
+    "to": [34.5, 31.56],
+    "cat": "strike",
+    "label": "IDF Strike Kills 3 in Beit Lahiya Home",
+    "date": "2026-08-25",
+    "weaponType": "unknown",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "2:00",
+    "casualties": "3 killed, others wounded",
+    "notes": "Strike hit a residential building near Kamal Adwan Hospital overnight into Aug 25, 2026.",
+    "platform": "IAF",
+    "status": "hit",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "idf-drone-strike-khan-younis-mawasi-aug25",
+    "from": [34.78, 32.08],
+    "to": [34.23, 31.31],
+    "cat": "strike",
+    "label": "IDF Drone Strike on Gathering in Khan Younis (al-Mawasi)",
+    "date": "2026-08-25",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "3:00",
+    "casualties": "1 killed, 3 wounded",
+    "notes": "Drone strike hit a gathering of civilians in the al-Mawasi area of Khan Younis overnight into Aug 25, 2026.",
+    "platform": "IAF drone",
+    "status": "hit",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-khan-younis-commanders-aug27",
+    "from": [34.78, 32.08],
+    "to": [34.29, 31.34],
+    "cat": "strike",
+    "label": "IDF Strikes Kill Hamas Commanders Ismail Ibrahim Barim and Azzam Abd Abadala — Khan Younis",
+    "date": "2026-08-27",
+    "weaponType": "drone_ucav",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "2:00",
+    "casualties": "2 named Hamas commanders killed",
+    "notes": "IDF said Ismail Mohammed Ibrahim Barim had held hostages Edan Alexander, Matan Zangauker and Avera Mengistu before their release; Azzam Rifaat Abd Abadala was identified as a Khan Younis Brigade operative.",
+    "platform": "IAF drone",
+    "status": "hit",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "idf-strike-shati-camp-commander-aug27",
+    "from": [34.78, 32.08],
+    "to": [34.44, 31.53],
+    "cat": "strike",
+    "label": "IDF Strike Kills Hamas Anti-Tank Commander — Shati Refugee Camp, Gaza City",
+    "date": "2026-08-27",
+    "weaponType": "drone_ucav",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "2:30",
+    "casualties": "1 named Hamas commander killed",
+    "notes": "IDF identified the target as Bilal Ibrahim Saleh Raqi'i, a commander in Hamas's anti-tank unit.",
+    "platform": "IAF drone",
+    "status": "hit",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "idf-strikes-civilian-tents-mawasi-sinaa-aug27",
+    "from": [34.78, 32.08],
+    "to": [34.23, 31.31],
+    "cat": "strike",
+    "label": "IDF Drone Strikes on Displacement Tents and Motorbike Kill 4 Across Gaza",
+    "date": "2026-08-27",
+    "weaponType": "drone_ucav",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "9:00",
+    "casualties": "4 killed, several wounded (one critically)",
+    "notes": "Separate strikes hit a displaced-persons tent west of Gaza City, a tent in al-Mawasi (Khan Younis), and an electric bicycle at the al-Sinaa intersection.",
+    "platform": "IAF drone",
+    "status": "hit",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  }
+]

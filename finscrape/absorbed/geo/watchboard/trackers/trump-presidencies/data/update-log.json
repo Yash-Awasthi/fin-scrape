@@ -1,0 +1,43 @@
+{
+  "lastRun": "2026-08-28T00:53:08.625Z",
+  "tracker": "trump-presidencies",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-08-18T15:58:52.000Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "lastRun": "2026-06-01T14:08:37.000Z",
+      "status": "updated"
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-07T14:00:00.000Z",
+      "status": "updated"
+    },
+    "econ": {
+      "lastRun": "2026-06-07T14:00:00.000Z",
+      "status": "updated"
+    },
+    "claims": {
+      "lastRun": "2026-06-07T14:00:00.000Z",
+      "status": "updated"
+    },
+    "political": {
+      "lastRun": "2026-06-07T14:00:00.000Z",
+      "status": "updated"
+    },
+    "events": {
+      "lastRun": "2026-08-22T18:21:16.699Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-22T18:21:16.699Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-15T00:49:57.258Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

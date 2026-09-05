@@ -1,0 +1,64 @@
+[
+  {
+    "id": "humanitarian-convoy-724-trucks-pak-afg-border-2026-08-16",
+    "year": "Aug 16, 2026",
+    "title": "724 Humanitarian Aid Trucks Cross Pakistan-Afghanistan Border in Major Convoy Movement",
+    "type": "humanitarian",
+    "detail": "724 humanitarian aid trucks crossed the Pakistan-Afghanistan border in one of the largest single convoy movements in recent months, according to the South China Morning Post. The large-scale shipment reflects ongoing efforts to sustain aid flows to Afghanistan amid the country's severe humanitarian crisis, with millions dependent on international assistance.",
+    "sources": [
+      {
+        "name": "South China Morning Post",
+        "tier": 2,
+        "url": "https://www.scmp.com/news/asia/south-asia/article/3364199/pakistan-border-sees-724-humanitarian-trucks-enter-afghanistan",
+        "pole": "eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.scmp.com/news/asia/south-asia/article/3364199/pakistan-border-sees-724-humanitarian-trucks-enter-afghanistan",
+        "caption": "724 humanitarian aid trucks cross Pakistan-Afghanistan border",
+        "source": "South China Morning Post"
+      }
+    ]
+  },
+  {
+    "id": "kharan-ibo-seven-ttp-killed-aug16-2026",
+    "date": "2026-08-16",
+    "year": "2026",
+    "title": "Seven TTP Militants Killed in Intelligence-Based Operation in Balochistan's Kharan",
+    "type": "military",
+    "detail": "Pakistani security forces killed seven Tehrik-e-Taliban Pakistan (Fitna al-Khawarij) militants in an intelligence-based operation in the Lajay area of Kharan district, Balochistan, conducted under the 'Radd-ul-Fitna 3' campaign. Officials said the militants were allegedly involved in extortion, kidnappings for ransom, targeted killings and planning suicide attacks in and around Kharan. Security forces recovered weapons, ammunition, military equipment, two vehicles and a motorcycle, and destroyed the hideout. President Asif Ali Zardari called the operation a significant achievement for counterterrorism efforts.",
+    "sources": [
+      {
+        "name": "The Express Tribune — Security forces kill seven terrorists in Balochistan's Kharan",
+        "tier": 2,
+        "url": "https://tribune.com.pk/story/2624165/security-forces-kill-seven-terrorists-in-balochistans-kharan",
+        "pole": "eastern"
+      },
+      {
+        "name": "Khaama Press — Pakistan Says Seven TTP Militants Killed in Balochistan Operation",
+        "tier": 2,
+        "url": "https://www.khaama.com/pakistan-says-seven-ttp-militants-killed-in-balochistan-operation/",
+        "pole": "eastern"
+      },
+      {
+        "name": "The Nation — Seven terrorists killed in Kharan IBO",
+        "tier": 2,
+        "url": "https://www.nation.com.pk/17-Aug-2026/seven-terrorists-killed-kharan-ibo",
+        "pole": "eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-08-18T14:43:33.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://tribune.com.pk/story/2624165/security-forces-kill-seven-terrorists-in-balochistans-kharan",
+        "caption": "Security forces kill seven TTP militants in an intelligence-based operation in Balochistan's Kharan district.",
+        "source": "The Express Tribune",
+        "thumbnail": "https://i.tribune.com.pk/media/images/531780870875-0/531780870875-0-640x480.webp"
+      }
+    ]
+  }
+]

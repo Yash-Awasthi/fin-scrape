@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-28T00:26:05.378Z",
+  "tracker": "nicaragua-ortega-crisis",
+  "sections": {
+    "timeline": {
+      "status": "updated",
+      "count": 35
+    },
+    "mapPoints": {
+      "status": "updated",
+      "count": 20
+    },
+    "claims": {
+      "status": "updated",
+      "count": 17
+    },
+    "political": {
+      "status": "unchanged",
+      "count": 16
+    },
+    "kpis": {
+      "status": "updated",
+      "count": 8
+    },
+    "econ": {
+      "status": "unchanged",
+      "count": 8
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

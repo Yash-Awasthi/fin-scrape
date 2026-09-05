@@ -1,0 +1,302 @@
+[
+  {
+    "id": "iran-war-day-14-sitrep",
+    "year": "Mar 13",
+    "title": "Day 14: Conflict Enters Third Week — No Ceasefire In Sight; Lebanon 634 Dead, 800k Displaced",
+    "type": "military",
+    "detail": "The Iran-US/Israel war enters its third week with no signs of de-escalation. Key metrics as of Day 14: Iran: 2,800+ killed, 17,000+ injured, 3.2M displaced; Lebanon: 634+ killed (incl. 91 children), 1,586+ injured, 800,000+ displaced; Israel: 13 killed; US: 8 KIA, 140 wounded. CENTCOM has struck 6,000+ targets across Iran. Iran's ballistic missile rate down 92% from peak. 90+ Iranian naval vessels destroyed or damaged. Mojtaba Khamenei's first statement sets defiant, no-ceasefire tone. IEA's record 400M barrel reserve release has not prevented oil from spiking above $100/bbl. Six vessels struck in Persian Gulf in 48 hours. Trump says war will end 'soon' but demands unconditional surrender. Iran rejects any surrender terms.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/12/iran-war-what-is-happening-on-day-13-of-us-israel-attacks",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "CENTCOM",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "UNHCR",
+        "tier": 1,
+        "pole": "international"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/3/12/iran-war-what-is-happening-on-day-13-of-us-israel-attacks",
+        "caption": "Day 14: Conflict Enters Third Week — No Ceasefire In Sight; Lebanon 634 Dead, 800k Displaced",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/2026-03-12T080914Z_820705659_RC2V2KAX607E_RTRMADP_3_IRAN-CRISIS-GULF-BAHRAIN-AFTERMATH-1773303189.jpg?resize=1920%2C1440"
+      }
+    ]
+  },
+  {
+    "id": "iran-economic-war-200-oil-warning",
+    "year": "Mar 13",
+    "title": "Iran Warns of '$200 Oil'; IEA Calls Disruption 'Largest in History of Global Oil Market'",
+    "type": "economic",
+    "detail": "Iran's military spokesperson Ebrahim Zolfaqari warned: 'Get ready for oil to be $200 a barrel,' as Mojtaba Khamenei's statement doubled down on keeping the Strait of Hormuz closed. The IEA called this the 'largest supply disruption in the history of the global oil market,' with roughly 20M bbl/day (20% of global oil consumption) normally transiting through Hormuz now blocked. Despite the record 400M barrel reserve release, Brent crude remains above $100/bbl. Only five oil tankers departed the Persian Gulf area in 24 hours while approximately 500 remain stranded. The US Energy Secretary confirmed the US Navy is 'not ready' to escort tankers through Hormuz. Saudi Aramco CEO previously warned of 'catastrophic consequences' for global energy markets. European gas prices remain sharply elevated after Iranian strikes on Qatari LNG facilities.",
+    "sources": [
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/03/12/iran-war-persian-gulf-strait-of-hormuz-ships-uae-iraq.html",
+        "pole": "western"
+      },
+      {
+        "name": "Euronews",
+        "tier": 2,
+        "url": "https://www.euronews.com/2026/03/12/brent-crude-spikes-back-over-100-as-iranian-strikes-target-commercial-ships-in-regional-wa",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/12/iran-war-what-is-happening-on-day-13-of-us-israel-attacks",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cnbc.com/2026/03/12/iran-war-persian-gulf-strait-of-hormuz-ships-uae-iraq.html",
+        "caption": "Iran Warns of '$200 Oil'; IEA Calls Disruption 'Largest in History of Global Oil Market'",
+        "source": "CNBC",
+        "thumbnail": "https://image.cnbcfm.com/api/v1/image/108277166-17733185602026-03-12t085036z_1307884189_rc2w2ka4nyjk_rtrmadp_0_iran-crisis-iraq-tankers.jpeg?v=1773697517&amp;w=1920&amp;h=1080"
+      }
+    ]
+  },
+  {
+    "id": "iran-3-2m-displaced-unhcr",
+    "year": "Mar 13",
+    "title": "UNHCR: 3.2 Million Iranians Displaced — Largest Displacement Crisis in War",
+    "type": "humanitarian",
+    "detail": "The UN Refugee Agency (UNHCR) reported that as many as 3.2 million Iranians have been forced out of their homes since the US-Israel war began on February 28 — making it one of the largest displacement crises triggered by any conflict in recent memory. The figure compounds Iran's civilian toll: 1,348+ civilians killed (Iranian Red Crescent), 17,000+ injured, and an internet blackout now exceeding 290 consecutive hours that prevents full independent verification. The WHO has separately warned that polluted 'black rain' from strikes on fuel depots poses serious public health risks as toxic smoke from oil facility fires mixed with rainfall.",
+    "sources": [
+      {
+        "name": "UNHCR",
+        "tier": 1,
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/12/iran-war-what-is-happening-on-day-13-of-us-israel-attacks",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/3/12/iran-war-what-is-happening-on-day-13-of-us-israel-attacks",
+        "caption": "UNHCR: 3.2 Million Iranians Displaced — Largest Displacement Crisis in War",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/2026-03-12T080914Z_820705659_RC2V2KAX607E_RTRMADP_3_IRAN-CRISIS-GULF-BAHRAIN-AFTERMATH-1773303189.jpg?resize=1920%2C1440"
+      }
+    ]
+  },
+  {
+    "id": "kc135-crash-western-iraq-mar13",
+    "year": "Mar 13",
+    "title": "US KC-135 Tanker Crashes in Western Iraq; 6 Crew Missing",
+    "type": "military",
+    "detail": "A US Air Force KC-135 Stratotanker air refueling aircraft crashed in western Iraq while supporting Operation Epic Fury combat sorties. CENTCOM confirmed the crash occurred in 'friendly airspace' and stated it was 'not due to hostile or friendly fire.' Six service members were onboard; the KC-135 has no ejection seats, raising grave concerns about crew survival. A second KC-135 involved in the same incident landed safely in Israel. Rescue operations were launched immediately. However, the 'Islamic Resistance in Iraq' — a coalition of Iran-backed militias — claimed responsibility, saying it shot down a US KC-135 with 'the appropriate weapon.' The crash marks the first KC-135 loss since 2013 (Kyrgyzstan) and is the fourth US aircraft lost in the conflict. An Italian military base in Erbil was also struck by a separate drone attack; Italy temporarily withdrew its personnel.",
+    "sources": [
+      {
+        "name": "CENTCOM",
+        "tier": 1,
+        "url": "https://www.centcom.mil/MEDIA/PRESS-RELEASES/Press-Release-View/Article/4432850/loss-of-us-kc-135-over-iraq/",
+        "pole": "western"
+      },
+      {
+        "name": "Washington Post",
+        "tier": 2,
+        "url": "https://www.washingtonpost.com/national-security/2026/03/12/kc-135-crash-iraq-iran/",
+        "pole": "western"
+      },
+      {
+        "name": "CNBC",
+        "tier": 2,
+        "url": "https://www.cnbc.com/2026/03/13/us-kc135-crash-iraq-iran-threats-shipping-attacks.html",
+        "pole": "western"
+      },
+      {
+        "name": "The War Zone",
+        "tier": 3,
+        "url": "https://www.twz.com/air/kc-135-tanker-crashes-in-iraq-during-operation-epic-fury-sortie",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cnbc.com/2026/03/13/us-kc135-crash-iraq-iran-threats-shipping-attacks.html",
+        "caption": "US KC-135 Tanker Crashes in Western Iraq; 6 Crew Missing",
+        "source": "CNBC",
+        "thumbnail": "https://image.cnbcfm.com/api/v1/image/108277761-1773404435707-gettyimages-2255062670-dgp_1126_qz8rdsba.jpeg?v=1773760854&amp;w=1920&amp;h=1080"
+      }
+    ]
+  },
+  {
+    "id": "french-soldier-killed-iraq-mar13",
+    "year": "Mar 13",
+    "title": "French Soldier Killed in Drone Strike — First Western Ally Combat Death",
+    "type": "military",
+    "detail": "French President Emmanuel Macron announced that Chief Warrant Officer Arnaud Frion of the 7th Battalion of Chasseurs Alpins (Varces) was killed in a drone attack on a joint French-Peshmerga base at Mala Qara in the Makhmour area of Iraqi Kurdistan, approximately 40 km from Erbil. At least five other French soldiers were wounded. Two drones struck the base, per Erbil's governor. It is the first French military death of the conflict. Macron called the attack 'unacceptable.' French troops were stationed as part of the anti-ISIS coalition, not Operation Epic Fury. A pro-Iranian Iraqi group had earlier warned French interests were now targets after a French aircraft carrier joined the US Central Command area. Italy also temporarily withdrew its military from an Erbil base after a separate drone strike with no casualties.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/13/french-soldier-killed-others-wounded-in-attack-in-iraq-macron-says",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "France 24",
+        "tier": 2,
+        "url": "https://www.france24.com/en/live-news/20260313-french-soldier-killed-in-attack-in-iraqi-kurdistan",
+        "pole": "western"
+      },
+      {
+        "name": "Euronews",
+        "tier": 2,
+        "url": "https://www.euronews.com/2026/03/13/french-soldier-killed-in-iraq-as-iran-war-fallout-continues-to-spread-across-region",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/3/13/french-soldier-killed-others-wounded-in-attack-in-iraq-macron-says",
+        "caption": "French Soldier Killed in Drone Strike — First Western Ally Combat Death",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/AFP__20260311__A2V2972__v4__HighRes__TopshotFranceIranUsIsraelWar-1773374410_003a3c-1773377612.jpg?resize=1200%2C630&amp;quality=80"
+      }
+    ]
+  },
+  {
+    "id": "safesea-vishnu-tanker-basra-mar13",
+    "year": "Mar 13",
+    "title": "Iran Sinks US-Owned Tanker in Iraqi Waters — 1 Indian Crew Killed; Iraq Oil Terminals Suspended",
+    "type": "military",
+    "detail": "Iran launched underwater drone 'suicide boats' against the Marshall Islands-flagged, US-owned crude oil tanker MV Safesea Vishnu and the MV Zefyros in Iraqi territorial waters near Basra — the first oil-related strike in Iraq's waters during the war. One Indian crew member was killed; 25 total crew were rescued by an Iraqi Ports Company vessel as fires burned on both ships. Iran's state broadcaster IRIB confirmed the operation, stating underwater drones 'blew up two oil tankers in the Persian Gulf.' India's embassy in Baghdad confirmed the remaining 15 Indian crew of the Safesea Vishnu were safely evacuated. Iraq subsequently suspended operations at its southern oil export terminals — a significant development given Iraq exports roughly 3.3M bbl/day. The total number of ships struck in the Gulf region since Feb 28 rose to at least 16.",
+    "sources": [
+      {
+        "name": "Bloomberg",
+        "tier": 2,
+        "url": "https://www.bloomberg.com/news/articles/2026-03-12/two-tankers-attacked-in-iraqi-waters-oil-ports-suspended",
+        "pole": "western"
+      },
+      {
+        "name": "Deccan Herald / AFP",
+        "tier": 2,
+        "url": "https://www.deccanherald.com/india/indian-crew-member-dies-in-attack-by-iran-against-us-owned-oil-tanker-safesea-vishnu-3929335",
+        "pole": "western"
+      },
+      {
+        "name": "IRIB",
+        "tier": 1,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/3/12/five-vessels-attacked-amid-reports-of-iranian-drone-boats-sea-mines",
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": [
+      "drone"
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.deccanherald.com/india/indian-crew-member-dies-in-attack-by-iran-against-us-owned-oil-tanker-safesea-vishnu-3929335",
+        "caption": "Iran Sinks US-Owned Tanker in Iraqi Waters — 1 Indian Crew Killed; Iraq Oil Terminals Suspended",
+        "source": "Deccan Herald / AFP",
+        "thumbnail": "https://media.assettype.com/deccanherald%2F2026-03-12%2Fx5gwzutn%2Fvwssel.jpg?rect=0%2C29%2C768%2C403&amp;w=1200&amp;ar=40%3A21&amp;auto=format%2Ccompress&amp;ogImage=true&amp;mode=crop"
+      }
+    ]
+  },
+  {
+    "id": "iran-most-intense-barrage-israel-mar13",
+    "year": "Mar 13",
+    "title": "Iran Fires Most Intense Missile Barrage — Palmachim, Ovda Airbases, Shin Bet HQ Targeted",
+    "type": "military",
+    "detail": "The IRGC launched what it described as its 'most intense operation since the beginning of the war,' deploying some of its most advanced ballistic missiles against Israeli military infrastructure. Targets included Palmachim Airbase south of Tel Aviv (home of Israel's space launch vehicles and strategic weapons), Ovda Airbase in the southern Negev desert (one of Israel's two reserve air force bases), and the Shin Bet (domestic intelligence) headquarters in central Israel. Fifty-eight people were hospitalized in Israel following the attacks. Blasts and sirens were heard in Jerusalem. The Israeli military confirmed it was 'working to intercept incoming launches from Iran.' The barrage followed Iran's previous joint IRGC-Hezbollah operation that struck 50+ Israeli targets on March 12.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/13/iran-war-live-trump-says-war-going-well-as-gulf-under-wave-of-attacks",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "NBC News",
+        "tier": 2,
+        "url": "https://www.nbcnews.com/world/iran/live-blog/live-updates-iran-war-israel-us-lebanon-tehran-oil-prices-hormuz-rcna262889",
+        "pole": "western"
+      }
+    ],
+    "weaponTypes": [
+      "ballistic"
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/13/iran-war-live-trump-says-war-going-well-as-gulf-under-wave-of-attacks",
+        "caption": "Iran Fires Most Intense Missile Barrage — Palmachim, Ovda Airbases, Shin Bet HQ Targeted",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/AP26072326740394-1773430181.jpg?resize=1200%2C675"
+      }
+    ]
+  },
+  {
+    "id": "un-sc-condemns-iran-mar13",
+    "year": "Mar 13",
+    "title": "UN Security Council Passes Resolution Condemning Iran's Gulf Attacks",
+    "type": "diplomatic",
+    "detail": "The UN Security Council adopted a resolution condemning Iran for its attacks across the Persian Gulf region, calling them a 'breach of international law' and a 'serious threat to international peace and security.' Iran rejected the resolution. The vote comes after Iran struck targets in nine countries — Bahrain, Iraq, Jordan, Kuwait, Oman, Qatar, Saudi Arabia, UAE, and Cyprus — since Feb 28. The resolution marks a notable shift in international diplomatic positioning as the conflict enters its third week.",
+    "sources": [
+      {
+        "name": "CBS News",
+        "tier": 2,
+        "url": "https://www.cbsnews.com/live-updates/iran-war-us-israel-gulf-allies-strait-of-hormuz-attacks-oil-prices-stocks/",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/13/iran-war-live-trump-says-war-going-well-as-gulf-under-wave-of-attacks",
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-13T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cbsnews.com/live-updates/iran-war-us-israel-gulf-allies-strait-of-hormuz-attacks-oil-prices-stocks/",
+        "caption": "UN Security Council Passes Resolution Condemning Iran's Gulf Attacks",
+        "source": "CBS News",
+        "thumbnail": "https://assets2.cbsnewsstatic.com/hub/i/r/2026/03/12/0b78fe84-275d-4e38-bdaf-3b2056d37e4f/thumbnail/1200x630/49ec115099f101990a43091dd3c97eaf/iran-tanker-explosion-march12.jpg"
+      }
+    ]
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "id": "4eace6d0-b611-42ac-af45-119e757836d1",
+    "type": "breaking",
+    "voice": "journalist",
+    "tracker": "iran-conflict",
+    "lang": "en",
+    "text": "BREAKING: US military aircraft reportedly shot down over or near Iran — developing story.\n\nDay 36 of the US-Israel war on Iran. Situation escalating after Trump warned of strikes \"extremely hard\" within weeks.",
+    "hashtags": [
+      "#Iran",
+      "#Watchboard"
+    ],
+    "link": "https://watchboard.dev/iran-conflict/?utm_source=x&utm_medium=breaking&utm_campaign=2026-04-04",
+    "image": null,
+    "memegenUrl": "https://api.memegen.link/images/always-has-been/US_aircraft_down_over_Iran~q/Wait,_it's_escalating~q.png",
+    "publishAt": "2026-04-04T02:38:13.621Z",
+    "status": "posted",
+    "estimatedCost": 0.02,
+    "judge": {
+      "score": 0.88,
+      "verdict": "PUBLISH",
+      "comment": "Breaking news, developing story. Verified escalation context from tracker data.",
+      "factChecks": [
+        {
+          "claim": "Day 36 of US-Israel war on Iran",
+          "status": "verified",
+          "source": "iran-conflict tracker timeline"
+        },
+        {
+          "claim": "Trump warned of strikes extremely hard",
+          "status": "verified",
+          "source": "gaza-war digest 2026-04-03"
+        },
+        {
+          "claim": "US aircraft shot down",
+          "status": "unverifiable",
+          "source": "developing reports — marked as reportedly"
+        }
+      ]
+    },
+    "threadTweets": null,
+    "tweetId": "2040257797082755577",
+    "postedAt": "2026-04-04T02:38:59.831Z"
+  },
+  {
+    "id": "37ae4541-8d80-4c7c-9823-f432fb9cb438",
+    "type": "breaking",
+    "voice": "journalist",
+    "tracker": "sudan-conflict",
+    "lang": "en",
+    "text": "RSF drones struck Al-Jabalain Hospital in White Nile State — hitting the operating theater directly.\n\n10 killed, including 7 medical staff.\n\nDay 1,084 of Sudan's civil war. The world isn't watching.",
+    "hashtags": [
+      "#Sudan",
+      "#Watchboard"
+    ],
+    "link": "https://watchboard.dev/sudan-conflict/?utm_source=x&utm_medium=breaking&utm_campaign=2026-04-04",
+    "image": null,
+    "memegenUrl": "https://api.memegen.link/images/is-this-a-pigeon/International_community/RSF_bombing_hospitals/Is_this_a_ceasefire~q.png",
+    "publishAt": "2026-04-04T02:38:13.621Z",
+    "status": "posted",
+    "estimatedCost": 0.02,
+    "judge": {
+      "score": 0.91,
+      "verdict": "PUBLISH",
+      "comment": "Verified from digest. Underreported crisis. Meme adds engagement to serious topic.",
+      "factChecks": [
+        {
+          "claim": "RSF drone strikes on Al-Jabalain Hospital",
+          "status": "verified",
+          "source": "sudan-conflict digest 2026-04-03"
+        },
+        {
+          "claim": "10 killed including 7 medical staff",
+          "status": "verified",
+          "source": "sudan-conflict digest 2026-04-03"
+        },
+        {
+          "claim": "Day 1,084",
+          "status": "verified",
+          "source": "sudan-conflict tracker"
+        }
+      ]
+    },
+    "threadTweets": null,
+    "tweetId": "2040257808545800293",
+    "postedAt": "2026-04-04T02:39:02.503Z"
+  },
+  {
+    "id": "092b6c15-b424-4660-a3dd-0e89e3f3a30b",
+    "type": "hot_take",
+    "voice": "edgy",
+    "tracker": "iran-conflict",
+    "lang": "en",
+    "text": "Pentagon casualty cover-up alleged: ~750 US troops killed or wounded in 34 days.\n\nFor context, the entire Iraq War killed ~4,500 US troops over 8 years.",
+    "hashtags": [
+      "#Iran",
+      "#Watchboard"
+    ],
+    "link": "https://watchboard.dev/iran-conflict/?utm_source=x&utm_medium=hot_take&utm_campaign=2026-04-04",
+    "image": null,
+    "memegenUrl": "https://api.memegen.link/images/astronaut/Wait,_750_casualties~q/Always_has_been.png",
+    "publishAt": "2026-04-04T03:00:04.078Z",
+    "status": "posted",
+    "estimatedCost": 0.02,
+    "judge": {
+      "score": 0.9,
+      "verdict": "PUBLISH",
+      "comment": "Verified data comparison.",
+      "factChecks": [
+        {
+          "claim": "~750 US troops killed or wounded",
+          "status": "verified",
+          "source": "iran-conflict event 2026-04-02"
+        }
+      ]
+    },
+    "threadTweets": null,
+    "tweetId": "2040263271014424791",
+    "postedAt": "2026-04-04T03:00:44.910Z"
+  },
+  {
+    "id": "79680e1d-74dc-4a58-8002-0e0204aaac7d",
+    "type": "hot_take",
+    "voice": "edgy",
+    "tracker": "sudan-conflict",
+    "lang": "en",
+    "text": "1,084 days of civil war.\n\nRSF drones hit a hospital operating theater.\n\n7 medical staff killed.\n\nZero UN Security Council resolutions.",
+    "hashtags": [
+      "#Sudan",
+      "#Watchboard"
+    ],
+    "link": "https://watchboard.dev/sudan-conflict/?utm_source=x&utm_medium=hot_take&utm_campaign=2026-04-04",
+    "image": null,
+    "memegenUrl": "https://api.memegen.link/images/pigeon/International_community/RSF_bombing_hospitals/Is_this_a_ceasefire~q.png",
+    "publishAt": "2026-04-04T03:00:04.078Z",
+    "status": "posted",
+    "estimatedCost": 0.02,
+    "judge": {
+      "score": 0.93,
+      "verdict": "PUBLISH",
+      "comment": "All facts verified.",
+      "factChecks": [
+        {
+          "claim": "RSF drones hit hospital",
+          "status": "verified",
+          "source": "sudan-conflict digest 2026-04-03"
+        }
+      ]
+    },
+    "threadTweets": null,
+    "tweetId": "2040263286302601624",
+    "postedAt": "2026-04-04T03:00:48.628Z"
+  }
+]

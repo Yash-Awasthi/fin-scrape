@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台海风险指数仪表盘 (V5.1)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* 链接样式 */
+        .news-link {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+        .news-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-4 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">台海风险指数仪表盘 (V5.1)</h1>
+            <p class="text-lg text-slate-400" id="last-updated">正在加载数据...</p>
+        </header>
+
+        <!-- 风险指数显示 -->
+        <div class="mb-8 p-6 bg-slate-800 rounded-2xl shadow-2xl flex flex-col items-center justify-center transition-all duration-300">
+            <h2 class="text-2xl font-semibold text-slate-300 mb-4">当前风险指数</h2>
+            <div id="risk-index-display" class="text-8xl font-bold text-green-500 transition-colors duration-300">
+                0
+            </div>
+            <div id="risk-level-display" class="mt-4 text-2xl font-semibold text-green-500 transition-colors duration-300">
+                低风险
+            </div>
+            <p id="risk-summary" class="text-slate-400 mt-2">激活了 0 / 0 个指标</p>
+        </div>
+
+        <!-- 激活的指标清单 -->
+        <div class="mb-8 p-6 bg-slate-800 rounded-2xl shadow-xl">
+            <h3 class="text-2xl font-semibold mb-6">当前激活的预警信号</h3>
+            <div id="triggered-list" class="space-y-4">
+                <p class="text-slate-400" id="no-triggers">未激活任何关键指标。</p>
+            </div>
+        </div>
+
+        <!-- LLM 分析摘要 -->
+        <div class="mb-8 bg-slate-800 rounded-2xl shadow-xl overflow-hidden">
+            <details class="p-6" open>
+                <summary class="text-2xl font-semibold cursor-pointer">今日分析摘要 (LLM)</summary>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                    <div class="bg-slate-700 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2 text-sky-400">📈 经济金融</h4>
+                        <p id="r-econ" class="text-sm text-slate-300">...</p>
+                    </div>
+                    <div class="bg-slate-700 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2 text-orange-400">🛡️ 军事后勤</h4>
+                        <p id="r-mil" class="text-sm text-slate-300">...</p>
+                    </div>
+                    <div class="bg-slate-700 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2 text-red-400">🗣️ 政治舆论</h4>
+                        <p id="r-pol" class="text-sm text-slate-300">...</p>
+                    </div>
+                    <div class="bg-slate-700 p-4 rounded-lg">
+                        <h4 class="text-lg font-semibold mb-2 text-teal-400">📍 在地体感 (厦门)</h4>
+                        <p id="r-local" class="text-sm text-slate-300">...</p>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <!-- 情报来源列表 (新增) -->
+        <div class="bg-slate-800 rounded-2xl shadow-xl overflow-hidden">
+            <details class="p-6">
+                <summary class="text-2xl font-semibold cursor-pointer text-sky-300">查看今日原始情报来源 (点击展开)</summary>
+                <div class="mt-6 space-y-6">
+                    
+                    <div>
+                        <h4 class="text-xl font-semibold mb-3 border-b border-slate-600 pb-2">🛡️ 军事与政治信源</h4>
+                        <div id="source-mil-pol" class="space-y-2 text-sm text-slate-300">
+                            <p class="text-slate-500">暂无数据...</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-3 border-b border-slate-600 pb-2">📈 经济信源</h4>
+                        <div id="source-econ" class="space-y-2 text-sm text-slate-300">
+                            <p class="text-slate-500">暂无数据...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </details>
+        </div>
+
+    </div>
+
+    <script>
+        const riskIndexDisplay = document.getElementById('risk-index-display');
+        const riskLevelDisplay = document.getElementById('risk-level-display');
+        const riskSummary = document.getElementById('risk-summary');
+        const lastUpdatedDisplay = document.getElementById('last-updated');
+        const triggeredList = document.getElementById('triggered-list');
+        const noTriggers = document.getElementById('no-triggers');
+        
+        const rEcon = document.getElementById('r-econ');
+        const rMil = document.getElementById('r-mil');
+        const rPol = document.getElementById('r-pol');
+        const rLocal = document.getElementById('r-local');
+
+        const sourceMilPol = document.getElementById('source-mil-pol');
+        const sourceEcon = document.getElementById('source-econ');
+
+        function updateRiskColor(totalRisk) {
+            const elementsToUpdate = [riskIndexDisplay, riskLevelDisplay];
+            elementsToUpdate.forEach(el => {
+                el.classList.remove('text-green-500', 'text-yellow-500', 'text-red-500');
+            });
+            if (totalRisk < 20) {
+                elementsToUpdate.forEach(el => el.classList.add('text-green-500'));
+                riskLevelDisplay.textContent = '低风险 (Low)';
+            } else if (totalRisk < 50) {
+                elementsToUpdate.forEach(el => el.classList.add('text-yellow-500'));
+                riskLevelDisplay.textContent = '中度风险 (Medium)';
+            } else {
+                elementsToUpdate.forEach(el => el.classList.add('text-red-500'));
+                riskLevelDisplay.textContent = '高度风险 (High)';
+            }
+        }
+
+        function createIndicatorCard(id, data, masterList) {
+            const masterInfo = masterList[id] || { description: "未知指标", category: "未知" };
+            const baseWeight = data.base_weight;
+            const currentWeight = data.current_weight;
+            const triggeredOn = data.triggered_on;
+            let bgColor = 'bg-slate-700';
+            if (baseWeight >= 90) bgColor = 'bg-red-900/50';
+            else if (baseWeight >= 70) bgColor = 'bg-orange-900/50';
+            const decayPercentage = (currentWeight / baseWeight) * 100;
+            
+            return `
+                <div class="${bgColor} p-4 rounded-lg border border-slate-600">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="font-semibold text-slate-300">${id} - ${masterInfo.category}</span>
+                        <span class="text-red-400 font-bold">当前权重: ${Math.round(currentWeight)} / ${baseWeight}</span>
+                    </div>
+                    <p class="text-slate-400 mt-2 text-sm">${masterInfo.description}</p>
+                    <div class="w-full bg-slate-800 rounded-full h-2.5 mt-3">
+                        <div class="bg-red-500 h-2.5 rounded-full" style="width: ${decayPercentage}%"></div>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-1 text-right">首次触发: ${triggeredOn}</p>
+                </div>
+            `;
+        }
+
+        function renderNewsList(articles) {
+            if (!articles || articles.length === 0) return '<p class="text-slate-500">无相关报道。</p>';
+            return articles.map(news => `
+                <div class="flex justify-between items-start py-2 border-b border-slate-700 last:border-0">
+                    <div>
+                        <a href="${news.url}" target="_blank" class="news-link font-medium">${news.title}</a>
+                        <div class="text-xs text-slate-500 mt-1">${news.source}</div>
+                    </div>
+                    <div class="text-xs text-slate-400 whitespace-nowrap ml-4">${news.date}</div>
+                </div>
+            `).join('');
+        }
+
+        async function loadData() {
+            try {
+                const scoreResponse = await fetch('scores-v3.json?t=' + new Date().getTime());
+                if (!scoreResponse.ok) throw new Error(`HTTP error! status: ${scoreResponse.status}`);
+                const data = await scoreResponse.json();
+
+                const indicatorsResponse = await fetch('indicators.json?t=' + new Date().getTime());
+                if (!indicatorsResponse.ok) throw new Error('Failed to load indicators.json');
+                const indicatorsList = await indicatorsResponse.json();
+                const masterList = indicatorsList.reduce((acc, ind) => { acc[ind.id] = ind; return acc; }, {});
+
+                // 1. 更新分数
+                const score = data.score;
+                riskIndexDisplay.textContent = score;
+                riskSummary.textContent = `激活了 ${data.active_indicators_count} / ${data.total_indicators_possible} 个指标`;
+                updateRiskColor(score);
+
+                const updatedDate = new Date(data.last_updated);
+                lastUpdatedDisplay.textContent = `上次分析于: ${updatedDate.toLocaleString()}`;
+
+                // 2. 更新 LLM 理由
+                rEcon.textContent = "今日分析: " + data.category_reasoning.econ;
+                rMil.textContent = "今日分析: " + data.category_reasoning.mil;
+                rPol.textContent = "今日分析: " + data.category_reasoning.pol;
+                rLocal.textContent = "今日分析: " + data.category_reasoning.local;
+
+                // 3. 更新指标列表
+                if (data.active_indicators_count > 0) {
+                    noTriggers.style.display = 'none';
+                    const activeIndicatorsArray = Object.entries(data.active_indicators).map(([id, data]) => ({ id, ...data }));
+                    activeIndicatorsArray.sort((a, b) => b.current_weight - a.current_weight);
+                    let htmlContent = '';
+                    activeIndicatorsArray.forEach(data => { htmlContent += createIndicatorCard(data.id, data, masterList); });
+                    triggeredList.innerHTML = htmlContent;
+                } else {
+                    noTriggers.style.display = 'block';
+                    triggeredList.innerHTML = '';
+                }
+
+                // 4. 更新新闻源列表 (新增)
+                if (data.news_sources) {
+                    // 合并军事和政治
+                    const milPolArticles = [...(data.news_sources.mil || []), ...(data.news_sources.pol || [])];
+                    sourceMilPol.innerHTML = renderNewsList(milPolArticles);
+                    sourceEcon.innerHTML = renderNewsList(data.news_sources.econ || []);
+                }
+
+            } catch (error) {
+                console.error("加载数据失败:", error);
+                lastUpdatedDisplay.textContent = "加载数据失败，请稍后重试。";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

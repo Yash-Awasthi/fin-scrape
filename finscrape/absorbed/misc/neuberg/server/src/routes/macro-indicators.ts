@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import { getRawQuotes } from '../services/stocks/yahoo-finance.js';
+const router = Router();
+const SYMBOLS = ['^GSPC', '^DJI', '^IXIC', '^RUT', '^VIX', '^TNX', '^IRX', 'DXY=X', 'CL=F', 'GC=F', 'HYG', 'TLT', 'IYT', 'XLI', 'COPX'];
+const CACHE_TTL = 5 * 60_000; let cache: { data: unknown; ts: number } | null = null;
+function r2(n: number | undefined | null): number { return n != null && isFinite(n) ? Math.round(n * 100) / 100 : 0; }
+async function fetchData() { const quotes = await getRawQuotes(SYMBOLS); if (!quotes || quotes.length === 0) throw new Error('No data'); const qMap = new Map(quotes.filter(q => q?.symbol).map(q => [q.symbol!, q])); const tnx = qMap.get('^TNX')?.regularMarketPrice || 4.5; const irx = qMap.get('^IRX')?.regularMarketPrice || 5; const vix = qMap.get('^VIX')?.regularMarketPrice || 20;
+  const indicators = [{ name: 'S&P 500', value: r2(qMap.get('^GSPC')?.regularMarketChangePercent || 0), category: 'Equity' }, { name: 'VIX', value: r2(vix), category: 'Volatility' }, { name: '10Y Yield', value: r2(tnx), category: 'Rates' }, { name: 'Yield Curve', value: r2(tnx - irx), category: 'Rates' }, { name: 'Dollar Index', value: r2(qMap.get('DXY=X')?.regularMarketPrice || 104), category: 'FX' }, { name: 'Oil Price', value: r2(qMap.get('CL=F')?.regularMarketPrice || 75), category: 'Commodities' }, { name: 'Gold', value: r2(qMap.get('GC=F')?.regularMarketChangePercent || 0), category: 'Safe Haven' }, { name: 'Credit', value: r2(qMap.get('HYG')?.regularMarketChangePercent || 0), category: 'Credit' }, { name: 'Transport', value: r2(qMap.get('IYT')?.regularMarketChangePercent || 0), category: 'Leading' }, { name: 'Copper', value: r2(qMap.get('COPX')?.regularMarketChangePercent || 0), category: 'Cyclical' }];
+  return { indicators, regime: vix < 18 ? 'Expansionary' : vix > 28 ? 'Contractionary' : 'Neutral', generatedAt: new Date().toISOString() }; }
+router.get('/', async (_req, res) => { try { const now = Date.now(); if (cache && now - cache.ts < CACHE_TTL) return res.json(cache.data); const data = await fetchData(); cache = { data, ts: now }; res.json(data); } catch (err) { console.error('[MacroIndicators]', (err as Error).message); if (cache) return res.json(cache.data); res.status(500).json({ error: 'Failed' }); } });
+export default router;

@@ -1,0 +1,116 @@
+[
+  {
+    "id": "gang-territory-pct",
+    "label": "Gang-Controlled Capital",
+    "value": "~75–90%",
+    "color": "red",
+    "source": "UN BINUH / OHCHR Mar 2026 (90%); PM Fils-Aimé May 1, 2026 (75%)",
+    "contested": true,
+    "contestNote": "PM Fils-Aimé claimed 75% on May 1, 2026 (CNN/Amanpour) — the first government claim of territorial rollback since 2021. UN BINUH independent estimate remains ~90% as of March 2026. Discrepancy may reflect different methodologies or political framing of early GSF joint-operation gains.",
+    "trend": "up",
+    "deltaNote": "Up from ~60% in 2021; 26 gangs active in capital area. PM claims early GSF joint operations have pushed gangs back to ~75% as of May 2026 — UN verification pending.",
+    "lastUpdated": "2026-05-04T14:35:00Z"
+  },
+  {
+    "id": "idp-count",
+    "label": "Internally Displaced Persons",
+    "value": "~1.5M",
+    "color": "red",
+    "source": "IOM / UN News, Jun 5–6, 2026; IOM ETT 95 (May 29 – Jun 1); OCHA Crisis in Numbers May 7, 2026",
+    "contested": false,
+    "trend": "up",
+    "delta": "+40%+",
+    "deltaNote": "IOM confirmed record 1.5 million displaced as of June 5–6, 2026 — over half women and girls (UN News / IOM Chief of Mission Gregoire Goodstein). Port-au-Prince metro area crossed 300,000 IDPs for first time. 18,000+ newly displaced in May from Cité Soleil gang violence alone; 5,000+ displaced in Sud-Est (previously a refuge), demonstrating geographic spread. Since Jan 2026, 110,000+ Haitians forcibly returned from abroad. Hurricane season onset (June 2026) poses additional catastrophic risk to temporary shelters. IOM ETT-95 (May 29 – Jun 1) confirmed 1,100+ displaced from Petite Rivière de Bayonnais (Artibonite). GSF advance force (~800) has zero coverage outside Port-au-Prince city center, meaning virtually all displacement sites have no international security presence.",
+    "lastUpdated": "2026-06-06T14:00:00.000Z"
+  },
+  {
+    "id": "food-insecurity",
+    "label": "Need Humanitarian Assistance",
+    "value": "6.4M",
+    "color": "red",
+    "source": "WFP / OCHA, Apr 2026; IPC May 2026 projects 5.91M in IPC Phase 3+",
+    "contested": false,
+    "trend": "up",
+    "deltaNote": "More than half the population; ~2M in Emergency (Phase 4); 600K in IPC Phase 5 (Catastrophe/famine). May–Aug lean season projected at worst levels.",
+    "lastUpdated": "2026-05-09T14:30:00Z"
+  },
+  {
+    "id": "killed-2025",
+    "label": "Killed (Jan–Jun 4, 2026, OHCHR)",
+    "value": "2,310+",
+    "color": "red",
+    "source": "OHCHR / HaitiLibre, June 4, 2026",
+    "contested": true,
+    "contestNote": "OHCHR June 4 cumulative: 2,310+ killed, 1,100+ injured, 699 women/girls subjected to sexual violence. Security forces responsible for ~69% of Q1 casualties (69 civilians + 5 children from drone strikes); gangs directly responsible for ~27%. Annualized pace: ~5,500–6,000 for full-year 2026.",
+    "trend": "up",
+    "delta": "+668 since Q1",
+    "deltaNote": "Q1 BINUH figure was 1,642 (Jan–Mar); OHCHR adds ~668 more deaths April 1–June 4. Full-year 2026 pace approaching record 5,600+ of 2024. 699 women/girls sexually assaulted in 5 months.",
+    "lastUpdated": "2026-06-04T12:00:00.000Z"
+  },
+  {
+    "id": "gsf-personnel-deployed",
+    "label": "GSF Personnel Deployed",
+    "value": "~1,000",
+    "color": "amber",
+    "source": "NPR, Jun 17, 2026; The Ops Con Threat Level Briefing, Jul 14, 2026",
+    "contested": false,
+    "trend": "up",
+    "deltaNote": "Up from ~800 on Jun 1. Contributing nations: Mongolia (force commander Gen. Erdenebat Batsuuri), Chad, El Salvador, Guatemala, Jamaica (HQ staff + Chadian-troop training) — still under 1,000 combined as of the Jun 17 NPR report, roughly ~18% of the 5,550-person authorized ceiling (UNSCR 2793). The Ops Con's Jul 14 threat-level briefing assessed the force as 'early, thin and outmatched for now,' with full operational capacity not expected before October 2026 and noted the GSF's arrival 'does not change the ground picture yet.' Since Artibonite/GSF activity in mid-August (Sri Lankan contingent, per Aug 6/13 events), coverage remains concentrated in Port-au-Prince and Gonaïves; Cité Soleil, Centre, and Sud-Est remain largely uncovered.",
+    "lastUpdated": "2026-08-24T15:11:44.000Z"
+  },
+  {
+    "id": "active-gangs",
+    "label": "Active Gangs Nationwide",
+    "value": "200+",
+    "color": "red",
+    "source": "UN BINUH / ACLED, 2025",
+    "contested": false,
+    "trend": "up",
+    "deltaNote": "26 in capital area; Viv Ansanm coalition designated US FTO",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "food-catastrophe-phase5",
+    "label": "In IPC Phase 5 (Catastrophe)",
+    "value": "600,000+",
+    "color": "red",
+    "source": "WFP / IPC, Q1 2026",
+    "contested": false,
+    "trend": "up",
+    "deltaNote": "Up from 8,400 in 2024; concentrated in IDP displacement camps",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "gdp-growth",
+    "label": "GDP Growth (2025)",
+    "value": "-2.4%",
+    "color": "red",
+    "source": "IMF DataMapper, 2025",
+    "contested": false,
+    "trend": "down",
+    "deltaNote": "Ongoing economic contraction since 2021",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "remittances-pct-gdp",
+    "label": "Remittances (% of GDP)",
+    "value": "15%",
+    "color": "amber",
+    "source": "World Bank, 2024",
+    "contested": false,
+    "trend": "down",
+    "deltaNote": "Down from 19% in 2023; lifeline for 3M+ families",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "children-malnutrition",
+    "label": "Children with Acute Malnutrition",
+    "value": "277,000",
+    "color": "red",
+    "source": "UNICEF, 2024",
+    "contested": false,
+    "trend": "up",
+    "deltaNote": "125,000 with severe acute malnutrition; 2.6M children need humanitarian aid",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  }
+]

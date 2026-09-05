@@ -1,0 +1,1607 @@
+[
+  {
+    "era": "First Trump Term: Stress Testing (2017–2021)",
+    "events": [
+      {
+        "id": "trump-inauguration-nato-obsolete",
+        "year": "Jan 20, 2017",
+        "title": "Trump Inaugurated; NATO 'Obsolete' Label Looms",
+        "type": "diplomatic",
+        "detail": "Donald Trump is inaugurated as the 45th US President, having spent his campaign calling NATO 'obsolete' and demanding allies pay more. His election immediately triggers anxiety among European partners who fear conditionality on collective defense for the first time in the alliance's history.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/article/us-usa-trump-nato-idUSKBN1541T5"
+          },
+          {
+            "name": "Atlantic Council",
+            "tier": 3,
+            "url": "https://www.atlanticcouncil.org/blogs/natosource/trumps-nato-strategy/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mattis-brussels-article5-endorse",
+        "year": "Feb 15, 2017",
+        "title": "SecDef Mattis Endorses Article 5, Warns on Spending",
+        "type": "diplomatic",
+        "detail": "Defense Secretary James Mattis visits Brussels and explicitly endorses Article 5 — filling a gap Trump refused to fill — but warns allies that if they do not increase defense spending, the US 'will moderate its commitment.' Sets the tone of conditioned reassurance.",
+        "sources": [
+          {
+            "name": "Pentagon Press Release",
+            "tier": 1,
+            "url": "https://www.defense.gov/News/News-Stories/Article/Article/1075846/"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-us-canada-38974428"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trump-merkel-no-handshake",
+        "year": "Mar 17, 2017",
+        "title": "Trump-Merkel Meeting Exposes Rift; No Joint NATO Statement",
+        "type": "diplomatic",
+        "detail": "Trump meets German Chancellor Angela Merkel at the White House. No joint communiqué on NATO defense spending is issued. Trump reportedly refuses to shake hands on camera, and their divergent approaches to the alliance are on public display from the outset.",
+        "sources": [
+          {
+            "name": "Der Spiegel",
+            "tier": 2,
+            "url": "https://www.spiegel.de/international/germany/trump-and-merkel-at-the-white-house-a-1138967.html"
+          },
+          {
+            "name": "New York Times",
+            "tier": 2,
+            "url": "https://www.nytimes.com/2017/03/17/us/politics/trump-merkel-white-house.html"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.spiegel.de/international/germany/trump-and-merkel-at-the-white-house-a-1138967.html",
+            "source": "Der Spiegel",
+            "thumbnail": "https://cdn.prod.www.spiegel.de/images/78e5624a-0001-0004-0000-000001118560_w1200_r1.778_fpx69.98_fpy44.99.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trump-reverses-nato-obsolete",
+        "year": "Apr 12, 2017",
+        "title": "Trump Reverses 'Obsolete' Label After Stoltenberg Meeting",
+        "type": "statement",
+        "detail": "Trump meets NATO Secretary General Stoltenberg at the White House and reverses his campaign characterization: 'I said it was obsolete. It's no longer obsolete.' However, Trump still conditions US support on burden-sharing compliance, leaving allies uncertain about the durability of the reversal.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://trumpwhitehouse.archives.gov/briefings-statements/remarks-president-trump-nato-secretary-general-stoltenberg/"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "url": "https://apnews.com/article/north-america-donald-trump-europe-nato-international-news-4ef94b20e7f24d02820db77b9b2ebd67"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "brussels-summit-2017-article5-omission",
+        "year": "May 25, 2017",
+        "title": "2017 NATO Summit: Trump Omits Article 5 Endorsement",
+        "type": "summit",
+        "detail": "At the opening of NATO's new Brussels headquarters, Trump delivers a speech focused on burden-sharing and terrorism but conspicuously omits any mention of Article 5 collective defense — the first sitting US president to do so at a NATO summit. National Security Advisor McMaster, SecDef Mattis, and Secretary Tillerson had all unsuccessfully tried to insert Article 5 language into the speech.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_144098.htm"
+          },
+          {
+            "name": "Politico",
+            "tier": 2,
+            "url": "https://www.politico.eu/article/trump-shoves-nato-ally-article-5-burden-sharing/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.nato.int/cps/en/natohq/news_144098.htm",
+            "source": "NATO",
+            "thumbnail": "https://s7g10.scene7.com/is/image/ncia/20170525_170525k-006"
+          }
+        ]
+      },
+      {
+        "id": "trump-berates-allies-brussels",
+        "year": "May 25, 2017",
+        "title": "Trump Publicly Berates NATO Allies Over Debt at Summit",
+        "type": "statement",
+        "detail": "At the Brussels NATO summit, Trump publicly lectures allies on camera, saying they owe 'massive amounts of money' to NATO and the United States. Trump also notoriously appears to push aside Montenegro Prime Minister Markovic during a photo opportunity, creating a visual metaphor for US-alliance friction that circulates globally.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/article/us-nato-summit-trump-idUSKBN18L0B0"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-us-canada-40051704"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "wsj-trump-nato-withdrawal-report",
+        "year": "Jan 14, 2018",
+        "title": "WSJ Reports Trump Privately Asked About NATO Withdrawal",
+        "type": "crisis",
+        "detail": "The Wall Street Journal reports that Trump privately asked senior aides multiple times about the possibility of withdrawing the United States from NATO. The report — denied by the White House — deeply alarmed European governments and accelerated internal European discussions about strategic autonomy.",
+        "sources": [
+          {
+            "name": "Wall Street Journal",
+            "tier": 2,
+            "url": "https://www.wsj.com/articles/trump-has-raised-prospect-of-withdrawing-from-nato-1510276101"
+          },
+          {
+            "name": "Politico",
+            "tier": 2,
+            "url": "https://www.politico.eu/article/trump-nato-withdrawal-allies-panic/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "brussels-summit-2018-germany-russia",
+        "year": "Jul 11, 2018",
+        "title": "2018 NATO Summit: Trump Attacks Germany as 'Captive to Russia'",
+        "type": "summit",
+        "detail": "At the Brussels NATO summit, Trump opens with a broadside against Germany: 'Germany, as far as I'm concerned, is captive to Russia because it's getting so much of its energy from Russia.' He demands allies meet a 4% GDP defense spending target and threatens to 'do his own thing.' A later leaked transcript revealed Trump threatened to 'go it alone' if Germany did not raise spending.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/official_texts_156624.htm"
+          },
+          {
+            "name": "New York Times",
+            "tier": 2,
+            "url": "https://www.nytimes.com/2018/07/11/world/europe/trump-nato-summit-germany.html"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "helsinki-summit-trump-putin",
+        "year": "Jul 16, 2018",
+        "title": "Helsinki: Trump Sides with Putin Over US Intel on Election",
+        "type": "crisis",
+        "detail": "At his bilateral summit with Putin in Helsinki, Trump sides with Russia's denial over US intelligence community assessments of election interference: 'I have President Putin; he just said it's not Russia. I will say this: I don't see any reason why it would be.' NATO Sec-Gen Stoltenberg calls the remarks 'unprecedented.' European allies are deeply alarmed about US reliability as an intelligence partner.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/article/us-usa-russia-summit-idUSKBN1K11J5"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-us-canada-44852812"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "inf-treaty-withdrawal-announcement",
+        "year": "Oct 20, 2018",
+        "title": "US Announces Withdrawal from INF Treaty",
+        "type": "crisis",
+        "detail": "Trump announces the US will withdraw from the Intermediate-Range Nuclear Forces (INF) Treaty, citing Russian violations. European allies are initially dismayed as the treaty had kept medium-range nuclear missiles out of Europe since 1987. The treaty formally expires in August 2019, reopening the prospect of a new missile race on European soil.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://trumpwhitehouse.archives.gov/briefings-statements/statement-president-regarding-inf-treaty/"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-us-canada-45933132"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "macron-nato-brain-death",
+        "year": "Nov 7, 2019",
+        "title": "Macron Declares NATO Experiencing 'Brain Death'",
+        "type": "statement",
+        "detail": "In a bombshell interview with The Economist, French President Emmanuel Macron declares NATO is experiencing 'brain death,' citing 'zero coordination' of strategic decision-making between the US and allies. He expresses uncertainty about whether Article 5 remains reliable and calls for Europe to take responsibility for its own strategic autonomy — marking a watershed moment in transatlantic relations.",
+        "sources": [
+          {
+            "name": "The Economist",
+            "tier": 2,
+            "url": "https://www.economist.com/europe/2019/11/07/emmanuel-macron-warns-europe-nato-brain-death"
+          },
+          {
+            "name": "France 24",
+            "tier": 2,
+            "url": "https://www.france24.com/en/20191107-macron-claims-nato-is-suffering-brain-death"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "london-nato-summit-2019",
+        "year": "Dec 4, 2019",
+        "title": "NATO London Summit: 70th Anniversary, Tensions Surface",
+        "type": "summit",
+        "detail": "At NATO's 70th anniversary summit in Watford, Macron stands by his 'brain death' characterization. Trump calls Macron's remarks 'very nasty' and 'insulting.' A leaked video captures NATO leaders including Trudeau, Macron, and Johnson apparently mocking Trump. The summit issues a communiqué reaffirming 'sacred' Article 5 but the divisions between the US president and European allies are visibly on display.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/official_texts_171584.htm"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/article/us-nato-summit-macron-idUSKBN1Y710W"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "soleimani-killing-nato-friction",
+        "year": "Jan 3, 2020",
+        "title": "Soleimani Killing: NATO Allies Not Consulted",
+        "type": "crisis",
+        "detail": "The US kills Iranian General Qasem Soleimani in Baghdad without consulting NATO allies. Iraq requests suspension of the NATO training mission. The incident exposes deep command and consultation gaps within the alliance and highlights the US tendency to act unilaterally in high-stakes operations affecting allied interests.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/article/us-iraq-security-nato-idUSKBN1Z60HH"
+          },
+          {
+            "name": "Politico",
+            "tier": 2,
+            "url": "https://www.politico.eu/article/soleimani-killing-nato-iraq-mission-suspended/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trump-germany-troop-withdrawal",
+        "year": "Jun 5, 2020",
+        "title": "Trump Orders 9,500 Troops Withdrawn from Germany",
+        "type": "dispute",
+        "detail": "Trump announces plans to withdraw 9,500 US troops from Germany — reducing the force from approximately 35,000 to 25,000 — citing Germany's 'delinquency' on defense spending. The German government protests strongly. The move is seen as punitive and marks the first time the US has weaponized troop presence as leverage against a major NATO ally.",
+        "sources": [
+          {
+            "name": "Pentagon",
+            "tier": 1,
+            "url": "https://www.defense.gov/News/News-Stories/Article/Article/2226096/"
+          },
+          {
+            "name": "Der Spiegel",
+            "tier": 2,
+            "url": "https://www.spiegel.de/international/world/trump-withdraws-troops-from-germany-a-a5e7a09c-8e03-4e7e-861c-b3c8d39e23a2"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trump-election-loss-2020",
+        "year": "Nov 4, 2020",
+        "title": "Trump Loses Election; European Allies Relieved",
+        "type": "diplomatic",
+        "detail": "Joe Biden defeats Donald Trump in the US presidential election. European NATO allies broadly express relief at the outcome, with many governments openly acknowledging that Trump's approach had created the most serious crisis of confidence in the alliance since its founding. Biden's victory immediately triggers discussions about a return to multilateral engagement.",
+        "sources": [
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "url": "https://www.politico.eu/article/europe-welcomes-biden-relief-trump-defeat/"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/article/us-usa-election-europe-idUSKBN27K0QK"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Biden Restoration (2021–2025)",
+    "events": [
+      {
+        "id": "biden-inauguration-calls-stoltenberg",
+        "year": "Jan 20, 2021",
+        "title": "Biden Inaugurated; First Call Goes to NATO Sec-Gen",
+        "type": "diplomatic",
+        "detail": "Joe Biden is inaugurated as the 46th US President. His first phone call after the inauguration goes to NATO Secretary General Stoltenberg — a deliberate symbolic act signaling a return to alliance primacy after four years of Trump-era friction. Biden immediately begins rolling back Trump's Germany troop withdrawal orders.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://www.whitehouse.gov/briefing-room/statements-releases/2021/01/20/readout-of-president-joe-bidens-call-with-nato-secretary-general-jens-stoltenberg/"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "url": "https://apnews.com/article/biden-nato-stoltenberg-first-call-alliance-rebuilding"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "biden-munich-america-is-back",
+        "year": "Feb 19, 2021",
+        "title": "Biden at Munich: 'America Is Back, the Alliance Is Back'",
+        "type": "statement",
+        "detail": "Addressing the Munich Security Conference virtually, Biden delivers the phrase that would define his NATO policy: 'America is back. The transatlantic alliance is back.' He reverses Trump's Germany troop withdrawal plan, announces renewed commitment to Article 5, and pledges to consult allies before major strategic moves. European leaders give a standing ovation.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://www.whitehouse.gov/briefing-room/speeches-remarks/2021/02/19/remarks-by-president-biden-at-the-2021-virtual-munich-security-conference/"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-us-canada-56122927"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "biden-article5-sacred-commitment",
+        "year": "Jun 7, 2021",
+        "title": "Biden Calls Article 5 a 'Sacred Commitment' with Stoltenberg",
+        "type": "statement",
+        "detail": "Meeting with NATO Secretary General Stoltenberg at the Oval Office, Biden declares Article 5 to be a 'sacred commitment — I mean that literally, a sacred commitment.' The phrase directly contrasts with Trump's conditional language and is interpreted across Europe as a full restoration of the US Article 5 guarantee.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://www.whitehouse.gov/briefing-room/speeches-remarks/2021/06/07/remarks-by-president-biden-and-nato-secretary-general-stoltenberg-before-bilateral-meeting/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "nato-brussels-summit-2021",
+        "year": "Jun 14, 2021",
+        "title": "2021 NATO Brussels Summit: Biden's Multilateral Debut",
+        "type": "summit",
+        "detail": "Biden's first NATO summit as president results in the most substantial communiqué update since 2010, naming China as a 'systemic challenge' for the first time. Biden declares the US commitment to collective defense 'rock solid and unshakable.' A new strategic reflection process begins, leading to the 2022 Strategic Concept.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_185000.htm"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/nato-summit-2021-biden-allies-2021-06-14/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "ukraine-invasion-nato-response",
+        "year": "Feb 24, 2022",
+        "title": "Russia Invades Ukraine: NATO Activates Response Force",
+        "type": "crisis",
+        "detail": "Russia's full-scale invasion of Ukraine transforms NATO's posture overnight. Biden declares: 'We will defend every inch of NATO territory with the full might of a united and galvanized NATO.' NATO activates its Response Force for the first time in history and begins deploying high-readiness forces eastward. Germany announces the Zeitenwende ('turning point') with a €100B special defense fund.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_192455.htm"
+          },
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://www.whitehouse.gov/briefing-room/speeches-remarks/2022/02/24/remarks-by-president-biden-on-russias-unprovoked-and-unjustified-attack-on-ukraine/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "nato-emergency-summit-march-2022",
+        "year": "Mar 24, 2022",
+        "title": "Emergency NATO Summit Expands Eastern Flank Deployments",
+        "type": "summit",
+        "detail": "Biden attends an emergency in-person NATO summit in Brussels. Four new NATO battlegroups are announced for Bulgaria, Hungary, Romania, and Slovakia — doubling the Enhanced Forward Presence structure. The US deploys 20,000 additional troops to Europe, bringing the total US military presence on the continent to approximately 100,000.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_194717.htm"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/nato-leaders-convene-extraordinary-summit-2022-03-24/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "finland-sweden-nato-application",
+        "year": "May 18, 2022",
+        "title": "Finland and Sweden Apply to Join NATO",
+        "type": "diplomatic",
+        "detail": "Finland and Sweden formally apply to join NATO, abandoning decades of non-alignment in direct response to Russia's invasion of Ukraine. Biden issues a statement offering 'full, total, complete backing' for their membership. The applications nearly double the length of NATO's land border with Russia, representing the alliance's most significant enlargement since 2004.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_195468.htm"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "url": "https://apnews.com/article/russia-ukraine-nato-sweden-finland-membership-2022"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.nato.int/cps/en/natohq/news_195468.htm",
+            "source": "NATO",
+            "thumbnail": "https://s7g10.scene7.com/is/image/ncia/220518-sg"
+          }
+        ]
+      },
+      {
+        "id": "nato-madrid-summit-2022",
+        "year": "Jun 29, 2022",
+        "title": "NATO Madrid Summit: New Strategic Concept, Nordic Expansion",
+        "type": "summit",
+        "detail": "The NATO Madrid Summit formally invites Finland and Sweden after a trilateral deal with Turkey is brokered by Biden. The alliance adopts its first new Strategic Concept since 2010, naming Russia as 'the most significant and direct threat' and activating new regional defense plans. Eight battlegroups are now deployed on NATO's eastern flank.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_197070.htm"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/nato-summit-madrid-outcomes-2022-06-30/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "finland-nato-member",
+        "year": "Apr 4, 2023",
+        "title": "Finland Officially Joins NATO as 31st Member",
+        "type": "diplomatic",
+        "detail": "Finland officially becomes NATO's 31st member state, completing the fastest ratification process in modern alliance history. Biden calls it a 'historic' moment. Finland doubles NATO's shared land border with Russia, fundamentally altering the strategic balance in Northern Europe. Russia warns of consequences and threatens retaliatory deployments.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_213735.htm"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/finland-nato-member-state-2023-04-04/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "nato-vilnius-summit-2023",
+        "year": "Jul 11, 2023",
+        "title": "NATO Vilnius Summit: Ukraine Membership Stalemate",
+        "type": "summit",
+        "detail": "The Vilnius Summit sees NATO declare 'Ukraine's future is in NATO' but offer no timeline or pre-conditions for membership. Ukrainian President Zelensky tweets his fury before arrival: 'It's unprecedented and absurd when a timeframe is not set.' G7 security guarantees are announced as an alternative. Zelensky eventually accepts the communiqué but the episode reveals deep divisions over Ukraine's path.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/official_texts_217320.htm"
+          },
+          {
+            "name": "PBS NewsHour",
+            "tier": 2,
+            "url": "https://www.pbs.org/newshour/world/zelensky-calls-nato-plan-for-ukraine-membership-absurd"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.pbs.org/newshour/world/zelensky-calls-nato-plan-for-ukraine-membership-absurd",
+            "source": "PBS NewsHour",
+            "thumbnail": "https://d3i6fh83elv35t.cloudfront.net/static/2023/07/2023-07-11T124259Z_443961477_RC2012A3C6U9_RTRMADP_3_NATO-SUMMIT-1024x683.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trump-nato-encourage-russia-rally",
+        "year": "Feb 10, 2024",
+        "title": "Trump Says He'd 'Encourage' Russia to Attack Non-Paying NATO Members",
+        "type": "statement",
+        "detail": "At a campaign rally in South Carolina, Trump recounts telling an unnamed NATO leader that he would 'encourage' Russia to 'do whatever the hell they want' to NATO members that don't pay their bills. Biden calls the remarks 'un-American,' 'appalling,' and 'dangerous.' European governments react with alarm; the quote becomes central to debates about Article 5 reliability.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/trump-says-he-would-encourage-russia-do-whatever-hell-they-want-nato-members-not-2024-02-11/"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-us-canada-68268329"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "nato-18-members-hit-2pct",
+        "year": "Apr 2024",
+        "title": "18 NATO Members Reach 2% GDP Spending Target",
+        "type": "spending",
+        "detail": "NATO announces that 18 of its 32 members will reach or exceed the 2% GDP defense spending target in 2024 — up from just 3 members in 2014 and 11 in 2023. The alliance as a whole averages 2.71% of GDP. The milestone is partly attributed to pressure from Trump during his first term and the shock of Russia's Ukraine invasion.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_226465.htm"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2024/7/11/how-much-does-each-nato-country-spend-in-2024"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2024/7/11/how-much-does-each-nato-country-spend-in-2024",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2024/07/AFP__20240709__363K6QW__v1__HighRes__UsNatoSummitDiplomacyDefence-1720613004.jpg?resize=1920%2C1440"
+          }
+        ]
+      },
+      {
+        "id": "sweden-nato-member",
+        "year": "Mar 7, 2024",
+        "title": "Sweden Officially Joins NATO as 32nd Member",
+        "type": "diplomatic",
+        "detail": "Sweden officially becomes NATO's 32nd member state after Hungary and Turkey ratified its accession protocols. Biden declares 'NATO is stronger than ever.' Sweden's accession completes the Nordic enlargement triggered by Russia's 2022 invasion and effectively turns the Baltic Sea into a 'NATO lake' with only Russian Kaliningrad and St. Petersburg as non-member coastlines.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_223390.htm"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "url": "https://apnews.com/article/sweden-nato-membership-final-ratification-2024"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "nato-washington-summit-2024",
+        "year": "Jul 10, 2024",
+        "title": "NATO Washington Summit: 75th Anniversary, Industrial Pledge",
+        "type": "summit",
+        "detail": "The NATO Washington Summit marks the alliance's 75th anniversary. Biden declares 'today we are stronger than we've ever been.' An Industrial Capacity Expansion Pledge is signed, committing allies to sustaining defense production. Outgoing Sec-Gen Stoltenberg's final summit. US battlegroups on the eastern flank have doubled since 2022.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_227450.htm"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/nato-washington-summit-2024-outcomes/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "rutte-nato-sec-gen",
+        "year": "Oct 1, 2024",
+        "title": "Mark Rutte Takes Over as NATO Secretary General",
+        "type": "diplomatic",
+        "detail": "Mark Rutte, former Dutch Prime Minister, succeeds Jens Stoltenberg as NATO Secretary General. Rutte, known for his experience navigating populist governments in Europe and famously having survived as Dutch PM for 14 years, is seen as well-suited to managing the complex relationship with Trump, who returns to power in January 2025.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_228785.htm"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/mark-rutte-new-nato-secretary-general-2024-10-01/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Second Trump Term: Alliance Under Pressure (2025–2026)",
+    "events": [
+      {
+        "id": "trump-inauguration-2025",
+        "year": "Jan 20, 2025",
+        "title": "Trump's Second Inauguration Triggers European Anxiety",
+        "type": "diplomatic",
+        "detail": "Donald Trump is inaugurated for his second term as US President. European NATO allies immediately begin scrambling to accommodate new demands. Governments across the continent announce emergency defense spending increases in the days surrounding the inauguration, hoping to forestall confrontations over burden-sharing.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/europe-nato-reacts-trump-inauguration-2025-01-20/"
+          },
+          {
+            "name": "Politico Europe",
+            "tier": 2,
+            "url": "https://www.politico.eu/article/europe-nato-trump-second-term-defense-spending/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trump-davos-5pct-demand",
+        "year": "Jan 23, 2025",
+        "title": "Trump at Davos: Demands NATO Members Spend 5% of GDP",
+        "type": "statement",
+        "detail": "Addressing the World Economic Forum in Davos, Trump demands all NATO nations increase defense spending to 5% of GDP: 'I'm also going to ask all NATO nations to increase defence spending to 5% of GDP, which is what it should have been years ago.' The demand — more than double the existing 2% target — is seen as largely aspirational but sets the tone for alliance negotiations.",
+        "sources": [
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://www.whitehouse.gov/briefing-room/speeches-remarks/2025/01/23/remarks-by-president-trump-at-the-world-economic-forum/"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/business/2025/01/23/trump-at-davos-nato-5-push-tariff-warnings-for-europe"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.euronews.com/business/2025/01/23/trump-at-davos-nato-5-push-tariff-warnings-for-europe",
+            "source": "Euronews",
+            "thumbnail": "https://static.euronews.com/articles/stories/08/99/90/24/1200x675_cmsv2_07d8731a-4470-5bb7-a5ec-8d463ceafb95-8999024.jpg"
+          }
+        ]
+      },
+      {
+        "id": "vance-munich-europe-threat",
+        "year": "Feb 2025",
+        "title": "Vance at Munich: Europe's Biggest Threat Is 'Internal'",
+        "type": "statement",
+        "detail": "Vice President JD Vance addresses the Munich Security Conference and tells European leaders the greatest threat to Europe is 'internal' — specifically progressive censorship and speech restrictions — rather than Russia. He offers no reassurance on Article 5. European leaders are appalled; French President Macron calls it 'a break with shared values.'",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/vance-munich-security-conference-speech-2025/"
+          },
+          {
+            "name": "Politico",
+            "tier": 2,
+            "url": "https://www.politico.eu/article/jd-vance-munich-security-conference-europe-free-speech/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-russia-ukraine-talks-exclude-europe",
+        "year": "Feb 18, 2025",
+        "title": "US Begins Direct Russia-Ukraine Talks, Excluding Europeans",
+        "type": "crisis",
+        "detail": "The US begins direct negotiations with Russia over a potential Ukraine peace settlement, excluding European allies and Ukraine itself from initial talks. The move represents a dramatic departure from four years of allied coordination. European governments scramble to assert relevance; Macron calls an emergency European summit to formulate a joint response.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/us-russia-ukraine-talks-riyadh-2025-02-18/"
+          },
+          {
+            "name": "BBC",
+            "tier": 2,
+            "url": "https://www.bbc.com/news/world-us-canada-ukraine-peace-talks-2025"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "merz-election-independence-push",
+        "year": "Feb 25, 2025",
+        "title": "Merz Wins German Election; Declares Independence from US Priority",
+        "type": "statement",
+        "detail": "Friedrich Merz wins the German federal election and immediately declares: 'My absolute priority will be to strengthen Europe as quickly as possible so that step by step, we can really achieve independence from the USA.' He says it is 'five minutes to midnight' for European defense and suggests European capitals may need nuclear guarantees from Paris or London rather than Washington.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2025/2/25/germanys-centrists-bang-heads-together-on-defence-immigration-economy"
+          },
+          {
+            "name": "Stars and Stripes",
+            "tier": 2,
+            "url": "https://www.stripes.com/theaters/europe/2025-02-25/germany-nato-merz-trump-16948459.html"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2025/2/25/germanys-centrists-bang-heads-together-on-defence-immigration-economy",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2025/02/2025-02-23T175346Z_1899273465_RC2H0DAUKR2V_RTRMADP_3_GERMANY-ELECTION-CDU-1740477036.jpg?resize=1200%2C630"
+          }
+        ]
+      },
+      {
+        "id": "rearm-europe-von-der-leyen",
+        "year": "Mar 4, 2025",
+        "title": "EU Announces ReArm Europe Plan: €800 Billion Defense Push",
+        "type": "spending",
+        "detail": "European Commission President von der Leyen announces the ReArm Europe (Readiness 2030) Plan, aiming to unlock 'nearly €800 billion' for European defense — comprising €650 billion in fiscal flexibility for member states and a €150 billion SAFE loan instrument. It is the EU's most ambitious defense investment initiative in history and a direct response to US conditionality under Trump.",
+        "sources": [
+          {
+            "name": "European Commission",
+            "tier": 1,
+            "url": "https://commission.europa.eu/topics/defence/readiness-2030_en"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2025/03/05/how-can-the-eu-unlock-up-to-800bn-for-its-rearmament-plan"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.euronews.com/my-europe/2025/03/05/how-can-the-eu-unlock-up-to-800bn-for-its-rearmament-plan",
+            "source": "Euronews",
+            "thumbnail": "https://static.euronews.com/articles/stories/09/09/47/94/1200x675_cmsv2_2748ac5f-703b-539a-a5c8-cf36a9e383ef-9094794.jpg"
+          }
+        ]
+      },
+      {
+        "id": "germany-debt-brake-reform",
+        "year": "Mar 21, 2025",
+        "title": "Germany Suspends Constitutional Debt Brake for Defense",
+        "type": "spending",
+        "detail": "The German Bundestag votes with a two-thirds supermajority to suspend the constitutional debt brake (Schuldenbremse) for defense spending — a seismic shift in German fiscal history. A €500 billion extrabudgetary fund is created; defense spending above 1% of GDP is exempted from debt limits. Germany's defense budget is projected to reach 3.5% of GDP by 2029.",
+        "sources": [
+          {
+            "name": "Bundestag",
+            "tier": 1,
+            "url": "https://www.bundestag.de/en/press/hib/1051978-1051978"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2025/03/18/business/germany-merz-borrowing-military-spending-intl"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "eu-safe-instrument-adopted",
+        "year": "May 2025",
+        "title": "EU Adopts SAFE: €150B Defense Loan Instrument",
+        "type": "spending",
+        "detail": "The EU Council formally adopts the Security Action for Europe (SAFE) instrument — a €150 billion loan instrument for joint defense procurement. It marks the first time the EU has issued bonds explicitly for defense purposes, crossing a significant institutional threshold and representing a tangible step toward European strategic autonomy.",
+        "sources": [
+          {
+            "name": "European Council",
+            "tier": 1,
+            "url": "https://www.consilium.europa.eu/en/press/press-releases/2025/05/safe-regulation-adopted/"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/eu-safe-defense-bonds-instrument-2025-05/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "nato-hague-summit-2025",
+        "year": "Jun 24, 2025",
+        "title": "NATO Hague Summit: 5% Target Agreed, Trump Ambiguous on Article 5",
+        "type": "summit",
+        "detail": "The NATO Hague Summit sees Trump attend and agree to a new 5% of GDP spending target by 2035 (3.5% core defense + 1.5% infrastructure). However, when asked about Article 5 commitment, Trump says: 'Depends on your definition. There's numerous definitions of Article 5.' The next day he says 'We're with them all the way.' The contradiction becomes shorthand for European uncertainty about US reliability.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/cps/en/natohq/news_hague_2025.htm"
+          },
+          {
+            "name": "PBS NewsHour",
+            "tier": 2,
+            "url": "https://www.pbs.org/newshour/world/trump-says-commitment-to-nato-mutual-defense-guarantee-depends-on-your-definition"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.pbs.org/newshour/world/trump-says-commitment-to-nato-mutual-defense-guarantee-depends-on-your-definition",
+            "source": "PBS NewsHour",
+            "thumbnail": "https://d3i6fh83elv35t.cloudfront.net/static/2025/06/2025-06-24T181054Z_917182768_RC259FAI3FLK_RTRMADP_3_NATO-SUMMIT-TRUMP-1024x683.jpg"
+          }
+        ]
+      },
+      {
+        "id": "greenland-annexation-push-2026",
+        "year": "Jan 4, 2026",
+        "title": "Trump Renews Greenland Push; Denmark Invokes NATO Defense Clause",
+        "type": "crisis",
+        "detail": "Trump renews his demand that the United States take control of Greenland, saying the US 'absolutely' needs it. Danish Prime Minister Frederiksen warns: 'If the United States chooses to attack another NATO country militarily, then everything stops — that is, including our NATO.' The crisis marks the first time a NATO ally formally invokes the specter of the US attacking a fellow member.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/trump-greenland-denmark-nato-crisis-2026-01-04/"
+          },
+          {
+            "name": "CNBC",
+            "tier": 2,
+            "url": "https://www.cnbc.com/2026/01/04/trump-denmark-greenland-frederiksen-venezuela.html"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.cnbc.com/2026/01/04/trump-denmark-greenland-frederiksen-venezuela.html",
+            "source": "CNBC",
+            "thumbnail": "https://image.cnbcfm.com/api/v1/image/108093549-17380819032025-01-28t074825z_1878371830_rc2vicawq5rr_rtrmadp_0_germany-denmark-politics.jpeg?v=1738081987&amp;w=1920&amp;h=1080"
+          }
+        ]
+      },
+      {
+        "id": "greenland-tariff-threat-climbdown",
+        "year": "Jan 21, 2026",
+        "title": "Trump Threatens Greenland Tariffs, Then Backs Down at Davos",
+        "type": "crisis",
+        "detail": "Trump threatens 10–25% tariffs on Denmark and eight European NATO allies unless Greenland is transferred. At Davos, he says he won't take Greenland by force but warns: 'You can say yes, and we will be very appreciative, or you can say no and we will remember.' He later posts about a 'framework' deal with NATO Sec-Gen Rutte and withdraws the tariff threat — a climbdown described as significant by European analysts.",
+        "sources": [
+          {
+            "name": "CNBC",
+            "tier": 2,
+            "url": "https://www.cnbc.com/2026/01/21/greenland-trump-denmark-timeline-of-diplomatic-tensions.html"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/trump-greenland-tariff-climbdown-davos-2026-01-21/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.cnbc.com/2026/01/21/greenland-trump-denmark-timeline-of-diplomatic-tensions.html",
+            "source": "CNBC",
+            "thumbnail": "https://image.cnbcfm.com/api/v1/image/108254765-1768989177799-gettyimages-2257227374-2s4a2213_roicimg5.jpeg?v=1769135940&amp;w=1920&amp;h=1080"
+          }
+        ]
+      },
+      {
+        "id": "von-der-leyen-munich-2026-rebukes-rutte",
+        "year": "Feb 2026",
+        "title": "Von der Leyen Rebukes NATO Chief; Calls for EU Mutual Defense",
+        "type": "statement",
+        "detail": "Addressing the Munich Security Conference, European Commission President von der Leyen publicly rebukes NATO Sec-Gen Rutte's reported comment that Europe cannot guarantee security 'without the US': 'Let's develop our strength without constantly leaning on someone else.' She calls for activating the EU mutual defense clause (Article 42.7 of the Treaty of Lisbon) as a complement to NATO.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/02/14/von-der-leyen-rebukes-nato-chief-over-no-security-without-us-calls-for-european-mutual-def"
+          },
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/von-der-leyen-munich-2026-eu-defense/"
+          }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.euronews.com/my-europe/2026/02/14/von-der-leyen-rebukes-nato-chief-over-no-security-without-us-calls-for-european-mutual-def",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/65/11/09/1200x675_cmsv2_036733ee-a3ba-5936-bf73-36f29f316b55-9651109.jpg"
+          }
+        ]
+      },
+      {
+        "id": "hormuz-nato-us-rupture-2026",
+        "year": "Mar–Apr 2026",
+        "title": "Hormuz Crisis Triggers Alliance Rupture: Trump 'STAY AWAY'; Hegseth Refuses Article 5",
+        "type": "crisis",
+        "detail": "The US-Israel war against Iran and resulting closure of the Strait of Hormuz became the sharpest NATO crisis since the alliance's founding. European allies — led by France, Germany, and the UK — refused to join Trump's Hormuz military coalition, citing the war as 'not NATO's war.' Trump branded allies 'COWARDS' on Truth Social (March 17), then escalated to 'absolutely useless / STAY AWAY' (April 18). SecDef Hegseth refused to reaffirm Article 5 at a Pentagon briefing (March 31), the first time a US Defense Secretary conditioned mutual defense on presidential discretion. Italy denied US aircraft landing rights at Sigonella; Spain closed airspace; Poland refused to redeploy Patriot batteries. The Rutte-Trump White House meeting (April 8) ended without reassurance. European capitals drafted autonomous NATO contingency plans. Hormuz reopened via ceasefire April 17. Trump's 'STAY AWAY' post dismissed Europe's 40+ nation coalition. Former Sec-Gen Stoltenberg warned: 'It's not written in stone that NATO will exist for the next ten years.' (April 15).",
+        "sources": [
+          {
+            "name": "GB News",
+            "tier": 2,
+            "url": "https://www.gbnews.com/politics/us/donald-trump-nato-absolutely-useless-iran-war"
+          },
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2026/04/10/politics/nato-trump-iran-us-countries"
+          },
+          {
+            "name": "Wall Street Journal",
+            "tier": 2,
+            "url": "https://nato.news-pravda.com/nato/2026/04/15/100211.html"
+          }
+        ],
+        "lastUpdated": "2026-04-21T15:14:21.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.gbnews.com/politics/us/donald-trump-nato-absolutely-useless-iran-war",
+            "source": "GB News",
+            "thumbnail": "https://www.gbnews.com/media-library/image.png?id=65566883&width=1200&height=600&coordinates=0%2C60%2C0%2C60"
+          }
+        ]
+      },
+      {
+        "id": "orban-defeated-magyar-elected-apr2026",
+        "year": "Apr 13, 2026",
+        "title": "Orbán Defeated; NATO's Internal Obstructionist Removed",
+        "type": "diplomatic",
+        "detail": "Viktor Orbán conceded Hungary's parliamentary election after 16 years in power. Péter Magyar's Tisza party won 138 of 199 seats (53.6%), ending Hungary's role as NATO's most obstructionist internal voice. Orbán had blocked Ukraine's NATO membership, vetoed EU Ukraine loans, and maintained a pro-Moscow posture. Magyar pledged to rebuild Hungary's NATO and EU alignment, potentially shifting alliance consensus ahead of Helsingborg (May 21–22) and the Ankara Summit (July 7–8). Hungarian President Sulyok formally nominated Magyar as PM on April 15.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/orban-concedes-hungary-election-2026-04-13/"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/04/13/hungarys-incoming-pm-peter-magyar-demands-orbans-puppets-leave-the-country"
+          }
+        ],
+        "lastUpdated": "2026-04-21T15:14:21.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.euronews.com/my-europe/2026/04/13/hungarys-incoming-pm-peter-magyar-demands-orbans-puppets-leave-the-country",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/71/93/88/1200x675_cmsv2_63a0fa7a-423f-51cb-aafe-ad6149b41017-9719388.jpg"
+          }
+        ]
+      },
+      {
+        "id": "rutte-ankara-visit-july-summit-prep-apr21",
+        "year": "Apr 21, 2026",
+        "title": "Rutte Visits Ankara: July Summit Preparation; Turkey as Crisis-Era Host",
+        "type": "diplomatic",
+        "detail": "NATO Secretary General Rutte arrived in Ankara on April 21 for a closed two-day visit — meeting President Erdoğan, FM Fidan, and Defense Minister Güler — to prepare the July 7–8 NATO Leaders' Summit. The summit will be the first hosted by Turkey and a defining test of alliance cohesion under unprecedented US-NATO tension. Rutte's Ankara diplomacy marks the transition from crisis management (post-Hormuz) to institutional stabilization, with the Turkish summit providing both an opportunity for a unified message and a risk that Erdoğan leverages the host role for side-demands.",
+        "sources": [
+          {
+            "name": "NATO HQ",
+            "tier": 1,
+            "url": "https://www.nato.int/en/news-and-events/events/media-advisories/2026/04/20/nato-secretary-general-to-visit-turkiye"
+          },
+          {
+            "name": "Turkish Minute",
+            "tier": 2,
+            "url": "https://www.turkishminute.com/2026/04/20/nato-chief-rutte-to-visit-turkey-ahead-of-july-summit/"
+          }
+        ],
+        "lastUpdated": "2026-04-21T15:14:21.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.turkishminute.com/2026/04/20/nato-chief-rutte-to-visit-turkey-ahead-of-july-summit/",
+            "source": "Turkish Minute",
+            "thumbnail": "https://turkishminute.com/wp-content/uploads/2025/05/mark-rutte.jpg"
+          }
+        ]
+      },
+      {
+        "id": "germany-first-military-strategy-responsibility-europe-apr22",
+        "year": "Apr 22, 2026",
+        "title": "Germany Adopts First-Ever Military Strategy: 'Responsibility for Europe'",
+        "type": "spending",
+        "detail": "German Defense Minister Boris Pistorius unveiled Germany's first-ever formally adopted military strategy on April 22, titled 'Responsibility for Europe' — the most explicit statement of German military ambition since the founding of the Bundeswehr in 1955. The strategy names Russia as Germany's primary military threat and sets the goal of making the Bundeswehr Europe's strongest conventional army, with expansion from 185,000 to 260,000 personnel and reserve forces growing from 60,000 to 200,000. The EMA26 reform program includes 153 concrete measures and 580 implementation steps. Backed by the constitutional €500B Sondervermögen fund (March 2025), it operationalizes Merz's declaration that 'it is five minutes to midnight for Europe' — representing Germany's most consequential defense doctrine shift in the postwar era.",
+        "sources": [
+          {
+            "name": "Defense News",
+            "tier": 2,
+            "url": "https://www.defensenews.com/global/europe/2026/04/22/germany-unveils-strategy-for-becoming-europes-strongest-military-by-2039/"
+          },
+          {
+            "name": "German Federal Ministry of Defence",
+            "tier": 1,
+            "url": "https://www.bmvg.de/en/topics/security-policy"
+          }
+        ],
+        "lastUpdated": "2026-04-24T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.defensenews.com/global/europe/2026/04/22/germany-unveils-strategy-for-becoming-europes-strongest-military-by-2039/",
+            "source": "Defense News",
+            "thumbnail": "https://www.armytimes.com/resizer/v2/36FZDFWGNBFWVB64WEPPDNWKFA.jpg?width=1200&amp;auth=1949899081f4656931b25c877aa834a274962eb7a8ffdb6c9290d308bb118f9e"
+          }
+        ]
+      },
+      {
+        "id": "pentagon-spain-nato-suspension-threat-apr24",
+        "year": "Apr 24, 2026",
+        "title": "Pentagon Email Threatens Spain NATO Suspension, UK Falklands Leverage — First Documented Institutional Expulsion Threat",
+        "type": "crisis",
+        "detail": "A Reuters investigation published April 24 revealed a leaked Pentagon email listing punitive options against NATO allies that refused to support the US Iran war: suspending Spain from NATO, re-evaluating US support for UK Falklands sovereignty, and relocating Rota naval base to Eastern European allies. Spain had blocked Iran war operations from its territory, citing international law. Trump called Spain 'terrible'; Hegseth declared 'free-riding is over.' Spain PM Sanchez responded: 'absolute collaboration within the framework of international legality.' The email marks the alliance's deepest crisis: the first documented institutional process for expelling a NATO member — transforming Trump's rhetorical conditionality into Pentagon contingency planning for punishing allies. The EU Cyprus summit the same day formally mandated Article 42.7 crisis testing in response.",
+        "sources": [
+          {
+            "name": "Al Jazeera / Reuters",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/4/24/us-weighs-retaliation-against-nato-allies-over-iran-war-divisions-reuters"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-04-24/sanchez-pledges-cooperation-after-report-of-us-threat-over-nato"
+          }
+        ],
+        "lastUpdated": "2026-04-24T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.aljazeera.com/news/2026/4/24/us-weighs-retaliation-against-nato-allies-over-iran-war-divisions-reuters",
+            "source": "Al Jazeera / Reuters",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/2025-09-18T102815Z_1501269944_RC2AUGA872S8_RTRMADP_3_USA-TRUMP-BRITAIN-1777024593.jpg?resize=1920%2C1440"
+          }
+        ]
+      },
+      {
+        "id": "eu-cyprus-summit-article427-formal-mandate-apr24",
+        "year": "Apr 24, 2026",
+        "title": "EU Cyprus Summit Formally Mandates Article 42.7 Crisis Testing as NATO Fallback",
+        "type": "diplomatic",
+        "detail": "EU leaders convened in Nicosia, Cyprus on April 23–24 and formally mandated Article 42.7 crisis-testing exercises — the EU Treaty's mutual defense clause. Cypriot President Christodoulides: 'We need to give substance to Article 42.7.' Ambassador-level tabletop exercises begin immediately; defense ministers to follow in May, ahead of the NATO Helsingborg Foreign Ministers' meeting (May 21–22). The decision marks the transition from Brussels planning to a political mandate of 27 EU member states — the deepest institutional shift toward a post-NATO European security architecture since the EU's founding. The move responds to both the Washington Post investigation (April 23) and the Pentagon's Spain suspension threat (April 24).",
+        "sources": [
+          {
+            "name": "Xinhua",
+            "tier": 2,
+            "url": "https://english.news.cn/20260424/ee1764ca7fa342cc9bc0f3c6279daf98/c.html"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/04/23/newsletter-eu-leaders-weigh-a-nato-style-common-defence-clause"
+          }
+        ],
+        "lastUpdated": "2026-04-24T00:00:00Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.euronews.com/my-europe/2026/04/23/newsletter-eu-leaders-weigh-a-nato-style-common-defence-clause",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/73/23/32/1200x675_cmsv2_49bf7b8d-c577-5e50-8362-8252c4383c37-9732332.jpg"
+          }
+        ]
+      },
+      {
+        "id": "european-allies-back-spain-nato-legal-firewall-apr25",
+        "year": "Apr 25, 2026",
+        "title": "European Bloc Backs Spain; NATO Legal Firewall Blocks US Punishment Options; EU Article 42.7 Blueprint Published",
+        "type": "diplomatic",
+        "detail": "April 25 saw a three-part institutional response to the Pentagon's punishment email (April 24): (1) Germany and Italy publicly backed Spain's NATO membership, with Germany's government spokesperson stating it 'should not be questioned'; (2) NATO formally clarified its Washington Treaty contains no mechanism to suspend or expel a member — only voluntary withdrawal is possible under Article 13 — creating an institutional legal firewall against the Pentagon's contingency options; (3) EU Foreign Policy Chief Kaja Kallas published a detailed operational blueprint for activating Article 42.7, covering hybrid attacks, conventional armed attacks, and parallel triggering of both Article 42.7 and NATO Article 5 simultaneously. Kallas told Euronews: 'The EU mutual assistance clause doesn't contradict NATO.' The EU blueprint transitions Article 42.7 from political mandate (April 24) to active operational planning — the most consequential institutionalization of EU mutual defense since the clause's single prior invocation (France, November 2015 Paris attacks). The dual dynamic: US institutional punishment options checked by treaty law and European solidarity; EU autonomous defense architecture advancing in parallel.",
+        "sources": [
+          {
+            "name": "NPR",
+            "tier": 2,
+            "url": "https://www.npr.org/2026/04/24/nx-s1-5798597/europe-pushes-back-on-reported-u-s-plans-to-punish-nato-allies"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://euronewssource.com/europe/eu-mutual-assistance-clause-doesnt-contradict-nato-kallas-tells-euronews-as-trump-blasts-allies/"
+          }
+        ],
+        "lastUpdated": "2026-04-27T14:23:47.123Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.npr.org/2026/04/24/nx-s1-5798597/europe-pushes-back-on-reported-u-s-plans-to-punish-nato-allies",
+            "source": "NPR",
+            "thumbnail": "https://media.npr.org/include/images/facebook-default-wide-s1400-c85.jpg"
+          }
+        ]
+      },
+      {
+        "id": "macron-athens-eu-art427-stronger-nato-apr26",
+        "year": "Apr 26, 2026",
+        "title": "Macron in Athens: EU Article 42.7 is 'Stronger than NATO's Article 5'; France-Greece €3B Defense Pact",
+        "type": "diplomatic",
+        "detail": "French President Macron visited Athens and declared EU Article 42.7 is 'in substance, stronger than Article 5' of NATO's Washington Treaty, arguing it 'leaves no option' for member states when an ally is attacked — unlike Article 5's more discretionary language that Trump has made conditional on spending compliance. The statement came as Macron and Greek PM Mitsotakis signed a renewed €3 billion bilateral defense partnership: 24 Rafale jets, four frigates, MICA missiles. Macron cited both countries' joint dispatch of warships to Cyprus in March 2026 as Article 42.7 in practice: 'This mutual assurance and assistance clause is inviolable.' He stressed complementarity with NATO: 'not against anyone, not as an alternative to anything.' The Athens visit built on Kallas' blueprint (April 25) — demonstrating Article 42.7 advancing from institutional document to active bilateral treaty practice within 24 hours.",
+        "sources": [
+          {
+            "name": "The Defense Post",
+            "tier": 2,
+            "url": "https://thedefensepost.com/2026/04/26/macron-eu-defense-clause/"
+          },
+          {
+            "name": "AP",
+            "tier": 2,
+            "url": "https://wtop.com/europe/2026/04/leaders-of-france-and-greece-say-the-eus-defense-splurge-is-no-alternative-to-the-nato-alliance/"
+          }
+        ],
+        "lastUpdated": "2026-04-27T14:23:47.123Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://mb.com.ph/2026/04/25/leaders-of-france-and-greece-say-the-eus-defense-splurge-is-no-alternative-to-the-nato-alliance",
+            "source": "AP / Manila Bulletin",
+            "thumbnail": "https://mb.com.ph/manilabulletin/uploads/images/2026/04/25/96544.webp"
+          }
+        ]
+      },
+      {
+        "id": "trump-atlantic-alliance-failed-sword26-apr27",
+        "year": "Apr 27, 2026",
+        "title": "Trump Declares 'The Atlantic Alliance Has Failed Us'; SWORD 26 Exercises Launch with 15,500 Troops",
+        "type": "crisis",
+        "detail": "On April 26–27, 2026, Trump posted on Truth Social 'The Atlantic Alliance has failed us' — his starkest condemnation yet — while simultaneously, NATO's SWORD 26 exercises launched with 15,500 troops including 6,000 Americans conducting warfighting drills across the Baltic and Arctic. The juxtaposition encapsulated the split-level nature of the NATO crisis: the US military continued integrating with allies at the operational level while the US president publicly declared the alliance a failure. SWORD 26 was the first NATO exercise to integrate AI-enabled targeting and command systems across three linked drills: Saber Strike (Baltic), Immediate Response (High North), and Swift Response (equipment deployment). The 6,000 US troops participating were from the very formations Trump's political rhetoric was putting at risk of further drawdown.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/4/30/can-the-eus-article-42-7-offer-europe-nato-like-collective-defence",
+            "pole": "western"
+          },
+          {
+            "name": "Stars and Stripes",
+            "tier": 2,
+            "url": "https://www.stripes.com/theaters/europe/2026-05-03/germany-trump-troop-cuts-21561959.html",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-07T14:36:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/4/30/can-the-eus-article-42-7-offer-europe-nato-like-collective-defence",
+            "source": "Al Jazeera",
+            "thumbnail": "https://www.stripes.com/incoming/duvfta-9006956.jpg/alternates/LANDSCAPE_910/9006956.jpg"
+          }
+        ]
+      },
+      {
+        "id": "hegseth-congress-europe-primary-responsibility-apr29",
+        "year": "Apr 29, 2026",
+        "title": "Hegseth to Congress: Europe Must Take 'Primary Responsibility' for Its Own Conventional Defense",
+        "type": "statement",
+        "detail": "Defense Secretary Pete Hegseth testified before Congress on April 29, 2026, stating that the Department of Defense would 'continue to demand that NATO allies do their part to take primary responsibility for Europe's conventional defense.' Hegseth distinguished between 'model allies' — Poland, Finland, and the Baltic states, who spend above 4% of GDP and had cooperated on Hormuz operations — and those who 'failed to step up,' who would 'face consequences.' The testimony simultaneously revealed that NATO allies were considering skipping the 2028 NATO summit to avoid a confrontational encounter with Trump in his final full calendar year in office. Reuters cited six sources among allied governments who described the unprecedented deliberation about boycotting the alliance's signature annual event.",
+        "sources": [
+          {
+            "name": "Reuters",
+            "tier": 2,
+            "url": "https://www.reuters.com/world/europe/nato-allies-weigh-skipping-2028-summit-amid-us-tensions-2026-04-28/",
+            "pole": "western"
+          },
+          {
+            "name": "PBS NewsHour",
+            "tier": 2,
+            "url": "https://www.pbs.org/newshour/world/trump-says-commitment-to-nato-mutual-defense-guarantee-depends-on-your-definition",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-07T14:36:00.000Z"
+      },
+      {
+        "id": "pentagon-5000-troops-germany-withdrawal-may01",
+        "year": "May 1, 2026",
+        "title": "Pentagon Announces 5,000-Troop Withdrawal from Germany — First Concrete Punitive Drawdown of Iran War Rift",
+        "type": "crisis",
+        "detail": "On May 1, 2026, the Pentagon formally announced the withdrawal of approximately 5,000 US troops from Germany — the first concrete military drawdown directly linked to European allies' refusal to support US Iran war operations. The unit departing is one armored brigade combat team plus logistics support; even after withdrawal, approximately 30,000 US troops remain in Germany. Trump threatened to cut 'a lot further than 5,000' and specifically named Italy (~13,000 troops) and Spain (~3,500, Naval Station Rota) as next targets. NATO's command structure was not warned in advance — senior alliance officials including SACEUR Gen. Donahue learned of the decision through the Pentagon's public announcement, not prior consultation. German Defense Minister Pistorius called it 'anticipated' and said Germany is ready to shoulder more defense responsibility. Republican senators Roger Wicker and Rep. Mike Rogers issued a joint statement saying they were 'very concerned.' The announcement triggered Germany's formal request for 'urgent clarification.'",
+        "sources": [
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-05-01/us-to-withdraw-5-000-troops-from-germany",
+            "pole": "western"
+          },
+          {
+            "name": "Stars and Stripes",
+            "tier": 2,
+            "url": "https://www.stripes.com/theaters/europe/2026-05-01/trump-withdraw-5000-troops-germany-21550153.html",
+            "pole": "western"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "url": "https://www.npr.org/2026/05/02/g-s1-119864/u-s-withdraw-troops-germany",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-07T14:36:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.stripes.com/theaters/europe/2026-05-01/trump-withdraw-5000-troops-germany-21550153.html",
+            "source": "Stars and Stripes",
+            "thumbnail": "https://www.stripes.com/incoming/duvfta-9006956.jpg/alternates/LANDSCAPE_910/9006956.jpg"
+          }
+        ]
+      },
+      {
+        "id": "nato-dark-tomahawk-cancelled-ndaa-may05",
+        "year": "May 5, 2026",
+        "title": "NATO 'Still in the Dark' on US Withdrawal; Pentagon Cancels Tomahawk Deployment; NDAA §1249 Legal Bar Identified",
+        "type": "diplomatic",
+        "detail": "Four days after the Pentagon's May 1 announcement, NATO confirmed on May 5 it remained uninformed about the operational timeline and scope of the Germany drawdown. NATO spokesperson Alison Harte urged allies to 'invest more in defence'; Col. Martin O'Donnell said deterrence was unchanged. The lack of prior consultation — SACEUR and EUCOM having 'minimal advance notice' — confirmed the decision was political rather than military in origin. Compounding the shock, Euronews confirmed the Pentagon had also cancelled the deployment of a Long-Range Fires battalion to Germany — a unit equipped with Tomahawk land-attack cruise missiles and the new Army hypersonic weapons system, previously promised by the Biden administration. A Euronews legal analysis identified Section 1249 of the NDAA (FY2026), which prohibits using federal funds to reduce US personnel in Europe below 76,000 without congressional authorization — a threshold the planned 5,000 drawdown would breach. Democratic senators began preparing oversight letters.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/05/05/nato-still-in-the-dark-over-us-plans-to-withdraw-5000-troops",
+            "pole": "western"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/05/05/can-us-law-stop-trump-from-withdrawing-troops-from-europe",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-07T14:36:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/05/05/nato-still-in-the-dark-over-us-plans-to-withdraw-5000-troops",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/74/96/94/1536x864_cmsv2_dd8627d5-dc6e-5b91-bcb2-2bf9e374f308-9749694.jpg"
+          }
+        ]
+      },
+      {
+        "id": "trump-ct-strategy-terror-incubators-coalition-shuffle-may07",
+        "year": "May 7, 2026",
+        "title": "White House Labels NATO Allies 'Terror Incubators'; Poland and Lithuania Lobby for Germany Troops — Coalition Shuffle Accelerates",
+        "type": "crisis",
+        "detail": "May 7, 2026 marked a qualitative escalation in the NATO-US crisis: the Trump White House released a 16-page National Counterterrorism Strategy explicitly describing wealthy NATO allies as a 'financial, logistical, and recruitment hub for terrorists' and Western Europe as an 'incubator of terror threats' due to 'unfettered mass migration.' The document — the sharpest official US condemnation of European partners in alliance history — frames European governance itself as a national security threat to the United States, moving the confrontation beyond burden-sharing into civilizational critique. Simultaneously, Poland and Lithuania launched active lobbying campaigns to receive the 5,000 US troops being withdrawn from Germany rather than having them return to the US. Romania expanded its Mihail Kogălniceanu Air Base on the Black Sea to compete. Stars and Stripes characterized the dynamic as a 'coalition shuffle': eastern allies aligned with Washington actively competing for the American military presence that western allies are losing as punishment for refusing Iran war operations. The dual development — rhetorical rupture toward NATO's western members, bilateral deepening with its eastern members — reinforced that the US is not withdrawing from Europe entirely but restructuring its European military presence around political loyalty rather than alliance treaty commitments.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/05/07/white-house-calls-europe-incubator-for-terrorism-in-new-counter-terrorism-strategy",
+            "pole": "western"
+          },
+          {
+            "name": "White House",
+            "tier": 1,
+            "url": "https://www.whitehouse.gov/wp-content/uploads/2026/05/2026-USCT-Strategy-1.pdf",
+            "pole": "western"
+          },
+          {
+            "name": "Stars and Stripes",
+            "tier": 2,
+            "url": "https://www.stripes.com/theaters/europe/2026-05-07/trump-poland-lithuania-troops-21600285.html",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-07T14:36:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/05/07/white-house-calls-europe-incubator-for-terrorism-in-new-counter-terrorism-strategy",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/74/96/94/1536x864_cmsv2_dd8627d5-dc6e-5b91-bcb2-2bf9e374f308-9749694.jpg"
+          }
+        ]
+      },
+      {
+        "id": "rasmussen-nato-disintegrating-trump-poland-possible-may09",
+        "year": "May 9, 2026",
+        "title": "Rasmussen Declares NATO 'Disintegrating'; Trump Confirms Poland Troop Transfer 'Possible'; Allied Capitals Begin Formal Contingency Planning",
+        "type": "crisis",
+        "detail": "May 9, 2026 marked a further inflection point: former NATO Secretary General Anders Fogh Rasmussen (2009–2014) declared that 'what we are witnessing now is the disintegration of NATO, and this is dangerous,' citing the Germany troop withdrawal and Tomahawk cancellation as irreversible triggers and proposing a new 'coalition of the willing' for states meeting 5% GDP and committing to Article 5-equivalent guarantees — the most authoritative former-official condemnation of the alliance's breakdown to date. The same day, Trump publicly confirmed that shifting the 5,000 Germany troops to Poland rather than returning them to the US was 'possible' ('Poland would like that. I might do it'), formally validating the coalition shuffle logic. A Bloomberg analysis published May 9 reported that top NATO diplomats forecast further drawdowns, with Italy (~13,000 US troops) and Spain (~3,500 at Rota) as next targets — and that the US was also considering ending participation in European military exercises. By May 10, allied governments had begun formal contingency planning covering post-US infrastructure scenarios including Rota's Aegis destroyer hub and Aviano's nuclear sharing role. The week of May 7–10, 2026 therefore marked the moment the NATO-US crisis moved from rhetorical rupture to institutional decomposition: former senior officials diagnosing disintegration, the US president confirming a loyalty-based European footprint, and allied governments operationally planning for NATO without the United States.",
+        "sources": [
+          {
+            "name": "nato.news-pravda.com",
+            "tier": 2,
+            "url": "https://nato.news-pravda.com/nato/2026/05/09/102659.html",
+            "pole": "western"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/2026/05/09/trump-open-to-shifting-us-troops-from-germany-to-poland",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-05-09/nato-nations-brace-for-trump-to-pull-more-troops-from-europe",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-10T14:05:23.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/2026/05/09/trump-open-to-shifting-us-troops-from-germany-to-poland",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/75/26/04/1536x864_cmsv2_add68ae0-f375-5f29-9e59-c83dc4e6f043-9752604.jpg"
+          }
+        ]
+      },
+      {
+        "id": "rutte-sybiha-helsingborg-emergency-prep-may11",
+        "year": "May 11, 2026",
+        "title": "Rutte Meets Ukrainian FM Sybiha at NATO HQ — Helsingborg Reconfigured as Emergency Session; Poland Pushes 5% GDP by 2030; Norway Surpasses US in Per-Capita Defense Spending",
+        "type": "diplomatic",
+        "detail": "May 11, 2026: NATO Secretary General Rutte met Ukrainian FM Andrii Sybiha at NATO HQ Brussels — the first formal alliance-Ukraine bilateral following Rasmussen's 'disintegrating' declaration — signaling NATO's effort to hold its two simultaneous crises together: Russia's ongoing aggression against Ukraine and the transatlantic rupture from Trump's withdrawal signals. The Helsingborg NATO Foreign Ministers Meeting (May 21–22) was formally reconfigured as an emergency consultative session, with four agenda clusters confirmed: Ukraine support sustainability post-US troop reduction; 5% GDP target timelines (Poland pushing for 2030 acceleration, not the agreed 2035); Rota and Aviano succession planning in the event of US Italy/Spain drawdowns; and Rasmussen's coalition of the willing governance proposal. The EU Foreign Affairs Council (Defence) was scheduled for May 12 — one day later — providing the EU track's counterpart, with Article 42.7 operationalization (mandated at the April 24 Cyprus summit) as the institutional vehicle for post-US contingency planning. In parallel, Norway was confirmed as the first European NATO member to surpass the United States in per-capita defense spending — a statistical milestone that inverts the burden-sharing argument deployed by Washington since the 2014 Wales Pledge. Poland simultaneously called for the NATO 5% GDP target to be achieved by 2030, not the agreed 2035 deadline, backed by the Baltic states. The May 11–21 window represents the most concentrated diplomatic pre-ministerial preparation since Russia's February 2022 invasion. Next: Helsingborg FMM May 21–22; Ankara Leaders' Summit July 7–8, 2026.",
+        "sources": [
+          {
+            "name": "NATO Media Advisory",
+            "tier": 1,
+            "url": "https://www.nato.int/en/news-and-events/events/media-advisories/2026/05/08/nato-secretary-general-meets-the-minister-of-foreign-affairs-of-ukraine",
+            "pole": "western"
+          },
+          {
+            "name": "EU Council",
+            "tier": 1,
+            "url": "https://www.consilium.europa.eu/en/meetings/fac/2026/05/12/",
+            "pole": "western"
+          },
+          {
+            "name": "US News",
+            "tier": 2,
+            "url": "https://www.usnews.com/news/world/articles/2026-05-06/nato-must-spend-5-of-gdp-on-defence-by-2030-poland-says",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-11T14:32:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.nato.int/en/news-and-events/events/media-advisories/2026/05/08/nato-secretary-general-meets-the-minister-of-foreign-affairs-of-ukraine",
+            "caption": "NATO Secretary General Rutte meets Ukrainian FM Sybiha at NATO HQ Brussels, May 11, 2026",
+            "source": "NATO"
+          }
+        ]
+      },
+      {
+        "id": "eu-fac-defence-may12-kallas-threat-analysis",
+        "year": "May 12, 2026",
+        "title": "EU FAC Defence: Kallas Chairs Emergency Session on Ukraine Aid (€63B), Threat Analysis, and €90B Defense Loan",
+        "type": "diplomatic",
+        "detail": "On May 12, 2026, EU defence and foreign ministers convened in Brussels for the EU Foreign Affairs Council (Defence) — the EU institutional counterpart to NATO's emergency Helsingborg pre-planning. Chaired by EU High Representative Kaja Kallas with NATO Deputy Secretary General Radmila Shekerinska participating and Ukrainian Defence Minister Mykhailo Fedorov joining via VTC, the session reviewed an updated EU Threat Analysis, EU total military support for Ukraine (€63B total, €25B in 2025 alone), and debated a proposed €90B EU defense loan (€60B defense-targeted, contested on 'Buy European' conditions). Hungary's blocking of €6.6B in European Peace Facility funds left €43B in member-state reimbursements unresolved. Ministers discussed expanding EUMAM military training inside Ukraine post-truce and Kallas emphasized support to Lebanese Armed Forces. The EU-track session — running in parallel with NATO's 10-day Helsingborg pre-brief window — confirmed that both institutions are now operating simultaneously in emergency mode, with Article 42.7 operationalization (mandated at the April 24 Cyprus summit) as the EU's structural vehicle for post-US contingency architecture. Kallas: 'For Europe to take a more active role, we must agree amongst ourselves what we want to talk to Russia about and what our red lines are.'",
+        "sources": [
+          {
+            "name": "EU Council",
+            "tier": 1,
+            "url": "https://www.consilium.europa.eu/en/meetings/fac/2026/05/12/",
+            "pole": "western"
+          },
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/my-europe/2026/05/12/newsletter-the-eus-best-offence-is-a-good-defence",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-12T14:41:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/my-europe/2026/05/12/newsletter-the-eus-best-offence-is-a-good-defence",
+            "caption": "EU Foreign Affairs Council (Defence) Brussels, May 12, 2026",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/75/50/90/1536x864_cmsv2_2bc58342-791d-58b4-beec-69c04f0d1dad-9755090.jpg"
+          }
+        ]
+      },
+      {
+        "id": "b9-nordic-summit-nato3-declaration-may13",
+        "year": "May 13, 2026",
+        "title": "B9 + Nordic Allies Summit Bucharest: 'NATO 3.0' Framework Adopted — Russia Declared 'Most Significant Threat'; Rutte Proposes 0.25% GDP Ukraine Pledge",
+        "type": "summit",
+        "detail": "NATO Secretary General Rutte attended the B9 + Nordic Allies Summit at Cotroceni Palace in Bucharest alongside Presidents Dan (Romania), Nawrocki (Poland), Zelensky (Ukraine), and allied delegations from 13 Eastern flank and Nordic members. The joint declaration explicitly framed the alliance's structural evolution as 'NATO 3.0': European allies take primary responsibility for conventional defense, with the US providing nuclear deterrence and intelligence backstop. Russia was designated 'the most significant and direct long-term threat.' Rutte formally proposed 0.25% GDP/year Ukraine military commitment from all 32 allies (~$143B/year total) — designed to be US-independent and insulated from Washington's political shifts. Expected Helsingborg and Ankara agenda item; southern ally resistance reported. Rutte: 'We need a stronger Europe in a stronger NATO.'",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/nato-secretary-general-at-b9-and-nordic-allies-summit",
+            "pole": "western"
+          },
+          {
+            "name": "NATO Press Transcripts",
+            "tier": 1,
+            "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/05/13/joint-press-statements-by-nato-secretary-general-mark-rutte-president-of-romania-nicusor-dan-and-president-of-poland-karol-nawrocki-at-the-b9-summit",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-15T14:22:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/nato-secretary-general-at-b9-and-nordic-allies-summit",
+            "caption": "B9 + Nordic Allies Summit Bucharest, May 13, 2026",
+            "source": "NATO",
+            "thumbnail": "https://www.nato.int/en/news-and-events/articles/news/2026/05/13/nato-secretary-general-at-b9-and-nordic-allies-summit"
+          }
+        ]
+      },
+      {
+        "id": "cnn-full-troop-cuts-10200-europe-may14",
+        "year": "May 14, 2026",
+        "title": "CNN Reveals Full Scope of US Troop Cuts: 10,200+ Soldiers Affected Across Germany and Poland; NDAA §1249 Floor Now in Conflict",
+        "type": "crisis",
+        "detail": "CNN published a comprehensive breakdown of Trump's European troop cuts on May 14, revealing total impact of 10,200+ soldiers: the Germany 5,000-troop withdrawal (in-process) plus the cancelled rotation of the 2nd ABCT from the 1st Cavalry Division (4,700, Poland) and a cancelled 500-soldier rocket/missile battalion. CFR noted the missile cancellations — following the Tomahawk/hypersonic cancellation confirmed May 5 — represent a larger strategic retreat than the troop numbers suggest, degrading NATO conventional deterrence against Russia. The cumulative US European troop level (~70,000) would drop below the NDAA §1249 statutory floor of 76,000, requiring congressional authorization to complete — a potential constitutional conflict not yet acknowledged by the White House.",
+        "sources": [
+          {
+            "name": "CNN",
+            "tier": 2,
+            "url": "https://www.cnn.com/2026/05/14/politics/us-military-troop-numbers-europe-trump",
+            "pole": "western"
+          },
+          {
+            "name": "CFR",
+            "tier": 3,
+            "url": "https://www.cfr.org/articles/trump-is-pulling-troops-from-germany-the-missiles-are-a-bigger-problem",
+            "pole": "western"
+          },
+          {
+            "name": "NBC News",
+            "tier": 2,
+            "url": "https://www.nbcnews.com/world/europe/us-scraps-deployment-4000-troops-poland-rcna345283",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-15T14:22:00.000Z",
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.cnn.com/2026/05/14/politics/us-military-troop-numbers-europe-trump",
+            "caption": "CNN breakdown of US troop cuts in Europe, May 14, 2026",
+            "source": "CNN",
+            "thumbnail": "https://www.cnn.com/2026/05/14/politics/us-military-troop-numbers-europe-trump"
+          }
+        ]
+      },
+      {
+        "id": "sweden-rutte-revinge-msb-helsingborg-t8-may13",
+        "year": "May 13, 2026",
+        "title": "Sweden Announces Rutte-Kristersson Bilateral + MSB Revinge Civil Defence Demo — Helsingborg T-8 Days; Total Defence Model on Display",
+        "type": "diplomatic",
+        "detail": "On May 13, 2026, the Swedish government announced that NATO Secretary General Rutte will visit Sweden on May 21 for a bilateral meeting with PM Ulf Kristersson, Defence Minister Pål Jonson, and Civil Defence Minister Carl-Oskar Bohlin, centred on a demonstration at the Swedish Civil Defence and Resilience Agency (MSB) training centre in Revinge, Skåne. The visit — scheduled exactly 8 days before the Helsingborg NATO Foreign Ministers Meeting (May 21–22) — is Sweden's strategic signal to the alliance that European resilience is being built from the ground up. Rutte will observe air-threat management exercises and civilian-military cooperation demonstrations under Sweden's totalförsvar (total defence) framework, which integrates municipal governments, private enterprise, emergency services, and the population into national security planning alongside conventional forces. Sweden joined NATO in March 2024 and is hosting the first NATO ministerial on its soil. The Helsingborg FMM agenda has been reconfigured as an emergency session with four clusters: Ukraine support post-US withdrawal, 5% GDP target acceleration, Rota/Aviano succession planning, and governance reform proposals. The May 13 announcement arrives against the backdrop of the dual emergency track: EU FAC Defence concluded May 12 (Kallas: 'we must agree on our red lines'), allied contingency planning formally underway since May 10, and Rasmussen's 'disintegrating' declaration (May 9). Next: Helsingborg FMM May 21–22; Ankara Leaders' Summit July 7–8, 2026.",
+        "sources": [
+          {
+            "name": "Swedish Government",
+            "tier": 1,
+            "url": "https://www.government.se/press-releases/2026/05/prime-minister-to-receive-nato-secretary-general/",
+            "pole": "western"
+          },
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://www.nato.int/en/news-and-events/events/media-advisories/2026/04/02/meeting-of-nato-minister-of-foreign-affairs-in-helsingborg-sweden-21-22-may-2026",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-13T15:42:58.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.kpbs.org/news/international/2026/05/08/fallout-from-the-iran-war-may-include-a-nato-where-the-u-s-is-no-longer-its-leader",
+            "caption": "NATO resilience: Sweden showcases total defence model to Rutte ahead of Helsingborg FMM, May 13, 2026",
+            "source": "KPBS/NPR",
+            "thumbnail": "https://npr-brightspot.s3.amazonaws.com/96/42/f231853c4e508418a9afac2bdff3/gettyimages-2262286023.jpg"
+          }
+        ]
+      },
+      {
+        "id": "spiegel-us-nato-military-contribution-cuts-may26",
+        "year": "May 26, 2026",
+        "title": "Der Spiegel Exclusive: US Secretly Notifies Allies of Sweeping Military Cuts — Jets Minus One-Third, Bombers Halved, Zero Submarines, Zero Drones",
+        "type": "crisis",
+        "detail": "Der Spiegel published a bombshell exclusive on May 26, 2026: the US Pentagon secretly notified European NATO allies at a confidential Brussels meeting of sweeping reductions in American military contributions to the alliance — far beyond the already-confirmed 10,200+ troop cuts. Pentagon adviser Alexander Velez-Green delivered the message; European attendees were described as 'shocked.' Fighter jets cut by one-third; strategic bombers halved; zero US submarines contributed; zero US drones; warships significantly reduced. The US framing: reallocation toward a potential Indo-Pacific/China conflict. European allies must have a credible gap-filling plan ready before the Ankara Leaders' Summit (July 7–8, 2026). The submarine and drone cuts strike at NATO's ISR and anti-submarine warfare architecture. Coming just four days after Helsingborg closed without reassurance, the disclosures reveal the full scope of US disengagement that was underway even as Rubio spoke of 'expectations' on stage with Rutte.",
+        "sources": [
+          {
+            "name": "Der Spiegel",
+            "tier": 2,
+            "url": "https://www.spiegel.de/politik/ausland/nato-usa-soll-massiv-militaerbeitraege-kuerzten-berichtet-spiegel-a-00000000-0002-0001-0000-000204133999",
+            "pole": "western"
+          },
+          {
+            "name": "Pravda EU",
+            "tier": 3,
+            "url": "https://eu.news-pravda.com/world/2026/05/26/199899.html",
+            "pole": "international"
+          },
+          {
+            "name": "Athens Times",
+            "tier": 3,
+            "url": "https://athens-times.com/spiegel-u-s-plans-major-reduction-in-nato-military-contributions/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-26T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://eu.news-pravda.com/world/2026/05/26/199899.html",
+            "caption": "US plans to slash NATO contributions: fighter jets, bombers, submarines, drones — Der Spiegel exclusive",
+            "source": "Pravda EU / Der Spiegel",
+            "thumbnail": "https://eu.news-pravda.com/img/20260526/91800ee9a14e19ff993d8bb11d18445e.jpg"
+          }
+        ]
+      },
+      {
+        "id": "colby-nac-brussels-force-posture-briefing-2026-08-27",
+        "year": "Aug 27, 2026",
+        "title": "Colby Briefs NATO Ambassadors in Brussels: Loyalty Questionnaire Sent 'In the Spirit of NATO 3.0'; Deep Troop Cuts Now Seen as Unlikely",
+        "type": "diplomatic",
+        "detail": "US Under Secretary of War for Policy Elbridge Colby met the North Atlantic Council at NATO headquarters in Brussels on August 27, 2026, briefing all 32 ambassadors on the six-month Europe force-posture review launched in July. Colby confirmed on the record that the allied loyalty questionnaire leaked by Bloomberg on August 14 — criticized by former officials Karlin and Smith in Defense One on August 23 as eroding rather than building trust — was sent deliberately \"in the spirit of NATO 3.0,\" with the review now focused on resolving disputes over base access, basing rights and overflight rather than blunt troop drawdowns. NATO Secretary General Mark Rutte credited the review process with helping drive a $139 billion increase in 2025 defense spending by European allies and Canada. Foreign Policy reported the same day that, despite alarm triggered by the May 26 Der Spiegel leak on prospective jet, bomber, submarine and drone cuts, the review is now unlikely to produce major US troop reductions.",
+        "sources": [
+          {
+            "name": "NATO",
+            "tier": 1,
+            "url": "https://nato.int/en/news-and-events/articles/news/2026/08/27/secretary-general-welcomes-united-states-under-secretary-of-war-for-policy-to-nato-headquarters",
+            "pole": "international"
+          },
+          {
+            "name": "Foreign Policy",
+            "tier": 2,
+            "url": "https://foreignpolicy.com/2026/08/27/us-europe-defense-posture-review-troops-elbridge-colby-hegseth-nato/",
+            "pole": "western"
+          },
+          {
+            "name": "US News & World Report",
+            "tier": 2,
+            "url": "https://www.usnews.com/news/world/articles/2026-08-27/pentagon-policy-chief-tells-nato-allies-u-s-wants-european-led-defense-of-continent",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://nato.int/en/news-and-events/articles/news/2026/08/27/secretary-general-welcomes-united-states-under-secretary-of-war-for-policy-to-nato-headquarters",
+            "caption": "Press statements by NATO Secretary General Mark Rutte and US Under Secretary of War for Policy Elbridge A. Colby at NATO Headquarters, Brussels",
+            "source": "NATO",
+            "thumbnail": "https://www.nato.int/content/dam/nato/webready/news/2020-2029/2026/08/27/visit-usow-us/20260827_visit-usow-us_0010.jpg"
+          }
+        ],
+        "lastUpdated": "2026-08-28T00:00:00.000Z"
+      }
+    ]
+  }
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "id": "uk-holiday-bookings-decline-april-2026",
+    "year": "Apr 14, 2026",
+    "title": "UK Holiday Bookings Plummet Amid Cost of Living Crisis and Iran War Impact",
+    "type": "economic",
+    "detail": "UK travel industry reports significant decline in holiday bookings as consumers cut discretionary spending due to persistent cost of living pressures. The ongoing Iran conflict has further dampened consumer confidence and increased travel insurance costs, creating a double impact on the leisure sector. This trend reflects broader economic stress as households prioritize essential spending over travel and entertainment.",
+    "sources": [
+      {
+        "name": "The Guardian",
+        "tier": 2,
+        "url": "https://www.theguardian.com/business/2026/apr/14/holidays-hit-cost-of-living-iran-war-travel",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.theguardian.com/business/2026/apr/14/holidays-hit-cost-of-living-iran-war-travel",
+        "caption": "UK consumers cutting back on holiday spending amid economic pressures and geopolitical uncertainty",
+        "source": "theguardian.com",
+        "thumbnail": "https://i.guim.co.uk/img/media/87fc69c6bbe2c5863979e9709b865a851ab18f84/115_0_4504_3604/master/4504.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=1ace1bdb0b21851d4e262583043d65b1"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "undp-india-poverty-warning-april-2026",
+    "year": "Apr 14, 2026",
+    "title": "UNDP Warns West Asia Conflict Could Push 2.5 Million Indians Into Poverty",
+    "type": "economic",
+    "detail": "A United Nations Development Programme report highlights how the ongoing West Asia conflict threatens to reverse poverty reduction gains in India, potentially pushing 2.5 million people below the poverty line. The warning underscores how regional conflicts can trigger broader economic instability and social regression in emerging markets, adding to global recession pressures through reduced consumption and increased fiscal strain on developing economies.",
+    "sources": [
+      {
+        "name": "The Hindu",
+        "tier": 2,
+        "url": "https://www.thehindu.com/news/international/west-asia-conflict-threatens-to-push-25-million-people-in-india-into-poverty-undp-report/article70860337.ece",
+        "pole": "eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.thehindu.com/news/international/west-asia-conflict-threatens-to-push-25-million-people-in-india-into-poverty-undp-report/article70860337.ece",
+        "caption": "UNDP report warns of poverty increase in India due to West Asia conflict",
+        "source": "thehindu.com",
+        "thumbnail": "https://th-i.thgim.com/public/incoming/rjqkgt/article70860418.ece/alternates/LANDSCAPE_1200/iStock-1223582779.jpg"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "official_claim"
+  },
+  {
+    "id": "china-export-slowdown-iran-war-april-2026",
+    "year": "Apr 14, 2026",
+    "title": "China's Export Engine Falters as Iran War Dampens Global Demand",
+    "type": "trade",
+    "detail": "China's export sector shows signs of strain as the Iran war creates uncertainty in global markets and reduces international demand for Chinese goods. The slowdown in China's manufacturing export engine poses significant risks to global economic stability, given China's central role in international supply chains and its contribution to global growth. This development adds to mounting concerns about a synchronized global economic downturn.",
+    "sources": [
+      {
+        "name": "The Japan Times",
+        "tier": 2,
+        "url": "https://www.japantimes.co.jp/business/2026/04/14/china-exports-iran-war-demand/",
+        "pole": "eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.japantimes.co.jp/business/2026/04/14/china-exports-iran-war-demand/",
+        "caption": "China's export sector faces headwinds from reduced global demand amid Iran conflict",
+        "source": "japantimes.co.jp",
+        "thumbnail": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/04/14/534815.JPG?v=3.1"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "imf-global-growth-cut-hormuz-blockade-april-2026",
+    "year": "Apr 14, 2026",
+    "title": "IMF Slashes Global Growth Forecast as Strait of Hormuz Blockade Threatens Recovery",
+    "type": "economic",
+    "detail": "The International Monetary Fund issued an emergency downgrade to its global growth projections, citing the ongoing blockade of the Strait of Hormuz as a critical threat to the world economy. The IMF warned that disrupted oil flows through the strategic waterway could trigger a global recession, with emerging markets particularly vulnerable to energy price shocks and supply chain disruptions. The fund called for coordinated international action to restore maritime trade flows.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/economy/2026/4/14/imf-cuts-global-growth-forecast-during-hormuz-blockade?traffic_source=rss",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/economy/2026/4/14/imf-cuts-global-growth-forecast-during-hormuz-blockade?traffic_source=rss",
+        "caption": "IMF headquarters as the fund issues emergency growth downgrades amid Strait of Hormuz crisis",
+        "source": "aljazeera.com",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/04/afp_69de70f95efa-1776185593.jpg?resize=1920%2C1440"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "canada-suspends-gas-tax-fuel-costs-april-2026",
+    "year": "Apr 14, 2026",
+    "title": "Canada Suspends Federal Gas Tax as War-Driven Fuel Costs Threaten Economic Recovery",
+    "type": "policy",
+    "detail": "Prime Minister Mark Carney announced the temporary suspension of Canada's federal gas tax in response to soaring fuel costs driven by the ongoing Middle East conflict and Strait of Hormuz disruptions. The emergency measure aims to provide immediate relief to Canadian consumers and businesses facing mounting inflationary pressures that threaten to derail economic recovery efforts. The suspension represents a significant fiscal intervention as policymakers grapple with the economic fallout from geopolitical tensions affecting global energy markets.",
+    "sources": [
+      {
+        "name": "New York Times",
+        "tier": 2,
+        "url": "https://www.nytimes.com/2026/04/14/world/middleeast/carney-suspends-fuel-tax.html",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.nytimes.com/2026/04/14/world/middleeast/carney-suspends-fuel-tax.html",
+        "caption": "Canada suspends federal gas tax amid war-driven fuel cost surge",
+        "source": "nytimes.com"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  },
+  {
+    "id": "imf-global-growth-downgrade-april-2026",
+    "year": "Apr 14, 2026",
+    "title": "IMF Downgrades Global Growth Outlook, Warns of Worsening Economic Scenario",
+    "type": "economic",
+    "detail": "The International Monetary Fund has cut its global growth forecast and warned that the world economy is drifting toward a more adverse scenario. The downgrade reflects mounting concerns over persistent inflationary pressures, geopolitical tensions affecting energy markets, and slowing momentum in major economies. The IMF's revised projections highlight increasing risks to the global recovery as central banks navigate between controlling inflation and supporting growth.",
+    "sources": [
+      {
+        "name": "The Japan Times",
+        "tier": 2,
+        "url": "https://www.japantimes.co.jp/business/2026/04/15/economy/imf-cuts-growth-outlook/",
+        "pole": "eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.japantimes.co.jp/business/2026/04/15/economy/imf-cuts-growth-outlook/",
+        "caption": "IMF warns of deteriorating global economic conditions as growth forecasts are revised downward",
+        "source": "japantimes.co.jp",
+        "thumbnail": "https://www.japantimes.co.jp/japantimes/uploads/images/2026/04/15/534866.jpg?v=3.1"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified"
+  }
+]

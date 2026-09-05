@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-28T01:02:36.554Z",
+  "tracker": "usmca-trade-rupture",
+  "sections": {
+    "kpis": {
+      "count": 11,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 39,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 20,
+      "status": "updated"
+    },
+    "mapLines": {
+      "count": 17,
+      "status": "updated"
+    },
+    "econ": {
+      "count": 10,
+      "status": "ok"
+    },
+    "claims": {
+      "count": 18,
+      "status": "updated"
+    },
+    "political": {
+      "count": 18,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

@@ -1,0 +1,209 @@
+[
+  {
+    "id": "iran-war-day-15-sitrep",
+    "year": "Mar 14",
+    "title": "Day 15: US Bombs Kharg Island Oil Terminal; Pentagon Vows to 'Ramp Up' Campaign",
+    "type": "military",
+    "detail": "The Iran-US/Israel war enters its 16th day with the United States escalating to strike Kharg Island — Iran's primary oil export terminal responsible for ~90% of its crude exports — marking the most significant economic infrastructure strike of the war. The Pentagon vowed to 'ramp up' the military campaign. Day 15 cumulative: Iran Health Ministry confirms 1,444+ killed, 18,551+ injured (official floor); HRANA estimates exceed 2,800. Lebanon: 773+ killed, 800K+ displaced. US KIA updated to 13. IDF also struck Shiraz (underground ballistic missile production, Shahid Dastghaib air base), Tehran (air defense arrays, weapons production), and Ahvaz (IRGC Ground Forces HQ) on March 13.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "CENTCOM",
+        "tier": 1,
+        "pole": "western"
+      },
+      {
+        "name": "Alma Research",
+        "tier": 3,
+        "url": "https://israel-alma.org/daily-report-the-second-iran-war-march-13-2026-1600/",
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-14T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran",
+        "caption": "Day 15: US Bombs Kharg Island Oil Terminal; Pentagon Vows to 'Ramp Up' Campaign",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/ap_69b4917c18fd9-1773441404.jpg?resize=1920%2C1440"
+      }
+    ]
+  },
+  {
+    "id": "us-kharg-island-strike-mar14",
+    "year": "Mar 14",
+    "title": "US Bombs Kharg Island — Iran's Main Oil Export Terminal Struck for First Time",
+    "type": "military",
+    "detail": "US forces bombed Kharg Island in the Persian Gulf, the hub through which approximately 90% of Iran's crude oil exports transit. The strike on Kharg Island represents a dramatic escalation, directly targeting Iran's primary source of hard currency. Al Jazeera reported the strike via its live blog as the Pentagon simultaneously vowed to 'ramp up' the military campaign against Iran. Iran has warned that any direct attack on Kharg Island could push oil prices to $200/barrel. The IEA's record 400M barrel reserve release has thus far been insufficient to offset Hormuz disruption; the Kharg strike adds pressure on global supply from the export side as well.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Pentagon",
+        "tier": 1,
+        "pole": "western"
+      }
+    ],
+    "weaponTypes": [
+      "mixed"
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-14T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran",
+        "caption": "US Bombs Kharg Island — Iran's Main Oil Export Terminal Struck for First Time",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/ap_69b4917c18fd9-1773441404.jpg?resize=1920%2C1440"
+      }
+    ]
+  },
+  {
+    "id": "idf-shiraz-ballistic-missile-mar13",
+    "year": "Mar 13",
+    "title": "IDF Strikes Shiraz — Underground Ballistic Missile Production, Shahid Dastghaib Airbase",
+    "type": "military",
+    "detail": "Israeli Air Force struck Shiraz (Fars Province) on March 13, targeting underground ballistic missile production and storage facilities and the Shahid Dastghaib air base. The Alma Research daily report identified this as a key Day 14 strike targeting Iran's remaining ballistic missile production capacity. Shahid Dastghaib air base is one of Iran's primary IRIAF installations in southern Iran, previously used to support long-range drone and missile operations. The strikes add to the 6,000+ targets CENTCOM has confirmed struck since February 28.",
+    "sources": [
+      {
+        "name": "Alma Research",
+        "tier": 3,
+        "url": "https://israel-alma.org/daily-report-the-second-iran-war-march-13-2026-1600/",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran",
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": [
+      "cruise"
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-14T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://israel-alma.org/daily-report-the-second-iran-war-march-13-2026-1600/",
+        "caption": "IDF Strikes Shiraz — Underground Ballistic Missile Production, Shahid Dastghaib Airbase",
+        "source": "Alma Research",
+        "thumbnail": "https://israel-alma.org/wp-content/uploads/2026/03/תמונה-ראשית-15.jpg"
+      }
+    ]
+  },
+  {
+    "id": "idf-ahvaz-irgc-groundforces-mar13",
+    "year": "Mar 13",
+    "title": "IDF Hits Ahvaz — IRGC Ground Forces HQ and Internal Security HQ Destroyed",
+    "type": "military",
+    "detail": "Israeli forces struck Ahvaz (Khuzestan Province) on March 13, targeting the IRGC Ground Forces headquarters and an internal security headquarters. Khuzestan Province is strategically significant as Iran's main oil-producing region and borders Iraq. The IRGC Ground Forces HQ in Ahvaz serves as a key command node for western and southwestern Iran. The strike follows a pattern of eliminating regional command infrastructure across all 30/31 of Iran's provinces.",
+    "sources": [
+      {
+        "name": "Alma Research",
+        "tier": 3,
+        "url": "https://israel-alma.org/daily-report-the-second-iran-war-march-13-2026-1600/",
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      }
+    ],
+    "weaponTypes": [
+      "cruise"
+    ],
+    "confidence": "medium",
+    "lastUpdated": "2026-03-14T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://israel-alma.org/daily-report-the-second-iran-war-march-13-2026-1600/",
+        "caption": "IDF Hits Ahvaz — IRGC Ground Forces HQ and Internal Security HQ Destroyed",
+        "source": "Alma Research",
+        "thumbnail": "https://israel-alma.org/wp-content/uploads/2026/03/תמונה-ראשית-15.jpg"
+      }
+    ]
+  },
+  {
+    "id": "us-iran-casualties-update-mar14",
+    "year": "Mar 14",
+    "title": "Casualty Update: Iran Health Ministry 1,444+ Killed; US KIA Rises to 13; Lebanon 773+",
+    "type": "humanitarian",
+    "detail": "Updated casualty figures as of Day 15 (March 14): Iran's Health Ministry officially confirms 1,444+ killed and 18,551+ injured — this is the government's floor figure; HRANA NGO estimates exceed 2,800 including 181+ children; Hengaw's 10-day estimate was 4,300+. US service member death toll has risen to 13 KIA (per Time and NPR; includes 6 Army Reserve killed in Kuwait drone strike Feb 28, additional personnel since). Lebanon: 773+ killed (including 98 children), 1,586+ injured, 800,000+ displaced from continued Israeli strikes. Israel: 15 killed, 2,000+ wounded from Iranian missile attacks. All figures remain fluid due to Iran's ongoing internet blackout (290+ consecutive hours at ~1% connectivity).",
+    "sources": [
+      {
+        "name": "Iran Health Ministry / Al Jazeera",
+        "tier": 1,
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Time",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Lebanese health authorities",
+        "tier": 1,
+        "pole": "middle_eastern"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-14T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker",
+        "caption": "Casualty Update: Iran Health Ministry 1,444+ Killed; US KIA Rises to 13; Lebanon 773+",
+        "source": "Iran Health Ministry / Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/Live-tracker-04-1772372283.png?resize=1200%2C630"
+      }
+    ]
+  },
+  {
+    "id": "pentagon-ramp-up-statement-mar14",
+    "year": "Mar 14",
+    "title": "Pentagon Vows to 'Ramp Up' Campaign as War Enters Fourth Week",
+    "type": "military",
+    "detail": "The Pentagon publicly vowed to 'ramp up' the US military campaign against Iran as the conflict enters its 16th day. The statement accompanies the Kharg Island strike and signals that despite Trump's claim that 'there is practically nothing left to hit,' the US is expanding target sets to include economic infrastructure critical to Iran's ability to finance its war effort. The White House press secretary had previously stated the war would continue for 'four to six more weeks.' Iran has responded by reiterating that Hormuz will remain closed and that it is 'studying expanding the war to additional fronts.'",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran",
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "Pentagon",
+        "tier": 1,
+        "pole": "western"
+      }
+    ],
+    "confidence": "high",
+    "lastUpdated": "2026-03-14T06:00:00.000Z",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/liveblog/2026/3/14/iran-war-live-pentagon-vows-to-ramp-up-us-military-campaign-against-iran",
+        "caption": "Pentagon Vows to 'Ramp Up' Campaign as War Enters Fourth Week",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/03/ap_69b4917c18fd9-1773441404.jpg?resize=1920%2C1440"
+      }
+    ]
+  }
+]

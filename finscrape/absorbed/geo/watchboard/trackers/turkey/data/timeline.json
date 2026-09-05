@@ -1,0 +1,1648 @@
+[
+  {
+    "era": "Ottoman Empire: Founding & Expansion (1299–1453)",
+    "events": [
+      {
+        "id": "ottoman-founding-1299",
+        "year": "1299",
+        "title": "Founding of the Ottoman Principality",
+        "type": "political",
+        "detail": "Osman I (Osman Gazi) establishes an independent principality in northwestern Anatolia, centered around Söğüt and Domaniç near Bursa. Breaking away from the weakening Seljuk Sultanate of Rum, Osman begins raiding Byzantine territories and attracting ghazi (holy warrior) fighters. The date of 1299 is traditional though not precisely documented; Ottoman historians later used it to mark the dynasty's independence. Osman's principality would grow to become one of history's longest-lasting empires.",
+        "sources": [
+          {
+            "name": "Cambridge History of Turkey",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Halil İnalcık, The Ottoman Empire: The Classical Age",
+            "tier": 3,
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Principality_of_Theodoro",
+            "source": "Wikipedia / Principality of Theodoro",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Caffa_and_Theodoro_2.svg/330px-Caffa_and_Theodoro_2.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "bursa-conquered-1326",
+        "year": "1326",
+        "title": "Capture of Bursa — First Ottoman Capital",
+        "type": "military",
+        "detail": "Orhan I, son of Osman, captures the Byzantine city of Prusa (modern Bursa) after a long siege. Bursa becomes the first major Ottoman capital and an important center of Islamic learning and commerce. The conquest demonstrates Ottoman power had grown beyond mere raiding and signals the beginning of systematic territorial expansion. The city's grand mosques and bazaars become models for future Ottoman urban planning.",
+        "sources": [
+          {
+            "name": "Halil İnalcık, Ottoman Historical Scholarship",
+            "tier": 3,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Stanford Shaw, History of the Ottoman Empire",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Siege_of_Bursa",
+            "source": "Wikipedia / Siege of Bursa",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Bursa_Kalesi_1.jpg/330px-Bursa_Kalesi_1.jpg"
+          }
+        ]
+      },
+      {
+        "id": "crossing-bosphorus-1354",
+        "year": "1354",
+        "title": "Ottomans Cross into Europe at Gallipoli",
+        "type": "military",
+        "detail": "Ottoman forces under Suleyman Pasha, son of Orhan I, cross the Dardanelles and establish a permanent foothold at Gallipoli (Gelibolu) in Thrace following a devastating earthquake that destroyed much of the Byzantine fortifications. This marks the beginning of Ottoman expansion into the Balkans and Europe, a trajectory that would continue for centuries. The crossing transforms the Ottomans from a regional Anatolian power into a cross-continental empire.",
+        "sources": [
+          {
+            "name": "Lord Kinross, The Ottoman Centuries",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Halil İnalcık, The Ottoman Empire",
+            "tier": 3,
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Gallipoli_campaign",
+            "source": "Wikipedia / Gallipoli campaign",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/G.C._18_March_1915_Gallipoli_Campaign_Article.jpg/330px-G.C._18_March_1915_Gallipoli_Campaign_Article.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-kosovo-1389",
+        "year": "1389",
+        "title": "Battle of Kosovo — Ottoman Victory in the Balkans",
+        "type": "military",
+        "detail": "Sultan Murad I defeats a Serbian-led coalition at the Battle of Kosovo Polje (Field of Blackbirds), securing Ottoman dominance in the Balkans. Both Murad I and the Serbian Prince Lazar are killed in the battle. The victory solidifies Ottoman control over much of the Balkans but the battle becomes a foundational myth of Serbian national identity, shaping Balkan politics for centuries. Kosovo remains a symbol of contested heritage between Turkish/Islamic and Serbian Orthodox traditions.",
+        "sources": [
+          {
+            "name": "Malcolm, Kosovo: A Short History",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Imber, The Ottoman Empire 1300-1650",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Kosovo",
+            "source": "Wikipedia / Battle of Kosovo",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Battle_of_Kosovo%2C_Adam_Stefanovi%C4%87%2C_1870.jpg/330px-Battle_of_Kosovo%2C_Adam_Stefanovi%C4%87%2C_1870.jpg"
+          }
+        ]
+      },
+      {
+        "id": "fall-of-constantinople-1453",
+        "year": "1453",
+        "title": "Fall of Constantinople — End of Byzantine Empire",
+        "type": "military",
+        "active": true,
+        "detail": "Sultan Mehmed II (the Conqueror) besieges and captures Constantinople on May 29, 1453 after a 53-day siege, ending the Byzantine Empire after over 1,100 years. Ottoman forces breach the walls using massive bronze cannons and overwhelm the city's defenders. Mehmed renames the city İstanbul and makes it the new Ottoman capital. The Hagia Sophia cathedral is converted to a mosque. The conquest closes the eastern Mediterranean chapter of the Roman world and opens a new era of Ottoman imperial power extending from Anatolia to the Balkans.",
+        "sources": [
+          {
+            "name": "Steven Runciman, The Fall of Constantinople 1453",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Roger Crowley, 1453: The Holy War for Constantinople",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople",
+            "source": "Wikipedia / Fall of Constantinople",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Le_si%C3%A8ge_de_Constantinople_%281453%29_by_Jean_Le_Tavernier_after_1455.jpg/330px-Le_si%C3%A8ge_de_Constantinople_%281453%29_by_Jean_Le_Tavernier_after_1455.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Ottoman Empire: Peak & Zenith (1453–1699)",
+    "events": [
+      {
+        "id": "suleiman-the-magnificent-reign",
+        "year": "1520",
+        "title": "Reign of Suleiman the Magnificent — Ottoman Zenith",
+        "type": "political",
+        "detail": "Suleiman I (r. 1520–1566) presides over the Ottoman Empire at the height of its power. Known in the West as 'the Magnificent' and in the Ottoman world as 'the Lawgiver' (Kanuni), he conquers Belgrade (1521), Rhodes (1522), and much of Hungary following the Battle of Mohács (1526). He expands Ottoman power into the Arab world, capturing Baghdad (1534), and extends the empire from the Persian Gulf to Algiers. Under his rule the empire becomes a major center of arts, learning, and architecture, epitomized by the great mosque complexes designed by Mimar Sinan.",
+        "sources": [
+          {
+            "name": "Ágoston & Masters, Encyclopedia of the Ottoman Empire",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "André Clot, Suleiman the Magnificent",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Suleiman_the_Magnificent",
+            "source": "Wikipedia / Suleiman the Magnificent",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/EmperorSuleiman.jpg/330px-EmperorSuleiman.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-lepanto-1571",
+        "year": "1571",
+        "title": "Battle of Lepanto — First Major Ottoman Naval Defeat",
+        "type": "military",
+        "detail": "A Holy League fleet assembled by Pope Pius V defeats the Ottoman naval force at the Battle of Lepanto (Gulf of Patras, Greece) on October 7, 1571. Over 30,000 Ottomans are killed or captured and much of the Ottoman fleet is destroyed. While the Ottomans quickly rebuild their navy, Lepanto marks the first significant check to Ottoman naval power in the Mediterranean and becomes a symbolic victory for Christendom. The battle demonstrates Ottoman vulnerability to concerted European military cooperation.",
+        "sources": [
+          {
+            "name": "Hugh Bicheno, Crescent and Cross: The Battle of Lepanto 1571",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Ágoston & Masters, Encyclopedia of the Ottoman Empire",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_Lepanto",
+            "source": "Wikipedia / Battle of Lepanto",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Laureys_a_Castro_-_The_Battle_of_Lepanto.jpeg/330px-Laureys_a_Castro_-_The_Battle_of_Lepanto.jpeg"
+          }
+        ]
+      },
+      {
+        "id": "siege-of-vienna-1683",
+        "year": "1683",
+        "title": "Siege of Vienna — High Water Mark and Beginning of Retreat",
+        "type": "military",
+        "detail": "Grand Vizier Kara Mustafa Pasha leads an Ottoman army of over 150,000 troops to besiege Vienna in July 1683, the farthest Ottoman penetration into Europe. On September 12, a combined Polish-Austrian force under King Jan III Sobieski defeats the Ottomans in the Battle of Vienna, lifting the siege. The defeat marks the beginning of Ottoman decline in Europe. The subsequent War of the Holy League (1683–1699) leads to significant Ottoman territorial losses. Coffee brought by retreating Ottoman forces allegedly helps launch Vienna's famous café culture.",
+        "sources": [
+          {
+            "name": "John Stoye, The Siege of Vienna",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Lord Kinross, The Ottoman Centuries",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Siege_of_Vienna_(1529)",
+            "source": "Wikipedia / Siege of Vienna (1529)",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Siegeofvienna1529.jpg/330px-Siegeofvienna1529.jpg"
+          }
+        ]
+      },
+      {
+        "id": "treaty-karlowitz-1699",
+        "year": "1699",
+        "title": "Treaty of Karlowitz — First Major Territorial Losses",
+        "type": "diplomatic",
+        "detail": "The Treaty of Karlowitz (January 26, 1699) ends the Great Turkish War, forcing the Ottomans to cede Hungary, Transylvania, Slavonia, and most of Dalmatia to Austria, Poland, and Venice. It is the first multilateral peace treaty in which the Ottomans cede large territories under pressure. The treaty marks a structural turning point: the Ottoman Empire shifts from expansion to defense. The psychological impact within the empire triggers debates about reform and modernization that will echo for the next two centuries.",
+        "sources": [
+          {
+            "name": "Virginia Aksan, Ottoman Wars 1700-1870",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Rhoads Murphey, Ottoman Warfare 1500-1700",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Treaty_of_Karlowitz",
+            "source": "Wikipedia / Treaty of Karlowitz",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Treaty_of_Karlowitz.jpg/330px-Treaty_of_Karlowitz.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Ottoman Decline & Tanzimat Reforms (1699–1908)",
+    "events": [
+      {
+        "id": "tanzimat-reforms-1839",
+        "year": "1839",
+        "title": "Tanzimat Reforms — Ottoman Modernization Era",
+        "type": "political",
+        "detail": "The Gülhane Edict of 1839 (Hatt-ı Şerif of Gülhane) launches the Tanzimat ('Reorganization') era of sweeping reforms. Sultan Abdülmecid I guarantees security of life, property, and honor for all Ottoman subjects regardless of religion, and promises fair taxation and military service reforms. Subsequent reforms (1839–1876) include the establishment of secular courts and schools, land registration, a civil legal code (Mecelle), and banking institutions. These reforms are partly inspired by Western Enlightenment principles but also designed to preserve the empire against external pressure and internal separatism.",
+        "sources": [
+          {
+            "name": "Şükrü Hanioğlu, A Brief History of the Late Ottoman Empire",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Donald Quataert, The Ottoman Empire 1700-1922",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z"
+      },
+      {
+        "id": "crimean-war-1853",
+        "year": "1853",
+        "title": "Crimean War — Ottoman Alliance with Western Powers",
+        "type": "military",
+        "detail": "The Ottoman Empire allies with Britain, France, and Sardinia against Russia in the Crimean War (1853–1856). The war is triggered by disputes over Christian holy sites in Palestine and Russian expansionism in the Black Sea region. The alliance succeeds in defeating Russia militarily but the war leaves the Ottomans with crushing debt, accelerating economic dependence on European creditors. The war also enables Florence Nightingale's nursing reforms and leads to modern military medicine practices.",
+        "sources": [
+          {
+            "name": "Trevor Royle, Crimea: The Great Crimean War 1854-1856",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "David Wetzel, The Crimean War",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Crimean_War",
+            "source": "Wikipedia / Crimean War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%D0%9E%D1%81%D0%B0%D0%B4%D0%B0_%D0%A1%D0%B8%D0%BB%D0%B8%D1%81%D1%82%D1%80%D0%B8%D0%B8_1._%D0%92%D0%B8%D0%BB%D0%BB%D0%B5%D0%B2%D0%B0%D0%BB%D1%8C%D0%B4%D0%B5.jpg/330px-%D0%9E%D1%81%D0%B0%D0%B4%D0%B0_%D0%A1%D0%B8%D0%BB%D0%B8%D1%81%D1%82%D1%80%D0%B8%D0%B8_1._%D0%92%D0%B8%D0%BB%D0%BB%D0%B5%D0%B2%D0%B0%D0%BB%D1%8C%D0%B4%D0%B5.jpg"
+          }
+        ]
+      },
+      {
+        "id": "congress-berlin-1878",
+        "year": "1878",
+        "title": "Congress of Berlin — Major Balkan Territorial Losses",
+        "type": "diplomatic",
+        "detail": "Following the Russo-Ottoman War (1877–78) and the Treaty of San Stefano, the Congress of Berlin revises peace terms under Bismarck's mediation. The Ottomans lose Romania, Serbia, Montenegro (full independence), Bulgaria (autonomy), Bosnia-Herzegovina (Austrian administration), Kars, Ardahan, and Batumi to Russia. Cyprus is leased to Britain. The empire loses roughly 40% of its remaining European territory and 20% of its population. The losses fuel pan-Turkic nationalism and accelerate internal political tensions that will lead to the Young Turk revolution.",
+        "sources": [
+          {
+            "name": "Richard Millman, Britain and the Eastern Question 1875-1878",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "M.S. Anderson, The Eastern Question 1774-1923",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Congress_of_Berlin",
+            "source": "Wikipedia / Congress of Berlin",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Congress_of_Berlin%2C_13_July_1878%2C_by_Anton_von_Werner.jpg/330px-Congress_of_Berlin%2C_13_July_1878%2C_by_Anton_von_Werner.jpg"
+          }
+        ]
+      },
+      {
+        "id": "hamidian-massacres-1894",
+        "year": "1894",
+        "title": "Hamidian Massacres of Armenians (1894–1896)",
+        "type": "political",
+        "detail": "Sultan Abdülhamid II's regime carries out mass killings of Armenians throughout Anatolia between 1894 and 1896. Estimates of victims range from 100,000 to 300,000 Armenians. The violence is triggered by Armenian demands for reforms and protection under the Treaty of Berlin, and escalates in response to Armenian resistance. Hamidye cavalry units (Kurdish irregular forces) participate extensively. European powers protest but take no significant action. The massacres are a precursor to the later genocide and deepen Armenian-Turkish communal tensions.",
+        "sources": [
+          {
+            "name": "Ronald Grigor Suny, They Can Live in the Desert but Nowhere Else",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Vahakn Dadrian, History of the Armenian Genocide",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Hamidian_massacres",
+            "source": "Wikipedia / Hamidian massacres",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/1895erzurum-victims.jpg/330px-1895erzurum-victims.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Young Turks, WWI & Ottoman Collapse (1908–1922)",
+    "events": [
+      {
+        "id": "young-turk-revolution-1908",
+        "year": "1908",
+        "title": "Young Turk Revolution — Committee of Union and Progress",
+        "type": "political",
+        "detail": "The Committee of Union and Progress (CUP / İttihat ve Terakki Cemiyeti) launches a successful revolution in July 1908, forcing Sultan Abdülhamid II to restore the 1876 constitution and reconvene parliament. The revolution is triggered by military officers in Macedonia who feared Great Power intervention. Initially celebrated across ethnic groups, the CUP government proves increasingly authoritarian. After a counter-coup attempt in 1909 is suppressed, Abdülhamid II is deposed and replaced by Mehmed V. The revolution accelerates the empire's final decade of turbulent reform, war, and collapse.",
+        "sources": [
+          {
+            "name": "Şükrü Hanioğlu, Preparation for a Revolution: The Young Turks",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Erik Jan Zürcher, Turkey: A Modern History",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Committee_of_Union_and_Progress",
+            "source": "Wikipedia / Committee of Union and Progress",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/%C4%B0ttihat_ve_Terakki_amblemi.jpg/330px-%C4%B0ttihat_ve_Terakki_amblemi.jpg"
+          }
+        ]
+      },
+      {
+        "id": "balkan-wars-1912",
+        "year": "1912",
+        "title": "Balkan Wars — Near-Total Loss of European Territory",
+        "type": "military",
+        "detail": "The First (1912–13) and Second (1913) Balkan Wars strip the Ottoman Empire of nearly all remaining European territory. The Balkan League (Bulgaria, Serbia, Greece, Montenegro) drives Ottoman forces back to a line just west of Istanbul in the First War. In the Second War, Bulgaria's attack on its former allies allows the Ottomans to recover Edirne. The wars result in the loss of Macedonia, Albania, most of Thrace, and over 600,000 square kilometers. Some 400,000 Muslim refugees flood into Anatolia. The humiliation radicalizes the CUP and contributes directly to their decision to enter WWI alongside Germany.",
+        "sources": [
+          {
+            "name": "Richard Hall, The Balkan Wars 1912-1913",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Hew Strachan, The First World War",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Second_Balkan_War",
+            "source": "Wikipedia / Second Balkan War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Second_Balkan_War.png/330px-Second_Balkan_War.png"
+          }
+        ]
+      },
+      {
+        "id": "wwi-ottoman-entry-1914",
+        "year": "1914",
+        "title": "Ottoman Entry into World War I",
+        "type": "military",
+        "detail": "The CUP-led government concludes a secret alliance with Germany on August 2, 1914 and formally enters WWI on October 29, 1914, when Ottoman warships (under German command) bombard Russian Black Sea ports. Enver Pasha, Talat Pasha, and Cemal Pasha (the 'Three Pashas') dominate decision-making and calculate that alliance with Germany offers the best chance of recovering lost territories and resisting further encroachment. The Ottoman Empire fights on multiple fronts: the Caucasus, Mesopotamia, Palestine, and the Dardanelles.",
+        "sources": [
+          {
+            "name": "Hew Strachan, The First World War",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Mustafa Aksakal, The Ottoman Road to War in 1914",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z"
+      },
+      {
+        "id": "gallipoli-campaign-1915",
+        "year": "1915",
+        "title": "Gallipoli Campaign — Atatürk's Emergence",
+        "type": "military",
+        "detail": "Allied forces (British, French, ANZAC) launch an amphibious assault on the Gallipoli peninsula on April 25, 1915, attempting to open a sea route to Russia via the Dardanelles and knock the Ottomans out of the war. Ottoman defenses, led by Lieutenant Colonel Mustafa Kemal at Chunuk Bair and Arıburnu, successfully repel multiple Allied offensives. The campaign costs approximately 130,000 Allied and 87,000 Ottoman lives before Allied withdrawal in January 1916. The defense becomes a foundational myth of Turkish nationalism; April 25 is commemorated as ANZAC Day in Australia and New Zealand.",
+        "sources": [
+          {
+            "name": "John Keegan, The First World War",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Peter Hart, Gallipoli",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Mustafa_Kemal_Atat%C3%BCrk",
+            "source": "Wikipedia / Mustafa Kemal Atat%C3%BCrk",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Portret_van_de_Turkse_leider_Mustafa_Kemal_Ataturk_%28Atat%C3%BCrk_Kemal_Pascha%29_%281881-1938%29_in_westers%2C_SFA003017837.jpg/330px-Portret_van_de_Turkse_leider_Mustafa_Kemal_Ataturk_%28Atat%C3%BCrk_Kemal_Pascha%29_%281881-1938%29_in_westers%2C_SFA003017837.jpg"
+          }
+        ]
+      },
+      {
+        "id": "armenian-genocide-1915",
+        "year": "1915",
+        "title": "Armenian Genocide — Mass Deportations and Killings",
+        "type": "political",
+        "detail": "The CUP government orders the deportation of the Armenian population of Anatolia beginning April 24, 1915 (the date Armenian intellectuals are arrested in Istanbul). Armenians are forced on death marches into the Syrian desert; killed by Ottoman soldiers, gendarmes, and Kurdish irregulars; or die of starvation, exposure, and disease. Estimates of deaths range from 600,000 to 1.5 million. The genocide is recognized by over 30 countries and international bodies, though Turkey officially denies it constituted genocide, arguing the deaths resulted from wartime deportation and intercommunal violence rather than state-organized extermination.",
+        "sources": [
+          {
+            "name": "Taner Akçam, A Shameful Act: The Armenian Genocide",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Ronald Grigor Suny, They Can Live in the Desert but Nowhere Else",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z"
+      },
+      {
+        "id": "wwi-defeat-armistice-1918",
+        "year": "1918",
+        "title": "WWI Defeat & Armistice of Mudros",
+        "type": "diplomatic",
+        "detail": "The Ottoman Empire signs the Armistice of Mudros on October 30, 1918, ending its participation in WWI. Allied forces occupy Istanbul, the Dardanelles, and key Anatolian regions. The Three Pashas flee to Germany. Under subsequent Allied administration, nationalist officers are tried for wartime atrocities. The empire's collapse triggers immediate Allied plans for partition, leading to the Treaty of Sèvres (1920) which would have left only a rump Anatolian Turkish state. Ottoman defeat creates the conditions for Mustafa Kemal's nationalist movement.",
+        "sources": [
+          {
+            "name": "David Fromkin, A Peace to End All Peace",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Hew Strachan, The First World War",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/World_War_I",
+            "source": "Wikipedia / World War I",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bataille_de_Verdun_1916.jpg/330px-Bataille_de_Verdun_1916.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "War of Independence & Early Republic (1919–1938)",
+    "events": [
+      {
+        "id": "mustafa-kemal-samsun-1919",
+        "year": "1919",
+        "title": "Mustafa Kemal Lands at Samsun — Nationalist Resistance Begins",
+        "type": "political",
+        "detail": "Mustafa Kemal arrives at Samsun on the Black Sea coast on May 19, 1919, ostensibly as inspector-general but with the aim of organizing nationalist resistance to the Allied occupation and partition of Anatolia. Greek forces had landed at İzmir two days earlier. Kemal organizes regional Resistance Congresses at Erzurum (July 1919) and Sivas (September 1919), building a nationwide movement. He establishes the Grand National Assembly in Ankara on April 23, 1920, creating a parallel government in defiance of the Istanbul government collaborating with the Allies.",
+        "sources": [
+          {
+            "name": "Andrew Mango, Atatürk: The Biography of the Founder of Modern Turkey",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Erik Jan Zürcher, Turkey: A Modern History",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Turkish_War_of_Independence",
+            "source": "Wikipedia / Turkish War of Independence",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/T%C3%BCrk_Kurtulu%C5%9F_Sava%C5%9F%C4%B1_-_kolaj.jpg/330px-T%C3%BCrk_Kurtulu%C5%9F_Sava%C5%9F%C4%B1_-_kolaj.jpg"
+          }
+        ]
+      },
+      {
+        "id": "treaty-sevres-1920",
+        "year": "1920",
+        "title": "Treaty of Sèvres — Attempted Partition of Anatolia",
+        "type": "diplomatic",
+        "detail": "The Treaty of Sèvres (August 10, 1920) partitions the Ottoman Empire: Greece receives Thrace and the İzmir region; Armenia and Kurdistan receive independent states; the Dardanelles are internationalized; the Arab provinces become British/French mandates. The rump Ottoman state retains only north-central Anatolia. The Istanbul government signs it but the Ankara-based Grand National Assembly rejects it. The treaty galvanizes Turkish nationalist resistance. It is never ratified and is superseded by the Treaty of Lausanne (1923) after Turkish military victories.",
+        "sources": [
+          {
+            "name": "David Fromkin, A Peace to End All Peace",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Erik Jan Zürcher, Turkey: A Modern History",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Partition_of_the_Ottoman_Empire",
+            "source": "Wikipedia / Partition of the Ottoman Empire",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Peace-conference-memoranda-respecting-syria-arabia-palestine5.jpg/330px-Peace-conference-memoranda-respecting-syria-arabia-palestine5.jpg"
+          }
+        ]
+      },
+      {
+        "id": "battle-sakarya-1921",
+        "year": "1921",
+        "title": "Battle of the Sakarya — Turning Point in Independence War",
+        "type": "military",
+        "detail": "Greek forces advance deep into Anatolia in a major offensive but are decisively stopped at the Battle of the Sakarya River (August 23–September 13, 1921) by Turkish nationalist forces under Mustafa Kemal, who assumes personal command. The 22-day battle is one of the longest pitched battles in history. The Greek advance is halted and reversed. The victory earns Kemal the title 'Gazi' (Warrior for the Faith) from the Grand National Assembly and marks the strategic turning point of the Greco-Turkish War. The Great Offensive (Büyük Taarruz) of August 1922 follows, driving Greek forces to the Aegean.",
+        "sources": [
+          {
+            "name": "Andrew Mango, Atatürk",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Ryan Gingeras, Fall of the Sultanate",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Battle_of_the_Sakarya",
+            "source": "Wikipedia / Battle of the Sakarya",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Battle_of_Sakarya_1921.jpg/330px-Battle_of_Sakarya_1921.jpg"
+          }
+        ]
+      },
+      {
+        "id": "lausanne-turkish-republic-1923",
+        "year": "1923",
+        "title": "Treaty of Lausanne & Proclamation of the Turkish Republic",
+        "type": "political",
+        "active": true,
+        "detail": "The Treaty of Lausanne (July 24, 1923) establishes Turkey's modern borders, superseding the punitive Treaty of Sèvres. International recognition of the Republic of Turkey follows on October 29, 1923, when Mustafa Kemal proclaims the republic and is elected its first President. The treaty includes a massive population exchange: 1.1 million Greeks leave Turkey and 400,000 Muslims leave Greece, reshaping both countries' demographics. Lausanne also accompanies the abolition of the sultanate (1922) and later the caliphate (1924), ending the Ottoman era definitively.",
+        "sources": [
+          {
+            "name": "Baskın Oran (ed.), Turkish Foreign Policy 1919-2006",
+            "tier": 3,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Andrew Mango, Atatürk",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Demographics_of_Turkey",
+            "source": "Wikipedia / Demographics of Turkey",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Turkey_population_pyramid_-_end_of_2025.png/330px-Turkey_population_pyramid_-_end_of_2025.png"
+          }
+        ]
+      },
+      {
+        "id": "ataturk-secularization-reforms",
+        "year": "1924",
+        "title": "Atatürk's Secularization and Modernization Reforms",
+        "type": "social",
+        "detail": "Atatürk implements sweeping reforms to transform Turkey from a theocratic sultanate into a secular nation-state: the caliphate is abolished (March 1924); religious schools and courts are closed; the hat law bans the fez and promotes Western dress (1925); the Latin alphabet replaces Arabic script (1928); Islam loses official state religion status (1928); family names are introduced (1934) — Mustafa Kemal adopts the surname Atatürk ('Father of the Turks'); women receive voting rights (1934). These reforms establish Turkey's secular Kemalist identity but remain contested between secularists and Islamists into the 21st century.",
+        "sources": [
+          {
+            "name": "Andrew Mango, Atatürk",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Şükrü Hanioğlu, Atatürk: An Intellectual Biography",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Atat%C3%BCrk's_reforms",
+            "source": "Wikipedia / Atat%C3%BCrk's reforms",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/%C4%B0nk%C4%B1lap_Yolunda_%281933%29_by_Zeki_Faik_%C4%B0zer.jpg/330px-%C4%B0nk%C4%B1lap_Yolunda_%281933%29_by_Zeki_Faik_%C4%B0zer.jpg"
+          }
+        ]
+      },
+      {
+        "id": "sheikh-said-rebellion-1925",
+        "year": "1925",
+        "title": "Sheikh Said Kurdish Rebellion Suppressed",
+        "type": "military",
+        "detail": "Sheikh Said of Piran leads a major Kurdish uprising in eastern Anatolia beginning February 1925. Motivated by a mix of Islamic conservatism (opposition to Atatürk's secularization) and Kurdish nationalism, the rebellion temporarily captures Elazığ and Diyarbakır. The Turkish army suppresses it within weeks; Sheikh Said is captured, tried, and hanged in June 1925. The rebellion accelerates repressive policies toward Kurds: Kurdish language is banned, tribal leaders are deported, and the word 'Kurd' itself is officially suppressed for decades. The episode sets the pattern for Turkish-Kurdish relations through the 20th century.",
+        "sources": [
+          {
+            "name": "Martin van Bruinessen, Agha, Shaikh and State: The Social and Political Structures of Kurdistan",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "David McDowall, A Modern History of the Kurds",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Sheikh_Said_rebellion",
+            "source": "Wikipedia / Sheikh Said rebellion",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Cumhuriyet_March_30%2C_1925.jpg/330px-Cumhuriyet_March_30%2C_1925.jpg"
+          }
+        ]
+      },
+      {
+        "id": "ataturk-death-1938",
+        "year": "1938",
+        "title": "Death of Atatürk — End of Founding Era",
+        "type": "political",
+        "detail": "Mustafa Kemal Atatürk dies of cirrhosis of the liver on November 10, 1938, at Dolmabahçe Palace in Istanbul, aged 57. The entire nation observes a 10-minute silence at 9:05 AM — the precise time of his death — a practice that continues annually. İsmet İnönü succeeds him as president. Atatürk's legacy — secular democracy, Westernization, territorial integrity — becomes the official ideology (Kemalism/Atatürkism) embedded in the constitution. Criticism of Atatürk is criminalized in Turkey. His face appears on Turkish currency and all government buildings.",
+        "sources": [
+          {
+            "name": "Andrew Mango, Atatürk",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Turkish State Archives",
+            "tier": 1,
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Mustafa_Kemal_Atat%C3%BCrk",
+            "source": "Wikipedia / Death and state funeral of Mustafa Kemal Atat%C3%BCrk",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Ataturk-1938-funeral-cortege.jpg/330px-Ataturk-1938-funeral-cortege.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "Cold War Turkey (1945–1980)",
+    "events": [
+      {
+        "id": "multi-party-democracy-1946",
+        "year": "1946",
+        "title": "Transition to Multi-Party Democracy",
+        "type": "political",
+        "detail": "Turkey transitions from the single-party CHP (Republican People's Party) rule to multi-party democracy. The Democrat Party (DP) is founded in 1946 by dissidents including Adnan Menderes and Celal Bayar. The 1950 elections produce a landslide DP victory, ending 27 years of CHP rule. Adnan Menderes becomes Prime Minister and Bayar President. The DP pursues economic liberalization, allows the re-opening of Islamic institutions, and enjoys strong rural support. However, the government increasingly suppresses political opposition as economic problems mount through the 1950s.",
+        "sources": [
+          {
+            "name": "Erik Jan Zürcher, Turkey: A Modern History",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Feroz Ahmad, The Making of Modern Turkey",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/1990_Hungarian_presidential_election",
+            "source": "Wikipedia / 1990 Hungarian presidential election",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/G%C3%B6ncz%C3%81rp%C3%A1d.jpg/330px-G%C3%B6ncz%C3%81rp%C3%A1d.jpg"
+          }
+        ]
+      },
+      {
+        "id": "turkey-joins-nato-1952",
+        "year": "1952",
+        "title": "Turkey Joins NATO — Cold War Alignment",
+        "type": "diplomatic",
+        "detail": "Turkey and Greece formally join NATO on February 18, 1952, following Turkey's participation in the Korean War (1950–53) as part of the UN force, where Turkish troops distinguished themselves at the Battle of Kunu-ri. NATO membership aligns Turkey firmly with the Western bloc and provides the security framework for Turkey's Cold War foreign policy. NATO's Article 5 mutual defense commitment becomes central to Turkish strategic doctrine. Turkey's geographic position—controlling the Bosphorus and Dardanelles, bordering the USSR—makes it a critical member of the alliance.",
+        "sources": [
+          {
+            "name": "NATO official records",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Feroz Ahmad, Turkey: The Quest for Identity",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Cold_War",
+            "source": "Wikipedia / Cold War",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/NATO_vs._Warsaw_Pact_%281949-1990%29.svg/330px-NATO_vs._Warsaw_Pact_%281949-1990%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "coup-1960",
+        "year": "1960",
+        "title": "1960 Military Coup — First of Turkey's Interventions",
+        "type": "political",
+        "detail": "A military coup led by General Cemal Gürsel overthrows the elected Democrat Party government on May 27, 1960. PM Adnan Menderes, President Celal Bayar, and Foreign Minister Fatin Rüştü Zorlu are arrested. A military junta (National Unity Committee) governs for 17 months. Menderes and Zorlu are tried for treason and violations of the constitution; both are hanged in September 1961. Bayar's death sentence is commuted. A new constitution (1961) introduces more checks on executive power and creates the Senate and Constitutional Court. The coup establishes a pattern of military intervention as self-appointed guardian of Kemalist principles.",
+        "sources": [
+          {
+            "name": "Feroz Ahmad, The Turkish Experiment in Democracy 1950-1975",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Erik Jan Zürcher, Turkey: A Modern History",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z"
+      },
+      {
+        "id": "cyprus-invasion-1974",
+        "year": "1974",
+        "title": "Turkish Military Intervention in Cyprus",
+        "type": "military",
+        "detail": "Following a Greek Cypriot coup backed by the Athens military junta aimed at union (enosis) with Greece, Turkey invades Cyprus on July 20, 1974, citing its right as a guarantor power under the 1960 Treaty of Guarantee to protect Turkish Cypriots. In two phases (July 20 and August 14–16), Turkish forces occupy the northern 37% of Cyprus. Some 160,000–200,000 Greek Cypriots flee south and 45,000 Turkish Cypriots move north. In 1983, the Turkish-occupied north declares itself the 'Turkish Republic of Northern Cyprus,' recognized only by Turkey. The Cyprus dispute remains unresolved and is a major obstacle to Turkish-EU relations.",
+        "sources": [
+          {
+            "name": "William Mallinson, Cyprus: A Modern History",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Brendan O'Malley & Ian Craig, The Cyprus Conspiracy",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Turkish_invasion_of_Cyprus",
+            "source": "Wikipedia / Turkish invasion of Cyprus",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Cyprus_1973_ethnic_en.svg/330px-Cyprus_1973_ethnic_en.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "coup-1980",
+        "year": "1980",
+        "title": "1980 Military Coup — Kenan Evren Seizes Power",
+        "type": "political",
+        "detail": "General Kenan Evren leads a bloodless military coup on September 12, 1980, the most decisive of Turkey's interventions. Political violence between left and right-wing factions (over 5,000 killed in the 1970s) and parliamentary paralysis (failure to elect a president for months) give the military justification. The coup suspends parliament, bans all political parties, and arrests tens of thousands. A new constitution (1982) concentrates power in the executive and includes restrictions on labor unions, political parties, and speech. Evren serves as president until 1989. The coup reshapes Turkish politics for decades and is blamed for enabling political Islam's later rise.",
+        "sources": [
+          {
+            "name": "Feroz Ahmad, Turkey: The Quest for Identity",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Erik Jan Zürcher, Turkey: A Modern History",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "era": "PKK Insurgency & Political Islam (1980–2002)",
+    "events": [
+      {
+        "id": "pkk-insurgency-1984",
+        "year": "1984",
+        "title": "PKK Insurgency Begins — Kurdish Armed Struggle",
+        "type": "military",
+        "detail": "The Kurdistan Workers' Party (PKK / Partiya Karkerên Kurdistanê) under Abdullah Öcalan launches its armed insurgency against the Turkish state on August 15, 1984 with attacks on military outposts in Eruh (Siirt) and Şemdinli (Hakkari). The PKK combines Marxist-Leninist ideology with Kurdish nationalism and seeks independence or autonomy for Kurdish-majority southeastern Turkey. The conflict grows into a full-scale insurgency through the 1980s and 1990s, displacing millions of civilians and causing massive infrastructure destruction. Öcalan directs operations from Syria (with Assad's backing until 1998) until his capture in 1999.",
+        "sources": [
+          {
+            "name": "David McDowall, A Modern History of the Kurds",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Aliza Marcus, Blood and Belief: The PKK and the Kurdish Fight for Independence",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z"
+      },
+      {
+        "id": "turgut-ozal-economic-reforms",
+        "year": "1983",
+        "title": "Turgut Özal's Economic Liberalization",
+        "type": "economic",
+        "detail": "Turgut Özal, first as Prime Minister (1983–89) and then as President (1989–93), implements sweeping market liberalization of Turkey's economy: ending import substitution industrialization, opening to foreign investment, liberalizing financial markets, and privatizing state enterprises. GDP grows rapidly through the late 1980s. Turkey's export-oriented manufacturing sector emerges. However, liberalization also produces chronic inflation (reaching 70–100% in the early 1990s) and growing inequality. Özal's economic model — pragmatic capitalism with Islamic social conservatism — prefigures the AKP approach two decades later.",
+        "sources": [
+          {
+            "name": "Ziya Öniş, The Political Economy of Turkey in the 1980s",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "OECD Turkey Economic Surveys",
+            "tier": 1,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Turgut_%C3%96zal",
+            "source": "Wikipedia / Turgut %C3%96zal",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Turgut_%C3%96zal_as_Turkish_Prime_Minister.jpg/330px-Turgut_%C3%96zal_as_Turkish_Prime_Minister.jpg"
+          }
+        ]
+      },
+      {
+        "id": "postmodern-coup-1997",
+        "year": "1997",
+        "title": "'Postmodern Coup' — Military Removes Erbakan",
+        "type": "political",
+        "detail": "The military issues a memorandum on February 28, 1997 — Turkey's so-called 'postmodern coup' — pressuring Islamist PM Necmettin Erbakan of the Refah (Welfare) Party to resign. Erbakan had been in government since June 1996, pursuing pro-Islamic policies the military viewed as threatening secularism. The memorandum lists required policy reversals; Erbakan resigns in June 1997 without a shot being fired. Refah is banned by the Constitutional Court in 1998. One of Erbakan's proteges, Recep Tayyip Erdoğan (mayor of Istanbul since 1994), is imprisoned for six months in 1999 for reciting an 'inciting' Islamic poem. These events push Erdoğan to found the AKP.",
+        "sources": [
+          {
+            "name": "Gareth Jenkins, Between Fact and Fantasy: Turkey's Ergenekon Investigation",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Şükrü Hanioğlu, Brief History of the Late Ottoman Empire",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z"
+      },
+      {
+        "id": "ocalan-captured-1999",
+        "year": "1999",
+        "title": "Abdullah Öcalan Captured in Kenya",
+        "type": "military",
+        "detail": "PKK founder Abdullah Öcalan is captured on February 15, 1999 at the Greek embassy in Nairobi, Kenya, in a covert operation by Turkish intelligence (MİT) with US and Israeli assistance. Öcalan had been expelled from Syria (1998) and shuttled between European countries before being refused asylum. He is returned to Turkey, tried, and sentenced to death (later commuted to life imprisonment due to EU pressure). He remains imprisoned on İmralı Island. Following his capture, Öcalan orders a PKK ceasefire and pivots to calls for cultural rights and democratic confederation rather than outright independence. PKK violence significantly reduces through 2000–2004.",
+        "sources": [
+          {
+            "name": "Aliza Marcus, Blood and Belief",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Gareth Jenkins, Political Islam in Turkey",
+            "tier": 3,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Abdullah_%C3%96calan",
+            "source": "Wikipedia / Abdullah %C3%96calan",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Abdullah_%C3%96calan.png/330px-Abdullah_%C3%96calan.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "era": "AKP Era & Erdoğan's Turkey (2002–Present)",
+    "events": [
+      {
+        "id": "akp-election-victory-2002",
+        "year": "2002",
+        "title": "AKP Election Landslide — Erdoğan Rises to Power",
+        "type": "political",
+        "detail": "The Justice and Development Party (AKP / Adalet ve Kalkınma Partisi) wins a landslide victory in the November 3, 2002 elections with 34% of the vote, winning 363 of 550 parliamentary seats due to Turkey's 10% electoral threshold wiping out most opposition parties. Erdoğan himself is initially barred from office due to his 1999 conviction but the parliament changes the law; he becomes PM after a by-election in March 2003. The AKP markets itself as conservative-democratic rather than Islamist, pursuing EU membership and economic reform. Early AKP rule delivers strong GDP growth, inflation reduction, and significant EU-compatible legal reforms.",
+        "sources": [
+          {
+            "name": "Soli Özel, Turkey at the Polls",
+            "tier": 3,
+            "pole": "western"
+          },
+          {
+            "name": "Hürriyet Daily News election reports",
+            "tier": 2,
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan",
+            "source": "Wikipedia / Recep Tayyip Erdo%C4%9Fan",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Turkish_President_Recep_Tayyip_Erdo%C4%9Fan_in_January_2024_%28cropped%29.jpg/330px-Turkish_President_Recep_Tayyip_Erdo%C4%9Fan_in_January_2024_%28cropped%29.jpg"
+          }
+        ]
+      },
+      {
+        "id": "eu-accession-talks-2005",
+        "year": "2005",
+        "title": "EU Accession Negotiations Open",
+        "type": "diplomatic",
+        "detail": "The European Union formally opens accession negotiations with Turkey on October 3, 2005. Turkey has been an EU associate member since 1963 and applied for full membership in 1987. The AKP government under Erdoğan implements significant reforms to meet EU requirements: abolishing the death penalty, expanding Kurdish language rights, reducing military influence, improving press freedom, and strengthening civilian courts. Progress stalls from 2007 as France and Germany block key chapters and the Cyprus dispute remains unresolved. By the early 2010s negotiations are effectively frozen, with the EU repeatedly citing democratic backsliding.",
+        "sources": [
+          {
+            "name": "European Commission Turkey Progress Reports",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "ICG, Turkey and Europe: The Decisive Year Ahead",
+            "tier": 3,
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Accession_of_Turkey_to_the_European_Union",
+            "source": "Wikipedia / Accession of Turkey to the European Union",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/European_Union_Turkey_Locator_%28with_internal_borders%29.svg/330px-European_Union_Turkey_Locator_%28with_internal_borders%29.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "gezi-park-protests-2013",
+        "year": "2013",
+        "title": "Gezi Park Protests — Nationwide Anti-Government Unrest",
+        "type": "social",
+        "detail": "What begins as a small environmental sit-in protesting the demolition of Istanbul's Gezi Park (Taksim Square) in late May 2013 escalates into nationwide protests involving millions across 67 cities, driven by opposition to Erdoğan's increasingly authoritarian style, restrictions on alcohol sales, media censorship, and police violence. Police use water cannons, tear gas, and rubber bullets; at least 8 protesters are killed and thousands injured. The protests represent the most significant challenge to AKP rule, revealing deep polarization between Erdoğan's conservative base and secular urban middle class. Erdoğan responds by dismissing protesters as 'çapulcu' (marauders) and framing the unrest as foreign conspiracy.",
+        "sources": [
+          {
+            "name": "Human Rights Watch, Turkey: Protect Gezi Park Protesters",
+            "tier": 3,
+            "pole": "international"
+          },
+          {
+            "name": "BBC News Turkey coverage",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Gezi_Park_protests",
+            "source": "Wikipedia / Gezi Park protests",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Each_day_protestants_return_to_the_square._Events_of_June_7%2C_2013.jpg/330px-Each_day_protestants_return_to_the_square._Events_of_June_7%2C_2013.jpg"
+          }
+        ]
+      },
+      {
+        "id": "coup-attempt-july-2016",
+        "year": "2016",
+        "title": "July 15 Coup Attempt — Failed Military Putsch",
+        "type": "political",
+        "active": true,
+        "detail": "A faction within the Turkish military attempts a coup on the night of July 15–16, 2016, bombing parliament and the presidential palace, seizing key bridges in Istanbul, and deploying tanks. Erdoğan, vacationing in Marmaris, makes a phone call on CNN Türk calling on citizens to take to the streets. Massive public resistance — including civilians blocking tanks — and loyal military units suppress the coup within hours. Over 250 people are killed. The government blames the Gülenist movement (FETÖ) led by Pennsylvania-based cleric Fethullah Gülen, a former Erdoğan ally. Subsequent purges remove 150,000+ from public sector, arrest 77,000+, and shut down 150+ media outlets.",
+        "sources": [
+          {
+            "name": "Reuters, Turkey coup attempt coverage",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "Turkish Presidency official statements",
+            "tier": 1,
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/July_Putsch",
+            "source": "Wikipedia / July Putsch",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/BlindadoDeLaPolic%C3%ADaEnBallhausplatz19340725.jpg/330px-BlindadoDeLaPolic%C3%ADaEnBallhausplatz19340725.jpg"
+          }
+        ]
+      },
+      {
+        "id": "presidential-referendum-2017",
+        "year": "2017",
+        "title": "Constitutional Referendum — Presidential System Adopted",
+        "type": "political",
+        "detail": "A referendum on April 16, 2017 approves constitutional amendments converting Turkey from a parliamentary to a presidential system, with 51.4% voting 'Yes' (51.4% Yes, 48.6% No). The amendments abolish the Prime Minister position, greatly expand presidential powers, weaken parliamentary oversight, and allow the president to appoint judges. The OSCE/ODIHR election observation mission criticizes unequal campaigning conditions and last-minute rule changes. Critics call it a transformation to one-man rule; supporters call it an end to governmental paralysis. Changes take full effect after the 2018 elections, when Erdoğan wins the presidential election in the first round.",
+        "sources": [
+          {
+            "name": "OSCE/ODIHR Referendum Observation Report",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "BBC News Turkey",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2026_Italian_constitutional_referendum",
+            "source": "Wikipedia / 2026 Italian constitutional referendum",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/2026_Italian_constitutional_referendum_by_province.svg/330px-2026_Italian_constitutional_referendum_by_province.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "s400-purchase-2019",
+        "year": "2019",
+        "title": "S-400 Purchase from Russia — NATO Crisis",
+        "type": "diplomatic",
+        "detail": "Turkey receives the first delivery of Russian S-400 anti-aircraft missile systems on July 12, 2019, despite intense US pressure to cancel the purchase. The US argues S-400 systems are incompatible with NATO infrastructure and create security vulnerabilities, particularly for F-35 radar and electronic warfare systems. Turkey is expelled from the F-35 program as a result. The US activates CAATSA (Countering America's Adversaries Through Sanctions Act) sanctions against Turkey's defense procurement agency (SSB) in December 2020 — the first NATO ally to face such sanctions. The purchase is seen as a sign of Turkey's strategic ambiguity and growing ties with Russia.",
+        "sources": [
+          {
+            "name": "US State Department statements",
+            "tier": 1,
+            "pole": "western"
+          },
+          {
+            "name": "Reuters, S-400 Turkey coverage",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Greenland_crisis",
+            "source": "Wikipedia / Greenland crisis",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Hands_off_Greenland_protest_against_Donald_Trump_in_Copenhagen.jpg/330px-Hands_off_Greenland_protest_against_Donald_Trump_in_Copenhagen.jpg"
+          }
+        ]
+      },
+      {
+        "id": "kahramanmaras-earthquakes-2023",
+        "year": "2023",
+        "title": "Kahramanmaraş Earthquakes — Deadliest Disaster in Modern Turkey",
+        "type": "social",
+        "detail": "Two catastrophic earthquakes strike southeastern Turkey on February 6, 2023: a Mw 7.8 at 4:17 AM and a Mw 7.5 eleven hours later, both centered near Kahramanmaraş. Over 53,000 people die in Turkey (11 deaths in Syria). More than 125,000 buildings collapse or are seriously damaged. 1.5 million people are displaced. The disaster affects 10 provinces with 13 million residents. International rescue teams from 90+ countries respond. The government's slow initial response draws sharp criticism. The disaster dominates the May 2023 election campaign, with opposition leaders arguing corruption in building permits cost lives. Reconstruction costs are estimated at $100+ billion.",
+        "sources": [
+          {
+            "name": "Turkish Disaster and Emergency Management Authority (AFAD)",
+            "tier": 1,
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "USGS Earthquake Hazards Program",
+            "tier": 1,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/2023_Turkey%E2%80%93Syria_earthquakes",
+            "source": "Wikipedia / 2023 Turkey%E2%80%93Syria earthquakes",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Collage_of_2023_Turkey%E2%80%93Syria_earthquake.jpg/330px-Collage_of_2023_Turkey%E2%80%93Syria_earthquake.jpg"
+          }
+        ]
+      },
+      {
+        "id": "erdogan-reelected-2023",
+        "year": "2023",
+        "title": "2023 Elections — Erdoğan Wins Third Presidential Term",
+        "type": "political",
+        "detail": "In Turkey's most consequential election in decades, Erdoğan wins a second-round presidential runoff on May 28, 2023 with 52.2% vs. opposition candidate Kemal Kılıçdaroğlu's 47.8%. The vote comes just months after the devastating February earthquakes and amid triple-digit inflation. The AKP and coalition retain parliamentary majority. Erdoğan's victory, despite severe economic conditions, is attributed to his nationalist base, control of state media, and the Kurdish-dominated HDP being barred from using its party name. International observers note concerns about media access and opposition party restrictions. The result confirms Erdoğan's dominance despite unprecedented economic and natural crises.",
+        "sources": [
+          {
+            "name": "OSCE/ODIHR Election Observation",
+            "tier": 1,
+            "pole": "international"
+          },
+          {
+            "name": "Reuters Turkey election coverage",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Next_Turkish_presidential_election",
+            "source": "Wikipedia / Next Turkish presidential election",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/2028_Turkish_presidential_election_map.svg/330px-2028_Turkish_presidential_election_map.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "imamoglu-detained-2025",
+        "year": "2025",
+        "title": "İmamoğlu Detained — Crackdown on Istanbul Mayor",
+        "type": "political",
+        "active": true,
+        "detail": "Istanbul mayor Ekrem İmamoğlu — Erdoğan's main political rival and the CHP's presumptive presidential candidate — is detained by Turkish authorities on March 19, 2025 on corruption and terrorism charges, days before he was expected to be formally declared the CHP's 2028 presidential candidate. His detention triggers massive protests across Turkey, drawing hundreds of thousands. The charges are widely viewed by opposition and international observers as politically motivated, aimed at eliminating the most credible challenger to AKP rule. The EU, US, and Council of Europe issue criticism. The crackdown marks an escalation of judicial weaponization against political opposition.",
+        "sources": [
+          {
+            "name": "Reuters Turkey coverage",
+            "tier": 2,
+            "pole": "western"
+          },
+          {
+            "name": "BBC News Turkey",
+            "tier": 2,
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-04-25T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Ekrem_%C4%B0mamo%C4%9Flu",
+            "source": "Wikipedia / Ekrem %C4%B0mamo%C4%9Flu",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Ekrem_%C4%B0mamo%C4%9Flu_7_March_2024_%28cropped%29.png/330px-Ekrem_%C4%B0mamo%C4%9Flu_7_March_2024_%28cropped%29.png"
+          }
+        ]
+      },
+      {
+        "id": "pkk-ceasefire-dissolution-2025",
+        "year": "2025",
+        "title": "PKK Declares Ceasefire and Votes to Dissolve — Historic Gamble",
+        "type": "political",
+        "active": true,
+        "detail": "In a historic development, imprisoned PKK founder Abdullah Öcalan issued a statement on February 27, 2025 calling on the PKK to lay down arms and dissolve itself, declaring that 'a century of armed struggle has brought neither victory nor defeat' and advocating for a democratic political solution. The PKK leadership council, meeting in the Kandil Mountains of northern Iraq, voted overwhelmingly to accept Öcalan's call in May 2025 — with some commanders symbolically burning weapons. This followed a March 2025 unilateral ceasefire declaration. The move was interpreted as reflecting the PKK's assessment that geopolitical conditions — including the US withdrawal from Syria, new Turkish-SDF engagements, and MHP-backed parliamentary openings — made continued armed struggle untenable. The Turkish government cautiously welcomed the announcement but stopped short of formal recognition, insisting on full and verifiable disarmament before political steps. By late 2025, the process had effectively stalled over sequencing disagreements. As of May 2026, the PKK ceasefire nominally holds but no verified disarmament has occurred and Öcalan remains imprisoned.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2025/3/1/pkk-declares-ceasefire-in-40-year-conflict-with-turkiye-kurdish-media",
+            "pole": "international"
+          },
+          {
+            "name": "Voice of America",
+            "tier": 2,
+            "url": "https://www.voanews.com/a/pkk-declares-ceasefire-with-turkey-after-40-years-of-armed-struggle-/7993837.html",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-09T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Abdullah_%C3%96calan",
+            "source": "Wikipedia / Abdullah Öcalan",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/%C4%B0mral%C4%B1_Island_view_from_the_Marmara_Sea.jpg/320px-%C4%B0mral%C4%B1_Island_view_from_the_Marmara_Sea.jpg"
+          }
+        ]
+      },
+      {
+        "id": "imamoglu-trial-begins-2026",
+        "year": "2026",
+        "title": "İmamoğlu Corruption Mega-Trial Begins with 413 Defendants",
+        "type": "political",
+        "active": true,
+        "detail": "On March 9, 2026, the trial of Istanbul Mayor Ekrem İmamoğlu and 412 co-defendants formally began in Istanbul. İmamoğlu, the CHP's presumptive 2028 presidential candidate and Erdoğan's most credible electoral challenger, had been arrested in March 2025 on charges of leading an organized network of bribery and tender manipulation across Istanbul municipality operations spanning a decade. He additionally faces separate charges of espionage and forging university credentials. If convicted on all counts, he faces a sentence exceeding 2,430 years in prison. An Istanbul court granted conditional release to 15 co-defendants on April 30. Turkish police arrested 29 more municipality associates in May 2026, indicating prosecutors were expanding rather than narrowing the case. The Bloomberg reported the trial 'risks shaking the opposition.' EU, US State Department, and Council of Europe have issued formal criticisms. The Verfassungsblog characterized it as 'lawfare' — the weaponization of legal process for political ends.",
+        "sources": [
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-05-06/erdogan-rivals-stand-trial-in-case-that-risks-shaking-opposition",
+            "pole": "western"
+          },
+          {
+            "name": "Verfassungsblog",
+            "tier": 3,
+            "url": "https://verfassungsblog.de/holding-fast/",
+            "pole": "international"
+          }
+        ],
+        "lastUpdated": "2026-05-09T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://en.wikipedia.org/wiki/Ekrem_%C4%B0mamo%C4%9Flu",
+            "source": "Wikipedia / Ekrem İmamoğlu",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Ekrem_%C4%B0mamo%C4%9Flu_7_March_2024_%28cropped%29.png/330px-Ekrem_%C4%B0mamo%C4%9Flu_7_March_2024_%28cropped%29.png"
+          }
+        ]
+      },
+      {
+        "id": "ankara-nato-summit-2026",
+        "year": "2026",
+        "title": "Turkey to Host 2026 NATO Summit in Ankara — Alliance Test",
+        "type": "diplomatic",
+        "active": false,
+        "detail": "The 36th NATO Summit was held July 7–8, 2026 in Ankara — only the second time Türkiye has hosted alliance leaders (after the 2004 Istanbul Summit). All 32 member-state leaders attended, joined by Ukrainian President Volodymyr Zelenskyy and South Korean President Lee Jae-myung as non-alliance guests. Members committed to invest 5% of GDP in defense by 2035. Erdoğan held bilateral meetings with Trump, Macron, Stubb, Pellegrini and Merz, using the summit to press Türkiye's leverage over İncirlik airbase access, the Bosphorus Strait and NATO's second-largest standing military. The summit's most concrete outcome was Trump's pledge to lift CAATSA sanctions imposed over Türkiye's 2019 S-400 purchase and to 'consider' resuming F-35 sales — though Israel publicly objected. The summit also became a stage for domestic political tension: jailed opposition leader Ekrem İmamoğlu was run through three court hearings on July 6 and ejected from a courtroom on July 8, drawing international criticism that Ankara timed the proceedings for maximum distraction during the global spotlight.",
+        "sources": [
+          {
+            "name": "NATO Official Announcement",
+            "tier": 1,
+            "url": "https://www.nato.int/en/news-and-events/articles/news/2025/08/20/turkiye-to-host-2026-nato-summit-in-ankara",
+            "pole": "international"
+          },
+          {
+            "name": "Wikipedia / 2026 Ankara NATO Summit",
+            "tier": 3,
+            "url": "https://en.wikipedia.org/wiki/2026_Ankara_NATO_summit",
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/7/nato-summit-begins-who-is-attending-and-what-is-at-stake",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-07-02/erdogan-shows-europe-why-nato-needs-turkey-s-clout-on-defense",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-07-16T00:00:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/7/7/nato-summit-begins-who-is-attending-and-what-is-at-stake",
+            "caption": "NATO leaders gather in Ankara for the 36th alliance summit — July 7, 2026",
+            "source": "Al Jazeera",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/07/afp_6a4d12bd6c8b-1783435965.jpg"
+          }
+        ],
+        "eventConfidence": "verified"
+      },
+      {
+        "id": "chp-leadership-annulled-court-may2026",
+        "year": "2026",
+        "title": "Ankara Court Annuls CHP Leadership; Thousands Rally as Democratic Backsliding Deepens",
+        "type": "political",
+        "active": true,
+        "detail": "The 36th Ankara Regional Court of Appeal on May 21, 2026, issued an interim ruling annulling the November 2023 CHP party congress and removing party chair Özgür Özel and the entire party leadership from office, reinstating former leader Kemal Kılıçdaroğlu as interim chair. The ruling triggered a 6%+ drop in the BIST-100 stock index, mass protests across Istanbul, Ankara, and İzmir, and strong international condemnation from the EU, US State Department, Council of Europe, and Human Rights Watch. CHP announced it would appeal at the constitutional court. The decision represents the most dramatic judicial intervention against a Turkish opposition party since at least the closure of the Welfare Party (Refah) in 1998. Together with Istanbul Mayor İmamoğlu's ongoing detention and corruption mega-trial since March 2025, the ruling forms part of what international observers describe as a systematic judicial campaign to decapitate Turkey's organized opposition ahead of the 2028 presidential election — a pattern that has drawn Turkey further from European democratic norms.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/2026/05/21/turkish-court-annuls-leadership-of-main-opposition-chp-party-sparking-turmoil",
+            "pole": "western"
+          },
+          {
+            "name": "Human Rights Watch",
+            "tier": 3,
+            "url": "https://www.hrw.org/news/2026/05/22/turkiye-court-removes-leadership-of-main-opposition-party",
+            "pole": "international"
+          },
+          {
+            "name": "Al-Monitor",
+            "tier": 2,
+            "url": "https://www.al-monitor.com/originals/2026/05/turkish-court-ousts-chp-leadership-amid-opposition-crackdown",
+            "pole": "middle_eastern"
+          }
+        ],
+        "lastUpdated": "2026-05-24T14:30:00.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/2026/05/21/turkish-court-annuls-leadership-of-main-opposition-chp-party-sparking-turmoil",
+            "source": "Euronews",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/320px-Flag_of_Turkey.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "ozel-defiance-protest-wave-may2026",
+        "year": "2026",
+        "title": "Özel's Defiance Protest Wave — Tens of Thousands March to Atatürk Mausoleum",
+        "type": "political",
+        "active": true,
+        "detail": "Following the May 21 court ruling that stripped him of the CHP chairmanship, Özgür Özel launched a nationwide defiance tour that drew some of the largest opposition crowds Turkey had seen in over a decade. On May 26, riot police deployed water cannons against Özel supporters in İzmir. On May 30, tens of thousands marched with Özel from Güven Park in Ankara to Anıtkabir — the mausoleum of Mustafa Kemal Atatürk — in a demonstration laden with symbolic power, framing the struggle against judicial repression in terms of defending Atatürk's republican legacy. Ankara Mayor Mansur Yavaş joined the march. The Socialist International unanimously endorsed Özel as the legitimate CHP leader (May 27) and issued a formal statement (May 29) calling the court ruling unlawful. On May 31, Kılıçdaroğlu and Özel held rival events in Ankara, with Kılıçdaroğlu vowing a congress 'as soon as possible' but without a specific date, while Özel drew larger crowds and demanded an immediate date. International analysts (Foreign Policy, May 28) argued that Erdoğan's judicial campaign was paradoxically consolidating opposition support, potentially creating a more unified and publicly mobilized opposition than had previously existed. The crisis established the 'absolute nullity' ruling as a landmark moment in Turkey's democratic backsliding.",
+        "sources": [
+          {
+            "name": "AP / US News",
+            "tier": 2,
+            "url": "https://www.usnews.com/news/world/articles/2026-05-30/ousted-turkish-opposition-leader-ozel-draws-thousands-in-ankara-protest",
+            "pole": "western"
+          },
+          {
+            "name": "Washington Post",
+            "tier": 2,
+            "url": "https://www.washingtonpost.com/world/2026/05/26/turkey-izmir-opposition-rally-water-cannon/779ed366-58f5-11f1-8a9d-afb1148204e1_story.html",
+            "pole": "western"
+          },
+          {
+            "name": "Foreign Policy",
+            "tier": 2,
+            "url": "https://foreignpolicy.com/2026/05/28/erdogan-turkey-opposition-chp-imamoglu-kilicdaroglu-ozel-istanbul-ankara/",
+            "pole": "western"
+          }
+        ],
+        "lastUpdated": "2026-05-31T15:43:51.000Z",
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.usnews.com/news/world/articles/2026-05-30/ousted-turkish-opposition-leader-ozel-draws-thousands-in-ankara-protest",
+            "source": "AP / US News",
+            "caption": "Özel's defiance march to Anıtkabir, Ankara — May 30, 2026",
+            "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/320px-Flag_of_Turkey.svg.png"
+          }
+        ]
+      },
+      {
+        "id": "trump-erdogan-f35-caatsa-sanctions-2026",
+        "year": "2026",
+        "title": "Trump Pledges to Lift CAATSA Sanctions, 'Consider' F-35 Sale to Türkiye",
+        "type": "diplomatic",
+        "detail": "Meeting Erdoğan on the sidelines of the NATO Ankara summit on July 7, 2026, President Trump said the US would remove CAATSA sanctions imposed after Türkiye's 2019 purchase of Russian S-400 air defense systems — the same purchase that got Türkiye expelled from the F-35 fighter program. Trump said he would soon decide on resuming F-35 sales, calling the jet 'the best plane by far'; Erdoğan said Türkiye had previously been promised five jets and hoped for a 'favourable decision.' Any return to the F-35 program still requires a formal presidential determination under a 2020 law that Türkiye no longer operates the S-400. Israeli Prime Minister Netanyahu publicly urged against the sale, warning it would upset the regional balance of power.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/7/trump-says-will-lift-sanctions-on-turkiye-consider-selling-f-35s",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "PBS NewsHour",
+            "tier": 2,
+            "url": "https://www.pbs.org/newshour/world/watch-trump-says-in-erdogan-meeting-that-u-s-will-lift-turkey-sanctions-consider-selling-f-35s",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/7/7/trump-says-will-lift-sanctions-on-turkiye-consider-selling-f-35s",
+            "caption": "Trump and Erdoğan meet on the sidelines of the NATO Ankara summit — July 7, 2026",
+            "source": "Al Jazeera",
+            "thumbnail": "https://aje.news/wp-content/uploads/2026/07/afp_6a4d12bd6c8b-1783435965.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Trump's sanctions-lift statement is verified but formal CAATSA delisting and any F-35 sale require further US government action not yet finalized.",
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "imamoglu-nato-summit-judicial-pressure-2026",
+        "year": "2026",
+        "title": "İmamoğlu Faces Triple Hearings, Courtroom Ejection During NATO Summit Spotlight",
+        "type": "political",
+        "detail": "As NATO leaders gathered in Ankara, jailed Istanbul Mayor and CHP presidential candidate Ekrem İmamoğlu faced an intensified judicial squeeze. On July 6, he appeared in three separate Silivri prison-complex hearings in a single day — the IMM corruption case, a university-diploma fraud case, and the political/military espionage case, which was adjourned pending further technical examination of alleged data-breach evidence. European Parliament rapporteur Nacho Sánchez Amor called the scheduling 'statistically impossible' as coincidence. On July 8, the second day of the summit, İmamoğlu was ejected from the IMM trial courtroom after protesting his defense time limit, asking how Ankara would explain his 'silencing' to visiting world leaders; the Bakırköy prosecutor's office opened an investigation into his remarks. The same session released 6 of 414 co-defendants. İmamoğlu, jailed since March 2025, faces up to 2,430 years across 142 charges; CHP called the proceedings 'a sham.'",
+        "sources": [
+          {
+            "name": "Turkish Minute",
+            "tier": 2,
+            "url": "https://turkishminute.com/2026/07/06/jailed-erdogan-rival-faces-3-hearings-in-one-day-as-nato-leaders-arrive-in-ankara/",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "Hürriyet Daily News",
+            "tier": 2,
+            "url": "https://www.hurriyetdailynews.com/imamoglu-ejected-from-hearing-as-court-releases-6-defendants-224191",
+            "pole": "middle_eastern"
+          },
+          {
+            "name": "AFP / Yahoo News",
+            "tier": 2,
+            "url": "https://www.yahoo.com/news/politics/articles/istanbul-mayor-ejected-court-corruption-131235916.html",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.yahoo.com/news/politics/articles/istanbul-mayor-ejected-court-corruption-131235916.html",
+            "caption": "İmamoğlu removed from the IMM corruption trial courtroom — July 8, 2026",
+            "source": "AFP",
+            "thumbnail": "https://media.zenfs.com/en/afp.com/bfb0a5b8695e0dffdfe9e7b31a7c8fb6"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "comedian-goktas-jailed-2026",
+        "year": "2026",
+        "title": "Comedian Deniz Göktaş Jailed Over Erdoğan 'Dictator' Stand-Up Joke",
+        "type": "social",
+        "detail": "Comedian Deniz Göktaş, 32, was detained at Istanbul Airport on July 2, 2026 after a stand-up set uploaded to YouTube on June 24 — in which he called Erdoğan a 'shy dictator' who had grown 'confident in his identity' and made a quip referencing the Quran — drew 9.5 million views and 185 prosecutorial complaints. Charged with 'publicly insulting religious values' and violating Article 299 (insulting the president, punishable by up to four years), Göktaş was jailed pending trial on July 3. The case drew condemnation from free-speech advocates and fellow performers as an escalation of Türkiye's use of Article 299 against artists and public figures.",
+        "sources": [
+          {
+            "name": "Euronews",
+            "tier": 2,
+            "url": "https://www.euronews.com/culture/2026/07/03/turkish-comedian-arrested-for-insulting-islam-and-erdogan",
+            "pole": "western"
+          },
+          {
+            "name": "Bloomberg",
+            "tier": 2,
+            "url": "https://www.bloomberg.com/news/articles/2026-07-03/turkey-arrests-comedian-deniz-goktas-for-insulting-erdogan-religion",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.euronews.com/culture/2026/07/03/turkish-comedian-arrested-for-insulting-islam-and-erdogan",
+            "caption": "Comedian Deniz Göktaş jailed pending trial over a routine calling Erdoğan a 'dictator' — July 3, 2026",
+            "source": "Euronews",
+            "thumbnail": "https://images.euronews.com/articles/stories/09/82/34/57/1536x864_cmsv2_a4a87b1c-3371-5978-a0ae-1b73239194ad-9823457.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "israel-armenian-genocide-recognition-2026",
+        "year": "2026",
+        "title": "Israel Recognizes Armenian Genocide; Türkiye Rejects Move as Gaza Deflection",
+        "type": "diplomatic",
+        "detail": "On June 28, 2026, Israel's cabinet unanimously voted to recognize the 1915–1923 killings of Armenians under the Ottoman Empire as genocide, on a resolution from Foreign Minister Gideon Sa'ar (pending Knesset ratification). Türkiye's Foreign Ministry rejected the recognition as a politically motivated attempt by a government 'being tried at the International Court of Justice for genocide against the people of Gaza' to deflect from its own conduct. The move deepened the rupture in Turkey-Israel relations that began with the October 2023 Gaza war, and reopened Türkiye's long-standing dispute over the genocide classification (see Armenian Genocide casualty entry).",
+        "sources": [
+          {
+            "name": "The Times of Israel",
+            "tier": 2,
+            "url": "https://www.timesofisrael.com/government-unanimously-recognizes-armenian-genocide-amid-frosty-ties-with-turkey/",
+            "pole": "western"
+          },
+          {
+            "name": "NPR",
+            "tier": 2,
+            "url": "https://www.npr.org/2026/06/29/g-s1-130772/israel-armenian-wwi-deaths-genocide",
+            "pole": "western"
+          },
+          {
+            "name": "Turkish Minute",
+            "tier": 2,
+            "url": "https://www.turkishminute.com/2026/06/26/israel-moves-to-recognize-1915-killings-of-armenians-as-genocide-amid-turkey-tensions/",
+            "pole": "middle_eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.timesofisrael.com/government-unanimously-recognizes-armenian-genocide-amid-frosty-ties-with-turkey/",
+            "caption": "Israel's cabinet votes to recognize the Armenian genocide amid frosty ties with Türkiye — June 28, 2026",
+            "source": "The Times of Israel",
+            "thumbnail": "https://static-cdn.toi-media.com/www/uploads/2026/06/AFP__20250423__439P9ED__v2__HighRes__ArmeniaTurkeyHistoryGenocideAnniversary.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "ozel-new-party-plans-2026",
+        "year": "2026",
+        "title": "Ousted CHP Leader Özel Signals Plans for a New Party",
+        "type": "political",
+        "detail": "Özgür Özel, ousted as CHP chairman after a May 2026 Ankara court ruling annulled the party's 2023 congress and reinstated Kemal Kılıçdaroğlu, said on July 15, 2026 that preparations were underway for a possible new party, with any formal step contingent on the outcome of pending legal proceedings. Özel said his appeal against the ouster and a bid for an extraordinary CHP congress could be resolved within about two weeks; if blocked, he signaled a new party could launch by late July or early August. The rift leaves CHP split into rival power centers heading into the 2028 presidential race, even as Özel continues to draw large rally crowds without formal control of the party apparatus.",
+        "sources": [
+          {
+            "name": "Al-Monitor",
+            "tier": 2,
+            "url": "https://www.al-monitor.com/originals/2026/07/turkeys-ousted-opposition-leader-says-preparing-possible-new-party",
+            "pole": "western"
+          },
+          {
+            "name": "Hürriyet Daily News",
+            "tier": 2,
+            "url": "https://www.hurriyetdailynews.com/ozel-camp-eyes-new-party-by-august-as-chp-rift-widens-224417",
+            "pole": "middle_eastern"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.al-monitor.com/originals/2026/07/turkeys-ousted-opposition-leader-says-preparing-possible-new-party",
+            "caption": "Özgür Özel greets supporters at a rally in İzmir — May 26, 2026",
+            "source": "Reuters / Al-Monitor",
+            "thumbnail": "https://www.al-monitor.com/sites/default/files/styles/article_hero_medium/public/2026-07/2026-07-15T093646Z_1_LYNXMPEM6E0GT_RTROPTP_4_TURKEY-OPPOSITION.JPG?h=eb2c54f2&itok=M6kLYomz"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16T00:00:00.000Z"
+      },
+      {
+        "id": "ozel-founds-yeni-parti-jul2026",
+        "year": "2026",
+        "title": "Özel Founds Yeni Parti, Splitting CHP's Parliamentary Bloc",
+        "type": "political",
+        "detail": "Özgür Özel formally founded Yeni Parti (\"New Party\") on July 24, 2026, filing papers with the Interior Ministry and holding an inaugural meeting in Ankara where he was elected chairman. Ninety-one CHP deputies resigned to join, cutting CHP's parliamentary bloc from 135 to 44 of 600 seats and instantly making Yeni Parti the largest opposition party. The split followed the May 21, 2026 court ruling that annulled Özel's CHP leadership and reinstated Kemal Kılıçdaroğlu; analysts warned the opposition fragmentation could benefit President Erdoğan ahead of the 2028 presidential race.",
+        "sources": [
+          {
+            "name": "Al Jazeera",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/28/new-party-why-turkiye-opposition-suffered-a-split-and-what-that-means",
+            "pole": "western"
+          },
+          {
+            "name": "Al Jazeera (announcement)",
+            "tier": 2,
+            "url": "https://www.aljazeera.com/news/2026/7/21/deposed-turkish-opposition-leader-plans-new-party",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.aljazeera.com/news/2026/7/28/new-party-why-turkiye-opposition-suffered-a-split-and-what-that-means",
+            "caption": "Özgür Özel waves to supporters at Hacı Bayram Mosque in Ankara after founding Yeni Parti",
+            "source": "AFP / Al Jazeera",
+            "thumbnail": "https://www.aljazeera.com/wp-content/uploads/2026/07/afp_6a68a3985d49-1785242520.jpg?resize=770%2C513&quality=80"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10T00:00:00.000Z"
+      },
+      {
+        "id": "pkk-amnesty-bill-parliament-debate-aug2026",
+        "year": "2026",
+        "title": "Parliament Opens Debate on PKK Disarmament Amnesty Bill",
+        "type": "political",
+        "detail": "Turkey's Grand National Assembly opened debate on August 10, 2026 on a 12-article bill offering conditional amnesty to thousands of PKK members as part of the disarmament process launched after the group's 2025 decision to disband. The bill suspends sentences and postpones trials for 5–10 years for eligible members, contingent on National Security Council certification that the PKK has disarmed; it excludes those convicted of intentional killings and pre-2005 life sentences, so founder Abdullah Öcalan does not benefit. The AKP-MHP coalition and pro-Kurdish DEM party support the bill; the PKK called it a good first step with \"serious shortcomings\" and demanded Öcalan's release, while the nationalist İYİ Party opposed it as a vehicle to extend Erdoğan's tenure.",
+        "sources": [
+          {
+            "name": "AP News",
+            "tier": 2,
+            "url": "https://abcnews.com/International/wireStory/turkeys-parliament-opens-debate-pardon-bill-thousands-pkk-135510235",
+            "pole": "western"
+          },
+          {
+            "name": "Balkan Insight",
+            "tier": 3,
+            "url": "https://balkaninsight.com/2026/08/05/turkey-submits-long-waited-pkk-disarmament-law-to-parliament/bi/",
+            "pole": "western"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://abcnews.com/International/wireStory/turkeys-parliament-opens-debate-pardon-bill-thousands-pkk-135510235",
+            "caption": "Turkey's parliament opens debate on the PKK amnesty/disarmament bill — August 10, 2026",
+            "source": "AP News",
+            "thumbnail": "https://i.abcnewsfe.com/a/b0737c4a-083c-4061-8ae1-8c3501ee4667/wirestory_a9addfb69c8126f1d661d4f37ef74827_16x9.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10T00:00:00.000Z"
+      }
+    ]
+  }
+]

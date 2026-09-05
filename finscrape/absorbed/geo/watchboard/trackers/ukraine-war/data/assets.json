@@ -1,0 +1,128 @@
+[
+  {
+    "id": "himars-m142",
+    "type": "Rocket Artillery",
+    "name": "M142 HIMARS",
+    "detail": "High Mobility Artillery Rocket System. US supplied 40+ units starting Jun 2022. 70km range with GMLRS rockets; up to 300km with ATACMS. Transformed Ukraine's ability to strike Russian ammunition depots, forcing Russia to move logistics 80km+ from the front.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "atacms-missiles",
+    "type": "Ballistic Missile",
+    "name": "ATACMS (MGM-140)",
+    "detail": "Army Tactical Missile System. Range ~300km. First delivered secretly in limited numbers Sep 2023 (used against Crimea). Full authorization provided in 2024. Launched from HIMARS; used to strike Russian airfields, ammunition depots, and military formations in occupied territory and Russia itself.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "storm-shadow-scalp",
+    "type": "Cruise Missile",
+    "name": "Storm Shadow / SCALP-EG",
+    "detail": "Anglo-French long-range cruise missile (~250km range). UK supplied from May 2023; France (SCALP) followed. Adapted for use on Soviet-era aircraft then F-16s. Used to strike the Kerch Bridge, Russian HQs in Crimea, and rear-area logistics. Significant escalation beyond prior weapons supplies.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "patriot-pac3",
+    "type": "Air Defense System",
+    "name": "Patriot PAC-3",
+    "detail": "Advanced US air defense system. 3 batteries supplied to Ukraine from 2023. Successfully intercepted Russian Kinzhal hypersonic missiles in May 2023 \u2014 first confirmed Kinzhal shootdown. Critical for protecting Kyiv and major cities. Each battery costs ~$1B; interceptors ~$4M each. Ukraine lobbied repeatedly for more batteries.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "f16-fighters",
+    "type": "Fighter Aircraft",
+    "name": "F-16 Fighting Falcon",
+    "detail": "4th-generation multirole fighter. Denmark, Netherlands, Belgium, and Norway pledged transfers; first aircraft operational Aug 2024. Pilots trained in Europe for over a year. Improved Ukrainian strike capability and air-to-air combat. Limited numbers (40-80 total) and maintenance complexity mean not a decisive game-changer but significant upgrade.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "javelin-atgm",
+    "type": "Anti-Tank Guided Missile",
+    "name": "FGM-148 Javelin",
+    "detail": "US-Swedish fire-and-forget anti-tank missile. US supplied thousands pre-war and post-invasion. Credited with destroying hundreds of Russian tanks in early 2022 Kyiv battle. Ukrainian troops could fire and immediately take cover due to top-attack fire-and-forget capability. Became iconic symbol of Ukrainian resistance.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "nlaw-atgm",
+    "type": "Anti-Tank Guided Missile",
+    "name": "NLAW (MBT LAW)",
+    "detail": "Swedish-British Next-generation Light Anti-tank Weapon. UK supplied over 5,000 NLAWs pre-invasion and in early 2022. Short-range disposable system ideal for urban warfare. Highly effective in Kyiv battle; light enough for individual soldiers to carry. Became symbol of UK-Ukraine defense cooperation.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "leopard2-tanks",
+    "type": "Main Battle Tank",
+    "name": "Leopard 2 (various variants)",
+    "detail": "German-made main battle tank. Germany, Poland, Canada, Spain, Norway and others supplied ~100+ Leopard 2s after Jan 2023 authorization. Limited operational impact vs. entrenched Russian positions; several destroyed by mines and drones. Better suited to maneuver warfare; Russia's defensive lines negated their advantage. Germany led Western tank coalition.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "abrams-m1",
+    "type": "Main Battle Tank",
+    "name": "M1A1 Abrams",
+    "detail": "US main battle tank. US pledged 31 tanks in Jan 2023; delivered Sep 2023. Reportedly withdrawn from front lines by late 2024 due to vulnerability to Russian drones and loitering munitions \u2014 logistical complexity also a factor. High fuel consumption and maintenance demands reduced battlefield availability.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "iris-t-sls",
+    "type": "Air Defense System",
+    "name": "IRIS-T SLM",
+    "detail": "German-supplied medium-range air defense system. Germany delivered first battery Oct 2022, becoming the first modern Western air defense in Ukraine. Range ~40km; intercepts cruise missiles, drones, and aircraft. Germany supplied multiple batteries. Particularly effective against Shahed drone attacks. Complementary to Patriot's longer range.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "nasams-system",
+    "type": "Air Defense System",
+    "name": "NASAMS (National Advanced Surface-to-Air Missile System)",
+    "detail": "US-Norwegian medium-range air defense. US provided 12 NASAMS systems to Ukraine. Uses AIM-120 AMRAAM missiles. Highly effective against cruise missiles, drones, and aircraft. Central to Ukraine's layered air defense network protecting major cities.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "shahed136-drone",
+    "type": "Loitering Munition (Russian)",
+    "name": "Shahed-136 / Geran-2",
+    "detail": "Iranian-designed loitering munition produced in Russia as Geran-2. $20-50K per unit \u2014 much cheaper than missiles. Low-speed subsonic attack profile makes them easier to intercept but challenging in mass swarms. Russia launches 50-130+ per night against Ukrainian cities. Production rate estimated 300+ per month in Russia by 2025. Key weapon in Russia's energy terror campaign.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "kinzhal-missile",
+    "type": "Hypersonic Missile (Russian)",
+    "name": "Kh-47M2 Kinzhal",
+    "detail": "Russian air-launched hypersonic ballistic missile. Putin called it 'invincible.' Ukraine's Patriot system shot down multiple Kinzhals in May 2023 \u2014 undermining Russia's propaganda. Range ~2,000km; launched from MiG-31K and Tu-22M3. Russia has limited stockpiles (~50-100 estimated). Used selectively against hardened targets.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "lancet-drone",
+    "type": "Loitering Munition (Russian)",
+    "name": "Lancet-3 Loitering Munition",
+    "detail": "Russian-made loitering munition with TV/optical guidance. Highly effective against Ukrainian artillery pieces, armored vehicles, and air defense radars. Production scaled to hundreds/month by 2024. Has destroyed numerous HIMARS, howitzers, and other critical Ukrainian systems. Operates in tandem with Zala recon drones \u2014 one locates, one strikes.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "neptune-missile",
+    "type": "Anti-Ship Cruise Missile (Ukrainian)",
+    "name": "R-360 Neptune",
+    "detail": "Ukrainian-developed anti-ship cruise missile. Used to sink Russia's Black Sea Fleet flagship Moskva (Apr 2022) \u2014 the most significant naval loss of the conflict. Based on Soviet Kh-35 design but substantially upgraded. Two Neptune missiles fired; both struck Moskva. Further strikes forced Russia's Black Sea Fleet to retreat from Snake Island and western Black Sea.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "fp5-flamingo-missile",
+    "type": "Cruise Missile (Ukrainian)",
+    "name": "FP-5 Flamingo",
+    "detail": "Ukrainian-developed long-range cruise missile produced by Fire Point. In operational use since November 2025; seeing increasing deployment frequency in early 2026. Used to strike the Promsintez explosives plant in Chapayevsk, Samara Oblast (March 28) \u2014 one of Russia's largest explosives manufacturers, ~1,200 km from Ukraine. Extends Ukraine's deep-strike capability alongside Shahed-derived long-range drones.",
+    "lastUpdated": "2026-03-30T14:15:42Z"
+  },
+  {
+    "id": "gripen-jAS39-cd-ukraine",
+    "type": "Fighter Aircraft",
+    "name": "Saab JAS 39 Gripen C/D (Sweden donation)",
+    "detail": "Swedish-made lightweight 4th-generation multirole fighter. Sweden announced on May 28, 2026 the donation of 16 used Gripen C/D aircraft to Ukraine, with first deliveries expected in early 2027. Ukraine will also have the option to purchase up to 20 new Gripen E jets (latest-generation variant with AESA radar and IRST) financed by a \u20ac2.5B EU Ukraine Support Loan, with deliveries from 2030. Total Swedish package worth ~$2.7B also includes $400M for Ukrainian drone production, long-range strike capabilities, artillery ammunition, and electronic warfare systems. The Gripen supplements F-16s (Denmark/Netherlands/Belgium/Norway), Mirage 2000-5s (France), and other Western combat aircraft in Ukraine's growing 4th-gen air fleet. ISW assessed the Gripen donation will improve Ukraine's ability to intercept Russian guided glide bombs (KABs) that devastate fixed defensive positions.",
+    "lastUpdated": "2026-05-29T14:30:00Z"
+  },
+  {
+    "id": "kn30-hwasong11c-missile",
+    "type": "Ballistic Missile",
+    "name": "KN-30 / Hwasong-11C (North Korean, deployed to Russia)",
+    "detail": "North Korean-made short-range ballistic missile with a reported 2,500kg warhead and ~900km range \u2014 larger but less accurate than Russia's Iskander-M. Ukraine's Defense Intelligence confirmed Russia received its first shipment on August 20, 2026, deployed with a ~90-person North Korean missile unit operating six transporter-erector-launchers in Voronezh Oblast, putting Kyiv, Sumy, Kharkiv, Chernihiv, Poltava, Dnipropetrovsk, and Zaporizhzhia regions within range. ISW had not observed the KN-30 used against Ukraine as of Aug 22, 2026, assessing Russia is likely saving expanded missile stocks for periodic mass attacks designed to overwhelm Ukrainian air defenses. Part of a broader North Korean transfer of ~50 KN-23/KN-24/KN-30 missiles to Russia by mid-2026.",
+    "lastUpdated": "2026-08-22T14:00:00Z"
+  }
+]

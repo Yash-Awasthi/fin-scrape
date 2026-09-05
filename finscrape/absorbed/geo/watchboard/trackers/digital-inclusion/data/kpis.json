@@ -1,0 +1,108 @@
+[
+  {
+    "id": "internet-penetration-global",
+    "label": "Global Internet Penetration",
+    "value": "75%",
+    "color": "blue",
+    "source": "ITU Global Connectivity Report 2025",
+    "contested": false,
+    "delta": "+7.6 pp",
+    "deltaNote": "year-over-year increase per ITU GCR 2025; 6 billion people now connected for the first time",
+    "trend": "up",
+    "lastUpdated": "2026-04-21T14:35:22Z"
+  },
+  {
+    "id": "people-offline-count",
+    "label": "People Still Offline Worldwide",
+    "value": "2.2 billion",
+    "color": "red",
+    "source": "ITU Global Connectivity Report 2025",
+    "contested": true,
+    "contestNote": "ITU estimates 2.2B; estimates range 2.1–2.5B depending on 'active use' vs. 'occasional access' definitions; rural-urban and income divides persist",
+    "trend": "down",
+    "lastUpdated": "2026-04-21T14:35:22Z"
+  },
+  {
+    "id": "starlink-active-subscribers",
+    "label": "Starlink Active Subscribers",
+    "value": "13 million+",
+    "color": "blue",
+    "source": "SpaceX internal all-hands meeting (posted publicly on X), August 11, 2026",
+    "contested": false,
+    "delta": "+1M since June 4, 2026",
+    "deltaNote": "SpaceX disclosed over 13 million consumer subscribers during an internal all-hands meeting between Elon Musk and employees, posted publicly on X August 11, 2026 — up from the 12M figure confirmed June 4, 2026; SpaceX targeting 25M by end-2026 as V3 satellites boost per-satellite bandwidth 10x",
+    "trend": "up",
+    "lastUpdated": "2026-08-11T00:00:00Z"
+  },
+  {
+    "id": "mobile-broadband-coverage",
+    "label": "4G+ Mobile Coverage (% population)",
+    "value": "95%",
+    "color": "green",
+    "source": "GSMA Intelligence State of Connectivity 2024",
+    "contested": false,
+    "delta": "+2 pp",
+    "deltaNote": "coverage growing but adoption still lags at ~57%",
+    "trend": "up",
+    "lastUpdated": "2026-04-14T00:00:00Z"
+  },
+  {
+    "id": "gender-digital-gap",
+    "label": "Gender Digital Gap (mobile internet, LMICs)",
+    "value": "7 pp",
+    "color": "amber",
+    "source": "GSMA Connected Women Report 2023",
+    "contested": false,
+    "delta": "-1 pp",
+    "deltaNote": "slowly narrowing; women 7% less likely to use mobile internet than men in LMICs",
+    "trend": "down",
+    "lastUpdated": "2026-04-14T00:00:00Z"
+  },
+  {
+    "id": "school-connectivity-lmic",
+    "label": "School Connectivity in LMICs",
+    "value": "~40%",
+    "color": "red",
+    "source": "UNICEF / ITU Measuring Digital Development 2024",
+    "contested": true,
+    "contestNote": "Definitions vary: some estimates as low as 23% when measuring actual learning-quality broadband",
+    "trend": "up",
+    "lastUpdated": "2026-04-14T00:00:00Z"
+  },
+  {
+    "id": "data-cost-1gb-lmic",
+    "label": "1GB Data Cost (avg % of monthly income, LMICs)",
+    "value": "1.8%",
+    "color": "amber",
+    "source": "Alliance for Affordable Internet (A4AI) Affordability Report 2024",
+    "contested": false,
+    "delta": "-0.3 pp",
+    "deltaNote": "improving but ITU 2% affordability target still missed in 40+ countries",
+    "trend": "down",
+    "lastUpdated": "2026-04-14T00:00:00Z"
+  },
+  {
+    "id": "starlink-country-coverage",
+    "label": "Starlink Countries with Active Service",
+    "value": "160+",
+    "color": "blue",
+    "source": "SpaceX Starlink milestone announcement / Space in Africa, June-July 2026",
+    "contested": false,
+    "delta": "+45 countries since early 2024",
+    "deltaNote": "SpaceX confirmed service in 160+ countries/territories as of June 4, 2026; Côte d'Ivoire authorized June 12, 2026 as the 28th African market (service launching July 2026); South Africa entry remains stalled over BEE ownership rules despite ICASA's June 30 licensing framework clarification",
+    "trend": "up",
+    "lastUpdated": "2026-07-16T12:00:00Z"
+  },
+  {
+    "id": "amazon-kuiper-satellites-deployed",
+    "label": "Amazon Leo Satellites Deployed",
+    "value": "375+",
+    "color": "blue",
+    "source": "CNBC / About Amazon — 14th mission (Atlas V), July 2, 2026",
+    "contested": false,
+    "delta": "+44 since May 29",
+    "deltaNote": "375+ satellites in orbit after 14th launch on July 2, 2026 — Amazon says this is enough to begin initial commercial service later in 2026; FCC waived the July 30, 2026 half-constellation deadline in June 2026 after Amazon's extension request; enterprise beta active with Verizon, AT&T, Vodafone and Vodacom; Herotel partnership signed for South Africa's 'evry' rural service (2027 launch)",
+    "trend": "up",
+    "lastUpdated": "2026-07-16T12:00:00Z"
+  }
+]

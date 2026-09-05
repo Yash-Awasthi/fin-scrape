@@ -1,0 +1,937 @@
+[
+  {
+    "era": "Cuban Revolution (1953–1959)",
+    "events": [
+      {
+        "id": "moncada-barracks-attack",
+        "year": "Jul 26, 1953",
+        "title": "Moncada Barracks Attack",
+        "type": "revolution",
+        "detail": "Fidel Castro led approximately 160 rebels in a failed assault on the Moncada Barracks in Santiago de Cuba, the second-largest military installation in Cuba. The attack failed; many rebels were killed or captured. Castro was tried and sentenced to 15 years, delivering his famous 'History Will Absolve Me' speech in court.",
+        "sources": [
+          { "name": "Granma", "tier": 1, "url": "http://www.granma.cu" },
+          { "name": "BBC History", "tier": 2 },
+          { "name": "Cuba: A New History (Richard Gott)", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "castro-amnesty-exile",
+        "year": "May 15, 1955",
+        "title": "Castro Amnestied, Exiles to Mexico",
+        "type": "political",
+        "detail": "Batista's government granted amnesty to political prisoners, including Fidel and Raúl Castro. Fidel went to Mexico where he organized the 26th of July Movement and trained with Che Guevara and 80 other revolutionaries for the return to Cuba.",
+        "sources": [
+          { "name": "State Department Archives", "tier": 1 },
+          { "name": "Reuters History", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "granma-landing",
+        "year": "Dec 2, 1956",
+        "title": "Granma Landing — Revolution Begins",
+        "type": "revolution",
+        "detail": "Fidel Castro and 81 fighters landed on the southeastern coast of Cuba aboard the yacht Granma. Batista's forces ambushed the group at Alegría de Pío; only 20 survived and fled into the Sierra Maestra mountains, beginning the guerrilla war. The landing date became a national holiday.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "AP Archive", "tier": 2 },
+          { "name": "Wilson Center Digital Archive", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "sierra-maestra-guerrilla-campaign",
+        "year": "1957",
+        "title": "Sierra Maestra Guerrilla Campaign Expands",
+        "type": "revolution",
+        "detail": "Castro's forces built a base in the Sierra Maestra mountains, gaining peasant support and launching raids against Batista's army. The New York Times' Herbert Matthews interviewed Castro, reporting he was alive and leading a genuine insurgency, boosting international awareness. A second front under Raúl Castro opened in the north.",
+        "sources": [
+          { "name": "New York Times", "tier": 2 },
+          { "name": "Cuba: A New History (Richard Gott)", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "battle-santa-clara",
+        "year": "Dec 29–31, 1958",
+        "title": "Battle of Santa Clara — Decisive Revolutionary Victory",
+        "type": "revolution",
+        "detail": "Che Guevara's column captured Santa Clara in three days, derailing an armored troop train carrying 408 soldiers and weapons. The fall of Santa Clara broke Batista's defensive lines and signaled the regime's imminent collapse. It is considered the decisive battle of the Cuban Revolution.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "BBC News", "tier": 2 },
+          { "name": "Cuban Research Institute", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "batista-flees",
+        "year": "Jan 1, 1959",
+        "title": "Batista Flees Cuba",
+        "type": "revolution",
+        "detail": "President Fulgencio Batista fled to the Dominican Republic in the early hours of January 1, 1959, with close associates and significant personal wealth. The Rebel Army marched into Havana unopposed as jubilant crowds filled the streets. Cuba's seven-year revolutionary war was over.",
+        "sources": [
+          { "name": "State Department Records", "tier": 1 },
+          { "name": "New York Times", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "castro-enters-havana",
+        "year": "Jan 8, 1959",
+        "title": "Castro Enters Havana in Triumph",
+        "type": "political",
+        "detail": "Fidel Castro arrived in Havana to massive crowds after a week-long victory march from Santiago de Cuba. Speaking at Camp Columbia military base, Castro declared the revolution complete and vowed to end corruption and poverty. Manuel Urrutia was installed as President with Castro as commander-in-chief.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "New York Times", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "castro-prime-minister",
+        "year": "Feb 16, 1959",
+        "title": "Castro Becomes Prime Minister",
+        "type": "political",
+        "detail": "Fidel Castro was appointed Prime Minister of Cuba, consolidating power after José Miró Cardona resigned. Castro moved quickly to purge Batista loyalists and establish revolutionary tribunals. Show trials of former regime officials drew international attention, with hundreds executed.",
+        "sources": [
+          { "name": "Cuban Government Records", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "first-agrarian-reform",
+        "year": "May 17, 1959",
+        "title": "First Agrarian Reform Law",
+        "type": "economic",
+        "detail": "Castro signed the First Agrarian Reform Law, limiting landholdings to 1,000 acres and expropriating large estates for redistribution to peasants and cooperatives. The law nationalized approximately 40% of Cuba's arable land. US companies and Cuban landowners were offered compensation bonds, which most rejected as insufficient.",
+        "sources": [
+          { "name": "Cuban Official Gazette", "tier": 1 },
+          { "name": "State Department FRUS", "tier": 1 },
+          { "name": "Miami Herald", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "hubert-matos-arrest",
+        "year": "Oct 1959",
+        "title": "Hubert Matos Arrested — Revolution Fractures",
+        "type": "political",
+        "detail": "Revolutionary commander Hubert Matos resigned and was arrested for 'treason and sedition' after protesting Communist influence in the government. Matos was sentenced to 20 years in prison. The episode signaled that the revolution was moving decisively left and that dissent within revolutionary ranks would not be tolerated.",
+        "sources": [
+          { "name": "Cuban Research Institute", "tier": 3 },
+          { "name": "Miami Herald", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Bay of Pigs & US Confrontation (1960–1961)",
+    "events": [
+      {
+        "id": "oil-refinery-nationalization",
+        "year": "Jun–Jul 1960",
+        "title": "Oil Refineries Nationalized",
+        "type": "economic",
+        "detail": "Cuba nationalized US-owned oil refineries (Texaco, Esso, Shell) after they refused to process Soviet crude oil. The Eisenhower administration responded by eliminating Cuba's sugar import quota. Cuba then nationalized major US-owned industries including banks, utilities, and sugar mills worth over $1 billion.",
+        "sources": [
+          { "name": "State Department FRUS", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "Wilson Center Digital Archive", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "us-trade-embargo-begins",
+        "year": "Oct 19, 1960",
+        "title": "US Imposes Partial Trade Embargo",
+        "type": "economic",
+        "detail": "The Eisenhower administration imposed a partial trade embargo on Cuba, banning exports of all goods except food and medicine. Cuba had already received its first Soviet arms shipment in July 1960. The embargo set the stage for the full trade rupture that would define US-Cuba relations for decades.",
+        "sources": [
+          { "name": "US Federal Register", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "diplomatic-break",
+        "year": "Jan 3, 1961",
+        "title": "United States Breaks Diplomatic Relations",
+        "type": "diplomatic",
+        "detail": "President Eisenhower severed diplomatic relations with Cuba after Castro demanded the US Embassy reduce its staff to 11 people. The break ended 60 years of formal diplomatic ties and left the Swiss Embassy representing US interests. Canada, Mexico, and most Latin American states maintained relations.",
+        "sources": [
+          { "name": "State Department FRUS", "tier": 1 },
+          { "name": "New York Times", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "bay-of-pigs-invasion",
+        "year": "Apr 17–19, 1961",
+        "title": "Bay of Pigs Invasion Fails",
+        "type": "revolution",
+        "detail": "CIA-trained Cuban exiles (Brigade 2506) landed at Playa Girón and Playa Larga in the Bay of Pigs. President Kennedy cancelled planned US air support at the last moment. Without air cover, the 1,400-man brigade was overwhelmed by Cuban forces within 72 hours. About 1,200 were captured; 114 killed. The disaster was a massive embarrassment for the Kennedy administration.",
+        "sources": [
+          { "name": "CIA Inspector General Report (declassified)", "tier": 1 },
+          { "name": "New York Times", "tier": 2 },
+          { "name": "Wilson Center Digital Archive", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "socialist-declaration",
+        "year": "Apr 16, 1961",
+        "title": "Castro Declares Revolution Socialist",
+        "type": "political",
+        "detail": "On the eve of the Bay of Pigs invasion, Castro publicly declared the Cuban Revolution 'socialist' for the first time at a funeral for victims of CIA air strikes. The declaration was a direct challenge to the United States and formalized Cuba's alignment with the Soviet bloc.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "prisoner-ransom-released",
+        "year": "Dec 1962",
+        "title": "Bay of Pigs Prisoners Released for $53M Ransom",
+        "type": "diplomatic",
+        "detail": "Cuba released the 1,113 Bay of Pigs prisoners in exchange for $53 million worth of food and medicine, negotiated by James Donovan and Robert Kennedy. The prisoners returned to the US on December 23, just in time for Christmas, and were received by President Kennedy at Miami's Orange Bowl.",
+        "sources": [
+          { "name": "State Department Records", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "castro-marxist-declaration",
+        "year": "Dec 2, 1961",
+        "title": "Castro Declares Himself Marxist-Leninist",
+        "type": "political",
+        "detail": "In a televised speech, Castro declared 'I am a Marxist-Leninist and will be one until the last day of my life.' The announcement formalized the ideological transformation of the Cuban revolution and cemented the Soviet-Cuban alliance. Cuba began integrating with the Soviet economic bloc (COMECON).",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Cuban Missile Crisis (1962)",
+    "events": [
+      {
+        "id": "u2-reconnaissance-photos",
+        "year": "Oct 14, 1962",
+        "title": "U-2 Photographs Reveal Soviet Missiles",
+        "type": "diplomatic",
+        "detail": "CIA U-2 reconnaissance aircraft photographed Soviet medium-range ballistic missile (MRBM) launch sites under construction in western Cuba. Analyst Dino Brugioni at the National Photographic Interpretation Center confirmed the sites on October 15. President Kennedy was briefed on October 16, beginning the 13-day crisis.",
+        "sources": [
+          { "name": "CIA FOIA Release", "tier": 1 },
+          { "name": "National Security Archive", "tier": 3 },
+          { "name": "New York Times", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "excomm-formation",
+        "year": "Oct 16, 1962",
+        "title": "Kennedy Forms ExComm",
+        "type": "political",
+        "detail": "President Kennedy secretly convened the Executive Committee of the National Security Council (ExComm), a group of 14 advisors to manage the crisis. Over six days of secret deliberations, options ranged from air strikes to invasion to a naval blockade. Kennedy chose a naval quarantine as a middle option.",
+        "sources": [
+          { "name": "Kennedy Library Records", "tier": 1 },
+          { "name": "National Security Archive", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "kennedy-missile-crisis-address",
+        "year": "Oct 22, 1962",
+        "title": "Kennedy Announces Naval Quarantine",
+        "type": "diplomatic",
+        "detail": "President Kennedy addressed the nation in a televised speech, revealing the Soviet missiles in Cuba and announcing a naval quarantine. Kennedy demanded the Soviets dismantle the missiles and warned that any nuclear attack from Cuba would be considered an attack by the USSR, requiring full US retaliation. The world held its breath.",
+        "sources": [
+          { "name": "Kennedy Library", "tier": 1 },
+          { "name": "New York Times", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "quarantine-line-confrontation",
+        "year": "Oct 24, 1962",
+        "title": "Soviet Ships Approach Quarantine Line",
+        "type": "diplomatic",
+        "detail": "Soviet ships carrying military cargo approached the US naval quarantine line around Cuba. Secretary of State Dean Rusk reportedly said 'We're eyeball to eyeball, and I think the other fellow just blinked.' Most Soviet ships turned back; one tanker passed through after being searched. The US military went to DEFCON 2 for the only time in history.",
+        "sources": [
+          { "name": "State Department FRUS", "tier": 1 },
+          { "name": "National Security Archive", "tier": 3 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "black-saturday",
+        "year": "Oct 27, 1962",
+        "title": "Black Saturday — Closest to Nuclear War",
+        "type": "diplomatic",
+        "detail": "On the most dangerous day of the crisis, a U-2 was shot down over Cuba, killing Major Rudolf Anderson — the only combat death of the crisis. A Soviet submarine near Cuba nearly launched a nuclear torpedo after losing communications. That evening, Kennedy and Khrushchev privately agreed: Soviets would remove missiles, US would pledge not to invade Cuba and secretly remove Jupiter missiles from Turkey.",
+        "sources": [
+          { "name": "Kennedy Library Declassified", "tier": 1 },
+          { "name": "National Security Archive", "tier": 3 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "khrushchev-backs-down",
+        "year": "Oct 28, 1962",
+        "title": "Khrushchev Agrees to Remove Missiles",
+        "type": "diplomatic",
+        "detail": "Soviet Premier Khrushchev announced over Radio Moscow that the USSR would dismantle and remove Soviet missiles from Cuba in exchange for Kennedy's non-invasion pledge. Cuba's Fidel Castro was furious not to have been consulted and reportedly smashed a mirror. The crisis formally ended; the blockade was lifted November 20.",
+        "sources": [
+          { "name": "Soviet/Russian State Archives", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "New York Times", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "full-us-embargo",
+        "year": "Feb 3, 1962",
+        "title": "Full US Trade Embargo Imposed",
+        "type": "economic",
+        "detail": "President Kennedy signed Proclamation 3447, imposing a comprehensive embargo on all trade with Cuba under the Foreign Assistance Act and Trading with the Enemy Act. The embargo prohibited virtually all US exports to Cuba and cut the island off from the US market, which had previously absorbed 67% of Cuban exports.",
+        "sources": [
+          { "name": "US Federal Register", "tier": 1 },
+          { "name": "State Department", "tier": 1 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Soviet Alliance & Consolidation (1963–1975)",
+    "events": [
+      {
+        "id": "second-agrarian-reform",
+        "year": "Oct 3, 1963",
+        "title": "Second Agrarian Reform — All Large Farms Nationalized",
+        "type": "economic",
+        "detail": "The Second Agrarian Reform nationalized all farms larger than 165 acres, eliminating the remaining middle-class private farms and turning Cuba into a fully state-managed agricultural economy. The reform completed the Soviet-style collectivization of Cuban agriculture begun in 1959.",
+        "sources": [
+          { "name": "Cuban Official Gazette", "tier": 1 },
+          { "name": "Wilson Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pcc-founded",
+        "year": "Oct 3, 1965",
+        "title": "Cuban Communist Party Founded",
+        "type": "political",
+        "detail": "Fidel Castro announced the formation of the Partido Comunista de Cuba (PCC), formally replacing the Integrated Revolutionary Organizations. The PCC was designated the sole legal political party. Raúl Castro became the party's second secretary. The party structure consolidated Castro's one-party state.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Cuban Research Institute", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "freedom-flights-begin",
+        "year": "Dec 1, 1965",
+        "title": "Freedom Flights Begin",
+        "type": "diplomatic",
+        "detail": "The US and Cuba negotiated an airlift program (Freedom Flights/Vuelos de la Libertad) allowing Cubans to emigrate to the United States. Between 1965 and 1973, more than 260,000 Cubans emigrated via twice-daily flights. The program accelerated Cuba's brain drain but reduced pressure on the Castro government.",
+        "sources": [
+          { "name": "State Department Records", "tier": 1 },
+          { "name": "Miami Herald", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "che-guevara-killed",
+        "year": "Oct 9, 1967",
+        "title": "Che Guevara Killed in Bolivia",
+        "type": "revolution",
+        "detail": "Ernesto 'Che' Guevara was captured and executed by Bolivian Army forces assisted by CIA operatives in La Higuera, Bolivia. Guevara had left Cuba in 1965 to spread revolution in the Congo and then Bolivia. His death was a severe blow to Cuba's revolutionary export strategy. His diary was published by Cuba and became a global symbol of resistance.",
+        "sources": [
+          { "name": "CIA FOIA Release", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "revolutionary-offensive",
+        "year": "Mar 1968",
+        "title": "Revolutionary Offensive — All Private Business Nationalized",
+        "type": "economic",
+        "detail": "Castro's 'Revolutionary Offensive' nationalized all remaining private businesses in Cuba — 55,000 small shops, bars, and restaurants — completing the transformation to a fully state-owned economy. The move was partly to fund the 10 million ton sugar harvest goal. Cuba became one of the most nationalized economies in the world.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Wilson Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "padilla-affair",
+        "year": "Mar–Apr 1971",
+        "title": "Padilla Affair — Cultural Repression Exposed",
+        "type": "political",
+        "detail": "Poet Heberto Padilla was arrested for 'ideological deviation' and forced to make a televised confession after 38 days of detention. The affair provoked an international outcry from previously sympathetic European and Latin American intellectuals including Jean-Paul Sartre, Simone de Beauvoir, and Gabriel García Márquez. It marked Cuba's turn toward Soviet-style cultural repression.",
+        "sources": [
+          { "name": "El País", "tier": 2 },
+          { "name": "Cuban Research Institute", "tier": 3 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cuba-joins-comecon",
+        "year": "Jul 11, 1972",
+        "title": "Cuba Joins COMECON",
+        "type": "economic",
+        "detail": "Cuba became a full member of the Council for Mutual Economic Assistance (COMECON), integrating with the Soviet economic bloc. The USSR provided oil at below-market prices, purchased sugar at above-market prices, and provided over $1 billion per year in subsidies. Cuba became dependent on Soviet support for its economic survival.",
+        "sources": [
+          { "name": "Soviet/Russian State Archives", "tier": 1 },
+          { "name": "Wilson Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cuban-intervention-angola",
+        "year": "Nov 1975",
+        "title": "Cuba Sends Troops to Angola",
+        "type": "diplomatic",
+        "detail": "Cuba deployed approximately 36,000 troops to Angola in Operation Carlota to support the MPLA government against UNITA rebels and South African forces. The intervention was the largest Cuban military operation abroad and lasted until 1991. It cemented Cuba's role as a Soviet proxy power in Africa and won international prestige in the Non-Aligned Movement.",
+        "sources": [
+          { "name": "Cuban Foreign Ministry", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "Wilson Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Cold War Operations & Mariel (1976–1990)",
+    "events": [
+      {
+        "id": "cuban-constitution-1976",
+        "year": "Feb 24, 1976",
+        "title": "Socialist Constitution Adopted",
+        "type": "political",
+        "detail": "Cuba adopted its first socialist constitution, formalizing the one-party state under the Communist Party. The constitution created the National Assembly of People's Power as the legislative body, with Fidel Castro as President of the Council of State, consolidating executive and party power. Approved by 97.7% in a referendum.",
+        "sources": [
+          { "name": "Cuban Official Gazette", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "nonaligned-movement-chair",
+        "year": "Sep 1979",
+        "title": "Cuba Chairs Non-Aligned Movement",
+        "type": "diplomatic",
+        "detail": "Cuba hosted the 6th Summit of the Non-Aligned Movement in Havana and assumed the chairmanship. Fidel Castro argued the NAM's natural allies were the socialist countries, not the West. Cuba used the chairmanship to advance anti-imperialist positions at the UN, despite critics noting the contradiction of a Soviet-aligned state leading the non-aligned movement.",
+        "sources": [
+          { "name": "UN Records", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "mariel-boatlift",
+        "year": "Apr–Oct 1980",
+        "title": "Mariel Boatlift — 125,000 Cubans Flee",
+        "type": "political",
+        "detail": "After 10,000 Cubans stormed the Peruvian Embassy in Havana, Castro announced that anyone who wished to leave could do so through the port of Mariel. Over six months, 125,000 Cubans emigrated to Florida in a chaotic flotilla. The Cuban government included criminals and mental patients among those permitted to leave ('Marielitos'), straining US-Cuba relations.",
+        "sources": [
+          { "name": "State Department Records", "tier": 1 },
+          { "name": "Miami Herald", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cuito-cuanavale-battle",
+        "year": "Nov 1987 – Mar 1988",
+        "title": "Battle of Cuito Cuanavale",
+        "type": "revolution",
+        "detail": "Cuban and MPLA forces fought a massive conventional battle against South African and UNITA forces at Cuito Cuanavale in Angola. Cuba deployed over 50,000 troops and advanced armor. The battle ended in a strategic stalemate but forced South Africa into negotiations. Nelson Mandela later credited Cuba's role in ending apartheid.",
+        "sources": [
+          { "name": "Cuban Foreign Ministry", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "Wilson Center", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "angola-peace-accord",
+        "year": "Dec 22, 1988",
+        "title": "Angola Peace Accord Signed",
+        "type": "diplomatic",
+        "detail": "Cuba, Angola, and South Africa signed the New York Accords, providing for the withdrawal of Cuban troops from Angola and South African troops from Namibia. Over 50,000 Cuban soldiers had served in Angola over 13 years; Cuba claimed 2,000 casualties. The accords paved the way for Namibian independence.",
+        "sources": [
+          { "name": "UN Records", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Special Period & Post-Soviet Era (1991–2000)",
+    "events": [
+      {
+        "id": "soviet-union-collapse",
+        "year": "Dec 25, 1991",
+        "title": "Soviet Union Collapses — Cuba Loses $5B Annual Subsidy",
+        "type": "economic",
+        "detail": "The dissolution of the Soviet Union eliminated Cuba's primary economic lifeline. Soviet subsidies worth approximately $5 billion per year ended overnight. Cuban GDP fell by 35% over three years. Oil imports dropped 70%, causing rolling blackouts of 16+ hours daily. Castro declared the 'Special Period in Time of Peace,' Cuba's worst economic crisis.",
+        "sources": [
+          { "name": "Cuban Government Statistics", "tier": 1 },
+          { "name": "Wilson Center", "tier": 3 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "dollar-legalized",
+        "year": "Aug 13, 1993",
+        "title": "US Dollar Legalized in Cuba",
+        "type": "economic",
+        "detail": "The Cuban government legalized the possession and use of US dollars in response to the economic crisis of the Special Period. The move recognized the reality of widespread dollar use in the underground economy and created a two-tier currency system. Cubans with relatives abroad gained economic advantages over those without, increasing inequality.",
+        "sources": [
+          { "name": "Cuban Official Gazette", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "Miami Herald", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "balseros-crisis",
+        "year": "Aug 1994",
+        "title": "Balseros Crisis — 35,000 Rafters Cross to Florida",
+        "type": "political",
+        "detail": "After Castro announced the government would not stop anyone from leaving, over 35,000 Cubans built rafts and attempted the 90-mile crossing to Florida in August 1994. The US Coast Guard interdicted over 30,000. The Clinton administration ended the 'wet foot, dry foot' open-door policy for Cuban rafters, detaining them at Guantanamo Bay instead.",
+        "sources": [
+          { "name": "State Department Records", "tier": 1 },
+          { "name": "Miami Herald", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "migration-accord-1994",
+        "year": "Sep 9, 1994",
+        "title": "US-Cuba Migration Accord",
+        "type": "diplomatic",
+        "detail": "The US and Cuba signed a migration agreement: the US would admit a minimum of 20,000 Cuban immigrants per year through legal channels; Cuba would prevent mass emigration. A follow-up accord in May 1995 established the 'wet foot, dry foot' policy: Cubans intercepted at sea would be returned to Cuba; those reaching US soil could stay.",
+        "sources": [
+          { "name": "State Department Records", "tier": 1 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "brothers-rescue-shootdown",
+        "year": "Feb 24, 1996",
+        "title": "Brothers to the Rescue Aircraft Shot Down",
+        "type": "diplomatic",
+        "detail": "Cuban MiG-29 fighters shot down two Cessna aircraft operated by Brothers to the Rescue, a Cuban-American humanitarian group that had been dropping anti-Castro leaflets over Havana. Four Cuban-Americans were killed over international waters. The Clinton administration condemned the shootdown as murder and Congress swiftly passed the Helms-Burton Act.",
+        "sources": [
+          { "name": "ICAO Investigation Report", "tier": 1 },
+          { "name": "State Department", "tier": 1 },
+          { "name": "Miami Herald", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "helms-burton-act",
+        "year": "Mar 12, 1996",
+        "title": "Helms-Burton Act Signed",
+        "type": "economic",
+        "detail": "President Clinton signed the Cuban Liberty and Democratic Solidarity (Helms-Burton) Act, codifying the embargo into law and making it virtually impossible for any President to lift it without Congressional approval. Title III allowed US nationals to sue foreign companies 'trafficking' in confiscated Cuban property. Title IV barred executives of such companies from entering the US.",
+        "sources": [
+          { "name": "US Congress/White House", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "pope-john-paul-visit",
+        "year": "Jan 21–25, 1998",
+        "title": "Pope John Paul II Visits Cuba",
+        "type": "diplomatic",
+        "detail": "Pope John Paul II made a historic five-day visit to Cuba — the first papal visit in history. He celebrated Masses across the island and called for Cuba to 'open itself to the world and for the world to open itself to Cuba.' He criticized both the US embargo and the Cuban government's restrictions on religious freedom. Castro released some political prisoners.",
+        "sources": [
+          { "name": "Vatican Records", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Black Spring, Raúl Transition & Normalization (2001–2014)",
+    "events": [
+      {
+        "id": "black-spring-arrests",
+        "year": "Mar 18–20, 2003",
+        "title": "Black Spring — 75 Dissidents Arrested",
+        "type": "political",
+        "detail": "The Cuban government arrested 75 independent journalists, librarians, and human rights activists in a three-day sweep, sentencing them to up to 28 years in prison. The crackdown, timed while the world was focused on the Iraq invasion, drew fierce international condemnation. The EU suspended high-level contacts with Cuba; most prisoners were released by 2010.",
+        "sources": [
+          { "name": "Cuban Commission for Human Rights and National Reconciliation", "tier": 3 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "fidel-transfers-power",
+        "year": "Jul 31, 2006",
+        "title": "Fidel Castro Transfers Power to Raúl",
+        "type": "political",
+        "detail": "Following emergency intestinal surgery, Fidel Castro provisionally transferred presidential powers to his brother Raúl, ending 47 years of direct rule. Fidel never returned to power. On February 24, 2008, Raúl Castro was formally elected President of Cuba by the National Assembly, marking the first peaceful transfer of power in Cuba's post-revolution history.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "zapata-tamayo-death",
+        "year": "Feb 23, 2010",
+        "title": "Orlando Zapata Tamayo Dies — 83-Day Hunger Strike",
+        "type": "political",
+        "detail": "Orlando Zapata Tamayo, a political prisoner arrested in the Black Spring of 2003, died after an 83-day hunger strike demanding political prisoner status. His death provoked international outrage and EU calls for sanctions. The Castro government called him a common criminal. Spain's foreign minister condemned the death. More hunger strikes followed in Cuba's prisons.",
+        "sources": [
+          { "name": "Cuban Commission for Human Rights", "tier": 3 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "El País", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "economic-reforms-lineamientos",
+        "year": "Apr 2011",
+        "title": "Raúl Announces Economic Reforms (Lineamientos)",
+        "type": "economic",
+        "detail": "The 6th Cuban Communist Party Congress adopted 313 'Guidelines' (Lineamientos) for economic reform. Reforms allowed expansion of the self-employed sector (cuentapropistas), legalized buying and selling of homes and cars, opened small private restaurants (paladares) and bed-and-breakfasts, and reduced state payrolls by 500,000 jobs. The reforms were incremental and limited.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "Brookings Institution", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "venezuela-oil-deal",
+        "year": "2000",
+        "title": "Venezuela Oil Deal — New Socialist Ally",
+        "type": "economic",
+        "detail": "Cuba and Venezuela signed the Convenio Integral de Cooperación, providing Cuba with 90,000 barrels of oil per day at preferential prices in exchange for Cuban doctors, teachers, and security personnel. By 2012 Venezuela was supplying 100,000+ barrels per day, effectively replacing Soviet subsidies. The deal became Cuba's economic lifeline.",
+        "sources": [
+          { "name": "Cuban Foreign Ministry", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Obama Normalization (2014–2017)",
+    "events": [
+      {
+        "id": "obama-raul-announcement",
+        "year": "Dec 17, 2014",
+        "title": "Obama and Raúl Announce Historic Normalization",
+        "type": "diplomatic",
+        "detail": "President Obama and President Raúl Castro simultaneously announced the re-establishment of full diplomatic relations in a joint televised address — the most significant shift in US-Cuba policy in 50 years. The deal, brokered by Canada and the Vatican, included the release of Alan Gross and 53 political prisoners, plus an exchange of intelligence agents. Obama said the 54-year embargo policy 'has failed.'",
+        "sources": [
+          { "name": "White House", "tier": 1 },
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "embassies-reopen",
+        "year": "Jul 20, 2015",
+        "title": "US and Cuban Embassies Reopen",
+        "type": "diplomatic",
+        "detail": "The United States and Cuba formally reopened their embassies in Washington and Havana, restoring full diplomatic relations for the first time since 1961. Secretary of State John Kerry visited Havana in August for the US Embassy flag-raising ceremony. Commercial flights and cruise ships to Cuba resumed. US businesses rushed to explore the Cuban market.",
+        "sources": [
+          { "name": "State Department", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "obama-cuba-visit",
+        "year": "Mar 20–22, 2016",
+        "title": "Obama Makes Historic Visit to Cuba",
+        "type": "diplomatic",
+        "detail": "President Obama became the first sitting US president to visit Cuba since Calvin Coolidge in 1928. Obama and Raúl Castro held a joint press conference where Castro notably lectured Obama on US human rights. Obama attended a baseball game and spoke directly to the Cuban people in a televised address, calling for political and economic freedom.",
+        "sources": [
+          { "name": "White House", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "fidel-castro-dies",
+        "year": "Nov 25, 2016",
+        "title": "Fidel Castro Dies at 90",
+        "type": "political",
+        "detail": "Fidel Castro died in Havana at age 90, ending 57 years of political dominance over Cuba. His death was announced by Raúl Castro in a late-night television address. Nine days of national mourning were declared. His ashes were taken on a procession following the reverse route of the 1959 victory march, from Havana to Santiago de Cuba, where he was buried at the Santa Ifigenia Cemetery.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "Trump Reversal & Havana Syndrome (2017–2020)",
+    "events": [
+      {
+        "id": "trump-cuba-reversal",
+        "year": "Jun 16, 2017",
+        "title": "Trump Reverses Obama Cuba Opening",
+        "type": "diplomatic",
+        "detail": "President Trump announced a new Cuba policy in Miami, curtailing people-to-people travel and banning US business dealings with companies controlled by Cuba's military (including most major hotels). Trump reinstated restrictions on individual tourism and tightened enforcement of the embargo, effectively reversing much of Obama's normalization.",
+        "sources": [
+          { "name": "White House", "tier": 1 },
+          { "name": "State Department", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "havana-syndrome-reports",
+        "year": "Aug–Sep 2017",
+        "title": "Havana Syndrome — Diplomats Report Mysterious Illness",
+        "type": "diplomatic",
+        "detail": "US Embassy personnel in Havana reported suffering hearing loss, headaches, balance problems, and cognitive impairment after hearing unusual sounds. The State Department evacuated most non-essential Embassy staff and expelled Cuban diplomats from Washington. The State Department later called it a 'health attack.' Subsequent investigations pointed to pulsed microwave energy as a possible cause.",
+        "sources": [
+          { "name": "State Department", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "National Academies of Sciences (2020 report)", "tier": 3 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "diaz-canel-president",
+        "year": "Apr 19, 2018",
+        "title": "Díaz-Canel Becomes Cuba's President",
+        "type": "political",
+        "detail": "Miguel Díaz-Canel was elected President of Cuba's Council of State, replacing Raúl Castro and becoming the first person outside the Castro family to lead Cuba since 1959. Raúl retained his post as Communist Party First Secretary until 2021. Díaz-Canel, a party loyalist, was seen as a continuity figure rather than a reformer.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "helms-burton-title-iii-activated",
+        "year": "May 2, 2019",
+        "title": "Trump Activates Helms-Burton Title III",
+        "type": "economic",
+        "detail": "The Trump administration activated Title III of the Helms-Burton Act for the first time, allowing US nationals to sue foreign companies doing business with property confiscated by the Cuban government. Every US president since Clinton had waived this provision every six months. The activation triggered a wave of lawsuits and deterred European, Canadian, and Latin American investment in Cuba.",
+        "sources": [
+          { "name": "State Department", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cuba-state-sponsor-terrorism",
+        "year": "Jan 11, 2021",
+        "title": "Cuba Redesignated State Sponsor of Terrorism",
+        "type": "diplomatic",
+        "detail": "In the final days of the Trump administration, Secretary of State Pompeo redesignated Cuba as a State Sponsor of Terrorism — a status Cuba had been removed from by Obama in 2015. The designation limits Cuba's ability to access international finance, discourages foreign investment, and complicates humanitarian aid. Critics called it a last-minute political move.",
+        "sources": [
+          { "name": "State Department", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      }
+    ]
+  },
+  {
+    "era": "2021 Protests & Ongoing Crisis (2021–Present)",
+    "events": [
+      {
+        "id": "july-11-protests",
+        "year": "Jul 11, 2021",
+        "title": "Historic Mass Protests Erupt Across Cuba",
+        "type": "protest",
+        "detail": "Thousands of Cubans took to the streets in simultaneous protests in Havana, Santiago, Matanzas, and over 50 other cities — the largest anti-government demonstrations since 1994. Protesters chanted 'Libertad' and 'Patria y Vida' (Homeland and Life). The protests were triggered by worsening food shortages, medicine scarcity, rolling blackouts, and the economic devastation of the COVID-19 pandemic.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 },
+          { "name": "14ymedio", "tier": 2 },
+          { "name": "BBC", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "diaz-canel-street-response",
+        "year": "Jul 11, 2021",
+        "title": "Díaz-Canel Calls for Regime Defenders to Take Streets",
+        "type": "political",
+        "detail": "President Díaz-Canel went on national television and called on 'all revolutionaries' and Communist Party members to go to the streets to confront protesters, saying 'the order to fight has been given.' Security forces, plainclothes agents (boinas negras), and civilian brigades were deployed. The internet was cut off across Cuba within hours of the protests beginning.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "14ymedio", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "july-protest-crackdown",
+        "year": "Jul 12–Aug 2021",
+        "title": "Mass Arrests Follow Protests — 1,300+ Detained",
+        "type": "protest",
+        "detail": "Cuban security forces arrested an estimated 1,300+ protesters, activists, and journalists in the weeks following July 11. Protesters faced charges of sedition, public disorder, and contempt. In December 2021, a mass trial resulted in sentences of up to 30 years in prison for protesters. Amnesty International and Human Rights Watch declared those convicted prisoners of conscience.",
+        "sources": [
+          { "name": "Cuban Commission for Human Rights and National Reconciliation", "tier": 3 },
+          { "name": "Amnesty International", "tier": 3 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "patria-vida-anthem",
+        "year": "Feb 2021",
+        "title": "Patria y Vida — Protest Anthem Goes Viral",
+        "type": "protest",
+        "detail": "Cuban musicians released 'Patria y Vida' (Homeland and Life), a rap music video explicitly challenging the revolutionary slogan 'Patria o Muerte' (Homeland or Death). The song went viral internationally before the protests, becoming the anthem of the July 11 uprising. The Cuban government called its creators 'mercenaries.' It won the Grammy Award for Best Urban Fusion/Performance in 2022.",
+        "sources": [
+          { "name": "Reuters", "tier": 2 },
+          { "name": "BBC", "tier": 2 },
+          { "name": "Miami Herald", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "raul-castro-retires",
+        "year": "Apr 19, 2021",
+        "title": "Raúl Castro Retires as Communist Party First Secretary",
+        "type": "political",
+        "detail": "Raúl Castro stepped down as First Secretary of the Cuban Communist Party at the 8th Party Congress, handing leadership to Díaz-Canel. It was the first time since 1959 that neither Castro brother held the top party position. Raúl, 89, remained an influential figure and member of the party's Central Committee, ending the Castro era in formal leadership.",
+        "sources": [
+          { "name": "Granma Official", "tier": 1 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cuba-energy-crisis-2022",
+        "year": "Sep–Oct 2022",
+        "title": "Total Power Grid Failure — Hurricane Ian",
+        "type": "economic",
+        "detail": "Hurricane Ian caused a complete collapse of Cuba's national power grid in late September 2022, leaving all 11 million Cubans without power. Pre-existing fuel shortages prevented rapid restoration. In some areas blackouts lasted weeks. The crisis accelerated emigration; over 300,000 Cubans emigrated to the United States in fiscal year 2023, the highest single-year figure ever recorded.",
+        "sources": [
+          { "name": "ONAMET (Cuban Meteorological Service)", "tier": 1 },
+          { "name": "AP", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cuba-mass-emigration-2023",
+        "year": "2022–2023",
+        "title": "Record Cuban Emigration — 500,000+ in Two Years",
+        "type": "political",
+        "detail": "Cuba experienced its largest emigration wave since the Mariel Boatlift, with over 300,000 Cubans entering the US in FY2023 alone via the southern border and legal parole programs, on top of 224,000 in FY2022. Cuba's population fell below 11 million for the first time in decades. Brain drain left hospitals and schools critically understaffed.",
+        "sources": [
+          { "name": "US Customs and Border Protection", "tier": 1 },
+          { "name": "Miami Herald", "tier": 2 },
+          { "name": "Reuters", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "cuba-food-fuel-crisis-2024",
+        "year": "2024",
+        "title": "Acute Food and Fuel Shortage — Worst Crisis in Decades",
+        "type": "economic",
+        "detail": "By 2024, Cuba faced its worst economic crisis since the Special Period of the 1990s. Venezuela's declining oil production reduced supplies; fuel rationing severely limited transportation and food distribution. The World Food Programme reported widespread food insecurity. Lineups for basic goods stretched hours. The informal dollar economy became the dominant mode of survival for most Cubans.",
+        "sources": [
+          { "name": "World Food Programme", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "14ymedio", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "biden-partial-cuba-removal-terrorism",
+        "year": "Jan 14, 2025",
+        "title": "Biden Removes Cuba from Terrorism List Days Before Leaving Office",
+        "type": "diplomatic",
+        "detail": "President Biden removed Cuba from the US State Sponsors of Terrorism list on January 14, 2025, just days before leaving office, as part of a deal brokered by Pope Francis to secure Cuba's release of over 500 political prisoners. Cuba was to release prisoners in exchange for the delisting. President Trump subsequently reversed the decision and redesignated Cuba upon taking office.",
+        "sources": [
+          { "name": "State Department", "tier": 1 },
+          { "name": "Vatican", "tier": 1 },
+          { "name": "Reuters", "tier": 2 },
+          { "name": "AP", "tier": 2 }
+        ],
+        "lastUpdated": "2026-03-20T00:00:00Z"
+      },
+      {
+        "id": "trump-cuba-oil-blockade-2026",
+        "year": "2026",
+        "title": "Trump Administration Effectively Blockades Cuba's Oil Supply",
+        "type": "economic",
+        "detail": "Following the US capture of former Venezuelan President Nicolás Maduro in January 2026, the Trump administration cut off Venezuelan crude shipments to Cuba — the island's main fuel lifeline — and later imposed tariffs on countries supplying Cuba with oil, including Mexico. Deprived of fuel for its aging, poorly maintained thermoelectric plants, Cuba's national grid entered a spiral of repeated total collapses through 2026, with officials and independent monitors describing the fuel cutoff as a de facto blockade.",
+        "sources": [
+          { "name": "Al Jazeera", "tier": 2, "url": "https://www.aljazeera.com/news/2026/8/3/grid-failure-plunges-cuba-into-nationwide-blackout", "pole": "middle_eastern" },
+          { "name": "CNN", "tier": 2, "pole": "western" }
+        ],
+        "lastUpdated": "2026-08-03T00:00:00Z"
+      },
+      {
+        "id": "cuba-tourism-ministry-sanctioned-2026",
+        "year": "Jul 13, 2026",
+        "title": "US Blacklists Cuba's Tourism Ministry, Triggering Hotel Industry Collapse",
+        "type": "economic",
+        "detail": "The US Treasury designated Cuba's Ministry of Tourism (MINTUR) and nine other state entities as Specially Designated Nationals — the first time a full Cuban government ministry was blacklisted. Within two weeks, Spain's three largest hotel operators (Meliá, Iberostar, Barceló) all withdrew from the island, ending decades of foreign hotel management and deepening the collapse of Cuba's tourism sector, already down to 1.81 million visitors in 2025 — its lowest since 2002.",
+        "sources": [
+          { "name": "Local10 / AP", "tier": 2, "url": "https://www.local10.com/news/world/2026/07/13/us-sanctions-cubas-ministry-of-tourism-or-mintur/", "pole": "western" },
+          { "name": "CiberCuba", "tier": 2, "url": "https://en.cibercuba.com/noticias/2026-07-21-u1-e129488-s27061-nid335751-iberostar-barcelo-siguen-melia-abandonan-cuba", "pole": "international" }
+        ],
+        "lastUpdated": "2026-07-21T00:00:00Z"
+      },
+      {
+        "id": "cuba-blackout-crisis-un-silent-gaza-warning-2026",
+        "year": "Aug 2026",
+        "title": "Sixth Nationwide Blackout Prompts UN Warning of 'Silent Gaza'",
+        "type": "diplomatic",
+        "detail": "Cuba suffered its sixth total grid collapse of 2026 on August 2–3, prompting a US Embassy security alert over 20+ hour rolling blackouts and residents sleeping outdoors on Havana's Malecón to escape the heat. Days later, the US sanctioned Cuban military officials and firms over arms ties to China and Russia, prompting Human Rights Council-appointed independent UN experts to condemn the escalating sanctions regime and warn that Cuba risks becoming a 'silent Gaza' without urgent international intervention.",
+        "sources": [
+          { "name": "PBS NewsHour", "tier": 2, "url": "https://www.pbs.org/newshour/world/cubans-seek-relief-from-crippling-blackouts-and-summer-heat", "pole": "western" },
+          { "name": "UN News (OHCHR)", "tier": 1, "url": "https://news.un.org/en/story/2026/08/1168094", "pole": "international" }
+        ],
+        "lastUpdated": "2026-08-06T00:00:00Z"
+      }
+    ]
+  }
+]

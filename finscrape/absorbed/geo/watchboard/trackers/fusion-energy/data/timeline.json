@@ -1,0 +1,1464 @@
+[
+  {
+    "era": "The Ignition Breakthrough (2022)",
+    "events": [
+      {
+        "id": "nif-ignition-dec-2022",
+        "year": "2022",
+        "title": "NIF Achieves Fusion Ignition for First Time",
+        "type": "breakthrough",
+        "active": true,
+        "detail": "On December 5, 2022, the National Ignition Facility (NIF) at Lawrence Livermore National Laboratory achieved fusion ignition — producing 3.15 MJ of fusion energy from 2.05 MJ of laser energy delivered to the target. This marks the first time in history that a fusion reaction produced more energy than the laser input, fulfilling a 60-year scientific goal. NIF Director Kim Budil called it \"a triumph of science, engineering, and most of all, people.\" Note: the facility consumed ~300 MJ total to generate the laser pulse, so wall-plug efficiency remains ~1%.",
+        "sources": [
+          { "name": "Lawrence Livermore National Laboratory (LLNL) official announcement", "tier": 1, "url": "https://lasers.llnl.gov/science/achieving-fusion-ignition", "pole": "western" },
+          { "name": "Nature, vol. 612 (peer-reviewed)", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      }
+    ]
+  },
+  {
+    "era": "Global Acceleration (2023)",
+    "events": [
+      {
+        "id": "helion-microsoft-ppa-2023",
+        "year": "2023",
+        "title": "Helion Energy Signs First-Ever Fusion Power Purchase Agreement with Microsoft",
+        "type": "milestone",
+        "detail": "On May 10, 2023, Helion Energy announced a power purchase agreement (PPA) with Microsoft — the world's first commercial fusion energy contract. Helion committed to deliver at least 50 MW of electricity starting in 2028. The deal includes financial penalties if the deadline is missed. Helion's approach uses a field-reversed configuration (FRC) plasma that directly induces current in surrounding coils, bypassing traditional steam turbines.",
+        "sources": [
+          { "name": "Helion Energy press release", "tier": 1, "url": "https://www.helionenergy.com/articles/announcing-helion-fusion-ppa-with-microsoft-constellation/", "pole": "western" },
+          { "name": "Reuters", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "jt60sa-first-plasma-2023",
+        "year": "2023",
+        "title": "JT-60SA Achieves First Plasma — World's Largest Operational Tokamak",
+        "type": "milestone",
+        "detail": "On December 1, 2023, the JT-60SA tokamak at the National Institutes for Quantum Science and Technology (QST) in Naka, Japan achieved first plasma, becoming the world's largest operational superconducting tokamak. A Japan-EU joint project under the Broader Approach agreement, JT-60SA has a plasma volume of 135 m³ and is designed to inform ITER and DEMO operations. First plasma was achieved on October 23, 2023 during commissioning and formally declared on December 1.",
+        "sources": [
+          { "name": "JT-60SA Organization official announcement", "tier": 1, "url": "https://www.jt60sa.org/wp/", "pole": "western" },
+          { "name": "Science magazine", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "nif-second-ignition-2023",
+        "year": "2023",
+        "title": "NIF Achieves Second Ignition with 3.88 MJ Yield",
+        "type": "breakthrough",
+        "detail": "On July 30, 2023, NIF conducted its second confirmed ignition shot, achieving 3.88 MJ of fusion energy output — a 23% increase over the December 2022 record. This demonstrated reproducibility of the ignition result and confirmed the December 2022 milestone was not a one-off anomaly. Subsequent shots in October 2023 (4th ignition, 3.4 MJ) further validated the results.",
+        "sources": [
+          { "name": "Lawrence Livermore National Laboratory", "tier": 1, "pole": "western" },
+          { "name": "Physics of Plasmas (peer-reviewed)", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "iter-baseline-2024-announced",
+        "year": "2023",
+        "title": "ITER Announces Major Schedule and Cost Revision",
+        "type": "regulatory",
+        "detail": "ITER Organization, under new Director-General Pietro Barabaschi, disclosed that first plasma — originally scheduled for 2025 — must be delayed to 2033 (Baseline 2024 schedule). Full deuterium-tritium burning plasma operations are now targeted for 2039. The revision followed discovery of dimensional deviations in vacuum vessel sectors and stress corrosion cracks in thermal shields. Total cost estimate increased by €5.2 billion, bringing total to over €20 billion. Barabaschi described the new baseline as \"realistic and achievable.\"",
+        "sources": [
+          { "name": "ITER Organization — Baseline 2024 document", "tier": 1, "url": "https://www.iter.org/", "pole": "international" },
+          { "name": "Physics World", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "east-403s-record-2023",
+        "year": "2023",
+        "title": "China's EAST Tokamak Sets 403-Second Plasma Duration Record",
+        "type": "milestone",
+        "detail": "China's Experimental Advanced Superconducting Tokamak (EAST) at the Institute of Plasma Physics in Hefei set a world record for sustained high-temperature plasma duration — 403 seconds at over 100 million degrees Celsius. This surpassed the previous EAST record of ~101 seconds (2022). The achievement is part of China's strategy to lead global fusion research as a \"strategic frontier\" priority under the 14th Five-Year Plan.",
+        "sources": [
+          { "name": "Chinese Academy of Sciences / ASIPP", "tier": 1, "pole": "eastern" },
+          { "name": "Xinhua News Agency", "tier": 2, "pole": "eastern" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "cfs-sparc-site-construction-2023",
+        "year": "2023",
+        "title": "Commonwealth Fusion Systems Breaks Ground on SPARC Site in Devens, MA",
+        "type": "milestone",
+        "detail": "Commonwealth Fusion Systems (CFS), an MIT spinoff, began site preparation and construction work in Devens, Massachusetts for SPARC — its demonstration tokamak. SPARC is designed with a major radius of 1.85 m, magnetic field of 12.2 Tesla, and aims to demonstrate net energy gain (Q > 2) by the late 2020s. The compact high-field design is made possible by CFS's proprietary high-temperature superconducting (HTS) REBCO magnets, which achieved 20 Tesla in a September 2021 world-record test.",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems", "tier": 1, "url": "https://cfs.energy/technology/sparc/", "pole": "western" },
+          { "name": "MIT Technology Review", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "wendelstein-record-2023",
+        "year": "2023",
+        "title": "Wendelstein 7-X Stellarator Sets Energy Confinement Record",
+        "type": "scientific",
+        "detail": "Germany's Wendelstein 7-X (W7-X) stellarator at the Max-Planck-Institut für Plasmaphysik in Greifswald achieved a new record for energy stored in a stellarator plasma. W7-X, the world's largest stellarator, is designed to demonstrate that stellarators — which use twisted magnetic coils rather than plasma current for confinement — can achieve sustained, stable plasmas. Unlike tokamaks, stellarators do not require a plasma current that can become unstable, potentially enabling steady-state operation.",
+        "sources": [
+          { "name": "Max-Planck-Institut für Plasmaphysik", "tier": 1, "pole": "western" },
+          { "name": "Nuclear Fusion journal (peer-reviewed)", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "fia-6b-investment-report-2023",
+        "year": "2023",
+        "title": "Global Private Fusion Investment Reaches $6.21 Billion — FIA Report",
+        "type": "investment",
+        "detail": "The Fusion Industry Association (FIA) 2023 Global Fusion Industry Report documented that cumulative private investment in fusion energy had reached $6.21 billion, up from $4.8 billion in 2022. The report tracked 43 private fusion companies across 12 countries, with 25 based in the United States. 35 of 45 companies surveyed forecast commercially viable pilot plants between 2030 and 2035.",
+        "sources": [
+          { "name": "Fusion Industry Association — 2023 Global Fusion Industry Report", "tier": 3, "url": "https://www.fusionindustryassociation.org/", "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      }
+    ]
+  },
+  {
+    "era": "Records and Ramp-Up (2024)",
+    "events": [
+      {
+        "id": "nif-5mj-record-feb-2024",
+        "year": "2024",
+        "title": "NIF Sets New Record: 5.2 MJ Fusion Yield",
+        "type": "breakthrough",
+        "detail": "In February 2024, the National Ignition Facility achieved a new record fusion energy yield of 5.2 MJ from a 2.2 MJ laser input shot — a target gain of approximately 2.3×. This represents a 65% increase over the December 2022 ignition milestone and demonstrates that NIF can repeatedly achieve ignition with improving yields. The result was published in peer-reviewed literature and confirmed by independent analysis.",
+        "sources": [
+          { "name": "Lawrence Livermore National Laboratory", "tier": 1, "pole": "western" },
+          { "name": "Physical Review Letters (peer-reviewed)", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "kstar-48s-record-2024",
+        "year": "2024",
+        "title": "KSTAR Sustains 100 Million°C Plasma for 48 Seconds — New World Record",
+        "type": "milestone",
+        "detail": "South Korea's KSTAR (Korea Superconducting Tokamak Advanced Research) device sustained a plasma at 100 million degrees Celsius for 48 seconds during its 2023–2024 experimental campaign, announced April 2024. This broke the previous KSTAR record of 30 seconds (2021) and was enabled by an upgrade to tungsten divertors (replacing carbon) completed in 2023. The Korea Institute of Fusion Energy (KFE) aims to reach 300 seconds by 2026.",
+        "sources": [
+          { "name": "Korea Institute of Fusion Energy (KFE)", "tier": 1, "pole": "eastern" },
+          { "name": "CNN", "tier": 2, "url": "https://www.cnn.com/2024/04/01/climate/nuclear-fusion-record-korea-climate-intl", "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "iter-budget-increase-2024",
+        "year": "2024",
+        "title": "ITER Council Approves €5.2 Billion Budget Increase and Revised Schedule",
+        "type": "regulatory",
+        "detail": "In July 2024, the ITER Council formally approved the Baseline 2024 — the latest revised schedule and budget for the project. The revision confirmed first plasma in 2033 and deuterium-tritium burning plasma in 2039. An additional €5.2 billion was added to the project budget, bringing the total estimated cost to approximately €20.4 billion. The revision was necessitated by manufacturing defects in vacuum vessel sectors and thermal shield components discovered during assembly.",
+        "sources": [
+          { "name": "ITER Organization — Baseline 2024", "tier": 1, "url": "https://www.iter.org/", "pole": "international" },
+          { "name": "World Nuclear News", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "pacific-fusion-900m-2024",
+        "year": "2024",
+        "title": "Pacific Fusion Emerges from Stealth with $900M Series A",
+        "type": "investment",
+        "detail": "In November 2024, Pacific Fusion — a previously stealth-mode inertial confinement fusion company — announced a $900 million Series A funding round, one of the largest in fusion industry history. The company focuses on pulsed fusion power using high-explosive-driven implosions. The funding represents continued strong investor confidence in fusion energy despite the long timelines to commercialization.",
+        "sources": [
+          { "name": "Pacific Fusion press release", "tier": 1, "pole": "western" },
+          { "name": "MIT Technology Review", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "cfs-sparc-magnet-completed-2024",
+        "year": "2024",
+        "title": "CFS Completes First SPARC Toroidal Field Magnet",
+        "type": "milestone",
+        "detail": "Commonwealth Fusion Systems completed the first of 18 toroidal field (TF) magnets for the SPARC tokamak at its Devens, Massachusetts facility. Each TF magnet uses high-temperature superconducting REBCO tape wound into a D-shape and must be tested at cryogenic temperatures. The completion of the first magnet represented a major manufacturing milestone in SPARC construction, with the full set of 18 required for tokamak assembly.",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems", "tier": 1, "url": "https://cfs.energy/", "pole": "western" },
+          { "name": "Ars Technica", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "uk-step-west-burton-phase2-2024",
+        "year": "2024",
+        "title": "UK STEP Programme Enters Phase 2 Engineering Design",
+        "type": "regulatory",
+        "detail": "The UK's Spherical Tokamak for Energy Production (STEP) programme at the West Burton A site in Nottinghamshire entered Phase 2 — detailed engineering design — in 2024. STEP is designed to generate ~100 MWe net electricity using a spherical tokamak configuration, with operations expected in the 2040s. Phase 2 runs from 2025–2032 and involves procurement of engineering and construction partners.",
+        "sources": [
+          { "name": "UK Atomic Energy Authority (UKAEA)", "tier": 1, "url": "https://stepfusion.com/", "pole": "western" },
+          { "name": "The Engineer", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "helion-polaris-complete-2024",
+        "year": "2024",
+        "title": "Helion Completes Construction of Polaris — 7th Fusion Prototype",
+        "type": "milestone",
+        "detail": "Helion Energy completed construction of Polaris, its 7th and most advanced fusion prototype, in late 2024. Polaris uses a field-reversed configuration (FRC) approach in which two magnetized plasma rings are accelerated toward each other at ~1 million mph and compressed to achieve fusion conditions. Polaris is designed to demonstrate net electricity production — a prerequisite for the 2028 Microsoft power delivery target. The device began operations forming the largest FRC plasmas in Helion history.",
+        "sources": [
+          { "name": "Helion Energy", "tier": 1, "url": "https://www.helionenergy.com/", "pole": "western" },
+          { "name": "Bloomberg", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "tae-norm-breakthrough-2024",
+        "year": "2024",
+        "title": "TAE Technologies Reports Breakthrough Performance on Norman Machine",
+        "type": "scientific",
+        "detail": "TAE Technologies reported that its Norman (Norm) research machine achieved its highest plasma performance levels, exceeding all prior targets. TAE's approach — using a field-reversed configuration fueled with hydrogen and boron (p-B11, aneutronic fusion) — aims to produce energy without high-energy neutrons, dramatically reducing radiation shielding requirements. The Norm machine demonstrated plasma parameters approaching the conditions required for p-B11 fusion, despite the more challenging physics compared to deuterium-tritium approaches.",
+        "sources": [
+          { "name": "TAE Technologies", "tier": 1, "url": "https://tae.com/", "pole": "western" },
+          { "name": "Nature Communications", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-04-13"
+      }
+    ]
+  },
+  {
+    "era": "Net Energy Era (2025–2026)",
+    "events": [
+      {
+        "id": "east-1066s-world-record-2025",
+        "year": "2025",
+        "title": "China's EAST Achieves 1,066-Second Plasma — World Record",
+        "type": "breakthrough",
+        "detail": "On January 20, 2025, China's EAST (Experimental Advanced Superconducting Tokamak) tokamak at the Institute of Plasma Physics (ASIPP) in Hefei achieved a sustained plasma duration of 1,066 seconds (nearly 18 minutes) at over 100 million degrees Celsius — more than doubling its previous record of 403 seconds. The achievement used new plasma diagnostics and doubled heating system power. French tokamak WEST later set a competing record of 1,337 seconds (22+ minutes) in February 2025.",
+        "sources": [
+          { "name": "Chinese Academy of Sciences / ASIPP", "tier": 1, "url": "https://english.cas.cn/", "pole": "eastern" },
+          { "name": "CGTN", "tier": 2, "pole": "eastern" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "west-tokamak-1337s-2025",
+        "year": "2025",
+        "title": "French WEST Tokamak Breaks EAST Record with 1,337-Second Plasma",
+        "type": "breakthrough",
+        "detail": "France's WEST (Tungsten (W) Environment in Steady-state Tokamak) device at CEA's IRFM facility in Cadarache achieved a world record plasma duration of 1,337 seconds (~22 minutes) in February 2025, surpassing the 1,066-second record set by China's EAST just weeks earlier. WEST uses an all-tungsten first wall and is designed to test plasma-wall interactions for ITER. The record demonstrates Europe's continued competitive position in long-pulse plasma research.",
+        "sources": [
+          { "name": "CEA (Commissariat à l'énergie atomique) — official press release", "tier": 1, "pole": "western" },
+          { "name": "EUROfusion", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "helion-series-f-2025",
+        "year": "2025",
+        "title": "Helion Raises $425M Series F with SoftBank; Valued at $5.4 Billion",
+        "type": "investment",
+        "detail": "In January 2025, Helion Energy announced a $425 million Series F funding round with SoftBank Vision Fund 2 as a lead investor. The round valued Helion at $5.4 billion, making it one of the most highly valued private fusion companies. The funding will support continued development of the Polaris prototype and progress toward the 2028 Microsoft power delivery target. Sam Altman, an early Helion backer, again participated.",
+        "sources": [
+          { "name": "Helion Energy press release", "tier": 1, "url": "https://www.helionenergy.com/articles/helion-announces-425m-series-f-investment-to-scale-commercialized-fusion-power/", "pole": "western" },
+          { "name": "Reuters", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "uk-fusion-410m-2025",
+        "year": "2025",
+        "title": "UK Announces £410M in Record Fusion Funding for 2025–2026",
+        "type": "investment",
+        "detail": "On January 16, 2025, the UK government announced £410 million in fusion research funding — the highest annual allocation in UK fusion history. The funding covers STEP programme progression, the Fusion Futures skills pipeline, JET decommissioning research, and UKAEA operational support. A subsequent commitment of £2.5 billion over the following years was announced, cementing the UK's position as a major global fusion investor and supporting its ambition to become a world leader in commercial fusion energy.",
+        "sources": [
+          { "name": "UK Atomic Energy Authority (UKAEA)", "tier": 1, "url": "https://ukaea.maglr.com/newsletter-15th-edition-january-2025/", "pole": "western" },
+          { "name": "BBC News", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "tae-150m-round-2025",
+        "year": "2025",
+        "title": "TAE Technologies Raises $150M; Total Funding Exceeds $1.3 Billion",
+        "type": "investment",
+        "detail": "In June 2025, TAE Technologies raised $150 million in a new funding round, with investors including Google, Chevron Technology Ventures, and NEA. TAE's total equity capital raised passed $1.3 billion, making it one of the best-funded alternative fusion approaches globally. TAE's Norman machine continues to advance toward conditions required for hydrogen-boron (p-B11) aneutronic fusion — a pathway that would produce no high-energy neutrons.",
+        "sources": [
+          { "name": "TAE Technologies press release", "tier": 1, "url": "https://tae.com/", "pole": "western" },
+          { "name": "Bloomberg", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "helion-polaris-150m-dt-2026",
+        "year": "2026",
+        "title": "Helion Polaris Achieves 150 Million°C in Deuterium-Tritium Fusion",
+        "type": "breakthrough",
+        "detail": "On February 13, 2026, Helion Energy announced that its Polaris prototype had achieved a plasma temperature of 150 million degrees Celsius — significantly exceeding the 100 million degree threshold — using deuterium-tritium (D-T) fuel. This represents the highest temperature achieved by Helion to date and a critical step toward demonstrating net electricity production. Helion's FRC approach directly converts fusion energy to electricity via induced magnetic fields, eliminating the need for steam turbines.",
+        "sources": [
+          { "name": "Helion Energy press release", "tier": 1, "url": "https://www.helionenergy.com/", "pole": "western" },
+          { "name": "MIT Technology Review", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "cfs-sparc-first-magnet-2026",
+        "year": "2026",
+        "title": "CFS Completes First SPARC Toroidal Field Magnet for Full Assembly",
+        "type": "milestone",
+        "detail": "In January 2026, Commonwealth Fusion Systems completed and tested the first production toroidal field magnet for SPARC assembly at its Devens, Massachusetts facility. The magnet — made from high-temperature superconducting REBCO tape — must achieve 12.2 Tesla in operation. CFS requires 18 such magnets for SPARC. The SPARC tokamak is designed to achieve fusion energy gain Q > 2, making it the first tokamak to demonstrate net fusion energy gain if successful.",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems", "tier": 1, "url": "https://cfs.energy/", "pole": "western" },
+          { "name": "Ars Technica", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "cfs-863m-series-b2-2025",
+        "year": "2025",
+        "title": "CFS Raises $863M Series B2 — Nvidia and Google Among Investors",
+        "type": "investment",
+        "detail": "In August 2025, Commonwealth Fusion Systems announced an $863 million Series B2 funding round, bringing total capital raised to nearly $3 billion. New investors included Nvidia, Google, Breakthrough Energy Ventures, Gates Frontier, Khosla Ventures, and Eni. CFS is now the world's best-funded private fusion company. The funds support construction of SPARC at Devens, MA and advance planning for the ARC commercial fusion power plant.",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems press release", "tier": 1, "url": "https://cfs.energy/", "pole": "western" },
+          { "name": "TechCrunch", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "doe-fy2025-fusion-budget",
+        "year": "2025",
+        "title": "US DOE FY2025 Fusion Budget Reaches $790M for Fusion Energy Sciences",
+        "type": "regulatory",
+        "detail": "The US Department of Energy's Office of Fusion Energy Sciences (FES) received $790 million in FY2025 appropriations, supporting fusion research across national labs, universities, and the US contribution to ITER (~$200M). Separately, DOE's Inertial Confinement Fusion program received ~$683M, the majority going to NIF at Lawrence Livermore. Total federal fusion investment in FY2025 exceeded $1.4 billion, the highest in US history.",
+        "sources": [
+          { "name": "US Department of Energy", "tier": 1, "url": "https://www.energy.gov/", "pole": "western" },
+          { "name": "Congressional Research Service", "tier": 3, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "iter-vacuum-vessel-westinghouse-2025",
+        "year": "2025",
+        "title": "Westinghouse Awarded €168M ITER Vacuum Vessel Assembly Contract",
+        "type": "regulatory",
+        "detail": "Westinghouse Electric Company was awarded a €168 million ($180M USD) contract for final assembly operations on ITER's vacuum vessel sectors. The contract covers machining and welding of the nine 400-tonne D-shaped steel sectors that form the toroidal vacuum vessel. Earlier quality inspections had found dimensional deviations and stress corrosion cracking in thermal shields, contributing to the schedule delay. ITER requires millimeter-precision positioning for the automated welding tools.",
+        "sources": [
+          { "name": "ITER Organization", "tier": 1, "url": "https://www.iter.org/", "pole": "international" },
+          { "name": "World Nuclear News", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "fia-9b-investment-2025",
+        "year": "2025",
+        "title": "Cumulative Private Fusion Investment Surpasses $9.8 Billion — FIA",
+        "type": "investment",
+        "detail": "The Fusion Industry Association's 2025 data showed cumulative private investment in fusion energy had exceeded $9.8 billion — representing a 5× increase since 2021. The rolling 12-month investment rate of $2.64 billion (to July 2025) was the highest annual rate since 2022, signaling renewed investor confidence. The number of private fusion companies tracked reached 43+ across 12 countries.",
+        "sources": [
+          { "name": "Fusion Industry Association — 2025 report", "tier": 3, "url": "https://www.fusionindustryassociation.org/", "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "wendelstein-record-energy-2024",
+        "year": "2024",
+        "title": "Wendelstein 7-X Achieves Record Energy Stored in Stellarator Plasma",
+        "type": "scientific",
+        "detail": "Germany's Wendelstein 7-X (W7-X) stellarator at Max-Planck-Institut für Plasmaphysik in Greifswald set a new world record for energy content in a stellarator plasma in its 2023–2024 experimental campaign. W7-X's key advantage over tokamaks is its inherently steady-state design — no plasma current means no disruptive instabilities. The record validated that optimized stellarator geometry (computed via years of numerical optimization) can achieve confinement comparable to tokamaks, advancing the case for stellarators as a commercial fusion route.",
+        "sources": [
+          { "name": "Max-Planck-Institut für Plasmaphysik — official report", "tier": 1, "pole": "western" },
+          { "name": "Nuclear Fusion journal (IOP Publishing)", "tier": 1, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "kstar-upgrade-2024-target-300s",
+        "year": "2024",
+        "title": "KSTAR Announces Upgraded Target: 300 Seconds at 100M°C by 2026",
+        "type": "milestone",
+        "detail": "Following its 48-second plasma record in early 2024, the Korea Institute of Fusion Energy (KFE) formally announced a 300-second sustained plasma target at 100 million degrees Celsius as its next major milestone, to be achieved by 2026. The upgraded tungsten divertor (replacing the previous carbon system) enables much longer plasma durations by better handling the heat exhaust. A 300-second record would represent a 6× improvement and bring KSTAR plasma parameters closer to the continuous operation needed for a power plant.",
+        "sources": [
+          { "name": "Korea Institute of Fusion Energy (KFE) — official statement", "tier": 1, "pole": "eastern" },
+          { "name": "Space.com", "tier": 2, "pole": "western" }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-13"
+      },
+      {
+        "id": "tae-tmtg-merger-dec-2025",
+        "year": "2025",
+        "title": "TAE Technologies Merges with Trump Media & Technology Group, Receives $200M",
+        "type": "investment",
+        "detail": "In December 2025, TAE Technologies entered a merger agreement with Trump Media & Technology Group (TMTG), receiving $200 million in initial funding with an additional $100 million contingent on SEC Form S-4 approval. The deal gives TAE access to capital market funding via TMTG's public market presence. TAE had raised nearly $2 billion over its 30-year history. The company continues to pursue hydrogen-boron (p-B11) aneutronic fusion on its Norman machine and is actively evaluating US sites (Alabama, Ohio, Texas) for its first commercial fusion power plant targeting approximately 50 MWe in the early 2030s. The unconventional financing structure reflects wider pressures in private fusion funding, with the rolling 12-month private investment rate softening from its $2.64 billion mid-2025 peak.",
+        "sources": [
+          { "name": "TechCrunch", "tier": 2, "url": "https://techcrunch.com/2026/04/19/cracks-are-starting-to-form-on-fusion-energys-funding-boom/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://techcrunch.com/2026/04/19/cracks-are-starting-to-form-on-fusion-energys-funding-boom/",
+            "caption": "TechCrunch analysis of TAE-TMTG merger and fusion funding trends",
+            "source": "TechCrunch",
+            "thumbnail": "https://techcrunch.com/2026/04/19/cracks-are-starting-to-form-on-fusion-energys-funding-boom/"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-21"
+      },
+      {
+        "id": "arpa-e-135m-fusion-apr-2026",
+        "year": "2026",
+        "title": "ARPA-E Commits $135M to Fusion — Agency's Largest Fusion Investment",
+        "type": "investment",
+        "detail": "On April 8, 2026, ARPA-E Director Conner Prochaska announced a $135 million commitment to fusion technology development at the ARPA-E Energy Innovation Summit in National Harbor, Maryland — the largest single fusion investment in the agency's 17-year history. The funding will be deployed over 18 months across multiple programs targeting key technical barriers to commercial fusion: plasma confinement, materials science, and tritium breeding. The announcement signals continued robust federal support for fusion, complementing DOE's Office of Fusion Energy Sciences FY2025 budget of $790 million. Total US federal fusion investment in FY2025 exceeded $1.4 billion — the highest in US history.",
+        "sources": [
+          { "name": "ARPA-E official announcement", "tier": 1, "url": "https://arpa-e.energy.gov/news-and-events/news-and-insights/arpa-e-announces-135-million-commitment-fusion-technology-largest-fusion-investment-agencys-history", "pole": "western" },
+          { "name": "Axios", "tier": 2, "url": "https://www.axios.com/2026/04/08/fusion-power-energy-federal-support-increase", "pole": "western" },
+          { "name": "ANS Nuclear Newswire", "tier": 2, "url": "https://www.ans.org/news/article-7923/arpae-commits-135-million-for-fusion-commercialization/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://arpa-e.energy.gov/news-and-events/news-and-insights/arpa-e-announces-135-million-commitment-fusion-technology-largest-fusion-investment-agencys-history",
+            "caption": "ARPA-E Director Conner Prochaska announces $135M fusion commitment at 2026 Energy Innovation Summit",
+            "source": "ARPA-E",
+            "thumbnail": "https://arpa-e.energy.gov/news-and-events/news-and-insights/arpa-e-announces-135-million-commitment-fusion-technology-largest-fusion-investment-agencys-history"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-21"
+      },
+      {
+        "id": "uk-national-fusion-strategy-apr-2026",
+        "year": "2026",
+        "title": "UK Unveils National Fusion Energy Strategy Backed by £1.3 Billion",
+        "type": "regulatory",
+        "detail": "On April 14, 2026, the UK government unveiled its National Fusion Energy Strategy at Fusion Fest 2026 in London, committing £1.3 billion in government investment as part of the broader £2.5 billion UK fusion commitment (2025–2030). The strategy centers on the STEP (Spherical Tokamak for Energy Production) programme at West Burton A, Nottinghamshire, targeting approximately 100 MWe net output with operations beginning in 2040. Key contracts announced: the ILIOS Consortium was awarded a £200 million STEP Construction Partner contract; Tokamak Energy was selected for high-temperature superconducting magnet technology; and Dassault Systèmes for digital systems management. The strategy leverages 70+ years of UK fusion research expertise — including the legacy of the Joint European Torus (JET) at Culham — and positions the UK as a global leader in commercial fusion. Additional support covers the Fusion Futures skills pipeline and JET decommissioning research.",
+        "sources": [
+          { "name": "UK Government — GOV.UK official announcement", "tier": 1, "url": "https://www.gov.uk/government/news/new-uk-fusion-energy-strategy-maps-path-to-commercial-fusion", "pole": "western" },
+          { "name": "IET Engineering & Technology", "tier": 2, "url": "https://eandt.theiet.org/2026/04/15/ps1-3bn-uk-fusion-strategy-sets-out-path-lab-grid", "pole": "western" },
+          { "name": "Innovation News Network", "tier": 2, "url": "https://www.innovationnewsnetwork.com/ukfe-launches-1-3bn-uk-fusion-strategy-as-ukaea-publishes-national-roadmap/68617/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.gov.uk/government/news/new-uk-fusion-energy-strategy-maps-path-to-commercial-fusion",
+            "caption": "UK National Fusion Energy Strategy launched at Fusion Fest 2026 in London",
+            "source": "UK Government / GOV.UK",
+            "thumbnail": "https://assets.publishing.service.gov.uk/media/69de3242642d5aaff4e04f66/s300_UK_Fusion_Energy_Ltd_Strategy-4.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-21"
+      },
+      {
+        "id": "nif-eyc-cd1-apr-2026",
+        "year": "2026",
+        "title": "NIF Enhanced Fusion Yield Capability Laser Upgrade Clears Critical Decision-1",
+        "type": "milestone",
+        "detail": "On April 24, 2026, NNSA and Lawrence Livermore National Laboratory announced that the Enhanced Fusion Yield Capability (EYC) project cleared Critical Decision-1 (CD-1), authorizing engineering design and procurement. EYC will upgrade NIF's laser energy from 2.2 to 2.6 megajoules (an 18% increase), enabling fusion shots targeting significantly higher yields beyond the current 5.2 MJ record. The upgrade supports both national security stockpile stewardship and clean energy fusion research. The EYC project is expected to be operational in the late 2020s, continuing NIF's trajectory of improving fusion performance following the December 2022 ignition breakthrough.",
+        "sources": [
+          { "name": "NNSA / US Department of Energy", "tier": 1, "url": "https://www.energy.gov/nnsa/articles/nnsa-and-lawrence-livermore-national-laboratory-advance-laser-upgrade-nuclear-0", "pole": "western" },
+          { "name": "Livermore Vine", "tier": 2, "url": "https://www.livermorevine.com/technology/2026/04/24/llnl-advances-on-laser-upgrade-project-intended-to-increase-fusion-yield/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.energy.gov/nnsa/articles/nnsa-and-lawrence-livermore-national-laboratory-advance-laser-upgrade-nuclear-0",
+            "caption": "NNSA and LLNL advance NIF laser upgrade targeting increased fusion yield capability",
+            "source": "US Department of Energy / NNSA",
+            "thumbnail": "https://www.energy.gov/nnsa/articles/nnsa-and-lawrence-livermore-national-laboratory-advance-laser-upgrade-nuclear-0"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-29"
+      },
+      {
+        "id": "cfs-pjm-application-apr-2026",
+        "year": "2026",
+        "title": "CFS Becomes First Fusion Company to Apply to PJM Interconnection Grid",
+        "type": "milestone",
+        "active": true,
+        "detail": "On April 28, 2026, Commonwealth Fusion Systems filed an interconnection application with PJM Interconnection — the largest US wholesale electricity market (182,000 MW, serving 65+ million customers) — for its planned ARC commercial fusion power plant. This is the first-ever fusion energy grid interconnection application in the US, marking a fundamental transition from fusion as a research endeavor to fusion as a regulated electricity business. SPARC is ~75% complete at CFS's Devens, MA campus with first plasma targeted for 2027; ARC targets commercial operation in the early 2030s. The application follows a wave of government fusion investment in April 2026: ARPA-E $135M commitment (April 8), UK £1.3B National Fusion Strategy (April 14), and NIF EYC laser upgrade CD-1 (April 24).",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems / PR Newswire", "tier": 1, "url": "https://www.prnewswire.com/news-releases/commonwealth-fusion-systems-becomes-first-fusion-company-to-apply-to-pjm-interconnection-the-largest-us-wholesale-electricity-market-302755102.html", "pole": "western" },
+          { "name": "Commonwealth Fusion Systems", "tier": 1, "url": "https://cfs.energy/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.prnewswire.com/news-releases/commonwealth-fusion-systems-becomes-first-fusion-company-to-apply-to-pjm-interconnection-the-largest-us-wholesale-electricity-market-302755102.html",
+            "caption": "CFS becomes first fusion company to apply to PJM Interconnection grid — April 28, 2026",
+            "source": "Commonwealth Fusion Systems / PR Newswire",
+            "thumbnail": "https://www.prnewswire.com/news-releases/commonwealth-fusion-systems-becomes-first-fusion-company-to-apply-to-pjm-interconnection-the-largest-us-wholesale-electricity-market-302755102.html"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-29"
+      },
+      {
+        "id": "east-dtp-regime-apr-2026",
+        "year": "2026",
+        "title": "EAST Demonstrates Novel DTP Plasma Regime — ELM-Free H-Mode with Divertor Detachment",
+        "type": "breakthrough",
+        "detail": "China's EAST tokamak at ASIPP in Hefei demonstrated the 'DTP' (Detached divertor and Turbulence-dominated Pedestal) plasma regime in a metal-wall device for the first time — simultaneously achieving partial divertor detachment, ELM-free high-confinement mode, and enhanced pedestal performance for approximately one minute. Published in Physical Review Letters (April 2026, lead researcher Prof. Xu Guosheng). The result addresses one of the toughest engineering challenges in fusion: managing extreme heat loads on the divertor while maintaining plasma quality. ELM-free high-confinement and divertor detachment are normally in tension; the DTP regime reconciles both simultaneously, offering a potential operational scenario for ITER and future power plants.",
+        "sources": [
+          { "name": "Physical Review Letters (peer-reviewed)", "tier": 1, "url": "https://doi.org/10.1103/7r3f-dqft", "pole": "international" },
+          { "name": "Phys.org", "tier": 2, "url": "https://phys.org/news/2026-04-tokamak-regime-sustains-stable-fusion.html", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/chinese-tokamak-achieves-progress-in-high-density-operation", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://phys.org/news/2026-04-tokamak-regime-sustains-stable-fusion.html",
+            "caption": "EAST tokamak demonstrates novel DTP regime — simultaneous divertor detachment and ELM-free H-mode for one minute",
+            "source": "Phys.org / ASIPP",
+            "thumbnail": "https://scx1.b-cdn.net/csz/news/800a/2026/tokamak-regime-sustain.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-29"
+      },
+      {
+        "id": "zap-energy-fission-pivot-apr-2026",
+        "year": "2026",
+        "title": "Zap Energy Appoints New CEO, Pivots to Dual Fission-Fusion Strategy",
+        "type": "milestone",
+        "detail": "Seattle-based Zap Energy named Zabrina Johal as CEO and announced an integrated nuclear strategy adding 50 MW small modular reactors (SMRs) based on the 4S fission design to its fusion roadmap, targeting fission revenue within one year. The pivot mirrors moves by other fusion companies under funding pressure: the rolling 12-month private investment rate softened to ~$1.6B (April 2026) from a $2.64B mid-2025 peak. Zap's core Z-pinch fusion approach (sheared-flow-stabilized, no external magnets) continues as the long-term commercial target. The company has raised $160M+ since its University of Washington spinout.",
+        "sources": [
+          { "name": "PR Newswire / Zap Energy", "tier": 1, "url": "https://www.prnewswire.com/news-releases/zap-energy-advances-integrated-nuclear-strategy-and-appoints-zabrina-johal-as-ceo-302757297.html", "pole": "western" },
+          { "name": "TechCrunch", "tier": 2, "url": "https://techcrunch.com/2026/04/29/fusion-power-startup-zap-energy-pulls-a-partial-pivot-adding-nuclear-fission-to-the-mix/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://techcrunch.com/2026/04/29/fusion-power-startup-zap-energy-pulls-a-partial-pivot-adding-nuclear-fission-to-the-mix/",
+            "caption": "Zap Energy announces fission-fusion dual strategy and new CEO Zabrina Johal — April 29, 2026",
+            "source": "TechCrunch",
+            "thumbnail": "https://techcrunch.com/wp-content/uploads/2024/10/Zap-Energy-Century-reaction-chamber.jpg?w=1024"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-04-29"
+      },
+      {
+        "id": "general-fusion-doe-fuel-cycle-may-2026",
+        "year": "2026",
+        "title": "DOE-Funded Study Validates General Fusion's Tritium Fuel Cycle Advantages",
+        "type": "scientific",
+        "detail": "A Savannah River National Laboratory (SRNL) study funded by DOE's INFUSE program, published in Fusion Science and Technology (May 2026), found that General Fusion's Magnetized Target Fusion liquid metal wall design requires less start-up tritium and achieves shorter tritium doubling times than conventional tokamaks. The liquid lithium-lead wall simultaneously breeds tritium, shields equipment from neutron damage, and captures fusion energy — addressing the global tritium supply bottleneck (world inventory: ~20–25 kg) that constrains commercial D-T fusion scale-up.",
+        "sources": [
+          { "name": "GlobeNewswire / General Fusion", "tier": 2, "url": "https://www.globenewswire.com/news-release/2026/05/04/3286629/0/en/U-S-Department-of-Energy-Funded-Study-Supports-General-Fusion-s-Fuel-Cycle-Design.html", "pole": "western" },
+          { "name": "Metal Tech News", "tier": 3, "url": "https://www.metaltechnews.com/story/2026/05/06/tech-bytes/doe-national-lab-backs-general-fusion-tech/2746.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.globenewswire.com/news-release/2026/05/04/3286629/0/en/U-S-Department-of-Energy-Funded-Study-Supports-General-Fusion-s-Fuel-Cycle-Design.html",
+            "caption": "DOE-funded SRNL study validates General Fusion's liquid metal wall design for tritium fuel cycle",
+            "source": "GlobeNewswire / General Fusion",
+            "thumbnail": "https://ml.globenewswire.com/Resource/Download/d492e1bd-35f4-4409-a2c0-b24f5f30ac78"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-04"
+      },
+      {
+        "id": "iter-on-budget-schedule-may-2026",
+        "year": "2026",
+        "title": "ITER Declared On Budget and On Schedule — First Time in Project History",
+        "type": "milestone",
+        "detail": "On May 5, 2026, ITER's leadership publicly declared the 35-nation international tokamak is on budget and on schedule for the first time, following management reforms under Director-General Pietro Barabaschi (in post since late 2022). ITER met all spending targets in 2024 — the first time in the project's history. The US ITER organization also completed final deliveries of the central solenoid magnet's components to the Cadarache site — a 59-foot, 3,000-tonne superconducting system 15 years in the making. First plasma remains targeted for 2033 with D-T burning plasma by 2039; total project cost stands at approximately €20 billion. The declaration represents a significant organizational turnaround without altering the revised Baseline 2024 schedule.",
+        "sources": [
+          { "name": "NucNet", "tier": 2, "url": "https://www.nucnet.org/news/iter-european-fusion-project-now-on-budget-and-on-schedule-after-turnaround-5-5-2026", "pole": "western" },
+          { "name": "OilPrice.com", "tier": 3, "url": "https://oilprice.com/Energy/Energy-General/The-Worlds-Biggest-Fusion-Reactor-Just-Hit-a-Milestone.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.nucnet.org/news/iter-european-fusion-project-now-on-budget-and-on-schedule-after-turnaround-5-5-2026",
+            "caption": "ITER declared on budget and on schedule — first time in project history",
+            "source": "NucNet"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-13"
+      },
+      {
+        "id": "uk-infinity-fusion-consortium-may-2026",
+        "year": "2026",
+        "title": "UK Infinity Fusion Consortium Launched — First Private Stellarator Plant in UK",
+        "type": "milestone",
+        "active": true,
+        "detail": "On May 6, 2026, Type One Energy (Madison, WI), Tokamak Energy (UK), and AECOM announced the UK Infinity Fusion Consortium to develop the UK's first private-sector commercial fusion power plant. The consortium combines Type One Energy's 400 MWe Infinity Two stellarator design (a field-period-optimized stellarator), Tokamak Energy's HTS magnet manufacturing, and AECOM engineering. The UK project mirrors Type One Energy's US project at TVA's Bull Run site in Tennessee, targeting commercial operations by 2034. The launch was timed to US Fusion Energy Week (May 4–10, 2026) and reflects growing private-sector engagement with the UK's £2.5 billion National Fusion Energy Strategy.",
+        "sources": [
+          { "name": "Type One Energy / AECOM Press Release", "tier": 2, "url": "https://typeoneenergy.com/type-one-energy-tokamak-energy-and-aecom-form-the-uk-infinity-fusion-consortium/", "pole": "western" },
+          { "name": "New Civil Engineer", "tier": 2, "url": "https://www.newcivilengineer.com/latest/aecom-forms-partnership-with-two-nuclear-fusion-organisations-to-develop-uks-first-private-power-plant-08-05-2026/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://typeoneenergy.com/type-one-energy-tokamak-energy-and-aecom-form-the-uk-infinity-fusion-consortium/",
+            "caption": "UK Infinity Fusion Consortium — Type One Energy, Tokamak Energy, and AECOM launch UK's first private commercial fusion plant project",
+            "source": "Type One Energy",
+            "thumbnail": "https://typeoneenergy.com/wp-content/uploads/2026/05/157A0610-Medium.jpeg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-13"
+      },
+      {
+        "id": "general-fusion-investor-roadshow-may-2026",
+        "year": "2026",
+        "title": "General Fusion Advances NASDAQ SPAC Merger with Investor Roadshow",
+        "type": "investment",
+        "detail": "On May 7, 2026, General Fusion announced investor presentations at major tech and finance events throughout May, advancing its NASDAQ listing via a SPAC merger with Spring Valley Acquisition Corp. III (SVAC) under proposed ticker 'GFUZ'. The roadshow follows a May 4 DOE-funded Savannah River National Laboratory study validating General Fusion's MTF liquid metal wall fuel cycle design. General Fusion, backed by Jeff Bezos and Temasek ($492M raised), undertook a ~25% staff reduction in 2025 and received a $22M bridge round before choosing the SPAC path to public capital markets.",
+        "sources": [
+          { "name": "GlobeNewswire / General Fusion", "tier": 2, "url": "https://www.globenewswire.com/news-release/2026/05/07/3289928/0/en/General-Fusion-to-Present-at-Major-Tech-Industry-and-Key-Investor-Events-in-May.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.globenewswire.com/news-release/2026/05/07/3289928/0/en/General-Fusion-to-Present-at-Major-Tech-Industry-and-Key-Investor-Events-in-May.html",
+            "caption": "General Fusion advances NASDAQ SPAC listing — investor presentations across May 2026",
+            "source": "GlobeNewswire / General Fusion",
+            "thumbnail": "https://ml.globenewswire.com/media/NjYxN2U2ZDMtMTMzYS00MDYyLWI1YmItZTllZDczYzFkYTY2LTEyMjI5MzItMjAyNi0wNS0wNy1lbg==/tiny/General-Fusion.png"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-13"
+      },
+      {
+        "id": "ukaea-stellarex-mou-may-2026",
+        "year": "2026",
+        "title": "UKAEA and Stellarex Energy Sign Stellarator Fusion MOU at UK-Canada Forum",
+        "type": "milestone",
+        "detail": "On May 13, 2026, the UK Atomic Energy Authority and Stellarex Energy (Toronto, Canada — Princeton University spinoff) signed a Memorandum of Understanding to advance stellarator fusion development. Signed at the Second Annual UK-Canada Nuclear Forum at the British High Commission in Ottawa, the MOU covers plasma physics, HTS technology, fuel cycle design, and diagnostics. This is Stellarex's second major institutional MOU, following a 2024 agreement with Max-Planck-Institut für Plasmaphysik. The signing highlights growing international interest in stellarators — which use externally shaped coils rather than plasma current, enabling inherently steady-state disruption-free operation — as a commercial complement to dominant tokamak programs.",
+        "sources": [
+          { "name": "PRNewswire / UKAEA", "tier": 2, "url": "https://www.prnewswire.com/news-releases/ukaea-and-stellarex-energy-to-advance-fusion-power-development-302770709.html", "pole": "western" },
+          { "name": "SustainabilityHQ", "tier": 3, "url": "https://www.sustainabilityhq.com/ukaea-and-stellarex-energy-to-advance-fusion-power-development/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.prnewswire.com/news-releases/ukaea-and-stellarex-energy-to-advance-fusion-power-development-302770709.html",
+            "caption": "UKAEA and Stellarex Energy MOU signing at the Second Annual UK-Canada Nuclear Forum, Ottawa, May 13, 2026",
+            "source": "PRNewswire / UKAEA",
+            "thumbnail": "https://mma.prnewswire.com/media/2978998/Stellarex_UKAEA_MOU_Signing.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-13"
+      },
+      {
+        "id": "tae-ukaea-beam-jv-timeline-may-2026",
+        "year": "2026",
+        "title": "TAE Technologies and UKAEA Launch TAE Beam UK Joint Venture at Culham",
+        "type": "milestone",
+        "detail": "On May 14, 2026, TAE Technologies and the UK Atomic Energy Authority (UKAEA) formally established TAE Beam UK — a joint venture based at the Culham Campus in Oxfordshire. UKAEA invested £5.6 million. The JV commercializes neutral beam injection and particle accelerator technologies originally developed for fusion research, targeting non-fusion markets including food safety inspection, homeland security, and cancer therapy. The partnership provides a near-term revenue stream while TAE's core hydrogen-boron (p-B11) aneutronic fusion programme on its Norman machine matures.",
+        "sources": [
+          { "name": "TAE Technologies / PR Newswire", "tier": 1, "url": "https://www.prnewswire.com/news-releases/tae-technologies-ukaea-advance-development-of-core-fusion-technology-302771798.html", "pole": "western" },
+          { "name": "UK Government (GOV.UK)", "tier": 1, "url": "https://www.gov.uk/government/news/tae-technologies-and-ukaea-partner-to-commercialise-fusion-tech", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/tae-ukaea-create-joint-venture", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.prnewswire.com/news-releases/tae-technologies-ukaea-advance-development-of-core-fusion-technology-302771798.html",
+            "caption": "TAE Technologies and UKAEA formally launch TAE Beam UK joint venture at Culham Campus, Oxfordshire",
+            "source": "PR Newswire / TAE Technologies",
+            "thumbnail": "https://www.prnewswire.com/news-releases/tae-technologies-ukaea-advance-development-of-core-fusion-technology-302771798.html"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-21"
+      },
+      {
+        "id": "jt60sa-restart-commissioning-timeline-2026",
+        "year": "2026",
+        "title": "JT-60SA Completes Major Upgrades — Integrated Commissioning Begins for Restart",
+        "type": "milestone",
+        "detail": "On May 15, 2026, Fusion for Energy and ANS Nuclear Newswire reported that JT-60SA — the world's largest operational superconducting tokamak — has completed a comprehensive upgrade programme and begun integrated commissioning ahead of plasma restart. Located in Naka, Japan, the Japan-EU Broader Approach joint project installed a new first wall and divertor, 8-meter in-vessel coils for high-speed plasma position control, additional heating capacity, new European cryopumps, and advanced diagnostics. Jerónimo García became project leader on May 14, 2026. Full plasma heating experiments are planned for late 2026, with over 150 international scientific proposals under review. JT-60SA is designed to sustain high-performance plasmas for up to 100 seconds and inform ITER and future DEMO reactor operations.",
+        "sources": [
+          { "name": "Fusion for Energy", "tier": 1, "url": "https://fusionforenergy.europa.eu/news/europe-and-japan-restart-jt-60sa/", "pole": "western" },
+          { "name": "ANS Nuclear Newswire", "tier": 2, "url": "https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/",
+            "caption": "JT-60SA completes post-first-plasma upgrades and begins integrated commissioning",
+            "source": "ANS Nuclear Newswire",
+            "thumbnail": "https://www.ans.org/news/2026-05-15/article-8036/jt60sa-upgraded-and-ready-for-restart/"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-05-21"
+      },
+      {
+        "id": "focused-energy-240m-series-a-2026",
+        "year": "2026",
+        "title": "Focused Energy Raises $240M Series A — Largest in Laser Fusion Startup History",
+        "type": "investment",
+        "detail": "On May 27, 2026, Germany-based Focused Energy announced a $240 million oversubscribed Series A led by German utility RWE alongside SPRIND (Federal Agency for Disruptive Innovation), the European Innovation Council Fund, and Prime Movers Lab — the largest Series A in laser fusion startup history. Total capital raised reaches $300 million; the company also holds $200 million in non-dilutive grants. Focused Energy builds on the NIF ignition platform and has selected the Biblis nuclear site near Frankfurt, Germany for its first commercial laser-fusion power plant. The raise positions Focused Energy as the leading European private ICF company and signals growing European industrial investment in fusion energy, complementing the UK's £2.5B national fusion strategy.",
+        "sources": [
+          { "name": "BusinessWire / Focused Energy", "tier": 1, "url": "https://www.businesswire.com/news/home/20260527514871/en/Focused-Energy-Raises-%24240-Million-in-Series-A-Financing", "pole": "western" },
+          { "name": "TechCrunch", "tier": 2, "url": "https://techcrunch.com/2026/06/02/focused-energy-raises-whopping-240m-series-a-for-laser-powered-fusion-tech/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://techcrunch.com/2026/06/02/focused-energy-raises-whopping-240m-series-a-for-laser-powered-fusion-tech/",
+            "caption": "Focused Energy raises $240M Series A — Europe's largest laser fusion funding round — to build first commercial ICF plant at Biblis, Germany",
+            "source": "TechCrunch",
+            "thumbnail": "https://techcrunch.com/2026/06/02/focused-energy-raises-whopping-240m-series-a-for-laser-powered-fusion-tech/"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-06-07"
+      },
+      {
+        "id": "thea-energy-100m-series-b-2026",
+        "year": "2026",
+        "title": "Thea Energy Raises $100M Series B — Princeton Stellarator Startup Advances Planar-Coil Fusion",
+        "type": "investment",
+        "detail": "On May 27, 2026, Thea Energy (Princeton, NJ) — a spinout from Princeton University's Program in Plasma Physics — closed a $100 million Series B round led by Thomas Tull's US Innovative Technology Fund, with Idemitsu Kosan (Japan) and a dozen other investors. Total capital raised reaches $130 million. Funds will expand magnet manufacturing (including a second New Jersey facility) and advance construction of 'Eos,' a large-scale integrated planar-coil stellarator. Thea's approach uses computationally optimized planar (flat) coils rather than the complex 3D coils of conventional stellarators, dramatically reducing manufacturing costs. DOE had previously selected Thea's Helios preconceptual design as the first awardee of a DOE preconceptual design certification — a significant federal validation.",
+        "sources": [
+          { "name": "GlobeNewswire / Thea Energy", "tier": 2, "url": "https://www.globenewswire.com/news-release/2026/05/27/3302022/0/en/Thea-Energy-Raises-100-Million-Series-B-Funding-to-Build-Scalable-Fusion-Power-Plants.html", "pole": "western" },
+          { "name": "TechCrunch", "tier": 2, "url": "https://techcrunch.com/2026/05/27/with-a-new-100m-raise-princetons-thea-energy-is-now-a-top-funded-fusion-startup/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.globenewswire.com/news-release/2026/05/27/3302022/0/en/Thea-Energy-Raises-100-Million-Series-B-Funding-to-Build-Scalable-Fusion-Power-Plants.html",
+            "caption": "Thea Energy raises $100M Series B to advance planar-coil stellarator fusion power plants",
+            "source": "GlobeNewswire / Thea Energy",
+            "thumbnail": "https://www.globenewswire.com/news-release/2026/05/27/3302022/0/en/Thea-Energy-Raises-100-Million-Series-B-Funding-to-Build-Scalable-Fusion-Power-Plants.html"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-06-07"
+      },
+      {
+        "id": "helion-465m-series-g-june-2026",
+        "year": "2026",
+        "title": "Helion Energy Raises $465M Series G at $15.5B Valuation — Triples from Jan 2025",
+        "type": "investment",
+        "active": true,
+        "detail": "On June 4, 2026, Helion Energy closed a $465 million Series G round led by Thrive Capital (Josh Kushner), bringing its valuation to $15.5 billion — nearly 3× its January 2025 valuation of $5.43 billion and the largest VC round in the Pacific Northwest in 2026. New investors include Alta Park Capital, Anti Fund, BoxGroup, Lux Capital, Peak XV Partners, and Bill Ford (Ford Motor Company Executive Chairman). Returning investors include Capricorn Technology Impact Funds, Lightspeed Venture Partners, Mithril Capital, SoftBank Vision Fund 2, and Sam Altman. Helion's total capital reached $1.5 billion. Funds will accelerate construction of Orion — its first commercial fusion power plant in Malaga, Washington — and expand U.S. manufacturing capacity. Helion's Polaris prototype became the first privately-funded fusion device to operate with deuterium-tritium fuel, achieving plasma temperatures of 150 million°C in February 2026. CEO David Kirtley stated: 'Fusion is no longer a future idea, but a path to clean, reliable, affordable always-on electricity at scale.' Helion maintains its target to deliver 50 MW to Microsoft by 2028 under a binding power purchase agreement with financial penalties.",
+        "sources": [
+          { "name": "Helion Energy", "tier": 1, "url": "https://www.helionenergy.com/newsroom/helion-raises-465-million-series-g-funding-round-to-meet-surging-global-demand-for-power", "pole": "western" },
+          { "name": "TechCrunch", "tier": 2, "url": "https://techcrunch.com/2026/06/04/helion-the-sam-altman-backed-fusion-startup-raises-465m-to-build-a-power-plant-for-microsoft/", "pole": "western" },
+          { "name": "GeekWire", "tier": 2, "url": "https://www.geekwire.com/2026/helion-hits-15-5b-valuation-with-465m-in-new-cash-to-commercialize-fusion-this-decade/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://techcrunch.com/2026/06/04/helion-the-sam-altman-backed-fusion-startup-raises-465m-to-build-a-power-plant-for-microsoft/",
+            "caption": "Helion's Polaris prototype — first private fusion device to operate with D-T fuel — now backed by $465M Series G at $15.5B valuation",
+            "source": "TechCrunch",
+            "thumbnail": "https://techcrunch.com/wp-content/uploads/2026/02/Helion-Polaris-D-T.jpeg?w=1024"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-06-07"
+      },
+      {
+        "id": "cfs-arc-physics-papers-june-2026",
+        "year": "2026",
+        "title": "CFS Publishes 5 Peer-Reviewed ARC Power Plant Physics Papers — 58 Scientists Validate 400 MW Net Electricity Design",
+        "type": "scientific",
+        "active": true,
+        "detail": "On June 4, 2026, Commonwealth Fusion Systems published five peer-reviewed papers in a special issue of the Journal of Plasma Physics (Cambridge University Press) providing a comprehensive physics basis for the ARC commercial fusion power plant. Co-authored by 58 scientists from MIT, Columbia University, UC San Diego, KTH Royal Institute of Technology, Chalmers University of Technology, and the Max Planck Institute for Plasma Physics, the papers validate that ARC will produce approximately 1.1 gigawatts of fusion power and deliver 400 megawatts of continuous net electricity to the grid. The five papers cover: (1) ARC physics basis overview; (2) power and particle exhaust; (3) disruption physics and strategy; (4) performance and transport dynamics; (5) magnetohydrodynamics foundations. Chief Engineer Alex Creely stated: 'If we build the ARC tokamak and power plant as we intend, it'll work.' CEO Bob Mumgaard emphasized the papers 'validate and de-risk' CFS's approach to delivering 'electricity on the grid in the early 2030s.' This work follows seven SPARC-focused papers published in 2020 and builds on SPARC construction progress (now ~75% complete; first plasma targeted 2027).",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems", "tier": 1, "url": "https://cfs.energy/news-and-media/commonwealth-fusion-systems-builds-on-learnings-from-sparc-to-publish-five-peer-reviewed-papers-validating-the-physics-of-the-arc-fusion-power-plant/", "pole": "western" },
+          { "name": "Journal of Plasma Physics (Cambridge University Press)", "tier": 1, "pole": "western" },
+          { "name": "PR Newswire", "tier": 2, "url": "https://www.prnewswire.com/news-releases/commonwealth-fusion-systems-builds-on-learnings-from-sparc-to-publish-five-peer-reviewed-papers-validating-the-physics-of-the-arc-fusion-power-plant-302790590.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cfs.energy/news-and-media/commonwealth-fusion-systems-builds-on-learnings-from-sparc-to-publish-five-peer-reviewed-papers-validating-the-physics-of-the-arc-fusion-power-plant/",
+            "caption": "CFS's ARC commercial power plant — five peer-reviewed papers by 58 scientists confirm 1.1 GW fusion power and 400 MW net electricity",
+            "source": "Commonwealth Fusion Systems",
+            "thumbnail": "https://mma.prnewswire.com/media/2432727/Commonwealth_Fusion_Systems_Logo.jpg?w=300"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-06-07"
+      },
+      {
+        "id": "china-15th-fyp-fusion-frontier-timeline-2026",
+        "year": "2026",
+        "title": "China's 15th Five-Year Plan Designates Fusion Among Eight National 'Frontier Technology' Priorities",
+        "type": "regulatory",
+        "detail": "China's 15th Five-Year Plan (2026–2030) formally designates fusion energy as one of eight national 'frontier technology' priorities, alongside artificial intelligence, quantum computing, and advanced materials — backed by over $6.5 billion in government fusion investment since 2023. New fusion facilities including the BEST tokamak are under construction. The designation extends China's demonstrated commitment to fusion leadership, building on EAST's world record of 1,066 seconds at 100 million°C (January 2025) and ongoing CFETR engineering development targeting a 2 GW test reactor by approximately 2035. The 15th FYP signals that China intends to maintain or increase fusion investment through 2030, intensifying the multipolar global race for commercial fusion power.",
+        "sources": [
+          { "name": "The Fusion Report (Substack)", "tier": 3, "url": "https://thefusionreport.substack.com/p/this-weeks-fusion-news-may-15-2026", "pole": "international" },
+          { "name": "Chinese Academy of Sciences / ASIPP", "tier": 1, "url": "https://english.cas.cn/", "pole": "eastern" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://thefusionreport.substack.com/p/this-weeks-fusion-news-may-15-2026",
+            "caption": "China's 15th Five-Year Plan designates fusion among eight national frontier technology priorities (2026–2030)",
+            "source": "The Fusion Report",
+            "thumbnail": "https://thefusionreport.substack.com/p/this-weeks-fusion-news-may-15-2026"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "lastUpdated": "2026-05-21"
+      },
+      {
+        "id": "wendelstein-triple-product-record-may2026",
+        "year": "2026",
+        "title": "Wendelstein 7-X Sets World-Record Triple Product for a Stellarator",
+        "type": "scientific",
+        "detail": "On May 22, 2026, at the close of its latest experimental campaign, Germany's Wendelstein 7-X stellarator (Max-Planck-Institut für Plasmaphysik, Greifswald) achieved a new world-record fusion triple product (density × temperature × confinement time) of n·T·τ > 3×10²¹ m⁻³·keV·s, sustained for 43 seconds with plasma temperatures exceeding 20 million°C (peaking above 30 million°C). The result, achieved through a US-Europe research collaboration, surpasses previous tokamak benchmarks for sustained-duration triple product and strengthens the case that stellarators can reach power-plant-relevant plasma quality without the disruption risk of tokamaks. Wendelstein 7-X is now in a scheduled maintenance period (June 2025–August 2026) ahead of its next operational campaign (OP2.4).",
+        "sources": [
+          { "name": "Max-Planck-Institut für Plasmaphysik", "tier": 1, "url": "https://www.ipp.mpg.de/5532945/w7x", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/wendelstein-7-x-sets-new-fusion-performance-records", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.world-nuclear-news.org/articles/wendelstein-7-x-sets-new-fusion-performance-records",
+            "caption": "Wendelstein 7-X stellarator sets world-record fusion triple product, May 22, 2026",
+            "source": "World Nuclear News",
+            "thumbnail": "https://www.world-nuclear-news.org/articles/wendelstein-7-x-sets-new-fusion-performance-records"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "kstar-102s-tungsten-divertor-record-2026",
+        "year": "2026",
+        "title": "KSTAR Sustains 100-Million-Degree Plasma for 102 Seconds — Doubles 2024 Record",
+        "type": "milestone",
+        "active": true,
+        "detail": "On June 2, 2026, South Korea's KSTAR tokamak (Korea Institute of Fusion Energy, Daejeon) sustained ion-temperature plasma above 100 million°C for 102 seconds — more than double its 2024 record of 48 seconds. The shot validates KSTAR's full tungsten divertor upgrade completed the prior year: it is the first tokamak to sustain that temperature in an all-tungsten-walled configuration, eliminating the carbon plasma-facing tiles used in earlier campaigns and reducing tritium-retention risk (tungsten divertors are also ITER's baseline choice). The upgraded divertor showed only a 25% surface-temperature increase versus the older carbon components under comparable heat loads. KSTAR's original 2026 target was 300 seconds; KFE has not revised that goal but frames the 102-second result as validation of the underlying engineering ahead of further campaigns.",
+        "sources": [
+          { "name": "Korea Institute of Fusion Energy (KFE)", "tier": 1, "pole": "eastern" },
+          { "name": "Fusion Energy News", "tier": 2, "url": "https://www.fusionenergynews.com/story/kstar-sustains-100-million-degree-plasma-for-102-seconds-in-tungsten-divertor-ca", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.fusionenergynews.com/story/kstar-sustains-100-million-degree-plasma-for-102-seconds-in-tungsten-divertor-ca",
+            "caption": "KSTAR's tungsten-divertor upgrade enables a 102-second, 100-million-degree plasma shot — double the 2024 record",
+            "source": "Fusion Energy News",
+            "thumbnail": "https://www.fusionenergynews.com/story/kstar-sustains-100-million-degree-plasma-for-102-seconds-in-tungsten-divertor-ca"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "nature-fusion-grid-skepticism-june2026",
+        "year": "2026",
+        "title": "Nature News: Fusion Firms Say Grid Power Is Coming — But Big Questions Remain",
+        "type": "scientific",
+        "detail": "On June 8, 2026, Nature News published an analysis examining commercial fusion companies' grid-power claims — including Commonwealth Fusion Systems' ARC physics papers and PJM interconnection filing — and concluded that no fusion device has yet produced continuous net electricity, run economically, or proven long-duration reliability at scale. The piece cites Fusion Industry Association survey data that 83% of fusion companies still name securing investment as a major challenge, and that the industry estimates it needs roughly $77 billion in additional capital to build the first wave of commercial plants. The article is among the most-cited independent checks on the wave of 2026 commercial fusion announcements.",
+        "sources": [
+          { "name": "Nature (News)", "tier": 1, "url": "https://www.nature.com/articles/d41586-026-01795-z", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.nature.com/articles/d41586-026-01795-z",
+            "caption": "Nature News: fusion firms promise grid power, but net-electricity production remains undemonstrated",
+            "source": "Nature",
+            "thumbnail": "https://www.nature.com/articles/d41586-026-01795-z"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "tae-tmtg-merger-update-june2026",
+        "year": "2026",
+        "title": "TAE Technologies–Trump Media Merger: Truth Social Spinoff Dropped, Q4 2026 Close Targeted",
+        "type": "investment",
+        "detail": "On June 10, 2026, Trump Media & Technology Group (TMTG) and TAE Technologies provided a joint update on their previously announced ~$6 billion all-stock merger (first announced December 18, 2025). The companies confirmed they remain focused on closing the transaction in Q4 2026 'or sooner,' and disclosed that TMTG, TAE, and Texas Ventures III have abandoned a planned spinoff of TMTG's media assets, including Truth Social — post-merger leadership will instead evaluate strategic alternatives for those legacy businesses. The combined company plans to site and begin construction on a first utility-scale 50 MWe fusion power plant in 2026, with subsequent plants planned in the 350–500 MWe range. The merger would make TAE the second major private fusion company to reach public markets in 2026, after General Fusion.",
+        "sources": [
+          { "name": "GlobeNewswire / TMTG-TAE joint release", "tier": 2, "url": "https://www.globenewswire.com/news-release/2026/06/10/3309700/0/en/trump-media-technology-group-and-tae-technologies-provide-update-on-merger.html", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.globenewswire.com/news-release/2026/06/10/3309700/0/en/trump-media-technology-group-and-tae-technologies-provide-update-on-merger.html",
+            "caption": "TMTG and TAE Technologies confirm Q4 2026 merger-close target and drop Truth Social spinoff plans",
+            "source": "GlobeNewswire",
+            "thumbnail": "https://ml.globenewswire.com/media/YjY5ZjA4YTAtYzgxMS00NmU4LTkxYjMtYjE4MDAxNDc4YTMwLTEyMzY3NjEtMjAyNi0wNi0xMC1lbg==/tiny/Trump-Media-Technology-Group.png"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "iter-council-38-baseline-reaffirmed-2026",
+        "year": "2026",
+        "title": "ITER's 38th Council Meeting Reaffirms Baseline 2024, France Grants Vacuum Vessel Regulatory Exemption",
+        "type": "regulatory",
+        "detail": "The ITER Council's 38th meeting (June 25–26, 2026, Saint-Paul-lez-Durance, chaired by Japan's Eisuke Tada) reviewed progress under Director-General Pietro Barabaschi and reaffirmed that construction remains on the Baseline 2024 schedule (first plasma 2033–2034, D-T burning plasma 2039). Members noted continued progress on central solenoid module assembly, vacuum vessel sector positioning, and confirmed the Magnet Cold Test Facility is now fully operational following its first 4-Kelvin cooldown in June. In a significant regulatory development, France's nuclear safety authority agreed to exclude the ITER vacuum vessel from the scope of the EU Pressure Equipment Directive as implemented in French law, removing a compliance risk to the schedule. On July 3, European Council President António Costa toured ITER's assembly hall with DG Barabaschi, underscoring continued EU political backing for the project.",
+        "sources": [
+          { "name": "ITER Organization", "tier": 1, "url": "https://www.iter.org/node/20687/iter-council-notes-continued-progress-across-construction-commissioning-and-licensing", "pole": "international" },
+          { "name": "Nuclear Engineering International", "tier": 2, "url": "https://www.neimagazine.com/news/iter-reports-strong-project-progress/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.iter.org/node/20687/iter-council-notes-continued-progress-across-construction-commissioning-and-licensing",
+            "caption": "ITER's 38th Council meeting reaffirms Baseline 2024 schedule and notes new French regulatory exemption for the vacuum vessel",
+            "source": "ITER Organization",
+            "thumbnail": "https://www.iter.org/sites/default/files/styles/responsive_300w/public/media/2026-06/ic-38_2026-07_sm.jpg.webp"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "cfs-ukaea-librti-tritium-partnership-2026",
+        "year": "2026",
+        "title": "CFS Named First International Partner in UKAEA's £220M Tritium-Breeding LIBRTI Programme",
+        "type": "milestone",
+        "detail": "On July 1, 2026, the UK Atomic Energy Authority (UKAEA) named Commonwealth Fusion Systems as the first international partner in its Lithium Breeding Tritium Innovation (LIBRTI) programme — a £220 million UK government initiative to demonstrate net tritium production at a first-of-a-kind test facility at UKAEA's Culham Campus, built around a customized large-scale neutron source. CFS will design experimental setups, develop testing protocols, and build test articles to validate blanket technology for its ARC commercial power plant (under construction at the Fall Line Fusion Power Station, Chesterfield County, Virginia) in an environment representative of full-scale fusion conditions. Tritium breeding — converting lithium to tritium fuel via fusion neutrons — remains one of the most significant unsolved engineering problems for commercial D-T fusion.",
+        "sources": [
+          { "name": "UK Government / GOV.UK", "tier": 1, "url": "https://www.gov.uk/government/news/cfs-named-first-international-partner-in-ukaeas-librti-programme", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/cfs-joins-ukaeas-tritium-blanket-testing-programme", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.gov.uk/government/news/cfs-named-first-international-partner-in-ukaeas-librti-programme",
+            "caption": "UKAEA's LIBRTI tritium-breeding test facility at Culham, where CFS will validate ARC's blanket technology",
+            "source": "UK Government / UKAEA",
+            "thumbnail": "https://assets.publishing.service.gov.uk/media/6a439c35065c5aec12a4e3ab/s300_LIBRTI_building_preview_-_Image_credit_United_Kingdom_Atomic_Energy_Authority.png"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "proxima-fusion-411m-raise-2026",
+        "year": "2026",
+        "title": "Proxima Fusion Raises €411M ($468M) — Becomes Europe's Best-Funded Fusion Company",
+        "type": "investment",
+        "active": true,
+        "detail": "On July 7, 2026, Munich-based stellarator developer Proxima Fusion closed a €411 million ($468 million) financing round led by XTX Ventures and East X Ventures, with Google and German utility RWE joining as strategic investors alongside KfW Capital, SPRIND, and returning investors including Plural, Balderton, Cherry Ventures, and DST Global Partners. The round values Proxima at €2.4 billion, making it the best-funded fusion company in Europe — the largest European fusion financing on record. Proceeds fund completion of the Stellarator Model Coil, expansion of HTS cable and magnet production, and 'Alpha,' Proxima's planned net-energy stellarator demonstrator near Munich, built in partnership with the state of Bavaria, the Max Planck Institute for Plasma Physics, and RWE. CEO Francesco Sciortino said the raise 'demonstrates that Europe can not only invent breakthrough technologies, but also build globally competitive companies around them.' The Fusion Industry Association's 2026 annual report separately tallies Proxima's total capital raised at $518 million.",
+        "sources": [
+          { "name": "Proxima Fusion", "tier": 1, "url": "https://www.proximafusion.com/press-news/proxima-fusion-raises-eu411-million-to-build-europes-commercial-fusion-champion", "pole": "western" },
+          { "name": "CNBC", "tier": 2, "url": "https://www.cnbc.com/2026/07/07/google-proxima-fusion-funding.html", "pole": "western" },
+          { "name": "Finsmes", "tier": 3, "url": "https://www.finsmes.com/2026/07/proxima-fusion-raises-e411m-at-e2-4-billion-valuation.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "article",
+            "url": "https://www.proximafusion.com/press-news/proxima-fusion-raises-eu411-million-to-build-europes-commercial-fusion-champion",
+            "caption": "Proxima Fusion raises €411M at a €2.4B valuation, becoming Europe's best-funded fusion company",
+            "source": "Proxima Fusion",
+            "thumbnail": "https://www.proximafusion.com/press-news/proxima-fusion-raises-eu411-million-to-build-europes-commercial-fusion-champion"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "general-fusion-nasdaq-debut-2026",
+        "year": "2026",
+        "title": "General Fusion Becomes First Publicly Traded Pure-Play Fusion Company on Nasdaq",
+        "type": "investment",
+        "active": true,
+        "detail": "On July 13, 2026, General Fusion (Richmond, BC) began trading on Nasdaq under ticker GFUZ after completing its business combination with Spring Valley Acquisition Corp. III — shareholders of both companies had approved the merger on July 6, and it formally closed July 10. Shares opened at $12.85 and rallied roughly 40% intraday, making General Fusion the first pure-play fusion power company on public markets, several months ahead of TAE Technologies' pending Trump Media merger. The company enters public markets with approximately $150 million in cash (from a private placement plus remaining SPAC trust proceeds after heavy redemptions), on top of over $600 million raised historically, backed by investors including Jeff Bezos and Temasek. CEO Greg Twinney called fusion a 'trillion dollar opportunity' and said the capital funds key milestones for General Fusion's magnetized target fusion (Lawson) program through 2028, with a first commercial power plant now targeted for approximately 2035 — later than the company's original 2026 breakeven goal.",
+        "sources": [
+          { "name": "TechCrunch", "tier": 2, "url": "https://techcrunch.com/2026/07/13/investors-send-general-fusion-soaring-in-debut-as-first-publicly-traded-fusion-company/", "pole": "western" },
+          { "name": "GlobeNewswire / General Fusion", "tier": 1, "url": "https://www.globenewswire.com/news-release/2026/07/13/3326335/0/en/General-Fusion-Becomes-First-Publicly-Listed-Fusion-Company.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://techcrunch.com/2026/07/13/investors-send-general-fusion-soaring-in-debut-as-first-publicly-traded-fusion-company/",
+            "caption": "General Fusion stock rallies ~40% on Nasdaq debut, becoming the first publicly traded pure-play fusion company",
+            "source": "TechCrunch",
+            "thumbnail": "https://techcrunch.com/wp-content/uploads/2025/03/General-Fusion-LM26.jpg?w=1024"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "fia-2026-annual-report-4-5b-2026",
+        "year": "2026",
+        "title": "Fusion Industry Association 2026 Report: Global Investment Surges 69% to $4.48B, Cumulative Total Hits $14.24B",
+        "type": "investment",
+        "detail": "The Fusion Industry Association's 2026 Global Fusion Industry Report, published July 14, 2026, found that global private fusion investment surged 69% year-over-year to a record $4.48 billion over the past 12 months, pushing cumulative sector financing to $14.24 billion since the FIA began tracking data in 2021. Major contributing rounds: Commonwealth Fusion Systems ($863M, Aug 2025), Proxima Fusion ($518M, Jul 2026), Helion Energy ($465M, Jun 2026), and Inertia Enterprises ($450M, Feb 2026). Two companies — General Fusion and TAE Technologies — are going public via Nasdaq listings in 2026. Of 56 companies surveyed, 71% still expect fusion plants to deliver grid electricity by the 2030s, and five companies now hold power purchase agreements with major tech firms (Microsoft/Helion, Google/CFS). FIA CEO Andrew Holland said the report 'shows how far fusion has come — from being defined by national labs and government R&D programmes to being dominated by private fusion investment totalling over $4 billion in just one year.'",
+        "sources": [
+          { "name": "Fusion Industry Association", "tier": 3, "url": "https://www.fusionindustryassociation.org/fusion-industry-attracts-record-annual-funding-of-4-48bn-raising-total-to-14-24bn/", "pole": "western" },
+          { "name": "Bloomberg", "tier": 2, "url": "https://www.bloomberg.com/news/articles/2026-07-13/global-investment-in-fusion-companies-surges-69-to-4-5-billion", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.world-nuclear-news.org/articles/fusion-industry-raised-usd45-billion-over-past-year-report-says",
+            "caption": "FIA's 2026 Global Fusion Industry Report: private investment surges 69% to $4.48B in the past year",
+            "source": "World Nuclear News",
+            "thumbnail": "https://www.world-nuclear-news.org/images/articles/cover_fia_report_730_82406.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-07-16"
+      },
+      {
+        "id": "china-best-craft-582ton-magnet-jun2026",
+        "year": "2026",
+        "title": "China Completes Testing of World's Largest Fusion Magnet — 582-Tonne Toroidal Field Coil for BEST Tokamak",
+        "type": "milestone",
+        "detail": "The Institute of Plasma Physics (ASIPP), Chinese Academy of Sciences, completed full-condition testing on June 27, 2026 of a 582-tonne toroidal field superconducting magnet at its CRAFT (Comprehensive Research Facility for Fusion Technology) campus in Hefei — the largest magnet ever built for a fusion reactor, with 1.3x the volume and ~3x the stored energy of the equivalent ITER coil. It is destined for BEST (Burning Plasma Experimental Superconducting Tokamak), China's next-generation device targeting first plasma later this decade. Every component was manufactured domestically.",
+        "sources": [
+          { "name": "Global Times", "tier": 2, "url": "https://www.globaltimes.cn/page/202607/1365378.shtml", "pole": "eastern" },
+          { "name": "Interesting Engineering", "tier": 2, "url": "https://interestingengineering.com/science/china-tests-world-largest-fusion-superconducting-magnet", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://interestingengineering.com/science/china-tests-world-largest-fusion-superconducting-magnet",
+            "caption": "China's 582-tonne toroidal field magnet — the largest ever built for a fusion reactor — completes testing at the CRAFT facility in Hefei",
+            "source": "Interesting Engineering",
+            "thumbnail": "https://cms.interestingengineering.com/wp-content/uploads/2026/06/fusion-magnet.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "ukaea-eni-rh3ova-launch-jul2026",
+        "year": "2026",
+        "title": "UKAEA and Eni Launch Rh3ova, a Joint Venture for Fusion Fuel-Cycle Services",
+        "type": "milestone",
+        "detail": "UKAEA and Eni launched Rh3ova on July 2, 2026, a UK-based joint venture providing consultancy and operational services across the fusion fuel cycle — deuterium and tritium management from feasibility through deployment — combining UKAEA's 30+ years of tritium-handling experience with Eni's industrial capabilities. It complements the two organizations' joint H3AT Tritium Loop Facility. A public launch webinar followed on July 14, 2026.",
+        "sources": [
+          { "name": "UK Government (GOV.UK)", "tier": 1, "url": "https://www.gov.uk/government/news/ukaea-and-eni-launch-rh3ova-to-advance-fusion-industry", "pole": "western" },
+          { "name": "Eni", "tier": 1, "url": "https://www.eni.com/en-IT/media/press-release/2026/07/pr-ukaea-eni-launch-rh3ova-expedite-fusion-energy-industrialisation.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.gov.uk/government/news/ukaea-and-eni-launch-rh3ova-to-advance-fusion-industry",
+            "caption": "Rh3ova leadership team launches the UKAEA-Eni fusion fuel-cycle joint venture",
+            "source": "UK Government / UKAEA",
+            "thumbnail": "https://assets.publishing.service.gov.uk/media/6a4643e9045e1108aaa5e999/s300_Rh3ova_team_-_Giorgio_Ricci_Maccarini__CEO___Sophie_Davies__CCO___Donald_Cockburn__CFO___Iryna_Bennett__CTO___1_.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "inertia-livermore-hq-opening-jul2026",
+        "year": "2026",
+        "title": "Inertia Opens 50,000-Sq-Ft Livermore HQ — World's First Fusion Fuel Target Factory",
+        "type": "milestone",
+        "detail": "Inertia Enterprises opened a new 50,000-square-foot headquarters in Livermore, CA on July 10, 2026, housing what the company calls the world's first fusion fuel target factory alongside a high-precision metrology facility, commercializing ICF breakthroughs proven at nearby NIF. The company plans to convert the site into an end-to-end fuel-capsule production line by 2027, with a power-plant groundbreaking targeted for 2030.",
+        "sources": [
+          { "name": "GlobeNewswire / Inertia", "tier": 2, "url": "https://www.globenewswire.com/news-release/2026/07/10/3325707/0/en/Inertia-unveils-new-headquarters-accelerating-the-path-to-commercial-fusion-energy.html", "pole": "western" },
+          { "name": "ABC7 News (San Francisco)", "tier": 2, "url": "https://abc7news.com/post/inertia-worlds-1st-fusion-factory-lawrence-livermore-national-laboratory-aims-clean-energy-source-commercial-use/19482659/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://abc7news.com/post/inertia-worlds-1st-fusion-factory-lawrence-livermore-national-laboratory-aims-clean-energy-source-commercial-use/19482659/",
+            "caption": "Inertia's new Livermore, CA headquarters houses the world's first fusion fuel target factory",
+            "source": "ABC7 News",
+            "thumbnail": "https://cdn.abcotvs.com/dip/images/19488586_071026-kgo-commercial-fusion-split-img.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "pacific-fusion-llnl-sirius-3000-shots-jul2026",
+        "year": "2026",
+        "title": "Pacific Fusion and LLNL's Sirius Pulsed-Power Prototype Surpasses 3,000 Shots",
+        "type": "scientific",
+        "detail": "Pacific Fusion announced on July 16, 2026 that Sirius, an LLNL-built pulsed-power prototype on the impedance-matched Marx generator (IMG) architecture, surpassed 3,000 shots — each delivering 60 gigawatts to a resistive load in a 100-nanosecond burst at 95% energy efficiency. The milestone demonstrates the reliability needed to scale the technology, already built ~11x larger in Pacific Fusion's own 440 GW prototype (Jun 2, 2026).",
+        "sources": [
+          { "name": "Pacific Fusion", "tier": 2, "url": "https://www.pacificfusion.com/updates/lawrence-livermore-pacific-fusion-collaboration-breaks-new-record-to-advance-americas-high-gain-fusion-capability", "pole": "western" },
+          { "name": "ANS Nuclear Newswire", "tier": 2, "url": "https://www.ans.org/news/2026-07-20/article-8217/llnl-and-pacific-fusion-achieve-3000shot-milestone-with-sirius-pulsedpower-prototype/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.pacificfusion.com/updates/lawrence-livermore-pacific-fusion-collaboration-breaks-new-record-to-advance-americas-high-gain-fusion-capability",
+            "caption": "Sirius, the LLNL/Pacific Fusion pulsed-power prototype, surpasses 3,000 shots",
+            "source": "Pacific Fusion",
+            "thumbnail": "https://pacific-fusion.transforms.svdcdn.com/production/Darkened.jpeg?w=2000&h=2000&q=80&auto=format&fit=clip&dm=1784211166&s=5a2b476689cfd4a2847eea65b9f78540"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "thea-energy-20m-arpae-scaleup-jul2026",
+        "year": "2026",
+        "title": "Thea Energy Wins $20M ARPA-E SCALEUP Award to Expand HTS Magnet Manufacturing",
+        "type": "investment",
+        "detail": "Thea Energy announced on July 27, 2026 a $20 million ARPA-E SCALEUP award to establish its first domestic manufacturing lines for modular high-temperature superconducting magnets, supporting the ~300 planar shaping coils required by its 'Eos' stellarator demonstration device. The award follows Thea's $100M Series B (May 27, 2026).",
+        "sources": [
+          { "name": "GlobeNewswire / Thea Energy", "tier": 2, "url": "https://www.globenewswire.com/news-release/2026/07/27/3333511/0/en/thea-energy-expands-magnet-manufacturing-lines-with-20-million-arpa-e-scaleup-program-award.html", "pole": "western" },
+          { "name": "Northeast Times", "tier": 3, "url": "https://northeasttimes.com/2026/07/28/fusion-startup-thea-energy-wins-20m-federal-grant-for-magnets/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.globenewswire.com/news-release/2026/07/27/3333511/0/en/thea-energy-expands-magnet-manufacturing-lines-with-20-million-arpa-e-scaleup-program-award.html",
+            "caption": "Thea Energy wins $20M ARPA-E SCALEUP award to scale modular HTS magnet manufacturing",
+            "source": "GlobeNewswire / Thea Energy",
+            "thumbnail": "https://ml.globenewswire.com/media/ZDM3OTEzYmUtODc5OS00MmFiLTg5NTMtMzNkMmZhMTc0YjIxLTEyNzE1ODYtMjAyNi0wNy0yNy1lbg==/tiny/Thea-Energy-Inc-.png"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "iter-sixth-sector-module-installed-jul2026",
+        "year": "2026",
+        "title": "ITER Installs Sixth of Nine Tokamak Sector Modules — Two-Thirds of Core Complete, Six Months Ahead of Schedule",
+        "type": "milestone",
+        "detail": "ITER completed installation of tokamak sector module #1 — the sixth of nine, and the last of the Korean-manufactured vacuum vessel sectors — on July 28, 2026, after a ~30-hour lift mobilizing 100+ staff. With this, two-thirds of the plasma chamber is now in place, roughly six months ahead of the Baseline 2024 schedule. The final module is targeted for mid-2027. This follows May 2026's declaration that ITER is, for the first time, on budget and on schedule.",
+        "sources": [
+          { "name": "ITER Organization", "tier": 1, "url": "https://www.iter.org/node/20687/millions-data-points-one-successful-lift", "pole": "international" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://world-nuclear-news.org/articles/in-pictures-iter-tokamak-core-assembly-progressing", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.iter.org/node/20687/millions-data-points-one-successful-lift",
+            "caption": "ITER's sixth tokamak sector module lands in the machine pit, bringing two-thirds of the plasma chamber into place",
+            "source": "ITER Organization",
+            "thumbnail": "https://www.iter.org/sites/default/files/media/2026-07/sm1_lifting-module-landed.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "cfs-1b-raise-4b-total-jul2026",
+        "year": "2026",
+        "title": "Commonwealth Fusion Systems Raises Another $1 Billion — Total Capital Hits $4 Billion, First Pension-Fund Backing in Fusion",
+        "type": "investment",
+        "detail": "CFS announced on July 30, 2026 a $1 billion equity round, bringing total capital raised since 2018 to $4 billion — the largest fusion funding round since its own $1.8B Series B (2021), and ~30% of all private fusion investment globally. The round included pension funds, sovereign wealth funds, and infrastructure/industrial partners — the industry's first pension-fund backing. Proceeds complete SPARC (~80% assembled, first plasma targeted 2027) and advance the ARC commercial plant in Chesterfield County, VA. CEO Bob Mumgaard: 'CFS is making what once was impossible into inevitable. In the 2030s, we will put commercial fusion on the grid.'",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems", "tier": 1, "url": "https://www.prnewswire.com/news-releases/commonwealth-fusion-systems-raises-another-1-billion-bringing-total-capital-raised-to-4-billion-302837638.html", "pole": "western" },
+          { "name": "TechCrunch", "tier": 2, "url": "https://techcrunch.com/2026/07/30/fusion-power-darling-commonwealth-fusion-systems-raises-another-1b/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://techcrunch.com/2026/07/30/fusion-power-darling-commonwealth-fusion-systems-raises-another-1b/",
+            "caption": "Commonwealth Fusion Systems employees supervise installation of the SPARC tokamak's cryostat base",
+            "source": "TechCrunch",
+            "thumbnail": "https://techcrunch.com/wp-content/uploads/2025/03/CFS-cryostat-base-installation.jpeg?w=1024"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "tae-black-moon-helium3-agreement-aug2026",
+        "year": "2026",
+        "title": "TAE Technologies Signs Helium-3 Fuel Supply Agreement with Black Moon Energy",
+        "type": "milestone",
+        "detail": "TAE Technologies and Black Moon Energy Corporation announced a strategic agreement on August 5, 2026 covering a prospective helium-3 fuel supply option and commercial development collaboration, giving TAE an alternative fuel path to its hydrogen-boron (p-B11) approach. Black Moon plans a robotic lunar delineation mission within five years to de-risk commercial-scale helium-3 production. TAE's first plant, Da Vinci (50 MWe), targets operations in 2031.",
+        "sources": [
+          { "name": "TAE Technologies", "tier": 1, "url": "https://www.prnewswire.com/news-releases/tae-technologies-and-black-moon-energy-corporation-enter-into-strategic-helium-3-supply-and-commercialization-agreement-for-fusion-power-302843093.html", "pole": "western" },
+          { "name": "StreetInsider", "tier": 3, "url": "https://www.streetinsider.com/Corporate+News/TAE+Technologies+signs+helium-3+fuel+supply+deal+with+Black+Moon+Energy/26870323.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://tae.com/tae-technologies-and-black-moon-energy-corporation-enter-into-strategic-helium-3-supply-and-commercialization-agreement-for-fusion-power/",
+            "caption": "TAE Technologies signs helium-3 fuel supply and commercialization agreement with Black Moon Energy",
+            "source": "TAE Technologies",
+            "thumbnail": "https://tae.com/wp-content/uploads/Brand-Portal-TAE-Technologies-Norman-Head-On-Close-Up-LoRes.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-10"
+      },
+      {
+        "id": "ornl-type-one-pellet-fueling-license-aug2026",
+        "year": "2026",
+        "title": "ORNL Licenses Cryogenic Pellet Fueling Technologies to Type One Energy",
+        "type": "milestone",
+        "detail": "On August 5, 2026, at the Nuclear Opportunities Workshop in Knoxville, Tennessee, the US Department of Energy's Oak Ridge National Laboratory (ORNL) signed a licensing agreement transferring four ORNL inventions — including a tritium-compatible cryogenic pellet gas gun and a tritium-compatible cryogenic screw extruder — to stellarator developer Type One Energy. The technologies address a persistent gap in fuel-pellet production rates needed for continuous deuterium-tritium plasma operations. The deal expands Type One's existing ORNL collaborations, including high-heat-flux component testing and the Innovation Network for Fusion Energy program, and supports the company's Infinity One stellarator prototype at the Tennessee Valley Authority's Bull Run site (targeting commissioning in 2029) ahead of a planned 350 MWe Infinity Two commercial plant.",
+        "sources": [
+          { "name": "Oak Ridge National Laboratory", "tier": 1, "url": "https://www.ornl.gov/news/ornl-type-one-energy-advance-fusion-fuel-cycle-innovative-new-technologies", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/ornl-type-one-partner-to-advance-fusion-fuel-cycle", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.ornl.gov/news/ornl-type-one-energy-advance-fusion-fuel-cycle-innovative-new-technologies",
+            "caption": "ORNL Director Stephen Streiffer and Type One Energy SVP Matt Miles sign the licensing agreement",
+            "source": "Oak Ridge National Laboratory",
+            "thumbnail": "https://www.ornl.gov/sites/default/files/styles/large/public/2026-08/26AH-3354.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-18"
+      },
+      {
+        "id": "mast-upgrade-fifth-campaign-record-pressure-aug2026",
+        "year": "2026",
+        "title": "UK's MAST Upgrade Completes Fifth Campaign, Sets Record Plasma Pressure",
+        "type": "milestone",
+        "detail": "UKAEA announced on August 6, 2026 that its MAST Upgrade spherical tokamak at Culham completed its fifth experimental campaign, generating more than 1,100 plasmas and achieving the highest plasma pressure in the machine's history without destabilization. The team suppressed Edge Localised Modes (ELMs) — disruptive plasma bursts that can damage reactor walls — through four independent methods, including a world-first demonstration of using 3D magnetic coils to stabilize the plasma edge. Researchers also accessed four stable high-performance operating regimes (including QH-mode and I-mode) and developed a world-first real-time plasma position control technique using deuterium light measurements. Two additional neutral beam injectors and an Electron Bernstein Wave heating system are being added through 2027, ahead of a sixth campaign in 2028 focused on STEP-relevant research.",
+        "sources": [
+          { "name": "UK Atomic Energy Authority (GOV.UK)", "tier": 1, "url": "https://www.gov.uk/government/news/under-pressure-record-plasma-for-uk-flagship-machine", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/latest-mast-upgrade-experiments-achieve-milestones", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.gov.uk/government/news/under-pressure-record-plasma-for-uk-flagship-machine",
+            "caption": "MAST Upgrade plasma with nitrogen added to dissipate exhaust heat",
+            "source": "UK Atomic Energy Authority",
+            "thumbnail": "https://assets.publishing.service.gov.uk/media/6a734909201b38b4dc3c286f/s300_A_MAST_Upgrade_plasma_with_nitrogen_added_to_spread_exhaust_heat__2_.png"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-18"
+      },
+      {
+        "id": "mit-whyte-lo-economic-viability-framework-aug2026",
+        "year": "2026",
+        "title": "MIT Researchers Propose 'Economic Q' Framework for Fusion Power Plant Viability",
+        "type": "scientific",
+        "detail": "MIT professors Dennis Whyte (Nuclear Science & Engineering; CFS co-founder) and Andrew W. Lo (Sloan School of Management) published a framework in the Journal of Fusion Energy on August 10, 2026 proposing ten quantitative parameters — spanning scientific inputs, engineering durability, and capital costs — for assessing when a fusion power plant becomes commercially viable, anchored by a metric the authors call 'Economic Q': the ratio of capital generated to capital expended over a plant's operating lifetime. Whyte said the framework is 'completely agnostic to whatever fusion concept you use' because it scales to any reactor design or output level, aiming to give investors, policymakers, and developers a common yardstick independent of any single company's technology.",
+        "sources": [
+          { "name": "MIT News", "tier": 1, "url": "https://news.mit.edu/2026/mit-researchers-tackle-economic-realities-fusion-power-0810", "pole": "western" },
+          { "name": "World Nuclear News", "tier": 2, "url": "https://www.world-nuclear-news.org/articles/mit-develops-framework-for-assessing-economics-of-fusion", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://news.mit.edu/2026/mit-researchers-tackle-economic-realities-fusion-power-0810",
+            "caption": "MIT researchers propose an 'Economic Q' framework for fusion power plant viability",
+            "source": "MIT News",
+            "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__download/public/download/202608/MIT-FusionEconomics-01-press_0.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-18"
+      },
+      {
+        "id": "fuse-energy-faeton-x-neutron-yield-record-aug2026",
+        "year": "2026",
+        "title": "Fuse Energy's FAETON-X Sets Highest Publicly Documented Neutron Yield by a Fusion Company",
+        "type": "scientific",
+        "detail": "Fuse Energy Technologies reported on August 10, 2026 that its megajoule-class dense plasma focus device FAETON-X — operating at 65 kV and storing roughly 1 MJ of energy — produced a peak yield of (1.27±0.27)×10^12 deuterium-deuterium neutrons in a single shot, with an average yield around 5×10^11 neutrons per shot at 10 Torr deuterium. The company says this is the first publicly documented neutron yield at that level by any fusion company, delivering about 40% more neutrons per megajoule than Lawrence Livermore National Laboratory's MJOLNIR pulsed-power facility. FAETON-X reached the milestone nine months after its first shot. CEO JC Btaiche said 'fusion has reached an inflection point, and private companies are now at the forefront of technology development.' Fuse, based in San Leandro, California, generates near-term revenue from radiation-effects testing for defense and space customers while advancing toward commercial fusion energy.",
+        "sources": [
+          { "name": "POWER Magazine", "tier": 2, "url": "https://www.powermag.com/fuse-touts-highest-neutron-yield-by-any-fusion-company/", "pole": "western" },
+          { "name": "Research Square (preprint)", "tier": 3, "url": "https://www.researchsquare.com/article/rs-10657590/v1", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.powermag.com/fuse-touts-highest-neutron-yield-by-any-fusion-company/",
+            "caption": "Fuse Energy's FAETON-X dense plasma focus device",
+            "source": "POWER Magazine",
+            "thumbnail": "https://www.powermag.com/wp-content/uploads/2026/08/fuse-faeton-x.jpeg"
+          }
+        ],
+        "confidence": "medium",
+        "eventConfidence": "official_claim",
+        "confidenceReason": "Based on company-reported results and a preprint (not yet peer-reviewed); independent verification of the neutron yield figures is pending.",
+        "lastUpdated": "2026-08-18"
+      },
+      {
+        "id": "cfs-arc-doe-milestones-aug2026",
+        "year": "2026",
+        "title": "CFS Attains Two DOE Milestones for ARC Commercial Fusion Plant",
+        "type": "milestone",
+        "detail": "Commonwealth Fusion Systems announced on August 5, 2026 that it has attained two additional milestones under the US Department of Energy's Milestone-Based Fusion Development Program — this time for its commercial successor to SPARC, the ARC fusion power plant, rather than SPARC itself (the subject of CFS's first three DOE milestones). The two milestones recognize completion of an ARC preconceptual design and a technology roadmap detailing the engineering steps required to build the plant. The achievements build on CFS's five peer-reviewed physics-basis papers on ARC published in the Journal of Plasma Physics on June 4, 2026, and follow the company's $1 billion raise on July 30, 2026 that brought total capital to $4 billion.",
+        "sources": [
+          { "name": "Commonwealth Fusion Systems", "tier": 1, "url": "https://blog.cfs.energy/sparc-progress-doe-milestone-approvals-reflect-cfs-power-plant-maturity/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://blog.cfs.energy/sparc-progress-doe-milestone-approvals-reflect-cfs-power-plant-maturity/",
+            "caption": "Illustration of the ARC commercial fusion power plant",
+            "source": "Commonwealth Fusion Systems",
+            "thumbnail": "https://blog.cfs.energy/nitropack_static/hbFvRsNuoNnmhwIdlbynzvKSCqRjcsMV/assets/images/optimized/rev-0d25276/blog.cfs.energy/wp-content/uploads/2026/08/CFS-ARC-Illustration.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-26"
+      },
+      {
+        "id": "ornl-kyoto-fusioneering-unity3-aug2026",
+        "year": "2026",
+        "title": "DOE Funds UNITY-3 Fusion Breeding Blanket Test Facility at Oak Ridge",
+        "type": "milestone",
+        "detail": "On August 13, 2026, Oak Ridge National Laboratory (ORNL) and Kyoto Fusioneering announced a DOE-backed $46.9 million investment to build UNITY-3, a first-of-its-kind fusion breeding blanket validation facility in East Tennessee, creating 51 new jobs. Kyoto Fusioneering will relocate its U.S. headquarters to Tennessee to help build and operate the facility, which will house an accelerator generating 14 MeV neutrons — representative of those produced by a burning plasma — to test breeding blanket components under fusion-relevant conditions for the first time. No breeding blanket has ever been validated under real fusion-nuclear conditions; the DOE's Fusion Science & Technology Roadmap identifies this validation gap as a critical national need. The project is backed by Tennessee's Nuclear Energy Supply Chain Investment Fund alongside DOE funding.",
+        "sources": [
+          { "name": "Oak Ridge National Laboratory", "tier": 1, "url": "https://www.ornl.gov/news/ornl-kyoto-fusioneering-develop-fusion-technology-test-facility-east-tennessee", "pole": "western" },
+          { "name": "ANS Nuclear Newswire", "tier": 2, "url": "https://www.ans.org/news/2026-08-13/article-8292/doe-funds-ornl-and-kyoto-fusioneering-test-facility/", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.ans.org/news/2026-08-13/article-8292/doe-funds-ornl-and-kyoto-fusioneering-test-facility/",
+            "caption": "ORNL and Kyoto Fusioneering leadership at the UNITY-3 announcement event",
+            "source": "ANS Nuclear Newswire",
+            "thumbnail": "https://www.ans.org/file/25122/KF_group_photo.jpg"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-26"
+      },
+      {
+        "id": "general-fusion-first-public-business-update-aug2026",
+        "year": "2026",
+        "title": "General Fusion Provides First Public Company Business Update",
+        "type": "milestone",
+        "detail": "On August 18, 2026, General Fusion (Nasdaq: GFUZ) delivered its first business update since becoming the first publicly listed fusion company in July 2026. The company reported roughly $150 million in cash entering public markets, expected to fund its Lawson Machine 26 (LM26) program through several planned technical milestones to the end of 2028. LM26 has demonstrated plasma heating to approximately 0.72 keV (about 8.4 million°C) via compression of a lithium-liner-confined plasma, progress toward the company's near-term 1 keV objective en route to 10 keV and the Lawson criterion for net fusion energy. General Fusion also announced a milestone-based framework agreement with Renexia S.p.A. (a Toto Group company) to explore commercial deployment of its Magnetized Target Fusion technology in Italy, and a diagnostics collaboration with General Atomics Energy Group. CEO Greg Twinney said the Nasdaq listing 'marks an important milestone for General Fusion and the broader fusion industry.'",
+        "sources": [
+          { "name": "General Fusion", "tier": 1, "url": "https://generalfusion.com/post/general-fusion-provides-first-public-company-business-update/", "pole": "western" },
+          { "name": "GlobeNewswire", "tier": 2, "url": "https://www.globenewswire.com/news-release/2026/08/18/3347219/0/en/general-fusion-provides-first-public-company-business-update.html", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://generalfusion.com/post/general-fusion-provides-first-public-company-business-update/",
+            "caption": "General Fusion's first business update as a public company details LM26 progress",
+            "source": "General Fusion",
+            "thumbnail": "https://generalfusion.com/wp-content/uploads/2026/04/Press-release-header-image-e1782319303781.png"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-26"
+      },
+      {
+        "id": "inertia-llnl-fuel-layer-manufacturing-breakthrough-aug2026",
+        "year": "2026",
+        "title": "Inertia Enterprises and LLNL Cut Fusion Fuel Layer Manufacturing Time from Days to Hours",
+        "type": "scientific",
+        "detail": "Inertia Enterprises and Lawrence Livermore National Laboratory announced on August 25, 2026 a manufacturing breakthrough that cuts the formation time for the cryogenically frozen deuterium-tritium 'ice' fuel layer inside inertial confinement fusion targets from multiple days — as required at the National Ignition Facility — to just two to three hours, with a path to under an hour. Because Inertia's planned 10 MJ laser is substantially less sensitive to fuel-layer imperfections than NIF's 2 MJ system, simulations show the faster layers cost essentially no fusion performance while remaining within NIF's proven ignition design tolerances. LLNL inertial confinement physicist Chris Weber said 'the quality of these rapid ice layers are comparable in many ways to the NIF layers that take much longer to grow,' while NIF deputy director Abbas Nikroo called it 'the most thorough examination of D-T ice layering that I am aware of.' The advance lowers tritium inventory, material-handling, and regulatory costs for Inertia's planned pilot plant, which aims to inject fuel targets several hundred times per minute — a rate incompatible with NIF-style multi-day layering.",
+        "sources": [
+          { "name": "ANS Nuclear Newswire", "tier": 2, "url": "https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/", "pole": "western" },
+          { "name": "Lawrence Livermore National Laboratory", "tier": 1, "url": "https://lasers.llnl.gov/news/fusion-ignition-and-the-path-to-inertial-fusion-energy", "pole": "western" }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://www.ans.org/news/2026-08-25/article-8335/inertia-and-llnl-accelerate-fusion-fuel-manufacturing/",
+            "caption": "Cut-away schematic of the fusion fuel capsule with rapidly formed D-T ice layer",
+            "source": "ANS Nuclear Newswire",
+            "thumbnail": "https://www.ans.org/file/25208/figure-1-carbon-capsule-shell.i4UwsoIK_2pjkWO.png"
+          }
+        ],
+        "confidence": "high",
+        "eventConfidence": "verified",
+        "lastUpdated": "2026-08-26"
+      }
+    ]
+  }
+]

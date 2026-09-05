@@ -1,0 +1,132 @@
+[
+  {
+    "id": "nuclear-warheads-estimated",
+    "label": "Estimated Nuclear Warheads",
+    "value": "~50",
+    "color": "red",
+    "source": "SIPRI Yearbook 2025",
+    "contested": true,
+    "contestNote": "Estimates range 40–120; DPRK does not disclose inventory. Kim Jong-un on June 3, 2026 personally inspected a third uranium enrichment factory and stated nuclear material production capacity has 'more than doubled compared with five years ago' — suggesting acceleration in warhead material output. President Trump on August 19, 2026 cited a specific figure for the first time, saying DPRK has '57 very powerful nuclear weapons' — above SIPRI's ~50 estimate and of unclear provenance. South Korean Defense Minister Ahn Gyu-back separately estimated 80–120 warheads, a considerably higher range. Earlier US DIA estimates ranged 20–60 warheads.",
+    "delta": "+10 since 2020; production rate accelerating (Kim June 2026); Trump cites '57' (Aug 19, 2026), ROK Defense Minister cites 80–120",
+    "trend": "up",
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "id": "total-nuclear-tests",
+    "label": "Underground Nuclear Tests",
+    "value": "6",
+    "color": "red",
+    "source": "CTBTO / US National Intelligence",
+    "contested": false,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "ballistic-missile-launches-2022",
+    "label": "Ballistic Missile Launches in 2022 (Record)",
+    "value": "63",
+    "color": "amber",
+    "source": "South Korean Ministry of National Defense",
+    "contested": false,
+    "delta": "Record single-year total",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "military-personnel",
+    "label": "Active Military Personnel",
+    "value": "1.28M",
+    "color": "amber",
+    "source": "IISS Military Balance 2025",
+    "contested": true,
+    "contestNote": "Independent estimates range 1.1M–1.4M; DPRK does not publish figures",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "un-sc-resolutions",
+    "label": "UN Security Council Sanctions Resolutions",
+    "value": "12",
+    "color": "blue",
+    "source": "UN Security Council (2006–2022)",
+    "contested": false,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "years-kim-dynasty",
+    "label": "Years of Continuous Kim Dynasty Rule",
+    "value": "78",
+    "color": "blue",
+    "source": "DPRK founding 1948 to present",
+    "contested": false,
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "dprk-troops-russia",
+    "label": "DPRK Troops Deployed to Russia (Cumulative Since Oct 2024)",
+    "value": "16,000+ deployed; up to 50,000 more planned",
+    "color": "red",
+    "source": "South Korean Defense Intelligence Agency, Aug 23, 2026; Zelensky statement Aug 8, 2026",
+    "contested": true,
+    "contestNote": "South Korea's Defense Intelligence Agency said Aug 23, 2026 that DPRK has sent more than 16,000 troops to Russia cumulatively since October 2024, with many killed or wounded, and continues preparations for an additional deployment — but detected no signs an additional deployment is imminent. Ukrainian President Zelensky said Aug 8, 2026 that new intelligence indicates 'a decision has been made' for 30,000–50,000 additional DPRK troops to deploy, which Kim Yo-jong dismissed as 'fabrication.' DPRK troops publicly marched at Moscow Victory Day parade May 9, 2026 — the first in history. Separately, a ~90-person DPRK ballistic missile unit has deployed to Russia's Voronezh Oblast, with capacity for up to 120 KN-23/24 missiles and six launchers.",
+    "delta": "Seoul DIA (Aug 23, 2026): 16,000+ sent cumulatively, no signs of imminent new wave; Zelensky (Aug 8, 2026) claims 30,000–50,000 more 'decided'",
+    "trend": "up",
+    "lastUpdated": "2026-08-23"
+  },
+  {
+    "id": "russia-artillery-shells-supplied",
+    "label": "Artillery Shells Supplied to Russia (152mm-equivalent, Cumulative)",
+    "value": "15M+ rounds",
+    "color": "amber",
+    "source": "South Korean Defense Intelligence Agency, Aug 23, 2026",
+    "contested": true,
+    "contestNote": "South Korea's Defense Intelligence Agency estimates DPRK has supplied Russia with the equivalent of more than 15 million rounds of 152mm artillery shells since the war began, up from a 12 million round estimate reported in July 2025. Neither Russia nor DPRK confirm shipment figures; South Korean intelligence assessments have historically trended upward as more shipments are tracked.",
+    "delta": "Revised up from 12M (Jul 2025) to 15M+ (Aug 23, 2026)",
+    "trend": "up",
+    "lastUpdated": "2026-08-23"
+  },
+  {
+    "id": "russia-earnings-cumulative",
+    "label": "Estimated DPRK Earnings From Russia Alliance (Cumulative)",
+    "value": "$22B (2022–2025)",
+    "color": "amber",
+    "source": "Bloomberg Economics, Aug 2026",
+    "contested": true,
+    "contestNote": "Bloomberg Economics analysis of trade data and intelligence estimates DPRK earned up to $22B in foreign revenue 2022–2025 (arms/troop compensation + cryptocurrency theft) — nearly 4x the prior four-year period. Prior estimate from Ukrainska Pravda/Nikkei Asia/Kyiv Post (May 2026) was $13–14B. Russia and DPRK deny financial terms.",
+    "delta": "Revised up from $13–14B (May 2026) to $22B (Bloomberg, Aug 2026)",
+    "trend": "up",
+    "lastUpdated": "2026-08-06"
+  },
+  {
+    "id": "crypto-theft-estimated",
+    "label": "Estimated Cryptocurrency Stolen (2022–2024)",
+    "value": "$3B+",
+    "color": "amber",
+    "source": "UN Panel of Experts 2024",
+    "contested": true,
+    "contestNote": "DPRK denies all allegations; UN panel and US agencies estimate $3B–$4B stolen via Lazarus Group hacking operations",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "weapons-tests-2026",
+    "label": "Weapons Tests in 2026 (as of Aug 20)",
+    "value": "12",
+    "color": "red",
+    "source": "South Korean Joint Chiefs of Staff, Aug 20, 2026",
+    "contested": false,
+    "delta": "+1: Aug 20 barrage of ~10 short-range ballistic missiles fired from the greater Pyongyang area toward the East Sea — 12th test of 2026, coming two days after Trump signaled renewed contact with Kim and a day after Trump said he expects to meet Kim this year. Trump ordered US-South Korea joint exercises 'substantially reduced' Aug 16; Pyongyang (via Kim Yo-jong) said Aug 18 the cuts change nothing.",
+    "trend": "up",
+    "lastUpdated": "2026-08-20"
+  },
+  {
+    "id": "uranium-enrichment-sites-disclosed",
+    "label": "Publicly Acknowledged Uranium Enrichment Sites",
+    "value": "3",
+    "color": "red",
+    "source": "KCNA (Jun 4, 2026) / IAEA Board of Governors (2022) / 38 North satellite analysis",
+    "contested": true,
+    "contestNote": "Site 1: Yongbyon (revealed to Sig Hecker 2010). Site 2: Kangson/Chollima (identified via satellite 2018; IAEA confirmed March 2026). Site 3: Unnamed facility personally inspected by Kim Jong-un June 3, 2026 — location undisclosed; South Korean JCS assesses it may be at or near Yongbyon. Kim stated capacity has 'more than doubled in five years.' US DIA assessed in April 2026 DPRK is building a probable additional facility at Yongbyon.",
+    "delta": "+1 (third site disclosed June 3, 2026)",
+    "trend": "up",
+    "lastUpdated": "2026-06-05"
+  }
+]

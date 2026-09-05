@@ -1,0 +1,189 @@
+[
+  {
+    "id": "burkina-faso-defense-budget",
+    "label": "Burkina Faso Defense Budget",
+    "value": "$813M (3.9% GDP)",
+    "change": "+74%",
+    "direction": "up",
+    "sparkData": [200, 250, 310, 380, 467, 813],
+    "color": "red",
+    "source": "World Bank / OECD 2023",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sahel-displaced-persons",
+    "label": "Displaced Persons — Sahel Region",
+    "value": "3.5M+",
+    "change": "+600%",
+    "direction": "up",
+    "sparkData": [500000, 700000, 1200000, 2000000, 2800000, 3500000],
+    "color": "red",
+    "source": "UNHCR Sahel Crisis Situation Report 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "mali-gdp-growth",
+    "label": "Mali Real GDP Growth",
+    "value": "3.7% (proj.)",
+    "change": "+0.2pts",
+    "direction": "up",
+    "sparkData": [4.8, 5.1, 4.7, 3.5, 3.5, 3.7],
+    "color": "amber",
+    "source": "IMF / World Bank 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "burkina-faso-food-insecure",
+    "label": "Food Insecure — Burkina Faso",
+    "value": "2.7M (11.4%)",
+    "change": "+280%",
+    "direction": "up",
+    "sparkData": [700000, 900000, 1400000, 1900000, 2400000, 2700000],
+    "color": "red",
+    "source": "WFP / FSIN 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "burkina-schools-closed",
+    "label": "Schools Closed — Burkina Faso",
+    "value": "5,330+",
+    "change": "+10,560%",
+    "direction": "up",
+    "sparkData": [50, 200, 500, 1200, 3000, 5330],
+    "color": "red",
+    "source": "UNOCHA Burkina Faso 2023",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "niger-uranium-exports",
+    "label": "Niger Uranium Export Revenue",
+    "value": "Severely disrupted",
+    "change": "-45%",
+    "direction": "down",
+    "sparkData": [310, 320, 280, 250, 200, 175],
+    "color": "red",
+    "source": "OECD / Niger Ministry of Mines 2024 (est.)",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "burkina-faso-health-facilities-closed",
+    "label": "Health Facilities Closed — Burkina Faso",
+    "value": "413+ (20% of total)",
+    "change": "+850%",
+    "direction": "up",
+    "sparkData": [40, 70, 120, 200, 320, 413],
+    "color": "red",
+    "source": "UNOCHA Burkina Faso Situation 2023",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "sahel-humanitarian-funding-gap",
+    "label": "Sahel Humanitarian Funding Gap",
+    "value": "$3.8B required (2024)",
+    "change": "+22%",
+    "direction": "up",
+    "sparkData": [1800, 2100, 2500, 2900, 3100, 3800],
+    "color": "amber",
+    "source": "OCHA Financial Tracking Service 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "wfp-aid-suspension-apr2026",
+    "label": "WFP Aid Suspended — Central Sahel (Apr 2026)",
+    "value": "2M people cut off",
+    "change": "-$620M",
+    "direction": "down",
+    "sparkData": [620, 580, 520, 440, 350, 0],
+    "color": "red",
+    "source": "WFP Press Release — April 2026",
+    "lastUpdated": "2026-04-19T12:00:00Z"
+  },
+  {
+    "id": "mali-fuel-prices-2026",
+    "label": "Mali Diesel Price (post-JNIM deal)",
+    "value": "940 CFA/L (+29.7%)",
+    "change": "+29.7%",
+    "direction": "up",
+    "sparkData": [350, 390, 430, 520, 700, 940],
+    "color": "red",
+    "source": "Bloomberg / Mali Ministry of Finance, March 28, 2026",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "bamako-power-grid-manantali-may2026",
+    "label": "Bamako Power Grid — JNIM Infrastructure Siege",
+    "value": "Manantali line attacked; grid at risk",
+    "change": "New infrastructure front",
+    "direction": "down",
+    "sparkData": [100, 100, 95, 90, 75, 55],
+    "color": "red",
+    "source": "Pravda Mali — May 12, 2026",
+    "lastUpdated": "2026-05-13T15:15:00.000Z"
+  },
+  {
+    "id": "bamako-supply-blockade-may1-2026",
+    "label": "Bamako Supply Chain — Blockade Status (Jun 1 / Day 34)",
+    "value": "3 of 6 roads cut; Day 34; US Embassy alert expired; post-Eid window holds",
+    "change": "March 2026 fuel truce expired; US Embassy Enhanced Security Alert expired May 31 without renewal; JNIM retains full blockade capacity",
+    "direction": "down",
+    "sparkData": [180, 140, 60, 5, 10, 5],
+    "color": "red",
+    "source": "IRC One-Month Assessment / AP / Amnesty International / WFP — June 1, 2026",
+    "lastUpdated": "2026-06-01T14:22:00.000Z"
+  },
+  {
+    "id": "mali-drone-strike-civilian-cost-may18-2026",
+    "label": "Mali FAMa Drone Civilian Incidents — 2026",
+    "value": "2+ confirmed incidents; 10+ killed",
+    "change": "+New: Tene, San Region wedding strike",
+    "direction": "up",
+    "sparkData": [0, 0, 1, 1, 1, 2],
+    "color": "red",
+    "source": "Al Jazeera / AFP — May 18, 2026",
+    "lastUpdated": "2026-05-21T00:00:00.000Z"
+  },
+  {
+    "id": "bamako-eid-livestock-prices-may27-2026",
+    "label": "Bamako Livestock Prices — Eid al-Adha Siege Impact (May 27)",
+    "value": "+100%+ (doubled vs. normal)",
+    "change": "Sheep prices doubled; traders stranded in Diema",
+    "direction": "up",
+    "sparkData": [48000, 52000, 58000, 70000, 95000, 120000],
+    "color": "red",
+    "source": "AP/Audacy — May 27, 2026",
+    "lastUpdated": "2026-05-27T14:35:22.000Z"
+  },
+  {
+    "id": "bf-humanitarian-access-may31-2026",
+    "label": "Burkina Faso Humanitarian Access — May 2026",
+    "value": "Severely compromised — ICRC convoy targeted",
+    "change": "New: ICRC emblem violation at Barsalogho",
+    "direction": "down",
+    "sparkData": [90, 75, 60, 45, 30, 15],
+    "color": "red",
+    "source": "Wikipedia: Barsalogho aid convoy attack / TRT World — May 2026",
+    "lastUpdated": "2026-05-31T00:00:00Z"
+  },
+  {
+    "id": "jnim-dakar-bamako-trade-blockade-jun4-2026",
+    "label": "JNIM Trade Blockade — Dakar–Bamako Corridor (Jun 2026)",
+    "value": "-15B FCFA/month (~$26.5M) — Dakar Port loss",
+    "change": "New systemic assessment",
+    "direction": "down",
+    "sparkData": [0, 2, 5, 10, 15, 15],
+    "color": "red",
+    "source": "ISS Africa — June 4, 2026",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  },
+  {
+    "id": "bamako-supply-blockade-jun5-2026",
+    "label": "Bamako Supply Chain — Blockade Status (Jun 5 / Day 38)",
+    "value": "3 of 6 roads cut; Day 38; Motorcycle ban in force; Africa Corps road clearing",
+    "change": "June 3 motorcycle ban issued; Africa Corps BMP-3 road clearing; post-Eid window concluded with no renewed escalation",
+    "direction": "down",
+    "sparkData": [180, 140, 60, 5, 10, 5],
+    "color": "red",
+    "source": "Africanews / Washington Post / ISS Africa / IRC — June 3–5, 2026",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  }
+]

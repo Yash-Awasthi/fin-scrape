@@ -1,0 +1,10 @@
+import { useQuery } from '@tanstack/react-query';
+import { api } from '../client';
+
+export function useFxOptions() {
+  return useQuery({
+    queryKey: ['fx-options'],
+    queryFn: () => api.get<any>('/fx-options'),
+    staleTime: 60 * 60 * 1000,
+  });
+}

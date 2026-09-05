@@ -1,0 +1,43 @@
+{
+  "lastRun": "2026-08-29T01:24:27.159Z",
+  "tracker": "ice-history",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-07T14:30:00.000Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "lastRun": "2026-04-22T12:36:49Z",
+      "status": "skipped",
+      "itemCount": 74
+    },
+    "mapPoints": {
+      "lastRun": "2026-06-07T14:30:00.000Z",
+      "status": "updated"
+    },
+    "casualties": {
+      "lastRun": "2026-05-27T14:05:00.000Z",
+      "status": "skipped",
+      "itemCount": 10
+    },
+    "claims": {
+      "lastRun": "2026-06-05T14:45:00Z",
+      "status": "skipped",
+      "itemCount": 31
+    },
+    "political": {
+      "lastRun": "2026-06-05T14:45:00Z",
+      "status": "skipped",
+      "itemCount": 22
+    },
+    "events": {
+      "lastRun": "2026-08-29T01:24:27.159Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-29T01:24:27.159Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

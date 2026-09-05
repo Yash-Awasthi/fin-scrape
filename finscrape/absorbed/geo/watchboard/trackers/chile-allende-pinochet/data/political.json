@@ -1,0 +1,227 @@
+[
+  {
+    "id": "salvador-allende",
+    "name": "Salvador Allende",
+    "role": "President of Chile (1970–1973) — Socialist; founder of Popular Unity coalition",
+    "avatar": "allende",
+    "initial": "S",
+    "quote": "They may overcome us, but they cannot defeat the great avenues through which free people will walk to build a better society.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "augusto-pinochet",
+    "name": "Augusto Pinochet",
+    "role": "Commander-in-Chief of Army; Leader of Military Junta (1973–1990); President of Chile (1974–1990)",
+    "avatar": "pinochet",
+    "initial": "A",
+    "quote": "I'm not a dictator. It's just that I have a grumpy face.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "henry-kissinger",
+    "name": "Henry Kissinger",
+    "role": "US National Security Advisor (1969–1975); Secretary of State (1973–1977); directed US covert intervention in Chile",
+    "avatar": "cia",
+    "initial": "H",
+    "quote": "I don't see why we need to stand by and watch a country go communist due to the irresponsibility of its own people.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "richard-nixon",
+    "name": "Richard Nixon",
+    "role": "US President (1969–1974); authorized CIA covert operations to prevent Allende's election and destabilize his government",
+    "avatar": "cia",
+    "initial": "R",
+    "quote": "[Instructed CIA Director Helms]: Make the economy scream. I want to do anything we can to hurt Allende and anyone who is going to bring Communism to Chile.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "manuel-contreras",
+    "name": "Manuel Contreras",
+    "role": "Director of DINA (1974–1977); chief architect of Operation Condor; convicted of Letelier assassination and multiple human rights crimes",
+    "avatar": "pinochet",
+    "initial": "M",
+    "quote": "DINA was the arm of General Pinochet and everything it did was with his full knowledge and authorization.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "orlando-letelier",
+    "name": "Orlando Letelier",
+    "role": "Allende's Foreign Minister and Defense Minister; exiled opposition leader; assassinated by DINA in Washington DC, September 1976",
+    "avatar": "allende",
+    "initial": "O",
+    "quote": "The economic system imposed by the Chilean junta is inseparable from its political system of terror.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "victor-jara",
+    "name": "Víctor Jara",
+    "role": "Folk musician, theater director, and Popular Unity activist; tortured and executed in National Stadium, September 16, 1973",
+    "avatar": "allende",
+    "initial": "V",
+    "quote": "How hard it is to sing when I must sing of horror. Horror which I am living, horror which I am dying.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cardinal-silva-henriquez",
+    "name": "Cardinal Raúl Silva Henríquez",
+    "role": "Archbishop of Santiago; founded Vicaría de la Solidaridad; key protector of human rights victims under the dictatorship",
+    "avatar": "church",
+    "initial": "R",
+    "quote": "The Church cannot remain silent when human beings are suffering, when the dignity of the person is threatened.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "patricio-aylwin",
+    "name": "Patricio Aylwin",
+    "role": "PDC president who initially opposed Allende; later led 'No' campaign and Concertación; President of Chile (1990–1994)",
+    "avatar": "other",
+    "initial": "P",
+    "quote": "Justice to the extent possible, given the need for reconciliation in Chilean society.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "carlos-prats",
+    "name": "General Carlos Prats",
+    "role": "Commander-in-Chief of Chilean Army; constitutionalist who supported Allende's democratic legitimacy; assassinated by DINA in Buenos Aires, 1974",
+    "avatar": "allende",
+    "initial": "C",
+    "quote": "A military man who conspires against the constitutional government commits treason and dishonors the uniform.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jaime-guzman",
+    "name": "Jaime Guzmán",
+    "role": "Chief ideologist of the Pinochet regime; principal drafter of the 1980 constitution; founder of UDI party; assassinated by FPMR in 1991",
+    "avatar": "pinochet",
+    "initial": "J",
+    "quote": "The constitution should be such that whoever wins the election can do very little of what they want.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "rene-schneider",
+    "name": "General René Schneider",
+    "role": "Commander-in-Chief of Chilean Army; constitutionalist shot in CIA-backed kidnapping attempt, October 1970; died October 25, 1970",
+    "avatar": "allende",
+    "initial": "R",
+    "quote": "The Army is not a solution to political problems. The election of President Allende must be respected.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "michael-townley",
+    "name": "Michael Townley",
+    "role": "US-born DINA agent; planted Letelier bomb; masterminded Prats assassination; became US government witness and entered witness protection",
+    "avatar": "cia",
+    "initial": "M",
+    "quote": "[Congressional testimony]: I acted under orders from DINA. Everything I did was authorized by General Contreras and ultimately by Pinochet.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gustavo-leigh",
+    "name": "General Gustavo Leigh",
+    "role": "Commander of Chilean Air Force; junta member; ordered the bombing of La Moneda; expelled from junta by Pinochet in 1978 for criticizing the regime",
+    "avatar": "pinochet",
+    "initial": "G",
+    "quote": "We were ready to destroy La Moneda completely if necessary. We would have turned it to rubble.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bernardo-leighton",
+    "name": "Bernardo Leighton",
+    "role": "Christian Democratic Party leader and former Chilean Vice President; shot by DINA-linked Italian neo-fascists in Rome, 1975; survived permanently disabled",
+    "avatar": "church",
+    "initial": "B",
+    "quote": "Chile will return to democracy. No dictatorship in history has been permanent. The people's will always prevails.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bishop-sergio-valech",
+    "name": "Bishop Sergio Valech",
+    "role": "President of the 2003-2004 National Commission on Political Imprisonment and Torture (Valech Commission); documented 40,000+ torture survivors",
+    "avatar": "church",
+    "initial": "S",
+    "quote": "The testimonies I heard were not stories from other countries or another era. This happened here, in Chile, and it must never be forgotten.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "raul-rettig",
+    "name": "Raúl Rettig",
+    "role": "Former Senator; President of Chile's National Commission on Truth and Reconciliation (1990-1991); gave his name to the Rettig Report documenting 2,279 victims",
+    "avatar": "other",
+    "initial": "R",
+    "quote": "We cannot build a future on silence. The truth, however painful, is the foundation of reconciliation.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jorge-cauas",
+    "name": "Jorge Cauas",
+    "role": "Finance Minister under Pinochet (1974-1977); implemented the 'Chicago Boys' shock therapy economic reforms in April 1975",
+    "avatar": "pinochet",
+    "initial": "J",
+    "quote": "The pain of adjustment is temporary; the benefits of a stable, free economy are permanent.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "joan-jara",
+    "name": "Joan Jara",
+    "role": "British wife of Víctor Jara; human rights activist; founded Víctor Jara Foundation; successfully sued perpetrator Pedro Barrientos in US courts",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "Víctor's voice could not be silenced by bullets. It continues to resonate wherever injustice exists in the world.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "paul-schafer",
+    "name": "Paul Schäfer",
+    "role": "German Nazi fugitive; founded Colonia Dignidad; collaborated with DINA providing remote torture and execution site; convicted of child abuse (2006)",
+    "avatar": "pinochet",
+    "initial": "P",
+    "quote": "[Never publicly admitted crimes; claimed colony was a peaceful religious community]",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jose-antonio-kast",
+    "name": "José Antonio Kast",
+    "role": "President of Chile (2026–); far-right politician who has praised Pinochet; son of a Nazi Party member. His government cut the culture budget 9.81% (May 2026), threatening the Museum of Memory and Villa Grimaldi; proposed zeroing the Human Rights Subsecretariat forensic program; faces IACHR complaint filed by 82 organizations (April 30, 2026). Admitted on May 31, 2026 to personally ordering Punta Peuco restored as an exclusive prison for dictatorship-era convicts; has declined to grant urgency to a Libertarian-sponsored general pardon bill for 2019-uprising security forces; confirmed a National Human Rights Institute (INDH) reform bill on July 12, 2026, a retreat from his campaign pledge to close the institute. His justice minister unveiled a bill stripping INDH's power to file criminal complaints (Aug 2, 2026), and his government faced its first-ever IACHR hearing over alleged human rights rollbacks on August 5, 2026.",
+    "avatar": "pinochet",
+    "initial": "J",
+    "quote": "If Pinochet were alive, he would have voted for me.",
+    "lastUpdated": "2026-08-05T00:00:00Z"
+  },
+  {
+    "id": "fabiola-campillai",
+    "name": "Fabiola Campillai",
+    "role": "Chilean Senator; blinded in both eyes by a police tear-gas canister during the October 2019 social uprising; became a leading voice against rollback of human rights institutions under the Kast government",
+    "avatar": "other",
+    "initial": "F",
+    "quote": "Esta idea de reformularlo no es más que el síntoma de la intolerancia. (This idea of reformulating it is nothing more than a symptom of intolerance.)",
+    "lastUpdated": "2026-07-16T00:00:00Z"
+  },
+  {
+    "id": "fernando-rabat",
+    "name": "Fernando Rabat",
+    "role": "Chilean Minister of Justice under President Kast; architect of the 2026 bill to restructure the INDH and strip its power to file criminal complaints",
+    "avatar": "pinochet",
+    "initial": "F",
+    "quote": "Creemos que, efectivamente, hoy la sociedad civil está mal representada en el INDH y tiene absolutamente un tinte de izquierda, y eso hay que corregirlo. (We believe that today civil society is poorly represented in the INDH and it has an absolutely left-wing tint, and that has to be corrected.)",
+    "lastUpdated": "2026-08-05T00:00:00Z"
+  },
+  {
+    "id": "yerko-ljubetic",
+    "name": "Yerko Ljubetic",
+    "role": "Director of Chile's National Human Rights Institute (INDH); publicly opposed the Kast government's 2026 bill to strip the institute's power to file criminal complaints",
+    "avatar": "other",
+    "initial": "Y",
+    "quote": "De más de 6.000 querellas presentadas por el instituto... solo tenemos siete casos de condenas en costas. (Of more than 6,000 lawsuits filed by the institute, we only have seven cases of cost-condemnations.)",
+    "lastUpdated": "2026-08-05T00:00:00Z"
+  },
+  {
+    "id": "bernarda-vera",
+    "name": "Bernarda Vera Contardo",
+    "role": "Teacher and MIR militant listed on Chile's official detained-disappeared registry since her 1973 arrest; DNA testing confirmed in July 2026 that she has been alive in Argentina for decades, triggering a review of the disappeared list and a fraud investigation into reparation payments made to her family",
+    "avatar": "other",
+    "initial": "B",
+    "quote": "[No public statement; case emerged through a 2025 Chilevisión investigation and 2026 court-ordered DNA testing]",
+    "lastUpdated": "2026-07-27T00:00:00Z"
+  }
+]

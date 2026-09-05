@@ -1,0 +1,167 @@
+[
+  {
+    "id": "mainshock-total",
+    "category": "Mainshock Fatalities & Injuries (All Regions)",
+    "killed": "111",
+    "injured": "1,672",
+    "source": "BNPB",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "Toll rose steadily: 2 (15 Aug, CGTN) → 14 → 38 → 47 → 51 (16 Aug) → 54 (17 Aug) → 68 (17–18 Aug) → 70 (18–19 Aug) → 73 (19 Aug) → 75 (20 Aug) → 83 (21 Aug) → 87 (22 Aug) → 91 (23 Aug) → 100 (24 Aug) → 103 (25 Aug) → 105 (26 Aug) → 111 (27 Aug) as rescue teams reached remote villages and hospitalized victims succumbed to injuries, then held flat on 28 August with no new fatalities. Injured count reached 1,672 by 27 August, having fluctuated between 986 and 1,666 across intervening days as regency-level tallies were reconciled.",
+    "lastUpdated": "2026-08-28T15:10:00Z"
+  },
+  {
+    "id": "death-toll-demographics-aug25",
+    "category": "Victim Demographics (Cumulative, 25 Aug)",
+    "killed": "103",
+    "injured": "unknown",
+    "source": "BNPB",
+    "tier": 1,
+    "contested": "no",
+    "note": "By gender: 55% women, 45% men. By age group: 45% elderly, 37% adults, 12% children/adolescents, remainder infants and toddlers.",
+    "lastUpdated": "2026-08-25T15:01:22Z"
+  },
+  {
+    "id": "death-toll-demographics-aug28",
+    "category": "Victim Demographics (Cumulative, 28 Aug, Day 14)",
+    "killed": "111",
+    "injured": "unknown",
+    "source": "BNPB",
+    "tier": 1,
+    "contested": "no",
+    "note": "By gender: 56.4% women, 43.6% men. By age group: 45% elderly, 37% adults, 12% children/adolescents, 5% toddlers. No new fatalities recorded since 27 August.",
+    "lastUpdated": "2026-08-28T15:10:00Z"
+  },
+  {
+    "id": "aug21-indirect-deaths-by-regency",
+    "category": "New Deaths Reported 21 August (Indirect Impacts)",
+    "killed": "8",
+    "injured": "unknown",
+    "source": "BNPB — Berton Suar Pelita Panjaitan",
+    "tier": 1,
+    "contested": "no",
+    "note": "BNPB spokesman confirmed the 8 deaths added between 20-21 August were from indirect earthquake impacts (aftershock-triggered shock, falls) rather than structural collapse: Manggarai 2, East Manggarai 2, Nagekeo 3, Ngada 1.",
+    "lastUpdated": "2026-08-21T16:00:00Z"
+  },
+  {
+    "id": "ruteng-aftershock-cardiac-death",
+    "category": "20 August Aftershock (M5.8, Ruteng)",
+    "killed": "1",
+    "injured": "unknown",
+    "source": "Ekorantt.com / Al Jazeera",
+    "tier": 2,
+    "contested": "no",
+    "note": "A resident died of a heart attack/shock triggered by a magnitude 5.8 aftershock at 06:45 WITA on 20 August in Ruteng; additive to the mainshock total.",
+    "lastUpdated": "2026-08-21T16:00:00Z"
+  },
+  {
+    "id": "flores-timur-uncounted-death",
+    "category": "Flores Timur Regency (Previously Uncounted)",
+    "killed": "1",
+    "injured": "0",
+    "source": "Ekorantt.com",
+    "tier": 4,
+    "contested": "yes",
+    "note": "Mateus Noba Noba (74), Waiula Village, Wulanggitang District, died 15 August fleeing his home during the mainshock; the death was not reported to provincial disaster officials until 20 August because Flores Timur Regency never declared an emergency-response status, leaving it outside BNPB's official tally.",
+    "lastUpdated": "2026-08-21T16:00:00Z"
+  },
+  {
+    "id": "aftershock-ngada-casualties",
+    "category": "17 Aug Aftershock (M5.7–5.8, Ngada Regency)",
+    "killed": "2",
+    "injured": "unknown",
+    "source": "Open The Magazine",
+    "tier": 4,
+    "contested": "no",
+    "note": "Aftershock-specific deaths, additive to the mainshock total.",
+    "lastUpdated": "2026-08-20T04:15:00Z"
+  },
+  {
+    "id": "manggarai-regency-casualties",
+    "category": "Manggarai Regency",
+    "killed": "45",
+    "injured": "unknown",
+    "source": "BNPB",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Highest single-regency death toll as of 28 August (Day 14), up from 41 (25 Aug) and 32 (23 Aug); figure not yet broken down by injured count.",
+    "lastUpdated": "2026-08-28T15:10:00Z"
+  },
+  {
+    "id": "east-manggarai-regency-casualties",
+    "category": "East Manggarai Regency",
+    "killed": "38",
+    "injured": "unknown",
+    "source": "BNPB",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Second-highest single-regency death toll as of 28 August (Day 14), up from 34 (25 Aug) and 31 (23 Aug), adjacent to Manggarai Regency.",
+    "lastUpdated": "2026-08-28T15:10:00Z"
+  },
+  {
+    "id": "nagekeo-regency-casualties",
+    "category": "Nagekeo Regency",
+    "killed": "13",
+    "injured": "unknown",
+    "source": "BNPB",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Regency nearest the epicenter; toll unchanged at 13 since 25 August. Also the regency with the most displaced residents (51,284 as of 27 Aug) and site of President Prabowo's 26 August visit.",
+    "lastUpdated": "2026-08-28T15:10:00Z"
+  },
+  {
+    "id": "combined-other-regencies-casualties",
+    "category": "Sikka, Ende, Ngada & West Manggarai (individual, 28 Aug)",
+    "killed": "15",
+    "injured": "unknown",
+    "source": "BNPB",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Per-regency breakdown unchanged since 25 August: Sikka 6, Ngada 5, Ende 3, West Manggarai 1 (sum 15).",
+    "lastUpdated": "2026-08-28T15:10:00Z"
+  },
+  {
+    "id": "missing-persons-status",
+    "category": "Missing / Unaccounted For",
+    "killed": "0",
+    "injured": "0",
+    "source": "Local Basarnas/SAR officials",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "As of 18–19 Aug, local officials reported no further outstanding reports of people trapped or missing beneath rubble, though NGOs caution that 812 disabled cell sites may mask undercounting in cut-off hamlets.",
+    "lastUpdated": "2026-08-20T04:15:00Z"
+  },
+  {
+    "id": "hospitalized-patients",
+    "category": "Hospitalized / Evacuated Patients",
+    "killed": "0",
+    "injured": "20+",
+    "source": "Wikipedia — 2026 Flores earthquake",
+    "tier": 3,
+    "contested": "no",
+    "note": "Includes 15 patients + 5 infants treated in tents at Ende Regional Hospital and surgical patients evacuated after Ruteng's operating theatre was destroyed.",
+    "lastUpdated": "2026-08-20T04:15:00Z"
+  },
+  {
+    "id": "tourists-evacuated-padar",
+    "category": "Tourists Evacuated (Padar Island)",
+    "killed": "0",
+    "injured": "0",
+    "source": "ANTARA News",
+    "tier": 2,
+    "contested": "no",
+    "note": "986 tourists evacuated to Labuan Bajo; no injuries reported among the tourist population.",
+    "lastUpdated": "2026-08-20T04:15:00Z"
+  },
+  {
+    "id": "independence-day-snapshot",
+    "category": "Cumulative Toll Snapshot — Independence Day (17 Aug)",
+    "killed": "54",
+    "injured": "unknown",
+    "source": "CBS News",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Point-in-time figure preserved for reference; superseded by later BNPB updates as recovery operations continued.",
+    "lastUpdated": "2026-08-20T04:15:00Z"
+  }
+]

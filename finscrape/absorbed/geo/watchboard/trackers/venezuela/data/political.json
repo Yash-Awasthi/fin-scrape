@@ -1,0 +1,191 @@
+[
+  {
+    "id": "nicolas-maduro",
+    "name": "Nicolás Maduro",
+    "role": "President of Venezuela (2013–Jan 2026); successor to Hugo Chávez; captured by US special forces in a January 3, 2026 operation and removed from power; now in US custody facing narco-terrorism charges",
+    "avatar": "maduro",
+    "initial": "NM",
+    "quote": "Chávez lives, the struggle goes on. The revolution will triumph against all imperialist aggression.",
+    "lastUpdated": "2026-05-04T00:00:00Z"
+  },
+  {
+    "id": "delcy-rodriguez",
+    "name": "Delcy Rodríguez",
+    "role": "Acting President of Venezuela (January 2026–present); former Executive Vice-President under Maduro; her constitutionally mandated 180-day interim term expired July 3, 2026 without official government comment on succession; faced continued scrutiny over the earthquake response as the government-confirmed death toll passed 6,125 by Aug 3 with only 16.5% of debris cleared; secured $346M in emergency IMF financing for reconstruction; her government's US-backed transition talks with a Dinorah Figuera-led opposition delegation began in Caracas Aug 6, excluding María Corina Machado; retains Trump administration backing despite the earthquake-response backlash",
+    "avatar": "chavismo",
+    "initial": "DR",
+    "quote": "There will be no social unrest here. Attempts are being made today to attack Venezuelan institutions.",
+    "lastUpdated": "2026-08-10T15:47:03Z"
+  },
+  {
+    "id": "hugo-chavez",
+    "name": "Hugo Chávez",
+    "role": "President of Venezuela (1999–2013); founder of the Bolivarian Revolution; died March 5, 2013",
+    "avatar": "chavismo",
+    "initial": "HC",
+    "quote": "I am not a candidate. I am the people — and the people will never surrender.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "maria-corina-machado",
+    "name": "María Corina Machado",
+    "role": "2025 Nobel Peace Prize laureate; opposition leader; won 2023 primary with 90%; announced presidential candidacy from Panama on May 23, 2026; her push to return and help administer earthquake aid drew Trump administration rebuke as \"grotesque political opportunism\" (Jul 1); her coalition's missing-persons database logged roughly 36,000 names by early July, far exceeding the government's confirmed death toll; not invited to the August 2026 US-backed transition talks led by Dinorah Figuera — said she and Edmundo González would not participate in the talks' \"design, development and operation\" but would not obstruct \"real progress,\" judging success on freed political prisoners, restored institutions, and scheduled elections",
+    "avatar": "opposition",
+    "initial": "MCM",
+    "quote": "Their response exposed its critical weaknesses. My presence stabilizes the situation — it is part of the organizing forces the country needs.",
+    "lastUpdated": "2026-08-10T15:47:03Z"
+  },
+  {
+    "id": "edmundo-gonzalez",
+    "name": "Edmundo González Urrutia",
+    "role": "2024 opposition presidential candidate; recognized by US, EU, Argentina, Perú and others as elected president; exiled in Spain; formally backed by Democratic Unitary Platform as opposition candidate for next competitive election (April 2026)",
+    "avatar": "opposition",
+    "initial": "EGU",
+    "quote": "The Venezuelan people gave us their verdict on July 28. No fraud can undo 8 million votes.",
+    "lastUpdated": "2026-05-04T00:00:00Z"
+  },
+  {
+    "id": "juan-guaido",
+    "name": "Juan Guaidó",
+    "role": "Former National Assembly president; declared interim president Jan 23, 2019; recognition withdrawn Jan 2023; exiled in Miami",
+    "avatar": "opposition",
+    "initial": "JG",
+    "quote": "Under Article 233, before God, before my country, I formally assume the powers of the national executive.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "diosdado-cabello",
+    "name": "Diosdado Cabello",
+    "role": "Interior Minister under Acting President Rodríguez (2026–present); PSUV co-founder; former ANC president; indicted by US DOJ on drug trafficking charges (2020); leads hardliner faction opposed to Rodríguez's pro-US normalization; at center of June 2026 Chavismo fracture as civilian-hardliner divide goes public",
+    "avatar": "chavismo",
+    "initial": "DC",
+    "quote": "Every coup against Venezuela will be defeated. The people and the armed forces are united.",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  },
+  {
+    "id": "jorge-rodriguez",
+    "name": "Jorge Rodríguez",
+    "role": "President of Venezuela's National Assembly (since 2021); Maduro's former chief government negotiator; continues in transitional National Assembly role following Maduro's removal; announced the government's earthquake death-toll updates via Telegram throughout mid-2026 (4,829 on Jul 15; 6,125 on Aug 3); leads the government delegation in the US-backed transition talks with the opposition that began Aug 6, 2026",
+    "avatar": "chavismo",
+    "initial": "JR",
+    "quote": "We have the voting tallies. Nicolás Maduro won the election and we challenge the opposition to present their supposed actas.",
+    "lastUpdated": "2026-08-10T15:47:03Z"
+  },
+  {
+    "id": "leopoldo-lopez",
+    "name": "Leopoldo López",
+    "role": "Voluntad Popular founder; sentenced to 13.9 years in 2015; house arrest; fled to Spanish Embassy 2019; in exile in Madrid",
+    "avatar": "opposition",
+    "initial": "LL",
+    "quote": "I deliver myself to the regime that persecutes me. But I do not surrender the fight for Venezuela's freedom.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "henrique-capriles",
+    "name": "Henrique Capriles Radonski",
+    "role": "Former Miranda Governor; 2012 and 2013 presidential candidate vs Chávez and Maduro; lost to Maduro by 1.5%; returned to active politics via the chavismo-aligned National Assembly after participating in 2025 elections; warned in August 2026 that any transition negotiation excluding María Corina Machado \"will be condemned to fail\"",
+    "avatar": "opposition",
+    "initial": "HCR",
+    "quote": "A negotiation that excludes Machado will be condemned to fail.",
+    "lastUpdated": "2026-08-10T15:47:03Z"
+  },
+  {
+    "id": "vladimir-padrino",
+    "name": "Vladimir Padrino López",
+    "role": "Defense Minister under Acting President Rodríguez (2026–present); commanded FANB under Maduro; did not militarily resist the January 3, 2026 US capture operation; aligned with Diosdado Cabello in the military-hardliner faction resisting Rodríguez's normalization with Washington, per June 2026 reporting",
+    "avatar": "military",
+    "initial": "VPL",
+    "quote": "The Bolivarian National Armed Forces are loyal to the legitimate constitutional government of Venezuela.",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  },
+  {
+    "id": "tarek-el-aissami",
+    "name": "Tarek El Aissami",
+    "role": "Former Oil Minister and PDVSA president; arrested March 2023 on corruption charges; US-sanctioned on drug trafficking since 2017",
+    "avatar": "chavismo",
+    "initial": "TEA",
+    "quote": "No statement available — arrested March 2023 and held incommunicado by Venezuelan authorities.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "simon-bolivar",
+    "name": "Simón Bolívar",
+    "role": "El Libertador; independence leader; first president of Gran Colombia (1819–1830); revolutionary icon invoked by all political factions",
+    "avatar": "opposition",
+    "initial": "SB",
+    "quote": "The art of winning is learned in defeat — and even in defeat, one does not abandon the ideal of freedom.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "alex-saab",
+    "name": "Alex Saab",
+    "role": "Colombian businessman; Maduro envoy; extradited to US 2021; pleaded guilty to money laundering 2023; freed in prisoner swap Dec 2023; re-deported from Venezuela to US by Rodríguez transitional government on May 17, 2026 to face new charges including criminal conspiracy, money laundering, and bribery — causing Chavista hardliners to accuse Rodríguez of governing under US direction",
+    "avatar": "chavismo",
+    "initial": "AS",
+    "quote": "I was arrested for serving Venezuela in a humanitarian mission. This was a political kidnapping.",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  },
+  {
+    "id": "antonio-ledezma",
+    "name": "Antonio Ledezma",
+    "role": "Former Mayor of Caracas; arrested 2015 on coup conspiracy charges; escaped house arrest 2017; exiled in Madrid",
+    "avatar": "opposition",
+    "initial": "AL",
+    "quote": "Maduro's regime holds Venezuela's soul hostage. We will not rest until every political prisoner is free.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "romulo-betancourt",
+    "name": "Rómulo Betancourt",
+    "role": "Founder of Acción Democrática (AD); first elected president under Punto Fijo democracy (1959–1964); established democratic transition model",
+    "avatar": "opposition",
+    "initial": "RB",
+    "quote": "Democratic governments must distinguish themselves from dictatorships in the quality of their freedoms.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "carlos-andres-perez",
+    "name": "Carlos Andrés Pérez",
+    "role": "AD president twice (1974–1979 and 1989–1993); nationalized oil industry and created PDVSA in 1976; crushed the 1989 Caracazo with military force; impeached for corruption 1993; died in Miami exile 2010",
+    "avatar": "opposition",
+    "initial": "CAP",
+    "quote": "Venezuela is not poor — it is a rich country with poor people. We must transform oil wealth into human development.",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "rafael-caldera",
+    "name": "Rafael Caldera",
+    "role": "COPEI founder; President 1969–1974 and 1994–1999; famously defended Chávez in Congress after the 1992 coup attempt; pardoned Chávez in 1994; last Punto Fijo era president before the Bolivarian Revolution",
+    "avatar": "opposition",
+    "initial": "RC",
+    "quote": "It is hard to ask a hungry people to respect the law when the state has failed to guarantee minimum living conditions.",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "gustavo-petro",
+    "name": "Gustavo Petro",
+    "role": "President of Colombia (2022–present); first foreign leader to visit Venezuela since Maduro's capture (April 24, 2026); advocates negotiated democratic transition while seeking to restore trade and migration cooperation",
+    "avatar": "intl",
+    "initial": "GP",
+    "quote": "We need democracy in Venezuela. Colombia and Venezuela must walk together — as brothers, not enemies.",
+    "lastUpdated": "2026-05-04T00:00:00Z"
+  },
+  {
+    "id": "manuel-rosales",
+    "name": "Manuel Rosales",
+    "role": "Zulia Governor (2000–2008, 2021–present) and Mayor of Maracaibo (2017–2021); 2006 opposition presidential candidate who lost to Chávez; self-exiled to Peru 2009 under corruption charges; returned 2015; remains a key regional opposition figure",
+    "avatar": "opposition",
+    "initial": "MR",
+    "quote": "My bonuses project would have put oil revenue directly in the hands of every Venezuelan family — that is real sovereignty.",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "dinorah-figuera",
+    "name": "Dinorah Figuera",
+    "role": "President of the Comisión Delegada representing Venezuela's 2015 National Assembly — the last legislature internationally recognized as democratically elected; returned from exile in Spain in June 2026; selected with US State Department backing to lead the 10-member opposition delegation (Primero Justicia/Voluntad Popular factions) in the August 2026 transition talks with the Rodríguez government, targeting CNE and Supreme Tribunal reform and a transition proposal by December 2026",
+    "avatar": "opposition",
+    "initial": "DF",
+    "quote": "We are laying the institutional groundwork for a political transition — renovating the CNE and extending reform to the Supreme Tribunal's electoral and constitutional chambers so Venezuela can hold elections with credible guarantees.",
+    "lastUpdated": "2026-08-10T15:47:03Z"
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "school-of-americas",
+    "type": "training-facility",
+    "name": "School of the Americas / WHINSEC",
+    "detail": "US Army training facility for Latin American military officers established at Fort Gulick, Panama (1946–1984) and moved to Fort Benning, Georgia (1984–present, renamed WHINSEC). Trained 60,000+ officers. Graduates include Pinochet associates, death squad leaders, Guatemalan genocide perpetrators, Noriega, and 11 Latin American dictators. 1992 declassified manuals revealed instruction in torture and assassination.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cia-crest-database",
+    "type": "intelligence-archive",
+    "name": "CIA CREST Declassified Archive",
+    "detail": "The CIA Records Search Tool (CREST) contains millions of declassified CIA documents. Key collections for Latin America include PBSUCCESS (Guatemala 1954), Bay of Pigs history, Chile Track I/II, Operation Condor cables, and Contra operations. The National Security Archive used FOIA litigation to release key documents proving CIA involvement in coups and assassinations.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "usaid-public-safety-program",
+    "type": "covert-program",
+    "name": "USAID Office of Public Safety (OPS)",
+    "detail": "The USAID Office of Public Safety (1962–1975) trained Latin American police forces in interrogation and counterinsurgency techniques under cover of development assistance. Dan Mitrione (Uruguay), a USAID/CIA contractor, taught torture methods to Uruguayan and Brazilian police. Congressional investigation (1975) linked OPS to systematic torture; Congress terminated the program. OPS trained 450,000 police in 47 countries.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "brigade-2506",
+    "type": "paramilitary-unit",
+    "name": "Brigade 2506 — Bay of Pigs Invasion Force",
+    "detail": "CIA-trained Cuban exile paramilitary force of approximately 1,400 men organized for the Bay of Pigs invasion. Trained at secret facilities in Guatemala (Retalhuleu) and the US. Named for the training serial number of a recruit who died in a training accident. The brigade was defeated within 72 hours. Its remnants became the core of anti-Castro exile operations for decades.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-pbsuccess",
+    "type": "covert-operation",
+    "name": "Operation PBSUCCESS — Guatemala 1954",
+    "detail": "CIA covert operation that overthrew Guatemalan President Jacobo Árbenz in 1954. Used a small CIA-trained exile force (300–400 men), psychological warfare (Radio KCALL broadcasting false reports of military advances), and diplomatic pressure. Total cost approximately $3 million. Directed by CIA Western Hemisphere Division chief J.C. King and Deputy Director of Plans Frank Wisner.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-mongoose",
+    "type": "covert-operation",
+    "name": "Operation Mongoose — Cuba 1961–1962",
+    "detail": "CIA covert operation authorized by Kennedy after Bay of Pigs to destabilize Cuba through sabotage, propaganda, and Castro assassination attempts. Run by Gen. Edward Lansdale with CIA under William Harvey. Budget: $50 million+. Included attacks on Cuban sugar crops, industrial sabotage, and assassination attempts (including CIA-mob collaboration through John Roselli, Sam Giancana). Suspended during Cuban Missile Crisis.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "condortel",
+    "type": "intelligence-infrastructure",
+    "name": "Condortel — Operation Condor Communications System",
+    "detail": "The US-provided secure communications system used by Operation Condor member states, based at the US Communications facility in the Panama Canal Zone. Declassified cables confirm the CIA facilitated this communications network connecting Argentina, Bolivia, Brazil, Chile, Paraguay, and Uruguay intelligence services for coordinating transnational repression. The system allowed real-time tracking of political exiles across borders.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "contras-fdn",
+    "type": "paramilitary-unit",
+    "name": "Nicaraguan Democratic Force (FDN) — Contras",
+    "detail": "The main Contra organization, formed from remnants of Somoza's National Guard. Organized, armed, trained, and funded by the CIA starting 1981. Operated primarily from Honduras. Received $19 million initial funding under NSDD-17. After Boland Amendment (1984) cut off direct funding, the CIA worked through Oliver North's private 'Enterprise' network and foreign donors (Saudi Arabia provided $32 million). Force reached 15,000 fighters.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "atlacatl-battalion",
+    "type": "paramilitary-unit",
+    "name": "Atlacatl Battalion — El Salvador",
+    "detail": "El Salvador's first Immediate Reaction Infantry Battalion, created in 1980 with US Army Special Forces training. Named after an indigenous warrior chief. Perpetrated the El Mozote massacre (December 1981, ~1,000 civilians killed) and multiple other documented atrocities. Received US military advisers and funding throughout the civil war. Dissolved under El Salvador peace accords (1992).",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "dina-chile",
+    "type": "intelligence-agency",
+    "name": "DINA — Pinochet's Secret Police",
+    "detail": "Dirección de Inteligencia Nacional, Chile's secret police created by Pinochet in June 1974 under Manuel Contreras. DINA ran Villa Grimaldi and other torture centers, coordinated Operation Condor, and assassinated Orlando Letelier in Washington DC (1976). CIA maintained regular contact with DINA; CIA asset Michael Townley, an American, built the Letelier bomb for DINA. Dissolved 1977; replaced by CNI.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ned-venezuela-operations",
+    "type": "quasi-governmental-operation",
+    "name": "National Endowment for Democracy (NED) — Venezuela Operations",
+    "detail": "The National Endowment for Democracy—a quasi-governmental US organization—provided $877,000 to Venezuelan opposition groups in 2001–2002 before the April 2002 coup attempt against Chávez. After the coup, NED and USAID funding to Venezuelan opposition groups increased substantially. Total NED/USAID funding to Venezuelan opposition exceeded $100 million over two decades, representing one of the largest 'democracy promotion' operations in the hemisphere.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "plan-colombia-military-program",
+    "type": "security-assistance-program",
+    "name": "Plan Colombia — US Military Assistance Program",
+    "detail": "US security assistance program for Colombia launched in 2000, initially $1.3 billion (75% military). Expanded under Bush as 'Andean Regional Initiative' to include counterinsurgency against FARC. Included training Colombian Special Forces, providing helicopters and aircraft, and aerial fumigation of coca crops. Associated with 'False Positives' scandal in which Colombian army units killed civilians and dressed them as guerrillas to inflate body counts and qualify for bonus payments.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "operation-just-cause-assets",
+    "type": "military-operation",
+    "name": "Operation Just Cause — Panama Invasion Assets",
+    "detail": "The US deployed 27,000 troops, 4 B-2 stealth bombers (first combat use), UH-60 Blackhawks, AH-64 Apaches, AC-130 gunships, and M551 Sheridan tanks in the December 20, 1989 Panama invasion. The operation was the largest US combat deployment since Vietnam. JSOC units conducted simultaneous strikes on 27 targets across the country. 23 US soldiers were killed.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "battalion-316-honduras",
+    "type": "paramilitary-unit",
+    "name": "Battalion 3-16 — Honduras Death Squad",
+    "detail": "Honduran military intelligence unit trained and supported by the CIA in the early 1980s. Responsible for disappearing 184 Hondurans between 1981 and 1984. CIA contractors participated in prisoner interrogations. First exposed by Baltimore Sun journalists in 1995; CIA Inspector General investigations followed. Unit commander Billy Joya later surfaced as an adviser to the post-2009 coup Honduran government.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fraph-haiti",
+    "type": "paramilitary-unit",
+    "name": "FRAPH — Haiti Paramilitary (CIA-linked)",
+    "detail": "The Revolutionary Front for the Advancement and Progress of Haiti (FRAPH), founded by Emmanuel Constant, carried out systematic terror against Aristide supporters during the 1991–1994 military junta. Subsequent US congressional testimony and investigations revealed that Constant was on the CIA payroll at the time. The US refused Haitian extradition requests for Constant, who lived openly in New York until public pressure forced a private arrangement.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ipp-iran-contra-enterprise",
+    "type": "covert-operation",
+    "name": "Oliver North's 'Enterprise' — Iran-Contra Network",
+    "detail": "Oliver North's private covert network (called 'the Enterprise') bypassed Congressional restrictions to continue funding the Contras after the Boland Amendment. Used Iranian arms sale proceeds, Saudi donations ($32M), and private fundraising. The network included arms dealer Richard Secord, financier Albert Hakim, and used Swiss bank accounts and offshore companies. North shredded key documents when the scandal broke in November 1986.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

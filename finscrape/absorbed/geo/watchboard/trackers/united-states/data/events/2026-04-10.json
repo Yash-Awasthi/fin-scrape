@@ -1,0 +1,60 @@
+[
+  {
+    "id": "artemis-ii-splashdown-success-apr10-2026",
+    "year": "2026",
+    "title": "Artemis II 'Bullseye Splashdown' \u2014 Crew Returns Safely After Historic Lunar Mission",
+    "type": "space",
+    "active": false,
+    "detail": "NASA's Artemis II Orion capsule splashed down in the Pacific Ocean off San Diego at 5:07 p.m. PDT (8:07 p.m. EDT) on April 10, 2026 \u2014 a 'perfect bullseye splashdown' per Mission Control in Houston. Commander Reid Wiseman, Pilot Victor Glover, Mission Specialist Christina Koch (NASA), and Mission Specialist Jeremy Hansen (CSA) all emerged safely following a nearly 10-day lunar mission. The mission broke Apollo 13's distance record, reaching 252,756 miles (406,771 km) from Earth \u2014 the farthest humans have ever traveled from our planet. Recovery crews from the USS John P. Murtha extracted all four crew members approximately one hour after splashdown via Navy helicopters. NASA called it a landmark stepping stone toward Artemis III's planned crewed Moon landing.",
+    "sources": [
+      {
+        "name": "NASA",
+        "tier": 1,
+        "url": "https://www.nasa.gov/blogs/missions/2026/04/10/artemis-ii-flight-day-10-re-entry-live-updates/",
+        "pole": "western"
+      },
+      {
+        "name": "CBS News",
+        "tier": 2,
+        "url": "https://www.cbsnews.com/live-updates/artemis-ii-splashdown-return/",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cbsnews.com/live-updates/artemis-ii-splashdown-return/",
+        "caption": "Orion spacecraft splashes down in the Pacific Ocean off San Diego \u2014 'bullseye splashdown' on April 10, 2026",
+        "source": "CBS News / Reuters",
+        "thumbnail": "https://assets3.cbsnewsstatic.com/hub/i/r/2026/04/11/73f98421-5625-4423-9350-ca8f830524c9/thumbnail/1200x630/912aa87fa1cbfe12c5c46aa4e11480eb/2026-04-11t021020z-2118394274-rc2qmkaipb96-rtrmadp-3-space-moon-artemis.jpg"
+      }
+    ],
+    "lastUpdated": "2026-04-12T12:00:00Z"
+  },
+  {
+    "id": "harris-2028-presidential-bid-tease-apr10-2026",
+    "year": "2026",
+    "title": "Kamala Harris Publicly Teases 2028 Presidential Bid",
+    "type": "political",
+    "active": true,
+    "detail": "Former Vice President Kamala Harris publicly signaled a potential return to presidential politics on April 10, 2026, teasing a 2028 presidential bid following Donald Trump's electoral victory over her in 2024. The move marks Harris's first clear public hint at re-entering the Democratic primary field and signals she intends to remain a central figure in Democratic Party politics despite her 2024 defeat. The announcement drew immediate attention ahead of the 2028 primary cycle, with Democrats weighing whether a Harris bid would unite or further fracture the party following its 2024 losses.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/4/10/democrat-kamala-harris-teases-2028-presidential-bid-following-trump-loss",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/news/2026/4/10/democrat-kamala-harris-teases-2028-presidential-bid-following-trump-loss",
+        "source": "Al Jazeera",
+        "caption": "Kamala Harris signals potential 2028 presidential run, re-entering Democratic primary politics",
+        "thumbnail": "https://www.aljazeera.com/news/2026/4/10/democrat-kamala-harris-teases-2028-presidential-bid-following-trump-loss"
+      }
+    ],
+    "lastUpdated": "2026-04-10T20:24:03Z"
+  }
+]

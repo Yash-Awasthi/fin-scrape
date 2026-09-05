@@ -1,0 +1,488 @@
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { t } from '../../../i18n/translations';
+import { useLocale } from '../../../i18n/useLocale';
+import type { BroadcastPhase } from './useBroadcastMode';
+import ImageCarousel from './ImageCarousel';
+import { useDragScrub } from './useDragScrub';
+import IslandErrorBoundary from '../shared/IslandErrorBoundary';
+import { IslandErrorFallback } from '../shared/IslandErrorFallback';
+import { useTrackerDetail, prefetchTrackerDetail } from './useTrackerDetail';
+
+interface TrackerForOverlay {
+  slug: string;
+  shortName: string;
+  icon?: string;
+  headline?: string;
+  domain?: string;
+  color?: string;
+  topKpis: Array<{ value: string; label: string }>;
+  latestEventMedia?: { url: string; source: string; tier: number };
+  eventImages?: Array<{ url: string; source: string; tier: number }>;
+  mapCenter?: { lon: number; lat: number };
+  dayCount?: number;
+  digestSummary?: string;
+}
+
+interface BreakingTracker {
+  slug: string;
+  shortName: string;
+  headline?: string;
+  icon: string;
+  color: string;
+  isBreaking: boolean;
+}
+
+interface BroadcastOverlayProps {
+  featuredTracker: TrackerForOverlay | null;
+  phase: BroadcastPhase;
+  progress: number;
+  trackerQueue: TrackerForOverlay[];
+  currentIndex: number;
+  onJumpTo: (slug: string) => void;
+  isUserPaused: boolean;
+  pauseCountdown: number;
+  onUserPause: () => void;
+  onUserResume: () => void;
+  onResetPauseTimer: () => void;
+  onGoToNext: () => void;
+  onGoToPrev: () => void;
+  basePath: string;
+  breakingTrackers?: BreakingTracker[];
+}
+
+const HOVER_GRACE_MS = 500;
+
+/** OSM tile fallback for the compact thumbnail — mirrors MobileStoryCarousel's 3-tier approach. */
+function mapTileUrl(lat: number, lon: number, zoom = 5): string {
+  const n = Math.pow(2, zoom);
+  const x = Math.floor(((lon + 180) / 360) * n);
+  const y = Math.floor(
+    ((1 - Math.log(Math.tan((lat * Math.PI) / 180) + 1 / Math.cos((lat * Math.PI) / 180)) / Math.PI) / 2) * n,
+  );
+  return `https://tile.openstreetmap.org/${zoom}/${x}/${y}.png`;
+}
+
+export default function BroadcastOverlay(props: BroadcastOverlayProps) {
+  return (
+    <IslandErrorBoundary
+      fallback={<IslandErrorFallback feature="the broadcast overlay" />}
+    >
+      <BroadcastOverlayInner {...props} />
+    </IslandErrorBoundary>
+  );
+}
+
+function BroadcastOverlayInner({
+  featuredTracker,
+  phase,
+  progress,
+  trackerQueue,
+  currentIndex,
+  onJumpTo,
+  isUserPaused,
+  pauseCountdown,
+  onUserPause,
+  onUserResume,
+  onResetPauseTimer,
+  onGoToNext,
+  onGoToPrev,
+  basePath,
+  breakingTrackers = [],
+}: BroadcastOverlayProps) {
+  const locale = useLocale();
+  const isPaused = phase === 'paused';
+  const isVisible = phase === 'dwelling' || phase === 'transitioning';
+  const graceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Keep isUserPaused readable from timers without stale closures, and drop
+  // any pending grace timer if broadcast resumes by other means (countdown,
+  // Esc) — otherwise the late timer would restart the dwell and skip trackers.
+  const isUserPausedRef = useRef(isUserPaused);
+  useEffect(() => {
+    isUserPausedRef.current = isUserPaused;
+    if (!isUserPaused && graceTimerRef.current) {
+      clearTimeout(graceTimerRef.current);
+      graceTimerRef.current = null;
+    }
+  }, [isUserPaused]);
+  const tickerTrackRef = useRef<HTMLDivElement>(null);
+  const activeItemRefs = useRef<Map<number, HTMLSpanElement>>(new Map());
+
+  // Lazy-fetch detail for the currently featured tracker so the
+  // paused/expanded lower-third has digestSummary + eventImages without
+  // shipping them in the homepage HTML. Pre-warm the next tracker in the
+  // queue (kept light: just a Map lookup + idle fetch) so when broadcast
+  // auto-advances or the user clicks "next" the panel feels instant.
+  const featuredSlug = featuredTracker?.slug ?? null;
+  const { detail: featuredDetail, loading: featuredLoading } = useTrackerDetail(featuredSlug);
+  useEffect(() => {
+    const next = trackerQueue[(currentIndex + 1) % Math.max(1, trackerQueue.length)];
+    if (next?.slug) prefetchTrackerDetail(next.slug);
+  }, [currentIndex, trackerQueue]);
+
+  const featuredEventImages = featuredDetail?.eventImages ?? featuredTracker?.eventImages ?? [];
+  const featuredDigest = featuredDetail?.digestSummary ?? featuredTracker?.digestSummary;
+
+  // Compact thumbnail with onError degradation: event media → OSM tile →
+  // nothing (same tiering as MobileStoryCarousel). Failed URLs are remembered
+  // so the broadcast cycle doesn't retry hotlink-blocked media every dwell.
+  const [failedThumbUrls, setFailedThumbUrls] = useState<Set<string>>(new Set());
+  const markThumbFailed = useCallback((url: string) => {
+    setFailedThumbUrls(prev => (prev.has(url) ? prev : new Set(prev).add(url)));
+  }, []);
+  const mediaThumbUrl = featuredTracker?.latestEventMedia?.url;
+  const tileThumbUrl = featuredTracker?.mapCenter
+    ? mapTileUrl(featuredTracker.mapCenter.lat, featuredTracker.mapCenter.lon)
+    : undefined;
+  const compactThumbUrl =
+    mediaThumbUrl && !failedThumbUrls.has(mediaThumbUrl)
+      ? mediaThumbUrl
+      : tileThumbUrl && !failedThumbUrls.has(tileThumbUrl)
+        ? tileThumbUrl
+        : undefined;
+
+  // Ticker: scroll to center the active item whenever currentIndex changes
+  // The broadcast cycle drives the ticker position, keeping card + ticker in sync
+  useEffect(() => {
+    const el = activeItemRefs.current.get(currentIndex);
+    if (el && tickerTrackRef.current) {
+      const track = tickerTrackRef.current;
+      const itemLeft = el.offsetLeft;
+      const itemWidth = el.offsetWidth;
+      const trackWidth = track.clientWidth;
+      const targetScroll = itemLeft - (trackWidth / 2) + (itemWidth / 2);
+      track.scrollTo({ left: Math.max(0, targetScroll), behavior: 'smooth' });
+    }
+  }, [currentIndex]);
+
+  // Hover grace period for moving between card and ticker
+  const handleMouseEnter = useCallback(() => {
+    if (graceTimerRef.current) {
+      clearTimeout(graceTimerRef.current);
+      graceTimerRef.current = null;
+    }
+    if (!isUserPaused) {
+      onUserPause();
+    }
+  }, [isUserPaused, onUserPause]);
+
+  const handleMouseLeave = useCallback(() => {
+    if (!isUserPaused) return;
+    graceTimerRef.current = setTimeout(() => {
+      graceTimerRef.current = null;
+      // Read via ref — the closure's isUserPaused may be stale by now.
+      if (isUserPausedRef.current) onUserResume();
+    }, HOVER_GRACE_MS);
+  }, [isUserPaused, onUserResume]);
+
+  // Cleanup grace timer
+  useEffect(() => {
+    return () => {
+      if (graceTimerRef.current) clearTimeout(graceTimerRef.current);
+    };
+  }, []);
+
+  // Ticker: detect which item is centered after user scrolls, update card to match
+  const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const userScrollingRef = useRef(false);
+
+  const handleTickerScroll = useCallback(() => {
+    // Mark as user-initiated scroll
+    if (!userScrollingRef.current) {
+      userScrollingRef.current = true;
+      if (!isUserPaused) onUserPause();
+    }
+    // Debounce: detect centered item after scroll stops
+    if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);
+    scrollTimeoutRef.current = setTimeout(() => {
+      userScrollingRef.current = false;
+      const track = tickerTrackRef.current;
+      if (!track) return;
+      const trackCenter = track.scrollLeft + track.clientWidth / 2;
+      let closestIdx = 0;
+      let closestDist = Infinity;
+      activeItemRefs.current.forEach((el, idx) => {
+        const itemCenter = el.offsetLeft + el.offsetWidth / 2;
+        const dist = Math.abs(itemCenter - trackCenter);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closestIdx = idx;
+        }
+      });
+      if (closestIdx !== currentIndex) {
+        onJumpTo(trackerQueue[closestIdx]?.slug);
+        onResetPauseTimer();
+      }
+    }, 200);
+  }, [isUserPaused, onUserPause, currentIndex, onJumpTo, trackerQueue, onResetPauseTimer]);
+
+  // Cleanup scroll timeout
+  useEffect(() => {
+    return () => { if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current); };
+  }, []);
+
+  // Mouse drag-to-scroll with inertia
+  const dragStartXRef = useRef<number | null>(null);
+  const dragScrollStartRef = useRef(0);
+  const dragLastXRef = useRef(0);
+  const dragVelocityRef = useRef(0);
+  const inertiaRafRef = useRef<number>(0);
+  const inertiaCancelledRef = useRef(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    cancelAnimationFrame(inertiaRafRef.current);
+    inertiaCancelledRef.current = false;
+    dragStartXRef.current = e.clientX;
+    dragLastXRef.current = e.clientX;
+    dragVelocityRef.current = 0;
+    dragScrollStartRef.current = tickerTrackRef.current?.scrollLeft ?? 0;
+    setIsDragging(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isDragging) return;
+    const onMouseMove = (e: MouseEvent) => {
+      if (dragStartXRef.current === null || !tickerTrackRef.current) return;
+      const dx = dragStartXRef.current - e.clientX;
+      tickerTrackRef.current.scrollLeft = dragScrollStartRef.current + dx;
+      // Track velocity for inertia
+      dragVelocityRef.current = dragLastXRef.current - e.clientX;
+      dragLastXRef.current = e.clientX;
+    };
+    const onMouseUp = () => {
+      dragStartXRef.current = null;
+      setIsDragging(false);
+      // Apply inertia
+      let velocity = dragVelocityRef.current;
+      const friction = 0.95;
+      const tick = () => {
+        // Cancelled flag stops re-scheduling after unmount cleanup — a frame
+        // already in flight when cancelAnimationFrame runs would otherwise
+        // keep mutating the unmounted ticker DOM.
+        if (inertiaCancelledRef.current) return;
+        if (Math.abs(velocity) < 0.5 || !tickerTrackRef.current) return;
+        tickerTrackRef.current.scrollLeft += velocity;
+        velocity *= friction;
+        inertiaRafRef.current = requestAnimationFrame(tick);
+      };
+      inertiaRafRef.current = requestAnimationFrame(tick);
+    };
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseup', onMouseUp);
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseup', onMouseUp);
+    };
+  }, [isDragging]);
+
+  // Cleanup inertia on unmount
+  useEffect(() => {
+    return () => {
+      inertiaCancelledRef.current = true;
+      cancelAnimationFrame(inertiaRafRef.current);
+    };
+  }, []);
+
+  // Card drag (swipe left/right on the lower-third)
+  const cardDrag = useDragScrub({
+    onPrev: () => { onGoToPrev(); onResetPauseTimer(); },
+    onNext: () => { onGoToNext(); onResetPauseTimer(); },
+    onDragStart: () => { if (!isUserPaused) onUserPause(); },
+  });
+
+  // Double-click card → navigate
+  const handleCardDoubleClick = useCallback(() => {
+    if (featuredTracker) {
+      window.location.href = `${basePath}${featuredTracker.slug}/`;
+    }
+  }, [featuredTracker, basePath]);
+
+  // Click ticker item → jump + pause
+  const handleTickerItemClick = useCallback((slug: string) => {
+    onJumpTo(slug);
+    if (!isUserPaused) {
+      onUserPause();
+    } else {
+      onResetPauseTimer();
+    }
+  }, [onJumpTo, isUserPaused, onUserPause, onResetPauseTimer]);
+
+  return (
+    <>
+      {/* Dim overlay when user-paused */}
+      {isUserPaused && (
+        <div className="broadcast-dim-overlay" />
+      )}
+
+      {/* LIVE / PAUSED Badge */}
+      <div className={`broadcast-live-badge ${isPaused ? 'paused' : ''}`}>
+        <div className="broadcast-live-dot" />
+        <span className="broadcast-live-text">
+          {isPaused ? t('broadcast.paused', locale) : t('broadcast.live', locale)}
+        </span>
+      </div>
+
+      {/* Auto-resume countdown */}
+      {isUserPaused && pauseCountdown > 0 && (
+        <div className="broadcast-countdown-badge">
+          ▶ {t('broadcast.resumingIn', locale)} {pauseCountdown}s
+        </div>
+      )}
+
+      {/* Lower-Third — compact or expanded */}
+      {featuredTracker && (
+        <div
+          className={`broadcast-lower-third ${isVisible || isUserPaused ? 'visible' : ''} ${isUserPaused ? 'expanded' : ''}`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => { if (!isUserPaused) onUserPause(); else onResetPauseTimer(); }}
+          onDoubleClick={handleCardDoubleClick}
+          {...cardDrag.handlers}
+        >
+          <div
+            className="broadcast-lt-accent"
+            style={{ background: featuredTracker.color || 'var(--accent-blue)' }}
+          />
+          <div className="broadcast-lt-body">
+            {isUserPaused ? (
+              /* ── Expanded layout ── */
+              <div className="broadcast-lt-expanded">
+                <div className="broadcast-lt-expanded-text">
+                  <div className="broadcast-lt-category">
+                    {featuredTracker.domain?.toUpperCase()}
+                    {featuredTracker.dayCount != null && ` · ${t('broadcast.day', locale)} ${featuredTracker.dayCount}`}
+                  </div>
+                  <div className="broadcast-lt-name">
+                    {featuredTracker.icon} {featuredTracker.shortName}
+                  </div>
+                  {featuredTracker.headline && (
+                    <div className="broadcast-lt-headline">{featuredTracker.headline}</div>
+                  )}
+                  {featuredDigest ? (
+                    <div className="broadcast-lt-digest">{featuredDigest}</div>
+                  ) : featuredLoading ? (
+                    /* Skeleton — keeps lower-third height stable while detail
+                       resolves, so the LIVE pulse doesn't reflow. */
+                    <div className="broadcast-lt-digest broadcast-lt-digest-skeleton" aria-hidden />
+                  ) : null}
+                  {featuredTracker.topKpis.length > 0 && (
+                    <div className="broadcast-lt-kpis-row">
+                      {featuredTracker.topKpis.slice(0, 3).map((kpi, i) => (
+                        <div key={i} className="broadcast-lt-kpi-item">
+                          <span className={`broadcast-lt-kpi-value kpi-color-${i}`}>{kpi.value}</span>
+                          <span className="broadcast-lt-kpi-label">{kpi.label}</span>
+                          {i < Math.min(featuredTracker.topKpis.length, 3) - 1 && (
+                            <div className="broadcast-lt-kpi-divider" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <a
+                    className="broadcast-lt-open-link"
+                    href={`${basePath}${featuredTracker.slug}/`}
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {t('broadcast.openDashboard', locale)}
+                  </a>
+                </div>
+                <div className="broadcast-lt-expanded-image">
+                  <ImageCarousel
+                    images={featuredEventImages}
+                    autoAdvance={true}
+                    fallbackIcon={featuredTracker.icon}
+                    fallbackDomain={featuredTracker.domain}
+                  />
+                </div>
+              </div>
+            ) : (
+              /* ── Compact layout with optional thumbnail ── */
+              <div className="broadcast-lt-compact">
+                {compactThumbUrl && (
+                  <img
+                    key={compactThumbUrl}
+                    className="broadcast-lt-compact-thumb"
+                    src={compactThumbUrl}
+                    alt=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer"
+                    onError={() => markThumbFailed(compactThumbUrl)}
+                  />
+                )}
+                <div className="broadcast-lt-compact-text">
+                  {featuredTracker.domain && (
+                    <div className="broadcast-lt-category">{featuredTracker.domain.toUpperCase()}</div>
+                  )}
+                  <div className="broadcast-lt-name">
+                    {featuredTracker.icon} {featuredTracker.shortName}
+                  </div>
+                  {featuredTracker.headline && (
+                    <div className="broadcast-lt-headline">{featuredTracker.headline}</div>
+                  )}
+                  {featuredTracker.topKpis?.[0] && (
+                    <div className="broadcast-lt-kpi">
+                      <span className="broadcast-lt-kpi-value">{featuredTracker.topKpis[0].value}</span>
+                      <span className="broadcast-lt-kpi-label">{featuredTracker.topKpis[0].label}</span>
+                    </div>
+                  )}
+                  <div className="broadcast-lt-progress">
+                    <div
+                      className="broadcast-lt-progress-fill"
+                      style={{ width: `${progress * 100}%` }}
+                    />
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* News Ticker */}
+      {trackerQueue.length > 0 && (
+        <div
+          id="tour-ticker"
+          className="broadcast-ticker"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="broadcast-ticker-label">
+            {breakingTrackers.length > 0 && breakingTrackers.some(t => t.isBreaking) ? 'BREAKING' : 'WATCHBOARD'}
+          </div>
+          <div
+            className="broadcast-ticker-track"
+            ref={tickerTrackRef}
+            onScroll={handleTickerScroll}
+            onMouseDown={handleMouseDown}
+            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
+          >
+            {breakingTrackers.map((bt) => (
+              <span
+                key={`breaking-${bt.slug}`}
+                className="broadcast-ticker-item breaking"
+                onClick={(e) => { e.stopPropagation(); window.location.href = `${basePath}${bt.slug}/`; }}
+              >
+                <span className="broadcast-ticker-breaking-tag">BREAKING</span>
+                {bt.icon} {bt.shortName} — {bt.headline || 'Breaking news'}
+                <span className="broadcast-ticker-separator">|</span>
+              </span>
+            ))}
+            {trackerQueue.map((tr, i) => (
+              <span
+                key={tr.slug}
+                ref={(el) => { if (el) activeItemRefs.current.set(i, el); }}
+                className={`broadcast-ticker-item ${i === currentIndex ? 'active' : ''}`}
+                onClick={(e) => { e.stopPropagation(); handleTickerItemClick(tr.slug); }}
+              >
+                {tr.icon} {tr.shortName} — {tr.headline || t('broadcast.tracking', locale)}
+                {i < trackerQueue.length - 1 && <span className="broadcast-ticker-separator">|</span>}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

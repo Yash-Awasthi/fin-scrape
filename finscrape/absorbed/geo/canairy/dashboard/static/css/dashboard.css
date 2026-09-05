@@ -1,0 +1,336 @@
+/* Household Resilience Dashboard Styles */
+
+:root {
+    --primary-color: #007bff;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --dark-bg: #1a1a1a;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: #dee2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+nav {
+    color: #666;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Alert Banner */
+.alert-banner {
+    background-color: var(--danger-color);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.alert-banner.hidden {
+    display: none;
+}
+
+.alert-icon {
+    font-size: 24px;
+}
+
+/* Status Cards */
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.status-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.status-card h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.status-card .value {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.status-card .value.green {
+    color: var(--success-color);
+}
+
+.status-card .value.amber {
+    color: var(--warning-color);
+}
+
+.status-card .value.red {
+    color: var(--danger-color);
+}
+
+/* Indicators Grid */
+.indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.indicator-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.indicator-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.indicator-card.status-green {
+    border-left-color: var(--success-color);
+}
+
+.indicator-card.status-amber {
+    border-left-color: var(--warning-color);
+}
+
+.indicator-card.status-red {
+    border-left-color: var(--danger-color);
+}
+
+.indicator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.indicator-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.indicator-status {
+    font-size: 20px;
+}
+
+.indicator-status.green {
+    color: var(--success-color);
+}
+
+.indicator-status.amber {
+    color: var(--warning-color);
+}
+
+.indicator-status.red {
+    color: var(--danger-color);
+}
+
+.indicator-value {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.indicator-details {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.what-is-it {
+    margin-bottom: 8px;
+}
+
+.why-it-matters {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.indicator-threshold {
+    font-size: 14px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Data Source Badges */
+.data-source {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.data-source.live {
+    background-color: #28a74520;
+    color: var(--success-color);
+}
+
+.data-source.manual {
+    background-color: #ffc10720;
+    color: #856404;
+}
+
+.data-source.mock {
+    background-color: #6c757d20;
+    color: #6c757d;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .indicators-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .status-card .value {
+        font-size: 24px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-indicator.green {
+    background-color: var(--success-color);
+}
+
+.status-indicator.red {
+    background-color: var(--danger-color);
+}
+
+/* Emergency Procedures */
+.emergency-section {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.emergency-section h2 {
+    color: var(--danger-color);
+    margin-bottom: 20px;
+}
+
+.emergency-section h3 {
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.emergency-section ul {
+    margin-left: 20px;
+}
+
+.emergency-section li {
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}

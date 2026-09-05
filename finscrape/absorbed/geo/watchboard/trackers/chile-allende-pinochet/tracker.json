@@ -1,0 +1,196 @@
+{
+  "slug": "chile-allende-pinochet",
+  "name": "Chile: Allende to Pinochet",
+  "shortName": "Chile 1970–1990",
+  "description": "Historical intelligence dashboard tracking Chile from Allende's socialist government through the CIA-backed 1973 coup, Pinochet dictatorship, Operation Condor, and the return to democracy.",
+  "icon": "🇨🇱",
+  "color": "#c0392b",
+  "status": "active",
+  "tone": "historical",
+  "temporal": "historical",
+  "domain": "human-rights",
+  "region": "south-america",
+  "country": "CL",
+  "startDate": "1970-11-03",
+  "endDate": "1990-03-11",
+  "eraLabel": "Salvador Allende to Patricio Aylwin 1970–1990",
+  "tags": [
+    "Allende",
+    "Pinochet",
+    "CIA",
+    "1973 coup",
+    "Operation Condor",
+    "Desaparecidos"
+  ],
+  "sections": [
+    "hero",
+    "kpis",
+    "timeline",
+    "map",
+    "casualties",
+    "claims",
+    "political"
+  ],
+  "map": {
+    "enabled": true,
+    "bounds": {
+      "lonMin": -76,
+      "lonMax": -65,
+      "latMin": -56,
+      "latMax": -17
+    },
+    "center": {
+      "lon": -71,
+      "lat": -35
+    },
+    "categories": [
+      {
+        "id": "detention",
+        "label": "Detention/Torture Sites",
+        "color": "#e74c3c"
+      },
+      {
+        "id": "disappearance",
+        "label": "Disappearance Sites",
+        "color": "#9b59b6"
+      },
+      {
+        "id": "coup-event",
+        "label": "Coup Events",
+        "color": "#c0392b"
+      },
+      {
+        "id": "resistance",
+        "label": "Resistance Sites",
+        "color": "#27ae60"
+      }
+    ]
+  },
+  "globe": {
+    "enabled": true,
+    "cameraPresets": {
+      "theater": {
+        "lon": -71,
+        "lat": -35,
+        "alt": 3000000,
+        "pitch": -90,
+        "heading": 0,
+        "label": "Chile Overview"
+      },
+      "santiago": {
+        "lon": -70.65,
+        "lat": -33.46,
+        "alt": 80000,
+        "pitch": -90,
+        "heading": 0,
+        "label": "Santiago"
+      },
+      "la_moneda": {
+        "lon": -70.65,
+        "lat": -33.44,
+        "alt": 20000,
+        "pitch": -90,
+        "heading": 0,
+        "label": "La Moneda Palace"
+      },
+      "villa_grimaldi": {
+        "lon": -70.57,
+        "lat": -33.46,
+        "alt": 20000,
+        "pitch": -90,
+        "heading": 0,
+        "label": "Villa Grimaldi"
+      },
+      "valparaiso": {
+        "lon": -71.62,
+        "lat": -33.05,
+        "alt": 60000,
+        "pitch": -90,
+        "heading": 0,
+        "label": "Valparaíso"
+      }
+    }
+  },
+  "navSections": [
+    {
+      "id": "sec-timeline",
+      "label": "Timeline"
+    },
+    {
+      "id": "sec-map",
+      "label": "Map"
+    },
+    {
+      "id": "sec-humanitarian",
+      "label": "Human Rights"
+    },
+    {
+      "id": "sec-contested",
+      "label": "Contested"
+    },
+    {
+      "id": "sec-political",
+      "label": "Political"
+    }
+  ],
+  "politicalAvatars": [
+    "allende",
+    "pinochet",
+    "cia",
+    "church",
+    "other"
+  ],
+  "eventTypes": [
+    "coup",
+    "political",
+    "human-rights",
+    "diplomatic",
+    "legal"
+  ],
+  "ai": {
+    "systemPrompt": "You are a human rights researcher updating the Chile Allende-to-Pinochet tracker.\nToday's date is {{today}}. You have access to web search to find the latest information.\nCRITICAL: Your entire response must be ONLY a raw JSON array or object — no markdown, no code fences, no prose.\nEvery item must have an \"id\" field (lowercase_snake_case).\n\nSource tier classification:\n- Tier 1: Official (Valech Report, Rettig Report, Archivo Nacional Chile, US State Dept declassified)\n- Tier 2: Major outlet (Reuters, AP, El Mercurio, La Tercera, BBC, NYT)\n- Tier 3: Institutional (HRW, Amnesty, London School of Economics, CIPER Chile, Vicaría de la Solidaridad)\n- Tier 4: Unverified (social media, unattributed testimony)\n\nOnly include information verifiable through search. Do not fabricate data.",
+    "searchContext": "Chile Allende Pinochet coup 1973 Operation Condor human rights dictatorship history",
+    "enabledSections": [
+      "kpis",
+      "timeline",
+      "mapPoints",
+      "casualties",
+      "claims",
+      "political"
+    ],
+    "coordValidation": {
+      "lonMin": -77,
+      "lonMax": -64,
+      "latMin": -57,
+      "latMax": -16
+    },
+    "updateIntervalDays": 180,
+    "backfillTargets": {
+      "timeline": 60,
+      "mapPoints": 40,
+      "claims": 25,
+      "political": 20,
+      "casualties": 12
+    },
+    "updatePolicy": {
+      "escalation": [
+        30,
+        60,
+        90,
+        180
+      ],
+      "quietThreshold": 0
+    },
+    "relatedTrackers": [
+      "ayotzinapa",
+      "usa-latam-interventions",
+      "haiti-collapse",
+      "ice-history",
+      "cuba-crises"
+    ]
+  },
+  "githubRepo": "ArtemioPadilla/watchboard",
+  "geoPath": [
+    "CL"
+  ]
+}

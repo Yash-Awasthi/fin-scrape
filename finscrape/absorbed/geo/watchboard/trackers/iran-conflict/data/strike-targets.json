@@ -1,0 +1,578 @@
+[
+  {
+    "id": "goruk_coastal_radar_jun06",
+    "name": "Goruk Coastal Radar Site — Hormuzgan Province (Day 99)",
+    "detail": "June 6 (Day 99): CENTCOM struck Iranian coastal surveillance radar site in Goruk (Hormuzgan Province, coastal Iran) after the IRGC launched 4 one-way attack drones toward the Strait of Hormuz. CENTCOM described the action as 'self-defense to defend against further maritime attacks.' CENTCOM released video footage. Iran condemned as ceasefire violation.",
+    "icon": "target",
+    "time": "Jun 6, 07:00",
+    "tier": 1,
+    "lastUpdated": "2026-06-06T07:00:00.000Z"
+  },
+  {
+    "id": "qeshm_island_radar_jun06",
+    "name": "Qeshm Island Radar Site — Second US Strike (Day 99)",
+    "detail": "June 6 (Day 99): Simultaneous with the Goruk strike, CENTCOM struck a second Iranian coastal surveillance radar site on Qeshm Island — the fourth US 'self-defense' strike on an Iranian target since the April 8 ceasefire. (First Qeshm strike: June 3, Day 96 — drone control stations.) Sources: Al Jazeera, Fox News, ABC7.",
+    "icon": "target",
+    "time": "Jun 6, 07:15",
+    "tier": 1,
+    "lastUpdated": "2026-06-06T07:15:00.000Z"
+  },
+  {
+    "id": "qeshm_island_drone_stations_jun03",
+    "name": "Qeshm Island — IRGC Drone Control Stations (Day 96)",
+    "detail": "June 3 (Day 96): US conducted airstrikes against IRGC drone ground control stations on Qeshm Island in the Strait of Hormuz — the first confirmed US strike on Iranian-held territory since May 5. The IRGC had used Qeshm as a hub for directing drone harassment of vessels in the strait. The strike triggered the IRGC's retaliatory attacks on Kuwait International Airport (1 killed, 63+ injured) and the US Fifth Fleet HQ in Bahrain (all intercepted).",
+    "icon": "target",
+    "time": "Jun 3, 03:00",
+    "tier": 1,
+    "lastUpdated": "2026-06-03T03:00:00.000Z"
+  },
+  {
+    "id": "khamenei_compound",
+    "name": "Khamenei's Compound — Pasteur District, Tehran",
+    "detail": "30 bombs by Israeli jets at ~08:10 IRST. Khamenei + family killed. 48 leaders eliminated.",
+    "icon": "target",
+    "time": "Feb 28, 08:10",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "thar_allah_hq",
+    "name": "Thar-Allah HQ — Tehran",
+    "detail": "IRGC command center for Tehran security. IDF released video of strike.",
+    "icon": "target",
+    "time": "Mar 1",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "revolutionary_court",
+    "name": "Revolutionary Court — Shariati St, Tehran",
+    "detail": "Building completely destroyed.",
+    "icon": "target",
+    "time": "Mar 1",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "irib_hq",
+    "name": "IRIB Broadcasting HQ — Alvand St, Tehran",
+    "detail": "State TV interrupted. Broadcasts hacked to air Trump and Netanyahu speeches.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "armed_forces_gs",
+    "name": "Armed Forces General Staff — Sepah Square",
+    "detail": "Extensive bombing of military command infrastructure.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "minab_school",
+    "name": "Shajareh Tayyebeh School — Minab",
+    "detail": "148–180 children killed (contested). School was ~200ft from IRGC Navy base.",
+    "icon": "casualty",
+    "time": "Feb 28, ~10:00",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "natanz_facility",
+    "name": "Natanz Nuclear Facility",
+    "detail": "Ground-penetrating munitions. Already damaged in June 2025.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "fordow_facility",
+    "name": "Fordow Underground Facility",
+    "detail": "Access roads and entrance hit. Deep damage uncertain per IAEA.",
+    "icon": "target",
+    "time": "Feb 28",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "niloofar_square",
+    "name": "Niloofar Square — Tehran",
+    "detail": "20 civilians killed on March 2.",
+    "icon": "casualty",
+    "time": "Mar 2",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "interior_ministry",
+    "name": "Interior Ministry — Tehran",
+    "detail": "Coordinated IRGC/Basij operations hub.",
+    "icon": "target",
+    "time": "Mar 1",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "irgc_navy_bandar_abbas",
+    "name": "IRGC Navy HQ — Bandar Abbas",
+    "detail": "Port facilities and fast-attack craft destroyed. Hormuz Strait patrol boats sunk.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "parchin_complex",
+    "name": "Parchin Military Complex",
+    "detail": "Suspected weapons research site. B-2 bunker busters deployed. IAEA denied access pre-strike.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "tabriz_airbase",
+    "name": "Tabriz Air Base",
+    "detail": "IRIAF fighter jets destroyed on tarmac. Runway cratered.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "irgc_missile_storage_khorramabad",
+    "name": "Missile Storage — Khorramabad",
+    "detail": "Underground ballistic missile depot. Secondary explosions lasted 4 hours.",
+    "icon": "target",
+    "time": "Mar 4",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "chabahar_port",
+    "name": "Chabahar Port Facilities",
+    "detail": "Drone and missile assembly warehouse targeted. India condemns strike near joint project.",
+    "icon": "target",
+    "time": "Mar 4",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "isfahan_tech_university",
+    "name": "Isfahan University of Technology",
+    "detail": "Alleged drone R&D lab. 12 civilians killed. Iran calls it war crime.",
+    "icon": "casualty",
+    "time": "Mar 4",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "azadi_sports_complex",
+    "name": "Azadi Sports Complex — Tehran",
+    "detail": "12,000-seat indoor arena destroyed by U.S.-Israeli airstrike.",
+    "icon": "target",
+    "time": "Mar 5",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "sns_council_hq",
+    "name": "Supreme National Security Council HQ — Tehran",
+    "detail": "Building destroyed; several senior officials killed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "expediency_discernment_council",
+    "name": "Expediency Discernment Council — Tehran",
+    "detail": "Facility targeted and destroyed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "bushehr_airport",
+    "name": "Bushehr Airport",
+    "detail": "Terminal damaged; Iran Air Airbus A319 destroyed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "min_zadai_facility",
+    "name": "Min Zadai Underground Facility",
+    "detail": "Suspected nuclear weapons site destroyed.",
+    "icon": "target",
+    "time": "Mar 3",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "tehran_kermanshah_strikes",
+    "name": "Tehran and Kermanshah Strikes",
+    "detail": "Israeli airstrikes targeted Tehran and Kermanshah, disabling much of Iran’s air defenses and missile infrastructure.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "beirut_strikes",
+    "name": "Beirut Strikes",
+    "detail": "Israeli airstrikes targeted southern suburbs of Beirut following a mass evacuation order.",
+    "icon": "target",
+    "time": "Mar 5",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "iranian_drone_carrier_strike",
+    "name": "Iranian Drone Carrier Strike",
+    "detail": "U.S. forces struck the Iranian drone carrier IRIS Shahid Bagheri at sea.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T06:19:02.250Z"
+  },
+  {
+    "id": "tehran_air_defense",
+    "name": "Tehran Air Defense Systems",
+    "detail": "Israeli airstrikes targeted and significantly damaged Iran's air defense and missile infrastructure in Tehran.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "beirut_southern_suburbs",
+    "name": "Beirut's Southern Suburbs",
+    "detail": "Israeli airstrikes hit Hezbollah-held areas in Beirut following a mass evacuation order.",
+    "icon": "target",
+    "time": "Mar 5",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "iranian_drone_carrier",
+    "name": "Iranian Drone Carrier",
+    "detail": "U.S. forces struck and destroyed an Iranian drone carrier at sea.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "iranian_missile_facilities",
+    "name": "Iranian Missile Facilities",
+    "detail": "U.S. B-2 bombers destroyed deeply buried missile launch facilities and other key military sites in Iran.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "iranian_naval_vessels",
+    "name": "Iranian Naval Vessels",
+    "detail": "U.S. forces sank over 40 Iranian warships, significantly degrading Iran's naval capabilities.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "tehran_airport_strike",
+    "name": "Tehran's Mehrabad International Airport",
+    "detail": "U.S.-Israeli airstrikes targeted the airport, causing significant damage to infrastructure.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "basra_oil_facility_strike",
+    "name": "Halliburton Oil Facilities — Basra, Iraq",
+    "detail": "Iranian missile strikes set U.S.-based Halliburton and KBR facilities ablaze.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T07:23:42.482Z"
+  },
+  {
+    "id": "iranian_naval_vessels_strike",
+    "name": "Iranian Naval Vessels",
+    "detail": "U.S. forces sank over 30 Iranian ships, including a drone carrier set ablaze.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "b2_bombers_missile_launchers",
+    "name": "Iranian Ballistic Missile Launchers",
+    "detail": "U.S. B-2 bombers destroyed deeply buried missile launch facilities, reducing Iranian missile launches by 90%.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "beirut_hezbollah_command_centers",
+    "name": "Hezbollah Command Centers — Beirut",
+    "detail": "Israeli airstrikes targeted multiple Hezbollah command centers in Beirut.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "tripoli_strike",
+    "name": "Tripoli — Northern Lebanon",
+    "detail": "Israeli airstrikes hit the city of Tripoli for the first time in the conflict.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_air_defense_systems",
+    "name": "Iranian Air Defense Systems",
+    "detail": "Israeli military claimed near-complete air superiority after destroying 80% of Iranian air defense systems.",
+    "icon": "target",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "tehran_oil_facility",
+    "name": "Oil Storage Facility — Tehran",
+    "detail": "Israeli airstrikes targeted a vital oil storage facility in Tehran, marking a significant escalation as civil infrastructure becomes a target for the first time.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "mehrabad_airport",
+    "name": "Mehrabad International Airport — Tehran",
+    "detail": "Israeli airstrikes targeted Tehran's Mehrabad International Airport, reportedly used for arms transport.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "isfahan_strikes",
+    "name": "Isfahan Military Targets",
+    "detail": "U.S. and Israeli forces executed strikes on multiple targets in Isfahan, focusing on military infrastructure.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "tehran_fuel_depots",
+    "name": "Tehran Fuel Depots",
+    "detail": "Israeli airstrikes targeted 30 fuel depots in Tehran, causing massive fires and toxic smoke over the city.",
+    "icon": "target",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "isfahan_airport",
+    "name": "Isfahan Airport",
+    "detail": "Israeli airstrikes targeted Iranian F-14 fighter jets at Isfahan Airport.",
+    "icon": "target",
+    "time": "Mar 8",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iranian_oil_facilities",
+    "name": "Iranian Oil Facilities",
+    "detail": "Joint U.S.-Israeli airstrikes targeted oil facilities in Tehran and other cities, causing large fires and civilian casualties.",
+    "icon": "target",
+    "time": "Mar 8",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "tehran_aghdasieh_oil_warehouse",
+    "name": "Aghdasieh Oil Warehouse & Shahran Depot — Tehran",
+    "detail": "Israeli strikes on March 10 targeted the Aghdasieh oil warehouse (northeast Tehran), Shahran oil depot (north Tehran), a south Tehran refinery, and a Karaj depot. At least 40 killed. Toxic black smoke engulfed Tehran; residents reported oil-tainted rainfall. IDF stated the facilities distributed fuel to IRGC military entities.",
+    "icon": "target",
+    "time": "Mar 10",
+    "tier": 1,
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "yehud_cluster_strike_israel",
+    "name": "Yehud — Cluster Warhead Strike, Central Israel",
+    "detail": "Iran fired a missile with a cluster warhead that struck multiple sites in Yehud, a city east of Tel Aviv, killing 2 civilians and wounding dozens. One of the most destructive single Iranian strikes on Israeli civilians since the war began.",
+    "icon": "retaliation",
+    "time": "Mar 10",
+    "tier": 1,
+    "lastUpdated": "2026-03-10T12:00:00.000Z"
+  },
+  {
+    "id": "hormuz_mine_layers_destroyed",
+    "name": "Strait of Hormuz — 16 Iranian Mine-Laying Vessels Destroyed",
+    "detail": "After US intelligence confirmed Iran had begun laying mines in the Strait of Hormuz, CENTCOM destroyed 16 mine-laying vessels and mine storage facilities. Gen. Caine stated US forces are 'hunting and striking mine-laying vessels.' Trump announced the destruction of 10 'inactive mine-laying boats and/or ships' on Truth Social and warned of 'death, fire and fury' if mines are not removed. Iran's navy is now effectively eliminated — 43 vessels total destroyed or damaged.",
+    "icon": "target",
+    "time": "Mar 11",
+    "tier": 1,
+    "lastUpdated": "2026-03-11T06:00:00.000Z"
+  },
+  {
+    "id": "iran_haifa_oil_refinery_drone",
+    "name": "Haifa Oil & Gas Refinery — Israel",
+    "detail": "The Iranian army launched a drone attack targeting an Israeli oil and gas refinery and fuel tanks in Haifa, according to Tasnim news agency. The Israeli army confirmed it identified incoming launches from Iran and worked to intercept. Marks the first confirmed targeting of Israeli energy infrastructure in Haifa.",
+    "icon": "retaliation",
+    "time": "Mar 11",
+    "tier": 2,
+    "lastUpdated": "2026-03-11T06:00:00.000Z"
+  },
+  {
+    "id": "pentagon_school_investigation",
+    "name": "Pentagon Investigation — Minab Girls' School Strike",
+    "detail": "The Pentagon formally opened an investigation into the US missile strike on the Shajareh Tayyebeh Elementary School in Minab that killed at least 165 civilians, many of them children. A preliminary internal assessment suggested the US was at fault. The school was located ~200ft from an IRGC Navy base. The formal investigation was announced March 12.",
+    "icon": "casualty",
+    "time": "Mar 12",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "israel_hezbollah_command_mar12",
+    "name": "Israeli Strikes — Hezbollah Command, Beirut (Mar 12)",
+    "detail": "Israel launched airstrikes against Hezbollah launch sites and command infrastructure in response to Hezbollah's biggest rocket barrage since the war began (joint IRGC-Hezbollah operation striking 50+ targets in 5 hours). Separately, an Israeli strike in Beirut killed 4 Iranian diplomats, prompting Iran to call the act 'terrorism' at the UN Security Council.",
+    "icon": "target",
+    "time": "Mar 12",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "us_israel_iran_6000_targets_mar13",
+    "name": "US-Israel — 6,000+ Targets Struck Across Iran (CENTCOM Total)",
+    "detail": "CENTCOM confirmed approximately 6,000 targets have been struck across Iran's 30/31 provinces since operations began. 90+ Iranian naval vessels damaged/destroyed. 92% reduction in Iranian ballistic missile launch rate from peak. 80% of Iranian air defense degraded. 30+ mine-laying ships destroyed. Trump: 'There is practically nothing left to hit.'",
+    "icon": "target",
+    "time": "Mar 13",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "kc135_crash_western_iraq_mar13",
+    "name": "KC-135 Crash — Western Iraq (4th US Aircraft Lost)",
+    "detail": "US Air Force KC-135 Stratotanker crashed in western Iraq supporting Epic Fury ops. CENTCOM: 'not due to hostile or friendly fire.' Islamic Resistance in Iraq claims shootdown. 6 crew onboard, no ejection seats. Second tanker (also KC-135) landed safely in Israel. Fourth US aircraft lost in the conflict.",
+    "icon": "casualty",
+    "time": "Mar 13",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "shiraz_dastghaib_missile_production",
+    "name": "Shahid Dastghaib AB + Underground Missile Production — Shiraz",
+    "detail": "IDF struck underground ballistic missile production and storage facilities in Shiraz alongside the Shahid Dastghaib air base (Mar 13). One of Iran's key remaining missile production nodes in southern Iran. Follows 80% destruction of missile launchers by Mar 9.",
+    "icon": "target",
+    "time": "Mar 13",
+    "tier": 2,
+    "lastUpdated": "2026-03-14T06:00:00.000Z"
+  },
+  {
+    "id": "ahvaz_irgc_ground_forces_hq_mar13",
+    "name": "IRGC Ground Forces HQ + Internal Security HQ — Ahvaz",
+    "detail": "IDF struck IRGC Ground Forces headquarters and an internal security headquarters in Ahvaz, Khuzestan Province (Mar 13). Khuzestan is Iran's oil heartland bordering Iraq. Strike eliminates southwestern regional command node.",
+    "icon": "target",
+    "time": "Mar 13",
+    "tier": 2,
+    "lastUpdated": "2026-03-14T06:00:00.000Z"
+  },
+  {
+    "id": "kharg_island_mar14",
+    "name": "Kharg Island Oil Export Terminal — Full Strike",
+    "detail": "US forces bombed Kharg Island (Mar 14), Iran's primary oil export terminal responsible for ~90% of crude exports. Initial warning strikes were conducted Mar 3. The Mar 14 strike directly targets Iran's economic lifeline. Pentagon vowed to 'ramp up' the campaign. Analysts warn of potential $200/bbl oil prices.",
+    "icon": "target",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-14T06:00:00.000Z"
+  },
+  {
+    "id": "iran_continued_strikes_day17",
+    "name": "Iran — Continued High-Tempo US-Israel Strikes (Day 17)",
+    "detail": "US-Israel continued high-tempo operations on Day 17 (Mar 16). IDF states 'thousands of targets' remain and operations will continue for 'at least 3 more weeks.' CENTCOM has struck 6,000+ targets across Iran. Trump is actively weighing additional Kharg Island strikes and secondary oil infrastructure (Abadan refinery, Arak). 4,700+ IDF sorties and 380+ strike waves total since Feb 28.",
+    "icon": "target",
+    "time": "Mar 16",
+    "tier": 1,
+    "lastUpdated": "2026-03-16T06:00:00.000Z"
+  },
+  {
+    "id": "tabriz_petrochem_mar29",
+    "name": "Tabriz Petrochemical Company — Tabriz, NW Iran",
+    "detail": "IDF struck the Tabriz Petrochemical Company on March 29 (Day 30), one of Iran's largest petrochemical producers in northwestern Iran. Strike sent Brent crude surging toward $115/bbl. Part of the ongoing campaign targeting Iran's petrochemical and industrial economic infrastructure.",
+    "icon": "target",
+    "time": "Mar 29",
+    "tier": 2,
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "tehran_neighborhoods_shaftcity_mar29",
+    "name": "Tehran Residential Areas — Shaft City / Saadat Abad / West Tehran",
+    "detail": "IDF strikes hit multiple Tehran neighborhoods on March 29 — Shaft City, Saadat Abad, and western Tehran residential areas — killing at least 2 people and wounding 14. IRGC ballistic missile R&D complex and air defense systems targeted in the same wave. Power blackouts in Tehran and Karaj. Washington Post investigation confirmed 4 key ballistic missile manufacturing sites and 29+ launch sites damaged across 4 weeks of war.",
+    "icon": "target",
+    "time": "Mar 29",
+    "tier": 2,
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "hormuz_airdefense_radar_jun9",
+    "name": "Iranian Air-Defense / Ground-Control / Radar Sites Near Hormuz",
+    "detail": "CENTCOM struck Iranian air-defense, ground-control, and surveillance-radar sites near the Strait of Hormuz on June 9, in response to Iran allegedly shooting down a US Army Apache helicopter (both aviators rescued safely).",
+    "icon": "target",
+    "time": "Jun 9",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "sirik_bandarlengeh_qeshm_jun28",
+    "name": "Sirik, Bandar-e Lengeh & Qeshm Island — 10 Targets Struck",
+    "detail": "CENTCOM conducted coordinated Navy/Air Force precision strikes on 10 Iranian military targets across Sirik, Bandar-e Lengeh, and Qeshm Island on June 28, retaliation for the June 27 Kiku tanker drone attack.",
+    "icon": "target",
+    "time": "Jun 28",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "bushehr_chabahar_bandarabbas_jask_jul8",
+    "name": "Bushehr, Chabahar, Bandar Abbas & Jask — 5-Province Strike Campaign",
+    "detail": "US strikes hit targets across Bushehr, Chabahar, Bandar Abbas, and Jask on July 8 after Trump declared the Islamabad MOU 'over.' Iran's Health Ministry reported 14 killed, 78 injured across five provinces.",
+    "icon": "target",
+    "time": "Jul 8",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "second_night_strikes_jul12",
+    "name": "Second Consecutive Night of US Strikes",
+    "detail": "US forces struck Iranian military targets for a second consecutive night on July 12, the same day IRGC declared the Strait of Hormuz 'closed' over 'US interference.'",
+    "icon": "target",
+    "time": "Jul 12",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "seven_hour_wave_qeshm_jul16",
+    "name": "Seven-Hour Strike Wave — Qeshm Island and Hormuz Coast",
+    "detail": "US forces conducted a seven-hour wave of strikes overnight into July 16 on dozens of Iranian military targets near Hormuz and the coast, including Qeshm Island, in response to the July 15 IRGC strikes on Bahrain, Kuwait, and Jordan. US strikes subsequently expanded into northern Iran.",
+    "icon": "target",
+    "time": "Jul 16",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  }
+]

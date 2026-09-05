@@ -1,0 +1,134 @@
+[
+  {
+    "id": "gdp-growth-sexenio",
+    "label": "Avg Annual GDP Growth (Sexenio)",
+    "value": "+0.8%",
+    "change": "Lowest since de la Madrid (1982–88)",
+    "direction": "down",
+    "sparkData": [-0.3, -8.6, 5.7, 3.9, 3.2, 1.5],
+    "color": "amber",
+    "source": "INEGI / World Bank 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "remittances-annual",
+    "label": "Remittances (2024 Record)",
+    "value": "$64.7B USD",
+    "change": "+80% since 2019",
+    "direction": "up",
+    "sparkData": [36.0, 40.6, 51.6, 58.5, 63.3, 64.7],
+    "color": "green",
+    "source": "Banco de México 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "minimum-wage-index",
+    "label": "Minimum Wage (pesos/day)",
+    "value": "248.93",
+    "change": "+182% from 88.36 in 2018",
+    "direction": "up",
+    "sparkData": [88.36, 102.68, 123.22, 141.70, 172.87, 207.44, 248.93],
+    "color": "green",
+    "source": "CONASAMI 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "poverty-rate-trend",
+    "label": "Poverty Rate (Multidimensional)",
+    "value": "29.6%",
+    "change": "-12.3 pts from 41.9% in 2018",
+    "direction": "down",
+    "sparkData": [41.9, 43.9, 43.9, 36.3, 36.3, 29.6],
+    "color": "green",
+    "source": "INEGI / CONEVAL 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "homicide-rate-trend",
+    "label": "Homicide Rate (per 100k)",
+    "value": "23.3",
+    "change": "-21% from 2019 peak of 29.5",
+    "direction": "down",
+    "sparkData": [29.6, 27.4, 27.8, 26.6, 25.0, 23.3],
+    "color": "red",
+    "source": "SESNSP / INEGI 2023",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fdi-flows",
+    "label": "Foreign Direct Investment",
+    "value": "$39B USD",
+    "change": "+33% from $29.3B in 2019",
+    "direction": "up",
+    "sparkData": [29.3, 31.5, 35.4, 35.3, 36.0, 39.0],
+    "color": "blue",
+    "source": "Secretaría de Economía 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pemex-debt",
+    "label": "Pemex Total Financial Debt",
+    "value": "$101.5B USD",
+    "change": "-$30.8B from $132.3B in 2018 peak",
+    "direction": "down",
+    "sparkData": [132.3, 136.6, 130.0, 120.0, 110.0, 101.5],
+    "color": "red",
+    "source": "Pemex Financial Reports / Bloomberg 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "inflation-cpi",
+    "label": "Consumer Price Inflation (annual)",
+    "value": "4.7%",
+    "change": "Peak 8.7% Aug 2022; declining since",
+    "direction": "down",
+    "sparkData": [3.6, 3.4, 5.7, 7.9, 5.2, 4.7],
+    "color": "amber",
+    "source": "INEGI / Banco de México 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "fiscal-balance",
+    "label": "Fiscal Balance (% of GDP)",
+    "value": "-5.7%",
+    "change": "Widened from -2.7% in 2018",
+    "direction": "down",
+    "sparkData": [-2.7, -2.9, -3.2, -3.4, -3.3, -5.7],
+    "color": "red",
+    "source": "SHCP / Banco de México 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tren-maya-cost",
+    "label": "Tren Maya Total Cost",
+    "value": "~$27–30B USD",
+    "change": "+300% over original $7.4B estimate",
+    "direction": "up",
+    "sparkData": [7.4, 9.0, 12.0, 16.0, 22.0, 28.0],
+    "color": "amber",
+    "source": "Fortune / Mexico News Daily 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "unemployment-rate",
+    "label": "Unemployment Rate",
+    "value": "2.77%",
+    "change": "Historic low reached 2.48% Oct 2024",
+    "direction": "down",
+    "sparkData": [3.4, 3.5, 4.4, 4.0, 3.3, 2.8],
+    "color": "green",
+    "source": "INEGI ENOE 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "social-program-spending",
+    "label": "Bienestar Social Spending (2024)",
+    "value": "543.9B MXN",
+    "change": "+300% from ~180B MXN in 2018; 41% of federal budget",
+    "direction": "up",
+    "sparkData": [180, 220, 270, 350, 430, 544],
+    "color": "blue",
+    "source": "SHCP Presupuesto de Egresos 2024",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

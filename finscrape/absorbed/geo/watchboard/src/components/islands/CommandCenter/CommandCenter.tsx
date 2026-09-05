@@ -1,0 +1,1348 @@
+import { useState, useCallback, useEffect, useRef, useMemo, lazy, Suspense } from 'react';
+import { trackEvent } from '../../../lib/analytics';
+import type { TrackerCardData } from '../../../lib/tracker-directory-utils';
+import { computeFreshness } from '../../../lib/tracker-directory-utils';
+import { computeCountryDensity } from '../../../lib/geo-utils';
+import { type Locale, SUPPORTED_LOCALES, getPreferredLocale, setPreferredLocale, t } from '../../../i18n/translations';
+import { deferImport } from '../../../lib/defer-load';
+// Defer Cesium parse+execute (~5s of CPU on mid-tier mobile) past LCP so the
+// rest of the homepage can paint and hydrate first. Suspense fallback covers
+// the wait with the existing starfield skeleton.
+const GlobePanel = lazy(() => deferImport(() => import('./GlobePanel')));
+import SidebarPanel from './SidebarPanel';
+import type { ViewMode } from './ViewModeToggle';
+import MobileStoryCarousel from './MobileStoryCarousel';
+import ComparePanel from './ComparePanel';
+import NotificationManager from './NotificationManager';
+import { useBroadcastMode } from './useBroadcastMode';
+import BroadcastOverlay from './BroadcastOverlay';
+import CoachMark from './CoachMark';
+import DesktopStoryStrip from './DesktopStoryStrip';
+import { getDiscoveredFeatures, markFeatureDiscovered, getNextCoachHint, getTourState, resetTour } from '../../../lib/onboarding';
+import OnboardingTour, { TOUR_REPLAY_EVENT } from '../Onboarding/OnboardingTour';
+import IslandErrorBoundary from '../shared/IslandErrorBoundary';
+import { IslandErrorFallback } from '../shared/IslandErrorFallback';
+
+const FOLLOWS_KEY = 'watchboard-follows';
+const SIDEBAR_PREF_KEY = 'watchboard-sidebar-pref'; // 'expanded' | 'collapsed'
+
+function loadFollows(): string[] {
+  try {
+    const raw = localStorage.getItem(FOLLOWS_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch { return []; }
+}
+
+function saveFollows(slugs: string[]) {
+  try { localStorage.setItem(FOLLOWS_KEY, JSON.stringify(slugs)); } catch {}
+}
+
+const SHORTCUTS = [
+  { key: '/', tKey: 'shortcuts.search' },
+  { key: '↑ ↓', tKey: 'shortcuts.navigate' },
+  { key: 'Enter', tKey: 'shortcuts.open' },
+  { key: 'F', tKey: 'shortcuts.follow' },
+  { key: 'C', tKey: 'shortcuts.compare' },
+  { key: 'B', tKey: 'shortcuts.broadcast' },
+  { key: 'G', tKey: 'shortcuts.rotate' },
+  { key: 'L', tKey: 'shortcuts.cityLights' },
+  { key: 'O', tKey: 'shortcuts.openSelected' },
+  { key: 'Esc', tKey: 'shortcuts.deselect' },
+  { key: '?', tKey: 'shortcuts.help' },
+] as const;
+
+function computeFeatureCentroidAndAltitude(feature: any): {
+  centroid: { lat: number; lng: number };
+  altitude: number;
+} {
+  let minLat = 90, maxLat = -90, minLng = 180, maxLng = -180;
+
+  function visitCoords(coords: any) {
+    if (typeof coords[0] === 'number') {
+      const lng = coords[0], lat = coords[1];
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+      if (lng < minLng) minLng = lng;
+      if (lng > maxLng) maxLng = lng;
+      return;
+    }
+    for (const c of coords) visitCoords(c);
+  }
+
+  if (feature.geometry?.coordinates) {
+    visitCoords(feature.geometry.coordinates);
+  }
+
+  const centroid = {
+    lat: (minLat + maxLat) / 2,
+    lng: (minLng + maxLng) / 2,
+  };
+
+  const area = (maxLat - minLat) * (maxLng - minLng);
+  let altitude = 1.6;
+  if (area < 25) altitude = 1.2;
+  else if (area > 2500) altitude = 2.0;
+
+  return { centroid, altitude };
+}
+
+interface BreakingTracker {
+  slug: string;
+  shortName: string;
+  headline?: string;
+  icon: string;
+  color: string;
+  isBreaking: boolean;
+}
+
+interface Props {
+  trackers: TrackerCardData[];
+  basePath: string;
+  /**
+   * Locale the page was served at. The island still lets the reader switch,
+   * but /es/, /fr/ and /pt/ must open in their own language rather than
+   * defaulting to English and making the visitor change it back.
+   */
+  initialLocale?: Locale;
+  liveCount: number;
+  historicalCount: number;
+  trackerCount: number;
+  updatedTodayCount: number;
+  breakingTrackers: BreakingTracker[];
+}
+
+export default function CommandCenter(props: Props) {
+  return (
+    <IslandErrorBoundary
+      fallback={
+        <IslandErrorFallback
+          feature="the command center"
+          style={{ width: '100vw', height: '100vh', margin: 0, maxWidth: 'none', borderRadius: 0 }}
+        />
+      }
+    >
+      <CommandCenterInner {...props} />
+    </IslandErrorBoundary>
+  );
+}
+
+function CommandCenterInner({
+  trackers,
+  basePath,
+  liveCount,
+  historicalCount,
+  trackerCount,
+  updatedTodayCount,
+  breakingTrackers,
+  initialLocale,
+}: Props) {
+  const [activeTracker, setActiveTracker] = useState<string | null>(null);
+  const [hoveredTracker, setHoveredTracker] = useState<string | null>(null);
+  const [followedSlugs, setFollowedSlugs] = useState<string[]>([]);
+  const [compareSlugs, setCompareSlugs] = useState<string[]>([]);
+  const [broadcastOff, setBroadcastOff] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
+  const [viewMode, setViewMode] = useState<ViewMode>(() => {
+    if (typeof window !== 'undefined') {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'geo') return 'geographic';
+      if (hash === 'domain') return 'domain';
+    }
+    return 'operations';
+  });
+  const [locale, setLocale] = useState<Locale>(initialLocale ?? 'en');
+  const [showHelp, setShowHelp] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== 'undefined' && window.innerWidth < 768,
+  );
+  const [mobileTab, setMobileTab] = useState<'live' | 'trackers'>('live');
+  const [coachHint, setCoachHint] = useState<ReturnType<typeof getNextCoachHint>>(null);
+  const [discoveredFeatures, setDiscoveredFeatures] = useState<Set<string>>(new Set());
+
+  // Globe <-> GeoAccordion bidirectional state (geographic mode only)
+  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
+  const [activeGeoPath, setActiveGeoPath] = useState<string[] | null>(null);
+  const [countriesGeoJSON, setCountriesGeoJSON] = useState<any>(null);
+  const [geoExpandedKeys, setGeoExpandedKeys] = useState<Set<string>>(new Set());
+
+  const countryDensity = useMemo(() => computeCountryDensity(trackers), [trackers]);
+  const activeCountry = activeGeoPath && activeGeoPath.length >= 2 ? activeGeoPath[1] : null;
+
+  const searchRef = useRef<HTMLInputElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const globeRef = useRef<{
+    toggleRotation?: () => void;
+    flyTo?: (lat: number, lng: number, altitude: number, durationMs: number) => void;
+    setAutoRotate?: (enabled: boolean, speed?: number) => void;
+    toggleCityLights?: () => void;
+  }>(null);
+
+  const broadcastEnabled = !broadcastOff;
+
+  const broadcast = useBroadcastMode(
+    trackers,
+    globeRef,
+    broadcastEnabled,
+    (slug) => setHoveredTracker(slug),
+    followedSlugs,
+  );
+
+  const broadcastRef = useRef(broadcast);
+  broadcastRef.current = broadcast;
+
+  useEffect(() => {
+    const hash = viewMode === 'operations' ? '' : viewMode === 'geographic' ? '#geo' : '#domain';
+    if (hash) {
+      window.history.replaceState(null, '', hash);
+    } else if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, [viewMode]);
+
+  // Lazy-load country GeoJSON when entering geographic mode
+  useEffect(() => {
+    if (viewMode !== 'geographic') return;
+    if (countriesGeoJSON) return;
+
+    fetch(`${basePath}geo/countries-110m.json`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => { if (data) setCountriesGeoJSON(data); })
+      .catch(() => { /* polygon layer simply won't appear */ });
+  }, [viewMode, countriesGeoJSON]);
+
+  // Reset geo state when leaving geographic mode
+  useEffect(() => {
+    if (viewMode !== 'geographic') {
+      setHoveredCountry(null);
+      setActiveGeoPath(null);
+      setGeoExpandedKeys(new Set());
+      if (!activeTracker) {
+        globeRef.current?.setAutoRotate?.(true, 0.3);
+      }
+    }
+  }, [viewMode]);
+
+  useEffect(() => {
+    setFollowedSlugs(loadFollows());
+    setLocale(getPreferredLocale());
+    const discovered = getDiscoveredFeatures();
+    setDiscoveredFeatures(discovered);
+    setCoachHint(getNextCoachHint(discovered));
+
+    // Sidebar default: expanded on wide desktops (≥ 1280px), collapsed on narrow
+    // screens. User's explicit preference in localStorage overrides the default.
+    const storedPref = localStorage.getItem(SIDEBAR_PREF_KEY);
+    if (storedPref === 'expanded') {
+      setSidebarCollapsed(false);
+    } else if (storedPref === 'collapsed') {
+      setSidebarCollapsed(true);
+    } else if (window.innerWidth >= 1280) {
+      setSidebarCollapsed(false);
+    }
+  }, []);
+
+  const handleDiscoverFeature = useCallback((feature: string) => {
+    markFeatureDiscovered(feature);
+    setDiscoveredFeatures(prev => {
+      const next = new Set(prev);
+      next.add(feature);
+      setCoachHint(getNextCoachHint(next));
+      return next;
+    });
+  }, []);
+
+  const handleDismissCoachHint = useCallback(() => {
+    if (coachHint) {
+      handleDiscoverFeature(coachHint.featureKey);
+    }
+  }, [coachHint, handleDiscoverFeature]);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  // Publish overlay nav height as --cc-nav-h so the sidebar can offset by exactly
+  // that much without hardcoding a magic number that drifts as the nav changes.
+  useEffect(() => {
+    const el = navRef.current;
+    if (!el) return;
+    const publish = () => {
+      // getBoundingClientRect is sub-pixel precise; offsetHeight would round to int
+      // and can leave a 1px overlap/gap under fractional DPR or zoom.
+      const h = Math.ceil(el.getBoundingClientRect().height);
+      document.documentElement.style.setProperty('--cc-nav-h', `${h}px`);
+    };
+    publish();
+    const ro = new ResizeObserver(publish);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [isMobile]);
+
+  const handleToggleLocale = useCallback(() => {
+    setLocale(prev => {
+      const idx = SUPPORTED_LOCALES.indexOf(prev);
+      const next = SUPPORTED_LOCALES[(idx + 1) % SUPPORTED_LOCALES.length];
+      setPreferredLocale(next);
+      return next;
+    });
+  }, []);
+
+  const handleSelect = useCallback((slug: string | null) => {
+    setActiveTracker(slug);
+    if (slug) {
+      setActiveGeoPath(null);
+      // Jump broadcast to this tracker and user-pause, so every surface
+      // (lower-third, story strip, sidebar) stays in sync without tearing
+      // down the broadcast experience. Esc or pauseCountdown resumes.
+      if (!broadcastOff) {
+        broadcastRef.current.jumpTo(slug);
+        broadcastRef.current.userPause();
+      }
+    }
+  }, [broadcastOff]);
+
+  const handleHover = useCallback((slug: string | null) => {
+    setHoveredTracker(slug);
+  }, []);
+
+  // Globe polygon click -> expand sidebar accordion + fly camera
+  const handleGeoClick = useCallback((isoA2: string) => {
+    const regionForCountry = trackers.find(
+      t => t.geoPath && t.geoPath[0] === isoA2 && t.region
+    )?.region ?? null;
+
+    if (regionForCountry) {
+      const path = [regionForCountry, isoA2];
+      setActiveGeoPath(path);
+      setActiveTracker(null);
+      setGeoExpandedKeys(prev => {
+        const next = new Set(prev);
+        next.add(`0-${regionForCountry}`);
+        next.add(`1-${isoA2}`);
+        return next;
+      });
+
+      if (countriesGeoJSON) {
+        const feature = countriesGeoJSON.features?.find(
+          (f: any) => f.properties?.ISO_A2 === isoA2
+        );
+        if (feature) {
+          const { centroid, altitude } = computeFeatureCentroidAndAltitude(feature);
+          globeRef.current?.flyTo?.(centroid.lat, centroid.lng, altitude, 1200);
+          globeRef.current?.setAutoRotate?.(false);
+        }
+      }
+    }
+  }, [trackers, countriesGeoJSON]);
+
+  // Sidebar hover -> globe highlight
+  const handleHoverGeoNode = useCallback((nodeId: string, level: string) => {
+    if (level === 'country') {
+      setHoveredCountry(nodeId);
+    } else if (level === 'region') {
+      setHoveredCountry(`region:${nodeId}`);
+    } else {
+      setHoveredCountry(null);
+    }
+  }, []);
+
+  const handleLeaveGeoNode = useCallback(() => {
+    setHoveredCountry(null);
+  }, []);
+
+  // Accordion node click -> fly camera
+  const handleClickGeoNode = useCallback((nodeId: string, level: string) => {
+    if (level === 'country') {
+      handleGeoClick(nodeId);
+    } else if (level === 'region') {
+      const regionTrackers = trackers.filter(t => t.region === nodeId && t.mapCenter);
+      if (regionTrackers.length > 0) {
+        const avgLat = regionTrackers.reduce((s, t) => s + t.mapCenter!.lat, 0) / regionTrackers.length;
+        const avgLng = regionTrackers.reduce((s, t) => s + t.mapCenter!.lon, 0) / regionTrackers.length;
+        globeRef.current?.flyTo?.(avgLat, avgLng, 2.0, 1200);
+        globeRef.current?.setAutoRotate?.(false);
+      }
+      setActiveGeoPath([nodeId]);
+      setActiveTracker(null);
+    }
+  }, [trackers, handleGeoClick]);
+
+  const handleToggleFollow = useCallback((slug: string) => {
+    handleDiscoverFeature('follow');
+    setFollowedSlugs(prev => {
+      const next = prev.includes(slug)
+        ? prev.filter(s => s !== slug)
+        : [...prev, slug];
+      saveFollows(next);
+      return next;
+    });
+  }, []);
+
+  const handleToggleCompare = useCallback((slug: string) => {
+    setCompareSlugs(prev =>
+      prev.includes(slug)
+        ? prev.filter(s => s !== slug)
+        : [...prev, slug],
+    );
+  }, []);
+
+  const handleClearCompare = useCallback(() => {
+    setCompareSlugs([]);
+  }, []);
+
+  const handleStoryTrackerChange = useCallback((slug: string) => {
+    const tracker = trackers.find(t => t.slug === slug);
+    if (tracker?.mapCenter) {
+      // Dynamic zoom based on tracker scope
+      const region = tracker.region;
+      const domain = tracker.domain;
+      let altitude = 2.0; // default
+      let duration = 1800; // ms
+
+      // Country-level trackers: zoom closer
+      if (tracker.country && !tracker.aggregate) {
+        altitude = 1.2;
+        duration = 2200;
+      }
+      // Regional conflicts: medium zoom
+      if (region === 'middle-east' || region === 'southeast-asia') {
+        altitude = 1.5;
+        duration = 2000;
+      }
+      // Global/multi-region trackers: wide view
+      if (domain === 'economy' || domain === 'science' || region === 'global' || tracker.aggregate) {
+        altitude = 3.0;
+        duration = 2500;
+      }
+      // Historical trackers: slower, more cinematic
+      if (tracker.temporal === 'historical') {
+        duration = 3000;
+      }
+
+      globeRef.current?.flyTo?.(tracker.mapCenter.lat, tracker.mapCenter.lon, altitude, duration);
+      globeRef.current?.setAutoRotate?.(false);
+    }
+  }, [trackers]);
+
+  // Global keyboard shortcuts
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      const isInput = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA';
+
+      if (e.key === 'Escape') {
+        if (showHelp) { setShowHelp(false); return; }
+        if (compareSlugs.length > 0) { setCompareSlugs([]); return; }
+        if (isInput) { (target as HTMLInputElement).blur(); return; }
+        setActiveTracker(null);
+        if (broadcastRef.current.isUserPaused) broadcastRef.current.userResume();
+        return;
+      }
+
+      if (isInput) return;
+
+      switch (e.key) {
+        case '/':
+          e.preventDefault();
+          searchRef.current?.focus();
+          handleDiscoverFeature('search');
+          break;
+        case '?':
+          e.preventDefault();
+          setShowHelp(prev => !prev);
+          break;
+        case 'f':
+        case 'F': {
+          const targetSlug = activeTracker || hoveredTracker;
+          if (targetSlug) {
+            e.preventDefault();
+            handleToggleFollow(targetSlug);
+          }
+          break;
+        }
+        case 'b':
+        case 'B':
+          e.preventDefault();
+          trackEvent('broadcast_mode_toggled', { enabled: broadcastOff });
+          setBroadcastOff(prev => !prev);
+          break;
+        case 'g':
+        case 'G':
+          e.preventDefault();
+          globeRef.current?.toggleRotation?.();
+          break;
+        case 'l':
+        case 'L':
+          e.preventDefault();
+          globeRef.current?.toggleCityLights?.();
+          break;
+        case 'c':
+        case 'C':
+          if (activeTracker) {
+            e.preventDefault();
+            handleToggleCompare(activeTracker);
+          }
+          break;
+        case 'o':
+        case 'O':
+          if (activeTracker) {
+            e.preventDefault();
+            const lp = locale === 'es' ? 'es/' : '';
+            window.location.href = `${basePath}${lp}${activeTracker}/`;
+          }
+          break;
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [activeTracker, showHelp, compareSlugs.length, handleToggleFollow, handleToggleCompare, basePath, locale]);
+
+  const sidebarStyle: React.CSSProperties = isMobile
+    ? mobileTab === 'trackers' ? styles.sidebar : { ...styles.sidebar, display: 'none' }
+    : sidebarCollapsed
+      ? broadcastEnabled
+        ? { ...styles.sidebarCollapsed, flex: '0 0 220px', minWidth: 220, maxWidth: 220 }
+        : { ...styles.sidebarCollapsed }
+      : { ...styles.sidebar };
+
+  return (
+    <div className={`command-center-root cc-mobile-tab-${mobileTab}`} role="application" aria-label="Watchboard Command Center" style={styles.container}>
+      <h1 className="sr-only">Watchboard — Intelligence Dashboard Platform</h1>
+      <NotificationManager trackers={trackers} followedSlugs={followedSlugs} />
+
+      {/* Overlay Nav */}
+      <div ref={navRef} style={{
+        ...styles.overlayNav,
+        ...(isMobile ? { position: 'absolute' as const } : {}),
+      }} role="banner" aria-label="Watchboard navigation">
+        <div style={styles.overlayNavLogo}>WATCHBOARD</div>
+        <div style={styles.overlayNavBadges}>
+          {isMobile ? (
+            <>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.5rem', color: 'var(--accent-green)' }}>
+                ● {liveCount} {t('cc.live', locale)}
+              </span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: '0.5rem', color: 'var(--text-muted, #8b949e)' }}>
+                {historicalCount} {t('cc.hist', locale)}
+              </span>
+              <button
+                type="button"
+                onClick={handleToggleLocale}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 3,
+                  padding: '2px 6px', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 3,
+                  background: 'transparent', cursor: 'pointer',
+                  fontFamily: "'JetBrains Mono', monospace", fontSize: '0.5rem',
+                  fontWeight: 600, color: '#e6edf3', letterSpacing: '0.04em',
+                }}
+                title="Change language"
+                aria-label={`Language: ${locale.toUpperCase()}. Tap to change.`}
+              >
+                🌐{locale.toUpperCase()}
+              </button>
+              <a
+                href={`${basePath}about/`}
+                style={{
+                  display: 'inline-flex', alignItems: 'center',
+                  padding: '2px 6px', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 3,
+                  background: 'transparent', color: 'rgba(255,255,255,0.7)',
+                  textDecoration: 'none', fontSize: '0.5rem', fontFamily: "'JetBrains Mono', monospace",
+                }}
+                aria-label="About"
+              >ℹ️</a>
+              <a
+                href="https://t.me/watchboard_dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center',
+                  padding: '2px 6px', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 3,
+                  background: 'transparent', color: 'rgba(255,255,255,0.7)',
+                  textDecoration: 'none', fontSize: '0.5rem', fontFamily: "'JetBrains Mono', monospace",
+                }}
+                aria-label="Telegram Channel"
+              >📢TG</a>
+            </>
+          ) : (
+            <>
+              <span style={styles.overlayNavBadge}>
+                <span style={styles.badgeCount}>{trackerCount}</span> trackers
+              </span>
+              <span style={{ ...styles.overlayNavBadge, background: 'rgba(46,160,67,0.25)', borderColor: 'rgba(46,160,67,0.4)' }}>
+                <span style={{ ...styles.badgeCount, color: '#3fb950' }}>{updatedTodayCount}</span> updated today
+              </span>
+              <a href={`${basePath}about/`} style={{ ...styles.overlayNavBadge, textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>About</a>
+              <a href="https://t.me/watchboard_dev" target="_blank" rel="noopener noreferrer" style={{ ...styles.overlayNavBadge, textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}>📢 Telegram</a>
+            </>
+          )}
+        </div>
+      </div>
+
+      <div id="tour-globe" className="cc-globe" style={{
+        ...(sidebarCollapsed && !isMobile ? styles.globeExpanded : styles.globe),
+        ...(isMobile ? { paddingTop: '2.5rem' } : {}),
+      }} role="region" aria-label="Globe visualization">
+        <Suspense fallback={
+          <div style={styles.globeLoading}>
+            <style>{`
+              @keyframes globeScan { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+              @keyframes globePulseRing { 0%,100% { opacity: 0.3; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.08); } }
+              @keyframes skeletonPulse { 0%,100% { opacity: 0.15; } 50% { opacity: 0.35; } }
+              @keyframes starTwinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 0.8; } }
+            `}</style>
+            {/* Starfield dots */}
+            {[...Array(40)].map((_, i) => (
+              <div key={i} style={{
+                position: 'absolute',
+                width: i % 3 === 0 ? 2 : 1,
+                height: i % 3 === 0 ? 2 : 1,
+                borderRadius: '50%',
+                background: '#fff',
+                top: `${(i * 17 + 7) % 100}%`,
+                left: `${(i * 31 + 13) % 100}%`,
+                animation: `starTwinkle ${2 + (i % 3)}s ease-in-out ${(i * 0.3) % 2}s infinite`,
+              }} />
+            ))}
+            {/* Title */}
+            <div style={{
+              position: 'absolute', top: '12%',
+              fontFamily: "'JetBrains Mono', monospace", fontSize: '0.75rem',
+              fontWeight: 700, letterSpacing: '0.25em', color: '#e74c3c',
+            }}>WATCHBOARD</div>
+            {/* Globe */}
+            <div style={styles.globePlaceholder}>
+              {/* Scanning line */}
+              <div style={{
+                position: 'absolute', inset: -10, borderRadius: '50%',
+                background: 'conic-gradient(from 0deg, transparent 0%, transparent 70%, rgba(52,152,219,0.4) 85%, transparent 100%)',
+                animation: 'globeScan 3s linear infinite',
+              }} />
+              {/* Pulse ring */}
+              <div style={{
+                position: 'absolute', inset: -16, borderRadius: '50%',
+                border: '1px solid rgba(52,152,219,0.3)',
+                animation: 'globePulseRing 2.5s ease-in-out infinite',
+              }} />
+            </div>
+            {/* Status text */}
+            <div style={styles.globeLoadingText}>{t('cc.initGlobe', locale)}</div>
+            {/* Skeleton KPI cards */}
+            <div style={{ display: 'flex', gap: 10, marginTop: 20 }}>
+              {[72, 56, 64].map((w, i) => (
+                <div key={i} style={{
+                  width: w, height: 28, borderRadius: 6,
+                  background: 'rgba(255,255,255,0.06)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  animation: `skeletonPulse 1.8s ease-in-out ${i * 0.3}s infinite`,
+                }} />
+              ))}
+            </div>
+          </div>
+        }>
+          <GlobePanel
+            ref={globeRef}
+            trackers={trackers}
+            activeTracker={activeTracker}
+            hoveredTracker={hoveredTracker}
+            followedSlugs={followedSlugs}
+            broadcastMode={broadcastEnabled}
+            featuredSlug={broadcast.featuredTracker?.slug || null}
+            onSelectTracker={handleSelect}
+            onHoverTracker={handleHover}
+            viewMode={viewMode}
+            countriesGeoJSON={viewMode === 'geographic' ? countriesGeoJSON : null}
+            countryDensity={countryDensity}
+            hoveredCountry={hoveredCountry}
+            activeCountry={activeCountry}
+            onPolygonClick={handleGeoClick}
+            onPolygonHover={setHoveredCountry}
+          />
+        </Suspense>
+        {broadcastEnabled && (
+          <BroadcastOverlay
+            featuredTracker={broadcast.featuredTracker}
+            phase={broadcast.phase}
+            progress={broadcast.progress}
+            trackerQueue={broadcast.trackerQueue}
+            currentIndex={broadcast.currentIndex}
+            onJumpTo={(slug) => {
+              broadcast.jumpTo(slug);
+              handleDiscoverFeature('ticker-click');
+            }}
+            isUserPaused={broadcast.isUserPaused}
+            pauseCountdown={broadcast.pauseCountdown}
+            onUserPause={() => {
+              broadcast.userPause();
+              handleDiscoverFeature('broadcast-pause');
+            }}
+            onUserResume={broadcast.userResume}
+            onResetPauseTimer={broadcast.resetPauseTimer}
+            onGoToNext={broadcast.goToNext}
+            onGoToPrev={broadcast.goToPrev}
+            basePath={basePath}
+            breakingTrackers={breakingTrackers}
+          />
+        )}
+      </div>
+      {isMobile && (
+        <div style={styles.mobileTabBar}>
+          <button
+            onClick={() => setMobileTab('live')}
+            style={mobileTab === 'live' ? styles.mobileTabActive : styles.mobileTab}
+          >
+            ⚡ {t('cc.tabLive', locale)}
+          </button>
+          <button
+            onClick={() => setMobileTab('trackers')}
+            style={mobileTab === 'trackers' ? styles.mobileTabActive : styles.mobileTab}
+          >
+            📋 {t('cc.tabTrackers', locale)}
+          </button>
+        </div>
+      )}
+      {/* Mobile story carousel — rendered unconditionally so SSR HTML
+          contains the LCP-critical text without waiting for JS to detect
+          viewport. Hidden on desktop and on mobile when mobileTab !== 'live'
+          via the cc-mobile-live-slot CSS class (see index.astro).
+          suppressHydrationWarning: useStoryState reads localStorage seenSlugs
+          on the client which can reorder eligible stories vs the SSR pass.
+          The structure is identical, only the rendered text may differ;
+          React updates text in-place without unmounting, so the SSR'd LCP
+          element still satisfies LCP. */}
+      <div
+        className={`cc-mobile-live-slot ${mobileTab === 'live' ? 'cc-mobile-live-active' : ''}`}
+        style={{ flex: '1 1 0%', overflow: 'hidden', position: 'relative' as const, minHeight: 0 }}
+        suppressHydrationWarning
+      >
+        <MobileStoryCarousel
+          trackers={trackers}
+          basePath={basePath}
+          followedSlugs={followedSlugs}
+          onTrackerChange={handleStoryTrackerChange}
+          enabled={isMobile && mobileTab === 'live'}
+        />
+      </div>
+      <nav id="tour-sidebar" className="cc-sidebar" style={sidebarStyle} aria-label="Tracker directory">
+        {!isMobile && sidebarCollapsed ? (
+          <div style={styles.collapsedSidebarContent}>
+            <button
+              onClick={() => {
+                setSidebarCollapsed(false);
+                try { localStorage.setItem(SIDEBAR_PREF_KEY, 'expanded'); } catch {}
+              }}
+              style={styles.sidebarToggleBtn}
+              aria-label="Expand sidebar"
+              title="Expand sidebar"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+            {broadcastEnabled ? (
+              <DesktopStoryStrip
+                trackerQueue={broadcast.trackerQueue}
+                featuredTracker={broadcast.featuredTracker ?? null}
+                currentIndex={broadcast.currentIndex}
+                onCircleClick={(slug) => {
+                  broadcastRef.current.jumpTo(slug);
+                  if (broadcastRef.current.isUserPaused) broadcastRef.current.userResume();
+                  handleDiscoverFeature('story-circle');
+                }}
+              />
+            ) : (
+              <div style={styles.collapsedTrackerIcons}>
+                {trackers.filter(t => t.status === 'active').slice(0, 12).map(t => {
+                  const freshness = computeFreshness(t.lastUpdated);
+                  const freshnessColor = freshness.className === 'fresh'
+                    ? 'var(--accent-green, #2ecc71)'
+                    : freshness.className === 'recent'
+                      ? 'var(--accent-amber, #f39c12)'
+                      : 'var(--text-muted, #484f58)';
+                  const freshnessShadow = freshness.className === 'fresh'
+                    ? 'rgba(46,160,67,0.37)'
+                    : freshness.className === 'recent'
+                      ? 'rgba(210,153,34,0.37)'
+                      : 'rgba(231,76,60,0.37)';
+                  const isSelected = activeTracker === t.slug;
+                  return (
+                    <button
+                      key={t.slug}
+                      onClick={() => { handleSelect(t.slug); setSidebarCollapsed(false); }}
+                      style={{
+                        ...styles.collapsedTrackerIcon,
+                        position: 'relative' as const,
+                        borderColor: isSelected ? t.color || freshnessColor : freshnessColor,
+                        boxShadow: isSelected ? `0 0 6px ${freshnessShadow}` : 'none',
+                        opacity: freshness.className === 'stale' ? 0.5 : 1,
+                      }}
+                      title={`${t.shortName} — ${freshness.label}`}
+                      aria-label={`Select ${t.shortName} (${freshness.label})`}
+                    >
+                      <span style={{ fontSize: '1rem' }}>{t.icon}</span>
+                      {freshness.className === 'fresh' && (
+                        <span style={{
+                          position: 'absolute',
+                          top: 1,
+                          right: 1,
+                          width: 6,
+                          height: 6,
+                          borderRadius: '50%',
+                          background: 'var(--accent-green)',
+                          boxShadow: '0 0 4px rgba(46,160,67,0.5)',
+                        }} />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            {!isMobile && (
+              <button
+                onClick={() => {
+                  setSidebarCollapsed(true);
+                  try { localStorage.setItem(SIDEBAR_PREF_KEY, 'collapsed'); } catch {}
+                }}
+                style={styles.sidebarCollapseBtn}
+                aria-label="Collapse sidebar"
+                title="Collapse sidebar"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+            )}
+            <SidebarPanel
+              isMobile={isMobile}
+              trackers={trackers}
+              basePath={basePath}
+              activeTracker={activeTracker}
+              hoveredTracker={hoveredTracker}
+              followedSlugs={followedSlugs}
+              liveCount={liveCount}
+              historicalCount={historicalCount}
+              onSelectTracker={handleSelect}
+              onHoverTracker={handleHover}
+              onToggleFollow={handleToggleFollow}
+              compareSlugs={compareSlugs}
+              onToggleCompare={handleToggleCompare}
+              locale={locale}
+              onToggleLocale={handleToggleLocale}
+              searchRef={searchRef}
+              viewMode={viewMode}
+              onChangeViewMode={setViewMode}
+              geoExpandedKeys={viewMode === 'geographic' ? geoExpandedKeys : undefined}
+              onGeoExpandedKeysChange={viewMode === 'geographic' ? setGeoExpandedKeys : undefined}
+              onHoverGeoNode={handleHoverGeoNode}
+              onLeaveGeoNode={handleLeaveGeoNode}
+              onClickGeoNode={handleClickGeoNode}
+              activeGeoPath={activeGeoPath}
+              featuredSlug={broadcastEnabled ? (broadcast.featuredTracker?.slug ?? null) : null}
+            />
+          </>
+        )}
+      </nav>
+
+      {/* Breaking News Ticker */}
+      {breakingTrackers.length > 0 && !broadcastEnabled && (
+        <div style={{
+          ...styles.ticker,
+          ...(isMobile ? { position: 'relative' as const, bottom: 'auto', flexShrink: 0 } : {})
+        }} role="marquee" aria-label="Breaking news ticker">
+          <div style={styles.tickerLabel}>
+            {breakingTrackers.some(t => t.isBreaking) ? 'BREAKING' : 'LATEST'}
+          </div>
+          <div style={styles.tickerTrack}>
+            <div style={styles.tickerContent}>
+              {[...breakingTrackers, ...breakingTrackers].map((t, i) => (
+                <a
+                  key={`${t.slug}-${i}`}
+                  href={`${basePath}${t.slug}/`}
+                  style={styles.tickerItem}
+                  title={`Go to ${t.shortName}`}
+                >
+                  <span style={{ marginRight: '0.35rem' }}>{t.icon}</span>
+                  <span style={{ color: t.color, fontWeight: 600, marginRight: '0.35rem' }}>{t.shortName}</span>
+                  {t.headline && (
+                    <span style={styles.tickerHeadline}>{t.headline}</span>
+                  )}
+                  <span style={styles.tickerDivider}>|</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Tracker comparison panel */}
+      {compareSlugs.length >= 2 && (
+        <ComparePanel
+          trackers={trackers}
+          compareSlugs={compareSlugs}
+          onClose={handleClearCompare}
+          onRemove={handleToggleCompare}
+          basePath={basePath}
+        />
+      )}
+
+      {/* Keyboard shortcuts help overlay */}
+      {showHelp && (
+        <div style={styles.helpOverlay} onClick={() => setShowHelp(false)}>
+          <div style={styles.helpPanel} onClick={e => e.stopPropagation()}>
+            <div style={styles.replayBlock}>
+              <div>
+                <div style={styles.replayLabel}>{t('tour.newHere', locale)}</div>
+                {(() => {
+                  const ts = getTourState('desktop').completedAt;
+                  if (!ts) return null;
+                  const date = new Date(ts).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' });
+                  return <div style={styles.replayMeta}>{t('tour.lastCompleted', locale)} {date}</div>;
+                })()}
+              </div>
+              <button
+                type="button"
+                style={styles.replayButton}
+                onClick={() => {
+                  resetTour('desktop');
+                  setShowHelp(false);
+                  window.dispatchEvent(new CustomEvent(TOUR_REPLAY_EVENT));
+                }}
+              >
+                ▶ {t('tour.replay', locale)}
+              </button>
+            </div>
+            <div style={styles.helpTitle}>{t('shortcuts.title', locale)}</div>
+            <div style={styles.helpGrid}>
+              {SHORTCUTS.map(s => (
+                <div key={s.key} style={styles.helpRow}>
+                  <kbd style={styles.helpKey}>{s.key}</kbd>
+                  <span style={styles.helpLabel}>{t(s.tKey as any, locale)}</span>
+                </div>
+              ))}
+            </div>
+            <div style={styles.helpClose}><kbd style={styles.helpKeyInline}>?</kbd> / <kbd style={styles.helpKeyInline}>Esc</kbd> {t('shortcuts.close', locale)}</div>
+          </div>
+        </div>
+      )}
+
+      {/* Coach marks */}
+      {coachHint && !isMobile && (
+        <CoachMark hint={coachHint} onDismiss={handleDismissCoachHint} />
+      )}
+
+      {!isMobile && <OnboardingTour />}
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    display: 'flex',
+    width: '100vw',
+    height: '100vh',
+    overflow: 'hidden',
+    background: 'var(--bg-primary)',
+    position: 'relative' as const,
+  } as React.CSSProperties,
+
+  globe: {
+    flex: '6 1 0%',
+    position: 'relative' as const,
+    minWidth: 0,
+    transition: 'flex 0.3s ease',
+  } as React.CSSProperties,
+
+  globeExpanded: {
+    flex: '1 1 0%',
+    position: 'relative' as const,
+    minWidth: 0,
+    transition: 'flex 0.3s ease',
+  } as React.CSSProperties,
+
+  globeLoading: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
+    background: 'radial-gradient(ellipse at 50% 40%, #0f1923 0%, #0a0b0e 60%)',
+    position: 'relative' as const,
+    overflow: 'hidden',
+  } as React.CSSProperties,
+
+  globePlaceholder: {
+    width: 160,
+    height: 160,
+    borderRadius: '50%',
+    background: 'radial-gradient(circle at 38% 32%, #1a4a7a 0%, #122a4a 30%, #0a1628 60%, #050a12 100%)',
+    position: 'relative' as const,
+    boxShadow: '0 0 60px rgba(52,152,219,0.15), inset 0 0 30px rgba(0,0,0,0.5)',
+  } as React.CSSProperties,
+
+  globeLoadingText: {
+    marginTop: 16,
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.5rem',
+    color: 'rgba(139,148,158,0.6)',
+    letterSpacing: '0.15em',
+    textTransform: 'uppercase' as const,
+  } as React.CSSProperties,
+
+  sidebar: {
+    flex: '4 1 0%',
+    minWidth: 280,
+    maxWidth: 440,
+    borderLeft: '1px solid var(--border)',
+    overflow: 'hidden',
+    transition: 'flex 0.35s cubic-bezier(0.4, 0, 0.2, 1), min-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease',
+    position: 'relative' as const,
+    opacity: 1,
+  } as React.CSSProperties,
+
+  sidebarCollapsed: {
+    flex: '0 0 52px',
+    minWidth: 52,
+    maxWidth: 52,
+    borderLeft: '1px solid var(--border)',
+    overflow: 'hidden',
+    transition: 'flex 0.35s cubic-bezier(0.4, 0, 0.2, 1), min-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease',
+  } as React.CSSProperties,
+
+  collapsedSidebarContent: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    paddingTop: '0.75rem',
+    gap: '0.4rem',
+    height: '100%',
+    overflowY: 'auto' as const,
+    scrollbarWidth: 'none' as const,
+  } as React.CSSProperties,
+
+  sidebarToggleBtn: {
+    background: 'none',
+    border: 'none',
+    color: 'var(--text-secondary)',
+    cursor: 'pointer',
+    padding: '6px',
+    borderRadius: '6px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition: 'background 0.15s',
+  } as React.CSSProperties,
+
+  sidebarCollapseBtn: {
+    position: 'absolute' as const,
+    top: '0.5rem',
+    right: '0.5rem',
+    background: 'var(--bg-secondary)',
+    border: '1px solid var(--border)',
+    color: 'var(--text-secondary)',
+    cursor: 'pointer',
+    padding: '4px',
+    borderRadius: '4px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 10,
+    transition: 'background 0.15s',
+  } as React.CSSProperties,
+
+  collapsedTrackerIcons: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    alignItems: 'center',
+    gap: '0.25rem',
+    paddingTop: '0.5rem',
+  } as React.CSSProperties,
+
+  collapsedTrackerIcon: {
+    background: 'none',
+    border: '2px solid transparent',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    padding: '3px',
+    width: '36px',
+    height: '36px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    transition: 'border-color 0.2s, box-shadow 0.2s, transform 0.15s, opacity 0.2s',
+  } as React.CSSProperties,
+
+  overlayNav: {
+    position: 'fixed' as const,
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 50,
+    background: 'rgba(0,0,0,0.3)',
+    backdropFilter: 'blur(8px)',
+    WebkitBackdropFilter: 'blur(8px)',
+    padding: '0.75rem 1.5rem',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    pointerEvents: 'auto',
+  } as React.CSSProperties,
+
+  overlayNavLogo: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.7rem',
+    fontWeight: 700,
+    letterSpacing: '0.2em',
+    color: '#e6edf3',
+    textTransform: 'uppercase' as const,
+  } as React.CSSProperties,
+
+  overlayNavBadges: {
+    display: 'flex',
+    gap: '0.5rem',
+    alignItems: 'center',
+    paddingRight: '36px',
+  } as React.CSSProperties,
+
+  overlayNavBadge: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.55rem',
+    color: 'var(--text-secondary, #8b949e)',
+    background: 'rgba(88,166,255,0.12)',
+    border: '1px solid rgba(88,166,255,0.25)',
+    borderRadius: '999px',
+    padding: '0.2rem 0.6rem',
+    letterSpacing: '0.04em',
+  } as React.CSSProperties,
+
+  badgeCount: {
+    fontWeight: 700,
+    color: 'var(--accent-blue, #58a6ff)',
+  } as React.CSSProperties,
+
+  ticker: {
+    position: 'fixed' as const,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    zIndex: 50,
+    background: 'rgba(0,0,0,0.7)',
+    backdropFilter: 'blur(4px)',
+    WebkitBackdropFilter: 'blur(4px)',
+    height: '36px',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    borderTop: '1px solid rgba(255,255,255,0.06)',
+  } as React.CSSProperties,
+
+  tickerLabel: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.55rem',
+    fontWeight: 700,
+    letterSpacing: '0.1em',
+    color: '#f85149',
+    background: 'rgba(248,81,73,0.15)',
+    padding: '0.2rem 0.6rem',
+    flexShrink: 0,
+    borderRight: '1px solid rgba(255,255,255,0.08)',
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+  } as React.CSSProperties,
+
+  tickerTrack: {
+    flex: 1,
+    overflow: 'hidden',
+    position: 'relative' as const,
+  } as React.CSSProperties,
+
+  tickerContent: {
+    display: 'flex',
+    alignItems: 'center',
+    whiteSpace: 'nowrap' as const,
+    animation: 'tickerScroll 60s linear infinite',
+    width: 'max-content',
+  } as React.CSSProperties,
+
+  tickerItem: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.6rem',
+    color: 'var(--text-secondary, #8b949e)',
+    textDecoration: 'none',
+    padding: '0 0.75rem',
+    cursor: 'pointer',
+    transition: 'color 0.15s',
+  } as React.CSSProperties,
+
+  tickerHeadline: {
+    color: 'var(--text-primary, #e6edf3)',
+    fontWeight: 400,
+    maxWidth: '300px',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  } as React.CSSProperties,
+
+  tickerDivider: {
+    color: 'rgba(255,255,255,0.15)',
+    margin: '0 0.5rem',
+  } as React.CSSProperties,
+
+  helpOverlay: {
+    position: 'fixed' as const,
+    inset: 0,
+    background: 'rgba(0,0,0,0.6)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 100,
+    backdropFilter: 'blur(4px)',
+  } as React.CSSProperties,
+
+  helpPanel: {
+    background: 'var(--bg-card, #161b22)',
+    border: '1px solid var(--border, #30363d)',
+    borderRadius: 10,
+    padding: '1.5rem 2rem',
+    maxWidth: 340,
+    width: '90%',
+  } as React.CSSProperties,
+
+  helpTitle: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.65rem',
+    fontWeight: 700,
+    letterSpacing: '0.12em',
+    color: 'var(--accent-blue, #58a6ff)',
+    marginBottom: '1rem',
+  } as React.CSSProperties,
+
+  helpGrid: {
+    display: 'flex',
+    flexDirection: 'column' as const,
+    gap: '0.5rem',
+  } as React.CSSProperties,
+
+  helpRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.75rem',
+  } as React.CSSProperties,
+
+  helpKey: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.65rem',
+    fontWeight: 600,
+    background: 'var(--bg-secondary, #0d1117)',
+    border: '1px solid var(--border, #30363d)',
+    borderRadius: 4,
+    padding: '2px 8px',
+    color: 'var(--text-primary, #e6edf3)',
+    minWidth: 36,
+    textAlign: 'center' as const,
+  } as React.CSSProperties,
+
+  helpKeyInline: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.6rem',
+    background: 'var(--bg-secondary, #0d1117)',
+    border: '1px solid var(--border, #30363d)',
+    borderRadius: 3,
+    padding: '1px 5px',
+    color: 'var(--text-primary, #e6edf3)',
+  } as React.CSSProperties,
+
+  helpLabel: {
+    fontFamily: "'DM Sans', sans-serif",
+    fontSize: '0.78rem',
+    color: 'var(--text-secondary, #8b949e)',
+  } as React.CSSProperties,
+
+  helpClose: {
+    marginTop: '1rem',
+    paddingTop: '0.75rem',
+    borderTop: '1px solid var(--border, #30363d)',
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.55rem',
+    color: 'var(--text-muted, #484f58)',
+    textAlign: 'center' as const,
+  } as React.CSSProperties,
+
+  replayBlock: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    background: 'var(--bg-secondary, #0d1117)',
+    border: '1px solid var(--border, #30363d)',
+    borderRadius: 6,
+    padding: '8px 12px',
+    marginBottom: '0.75rem',
+  } as React.CSSProperties,
+  replayLabel: {
+    fontFamily: "'DM Sans', sans-serif",
+    fontSize: '0.7rem',
+    color: 'var(--text-secondary, #8b949e)',
+  } as React.CSSProperties,
+  replayMeta: {
+    fontFamily: "'JetBrains Mono', monospace",
+    fontSize: '0.5rem',
+    color: 'var(--text-muted, #484f58)',
+    marginTop: 2,
+  } as React.CSSProperties,
+  replayButton: {
+    background: '#1f6feb',
+    color: '#fff',
+    fontFamily: "'DM Sans', sans-serif",
+    fontSize: '0.7rem',
+    fontWeight: 600,
+    padding: '4px 10px',
+    borderRadius: 4,
+    border: 'none',
+    cursor: 'pointer',
+  } as React.CSSProperties,
+
+  mobileTabBar: {
+    display: 'flex',
+    width: '100%',
+    borderBottom: '1px solid var(--border, #30363d)',
+    background: 'var(--bg-primary, #0d1117)',
+    flexShrink: 0,
+  } as React.CSSProperties,
+
+  mobileTab: {
+    flex: 1,
+    padding: '10px 0',
+    border: 'none',
+    background: 'transparent',
+    color: 'var(--text-muted, #8b949e)',
+    fontSize: '0.75rem',
+    fontFamily: "'JetBrains Mono', monospace",
+    fontWeight: 600,
+    letterSpacing: '0.05em',
+    cursor: 'pointer',
+    borderBottom: '2px solid transparent',
+  } as React.CSSProperties,
+
+  mobileTabActive: {
+    flex: 1,
+    padding: '10px 0',
+    border: 'none',
+    background: 'transparent',
+    color: 'var(--text-primary, #e8e9ed)',
+    fontSize: '0.75rem',
+    fontFamily: "'JetBrains Mono', monospace",
+    fontWeight: 600,
+    letterSpacing: '0.05em',
+    cursor: 'pointer',
+    borderBottom: '2px solid var(--accent-red, #e74c3c)',
+  } as React.CSSProperties,
+};
+
+/* Note: mobile layout overrides are in index.astro <style is:global> block */

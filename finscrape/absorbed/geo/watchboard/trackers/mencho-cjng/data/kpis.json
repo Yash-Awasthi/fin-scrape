@@ -1,0 +1,97 @@
+[
+  {
+    "id": "days-since-mencho-killed",
+    "label": "Days Since El Mencho Killed",
+    "value": "187",
+    "color": "red",
+    "source": "SEDENA / SSPC — Feb 22, 2026",
+    "contested": false,
+    "delta": "Feb 22, 2026",
+    "deltaNote": "Day 187. R-2 NAMED LOS RS SUCCESSOR, CHARGED (Aug 27): A Washington, D.C. federal grand jury indicted 'El R-1' (arrested Jul 30) and his brother Rafael Álvarez Ayala ('El R-2'), identified by Mexican authorities as R-1's successor atop the CJNG-affiliated 'Los Rs' cell in Michoacán; R-2 remains at large. CJNG DRONE UNIT SPANS 5 STATES (Aug 26): InSight Crime detailed CJNG's 'Operadores Droneros' unit adapting commercial drones for IED drops, chemical payloads, and a helicopter attack across Michoacán, Guanajuato, Chihuahua, Jalisco, and Baja California. CNN RETROSPECTIVE (Aug 25): Six months post-Mencho, analysts assess CJNG shows 'mucha disciplina' with no internal fracture despite the arrests of El Jardinero, El Güero Conta, 'M4,' and El R-1. LOS MEZCALES/CJNG SECOND-IN-COMMAND CAPTURED (Aug 21): C.M.M.M., alias 'El Abulón,' second-in-command of the CJNG-linked 'Los Mezcales' armed wing in Colima, captured in Oaxaca by SEMAR and the Oaxaca state prosecutor's office. 20 MORE CJNG DETAINED, EXOTIC ANIMALS SEIZED (Aug 24): García Harfuch announced 20 alleged CJNG members detained in Aug 21-23 raids across 36 properties in Hidalgo, Jalisco, and Michoacán — 113 vehicles, a drone/jammer, and tigers and panthers held in poor captivity conditions were seized; combined with the Aug 19 Tío Lako-cell raid, 32 total CJNG members detained in under a week. SUCCESSION BINARY HOLDS: El 03 (confirmed leader, $25M) vs. El Sapo (military wing/Puerto Vallarta plaza boss, $15M) — both remain at large.",
+    "trend": "up",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "us-bounty-mencho",
+    "label": "U.S. Bounty on El Mencho",
+    "value": "$15M",
+    "color": "amber",
+    "source": "U.S. State Dept Narcotics Rewards Program — Dec 2024",
+    "contested": false,
+    "delta": "↑ from $10M in 2018",
+    "deltaNote": "Largest bounty ever for a drug trafficker at time of increase; contributed to Feb 22 operation",
+    "trend": "stable",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "cjng-states-presence",
+    "label": "Mexican States with CJNG Presence",
+    "value": "27 / 32",
+    "color": "red",
+    "source": "InSight Crime / ACLED — 2025",
+    "contested": true,
+    "contestNote": "Estimates range 25–29 states depending on methodology; post-Mencho fragmentation may alter count",
+    "trend": "stable",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "colima-homicide-rate",
+    "label": "Colima Homicide Rate (per 100k)",
+    "value": "101",
+    "color": "red",
+    "source": "SESNSP / Mexico Peace Index — 2024",
+    "contested": false,
+    "delta": "↓ from 111 in 2023",
+    "deltaNote": "Still highest of any Mexican state; 5× national average. Post-Mencho succession violence expected to push rate higher in 2026.",
+    "trend": "up",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "el-menchito-forfeiture",
+    "label": "CJNG Assets Subject to U.S. Forfeiture",
+    "value": "$6B",
+    "color": "blue",
+    "source": "U.S. DOJ — El Menchito Sentencing, Mar 7, 2025",
+    "contested": true,
+    "contestNote": "Order targets Rubén Oseguera González; actual recovery expected to be far lower",
+    "trend": "stable",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "mexico-national-homicide-rate",
+    "label": "Mexico Homicides Declined in 2025",
+    "value": "−30%",
+    "color": "green",
+    "source": "SESNSP / Mexico News Daily — Jan 2026",
+    "contested": true,
+    "contestNote": "23,374 total homicides in 2025 (17.5/100k — lowest since 2016). Analysts caution decline may reflect criminal consolidation, not genuine peace. Post-Mencho fragmentation expected to reverse gains.",
+    "delta": "23,374 total in 2025",
+    "deltaNote": "Fourth consecutive year of decline nationally; analysts warn of reversal in 2026",
+    "trend": "down",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  },
+  {
+    "id": "cjng-high-value-extraditions",
+    "label": "CJNG HVTs Extradited/Captured",
+    "value": "49+",
+    "color": "green",
+    "source": "U.S. DOJ / FGR / SEDENA / SEMAR — Aug 2026",
+    "contested": false,
+    "delta": "+1 since Jul 30 (El R-1)",
+    "deltaNote": "EL R-2 CHARGED AS LOS RS SUCCESSOR (Aug 27): D.C. federal grand jury indicted El R-1 and brother Rafael Álvarez Ayala ('El R-2'), named by Mexican authorities as R-1's successor atop 'Los Rs'; R-2 remains at large, not yet captured. LOS MEZCALES SECOND-IN-COMMAND CAPTURED (Aug 21): C.M.M.M., alias 'El Abulón,' second-in-command of CJNG-linked armed wing 'Los Mezcales' in Colima, captured in Oaxaca by SEMAR/Oaxaca FGEO. 19 CJNG MEMBERS SENTENCED (Aug 10): Jalisco court handed down 16-18 year sentences over a 2022 Tizapán el Alto arms cache. DOJ CZECH CHARGES UNSEALED (Aug 11): 4 CJNG members (arrested in Czech Republic, June 2026) charged with narcoterrorism and arms trafficking; 2 extradited to Florida. EL R-1 ARRESTED (Jul 30): Ramón Ángel Álvarez Ayala, 'Los Rs' cell leader, captured in Atotonilco el Alto, Jalisco — linked to the Valeria Márquez femicide and the Carlos Manzo assassination; formally charged Aug 7 and held at Altiplano. OFAC LARGEST-EVER CJNG ACTION (Jul 23): 50+ individuals/entities sanctioned, confirming El 03 as leader and El Sapo as Puerto Vallarta plaza boss. DOJ/STATE $102M REWARD PACKAGE (Aug 5): 8 CJNG leaders targeted. Cumulative HVTs: 49+.",
+    "trend": "up",
+    "lastUpdated": "2026-08-28T00:00:00.000Z"
+  },
+  {
+    "id": "violence-cost-mexico",
+    "label": "Annual Cost of Violence to Mexico Economy",
+    "value": "$245B USD",
+    "color": "amber",
+    "source": "Vision of Humanity Mexico Peace Index — 2024",
+    "contested": true,
+    "contestNote": "Estimate equals ~18% of Mexican GDP; rose for first time since 2019 despite national homicide decline. CJNG fragmentation expected to increase cost in 2026.",
+    "delta": "4.5 trillion pesos",
+    "trend": "up",
+    "lastUpdated": "2026-03-18T06:00:00.000Z"
+  }
+]

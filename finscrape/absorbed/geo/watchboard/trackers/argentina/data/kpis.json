@@ -1,0 +1,123 @@
+[
+  {
+    "id": "dirty-war-disappeared",
+    "label": "Dirty War Disappeared",
+    "value": "~30,000",
+    "color": "red",
+    "source": "CONADEP (1984) / Madres de Plaza de Mayo",
+    "contested": true,
+    "contestNote": "CONADEP formally documented 8,961 confirmed cases; human rights organizations maintain the figure is ~30,000 total",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "inflation-april-2026",
+    "label": "Annual Inflation (Jul 2026)",
+    "value": "33.8%",
+    "color": "amber",
+    "source": "INDEC",
+    "contested": false,
+    "delta": "-177.6 pts vs Dec 2023 peak",
+    "deltaNote": "Monthly CPI rose to 2.1% in July (from 1.9% in June), ending a three-month disinflation streak; core inflation rose to 1.8%. Cumulative 2026 inflation reached 19.3%.",
+    "trend": "up",
+    "lastUpdated": "2026-08-13"
+  },
+  {
+    "id": "inflation-2023",
+    "label": "Annual Inflation Peak (Dec 2023)",
+    "value": "211.4%",
+    "color": "red",
+    "source": "INDEC",
+    "contested": false,
+    "delta": "+116.6 pts vs 2022",
+    "deltaNote": "Highest inflation rate since 1990 hyperinflation; Milei inherited this on taking office Dec 10, 2023",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "poverty-rate-2024",
+    "label": "Poverty Rate (H1 2024)",
+    "value": "52.9%",
+    "color": "red",
+    "source": "INDEC",
+    "contested": false,
+    "delta": "+11.2 pts vs H2 2023",
+    "trend": "up",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "imf-debt-2018",
+    "label": "IMF Loan (2018 Program)",
+    "value": "$57B",
+    "color": "red",
+    "source": "IMF / Argentine Treasury",
+    "contested": false,
+    "deltaNote": "Largest IMF loan in history at time of signing; renegotiated under Fernández (2022) and Milei (2025)",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "imf-program-2025",
+    "label": "IMF EFF Program (2025–2028)",
+    "value": "$20B",
+    "color": "amber",
+    "source": "IMF",
+    "contested": false,
+    "delta": "$15.8B disbursed by May 2026",
+    "deltaNote": "2nd review approved May 21, 2026; Argentina has entered 23 IMF programs since 1956 — more than any other country",
+    "trend": "up",
+    "lastUpdated": "2026-05-31"
+  },
+  {
+    "id": "malvinas-casualties",
+    "label": "Argentine Malvinas Deaths",
+    "value": "649",
+    "color": "amber",
+    "source": "Argentine Ministry of Defense",
+    "contested": false,
+    "deltaNote": "Includes 323 from sinking of ARA General Belgrano; UK lost 255 personnel",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "years-democracy",
+    "label": "Consecutive Years of Democracy",
+    "value": "42+",
+    "color": "green",
+    "source": "Calculated from Dec 10, 1983",
+    "contested": false,
+    "deltaNote": "Longest uninterrupted democratic period in Argentine history",
+    "trend": "up",
+    "lastUpdated": "2026-05-31"
+  },
+  {
+    "id": "milei-primary-surplus",
+    "label": "Primary Fiscal Surplus (2024)",
+    "value": "1.9% GDP",
+    "color": "green",
+    "source": "Argentine Ministry of Economy / INDEC",
+    "contested": true,
+    "contestNote": "Achieved through severe public spending cuts including disability services, education, and health; IMF projects 1.4% GDP surplus for 2026",
+    "trend": "up",
+    "lastUpdated": "2026-05-31"
+  },
+  {
+    "id": "gdp-contraction-2002",
+    "label": "GDP Contraction During 2002 Crisis",
+    "value": "-10.9%",
+    "color": "red",
+    "source": "World Bank / INDEC",
+    "contested": false,
+    "deltaNote": "Cumulative 1999–2002 contraction was ~28%; peak unemployment hit 21.5% in 2002",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "femicides-since-niunamenos",
+    "label": "Femicides Since #NiUnaMenos (2015–May 2026)",
+    "value": "3,073",
+    "color": "red",
+    "source": "Observatorio de las Violencias de Género / MuMaLá",
+    "contested": false,
+    "delta": "1 woman killed every ~30 hrs",
+    "deltaNote": "Total gender-based violence deaths 2015–May 2026: 3,424 (3,073 femicides). Milei defunded Ministry of Women in 2024; INADI abolished. Figures renewed public focus at June 4, 2026 #NiUnaMenos anniversary.",
+    "trend": "up",
+    "lastUpdated": "2026-06-07"
+  }
+]

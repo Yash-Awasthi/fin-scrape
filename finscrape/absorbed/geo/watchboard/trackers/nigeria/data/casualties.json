@@ -1,0 +1,200 @@
+[
+  {
+    "id": "biafran-war-total",
+    "category": "Biafran War (1967–1970)",
+    "killed": "1,000,000–3,000,000",
+    "injured": "Unknown",
+    "source": "Chinua Achebe / ICRC / scholarly consensus",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Majority of deaths from starvation and disease caused by federal blockade; direct combat deaths ~100,000; widely regarded as Africa's deadliest post-independence conflict",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "1966-pogroms",
+    "category": "1966 Northern Pogroms Against Igbo",
+    "killed": "10,000–30,000",
+    "injured": "Hundreds of thousands displaced",
+    "source": "Human Rights Watch / Chimamanda Ngozi Adichie / scholarly accounts",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Triggered by January 1966 coup; Igbo residents in Northern Nigeria massacred in September–October 1966 pogroms; 1–2 million fled east; direct cause of Biafra declaration",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "boko-haram-total",
+    "category": "Boko Haram / ISWAP Insurgency (2009–2024)",
+    "killed": "35,000–50,000",
+    "injured": "2,000,000+ displaced",
+    "source": "ACLED / UN OCHA / Brookings Institution",
+    "tier": 3,
+    "contested": "evolving",
+    "note": "Figures include direct killings by Boko Haram/ISWAP and Nigerian security forces; over 2 million IDPs remain in northeast; children constitute major casualty category via suicide bombing use",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "baga-massacre-2015",
+    "category": "Baga Massacre — January 2015",
+    "killed": "2,000 (est.)",
+    "injured": "Unknown; mass displacement",
+    "source": "Amnesty International / Human Rights Watch",
+    "tier": 3,
+    "contested": "yes",
+    "note": "Boko Haram overruns military base and town of Baga, Borno State; Nigerian military initially claimed 150 dead; satellite imagery and survivor accounts suggest 2,000+; worst single incident of the insurgency",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "niger-delta-conflict",
+    "category": "Niger Delta Militant Conflict (2006–2009)",
+    "killed": "1,000–1,500 combatants",
+    "injured": "Unknown civilian",
+    "source": "International Crisis Group / CSIS",
+    "tier": 3,
+    "contested": "partial",
+    "note": "MEND-era conflict; oil production cut by 25–30%; 2009 amnesty ended major hostilities; civilian death toll from security force operations disputed",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "sharia-riots-2000",
+    "category": "Sharia Riots — Kaduna 2000",
+    "killed": "2,000–3,000",
+    "injured": "~5,000",
+    "source": "Human Rights Watch / Reuters",
+    "tier": 3,
+    "contested": "yes",
+    "note": "Inter-communal violence following Kaduna State's adoption of Sharia in February 2000; Christians and Muslims killed in retaliatory cycles; 35,000–50,000 displaced across the North",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "endsars-lekki-2020",
+    "category": "#EndSARS Protests — Lekki Tollgate (Oct 20, 2020)",
+    "killed": "12–56 (disputed)",
+    "injured": "~200+ (protest-wide)",
+    "source": "Lagos Judicial Panel / Amnesty International",
+    "tier": 3,
+    "contested": "heavily",
+    "note": "Lagos State governor declared curfew; military opened fire on unarmed protesters at Lekki Toll Gate; Lagos Judicial Panel confirmed at least 12 killed; government denied civilian deaths; CCTV footage deleted",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "farmers-herders-conflict",
+    "category": "Farmer-Herder Violence (Middle Belt, 2016–2023)",
+    "killed": "10,000–20,000",
+    "injured": "Unknown; 300,000+ displaced",
+    "source": "ACLED / Council on Foreign Relations Nigeria Security Tracker",
+    "tier": 3,
+    "contested": "evolving",
+    "note": "Fulani herdsmen-farmer conflicts across Benue, Plateau, Kaduna, Niger, Zamfara states; climate-driven cattle corridor encroachment; classified as terrorism by some governors; government denies systematic nature",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "2011-post-election-violence",
+    "category": "2011 Post-Election Violence",
+    "killed": "800–1,000",
+    "injured": "~3,000",
+    "source": "Human Rights Watch / International Crisis Group",
+    "tier": 3,
+    "contested": "partial",
+    "note": "After Buhari lost 2011 election to Jonathan, supporters rioted in northern states; corper (NYSC member) volunteers killed; 2011 violence was a warning of institutional fragility before 2015 transition",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "northwest-banditry",
+    "category": "Northwest Banditry & Mass Kidnappings (2019–2024)",
+    "killed": "8,000–12,000",
+    "injured": "Unknown",
+    "source": "SBM Intelligence / ACLED / Council on Foreign Relations",
+    "tier": 3,
+    "contested": "evolving",
+    "note": "Armed bandit groups in Zamfara, Katsina, Sokoto, Kebbi states; mass school kidnappings including 344 Kankara boys (2020); Nigerian Air Force airstrikes have killed civilians; scale rivals Boko Haram at peak",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "plateau-farmer-herder-2026",
+    "category": "Plateau State Farmer-Herder Violence (Mar–May 2026)",
+    "killed": "110+",
+    "injured": "Unknown; mass displacement",
+    "source": "Daily Post Nigeria / International Christian Concern / HRW",
+    "tier": 3,
+    "contested": "evolving",
+    "note": "Surge in intercommunal attacks targeting Christian farming communities in Bassa, Barkin Ladi, and Riyom LGAs since late March 2026; includes April 26 killing of pastor and family; security forces unable to establish sustained protective presence",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "iswap-surge-2026",
+    "category": "ISWAP Escalation in Northeast (2026)",
+    "killed": "10+ soldiers; 240+ insurgents (May 7–30 combined operations)",
+    "injured": "Unknown",
+    "source": "Daily Post Nigeria / PRNigeria / AFRICOM / Vanguard / ISS Africa",
+    "tier": 2,
+    "contested": "partial",
+    "note": "ISWAP assaulted FOB Magumeri (May 7), 27 Brigade/Yobe (May 9), and Wulgo MNJTF base (May 16); US-Nigeria joint AFRICOM strikes (May 16–18) killed ISIS global #2 Abu-Bilal al-Minuki and ~175 militants; follow-up May 30 strike killed 21 more fighters including 3 mid-level commanders in Arege, Kukawa LGA; ISWAP continued probing attacks into July — a FOB in Logomani, Ngala LGA was assaulted July 9 (1 soldier killed) and an infiltration attempt into Cross Kauwa, Kukawa LGA was repelled July 11, allegedly coordinated by 4 senior commanders with foreign facilitator involvement; separately, a cholera outbreak reportedly killed 9 ISWAP fighters within the Timbuktu Triangle enclave in July; most sustained Nigeria counterterrorism operation in years",
+    "lastUpdated": "2026-07-11"
+  },
+  {
+    "id": "jas-kukawa-massacre-may2026",
+    "category": "JAS (Boko Haram) Kukawa Massacre — May 15, 2026",
+    "killed": "57 confirmed",
+    "injured": "~70 missing / abducted",
+    "source": "ISS Africa / International Crisis Group",
+    "tier": 3,
+    "contested": "partial",
+    "note": "JAS faction attacked Mallam Karamti and Kwatandashi villages in Kukawa LGA, Borno; accused villagers of spying for ISWAP; 100 seized, 57 bodies recovered; underscores intra-jihadist rivalry civilian cost",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "borno-oyo-school-abductions-may2026",
+    "category": "Wave of School Abductions — Borno and Oyo (May 15, 2026)",
+    "killed": "3 killed (1 teacher killed on the spot; 1 teacher, Michael Oyedokun, killed in captivity; 1 okada rider shot)",
+    "injured": "88–128+ abducted across both states; 44 Oyo hostages rescued alive July 10",
+    "source": "PM News Nigeria / Daily Post / Channels Television / Premium Times",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Boko Haram seized 42–82 students in Askira-Uba, Borno; bandits seized 46 in Oriire LGA, Oyo (3 schools); RESOLVED for Oyo cohort — a multi-agency military/police/DSS operation on the night of July 10 freed all 44 surviving Oriire hostages (37 pupils, 7 teachers) unconditionally after 56 days, with 8 gang members arrested; Nigerian military says the demanded gang-leader prisoner exchange was never conceded. Askira-Uba, Borno abductees continue to be recovered in smaller batches via ongoing search-and-rescue operations (2 more rescued July 7)",
+    "lastUpdated": "2026-07-10"
+  },
+  {
+    "id": "borno-cholera-outbreak-june2026",
+    "category": "Borno State Cholera Outbreak (May–June 2026)",
+    "killed": "108",
+    "injured": "13,234 cumulative suspected cases",
+    "source": "Tori.ng / UNICEF Nigeria Humanitarian Flash Update / Vanguard Nigeria / Daily Post Nigeria",
+    "tier": 2,
+    "contested": "evolving",
+    "note": "Outbreak spread from 7 to 17 of Borno State's 27 LGAs since May 1; Maiduguri MC (7,083 cases) and Jere (3,403) worst-hit; 71 of 108 deaths occurred in health facilities, 37 in the community; WHO, UNICEF, and MSF supporting the state response with water-access restrictions and safe-water tankering; driven by degraded sanitation, flooding, and IDP camp overcrowding from the ongoing insurgency",
+    "lastUpdated": "2026-06-18"
+  },
+  {
+    "id": "rabe-batsari-death-2026",
+    "category": "Death of Retired Maj. Gen. Rabe Batsari in Bandit Captivity (Katsina)",
+    "killed": "1",
+    "injured": "0 (wife released alive)",
+    "source": "Vanguard Nigeria / Daily Trust / AllAfrica",
+    "tier": 2,
+    "contested": "yes",
+    "note": "Retired Major General and former Nigerian Army Director of Defence Information abducted with his wife on May 30 in Matazu LGA, Katsina; died in captivity June 13. State government attributed death to pre-existing diabetes/hypertension; family publicly disputes this account and has demanded an independent investigation. Case triggered national outrage over banditry's reach into senior retired military ranks",
+    "lastUpdated": "2026-06-16"
+  },
+  {
+    "id": "zamfara-maradun-elders-abduction-2026",
+    "category": "Zamfara Elders Abduction During Failed Peace Mission (Maradun LGA)",
+    "killed": "3 (died in captivity)",
+    "injured": "0 confirmed; 39–50 abducted",
+    "source": "Daily Trust / Punch Nigeria / Daily Post Nigeria / Channels Television",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Elders from Magamin Diddi village abducted June 7 by bandit kingpin Jammo after traveling into Muntsira Forest for an unauthorized reconciliation meeting; bandits initially demanded ₦100 million ransom for 39 captives after releasing 11 to negotiate; all survivors freed in early July after a reported ₦35 million ransom payment, per conflict monitor Bakatsine",
+    "lastUpdated": "2026-07-02"
+  },
+  {
+    "id": "niger-state-farmer-herder-tegina-2026",
+    "category": "Fulani–Kamuku Inter-Communal Violence — Tegina, Niger State (Jul 1, 2026)",
+    "killed": "48 (42 Kamuku; ~6 Fulani herders in reprisal)",
+    "injured": "Unknown; mass displacement in Rafi LGA",
+    "source": "Premium Times / Vanguard Nigeria / Daily Trust",
+    "tier": 2,
+    "contested": "partial",
+    "note": "Machete-wielding herders attacked a Kamuku community in Tegina, Rafi LGA before dawn July 1, killing mostly women, children, and the elderly; Kamuku fighters staged a retaliatory attack killing roughly 6 herders on a nearby plantation. Traces to the May killing of Fulani leader Muhammed Shehu, blamed by herders on local vigilantes; police initially reported 18 dead before the fuller 48-death toll was confirmed",
+    "lastUpdated": "2026-07-01"
+  }
+]

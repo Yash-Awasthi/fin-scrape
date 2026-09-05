@@ -1,0 +1,584 @@
+[
+  {
+    "id": "kuwait_airport_jun03",
+    "name": "Kuwait International Airport — IRGC Strike (Day 96)",
+    "detail": "June 3 (Day 96): IRGC launched 13 ballistic missiles + 17 drones at Kuwait. 2 missiles struck Kuwait International Airport — 1 Indian national killed, 63+ injured, terminal damaged, airport temporarily closed. In retaliation for US strike on IRGC drone control stations on Qeshm Island (Strait of Hormuz) earlier that day.",
+    "icon": "retaliation",
+    "time": "Jun 3, 09:00",
+    "tier": 1,
+    "lastUpdated": "2026-06-03T09:00:00.000Z"
+  },
+  {
+    "id": "bahrain_fifthfleet_jun03",
+    "name": "Bahrain — US Fifth Fleet HQ (3 Missiles — Intercepted)",
+    "detail": "June 3 (Day 96): 3 IRGC ballistic missiles targeted the US Fifth Fleet headquarters in Manama, Bahrain — all 3 intercepted by US and Bahraini air defenses; no casualties. Simultaneous with Kuwait airport strike.",
+    "icon": "retaliation",
+    "time": "Jun 3, 09:15",
+    "tier": 1,
+    "lastUpdated": "2026-06-03T09:15:00.000Z"
+  },
+  {
+    "id": "uae_barrage",
+    "name": "UAE — 137 missiles, 209 drones",
+    "detail": "3 killed, 58+ injured. Burj Al Arab fire, Jebel Ali Port fire, Dubai Airport drone hit.",
+    "icon": "retaliation",
+    "time": "Mar 1–2",
+    "tier": 2
+  },
+  {
+    "id": "israel_barrage",
+    "name": "Israel — Multiple barrages",
+    "detail": "9+ killed near Beit Shemesh (synagogue), 777 hospitalized. Tel Nof and HaKirya targeted.",
+    "icon": "retaliation",
+    "time": "Mar 1–2",
+    "tier": 2
+  },
+  {
+    "id": "qatar_barrage",
+    "name": "Qatar — 65 missiles, 12 drones",
+    "detail": "Al Udeid Air Base targeted. Qatar shot down 2 Su-24s, 7 missiles, 5 drones. 16 injured.",
+    "icon": "retaliation",
+    "time": "Mar 1",
+    "tier": 2
+  },
+  {
+    "id": "kuwait_buehring",
+    "name": "Kuwait — Camp Buehring drone strike",
+    "detail": "4 US service members killed, 5 seriously wounded. Ali Al Salem attacked.",
+    "icon": "casualty",
+    "time": "Mar 1",
+    "tier": 1
+  },
+  {
+    "id": "iraq_erbil",
+    "name": "Iraq/Erbil — 70+ missiles and drones",
+    "detail": "Erbil Airport and US Consulate targeted. Fire at air base.",
+    "icon": "retaliation",
+    "time": "Mar 2",
+    "tier": 2
+  },
+  {
+    "id": "bahrain_5th_fleet",
+    "name": "Bahrain — 5th Fleet HQ targeted",
+    "detail": "Shahed drone struck apartment near HQ. Airport hit. 4 injured.",
+    "icon": "retaliation",
+    "time": "Mar 1",
+    "tier": 2
+  },
+  {
+    "id": "lincoln_claim",
+    "name": "USS Abraham Lincoln — IRGC claims hit",
+    "detail": "CENTCOM categorically denies: \"Not hit. Not even close.\" Lincoln continues ops.",
+    "icon": "retaliation",
+    "time": "Mar 1",
+    "tier": 1
+  },
+  {
+    "id": "lebanon_hezbollah",
+    "name": "Lebanon — Hezbollah enters conflict",
+    "detail": "6 projectiles at Israeli base near Haifa. Israel strikes Beirut; 52 killed, 154 wounded in Lebanon.",
+    "icon": "retaliation",
+    "time": "Mar 2",
+    "tier": 2
+  },
+  {
+    "id": "houthi_red_sea",
+    "name": "Yemen — Houthi Red Sea escalation",
+    "detail": "Houthis fire 3 anti-ship missiles at US destroyer. USS Gravely intercepts all. Houthis declare blockade of Red Sea.",
+    "icon": "retaliation",
+    "time": "Mar 3",
+    "tier": 2
+  },
+  {
+    "id": "iraq_militia_ain_asad",
+    "name": "Iraq — Militia rocket barrage at Al Asad",
+    "detail": "Iran-backed PMF fires 40+ rockets at Al Asad Airbase. 2 US contractors killed, 11 wounded. Base partially evacuated.",
+    "icon": "casualty",
+    "time": "Mar 3",
+    "tier": 1
+  },
+  {
+    "id": "dubai_drone_swarm",
+    "name": "UAE — Second drone wave",
+    "detail": "48 Shahed drones target Dubai International Airport. 31 intercepted. 3 hit terminal. Airport closed 18 hours.",
+    "icon": "retaliation",
+    "time": "Mar 4",
+    "tier": 2
+  },
+  {
+    "id": "israel_haifa_port",
+    "name": "Israel — Haifa port missile strike",
+    "detail": "Hezbollah fires anti-ship missiles at Haifa port. One cargo vessel hit. 3 dock workers killed.",
+    "icon": "retaliation",
+    "time": "Mar 4",
+    "tier": 2
+  },
+  {
+    "id": "iran_missile_barrage",
+    "name": "Iranian Missile Barrage — Israel and U.S. Bases",
+    "detail": "Iran launched multiple missiles targeting Israel and U.S. bases; interceptions reported.",
+    "icon": "retaliation",
+    "time": "Mar 5",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T04:24:50.651Z"
+  },
+  {
+    "id": "hezbollah_strikes",
+    "name": "Hezbollah Strikes",
+    "detail": "Hezbollah launched projectiles into northern Israel; Israeli airstrikes in Beirut followed.",
+    "icon": "retaliation",
+    "time": "Mar 7",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iranian_strikes_bahrain",
+    "name": "Iranian Strikes — Bahrain",
+    "detail": "Iran targeted U.S. Fifth Fleet HQ; one civilian killed, two injured.",
+    "icon": "retaliation",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iranian_strikes_oman",
+    "name": "Iranian Strikes — Oman",
+    "detail": "Ports of Duqm and Salalah targeted; one foreign worker injured.",
+    "icon": "retaliation",
+    "time": "Mar 7",
+    "tier": 2,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iranian_strikes_gulf",
+    "name": "Iranian Strikes — Gulf States",
+    "detail": "Missiles and drones launched at UAE, Qatar, Kuwait, and Saudi Arabia; casualties reported.",
+    "icon": "retaliation",
+    "time": "Mar 1",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "iranian_strikes_iraq",
+    "name": "Iranian Strikes — Iraq",
+    "detail": "Missiles targeted Erbil Airport and U.S. Consulate; fire at air base.",
+    "icon": "retaliation",
+    "time": "Mar 2",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "iranian_strikes_jordan",
+    "name": "Iranian Strikes — Jordan",
+    "detail": "Iran launched missiles and drones into Jordanian airspace; several civilians injured by falling shrapnel.",
+    "icon": "retaliation",
+    "time": "Mar 5",
+    "tier": 2,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_strikes_oman_tankers",
+    "name": "Iranian Strikes — Oil Tankers off Oman",
+    "detail": "Two tankers targeted; one crew member killed, four injured.",
+    "icon": "retaliation",
+    "time": "Mar 1",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "iranian_strikes_cyprus",
+    "name": "Iranian Strikes — UK Base in Cyprus",
+    "detail": "Drone struck runway; no casualties reported.",
+    "icon": "retaliation",
+    "time": "Mar 1",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T04:38:18.553Z"
+  },
+  {
+    "id": "iranian_missile_barrage",
+    "name": "Iranian Missile Barrage — Israel and U.S. Bases",
+    "detail": "Iran launched multiple missiles targeting Israel and U.S. military bases; interceptions reported.",
+    "icon": "retaliation",
+    "time": "Mar 7",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T00:29:50.183Z"
+  },
+  {
+    "id": "iran_missile_drone_attacks",
+    "name": "Iranian Missile and Drone Attacks",
+    "detail": "Iran launched missile and drone attacks on U.S. military-hosting nations including Kuwait, Qatar, Saudi Arabia, and Bahrain.",
+    "icon": "retaliation",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iran_strikes_israel",
+    "name": "Iranian Strikes on Israel",
+    "detail": "Iran launched multiple waves of missile and drone attacks against Israel, with some hitting civilian areas.",
+    "icon": "retaliation",
+    "time": "Mar 4",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "hezbollah_missile_attacks",
+    "name": "Hezbollah Missile Attacks",
+    "detail": "Hezbollah launched missile attacks on Israeli tanks near the southern Lebanese border.",
+    "icon": "retaliation",
+    "time": "Mar 4",
+    "tier": 2,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iran_strikes_bahrain",
+    "name": "Iranian Strikes on Bahrain",
+    "detail": "Iran conducted missile and drone strikes on Bahrain, hitting multiple buildings and a U.S. fleet headquarters.",
+    "icon": "retaliation",
+    "time": "Feb 28",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iran_strikes_qatar",
+    "name": "Iranian Strikes on Qatar",
+    "detail": "Iran launched missile strikes on Qatar, with some missiles intercepted and two Iranian Su-24 bombers shot down.",
+    "icon": "retaliation",
+    "time": "Mar 2",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:26:50.690Z"
+  },
+  {
+    "id": "iranian_strikes_qatar",
+    "name": "Iranian Strikes — Qatar",
+    "detail": "Iran launched missile strikes on Qatar, with some missiles intercepted and two Iranian Su-24 bombers shot down.",
+    "icon": "retaliation",
+    "time": "Mar 2",
+    "tier": 1,
+    "lastUpdated": "2026-03-06T05:57:54.619Z"
+  },
+  {
+    "id": "iranian_missile_barrage_israel",
+    "name": "Iranian Missile Barrage — Israel",
+    "detail": "Iran launched multiple missiles targeting Israel; interceptions reported.",
+    "icon": "retaliation",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_drone_strikes_gulf_states",
+    "name": "Iranian Drone Strikes — Gulf States",
+    "detail": "Iran intensified drone and missile attacks on Bahrain, causing massive damage to a refinery.",
+    "icon": "retaliation",
+    "time": "Mar 6",
+    "tier": 1,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "hezbollah_missile_attacks_israel",
+    "name": "Hezbollah Missile Attacks — Israel",
+    "detail": "Hezbollah launched multiple missiles from Lebanon into Israel; Israeli airstrikes followed.",
+    "icon": "retaliation",
+    "time": "Mar 6",
+    "tier": 2,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iranian_uav_attack_azerbaijan",
+    "name": "Iranian UAV Attack — Azerbaijan",
+    "detail": "Three Iranian UAVs targeted the passenger terminal of Nakhchivan International Airport.",
+    "icon": "retaliation",
+    "time": "Mar 5",
+    "tier": 2,
+    "lastUpdated": "2026-03-07T06:15:56.708Z"
+  },
+  {
+    "id": "iran_missile_strikes",
+    "name": "Iranian Missile Strikes",
+    "detail": "Iran launched missiles targeting military sites in Tel Aviv, Beersheba, and Muwaffaq Salti Air Base in Jordan.",
+    "icon": "retaliation",
+    "time": "Mar 8",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "kuwait_city_drone_strike",
+    "name": "Kuwait City Drone Strike",
+    "detail": "An Iranian drone strike set a Kuwait City tower belonging to the Public Institution for Social Security ablaze.",
+    "icon": "retaliation",
+    "time": "Mar 8",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "bahrain_desalination_plant",
+    "name": "Bahrain Desalination Plant",
+    "detail": "An Iranian drone damaged a desalination plant in Bahrain, injuring three people and damaging a university building.",
+    "icon": "retaliation",
+    "time": "Mar 8",
+    "tier": 1,
+    "lastUpdated": "2026-03-08T21:56:37.543Z"
+  },
+  {
+    "id": "iran_haifa_refinery_drone_mar11",
+    "name": "Iran Drone Attack — Haifa Oil Refinery, Israel",
+    "detail": "The Iranian army launched a drone attack targeting an Israeli oil and gas refinery and fuel tanks in Haifa. Israeli air defenses were activated; intercept efforts underway. First confirmed targeting of Israeli energy infrastructure in Haifa.",
+    "icon": "retaliation",
+    "time": "Mar 11",
+    "tier": 2,
+    "lastUpdated": "2026-03-11T06:00:00.000Z"
+  },
+  {
+    "id": "iran_hormuz_mining_mar11",
+    "name": "Iran Lays Mines — Strait of Hormuz",
+    "detail": "Iran began laying naval mines in the Strait of Hormuz, through which 20% of world oil transits. US intelligence confirmed the operation. Trump issued ultimatum for immediate removal threatening 'death, fire and fury.' CENTCOM subsequently destroyed 16 mine-laying vessels. The IRGC said Iran will not allow 'a single liter of oil' from the region to the 'hostile side and its partners until further notice.'",
+    "icon": "retaliation",
+    "time": "Mar 11",
+    "tier": 1,
+    "lastUpdated": "2026-03-11T06:00:00.000Z"
+  },
+  {
+    "id": "irgc_persian_gulf_ships_mar12",
+    "name": "IRGC — 6 Vessels Struck in Persian Gulf (48 hrs)",
+    "detail": "Iran struck 6 commercial and tanker vessels in the Persian Gulf over March 11-12: 3 on Mar 11, 3 more on Mar 12 including a US-owned tanker near Iraq's southern ports (first such strike in Iraqi waters). Container ship off UAE coast struck early Mar 12. Oman fuel storage tanks hit by Iranian drone. Bahrain fuel tanks targeted. ~500 oil tankers stranded in Persian Gulf per tracking data. Only 5 tankers departed the area in 24 hours.",
+    "icon": "retaliation",
+    "time": "Mar 12",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "hezbollah_biggest_barrage_mar12",
+    "name": "Hezbollah — Largest Rocket Attack Since War Began",
+    "detail": "Hezbollah launched its biggest rocket barrage against Israel since the conflict began on March 12 — part of a IRGC+Hezbollah joint operation striking 50+ Israeli targets over 5 hours. Israeli military said Hezbollah fired heavy volleys toward northern Israel overnight, repeatedly driving residents into shelters. Israel responded with attacks on Hezbollah launch sites and command infrastructure. Israeli DM Katz warned: 'If Lebanon cannot control Hezbollah, we will take the territory.'",
+    "icon": "retaliation",
+    "time": "Mar 12",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "iran_beirut_diplomats_killed",
+    "name": "Israeli Strike Kills 4 Iranian Diplomats in Beirut",
+    "detail": "An Israeli airstrike in Beirut killed four Iranian diplomats. Iran condemned the strike as a 'terrorist attack' and demanded justice at the UN Security Council.",
+    "icon": "casualty",
+    "time": "Mar 12",
+    "tier": 2,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "iran_most_intense_barrage_mar13",
+    "name": "Iran — Most Intense Missile Barrage (Palmachim, Ovda, Shin Bet HQ)",
+    "detail": "IRGC launched its 'most intense operation since beginning of war,' targeting Palmachim Airbase south of Tel Aviv, Ovda Airbase (Negev), and Shin Bet HQ in central Israel with advanced ballistic missiles. 58 Israelis hospitalized. Blasts heard over Jerusalem.",
+    "icon": "retaliation",
+    "time": "Mar 13",
+    "tier": 2,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "iran_safesea_vishnu_basra_mar13",
+    "name": "Iran Underwater Drones — Safesea Vishnu + Zefyros (Iraqi Waters, Basra)",
+    "detail": "Iran used underwater suicide drones to strike US-owned MV Safesea Vishnu and MV Zefyros in Iraqi territorial waters near Basra. 1 Indian crew killed, 25 rescued. First oil-related attack in Iraqi waters. Iraq suspended oil terminal operations.",
+    "icon": "retaliation",
+    "time": "Mar 13",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "iran_drone_french_base_makhmour_mar13",
+    "name": "Iran Drone — French Base, Mala Qara, Iraqi Kurdistan",
+    "detail": "Iranian drone strike on joint French-Peshmerga base at Mala Qara (Makhmour, ~40km from Erbil). 1 French soldier killed (CWO Arnaud Frion, 7th Chasseurs Alpins), 5 injured. First French combat death of the war. Italy also withdraws troops after separate Erbil base strike.",
+    "icon": "casualty",
+    "time": "Mar 13",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "iran_kuwait_airport_drones_mar13",
+    "name": "Kuwait International Airport — Drone Attack",
+    "detail": "Iranian drones targeted Kuwait International Airport, causing material damage. 6 electricity transmission lines disrupted by debris from intercepted drones. Earlier residential building in Kuwait City struck, wounding 2.",
+    "icon": "retaliation",
+    "time": "Mar 13",
+    "tier": 1,
+    "lastUpdated": "2026-03-13T06:00:00.000Z"
+  },
+  {
+    "id": "iran_uae_9ballistic_33uav_mar14",
+    "name": "UAE — 9 Ballistic Missiles + 33 UAVs (All Intercepted)",
+    "detail": "IRGC launched 9 ballistic missiles and 33 UAVs at UAE targets on March 14. UAE air defense intercepted all — Patriot and THAAD batteries performed without a miss. No casualties or infrastructure damage reported per UAE Ministry of Defense.",
+    "icon": "retaliation",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran_saudi_7drones_riyadh_mar14",
+    "name": "Saudi Arabia — 7 Iranian Drones Intercepted Over Riyadh",
+    "detail": "Iran launched 7 Shahed-type drones toward Riyadh; Saudi Civil Defense intercepted all 7 before reaching the capital. No casualties. Marks continued IRGC pressure on Saudi Arabia despite Pezeshkian's Mar 7 pledge to stop Gulf strikes.",
+    "icon": "retaliation",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran_qatar_4ballistic_mar14",
+    "name": "Qatar — 4 Ballistic Missiles Intercepted",
+    "detail": "IRGC fired 4 ballistic missiles toward Qatar, targeting the Al Udeid Air Base area — the largest US air base in the Middle East. Qatar air defenses intercepted all 4. No US casualties reported.",
+    "icon": "retaliation",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran_baghdad_us_embassy_mar14",
+    "name": "Baghdad — US Embassy Helipad + Air Defense System Destroyed",
+    "detail": "Missile (attributed to Islamic Resistance in Iraq / IRGC proxy) struck US Embassy Baghdad compound, destroying the helipad and Centurion CIWS air defense installation. First direct strike on the Embassy compound. No US fatalities. CENTCOM initiated investigation.",
+    "icon": "casualty",
+    "time": "Mar 14",
+    "tier": 1,
+    "lastUpdated": "2026-03-15T06:00:00.000Z"
+  },
+  {
+    "id": "iran_6th_wave_tel_nof_mar15",
+    "name": "Iran 6th Wave — Tel Nof AB, Israeli Military HQ, Tel Aviv Defense Industry",
+    "detail": "IRGC Aerospace Force announced its 'sixth wave' of retaliatory operations. Targets included Tel Nof Airbase (IAF F-35I home, south of Tel Aviv), the Israeli Military General Headquarters (Kirya, Tel Aviv), and a defense industry complex in central Israel. Sirens blared across central and northern Israel. Cluster missile fragments struck Tel Aviv streets. Iron Dome, David's Sling, and Arrow-3 systems all activated. 58 Israelis taken to hospitals. Total 174+ attack waves conducted against Israel since Feb 28.",
+    "icon": "retaliation",
+    "time": "Mar 15",
+    "tier": 1,
+    "lastUpdated": "2026-03-16T06:00:00.000Z"
+  },
+  {
+    "id": "iran_alba_ega_aluminium_mar29",
+    "name": "Iran Strikes Gulf Aluminium Industry — ALBA Bahrain + EGA Abu Dhabi",
+    "detail": "IRGC struck two of the Gulf's largest aluminium producers on March 29: ALBA (Aluminium Bahrain) and Emirates Global Aluminium (Abu Dhabi). ALBA reported 2 employees injured; EGA reported significant damage and 6 workers wounded. IRGC cited alleged US military-aerospace ties of both facilities. The strikes mark a new phase of Iranian targeting beyond oil and gas — hitting aluminium facilities that supply global automotive, aerospace, and packaging supply chains. Saudi Arabia intercepted 10 Iranian drones in the same wave; Kuwait's National Guard shot down 4 drones.",
+    "icon": "retaliation",
+    "time": "Mar 29",
+    "tier": 1,
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "iran_neot_hovav_israel_mar29",
+    "name": "Iran — Ne'ot Hovav Chemical Plant Struck in Southern Israel",
+    "detail": "Iranian ballistic missile struck the Ne'ot Hovav industrial zone in southern Israel on March 29, hitting a chemical plant and raising hazmat concerns. One person injured. Israeli emergency response teams deployed; precautionary shelter-in-place orders issued for communities within 5km. The strike continues Iran's pattern of targeting Israeli industrial infrastructure despite CENTCOM/IDF claims of severely degraded launch capacity.",
+    "icon": "retaliation",
+    "time": "Mar 29",
+    "tier": 2,
+    "lastUpdated": "2026-03-30T14:00:00.000Z"
+  },
+  {
+    "id": "iran_israel_ballistic_jun7_8",
+    "name": "Iran — Ballistic Missiles at Israel (First Since Ceasefire)",
+    "detail": "Iran fired ballistic missiles at Israel on June 7-8, the first direct attack on Israel since the April 8 ceasefire, in retaliation for an Israeli strike on Beirut's Dahieh suburb. All 4 missiles intercepted; sirens sounded in northern Israel.",
+    "icon": "retaliation",
+    "time": "Jun 7-8",
+    "tier": 2,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "irgc_true_promise_4_jun10",
+    "name": "IRGC 'Operation True Promise IV' — Bahrain, Kuwait, Jordan",
+    "detail": "IRGC claimed drone strikes on the US Fifth Fleet in Bahrain and Ali Al Salem airbase in Kuwait, plus a long-range missile strike on Azraq airbase, Jordan. All intercepted; no casualties reported by any of the three governments.",
+    "icon": "retaliation",
+    "time": "Jun 10",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "kiku_tanker_drone_jun27",
+    "name": "Drone Strike on Tanker M/T Kiku",
+    "detail": "A one-way attack drone struck the Panama-flagged, Greek-owned tanker M/T Kiku near the Strait of Hormuz. No crew injuries, no cargo leakage. Triggered a second wave of US strikes on Iran.",
+    "icon": "retaliation",
+    "time": "Jun 27",
+    "tier": 2,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "irgc_kuwait_bahrain_jun28",
+    "name": "IRGC Retaliation — Ali Al Salem Airbase & Fifth Fleet Facility",
+    "detail": "IRGC fired ballistic missiles and drones at Ali Al Salem airbase, Kuwait, and the Fifth Fleet facility in Manama, Bahrain, retaliation for the June 28 US strikes on Sirik/Bandar-e Lengeh/Qeshm. 1 Qatari citizen killed by shrapnel (collateral).",
+    "icon": "retaliation",
+    "time": "Jun 28",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "tanker_wave_4vessels_jul7",
+    "name": "Iranian Strikes on 4 Vessels in Strait of Hormuz",
+    "detail": "Drone and projectile strikes hit LNG tanker Al Rekayyat (fire, abandoned), oil tanker Wedyan (drone-damaged), container ship Cyprus Prosperity (minor damage), and oil tanker Kiku (bridge damaged). First wave that collapsed the Islamabad MOU.",
+    "icon": "retaliation",
+    "time": "Jul 6-7",
+    "tier": 2,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "gfs_galaxy_strike_jul11",
+    "name": "Projectile Strike on Container Ship GFS Galaxy",
+    "detail": "Container ship GFS Galaxy struck by a projectile in the Strait of Hormuz. 1 Indian crew member killed; a second body recovered July 14.",
+    "icon": "retaliation",
+    "time": "Jul 11",
+    "tier": 2,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "triple_tanker_strike_jul14",
+    "name": "IRGC Cruise Missiles — Triple Tanker Strike (Mombasa B, Al Bahyah, Stolt Magnesium)",
+    "detail": "IRGC cruise missiles struck VLCCs Mombasa B and Al Bahyah; chemical tanker Stolt Magnesium hit by a projectile. 1 Indian crew killed, 8 injured, 3 missing aboard Al Bahyah. Third tanker-attack wave in 8 days.",
+    "icon": "retaliation",
+    "time": "Jul 14",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "irgc_bahrain_kuwait_jordan_jul15",
+    "name": "IRGC Overnight Strikes — Bahrain, Kuwait, Jordan",
+    "detail": "IRGC claimed strikes on the US Fifth Fleet HQ/fuel depots in Bahrain, a US logistics hub at Mina Abdullah, Kuwait (Kuwait MoD downed 4 cruise missiles, 21 drones), and Al-Azraq Air Base, Jordan. Iran declared the MOU void.",
+    "icon": "retaliation",
+    "time": "Jul 15",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "uae_tankers_missiles_jul16",
+    "name": "Iranian Missiles Strike 2 UAE Tankers in Omani Waters",
+    "detail": "Iranian missiles hit two UAE-flagged tankers in Omani territorial waters. Hours later Iran's military said it struck and disabled two 'rogue supertankers' attempting to run the US naval blockade.",
+    "icon": "retaliation",
+    "time": "Jul 16",
+    "tier": 1,
+    "lastUpdated": "2026-07-16T18:00:00.000Z"
+  },
+  {
+    "id": "barzani_office_drones_aug17",
+    "name": "Drones Target KRG PM Barzani's Office, Erbil (Disputed)",
+    "detail": "Two Hadid-110 kamikaze drones, traced by Kurdish Counter-Terrorism Directorate to Iranian territory, struck near PM Masrour Barzani's private office and the Parastin intelligence chief's home in Erbil. No casualties. Iran's FM Araghchi denied responsibility, calling it a possible 'false-flag' operation.",
+    "icon": "retaliation",
+    "time": "Aug 17, 00:28",
+    "tier": 2,
+    "lastUpdated": "2026-08-18T15:26:14.000Z"
+  },
+  {
+    "id": "houthi_saudi_landing_ship_aug17",
+    "name": "Houthi Ballistic Missiles Target Saudi Landing Ship, Red Sea",
+    "detail": "Houthi forces claimed ballistic missile strikes 'completely burned' a Saudi military landing ship and damaged four escorting patrol boats off Mokha, part of the blockade of Saudi Arabia declared Jul 20. Saudi Arabia has not confirmed the claims.",
+    "icon": "retaliation",
+    "time": "Aug 17",
+    "tier": 3,
+    "lastUpdated": "2026-08-18T15:26:14.000Z"
+  },
+  {
+    "id": "iran_fully_offensive_policy_aug17",
+    "name": "Iran Declares Shift to 'Fully Offensive' Policy",
+    "detail": "A senior Iranian official told Reuters that Iran has decided to shift from a defensive to a 'fully offensive' posture as the 60-day US-Iran MOU lapsed, warning Iranian forces must be ready to escalate in the Strait of Hormuz and signaling readiness for a 'timely and precise' attack to break the US naval blockade if diplomacy fails.",
+    "icon": "retaliation",
+    "time": "Aug 17",
+    "tier": 2,
+    "lastUpdated": "2026-08-18T15:26:14.000Z"
+  },
+  {
+    "id": "iran_bounty_us_troops_aug16",
+    "name": "Iran Army Chief Offers $30,000 Bounty for US Troops",
+    "detail": "Army Commander-in-Chief Amir Hatami announced a 5-billion-toman (~$30,000) reward for killing or capturing a US service member, doubled to $60,000 if carried out by an Iranian woman, plus a museum display for the weapon used.",
+    "icon": "retaliation",
+    "time": "Aug 16",
+    "tier": 1,
+    "lastUpdated": "2026-08-18T15:26:14.000Z"
+  }
+]

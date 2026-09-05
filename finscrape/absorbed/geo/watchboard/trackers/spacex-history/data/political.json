@@ -1,0 +1,137 @@
+[
+  {
+    "id": "elon-musk",
+    "name": "Elon Musk",
+    "role": "Founder, CEO & CTO of SpaceX",
+    "avatar": "spacex",
+    "initial": "E",
+    "quote": "This will allow SpaceX to deliver high-bandwidth connectivity directly from satellites to phones. The phones that are able to use the spectrum we acquired will probably start shipping in around two years.",
+    "lastUpdated": "2026-06-29T12:00:00.000Z"
+  },
+  {
+    "id": "gwynne-shotwell",
+    "name": "Gwynne Shotwell",
+    "role": "President & COO, SpaceX / xAI Representative (from Mar 5, 2026)",
+    "avatar": "spacex",
+    "initial": "G",
+    "quote": "Maybe 140, 145-ish Falcon 9 launches this year. We just passed our 600th flight-proven booster launch and we're still climbing the curve.",
+    "lastUpdated": "2026-07-14T12:00:00.000Z"
+  },
+  {
+    "id": "tom-mueller",
+    "name": "Tom Mueller",
+    "role": "Co-founder, VP Propulsion (2002-2020)",
+    "avatar": "spacex",
+    "initial": "T",
+    "quote": "The Merlin engine is what made everything possible. If we couldn't build a reliable engine, nothing else matters.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bill-nelson",
+    "name": "Bill Nelson",
+    "role": "NASA Administrator (2021-2025)",
+    "avatar": "nasa",
+    "initial": "B",
+    "quote": "SpaceX has proven that commercial space is not just possible — it's the future of human space exploration.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jim-bridenstine",
+    "name": "Jim Bridenstine",
+    "role": "NASA Administrator (2018-2021)",
+    "avatar": "nasa",
+    "initial": "J",
+    "quote": "Commercial crew is working. What SpaceX and Boeing are doing will be transformative for American human spaceflight.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jeff-bezos",
+    "name": "Jeff Bezos",
+    "role": "Founder, Blue Origin (SpaceX Rival)",
+    "avatar": "bezos",
+    "initial": "J",
+    "quote": "We need to build the road to space so that our children can build the future. I'm not in a race with SpaceX. We have different timelines.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tory-bruno",
+    "name": "Tory Bruno",
+    "role": "CEO, United Launch Alliance",
+    "avatar": "ula",
+    "initial": "T",
+    "quote": "I respect what SpaceX has done with reusability. We took a different path with Vulcan — optimized for performance and reliability over recovery.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bob-behnken",
+    "name": "Bob Behnken",
+    "role": "NASA Astronaut, Crew Dragon Demo-2",
+    "avatar": "nasa",
+    "initial": "B",
+    "quote": "The partnership between NASA and SpaceX is really what makes this possible. The vehicle is spectacular.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "doug-hurley",
+    "name": "Doug Hurley",
+    "role": "NASA Astronaut, Crew Dragon Demo-2 Commander",
+    "avatar": "nasa",
+    "initial": "D",
+    "quote": "From the rocket to the spacecraft, the systems worked flawlessly. I'm incredibly proud of the SpaceX and NASA teams.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "kathy-lueders",
+    "name": "Kathy Lueders",
+    "role": "NASA Space Operations Mission Directorate Head",
+    "avatar": "nasa",
+    "initial": "K",
+    "quote": "Commercial crew is delivering results. We have a robust flight schedule that we couldn't have imagined a decade ago.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "shotwell-amos6",
+    "name": "Hans Koenigsmann",
+    "role": "VP Build & Flight Reliability, SpaceX (ret.)",
+    "avatar": "spacex",
+    "initial": "H",
+    "quote": "We accept responsibility for the AMOS-6 loss. Understanding this anomaly and preventing its recurrence is our absolute priority.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "peter-beck",
+    "name": "Peter Beck",
+    "role": "Founder & CEO, Rocket Lab",
+    "avatar": "other",
+    "initial": "P",
+    "quote": "SpaceX proved that private companies can reach orbit. That changed everything for companies like us — it showed the path was real.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jared-isaacman",
+    "name": "Jared Isaacman",
+    "role": "Polaris Program Commander / NASA Administrator (2025-)",
+    "avatar": "other",
+    "initial": "J",
+    "quote": "CRS-34 docking today is a perfect example of what the commercial partnership with SpaceX delivers — reliable, cost-effective access to the station that keeps our science program moving forward. We're grateful to every SpaceX engineer who made this happen.",
+    "lastUpdated": "2026-05-17T10:45:00.000Z"
+  },
+  {
+    "id": "michael-lopez-alegria",
+    "name": "Michael López-Alegría",
+    "role": "Axiom Space Astronaut / Former NASA",
+    "avatar": "other",
+    "initial": "M",
+    "quote": "Axiom-1 was proof that private astronaut missions are viable. SpaceX gave us the ride — and it was flawless.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "stian-westlake",
+    "name": "Simone Margaritelli",
+    "role": "ESA Space Debris Office Representative",
+    "avatar": "other",
+    "initial": "S",
+    "quote": "We are deeply concerned about the pace of Starlink constellation expansion. The orbital environment cannot absorb unlimited satellite growth without coordination.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  }
+]

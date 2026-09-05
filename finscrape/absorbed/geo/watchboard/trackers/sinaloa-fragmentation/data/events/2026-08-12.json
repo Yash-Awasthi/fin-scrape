@@ -1,0 +1,62 @@
+[
+  {
+    "id": "culiacan-barrancos-plaza-woman-shot-aug12-2026",
+    "date": "2026-08-12",
+    "year": "2026",
+    "title": "Day 750: Woman Shot Inside Business at Barrancos Shopping Plaza in Culiacán",
+    "type": "clash",
+    "detail": "A woman was shot inside a business at a commercial plaza in the Barrancos sector of southern Culiacán around 10:06 PM on Wednesday, August 12, 2026, at the intersection of Avenida Giovanni Zamudio and Antonio Nakayama, near a well-known shopping center. Witnesses reported hearing gunfire before emergency responders arrived. Red Cross paramedics treated her at the scene before transporting her to a hospital; her condition was not disclosed. State Police and Mexican Army personnel secured the perimeter while investigators worked the scene. No arrests have been reported.",
+    "sources": [
+      {
+        "name": "Quadratín Sinaloa",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://sinaloa.quadratin.com.mx/hieren-a-balazos-a-una-mujer-dentro-de-plaza-comercial-en-culiacan/"
+      }
+    ],
+    "confidence": "medium",
+    "media": [
+      {
+        "type": "image",
+        "url": "https://sinaloa.quadratin.com.mx/hieren-a-balazos-a-una-mujer-dentro-de-plaza-comercial-en-culiacan/",
+        "caption": "Woman wounded by gunfire inside a Barrancos-sector business, Culiacán, August 12, 2026",
+        "source": "Quadratín Sinaloa",
+        "thumbnail": "https://sinaloa.quadratin.com.mx/wp-content/uploads/2026/08/cdc6578a-cb40-4dc9-b2e4-e2355dcdf3d5-360x230.jpg"
+      }
+    ],
+    "lastUpdated": "2026-08-13T15:10:00.000Z"
+  },
+  {
+    "id": "mazatlan-casa-redonda-man-shot-9-times-aug12-2026",
+    "date": "2026-08-12",
+    "year": "2026",
+    "title": "Day 750: Man Dies After Being Shot Nine Times in Mazatlán's Casa Redonda Neighborhood",
+    "type": "clash",
+    "detail": "A man was attacked by gunmen on Caracol Street in the Casa Redonda neighborhood of Mazatlán shortly after 3:00 PM on Wednesday, August 12, 2026. He suffered at least nine gunshot wounds. Civil Protection paramedics transported him to a private hospital, where he died around 5:00 PM the same day. The Sinaloa State Attorney General's Office (FGE) opened an intentional-homicide investigation. The killing came amid a sharp violence spike in Mazatlán tied to the Chapitos–Mayos territorial dispute over the port, which prompted the Navy to begin surging personnel into the city days later under 'Operación Sable.'",
+    "sources": [
+      {
+        "name": "Ríodoce",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://riodoce.mx/2026/08/12/muere-hombre-atacado-a-balazos-en-casa-redonda-en-mazatlan/"
+      },
+      {
+        "name": "El Sol de Mazatlán",
+        "tier": 2,
+        "pole": "western",
+        "url": "https://oem.com.mx/elsoldemazatlan/local/muere-hombre-que-fue-atacado-a-balazos-en-la-colonia-casa-redonda-de-mazatlan-31551434"
+      }
+    ],
+    "confidence": "high",
+    "media": [
+      {
+        "type": "article",
+        "url": "https://oem.com.mx/elsoldemazatlan/local/muere-hombre-que-fue-atacado-a-balazos-en-la-colonia-casa-redonda-de-mazatlan-31551434",
+        "caption": "Man shot nine times in Mazatlán's Casa Redonda neighborhood, August 12, 2026",
+        "source": "El Sol de Mazatlán",
+        "thumbnail": "https://oem.com.mx/elsoldemazatlan/local/muere-hombre-que-fue-atacado-a-balazos-en-la-colonia-casa-redonda-de-mazatlan-31551434"
+      }
+    ],
+    "lastUpdated": "2026-08-18T14:06:30.000Z"
+  }
+]

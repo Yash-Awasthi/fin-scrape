@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brown Man Bunker - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/executive.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="executive-view">
+    <!-- Simplified Header -->
+    <header class="executive-header">
+        <div class="header-content">
+            <h1>Brown Man Bunker - Dashboard</h1>
+            <div class="header-actions">
+                <span id="last-update-exec">Last update: Loading...</span>
+                <a href="/indicators" class="btn-secondary">All Indicators</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="executive-container">
+        <!-- Critical Action Box -->
+        <div class="action-box" id="action-box">
+            <h2>🎯 What You Need to Do NOW</h2>
+            <div class="current-phase-box">
+                <div class="phase-indicator">
+                    <span class="phase-label">Current Phase:</span>
+                    <span class="phase-value" id="exec-phase">0</span>
+                </div>
+                <h3 id="exec-phase-name">Loading...</h3>
+                <div class="hopi-info">
+                    <span class="hopi-label">HOPI Score:</span>
+                    <span class="hopi-value" id="exec-hopi">--</span>
+                    <span class="confidence-label">Confidence:</span>
+                    <span class="confidence-value" id="exec-confidence">--</span>
+                </div>
+            </div>
+            <div class="immediate-actions" id="immediate-actions">
+                <h4>Immediate Actions:</h4>
+                <ol id="action-list">
+                    <li>Loading recommendations...</li>
+                </ol>
+            </div>
+            <div class="alert-summary" id="alert-summary">
+                <div class="alert-stat">
+                    <span class="stat-value" id="red-indicators">0</span>
+                    <span class="stat-label">Red Alerts</span>
+                </div>
+                <div class="alert-stat">
+                    <span class="stat-value" id="amber-indicators">0</span>
+                    <span class="stat-label">Amber Warnings</span>
+                </div>
+                <div class="alert-stat">
+                    <span class="stat-value" id="green-indicators">0</span>
+                    <span class="stat-label">Green/Safe</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Risk Heat Map -->
+        <div class="heat-map-container">
+            <h2>📊 Risk Heat Map</h2>
+            <div class="heat-map" id="heat-map">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Critical Indicators -->
+        <div class="critical-section">
+            <h2>⚠️ Critical Indicators</h2>
+            <div class="critical-grid" id="critical-grid">
+                <!-- Critical indicators will be populated here -->
+            </div>
+        </div>
+
+        <!-- Trend Sparklines -->
+        <div class="trends-section">
+            <h2>📈 7-Day Trends</h2>
+            <div class="trends-grid" id="trends-grid">
+                <!-- Trend charts will be populated here -->
+            </div>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="quick-reference">
+            <h3>📋 Quick Reference</h3>
+            <div class="reference-grid">
+                <div class="reference-item">
+                    <strong>TIGHTEN-UP Threshold:</strong> 2+ Red Alerts
+                </div>
+                <div class="reference-item">
+                    <strong>Critical Indicators:</strong> Market Volatility, Deepfake Shocks
+                </div>
+                <div class="reference-item">
+                    <strong>Phase Escalation:</strong> Follow phase actions immediately
+                </div>
+                <div class="reference-item">
+                    <strong>Data Freshness:</strong> 48h = Amber, 7d = Red
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/executive.js') }}"></script>
+</body>
+</html>

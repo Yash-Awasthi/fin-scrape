@@ -1,0 +1,2965 @@
+[
+  {
+    "id": "strike-belgorod-kharkiv-2022",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russian artillery/missile strikes on Kharkiv",
+    "date": "2022-02-24",
+    "weaponType": "ballistic",
+    "launched": 40,
+    "intercepted": 5,
+    "confidence": "high",
+    "time": "05:30",
+    "damage": "Multiple residential areas and civilian infrastructure destroyed",
+    "casualties": "Hundreds of civilians killed in Kharkiv Oblast during 2022",
+    "notes": "Russia struck Ukraine's 2nd-largest city relentlessly from Belgorod Oblast from the first day of the invasion",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-crimea-kyiv-cruise-2022",
+    "from": [
+      34.1,
+      44.95
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Kalibr cruise missiles from Crimea to Kyiv",
+    "date": "2022-10-10",
+    "weaponType": "cruise",
+    "launched": 84,
+    "intercepted": 43,
+    "confidence": "high",
+    "time": "08:00",
+    "damage": "Energy infrastructure, power stations, and civilian areas hit across Ukraine",
+    "casualties": "19 civilians killed, 105 injured in Oct 10 mass strike",
+    "notes": "Oct 10 2022 mass missile strike was Russia's response to Kerch Bridge explosion; targeted power grid across multiple cities",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-voronezh-shahed-kyiv-2023",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Shahed-136 drone swarm toward Kyiv",
+    "date": "2023-05-30",
+    "weaponType": "drone_loitering",
+    "launched": 54,
+    "intercepted": 52,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Several buildings damaged in Kyiv despite high interception rate",
+    "casualties": "3 civilians injured",
+    "notes": "Ukraine's air defense achieved 96% interception rate on this date; Shahed drones typically approach from multiple directions",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-russia-kherson-cruise",
+    "from": [
+      34.1,
+      44.95
+    ],
+    "to": [
+      32.6,
+      46.64
+    ],
+    "cat": "strike",
+    "label": "Russian cruise missiles and artillery on Kherson city",
+    "date": "2023-01-14",
+    "weaponType": "cruise",
+    "launched": 20,
+    "intercepted": 8,
+    "confidence": "high",
+    "time": "14:00",
+    "damage": "Market, hospital, and residential areas hit",
+    "casualties": "78 civilians killed in Kherson city in first 6 months after liberation (Nov 2022-May 2023)",
+    "notes": "Russia shelled Ukrainian-controlled Kherson city daily from left (eastern) bank of Dnipro after November 2022 withdrawal",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-belgorod-sumy-rockets",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      34.8,
+      50.9
+    ],
+    "cat": "strike",
+    "label": "Russian Grad/BM-21 rocket attacks on Sumy Oblast",
+    "date": "2022-03-01",
+    "weaponType": "rocket",
+    "launched": 30,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "07:00",
+    "damage": "Civilian infrastructure in Sumy Oblast destroyed",
+    "casualties": "Multiple civilian deaths in cross-border shelling",
+    "notes": "Sumy Oblast experienced sustained cross-border shelling throughout the war from Belgorod and Kursk oblasts",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-donetsk-bakhmut-2022",
+    "from": [
+      37.8,
+      47.9
+    ],
+    "to": [
+      38.0,
+      48.6
+    ],
+    "cat": "strike",
+    "label": "Russian artillery barrage on Bakhmut",
+    "date": "2022-08-01",
+    "weaponType": "rocket",
+    "launched": 150,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "damage": "Systematic destruction of all buildings in Bakhmut; city 90%+ destroyed",
+    "casualties": "Thousands of civilians trapped; hundreds killed over 10-month battle",
+    "notes": "Bakhmut sustained the highest concentration of Russian artillery fire of the war; Russia used 50,000+ shells per day at peak",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-black-sea-odesa-2022",
+    "from": [
+      30.9,
+      44.8
+    ],
+    "to": [
+      30.73,
+      46.48
+    ],
+    "cat": "strike",
+    "label": "Russian Black Sea Fleet missile strike on Odesa",
+    "date": "2022-04-22",
+    "weaponType": "cruise",
+    "launched": 8,
+    "intercepted": 2,
+    "confidence": "high",
+    "time": "09:30",
+    "damage": "Military infrastructure and residential buildings hit",
+    "casualties": "8 civilians killed, 18 injured",
+    "notes": "Russia struck Odesa the day after the sinking of the Moskva cruiser as retaliation",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-chernihiv-bryansk-2022",
+    "from": [
+      34.4,
+      53.1
+    ],
+    "to": [
+      31.3,
+      51.5
+    ],
+    "cat": "strike",
+    "label": "Russian advance and shelling on Chernihiv",
+    "date": "2022-02-27",
+    "weaponType": "rocket",
+    "launched": 60,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "06:00",
+    "damage": "Chernihiv cut off; bridges destroyed; civilian areas shelled",
+    "casualties": "Hundreds of civilians killed during siege",
+    "notes": "Chernihiv was encircled for 30 days; Ukrainian defenders held out until Russian withdrawal in March 2022",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "retaliation-ukraine-moskva-2022",
+    "from": [
+      30.73,
+      46.48
+    ],
+    "to": [
+      31.5,
+      45.2
+    ],
+    "cat": "retaliation",
+    "label": "Neptune missile strike sinks Moskva cruiser",
+    "date": "2022-04-13",
+    "weaponType": "cruise",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "21:00",
+    "damage": "Russian Black Sea Fleet flagship Moskva sunk — largest warship destroyed in combat since Falklands War",
+    "casualties": "Russia admits 1 KIA, 27 missing; actual losses higher per US intelligence",
+    "notes": "Ukraine used decoy Bayraktar TB2 drone to distract Moskva's radar, then struck with two R-360 Neptune anti-ship missiles",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "retaliation-ukraine-kerch-bridge-2022",
+    "from": [
+      34.8,
+      46.8
+    ],
+    "to": [
+      36.5,
+      45.34
+    ],
+    "cat": "retaliation",
+    "label": "Kerch Bridge explosion (Ukrainian operation)",
+    "date": "2022-10-08",
+    "weaponType": "drone",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "06:07",
+    "damage": "Partial collapse of road section; railway damaged; fuel tanker fire",
+    "casualties": "3 killed",
+    "notes": "Explosion on Putin's 70th birthday; attributed to Ukrainian truck bomb or sea drone; disrupted the Crimea Land Bridge supply route for Russian forces",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "retaliation-ukraine-belgorod-2024",
+    "from": [
+      36.23,
+      49.98
+    ],
+    "to": [
+      36.6,
+      50.6
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian ATACMS strike on Belgorod military targets",
+    "date": "2024-11-22",
+    "weaponType": "ballistic",
+    "launched": 6,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "11:00",
+    "damage": "Military depot and logistic hub damaged",
+    "casualties": "Military personnel casualties reported",
+    "notes": "First use of ATACMS against Russian territory after Biden authorized deep strikes in November 2024",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "retaliation-ukraine-sevastopol-drone-2023",
+    "from": [
+      32.6,
+      46.64
+    ],
+    "to": [
+      33.55,
+      44.6
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian naval drone swarm on Sevastopol",
+    "date": "2023-10-29",
+    "weaponType": "drone",
+    "launched": 16,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:30",
+    "damage": "Minesweeper Pyatidyesyatiyetiye Pobedy damaged; Black Sea Fleet HQ hit",
+    "casualties": "Unknown Russian casualties",
+    "notes": "Ukraine's naval drone campaign steadily degraded Russia's Black Sea Fleet; Russia eventually moved fleet away from Sevastopol to Novorossiysk",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "retaliation-kursk-incursion-2024",
+    "from": [
+      34.8,
+      50.9
+    ],
+    "to": [
+      36.2,
+      51.73
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine's Kursk Incursion: Cross-border advance",
+    "date": "2024-08-06",
+    "weaponType": "mixed",
+    "launched": 1000,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "06:00",
+    "damage": "1,000+ sq km of Russian territory captured; Sudzha town taken",
+    "casualties": "Russian and DPRK military casualties; Ukrainian forces also suffered losses",
+    "notes": "First foreign military occupation of Russian territory since WWII; Ukraine used combined arms — armored vehicles, drones, artillery — to advance rapidly",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "territorial-2014-contact-line",
+    "from": [
+      38.5,
+      47.7
+    ],
+    "to": [
+      38.5,
+      48.8
+    ],
+    "cat": "territorial",
+    "label": "2014-2022 Minsk Contact Line",
+    "date": "2015-02-12",
+    "notes": "The line of control established by Minsk II (Feb 2015) remained largely unchanged until February 2022; represented frozen conflict with 14,000 deaths",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "territorial-russian-kyiv-advance",
+    "from": [
+      30.1,
+      51.27
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "conflict",
+    "label": "Russian axis of advance: Belarus → Chernobyl → Kyiv",
+    "date": "2022-02-24",
+    "notes": "Russian forces advanced from Belarus through the Chernobyl exclusion zone to reach Kyiv's northern suburbs within 24 hours; 40-mile convoy stalled",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "territorial-crimea-2014",
+    "from": [
+      34.1,
+      44.95
+    ],
+    "to": [
+      35.18,
+      47.85
+    ],
+    "cat": "territorial",
+    "label": "Crimea to Zaporizhzhia: Russian land corridor aspiration",
+    "date": "2022-03-01",
+    "notes": "Russia established a land corridor from Crimea through Kherson Oblast to Zaporizhzhia as early as March 2022; fully captured Kherson Oblast before liberating it in November 2022",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "conflict-kharkiv-liberated-2022",
+    "from": [
+      37.28,
+      49.2
+    ],
+    "to": [
+      37.8,
+      48.0
+    ],
+    "cat": "conflict",
+    "label": "Ukrainian Kharkiv counteroffensive axis (Sept 2022)",
+    "date": "2022-09-06",
+    "notes": "Ukrainian forces thrust from Kharkiv Oblast south through Izium, liberating 8,000 sq km in days; Russia abandoned Izium logistics hub and withdrew east of Oskil River",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "humanitarian-grain-corridor",
+    "from": [
+      30.73,
+      46.48
+    ],
+    "to": [
+      31.0,
+      44.5
+    ],
+    "cat": "humanitarian",
+    "label": "Black Sea Grain Initiative corridor (July 2022–July 2023)",
+    "date": "2022-08-01",
+    "notes": "UN-brokered corridor allowed Ukrainian grain exports via Black Sea; 33 million metric tons exported before Russia exited July 2023; prevented global food price spike",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "diplomatic-kyiv-brussels",
+    "from": [
+      30.52,
+      50.45
+    ],
+    "to": [
+      22.3,
+      48.6
+    ],
+    "cat": "diplomatic",
+    "label": "Weapons and Aid Transit: Western Ukraine Corridor",
+    "date": "2022-03-01",
+    "notes": "Western military aid flows into Ukraine through western border crossings at Uzhhorod, Lviv, and other points; primary supply line for Western weapons systems",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "historical-pereiaslav-1654",
+    "from": [
+      31.45,
+      50.08
+    ],
+    "to": [
+      37.6,
+      55.7
+    ],
+    "cat": "historical",
+    "label": "Pereiaslav Agreement: Ukraine–Muscovy alignment (1654)",
+    "date": "1654-01-08",
+    "notes": "The 1654 Pereiaslav Agreement represented the formal alignment (disputed in nature) of Cossack Ukraine with Muscovy — a pivotal moment in Russian imperial claims over Ukraine. This symbolic line from Pereiaslav to Moscow represents the diplomatic connection.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "territorial-donbas-2022-front",
+    "from": [
+      37.8,
+      48.1
+    ],
+    "to": [
+      37.0,
+      47.5
+    ],
+    "cat": "conflict",
+    "label": "Active Donbas front line (approximate, 2024)",
+    "date": "2024-01-01",
+    "notes": "The Donetsk front line stabilized through 2024 with Russian advances south of Avdiivka and toward Pokrovsk; Ukrainian forces in defensive posture",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "strike-oreshnik-dnipro-2024",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      35.04,
+      48.46
+    ],
+    "cat": "strike",
+    "label": "Russia's first Oreshnik ballistic missile strike on Dnipro",
+    "date": "2024-11-21",
+    "weaponType": "ballistic",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "10:13",
+    "damage": "Pivdenmash industrial facility damaged; unprecedented missile used in combat",
+    "casualties": "No direct casualties from strike",
+    "notes": "First combat use of the Oreshnik medium-range ballistic missile; hypersonic warhead; Russia claimed it cannot be intercepted by existing systems; served as nuclear signaling after ATACMS authorization",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "conflict-zaporizhzhia-front",
+    "from": [
+      35.18,
+      47.85
+    ],
+    "to": [
+      35.9,
+      47.1
+    ],
+    "cat": "conflict",
+    "label": "Zaporizhzhia front line (2023 counteroffensive axis)",
+    "date": "2023-06-04",
+    "notes": "Ukraine's 2023 summer counteroffensive targeted the Zaporizhzhia-Melitopol axis; despite months of fighting, breakthrough limited to ~17km; Russian defensive lines proved among the most fortified since WWII",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "historical-nazis-kyiv-1941",
+    "from": [
+      30.52,
+      50.45
+    ],
+    "to": [
+      30.45,
+      50.47
+    ],
+    "cat": "historical",
+    "label": "German forces in Kyiv: Babi Yar massacre route (1941)",
+    "date": "1941-09-29",
+    "notes": "German forces organized the mass deportation of Kyiv's Jewish population to Babi Yar ravine on September 29-30, 1941, murdering 33,771 people in two days",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "diplomatic-istanbul-talks-2022",
+    "from": [
+      30.52,
+      50.45
+    ],
+    "to": [
+      28.9,
+      41.0
+    ],
+    "cat": "diplomatic",
+    "label": "Istanbul peace talks (March 29, 2022)",
+    "date": "2022-03-29",
+    "notes": "Ukraine and Russia held peace talks in Istanbul (March 29, 2022) following Russian withdrawal from Kyiv. Talks produced a preliminary framework; collapsed after Bucha massacre was revealed. The closest the sides came to a negotiated settlement.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "retaliation-ukraine-tuapse-4th-may1-2026",
+    "from": [
+      33.0,
+      46.5
+    ],
+    "to": [
+      39.08,
+      44.1
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine's 4th drone strike on Tuapse refinery — Russia's capacity hits 16-year low",
+    "date": "2026-05-01",
+    "weaponType": "drone_loitering",
+    "launched": 15,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Fires reignited at Rosneft Tuapse refinery; Russia's processing capacity drops to 4.69M bbl/day — 16-year low",
+    "casualties": "No reported casualties",
+    "notes": "4th Ukrainian drone strike on Tuapse in 2 weeks (Apr 16, 20, 28, May 1). Russia's overall refinery capacity fell to lowest since Dec 2009. Ukraine's 2026 drone campaign cost Russia $7B+ in energy sector losses.",
+    "status": "hit",
+    "lastUpdated": "2026-05-01"
+  },
+  {
+    "id": "strike-russia-227drones-day-may2-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      35.04,
+      48.46
+    ],
+    "cat": "strike",
+    "label": "Russian 227-drone daytime barrage on Ukraine — 200 shot down",
+    "date": "2026-05-02",
+    "weaponType": "drone_loitering",
+    "launched": 227,
+    "intercepted": 200,
+    "confidence": "high",
+    "time": "10:00",
+    "damage": "Energy and military infrastructure targeted across multiple regions; 27 drones penetrated air defenses",
+    "casualties": "No confirmed civilian casualties reported",
+    "notes": "Unusual daytime drone barrage (morning until 6 PM); mixed Shahed-type, Gerbera, and Italmas drones. Part of a combined 495+ drone campaign over 24 hours including subsequent overnight attack of 268 drones.",
+    "platform": "Shahed-136/Geran-2 loitering munitions + Gerbera/Italmas variants",
+    "status": "partial",
+    "lastUpdated": "2026-05-02"
+  },
+  {
+    "id": "strike-russia-268drones-iskander-may23-2026",
+    "from": [
+      34.5,
+      44.5
+    ],
+    "to": [
+      30.66,
+      46.3
+    ],
+    "cat": "strike",
+    "label": "Russia's 268-drone + Iskander-M overnight attack — Chornomorsk, Dnipro, Kherson hit",
+    "date": "2026-05-03",
+    "weaponType": "mixed",
+    "launched": 269,
+    "intercepted": 249,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Chornomorsk: 35 residential houses destroyed; Dnipro: 5-story apartment roof destroyed; Kherson: civilian transport hit",
+    "casualties": "4 killed (2 in Chornomorsk, 1 in Dnipro, 1 in Kherson); 5 injured",
+    "notes": "268 drones (Shahed, Gerbera, Italmas types) + 1 Iskander-M ballistic missile. Launched from Kursk, Shatalovo, Oryol, Primorsko-Akhtarsk (Russia), and Crimea (Hvardiiske, Chauda). Ukraine intercepted 249/268 drones.",
+    "platform": "Shahed-136/Geran-2 + Gerbera/Italmas + Iskander-M",
+    "status": "partial",
+    "lastUpdated": "2026-05-03"
+  },
+  {
+    "id": "retaliation-ukraine-novorossiysk-tankers-may3-2026",
+    "from": [
+      30.73,
+      46.48
+    ],
+    "to": [
+      37.77,
+      44.72
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine's 334-drone barrage strikes Russian shadow fleet tankers and cruise missile carrier near Novorossiysk",
+    "date": "2026-05-03",
+    "weaponType": "drone_loitering",
+    "launched": 334,
+    "intercepted": 117,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "2 shadow fleet oil tankers struck; 1 Russian cruise missile carrier hit; Pantsir-S1 and Tor air defense systems destroyed; 2 radar installations destroyed",
+    "casualties": "Russian military casualties at naval/energy targets; Zelensky confirmed 2 tankers and 1 warship struck",
+    "notes": "One of Ukraine's largest drone barrages of the war. Target: Russia's shadow fleet evading G7 oil sanctions. Ukraine also destroyed Pantsir-S1 in occupied Donetsk and P-18 radar in occupied Zaporizhzhia. Extended drone range 1,750 km demonstrated.",
+    "platform": "Long-range Ukrainian strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-04"
+  },
+  {
+    "id": "strike-voronezh-dnipro-apr25-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      35.04,
+      48.46
+    ],
+    "cat": "strike",
+    "label": "Russia mass strike: 47 missiles + 619 drones — Dnipro hardest hit",
+    "date": "2026-04-25",
+    "weaponType": "mixed",
+    "launched": 666,
+    "intercepted": 640,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Residential buildings, infrastructure in Dnipro and other cities; energy facilities struck",
+    "casualties": "10 killed, 67+ wounded; Dnipro: 8 dead, 49 wounded including 2 children",
+    "notes": "One of the largest aerial strikes of 2026: 47 missiles and 619 drones. Ukraine's air defense shot down/suppressed 610 of 619 drones. Part of Russia's sustained campaign to destroy Ukrainian energy and civilian infrastructure.",
+    "status": "partial",
+    "lastUpdated": "2026-04-26"
+  },
+  {
+    "id": "retaliation-ukraine-sevastopol-apr26-2026",
+    "from": [
+      30.73,
+      46.48
+    ],
+    "to": [
+      33.55,
+      44.6
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian drone swarm on Sevastopol — Black Sea Fleet campaign continues",
+    "date": "2026-04-26",
+    "weaponType": "drone_loitering",
+    "launched": 44,
+    "intercepted": 43,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "1 killed, 3 wounded in Sevastopol; limited infrastructure damage",
+    "casualties": "1 civilian killed, 3 wounded",
+    "notes": "Russian air defense claimed 43 drones shot down. Ukraine's GUR had previously attacked Sevastopol landing ships on April 20. The ongoing Black Sea Fleet degradation campaign has forced Russia to relocate most vessels to Novorossiysk.",
+    "status": "partial",
+    "lastUpdated": "2026-04-26"
+  },
+  {
+    "id": "strike-russia-odesa-shahed-apr27-2026",
+    "from": [
+      34.5,
+      44.5
+    ],
+    "to": [
+      30.73,
+      46.48
+    ],
+    "cat": "strike",
+    "label": "Russian Shahed drone swarm strikes Odesa — residential buildings, hotel hit",
+    "date": "2026-04-27",
+    "weaponType": "drone_loitering",
+    "launched": 94,
+    "intercepted": 80,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Residential buildings and hotel damaged in Odesa",
+    "casualties": "14 wounded including children",
+    "notes": "Russia launched 94 drones overnight including Shahed-type UAVs per Ukraine's Air Force. Odesa has faced sustained bombardment targeting port infrastructure and civilian residential areas.",
+    "status": "partial",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "retaliation-ukraine-tuapse-refinery-apr28-2026",
+    "from": [
+      33.0,
+      46.5
+    ],
+    "to": [
+      39.08,
+      44.1
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian drones hit Tuapse refinery for 3rd time — Krasnodar evacuations ordered",
+    "date": "2026-04-28",
+    "weaponType": "drone_loitering",
+    "launched": 12,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Major fire at Rosneft Tuapse refinery; evacuations ordered; smoke visible from Sochi 80km away",
+    "casualties": "No reported casualties",
+    "notes": "Third Ukrainian drone strike on Tuapse refinery within two weeks. Facility processes 12M metric tons of crude annually. Ukraine's long-range campaign targets Russian energy infrastructure funding the war effort. Part of the 2026 Tuapse oil terminal disaster.",
+    "status": "hit",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "retaliation-ukraine-crimea-iskander-apr28-2026",
+    "from": [
+      32.6,
+      46.64
+    ],
+    "to": [
+      34.0,
+      45.0
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian SOF drones destroy Iskander missile storage near Simferopol, Crimea",
+    "date": "2026-04-28",
+    "weaponType": "drone_loitering",
+    "launched": 8,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "01:30",
+    "damage": "Iskander missile storage depot destroyed; secondary explosions reported at former Soviet missile base near Ovrazhki",
+    "casualties": "Unknown Russian military casualties",
+    "notes": "Ukraine's Special Operations Forces struck a Crimea-based Iskander OTM storage facility 40km from Simferopol. Iskander missiles from this site could reach front lines or Ukrainian cities within minutes. Strike reduces Russia's southern missile strike capacity.",
+    "status": "hit",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "strike-crimea-odesa-two-wave-apr30-2026",
+    "from": [
+      34.5,
+      44.5
+    ],
+    "to": [
+      30.73,
+      46.48
+    ],
+    "cat": "strike",
+    "label": "Russian two-wave Shahed drone attack on Odesa — 18 injured, kindergarten damaged",
+    "date": "2026-04-30",
+    "weaponType": "drone_loitering",
+    "launched": 30,
+    "intercepted": 18,
+    "confidence": "high",
+    "time": "02:30",
+    "damage": "High-rise residential buildings in Primorskyi district set ablaze; kindergarten significantly damaged",
+    "casualties": "18 injured, 9 hospitalized, 2 in critical condition",
+    "notes": "Two-wave attack targeting Odesa's Primorskyi district. Part of Russia's sustained campaign of 206 total drones launched overnight Apr 29-30 across Ukraine (172 shot down overall). Russia has consistently targeted Odesa's civilian infrastructure, port, and cultural heritage throughout the war.",
+    "status": "partial",
+    "lastUpdated": "2026-04-30"
+  },
+  {
+    "id": "strike-russia-iskander-naftogaz-poltava-may5-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      34.55,
+      49.57
+    ],
+    "cat": "strike",
+    "label": "Russia targets Naftogaz facilities in Poltava/Kharkiv with 11 Iskander + 164 drones — 5 killed",
+    "date": "2026-05-05",
+    "weaponType": "mixed",
+    "launched": 175,
+    "intercepted": 150,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Naftogaz gas production facilities in Poltava and Kharkiv regions destroyed; gas supply cut to 3,500 customers",
+    "casualties": "5 killed (3 Naftogaz workers + 2 emergency rescuers killed in deliberate follow-up strike); 37 wounded",
+    "notes": "11 Iskander-M ballistic missiles + 164 drones (including jet-powered Shahed variants). 107th strike on Ukrainian energy infrastructure in 2026. Deliberate 'double tap' killing of rescuers constitutes a war crime under IHL.",
+    "platform": "Iskander-M + Shahed/Geran-2 + jet-powered variants",
+    "status": "partial",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "strike-russia-glide-bombs-zaporizhzhia-may5-2026",
+    "from": [
+      37.5,
+      47.3
+    ],
+    "to": [
+      35.18,
+      47.85
+    ],
+    "cat": "strike",
+    "label": "Russian KAB guided aerial bombs kill 12 in Zaporizhzhia, 4 in Dnipro — worst single strike on city in 2026",
+    "date": "2026-05-05",
+    "weaponType": "unknown",
+    "launched": 120,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "damage": "Car repair workshop and residential buildings destroyed in Zaporizhzhia; apartment buildings damaged in Dnipro; industrial facility in Dnipro struck",
+    "casualties": "12 killed, 43 wounded in Zaporizhzhia; 4 killed in Dnipro; combined deadliest day of 2026",
+    "notes": "KABs (Guided Aerial Bombs) dropped by Su-34/Su-35 aircraft flying near the contact line. Russia deployed 254 guided aerial bombs total in 24-hour period. Zaporizhzhia strike described as worst single attack on city since war began.",
+    "platform": "Su-34/Su-35 with KAB-500S/KAB-1500S guided aerial bombs",
+    "status": "hit",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "strike-russia-glide-bombs-kramatorsk-may5-2026",
+    "from": [
+      39.0,
+      48.0
+    ],
+    "to": [
+      37.57,
+      48.74
+    ],
+    "cat": "strike",
+    "label": "Russian guided aerial bombs strike Kramatorsk — 6 killed, 12 wounded in Donetsk region hub",
+    "date": "2026-05-05",
+    "weaponType": "unknown",
+    "launched": 20,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "14:00",
+    "damage": "Buildings destroyed in Kramatorsk, the last major Ukrainian administrative hub in Donetsk Oblast",
+    "casualties": "6 killed, 12 wounded",
+    "notes": "Part of Russia's broad May 5 aerial bomb campaign. Kramatorsk serves as the Ukrainian administrative capital for Donetsk Oblast — a consistent target. Combined with Zaporizhzhia and Dnipro strikes, total death toll reached 27 in one day.",
+    "platform": "Su-34/Su-35 with KAB guided aerial bombs",
+    "status": "hit",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "retaliation-ukraine-flamingo-cheboksary-may5-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      47.25,
+      56.15
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine's FP-5 'Flamingo' cruise missiles strike VNIIR-Progress defense electronics plant in Cheboksary — 1,200 km deep strike",
+    "date": "2026-05-05",
+    "weaponType": "cruise",
+    "launched": 5,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "JSC VNIIR-Progress plant significantly damaged; plant manufactures guidance systems for Shahed drones, Iskander-K, and KAB guided bombs",
+    "casualties": "2 killed in broader Chuvashia attack package",
+    "notes": "First confirmed combat use of Ukraine's domestically-developed FP-5 'Flamingo' cruise missile. Range 1,200+ km. Target produces electronic warfare components for Shahed-type drones, Iskander-K cruise missiles, and KAB modules. Zelensky confirmed strike with video evidence. Satellite imagery confirmed fires.",
+    "platform": "FP-5 'Flamingo' long-range cruise missile (Ukrainian domestic)",
+    "status": "hit",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "retaliation-ukraine-kirishi-refinery-may5-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      31.97,
+      59.45
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine drones knock out Kirishi oil refinery in Leningrad Oblast — 7% of Russian refining capacity halted",
+    "date": "2026-05-05",
+    "weaponType": "drone_loitering",
+    "launched": 20,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:30",
+    "damage": "3 of 4 primary crude distillation units damaged; refinery halted all operations; nearby Baltic port fuel pumping station also hit",
+    "casualties": "No reported casualties",
+    "notes": "Kirishi refinery processes ~400,000 barrels/day (~7% of Russia's total capacity). Combined with Tuapse refinery outage, Russia's overall refinery utilization fell further below the 16-year low set in early May. Part of Ukraine's sustained 2026 campaign against Russian energy infrastructure.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "strike-russia-ceasefire-violation-may6-2026",
+    "from": [
+      34.5,
+      44.5
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russia violates Ukraine's ceasefire within minutes — 3 missiles + 108 drones; 1,820 violations by morning",
+    "date": "2026-05-06",
+    "weaponType": "mixed",
+    "launched": 111,
+    "intercepted": 89,
+    "confidence": "high",
+    "time": "00:15",
+    "damage": "Kharkiv: 7 private homes damaged; Zaporizhzhia: industrial infrastructure facility hit",
+    "casualties": "Casualties reported; exact figures being documented",
+    "notes": "Ukraine declared open-ended ceasefire effective midnight May 6. Russia violated within minutes. By 10:00 AM, Ukraine documented 1,820 violations including artillery, airstrikes, ground assaults, and drone attacks. Zelensky said Ukraine would respond 'symmetrically.' Russia's competing Victory Day ceasefire covers only May 8-9.",
+    "platform": "Ballistic missiles + Shahed/Geran-2 drones",
+    "status": "partial",
+    "lastUpdated": "2026-05-06"
+  },
+  {
+    "id": "retaliation-ukraine-347drones-moscow-may7-2026",
+    "from": [
+      34.0,
+      51.0
+    ],
+    "to": [
+      37.6,
+      55.5
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine's 347-drone mass attack on 20 Russian regions — Moscow airports shut down",
+    "date": "2026-05-07",
+    "weaponType": "drone_loitering",
+    "launched": 347,
+    "intercepted": 310,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Nearly 100 flights delayed or cancelled at Sheremetyevo, Domodedovo, and Vnukovo airports; military and infrastructure targets struck across 20 Russian regions",
+    "casualties": "Russian military and infrastructure casualties; exact figures not published",
+    "notes": "Ukraine's second-largest drone attack of the war (largest: 389 drones, March 2026). Launched in direct response to Russia rejecting Ukraine's open-ended ceasefire and killing 27 Ukrainians on May 5. Russia claimed 347 drones shot down but airport shutdowns indicate penetrations. Zelensky: 'Russia chose war; Ukraine acts symmetrically.'",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "partial",
+    "lastUpdated": "2026-05-07"
+  },
+  {
+    "id": "strike-russia-kharkiv-drone-may7-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russian drone strike on Kharkiv — 9 wounded including 3 children",
+    "date": "2026-05-07",
+    "weaponType": "drone_loitering",
+    "launched": 10,
+    "intercepted": 5,
+    "confidence": "high",
+    "time": "08:00",
+    "damage": "Residential areas struck in northeastern Kharkiv",
+    "casualties": "9 wounded including 3 children",
+    "notes": "Part of Russia's continued offensive strikes on May 7 — despite both its own Victory Day ceasefire declaration and Ukraine's open-ended ceasefire. Russia carried out 65 total airstrikes and 4,869 kamikaze drones across Ukraine on May 7.",
+    "platform": "Shahed/Geran-2 drones",
+    "status": "partial",
+    "lastUpdated": "2026-05-07"
+  },
+  {
+    "id": "strike-russia-sumy-kindergarten-may7-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      34.8,
+      50.9
+    ],
+    "cat": "strike",
+    "label": "Russian missile strike on Sumy kindergarten — 2 killed; city declares day of mourning",
+    "date": "2026-05-07",
+    "weaponType": "rocket",
+    "launched": 2,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "09:00",
+    "damage": "Kindergarten building destroyed; residential area damaged",
+    "casualties": "2 killed",
+    "notes": "Strike on civilian educational infrastructure during declared ceasefire periods. Sumy city declared a day of mourning. The border region has experienced sustained cross-border shelling throughout the war despite occasional buffer zone agreements.",
+    "platform": "Russian surface-to-surface rockets",
+    "status": "hit",
+    "lastUpdated": "2026-05-07"
+  },
+  {
+    "id": "retaliation-ukraine-crimea-substation-may8-2026",
+    "from": [
+      32.6,
+      46.64
+    ],
+    "to": [
+      34.1,
+      44.95
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine drones strike Crimea electrical substation — fires reported in Simferopol",
+    "date": "2026-05-08",
+    "weaponType": "drone_loitering",
+    "launched": 8,
+    "intercepted": 2,
+    "confidence": "medium",
+    "time": "03:00",
+    "damage": "Large electrical substation ablaze; Russian military unit in Simferopol also reported hit",
+    "casualties": "Unknown",
+    "notes": "Ukrainian drones struck Russian military and infrastructure targets in occupied Crimea on Victory Day eve. The Crimea substation strike further degraded electrical supply to the peninsula. Ukraine also struck a Russian Karakurt-class missile ship at Kaspiysk, Dagestan (Caspian Sea) on the same date.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-08"
+  },
+  {
+    "id": "strike-russia-292-guided-bombs-may8-2026",
+    "from": [
+      39.0,
+      48.5
+    ],
+    "to": [
+      37.5,
+      48.0
+    ],
+    "cat": "strike",
+    "label": "Russia escalates to 99 airstrikes + 292 guided bombs on Victory Day eve — largest single-day airstrike count of 2026",
+    "date": "2026-05-08",
+    "weaponType": "mixed",
+    "launched": 293,
+    "intercepted": 80,
+    "confidence": "high",
+    "time": "06:00",
+    "damage": "Donetsk front, Pokrovsk, Toretske, and multiple cities hit; 208 combat engagements; 3,126 shelling attacks",
+    "casualties": "1,130 Russian personnel eliminated per Ukraine MoD; Ukrainian military and civilian casualties reported",
+    "notes": "Russia's single-day guided aerial bomb count of 292 was the highest in 2026. 99 airstrikes. Russia also deployed 9,113 kamikaze drones. Pokrovsk direction: 33 Russian assault actions. Lyman direction: 13 advance attempts. Despite Russia's own declared Victory Day ceasefire, combat operations were uninterrupted.",
+    "platform": "Su-34/Su-35 with KAB guided aerial bombs + Shahed/Geran-2 drones",
+    "status": "partial",
+    "lastUpdated": "2026-05-08"
+  },
+  {
+    "id": "strike-russia-drone-ceasefire-violation-may9-2026",
+    "from": [
+      38.97,
+      47.22
+    ],
+    "to": [
+      35.18,
+      47.84
+    ],
+    "cat": "strike",
+    "label": "Russian 850+ drone attacks overnight despite Trump-brokered ceasefire — Zaporizhzhia, Kharkiv, Dnipro hit",
+    "date": "2026-05-09",
+    "weaponType": "drone_loitering",
+    "launched": 850,
+    "intercepted": 700,
+    "confidence": "medium",
+    "time": "01:00",
+    "damage": "Zaporizhzhia, Kharkiv, Kramatorsk, and Dnipro struck; air defense active across all regions",
+    "casualties": "Casualties reported; exact figures being documented",
+    "notes": "Despite Trump-brokered 3-day ceasefire taking effect May 9, Ukraine recorded 850+ Russian drone attacks overnight and 140+ front-line attacks. Russia claimed 1,630 Ukrainian violations by noon. Both sides accused each other of breaking the ceasefire.",
+    "platform": "Shahed/Geran-2 loitering munitions + variant types",
+    "status": "partial",
+    "lastUpdated": "2026-05-09"
+  },
+  {
+    "id": "strike-russia-drones-zaporizhzhia-may10-2026",
+    "from": [
+      38.17,
+      46.05
+    ],
+    "to": [
+      35.18,
+      47.85
+    ],
+    "cat": "strike",
+    "label": "Russia breaks Day 2 ceasefire — 27 drones (all intercepted) + 780 artillery strikes on Zaporizhzhia; 1 killed, 19+ wounded across 7 regions",
+    "date": "2026-05-10",
+    "weaponType": "mixed",
+    "launched": 27,
+    "intercepted": 27,
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "Zaporizhzhia: 780 strikes on 33 settlements; Kharkiv: residential building hit; Kherson: 7 wounded; Dnipropetrovsk, Donetsk, Sumy, Chernihiv also struck",
+    "casualties": "1 killed (Zaporizhzhia), 19+ wounded including children in Kharkiv and Kherson",
+    "notes": "Day 2 of Trump-brokered 3-day ceasefire. Ukraine Air Force intercepted all 27 overnight drones from Primorsko-Akhtarsk and Millerovo. 147 combat clashes recorded despite ceasefire. Zaporizhzhia worst hit: 780 strikes on 33 settlements. Russia claimed 1,000+ Ukrainian violations.",
+    "platform": "Shahed/Geran-2 drones + FPV drones + artillery",
+    "status": "partial",
+    "lastUpdated": "2026-05-10"
+  },
+  {
+    "id": "strike-russia-drones-kherson-may11-2026",
+    "from": [
+      38.97,
+      45.04
+    ],
+    "to": [
+      32.6,
+      46.64
+    ],
+    "cat": "strike",
+    "label": "Russia Day 3 ceasefire violations — drones and artillery kill 3, wound 16 across Ukraine; 180 front-line clashes; ceasefire expires",
+    "date": "2026-05-11",
+    "weaponType": "mixed",
+    "launched": 30,
+    "intercepted": 10,
+    "confidence": "medium",
+    "time": "06:00",
+    "damage": "Kherson Oblast: 12 settlements struck including Kherson city; Zaporizhzhia: multiple strikes; Kharkiv: 8 settlements hit; Mykolaiv and Donetsk also struck",
+    "casualties": "3 killed (2 Kherson, 1 Zaporizhzhia), 16 wounded across Ukraine",
+    "notes": "Day 3 and final day of Trump-brokered 3-day ceasefire. No large-scale coordinated airstrikes, but Russian drones and one Iskander-M from Crimea were fired. 180 front-line combat clashes recorded over 24 hours. ISW found Russia used ceasefire for troop rotations and logistics resupply. Ceasefire expired May 11 with no extension announced. 1,000-for-1,000 POW exchange still unexecuted.",
+    "platform": "Shahed/Geran-2 drones + FPV drones + Iskander-M (1) + artillery",
+    "status": "hit",
+    "lastUpdated": "2026-05-11"
+  },
+  {
+    "id": "strike-russia-216-shahed-drones-post-ceasefire-may12-2026",
+    "from": [
+      39.7,
+      46.2
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Russia fires 216 Shahed drones at Ukraine as Victory Day ceasefire expires — 192 intercepted; Kyiv hit, 1 killed, 6 injured",
+    "date": "2026-05-12",
+    "weaponType": "drone_loitering",
+    "launched": 216,
+    "intercepted": 192,
+    "confidence": "high",
+    "time": "00:30",
+    "damage": "Kyiv Obolon district: 16-storey residential building roof struck by drone debris; kindergarten and energy infrastructure targeted across Ukraine",
+    "casualties": "1 killed, 6 injured across Ukraine",
+    "notes": "Russia's first major strike after the 3-day Victory Day ceasefire (May 9–11) expired. Ukraine's air force intercepted 192 of 216 drones. Zelensky: 'Russia itself chose to end the partial silence.' Ukraine FM Sybiha said Ukraine had proposed extending the ceasefire; Moscow escalated instead. Day 1,538 of the full-scale invasion.",
+    "platform": "Shahed-136/131 (Geran-2) loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-12"
+  },
+  {
+    "id": "strike-russia-combined-energy-may13-2026",
+    "from": [
+      39.0,
+      47.0
+    ],
+    "to": [
+      35.04,
+      48.46
+    ],
+    "cat": "strike",
+    "label": "Russia combined phased air strike on Ukraine energy sector — 8 killed in Dnipropetrovsk Oblast; Lutsk, Rivne, Kharkiv, Odesa, Cherkasy, Poltava all hit",
+    "date": "2026-05-13",
+    "weaponType": "mixed",
+    "launched": 150,
+    "intercepted": 100,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Energy infrastructure, military-industrial complex, and government buildings struck across Lutsk, Rivne, Cherkasy, Odesa, Kryvyi Rih, Kharkiv, Dnipropetrovsk and Poltava oblasts",
+    "casualties": "8 killed, 11 injured in Dnipropetrovsk Oblast; additional casualties in other regions",
+    "notes": "Phased combined attack: initial Shahed wave to overload air defenses, then cruise missiles (air+sea-launched) and ballistic missiles. STING Drone Hunters: 100+ intercepts. Part of Russia's sustained energy infrastructure campaign after ceasefire collapse. Day 1,539.",
+    "platform": "Shahed/Geran-2 + air-launched cruise missiles + sea-launched cruise missiles + ballistic missiles",
+    "status": "partial",
+    "lastUpdated": "2026-05-13"
+  },
+  {
+    "id": "retaliation-ukraine-astrakhan-gas-plant-may13-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      47.5,
+      46.3
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian drones strike Astrakhan gas processing plant — deep campaign extends to Caspian Sea region; Russia claims 286 drones downed overnight",
+    "date": "2026-05-13",
+    "weaponType": "drone_loitering",
+    "launched": 40,
+    "intercepted": 30,
+    "confidence": "medium",
+    "time": "02:00",
+    "damage": "Astrakhan gas processing plant struck; ongoing degradation of Russian energy export capacity",
+    "casualties": "Unknown",
+    "notes": "Russia claimed 286 Ukrainian drones downed across all Russian regions overnight into May 13. Astrakhan plant was hit despite claimed intercepts. Ukraine's 2026 deep-strike campaign previously hit: Tuapse x4, Kirishi (Leningrad Oblast), Orenburg gas, Cheboksary defense plant. Campaign cost Russia $7B+ in energy losses.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-13"
+  },
+  {
+    "id": "strike-russia-kyiv-record-48hr-may14-2026",
+    "from": [
+      39.0,
+      50.5
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Russia's record 48-hr aerial assault on Kyiv — 1,428 drones + 50+ missiles; apartment building demolished, 24 killed (3 children)",
+    "date": "2026-05-14",
+    "weaponType": "mixed",
+    "launched": 1480,
+    "intercepted": 1340,
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "Multi-story residential apartment building completely demolished in Kyiv; school, veterinary clinic struck; 20 locations across Kyiv hit; energy infrastructure targeted across multiple regions",
+    "casualties": "24 killed (including 3 children), 48 wounded from apartment building alone; additional casualties across Ukraine",
+    "notes": "Ukraine called it the most massive and sustained aerial assault of the entire war: 1,428 Shahed drones (single-day record), 50+ missiles, 91 airstrikes with 302 guided aerial bombs, 3,418 artillery attacks. Mayor Klitschko: 'largest-scale attack on the capital.' Air defense intercepted 94% of drones but only 73% of missiles. Kyiv declared day of mourning. Zelensky accused Russia of timing the attack to Trump's China state visit.",
+    "platform": "Shahed-136/Geran-2 + cruise missiles + KAB guided aerial bombs + Iskander-M",
+    "status": "partial",
+    "lastUpdated": "2026-05-14"
+  },
+  {
+    "id": "strike-russia-294drones-kherson-odesa-may16-2026",
+    "from": [
+      38.97,
+      45.04
+    ],
+    "to": [
+      32.6,
+      46.64
+    ],
+    "cat": "strike",
+    "label": "Russia 294-drone overnight barrage — Kherson, Odesa, Kharkiv, Sumy hit; 1 killed, 30+ wounded",
+    "date": "2026-05-16",
+    "weaponType": "drone_loitering",
+    "launched": 294,
+    "intercepted": 269,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Kherson: 5 high-rises + 19 houses damaged; Odesa: 39 settlements lost power (22,000+ consumers); Kharkiv: 2 metro stations + trolleybus network damaged",
+    "casualties": "1 killed (Kherson), 23 injured in Kherson, 7 in Sumy, 3 in Zaporizhzhia",
+    "notes": "Ukraine's Air Force intercepted 269 of 294 drones; 20 made direct hits at 15 locations. Day 1,542 of the full-scale invasion.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-16"
+  },
+  {
+    "id": "retaliation-ukraine-ryazan-refinery-may15-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      39.72,
+      54.63
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian drones set Rosneft Ryazan refinery ablaze — 3rd strike this year; 3–4 killed; military aircraft and air defenses also destroyed",
+    "date": "2026-05-15",
+    "weaponType": "drone_loitering",
+    "launched": 50,
+    "intercepted": 10,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Ryazan refinery vacuum distillation units consumed by fire; black oil debris coated Ryazan city; Be-200 Altair aircraft + Ka-27 helicopter destroyed at Yeysk; Tor-M2 hit in Luhansk Oblast; Pantsir-S1 destroyed in Crimea",
+    "casualties": "3–4 killed, 12 injured in Ryazan Oblast",
+    "notes": "Ukraine's 3rd strike on Ryazan refinery in 2026. Facility processes 17.1M metric tons crude/year — primary Moscow fuel supplier (~180 km from capital). Russia claimed 355 Ukrainian drones shot down overnight but refinery fires confirmed penetration. Part of ongoing 2026 deep-strike energy campaign: Tuapse x4, Kirishi, Orenburg, Astrakhan, Ryazan x3. Campaign cost Russia $7.5B+ in energy losses.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-15"
+  },
+  {
+    "id": "retaliation-ukraine-556-drones-moscow-may17-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      37.62,
+      55.75
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine's largest-ever drone attack — ~556 drones target Moscow region; refinery, Transneft pumping stations, Sheremetyevo Airport hit; 4 killed",
+    "date": "2026-05-17",
+    "weaponType": "drone_loitering",
+    "launched": 556,
+    "intercepted": 400,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Moscow oil refinery fires; Transneft oil-pumping stations hit in Moscow Oblast; ELMA Technopark struck; Sheremetyevo Airport: ~200 flights delayed/cancelled; residential blocks in Istra damaged; fires in village of Subbotino",
+    "casualties": "4 killed (3 Moscow region, 1 Belgorod Oblast), 12+ wounded",
+    "notes": "Ukraine's largest drone attack of the entire war. Russia claimed 556 drones intercepted but fires at Moscow refinery and airport disruptions confirmed penetrations. Ukraine's SBU confirmed joint operation targeting military-industrial and fuel infrastructure. Zelensky: 'entirely justified — a completely fair response.' Day 1,543 of the full-scale invasion.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "partial",
+    "lastUpdated": "2026-05-17"
+  },
+  {
+    "id": "strike-russia-287drones-ukraine-may17-2026",
+    "from": [
+      38.97,
+      45.04
+    ],
+    "to": [
+      35.04,
+      48.46
+    ],
+    "cat": "strike",
+    "label": "Russia 287-drone attack on Ukraine — 279 intercepted; 9 injured in Dnipropetrovsk and Zaporizhzhia",
+    "date": "2026-05-17",
+    "weaponType": "drone_loitering",
+    "launched": 287,
+    "intercepted": 279,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "7 locations struck; Dnipropetrovsk region and Zaporizhzhia district targeted; 8 drones broke through air defenses",
+    "casualties": "9 injured (Dnipropetrovsk and Zaporizhzhia districts)",
+    "notes": "Ukraine Air Force intercepted 279 of 287 drones. Russia also conducted 95 airstrikes and dropped ~300 guided aerial bombs in the preceding 24 hours. Day 1,543. Concurrent with Ukraine's 556-drone retaliation against Moscow region.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-17"
+  },
+  {
+    "id": "strike-russia-524drone-22missile-odesa-may18-2026",
+    "from": [
+      38.17,
+      46.05
+    ],
+    "to": [
+      30.73,
+      46.48
+    ],
+    "cat": "strike",
+    "label": "Russia 524-drone + 22-missile attack — Odesa kindergarten and residences struck; 20 injured including 2 children",
+    "date": "2026-05-18",
+    "weaponType": "mixed",
+    "launched": 546,
+    "intercepted": 507,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Odesa: residential buildings in 2 districts, kindergarten, lyceum, police station struck; 34 locations hit across Ukraine; Sumy Oblast also targeted",
+    "casualties": "20 injured including 2 children",
+    "notes": "524 Shahed-type drones + 22 missiles (14 ballistic); 503 drones + 4 missiles intercepted; 16 drones + 18 missiles scored direct hits at 34 locations. Launched the day after Ukraine's record 556-drone attack on Moscow region. Day 1,544.",
+    "platform": "Shahed-136/Geran-2 + ballistic missiles + cruise missiles",
+    "status": "partial",
+    "lastUpdated": "2026-05-18"
+  },
+  {
+    "id": "strike-russia-209drone-kharkiv-odesa-may19-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russia 209-drone overnight attack — Kharkiv 25 buildings damaged, Izmail warehouse hit",
+    "date": "2026-05-19",
+    "weaponType": "drone_loitering",
+    "launched": 209,
+    "intercepted": 180,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Kharkiv Novobavarskyi district: 25 buildings damaged; Odesa Oblast/Izmail district: warehouse struck; multiple injuries",
+    "casualties": "Several injured (Kharkiv); total civilian casualties under assessment",
+    "notes": "180 of 209 drones intercepted (86% interception rate); 29 broke through. Kharkiv's Novobavarskyi district worst-hit. Part of Russia's near-nightly May 2026 Shahed mass campaign. Day 1,545.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-19"
+  },
+  {
+    "id": "strike-russia-116drones-kharkiv-kryvyi-rih-may20-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russia 116-drone overnight attack — Kharkiv Chuhuiv community and Kryvyi Rih industrial facility struck; 109 intercepted",
+    "date": "2026-05-20",
+    "weaponType": "drone_loitering",
+    "launched": 116,
+    "intercepted": 109,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Kharkiv region (Chuhuiv community): infrastructure damaged, at least 1 civilian injured; Kryvyi Rih (Dnipropetrovsk Oblast): industrial facility struck",
+    "casualties": "At least 1 civilian injured (Chuhuiv/Kharkiv)",
+    "notes": "109 of 116 drones intercepted (94% rate); 7 broke through. Chuhuiv community in Kharkiv region and an industrial facility in Kryvyi Rih struck. Part of Russia's sustained Shahed campaign; lower intensity than recent 200–500 drone waves. Day 1,546.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-20"
+  },
+  {
+    "id": "retaliation-ukraine-snizhne-drone-traincamp-may21-2026",
+    "from": [
+      37.17,
+      48.28
+    ],
+    "to": [
+      38.77,
+      47.99
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine precision drone strike kills 65 Russian drone cadets + 1 instructor at Snizhne training camp",
+    "date": "2026-05-21",
+    "weaponType": "drone_ucav",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "22:00",
+    "damage": "Russian military drone pilot training camp destroyed; 65 cadets and 1 instructor killed — significant degradation of Russia's future drone operator capacity",
+    "casualties": "65 Russian drone cadets killed, 1 instructor killed",
+    "notes": "Precision strike on Russian drone pilot training camp in Snizhne, occupied Donetsk Oblast. Consistent with Ukraine's 2026 mid-range strike campaign targeting Russian training and logistics infrastructure 30–180 km behind the contact line. Russia has scaled up drone pilot training to counter Ukraine's FPV dominance. Day 1,547.",
+    "platform": "Ukrainian precision strike drone",
+    "status": "hit",
+    "lastUpdated": "2026-05-21"
+  },
+  {
+    "id": "retaliation-ukraine-starobilsk-may22-2026",
+    "from": [
+      36.23,
+      49.98
+    ],
+    "to": [
+      38.9,
+      49.3
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine multi-wave drone strike on Starobilsk military facility — 6 killed, 39 wounded; Putin calls it 'monstrous crime'",
+    "date": "2026-05-22",
+    "weaponType": "drone_loitering",
+    "launched": 6,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "22:00",
+    "damage": "College dormitory used as Russian troop billets destroyed; 6 killed, 39 wounded, 15 missing under rubble",
+    "casualties": "6 Russian personnel killed, 39 wounded, 15 missing",
+    "notes": "Ukraine struck a college dormitory in Starobilsk (occupied Luhansk Oblast) identified as Russian military troop billets in three waves. Putin ordered military to 'prepare suggestions for retaliation.' Starobilsk is a key Russian rear-area logistics hub ~65 km north of Luhansk city. Day 1,548.",
+    "platform": "Ukrainian strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "retaliation-ukraine-syzran-refinery-may22-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      48.47,
+      53.16
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Syzran oil refinery, Samara region — ~800 km deep strike; 2 civilians killed",
+    "date": "2026-05-22",
+    "weaponType": "drone_loitering",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Large fires at Syzran refinery; thick black smoke; significant damage to processing units",
+    "casualties": "2 civilians killed, several injured (Samara regional governor)",
+    "notes": "One of Ukraine's deepest drone strikes of the war (~800 km). Part of sustained May 2026 energy-sector campaign: Ryazan x3, Azot Stavropol, Yaroslavl, Kstovo/Nizhny Novgorod, now Syzran. Cumulative Russian energy losses exceed $8B in 2026. Day 1,548.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "retaliation-ukraine-kherson-fsb-may22-2026",
+    "from": [
+      32.6,
+      46.64
+    ],
+    "to": [
+      33.4,
+      46.3
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine hits FSB HQ and air defense in occupied Kherson Oblast — ~100 Russian personnel killed or wounded",
+    "date": "2026-05-22",
+    "weaponType": "drone_loitering",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "21:00",
+    "damage": "FSB headquarters in occupied Kherson Oblast destroyed; air defense system eliminated",
+    "casualties": "~100 Russian personnel killed or wounded combined (Zelensky)",
+    "notes": "Ukraine struck FSB regional HQ disrupting Russian security apparatus operations in occupied Kherson Oblast, and simultaneously eliminated an air defense system — part of Ukraine's ongoing 2026 campaign to neutralize Russian air defenses (129+ AD systems destroyed YTD). Zelensky confirmed in nightly address. Day 1,548.",
+    "platform": "Ukrainian strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "strike-russia-ukraine-drones-may22-2026",
+    "from": [
+      38.17,
+      45.72
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russian overnight drone strikes kill 5, injure 41 across Ukraine — Day 1,548",
+    "date": "2026-05-22",
+    "weaponType": "drone_loitering",
+    "launched": 60,
+    "intercepted": 50,
+    "confidence": "medium",
+    "time": "03:00",
+    "damage": "Multiple Ukrainian regions struck; residential areas and civilian infrastructure hit",
+    "casualties": "5 killed, 41 injured across Ukraine",
+    "notes": "Russia's near-nightly Shahed campaign continues on Day 1,548. Lower intensity compared to recent 200–500 drone waves. 10 drones penetrated Ukraine's air defenses. Strikes continue despite Russia's mounting losses: 1,353,930 cumulative casualties per Ukrainian MoD.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "retaliation-ukraine-tamannaftogaz-may23-2026",
+    "from": [
+      37.5,
+      47.5
+    ],
+    "to": [
+      36.7,
+      45.2
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Tamannaftogaz oil terminal on Russia's Taman Peninsula — deep strike campaign",
+    "date": "2026-05-23",
+    "weaponType": "drone_loitering",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "02:00",
+    "damage": "Tamannaftogaz terminal damaged; disrupts fuel supply to occupied Crimea via Kerch Strait corridor",
+    "casualties": "No confirmed casualties",
+    "notes": "Strike targets Russia's Taman Peninsula fuel terminal — a key logistics hub for supplying occupied Crimea and Black Sea Fleet. Part of Ukraine's ongoing 2026 energy infrastructure campaign ($8.5B+ in Russian energy losses). Ukraine also struck military targets in occupied Donetsk, Luhansk, and Crimea on same day.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-23"
+  },
+  {
+    "id": "strike-russia-kyiv-600drones-90missiles-may24-2026",
+    "from": [
+      32.0,
+      52.5
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Russia's massive Kyiv attack — 600 Shahed drones + 90 missiles; 4 killed, 80+ injured; all districts hit",
+    "date": "2026-05-24",
+    "weaponType": "mixed",
+    "launched": 690,
+    "intercepted": 600,
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "Damage in every district of Kyiv; at least 7 multi-story residential buildings damaged; Obolonskyi, Shevchenkivskyi, Dniprovskyi, Holosiivskyi, Solomianskyi, Pecherskyi districts all affected",
+    "casualties": "4 killed, 80+ injured in Kyiv",
+    "notes": "One of the war's largest attacks on Kyiv: 600 Shahed-type + 90 missiles. Retaliation for Ukraine's May 22 Starobilsk dormitory strike that killed 21. Ukrainian air defense intercepted most but ~90 projectiles penetrated. Combined with Oreshnik ballistic strike on Bila Tserkva 50 km south. Day 1,550.",
+    "platform": "Shahed-136/Geran-2 loitering munitions + cruise missiles + ballistic missiles",
+    "status": "partial",
+    "lastUpdated": "2026-05-24"
+  },
+  {
+    "id": "strike-oreshnik-bila-tserkva-may24-2026",
+    "from": [
+      44.9,
+      48.0
+    ],
+    "to": [
+      30.1,
+      49.8
+    ],
+    "cat": "strike",
+    "label": "Russia fires Oreshnik hypersonic ballistic missile at Bila Tserkva — 3rd wartime use; nuclear-capable",
+    "date": "2026-05-24",
+    "weaponType": "ballistic",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:30",
+    "damage": "Bila Tserkva struck by Oreshnik IRBM; infrastructure damage in Kyiv Oblast city 50 km south of capital",
+    "casualties": "Casualties reported in Bila Tserkva area",
+    "notes": "Third combat use of Oreshnik RS-26 Rubizh IRBM: 1st on Dnipro Nov 21, 2024; 2nd on Lviv Oblast Jan 9, 2026; 3rd on Bila Tserkva May 24, 2026. Launched from Kapustin Yar (Astrakhan). Features MIRV warheads; reaches Mach 10-13 — unstoppable by current UA air defenses. Nuclear-capable; serves as nuclear signaling. Zelensky confirmed use. Part of wider retaliation barrage.",
+    "platform": "RS-26 Rubizh 'Oreshnik' IRBM (Kapustin Yar launch site)",
+    "status": "hit",
+    "lastUpdated": "2026-05-24"
+  },
+  {
+    "id": "strike-russia-bilozerka-hospital-may25-2026",
+    "from": [
+      33.7,
+      46.8
+    ],
+    "to": [
+      32.93,
+      46.61
+    ],
+    "cat": "strike",
+    "label": "Russia shells Bilozerka hospital in Kherson region — continued targeting of medical facilities",
+    "date": "2026-05-25",
+    "weaponType": "rocket",
+    "launched": 5,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "08:00",
+    "damage": "Bilozerka hospital struck; medical facility damaged in Kherson Oblast community on Ukrainian-controlled right bank of Dnipro",
+    "casualties": "Casualties under assessment",
+    "notes": "Russia shelled a hospital in Bilozerka community (Kherson Oblast) on May 25 morning. Constitutes a potential war crime under Additional Protocol I of the Geneva Conventions prohibiting attacks on medical facilities. Russia has also struck 22 settlements in Kharkiv region (18 injured including 5-year-old) and Sumy Oblast on the same day. Kherson Oblast right bank has faced near-constant shelling from the Russian-held left bank since liberation in November 2022.",
+    "platform": "Russian artillery / rocket systems from left bank",
+    "status": "hit",
+    "lastUpdated": "2026-05-25"
+  },
+  {
+    "id": "strike-russia-122drones-2iskander-mykolaiv-may26-2026",
+    "from": [
+      38.97,
+      46.05
+    ],
+    "to": [
+      31.99,
+      46.97
+    ],
+    "cat": "strike",
+    "label": "Russia 122-drone + 2 Iskander-M overnight attack strikes Mykolaiv — admin + residential buildings damaged",
+    "date": "2026-05-26",
+    "weaponType": "mixed",
+    "launched": 124,
+    "intercepted": 115,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Mykolaiv: 1 administrative building + 2 high-rise residential buildings damaged; majority of drones intercepted",
+    "casualties": "No confirmed fatalities; injuries under assessment",
+    "notes": "Russia launched 2 Iskander-M ballistic missiles and 122 Shahed/Geran-type loitering munitions. Ukrainian air defense intercepted the majority. Mykolaiv was the primary target. Ukrainian intelligence warned of a planned future large-scale combined missile + drone attack. Part of Russia's sustained overnight Shahed campaign averaging 100–300 drones per night in May 2026.",
+    "platform": "Iskander-M ballistic missiles + Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-26"
+  },
+  {
+    "id": "retaliation-ukraine-bryansk-belets-depot-may26-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      34.36,
+      53.24
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Belets oil depot in Bryansk Oblast — front-line fuel supply disrupted",
+    "date": "2026-05-26",
+    "weaponType": "drone_loitering",
+    "launched": 10,
+    "intercepted": 0,
+    "confidence": "medium",
+    "time": "02:00",
+    "damage": "Belets oil depot ablaze; facility supplies fuel to Russian military units on eastern and northern fronts",
+    "casualties": "No confirmed casualties",
+    "notes": "Part of Ukraine's 2026 deep-strike energy campaign that has cost Russia $9B+ in energy sector losses. Concurrent explosions near a military airfield in Voronezh Oblast. Bryansk Oblast is a key Russian logistics hub bordering Ukraine's Chernihiv and Sumy oblasts. Ukraine's drone campaign has repeatedly struck Russian fuel and ammunition depots disrupting front-line supply.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-26"
+  },
+  {
+    "id": "strike-russia-kinzhal-147drones-may28-2026",
+    "from": [
+      39.5,
+      52.6
+    ],
+    "to": [
+      35.04,
+      48.46
+    ],
+    "cat": "strike",
+    "label": "Russia overnight attack: Kinzhal + 147 drones — 138 intercepted; hits at 7 locations",
+    "date": "2026-05-28",
+    "weaponType": "mixed",
+    "launched": 148,
+    "intercepted": 138,
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "Hits at 7 locations; drone debris at 6 additional locations across multiple Ukrainian regions",
+    "casualties": "Casualties under assessment at time of reporting",
+    "notes": "1 Kinzhal aeroballistic missile (from MiG-31K over Lipetsk Oblast) + 147 attack UAVs (Shahed, Herber/Geran, Italmas, jet-powered variants). Launch directions: Bryansk, Kursk, Oryol, Millerovo, Primorsko-Akhtarsk (Russia) + Hvardiiske, Chauda (Crimea). 138/147 drones intercepted (93.9%); Kinzhal not intercepted. Day 1,554.",
+    "platform": "Kh-47 Kinzhal (MiG-31K) + Shahed-136/Geran-2 + Herber + Italmas loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "id": "strike-russia-kherson-playground-mlrs-may28-2026",
+    "from": [
+      32.5,
+      46.5
+    ],
+    "to": [
+      32.62,
+      46.64
+    ],
+    "cat": "strike",
+    "label": "Russian MLRS strike kills father at Kherson children's playground — 2 children critically wounded",
+    "date": "2026-05-28",
+    "weaponType": "rocket",
+    "launched": 4,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "17:30",
+    "damage": "Children's playground in Korabelny district destroyed; nearby residential area hit",
+    "casualties": "1 killed (father); 4 wounded: mother (36), daughter (3, critical), daughter (6, serious shrapnel), 50-year-old man",
+    "notes": "Russian MLRS fired from east (left) bank of Dnipro River in Russian-controlled territory. Strike on civilian playground constitutes potential war crime under IHL. Korabelny district, Kherson city. The 3-year-old required emergency surgery to remove shrapnel from head; evacuated to Mykolaiv. Kherson faces near-daily Russian artillery/rocket fire since liberation Nov 2022.",
+    "platform": "MLRS (Multiple Launch Rocket System) from left bank positions",
+    "status": "hit",
+    "lastUpdated": "2026-05-28"
+  },
+  {
+    "id": "strike-russia-232drones-may30-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      35.04,
+      48.46
+    ],
+    "cat": "strike",
+    "label": "Russia 232-drone + 1 ballistic missile overnight attack — 217 intercepted; 14 regions struck",
+    "date": "2026-05-30",
+    "weaponType": "drone_loitering",
+    "launched": 233,
+    "intercepted": 217,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "14 Ukrainian regions struck; 16 drones + 1 ballistic missile penetrated air defenses; infrastructure and residential areas damaged",
+    "casualties": "Casualties reported across multiple regions",
+    "notes": "232 Shahed/Geran-type drones + 1 ballistic missile; 217 drones intercepted (93.1%); Russia also conducted 91 airstrikes, 277 guided aerial bombs, 8,549 total kamikaze drones in the 24-hour period. Day 1,556.",
+    "platform": "Shahed-136/Geran-2 loitering munitions + ballistic missile",
+    "status": "partial",
+    "lastUpdated": "2026-05-30"
+  },
+  {
+    "id": "retaliation-ukraine-taganrog-armavir-may30-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      38.89,
+      47.22
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine deep strikes: Taganrog port tanker+fuel storage, Armavir oil depot, Volgograd refinery halted",
+    "date": "2026-05-30",
+    "weaponType": "drone_loitering",
+    "launched": 50,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Taganrog: tanker, fuel tanks, admin building ablaze (2 civilians injured); Armavir: oil depot ablaze (~500 km from Ukraine border); Volgograd: oil refinery halted; Crimea marine oil terminal + shadow-fleet tanker also struck",
+    "casualties": "2 civilians injured in Taganrog; no other confirmed casualties",
+    "notes": "Multi-city overnight energy campaign. Zelensky confirmed Armavir strike. Combined with Yaroslavl fuel tank strikes, Russia's 2026 energy-sector losses exceed $9.5B. Ukraine simultaneously struck shadow-fleet tanker and Crimea marine oil terminal.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-05-30"
+  },
+  {
+    "id": "strike-russia-265drones-ukraine-jun1-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      32.6,
+      46.64
+    ],
+    "cat": "strike",
+    "label": "Russia 265-drone overnight attack — 228 intercepted; Kherson killed, Odesa maternity ward struck",
+    "date": "2026-06-01",
+    "weaponType": "drone_loitering",
+    "launched": 265,
+    "intercepted": 228,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Kherson: 1 killed, 7 wounded; Odesa: maternity ward in Bilhorod-Dnistrovskyi struck (6 injured postpartum women); Chernihiv: Moshchenka village 8 injured including 3 children; Dnipropetrovsk: 4 wounded, 1 police officer killed; Zaporizhzhia: cultural center + 976 attacks across 55 settlements",
+    "casualties": "2 killed, 30+ injured across Ukraine",
+    "notes": "86% interception rate (228/265). Drones targeted Kherson, Odesa, Chernihiv, Dnipropetrovsk, Zaporizhzhia, Kramatorsk, and Konotop regions. Maternity ward strike in Bilhorod-Dnistrovskyi constitutes probable war crime under Geneva Convention Additional Protocol I. Day 1,558.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-06-01"
+  },
+  {
+    "id": "strike-russia-odesa-maternity-jun1-2026",
+    "from": [
+      34.1,
+      44.95
+    ],
+    "to": [
+      30.34,
+      46.19
+    ],
+    "cat": "strike",
+    "label": "Russian drone strikes maternity ward in Bilhorod-Dnistrovskyi — 6 postpartum women injured",
+    "date": "2026-06-01",
+    "weaponType": "drone_loitering",
+    "launched": 8,
+    "intercepted": 4,
+    "confidence": "high",
+    "time": "03:30",
+    "damage": "Maternity ward struck; 6 postpartum women injured; buildings in Odesa city also struck with additional injuries",
+    "casualties": "6 injured in maternity ward; 4-5 additional in Odesa city",
+    "notes": "Strike on maternity hospital violates Additional Protocol I of the Geneva Conventions — medical facilities are protected under international humanitarian law. Bilhorod-Dnistrovskyi is a city of ~50,000 in Odesa Oblast near the Moldovan border. Day 1,558.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "hit",
+    "lastUpdated": "2026-06-01"
+  },
+  {
+    "id": "retaliation-ukraine-saratov-refinery-jun1-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      46.0,
+      51.5
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine long-range drones strike Saratov oil refinery — 18th Russian energy facility struck in 2026",
+    "date": "2026-06-01",
+    "weaponType": "drone_loitering",
+    "launched": 15,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "01:30",
+    "damage": "Saratov oil refinery damaged; fires reported at facility ~900–1,000 km from Ukraine's eastern border",
+    "casualties": "No confirmed casualties",
+    "notes": "Ukraine's 18th Russian energy facility strike of 2026. Saratov refinery strike continues Ukraine's deep-strike energy campaign — costing Russia $9.5B+ in energy sector losses. Russia's refinery capacity now reduced ~17% (1.1M bbl/day). Campaign previously struck: Tuapse x4, Kirishi, Ryazan x3, Syzran, Astrakhan, Yaroslavl, Taganrog, Armavir, Volgograd, Moscow refineries (record 556-drone May 17 raid). Day 1,558.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-06-01"
+  },
+  {
+    "id": "strike-russia-656drones-73missiles-kyiv-jun2-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Russia's massive 656-Shahed + 73-missile attack (incl. 8 Zircon hypersonics) — 22 killed across Ukraine, Kyiv residential buildings destroyed",
+    "date": "2026-06-02",
+    "weaponType": "mixed",
+    "launched": 729,
+    "intercepted": 642,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Kyiv: dozens of residential buildings damaged; Podil district nine-story apartment block ablaze; power outages. Casualties in Dnipro, Zaporizhzhia, Kharkiv, Poltava, Khmelnytskyi, Sumy regions. Military-industrial, fuel, and transport infrastructure targeted.",
+    "casualties": "22 killed, 100+ wounded across Ukraine (Kyiv and Dnipro worst hit)",
+    "notes": "One of the largest combined-arms aerial assaults of the war: 656 Shahed-type drones + 73 missiles. Notably included 8 Zircon hypersonic missiles — likely the largest number used in a single strike. Ukraine intercepted 602 drones (91.8%) and 40 missiles. Kremlin called it retaliation for Ukraine's May 22 Starobilsk dormitory strike. Russia declared war had entered a 'different paradigm.' Zelensky appealed directly to Trump for U.S. air defense. Day 1,559.",
+    "platform": "Shahed-136/Geran-2 loitering munitions + Zircon hypersonic missiles + cruise/ballistic missiles",
+    "status": "partial",
+    "lastUpdated": "2026-06-02"
+  },
+  {
+    "id": "retaliation-ukraine-ilsky-refinery-krasnodar-jun2-2026",
+    "from": [
+      35.04,
+      48.46
+    ],
+    "to": [
+      38.7,
+      44.9
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian drones strike Ilsky oil refinery in Krasnodar — fire ignited; energy campaign continues",
+    "date": "2026-06-02",
+    "weaponType": "drone_loitering",
+    "launched": 12,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Ilsky oil refinery (Krasnodar Krai) struck; fire ignited at facility ~700–750 km from Ukraine's eastern border",
+    "casualties": "No confirmed casualties",
+    "notes": "Ilsky refinery strike extends Ukraine's 2026 energy campaign south into Krasnodar region. Ukraine had struck 15 Russian oil refineries in Jan–May 2026, knocking out ~40% of Russia's main refining capacity. The deep strikes continue despite — and in some sense in direct response to — Russia's massive overnight aerial assault on Ukrainian cities. Day 1,559.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-06-02"
+  },
+  {
+    "id": "retaliation-ukraine-kronstadt-st-petersburg-jun3-2026",
+    "from": [
+      36.0,
+      49.5
+    ],
+    "to": [
+      29.77,
+      59.99
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Kronstadt naval base (corvette Boikiy ablaze) + St. Petersburg oil terminal — deepest naval strike of war",
+    "date": "2026-06-03",
+    "weaponType": "drone_loitering",
+    "launched": 80,
+    "intercepted": 30,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Corvette Boikiy (guided-missile corvette) set ablaze in dry dock at Kronstadt naval base; St. Petersburg oil terminal (largest NW Russia transshipment complex) struck and burning; defense facility in Tambov Oblast hit; 3 districts of St. Petersburg affected",
+    "casualties": "Several wounded in St. Petersburg",
+    "notes": "Ukraine's deepest naval strike of the war (~1,200–1,400 km). Timed to coincide with opening of Putin's SPIEF ('Putin's Davos'). Russia claimed 350+ Ukrainian drones intercepted overnight across all ops. Ukraine's SBU confirmed targeting military-industrial and energy export infrastructure. Day 1,560.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "partial",
+    "lastUpdated": "2026-06-03"
+  },
+  {
+    "id": "strike-russia-kharkiv-drone-jun3-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russian drone strikes hit 17 Kharkiv settlements — residential building ablaze, 3 killed, 19 wounded",
+    "date": "2026-06-03",
+    "weaponType": "drone_loitering",
+    "launched": 20,
+    "intercepted": 10,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Multi-story residential building struck and set on fire in Kharkiv city; civilian infrastructure across 17 settlements hit",
+    "casualties": "3 killed, 19 wounded in Kharkiv region",
+    "notes": "Continued near-nightly Russian drone strikes on Kharkiv Oblast. The region faces sustained cross-border fire from Belgorod Oblast; Kharkiv city is ~40 km from the Russian border. Part of Russia's overall 2026 Shahed campaign. Day 1,560.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-06-03"
+  },
+  {
+    "id": "strike-russia-zaporizhzhia-924-attacks-jun4-2026",
+    "from": [
+      38.17,
+      46.05
+    ],
+    "to": [
+      35.18,
+      47.85
+    ],
+    "cat": "strike",
+    "label": "Russia 924 strikes across Zaporizhzhia Oblast — city drone attack kills 1, wounds 4; 52 settlements hit",
+    "date": "2026-06-04",
+    "weaponType": "drone_loitering",
+    "launched": 35,
+    "intercepted": 20,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Zaporizhzhia city: multi-story residential building struck and ablaze; 924 total strikes across 52 settlements in oblast over 24 hours",
+    "casualties": "1 killed, 4 injured in Zaporizhzhia city and district",
+    "notes": "One of the highest single-day strike tallies for Zaporizhzhia Oblast in 2026. Region contains the Russian-occupied ZNPP (Europe's largest nuclear plant). Day 1,561.",
+    "platform": "Shahed-136/Geran-2 loitering munitions + artillery",
+    "status": "partial",
+    "lastUpdated": "2026-06-04"
+  },
+  {
+    "id": "strike-russia-272drones-ukraine-jun6-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      30.73,
+      46.48
+    ],
+    "cat": "strike",
+    "label": "Russia 272-Shahed overnight attack — 249 intercepted; Odessa port, Zaporizhzhia plant, Sumy hit — Day 1,563",
+    "date": "2026-06-06",
+    "weaponType": "drone_loitering",
+    "launched": 272,
+    "intercepted": 249,
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Odessa port infrastructure, Kryvorizka thermal power plant, Zaporizhzhia Machine-Building Plant, Sumy (1 killed), Dnipropetrovsk (1 killed, 3 wounded) all struck",
+    "casualties": "2 killed, 10+ wounded across Ukraine",
+    "notes": "272 Shahed-type drones; 249 intercepted (91.5% rate). 11 locations confirmed struck. Daytime also saw 46 additional airstrikes with 134 guided aerial bombs, 6,064 kamikaze drones, and 2,445 artillery strikes across Ukraine. Day 1,563.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "partial",
+    "lastUpdated": "2026-06-06"
+  },
+  {
+    "id": "retaliation-ukraine-kronstadt-arsenal-jun6-2026",
+    "from": [
+      30.5,
+      51.5
+    ],
+    "to": [
+      29.77,
+      59.99
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine's ~376-drone strike: Kronstadt 15th Arsenal, submarine R&D institute, Ust-Labinsk depot — SPIEF closing day",
+    "date": "2026-06-06",
+    "weaponType": "drone_loitering",
+    "launched": 376,
+    "intercepted": 144,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Russian Navy 15th Arsenal at Bolshaya Izhora struck with secondary detonations; Research Institute of Marine Thermal Engineering (submarine weapons R&D) hit, fire and partial evacuation; Kronstadt Marine Plant; Ust-Labinsk oil depot (~500 km deep)",
+    "casualties": "3 slightly injured on Russian side",
+    "notes": "Second major Kronstadt strike in 4 days (first June 3 set corvette Boikiy ablaze). Russia claimed 144 intercepts in Leningrad/St. Petersburg area. Strikes timed to final day of SPIEF. Zelensky: 'long-range sanctions.' Open-source satellite imagery confirmed fires. Day 1,563.",
+    "platform": "Ukrainian long-range strike drones (SBU/SBO/SOF joint operation)",
+    "status": "partial",
+    "lastUpdated": "2026-06-06"
+  },
+  {
+    "id": "strike-russia-chornobyl-nfs-jun7-2026",
+    "from": [
+      35.5,
+      52.5
+    ],
+    "to": [
+      30.05,
+      51.37
+    ],
+    "cat": "strike",
+    "label": "Russian Shahed drone strikes Chornobyl nuclear fuel storage building — IAEA emergency site visit ordered — Day 1,564",
+    "date": "2026-06-07",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Fuel-reception building at Chornobyl spent nuclear fuel storage facility damaged — facade, windows, doors destroyed; ~40 m² fire; blast wave affected nearby buildings",
+    "casualties": "No injuries at nuclear site; 4 killed across Ukraine on June 7",
+    "notes": "No spent fuel was in targeted building; radiation levels remained normal. IAEA announced emergency site visit. Zelensky: 'extremely vile.' Russia has not commented. Most serious attack on Chornobyl site since Russian occupation Feb–April 2022. Day 1,564.",
+    "platform": "Shahed-136/Geran-2 loitering munition",
+    "status": "hit",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "retaliation-ukraine-feodosia-fuel-depot-jun7-2026",
+    "from": [
+      34.8,
+      47.0
+    ],
+    "to": [
+      35.38,
+      45.03
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine SOF strikes Feodosia maritime oil terminal, Crimea — 7 fuel tanks (10,000–20,000 m³) ablaze — Day 1,564",
+    "date": "2026-06-07",
+    "weaponType": "drone_loitering",
+    "launched": 20,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "Seven storage tanks (10,000–20,000 m³ each) at Feodosia maritime oil terminal struck and ablaze; terminal used to transfer petroleum from rail to maritime vessels supplying Russian forces",
+    "casualties": "No confirmed casualties",
+    "notes": "Coordinated with simultaneous strike on Semykolodezyanska oil depot (Kerch district). Both facilities ~200–250 km from front line. Russia claimed 95 Ukrainian drones intercepted overnight. Part of a multi-day coordinated logistics attrition campaign targeting Crimea supply corridors (June 6 aerial control + June 7 fuel depots + Chonhar bridge). Day 1,564.",
+    "platform": "Ukrainian SOF long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "retaliation-ukraine-kerch-semykol-depot-jun7-2026",
+    "from": [
+      35.0,
+      47.2
+    ],
+    "to": [
+      36.3,
+      45.28
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine SOF strikes Semykolodezyanska oil depot (Kerch district, Crimea) — 9 tanks ablaze — Day 1,564",
+    "date": "2026-06-07",
+    "weaponType": "drone_loitering",
+    "launched": 15,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "01:30",
+    "damage": "Nine storage tanks (700–3,000 m³) at Semykolodezyanska oil depot in Kerch district struck; satellite imagery confirmed massive fire",
+    "casualties": "No confirmed casualties",
+    "notes": "Part of coordinated dual-target Crimea fuel hub strikes on June 7. Combined with Feodosia maritime terminal strike and Chonhar bridge damage, this three-strike package severely degraded Russia's Crimea fuel logistics. Day 1,564.",
+    "platform": "Ukrainian SOF long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "retaliation-ukraine-chonhar-bridge-jun7-2026",
+    "from": [
+      33.5,
+      47.5
+    ],
+    "to": [
+      34.49,
+      46.02
+    ],
+    "cat": "retaliation",
+    "label": "Ukrainian drone damages Chonhar bridge — Crimea supply crossing suspended; Dzhankoi checkpoint closed — Day 1,564",
+    "date": "2026-06-07",
+    "weaponType": "drone_loitering",
+    "launched": 5,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "04:00",
+    "damage": "Chonhar bridge damaged; traffic suspended for 'security reasons' per Russian-installed Kherson Oblast head Saldo; Dzhankoi road checkpoint closed",
+    "casualties": "No confirmed casualties",
+    "notes": "Completes the June 6–7 Crimea logistics attrition sequence: aerial drone control announced (June 6) → fuel hub strikes + bridge damage (June 7). The Chonhar causeway is a critical logistics bottleneck for Russian forces in Crimea. Day 1,564.",
+    "platform": "Ukrainian SOF strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "strike-kyiv-patriot-shortage-aug1-2026",
+    "from": [
+      46.21,
+      51.48
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Russian ballistic missile barrage on Kyiv — 9 killed as Ukraine runs out of Patriot interceptors",
+    "date": "2026-08-01",
+    "weaponType": "ballistic",
+    "launched": 27,
+    "intercepted": 1,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Strikes in Solomianskyi and Darnytskyi districts; residential buildings damaged",
+    "casualties": "9 killed, 33 wounded (2 dead/8 injured Solomianskyi incl. 2 children; 7 dead/14 injured Darnytskyi)",
+    "notes": "Only 1 of 27 ballistic missiles intercepted — Zelensky said Ukraine had run out of interceptors for the Patriot system and was negotiating a US manufacturing license.",
+    "platform": "Russian ballistic missile forces",
+    "status": "hit",
+    "lastUpdated": "2026-08-01"
+  },
+  {
+    "id": "strike-kyiv-deadliest-2026-aug5",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Deadliest Russian strike on Kyiv in 2026 — 24 ballistic + 4 hypersonic missiles, 115 drones, 17 killed",
+    "date": "2026-08-05",
+    "weaponType": "mixed",
+    "launched": 143,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "01:30",
+    "damage": "Nova Poshta logistics center destroyed; railway station in Brovary hit; Silpo and Rozetka distribution centers heavily damaged",
+    "casualties": "17 killed (incl. 8 at Brovary railway station, 3 at Nova Poshta center), dozens wounded",
+    "notes": "None of the 24 ballistic missiles or 4 Zircon/Onyx hypersonic missiles were intercepted. UN Secretary-General Guterres called it 'a clear violation' and the deadliest strike on Kyiv this year.",
+    "platform": "Russian strategic aviation / naval strike group",
+    "status": "hit",
+    "lastUpdated": "2026-08-05"
+  },
+  {
+    "id": "strike-dnipropetrovsk-nikopol-pokrov-aug6-2026",
+    "from": [
+      39.5,
+      47.5
+    ],
+    "to": [
+      34.4,
+      47.57
+    ],
+    "cat": "strike",
+    "label": "Russian drone barrage hits Nikopol/Pokrov, Dnipropetrovsk region — power cut to tens of thousands",
+    "date": "2026-08-06",
+    "weaponType": "drone_loitering",
+    "launched": 101,
+    "confidence": "medium",
+    "time": "02:00",
+    "damage": "150kV Bogdanovskaya substation near Pokrov and a gas station in Nikopol hit; power disrupted",
+    "casualties": "2 killed, 5-6 wounded across Dnipropetrovsk region",
+    "notes": "Strike time is an approximate overnight estimate; exact hour not specified in reporting. Part of a broader night of strikes across Dnipropetrovsk, Kherson, and Kharkiv regions. Day 1,624.",
+    "platform": "Shahed-136/Geran-2 loitering munitions",
+    "status": "hit",
+    "lastUpdated": "2026-08-06"
+  },
+  {
+    "id": "strike-kharkiv-saltivka-aug9-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Russian strike collapses Kharkiv Saltivka high-rise floors 7-10 — 2 killed, 20+ injured",
+    "date": "2026-08-09",
+    "weaponType": "unknown",
+    "confidence": "medium",
+    "time": "07:00",
+    "damage": "Upper floors (7-10) of a residential high-rise in Saltivka district collapsed",
+    "casualties": "2 killed (men aged 50 and 66), 20+ injured incl. a child",
+    "notes": "Weapon type unconfirmed in reporting — Russian strikes that day used a mix of missiles and KAB guided glide bombs across Kharkiv oblast. Part of a broader week (Aug 3-9) that saw 61 missiles, 1,560+ drones, and 1,540 glide bombs launched at Ukraine. Day 1,627.",
+    "platform": "Mixed missile/glide-bomb strike package",
+    "status": "hit",
+    "lastUpdated": "2026-08-09"
+  },
+  {
+    "id": "strike-kyiv-novaposhta-aug11-2026",
+    "from": [
+      39.2,
+      51.7
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Combined missile/drone strike hits Nova Poshta sorting complex, Kyiv — fires triggered",
+    "date": "2026-08-11",
+    "weaponType": "mixed",
+    "confidence": "medium",
+    "time": "02:30",
+    "damage": "Nova Poshta sorting/logistics complex hit; fires triggered in the capital",
+    "casualties": "No confirmed deaths reported for the Kyiv strike specifically",
+    "notes": "Part of a combined overnight Aug 10-11 strike package that also hit the Zaporizhstal steel plant in Zaporizhzhia. Day 1,629.",
+    "platform": "Russian mixed missile/drone strike package",
+    "status": "hit",
+    "lastUpdated": "2026-08-11"
+  },
+  {
+    "id": "strike-zaporizhstal-steel-plant-aug11-2026",
+    "from": [
+      38.0,
+      48.0
+    ],
+    "to": [
+      35.14,
+      47.85
+    ],
+    "cat": "strike",
+    "label": "North Korean KN-23 ballistic missiles hit Zaporizhstal steel plant, Zaporizhzhia — 6-7 killed",
+    "date": "2026-08-11",
+    "weaponType": "ballistic",
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Zaporizhstal metallurgical plant (Metinvest group) struck; Russia said the plant produced armor steel/fortification components for Ukraine's military",
+    "casualties": "6-7 workers killed, 20 injured",
+    "notes": "Kyiv's General Staff confirmed Russia used North Korean-supplied KN-23 ballistic missiles in the strike — part of a pattern of battle-testing Pyongyang-supplied weapons under combat conditions. Day 1,629.",
+    "platform": "North Korean KN-23 ballistic missile / Zircon hypersonic missile",
+    "status": "hit",
+    "lastUpdated": "2026-08-11"
+  },
+  {
+    "id": "retaliation-ukraine-novorossiysk-aug12-2026",
+    "from": [
+      30.72,
+      46.48
+    ],
+    "to": [
+      37.77,
+      44.72
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Novorossiysk naval base — 4 Russian warships damaged, grain terminals halted",
+    "date": "2026-08-12",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "4 warships damaged (frigates Admiral Essen and Admiral Makarov, a Buyan-M missile ship, a Vasily Bykov-class patrol vessel); 2 grain export terminals halted operations",
+    "casualties": "2-3 killed incl. 1 child, per regional governor Kondratyev",
+    "notes": "Largest Ukrainian strike yet on Russia's last major Black Sea Fleet stronghold; satellite imagery confirmed warship damage. Zelensky called it proof the base is now within reach. Day 1,630.",
+    "platform": "Jet-powered strike drones, R-360 Neptune cruise missiles, naval unmanned surface vessels",
+    "status": "hit",
+    "lastUpdated": "2026-08-12"
+  },
+  {
+    "id": "strike-odesa-train-aug13-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      30.9,
+      47.15
+    ],
+    "cat": "strike",
+    "label": "Jet-powered Shahed drone hits Odesa-region passenger train locomotive — 2 railway workers killed",
+    "date": "2026-08-13",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "confidence": "high",
+    "time": "08:00",
+    "damage": "Locomotive of an Odesa-Dnipro passenger train destroyed near Berezivka district",
+    "casualties": "2 railway workers killed (driver, 50, and assistant, 41); 340 passengers incl. 67 children evacuated safely, no injuries",
+    "notes": "Part of a wider overnight barrage of 133 drones. Zelensky called it a strike on a clearly civilian object. Day 1,631.",
+    "platform": "Jet-powered Shahed/Geran attack drone",
+    "status": "hit",
+    "lastUpdated": "2026-08-13"
+  },
+  {
+    "id": "retaliation-ukraine-ust-luga-6th-aug14-2026",
+    "from": [
+      35.0,
+      49.5
+    ],
+    "to": [
+      28.37,
+      59.67
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine drones hit Ust-Luga Baltic oil port for the 6th time in 2026",
+    "date": "2026-08-14",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Novatek-Ust-Luga gas processing and transshipment complex hit — 2 processing units damaged, fire broke out",
+    "casualties": "No reported casualties",
+    "notes": "Ust-Luga handles ~700,000 barrels/day of Russian oil exports on the Baltic Sea. 6th Ukrainian strike on the facility since March 2026, part of Kyiv's sustained campaign against Russian energy export revenue. Day 1,632.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-14"
+  },
+  {
+    "id": "strike-buryn-sumy-aug14-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      33.83,
+      51.2
+    ],
+    "cat": "strike",
+    "label": "Russian double drone strike on home in Buryn, Sumy Oblast — mother and 9-year-old son killed",
+    "date": "2026-08-14",
+    "weaponType": "drone_loitering",
+    "launched": 2,
+    "confidence": "high",
+    "time": "06:00",
+    "damage": "Private residential house destroyed by fire in a targeted double strike",
+    "casualties": "2 killed (29-year-old woman, 9-year-old son); 4 injured incl. father and grandmother with severe burns",
+    "notes": "Part of a wider wave of 39 Russian attacks on 28 Sumy Oblast settlements over 24 hours. Day 1,632.",
+    "platform": "Attack UAVs",
+    "status": "hit",
+    "lastUpdated": "2026-08-14"
+  },
+  {
+    "id": "strike-marhanets-aug15-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      34.62,
+      47.65
+    ],
+    "cat": "strike",
+    "label": "Russian drone strike on Marhanets high-rise — 3-month-old infant killed, 11 injured",
+    "date": "2026-08-15",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Multi-story residential building hit",
+    "casualties": "1 killed (3-month-old boy); 11 injured incl. 5-year-old boy and 12-year-old girl, 7 hospitalized in serious condition",
+    "notes": "Part of a wider overnight barrage of 152 Russian strike drones (Shahed, Gerbera, Bandero, Parodiya decoys); Ukraine intercepted/suppressed 124. Day 1,633.",
+    "platform": "Shahed-type / Gerbera loitering munitions",
+    "status": "hit",
+    "lastUpdated": "2026-08-15"
+  },
+  {
+    "id": "strike-kryvyi-rih-arcelormittal-aug16-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      33.39,
+      47.91
+    ],
+    "cat": "strike",
+    "label": "Russian mass strike hits ArcelorMittal Kryvyi Rih steel plant — 2 killed, 13 injured",
+    "date": "2026-08-16",
+    "weaponType": "mixed",
+    "launched": 106,
+    "intercepted": 88,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "ArcelorMittal Kryvyi Rih steel plant struck directly; combined attack also hit Kyiv and Kremenchuk",
+    "casualties": "7 killed, 51 injured across Kyiv, Kremenchuk, Kryvyi Rih and multiple oblasts; 2 killed, 13 injured at ArcelorMittal alone",
+    "notes": "Onyx, Iskander-M, KN-23, S-400-launched projectiles, X-59/69 missiles, and 106 attack drones used in combined strike. Day 1,634.",
+    "platform": "Mixed ballistic/cruise missiles and Shahed-type drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-16"
+  },
+  {
+    "id": "retaliation-ukraine-moscow-drones-aug16-2026",
+    "from": [
+      35.0,
+      49.5
+    ],
+    "to": [
+      37.62,
+      55.75
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine launches ~600-drone assault on Moscow",
+    "date": "2026-08-16",
+    "weaponType": "drone_loitering",
+    "launched": 600,
+    "intercepted": 201,
+    "confidence": "high",
+    "time": "23:00",
+    "damage": "Drones penetrated part of Moscow's air-defense screen; damage reported in Moscow region",
+    "casualties": "1 killed, 3 injured in Moscow region",
+    "notes": "One of the largest single Ukrainian drone strikes on Moscow of the war. Day 1,634.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "partial",
+    "lastUpdated": "2026-08-16"
+  },
+  {
+    "id": "strike-kherson-novokairy-aug17-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      33.2,
+      46.75
+    ],
+    "cat": "strike",
+    "label": "Russian drone strike on Novokairy, Kherson Oblast, kills two",
+    "date": "2026-08-17",
+    "weaponType": "drone_fpv",
+    "launched": 1,
+    "confidence": "high",
+    "time": "05:30",
+    "damage": "Residential area struck in Novokairy village",
+    "casualties": "2 killed (men aged 67 and 58); 9 injured across Kherson Oblast incl. 2 police officers",
+    "notes": "Part of a wider wave of Russian attacks across 10 Ukrainian regions killing 9 and injuring 43 over 24 hours, incl. Odesa Oblast shopping center and port strikes, and Izium guided-bomb strikes. Day 1,635.",
+    "platform": "FPV attack drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-17"
+  },
+  {
+    "id": "retaliation-ukraine-belgorod-koloskovo-aug17-2026",
+    "from": [
+      35.0,
+      49.5
+    ],
+    "to": [
+      38.0,
+      50.15
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Koloskovo village, Belgorod Oblast — 6 killed",
+    "date": "2026-08-17",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "Structure burned, vehicle damaged in Koloskovo, ~15km from Ukrainian border",
+    "casualties": "6 killed, 4 injured incl. a 14-year-old",
+    "notes": "Follows a day of large-scale reciprocal missile/drone exchanges that killed at least 19 combined on both sides. Day 1,635.",
+    "platform": "Missiles and attack drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-17"
+  },
+  {
+    "id": "strike-pechenihy-kharkiv-aug18-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      36.83,
+      49.93
+    ],
+    "cat": "strike",
+    "label": "Russian cruise missiles hit Pechenihy, Kharkiv Oblast — 10 killed",
+    "date": "2026-08-18",
+    "weaponType": "cruise",
+    "launched": 2,
+    "confidence": "high",
+    "time": "08:40",
+    "damage": "Post office, shops, cafe, and 7 vehicles destroyed at a village crossroads; 10 homes damaged",
+    "casualties": "10 killed, 17 injured",
+    "notes": "Struck with Banderol cruise missiles as residents headed to work. Day 1,636.",
+    "platform": "Banderol cruise missiles",
+    "status": "hit",
+    "lastUpdated": "2026-08-18"
+  },
+  {
+    "id": "strike-izium-tornado-s-aug18-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      37.24,
+      49.21
+    ],
+    "cat": "strike",
+    "label": "Russian Tornado-S rocket strike on Izium injures five",
+    "date": "2026-08-18",
+    "weaponType": "rocket",
+    "confidence": "high",
+    "time": "04:05",
+    "damage": "20 private homes damaged",
+    "casualties": "5 injured incl. a 9-year-old boy",
+    "notes": "300mm Tornado-S MLRS strike; Izium District Prosecutor's Office opened a war-crimes investigation. Day 1,636.",
+    "platform": "300mm Tornado-S MLRS",
+    "status": "hit",
+    "lastUpdated": "2026-08-18"
+  },
+  {
+    "id": "retaliation-ukraine-moscow-drones-aug18-2026",
+    "from": [
+      35.0,
+      49.5
+    ],
+    "to": [
+      37.62,
+      55.75
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine launches 620-drone assault on Moscow for 2nd consecutive night",
+    "date": "2026-08-18",
+    "weaponType": "drone_loitering",
+    "launched": 620,
+    "intercepted": 197,
+    "confidence": "high",
+    "time": "23:00",
+    "damage": "Wildberries warehouse, residential building in Pavlovsky Posad, aluminum plant, and Globus shopping center in Kolomna damaged; Vnukovo, Domodedovo, and Zhukovsky airports suspended flights",
+    "casualties": "3 injured incl. a 10-year-old girl in Ramensky; ~5,000 lost power",
+    "notes": "Largest Ukrainian drone strike on Moscow in years; 2nd consecutive night of large-scale drone retaliation. Day 1,636.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "partial",
+    "lastUpdated": "2026-08-18"
+  },
+  {
+    "id": "strike-kherson-minibus-aug19-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      32.62,
+      46.64
+    ],
+    "cat": "strike",
+    "label": "Russian drone strikes kill 5 in Kherson, incl. minibus attack",
+    "date": "2026-08-19",
+    "weaponType": "drone_fpv",
+    "launched": 1,
+    "confidence": "high",
+    "time": "08:50",
+    "damage": "Minibus struck in Korabelnyi district; separate afternoon drone strike killed a 62-year-old woman; 3 apartment buildings, a restaurant, and several vehicles damaged",
+    "casualties": "5 killed, 9 injured",
+    "notes": "Day 1,637.",
+    "platform": "FPV attack drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "id": "strike-zhytomyr-police-hq-aug19-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      28.66,
+      50.25
+    ],
+    "cat": "strike",
+    "label": "Russian Banderol drone double-tap strike on Zhytomyr police HQ kills 3",
+    "date": "2026-08-19",
+    "weaponType": "cruise",
+    "confidence": "high",
+    "time": "18:34",
+    "damage": "Fire on roof and 4th floor of National Police HQ building",
+    "casualties": "3 killed (incl. 2 named officers), 53 injured",
+    "notes": "Double-tap strike; second major Zhytomyr attack in 10 days, following an Aug 9 strike. Day 1,637.",
+    "platform": "Banderol jet-powered loitering munitions (S8000)",
+    "status": "hit",
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "id": "strike-zaporizhzhia-market-hostel-aug19-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      35.14,
+      47.84
+    ],
+    "cat": "strike",
+    "label": "Russian drones strike Zaporizhzhia market and hostel, kill 1",
+    "date": "2026-08-19",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "time": "01:37",
+    "damage": "Central market shopping complex destroyed by fire; nearby hostel damaged",
+    "casualties": "1 killed",
+    "notes": "War-crimes investigation opened by Zaporizhzhia Regional Prosecutor's Office. Day 1,637.",
+    "platform": "Shahed-type loitering munitions",
+    "status": "hit",
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "id": "retaliation-ukraine-russia-refineries-aug19-2026",
+    "from": [
+      35.0,
+      49.5
+    ],
+    "to": [
+      38.22,
+      54.08
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Russian oil refinery and arsenals in Ufa, Tula, Nizhny Novgorod",
+    "date": "2026-08-19",
+    "weaponType": "drone_loitering",
+    "confidence": "medium",
+    "time": "02:00",
+    "damage": "Fire at Bashneft-UNPZ refinery in Ufa; 53rd Arsenal targeted in Dzerzhinsk, Nizhny Novgorod Oblast; Novomoskovsk area, Tula Oblast targeted",
+    "casualties": "1 injured in Ufa",
+    "notes": "Ukraine's military had not confirmed the strikes at publication time; Russia claimed 453 drones downed across 21 regions. Mapped to the Tula Oblast target — Ufa and Nizhny Novgorod fall outside this tracker's coordinate bounds. Day 1,637.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "partial",
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "id": "strike-kyiv-massive-attack-aug20-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Russia launches massive missile-and-drone attack on Kyiv, kills 15",
+    "date": "2026-08-20",
+    "weaponType": "mixed",
+    "launched": 214,
+    "intercepted": 186,
+    "confidence": "high",
+    "time": "00:15",
+    "damage": "Children's hospital and kindergarten damaged in Darnytskyi/Solomianskyi districts; residential buildings hit; 28 locations struck citywide; Brovary also hit (1 killed, 8 injured)",
+    "casualties": "15 killed, ~40 injured",
+    "notes": "44 cruise missiles, 2 Banderol missiles, 168 Shahed-type drones, plus ballistic and Zircon hypersonic missiles launched from Kursk Oblast. Day 1,638.",
+    "platform": "Cruise missiles, ballistic missiles, Zircon hypersonic missiles, Shahed/Banderol drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-20"
+  },
+  {
+    "id": "strike-kryvyi-rih-mall-aug21-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      33.39,
+      47.91
+    ],
+    "cat": "strike",
+    "label": "Russian double-tap drone strike on Kryvyi Rih shopping mall, kills 16+",
+    "date": "2026-08-21",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "time": "16:30",
+    "damage": "Sunny Gallery shopping and entertainment center engulfed in fire across roughly a third of the complex",
+    "casualties": "16+ killed, 130 injured (23 children), 9 missing",
+    "notes": "Second drone struck the same building ~30 minutes after the first, targeting firefighters and rescuers already on scene — a deliberate 'double-tap.' Day 1,639.",
+    "platform": "Shahed-type jet-powered loitering munitions",
+    "status": "hit",
+    "lastUpdated": "2026-08-21"
+  },
+  {
+    "id": "strike-mykolaiv-tokarivka-aug21-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      31.01,
+      47.3
+    ],
+    "cat": "strike",
+    "label": "Russian loitering munition kills 4, including 3 children, in Tokarivka",
+    "date": "2026-08-21",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "time": "20:00",
+    "damage": "Building housing a shop, Nova Poshta branch, and pharmacy destroyed by fire (~300 sq m)",
+    "casualties": "4 killed (three children aged 11, 11, 13, and one 30-year-old adult)",
+    "notes": "Struck Tokarivka, Veselynivske settlement hromada, Mykolaiv Oblast. Day 1,639.",
+    "platform": "Loitering munition ('suicide drone')",
+    "status": "hit",
+    "lastUpdated": "2026-08-21"
+  },
+  {
+    "id": "strike-moldova-border-tabaki-aug21-2026",
+    "from": [
+      34.1,
+      45.35
+    ],
+    "to": [
+      28.27,
+      45.46
+    ],
+    "cat": "strike",
+    "label": "Russian drone strike closes Tabaki border crossing with Moldova",
+    "date": "2026-08-21",
+    "weaponType": "drone_loitering",
+    "confidence": "medium",
+    "time": "02:00",
+    "damage": "Buildings and structures at the Tabaki international crossing damaged, fires broke out; checkpoint closed and traffic redirected",
+    "casualties": "None reported",
+    "notes": "Second consecutive night Russia struck a Ukraine-Moldova border crossing, after hitting nearby Reni-Giurgiulesti during the Aug 20 Kyiv barrage. Suspected Shahed-136/Geran-2. Day 1,639.",
+    "platform": "Shahed-136 / Geran-2",
+    "status": "hit",
+    "lastUpdated": "2026-08-21"
+  },
+  {
+    "id": "strike-kyiv-warehouse-aug22-2026",
+    "from": [
+      36.19,
+      51.73
+    ],
+    "to": [
+      30.62,
+      50.41
+    ],
+    "cat": "strike",
+    "label": "Russian ballistic missile barrage sets Kyiv warehouse ablaze",
+    "date": "2026-08-22",
+    "weaponType": "ballistic",
+    "confidence": "medium",
+    "time": "01:00",
+    "damage": "Warehouse fire in Kyiv's Darnytskyi district",
+    "casualties": "1 killed, others injured",
+    "notes": "Air Force warned of a ballistic missile threat from the northeast (Kursk Oblast direction) before 22:00 Aug 21; explosions followed around 01:00 Aug 22. Second Kyiv strike in three days after the Aug 20 barrage. Day 1,640.",
+    "platform": "Ballistic missile",
+    "status": "hit",
+    "lastUpdated": "2026-08-22"
+  },
+  {
+    "id": "strike-zaporizhzhia-minibus-aug22-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      35.14,
+      47.84
+    ],
+    "cat": "strike",
+    "label": "Russian drone strikes minibus and wider Zaporizhzhia region",
+    "date": "2026-08-22",
+    "weaponType": "drone_fpv",
+    "confidence": "medium",
+    "time": "14:00",
+    "damage": "Route minibus struck in Zaporizhzhia city; additional strikes across the region",
+    "casualties": "3 wounded (city minibus); 4 killed, 15 wounded region-wide",
+    "notes": "Part of a broader wave of Russian strikes the day after the deadly Kryvyi Rih mall attack. Day 1,640.",
+    "platform": "FPV/loitering drone",
+    "status": "hit",
+    "lastUpdated": "2026-08-22"
+  },
+  {
+    "id": "strike-izium-guided-bombs-aug23-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      37.24,
+      49.21
+    ],
+    "cat": "strike",
+    "label": "Izium — Guided Aerial Bomb Strike",
+    "date": "2026-08-23",
+    "weaponType": "unknown",
+    "launched": 3,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "04:05",
+    "damage": "~20 houses damaged, power lines and vehicles hit, outbuilding fire ~20 sq m",
+    "casualties": "2 injured",
+    "platform": "Russian Aerospace Forces tactical aircraft (guided aerial bombs)",
+    "status": "hit"
+  },
+  {
+    "id": "strike-kharkiv-osnovianskyi-drone-aug23-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Kharkiv (Osnovianskyi) — Jet-Powered Shahed Strike",
+    "date": "2026-08-23",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Two houses and an outbuilding caught fire, ~250 sq m",
+    "casualties": "8 injured, including a 15-year-old boy",
+    "platform": "Jet-powered Shahed-type loitering munition",
+    "status": "hit"
+  },
+  {
+    "id": "strike-odesa-epicentr-aug24-2026",
+    "from": [
+      34.5,
+      45.2
+    ],
+    "to": [
+      30.73,
+      46.48
+    ],
+    "cat": "strike",
+    "label": "Odesa — Epicentr Hypermarkets and Warehouse Strike",
+    "date": "2026-08-24",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "time": "05:00",
+    "damage": "Two Epicentr hypermarkets ablaze; food storage, energy infrastructure, and warehouses hit",
+    "casualties": "5 injured, 3 hospitalized",
+    "platform": "Missiles and Shahed-type drones (part of nationwide barrage)",
+    "status": "hit"
+  },
+  {
+    "id": "strike-slavutych-chernihiv-power-aug25-2026",
+    "from": [
+      32.5,
+      52.8
+    ],
+    "to": [
+      30.75,
+      51.52
+    ],
+    "cat": "strike",
+    "label": "Chernihiv/Slavutych — Power Facility Strike",
+    "date": "2026-08-25",
+    "weaponType": "mixed",
+    "confidence": "high",
+    "time": "03:00",
+    "damage": "Power facility damaged; 30,000+ subscribers without electricity in Chernihiv district and Slavutych; further outages in Donetsk, Dnipropetrovsk, Kherson, and Sumy oblasts",
+    "casualties": "None reported",
+    "notes": "Part of an overnight barrage of 1 Iskander-M ballistic missile, 1 Kh-31P anti-radar missile, and ~150 Shahed/Gerbera/Parodiya drones hitting 17 locations across 5 oblasts.",
+    "platform": "Ballistic missile, anti-radar missile, and Shahed-type/decoy drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-25"
+  },
+  {
+    "id": "strike-kharkiv-zaporizhzhia-geran3-aug25-2026",
+    "from": [
+      36.6,
+      50.6
+    ],
+    "to": [
+      36.23,
+      49.98
+    ],
+    "cat": "strike",
+    "label": "Kharkiv (Osnovianskyi) — Geran-3 Drone Strike",
+    "date": "2026-08-25",
+    "weaponType": "drone_loitering",
+    "launched": 1,
+    "intercepted": 0,
+    "confidence": "high",
+    "time": "20:50",
+    "damage": "6 houses and 5 cars damaged in Kharkiv; industrial facility and ~10 vehicles set ablaze in a separate Zaporizhzhia strike the same day",
+    "casualties": "4 injured in Kharkiv (3 acute stress); 7 injured in an earlier Zaporizhzhia drone strike",
+    "notes": "Two Geran-3 drone strikes on the evening of Aug 25 — Kharkiv's Osnovianskyi district and a Zaporizhzhia industrial facility, following an afternoon Zaporizhzhia strike.",
+    "platform": "Geran-3 loitering munition",
+    "status": "hit",
+    "lastUpdated": "2026-08-25"
+  },
+  {
+    "id": "retaliation-ukraine-afipsky-novoshakhtinsk-refineries-aug25-2026",
+    "from": [
+      35.0,
+      49.5
+    ],
+    "to": [
+      38.85,
+      44.87
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Afipsky and Novoshakhtinsk oil refineries — 2 killed",
+    "date": "2026-08-25",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Major fire at Afipsky refinery, Krasnodar Krai; 10+ homes damaged in the town of Afipsky; Novoshakhtinsk refinery (Rostov Oblast) and Astrakhan gas processing plant also struck",
+    "casualties": "2 killed, 2 injured by falling drone debris near Afipsky railway station",
+    "notes": "Mapped to the Afipsky target; Novoshakhtinsk (Rostov) and Astrakhan facilities also hit the same night. Day 1,644.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-25"
+  },
+  {
+    "id": "retaliation-ukraine-tambov-lipetsk-belgorod-aug26-2026",
+    "from": [
+      35.0,
+      49.5
+    ],
+    "to": [
+      41.24,
+      52.98
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine hits 16 targets incl. Wildberries warehouse (Tambov), Lipetsk, Belgorod — 3 killed",
+    "date": "2026-08-26",
+    "weaponType": "drone_loitering",
+    "confidence": "high",
+    "time": "01:00",
+    "damage": "Wildberries logistics center in Kotovsk, Tambov Oblast completely destroyed by fire (~100,000 sq m); fires at Lukoil's NORSI refinery (Nizhny Novgorod Oblast)",
+    "casualties": "3 killed (2 in Lipetsk Oblast incl. a 14-year-old; 1 in Belgorod Oblast), 1 injured at the Wildberries site",
+    "notes": "Mapped to the Tambov/Kotovsk target; Ukraine says 16 targets were hit in total, including Lipetsk and Belgorod oblasts (both fatal) and the NORSI refinery in Nizhny Novgorod Oblast, which falls outside this tracker's coordinate bounds. Russia claims 426 drones intercepted.",
+    "platform": "Ukrainian long-range strike drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-26"
+  },
+  {
+    "id": "strike-kyiv-nine-cities-barrage-aug27-2026",
+    "from": [
+      34.36,
+      53.24
+    ],
+    "to": [
+      30.52,
+      50.45
+    ],
+    "cat": "strike",
+    "label": "Kyiv — Massive Barrage on 9 Cities (Iskander/KN-23, Onyx, ~258 drones)",
+    "date": "2026-08-27",
+    "weaponType": "mixed",
+    "launched": 258,
+    "intercepted": 222,
+    "confidence": "high",
+    "time": "02:00",
+    "damage": "Sports complex (Pecherskyi), educational facility (Shevchenkivskyi), medical facility, and vehicle fire (Holosiivskyi) hit in Kyiv; Kherson CHP generating equipment knocked out by glide bombs; Odesa 16-story building, 2 schools, and a grain elevator damaged; warehouses destroyed in Kyiv region",
+    "casualties": "2 killed (Zaporizhzhia region, Kherson region), 14+ wounded nationwide",
+    "notes": "Russia called the strike 'massive,' targeting 9 Ukrainian cities overnight into Aug 27 with 1 Onyx, 7 Iskander-M/KN-23 ballistic missiles, 3 Banderol strike drones, and ~258 Shahed-type/decoy drones. Day 1,645.",
+    "platform": "Iskander-M/KN-23 ballistic missiles, Onyx anti-ship missiles, S-8000 Banderol drones, Shahed-type/decoy drones",
+    "status": "hit",
+    "lastUpdated": "2026-08-27"
+  },
+  {
+    "id": "retaliation-ukraine-donetsk-command-posts-aug27-2026",
+    "from": [
+      37.6,
+      48.75
+    ],
+    "to": [
+      37.8,
+      48.0
+    ],
+    "cat": "retaliation",
+    "label": "Ukraine strikes Russian main/reserve command posts near occupied Donetsk",
+    "date": "2026-08-27",
+    "weaponType": "cruise",
+    "confidence": "high",
+    "time": "05:00",
+    "damage": "Underground parking area of an unfinished residential complex and former UkrStateNDIplastmas research institute buildings hit; one site assessed to have housed the 51st Guards Combined Arms Army command post",
+    "casualties": "Unknown; General Staff still assessing losses",
+    "notes": "Same operation also struck a repair-and-restoration unit near Chongar (Kherson region), a UAV control post at Olenivka (occupied Crimea), and personnel concentrations near Novopetrivka (Zaporizhzhia region) and Voskhod (occupied Crimea). Struck Aug 26, into overnight/morning of Aug 27.",
+    "platform": "Air-launched cruise missiles",
+    "status": "hit",
+    "lastUpdated": "2026-08-27"
+  }
+]

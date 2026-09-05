@@ -1,0 +1,167 @@
+[
+  {
+    "id": "econ-africa-cdc-who-continental-plan-2026",
+    "label": "Africa CDC + WHO Continental Ebola Response Plan",
+    "value": "$518M requested",
+    "change": "Launched 5 June 2026 — largest African-led outbreak mobilization",
+    "direction": "up",
+    "sparkData": [0, 0, 0, 0, 0, 518],
+    "color": "#3498db",
+    "source": "Africa CDC / WHO — Joint Continental Ebola Response Plan, 5 June 2026",
+    "lastUpdated": "2026-06-05"
+  },
+  {
+    "id": "econ-who-emergency-fund-2026",
+    "label": "WHO Emergency Contingency Fund — 2026 DRC Outbreak",
+    "value": "$47M",
+    "change": "+$22M (March supplement)",
+    "direction": "up",
+    "sparkData": [15, 20, 25, 30, 37, 47],
+    "color": "#e74c3c",
+    "source": "WHO Contingency Fund for Emergencies (CFE), May 2026",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "econ-west-africa-gdp-loss",
+    "label": "West Africa GDP Loss (2014–16 Epidemic)",
+    "value": "$2.2B",
+    "change": "Cumulative across Guinea, Liberia, Sierra Leone",
+    "direction": "down",
+    "sparkData": [100, 85, 60, 45, 52, 70],
+    "color": "#e74c3c",
+    "source": "World Bank — Economic Impact of Ebola Epidemic, 2015",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "econ-cepi-bdbv-vaccine",
+    "label": "CEPI Fast-Track Funding — BDBV Vaccine Candidates",
+    "value": "$61.8M total (Moderna $50M + Oxford $8.6M + IAVI $3.2M)",
+    "change": "+$16.8M (1 June 2026 expansion — adds Moderna $50M candidate)",
+    "direction": "up",
+    "sparkData": [0, 0, 5, 20, 45, 61.8],
+    "color": "#3498db",
+    "source": "CEPI Press Release — Fast-tracks three BDBV vaccine candidates, 1 June 2026",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "econ-gavi-vaccine-stockpile",
+    "label": "GAVI rVSV-ZEBOV Emergency Stockpile Released",
+    "value": "15,000 doses / ~$4.5M value",
+    "change": "+3,000 doses second tranche",
+    "direction": "up",
+    "sparkData": [0, 3000, 6000, 9000, 12000, 15000],
+    "color": "#27ae60",
+    "source": "GAVI — Emergency Vaccine Deployment Report, May 2026",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "econ-ituri-trade-disruption",
+    "label": "Ituri Province Cross-Border Trade Disruption",
+    "value": "~35% reduction",
+    "change": "Mahagi-Uganda corridor trade down from Jan 2026",
+    "direction": "down",
+    "sparkData": [100, 80, 65, 62, 65, 65],
+    "color": "#e67e22",
+    "source": "World Food Programme / OCHA Ituri Assessment, April 2026",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "econ-drc-health-spending",
+    "label": "DRC Government Health Spending per Capita",
+    "value": "$6.40/year",
+    "change": "Below $86 WHO universal coverage benchmark",
+    "direction": "down",
+    "sparkData": [4.2, 4.8, 5.1, 5.6, 6.0, 6.4],
+    "color": "#e74c3c",
+    "source": "World Bank Health Expenditure Data — DRC, 2025",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "econ-un-cerf-allocation",
+    "label": "UN CERF Emergency Allocation — DRC Ebola 2026",
+    "value": "$15M",
+    "change": "Approved March 2026",
+    "direction": "up",
+    "sparkData": [0, 0, 5, 10, 12, 15],
+    "color": "#3498db",
+    "source": "UN OCHA / CERF Dashboard, 2026",
+    "lastUpdated": "2026-05-22"
+  },
+  {
+    "id": "econ-tourism-impact",
+    "label": "Uganda Tourism Decline (Ebola Alert Effect)",
+    "value": "~30% arrivals drop (revised)",
+    "change": "Q2 2026 booking cancellations after PHEIC and Kampala cases",
+    "direction": "down",
+    "sparkData": [100, 98, 92, 83, 75, 70],
+    "color": "#e67e22",
+    "source": "Uganda Tourism Board / Reuters, May 2026",
+    "lastUpdated": "2026-05-24"
+  },
+  {
+    "id": "econ-pandemic-fund-220m-2026",
+    "label": "Pandemic Fund Emergency Financing — Bundibugyo Ebola Response",
+    "value": "$220.6M",
+    "change": "Approved 5 June 2026 — $175.7M reprogrammed + $44.9M new",
+    "direction": "up",
+    "sparkData": [0, 0, 0, 0, 0, 220.6],
+    "color": "#3498db",
+    "source": "Africa CDC — Pandemic Fund approval, 5 June 2026",
+    "lastUpdated": "2026-06-07"
+  },
+  {
+    "id": "econ-us-state-dept-response",
+    "label": "US Government Ebola Response Funding — 2026",
+    "value": ">$592M",
+    "change": "+$80M additional (21 August, for treatment-bed capacity and safe burials) — largest bilateral Ebola donor",
+    "direction": "up",
+    "sparkData": [0, 5, 42, 165, 270, 512, 592],
+    "color": "#3498db",
+    "source": "US State Department / UN News — Ebola Response Update, 21 August 2026",
+    "lastUpdated": "2026-08-21"
+  },
+  {
+    "id": "econ-un-cerf-allocation-aug2026",
+    "label": "UN CERF Emergency Allocation — Ebola Winning Warning",
+    "value": "$30.5M",
+    "change": "Released 14 August 2026 by UN Humanitarian Chief Tom Fletcher, building on $24M previously allocated to DRC and neighboring countries",
+    "direction": "up",
+    "sparkData": [0, 0, 0, 0, 10, 30.5],
+    "color": "#3498db",
+    "source": "UN OCHA / CERF — Tom Fletcher announcement, 14 August 2026",
+    "lastUpdated": "2026-08-14"
+  },
+  {
+    "id": "econ-eu-ebola-allocation-2026",
+    "label": "EU Humanitarian Funding — DRC/Uganda Ebola 2026",
+    "value": "€15M",
+    "change": "New allocation announced 22 May 2026",
+    "direction": "up",
+    "sparkData": [0, 0, 0, 0, 5, 15],
+    "color": "#3498db",
+    "source": "European Commission DG ECHO — EU Allocates €15M for Ebola Outbreak, 22 May 2026",
+    "lastUpdated": "2026-05-25"
+  },
+  {
+    "id": "econ-humanitarian-capacity-cut-aug2026",
+    "label": "Humanitarian Response Capacity Reduction — Recent Aid Cuts",
+    "value": "-30% organizational capacity",
+    "change": "UN Ebola Coordinator Julien Harneis warns response funding 'will run out' within weeks",
+    "direction": "down",
+    "sparkData": [100, 100, 95, 85, 75, 70],
+    "color": "#e74c3c",
+    "source": "UN News — Julien Harneis briefing, 21 August 2026",
+    "lastUpdated": "2026-08-21"
+  },
+  {
+    "id": "econ-response-funding-gap-aug2026",
+    "label": "Humanitarian Response Funding Gap",
+    "value": "Only 48% funded; $1.1B additional needed",
+    "change": "UN Secretary-General Guterres appeals to Security Council for $1.1B more, warns 'vital operations will run out of money'",
+    "direction": "down",
+    "sparkData": [70, 65, 60, 55, 50, 48],
+    "color": "#e74c3c",
+    "source": "UN News — António Guterres Security Council briefing, 27 August 2026",
+    "lastUpdated": "2026-08-27"
+  }
+]

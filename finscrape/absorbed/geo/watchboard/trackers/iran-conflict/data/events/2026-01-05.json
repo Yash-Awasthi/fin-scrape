@@ -1,0 +1,39 @@
+[
+  {
+    "id": "protests_30_provinces",
+    "year": "Jan 5",
+    "title": "Protests Spread to 30 Provinces",
+    "type": "humanitarian",
+    "detail": "Despite full internet blackout, protests reach all 31 provinces. Workers at Khuzestan oil fields join strikes. Estimates of 200,000+ on streets in Tehran alone. Regime deploys armored vehicles.",
+    "sources": [
+      {
+        "name": "Hengaw",
+        "tier": 3,
+        "pole": "international"
+      },
+      {
+        "name": "CNN",
+        "tier": 2,
+        "pole": "western"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "pole": "middle_eastern"
+      },
+      {
+        "name": "CGTN",
+        "tier": 2,
+        "pole": "eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.aljazeera.com/news/2026/1/12/what-we-know-about-the-protests-sweeping-iran",
+        "caption": "200,000+ protesters reported in Tehran alone as Khuzestan oil workers join nationwide strikes",
+        "source": "Al Jazeera"
+      }
+    ]
+  }
+]

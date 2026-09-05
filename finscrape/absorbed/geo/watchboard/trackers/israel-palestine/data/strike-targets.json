@@ -1,0 +1,74 @@
+[
+  {
+    "id": "strike-shifa-nov2023",
+    "name": "Al-Shifa Hospital Complex",
+    "detail": "IDF raided Al-Shifa Hospital on 15 November 2023, claiming Hamas command infrastructure. Tunnel shafts and weapons cache found; scale of command center disputed. Hospital rendered non-functional. Second raid March 2024 killed hundreds of militants.",
+    "icon": "target",
+    "time": "2023-11-15",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-hamas-leadership",
+    "name": "Hamas Leadership Elimination Campaign",
+    "detail": "IDF systematically eliminated Hamas leadership: Mohammed Deif (presumed Aug 2024), Yahya Sinwar (Oct 16, 2024), Ismail Haniyeh (Tehran, Jul 31, 2024 — attributed to Mossad). Marwan Issa (deputy Qassam commander) killed Mar 2024. Senior PIJ commanders also targeted. May 15, 2026: Izz al-Din al-Haddad (Hamas armed wing chief in Gaza, last surviving Oct 7 architect) killed in Rimal airstrike.",
+    "icon": "target",
+    "time": "2023-10-08",
+    "tier": 1,
+    "lastUpdated": "2026-05-17T14:30:00.000Z"
+  },
+  {
+    "id": "strike-al-haddad-may2026",
+    "name": "Izz al-Din al-Haddad — Hamas Armed Wing Chief Eliminated",
+    "detail": "IDF airstrike on Rimal neighborhood of Gaza City on May 15, 2026 killed al-Haddad, commander of Hamas's Qassam Brigades in Gaza and one of the last surviving architects of the October 7, 2023 attack. Israeli officials stated he had been 'undermining Trump's Gaza plan' by organizing ongoing militant operations during the October 2025 ceasefire. 7 killed, 50+ wounded. Hamas confirmed his death on May 16. Most senior Hamas military elimination since the October 2025 ceasefire.",
+    "icon": "target",
+    "time": "2026-05-15",
+    "tier": 1,
+    "lastUpdated": "2026-05-17T14:30:00.000Z"
+  },
+  {
+    "id": "strike-tunnel-network",
+    "name": "Hamas Tunnel Network Destruction",
+    "detail": "IDF declared goal to destroy Hamas's ~500km tunnel network. Used 2,000-lb bunker busters, controlled flooding (seawater pumps), and underground demolition. Estimated 30–50% of tunnels destroyed by 2024. Tunnel discoveries continued to reveal Hamas's extensive infrastructure.",
+    "icon": "target",
+    "time": "2023-10-27",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "strike-philadelphi-corridor",
+    "name": "Philadelphi Corridor Seizure",
+    "detail": "IDF seized the 14km Philadelphi Corridor along Gaza-Egypt border in May 2024, cutting Hamas weapons smuggling route. Egyptian government protested Israeli presence near border. Corridor's status was the main obstacle in Phase 2 ceasefire negotiations — Netanyahu insisted on Israeli control, Hamas demanded full withdrawal.",
+    "icon": "target",
+    "time": "2024-05-07",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "retaliation-iran-april-2024",
+    "name": "Iran Direct Attack on Israel (April 13, 2024)",
+    "detail": "Iran launched its first-ever direct attack on Israeli territory: 300+ drones, cruise missiles, and ballistic missiles. Israel, US, UK, France, and Jordan intercepted 99% of projectiles. Israel and partners' coordinated defense was unprecedented. Minor damage to Nevatim Air Base. Israel conducted limited retaliatory strike on Isfahan (Apr 19).",
+    "icon": "retaliation",
+    "time": "2024-04-13",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "retaliation-hezbollah-north",
+    "name": "Hezbollah Northern Front (Oct 2023–Sep 2024)",
+    "detail": "Hezbollah opened a 'support front' for Hamas from day one of the war, firing anti-tank missiles, rockets, and drones into northern Israel daily. ~60,000 Israelis evacuated from northern Israel. Israel-Hezbollah full war erupted September 2024; IDF killed Hezbollah Secretary-General Hassan Nasrallah (Sep 27, 2024) and launched ground operation in south Lebanon.",
+    "icon": "retaliation",
+    "time": "2023-10-08",
+    "tier": 1,
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "retaliation-houthi-shipping",
+    "name": "Houthi Attacks on Shipping / Israeli-Linked Vessels",
+    "detail": "Yemen's Houthi movement fired missiles and drones at Israeli-linked shipping in the Red Sea beginning November 2023, claiming solidarity with Gaza. ~100+ vessels attacked. US-led Operation Prosperity Guardian conducted strikes on Houthi positions in Yemen. Suez Canal traffic fell ~50%; global shipping costs surged. Houthis also launched ballistic missiles at Israel (mostly intercepted).",
+    "icon": "retaliation",
+    "time": "2023-11-19",
+    "tier": 2,
+    "lastUpdated": "2026-03-20"
+  }
+]

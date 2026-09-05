@@ -1,0 +1,106 @@
+# AutoGen Financial Analysis System Configuration
+
+# AutoGen Configuration
+autogen:
+  model: "gpt-4"
+  temperature: 0.1
+  max_tokens: 8000
+  top_p: 0.9
+  frequency_penalty: 0.1
+  presence_penalty: 0.1
+  max_consecutive_auto_reply: 20
+
+# Data Sources Configuration
+data_sources:
+  yahoo_finance:
+    enabled: true
+    rate_limit: 100
+    timeout: 30
+
+  alpha_vantage:
+    enabled: true
+    rate_limit: 5
+    timeout: 60
+
+  quandl:
+    enabled: false
+    rate_limit: 10
+    timeout: 45
+
+# Cache Configuration
+cache:
+  redis:
+    url: "redis://localhost:6379"
+    ttl: 3600
+    stale_while_revalidate: 300
+
+  memory:
+    max_size: 1000
+    cleanup_interval: 300
+
+# Database Configuration
+database:
+  url: "postgresql://user:password@localhost:5432/financial_db"
+  pool_size: 20
+  max_overflow: 30
+  pool_timeout: 30
+
+# Performance Configuration
+performance:
+  max_workers: 10
+  max_concurrent_requests: 50
+  timeout: 300
+  retry_attempts: 3
+  backoff_factor: 2.0
+
+# Monitoring Configuration
+monitoring:
+  prometheus:
+    enabled: true
+    port: 9090
+
+  logging:
+    level: "INFO"
+    format: "json"
+    file: "logs/autogen.log"
+
+# Security Configuration
+security:
+  encryption:
+    algorithm: "AES-256-GCM"
+    key_rotation_days: 90
+
+  rate_limiting:
+    requests_per_minute: 60
+    requests_per_hour: 1000
+
+  access_control:
+    enabled: true
+    session_timeout: 3600
+
+# Risk Analysis Configuration
+risk:
+  var_confidence_levels: [0.95, 0.99]
+  stress_scenarios:
+    - name: "market_crash"
+      shock_factor: 0.7
+    - name: "interest_rate_hike"
+      shock_factor: 0.8
+    - name: "currency_crisis"
+      shock_factor: 0.6
+
+# Quantitative Analysis Configuration
+quantitative:
+  portfolio_optimization:
+    num_portfolios: 10000
+    risk_free_rate: 0.02
+
+  factor_models:
+    factors: ["market", "size", "value", "momentum", "quality"]
+    lookback_period: 252
+
+# Report Configuration
+reports:
+  output_formats: ["html", "pdf", "json"]
+  template_dir: "templates"
+  output_dir: "reports"

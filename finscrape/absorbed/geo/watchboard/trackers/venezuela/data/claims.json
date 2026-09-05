@@ -1,0 +1,408 @@
+[
+  {
+    "id": "chavismo-fracture-rodriguez-vs-hardliners",
+    "question": "Is Acting President Rodríguez governing in Venezuela's national interest, or capitulating to US demands at the expense of the Bolivarian Revolution?",
+    "sideA": {
+      "label": "Rodríguez / Pragmatists",
+      "text": "Rodríguez's normalization with the US is a pragmatic response to Venezuela's economic and geopolitical reality after Maduro's removal. Cooperating with Washington — including the Alex Saab deportation and authorizing US military exercises — is the price of lifting oil sanctions, restoring investor confidence, and preventing state collapse. Venezuela cannot survive an extended confrontation with the US while the economy is in ruins and 8 million diaspora citizens depend on remittances."
+    },
+    "sideB": {
+      "label": "Chavismo Hardliners / Cabello / Silva",
+      "text": "Rodríguez is governing under the direction of the US Embassy, not in Venezuela's sovereign interest. The deportation of Alex Saab — who was serving as a Venezuela diplomatic envoy — violates the constitution's prohibition on extradition and betrays a trusted chavista official. Authorizing US Marines to fly over Caracas desecrates Venezuelan sovereignty. The revolution cannot be surrendered to imperialism, and Rodríguez's actions represent an unconstitutional capitulation that effectively makes Venezuela a US protectorate."
+    },
+    "resolution": "Public fracture confirmed by multiple outlets on June 1, 2026 — the most visible internal Chavismo split in 27 years. Interior Minister Cabello and Defense Minister Padrino López represent the hardliner military faction; Rodríguez and National Assembly President Jorge Rodríguez lead the civilian-pragmatist wing. Resolution depends on whether Rodríguez can hold together the coalition needed to manage the political transition while Maduro remains in US custody.",
+    "lastUpdated": "2026-06-05T00:00:00Z"
+  },
+  {
+    "id": "election-2024-legitimacy",
+    "question": "Who legitimately won the July 28, 2024 Venezuelan presidential election?",
+    "sideA": {
+      "label": "Maduro Government / CNE",
+      "text": "The CNE declared Nicolás Maduro the winner with 51.2% of the vote. Venezuela's Supreme Court (TSJ) certified the result. Russia, Cuba, Nicaragua, Bolivia, and China recognized Maduro's victory. Any challenge is a US-orchestrated 'electoral coup'."
+    },
+    "sideB": {
+      "label": "Opposition / Western Governments",
+      "text": "Opposition witnesses collected 84% of signed actas (voting tallies) showing Edmundo González winning with ~67%. The CNE never published disaggregated results. Carter Center, OAS, EU, and 30+ countries refused recognition. The burden of proof for Maduro's claimed win was never met."
+    },
+    "resolution": "Unresolved. The full voting tallies were never officially released. Maduro was inaugurated January 10, 2025, then removed from power in the January 3, 2026 US capture operation. The Democratic Unitary Platform formally backed González as its candidate for the next competitive election in April 2026.",
+    "lastUpdated": "2026-05-04T15:57:51Z"
+  },
+  {
+    "id": "crisis-cause-sanctions-vs-mismanagement",
+    "question": "What caused Venezuela's economic collapse — US sanctions or government mismanagement?",
+    "sideA": {
+      "label": "Venezuelan Government / Allies",
+      "text": "US OFAC sanctions (2017–present) have blocked financial transactions, frozen assets, denied Venezuela access to capital markets, and cut oil revenues — constituting 'economic warfare.' The UN Special Rapporteur (Alena Douhan) documented humanitarian impact of sanctions in 2021."
+    },
+    "sideB": {
+      "label": "Opposition / Western Economists",
+      "text": "Venezuela's economic collapse began in 2013–2016 — years before comprehensive sanctions. Price controls, currency controls (CADIVI/SICAD), expropriations, PDVSA politicization, and mass currency printing caused hyperinflation and GDP collapse. Sanctions intensified but did not cause the crisis."
+    },
+    "resolution": "Most economists agree the collapse preceded comprehensive sanctions. Major PDVSA production decline began 2013–2018. Personal and PDVSA sanctions expanded significantly only in 2017–2019. Both factors contributed; causal sequencing is disputed.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "guaido-legitimacy-claim",
+    "question": "Was Juan Guaidó a legitimate president of Venezuela (2019–2023)?",
+    "sideA": {
+      "label": "US, EU, and 50+ Governments",
+      "text": "Under Article 233 of Venezuela's constitution, when the presidency is vacated and no free election has occurred, the National Assembly president serves as interim president. Guaidó's assumption of the interim presidency was constitutionally valid given Maduro's illegitimate 2018 election."
+    },
+    "sideB": {
+      "label": "Venezuelan Government / Russia / China",
+      "text": "Guaidó's claim had no constitutional basis. Article 233 applies when a vacancy occurs, not when a sitting president is simply disputed. Maduro was elected (2018), even if the election was flawed. Only the Venezuelan people can determine their president, not foreign governments."
+    },
+    "resolution": "Guaidó was recognized by 60 countries at peak (2019). Support eroded as his power remained theoretical. The opposition National Assembly formally terminated Guaidó's 'interim presidency' mandate in January 2023. He relocated to Miami.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "2002-coup-us-backing",
+    "question": "Did the United States back the April 2002 coup against Hugo Chávez?",
+    "sideA": {
+      "label": "Venezuelan Government / Chávez / Critics",
+      "text": "Declassified CIA and State Department cables showed US officials had contact with coup plotters weeks before April 11. NED (National Endowment for Democracy) funded Venezuelan opposition groups. Bush administration briefly endorsed the coup. The US had foreknowledge and tacit approval."
+    },
+    "sideB": {
+      "label": "US Government",
+      "text": "The US did not plan or execute the coup. The Bush administration was caught off-guard by the speed of events. Some officials expressed support for removing Chávez but there was no operational US role. Funding civil society organizations is standard democracy promotion, not coup support."
+    },
+    "resolution": "Declassified records confirm NED funding to coup-linked groups and early US recognition. Whether this constitutes backing the coup depends on definition. Independent investigations (OAS) found no conclusive US operational role in planning the coup itself.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "pdvsa-collapse-cause",
+    "question": "What caused PDVSA's production collapse from 3.3M bpd to under 800K bpd?",
+    "sideA": {
+      "label": "Venezuelan Government",
+      "text": "US sanctions blocked PDVSA from accessing international capital markets, spare parts suppliers, and technical services. The systematic financial stranglehold made it impossible to maintain aging infrastructure. Chevron and other operators were blocked from investing."
+    },
+    "sideB": {
+      "label": "PDVSA Industry Analysts / Opposition",
+      "text": "PDVSA's collapse began under Chávez after the 2002–2003 oil strike when 18,000 experienced engineers and managers were fired and replaced with political loyalists. Politicization, corruption (PDVSA executives arrested for billions stolen), and underinvestment caused production decline. Sanctions accelerated an already terminal decline."
+    },
+    "resolution": "Production declined from 3.3M bpd (1998) to 2.5M bpd (2013) before major sanctions existed, reaching 700K bpd by 2020. Industry consensus attributes primary cause to political management decisions (2003–2016) with sanctions compounding the crisis (2019–present). BP's April 2026 gas deal signals early investor return post-transition.",
+    "lastUpdated": "2026-05-04T15:57:51Z"
+  },
+  {
+    "id": "migration-figures-contested",
+    "question": "How many Venezuelans have been displaced — and is it the largest displacement crisis in Latin American history?",
+    "sideA": {
+      "label": "UNHCR / R4V Platform",
+      "text": "R4V (Response for Venezuelans) counted 7.9 million Venezuelan refugees and migrants as of 2024, making it the largest displacement crisis in Latin American history and one of the largest globally. Colombia (2.9M), Peru (1.5M), Ecuador (500K+), and Chile (450K+) host the largest communities."
+    },
+    "sideB": {
+      "label": "Venezuelan Government",
+      "text": "The government disputes displacement figures as politically inflated to justify sanctions. Many 'migrants' are economic migrants choosing opportunities abroad, not refugees. Venezuela has welcomed return migrants under Vuelta a la Patria program. Emigration is a global phenomenon, not a crisis unique to Venezuela."
+    },
+    "resolution": "The 7.9M figure is based on national-level census and registration data in destination countries, not political claims. The UNHCR classification as the world's third-largest displacement crisis (behind Ukraine and Syria) is consistent across sources.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "citgo-ownership",
+    "question": "Who controls Citgo — and is it legitimately Venezuela's sovereign asset?",
+    "sideA": {
+      "label": "Maduro Government / PDVSA",
+      "text": "Citgo is a wholly-owned PDVSA subsidiary — Venezuela's sovereign property. US-backed attempts to transfer Citgo to Guaidó and creditors are theft of sovereign assets. Venezuela is entitled to its own property regardless of internal political disputes recognized by foreign governments."
+    },
+    "sideB": {
+      "label": "Guaidó Government / US Courts",
+      "text": "Citgo was held in trust by the Guaidó 'interim government' to prevent Maduro from monetizing it while under sanctions. US courts have permitted creditors (including Crystallex and ConocoPhillips) to pursue enforcement against Citgo for unpaid arbitration awards arising from Venezuela's expropriations."
+    },
+    "resolution": "US courts ordered Citgo shares sold at auction in 2024 to satisfy creditors. The sale process raised $7.3B. The Maduro government was excluded from the proceedings under sanctions. Final distribution remains in litigation. Status of Citgo under Venezuela's new transitional government is under review.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "constituent-assembly-2017-legality",
+    "question": "Was Maduro's 2017 National Constituent Assembly constitutional?",
+    "sideA": {
+      "label": "Maduro Government / TSJ",
+      "text": "Article 347 of the Venezuelan constitution grants the people the right to call a constituent assembly at any time. The president can initiate this process. The ANC was legally convened and the Supreme Court (TSJ) certified its constitutionality. International critics are interfering in internal legal affairs."
+    },
+    "sideB": {
+      "label": "Opposition / OAS / Legal Scholars",
+      "text": "Article 347 requires a referendum to approve calling a constituent assembly before it is formed. Maduro skipped this step. The CNE-controlled voting process for ANC members was non-competitive and rigged. The opposition-controlled National Assembly, which alone has legislative authority, had not authorized the ANC."
+    },
+    "resolution": "The OAS Secretary General Luis Almagro and most Latin American governments declared the ANC illegitimate. The EU and US imposed sanctions targeting ANC members. The ANC never ratified a new constitution before being dissolved in 2020.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "oil-reserves-actual",
+    "question": "Does Venezuela actually possess the world's largest proven oil reserves?",
+    "sideA": {
+      "label": "Venezuelan Government / OPEC",
+      "text": "Venezuela holds 303.8 billion barrels of proven reserves — the world's largest. OPEC official figures confirm this. The Orinoco Belt holds vast extra-heavy crude. Venezuela's underdevelopment is a result of sanctions and foreign interference, not geological limitations."
+    },
+    "sideB": {
+      "label": "Industry Analysts / IEA",
+      "text": "Venezuela's reserve figures were dramatically inflated when the government reclassified Orinoco heavy crude as 'conventional reserves' in 2011. Much of this oil requires expensive upgrading and is technically challenging to produce at scale. Economically recoverable reserves are substantially lower."
+    },
+    "resolution": "The certified 303.8B barrels include Orinoco extra-heavy crude requiring significant processing. At current prices and production technology, a fraction is economically recoverable. The IEA and many analysts consider Venezuela's effective reserves much lower than the OPEC-certified figure.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "chavez-cancer-conspiracy",
+    "question": "Was Hugo Chávez deliberately infected with cancer?",
+    "sideA": {
+      "label": "Maduro / Venezuelan Government",
+      "text": "Nicolás Maduro and multiple Venezuelan officials publicly alleged that Chávez was infected with cancer by US intelligence agencies, referring to alleged CIA techniques. Maduro has stated he believes Chávez was assassinated. This claim was widely repeated in Venezuelan state media."
+    },
+    "sideB": {
+      "label": "US Government / Medical Community",
+      "text": "There is no evidence of deliberate cancer infection. The US denied any role. Chávez's pelvic sarcoma followed a recognized medical trajectory. Several other Latin American leaders (Lula, Fernández, Rousseff) also had cancer diagnoses around the same time, suggesting coincidence rather than targeting."
+    },
+    "resolution": "No credible evidence has emerged supporting the assassination-by-cancer claim. The simultaneous cancers of multiple Latin American leaders became a conspiracy theory known as 'cancer diplomacy.' Medical experts found no basis for deliberate infection.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "narco-state-designation",
+    "question": "Is Venezuela a narco-state, and does Maduro's inner circle control drug trafficking?",
+    "sideA": {
+      "label": "US DOJ / DEA / OFAC",
+      "text": "The US DOJ indicted Nicolás Maduro himself in March 2020 on narco-terrorism charges, alleging he conspired with FARC to flood the US with cocaine via Venezuela. Multiple senior officials (including Diosdado Cabello, Tarek El Aissami, and his nephews 'Los Narcosobrinos') have been indicted. Venezuela's territory is used as a major cocaine transshipment corridor."
+    },
+    "sideB": {
+      "label": "Venezuelan Government / Allies",
+      "text": "The US narco-terrorism charges are politically motivated and lack due process. Venezuela cooperates with anti-drug efforts. The 'narco-state' label is used to justify sanctions and interference. Venezuela has extradited drug traffickers when legally appropriate."
+    },
+    "resolution": "The Maduro DOJ indictment led to his arrest by US special forces on January 3, 2026. Multiple Venezuelan officials sanctioned for drug trafficking under E.O. 13850. UNODC data shows Venezuela as a major cocaine transshipment hub.",
+    "lastUpdated": "2026-05-04T15:57:51Z"
+  },
+  {
+    "id": "alex-saab-diplomat-vs-trafficker",
+    "question": "Was Alex Saab a Venezuelan diplomatic envoy entitled to immunity, or a corrupt businessman?",
+    "sideA": {
+      "label": "Venezuelan Government",
+      "text": "Alex Saab was a Special Envoy of Venezuela's government on a humanitarian mission to Iran when he was arrested in Cape Verde in June 2020 and extradited to the US in October 2021. His arrest violated diplomatic immunity under the Vienna Convention and international law."
+    },
+    "sideB": {
+      "label": "US DOJ / EU / Critics",
+      "text": "Saab was a Colombian businessman who allegedly laundered billions from Venezuelan government contracts through shell companies, including housing and food programs (CLAP). His post-arrest diplomatic appointment was a cynical attempt to invoke immunity after the fact."
+    },
+    "resolution": "Saab pleaded guilty to money laundering in November 2023 and was sentenced to time served. He was released in a prisoner exchange (December 2023). The case revealed billions in CLAP program corruption, channeled through front companies in Europe and the Middle East.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "opposition-unity",
+    "question": "Is Venezuela's opposition capable of uniting for elections?",
+    "sideA": {
+      "label": "Maduro Government",
+      "text": "The Venezuelan opposition is fragmented, led by coup-plotters backed by the US, and has no popular mandate. Multiple opposition figures have been co-opted or worked with the government (Capriles, AD). The MUD/PUD coalitions are manufactured entities without real electoral support."
+    },
+    "sideB": {
+      "label": "Democratic Opposition",
+      "text": "The 2024 opposition primary produced an unprecedented 2.4 million votes and unified support behind Machado and González. The 2015 supermajority and the massive protest movements of 2014 and 2017 show deep popular opposition. The regime uses banning and arrests to prevent opposition participation."
+    },
+    "resolution": "In April 2026, Venezuela's Democratic Unitary Platform formally unified behind María Corina Machado and Edmundo González, demanding three conditions: a negotiated process with the interim government, conditions for competitive elections, and an orderly transfer of power.",
+    "lastUpdated": "2026-05-04T15:57:51Z"
+  },
+  {
+    "id": "barbados-agreement-compliance",
+    "question": "Did Venezuela comply with the October 2023 Barbados Agreement?",
+    "sideA": {
+      "label": "Venezuelan Government",
+      "text": "Venezuela fulfilled its obligations: elections were held on the agreed date. Some political prisoners were released. Venezuela participated in good faith negotiations. The US violated the agreement by reinstating sanctions in April 2024 before evaluating Venezuela's compliance objectively."
+    },
+    "sideB": {
+      "label": "Opposition / US / EU",
+      "text": "Venezuela violated the agreement by: keeping María Corina Machado banned; arresting opposition figures; refusing to publish voting tallies; allowing only a Maduro surrogate (González) as alternative. The CNE refused to register Machado despite the agreement requiring a 'level playing field'."
+    },
+    "resolution": "The US Treasury reinstated oil sanctions in April 2024 citing non-compliance after Venezuela barred Machado. The election was held but without the promised competitive conditions. The Norwegian mediators acknowledged conditions fell short of the agreement.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "pdvsa-corruption-scale",
+    "question": "How much was stolen from PDVSA through corruption?",
+    "sideA": {
+      "label": "Venezuelan Government (selective acknowledgment)",
+      "text": "The Maduro government itself has arrested former PDVSA officials, including Oil Minister Tarek El Aissami (2023), on corruption charges. This shows the government actively fights corruption. Estimates of theft are inflated to justify sanctions and demonize Venezuela."
+    },
+    "sideB": {
+      "label": "US DOJ / International Investigators",
+      "text": "US and European prosecutors have tracked over $20 billion stolen from PDVSA and the Venezuelan state through inflated contracts, currency arbitrage (CADIVI/SIMADI), and CLAP food program fraud. The US case against Saab alone involved $350M. Senior officials' offshore wealth evidence massive institutional looting."
+    },
+    "resolution": "Court records in US, Portugal, Spain, and Switzerland show convicted PDVSA officials stole billions. The scope of overall corruption is estimated at $20–400 billion (different methodologies). The Tarek El Aissami arrest (internal) shows some accountability, though critics see it as selective purge.",
+    "lastUpdated": "2026-04-24T00:00:00Z"
+  },
+  {
+    "id": "caracazo-1989-massacre",
+    "question": "Was the 1989 Caracazo a spontaneous popular uprising or a state-orchestrated massacre?",
+    "sideA": {
+      "label": "Human Rights Organizations / Survivors",
+      "text": "The military response to the February 27–March 3, 1989 riots was a massacre. Security forces fired indiscriminately on civilians in poor barrios. Death tolls estimated at 276 official deaths to 3,000+ (COFAVIC and independent investigators). Mass graves were found at La Peste cemetery in Caracas. The Inter-American Court of Human Rights ruled Venezuela violated the right to life."
+    },
+    "sideB": {
+      "label": "Carlos Andrés Pérez Government (1989)",
+      "text": "The government declared a state of emergency and suspended civil liberties to restore order after widespread looting and violence left dozens dead. The military used force proportionate to a breakdown in public order. The official death toll of 276 represents those confirmed in armed incidents, not a massacre of civilians."
+    },
+    "resolution": "The IACHR ruled against Venezuela in the 'El Caracazo' case (1999, 2002), finding extrajudicial executions and forced disappearances. The case became a founding grievance of the Bolivarian Revolution. Venezuela paid reparations to victims' families. The number of dead remains contested (276 official vs. 1,000–3,000 by NGOs).",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "colectivos-state-paramilitaries",
+    "question": "Are Venezuelan colectivos state-sponsored paramilitaries or autonomous community organizations?",
+    "sideA": {
+      "label": "Venezuelan Government / Chavismo",
+      "text": "Colectivos are organic community organizations rooted in barrio activism. They emerged from the Bolivarian Circles under Chávez and reflect grassroots political participation. Labeling them paramilitaries is a smear to justify foreign intervention. The government does not direct their activities."
+    },
+    "sideB": {
+      "label": "Opposition / Human Rights Groups / UN",
+      "text": "The UN Fact-Finding Mission (2020) found colectivos operate with state acquiescence or coordination, carrying out repression, intimidation, and killings that government forces avoid to limit accountability. HRW documented colectivo attacks on protests with military-grade weapons and impunity for violence. They function as irregular auxiliary forces for the Maduro government."
+    },
+    "resolution": "The UN FFM concluded colectivos are used by the state to suppress dissent, with security forces standing aside during colectivo attacks. The government has not prosecuted colectivo leaders for documented killings. They remain a key element of the Maduro government's control apparatus.",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "2018-election-legitimacy",
+    "question": "Was the May 2018 presidential election — in which Maduro claimed re-election — legitimate?",
+    "sideA": {
+      "label": "Maduro Government / PSUV",
+      "text": "Maduro won the May 20, 2018 election with 67.8% of votes cast. The CNE supervised the process. Participation was voluntary. The main opposition decided to boycott, ceding the election. Venezuela's electoral system is among the most technologically advanced in the world; results were verifiable."
+    },
+    "sideB": {
+      "label": "Opposition / OAS / EU / US",
+      "text": "The 2018 election was held under conditions making free competition impossible: main opposition candidates were jailed or barred; major parties (MUD) were disqualified; the election was moved up to benefit Maduro; international observers were denied meaningful access; the campaign used state resources and food-program coercion (carnet de la patria) to pressure votes."
+    },
+    "resolution": "The OAS General Assembly passed a resolution declaring the election illegitimate. The EU, US, Canada, and most Lima Group countries refused recognition. This formed the basis for Guaidó's January 2019 interim presidency claim under Article 233. The IMF and World Bank suspended engagement.",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "chavez-2004-recall-referendum",
+    "question": "Was the August 2004 presidential recall referendum against Hugo Chávez a free and fair vote?",
+    "sideA": {
+      "label": "Chávez Government / CNE / Carter Center",
+      "text": "Chávez won the August 15, 2004 recall referendum with 59.1% voting to keep him in office. The Carter Center and OAS certified the results as reflecting the will of Venezuelan voters. The automated voting system produced a reliable audit trail. Chavismo's social programs (misiones) and oil-fueled benefits had generated genuine popularity."
+    },
+    "sideB": {
+      "label": "Opposition / Súmate / Statistical Analysts",
+      "text": "Statisticians Jorge Delfino and Ricardo Hausmann found the distribution of yes/no tallies from automated voting machines showed anomalies inconsistent with genuine random sampling — suggesting systematic manipulation. The CNE refused to allow a full statistical audit of paper ballot backups. The 'hot audit' conducted was limited and not independently verified."
+    },
+    "resolution": "The Carter Center and OAS certified the result, and Chávez's win was widely accepted internationally. However, the statistical anomaly debate was never fully resolved because the CNE declined a comprehensive random audit of paper receipts. The referendum result stands as certified. Academic debate on irregularities continues.",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "arco-minero-indigenous-rights",
+    "question": "Is Venezuela's Arco Minero del Orinoco an ecological and indigenous rights emergency?",
+    "sideA": {
+      "label": "Venezuelan Government / PDVSA",
+      "text": "The Arco Minero, formalized in 2016 across 112,000 km² of Bolívar state, is a strategic national development plan to diversify Venezuela's economy beyond oil using its mineral wealth. It operates under environmental regulation and participates in indigenous consultation processes. Mining revenue funds social programs."
+    },
+    "sideB": {
+      "label": "Indigenous Communities / HRW / WOLA / Environmental Groups",
+      "text": "The Arco Minero has caused severe deforestation, mercury contamination of rivers (affecting the Orinoco watershed), and violent displacement of Pemón and Ye'kwana indigenous communities. Armed groups (ELN, FARC, Tren de Aragua) control illegal mining. Activists and indigenous leaders who protest have been killed. The UN Special Rapporteur on Toxics documented mercury poisoning in 2021."
+    },
+    "resolution": "The Inter-American Commission on Human Rights granted precautionary measures for Pemón communities in 2019. Amnesty International documented killings of Pemón leaders. No independent environmental audit of the full Arco Minero zone has been permitted. Mining expansion continues under military protection.",
+    "lastUpdated": "2026-04-25T00:00:00Z"
+  },
+  {
+    "id": "essequibo-icj-territorial-dispute",
+    "question": "Is the Essequibo region legally Venezuelan territory or sovereign Guyanese land?",
+    "sideA": {
+      "label": "Venezuela / All Venezuelan Political Factions",
+      "text": "The Essequibo — covering 160,000 km² — has been Venezuelan territory since Gran Colombia and was illegally arbitrated away by the 1899 Paris Award, which Venezuela considers null and void. All Venezuelan governments across the political spectrum (Chavista and opposition alike) claim the Essequibo as Venezuela's historic territory, backed by the 2023 national referendum in which 96% voted to assert sovereignty."
+    },
+    "sideB": {
+      "label": "Guyana / International Court of Justice",
+      "text": "Guyana administers the Essequibo as sovereign territory and has done so continuously since independence (1966). The 1966 Geneva Agreement and the 1899 Arbitral Award established the border. Guyana has brought the case to the ICJ to enforce the award and obtain a ruling on the border's permanent legal status. The Essequibo accounts for ~70% of Guyana's territory and lies adjacent to massive ExxonMobil-discovered offshore oil fields."
+    },
+    "resolution": "The ICJ began oral hearings on the merits of the case on May 4, 2026. Venezuela contests ICJ jurisdiction but participated in the proceedings. A final ruling could take several years. The case is concurrent with Venezuela's post-Maduro political transition, with the Rodríguez transitional government continuing to assert the Essequibo claim.",
+    "lastUpdated": "2026-05-04T15:57:51Z"
+  },
+  {
+    "id": "maduro-capture-legitimacy",
+    "question": "Was the January 3, 2026 US special forces operation that captured Nicolás Maduro a legitimate law enforcement action or an act of aggression?",
+    "sideA": {
+      "label": "US Government / Opposition",
+      "text": "The January 3 operation was a legitimate law enforcement action to bring Maduro to justice for the 2020 narco-terrorism indictment by the US Department of Justice. Maduro had evaded accountability through force while running a criminal enterprise. The action was consistent with the Drug Enforcement Administration's authority to arrest internationally indicted narcotics traffickers."
+    },
+    "sideB": {
+      "label": "Russia / China / Cuba / Nicaragua / ALBA States",
+      "text": "The capture of a sitting head of state by US special forces was an unprecedented violation of Venezuela's sovereignty and international law. No UN Security Council authorization was sought. The action contravened the UN Charter prohibition on the use of force against a sovereign state. US narco-terrorism charges were always politically motivated."
+    },
+    "resolution": "The operation removed Maduro from power on January 3, 2026. Delcy Rodríguez assumed the role of Acting President. The UN Security Council was unable to pass a resolution condemning the action (US veto). Venezuela's post-Maduro transitional government, while not formally endorsing the operation, has proceeded with political normalization with Washington.",
+    "lastUpdated": "2026-05-04T15:57:51Z"
+  },
+  {
+    "id": "icj-essequibo-binding-ruling",
+    "question": "Will the ICJ's eventual ruling on the Essequibo dispute be binding on Venezuela?",
+    "sideA": {
+      "label": "Guyana / International Legal Scholars",
+      "text": "ICJ judgments are final and binding under the UN Charter (Article 94). Venezuela participated in the 2026 oral hearings, strengthening the argument that it is bound by the outcome. The 1899 Arbitral Award established a clear, long-standing boundary. A ruling affirming the award would be the definitive legal resolution of one of the hemisphere's longest-running territorial disputes. Venezuela's attendance at The Hague demonstrates it cannot ignore the proceedings."
+    },
+    "sideB": {
+      "label": "Venezuela / Acting President Rodríguez",
+      "text": "Venezuela's participation at the ICJ 'does not imply in any way recognition of the court's jurisdiction in the territorial controversy.' Venezuela has never consented to ICJ adjudication and maintains that the 1966 Geneva Agreement requires direct political negotiation. Acting President Rodríguez warned on May 11, 2026 that 'there is no legal way of recognising a decision resulting from this process.' A ruling will conclude the court case but not the territorial dispute itself."
+    },
+    "resolution": "ICJ oral hearings concluded May 11, 2026. A final ruling is expected in late 2026 or 2027. The core tension is unresolved: Guyana treats the ICJ process as binding; Venezuela treats it as legally void. Acting President Rodríguez's personal appearance at The Hague on May 10–11, 2026 raised procedural questions about implicit consent, but Venezuela explicitly preserved its jurisdictional objection throughout.",
+    "lastUpdated": "2026-05-12T14:30:00Z"
+  },
+  {
+    "id": "rodriguez-prosecution-standdown-may2026",
+    "question": "Was the Trump administration right to shield Acting President Rodríguez from criminal prosecution?",
+    "sideA": {
+      "label": "Trump Administration / Pragmatists",
+      "text": "The May 27, 2026 directive to federal prosecutors not to pursue criminal investigations into Delcy Rodríguez is strategically sound. Without a cooperative transitional government, Venezuelan oil cannot be unlocked, Maduro's trial cannot proceed with Venezuelan cooperation, and the risk of state collapse increases. Diplomacy requires pragmatic engagement with the actors who hold power, not only those with clean records."
+    },
+    "sideB": {
+      "label": "Democrats / Human Rights Groups / Rule-of-Law Advocates",
+      "text": "Rodríguez was a DEA drug trafficking target with accumulated intelligence on narcotics and gold smuggling. Granting her effective impunity while thousands of political prisoners remain detained — with released detainees facing speech restrictions and mandatory security check-ins — signals that the US prioritizes oil access over genuine democratic accountability. Without legal jeopardy, Rodríguez has little incentive to comply with election conditions or release remaining political prisoners."
+    },
+    "resolution": "The administration justified the decision on strategic grounds but faced bipartisan pushback. Democratic Senators Shaheen and Warren demanded explanation for the Rodríguez sanctions removal in a May 20 letter. The decision does not affect the separate Maduro narco-terrorism prosecution. Human rights organizations have noted Venezuela's 'revolving door' pattern — releasing prisoners while restricting their freedoms and continuing new politically motivated arrests.",
+    "lastUpdated": "2026-05-29T14:30:00Z"
+  },
+  {
+    "id": "venezuela-51st-state-trump-proposal",
+    "question": "Should Venezuela become the 51st state of the United States?",
+    "sideA": {
+      "label": "President Donald Trump",
+      "text": "Trump told Fox News on May 11, 2026 that he was 'seriously considering' making Venezuela the 51st US state, citing '$40 trillion in oil' reserves and claiming 'Venezuela loves Trump.' He had previously floated the idea in March 2026 following Venezuela's baseball World Cup win. Proponents argue that US stewardship would fast-track Venezuela's economic recovery, establish rule of law, and prevent the country from becoming a failed state or drifting back to authoritarian governance."
+    },
+    "sideB": {
+      "label": "Venezuela / Acting President Rodríguez",
+      "text": "Rodríguez rejected the proposal on May 11, 2026: 'That would never have been considered. If there is one thing we Venezuelan men and women have, it is that we love our independence process, we love our heroes and heroines of independence.' The Essequibo sovereignty claim — an issue that unites all Venezuelan political factions including the democratic opposition — illustrates how deeply territorial independence is embedded in Venezuelan national identity. Venezuela has never sought statehood and is not constitutionally eligible for US annexation."
+    },
+    "resolution": "No formal annexation process has been initiated. The US Constitution has no mechanism to annex a foreign country. Trump's remarks were interpreted by analysts as political signaling toward Venezuela's oil sector and the diaspora community rather than a serious legislative proposal. Rodríguez's rejection was unambiguous. The White House said only that Trump 'never accepts the status quo' and praised Rodríguez for cooperating with the US.",
+    "lastUpdated": "2026-05-12T14:30:00Z"
+  },
+  {
+    "id": "earthquake-response-effectiveness",
+    "question": "Was the Rodríguez government's response to the June 24 earthquakes adequate given the circumstances, or did institutional collapse cost lives?",
+    "sideA": {
+      "label": "Rodríguez Government",
+      "text": "Rescue crews \"activated immediately\" after the quakes; thousands of rescue workers and 11 international field hospitals were deployed within days. Criticism of the response amounts to \"propaganda operations, driven by partisan political interests\" from opposition figures seeking political advantage from a natural disaster. No government — six months removed from decades of institutional hollowing-out under Chavismo — could have fully absorbed a doublet earthquake of this magnitude."
+    },
+    "sideB": {
+      "label": "Independent Experts / Opposition",
+      "text": "The response was \"wholly predictable\" to be inadequate: firefighters lacked fuel, civil defense workers searched rubble with cellphone flashlights, and citizens organized rescue efforts before state agencies arrived. Foreign aid faced bureaucratic obstruction — a German medical team was denied entry, Colombian and Chilean rescuers were delayed — while access to hard-hit La Guaira required registration. The government also moved to shut down opposition-linked aid collection centers and asserted control of the damaged airport, suggesting political consolidation took priority over saving lives."
+    },
+    "resolution": "Unresolved, and the reconstruction phase is now reinforcing the same critique. Independent experts (International Crisis Group, WOLA, academic Venezuela specialists) broadly assessed the emergency response as inadequate, citing documented failures in the first 48–72 hours; the government disputes this as politically motivated. Two months on, only 335 of 4,000 promised replacement homes had been delivered as of mid-August, just 28.61% of debris had been cleared by August 25, and an August 22 flash flood destroyed emergency tent shelters and killed another person in the same recovering region — evidence critics cite as confirming that reconstruction, not the initial response, will determine lasting political consequences, per earlier comparisons to the 1972 Nicaragua earthquake.",
+    "lastUpdated": "2026-08-26T16:11:48.000Z"
+  },
+  {
+    "id": "rodriguez-mandate-legitimacy-post-180-days",
+    "question": "Is Delcy Rodríguez's continued rule constitutionally valid after her 180-day interim mandate expired on July 3, 2026?",
+    "sideA": {
+      "label": "Rodríguez Government / National Assembly",
+      "text": "Rodríguez continues to exercise the powers of the presidency during an active national emergency (the earthquake crisis), and the National Assembly — which controls the constitutional process for declaring the presidency permanently vacant — has taken no action to remove her. Continuity of government during disaster response is itself constitutionally justified."
+    },
+    "sideB": {
+      "label": "Opposition / Constitutional Critics",
+      "text": "Venezuela's constitution allows temporary presidential absences to be filled for up to 90 days, extendable once by the National Assembly for a further 90 — a period Rodríguez had already exceeded even before the July 3 deadline some analysts cite. Without a National Assembly vote extending or formalizing her term, or a snap election, her continued exercise of presidential power lacks clear constitutional grounding."
+    },
+    "resolution": "Unresolved as of mid-July 2026. The July 3 mandate deadline passed with no official government comment on succession or an election timeline. The Rodríguez-controlled National Assembly has neither extended her term through a formal vote nor declared the presidency vacant to trigger a snap election, leaving the question in constitutional limbo while she focuses on earthquake recovery.",
+    "lastUpdated": "2026-07-16T14:37:22Z"
+  },
+  {
+    "id": "transition-talks-legitimacy-without-machado",
+    "question": "Can Venezuela's August 2026 transition talks produce a credible path to elections without María Corina Machado?",
+    "sideA": {
+      "label": "Rodríguez Government / Figuera Delegation / US State Dept",
+      "text": "The talks that began August 6 represent the first credible institutional pathway to elections since Maduro's removal. Dinorah Figuera leads a delegation representing the 2015 National Assembly — the last legislature internationally recognized as democratically elected — with a concrete mandate to renovate the CNE and reform the Supreme Tribunal's electoral chambers, targeting a transition proposal by December 2026. Machado and González were free to participate and chose not to; their absence does not invalidate a US-backed process aimed at restoring institutions Machado herself says she'll judge on results."
+    },
+    "sideB": {
+      "label": "Machado / González / Capriles Critics",
+      "text": "Talks that exclude the opposition's most popular and internationally recognized leader lack legitimacy and are \"condemned to fail,\" per Henrique Capriles. Machado and González were reportedly not invited and say they will not participate in the talks' design or operation. Figuera's delegation draws mainly from the abstentionist wing of Primero Justicia, raising questions about how representative it is of the opposition coalition that actually won the disputed 2024 election."
+    },
+    "resolution": "Partial progress reported. Six days of talks at Caracas's Gran Meliá hotel concluded August 12 with a communiqué signed by Jorge Rodríguez and Dinorah Figuera committing to recover Venezuelan assets frozen abroad (including gold held in the UK) for earthquake reconstruction, and to overhaul the judiciary — replacing all 32 TSJ magistrates via an independent nominating body, with CNE renewal targeted for December and a full transition proposal by year-end. The government then freed 131 more people it counted as political prisoners on August 15 (independently verified at ~40-43 by Foro Penal and Vente Venezuela), which Secretary of State Rubio called \"a crucial step,\" though Foro Penal still counted 391 detained (228 civilians, 163 military). President Trump said Venezuela is \"not ready yet\" for elections. Analyst Carmen Beatriz Fernández called the shift bigger than she expected; Machado adviser Pedro Urruchurtu said the talks \"will be relevant... to the extent that they produce real, verifiable results,\" and Capriles reiterated any deal excluding Machado \"will be condemned to fail.\"",
+    "lastUpdated": "2026-08-26T16:11:48.000Z"
+  }
+]

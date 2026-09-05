@@ -1,0 +1,454 @@
+[
+  {
+    "id": "was-doha-deal-capitulation",
+    "question": "Was the Doha Agreement a necessary peace deal or a US capitulation to the Taliban?",
+    "sideA": {
+      "label": "Necessary Diplomacy",
+      "text": "The Doha Agreement was a pragmatic recognition that 20 years of military intervention had not produced a self-sustaining Afghan state. The deal offered a framework to end US involvement, required Taliban commitments on counterterrorism, and opened intra-Afghan dialogue. No military solution was available; diplomacy was the only path to ending US casualties."
+    },
+    "sideB": {
+      "label": "Capitulation & Abandonment",
+      "text": "The Doha Agreement legitimized the Taliban by negotiating without the Afghan government, released 5,000 Taliban prisoners, imposed no human rights conditions, and set a firm withdrawal date the Taliban used as a clock to wait out. The deal dismantled Afghan morale, precipitated the 2021 collapse, and betrayed Afghans who had fought alongside the US for 20 years."
+    },
+    "resolution": "Highly contested; US officials defend deal as only viable option while Afghan government officials and military veterans call it a betrayal",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "why-did-ansf-collapse",
+    "question": "Why did the Afghan National Security Forces (ANSF) collapse so rapidly in August 2021?",
+    "sideA": {
+      "label": "US Withdrawal Caused Collapse",
+      "text": "The ANSF was fundamentally dependent on US air support, intelligence, logistics, and contractor maintenance for its aircraft and equipment. When the US announced withdrawal and pulled contractors, air capability evaporated within weeks. ANSF could not maintain equipment, lacked close air support, and suffered massive desertions as local deals were struck. The Doha deal had already persuaded many Afghans the US was leaving regardless."
+    },
+    "sideB": {
+      "label": "Structural Failures & Corruption",
+      "text": "The ANSF suffered from endemic corruption with 'ghost soldiers' on payrolls, incompetent political generals, equipment looting, and lack of organic logistics. SIGAR documented systemic failures throughout the 20-year $89 billion training program. The ANSF was never designed to fight without US support because building true capability was never fully resourced or prioritized. The collapse reflected failure of 20 years of nation-building."
+    },
+    "resolution": "Bipartisan agreement exists on multiple contributing factors; congressional investigation and Biden administration review both cited failures at multiple levels",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-isi-taliban-support",
+    "question": "Did Pakistan's ISI deliberately support the Taliban insurgency against US and Afghan forces?",
+    "sideA": {
+      "label": "Pakistan Provided Strategic Sanctuary",
+      "text": "Overwhelming evidence indicates Pakistan's ISI provided the Taliban with sanctuary in Quetta and Peshawar, intelligence support, financial facilitation, medical care, and diplomatic protection. US military and intelligence reports consistently documented ISI links to the Haqqani Network, Quetta Shura, and TTP predecessor groups. CIA Director Leon Panetta, Admiral Mike Mullen, and multiple ISAF commanders explicitly accused Pakistan of supporting insurgent proxies while taking US aid."
+    },
+    "sideB": {
+      "label": "Pakistan Was a Partner Against Terrorism",
+      "text": "Pakistan lost over 80,000 citizens to terrorism, conducted major military operations in FATA (Zarb-e-Azb, Rah-e-Rast), arrested hundreds of al-Qaeda members, and facilitated NATO supply routes at great cost. Pakistan's tolerance of some Afghan Taliban was driven by legitimate security interests (fear of Indian encirclement, Pashtun tribal politics) and was vastly overstated. Pakistan suffered as much from terrorism as any country."
+    },
+    "resolution": "One of war's most contested dimensions; never formally adjudicated; Pakistan-US relations permanently strained by conflicting narratives",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tora-bora-strategic-failure",
+    "question": "Was the failure to capture bin Laden at Tora Bora (Dec 2001) a strategic blunder?",
+    "sideA": {
+      "label": "Critical Strategic Failure",
+      "text": "The US Senate Foreign Relations Committee concluded that relying on Afghan militias rather than deploying US Army Rangers or Marines directly into Tora Bora was a critical error. Bin Laden was cornered and within reach, but General Tommy Franks refused requests for more US troops. Had bin Laden been captured or killed, al-Qaeda's global network would have been far more disrupted, potentially shortening the entire conflict.",
+      "sources": [
+        {
+          "name": "US Senate Foreign Relations Committee",
+          "tier": 1
+        }
+      ]
+    },
+    "sideB": {
+      "label": "Operational Constraints Were Real",
+      "text": "CENTCOM argues the Tora Bora terrain and time constraints made a massive US troop deployment logistically impossible. Afghan militia forces were locally knowledgeable and more appropriate. Bin Laden's presence there was not confirmed until after the battle. Even if he was there, US forces could not have sealed the porous Afghan-Pakistan mountain border with its dozens of passes with available forces."
+    },
+    "resolution": "Senate intelligence report concluded bin Laden was present and was allowed to escape; CENTCOM disputed characterization of avoidable failure",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "isis-k-threat-level",
+    "question": "Does ISIS-K pose a genuine threat to the US homeland or Western Europe?",
+    "sideA": {
+      "label": "Growing External Operations Threat",
+      "text": "ISIS-K has demonstrated genuine external operations capability: the March 2024 Crocus City Hall massacre (140+ killed), disrupted Vienna concert attack plots, multiple disrupted plots in Germany and the UK in 2024. ISIS-K recruits in Europe via online networks, has a dedicated external operations unit, and has issued specific threats to the US. The collapse of US intelligence presence in Afghanistan has reduced visibility into planning."
+    },
+    "sideB": {
+      "label": "Regional Terrorist Group, Not Peer Threat",
+      "text": "ISIS-K remains primarily focused on fighting the Taliban in Afghanistan and attacking Pakistan. Western plots have been disrupted by robust intelligence cooperation. Unlike pre-9/11 al-Qaeda, ISIS-K lacks sophisticated global infrastructure, experienced foreign fighters at scale, and financial networks. The group's external operations cell is small and monitored by multiple intelligence agencies."
+    },
+    "resolution": "US intelligence community assesses ISIS-K has ambitions for external attacks but currently limited capability; UK and European authorities treat threat as credible and serious",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "taliban-recognition-debate",
+    "question": "Should the international community recognize the Taliban government to improve Afghan human rights?",
+    "sideA": {
+      "label": "Engagement is More Effective",
+      "text": "International isolation has failed to change Taliban behavior and has caused catastrophic humanitarian suffering. Without recognition, Afghanistan receives no IMF/World Bank funding, no diplomatic leverage exists, and ordinary Afghans suffer. Engagement — as China, Russia, and UAE show — provides channels to raise human rights concerns and pragmatic influence. Continued isolation only deepens the humanitarian crisis."
+    },
+    "sideB": {
+      "label": "Recognition Would Reward Misogyny",
+      "text": "Recognizing the Taliban would reward the world's most extreme gender apartheid regime, legitimize the erasure of girls' education, and send a signal globally that repression has no consequences. International pressure has been the only constraint on even worse Taliban policies. UN Special Rapporteur Richard Bennett documented Taliban crimes against humanity; rewarding this with recognition would be morally indefensible."
+    },
+    "resolution": "No country has formally recognized the Taliban government as of 2026; debate ongoing in UN; Taliban shows no sign of reversing girls' education ban",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "reconstruction-failure",
+    "question": "Was the $145 billion US reconstruction program for Afghanistan a failure?",
+    "sideA": {
+      "label": "Fundamental Failure",
+      "text": "SIGAR documented systematic waste, fraud, and projects that collapsed immediately after construction. There was no strategy connecting individual projects to governance outcomes. Too much money was spent too fast in a country that couldn't absorb it, breeding corruption. Infrastructure built without Afghan ownership or maintenance capacity crumbled within years. The collapse of 2021 erased 20 years of 'progress' within weeks."
+    },
+    "sideB": {
+      "label": "Real Gains Achieved",
+      "text": "Measurable progress was real: girls' school enrollment grew from 0 to 3.3 million, life expectancy increased from 44 to 66 years, maternal mortality halved, mobile phone penetration reached 80%+ of population, a free press with hundreds of outlets emerged. These gains required investment. The 2021 collapse doesn't negate 20 years of genuine progress for millions of Afghans, particularly women."
+    },
+    "resolution": "SIGAR's final report called reconstruction largely a failure at the strategic level while acknowledging real but reversible humanitarian gains",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "civcas-drone-strikes",
+    "question": "Were US drone strikes in Pakistan's tribal areas legal and strategically effective?",
+    "sideA": {
+      "label": "Necessary and Legal Counterterrorism",
+      "text": "CIA drone strikes neutralized key al-Qaeda and TTP leaders including Baitullah Mehsud, al-Libi, and others, disrupting attack planning against the US. Pakistan's tacit approval (while publicly protesting) indicated it viewed the strikes as serving shared interests. The strikes were conducted under the 2001 AUMF against al-Qaeda and associated forces, providing legal authority. They prevented Pakistan from becoming an even more severe terrorism sanctuary."
+    },
+    "sideB": {
+      "label": "Illegal, Counterproductive, and Harmful",
+      "text": "The strikes violated Pakistani sovereignty, killed hundreds of civilians according to the Bureau of Investigative Journalism, fueled TTP recruitment with grievance narratives, and contributed to severe anti-American sentiment in Pakistan. They occurred without Congressional oversight, created a global precedent for targeted killing outside armed conflict zones, and ultimately failed to eliminate al-Qaeda's core capacity or prevent the Taliban's return."
+    },
+    "resolution": "Obama administration defended legality under AUMF and international law; major civil liberties organizations challenged legal framework; effectiveness disputed by academics",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "is-afghanistan-safe-haven-again",
+    "question": "Is Afghanistan again a safe haven for terrorism under Taliban rule?",
+    "sideA": {
+      "label": "Yes — Al-Qaeda Has Returned",
+      "text": "The Zawahiri killing proved al-Qaeda leadership was operating from Kabul under Taliban hospitality. UNAMA and CENTCOM document persistent al-Qaeda presence and training in Afghanistan. Taliban released thousands of al-Qaeda-linked fighters from Bagram in 2021. The Haqqani Network, which controls the Interior Ministry, has documented ties to al-Qaeda. Without US presence, intelligence collection has severely degraded."
+    },
+    "sideB": {
+      "label": "Taliban's Counterterrorism Cooperation Partial",
+      "text": "The Taliban has an institutional interest in not triggering renewed US military involvement and has conducted genuine operations against ISIS-K. The Taliban views al-Qaeda differently from ISIS-K (ideological allies vs competitors). US over-the-horizon strikes continue with some effectiveness. Taliban governance creates some stability; a failed state would be more dangerous than a brutal but functioning government."
+    },
+    "resolution": "US intelligence assessment (2024): al-Qaeda present in Afghanistan but degraded; ISIS-K is more operationally active threat; risk of 9/11-scale attack from Afghanistan remains reduced but not eliminated",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "civilian-casualty-responsibility",
+    "question": "Who bears primary responsibility for Afghan civilian casualties over 20+ years?",
+    "sideA": {
+      "label": "Taliban/Insurgents Caused Most Deaths",
+      "text": "UNAMA data consistently showed that insurgent groups (Taliban, Haqqani, ISIS-K) caused the majority of civilian casualties — approximately 60-65% in most years. Suicide bombs, targeted assassinations, IEDs, and executions killed far more civilians than US/NATO airstrikes. Taliban's deliberate use of human shields and placement of fighters in civilian areas shifted moral responsibility to them for resulting casualties."
+    },
+    "sideB": {
+      "label": "All Parties Share Responsibility",
+      "text": "UNAMA documented thousands of civilians killed by US/NATO airstrikes including the 2009 Kunduz tanker bombing (142 killed), 2015 MSF hospital bombing (42 killed), and numerous night raid deaths. CIA and Pentagon repeatedly undercounted civilian casualties. US forces had a pattern of inadequate force protection protocols. All belligerents bear responsibility under IHL; UNAMA never absolved pro-government forces."
+    },
+    "resolution": "UNAMA data shows insurgents caused majority of documented civilian deaths; however both sides committed violations of international humanitarian law",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gender-apartheid-international-law",
+    "question": "Do Taliban restrictions on women constitute 'gender apartheid' under international law?",
+    "sideA": {
+      "label": "Constitutes Crime Against Humanity",
+      "text": "The Taliban's systematic and comprehensive subjugation of women — banning education above grade 6, banning work in most sectors, banning travel without male guardian, banning access to parks and gyms, banning women from NGO work — constitutes the world's most severe gender discrimination. UN Special Rapporteur Richard Bennett documented it meets the legal threshold for crimes against humanity. Some scholars argue it meets the definition of gender apartheid."
+    },
+    "sideB": {
+      "label": "Internal Religious Governance",
+      "text": "The Taliban frames restrictions as compliance with their interpretation of Islamic law, which they argue international actors have no standing to adjudicate. Comparison to apartheid misrepresents a complex tribal-religious governance system. Some restrictions (like female health workers) have been partially relaxed. International pressure through isolation and sanctions has been ineffective and counterproductive."
+    },
+    "resolution": "UN Special Rapporteur on Human Rights in Afghanistan documented systematic violations meeting threshold of crimes against humanity; No country applies formal 'gender apartheid' legal designation as of 2026",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "was-surge-worth-it",
+    "question": "Did the 2009 Obama surge achieve its strategic objectives in Afghanistan?",
+    "sideA": {
+      "label": "Surge Temporarily Reduced Violence",
+      "text": "The surge reversed Taliban momentum in key areas — Helmand, Kandahar, Ghazni — from 2010-2012. Violence metrics decreased, territory was cleared, and Afghan security force numbers grew significantly. The surge provided time for ANSF capacity building. Without the surge, Afghanistan might have collapsed earlier. General Petraeus's counterinsurgency approach achieved tactical successes that showed what was possible with adequate resources."
+    },
+    "sideB": {
+      "label": "Surge Failed Strategically",
+      "text": "The surge's tactical gains proved 'fragile and reversible' as predicted. Taliban simply waited out the surge, returned to cleared areas, and by 2014 violence had returned to pre-surge levels. Obama's simultaneous announcement of a withdrawal deadline undermined the strategy by giving Taliban an end date to endure. The Afghan government never provided the governance 'clear-hold-build' required, and the structural problems could not be solved militarily."
+    },
+    "resolution": "Mixed assessment: tactical results in 2010-2012 were real; long-term strategic impact debated; violence returned to pre-surge levels by 2014-2015",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bin-laden-pakistan-knew",
+    "question": "Did Pakistan's government or military know Osama bin Laden was hiding in Abbottabad?",
+    "sideA": {
+      "label": "ISI Must Have Known",
+      "text": "Bin Laden lived for years in a large compound 800 meters from Pakistan's premier military academy in a garrison city. The compound's unusual construction — high walls, no internet or phone lines, burned its own garbage — should have attracted intelligence scrutiny. Multiple US officials, including CIA Director Panetta, expressed doubts that Pakistani authorities had no knowledge. The compound was built in 2004-2005 and bin Laden moved in around 2005."
+    },
+    "sideB": {
+      "label": "Pakistan Was Embarrassed, Not Complicit",
+      "text": "Pakistan's official position — and one accepted by many analysts — is that Pakistan was embarrassed by the Abbottabad raid, not complicit in hiding bin Laden. The ISI had a genuine interest in eliminating bin Laden for domestic terrorism reasons. The Abbottabad Commission found no evidence of official complicity but found serious intelligence failures. Pakistan's reaction to the unauthorized US military incursion was genuine outrage."
+    },
+    "resolution": "Official Abbottabad Commission found no evidence of deliberate protection; US officials remained skeptical; no conclusive evidence of high-level Pakistani government knowledge publicly released",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "war-crimes-accountability",
+    "question": "Should US and Australian military personnel face prosecution for alleged war crimes in Afghanistan?",
+    "sideA": {
+      "label": "Accountability Is Required",
+      "text": "The Brereton Report confirmed Australian SAS troops unlawfully killed 39 Afghan civilians and prisoners in cold blood. US personnel killed civilians in the Haditha-style Mahmud Raqi massacres, Panjwai massacre (Bales), and multiple night raids. ICC Prosecutor launched investigation. International law requires accountability regardless of political considerations. Without accountability, impunity emboldens future war crimes."
+    },
+    "sideB": {
+      "label": "Combat Context and Sovereignty Issues",
+      "text": "US withdrew from ICC jurisdiction in 2002 specifically to protect forces. Prosecuting soldiers for decisions made in life-or-death combat situations is unjust without understanding ground-level pressure. Australia's own military justice system is handling Brereton findings. Political prosecutions of veterans undermine military morale. Individual cases should be handled domestically, not by a court that lacks jurisdiction over the US."
+    },
+    "resolution": "Australia's Brereton Report led to criminal referrals; US suspended cooperation with ICC probe; Robert Bales convicted domestically; no senior commanders prosecuted; accountability remains deeply inadequate per rights organizations",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "helmand-opium-nato-tolerance",
+    "question": "Did NATO and the US deliberately avoid disrupting Afghan opium production to protect political alliances?",
+    "sideA": {
+      "label": "Deliberate Policy to Avoid Disruption",
+      "text": "Multiple journalistic investigations and former officials confirmed the US and UK avoided destroying poppy fields in Helmand because doing so would have alienated Pashtun farmers and landlords whose political support was needed for counterinsurgency. Warlords who collaborated with coalition forces were major opium producers protected from eradication. The US knowingly allowed Taliban to tax the drug trade which financed the insurgency killing US soldiers."
+    },
+    "sideB": {
+      "label": "Eradication Was Counterproductive and Impractical",
+      "text": "Eradicating the only cash crop of impoverished Afghan farmers without providing alternatives would have immediately driven them into Taliban arms — a net negative for counterinsurgency. The US did fund alternative livelihoods programs, even if underfunded. There was no political alliance of sufficient importance to justify deliberately funding the enemy. The trade-off was between imperfect options, not deliberate protection of drug lords."
+    },
+    "resolution": "SIGAR documented counternarcotics failures; scholarly consensus is US had policy paralysis and made deliberate trade-offs between counternarcotics and COIN objectives",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ttp-afghan-taliban-relationship",
+    "question": "Does the Afghan Taliban protect or control the Pakistani Taliban (TTP)?",
+    "sideA": {
+      "label": "Taliban Shelters TTP and Cannot Control It",
+      "text": "The Afghan Taliban provides TTP with sanctuary based on Pashtun tribal solidarity, shared ideology, and long-standing personal relationships. Taliban lacks capacity to expel TTP from its territory even if it wanted to. Taliban has mediated between TTP and Pakistan in negotiations but has no power to impose outcomes on an independent armed group. TTP controls its own operations from Afghan soil regardless of Taliban preferences."
+    },
+    "sideB": {
+      "label": "Taliban Could Stop TTP If It Chose",
+      "text": "The Taliban controls all Afghan territory and expelled ISIS-K from many areas through military operations. If the Taliban chose to, it could confront TTP. Its failure to do so reflects ideological solidarity and deliberate strategic ambiguity — using TTP as leverage over Pakistan while claiming inability to control it. Pakistan believes Taliban leadership is complicit in protecting TTP commanders in Kandahar and Kabul."
+    },
+    "resolution": "Deeply contested; Pakistan formally blames Taliban; Taliban denies; credible evidence suggests Taliban tolerates TTP presence but relationship is complex and has tensions",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "was-this-war-necessary",
+    "question": "Was the US invasion of Afghanistan in 2001 justified?",
+    "sideA": {
+      "label": "Invasion Was Justified Under Self-Defense",
+      "text": "The Taliban harbored al-Qaeda which carried out the September 11 attacks killing 2,977 people. After the Taliban refused multiple ultimatums to surrender bin Laden, military action under Article 51 of the UN Charter (self-defense) was legally justified. The initial campaign was broadly supported internationally. Destroying al-Qaeda's Afghan infrastructure and removing the Taliban government that sponsored it was an appropriate military response."
+    },
+    "sideB": {
+      "label": "Occupation Exceeded Justified Response",
+      "text": "While the initial overthrow of the Taliban had broad support, the subsequent 20-year occupation, nation-building attempt, and counterinsurgency campaign far exceeded what was justified by the 9/11 attacks. The objectives constantly shifted — democratization, women's rights, anti-corruption — none were achieved. The occupation created more enemies than it eliminated, with hundreds of thousands of casualties. A swift punitive expedition that withdrew quickly might have achieved more."
+    },
+    "resolution": "Invasion broadly supported in international law and public opinion in 2001; subsequent occupation increasingly questioned; legacy deeply contested among historians and policymakers",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "torture-bagram-legal",
+    "question": "Were 'enhanced interrogation techniques' at Bagram and CIA black sites legal and effective?",
+    "sideA": {
+      "label": "Illegal and Counterproductive",
+      "text": "The Senate Intelligence Committee's 2014 torture report concluded CIA enhanced interrogation (waterboarding, sleep deprivation, rectal hydration) was torture under domestic and international law, produced no actionable intelligence that could not have been obtained through legal means, and endangered US national security by damaging relationships with allies and providing terrorist recruitment propaganda. Multiple military and intelligence professionals confirmed torture yields unreliable information."
+    },
+    "sideB": {
+      "label": "Necessary Under Post-9/11 Circumstances",
+      "text": "CIA and Bush administration officials maintain enhanced interrogation prevented follow-on attacks. Information from detainees contributed to the bin Laden location effort and disrupted specific plots. Legal memos from OLC provided authorization under the interpretation that tactics short of organ failure did not constitute torture. In extraordinary circumstances (ticking time bomb scenarios), coercive interrogation is morally defensible."
+    },
+    "resolution": "Senate Intelligence Report concluded torture ineffective and illegal; CIA disputed findings; no prosecutions of CIA officials; US officially banned enhanced interrogation under Obama",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "afghan-elections-legitimate",
+    "question": "Were the 2009 and 2014 Afghan presidential elections free and fair?",
+    "sideA": {
+      "label": "Elections Were Massively Fraudulent",
+      "text": "The Electoral Complaints Commission found one-third of Karzai's first-round 2009 votes were fraudulent. Abdullah Abdullah withdrew from the runoff citing persistent fraud. UN and EU observers documented ballot stuffing, voter intimidation, and ghost polling stations. The 2014 election required UN-mediated power-sharing deal after fraud allegations. Legitimacy of both Karzai and Ghani governments was permanently compromised by the elections that produced them."
+    },
+    "sideB": {
+      "label": "Elections Were Progress Despite Imperfections",
+      "text": "Both elections were held under extremely difficult security conditions with millions of Afghans risking Taliban attacks to vote. Every election showed genuine public enthusiasm for democratic participation. International monitoring led to real accountability — the 2009 Karzai fraud runoff was cancelled and 2014 led to a unity government. Perfect elections were impossible in a post-conflict state building democracy from scratch under active insurgency."
+    },
+    "resolution": "UN and international observers confirmed fraud in 2009 and 2014; elections went forward despite this; both governments operated under legitimacy deficit",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nation-building-possible",
+    "question": "Was Western-style democracy ever viable in Afghanistan's cultural and political context?",
+    "sideA": {
+      "label": "Democracy Was Never Viable",
+      "text": "Afghanistan's tribal, ethnic, and geographic fragmentation made centralized democratic governance structurally impossible. The US tried to build in 20 years what took Europe centuries, in a country with 80%+ illiteracy, no democratic tradition, and active ethnic conflict. The 2001 Bonn Agreement imposed a centralized presidential system that contradicted Afghan power-sharing traditions. Democratic institutions were grafted onto fundamentally incompatible social structures."
+    },
+    "sideB": {
+      "label": "Democracy Was Possible with Sustained Commitment",
+      "text": "Japan, Germany, and South Korea all emerged as democracies from war and occupation with sustained long-term commitment. Afghan civil society, women's organizations, and independent media that flourished under the republic demonstrated genuine appetite for democratic norms. The failure was not cultural but strategic — the US never committed sufficient resources or patience. Young Afghans who fled in 2021 were educated, democratic citizens who prove viable constituency existed."
+    },
+    "resolution": "Remains deeply contested among political scientists; SIGAR found strategic incoherence and premature assumptions about achievable governance outcomes",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "isis-k-vs-taliban-threat",
+    "question": "Is ISIS-K or the Taliban a greater long-term threat to regional and global security?",
+    "sideA": {
+      "label": "ISIS-K Is the Greater Threat",
+      "text": "ISIS-K explicitly targets the international community with global jihad ideology, has conducted attacks in Russia, plotted attacks in Europe, and issues threats against the US. Unlike the Taliban, ISIS-K has an internationalist Salafi-jihadist ideology targeting all perceived enemies including moderate Muslims. Its demonstrated external operations capability (Crocus City Hall, Vienna plots) makes it an active threat to Western populations in ways the Taliban is not."
+    },
+    "sideB": {
+      "label": "Taliban Is the Greater Structural Problem",
+      "text": "The Taliban governs 40 million people, provides sanctuary for al-Qaeda, controls Afghanistan's territory and resources, and has systematically destroyed the human capital needed for economic development and female advancement. Taliban rule creates the conditions — poverty, exclusion, grievance — that breed more extremism including ISIS-K recruitment. A normalized Taliban government is a far more durable and structural threat than ISIS-K's terrorism."
+    },
+    "resolution": "US intelligence prioritizes ISIS-K as active operational threat; scholars debate long-term structural vs. tactical threat assessment",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "ghani-flight-responsible",
+    "question": "Was Ashraf Ghani's flight from Afghanistan responsible for the 2021 collapse?",
+    "sideA": {
+      "label": "Ghani's Departure Precipitated Collapse",
+      "text": "Ghani's departure without notice on August 15 shattered the morale of Afghan security forces and government officials across the country who were still prepared to defend Kabul. Security sector advisors and commanders felt betrayed. The remaining Afghan military, police, and intelligence officials had no instructions, no civilian command, and no government to defend. Ghani's flight converted a negotiable crisis into instantaneous collapse."
+    },
+    "sideB": {
+      "label": "Collapse Was Inevitable Regardless",
+      "text": "By August 15, virtually every provincial capital had already fallen, the ANA had been dissolving for weeks, and Taliban forces surrounded Kabul from multiple directions. Ghani faced a choice between fighting a battle that would destroy Kabul or leaving. Staying would have meant death or surrender, producing the same outcome with more bloodshed. The collapse reflected 20 years of structural failures that no last stand could have reversed."
+    },
+    "resolution": "Ghani himself has written a defense of his decision; Afghan military and political figures largely condemn his departure; ultimate responsibility contested",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "hazara-persecution-genocide",
+    "question": "Do Taliban and ISIS-K actions against Hazaras constitute ethnic cleansing or genocide?",
+    "sideA": {
+      "label": "Systematic Persecution of Hazaras",
+      "text": "HRW and Amnesty International documented systematic Taliban targeting of Hazara communities including forcible displacement from ancestral lands in Uruzgan and Daikundi, extrajudicial killings, and appointment of non-Hazara governors. ISIS-K has conducted numerous suicide bombings against Hazara religious sites, schools, and neighborhoods explicitly targeting the Shia minority. UN experts have raised genocide warning flags for Hazara communities."
+    },
+    "sideB": {
+      "label": "Persecution Without Genocide Legal Threshold",
+      "text": "While Taliban and ISIS-K persecution of Hazaras is well documented and constitutes serious human rights violations, the UN has not formally declared genocide. The Taliban government includes some Hazara officials and has at times provided security to Hazara areas against ISIS-K. Legal definitions of genocide require specific intent to destroy a group 'as such' that is difficult to prove in all Taliban actions. HRW calls it 'persecution' not genocide."
+    },
+    "resolution": "UN Special Rapporteur documented serious violations; UNAMA reports ongoing discrimination; genocide designation not formally applied; ICC could investigate",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "afghan-frozen-assets-legal",
+    "question": "Was the US legally justified in freezing $9.5 billion in Afghan central bank reserves after Taliban takeover?",
+    "sideA": {
+      "label": "Legally Justified, Necessary to Deny Taliban",
+      "text": "US had legal authority under Executive Orders and sanctions law to freeze assets to prevent terrorist organization from accessing resources. Providing the Taliban with $9.5 billion would have immediately funded weapons procurement, repression of dissidents, and potentially terrorism. US compromised, releasing $3.5 billion for humanitarian use through a separate Swiss trust fund while denying direct Taliban access."
+    },
+    "sideB": {
+      "label": "Freeze Caused Humanitarian Catastrophe",
+      "text": "Central bank reserves belong to the Afghan people, not the government of the moment. Freezing them caused the Afghan banking system to collapse, wiped out private savings, caused mass unemployment and a currency crisis that pushed 97% of Afghans below the poverty line. The economic catastrophe directly caused preventable deaths from malnutrition and lack of healthcare. International law and IMF norms support returning central bank assets to their sovereign owners."
+    },
+    "resolution": "Biden executive order split assets: $3.5B to Afghan Fund for humanitarian purposes, $3.5B reserved for 9/11 families' lawsuit; remaining $2.5B still disputed",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "green-on-blue-cause",
+    "question": "Were 2012 insider ('green on blue') attacks driven by Taliban infiltration or genuine Afghan grievance?",
+    "sideA": {
+      "label": "Taliban Deliberate Infiltration Campaign",
+      "text": "Taliban leadership explicitly directed followers to infiltrate Afghan security forces to conduct insider attacks. Multiple documented cases showed attackers with proven Taliban connections or communication. The concentrated surge in 2012 attacks (60+ NATO killed) had the hallmarks of a coordinated campaign with messaging discipline. Taliban claimed responsibility and celebrated attacks as strategic demonstrations that NATO forces could not trust Afghan partners."
+    },
+    "sideB": {
+      "label": "Cultural Friction and Genuine Grievance",
+      "text": "US military investigations found a majority of insider attacks were motivated by personal disputes, disrespect, cultural insensitivity, and accumulation of grievances rather than Taliban direction. Many attackers had no prior Taliban connection. Coalition forces' arrogant behavior, night raids on civilian homes, civilian casualties, and Quran burning incidents produced genuine rage. Lumping all cases as 'Taliban infiltration' missed the real lessons about cultural understanding."
+    },
+    "resolution": "Pentagon review found mixed motivations; estimated 25% directly Taliban-connected, remainder driven by personal/cultural grievances; both factors contributed to insider attack problem",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "night-raids-effective",
+    "question": "Were Special Operations Forces night raids strategically effective in degrading Taliban leadership?",
+    "sideA": {
+      "label": "Night Raids Were Critical to Tactical Gains",
+      "text": "JSOC targeting cycles eliminated thousands of Taliban mid-level commanders and senior leaders, repeatedly disrupting command-and-control. The raids, conducted at a rate of 10-12 per night at peak, became the most effective counterinsurgency tool in ISAF's arsenal according to General McChrystal and Petraeus. Military analysts credited night raids with helping produce the 2010-2012 violence reduction in Helmand and Kandahar."
+    },
+    "sideB": {
+      "label": "Raids Created More Enemies Than They Eliminated",
+      "text": "Civilian casualties from night raids fueled insurgent recruitment and alienated the population. Karzai repeatedly demanded an end to raids and Afghans protested them as violations of home and family honor — among the most serious cultural violations. Multiple documented cases showed raids killing civilians. Taliban replaced every killed commander within weeks. The raids achieved tactical disruption but caused strategic backlash that undermined the counterinsurgency mission."
+    },
+    "resolution": "Ongoing debate; US military defends tactical effectiveness; COIN theorists argue strategic costs outweighed tactical gains; Afghan government demanded restrictions that US eventually agreed to",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pakistan-aid-effectiveness",
+    "question": "Was US military and economic aid to Pakistan ($33+ billion) effective counterterrorism policy?",
+    "sideA": {
+      "label": "Aid Bought Critical Cooperation",
+      "text": "Pakistan provided NATO supply routes saving thousands of US lives and billions in logistics costs, arrested hundreds of al-Qaeda operatives, conducted operations in FATA and Swat Valley, and shared intelligence that enabled key counterterrorism successes. Without Pakistani cooperation, the Afghan mission would have been far more costly or impossible. Conditional aid maintained leverage and was cheaper than open confrontation with a nuclear-armed state."
+    },
+    "sideB": {
+      "label": "Aid Funded Both Sides of the War",
+      "text": "US aid funded Pakistan's military which simultaneously supported Taliban proxies killing US soldiers. Every dollar in military aid freed resources for ISI-funded insurgency. Pakistan has never been genuinely penalized for supporting proxies. The relationship became a protection racket — Pakistan extracted maximum aid by threatening to withdraw cooperation on areas where it was actually helpful while continuing to support insurgents. Senator Bob Corker called it 'the most complicated relationship we have.'"
+    },
+    "resolution": "Deeply contested; Coalition Support Fund Inspector General documented lack of accountability; US suspended some aid multiple times but never terminated strategic relationship",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "isis-k-taliban-cooperation",
+    "question": "Has the Taliban genuinely fought ISIS-K or tolerated its presence?",
+    "sideA": {
+      "label": "Taliban Has Genuinely Fought ISIS-K",
+      "text": "The Taliban and ISIS-K have been in violent conflict since 2015, with hundreds of fighters killed on both sides. After 2021, Taliban conducted significant operations in Nangarhar and Kunar reducing ISIS-K's territorial control. The two groups are ideological competitors — ISIS-K considers Taliban apostates for national governance rather than global jihad. Taliban has arrested ISIS-K members and dismantled cells in Kabul. Self-interest drives genuine counterterrorism.",
+      "sources": [
+        {
+          "name": "ACLED",
+          "tier": 3
+        }
+      ]
+    },
+    "sideB": {
+      "label": "Taliban Counterterrorism Capacity Is Inadequate",
+      "text": "Despite Taliban operations, ISIS-K conducted hundreds of attacks in 2022-2024 including major bombings of Taliban officials and Hazara civilians. Taliban lacks the intelligence, training, and institutional capacity for effective counterterrorism. Taliban released ISIS-K-linked prisoners in 2021. Some Taliban factions may tolerate or even cooperate with ISIS-K in specific areas. Overall, Taliban has not been able to suppress ISIS-K and may lack the will in some cases.",
+      "sources": [
+        {
+          "name": "UNAMA",
+          "tier": 1
+        }
+      ]
+    },
+    "resolution": "Taliban-ISIS-K conflict is genuine; Taliban operations have degraded ISIS-K territory; ISIS-K attack capacity remains substantial; US intelligence assesses Taliban counterterrorism as inadequate",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "urumqi-talks-genuine-progress",
+    "question": "Do the China-mediated Urumqi talks represent genuine peace progress or a tactical pause in the Af-Pak conflict?",
+    "sideA": {
+      "label": "Genuine Diplomatic Breakthrough",
+      "text": "China's mediation in Urumqi produced a joint commitment to explore a 'comprehensive solution' — the first formal bilateral agreement since the conflict began. China has unique leverage as Pakistan's largest investor (CPEC) and Afghanistan's largest neighboring economy; neither side can ignore Beijing's interests. The talks signal both parties recognize no military victory is achievable: Pakistan cannot occupy Afghanistan, and Afghanistan cannot expel Pakistani artillery. A China-backed framework offers the most viable off-ramp for a nuclear-armed conflict."
+    },
+    "sideB": {
+      "label": "Strategic Pause, Not Peace",
+      "text": "Pakistan struck Asadabad's provincial capital on the same day China announced the 'comprehensive solution' agreement, demonstrating talks have not restrained military operations. The core TTP dispute — Pakistan demanding the Taliban expel or neutralize 6,000+ TTP fighters from Afghan soil — has not been addressed. The Taliban cannot politically afford to disarm TTP without being seen as collaborating with a foreign power against fellow Pashtun fighters. China's mediation interests its own strategic goals (CPEC security, Xinjiang stability), not necessarily a durable Afghan-Pakistani peace."
+    },
+    "resolution": "Op Ghazab Day 100 (Jun 5, 2026): 31-day pause since May 5 Dangam strike — no formal ceasefire, no Urumqi Round 2 date, China silent on mediation since April 8. Pakistan's 3 core demands unmet after 100 days. Taliban Defense Minister Yaqoob (Jun 5): 'Pakistan will not dare execute military attacks inside Afghan territories' — Russia pact implementation commences. Pakistan dismisses Russia-Taliban military deal as non-threatening to Pakistani air operations (Jun 4). Pakistan Defense Min. Asif rejects Taliban Supreme Leader's informal TTP warning as 'insufficient' (Jun 3). TTP Eid ceasefire (May 27-29) concluded; no major post-ceasefire TTP attacks. UNAMA mandate expires Jun 17 — Security Council vote imminent; Russia's Taliban military partnership complicates council dynamics. Jawid Niazi (Paigard) Day 30 in Taliban GDI — no bail, no charges, no legal access.",
+    "lastUpdated": "2026-06-05T14:30:00.000Z"
+  },
+  {
+    "id": "sirajuddin-haqqani-interpol",
+    "question": "Should the US remove Sirajuddin Haqqani (Afghan Interior Minister) from FBI Most Wanted for counterterrorism cooperation?",
+    "sideA": {
+      "label": "Pragmatic Engagement Requires De-listing",
+      "text": "Sirajuddin Haqqani is Afghanistan's Interior Minister, the official responsible for counterterrorism cooperation and security. Maintaining him on the FBI Most Wanted with a $10 million bounty makes any cooperation impossible. If the US wants Taliban to fight ISIS-K and prevent al-Qaeda attacks on the West, it must engage with the actual power structure, which includes Haqqani. Continued listing reflects political embarrassment over the handshake with former terrorists, not strategic logic."
+    },
+    "sideB": {
+      "label": "FBI Status Reflects His Crimes",
+      "text": "Sirajuddin Haqqani is responsible for the 2008 Kabul Hotel attack, multiple mass casualty bombings, and the kidnapping of US and Western nationals. The Haqqani Network committed some of the war's worst atrocities. Removing him from the Most Wanted list would reward impunity, enrage 9/11 families, betray victims' families, and signal that leading a designated terrorist organization is a path to legitimacy. FBI status reflects documented crimes, not political convenience."
+    },
+    "resolution": "Status unchanged as of 2026; US conducts limited pragmatic engagement with Taliban but has not moved to de-list; Haqqani remains the most prominent terrorist serving as a head of government",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "jun28-29-strikes-civilians-or-militants",
+    "question": "Did Pakistan's June 28-29 strikes on Chamkani, Gyan, and Marawara primarily kill militants or civilians?",
+    "sideA": {
+      "label": "Precision Counterterrorism Strikes",
+      "text": "Pakistan's Information Minister Attaullah Tarar said the strikes killed 25-29 militants linked to Jamaat-ul-Ahrar and Fitna al-Khawarij (TTP), posting video evidence of strikes on militant camps. The operation directly retaliated for the June 27 attack on a Karachi Rangers camp that killed 3 security personnel, and Pakistan frames it as a proportionate response targeting the groups responsible."
+    },
+    "sideB": {
+      "label": "Mass Civilian Casualty Event",
+      "text": "UNAMA's official statement recorded at least 28 civilians killed and 49 injured across Chamkani (Paktia), Gyan (Paktika), and Marawara (Kunar), with the Chamkani strike alone killing 22 and injuring 47. Taliban officials and NPR later cited a toll of 36 killed and roughly 160 wounded as hospitals treated more casualties. Human Rights Watch's July 15 report cited the strikes as raising serious civilian-casualty concerns under international humanitarian law's distinction and proportionality requirements."
+    },
+    "resolution": "Unresolved — Pakistan's militant-casualty claim and UNAMA's civilian-casualty count describe the same night's strikes with no reconciled figure. UNAMA is the only independent verification body with a published toll (28 killed, 49 injured); it does not address Pakistan's separate militant-casualty claim, suggesting both civilian and militant deaths may have occurred in the same strike package.",
+    "lastUpdated": "2026-07-16T14:05:00.000Z"
+  }
+]

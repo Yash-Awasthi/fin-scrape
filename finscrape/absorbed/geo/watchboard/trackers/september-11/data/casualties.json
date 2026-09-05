@@ -1,0 +1,112 @@
+[
+  {
+    "id": "total-casualties",
+    "category": "Total Killed (All Sites)",
+    "killed": "2,977",
+    "injured": "6,000+",
+    "source": "9/11 Commission Report; NYC Office of Chief Medical Examiner",
+    "tier": "all",
+    "contested": "no",
+    "note": "Excludes 19 hijackers. Includes WTC (2,753), Pentagon (184), and Flight 93 (40). Over 1,100 victims remain unidentified.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "wtc-site-casualties",
+    "category": "World Trade Center Site",
+    "killed": "2,753",
+    "injured": "~6,000",
+    "source": "NYC Office of Chief Medical Examiner; 9/11 Memorial",
+    "tier": 1,
+    "contested": "no",
+    "note": "Includes all who died at the WTC complex: civilians in the towers, first responders, and victims in adjacent buildings. Over 25,000 people were in the towers before and during the attack. More than 18,000 evacuated successfully.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "fdny-killed",
+    "category": "FDNY Firefighters & Paramedics",
+    "killed": "343",
+    "injured": "~350",
+    "source": "FDNY Official Records",
+    "tier": 1,
+    "contested": "no",
+    "note": "The largest loss of firefighters in a single incident in history. 343 FDNY members died in the WTC collapse, including Chief of Department Peter Ganci and First Deputy Commissioner William Feehan.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "law-enforcement-killed",
+    "category": "Law Enforcement (NYPD & Port Authority)",
+    "killed": "72",
+    "injured": "~200",
+    "source": "NYPD; Port Authority Police Department",
+    "tier": 1,
+    "contested": "no",
+    "note": "Includes 23 NYPD officers and 37 Port Authority Police officers killed at the WTC. Also includes 8 EMT/paramedics from EMS and private companies. This is the largest loss of police officers in a single incident in U.S. history.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "pentagon-casualties",
+    "category": "Pentagon (Arlington, Virginia)",
+    "killed": "184",
+    "injured": "~53",
+    "source": "Department of Defense; AFIP",
+    "tier": 1,
+    "contested": "no",
+    "note": "125 Pentagon personnel (military and civilian DoD employees) killed inside the building, plus all 59 passengers and crew of American Airlines Flight 77. Victims include Army, Navy, and civilian DoD workers; no victims from other services.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "flight-93-casualties",
+    "category": "United Airlines Flight 93 (Shanksville, PA)",
+    "killed": "40",
+    "injured": "0",
+    "source": "NTSB; 9/11 Commission Report",
+    "tier": 1,
+    "contested": "no",
+    "note": "33 passengers and 7 crew members killed. No survivors. Flight 93 is the only aircraft that did not reach its intended target. The passenger revolt is credited with preventing a strike on the U.S. Capitol or White House.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "flight-11-casualties",
+    "category": "American Airlines Flight 11 (North Tower)",
+    "killed": "87",
+    "injured": "0",
+    "source": "NTSB; American Airlines",
+    "tier": 1,
+    "contested": "no",
+    "note": "76 passengers and 11 crew members (excluding 5 hijackers) killed. Flight 11 was the first aircraft hijacked and struck the WTC North Tower at 8:46 AM. All 3 stairwells in the North Tower were destroyed on impact.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "flight-175-casualties",
+    "category": "United Airlines Flight 175 (South Tower)",
+    "killed": "60",
+    "injured": "0",
+    "source": "NTSB; United Airlines",
+    "tier": 1,
+    "contested": "no",
+    "note": "51 passengers and 9 crew members (excluding 5 hijackers). Struck the South Tower at 9:03 AM. Flight 175 was the first aircraft strike witnessed live on television worldwide.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "first-responder-illness-deaths",
+    "category": "9/11-Related Illness Deaths (First Responders & Survivors)",
+    "killed": "9,000+",
+    "injured": "140,000+",
+    "source": "NIOSH WTC Health Program; September 11th Victim Compensation Fund (2026)",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "Over 9,000 WTC Health Program members have died of certified 9/11-related cancers, respiratory diseases, and other illnesses since 2001 — nearly three times the 2,977 killed on the day of the attacks. Over 53,000 9/11-related cancers are now certified. Over 140,000 survivors, first responders, and Lower Manhattan residents are enrolled in the WTC Health Program. The 9/11 Memorial announced a permanent 7th moment of silence in May 2026 to honor illness deaths. A June 2026 mortality study found Program members had a 13% lower all-cause death risk than non-members; a July 2026 study found 10.9% of male responders diagnosed with cancer developed multiple unrelated primary cancers, versus 10.5% in the general SEER population.",
+    "lastUpdated": "2026-07-16T00:00:00.000Z"
+  },
+  {
+    "id": "unidentified-victims",
+    "category": "Victims Whose Remains Have Not Been Identified",
+    "killed": "1,100+",
+    "injured": "N/A",
+    "source": "NYC Office of Chief Medical Examiner",
+    "tier": 1,
+    "contested": "evolving",
+    "note": "As of 2026, 1,106 of the 2,977 victims (37%) have not been identified. The OCME continues to use advanced DNA technology to identify additional remains. The WTC site yielded approximately 21,900 human remains, many fragmentary. Remains are still occasionally discovered during construction.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  }
+]

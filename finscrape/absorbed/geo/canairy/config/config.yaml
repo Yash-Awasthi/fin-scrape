@@ -1,0 +1,730 @@
+# Brown Man Bunker Phase-Based Monitoring Configuration
+# Complete system with 22 metrics driving phases 0-9
+
+monitoring:
+  enabled: true
+  check_interval_minutes: 15  # More frequent checks for critical metrics
+  data_retention_days: 365
+  max_retries: 3
+  timeout_seconds: 30
+  
+  # Stale data rules
+  stale_thresholds:
+    amber_hours: 48  # Force amber after 48 hours
+    red_hours: 168   # Force red after 7 days
+
+# Phase definitions and triggers
+phases:
+  current_phase: 0  # Tracks current phase
+  
+  definitions:
+    0:
+      name: "Foundations"
+      trigger: "default"
+      actions:
+        - "CPR/First Aid, Stop-the-Bleed training"
+        - "Bitwarden + FIDO2 security"
+        - "Resilience notebook"
+        - "SCAN→DECIDE→ACT walks"
+        - "Baseline fitness & labs"
+        - "Pepper gel + 1000-lm light EDC"
+    
+    1:
+      name: "72-hour bin"
+      trigger: "normal/green overall"
+      actions:
+        - "48× Mainstay water + low-sugar food kit"
+        - "Crank NOAA radio"
+        - "$500 cash"
+        - "CO alarm + ABC extinguisher"
+        - "Anker C1000 at ~60% SoC"
+    
+    2:
+      name: "Digital & comms"
+      trigger: "any 1 amber in econ/rights/security"
+      actions:
+        - "Password manager done"
+        - "2× power banks"
+        - "Laminated contacts"
+        - "GMRS handhelds set (Ch7/CTCSS23)"
+        - "Print PACE card"
+        - "Quarterly backup test"
+    
+    2.5:
+      name: "Liquidity & docs"
+      trigger: "any 2 ambers or GREEN-G1 false"
+      actions:
+        - "3-month T-bill ladder"
+        - "5% gold + 5% USD-hedge"
+        - "Dual cloud vaults + IronKey"
+        - "Passport card/Real-ID in wallets"
+        - "Go-folder lives by front door"
+    
+    3:
+      name: "Air, health, mobile"
+      trigger: "1 red anywhere or 2 ambers sustained 7 days"
+      actions:
+        - "HEPA on"
+        - "N95 cache verified"
+        - "C1000 moved to shelter as UPS"
+        - "inReach Mini in Faraday pouch"
+        - "Weekly modem-off comms drill"
+    
+    4:
+      name: "Dry-basement / perimeter"
+      trigger: "ACLED or CYBER turns red or 2 total reds"
+      actions:
+        - "Avoid protest zones"
+        - "Minor family curfew"
+        - "Top off fuel & cash"
+        - "Utility pump staged"
+        - "Door strike-plates/door bar installed"
+    
+    5:
+      name: "Oil-tank → generator prep"
+      trigger: "OIL-01 or OIL-02 red or MARKET-01 ≥30 bp event"
+      actions:
+        - "Dose PRI-D"
+        - "Buy Racor 500FG + 2 spares"
+        - "Choose day-tank vs direct feed"
+        - "Battery tender on genset"
+        - "Write '1-hour morning charge' routine for C1000"
+    
+    6:
+      name: "Shelter nook build"
+      trigger: "2+ reds sustained ≥48 h"
+      actions:
+        - "Tyvek clean-out"
+        - "Shelves/bins"
+        - "PoE NVR on isolated VLAN"
+        - "Roles matrix posted (Ops/Comms/Med/Logistics)"
+        - "Soft-skill ledger whiteboard"
+    
+    7:
+      name: "Harden + genset live"
+      trigger: "local Guard activation or court-injunction chaos + 2 reds"
+      actions:
+        - "Install 18–22 kW diesel + ATS"
+        - "Lightning & surge protection"
+        - "Circuit power-budget + daily run schedule"
+        - "Steel/plywood wrap for nook"
+    
+    8:
+      name: "Water & circuits"
+      trigger: "grid instability pattern (3+ PJM outages/quarter)"
+      actions:
+        - "Rainwater totes + RV pump + filters"
+        - "Integrate shelter circuits to ATS"
+        - "Download local 7B LLM & first-aid videos for offline"
+    
+    9:
+      name: "Optional safe-room"
+      trigger: "only if you want near-absolute wind/blast"
+      actions:
+        - "FEMA/ICC-500 engineered room"
+        - "Not required for most scenarios"
+
+# Global phase rules
+phase_rules:
+  tighten_threshold: 2  # Tighten within 48h if ≥2 reds at once
+  relax_budget_percent: 10  # Relax 10% budget if green-flag holds 2 quarters
+  
+# Trip-wire metrics
+trip_wires:
+  # ECONOMY, JOBS, RIGHTS, SECURITY
+  econ_01_treasury_tail:
+    name: "10Y auction tail (bp)"
+    description: "Weak demand for US debt signals rising borrowing costs — mortgage rates and loans may spike."
+    enabled: true
+    source_type: "api"
+    url: "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auction_results"
+    params:
+      filter: "security_desc:eq:10-Year Note,record_date:gte:2024-01-01"
+      sort: "-issue_date"
+      limit: 1
+    thresholds:
+      green: 3.0
+      amber: 7.0
+      red: 999.0
+    unit: "basis_points"
+    category: "economy"
+    
+  econ_02_grocery_cpi:
+    name: "Grocery CPI, 3-mo annualized (%)"
+    description: "Food prices rising fast — stock up on staples now before costs jump further."
+    enabled: true
+    source_type: "api"
+    url: "https://api.stlouisfed.org/fred/series/observations"
+    series_id: "CUSR0000SAF11"
+    thresholds:
+      green: 4.0
+      amber: 8.0
+      red: 999.0
+    unit: "percent"
+    category: "economy"
+    
+  job_01_strike_days:
+    name: "US strike days / month"
+    description: "Major labor unrest may disrupt supply chains — expect shipping delays and shortages."
+    enabled: true
+    source_type: "api"
+    url: "https://striketracker.ilr.cornell.edu/api/v1/strikes"
+    thresholds:
+      green: 100000
+      amber: 500000
+      red: 999999999
+    unit: "worker_days"
+    category: "jobs"
+    
+  power_01_ai_surveillance:
+    name: "AI-surveillance bills / month"
+    description: "Government expanding surveillance powers — review your digital privacy and secure communications."
+    enabled: true
+    source_type: "api"
+    url: "https://api.legiscan.com"
+    thresholds:
+      green: 3
+      amber: 10
+      red: 999
+    unit: "bills"
+    category: "rights"
+    
+  cyber_01_cisa_kev:
+    name: "CISA KEV + ICS significant (90d count)"
+    description: "Critical cyber vulnerabilities being exploited — update devices and check your network security."
+    enabled: true
+    source_type: "api"
+    url: "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+    thresholds:
+      green: 2
+      amber: 5
+      red: 999
+    unit: "vulnerabilities"
+    category: "security"
+
+  civil_01_acled_protests:
+    name: "ACLED US protests, 7-day avg"
+    description: "Civil unrest rising — avoid protest zones, check travel routes, review family safety plan."
+    enabled: true
+    source_type: "api"
+    url: "https://api.acleddata.com/acled/read"
+    thresholds:
+      green: 25
+      amber: 75
+      red: 999
+    unit: "protests_per_day"
+    category: "rights"
+
+  grid_01_pjm_outages:
+    name: "PJM outages ≥50k / quarter"
+    description: "Power grid becoming unstable — charge backup batteries, test generator, prepare for outages."
+    enabled: true
+    source_type: "csv"
+    url: "https://www.oe.netl.doe.gov/OE417_annual_summary.csv"
+    thresholds:
+      green: 1
+      amber: 2
+      red: 999
+    unit: "outages"
+    category: "security"
+
+  market_01_intraday_swing:
+    name: "10Y intraday swing (bp) on data days"
+    description: "Bond market in turmoil — financial stress rising, review cash reserves and avoid big purchases."
+    critical: true  # Fires immediately
+    enabled: true
+    source_type: "yahoo_finance"
+    ticker: "^TNX"
+    thresholds:
+      green: 20
+      amber: 29
+      red: 30
+    unit: "basis_points"
+    category: "economy"
+
+  bio_01_h2h_countries:
+    name: "Novel H2H countries (14d count)"
+    description: "New disease spreading between humans — verify N95 supply, review isolation protocols."
+    enabled: true
+    source_type: "rss"
+    url: "https://www.who.int/feeds/entity/csr/don/en/rss.xml"
+    thresholds:
+      green: 0
+      amber: 2
+      red: 3  # Or US case
+    unit: "countries"
+    category: "security"
+    
+  # NEW OIL AXIS
+  oil_01_russian_brics:
+    name: "Share of Russian crude to BRICS (30d %)"
+    description: "Oil trade bypassing Western markets — energy prices and dollar value may shift, hedge exposure."
+    enabled: true
+    source_type: "csv"
+    url: "https://energyandcleanair.org/russia_oil_exports.csv"
+    thresholds:
+      green: 60
+      amber: 75
+      red: 999
+    unit: "percent"
+    category: "oil_axis"
+
+  oil_02_mbridge_settlements:
+    name: "mBridge energy settlement (USD m/day)"
+    description: "Countries settling oil outside the dollar — watch for currency volatility, consider hedges."
+    enabled: true
+    source_type: "pdf"
+    url: "https://www.bis.org/project/mbridge/reports"
+    thresholds:
+      green: 50
+      amber: 300
+      red: 999
+    unit: "million_usd_per_day"
+    category: "oil_axis"
+
+  oil_03_ofac_designations:
+    name: "OFAC designations (India/China + oil, 30d)"
+    description: "US sanctioning oil traders — fuel prices may spike, top off vehicles and heating oil."
+    enabled: true
+    source_type: "csv"
+    url: "https://home.treasury.gov/ofac_downloads/sdn.csv"
+    thresholds:
+      green: 0
+      amber: 5
+      red: 999
+    unit: "designations"
+    category: "oil_axis"
+
+  oil_04_refinery_ratio:
+    name: "Refinery run-rate ratio (India+China)/OECD"
+    description: "Global refining shifting East — Western fuel supply chains at risk, maintain reserves."
+    enabled: true
+    source_type: "api"
+    url: "https://www.jodidata.org/api"
+    thresholds:
+      green: 1.2
+      amber: 1.4
+      red: 999
+    unit: "ratio"
+    category: "oil_axis"
+    
+  # AI HELL WINDOW + INFO WAR
+  labor_ai_01_layoffs:
+    name: "AI-linked layoffs (monthly)"
+    description: "AI replacing jobs rapidly — update skills, diversify income sources, build emergency fund."
+    enabled: true
+    source_type: "api"
+    url: "https://api.layoffs.fyi"
+    thresholds:
+      green: 5000
+      amber: 25000
+      red: 999999
+    unit: "workers"
+    category: "ai_window"
+
+  cyber_02_ai_ransomware:
+    name: "AI-assisted ransomware (90d)"
+    description: "AI-powered cyberattacks increasing — backup critical data offline, verify security settings."
+    enabled: true
+    source_type: "json"
+    url: "https://www.cisa.gov/sites/default/files/feeds/ics-advisories.json"
+    thresholds:
+      green: 3
+      amber: 6
+      red: 999
+    unit: "incidents"
+    category: "ai_window"
+
+  info_02_deepfake_shocks:
+    name: "Deepfake market shocks / quarter"
+    description: "Fake videos causing market chaos — verify news sources, don't panic-sell on viral content."
+    critical: true  # Fires immediately
+    enabled: true
+    source_type: "composite"
+    thresholds:
+      green: 0
+      amber: 1
+      red: 2
+    unit: "events"
+    category: "ai_window"
+
+  compute_01_training_cost:
+    name: "$/training-FLOP 6-mo Δ (%)"
+    description: "AI capabilities accelerating — good for productivity but watch for job displacement signals."
+    enabled: true
+    source_type: "csv"
+    url: "https://epochai.org/data/flop_price.csv"
+    green_flag: true  # Positive indicator
+    green_flag_threshold: -30  # Green when ≤ -30% for 6 months
+    unit: "percent_change"
+    category: "ai_window"
+
+  green_g1_gdp_rates:
+    name: "US real GDP ≥4% y/y (2 qtrs) & 10Y <4%"
+    description: "Economy healthy with low rates — good time to relax some preparedness spending if sustained."
+    enabled: true
+    source_type: "composite"
+    green_flag: true  # Positive indicator
+    unit: "condition"
+    category: "economy"
+    
+  # CULT SIGNALS
+  cult_trend_01_twitter:
+    name: "X/Twitter 24h #AIGod OR #Basilisk OR #JoinTheComet"
+    description: "AI worship rhetoric spreading — watch for radicalization in community, maintain critical thinking."
+    enabled: true
+    source_type: "twitter_api"
+    query: "#AIGod OR #Basilisk OR #JoinTheComet"
+    thresholds:
+      green: 10000
+      amber: 50000
+      red: 999999
+    unit: "tweets"
+    category: "cult"
+
+  cult_meme_01_tokens:
+    name: "New ERC-20 with (cult.*ai), 7d"
+    description: "AI-cult crypto scams proliferating — avoid speculative investments, warn family members."
+    enabled: true
+    source_type: "etherscan_api"
+    thresholds:
+      green: 5
+      amber: 20
+      red: 999
+    unit: "tokens"
+    category: "cult"
+
+  cult_event_01_protests:
+    name: "ACLED protests mentioning AI+(god|cult|church), 30d"
+    description: "AI-related extremism going physical — be aware of gatherings, avoid confrontations."
+    enabled: true
+    source_type: "api"
+    url: "https://api.acleddata.com/acled/read"
+    thresholds:
+      green: 1
+      amber: 4
+      red: 999
+    unit: "protests"
+    category: "cult"
+
+  cult_media_01_trends:
+    name: "Google Trends 'AI religion' (US weekly)"
+    description: "Public interest in AI worship rising — cultural stress signal, stay grounded in reality."
+    enabled: true
+    source_type: "pytrends"
+    thresholds:
+      green: 15
+      amber: 40
+      red: 999
+    unit: "trend_score"
+    category: "cult"
+
+  # GLOBAL CONFLICT
+  global_conflict_intensity:
+    name: "Global Conflict Intensity Index"
+    description: "Armed conflicts escalating worldwide — monitor news, review evacuation plans if traveling."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 50
+      amber: 75
+      red: 100
+    unit: "index"
+    category: "global_conflict"
+
+  taiwan_pla_activity:
+    name: "Taiwan Strait PLA Activity"
+    description: "China military pressure on Taiwan rising — could trigger supply chain chaos, stock up on electronics."
+    enabled: true
+    source_type: "composite"
+    critical: true
+    thresholds:
+      green: 2
+      amber: 5
+      red: 10
+    unit: "incidents"
+    category: "global_conflict"
+
+  nato_high_readiness:
+    name: "NATO High Readiness Alert Level"
+    description: "NATO forces mobilizing — Europe tensions rising, review travel plans and asset exposure."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 1
+      amber: 2
+      red: 3
+    unit: "level"
+    category: "global_conflict"
+
+  nuclear_test_activity:
+    name: "Nuclear Test Activity (90d)"
+    description: "Nuclear tests detected — extreme geopolitical stress, ensure emergency supplies are ready."
+    enabled: true
+    source_type: "api"
+    critical: true
+    thresholds:
+      green: 0
+      amber: 1
+      red: 2
+    unit: "tests"
+    category: "global_conflict"
+
+  russia_nato_escalation:
+    name: "Russia-NATO Border Incidents"
+    description: "Russia-NATO tensions rising — watch for energy disruptions, sanctions, and market volatility."
+    enabled: true
+    source_type: "composite"
+    thresholds:
+      green: 2
+      amber: 5
+      red: 10
+    unit: "incidents"
+    category: "global_conflict"
+
+  defense_spending_growth:
+    name: "US Defense Spending Growth (%)"
+    description: "Military spending surging — could signal conflict preparation, watch for draft discussions."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 5
+      amber: 10
+      red: 20
+    unit: "percent"
+    category: "global_conflict"
+
+  # DOMESTIC CONTROL
+  dc_control_countdown:
+    name: "DC Federal Control Events"
+    description: "Federal power consolidation accelerating — stay informed on rights changes, document preparations."
+    enabled: true
+    source_type: "composite"
+    thresholds:
+      green: 0
+      amber: 2
+      red: 5
+    unit: "events"
+    category: "domestic_control"
+
+  national_guard_metros:
+    name: "National Guard Metro Deployments"
+    description: "Guard troops in major cities — civil emergency or unrest likely, avoid affected areas."
+    enabled: true
+    source_type: "api"
+    critical: true
+    thresholds:
+      green: 0
+      amber: 3
+      red: 10
+    unit: "deployments"
+    category: "domestic_control"
+
+  ice_detention_surge:
+    name: "ICE Detention Population"
+    description: "Immigration enforcement surging — community disruption possible, know your rights, support networks."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 40000
+      amber: 60000
+      red: 100000
+    unit: "detainees"
+    category: "domestic_control"
+
+  dhs_removal_expansion:
+    name: "DHS Expedited Removal Actions"
+    description: "Deportation operations expanding — community stress rising, maintain family emergency contacts."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 10000
+      amber: 25000
+      red: 50000
+    unit: "removals"
+    category: "domestic_control"
+
+  hill_control_legislation:
+    name: "Executive Power Bills in Congress"
+    description: "Laws expanding federal authority moving — watch for civil liberties impacts, stay politically engaged."
+    enabled: false  # Disabled: collector has bug
+    source_type: "api"
+    thresholds:
+      green: 2
+      amber: 5
+      red: 10
+    unit: "bills"
+    category: "domestic_control"
+
+  liberty_litigation_count:
+    name: "Civil Liberties Cases Filed"
+    description: "Legal challenges to rights rising — indicates systemic pressure, stay informed on court rulings."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 10
+      amber: 25
+      red: 50
+    unit: "cases"
+    category: "domestic_control"
+
+  # ORIGINAL INDICATORS (legacy)
+  treasury_tail:
+    name: "Treasury Auction Tail"
+    description: "Bond auction weakness signals debt market stress — could impact interest rates and mortgages."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 3
+      amber: 7
+      red: 15
+    unit: "basis_points"
+    category: "economy"
+
+  ice_detention:
+    name: "ICE Detention Beds Filled"
+    description: "Detention capacity filling — immigration enforcement intensifying, community disruption possible."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 50
+      amber: 75
+      red: 90
+    unit: "percent"
+    category: "domestic_control"
+
+  taiwan_exclusion:
+    name: "Taiwan Exclusion Zone Status"
+    description: "China asserting control over Taiwan waters — major supply chain risk, semiconductor shortages likely."
+    enabled: true
+    source_type: "composite"
+    critical: true
+    thresholds:
+      green: 0
+      amber: 1
+      red: 2
+    unit: "level"
+    category: "global_conflict"
+
+  hormuz_risk:
+    name: "Strait of Hormuz Risk Premium"
+    description: "Oil shipping insurance spiking — fuel prices will follow, fill up vehicles and heating oil."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 1
+      amber: 3
+      red: 5
+    unit: "percent"
+    category: "oil_axis"
+
+  dod_autonomy:
+    name: "DoD Autonomous Weapons Policy"
+    description: "Military AI decision-making expanding — signals arms race acceleration, geopolitical instability."
+    enabled: true
+    source_type: "manual"
+    thresholds:
+      green: 0
+      amber: 1
+      red: 2
+    unit: "level"
+    category: "security"
+
+  jobless_claims:
+    name: "Initial Jobless Claims"
+    description: "Layoffs accelerating — recession risk rising, strengthen emergency fund, reduce discretionary spending."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 250000
+      amber: 350000
+      red: 500000
+    unit: "claims"
+    category: "economy"
+
+  luxury_collapse:
+    name: "Luxury Goods Sales Decline"
+    description: "High-end spending collapsing — leading indicator of recession, wealthy pulling back, prepare for downturn."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 0
+      amber: -10
+      red: -25
+    unit: "percent"
+    category: "economy"
+
+  pharmacy_shortage:
+    name: "FDA Drug Shortage Count"
+    description: "Critical medications becoming scarce — check prescriptions, talk to doctor about alternatives."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 100
+      amber: 150
+      red: 200
+    unit: "drugs"
+    category: "security"
+
+  school_closures:
+    name: "Unexpected School Closures"
+    description: "Schools closing unexpectedly — indicates local emergency, prepare for childcare disruption."
+    enabled: true
+    source_type: "api"
+    thresholds:
+      green: 50
+      amber: 200
+      red: 500
+    unit: "schools"
+    category: "security"
+
+  agi_milestones:
+    name: "AGI Capability Milestones"
+    description: "AI reaching new capability levels — accelerating change, job displacement risk, stay adaptable."
+    enabled: true
+    source_type: "composite"
+    thresholds:
+      green: 0
+      amber: 1
+      red: 3
+    unit: "milestones"
+    category: "ai_window"
+
+  labor_displacement:
+    name: "AI Labor Displacement Index"
+    description: "AI replacing human workers rapidly — reskill now, diversify income, build financial buffer."
+    enabled: true
+    source_type: "composite"
+    thresholds:
+      green: 20
+      amber: 40
+      red: 60
+    unit: "index"
+    category: "ai_window"
+
+# Alert system configuration
+alerts:
+  tighten_up_threshold: 2  # Number of red alerts to trigger "TIGHTEN-UP"
+  notification_methods:
+    - email
+    - desktop
+  
+  # Critical indicators bypass confirmation
+  critical_indicators:
+    - "market_01_intraday_swing"
+    - "info_02_deepfake_shocks"
+  
+  # Notification settings (actual credentials in secrets.yaml)
+  email:
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    from_email: "${EMAIL_FROM}"
+    to_emails:
+      - "${EMAIL_TO_PRIMARY}"
+
+# Logging configuration
+logging:
+  level: "INFO"
+  file: "logs/monitoring.log"
+  max_bytes: 10485760  # 10MB
+  backup_count: 5

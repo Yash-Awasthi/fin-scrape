@@ -1,0 +1,182 @@
+[
+  {
+    "id": "hassan-sheikh-mohamud",
+    "name": "Hassan Sheikh Mohamud",
+    "role": "President, FGS (disputed) — term EXPIRED May 15; invoking disputed March 2026 amendments extending to 2027; opposition declared illegitimate May 16. June 3-5: worst Mogadishu urban warfare in decade — 13 dead, 189 wounded, 12,500 families displaced (UN/UNHCR Jun 6). June 6: preliminary deal brokered with Himilo Qaran (Sharif's party); weapons crackdown launched in Abdiaziz/Hawlwadag; Turkey pressed for urgent political deal after Turkish national wounded near its compound. Opposition countdown Day 23 (7 days to Deni's June 14 parallel authority deadline). SW State presidential vote June 10. Adan Yabal Day 49 under Al-Shabaab; 44 hostages across 3 piracy vessels. WFP July 2026 shutdown warning active.",
+    "avatar": "fgs",
+    "initial": "H",
+    "quote": "The preliminary understanding with Himilo Qaran shows that dialogue is possible and that constitutional order can be restored through talks. The June 10 Southwest State election will proceed as scheduled. Security forces acted to protect institutions — but we hear the call for dialogue and we respond.",
+    "lastUpdated": "2026-06-07T15:42:00.000Z"
+  },
+  {
+    "id": "ahmad-umar",
+    "name": "Ahmad Umar (Abu Ubaidah)",
+    "role": "Emir of Al-Shabaab (since September 2014)",
+    "avatar": "al-shabaab",
+    "initial": "A",
+    "quote": "The mujahideen will continue their operations until the foreign invaders and their apostate allies are expelled from every inch of Muslim land.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "farmaajo",
+    "name": "Mohamed Abdullahi 'Farmaajo'",
+    "role": "Former President of Somalia (2017–2022)",
+    "avatar": "fgs",
+    "initial": "F",
+    "quote": "Security, reconciliation, and rule of law are the pillars upon which we will rebuild this nation.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "hamza-abdi-barre",
+    "name": "Hamza Abdi Barre",
+    "role": "Prime Minister of Somalia (appointed June 2022)",
+    "avatar": "fgs",
+    "initial": "B",
+    "quote": "The Macawisley mobilization shows that the Somali people themselves are rising up against Al-Shabaab's tyranny.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "ahmed-abdi-godane",
+    "name": "Ahmed Abdi Godane (Abu Zubayr)",
+    "role": "Al-Shabaab Emir 2008–2014; killed in US airstrike Sept 2014",
+    "avatar": "al-shabaab",
+    "initial": "G",
+    "quote": "We are fighting the enemies of Islam and their apostate agents. Our struggle will continue until the last crusader is expelled.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "atmis-commander",
+    "name": "Lt. Gen. Sam Okiding",
+    "role": "ATMIS Force Commander (Uganda)",
+    "avatar": "atmis",
+    "initial": "O",
+    "quote": "The transition to Somali-led security is on track. We are building capacity that will outlast our mission.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "ahmed-abdi-kariye",
+    "name": "Ahmed Abdi Kariye (Ilka Jiir)",
+    "role": "Former Mayor of Mogadishu; senior FGS official",
+    "avatar": "fgs",
+    "initial": "K",
+    "quote": "Mogadishu has been transformed. Those who left will return to a city that is rising from the ashes.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "ahmed-madobe",
+    "name": "Ahmed Madobe",
+    "role": "President of Jubbaland State (declared independent government May 31); co-leads Somali Future Council; treats SNA Gedo deployment as foreign incursion; Kenya's KDF is Jubbaland's external security anchor; rejects NIEBC calendar and SW State June 10 presidential vote; UN count of 13 dead, 189 wounded and 12,500 families displaced in June 3-5 clashes validates Jubbaland's opposition stance; June 14 deadline in 7 days (Day 23 of countdown); fragile June 6 preliminary deal does not address Jubbaland's federal withdrawal or constitutional demands",
+    "avatar": "clan",
+    "initial": "M",
+    "quote": "The UN's own figures — 13 dead, 189 wounded, 12,500 families driven from their homes — speak for themselves. A deal with one faction cannot erase those numbers. Jubbaland remains part of the Somali Future Council. June 14 is not a threat — it is a constitutional obligation.",
+    "lastUpdated": "2026-06-07T15:42:00.000Z"
+  },
+  {
+    "id": "laftagareen",
+    "name": "Laftagareen (Abdiaziz Hassan Mohamed)",
+    "role": "Former President of Southwest State; re-elected Mar 28, resigned Mar 30, 2026 as SNA seized Baidoa; resigned JSP party Mar 18, 2026. Fighters loyal to him launched a pre-dawn VBIED assault on Baidoa on Aug 17, 2026, reportedly coordinating with Al-Shabaab elements; federal forces repelled the attack, killing 30+ attackers and retaining control of the city into Aug 18.",
+    "avatar": "clan",
+    "initial": "L",
+    "quote": "The federal government's unconstitutional amendments and military deployments against Southwest State are a blatant invasion. We will not surrender our state's rights to a one-man show in Mogadishu.",
+    "lastUpdated": "2026-08-18T00:00:00.000Z"
+  },
+  {
+    "id": "un-special-representative",
+    "name": "James Swan",
+    "role": "UN Special Representative for Somalia / Head of UNTMIS — succeeded Catriona Laing (completed her assignment May 2026)",
+    "avatar": "un",
+    "initial": "J",
+    "quote": "UNSOS's drawdown is now underway in practice, not just on paper — staff are receiving termination notices and equipment is being auctioned as UNTMIS works toward completing its transition to a standard UN country team by October 31, 2026.",
+    "lastUpdated": "2026-08-26T00:00:00.000Z"
+  },
+  {
+    "id": "us-africom-commander",
+    "name": "Gen. Michael Langley",
+    "role": "Commander, US Africa Command (AFRICOM)",
+    "avatar": "other",
+    "initial": "L",
+    "quote": "Our operations in Somalia remain focused on degrading Al-Shabaab's leadership and protecting US national security interests in the region.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "ali-khaire",
+    "name": "Hassan Ali Khaire",
+    "role": "Former Prime Minister of Somalia (2017–2019)",
+    "avatar": "fgs",
+    "initial": "H",
+    "quote": "Security sector reform is the foundation of everything. Without it, no political progress will be sustainable.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "abshir-shirdon",
+    "name": "Said Abdi 'Shirdon'",
+    "role": "Former Prime Minister; opposition figure",
+    "avatar": "fgs",
+    "initial": "S",
+    "quote": "Political reconciliation among all Somali factions must accompany military operations for any lasting peace.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "turkey-ambassador",
+    "name": "Olgan Bekar",
+    "role": "Turkish Ambassador to Somalia; key Turkish-Somalia bilateral coordinator",
+    "avatar": "other",
+    "initial": "T",
+    "quote": "Turkey's commitment to Somalia is long-term. We are here to help build lasting peace and prosperity for the Somali people.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "macawisley-commander",
+    "name": "Sheikh Mohamed Nur Gurhan",
+    "role": "Macawisley (Clan Militia) Commander, Hiiraan Region",
+    "avatar": "clan",
+    "initial": "M",
+    "quote": "Al-Shabaab levied taxes on our families, killed our elders, and recruited our children by force. We took up arms because we had no choice.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "fahad-yasin",
+    "name": "Fahad Yasin",
+    "role": "Former National Intelligence and Security Agency (NISA) Director; influential political figure",
+    "avatar": "fgs",
+    "initial": "Y",
+    "quote": "Intelligence-led operations are essential to dismantling Al-Shabaab's network. We must hit their financing and recruitment.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "puntland-president",
+    "name": "Said Abdullahi Deni",
+    "role": "President of Puntland State; co-leads Somali Future Council opposition; declared Mohamud illegitimate May 16, 2026; opposition countdown Day 23 as of Jun 7 — 7 days remain before June 14 parallel authority deadline; June 3-5 Mogadishu urban warfare (13 dead, 189 wounded, 12,500 families displaced) validates opposition warnings; June 6 fragile preliminary deal with Himilo Qaran does not address Deni's core demands; rejects NIEBC SW State June 10 presidential vote as illegitimate; Jubbaland withdrawal (May 31) sustains federal fragmentation; Turkey pressing for political deal (Jun 6) adds external pressure for dialogue before June 14",
+    "avatar": "fgs",
+    "initial": "D",
+    "quote": "Thirteen Somalis are dead. One hundred and eighty-nine are wounded. Twelve thousand families are displaced. A preliminary deal with one party does not end a constitutional crisis. The June 14 date stands. Puntland will not accept rule by artillery decree.",
+    "lastUpdated": "2026-06-07T15:42:00.000Z"
+  },
+  {
+    "id": "au-commission-peace",
+    "name": "Bankole Adeoye",
+    "role": "AU Commissioner for Political Affairs, Peace and Security",
+    "avatar": "atmis",
+    "initial": "A",
+    "quote": "Africa must take the lead in securing Somalia. ATMIS and its successor mission represent the AU's commitment to durable peace in the Horn.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "ocha-somalia-chief",
+    "name": "Adam Abdelmoula",
+    "role": "OCHA Somalia Humanitarian Coordinator",
+    "avatar": "un",
+    "initial": "A",
+    "quote": "Nearly 7 million Somalis face acute food insecurity. The humanitarian community needs unimpeded access and sustained funding to prevent catastrophe.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  },
+  {
+    "id": "sheikh-sharif-sheikh-ahmed",
+    "name": "Sheikh Sharif Sheikh Ahmed",
+    "role": "Former President (2009–2012); former ICU moderate leader",
+    "avatar": "fgs",
+    "initial": "S",
+    "quote": "The path to peace in Somalia runs through dialogue with those who are willing to lay down arms and engage in the political process.",
+    "lastUpdated": "2026-03-20T00:00:00.000Z"
+  }
+]

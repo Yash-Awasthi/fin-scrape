@@ -1,0 +1,240 @@
+[
+  {
+    "id": "true-death-toll",
+    "question": "What is the true death toll from the Chernobyl disaster?",
+    "sideA": {
+      "label": "UN/IAEA/WHO Estimate",
+      "text": "The Chernobyl Forum (2005) and UNSCEAR (2008) estimate approximately 4,000 eventual cancer deaths among the 600,000 most highly exposed individuals — the emergency workers, evacuees, and residents of contaminated areas. The 31 direct deaths (2 explosion, 28 ARS, 1 other) are uncontested. The conservative UN estimate uses validated epidemiological data and notes that cancer deaths would be nearly impossible to distinguish statistically from background rates."
+    },
+    "sideB": {
+      "label": "Greenpeace / Independent Researchers",
+      "text": "Greenpeace's 2006 report estimates approximately 985,000 premature deaths globally from Chernobyl radiation. The TORCH Report (2006) estimates 30,000–60,000 excess cancer deaths in Europe alone. Critics argue the UN agencies systematically underestimate risk by focusing only on the most exposed populations, ignoring low-dose risks across the broader European population, and relying on methodologies that mask radiation-caused cancers in baseline statistics."
+    },
+    "resolution": "Permanently contested. UNSCEAR (the authoritative UN body) maintains its conservative estimate. Independent researchers and NGOs dispute the methodology as politically motivated. The true number will likely never be definitively established.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "cause-of-explosion",
+    "question": "Was the Chernobyl explosion caused by operator error or reactor design flaws?",
+    "sideA": {
+      "label": "Soviet/Initial IAEA Position: Operator Error",
+      "text": "The initial Soviet report to the IAEA (INSAG-1, 1986) placed primary blame on the operators for conducting the safety test in violation of procedures, including disabling safety systems and operating the reactor at an unstable low power level. Viktor Bryukhanov, Anatoly Dyatlov, and others were convicted of criminal negligence. This narrative served Soviet interests by deflecting attention from the RBMK reactor design."
+    },
+    "sideB": {
+      "label": "Revised IAEA Position: Fundamental Design Flaw",
+      "text": "The 1992 IAEA INSAG-7 report substantially revised the conclusion, finding that the RBMK reactor had a fundamental positive void coefficient flaw — meaning the reactor became more reactive (rather than less) as steam formed, making the explosion physically possible. Without this design defect, the operators' violations would not have triggered a nuclear excursion. Valery Legasov's posthumous tapes also strongly criticized Soviet secrecy about known RBMK flaws."
+    },
+    "resolution": "IAEA officially revised position (INSAG-7, 1992): both factors contributed, but the RBMK design flaw was a necessary precondition. Operator violations created the conditions; the reactor's design flaw made catastrophe possible.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "cancer-estimates-methodology",
+    "question": "Are UN cancer death estimates for Chernobyl scientifically valid?",
+    "sideA": {
+      "label": "UNSCEAR/WHO: Linear Model Applied Conservatively",
+      "text": "UNSCEAR's methodology applies the linear no-threshold (LNT) radiation model to measured doses in the most exposed populations, producing statistically robust estimates. The committee argues that extrapolating to lower doses across broader populations introduces unacceptable uncertainty. Cancer deaths from Chernobyl-level low-dose exposure cannot be distinguished from background cancer rates. The 4,000 estimate is explicitly for the most highly exposed; total impacts may be higher but are statistically unmeasurable."
+    },
+    "sideB": {
+      "label": "TORCH/Greenpeace: LNT Applies to All Exposed Populations",
+      "text": "TORCH and Greenpeace researchers argue that UNSCEAR artificially limits its analysis to directly measurable populations, while the same LNT model it accepts for high doses should be applied to the 500+ million Europeans who received some Chernobyl fallout. When applied consistently, the model predicts tens of thousands of excess cancers. They further argue that IAEA's institutional mandate — promoting nuclear energy — creates a conflict of interest in casualty estimation."
+    },
+    "resolution": "Scientifically contested. The LNT model's validity at very low doses is itself debated. UNSCEAR acknowledges uncertainty; independent researchers dispute scope of analysis. This debate shapes nuclear energy policy globally.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "iaea-who-conflict-of-interest",
+    "question": "Does the IAEA's mandate to promote nuclear energy create a conflict of interest in Chernobyl health research?",
+    "sideA": {
+      "label": "IAEA/WHO: Independence Maintained",
+      "text": "The IAEA and WHO maintain that their assessments are conducted by independent scientific committees (UNSCEAR) with no institutional bias toward nuclear promotion. UNSCEAR reports are peer-reviewed by international experts and published in the open scientific literature. The 1959 agreement between IAEA and WHO on cooperation covers only consultation, not the suppression of health data."
+    },
+    "sideB": {
+      "label": "Critics: WHO-IAEA 1959 Agreement Suppresses Independent Research",
+      "text": "Critics, including some public health researchers and NGOs, point to a 1959 agreement between WHO and IAEA requiring consultation before either publishes in the other's field. Critics argue this has de facto subordinated WHO's nuclear health research to IAEA review, limiting independent assessment of Chernobyl's health impacts. The WHO's 1991 Kiev conference on Chernobyl health was reportedly suppressed or delayed. Some scientists have called for WHO to terminate the agreement."
+    },
+    "resolution": "Disputed. The 1959 agreement exists and WHO acknowledges consulting IAEA on nuclear matters. WHO denies any research suppression. Independent researchers continue to call for a truly independent international body to assess Chernobyl and nuclear health.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "chernobyl-soviet-collapse",
+    "question": "Did Chernobyl directly cause the collapse of the Soviet Union?",
+    "sideA": {
+      "label": "Gorbachev: Chernobyl Was a Decisive Catalyst",
+      "text": "Mikhail Gorbachev himself wrote in 2006 that 'Chernobyl was perhaps the real cause of the collapse of the Soviet Union five years later.' The disaster exposed the Soviet system's inability to protect its citizens, proved glasnost was a necessity rather than a luxury, and galvanized Ukrainian and Belarusian independence movements. The environmental damage to Belarus and Ukraine became a rallying point for anti-Soviet nationalism."
+    },
+    "sideB": {
+      "label": "Historians: Chernobyl Was a Catalyst, Not the Cause",
+      "text": "Most historians argue that the Soviet Union's collapse had deep structural causes — economic stagnation, the arms race, Afghan war losses, ethnic nationalism — that predated Chernobyl. The disaster accelerated glasnost and exposed Soviet systemic failures, but was a contributing factor rather than the primary cause. Countries like the Baltic states had independence movements largely independent of Chernobyl concerns."
+    },
+    "resolution": "Historical debate. Scholarly consensus holds that Chernobyl significantly accelerated glasnost and fueled Ukrainian/Belarusian independence movements, but was one of multiple causes of Soviet collapse rather than the singular cause.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "exclusion-zone-repopulation",
+    "question": "Is it safe to repopulate the Chernobyl exclusion zone?",
+    "sideA": {
+      "label": "Ukrainian/Scientific Consensus: Zone Remains Hazardous",
+      "text": "Ukrainian authorities maintain that habitation of the exclusion zone is unsafe and illegal except for authorized workers. Cesium-137 (half-life 30 years) and strontium-90 remain in soils at levels deemed hazardous for agricultural use. The New Safe Confinement contains cracked reactor structures that could release radioactive material. Regular IAEA inspections confirm the zone requires continued restricted access for the foreseeable future."
+    },
+    "sideB": {
+      "label": "Self-Settlers and Some Researchers: Parts Are Habitable",
+      "text": "Approximately 100–200 elderly 'self-settlers' (mostly women) returned to the zone after evacuation and have lived there for decades, many in apparent good health. Some radiobiologists argue that the psychological and social harms of permanent displacement exceed the marginal radiation risk for inhabitants, particularly the elderly. Parts of the zone have radiation levels comparable to some naturally occurring high-background areas globally."
+    },
+    "resolution": "Ukrainian government policy: the zone remains restricted. Some scientific discussion of limited agricultural use or resettlement in lowest-contamination areas. No formal repopulation plans exist. The self-settler community is aging and dwindling.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "wildlife-in-exclusion-zone",
+    "question": "Is wildlife in the Chernobyl exclusion zone thriving or suffering from radiation?",
+    "sideA": {
+      "label": "Thriving in Absence of Humans",
+      "text": "Multiple scientific studies, including by Jim Smith (University of Portsmouth) and Timothy Mousseau, show that large mammal populations — wolves, bears, lynx, deer, wild boar, and Przewalski's horses — have expanded dramatically in the exclusion zone since human evacuation. Camera trap surveys show wildlife densities comparable to uncontaminated nature reserves. The absence of hunting, farming, and human disturbance outweighs radiation effects on population-level wildlife health."
+    },
+    "sideB": {
+      "label": "Radiation Causes Measurable Biological Harm",
+      "text": "Timothy Mousseau and Anders Møller's research documents reduced bird species diversity, smaller brain sizes in some birds, and higher rates of albinism in barn swallows in the most contaminated areas. Insects are less abundant near the reactor. Trees show asymmetrical growth. While large mammals have returned, the researchers argue radiation is causing subcellular and genetic damage that affects individual and population fitness in ways population counts alone cannot reveal."
+    },
+    "resolution": "Ongoing scientific debate. Population-level studies show wildlife abundance; individual and cellular studies show biological damage in most contaminated areas. The scientific community has not reached consensus; both findings are accepted as valid within their respective frameworks.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "liquidator-radiation-records",
+    "question": "Were Soviet-era radiation dose records for liquidators accurate?",
+    "sideA": {
+      "label": "Officially Capped Doses — Records Distorted",
+      "text": "Multiple liquidator testimonies and internal Soviet documents reveal that dosimetry records were routinely falsified. Workers were told to record doses that would keep them below the 35-rem (350 mSv) limit for continued work eligibility — regardless of actual exposure. Dosimeters were sometimes confiscated or shared among multiple workers. Veterans' organizations in Russia and Ukraine have long argued their official dose records are dramatic underestimates."
+    },
+    "sideB": {
+      "label": "UNSCEAR: Records Adequate for Epidemiological Studies",
+      "text": "UNSCEAR acknowledges that dose records for the 1986 emergency period are uncertain, but argues that records for the bulk of the liquidator workforce (1987–1990) are adequate for epidemiological analysis. The committee notes that even with uncertainty, the average doses measured are consistent with observed health outcomes in the most robustly studied cohorts."
+    },
+    "resolution": "UNSCEAR and liquidator advocacy groups are in direct disagreement. Most independent researchers acknowledge that Soviet-era dose records are seriously compromised for the highest-exposure periods, introducing significant uncertainty into long-term health studies.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "pripyat-evacuation-timing",
+    "question": "Was the 36-hour delay in evacuating Pripyat a deliberate cover-up or institutional failure?",
+    "sideA": {
+      "label": "Deliberate Cover-Up to Prevent Panic",
+      "text": "The Soviet Union's Politburo documents (later revealed by journalist Yaroshinskaya) show that high-level officials received accurate reports of the explosion's severity on the morning of April 26. The decision to delay evacuation was an active choice driven by fear of public panic, desire to avoid acknowledging the scale of a Soviet nuclear failure, and rigid bureaucratic hierarchy. The May Day parade in Kyiv, held while officials knew the scale of the disaster, reinforces this interpretation."
+    },
+    "sideB": {
+      "label": "Institutional Inertia and Incomplete Information",
+      "text": "Some historians argue that the initial hours after the explosion involved genuinely incomplete information — plant director Bryukhanov himself reported to Moscow that the reactor was intact when it clearly was not. The decision-making chain from Kyiv to Moscow involved bureaucratic processes that took time. The delay partly reflected genuine uncertainty about whether evacuation was necessary and the logistical challenge of mobilizing 1,100 buses for a city of 50,000 people."
+    },
+    "resolution": "Historical consensus: both factors played a role. The initial hours involved incomplete information; the delay beyond April 27 morning reflects deliberate minimization. The decision to hold Kyiv's May Day parade is generally regarded as an indefensible cover-up act.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "chernobyl-nuclear-power-legacy",
+    "question": "Did Chernobyl prove nuclear power is inherently unsafe?",
+    "sideA": {
+      "label": "Anti-Nuclear: Chernobyl Demonstrates Unacceptable Risk",
+      "text": "The Chernobyl disaster — followed by Fukushima in 2011 — demonstrates that nuclear power plants can fail catastrophically despite safety regulations and trained operators. The RBMK's design flaws were known to Soviet engineers but suppressed. The long-term contamination of hundreds of square kilometers, the hundreds of thousands exposed, and the cost exceeding $700 billion in some estimates show that nuclear's risks are fundamentally unacceptable compared to alternatives."
+    },
+    "sideB": {
+      "label": "Pro-Nuclear: Chernobyl Was an Outdated Soviet Design Failure",
+      "text": "Modern Western reactor designs (pressurized water reactors) do not have the RBMK's positive void coefficient flaw and are far safer. Chernobyl's casualties and contamination must be weighed against the millions of deaths annually from fossil fuel air pollution. The disaster occurred under uniquely Soviet conditions of secrecy, systemic safety culture failure, and a fundamentally flawed design that was never exported to Western markets."
+    },
+    "resolution": "Ongoing global policy debate. Chernobyl directly caused the cancellation of many Western nuclear projects in the 1980s–1990s. Nuclear power's role in climate policy has renewed the debate; the incident informs nuclear safety culture worldwide.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "corium-fuel-remaining",
+    "question": "Is the melted reactor fuel (corium) stable under the New Safe Confinement?",
+    "sideA": {
+      "label": "IAEA/Ukraine: NSC Containment Holds Despite Damage",
+      "text": "The New Safe Confinement arch, completed in 2016 and designed for 100 years, continues to enclose the original sarcophagus. Despite a February 2025 Russian drone strike that damaged the NSC roof, IAEA monitoring confirms that radiation readings outside the structure remain within acceptable ranges and no significant radioactive release has occurred. The approximately 200 tonnes of corium (solidified nuclear fuel mixture) remain stable — no self-sustaining fission is occurring. IAEA Director General Grossi signed a Memorandum of Understanding with Ukraine in April 2026 to coordinate international support for the estimated €500 million repair effort, with full restoration of confinement function targeted for 2030."
+    },
+    "sideB": {
+      "label": "Greenpeace/Critics: War Damage Creates Risk of Catastrophic Collapse",
+      "text": "Following the February 2025 drone strike, Greenpeace warned in April 2026 of a potential 'catastrophic collapse' if the NSC's damaged sections are not repaired promptly. Nuclear specialist Shaun Burnie warned of 'four tonnes of highly radioactive dust, fuel pellets, and enormous amounts of radioactivity' that could be released in a collapse scenario. The original sarcophagus beneath the NSC has known structural weaknesses. With the war ongoing, access for contractors to perform complex engineering repairs is severely complicated, and Greenpeace argues the global community is not acting with sufficient urgency."
+    },
+    "resolution": "IAEA assessment: the NSC provides adequate near-term containment. Emergency repairs estimated at €500M are underway with French firms Bouygues and Vinci expected to lead; full restoration targeted for 2030. Greenpeace warns of collapse risk if repairs are delayed by continued conflict.",
+    "lastUpdated": "2026-05-16T14:23:47.391Z"
+  },
+  {
+    "id": "iodine-tablets-not-distributed",
+    "question": "Why weren't iodine tablets distributed to prevent thyroid cancer?",
+    "sideA": {
+      "label": "Soviet Cover-Up Prevented Protective Action",
+      "text": "Potassium iodide (KI) tablets, which when taken promptly saturate the thyroid gland and block absorption of radioactive iodine-131, were stockpiled by Soviet authorities but not distributed to civilians in Ukraine or Belarus in the critical 36–72 hours after the explosion. The decision not to distribute KI tablets — like the delay in evacuation — is attributed to the desire to avoid public panic and official acknowledgment of the disaster's severity. This failure directly contributed to thousands of thyroid cancer cases in children."
+    },
+    "sideB": {
+      "label": "Logistical and Informational Limits",
+      "text": "Some Soviet officials and historians argue that KI distribution would have required acknowledging the disaster publicly and that the logistical infrastructure for rapid distribution to millions of people did not exist in 1986. Additionally, the efficacy of KI requires administration before or within hours of exposure — by the time any distribution could have been organized, the main exposure window had passed for many individuals. Poland was the only European country to actually distribute KI tablets to children in 1986."
+    },
+    "resolution": "Historical consensus: the failure to distribute iodine tablets is attributed primarily to the Soviet decision to conceal the disaster. Poland's successful distribution demonstrates it was feasible; the cover-up was the decisive factor. The WHO now recommends KI stockpiling within 20–30 km of nuclear plants.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "liquidator-criminal-negligence",
+    "question": "Should the 1987 criminal convictions of Chernobyl plant officials be considered just?",
+    "sideA": {
+      "label": "Convictions Were a Show Trial Shielding the System",
+      "text": "The 1987 trial of six plant workers, including director Bryukhanov and deputy chief engineer Dyatlov, is widely characterized as a Soviet show trial designed to assign all blame to individuals while protecting the Communist Party, the nuclear industry establishment, and the RBMK reactor designers. Key figures responsible for the RBMK's known design flaws — including scientists at the Kurchatov Institute who had never disclosed safety problems — were never prosecuted. Legasov's tapes implicitly condemned this institutional impunity."
+    },
+    "sideB": {
+      "label": "Officials Did Violate Safety Procedures",
+      "text": "The convicted officials did, in fact, violate established safety procedures: the safety test was conducted in violation of regulations, critical safety systems were disabled, and plant director Bryukhanov provided false reports to Moscow minimizing the accident. While the reactor's design flaws created the necessary conditions, the operators' actions were a contributing proximate cause. Some argue the convictions, while incomplete, were not entirely unjust."
+    },
+    "resolution": "Historical consensus among Western and post-Soviet scholars: the trial was politically motivated and incomplete. Design flaws (RBMK positive void coefficient) were the necessary precondition; both factors contributed. No Soviet-era nuclear establishment officials were ever prosecuted.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "russian-occupation-radiation-impact",
+    "question": "Did Russian military occupation of Chernobyl in 2022 cause radiological harm?",
+    "sideA": {
+      "label": "IAEA: Significant Disruption and Elevated Readings Detected",
+      "text": "IAEA Director General Grossi expressed serious concern about Russian forces digging trenches in the Red Forest — one of the world's most radioactively contaminated areas — and operating military vehicles that stirred up radioactive dust. Ukraine's radiation monitoring system was disrupted. Elevated radiation readings were recorded near disturbed soil areas. IAEA called the occupation a safety concern and an unprecedented challenge to nuclear safety norms in a conflict zone."
+    },
+    "sideB": {
+      "label": "Russia: No Significant Radiological Event Occurred",
+      "text": "Russian military spokespeople denied causing any significant radiological release and claimed their forces' health was not affected. Some Western radiation monitoring organizations noted that while local elevations were detected, they did not constitute a large-scale release. The soldiers who occupied the zone received elevated radiation doses from their activities, and some were reported to have been hospitalized for radiation exposure upon return to Belarus."
+    },
+    "resolution": "IAEA confirmed that Russian trench-digging in the Red Forest disturbed radioactive soil and that some Russian soldiers were hospitalized for radiation exposure. No large-scale radiological release occurred, but the occupation compromised monitoring infrastructure and safety procedures.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "hbo-historical-accuracy",
+    "question": "Was the HBO Chernobyl series (2019) historically accurate?",
+    "sideA": {
+      "label": "Highly Accurate on Key Events and Systemic Critique",
+      "text": "Historians and Chernobyl researchers praised the HBO series for accurately depicting the Soviet cover-up, the suppression of radiation data, the show trial, and the systemic safety culture failures. The portrayal of Valery Legasov, the role of Ulana Khomyuk (a composite character representing multiple scientists), and the horrific conditions facing liquidators are considered broadly faithful to documented events. The series significantly raised global awareness of the disaster's true history."
+    },
+    "sideB": {
+      "label": "Some Dramatizations and Compression of History",
+      "text": "The series created composite characters (Khomyuk) and compressed timelines for dramatic effect. Some Soviet-era scientists criticized the portrayal of certain individuals or events as overly melodramatic. The depiction of Legasov's personal story involved some speculation beyond documented facts. A few Russian commentators produced counter-narratives claiming the series demonized Soviet scientists unfairly or exaggerated the cover-up."
+    },
+    "resolution": "General consensus among historians and documentary experts: the HBO series is among the most historically faithful dramatic depictions of the disaster, while using standard dramatic licenses acceptable in narrative film. Creator Craig Mazin has publicly documented his research sources.",
+    "lastUpdated": "2026-03-17T00:00:00.000Z"
+  },
+  {
+    "id": "isf2-strike-intentionality",
+    "question": "Was the June 2026 drone strike on Chernobyl's spent fuel storage facility a deliberate target or incidental damage?",
+    "sideA": {
+      "label": "Ukraine/IAEA: Reckless Attack Near Nuclear Material",
+      "text": "President Zelenskyy called the June 7, 2026 strike 'extremely vile' and accused Russia of striking a facility housing large quantities of spent nuclear fuel. IAEA Director General Rafael Grossi said attacking a facility with large amounts of nuclear material is 'extremely dangerous' and 'must not happen,' treating the strike as a serious breach of nuclear safety norms regardless of intent."
+    },
+    "sideB": {
+      "label": "Russia: No Comment, Ambiguity Over Targeting",
+      "text": "Russia has not publicly commented on the ISF-2 strike, consistent with its general pattern of not confirming individual drone strike targets in Ukraine. Analysts note Shahed drones are frequently launched in mass barrages against Ukrainian energy infrastructure broadly rather than precision-guided at specific buildings, making it difficult to establish whether the facility was deliberately targeted or an incidental casualty of a wider drone wave that killed five people elsewhere in Ukraine the same day."
+    },
+    "resolution": "Unresolved. The IAEA has not attributed blame, consistent with its standing wartime policy. Radiation levels stayed normal and no spent fuel was in the damaged building at the time, limiting the incident's physical consequences regardless of intent.",
+    "lastUpdated": "2026-07-16T14:00:00.000Z"
+  },
+  {
+    "id": "zone-fortification-radiological-risk",
+    "question": "Does Ukraine's 2026 fortification of the Chernobyl exclusion zone repeat the same radiological risk Kyiv condemned when Russia dug trenches there in 2022?",
+    "sideA": {
+      "label": "Ukrainian Defense Rationale: Necessary and Different in Kind",
+      "text": "Ukrainian officials and military analysts frame the trenches, defensive tunnels, and anti-drone nets built roughly 15 km from the Belarusian border as a defensive necessity against a possible renewed Russian advance, distinct from the 2022 Russian occupation. Unlike Russian troops in 2022, who dug directly into the Red Forest — the most contaminated site in the zone — Ukrainian works have not been reported inside the highest-contamination areas, and no elevated radiation readings or IAEA safety warnings have been issued in connection with the 2026 fortifications."
+    },
+    "sideB": {
+      "label": "Critics: Any Earthworks in the Zone Risk Disturbing Contaminated Soil",
+      "text": "Environmental and nuclear-safety critics note that when Russian forces dug trenches in the Red Forest in 2022, the IAEA and Ukrainian officials condemned the disturbance of radioactive soil and reported some Russian soldiers were later hospitalized for radiation exposure. Large-scale earthmoving anywhere in the 30 km exclusion zone — regardless of who conducts it or their intent — carries some risk of redistributing cesium-137 and strontium-90 in surface soils, and critics argue the same safety standard applied to Russia's 2022 occupation should apply to Ukraine's own defensive works."
+    },
+    "resolution": "Unresolved and largely unaddressed by officials. No IAEA statement or independent radiation monitoring report on the 2026 Ukrainian fortifications had been published as of this update; the comparison to the widely condemned 2022 Russian trenching in the Red Forest remains an open question raised by outside observers rather than a formally assessed risk.",
+    "lastUpdated": "2026-08-15T14:32:39.000Z"
+  }
+]

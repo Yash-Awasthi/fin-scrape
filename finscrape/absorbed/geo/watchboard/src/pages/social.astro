@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialCommandCenter from '../components/islands/SocialCommandCenter';
+
+const base = import.meta.env.BASE_URL;
+const basePath = base.endsWith('/') ? base : `${base}/`;
+---
+
+<BaseLayout
+  title="Social Command Center — Watchboard"
+  description="AI-curated social media queue with LLM judge, budget tracking, and batch approval"
+>
+  <main id="main-content" class="social-page">
+    <header class="social-header">
+      <a class="social-home-link" href={basePath} title="Back to Watchboard">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        <span data-i18n data-es="Watchboard" data-fr="Watchboard" data-pt="Watchboard">Watchboard</span>
+      </a>
+      <div class="social-title-row">
+        <span class="section-num">S</span>
+        <h1 class="social-title" data-i18n data-es="Centro de mando social" data-fr="Centre de commande social" data-pt="Central de comando social">Social Command Center</h1>
+      </div>
+      <p class="social-subtitle" data-i18n data-es="Cola de redes sociales curada por IA con juez LLM, seguimiento de presupuesto y aprobación por lotes." data-fr="File d'attente de médias sociaux gérée par IA avec juge LLM, suivi du budget et approbation par lots." data-pt="Fila de mídia social curada por IA com juiz LLM, rastreamento de orçamento e aprovação em lote.">AI-curated social media queue with LLM judge, budget tracking, and batch approval.</p>
+    </header>
+    <SocialCommandCenter client:load basePath={basePath} githubRepo="ArtemioPadilla/watchboard" />
+    <footer class="platform-footer">
+      <a href={basePath}>Watchboard</a>
+      <span>&middot;</span>
+      <a href={`${basePath}about/`} data-i18n data-es="Acerca de" data-fr="À propos" data-pt="Sobre">About</a>
+      <span>&middot;</span>
+      <a href={`${basePath}metrics/`} data-i18n data-es="Métricas" data-fr="Métriques" data-pt="Métricas">Metrics</a>
+      <span>&middot;</span>
+      <a href={`${basePath}rss.xml`}>RSS</a>
+      <span>&middot;</span>
+      <a href="https://bsky.app/profile/watchboard.bsky.social" target="_blank" rel="noopener noreferrer">Bluesky</a>
+      <span>&middot;</span>
+      <a href="https://github.com/ArtemioPadilla/watchboard" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </footer>
+  </main>
+</BaseLayout>
+
+<style>
+  .social-page {
+    min-height: 100vh;
+    background: var(--bg-primary, #0d1117);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+
+  .social-header {
+    margin-bottom: 24px;
+  }
+
+  .social-home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 16px;
+    transition: color 0.2s;
+    min-height: 44px;
+  }
+
+  .social-home-link:hover {
+    color: var(--accent-blue);
+  }
+
+  .social-title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .section-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: var(--accent-blue);
+    color: #000;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .social-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .social-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .platform-footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: var(--text-muted, #484f58);
+  }
+  .platform-footer a {
+    color: var(--text-muted, #484f58);
+    text-decoration: none;
+  }
+  .platform-footer a:hover {
+    color: var(--accent-blue, #58a6ff);
+  }
+</style>

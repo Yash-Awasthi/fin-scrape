@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-10T17:00:51.710Z",
+  "tracker": "tlatelolco-1968",
+  "sections": {
+    "kpis": {
+      "count": 8,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 42,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 16,
+      "status": "ok"
+    },
+    "casualties": {
+      "count": 8,
+      "status": "ok"
+    },
+    "claims": {
+      "count": 15,
+      "status": "ok"
+    },
+    "political": {
+      "count": 13,
+      "status": "ok"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

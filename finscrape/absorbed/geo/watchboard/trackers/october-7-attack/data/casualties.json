@@ -1,0 +1,134 @@
+[
+  {
+    "id": "israeli-civilians-killed-oct7",
+    "category": "Israeli Civilians Killed (Oct 7)",
+    "killed": "~859",
+    "injured": "~4,400",
+    "source": "Israel Police / Ministry of Health",
+    "tier": 1,
+    "contested": "partial",
+    "note": "~859 civilians killed; remaining ~336 of the total 1,195 were IDF/security personnel. Exact split contested as some off-duty soldiers were in civilian clothes.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-security-personnel-killed-oct7",
+    "category": "IDF & Security Personnel Killed (Oct 7)",
+    "killed": "~373",
+    "injured": "~1,800",
+    "source": "IDF / Israeli Police",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Includes IDF soldiers at overrun bases, police officers, and Border Police. IDF officially named 373 soldiers killed Oct 7; some estimates reach higher.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "total-israelis-killed-oct7",
+    "category": "Total Israelis Killed (Oct 7 — All Categories)",
+    "killed": "1,195",
+    "injured": "~5,400",
+    "source": "Israel Police / Israeli Government (revised figure)",
+    "tier": 1,
+    "contested": "partial",
+    "note": "Initial Israeli government figure was ~1,400; revised down to ~1,195 in late 2023 after removing duplicate foreign national entries. Hamas disputes this figure as inflated by friendly fire.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "foreign-nationals-killed-oct7",
+    "category": "Foreign Nationals Killed (Oct 7)",
+    "killed": "71+",
+    "injured": "~120",
+    "source": "Israeli Foreign Ministry / Individual Governments",
+    "tier": 1,
+    "contested": "no",
+    "note": "Americans: 33; Thais: 39 (many agricultural workers in kibbutzim); Germans, French, British also killed. ~40 nationalities represented.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "nova-festival-killed",
+    "category": "Nova Music Festival — Killed",
+    "killed": "364",
+    "injured": "~1,200+",
+    "source": "Israel Police",
+    "tier": 1,
+    "contested": "no",
+    "note": "Largest single-site massacre. ~40 additional victims taken hostage from the festival. Some victims died in vehicles fleeing on Route 232.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hostages-taken-total",
+    "category": "Hostages Taken to Gaza (Oct 7)",
+    "killed": "0 (taken alive)",
+    "injured": "N/A",
+    "source": "Israeli Government / Hostages Forum",
+    "tier": 1,
+    "contested": "no",
+    "note": "251 hostages total: ~36 soldiers, ~215 civilians. Ages ranged from 9-month-old Kfir Bibas to 85-year-old Yocheved Lifshitz. As of Mar 2026, ~97 remain in Gaza (some deceased).",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "hostages-status-march-2026",
+    "category": "Hostage Resolution (Jan 2026 — Final)",
+    "killed": "85 bodies repatriated (including last remains Jan 26, 2026)",
+    "injured": "N/A — all resolved",
+    "source": "Israeli Government / Hostages Forum",
+    "tier": 1,
+    "contested": "no",
+    "note": "ALL 251 hostages accounted for as of Jan 26, 2026. 168 returned alive: 8 IDF rescues, 5 outside ceasefires, 105 Nov 2023 truce, 30 Jan 2025 ceasefire, 20 final living hostages Oct 13, 2025. 85 bodies repatriated. Last: Master Sgt. Ran Gvili's remains recovered from northern Gaza cemetery Jan 26, 2026.",
+    "lastUpdated": "2026-03-27"
+  },
+  {
+    "id": "hamas-fighters-killed-oct7",
+    "category": "Hamas Fighters Killed on Oct 7",
+    "killed": "~1,500",
+    "injured": "Unknown",
+    "source": "IDF Spokesperson (estimate)",
+    "tier": 1,
+    "contested": "yes",
+    "note": "IDF estimate of ~1,500 Hamas/militant fighters killed Oct 7 within Israel. Hamas does not publish its own Oct 7 fighter casualty figures. Bodies of ~1,000 fighters reportedly recovered inside Israel.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "idf-killed-subsequent-operations",
+    "category": "IDF Soldiers Killed — Operation Swords of Iron (Oct 2023 – Mar 2026)",
+    "killed": "850+",
+    "injured": "~5,000+",
+    "source": "IDF / Israeli Ministry of Defense",
+    "tier": 1,
+    "contested": "no",
+    "note": "IDF publishes names of all fallen soldiers. ~450 killed in Gaza ground operations (Oct 2023–Mar 2024); additional losses through 2025-26 operations. Includes friendly fire incidents.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "kibbutz-beeri-casualties",
+    "category": "Kibbutz Be'eri Casualties (Oct 7)",
+    "killed": "~97",
+    "injured": "~40+",
+    "source": "Israel Police / Be'eri Community",
+    "tier": 1,
+    "contested": "no",
+    "note": "~97 of ~1,000 residents killed (~10% of community). ~30 taken hostage. Worst per-capita loss of any urban community. Some deaths caused by IDF tank fire (under investigation).",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "kibbutz-nir-oz-casualties",
+    "category": "Kibbutz Nir Oz Casualties (Oct 7)",
+    "killed": "~40",
+    "injured": "~30",
+    "source": "Israel Police / Nir Oz Community",
+    "tier": 1,
+    "contested": "no",
+    "note": "~79 taken hostage — highest per-capita hostage-taking of any community. ~40 killed. Of 400 residents, 25% killed or taken captive. Bibas family taken hostage: parents + 4-year-old Ariel + 9-month-old Kfir.",
+    "lastUpdated": "2026-03-20"
+  },
+  {
+    "id": "total-since-oct7-conflict",
+    "category": "Total Conflict Dead (Oct 7, 2023 – Jul 2026, All Sides)",
+    "killed": "73,110+",
+    "injured": "173,599+",
+    "source": "OCHA / Gaza Ministry of Health / WAFA / IDF",
+    "tier": "all",
+    "contested": "heavily",
+    "note": "OCHA/Gaza MoH/WAFA: 73,110+ Palestinians killed, 173,599+ injured as of early July 2026; includes combatants/civilians. WHO validates ~70% civilian. IDF: 1,195 Israelis Oct 7 + 850+ soldiers afterward. Ceasefire since Oct 10, 2025: 1,084+ Palestinians killed (3,491+ wounded) by documented Israeli ceasefire violations as of early July 2026 (Day ~270+), per Gaza MoH — passed the 1,000 mark June 17, 2026. OHCHR's Volker Türk: 'The unrelenting pattern of killings reflects continuing disregard for Palestinian lives, enabled by sweeping impunity' (ongoing strikes incl. July 6 and July 8 incidents killing civilians in Khan Younis and Gaza City). UN Women: 38,000+ women and girls killed Oct 2023–Dec 2025, avg 47/day. ACLED: April 2026 was deadliest month of 2026 with 140 fatalities despite ceasefire. UNICEF: 229+ children killed since ceasefire began. On July 6, 2026, Hamas announced the resignation of its Gaza civil administration under the Board of Peace framework; the Board says Hamas disarmament remains 'non-negotiable' and reconstruction stalled with under $1B of $17B pledged received against a UN-EU-WB assessed $71.4B rebuilding cost. Israel's parallel October 7 accountability crisis reached its 1,000-day milestone July 2, 2026 with nationwide protests; the Knesset passed the politically-appointed Kallner inquiry bill's first reading 59-0 on July 6 amid an opposition boycott, and is set to dissolve July 17 ahead of the October 27, 2026 election. October 7 Perpetrators Eliminated: Sinwar (Oct 16, 2024), Shambari (Apr 29, 2026), Haddad (May 16, 2026), Odeh (May 27, 2026). Last survivor: Imad Aqel — still at large as of mid-July 2026, with Hamas reportedly weighing a 'collective leadership' model for the Qassam Brigades rather than naming him supreme commander.",
+    "lastUpdated": "2026-07-16"
+  }
+]

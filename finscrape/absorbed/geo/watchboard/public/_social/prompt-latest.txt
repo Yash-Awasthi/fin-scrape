@@ -1,0 +1,302 @@
+You are the Social Media Content Strategist for Watchboard, an AI-powered OSINT intelligence dashboard platform at https://watchboard.dev.
+
+Your X/Twitter handle is @watchboard_dev.
+
+TODAY: 2026-08-28
+
+## YOUR TASK
+Review all tracker updates below and decide what is WORTH tweeting today. You are a curator, not a factory. Quality over volume. Every tweet costs real money.
+
+## PLATFORM
+You are generating content for X/Twitter ONLY. Do NOT generate posts for LinkedIn, Facebook, Instagram, or any other platform. Every entry must be a tweet.
+
+## BUDGET
+- Monthly target: $1.00
+- Spent this month: $0.00
+- Remaining: $1.00
+- Tweets posted this month: 0
+- Cost per text tweet: $0.01
+- Cost per image tweet: $0.02
+- Cost per thread tweet: $0.01 × number of tweets in thread
+- PRIORITIZE impact-per-dollar. If budget is tight, post fewer but better tweets.
+
+## ALREADY POSTED (avoid duplication)
+Nothing posted today yet.
+
+## HISTORIC PERFORMANCE (what gets clicks)
+No performance data yet. Prioritize variety and coverage.
+
+## CHARACTER LIMITS — CRITICAL
+- Twitter max: 280 characters per tweet
+- URLs are wrapped to 23 characters by t.co regardless of actual length
+- Hashtags count toward the 280 limit
+- Line breaks count as 1 character each
+- You MUST write text that fits within 280 characters. DO NOT exceed this. DO NOT truncate with "…"
+- Calculate: 280 - 23 (link) - (hashtag chars) - 4 (spacing) = available body text
+- For threads: each tweet in the thread has its own 280-char budget
+
+## HASHTAG RULES
+- Standard tweets: exactly 2 hashtags — 1 relevant topic tag (e.g., #Iran, #Gaza, #Ukraine, #Sudan) + #Watchboard
+- Threads: hashtags on the LAST tweet only
+- Memes: NO hashtags
+- Never use generic tags like #ConflictTracking or #IntelDashboard
+
+## VOICE
+One voice: analyst. Sober, precise, data-first. Authority comes from the figures
+and their provenance, not from tone. Never adopt a persona, never perform wit,
+never write provocatively for its own sake.
+
+## TWEET TYPES
+Choose the best type for each piece of content:
+- digest — daily summary, data-first
+- breaking — significant development, impact-focused
+- thread — complex story, 3-7 tweets, narrative arc
+- data_viz — trend spotting, week-over-week, let data tell the story
+
+These four are the differentiated ones. They can only be written by something
+that has actually tracked the data, which is the whole point — a competitor can
+copy a tone with a prompt, not a year of dated figures:
+
+- contested — a figure where sourced authorities genuinely disagree. State BOTH
+  sides with attribution. Do not adjudicate, do not average. The disagreement
+  IS the story.
+    e.g. "Two UN agencies put the Venezuela quake damage at $37bn and $6.7bn.
+          Same OCHA report, same paragraph."
+- stale_data — an official figure frozen while the situation moved. Give the
+  freeze date and what changed around it.
+    e.g. "Venezuela's official injured count hasn't moved since 5 July.
+          The death toll rose 89% in that time."
+- escalation — a tracker spiking above its OWN 14-day baseline. Give both
+  numbers; a big ratio on a tiny baseline is noise, not news.
+- cross_tracker — a pattern visible only across many trackers at once.
+
+RULES FOR THESE FOUR
+- Every figure needs a source and an as-of date. No figure without provenance.
+- Never present an extrapolation as an observation.
+- If the data does not support a clean claim, do not write the tweet. Returning
+  fewer tweets is correct; inventing a pattern is not.
+
+## LANGUAGES
+Available: en, es, fr, pt
+Each language version is a SEPARATE tweet (separate cost). Only translate high-impact tweets.
+Spanish: use Latin American Spanish. Keep proper nouns, org names, acronyms untranslated.
+
+## SCHEDULING
+Assign each tweet to a time slot: 08:00, 13:00, 18:00, 22:00 UTC.
+Spread content across slots. Put breaking news in the earliest available slot.
+
+## JUDGE ASSESSMENT
+For EACH tweet you generate, also provide a self-assessment:
+- score (0.0-1.0): quality/appropriateness
+- verdict: PUBLISH (auto-approve), REVIEW (needs human eyes), HOLD (good but defer), KILL (reject)
+- comment: 1-2 sentence explanation
+- factChecks: for EVERY number, claim, and quote in the tweet, verify against the tracker data provided below. Status: verified/warning/unverifiable/failed.
+
+If any factCheck has status "failed", the verdict MUST be KILL.
+Meme tweets MUST have verdict REVIEW (never PUBLISH).
+
+## TRACKER DATA FOR TODAY
+
+### COVID-19 (covid-pandemic) [domain: disaster]
+Digest: FDA approves updated COVID-19 vaccines targeting the dominant XFG variant, marking a new round of vaccine authorization.
+Sections updated: events, meta
+KPIs: Confirmed COVID-19 Deaths: 7.1 Million; Estimated Excess Deaths (2020–2021): 14.9 Million; Confirmed Cases Worldwide: 755 Million; Vaccine Doses Administered Globally: 13.5 Billion; PHEIC Duration: 1,191 Days; Global GDP Contraction (2020): −3.3%
+Recent events:
+[2026-07-30] (id: rand-paul-fauci-contempt-vote-2026) Rand Paul Announces Contempt Vote Against Fauci After Fifth Amendment Refusals
+[2026-07-31] (id: who-position-paper-covid-vaccines-july-2026) WHO Publishes Updated Position Paper on COVID-19 Vaccines for the Endemic Era
+[2026-08-28] (id: fda-approves-xfg-vaccine-2026-08-28) FDA Approves Updated COVID-19 Vaccines Targeting XFG Variant
+Unresolved disputes: Q: Did SARS-CoV-2 originate from a laboratory accident or natural animal-to-human spillover? | Natural Zoonotic Origin: The majority of virologists and epidemiologists favor natural zoonotic spillover, citing genomic evidence of natural selection, the Huanan Seafood Market as an  | Laboratory Leak Hypothesis: The U.S. House Select Subcommittee concluded in its December 2024 final report (520 pages) that a lab leak from the Wuhan Institute of Virology was the most lik || Q: Were national lockdowns effective at reducing COVID deaths, or did they cause more harm than they prevented? | Lockdowns Saved Lives: Epidemiological modeling shows lockdowns substantially slowed transmission and prevented healthcare collapse. The Imperial College London Report 9 estimated tha | Lockdowns Caused Unacceptable Harm: Lockdowns caused massive collateral damage: delayed cancer screenings, surging mental health crises, educational setbacks costing children years of learning, do || Q: Were face masks effective at preventing COVID-19 transmission? | Masks Are Effective: WHO, CDC, and most national health agencies recommend masks as an effective layer of protection, supported by observational studies showing reduced transmission | Mask Effectiveness Is Overstated: The Cochrane Review (2023) found that randomized controlled trials showed 'little to no difference' in infection rates between mask-wearing and non-mask-wearing
+Disputed or frozen figures: Global Confirmed COVID-19 Deaths: 7,112,000+ (WHO COVID-19 Dashboard (as of May 2023)) Confirmed deaths severely undercount true toll due to limited testing capacity and inconsistent death certification, esp || Global Excess Mortality (2020–2021): 14,900,000 (WHO Global Excess Mortality Report, May 2022 / Nature) WHO estimate (13.3–16.6 million range). Lancet independently estimated 18.2 million. IHME estimates up to 36 million thr || United States: ~1,100,000 (CDC / Johns Hopkins CSSE) The U.S. recorded the highest confirmed COVID-19 death count of any country. Excess mortality suggests the true toll may
+
+### Hormuz Crisis (hormuz-food-security-crisis) [domain: economy]
+Digest: Iran and Oman finalized a temporary 7-mile-wide shipping corridor through the Strait of Hormuz on Aug 26, complete with a mine-clearing project and revenue-sharing deal, though Tehran insists the strait remains officially closed pending US sanctions relief. Brent crude fell 2.5% to $86.38/bbl on the news before steadying near $87.65-89.68/bbl on Aug 27 as hot US PCE inflation data offset de-escalation optimism. Tanker traffic has not recovered despite the deal — PortWatch and Vortexa data show just 2-3 transits/day, the lowest since early May. Separately, global wheat prices climbed to $734.30
+Sections updated: events, timeline, kpis, econ, claims, political, mapPoints, meta
+KPIs: Brent Crude: $87.65/bbl; FAO Food Price Index: 131.1; Hormuz Daily Tanker Transits: ~2-3/day; War-Risk Insurance (Hull Value): 7.5-10%; 2026 Global Growth Forecast: 2.5%; People at Risk of Acute Hunger (Conflict-Linked): 45 million
+Recent events:
+[2026-08-25] (id: oil-one-week-low-sanctions-shrug-aug25) Oil Falls to One-Week Low as Traders Shrug Off Bessent's Iran Sanctions Package
+[2026-08-26] (id: iran-oman-temporary-hormuz-corridor-agreement-aug26) Iran and Oman Agree on Temporary Shipping Corridor Through Strait of Hormuz
+[2026-08-26] (id: oil-prices-fall-iran-oman-corridor-deal-aug26) Oil Prices Extend Slide as Traders Weigh Iran-Oman Hormuz Corridor Deal
+[2026-08-27] (id: oil-stabilizes-wheat-two-year-high-aug27) Oil Steadies Near $87-90/bbl on Hot Inflation Data as Wheat Hits Two-Year High
+Unresolved disputes: Q: Is the Strait of Hormuz truly 'closed,' or does meaningful traffic still pass through it? | US / Trump administration: Trump declared on Aug 12, 2026 that the US has 'total control' of the strait, framing remaining disruption as a mop-up operation rather than an active closure. | Iran / shipping data: Rezaei and Araghchi reject the claim outright, calling it 'fake intelligence'; independent MarineTraffic data shows only ~8 vessels/day transiting versus a 130- || Q: Is Iran's blockade or the US-Israeli initial strikes and subsequent US naval blockade more responsible for the ongoing shipping closure? | US / Israel: Washington frames Iranian mining, vessel seizures and attacks on commercial shipping as the direct and sole cause of the closure, justifying continued military  | Iran: Tehran counters that the US Navy's own blockade of Iranian ports (begun April 13) and sanctions are equally responsible for the impasse, and that a full reopeni || Q: Is the EU's renewed nuclear pivot, prompted by von der Leyen, a justified structural response, or an overreaction to a temporary shock? | Von der Leyen / EU Commission: Von der Leyen argues abandoning nuclear was 'a strategic mistake' and that accelerating 'homegrown, clean energies' including nuclear is necessary for durable e | Renewables-focused critics: Critics note the €22bn+ import cost shock is crisis-driven and time-limited, and argue that pivoting toward nuclear — with its long build times and high capital
+Disputed or frozen figures: none
+
+### India-Pakistan (india-pakistan-conflict) [domain: conflict]
+Digest: Nawaz Sharif dropped AJK PML-N President Shah Ghulam Qadir as the party's prime ministerial nominee on August 27 in favour of Barrister Iftikhar Gilani, triggering a public revolt as Qadir and former AJK PM Raja Farooq Haider withheld support and Qadir vowed to boycott the vote. The AJK Legislative Assembly nonetheless convened August 28 to elect Gilani as the territory's 17th prime minister, with PML-N's 32-seat coalition against PPP's 14 sufficient to seat him despite the intra-party dissent. KPIs and the tracker's headline/meta were refreshed to reflect Day 475 of the ceasefire and the AJK 
+Sections updated: events, kpis, meta
+KPIs: LOC Ceasefire Violations (2026 YTD): 12+; Active Militants in J&K (2026 est.): ~90; Indian Nuclear Warheads (est.): ~172; Pakistani Nuclear Warheads (est.): ~170; Conflict Deaths in J&K Since 1989: ~47,000; Line of Control Length: 776 km
+Recent events:
+[2026-08-25] (id: ajk-pmln-sweeps-speaker-deputy-speaker-aug25-2026) PML-N Sweeps AJK Assembly Speaker and Deputy Speaker Elections
+[2026-08-25] (id: nia-probe-isi-unified-terror-command-jk-punjab-aug25-2026) NIA Pahalgam Probe Finds ISI Unified Command Coordinating J&K and Punjab Terror Groups
+[2026-08-27] (id: nawaz-nominates-gilani-ajk-pm-rift-aug27-2026) Nawaz Sharif Nominates Barrister Iftikhar Gilani for AJK Premier, Dropping Shah Ghulam Qadir Amid PML-N Rift
+[2026-08-28] (id: ajk-assembly-elect-gilani-pm-session-aug28-2026) AJK Legislative Assembly Convenes to Elect Gilani as 17th Prime Minister Amid PML-N Revolt
+Unresolved disputes: Q: Was the 1947 Instrument of Accession of Jammu & Kashmir to India legally valid? | India: The accession was fully legal under the Indian Independence Act 1947 and the terms by which princely states joined either India or Pakistan. Maharaja Hari Singh | Pakistan: The accession was obtained under duress — Pakistan's tribal forces had not yet reached Srinagar when the Maharaja signed. Under the two-nation theory and religi || Q: How many militants were killed in India's Balakot airstrike (Feb 26, 2019)? | India: India's government and media claimed 200–350 militants were killed at the JeM training camp. Foreign Secretary Vijay Gokhale stated India targeted a 'very large | Pakistan: Pakistan's ISPR stated Indian bombs fell in forested areas causing no casualties — only trees were hit. Pakistan invited journalists to the site who filmed an u || Q: How many people were killed by Pakistani forces during the 1971 East Pakistan operations? | Bangladesh / India: Bangladesh's official position and Indian accounts cite 3 million killed by Pakistani forces in Operation Searchlight and subsequent operations between March–De | Pakistan: Pakistan's Hamoodur Rahman Commission (1974, declassified 2000) put the figure at 26,000. Pakistani historians argue the 3 million figure was politically inflat
+Disputed or frozen figures: 1947 Partition — Communal Violence: 200,000–2,000,000 (Encyclopaedia Britannica / UN Archives) Estimates range widely. Modern scholarship suggests 200,000–2 million. 10–20 million people were displaced in the larges || First Kashmir War (1947–1949): ~6,000 (India + Pakistan combined) (Indian Army Historical Archives / Crisis Group) Includes Indian Army, Pakistani forces, and tribals. Precise figures disputed; civilian casualties also occurred but not || Second Indo-Pakistani War (1965): India: 3,000 / Pakistan: 3,800 (est.) (Indian MOD / Pakistani ISPR estimates (divergent)) Both sides dispute each other's figures. Pakistan claims lower Indian casualties; India claims higher Pakistani losses. 
+
+### Flores Quake (indonesia-flores-earthquake) [domain: disaster]
+Digest: President Prabowo Subianto finally visited the earthquake zone on 26 August — eleven days after the mainshock, after two prior postponements — distributing Rp200 billion in aid across NTT province and its eight affected regencies. The confirmed death toll rose to 111 by 27 August before holding flat on Day 14 with no new fatalities reported. Displacement declined for the first time since the quake, falling from a 185,131 peak on 25 August to 176,621 on 27 August as families began returning home. BNPB's verified homes-damaged count rose to 77,912, and the agency launched an accelerated rehabili
+Sections updated: kpis, timeline, mapPoints, casualties, econ, claims, political
+KPIs: Confirmed Deaths: 111; Injured: 1,672; Displaced / Sheltering: 176,621; Homes Damaged: 77,912; Aftershocks Recorded: 8,193+; Presidential Visit Status: Completed 26 Aug
+Recent events:
+none
+Unresolved disputes: Q: Is BNPB's official death toll of 83 an accurate, complete count? | BNPB / Government: BNPB says its figures are verified through hospital and morgue reporting and updated daily as regency-level teams confirm identities; the 21 August toll of 83 b | Local Residents / Aid Groups: A 74-year-old Flores Timur man who died fleeing his home on 15 August went unrecorded in official data until 20 August because his regency never declared emerge || Q: Is Indonesia's building-code enforcement adequate to prevent this scale of housing damage? | NTT Provincial Government: The province has set a renovation target of 5,000 homes for 2026 and points to broader national efforts to improve rural building standards over time. | Critics: Only 436 homes were renovated in 2025 against the scale of need, roughly 80% of Indonesian residential buildings are built without engineering oversight, and on || Q: Did the 2026 Basarnas budget cut hamper the rescue response? | Government / Parliament: The 4.5% reduction to Basarnas's budget (to Rp1.48 trillion) was framed as part of broader fiscal discipline, not a deliberate weakening of disaster response ca | Critics: Basarnas operates only 38 offices across 514 regional jurisdictions, and its own chief warned before the cut that capacity needed to grow, not shrink. Critics j
+Disputed or frozen figures: Flores Timur Regency (Previously Uncounted): 1 (Ekorantt.com) Mateus Noba Noba (74), Waiula Village, Wulanggitang District, died 15 August fleeing his home during the mainshock; the  || Manggarai Regency: 45 (BNPB) Highest single-regency death toll as of 28 August (Day 14), up from 41 (25 Aug) and 32 (23 Aug); figure not yet broken d || East Manggarai Regency: 38 (BNPB) Second-highest single-regency death toll as of 28 August (Day 14), up from 34 (25 Aug) and 31 (23 Aug), adjacent to Mang
+
+### Kenya Gen Z Protests (kenya-genz-protests) [domain: governance]
+Digest: President Ruto told the 16th Katiba Day Symposium at KICC that the Gen Z protests were a legitimate exercise of constitutional freedoms rather than an assault on democracy, acknowledging 'the pain that remains' and pledging independent, transparent investigation of every credible human-rights-violation allegation. The remarks came two days after former Chief Justice David Maraga's August 25 deadline for releasing the shelved National Taskforce on Police Reforms report expired without government action; Ruto instead moved ahead with unveiling a redesigned police uniform at an August 28 Kiganjo 
+Sections updated: timeline, claims, political, mapPoints
+KPIs: Total Killed Since June 2024: 128+; Enforced Disappearances / Abductions: 83+; Total Arrests, 2024–2025: 3,000+; Arrests on 2nd Anniversary (Jun 25, 2026): 355+; Youth Unemployment Rate: ~30%; Public Debt-to-GDP Ratio: 69.5%
+Recent events:
+none
+Unresolved disputes: Q: How widespread were enforced disappearances of protesters? | Amnesty International: At least 83 enforced disappearances occurred alongside 128 killings and roughly 3,000 arrests across the 2024–2025 protest waves. | Government: Officials have denied any systematic policy of abductions, framing individual cases as isolated criminal matters under investigation rather than state policy. || Q: Is the Finance Act 2026 necessary fiscal reform or a repeat of 2024's mistakes? | Treasury / Government: Officials argue new levies, including on mobile money and betting, are required to close a widening revenue shortfall and slow the rise in Kenya's debt-to-GDP r | Gen Z Organizers / Critics: Critics say taxing bread, mobile money and data again targets the same low-income and youth demographic that revolted in 2024, arguing the government 'learned n
+Disputed or frozen figures: June–July 2024 Finance Bill protests (KNCHR count): 63 (Kenya National Commission on Human Rights (KNCHR)) KNCHR's own count for the June–July 2024 wave; police and government sources cited lower, uncorroborated figures. || June 25, 2025 anniversary protests: 16 (Amnesty International Kenya) Media and rights-group tallies for the single day ranged from 8 to 21 killed depending on the source and cutoff time. || July 7, 2025 Saba Saba Day: 38 (KNCHR / Citizen Digital tally) Counts for this single day ranged from roughly 10 to 41 killed across different outlets, making it the deadliest day of 
+
+### CJNG Crisis (mencho-cjng) [domain: security]
+Digest: A Washington, D.C. federal grand jury indicted 'El R-1' (arrested Jul 30) and his brother Rafael Álvarez Ayala ('El R-2') — named by Mexican authorities as R-1's successor atop the CJNG-affiliated 'Los Rs' cell in Michoacán and Jalisco — on drug-trafficking conspiracy and firearms charges; R-2 remains at large (Aug 27). InSight Crime detailed CJNG's dedicated 'Operadores Droneros' unit, which has extended weaponized-drone attacks across five Mexican states (Aug 26). CNN en Español's six-month retrospective assessed CJNG as showing 'mucha disciplina' with no visible internal fracture despite a 
+Sections updated: events, timeline, mapPoints, kpis, political, meta
+KPIs: Days Since El Mencho Killed: 187; U.S. Bounty on El Mencho: $15M; Mexican States with CJNG Presence: 27 / 32; Colima Homicide Rate (per 100k): 101; CJNG Assets Subject to U.S. Forfeiture: $6B; Mexico Homicides Declined in 2025: −30%
+Recent events:
+[2026-08-25] (id: cnn-cjng-structure-retrospective-no-fracture-aug25-2026) CNN Retrospective: Six Months of Blows Have Not Fractured CJNG's Structure, Analysts Say
+[2026-08-26] (id: insight-crime-cjng-drone-unit-five-states-aug26-2026) InSight Crime: CJNG's 'Operadores Droneros' Unit Has Extended Weaponized Drone Attacks to Five Mexican States
+[2026-08-27] (id: r2-charged-los-rs-successor-dc-grand-jury-aug27-2026) U.S. Grand Jury Charges 'El R-1' and Brother 'El R-2' as CJNG's 'Los Rs' Cell Reorganizes Under New Leadership
+Unresolved disputes: Q: Did U.S. CIA officers conduct unauthorized counter-narcotics field operations on Mexican soil that violate Mexico's National Security Law? | Mexican Government / Sheinbaum Administr: Mexico's National Security Law explicitly prohibits foreign personnel from conducting field operations on Mexican soil — they may only engage in information-sha | U.S. Government / Security Partnership A: U.S. officials confirmed the CIA affiliation of the two dead Americans without directly addressing the authorization question publicly. Security analysts and U. || Q: How significant was U.S. intelligence in the operation that killed El Mencho? | U.S. Officials: DEA and U.S. intelligence agencies provided critical real-time location intelligence — including signals intelligence and surveillance data — that enabled the p | Mexican Government: Mexico's own intelligence services, SEDENA, and the CNI (national intelligence center) conducted independent surveillance that confirmed El Mencho's location. M || Q: Does CJNG maintain effective territorial control over Colima state post-Mencho? | CJNG Structure: CJNG's territorial control in Colima — long one of its most secure plazas — was established through years of systematic violence that eliminated all rivals. The | Security Analysts: El Mencho's death has visibly destabilized Colima as competing CJNG sub-factions and external rivals probe for weaknesses. The spike in violence in March 2026 s
+Disputed or frozen figures: Veracruz Boca del Río Massacre — Sep 20, 2011: 35 (alleged Zetas members) (Veracruz State Prosecutor / Reuters) CJNG (then calling itself 'Matazetas') dumped 35 bodies on Boca del Río highway with a narco-banner. This was CJNG's pub
+
+### Moldova-Transnistria (moldova-transnistria) [domain: conflict]
+Digest: Moldova's drone crisis sharply escalated over the past week: airspace breaches since August 9 climbed from five to twelve. A drone crossed via Vulcănești into Romania on August 24, prompting a Romanian F-16 scramble, before a Russian Shahed-type drone struck the Vynohradivka border checkpoint on August 25 — the third Ukraine-Moldova border-crossing strike in two weeks, which Ukraine's Foreign Minister called "a clear pattern." A single drone crossed near Palanca on August 26, and overnight into August 27 — hours before Moldova's 35th Independence Day — five drones swept the Ștefan Vodă frontie
+Sections updated: timeline, mapPoints, mapLines, kpis, econ, claims, political, assets
+KPIs: Transnistria Residents Eligible Under Passportisation Decree: ~220,000; Moldovan Airspace Breaches (Since Aug 9, 2026): 12; Ukraine-Moldova Border Crossings Struck (2 Weeks): 3; Drones Shot Down Over Romania (2026 total): 4; OGRF Troop Strength in Transnistria: ~1,500; Cobasna Ammunition Depot Stockpile: ~19,000-22,000 tonnes
+Recent events:
+none
+Unresolved disputes: Q: Is Putin's May 15 citizenship decree a humanitarian measure or a war-recruitment and leverage tool? | Moldova / President Sandu: Sandu warned the decree could serve as a mechanism to recruit more people from Transnistria into Russia's war against Ukraine, framing it as part of a broader " | Russia / Kremlin: Moscow frames the decree as a humanitarian simplification of citizenship for ethnic Russians and Russian speakers long resident in Transnistria, arguing it mere || Q: Are the August 2026 drone incursions into Moldova deliberate Russian probing or accidental spillover from strikes on Ukraine? | Moldovan officials: President Sandu said the pattern of drone trajectories suggests some incidents are deliberate tests of the region's response capacity, while others are accident | Russia: Moscow has not claimed responsibility for any of the August incidents and has not commented specifically on the Crocmaz, Priozerne or Talmaza incidents; it has  || Q: Did PM Munteanu resign over the MoldATSA corruption scandal, or for undisclosed political reasons? | Investigative journalists / opposition: RISE Moldova's investigation into MoldATSA — showing President Sandu's cousin was paid roughly EUR 50,000 in under a year, about eight times the average salary  | Munteanu / PAS leadership: Munteanu gave no specific reason, saying only that he could "no longer exercise my mandate in accordance with my principles and beliefs." PAS officials have not
+Disputed or frozen figures: none
+
+### NATO Airspace Incursions (nato-airspace-incursions) [domain: conflict]
+Digest: German investigators recovered a third drone and roughly 50 grams of suspected military-grade hexogen in a field at Kabelsketal, just west of Leipzig/Halle Airport, on August 14 — a find reported this week that widens the probe into the August 4 plot against Ukrainian Antonov cargo aircraft; Chancellor Friedrich Merz warned that those behind 'hybrid attacks' against Germany 'will pay for them.' Separately, Latvia's National Armed Forces confirmed on August 20 that the drone shot down near Rugāji on August 14 was Ukrainian-made, redirected into Latvian airspace by Russian electronic-warfare jam
+Sections updated: timeline, mapPoints, mapLines, claims, political, kpis
+KPIs: Confirmed Incursion Incidents: 27+; Drones Downed by NATO Forces: 8; NATO Members With Confirmed Incursions: 6; Days Since First Confirmed Incursion: 159; NATO Governments Destabilized: 1; Civilians Injured: 2
+Recent events:
+none
+Unresolved disputes: Q: Are the 2026 incursions deliberate Russian probing, or stray Ukrainian drones diverted by Russian jamming? | NATO / member states: NATO's North Atlantic Council formally stated on August 12 that Russia 'bears full responsibility' for the airspace violations, calling them 'dangerous and unac | Russia / some independent analysts: The Kremlin denies deliberately violating NATO airspace and says it has provided no material evidence. Independent researchers, including the Centre for Eastern || Q: Did the Baltic states knowingly allow their airspace to be used to launch Ukrainian drone strikes against Russia? | Russian government / state media: Russian media and officials have suggested the Baltic states tacitly permitted Ukrainian drones to transit their territory or launch from it against targets nea | Estonia, Latvia, Lithuania: The three states' foreign ministries issued a joint statement on April 10 rejecting the accusations as 'part of a Russian disinformation campaign,' and Lithuani || Q: Was Russia behind the explosive drone found at Leipzig/Halle Airport? | German & U.S. officials: German Interior Minister Alexander Dobrindt said the operation was 'carried out by professionals, probably on behalf of foreign powers' as part of a hybrid-war  | Russian Embassy, Berlin: The Russian Embassy in Germany issued a formal statement denying any involvement in the incident.
+Disputed or frozen figures: none
+
+### October 7 (october-7-attack) [domain: conflict]
+Digest: IDF and Shin Bet announced the elimination of Razek Sahil Suleiman Abu Shahma (a former bodyguard to Yahya Sinwar) and Hazem Mousa, two Nukhba terrorists who infiltrated Re'im on October 7, plus a separate August 24 strike killing Nukhba terrorist Mohammad Abd al-Nasser Jabr Abu Asaad in Deir al-Balah. USAID's Inspector General and the State Department also debarred a former UNRWA principal linked to October 7 communications, proposed debarring three more former UNRWA staff, and confirmed — via Washington Free Beacon reporting — that UNRWA 'social worker' Faisal Ali Al-Naami, filmed dragging h
+Sections updated: events, claims
+KPIs: Israelis Killed (Oct 7): 1,195; Hostages Taken to Gaza: 251; Rockets Fired (Oct 7 Barrage): ~3,000; Hamas Fighters Infiltrated Israel: ~3,000; Communities & Bases Attacked: 22+; IDF Soldiers Killed (Oct 7): ~373
+Recent events:
+[2026-08-24] (id: october-council-strategic-warning-report-aug24-2026) October Council Report Warns Israel Is Repeating Pre-Oct. 7 'Conceptzia' Failures as Hamas Rebuilds
+[2026-08-24] (id: abu-asaad-deir-al-balah-nukhba-eliminated-aug24-2026) IDF Kills Nukhba Terrorist Who Infiltrated Israel on Oct. 7 in Deir al-Balah Strike
+[2026-08-25] (id: zamir-reim-surveillance-soldiers-lessons-aug25-2026) IDF Chief Visits Gaza-Border Surveillance Soldiers, Cites Duty to 'Listen Carefully' as Oct. 7 Lesson
+[2026-08-25] (id: netanyahu-unrwa-kafr-aqab-dismantled-oct7-aug25-2026) Netanyahu Orders UNRWA Jerusalem Training Center Dismantled, Citing Oct. 7 Involvement
+[2026-08-27] (id: abu-shahma-sinwar-bodyguard-mousa-nukhba-eliminated-aug27-2026) IDF, Shin Bet Announce Killing of Sinwar's Former Bodyguard and Second Nukhba Terrorist Who Infiltrated Re'im on Oct. 7
+[2026-08-27] (id: usaid-unrwa-debarment-al-naami-oct7-aug27-2026) US Debars First UN-Agency-Linked Hamas Operative, Confirms Oct. 7 Body-Dragger Al-Naami Was Active Hamas Militant
+Unresolved disputes: Q: Who bears responsibility for the October 7 intelligence failure? | Opposition / Military Analysts: The intelligence failure was comprehensive: AMAN (military intelligence) had the Jericho Wall document for a year and dismissed it; female soldiers' warnings we | Netanyahu Government: Netanyahu has blamed the military and intelligence establishment, specifically Shin Bet Director Ronen Bar and IDF Chief Halevi, for operational failures. He ha || Q: Did the IDF use the Hannibal Directive on October 7, potentially killing Israeli hostages? | Haaretz / Israeli Media Investigation: Evidence suggests IDF units, including helicopter pilots, fired on vehicles and structures containing Israeli hostages on October 7, possibly under Hannibal Dir | IDF Spokesperson: The IDF has denied officially activating the Hannibal Directive on October 7. The IDF maintains that forces responded to legitimate military threats. IDF statem || Q: Is Israel's response to October 7 a genocide under international law? | South Africa / Many Global South Nations: South Africa's ICJ application argued that Israel's conduct in Gaza — including the scale of civilian deaths, destruction of homes, hospitals, and food supply i | Israel / United States / Germany: Israel and its Western allies reject the genocide characterization. Israel argues it is conducting legitimate military operations against a terrorist organizati
+Disputed or frozen figures: Israeli Civilians Killed (Oct 7): ~859 (Israel Police / Ministry of Health) ~859 civilians killed; remaining ~336 of the total 1,195 were IDF/security personnel. Exact split contested as some off- || IDF & Security Personnel Killed (Oct 7): ~373 (IDF / Israeli Police) Includes IDF soldiers at overrun bases, police officers, and Border Police. IDF officially named 373 soldiers killed Oct || Total Israelis Killed (Oct 7 — All Categories): 1,195 (Israel Police / Israeli Government (revised figure)) Initial Israeli government figure was ~1,400; revised down to ~1,195 in late 2023 after removing duplicate foreign natio
+
+### PH Disasters 2026 (philippines-disasters-2026) [domain: disaster]
+Digest: NDRRMC's August 27 report put the combined death toll from the habagat and cyclone sequence at 31, up from 29, with Benguet (15), CALABARZON (8) and Metro Manila (3) hardest hit; 19 remained injured and 3 missing. The number of localities under a state of calamity grew to 104, infrastructure damage reached ₱5.95 billion, agricultural losses hit ₱1.91 billion, and the affected population rose to 7.7 million people across 10 regions, even as evacuation-center numbers eased to roughly 28,000 as floodwaters receded in some areas. Fresh orange rainfall warnings hit Zambales and Bataan on Aug 27 eve
+Sections updated: timeline, mapPoints, kpis, casualties, econ, claims
+KPIs: Cumulative Deaths Across Cascade (Earthquake + Bavi + Aug Storms): 160+; Mindanao Earthquake Magnitude: Mw 7.8; Aftershocks Recorded Since June 8: 8,500+; Homes Damaged/Destroyed (Earthquake): 138,563; People Affected by Aug Storm/Habagat Sequence: 7.7 million+; Earthquake Economic Loss: ₱71 billion
+Recent events:
+none
+Unresolved disputes: Q: Is the rolling blackout crisis primarily an external shock or a domestic structural failure? | Department of Energy / NGCP: The core driver is the Strait of Hormuz closure during the 2026 Iran war, which cut ~20% of global oil supply and hit the 98%-import-dependent Philippines espec | Congress / Consumer Groups: Lawmakers including Rep. Arthur Yap argue NGCP's chronic underinvestment in transmission capacity and delayed interconnection projects turned a manageable suppl || Q: Is national government funding sufficient to repair earthquake-damaged classrooms? | Department of Education: DepEd has acknowledged it lacks sufficient centrally-allocated funds to repair all 1,500+ damaged classrooms in Sarangani alone and says it is prioritizing the  | Sarangani Provincial Government: The province says it cannot wait for national funding and has turned to private cash donations to repair classrooms, arguing the shortfall reflects inadequate n || Q: Are humanitarian resources adequate to cover three simultaneous, overlapping disaster responses? | IFRC (Sanjeev Kafley): Kafley warned that 'humanitarian needs are soaring, but resources are dwindling' as the Philippine Red Cross and IFRC stretch to cover concurrent earthquake, ty | Philippine Government: Officials point to DBM's ₱362M initial rehab release, DSWD's pre-positioned supplies, and the pending ₱15B congressional supplemental as evidence that domestic 
+Disputed or frozen figures: M7.8 Earthquake — Total Deaths (Philippines): 106 (PHIVOLCS / NDRRMC) 1 additional death recorded in Indonesia from regional tsunami effects; 7 remained missing. Regional breakdown: 47 in Sa || Cumulative Cascade Total (Earthquake + Bavi + Aug Storms): 160+ (Watchboard aggregate of PHIVOLCS / NDRRMC / OCD figures) Sums three separately-tallied NDRRMC/PHIVOLCS event tolls (earthquake, Bavi, Aug storm sequence, now 31); does not doubl
+
+### Shield of Americas (shield-of-the-americas) [domain: security]
+Digest: Joint Task Force Western Hemisphere carried out a second lethal strike in three days, killing 4 people aboard a suspected go-fast drug-smuggling vessel in the Caribbean Sea on 25 August — the campaign's confirmed toll now stands at 227+ killed across 68 strikes since September 2025. Gen. Francis Donovan said JTF-WHEM would continue to 'hunt, disrupt, and defeat' narco-terrorist networks. The strike lands amid intensifying oversight scrutiny: Sen. Tim Kaine has called victims of some strikes 'murder victims' based on a classified-intelligence review, and the Pentagon Inspector General's targeti
+Sections updated: timeline, kpis, claims
+KPIs: Coalition Members: 19; Founding Doral Charter Signatories: 17; Major Holdout States: 4; A3C Campaign Plan Target: Nov 2026; Southern Spear Strikes / Killed: 68 strikes / 227+ killed; Plan Colombia 2.0 Pledge: $1B
+Recent events:
+none
+Unresolved disputes: Q: Are the Southern Spear boat strikes lawful counter-narcotics operations or extrajudicial killings? | US / SOUTHCOM: Strikes target vessels engaged in narcotics smuggling by narco-terrorist networks under the president's authority to use force against designated threats; SOUTH | Human rights groups / legal scholars: Strikes on civilian vessels without capture, trial, or independent verification of cargo/intent amount to extrajudicial killing in international waters, with no || Q: Is the Shield of the Americas a defensive partnership or a revived Monroe Doctrine? | Trump administration: A voluntary coalition of willing partners defending hemispheric sovereignty against cartels, narco-terrorism, and foreign interference — the 'Trump Corollary' t | Regional critics / left-leaning governme: A revival of 19th-century Monroe Doctrine hegemony, rewarding ideologically aligned right-wing governments while isolating and pressuring left-leaning holdouts, || Q: Does Mexico's absence reflect sovereignty or a security gap? | President Sheinbaum: Mexico can and must handle cartel enforcement domestically, including arresting rather than killing suspected traffickers at sea; cooperation with Washington is | US officials / coalition analysts: Mexico's non-membership — alongside Brazil and (until Aug 2026) Colombia — leaves the hemisphere's largest cartel theater outside coordinated coalition action, 
+Disputed or frozen figures: none
+
+### UK History (united-kingdom) [domain: governance]
+Digest: PM Andy Burnham used his first official visit to Northern Ireland on 27 August to rule out a border poll, prompting a Sinn Féin rebuke over the Good Friday Agreement while the DUP welcomed the move. The ONS reported a surprise £1.8bn public borrowing deficit for July on 21 August, piling pressure on Chancellor Healey ahead of his 28 October Budget, and Ofgem confirmed a 4% winter energy price cap rise to £1,723 on 26 August. Labour's poll lead over Reform UK has narrowed to a near-tie. Updated timeline, map points, KPIs, economic indicators, claims, and political profiles.
+Sections updated: events, timeline, mapPoints, kpis, econ, claims, political, meta
+KPIs: Days Since Founding (927 CE): 401,630; UK Population: 67.6 million; NHS England Waiting List: 7.11 million; UK CPI Inflation: 2.9%; Scotland Independence Support (polling avg.): ~48%; UK GDP (nominal): $3.1 trillion
+Recent events:
+[2026-08-21] (id: uk-public-finances-deficit-july-2026) UK Posts Surprise £1.8bn Budget Deficit in July, Piling Pressure on Chancellor Healey
+[2026-08-26] (id: ofgem-price-cap-rise-october-2026) Ofgem Confirms 4% Winter Price Cap Rise to £1,723 as Middle East-Driven Gas Costs Bite
+[2026-08-27] (id: burnham-belfast-border-poll-off-the-table-2026) Burnham Rules Out Northern Ireland Border Poll on First Visit, Sparking Sinn Féin Rebuke
+Unresolved disputes: Q: Does Reform UK's rapid rise represent a legitimate democratic shift or a threat to UK institutions? | Reform UK Reflects a Legitimate Democrat: Reform UK's 2026 local election results — 1,452 seats, 14 councils, 17 Scottish MSPs, 34 Welsh Assembly members — reflect genuine voter frustration with decades | Reform UK Poses Democratic and Instituti: Critics including academics at LSE and Chatham House argue that Reform UK's rhetoric — anti-immigration, anti-BBC, anti-NHS reform, anti-net-zero — represents a || Q: Has Brexit been economically beneficial or harmful to the United Kingdom? | Brexit Benefits the UK: Leaving the EU allows the UK to negotiate its own trade deals globally, control its own regulatory environment, and end the free movement of EU labour. Proponen | Brexit Has Damaged the UK: The OBR, Bank of England, Resolution Foundation, and the vast majority of economists find Brexit has reduced UK trade intensity by 15–20%, GDP by an estimated 4 || Q: Should Scotland become an independent country? | Yes — Independence for Scotland: The SNP argues Scotland has distinct political preferences (routinely voting Labour or SNP while England elects Conservatives), voted 62% to Remain in the EU re | No — Stronger Together in the UK: Unionists argue Scotland benefits from pooled UK resources, the pound sterling, and full access to the UK single market (far larger than the EU for Scottish exp
+Disputed or frozen figures: none
+
+### United States (united-states) [domain: governance]
+Digest: Large civil rights march in the US protests Trump administration changes to voting laws and election procedures, drawing crowds echoing historical civil rights demonstrations.
+Sections updated: events, meta
+KPIs: Total Departures Since Jan 2025: 2.5M+; ICE Detention Population: ~68,000; ICE Annual Deportation Target (FY2026): 1 Million; Section 232 Steel Tariff (effective Apr 6): 50%; Pharma Tariff (patented imports): Up to 100%; DOGE Claimed Savings: $160B
+Recent events:
+[2026-08-12] (id: trump-scotus-usps-mail-ballot-2026-08-12) Trump Administration Makes Second Supreme Court Appeal to Preserve USPS Mail Ballot Delivery Policy
+[2026-08-17] (id: us-foreign-shipyards-navy-2026-08-17) Trump Clears Foreign Shipyards to Build US Navy Warships
+[2026-08-28] (id: civil-rights-march-voting-laws-2026-08-28) Large Civil Rights March Protests Trump Voting Law Changes
+Unresolved disputes: Q: Was the January 6, 2021 Capitol attack an insurrection or a legitimate political protest? | House January 6 Committee / Democrats: The bipartisan House Select Committee concluded January 6 was a coordinated multi-part plan to overturn the 2020 election. Trump incited the crowd at the Ellips | Trump / Republican Defenders: Trump and his allies characterize the events as a mostly peaceful protest that was 'provocateured' by FBI informants and Capitol police who opened doors. They a || Q: Did COVID-19 originate from a Wuhan laboratory leak or natural zoonotic spillover? | Lab Leak Proponents (FBI, DOE, Republica: The FBI and Department of Energy (with low confidence) assessed COVID-19 most likely originated from a Wuhan Institute of Virology lab incident, possibly an acc | Natural Origin Scientists / WHO: Most virologists and four US intelligence agencies (CIA, NSA, ODNI, DIA) assessed COVID-19 most likely arose through natural zoonotic spillover from animals to  || Q: Does the First Amendment protect unlimited corporate and union political spending (Citizens United)? | Citizens United Majority / Conservative : In Citizens United v. FEC (2010), the Supreme Court ruled 5-4 that the First Amendment prohibits the government from restricting independent political expenditu | Dissent / Campaign Finance Reform Advoca: Justice Stevens' dissent argued the majority's equation of corporations with people and money with speech is unfounded. Critics argue Citizens United opened the
+Disputed or frozen figures: War in Afghanistan — US Military (2001–2021): 2,461 (DoD / Costs of War Project (Brown University)) America's longest war (20 years). Includes 1,833 killed in hostile action. Afghan security forces: ~66,000 killed. Afgha || Iraq War — US Military (2003–2011): 4,487 (DoD / iCasualties.org) US military deaths in Iraq from invasion through 2011 withdrawal. Coalition total: ~4,804 killed. Iraqi civilian deaths: || COVID-19 Pandemic — US Deaths (2020–present): 1,217,000+ (CDC COVID Data Tracker / WHO) US reported the world's highest COVID-19 death toll. CDC excess mortality analysis suggests true toll may be 1.3–1.4 mil
+
+### Cyclosporiasis Outbreak (us-cyclosporiasis-outbreak) [domain: disaster]
+Digest: CDC's Aug 27 weekly update expands the Taylor Farms/Taco Bell multistate outbreak to 20 states after Georgia, Tennessee, and Texas were added, with confirmed illnesses rising to 11,458 (from 10,930) and hospitalizations to 495 (from 454); the two Michigan deaths are unchanged. Separately, CDC's broader season-wide combined tally across all Cyclospora clusters climbed to 29,024 cases (17,180 lab-confirmed) across 48 states as of Aug 24-25, per Food Safety News and Food Poisoning Bulletin reporting. North Carolina's distinct parsley/cilantro cluster grew to 940 cases and 32 hospitalizations as o
+Sections updated: kpis, timeline, mapPoints, casualties, claims, political, meta
+KPIs: Lab-Confirmed Cases (Season, Since May 1): 17,180; Total Reported Cases (Confirmed + Probable): 29,024; Multistate Outbreak Cases (Taylor Farms Lettuce): 11,458; Hospitalizations (Multistate Outbreak): 495; Deaths: 2; States in Multistate Outbreak: 20
+Recent events:
+none
+Unresolved disputes: Q: Was Taylor Farms de México iceberg lettuce actually the source of the outbreak? | FDA / CDC: Epidemiologic case-control data and supply-chain traceback both converge on Taylor Farms de México iceberg lettuce sourced from central Mexico as the vehicle of | Mexican Regulators (COFEPRIS/SENASICA) /: A July 18-20 inspection of the Guanajuato facility found no Cyclospora cayetanensis or fecal coliforms in lettuce or water samples, and the company maintains th || Q: Does the retracted 'false positive' border sample undermine the traceback case? | Food-safety critics / Marler Blog: FDA's retraction of its one positive Cyclospora sample at the Laredo border, combined with no other product testing positive, weakens confidence in the specific | FDA: The retracted sample was one data point among a much larger epidemiological and supply-chain traceback; case-control interviews and distribution records indepen || Q: Why do Michigan's state case totals (13,909) differ so sharply from CDC's national multistate outbreak count (9,481)? | CDC: The 9,481 figure applies a specific multistate outbreak case definition tied to confirmed exposure to the recalled lettuce; Michigan's broader state total inclu | Michigan Department of Health and Human : Michigan's dashboard reflects the full burden of illness the state is managing and should be read alongside, not instead of, the narrower federal multistate cou
+Disputed or frozen figures: Multistate Outbreak — Taylor Farms Lettuce (20 States): 2 (CDC) 11,458 confirmed illnesses across 20 states as of Aug 27, 2026 (Georgia, Tennessee, and Texas newly added), tied specifi || Michigan (State Total): 2 (Michigan Department of Health and Human Services) 14,277 cumulative cases as of Aug 20, 2026 — the largest single-state total, using a broader state-level counting method || National — Probable/Unconfirmed Cases Pending Review: 0 (CDC) At least 11,844 additional cyclosporiasis cases require further investigation and lab confirmation; final classification
+
+### US Measles (us-measles-resurgence) [domain: disaster]
+Digest: CDC's weekly update added 211 new confirmed cases — more than double the prior week's gain — pushing the 2026 national total to 2,777 across 47 jurisdictions, driven mainly by surges in Pennsylvania and Ohio. Pennsylvania announced the year's first measles deaths on Aug 25: two unvaccinated Lancaster County residents, one an infant. Two days later CDC publicly disputed the state's 'measles-associated' framing, saying Pennsylvania had withheld case data, while the county coroner had not confirmed measles as the cause of either death. Separately, a new outbreak was declared in Seneca County, NY,
+Sections updated: kpis, timeline, mapPoints, claims, political, casualties
+KPIs: 2026 confirmed measles cases (US): 2,777; 2025 full-year confirmed cases: 2,289; Jurisdictions with 2026 cases: 47; Cases outbreak-associated (2026): 94%; Confirmed measles deaths: 5; National MMR kindergarten coverage: 92.4%
+Recent events:
+none
+Unresolved disputes: Q: Will the United States formally lose its own measles elimination status in November 2026? | CIDRAP analysis / public health research: An epidemiological analysis published mid-2026 concluded the US is 'highly likely' to lose elimination status this fall, citing continuous weekly transmission s | Some state and federal officials: Officials have argued that many 2025-2026 clusters, while overlapping in time, represent distinct chains of transmission traceable to specific undervaccinated c || Q: Is the reconstituted ACIP (after RFK Jr.'s June 2025 mass dismissal) a credible, science-based advisory body? | HHS / RFK Jr.: Kennedy said the wholesale replacement of all 17 ACIP members was necessary to remove conflicts of interest and ensure the committee reflects the administration | AMA / AAP / former ACIP members: Medical associations argued the new committee's rapid votes to restrict MMRV and narrow hepatitis B recommendations bypassed normal evidentiary review, undermin || Q: Did measles directly cause the two Lancaster County, Pennsylvania deaths announced in August 2026? | Pennsylvania Dept. of Health / Gov. Josh: The state announced the deaths of 2 unvaccinated Lancaster County residents as the first 'measles-associated' deaths in Pennsylvania in 35 years, saying this te | CDC / HHS under Trump and RFK Jr.: CDC publicly cast doubt on the state's framing, saying 'these discrepancies raise important questions, particularly because the Governor's Office has not provid
+Disputed or frozen figures: Pennsylvania (Lancaster County), 2026 deaths: 2 (Pennsylvania Dept. of Health / CDC) Pennsylvania announced Aug 25, 2026 what it called the state's first measles deaths in 35 years — 2 unvaccinated Lancast || South Carolina outbreak (Oct 2025-Apr 2026): 0 (SC DHEC / CIDRAP) No deaths reported; nearly 1,000 total cases, the vast majority in unvaccinated residents, before the state declared the
+
+### Rubin LSST (vera-rubin-lsst) [domain: science]
+Digest: Routine nightly science operations continue from Cerro Pachón; no new asteroid batches, data releases, or funding developments were found in the Aug 21–28 window despite multiple search strategies. The timeline was backfilled with one previously missing milestone: NAOJ and Subaru Telescope's confirmation of Japan's ongoing LSST contributions (camera operations scientist Yousuke Utsumi stationed on-site, plus data-management and computing support from NAOJ, University of Tokyo, Chiba University, and Nagoya University). Early Data Preview 2's COSMOS mosaic (released early August) remains the mos
+Sections updated: timeline, meta
+KPIs: New Asteroids Discovered: 11,000+; New Trans-Neptunian Objects Found: ~380; Nightly Alert Volume: Up to 10 million alerts/night; LSST Camera Resolution: 3,200 megapixels; Survey Duration: 10 years (began Jun 30, 2026); Total Construction Cost: ~$810 million
+Recent events:
+none
+Unresolved disputes: Q: Do satellite megaconstellations pose an existential threat to Rubin's wide-field science? | Astronomers / Rubin Observatory staff: Planned constellations of over a million satellites could triple night-sky brightness and cause Rubin to miss roughly 15% of hazardous near-Earth asteroids in a | Satellite operators / mitigation researc: Darkening treatments, orbit-avoidance coordination, and Rubin-side scheduling and image-processing techniques can substantially reduce streak contamination, kee || Q: Is Rubin's 2-year data proprietary period a fair balance between incentivizing investment and open science? | Rubin data policy / NSF-DOE: A time-limited proprietary period is standard practice that rewards the US and Chilean institutions and international partners who funded construction through i | International astronomy community: Scientists outside the US, Chile, and in-kind partner countries are locked out of the world's most powerful time-domain dataset for two years, disadvantaging re || Q: Can automated community alert brokers be trusted to classify Rubin's nightly alert stream without human review? | Broker teams / survey operators: At up to 10 million alerts per night, machine classification is the only feasible approach; well-tuned brokers with adjustable confidence thresholds make automa | Skeptical researchers: The overwhelming majority of alerts are ranked by machine probability scores alone and never reach human review, and threshold-tuning decisions — such as one br
+Disputed or frozen figures: none
+
+
+## OUTPUT FORMAT
+Respond with a JSON array of tweet objects. Each object MUST have ALL these fields:
+{
+  "type": "digest|breaking|thread|data_viz|contested|stale_data|escalation|cross_tracker",
+  "voice": "analyst",
+  "tracker": "tracker-slug",
+  "lang": "en|es|fr|pt",
+  "text": "the tweet body text ONLY — do NOT include the link or hashtags in this field, they are appended automatically by the poster",
+  "hashtags": ["#TopicTag", "#Watchboard"],
+  "link": "(see LINK RULES below)",
+  "image": "(see LINK RULES below — OG image URL for breaking tweets, null otherwise)",
+  "memegenUrl": null,
+  "publishAt": "2026-08-28T08:00:00Z",
+  "estimatedCost": 0.01,
+  "threadTweets": ["tweet 1", "tweet 2", ...] or null,
+  "judge": {
+    "score": 0.92,
+    "verdict": "PUBLISH",
+    "comment": "explanation",
+    "factChecks": [
+      { "claim": "quoted claim", "status": "verified", "source": "data source" }
+    ]
+  }
+}
+
+LINK RULES:
+- For "breaking" tweets: link to the specific event permalink. Format the event ID as a slug (lowercase, replace non-alphanumeric with hyphens). URL: https://watchboard.dev/{tracker}/events/{date}-{event-id-slug}?utm_source=x&utm_medium=breaking&utm_campaign=2026-08-28
+  Also set "image" to the per-event OG card: https://watchboard.dev/og/{tracker}/{date}-{event-id-slug}.png
+- For ALL other tweet types: link to the tracker dashboard: https://watchboard.dev/{tracker}/?utm_source=x&utm_medium={type}&utm_campaign=2026-08-28
+  Set "image" to null unless a stat card applies.
+- The event IDs are shown in the "Recent events" data as (id: ...) — use them to build slugs.
+
+CRITICAL RULES:
+- "text" must NOT contain the link URL or hashtags — the poster appends those automatically. Including them causes duplication.
+- "publishAt" is REQUIRED and MUST be a full ISO 8601 datetime using one of today's time slots (2026-08-28T08:00:00Z, 2026-08-28T13:00:00Z, 2026-08-28T18:00:00Z, 2026-08-28T22:00:00Z).
+- "judge" is REQUIRED with score, verdict, comment, and factChecks.
+- Do NOT include a "platform" field. All entries are Twitter/X tweets.
+
+Only output the JSON array. No markdown, no explanation, no code fences.

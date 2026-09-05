@@ -1,0 +1,206 @@
+[
+  {
+    "id": "sudan-ethiopia-border-military-buildup-may8-2026",
+    "date": "2026-05-08",
+    "year": "2026",
+    "title": "Sudan Deploys Troops and Anti-Aircraft Systems to Ethiopian Border Zones as Confrontation Escalates",
+    "type": "military",
+    "detail": "Sudan reinforced its border with Ethiopia on May 7–8, 2026, deploying additional ground troops and anti-aircraft systems to three key border zones in Gedaref State: East Gallabat, Basunda, and the disputed Al-Fashaga triangle — according to Bloomberg reporting based on multiple Sudanese and regional security officials. The buildup followed Sudan's May 5 formal accusation that Ethiopia's Bahir Dar Airport served as the launch site for four drone attacks since March 1, including the May 5 strike on Khartoum International Airport. The deployment signals a qualitative shift in the conflict: while Sudan's civil war has long had regional dimensions through proxy actors, this represents the first confirmed movement of SAF conventional forces to the Ethiopian border in direct response to state-level accusations. The reinforcement of East Gallabat and Al-Fashaga is particularly significant — Al-Fashaga has been a disputed tri-border area between Sudan, Ethiopia, and South Sudan for decades, with Sudanese farmers expelled from the fertile territory by Amhara militias in 2020–2021 during Ethiopia's domestic turmoil. Sudan's ambassador to Ethiopia remained recalled from Addis Ababa with no announced timeline for return. Ethiopia's Foreign Ministry maintained its position that Sudan's accusations were 'baseless' and continued to counter-accuse Sudan of sheltering TPLF-aligned 'mercenaries' along the shared border. Regional analysts warned the military buildup risks transforming Sudan's civil war from an internally-driven conflict with proxy dimensions into a full interstate confrontation in the Horn of Africa, at a moment when both countries are under significant internal pressure. The African Union Peace and Security Council called for de-escalation.",
+    "sources": [
+      {
+        "name": "Bloomberg",
+        "tier": 2,
+        "url": "https://www.bloomberg.com/news/articles/2026-05-07/horn-of-africa-tensions-flare-as-sudan-adds-forces-near-ethiopia",
+        "pole": "western"
+      },
+      {
+        "name": "Sudan Tribune",
+        "tier": 2,
+        "url": "https://sudantribune.com/article/313640",
+        "pole": "international"
+      },
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/news/2026/5/6/sudan-blames-ethiopia-uae-for-recent-drone-attacks-what-we-know",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.bloomberg.com/news/articles/2026-05-07/horn-of-africa-tensions-flare-as-sudan-adds-forces-near-ethiopia",
+        "caption": "Horn of Africa tensions flare as Sudan adds troops and anti-aircraft systems near Ethiopia following drone attack accusations — Bloomberg, May 7, 2026",
+        "source": "Bloomberg",
+        "thumbnail": "https://www.bloomberg.com/news/articles/2026-05-07/horn-of-africa-tensions-flare-as-sudan-adds-forces-near-ethiopia"
+      }
+    ],
+    "confidence": "medium",
+    "eventConfidence": "official_claim",
+    "lastUpdated": "2026-05-08T14:00:00.000Z"
+  },
+  {
+    "id": "khartoum-airport-closure-day4-un-uk-condemnation-may8-2026",
+    "date": "2026-05-08",
+    "year": "2026",
+    "title": "UN and UK Condemn RSF Drone Attacks on Khartoum Airport as Closure Enters Fourth Day; Sudan PM Visits Site",
+    "type": "diplomatic",
+    "detail": "The United Nations and the United Kingdom formally condemned RSF drone attacks on Khartoum International Airport as Khartoum airport operations remained suspended on May 8, 2026, entering a fourth consecutive day of closure following the May 5 drone interception. Sudan's Prime Minister visited the airport site to inspect the damage and assess security conditions, underscoring the political gravity of the attack on what had been heralded as a symbolic milestone — the airport's first resumed commercial operations since the civil war began in April 2023. A Dabanga Radio TV Online report confirmed UN agencies were still unable to use the airport for humanitarian logistics, disrupting planned acceleration of medical supply deliveries to Khartoum State. The 72-hour suspension originally announced on May 5 had elapsed, but SAF and civil aviation authorities had not formally announced a reopening schedule, citing ongoing security assessments. Sudan's Foreign Ministry reiterated that it expected the UN Security Council to act on its evidence package — including drone serial numbers and radar tracks — linking the attacks to UAE-supplied munitions launched from Ethiopia's Bahir Dar Airport. The UK government statement called the drone attacks 'an unacceptable escalation' that endangered civilian lives and humanitarian access. No independent verification of the Bahir Dar launch origin had been announced as of May 8. WFP confirmed its broader Sudan aid operations were not impacted by the airport closure, with alternative logistics corridors remaining functional through Port Sudan and ground routes.",
+    "sources": [
+      {
+        "name": "Sudan Tribune",
+        "tier": 2,
+        "url": "https://sudantribune.com/article/313614",
+        "pole": "international"
+      },
+      {
+        "name": "Dabanga Radio TV Online",
+        "tier": 2,
+        "url": "https://www.dabangasudan.org/en/all-news/article/un-flights-from-khartoum-airport-suspended-for-the-third-day-following-drone-attack-sudan-pm-visits-site",
+        "pole": "western"
+      },
+      {
+        "name": "Dabanga Radio TV Online",
+        "tier": 2,
+        "url": "https://www.dabangasudan.org/en/all-news/article/wfp-sudan-aid-ops-not-impacted-by-khartoum-airport-drone-strike",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://sudantribune.com/article/313614",
+        "caption": "UN and UK condemn RSF drone attacks on Khartoum airport as Sudan's PM visits the site; flights remain suspended into Day 4 — Sudan Tribune, May 8, 2026",
+        "source": "Sudan Tribune",
+        "thumbnail": "https://sudantribune.com/article/313614"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified",
+    "lastUpdated": "2026-05-08T14:00:00.000Z"
+  },
+  {
+    "id": "aljazeera-sudan-prolonged-war-scenarios-may8-2026",
+    "date": "2026-05-08",
+    "year": "2026",
+    "title": "Sudan War Enters Fourth Year: Analysts Project $34.5B GDP Loss and 34 Million More in Extreme Poverty if Conflict Continues to 2030",
+    "type": "humanitarian",
+    "detail": "Al Jazeera published a major analytical report on May 8, 2026 modeling economic and humanitarian scenarios if Sudan's civil war continues to 2030 or 2033. The report projects cumulative GDP losses of $34.5 billion under a prolonged conflict scenario, with an additional 34 million people pushed into extreme poverty on top of the 28.9 million already acutely food insecure as of April 2026. As Sudan's civil war entered its fourth year following the April 15, 2023 outbreak, analysts cited five compounding structural factors preventing resolution: continued RSF gold revenues estimated at $860 million annually financing the paramilitaries; external weapons supply chains through the UAE-RSF link and Turkey/Iran-SAF links; the collapse of UN-mediated ceasefire efforts since the Jeddah process failed in August 2023; Sudan's exclusion from active African Union mediation due to Hemedti's diplomatic maneuvering; and the humanitarian funding gap, with only 16% of the $2.9 billion 2026 UN appeal funded as of May 2026. The report noted that, absent a decisive military victory or external shock, the most likely near-term scenario is continued attrition warfare with gradual SAF territorial consolidation in the east and north while Darfur and parts of Kordofan remain under RSF control — effectively a low-intensity partition. Sudan's conflict has now displaced 14 million people (more than any other active conflict globally), killed an estimated 150,000+ people, and destroyed the livelihoods of approximately 20 million households.",
+    "sources": [
+      {
+        "name": "Al Jazeera",
+        "tier": 2,
+        "url": "https://www.aljazeera.com/features/2026/5/8/what-would-prolonged-war-mean-for-sudan",
+        "pole": "international"
+      },
+      {
+        "name": "UN OCHA",
+        "tier": 1,
+        "url": "https://www.unocha.org/sudan",
+        "pole": "international"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.aljazeera.com/features/2026/5/8/what-would-prolonged-war-mean-for-sudan",
+        "caption": "Al Jazeera feature: Sudan war enters fourth year with $34.5B GDP loss and 34 million pushed into extreme poverty projected if conflict continues — May 8, 2026",
+        "source": "Al Jazeera",
+        "thumbnail": "https://www.aljazeera.com/features/2026/5/8/what-would-prolonged-war-mean-for-sudan"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified",
+    "lastUpdated": "2026-05-08T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-drone-khartoum-commander-home-may8-2026",
+    "date": "2026-05-08",
+    "year": "2026",
+    "title": "RSF Drone Strikes Home of Military-Allied Commander Near Khartoum: 15 Killed",
+    "type": "military",
+    "detail": "An RSF drone struck the home of a military-aligned commander near Khartoum on May 8, 2026, killing at least 15 people, according to MadaMasr's Sudan intelligence roundup. The strike targeted a SAF-affiliated local military figure whose precise identity was not confirmed in available reporting. The attack follows the RSF's pattern of targeted strikes on SAF-aligned commanders and their families — most notably the May 2 RSF drone attack on the compound of former RSF commander Abu Aqla Kaikal in Gezira, which killed 9–17 family members including six children. The May 8 Khartoum-area strike adds to the near-daily toll of RSF drone operations targeting SAF-affiliated military infrastructure and affiliated individuals throughout the Khartoum region. The RSF's continued ability to conduct precision strikes against military-affiliated targets in SAF-recaptured Khartoum — where SAF retook the city in March 2025 after nearly two years of RSF occupation — demonstrates persistent RSF intelligence networks and drone targeting capability in the capital. Analysts at the Sudan War Monitor attributed RSF precision strike improvements in 2026 partly to the estimated 850+ foreign nationals embedded with RSF, including Colombian UAV specialists documented by US Treasury OFAC in April 2026.",
+    "sources": [
+      {
+        "name": "MadaMasr",
+        "tier": 2,
+        "url": "https://www.madamasr.com/en/2026/05/08/news/u/sudan-nashra-khartoum-escalates-against-ethiopia-after-rsf-strikes-traced-to-its-territories-15-killed-in-drone-strike-on-home-of-military-allied-commander-rsf-buildup-in-sudan-libya-egypt-border/",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.madamasr.com/en/2026/05/08/news/u/sudan-nashra-khartoum-escalates-against-ethiopia-after-rsf-strikes-traced-to-its-territories-15-killed-in-drone-strike-on-home-of-military-allied-commander-rsf-buildup-in-sudan-libya-egypt-border/",
+        "caption": "RSF drone kills 15 at home of SAF-aligned military commander near Khartoum on May 8, 2026 — MadaMasr Sudan roundup",
+        "source": "MadaMasr",
+        "thumbnail": "https://www.madamasr.com/en/2026/05/08/news/u/sudan-nashra-khartoum-escalates-against-ethiopia-after-rsf-strikes-traced-to-its-territories-15-killed-in-drone-strike-on-home-of-military-allied-commander-rsf-buildup-in-sudan-libya-egypt-border/"
+      }
+    ],
+    "confidence": "low",
+    "eventConfidence": "unverified",
+    "lastUpdated": "2026-05-10T14:30:00.000Z"
+  },
+  {
+    "id": "rsf-drone-strikes-al-quz-el-obeid-may8-2026",
+    "date": "2026-05-08",
+    "year": "2026",
+    "title": "RSF Drone Strikes Kill 26 Civilians in Al Quz (South Kordofan) and Near El Obeid (North Kordofan)",
+    "type": "military",
+    "detail": "RSF drone strikes on May 8, 2026 killed at least 26 civilians in two separate attacks: one in Al Quz, South Kordofan State and one near El Obeid, North Kordofan State, according to the OHCHR high-alert statement by UN Human Rights Chief Volker Türk issued on May 11, 2026. The Al Quz strike in South Kordofan extends RSF drone operations into an area where SAF has been pushing counteroffensive operations against RSF-SPLM-N positions. The El Obeid strike continues the near-daily pattern of RSF drone attacks on North Kordofan's state capital, which has been struck repeatedly since SAF broke the ground siege in February 2025 — including 13 civilians killed (8 children) on April 24, 7 civilians killed on April 25, and multiple strikes in early May. The May 8 strikes bring documented civilian drone deaths in 2026 (January–April plus early May) to at least 880, according to OHCHR. Türk cited these attacks as part of his high-alert warning that drone warfare now accounts for over 80% of all conflict-related civilian deaths in Sudan.",
+    "sources": [
+      {
+        "name": "OHCHR",
+        "tier": 1,
+        "url": "https://www.ohchr.org/en/press-releases/2026/05/turk-issues-high-alert-widening-sudan-conflict-amid-increased-use-drones",
+        "pole": "international"
+      },
+      {
+        "name": "Bloomberg",
+        "tier": 2,
+        "url": "https://www.bloomberg.com/news/articles/2026-05-11/drone-strikes-kill-nearly-900-sudan-civilians-this-year-un-says",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.bloomberg.com/news/articles/2026-05-11/drone-strikes-kill-nearly-900-sudan-civilians-this-year-un-says",
+        "caption": "UN documents RSF drone strikes killing 26 civilians in South and North Kordofan on May 8 — Bloomberg citing OHCHR, May 11, 2026",
+        "source": "Bloomberg",
+        "thumbnail": "https://www.bloomberg.com/news/articles/2026-05-11/drone-strikes-kill-nearly-900-sudan-civilians-this-year-un-says"
+      }
+    ],
+    "confidence": "high",
+    "eventConfidence": "verified",
+    "lastUpdated": "2026-05-11T14:00:00.000Z"
+  },
+  {
+    "id": "rsf-buildup-libya-egypt-sudan-border-may8-2026",
+    "date": "2026-05-08",
+    "year": "2026",
+    "title": "RSF Forces Mass Near Libya-Egypt-Sudan Border Triangle, Signaling Potential New Strategic Axis",
+    "type": "military",
+    "detail": "Intelligence reporting by MadaMasr on May 8, 2026 indicated that RSF forces were massing near the Sudan–Libya–Egypt border triangle in Sudan's far northwest — a remote Libyan Desert zone where the three countries converge near Jebel Uweinat. The buildup suggests the RSF may be consolidating a northern flank or establishing a new supply corridor through Libyan territory to bypass SAF interdiction of traditional RSF Chad-based supply routes. The RSF's established relationships with the Libyan National Army (LNA) under Khalifa Haftar and with networks operating in southern Libya could facilitate the use of Libyan territory as a transit zone for weapons and fighters. Sudan's military and diplomatic attention at this time was primarily focused on the Ethiopian border (East Gallabat, Basunda, Al-Fashaga), where SAF had deployed troops and anti-aircraft systems in response to accusations that Ethiopia facilitated RSF drone attacks. The simultaneous opening of a potential northwestern flank at the Libya-Egypt-Sudan border would represent a second front of RSF strategic maneuvering. The area is a known corridor for gold smuggling and irregular troop movements by armed groups across the Sahara. No SAF statement specifically addressing the Libya-Egypt-Sudan buildup had been issued as of May 8, and the report remained unconfirmed by independent verification.",
+    "sources": [
+      {
+        "name": "MadaMasr",
+        "tier": 2,
+        "url": "https://www.madamasr.com/en/2026/05/08/news/u/sudan-nashra-khartoum-escalates-against-ethiopia-after-rsf-strikes-traced-to-its-territories-15-killed-in-drone-strike-on-home-of-military-allied-commander-rsf-buildup-in-sudan-libya-egypt-border/",
+        "pole": "middle_eastern"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.madamasr.com/en/2026/05/08/news/u/sudan-nashra-khartoum-escalates-against-ethiopia-after-rsf-strikes-traced-to-its-territories-15-killed-in-drone-strike-on-home-of-military-allied-commander-rsf-buildup-in-sudan-libya-egypt-border/",
+        "caption": "RSF massing forces at Sudan-Libya-Egypt border triangle as of May 8, 2026 — potential new strategic axis or supply corridor via Libyan territory — MadaMasr",
+        "source": "MadaMasr",
+        "thumbnail": "https://www.madamasr.com/en/2026/05/08/news/u/sudan-nashra-khartoum-escalates-against-ethiopia-after-rsf-strikes-traced-to-its-territories-15-killed-in-drone-strike-on-home-of-military-allied-commander-rsf-buildup-in-sudan-libya-egypt-border/"
+      }
+    ],
+    "confidence": "low",
+    "eventConfidence": "unverified",
+    "lastUpdated": "2026-05-10T14:30:00.000Z"
+  }
+]

@@ -1,0 +1,1652 @@
+🌐 Starting Household Resilience Dashboard...
+📍 Access at: http://localhost:5555
+Press Ctrl+C to stop
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5555
+ * Running on http://10.0.0.13:5555
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 858-195-767
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:27:52] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:27:52] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:27:52] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:27:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:27:53] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:27:54] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:40] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:40] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:41] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:53] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:28:54] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:29:00] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:29:00] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:29:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:29:00] "GET / HTTP/1.1" 200 -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] code 400, message Bad request version ('æ\x9fY%p\x91õG\x07Ã\x00*ÚÚ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03è\x1cÇO¡<\x90ó)8\x01Í\x85Þv©Ë¬\x11ý|\x8fõ\x0f\x9f\x82¨a{\x18µ0 \x1c*\x06T\\W\x10-\\Za]ÌstäÍ¥×Ø×\x1fæ\x9fY%p\x91õG\x07Ã\x00*ÚÚ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x07öAZ4`\x03Ê×#\x03\x10l±a4\x99\x92¤Q£>È\x11{ý)$n\x17Åf')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x07öAZ4`\x03Ê×#\x03\x10l±a4\x99\x92¤Q£>È\x11{ý)$n\x17Åf eE\x13õ'õË]-#.þ\x17»\x8d\x14\x82\x88ß\x89\x1aB:t\x9eæ[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] code 400, message Bad request version ('º\x80¹eø\x1b\x8e®@ôÎ_AûS\x98\x07\x91XP\x97d(ÉIÝ1Û2\x04»\x00*ÊÊ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03×rb_1\x0eZH>\x95\x11ò\x85Äí¸\x0eùË\x06\x99ë\x09å\x13<2rzÃ²®  º\x80¹eø\x1b\x8e®@ôÎ_AûS\x98\x07\x91XP\x97d(ÉIÝ1Û2\x04»\x00*ÊÊ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] code 400, message Bad request version ('\x00*ZZ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Øâ[NÝ7èH\x9eî±O\x16£&\x1f°\x85ÕÚï~X%'ÊÕ\x98-í©\x90 \x12Ì\x1dEwj®°\x01ÿã\\hÏÏÉk,\x17\x93\x8f\x83Tÿ@öÓMoDy\x0b\x00*ZZ\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:15] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:29:17] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:29:42] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:29:53] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:29:54] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:30:42] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:30:54] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:30:55] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:16] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:17] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:19] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:19] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:20] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:23] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:23] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:23] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:24] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:31:30] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:32:24] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:32:42] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:32:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:32:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:32:46] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:32:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:32:47] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:33:25] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:33:42] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:33:47] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:40:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:40:11] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:40:11] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:40:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:40:12] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:40:17] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:40:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:41:12] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:41:17] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:41:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:42:12] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:42:17] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:42:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:12] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:14] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:14] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:15] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:17] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:43:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:44:15] "GET /api/status HTTP/1.1" 200 -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] code 400, message Bad request version ('\x00*\x1a\x1a\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ö£qGDü)ûN¡LÔ\x9bf¾Ó\x9e/+|Ýö\x85ú¢û\\ß\x976\x94ç ]\x9di¤^\x97\x98\x15\x12\x8f~ð\x1cÉ\x09ÛzÞã\x89ÏüB½\x05_$ë\x98S\x03\x1d\x00*\x1a\x1a\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] code 400, message Bad request version ('üX©Ø\x96Bm$\x17\x12ãn\x1a?H\x0fnH\x90\x00*jj\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x032\x17äO!0Úì¥\x9b\x04b\x1d g\x0cO}\x0féP\x83\x96$´}¯K\x99CÌ\x9b \x80\x8c>}\x83CKª4ÝÆÇ\x0cüX©Ø\x96Bm$\x17\x12ãn\x1a?H\x0fnH\x90\x00*jj\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] code 400, message Bad request version ('"!¿\x8eÆz\x8f\x93\x16%\x8c\x00*ªª\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03k¹7á(,¥!zÉ\x8cø\x85Æò\x02\x86\x01æv¥:ì(\x19\x9b*ÙQô\x1f¡ S0Ì¥!k\x8a÷"+Ãd$^ç\x8c^k\x1f¯\x0b"!¿\x8eÆz\x8f\x93\x16%\x8c\x00*ªª\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À[0m" HTTPStatus.BAD_REQUEST -
+ERROR:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] code 400, message Bad request version ('oÓ\x7fÚÁ\x87\x00*êê\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À')
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "[35m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x04BR×ñ}r\x95²ox/?w\x95"]VÉS"G@\x8d\x1c/\x18¥^z\\\x93 U\x88C8\x9c\x931\x87út\x9a\x92ñXå[èï2\x9a¦\x82º¤O\x1coÓ\x7fÚÁ\x87\x00*êê\x13\x01\x13\x02\x13\x03À,À+Ì©À0À/Ì¨À[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:44:20] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:44:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:44:35] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:45:11] "GET /emergency HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:45:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:45:21] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:45:22] "GET /emergency HTTP/1.1" 200 -
+INFO:werkzeug:10.0.0.14 - - [25/Jul/2025 20:45:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:45:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:45:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:46:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:46:35] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:46:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:46:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:46:49] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:46:50] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:47:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:47:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:47:50] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:48:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:48:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:48:50] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:49:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:49:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:49:50] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:50:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:50:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:50:50] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:51:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:51:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:51:50] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:52:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:52:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:52:50] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:53:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:53:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:54:34] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:54:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:54:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:55:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:55:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:55:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:56:34] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:56:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:56:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:57:35] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:57:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:57:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:58:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:58:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:58:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:59:34] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:59:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 20:59:35] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:11:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:11:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:11:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:12:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:12:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:12:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:13:46] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:13:46] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:13:47] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:14:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:14:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:14:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:15:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:15:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:15:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:16:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:16:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:16:46] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:17:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:17:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:17:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:18:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:18:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:18:46] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/manavthaker/Documents/GitHub/bunker/household-resilience-monitor/src/collectors/__init__.py', reloading
+🌐 Starting Household Resilience Dashboard...
+📍 Access at: http://localhost:5555
+Press Ctrl+C to stop
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 858-195-767
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:19:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:19:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:19:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:20:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:20:44] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:20:45] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:31:54] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:31:54] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:31:55] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:32:54] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:32:54] "GET /api/status HTTP/1.1" 200 -
+INFO:TreasuryCollector:Using mock Treasury tail: 2.5 bp
+INFO:ICEDetentionCollector:ICE detention utilization: 75.0%
+INFO:TaiwanZoneCollector:Taiwan Strait incursions: 8/week
+INFO:HormuzRiskCollector:Hormuz war risk premium: 0.8%
+INFO:DoDAutonomyCollector:DoD autonomous systems deployed: 350
+INFO:MBridgeCollector:mBridge monthly volume: $15.5B
+INFO:ThreatAnalyzer:Treasury: green (value: 2.5)
+INFO:ThreatAnalyzer:ICEDetention: green (value: 75.0)
+INFO:ThreatAnalyzer:TaiwanZone: green (value: 8)
+INFO:ThreatAnalyzer:HormuzRisk: green (value: 0.8)
+INFO:ThreatAnalyzer:DoDAutonomy: green (value: 350)
+INFO:ThreatAnalyzer:MBridge: green (value: 15.5)
+INFO:werkzeug:127.0.0.1 - - [25/Jul/2025 21:32:55] "GET /api/status HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/manavthaker/Documents/GitHub/bunker/household-resilience-monitor/src/main.py', reloading
+🌐 Starting Household Resilience Dashboard...
+📍 Access at: http://localhost:5555
+Press Ctrl+C to stop
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 858-195-767
+INFO:werkzeug: * Detected change in '/Users/manavthaker/Documents/GitHub/bunker/household-resilience-monitor/src/main.py', reloading
+🌐 Starting Household Resilience Dashboard...
+📍 Access at: http://localhost:5555
+Press Ctrl+C to stop
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 858-195-767
+INFO:werkzeug: * Detected change in '/Users/manavthaker/Documents/GitHub/bunker/household-resilience-monitor/dashboard/app.py', reloading
+🌐 Starting Household Resilience Dashboard...
+📍 Access at: http://localhost:5555
+Press Ctrl+C to stop
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 858-195-767
+INFO:werkzeug: * Detected change in '/Users/manavthaker/Documents/GitHub/bunker/household-resilience-monitor/dashboard/app.py', reloading
+🌐 Starting Household Resilience Dashboard...
+📍 Access at: http://localhost:5555
+Press Ctrl+C to stop
+INFO:werkzeug: * Restarting with stat
+Traceback (most recent call last):
+  File "/Users/manavthaker/Documents/GitHub/bunker/household-resilience-monitor/dashboard/app.py", line 44, in <module>
+    'JoblessClaims': JoblessClaimsCollector(config),
+TypeError: Can't instantiate abstract class JoblessClaimsCollector with abstract method validate_data

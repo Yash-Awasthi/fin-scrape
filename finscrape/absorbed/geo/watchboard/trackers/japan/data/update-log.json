@@ -1,0 +1,35 @@
+{
+  "lastRun": "2026-08-10T16:10:29.067Z",
+  "tracker": "japan",
+  "sections": {
+    "kpis": {
+      "status": "updated",
+      "itemCount": 8
+    },
+    "timeline": {
+      "status": "updated",
+      "itemCount": 54
+    },
+    "mapPoints": {
+      "status": "updated",
+      "itemCount": 22
+    },
+    "econ": {
+      "status": "updated",
+      "itemCount": 8
+    },
+    "claims": {
+      "status": "unchanged",
+      "itemCount": 15
+    },
+    "political": {
+      "status": "unchanged",
+      "itemCount": 20
+    },
+    "events": {
+      "status": "updated",
+      "itemCount": 7
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

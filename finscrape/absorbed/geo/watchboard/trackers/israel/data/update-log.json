@@ -1,0 +1,31 @@
+{
+  "lastRun": "2026-08-10T16:08:51.290Z",
+  "tracker": "israel",
+  "sections": {
+    "kpis": {
+      "count": 6,
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 61,
+      "status": "updated"
+    },
+    "mapPoints": {
+      "count": 32,
+      "status": "updated"
+    },
+    "claims": {
+      "count": 21,
+      "status": "updated"
+    },
+    "political": {
+      "count": 21,
+      "status": "updated"
+    },
+    "econ": {
+      "count": 6,
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

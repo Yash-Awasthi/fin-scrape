@@ -1,0 +1,69 @@
+[
+  {
+    "id": "rial-breaches-1420000",
+    "year": "Dec 23",
+    "title": "Rial Breaches 1,420,000/USD Amid Panic Selling",
+    "type": "economic",
+    "detail": "The rial fell to 1,420,000 per US dollar on the open market as panic selling intensified. Currency exchange shops in Tehran reported being overwhelmed with sellers. The gap between the official rate (42,000) and the open market rate widened to a factor of 34x, the largest divergence in Iran's history.",
+    "sources": [
+      { "name": "Reuters", "tier": 2, "pole": "western" },
+      { "name": "Eghtesad Online", "tier": 2, "pole": "middle_eastern" },
+      { "name": "Iran International", "tier": 2, "pole": "western" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.cnn.com/2025/12/29/middleeast/iran-protests-currency-low-latam-intl",
+        "caption": "Iranian rial breaches 1,420,000 per dollar amid panic selling at exchange shops",
+        "source": "CNN",
+        "thumbnail": "https://media.cnn.com/api/v1/images/stellar/prod/ap25363522315836-1.jpg?c=16x9&q=w_800,c_fill"
+      }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "social-tensions-rise-provinces",
+    "year": "Dec 23",
+    "title": "Social Tensions Rise Across Provincial Cities",
+    "type": "humanitarian",
+    "detail": "Reports emerged of localized protests in Kermanshah, Ahvaz, and Zahedan over food prices and the economic crisis. Small groups of residents gathered outside provincial governor offices demanding action. Security forces maintained a heavy presence but avoided direct confrontation.",
+    "sources": [
+      { "name": "Hengaw", "tier": 3, "pole": "international" },
+      { "name": "HRANA", "tier": 3, "pole": "international" },
+      { "name": "Tasnim News", "tier": 2, "pole": "middle_eastern" },
+      { "name": "BBC Persian", "tier": 2, "pole": "western" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.dailysabah.com/opinion/op-ed/economic-desperation-fuels-irans-latest-protests",
+        "caption": "Social tensions rise across provincial cities as residents demand action over food prices",
+        "source": "Daily Sabah",
+        "thumbnail": "https://idsb.tmgrup.com.tr/ly/uploads/images/2026/01/07/thumbs/1200x675/420371.jpg"
+      }
+    ],
+    "lastUpdated": "2026-03-10"
+  },
+  {
+    "id": "imf-downgrades-iran-outlook",
+    "year": "Dec 23",
+    "title": "IMF Downgrades Iran Economic Outlook",
+    "type": "economic",
+    "detail": "The International Monetary Fund revised Iran's 2026 GDP growth forecast from -2.1% to -4.8%, citing the currency collapse, intensified sanctions enforcement, and declining oil revenue. The report warned of potential humanitarian consequences if food import financing collapsed alongside the rial.",
+    "sources": [
+      { "name": "IMF", "tier": 1, "pole": "international" },
+      { "name": "AP", "tier": 2, "pole": "western" },
+      { "name": "CGTN", "tier": 2, "pole": "eastern" }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://www.iranintl.com/en/202512234988",
+        "caption": "IMF downgrades Iran's economic outlook amid currency collapse and sanctions enforcement",
+        "source": "Iran International",
+        "thumbnail": "https://i.iranintl.com/images/rdk9umy0/production/6cd727d54bb33012bea3cefa97624402122fcc4e-750x500.jpg?rect=0,53,750,394&w=1200&h=630&fit=max&auto=format"
+      }
+    ],
+    "lastUpdated": "2026-03-10"
+  }
+]

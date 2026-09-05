@@ -1,0 +1,48 @@
+{
+  "lastRun": "2026-08-23T00:49:35.557Z",
+  "tracker": "iran",
+  "sections": {
+    "kpis": {
+      "lastRun": "2026-06-24T00:44:16.414Z",
+      "status": "updated"
+    },
+    "timeline": {
+      "count": 76,
+      "status": "ok"
+    },
+    "mapPoints": {
+      "count": 41,
+      "status": "ok"
+    },
+    "claims": {
+      "count": 25,
+      "status": "ok"
+    },
+    "political": {
+      "count": 32,
+      "lastRun": "2026-06-01T14:22:17Z",
+      "status": "updated"
+    },
+    "casualties": {
+      "count": 15,
+      "status": "ok"
+    },
+    "econ": {
+      "count": 10,
+      "status": "ok"
+    },
+    "events": {
+      "lastRun": "2026-08-23T00:49:35.557Z",
+      "status": "updated"
+    },
+    "meta": {
+      "lastRun": "2026-08-23T00:49:35.557Z",
+      "status": "updated"
+    },
+    "map-points": {
+      "lastRun": "2026-06-24T00:44:16.414Z",
+      "status": "updated"
+    }
+  },
+  "consecutiveQuietRuns": 0
+}

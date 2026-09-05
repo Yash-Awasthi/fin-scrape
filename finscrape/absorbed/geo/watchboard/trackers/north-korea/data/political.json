@@ -1,0 +1,200 @@
+[
+  {
+    "id": "kim-jong-un",
+    "name": "Kim Jong-un",
+    "role": "Supreme Leader, Chairman of WPK, Chairman of State Affairs Commission",
+    "avatar": "kp",
+    "initial": "K",
+    "quote": "The southern border must be transformed into an impregnable fortress. Commanders must apply every lesson of modern warfare — drones, precision strikes, electronic — to achieve absolute superiority on the front line. (May 2026, KPA Commanders Meeting, KCNA)",
+    "lastUpdated": "2026-05-24"
+  },
+  {
+    "id": "kim-yo-jong",
+    "name": "Kim Yo-jong",
+    "role": "First Deputy Director, WPK Central Committee; Kim Jong-un's sister and de facto #2",
+    "avatar": "kp",
+    "initial": "Y",
+    "quote": "We think it's not worth making comments on that and we have no interest in it at all. The provocative, aggressive nature of the drills won't change even though their duration and size were reduced. (Aug 18, 2026, on Trump's US-ROK exercise cuts)",
+    "lastUpdated": "2026-08-18"
+  },
+  {
+    "id": "choe-son-hui",
+    "name": "Choe Son-hui",
+    "role": "Foreign Minister of DPRK (2023–present); former Deputy Foreign Minister and top nuclear negotiator; hosted Vietnamese FM Le Hoai Trung in Pyongyang on May 14, 2026 to deepen DPRK–Vietnam ties",
+    "avatar": "kp",
+    "initial": "C",
+    "quote": "The DPRK will take corresponding measures for every hostile act of the United States and its allies.",
+    "lastUpdated": "2026-05-14"
+  },
+  {
+    "id": "choe-ryong-hae",
+    "name": "Choe Ryong-hae",
+    "role": "President of the Presidium, Supreme People's Assembly (nominal head of state)",
+    "avatar": "kp",
+    "initial": "R",
+    "quote": "Our respected Supreme Leader is the sun of our revolution, leading the Korean people to the final victory.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "pak-jong-chon",
+    "name": "Pak Jong-chon",
+    "role": "Secretary of WPK (Military Affairs), 1st Vice-President of National Defence Commission",
+    "avatar": "kp",
+    "initial": "P",
+    "quote": "We stand ready to defeat any enemy through our nuclear shield and conventional military power.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "no-kwang-chol",
+    "name": "No Kwang Chol",
+    "role": "Minister of the People's Armed Forces (Defense Minister); met Russian DefMin Belousov in Pyongyang Apr 2026 to sign 2027–2031 military cooperation framework",
+    "avatar": "kp",
+    "initial": "N",
+    "quote": "The DPRK's armed forces stand shoulder to shoulder with our Russian comrades. Our military brotherhood is forged in shared sacrifice.",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "kim-il-sung",
+    "name": "Kim Il-sung",
+    "role": "Founding Supreme Leader of DPRK (1948–1994); architect of Juche ideology and Kim dynasty",
+    "avatar": "kp",
+    "initial": "I",
+    "quote": "The imperialists and their lackeys will never succeed in smothering the Korean people's struggle for independence and socialism.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "kim-jong-il",
+    "name": "Kim Jong-il",
+    "role": "Supreme Leader of DPRK (1994–2011); General Secretary of WPK; presided over nuclear program inception",
+    "avatar": "kp",
+    "initial": "J",
+    "quote": "Our strong military might is the cornerstone of peace and stability on the Korean peninsula.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "jang-song-thaek",
+    "name": "Jang Song-thaek",
+    "role": "Former Director of Administrative Dept, WPK; Kim Jong-un's uncle and regent; executed December 2013",
+    "avatar": "kp",
+    "initial": "J",
+    "quote": "I carried out anti-party, counter-revolutionary factional acts with ambition to seize supreme power of the party and state. — (from DPRK trial indictment, 2013)",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "yoon-suk-yeol",
+    "name": "Yoon Suk-yeol",
+    "role": "President of South Korea (2022–2025); impeached December 2024 following short-lived martial law declaration",
+    "avatar": "kr",
+    "initial": "Y",
+    "quote": "We will respond firmly to North Korean nuclear provocations and rebuild the ROK-US-Japan security architecture.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "moon-jae-in",
+    "name": "Moon Jae-in",
+    "role": "President of South Korea (2017–2022); Sunshine Policy architect; held three summits with Kim Jong-un in 2018",
+    "avatar": "kr",
+    "initial": "M",
+    "quote": "A new era of peace on the Korean Peninsula has begun today. We will no longer have war.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "lee-jae-myung",
+    "name": "Lee Jae-myung",
+    "role": "President of South Korea (2025–present); former leader of Democratic Party of Korea; favors engagement over pressure",
+    "avatar": "kr",
+    "initial": "L",
+    "quote": "Dialogue is the only sustainable path to denuclearization. Military pressure alone has never worked.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "donald-trump",
+    "name": "Donald J. Trump",
+    "role": "45th & 47th US President; held Singapore summit (2018) and Hanoi summit (2019) with Kim; ordered US-ROK joint drills 'substantially reduced' Aug 16, 2026 and said Aug 19 he expects a fourth meeting with Kim this year",
+    "avatar": "us",
+    "initial": "T",
+    "quote": "Yeah, I will be [meeting Kim this year]. ... He's got 57 very powerful nuclear weapons. I wouldn't have allowed it. But he's got them. I get along with him very well. (Aug 19, 2026)",
+    "lastUpdated": "2026-08-19"
+  },
+  {
+    "id": "joe-biden",
+    "name": "Joe Biden",
+    "role": "46th US President (2021–2025); imposed additional sanctions on DPRK; called North Korea 'most urgent proliferation challenge'",
+    "avatar": "us",
+    "initial": "B",
+    "quote": "North Korea remains the most urgent proliferation challenge facing the United States. We will not tolerate nuclear coercion.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "antony-blinken",
+    "name": "Antony Blinken",
+    "role": "US Secretary of State (2021–2025); led US diplomatic pressure campaign on DPRK sanctions enforcement",
+    "avatar": "us",
+    "initial": "A",
+    "quote": "We have offered diplomacy without preconditions and North Korea has refused to engage. The path to sanctions relief runs through denuclearization.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "xi-jinping",
+    "name": "Xi Jinping",
+    "role": "General Secretary of CPC / President of China; DPRK's largest trading partner and diplomatic shield at UNSC; made state visit to Pyongyang June 8–9, 2026 — first since June 2019 and his first international trip of 2026",
+    "avatar": "cn",
+    "initial": "X",
+    "quote": "The two sides will take this visit as an opportunity to promote bilateral relations. China is committed to peace and stability on the Korean Peninsula. (Chinese Foreign Ministry, June 5, 2026)",
+    "lastUpdated": "2026-07-01"
+  },
+  {
+    "id": "wang-huning",
+    "name": "Wang Huning",
+    "role": "China's 4th-ranking Politburo Standing Committee member and CPC's top ideologue; led a party-and-government delegation to Pyongyang July 15–17, 2026 to mark the 65th anniversary of the China-DPRK Treaty of Friendship",
+    "avatar": "cn",
+    "initial": "H",
+    "quote": "China is committed to implementing the agreements reached between our leaders. (Pyongyang, July 15, 2026)",
+    "lastUpdated": "2026-07-16"
+  },
+  {
+    "id": "wang-yi",
+    "name": "Wang Yi",
+    "role": "Director of CPC Central Foreign Affairs Commission / Former Foreign Minister; China's chief diplomat on Korea policy",
+    "avatar": "cn",
+    "initial": "W",
+    "quote": "Additional sanctions are not the answer. All parties should return to the negotiating table and address each other's legitimate concerns.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "vladimir-putin",
+    "name": "Vladimir Putin",
+    "role": "President of Russia; signed Comprehensive Strategic Partnership Treaty with DPRK (June 2024); received ~15,000 DPRK troops in Kursk; signed 2027–2031 Military Cooperation Plan",
+    "avatar": "ru",
+    "initial": "V",
+    "quote": "Russia and North Korea will continue to deepen their comprehensive strategic partnership. The heroism of the DPRK fighters deserves the highest recognition.",
+    "lastUpdated": "2026-04-29"
+  },
+  {
+    "id": "antonio-guterres",
+    "name": "António Guterres",
+    "role": "UN Secretary-General; called DPRK nuclear/missile program a 'serious threat to international peace and security'",
+    "avatar": "un",
+    "initial": "A",
+    "quote": "The DPRK's nuclear and ballistic missile activities continue to violate Security Council resolutions and pose a serious threat to international peace.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "rafael-grossi",
+    "name": "Rafael Mariano Grossi",
+    "role": "IAEA Director-General; repeatedly warned DPRK has restarted plutonium production reactor at Yongbyon",
+    "avatar": "un",
+    "initial": "R",
+    "quote": "The IAEA has been unable to verify the DPRK's nuclear activities since our inspectors were expelled in 2009. The Yongbyon reactor restart is deeply troubling.",
+    "lastUpdated": "2026-04-25"
+  },
+  {
+    "id": "tomas-ojea-quintana",
+    "name": "Tomás Ojea Quintana",
+    "role": "UN Special Rapporteur on the situation of human rights in the DPRK (2016–2022); documented systematic abuses",
+    "avatar": "un",
+    "initial": "T",
+    "quote": "The systematic, widespread and grave violations of human rights in the DPRK may amount to crimes against humanity. Accountability must follow.",
+    "lastUpdated": "2026-04-25"
+  }
+]

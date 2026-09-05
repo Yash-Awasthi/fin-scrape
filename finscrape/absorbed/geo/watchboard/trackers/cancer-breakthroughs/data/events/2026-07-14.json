@@ -1,0 +1,74 @@
+[
+  {
+    "id": "gedatolisib-revtorpyk-approval-2026",
+    "year": "Jul 14, 2026",
+    "title": "FDA Approves Gedatolisib (Revtorpyk), First Pan-PI3K/mTOR Inhibitor, for Advanced Breast Cancer",
+    "type": "approval",
+    "detail": "The FDA approved gedatolisib (Revtorpyk, Celcuity) in combination with fulvestrant, with or without palbociclib, for adults with hormone receptor-positive, HER2-negative, PIK3CA-wild-type locally advanced or metastatic breast cancer that progressed after at least one line of endocrine therapy in the metastatic setting. Revtorpyk is the only FDA-approved inhibitor of all class I PI3K isoforms (alpha, beta, delta, gamma) plus mTORC1 and mTORC2. In the pivotal VIKTORIA-1 trial, the triplet of gedatolisib, fulvestrant, and palbociclib achieved a median progression-free survival of 9.3 months versus 2.0 months for fulvestrant alone, while the gedatolisib-fulvestrant doublet reached 7.4 months. Celcuity expects to launch the drug commercially in the third quarter of 2026 and plans a supplemental filing for PIK3CA-mutated disease based on the trial's mutant cohort.",
+    "sources": [
+      {
+        "name": "FDA",
+        "tier": 1,
+        "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-gedatolisib-fulvestrant-or-without-palbociclib-hr-positive-her2-negative-locally",
+        "pole": "western"
+      },
+      {
+        "name": "CancerNetwork",
+        "tier": 3,
+        "url": "https://www.cancernetwork.com/view/fda-approves-gedatolisib-for-hr-her2-pik3ca-wild-type-advanced-breast-cancer",
+        "pole": "western"
+      },
+      {
+        "name": "Fierce Pharma",
+        "tier": 2,
+        "url": "https://www.fiercepharma.com/pharma/fda-approval-its-breast-cancer-blockbuster-hopeful-celcuity-could-belong-hands-big-pharma",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.cancernetwork.com/view/fda-approves-gedatolisib-for-hr-her2-pik3ca-wild-type-advanced-breast-cancer",
+        "caption": "FDA approves gedatolisib (Revtorpyk), the first approved inhibitor of all class I PI3K isoforms plus mTORC1/2, for HR+/HER2- advanced breast cancer",
+        "source": "CancerNetwork",
+        "thumbnail": "https://cdn.sanity.io/images/0vv8moc6/cancernetwork/3cab3ada4c023b68c118240a512e31d72a7f931b-1200x628.png"
+      }
+    ]
+  },
+  {
+    "id": "selpercatinib-ret-fusion-traditional-approval-2026",
+    "year": "Jul 14, 2026",
+    "title": "Selpercatinib (Retevmo) Converts to Traditional Approval as First Tumor-Agnostic RET Fusion Therapy",
+    "type": "approval",
+    "detail": "The FDA granted traditional approval to selpercatinib (Retevmo, Eli Lilly) for adult and pediatric patients 2 years and older with locally advanced or metastatic solid tumors harboring a RET gene fusion — converting the drug's prior accelerated approval (adults in 2022, pediatric extension 2024) to full approval and making it tissue-agnostic across cancer types rather than limited to specific tumor sites. Efficacy was confirmed in the multicenter LIBRETTO-001 trial, which showed a 47% overall response rate and 24.5-month median duration of response in 75 previously treated RET fusion-positive tumors outside NSCLC and thyroid cancer, supported by earlier positive results in RET fusion-positive lung and thyroid cancers. The approval came two months ahead of the FDA's target action date.",
+    "sources": [
+      {
+        "name": "FDA",
+        "tier": 1,
+        "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-traditional-approval-selpercatinib-locally-advanced-or-metastatic-ret-fusion-positive",
+        "pole": "western"
+      },
+      {
+        "name": "ASCO Post",
+        "tier": 3,
+        "url": "https://ascopost.com/news/july-2026/fda-grants-traditional-approval-to-selpercatinib-for-locally-advanced-or-metastatic-ret-fusion-positive-solid-tumors/",
+        "pole": "western"
+      },
+      {
+        "name": "OncLive",
+        "tier": 2,
+        "url": "https://www.onclive.com/view/fda-awards-traditional-approval-to-selpercatinib-for-ret-advanced-solid-tumors",
+        "pole": "western"
+      }
+    ],
+    "media": [
+      {
+        "type": "article",
+        "url": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-traditional-approval-selpercatinib-locally-advanced-or-metastatic-ret-fusion-positive",
+        "caption": "FDA converts selpercatinib (Retevmo) to full traditional approval as a tumor-agnostic therapy for RET fusion-positive solid tumors",
+        "source": "FDA",
+        "thumbnail": "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-grants-traditional-approval-selpercatinib-locally-advanced-or-metastatic-ret-fusion-positive"
+      }
+    ]
+  }
+]

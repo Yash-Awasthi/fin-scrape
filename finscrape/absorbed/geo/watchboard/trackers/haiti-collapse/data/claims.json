@@ -1,0 +1,325 @@
+[
+  {
+    "id": "moise-assassination-masterminds",
+    "question": "Who ordered the assassination of President Jovenel Moïse?",
+    "sideA": {
+      "label": "Haiti Government / Prosecutors",
+      "text": "Haitian and US prosecutors indicted over 50 people, including Moïse's widow Martine Moïse, former PM Claude Joseph, and former National Police chief Léon Charles. Key suspect Joseph Badio—a fired Justice Ministry official—allegedly recruited the Colombian mercenaries. The prosecution argues the plot was an inside operation by political elites seeking power."
+    },
+    "sideB": {
+      "label": "Defendants / Defense Lawyers",
+      "text": "Defendants and their counsel deny involvement, pointing to chaotic evidence collection, alleged torture of suspects, and the fact that no foreign masterminds have been brought to trial. Some defense lawyers argue the conspiracy narrative is a political tool to silence opponents of the current transitional government. The full chain of command remains publicly unproven."
+    },
+    "resolution": "On May 8, 2026, a Miami federal jury convicted all four defendants — Arcángel Pretel Ortiz, Antonio Intriago, Walter Veintemilla, and James Solages — on five counts including conspiracy to kill a foreign official, material support, and violating the US Neutrality Act. All face potential life sentences; sentencing scheduled for late summer 2026 before Judge Jacqueline Becerra. The verdict is the first US criminal accountability for the July 7, 2021 assassination but does not reach the alleged Haitian political and business masterminds, who remain unindicted. Key suspect Joseph Badio — believed to have recruited the Colombian mercenaries — has not been extradited to the US.",
+    "lastUpdated": "2026-05-09T14:30:00Z"
+  },
+  {
+    "id": "henry-complicity-assassination",
+    "question": "Was PM Ariel Henry complicit in the Moïse assassination?",
+    "sideA": {
+      "label": "Opposition / Prosecutors",
+      "text": "Phone records introduced in court show Henry called assassination suspect Joseph Badio twice on the night of the murder—once after the attack began and once after Moïse's death. Opposition parties argued Henry's call history and his suspicious appointment as PM just two days before the killing warranted his indictment. Haiti's chief prosecutor sought Henry's indictment in 2022."
+    },
+    "sideB": {
+      "label": "Henry's Government",
+      "text": "Henry and his lawyers consistently denied any involvement and refused to submit to the investigation. They argued the phone calls were coincidental or unrelated. With international backing, Henry remained in power for nearly three years without facing charges and was never formally arrested."
+    },
+    "resolution": "Haiti's chief prosecutor sought Henry's indictment in 2022; Henry never arrested. He resigned in March 2024 under gang pressure, not legal action.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "core-group-legitimacy",
+    "question": "Did the CORE Group's backing of Ariel Henry undermine Haitian sovereignty?",
+    "sideA": {
+      "label": "Critics / Civil Society",
+      "text": "Former US special envoy Daniel Foote and Haitian civil society groups argue the CORE Group's July 17, 2021 statement backing Henry over Claude Joseph was an act of undemocratic meddling. They contend it installed an unelected, constitutionally questionable PM and foreclosed a Haitian-led resolution. This set the conditions for Haiti's subsequent governance collapse."
+    },
+    "sideB": {
+      "label": "CORE Group / International Community",
+      "text": "CORE Group members argued Henry represented the most viable path to stability given the power vacuum. They viewed their intervention as necessary to prevent open conflict between rival factions. Without a functioning parliament or election schedule, international consensus was needed to designate a temporary executive."
+    },
+    "resolution": "Debated; Henry's government subsequently failed to hold elections or control gang violence, lending credibility to critics. CORE Group's role is widely cited in state collapse analyses.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "g9-political-vs-criminal",
+    "question": "Are G9/Viv Ansanm gangs a political resistance movement or criminal organizations?",
+    "sideA": {
+      "label": "Gang Leaders (Chérizier/Barbecue)",
+      "text": "Jimmy Chérizier has consistently framed the G9 and Viv Ansanm as a popular uprising against Haiti's corrupt oligarchy and its international backers. He claims gangs are the only force defending poor Haitians from the elite. He positioned the 2024 offensive as a revolution, comparing himself to figures like Che Guevara. In 2026, Viv Ansanm announced plans to form a political party to participate in August elections."
+    },
+    "sideB": {
+      "label": "UN / Human Rights Groups / US Government",
+      "text": "The UN, HRW, Amnesty International, ACLED, and the US State Department document systematic murder of civilians, mass rape, kidnapping for ransom, and extortion as core gang activities. The US designated Viv Ansanm a Foreign Terrorist Organization in May 2025. UN investigators found the G9 used political rhetoric to justify atrocities including the Cité Soleil massacre. The 2026 political party announcement was widely condemned as an amnesty-seeking maneuver."
+    },
+    "resolution": "Designated Foreign Terrorist Organization by the US (May 2025). UN sanctions imposed. Viv Ansanm announced political party formation in March 2026, drawing international condemnation.",
+    "lastUpdated": "2026-03-29T00:00:00Z"
+  },
+  {
+    "id": "mss-effectiveness",
+    "question": "Has the UN-authorized Kenya-led MSS/GSF mission been effective?",
+    "sideA": {
+      "label": "Kenyan Government / US State Department",
+      "text": "Kenya argues the MSS secured the airport, recaptured key government buildings, and prevented total state collapse. The mission was chronically underfunded, undersupported with equipment, and understaffed—achieving less than 40% of its 2,500-person target. US officials credit Kenya's commitment to humanitarian stabilization under difficult conditions."
+    },
+    "sideB": {
+      "label": "Critics / Haitian Civil Society / Independent Analysts",
+      "text": "By the end of the MSS in March 2026, gang control of Port-au-Prince had expanded from 80% to 90% since the MSS deployed. The mission was described as 'unfit for purpose' by analysts. Gangs have superior weaponry, local knowledge, and financing. The MSS failed to hold recaptured territory, suffered its first fatality in February 2025, and ended with only ~70 GSF personnel (Salvadoran advance contingent) on the ground."
+    },
+    "resolution": "MSS formally concluded with final 150 Kenyan officers departing April 28, 2026, completing the phased drawdown. Over 22 months Kenya deployed ~700–800 of a pledged 1,000 officers; trained 2,000+ HNP; secured the airport and TPC installation. Gang control of Port-au-Prince expanded from ~80% to ~90% during the mission. GSF advance force now ~545 personnel (400 Chadian + 70 Salvadoran + 75 Guatemalan). April 23, 2026 UNSC briefing: national pledges exceed 5,500 authorized ceiling; $200M+ pledged by 13 states ($59M disbursed); Qatar pledged $30M. GSF operations Dec 2025–Feb 2026 resulted in 1,343 suspected gang members killed. Full 5,500-person strength expected fall–end 2026.",
+    "lastUpdated": "2026-04-29T00:00:00Z"
+  },
+  {
+    "id": "transitional-council-legitimacy",
+    "question": "Is Haiti's Transitional Presidential Council (TPC) a legitimate governing body?",
+    "sideA": {
+      "label": "TPC / International Community",
+      "text": "The TPC was established through a CARICOM-brokered process in April 2024 following PM Henry's resignation, representing seven political blocs and the private sector. The US, Canada, France, and the UN recognized the TPC as the legitimate transitional authority. It has scheduled elections for August 2026."
+    },
+    "sideB": {
+      "label": "Civil Society / Opposition Groups",
+      "text": "Critics note the TPC was never elected and excludes significant civil society factions. Internal TPC splits—including the failed attempt to remove PM Fils-Aimé in January 2026—exposed deep dysfunctions. Many Haitians see it as an externally managed arrangement rather than a genuine expression of popular will."
+    },
+    "resolution": "TPC mandate expired February 7, 2026. Powers transferred to PM Fils-Aimé. Elections scheduled August 30, 2026.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "foreign-arms-trafficking",
+    "question": "Is foreign arms trafficking the primary driver of gang firepower?",
+    "sideA": {
+      "label": "Haitian Government / BINUH",
+      "text": "The UN, BINUH, and Haitian authorities have extensively documented the flow of illegal weapons—primarily from the United States—into Haiti via the Dominican Republic and direct sea routes. The UN Arms Embargo targets this supply chain. Gangs use AR-15s, AK-47s, and even armored vehicles often traced to Florida and Georgia gun dealers."
+    },
+    "sideB": {
+      "label": "Gun Rights Advocates / Some US Officials",
+      "text": "Some US officials and gun rights advocates argue Haiti's security failure stems from governance collapse, not American guns, and that better border enforcement and anti-money laundering measures are the solution rather than restricting legal US firearms markets. They point to historical gang violence predating current weapon flows."
+    },
+    "resolution": "UN Sanctions Committee confirmed illicit US-origin weapons in gang hands. US Congress appropriated funds for anti-trafficking measures. Arms flow continues despite embargo.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cholera-un-origin",
+    "question": "Did United Nations peacekeepers introduce cholera to Haiti?",
+    "sideA": {
+      "label": "Scientists / Haitian Families",
+      "text": "Extensive epidemiological and genetic evidence shows the 2010 cholera outbreak—which killed 10,000+ Haitians—was introduced by Nepalese UN peacekeepers (MINUSTAH) who discharged sewage into the Artibonite River. The UN initially denied responsibility but acknowledged 'moral responsibility' in 2016. Families of victims have pursued UN accountability through US courts."
+    },
+    "sideB": {
+      "label": "UN Legal Position",
+      "text": "The UN has maintained legal immunity from court proceedings, arguing peacekeepers' actions fall outside civil liability. While acknowledging a 'moral responsibility,' the UN declined to compensate victims citing institutional constraints and has not formally apologized. The 2022 cholera resurgence reopened this controversy."
+    },
+    "resolution": "UN acknowledged 'moral responsibility' in 2016. US courts upheld UN immunity in 2016. Victims' compensation fund of $400 million pledged but largely unfunded. 2022 resurgence linked to collapse of water systems, not UN forces.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "elections-before-security",
+    "question": "Should Haiti hold elections before security is restored?",
+    "sideA": {
+      "label": "International Community / Transitional Government",
+      "text": "The US, CARICOM, and TPC argue elections must proceed on August 30, 2026 to restore democratic legitimacy and break the cycle of unelected governance. They contend waiting for perfect security creates an indefinite pretext to delay accountability. The CEP has approved 320 political parties and set a voter registration timeline."
+    },
+    "sideB": {
+      "label": "Haitian Civil Society / Security Experts",
+      "text": "Civil society groups and security analysts argue holding elections while 90% of Port-au-Prince and 23 communes are under gang control would produce a manipulated, low-legitimacy result. They argue resources should be directed at the GSF to genuinely reclaim territory before polls. Critics also note that Viv Ansanm's political party announcement threatens to convert gang control into electoral leverage."
+    },
+    "resolution": "Elections originally scheduled for August 30, 2026. CEP published approved party list March 26, 2026 (320 parties registered). Voter and candidate registration postponed on April 8, 2026, pending a new electoral decree. On May 6, 2026, CEP added a 30,000-member party registration requirement reducing the eligible pool. On May 12, 2026, PM Fils-Aimé declared on Magik9 radio: 'It is clear that the security conditions are not met at the level for us to have elections in August' — the first explicit abandonment of the August 30 date by the transitional government. He announced a revised target of elections by end of 2026, with a new president by February 2027. On June 6, 2026, the US Embassy in Port-au-Prince welcomed Haiti's electoral decree as 'an important step in the process leading to elections' — reaffirming US backing for the August 30 framework despite acknowledged security obstacles. UN Special Representative Ruiz Massieu attended a first-time voter awareness event June 5, calling youth participation 'essential' for elections. Current status as of June 7, 2026: no voter registration begun; 23 communes inaccessible; 75–90% of Port-au-Prince under gang control; GSF advance force at ~800 of the 5,500-person authorized ceiling with no coverage outside Port-au-Prince city center. Security preconditions for credible elections remain unmet.",
+    "lastUpdated": "2026-06-07T14:32:00.000Z"
+  },
+  {
+    "id": "haiti-failed-state",
+    "question": "Is Haiti a failed state?",
+    "sideA": {
+      "label": "Analysts / Critics",
+      "text": "Many international analysts, including ICG and ACLED, argue Haiti meets the criteria of a failed state: a government unable to control territory (90% of capital held by gangs), provide basic services, maintain a monopoly on violence, or hold elections. The IMF records consecutive years of GDP contraction, and over 52% of the population faces acute hunger as of Q1 2026."
+    },
+    "sideB": {
+      "label": "Haitian Government / CARICOM",
+      "text": "Haitian officials and CARICOM partners reject the 'failed state' label, arguing it forecloses diplomatic solutions, reduces foreign investment, and ignores resilience in civil society. They argue Haiti has functioning ministries, a transitional government, a police force, and an election plan—evidence of fragile but existing state capacity."
+    },
+    "resolution": "Contested designation. Fragile States Index consistently ranks Haiti among the world's most fragile. CARICOM and US avoid 'failed state' label officially.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "cite-soleil-massacre-blame",
+    "question": "Who bears primary responsibility for the July 2022 Cité Soleil massacre?",
+    "sideA": {
+      "label": "G9 / Jimmy Chérizier",
+      "text": "BINUH and HRW documented that G9 snipers firing from rooftops indiscriminately killed civilians during the July 7–12 battle for Cité Soleil. UN investigators confirmed 207 deaths, 57 gang rapes, and systematic looting. Chérizier's forces used civilians as human shields and cut off escape routes."
+    },
+    "sideB": {
+      "label": "G9 Narrative",
+      "text": "Chérizier blamed G-Pèp (rival gang) for initiating violence and claimed G9 was defending its territory. He argued civilian deaths were caught in crossfire between armed groups, not targeted killings. He denied specific allegations and framed the violence as a gang war rather than atrocities against civilians."
+    },
+    "resolution": "UN BINUH attributed primary civilian deaths to G9 sniper tactics. G9 sanctioned by UN in 2022. Investigation cited 207 confirmed civilian deaths attributed to G9 forces.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "pont-sonde-prevention",
+    "question": "Could the Pont-Sondé massacre have been prevented by security forces?",
+    "sideA": {
+      "label": "Survivors / Opposition",
+      "text": "Survivors and opposition politicians point out that Gran Grif had publicly announced threats on social media before the October 3, 2024 attack. Security forces were warned but arrived more than 24 hours after the massacre began. The police commissioner for the region was subsequently dismissed, an implicit acknowledgment of operational failure."
+    },
+    "sideB": {
+      "label": "Government / Security Forces",
+      "text": "The Haitian government and police attributed their delayed response to limited resources, poor intelligence-sharing between departments, and the challenge of securing vast rural territory with an understaffed national police force. They argued the MSS's geographic concentration in Port-au-Prince left Artibonite without adequate coverage."
+    },
+    "resolution": "Haitian police commissioner for the region dismissed after the attack. MSS forces not deployed to Artibonite at time of massacre. Preventability contested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "tpc-removal-fils-aime",
+    "question": "Was the January 2026 attempt to remove PM Fils-Aimé legitimate?",
+    "sideA": {
+      "label": "TPC Factions Seeking Removal",
+      "text": "Several TPC voting members argued that Fils-Aimé had bypassed the council on key decisions, concentrated power inappropriately, and was not implementing agreed transition benchmarks. They contended the TPC had the authority under its mandate to replace the PM, as it had done with Garry Conille in November 2024."
+    },
+    "sideB": {
+      "label": "Fils-Aimé / Laurent Saint-Cyr",
+      "text": "PM Fils-Aimé argued the removal attempt was politically motivated by factions opposed to US-aligned private sector governance. TPC President Saint-Cyr refused to countersign the removal motion, effectively blocking it. The US reportedly backed Fils-Aimé's continued tenure as a stabilizing figure ahead of the 2026 elections."
+    },
+    "resolution": "Removal attempt failed after Saint-Cyr refused to sign. TPC mandate expired February 7, 2026, with Fils-Aimé assuming full executive authority.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "remittances-dependency",
+    "question": "Do remittances help or harm Haiti's long-term development?",
+    "sideA": {
+      "label": "Development Organizations",
+      "text": "Remittances represent 15–19% of Haiti's GDP and are the primary lifeline for millions of families, funding food, education, and healthcare that the state cannot provide. During crises, remittance flows have prevented famine conditions. WFP and OCHA studies show remittances directly offset humanitarian aid needs."
+    },
+    "sideB": {
+      "label": "Economic Critics",
+      "text": "Critics argue Haiti's dependency on remittances substitutes for structural reform, reduces political pressure for economic development, and creates a transnational economy that undermines local production. Gang extortion of remittance recipients is documented—gangs demand portions of diaspora transfers, effectively taxing the Haitian diaspora's generosity."
+    },
+    "resolution": "Remittances totaled $4.1 billion in 2024 (15% of GDP). World Bank projects declining share of GDP as diaspora remittance capacity limits. No consensus on net long-term effect.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gang-oligarch-ties",
+    "question": "Are Haitian economic elites funding gangs for political leverage?",
+    "sideA": {
+      "label": "UN Experts / BINUH / ACLED",
+      "text": "UN expert reports and ACLED analysis document that Haitian business oligarchs and political figures have historically funded gangs for protection and economic advantage. The UN Sanctions Committee identified specific businesspeople with ties to gang financing. This elite-gang nexus allows wealthy actors to shape political outcomes through armed proxies."
+    },
+    "sideB": {
+      "label": "Haitian Business Community",
+      "text": "Business associations deny systematic collusion, arguing individual businesspeople who pay 'protection' are extortion victims, not willing co-conspirators. They argue painting the entire business community as gang backers discourages legitimate private sector investment Haiti desperately needs."
+    },
+    "resolution": "UN Sanctions Committee sanctioned individual businesspeople for gang ties. Broader systemic relationship documented but not publicly prosecuted. Pattern acknowledged in ICG and HRW reports.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "international-community-responsibility",
+    "question": "Does the international community bear responsibility for Haiti's collapse?",
+    "sideA": {
+      "label": "Haitian Civil Society / Scholars",
+      "text": "Haitian activists and post-colonial scholars argue that centuries of foreign intervention—French reparations extracted after independence, US occupation (1915–34), support for the Duvalier dictatorship, CARICOM's backing of unelected leaders—created structural vulnerabilities. The 2010 cholera introduction by UN peacekeepers is cited as a direct harm. CORE Group interference in 2021 installed an unelected PM."
+    },
+    "sideB": {
+      "label": "International Community",
+      "text": "Western governments and the UN argue they have provided billions in reconstruction aid, authorized the MSS mission, and extended BINUH's mandate. They contend Haiti's challenges are primarily domestic governance failures and that the international community must balance sovereignty concerns with necessary intervention."
+    },
+    "resolution": "Widely debated in academic and policy circles. Multiple UN reports acknowledge 'historical responsibility.' CORE Group's 2021 interference is documented. Haiti has received over $13 billion in international aid since 2010 with limited structural improvement.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "deportations-haitians-us",
+    "question": "Is the Trump administration's deportation of Haitians from the US justified?",
+    "sideA": {
+      "label": "Trump Administration",
+      "text": "The Trump administration argued that Temporary Protected Status (TPS) for Haitians should end given that it was meant to be temporary and that Haitians must return to contribute to rebuilding their country. Plans to terminate TPS for 500,000+ Haitians in the US were framed as enforcing immigration law while reducing 'pull factors' for illegal migration."
+    },
+    "sideB": {
+      "label": "Haiti Government / Human Rights Groups",
+      "text": "HRW, Amnesty, UNHCR, and Haiti's transitional government argued deporting Haitians into an active conflict zone with 90% gang control of the capital would put returnees at immediate risk of death, extortion, or forced gang recruitment. International refugee law prohibits returning people to places of ongoing conflict."
+    },
+    "resolution": "TPS termination challenged in US courts as of 2026. No mass deportations completed. Haiti's government formally requested halt to deportations citing ongoing security crisis. On April 16, 2026, the US House passed bipartisan legislation 224–204 (with 10 Republican votes) requiring TPS extension through 2029; Trump administration threatened a veto and Senate Republicans pledged to block the bill. Rep. Andrew Clyde (R-GA) introduced legislation April 23 to repeal TPS entirely and give all holders 60 days to depart. US Supreme Court heard oral arguments on April 29, 2026 in consolidated cases Noem v. Doe / Trump v. Miot — the Court's conservative 6-3 majority appeared to signal deference to the Trump administration, with multiple justices questioning whether courts have power to review TPS termination decisions under a statutory non-reviewability clause; ruling expected late June or early July 2026. Senate advocates launched a push (week of May 19, 2026) to extend Haitian TPS through 2027 via standalone legislation — a lower-threshold ask than the House-passed 2029 extension — as the Supreme Court ruling approached. Haitian TPS holders (~350,000) and ~87,000 US-born children of TPS holders await the outcome. A ruling favoring deportation would coincide with: Day 16 (May 25) of MSF Cité Soleil hospital closure; Krache Dife IDP camp attack in Delmas 6 (2 killed, 24 houses burned); ~30,000 newly displaced since May 10; 1.5M total IDPs; 6.4M in acute humanitarian need. Haitian TPS holders contribute nearly $6 billion annually to the US economy per CNN Business. UPDATE Aug 20, 2026: the legal fight resolved in the administration's favor — the Supreme Court's June 25 ruling cleared termination effective July 26, and the first mass deportation flight since 2023 landed 161 people at Cap-Haïtien International Airport (diverted from Port-au-Prince, whose airport remains closed to commercial traffic through early September over gang violence). Haiti's migration office said it was 'not the Haitian state that asks for them to be sent back' and offered arrivals up to $65 and temporary shelter; advocacy groups warned the country 'is not ready to receive this number of migrants' amid 1.5M already displaced. NY Gov. Kathy Hochul publicly urged DHS the same day to reverse course, calling the termination a 'reckless and inhumane act' that would force New York to fire hundreds of essential workers by Aug 24 — a request DHS declined to act on.",
+    "lastUpdated": "2026-08-20T18:00:00.000Z"
+  },
+  {
+    "id": "haitian-armed-forces-rol",
+    "question": "Should Haiti rebuild its military (FAd'H) to counter gang power?",
+    "sideA": {
+      "label": "Haitian Government / US",
+      "text": "Haiti's transitional government and the US Congress (H.R. 7148) appropriated $5 million in non-lethal assistance for the Haitian Armed Forces (FAd'H), arguing a rebuilt military would complement the GSF and eventually reduce Haiti's dependence on foreign intervention. The FAd'H was disbanded in 1995 and reconstituted in 2017 with minimal resources."
+    },
+    "sideB": {
+      "label": "Human Rights Groups / Opposition",
+      "text": "HRW and Haitian human rights organizations warn that reconstituting a military under weak governance risks creating another armed actor rather than a solution. Historical FAd'H abuses—including coups, massacres, and support for the Duvalier dictatorship—make civil society deeply skeptical of military expansion."
+    },
+    "resolution": "US Congress approved $5M non-lethal FAd'H support in February 2026. FAd'H remains a small, lightly equipped force. Debate ongoing about its role versus GSF.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gang-economy-extortion",
+    "question": "Is the informal 'gang economy' of extortion now structurally embedded in Haiti?",
+    "sideA": {
+      "label": "ACLED / ICG / Economists",
+      "text": "ACLED and ICG analysts argue that gang extortion of businesses, transport companies, markets, and remittance recipients has become a parallel economic system generating hundreds of millions of dollars annually. This 'gangster economy' provides gangs with self-sustaining revenue that has made them independent of any political patron and structurally resistant to military suppression alone."
+    },
+    "sideB": {
+      "label": "Optimists / Some Policy Makers",
+      "text": "Some policy makers argue that rapid security improvement via the GSF could collapse gang economic power quickly, since much extortion depends on physical control of territory. They cite examples from Colombia and El Salvador where determined military operations significantly reduced gang revenue. They argue the structural embeddedness narrative is overly fatalistic."
+    },
+    "resolution": "Contested. Gang extortion remains primary revenue source. GSF strategy includes disrupting gang financing networks. No precedent for Haiti-scale resolution in comparable state fragility context.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "wharfjeremie-motive-massacre",
+    "question": "Was the Wharf Jérémie massacre motivated by superstition or was it a calculated extermination of a community?",
+    "sideA": {
+      "label": "Gang Leader / Defense",
+      "text": "Gang leader Micanor Altes claimed the December 2024 killings were motivated by his belief that residents had cast a Vodou curse on his son who had died from illness. His associates presented the killings as a communal grievance rather than a planned extermination campaign—though this explanation did not negate the atrocity."
+    },
+    "sideB": {
+      "label": "UN / Human Rights Investigators",
+      "text": "UN BINUH and OHCHR investigators described the Wharf Jérémie killings as systematic, methodical atrocities: victims were identified, interrogated, and killed in organized waves over five days. Investigators noted the targeting of elderly Vodou religious leaders aligned with patterns of gang 'cleansing' of community leaders who resist gang control."
+    },
+    "resolution": "UN confirmed 207 deaths. BINUH described killings as constituting potential crimes against humanity. International Criminal Court jurisdiction discussion ongoing. No perpetrators arrested.",
+    "lastUpdated": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "gsf-human-rights-framework",
+    "question": "Will the Gang Suppression Force avoid repeating the human rights failures documented under the MSS?",
+    "sideA": {
+      "label": "GSF Leadership / UN",
+      "text": "GSF Special Representative Jack Christofides and UN officials argue the new force has a stronger mandate and clearer rules of engagement than the MSS. The UNSOH will provide human rights monitoring oversight. The expanded force (5,550 vs. 2,500 for MSS) is designed to hold territory rather than merely raid and withdraw. Chad and other contributing nations have undergone UN human rights pre-deployment training.",
+      "lastUpdated": "2026-03-29T00:00:00Z"
+    },
+    "sideB": {
+      "label": "Amnesty International / HRW / Haitian Civil Society",
+      "text": "The OHCHR's March 24, 2026 report documented that security forces were responsible for 63% of deaths in Haiti between March 2025 and January 2026, with 247 police summary executions. Critics argue the GSF's stronger mandate raises human rights risks in densely populated gang-controlled areas. The BINUH Q1 2026 report (May 8, 2026) found that security forces were responsible for 69% of Q1 2026 casualties, including 69 civilians and 5 children killed by drone strikes — making security operations the single largest source of civilian deaths, exceeding direct gang killings in absolute numbers."
+    },
+    "resolution": "BINUH Q1 2026 report (May 8, 2026) found security forces responsible for 69% of Q1 2026 casualties, including 69 civilians (5 children) killed in drone strikes and 247 police summary executions documented in the prior period. HRW's March 2026 report documented 1,243 killed in 141 HNP drone operations (Mar 2025–Jan 2026). 14 specialized judges appointed in March 2026 for mass and financial crimes, representing a tentative accountability step. No formal GSF published code of conduct as of May 2026.",
+    "lastUpdated": "2026-05-10T12:00:00Z"
+  },
+  {
+    "id": "drone-strikes-legality",
+    "question": "Are Haiti's security force drone strikes against gang targets lawful under international humanitarian law?",
+    "sideA": {
+      "label": "Haitian Government / Security Forces",
+      "text": "Haiti's government argues that drone strikes targeting gang leaders and armed combatants in Port-au-Prince are a legitimate and proportionate response to gang control of 80–90% of the capital. Officials note that gangs are armed with military-grade weapons and represent an existential threat to the state. The strikes have been credited — alongside GSF joint operations — with killing over 1,343 suspected gang members between December 2025 and February 2026, and the PM claimed gangs were pushed back to ~75% of Port-au-Prince by May 2026."
+    },
+    "sideB": {
+      "label": "Human Rights Watch / UN OHCHR",
+      "text": "HRW's March 2026 report documented that HNP Task Force drone strikes — carried out with support from Vectus Global, a US-licensed private military firm associated with Erik Prince — killed 1,243 people in 141 operations between March 2025 and January 2026, including 17 children and 43 adults not believed to be gang members. The UN High Commissioner for Human Rights described the strikes as 'disproportionate and likely unlawful.' The BINUH Q1 2026 report found 69 civilians including 5 children killed by drone strikes in Q1 2026 alone, with security forces overall responsible for 69% of all Q1 casualties."
+    },
+    "resolution": "OHCHR said in October 2025 that drone strikes were 'disproportionate and likely unlawful.' BINUH Q1 2026 report (May 8, 2026) confirmed 69 civilian drone strike deaths in Q1. 14 specialized judges appointed in March 2026 to address mass crimes — a potential accountability mechanism. No criminal charges filed against security personnel for drone strike civilian deaths as of May 2026.",
+    "lastUpdated": "2026-05-10T12:00:00Z"
+  },
+  {
+    "id": "kenscoff-police-response-failure",
+    "question": "Did Haitian police fail to prevent or respond adequately to the August 23-26, 2026 Kenscoff massacre?",
+    "sideA": {
+      "label": "Kenscoff Residents / Local Officials",
+      "text": "Residents demanded the resignation of the local police chief, saying officers failed to protect people who were killed a short distance from the police station despite Kenscoff having suffered a similar 61-fatality massacre in July 2026. Critics argue the National Police and GSF left the town exposed despite known risk following the earlier attack."
+    },
+    "sideB": {
+      "label": "Haitian National Police / Government",
+      "text": "Haiti's National Police rejected accusations of insufficient protection, and PNH Director Vladimir Paraison ordered an investigation into potential \"complicity or negligence\" while deploying additional specialized units. The prime minister's office said security forces were on high alert and vowed that \"the government's authority will be restored, without weakness and without delay.\""
+    },
+    "resolution": "Unresolved as of August 26, 2026. PNH Director Paraison ordered an internal investigation into possible complicity or negligence; no findings had been released. A gang leader's hostage video simultaneously threatened Paraison against continued drone operations, complicating the security response.",
+    "lastUpdated": "2026-08-26T15:00:00.000Z"
+  }
+]
