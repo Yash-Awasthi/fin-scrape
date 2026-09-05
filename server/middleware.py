@@ -103,6 +103,7 @@ def configure_hardening(app: FastAPI) -> None:
     @app.middleware("http")
     async def _security_headers(request: Request, call_next) -> Response:
         resp = await call_next(request)
+        resp.headers.setdefault("X-API-Version", "1.0.0")
         resp.headers.setdefault("X-Content-Type-Options", "nosniff")
         resp.headers.setdefault("X-Frame-Options", "DENY")
         resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")

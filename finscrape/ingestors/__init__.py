@@ -5,6 +5,9 @@ same analyze→judge pipeline as scraped articles (worker, Phase 3). Network `fe
 is kept separate from the pure `parse` so the parsers are unit-tested against fixtures
 with no network. Endpoints are public facts (verified present in worldmonitor), not
 copied source.
+
+Crypto was removed from the event mix (CoinGeckoIngestor stays in coingecko.py for
+reference but is not registered) — WorldFin covers equities/geopolitics.
 """
 
 from finscrape.ingestors.base import BaseIngestor, RawGeoEvent
@@ -14,21 +17,21 @@ from finscrape.ingestors.opensky import OpenSkyIngestor
 from finscrape.ingestors.reliefweb import ReliefWebIngestor
 from finscrape.ingestors.usgs import USGSQuakesIngestor
 
-# Event-producing ingestors (OpenSky is a flights data layer, not an event source).
+# Event-producing ingestors (OpenSky is a flights data layer, not an event source;
+# CoinGecko was de-registered when the crypto section was removed).
 EVENT_INGESTORS = (
     USGSQuakesIngestor,
     GDELTIngestor,
     ReliefWebIngestor,
-    CoinGeckoIngestor,
 )
 
 __all__ = [
-    "BaseIngestor",
-    "RawGeoEvent",
-    "USGSQuakesIngestor",
-    "GDELTIngestor",
-    "ReliefWebIngestor",
-    "CoinGeckoIngestor",
-    "OpenSkyIngestor",
     "EVENT_INGESTORS",
+    "BaseIngestor",
+    "CoinGeckoIngestor",
+    "GDELTIngestor",
+    "OpenSkyIngestor",
+    "RawGeoEvent",
+    "ReliefWebIngestor",
+    "USGSQuakesIngestor",
 ]

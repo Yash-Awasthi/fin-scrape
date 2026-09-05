@@ -226,7 +226,7 @@ class ConfidenceScorer:
         """Aggregate predictions from multiple agents"""
         if not predictions:
             return ConfidenceScore(
-                prediction_id '',
+                prediction_id='',
                 consensus_prediction='insufficient_data',
                 weighted_confidence=0,
                 agent_scores={},

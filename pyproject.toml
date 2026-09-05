@@ -26,6 +26,7 @@ dependencies = [
     "yfinance>=0.2.30",
     "pytest>=9.0.3",
     "spacy>=3.8.14",
+    "trafilatura>=2.2.0",
 ]
 
 [dependency-groups]
@@ -57,3 +58,12 @@ venv = ".venv"
 pythonVersion = "3.11"
 typeCheckingMode = "basic"
 reportMissingImports = true
+
+# Absorbed feature code (see finscrape/absorbed/ABSORBED.md) is vendored
+# reference material pending wiring — keep it out of lint gates.
+[tool.ruff]
+extend-exclude = ["finscrape/absorbed"]
+
+# Keep pytest scoped to the real suite; absorbed/ holds 31k vendored files.
+[tool.pytest.ini_options]
+testpaths = ["tests"]

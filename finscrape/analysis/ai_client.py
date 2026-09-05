@@ -20,14 +20,18 @@ import json
 import logging
 import os
 import re
-import time
 import threading
-import requests
+import time
 
+import requests
 from dotenv import load_dotenv
+
 from finscrape.analysis.constants import (
-    VALID_EVENT_TYPES, VALID_IMPACT_DIRECTIONS,
-    VALID_MAGNITUDES, VALID_NOVELTIES, VALID_ACTIONABILITIES,
+    VALID_ACTIONABILITIES,
+    VALID_EVENT_TYPES,
+    VALID_IMPACT_DIRECTIONS,
+    VALID_MAGNITUDES,
+    VALID_NOVELTIES,
 )
 
 logger = logging.getLogger(__name__)
@@ -142,7 +146,12 @@ def call_ai(prompt: str, system_prompt: str, model: str | None = None) -> dict |
     Returns None on any failure (network, parsing, invalid response).
     Results are cached with TTL to reduce API costs.
     """
-    effective_model = model or DEFAULT_MODEL
+    # Read env at call time, not import time — main.py --ollama sets
+    # OPENAI_BASE_URL after this module is imported, so frozen constants
+    # would never see it.
+    effective_model = model or os.getenv("FINSCRAPE_MODEL", DEFAULT_MODEL)
+    base_url = os.getenv("OPENAI_BASE_URL", "")
+    openrouter_key = os.getenv("OPENROUTER_API_KEY", "")
 
     # Check cache first
     cached = _cache.get(prompt, system_prompt, effective_model)
@@ -150,11 +159,11 @@ def call_ai(prompt: str, system_prompt: str, model: str | None = None) -> dict |
         logger.debug("Cache hit (hits=%d, rate=%.0f%%)", _cache.hits, _cache.stats["hit_rate"] * 100)
         return cached
 
-    if OPENAI_BASE_URL and LLM_WIRE_API == "responses":
+    if base_url and os.getenv("FINSCRAPE_WIRE_API", "chat").lower() == "responses":
         raw = _call_with_retry(_call_responses_api, prompt, system_prompt, effective_model)
-    elif OPENAI_BASE_URL:
+    elif base_url:
         raw = _call_with_retry(_call_openai_proxy, prompt, system_prompt, effective_model)
-    elif OPENROUTER_API_KEY:
+    elif openrouter_key:
         raw = _call_with_retry(_call_openrouter, prompt, system_prompt, effective_model)
     else:
         logger.error("No AI backend configured. Set OPENROUTER_API_KEY or OPENAI_BASE_URL.")
@@ -303,13 +312,13 @@ def _call_openai_proxy(prompt: str, system_prompt: str, model: str | None = None
     """
     try:
         response = requests.post(
-            f"{OPENAI_BASE_URL}/chat/completions",
+            f"{os.getenv('OPENAI_BASE_URL', '')}/chat/completions",
             headers={
-                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY', 'proxy')}",
                 "Content-Type":  "application/json",
             },
             json={
-                "model":    model or DEFAULT_MODEL,
+                "model":    model or os.getenv("FINSCRAPE_MODEL", DEFAULT_MODEL),
                 "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user",   "content": prompt},

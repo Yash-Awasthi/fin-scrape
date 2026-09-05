@@ -27,6 +27,8 @@ from server.routes import health as health_routes
 from server.routes import portfolio as portfolio_routes
 from server.routes import sentiment as sentiment_routes
 from server.routes import telegram as telegram_routes
+from finscrape.api.geopolitical_api import router as geopolitical_router
+from finscrape.api.intelligence_api import router as intelligence_router
 from server.schemas import HealthResponse
 from server.settings import get_settings
 from server.ws import hub
@@ -104,6 +106,8 @@ def create_app() -> FastAPI:
     app.include_router(sentiment_routes.router)
     app.include_router(portfolio_routes.router)
     app.include_router(telegram_routes.router)
+    app.include_router(geopolitical_router, prefix="/api/v1", tags=["Geopolitical & Sentiment"])
+    app.include_router(intelligence_router, prefix="/api/v1", tags=["Intelligence Modules"])
 
     @app.websocket("/api/ws")
     async def ws(websocket: WebSocket) -> None:

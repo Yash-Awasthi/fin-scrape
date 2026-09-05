@@ -15,7 +15,6 @@ import logging
 import re
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Optional
 
 from finscrape.analysis.temporal import (
     TemporalExtractor,
@@ -23,7 +22,7 @@ from finscrape.analysis.temporal import (
     get_next_catalyst_date,
 )
 from finscrape.analysis.ticker_map import COMPANY_TO_TICKER
-from finscrape.entity_map import _matches
+from finscrape.entity_map import _matches, resolve_company_tickers
 
 logger = logging.getLogger(__name__)
 
@@ -208,6 +207,13 @@ class FinancialNLP:
             if _matches(key, name_lower):
                 return ticker
 
+        # SEC company list (10k legal names) — catches "NVIDIA Corporation"-style
+        # names the 189-entry hand-curated map doesn't have. Ambiguous multi-hits
+        # (share classes etc.) are skipped rather than guessed.
+        sec_hits = resolve_company_tickers(name_lower)
+        if len(sec_hits) == 1:
+            return sec_hits[0]
+
         # Custom entity index lookup
         for keyword, entries in self._custom_index.items():
             if keyword in name_lower:
@@ -335,6 +341,12 @@ class FinancialNLP:
                 tickers.append(m)
                 seen.add(m)
 
+        # Full legal company names from the SEC list ("Alphabet Inc." → GOOGL)
+        for ticker in resolve_company_tickers(text):
+            if ticker not in seen:
+                tickers.append(ticker)
+                seen.add(ticker)
+
         return tickers
 
     def _detect_sector(self, text: str, tickers: list[str]) -> str:
@@ -342,7 +354,7 @@ class FinancialNLP:
         text_lower = text.lower()
 
         sector_keywords = {
-            "technology": ["tech", "software", "semiconductor", "chip", "ai ", "cloud", "saas", "data center"],
+            "technology": ["tech", "software", "semiconductor", "chip", "ai", "cloud", "saas", "data center"],
             "healthcare": ["pharma", "biotech", "drug", "fda", "clinical trial", "healthcare", "hospital"],
             "finance": ["bank", "financial", "interest rate", "mortgage", "insurance", "trading"],
             "energy": ["oil", "gas", "renewable", "solar", "wind", "energy", "petroleum", "opec"],
@@ -354,7 +366,7 @@ class FinancialNLP:
 
         scores: dict[str, int] = {}
         for sector, keywords in sector_keywords.items():
-            scores[sector] = sum(1 for kw in keywords if kw in text_lower)
+            scores[sector] = sum(1 for kw in keywords if _matches(kw, text_lower))
 
         if scores:
             best = max(scores, key=scores.get)  # type: ignore

@@ -1,13 +1,20 @@
 # WorldFin — local-first compose (Phase 0: postgres + api).
 # Worker, web, ollama, redis arrive in later phases; redis is wired now as an
 # opt-in profile so nothing breaks when it's absent.
+
+version: "3.8"
+
 services:
   postgres:
-    image: postgres:16-alpine
+    image: postgres:16.4-alpine
+    container_name: worldfin-postgres
+    restart: unless-stopped
     environment:
       POSTGRES_USER: worldfin
-      POSTGRES_PASSWORD: worldfin
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_password
       POSTGRES_DB: worldfin
+    secrets:
+      - db_password
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
@@ -17,16 +24,31 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+        reservations:
+          cpus: "1.0"
+          memory: 1G
 
   api:
     build:
       context: .
       dockerfile: Dockerfile.api
+    container_name: worldfin-api
+    restart: unless-stopped
     environment:
-      WORLDFIN_DATABASE_URL: postgresql://worldfin:worldfin@postgres:5432/worldfin
+      WORLDFIN_DATABASE_URL: postgresql://worldfin:${POSTGRES_PASSWORD}@postgres:5432/worldfin
       WORLDFIN_HOST: 0.0.0.0
       WORLDFIN_PORT: "8000"
-      # LLM + ingest key come from .env (BYOK or Ollama). Compose reads .env by default.
       OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
       FINSCRAPE_MODEL: ${FINSCRAPE_MODEL:-auto}
@@ -43,22 +65,50 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+      start_period: 15s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+        reservations:
+          cpus: "1.0"
+          memory: 1G
 
   web:
     build:
       context: ./web
       dockerfile: Dockerfile
+    container_name: worldfin-web
+    restart: unless-stopped
     depends_on:
       - api
     ports:
       - "8080:80"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
 
   worker:
     build:
       context: .
       dockerfile: Dockerfile.worker
+    container_name: worldfin-worker
+    restart: unless-stopped
     environment:
-      WORLDFIN_DATABASE_URL: postgresql://worldfin:worldfin@postgres:5432/worldfin
+      WORLDFIN_DATABASE_URL: postgresql://worldfin:${POSTGRES_PASSWORD}@postgres:5432/worldfin
       OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
       OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
       FINSCRAPE_MODEL: ${FINSCRAPE_MODEL:-auto}
@@ -70,10 +120,24 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
-    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G
+        reservations:
+          cpus: "0.5"
+          memory: 512M
 
   redis:
-    image: redis:7-alpine
+    image: redis:7.2.5-alpine
+    container_name: worldfin-redis
+    restart: unless-stopped
     profiles: ["redis"]
     ports:
       - "6379:6379"
@@ -82,6 +146,20 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
 
 volumes:
   pgdata:
+
+secrets:
+  db_password:
+    file: ./secrets/db_password.txt

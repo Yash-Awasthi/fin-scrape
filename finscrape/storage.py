@@ -13,7 +13,7 @@ from __future__ import annotations
 import json
 import logging
 import sqlite3
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -44,6 +44,7 @@ class StateManager:
         self._conn.execute("PRAGMA journal_mode=WAL")
         self._conn.execute("PRAGMA foreign_keys=ON")
         self._init_tables()
+        self._migrate_event_columns()
         self._migrate_json()
 
     def _init_tables(self) -> None:
@@ -166,13 +167,29 @@ class StateManager:
 
     # --- Events ---
 
+    # Columns added after the original schema; older DBs are migrated lazily.
+    _EXTRA_EVENT_COLUMNS = (
+        "reasoning", "magnitude", "novelty", "actionability",
+        "sector_impact", "key_metrics", "second_order_effects",
+        "affected_entities", "lat", "lon",
+    )
+
+    def _migrate_event_columns(self) -> None:
+        existing = {r[1] for r in self._conn.execute("PRAGMA table_info(events)")}
+        for column in self._EXTRA_EVENT_COLUMNS:
+            if column not in existing:
+                self._conn.execute(f"ALTER TABLE events ADD COLUMN {column} DEFAULT NULL")
+        self._conn.commit()
+
     def _insert_event(self, ev: dict) -> int:
         cur = self._conn.execute(
             """INSERT INTO events
                (subject, event_type, tickers, impact_direction, signal_score,
                 confidence, verdict, heuristic_impact, divergence_flag,
-                sources, articles, timestamp)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                sources, articles, timestamp,
+                reasoning, magnitude, novelty, actionability, sector_impact,
+                key_metrics, second_order_effects, affected_entities, lat, lon)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (
                 ev.get("subject", ""),
                 ev.get("event_type", "other"),
@@ -185,7 +202,17 @@ class StateManager:
                 1 if ev.get("divergence_flag") else 0,
                 json.dumps(ev.get("sources", [])),
                 json.dumps(ev.get("articles", [])),
-                ev.get("timestamp", datetime.now(timezone.utc).isoformat()),
+                ev.get("timestamp", datetime.now(UTC).isoformat()),
+                ev.get("reasoning", ""),
+                ev.get("magnitude", "medium"),
+                ev.get("novelty", "standard"),
+                ev.get("actionability", "low"),
+                ev.get("sector_impact", ""),
+                json.dumps(ev.get("key_metrics", {})),
+                json.dumps(ev.get("second_order_effects", [])),
+                json.dumps(ev.get("affected_entities", [])),
+                ev.get("lat"),
+                ev.get("lon"),
             ),
         )
         return cur.lastrowid or 0

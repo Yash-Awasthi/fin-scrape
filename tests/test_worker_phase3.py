@@ -11,8 +11,9 @@ from worker.sources import build_sources
 def test_build_sources_has_world_rss_and_event_ingestors():
     sources = build_sources(max_articles=5)
     assert "world_rss" in sources
-    for name in ("usgs_quakes", "gdelt", "reliefweb", "coingecko"):
+    for name in ("usgs_quakes", "gdelt", "reliefweb"):
         assert name in sources and callable(sources[name])
+    assert "coingecko" not in sources  # crypto removed from the event mix
     assert "opensky" not in sources  # data layer, not an event source
 
 

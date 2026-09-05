@@ -14,7 +14,7 @@ from collections.abc import Callable
 
 import asyncpg
 
-from finscrape.accuracy import calibration
+from finscrape.accuracy import calibration, equity_metrics
 
 THRESHOLD_PCT = 1.0
 DIRECTIONAL = ("INVEST", "PULL_OUT")
@@ -61,6 +61,15 @@ def aggregate(rows: list[dict]) -> dict:
         cum += 1 if r["correct"] else -1
         equity.append(cum)
 
+    # Per-step returns of the equity walk (each hit/miss relative to the stake so
+    # far) feed the empyrical-backed metric engine — sharpe/sortino/drawdown.
+    step_returns: list[float] = []
+    prev = 0.0
+    for value in equity:
+        base = max(1.0, abs(prev))
+        step_returns.append((value - prev) / base)
+        prev = value
+
     return {
         "total": len(rows),
         "scored": len(scored),
@@ -68,6 +77,7 @@ def aggregate(rows: list[dict]) -> dict:
         "hit_rate": round(hits / len(scored), 3) if scored else 0.0,
         "by_verdict": by_verdict,
         "equity_curve": equity,
+        "equity_metrics": equity_metrics(step_returns),
         "calibration": calibration(scored),
     }
 

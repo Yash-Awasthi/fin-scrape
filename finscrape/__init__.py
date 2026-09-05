@@ -1,24 +1,8 @@
-"""finscrape package.
-
-Top-level names (FinScrapePipeline, FinEvent, Verdict) are exposed lazily via
-PEP 562 __getattr__ so that importing a light submodule — e.g.
-`finscrape.logging_config` or `finscrape.scrapers.world.feeds` — does NOT drag in
-the full pipeline/engine (curl_cffi, lxml, scrapling). That keeps the lean API
-image importable without the heavy scraper deps; `from finscrape import
-FinScrapePipeline` still works for callers that want the brain.
+"""WorldFin — Free Geopolitical Market Intelligence.
+Standalone modules: sentiment_analyzer, geopolitical_risk, trading_agents, backtest_engine, route_risk_monitor.
 """
+__version__ = "1.0.0"
 
-__version__ = "0.2.0"
-__all__ = ["FinScrapePipeline", "FinEvent", "Verdict"]
-
-
-def __getattr__(name: str):
-    if name == "FinScrapePipeline":
-        from finscrape.pipeline import FinScrapePipeline
-
-        return FinScrapePipeline
-    if name in ("FinEvent", "Verdict"):
-        from finscrape.models.events import FinEvent, Verdict
-
-        return {"FinEvent": FinEvent, "Verdict": Verdict}[name]
-    raise AttributeError(f"module 'finscrape' has no attribute {name!r}")
+# Trading pipeline (multi-agent analysis)
+from finscrape.trading.pipeline import run_analysis as run_trading_analysis
+from finscrape.trading.state import TradeState

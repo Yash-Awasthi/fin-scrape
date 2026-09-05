@@ -34,7 +34,7 @@ def _ema(data: List[float], window: int) -> List[Optional[float]]:
             result.append(sma_val)
             prev_ema = sma_val
         else:
-            ema_val = (val - prev_ema!) * multiplier + prev_ema!
+            ema_val = (val - prev_ema) * multiplier + prev_ema
             result.append(ema_val)
             prev_ema = ema_val
     return result
@@ -72,8 +72,8 @@ def adx(high: List[float], low: List[float], close: List[float], window: int = 1
             adx_values.append(None)
             continue
 
-        plus_di = (plus_di_raw[i]! / atr[i]!) * 100
-        minus_di = (minus_di_raw[i]! / atr[i]!) * 100
+        plus_di = (plus_di_raw[i] / atr[i]) * 100
+        minus_di = (minus_di_raw[i] / atr[i]) * 100
         dx = abs(plus_di - minus_di) / (plus_di + minus_di) * 100 if (plus_di + minus_di) > 0 else 0
 
         if prev_adx is None:
@@ -130,11 +130,11 @@ def cci(high: List[float], low: List[float], close: List[float], window: int = 2
             result.append(None)
         else:
             subset = tp[i - window + 1: i + 1]
-            mean_dev = sum(abs(x - sma_tp[i]!) for x in subset) / len(subset)
+            mean_dev = sum(abs(x - sma_tp[i]) for x in subset) / len(subset)
             if mean_dev == 0:
                 result.append(0)
             else:
-                result.append((tp[i] - sma_tp[i]!) / (0.015 * mean_dev))
+                result.append((tp[i] - sma_tp[i]) / (0.015 * mean_dev))
     return result
 
 
@@ -217,9 +217,9 @@ def bollinger_bands(close: List[float], window: int = 20, num_std: float = 2.0) 
             lower.append(None)
         else:
             subset = close[i - window + 1: i + 1]
-            std = (sum((x - sma[i]!) ** 2 for x in subset) / len(subset)) ** 0.5
-            upper.append(sma[i]! + num_std * std)
-            lower.append(sma[i]! - num_std * std)
+            std = (sum((x - sma[i]) ** 2 for x in subset) / len(subset)) ** 0.5
+            upper.append(sma[i] + num_std * std)
+            lower.append(sma[i] - num_std * std)
 
     return {"upper": upper, "middle": sma, "lower": lower}
 

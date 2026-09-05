@@ -12,6 +12,8 @@ import os
 import re
 import json
 import datetime
+import random
+import time
 from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING, Optional
 
@@ -27,6 +29,37 @@ MAX_WORDS = 1500
 MAX_PARAGRAPHS = 25
 MIN_TEXT_LENGTH = 150
 MAX_AGE_HOURS = float(os.getenv("FINSCRAPE_MAX_AGE_HOURS", "2.0"))
+
+# Retry configuration for transient fetch failures (429, 502, 503, 504, timeouts).
+FETCH_MAX_RETRIES = int(os.getenv("FINSCRAPE_FETCH_RETRIES", "3"))
+FETCH_BASE_DELAY = float(os.getenv("FINSCRAPE_FETCH_BASE_DELAY", "1.0"))  # seconds
+FETCH_MAX_DELAY = float(os.getenv("FINSCRAPE_FETCH_MAX_DELAY", "15.0"))  # seconds
+# HTTP status codes that warrant a retry (transient errors).
+RETRYABLE_STATUS_HINTS = {429, 500, 502, 503, 504}
+# Circuit breaker: after this many consecutive failures, the source is tripped
+# and subsequent fetches fast-fail without hitting the network until reset_after_s.
+CB_FAIL_THRESHOLD = int(os.getenv("FINSCRAPE_CB_FAIL_THRESHOLD", "5"))
+CB_RESET_AFTER_S = float(os.getenv("FINSCRAPE_CB_RESET_AFTER_S", "60.0"))
+
+# ── Per-source circuit breakers ────────────────────────────────────────────
+_breakers: dict[str, "CircuitBreaker"] = {}
+
+
+def get_breaker(name: str) -> "CircuitBreaker":
+    """Get or create the circuit breaker for a named source."""
+    if name not in _breakers:
+        from server.circuit import CircuitBreaker
+        _breakers[name] = CircuitBreaker(
+            name,
+            fail_threshold=CB_FAIL_THRESHOLD,
+            reset_after_s=CB_RESET_AFTER_S,
+        )
+    return _breakers[name]
+
+
+def reset_breakers() -> None:
+    """Clear all circuit breakers (for tests)."""
+    _breakers.clear()
 
 
 class BaseScraper(ABC):
@@ -53,22 +86,67 @@ class BaseScraper(ABC):
     ) -> Optional[Response]:
         """Fetch a page using the appropriate Scrapling fetcher.
 
-        Returns a Response object (extends Selector) with .css() and .xpath().
+        Uses a per-source circuit breaker to fast-fail when a source has been
+        consistently down, avoiding wasted timeout budget on every article.
+        Retries on transient failures (timeouts, 429/5xx) with exponential
+        backoff + jitter. Returns a Response object (extends Selector) with
+        .css() and .xpath(), or None if all retries are exhausted or the
+        circuit is open.
         """
-        # Engine import is deferred so light consumers (e.g. the API importing
-        # finscrape.scrapers.world.feeds) don't drag in curl_cffi/scrapling.
         from finscrape.engine import DynamicFetcher, Fetcher, StealthyFetcher
+        from server.circuit import CircuitBreaker, CircuitOpen
 
-        try:
-            if dynamic:
-                return DynamicFetcher.fetch(url)
-            elif stealthy:
-                return StealthyFetcher.fetch(url)
-            else:
-                return Fetcher.get(url)
-        except Exception as e:
-            logger.warning("[%s] Failed to fetch %s: %s", self.name, url, e)
+        breaker = get_breaker(self.name)
+
+        # Circuit-breaker guard: if the source has tripped, fast-fail without
+        # touching the network. The breaker auto-transitions to half-open after
+        # CB_RESET_AFTER_S, allowing one probe request through.
+        if not breaker.allow():
+            logger.info("[%s] Circuit open — fast-failing fetch of %s", self.name, url)
             return None
+
+        last_error: Optional[Exception] = None
+        for attempt in range(1, FETCH_MAX_RETRIES + 1):
+            try:
+                if dynamic:
+                    result = DynamicFetcher.fetch(url)
+                elif stealthy:
+                    result = StealthyFetcher.fetch(url)
+                else:
+                    result = Fetcher.get(url)
+                breaker.record_success()
+                return result
+            except Exception as e:
+                last_error = e
+                err_str = str(e).lower()
+                is_retryable = (
+                    any(f" {code}" in err_str or f"{code}" in err_str[:20]
+                        for code in RETRYABLE_STATUS_HINTS)
+                    or "timeout" in err_str
+                    or "timed out" in err_str
+                    or "connection" in err_str
+                    or "reset" in err_str
+                )
+
+                if not is_retryable or attempt >= FETCH_MAX_RETRIES:
+                    breaker.record_failure()
+                    logger.warning(
+                        "[%s] Failed to fetch %s (attempt %d/%d): %s",
+                        self.name, url, attempt, FETCH_MAX_RETRIES, e,
+                    )
+                    return None
+
+                delay = min(FETCH_BASE_DELAY * (2 ** (attempt - 1)), FETCH_MAX_DELAY)
+                delay = delay / 2 + random.uniform(0, delay / 2)
+                logger.info(
+                    "[%s] Transient fetch error for %s (attempt %d/%d), "
+                    "retrying in %.1fs: %s",
+                    self.name, url, attempt, FETCH_MAX_RETRIES, delay, e,
+                )
+                time.sleep(delay)
+
+        breaker.record_failure()
+        return None
 
     def extract_article_text(
         self, page: Response, max_paragraphs: int = MAX_PARAGRAPHS

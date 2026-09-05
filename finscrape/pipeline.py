@@ -24,9 +24,13 @@ from finscrape.analysis.validator import (
     check_divergence,
     clean_tickers,
     fuse_confidence,
+    is_market_relevant,
 )
 from finscrape.dashboard import DashboardClient
-from finscrape.entity_map import resolve_tickers
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+from finscrape.analysis.embeddings import most_similar
+from finscrape.entity_map import resolve_company_tickers, resolve_tickers
 from finscrape.market_data import (
     calculate_market_boost,
     get_indicators,
@@ -37,6 +41,7 @@ from finscrape.portfolio import PortfolioManager
 from finscrape.scrapers.benzinga import BenzingaScraper
 from finscrape.scrapers.bloomberg import BloombergScraper
 from finscrape.scrapers.cnbc import CNBCScraper
+from finscrape.scrapers.dev_tools import FirecrawlNewsScraper, SerpNewsScraper
 from finscrape.scrapers.edgar import EdgarScraper
 from finscrape.scrapers.ft import FTScraper
 from finscrape.scrapers.google_news import GoogleNewsScraper
@@ -140,6 +145,10 @@ class FinScrapePipeline:
         "edgar": EdgarScraper,
         "google_news": GoogleNewsScraper,
         "google_serp": GoogleSerpScraper,
+        # Dev-mode tools (secrets/dev_tools.json) — no-op with a clear warning
+        # until an API key is configured via `main.py devtools set`.
+        "firecrawl": FirecrawlNewsScraper,
+        "serp": SerpNewsScraper,
     }
 
     def __init__(
@@ -194,7 +203,12 @@ class FinScrapePipeline:
                 logger.warning("Unknown source '%s' — skipping", name)
 
     def run(self) -> list[FinEvent]:
-        """Run the full pipeline across all configured sources."""
+        """Run the full pipeline across all configured sources.
+
+        Sources scrape in PARALLEL (wall time ≈ slowest source, not their sum);
+        processing stays sequential afterwards because it mutates shared SQLite
+        state. Results are merged in deterministic source order.
+        """
         stats = PipelineStats()
 
         print(f"\n{'='*60}")
@@ -202,21 +216,38 @@ class FinScrapePipeline:
         print(f"  Sources: {', '.join(self.scrapers.keys())}")
         print(f"{'='*60}\n")
 
-        all_events = []
-
-        for source_name, scraper in self.scrapers.items():
-            print(f"[{source_name.upper()}] Scraping...")
+        def _scrape_source(source_name: str, scraper) -> tuple[str, list, Exception | None]:
             try:
                 with stats.time_stage(f"scrape_{source_name}"):
                     articles = scraper.scrape_news()
-                print(f"[{source_name.upper()}] Got {len(articles)} articles")
-                with stats.time_stage(f"process_{source_name}"):
-                    events = self._process_articles(source_name, articles, stats)
-                all_events.extend(events)
-            except Exception as e:
-                logger.error("[%s] Scraper failed: %s", source_name, e, exc_info=True)
-                print(f"[{source_name.upper()}] Error: {e}")
+                return source_name, articles, None
+            except Exception as e:  # noqa: BLE001 — one dead source never kills the run
+                return source_name, [], e
+
+        scraped: dict[str, tuple[list, Exception | None]] = {}
+        max_workers = min(4, max(1, len(self.scrapers)))
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            futures = [
+                pool.submit(_scrape_source, name, scraper)
+                for name, scraper in self.scrapers.items()
+            ]
+            for future in as_completed(futures):
+                name, articles, error = future.result()
+                scraped[name] = (articles, error)
+                if error is not None:
+                    logger.error("[%s] Scraper failed: %s", name, error, exc_info=error)
+                    print(f"[{name.upper()}] Error: {error}")
+                else:
+                    print(f"[{name.upper()}] Got {len(articles)} articles")
+
+        all_events = []
+        for source_name, scraper in self.scrapers.items():
+            articles, error = scraped.get(source_name, ([], None))
+            if error is not None or not articles:
                 continue
+            with stats.time_stage(f"process_{source_name}"):
+                events = self._process_articles(source_name, articles, stats)
+            all_events.extend(events)
 
         stats.events_created = len(all_events)
 
@@ -356,6 +387,12 @@ class FinScrapePipeline:
     def _analyze_article(self, source_name: str, article: ScrapedArticle) -> FinEvent | None:
         """Run AI analysis + heuristic validation on a single article."""
 
+        # Pre-LLM relevance gate: junk lifestyle pieces and transient event
+        # briefs (minor quakes, forming storms) never reach the AI or the DB.
+        if not is_market_relevant(article.title, article.text):
+            print("    [SKIP] Not market-relevant (off-topic or transient brief)")
+            return None
+
         # Choose analysis mode: multi-agent council or single AI call
         if self.council:
             result, council_verdict = self._analyze_with_council(source_name, article)
@@ -387,7 +424,9 @@ class FinScrapePipeline:
         regex_tickers = article.raw_tickers
         # Sector/geopolitics keyword → tickers (Phase 12): rescues world headlines that
         # name a sector/region but no company, where the LLM left tickers blank.
+        # Company-name resolution (SEC list) catches articles naming the company outright.
         sector_tickers = resolve_tickers(full_text)
+        company_tickers = resolve_company_tickers(full_text)
 
         # Also extract tickers from affected_entities
         entity_obj_tickers = [
@@ -403,6 +442,7 @@ class FinScrapePipeline:
             + regex_tickers
             + entity_obj_tickers
             + sector_tickers
+            + company_tickers
         )
         valid_tickers = clean_tickers([
             t for t in all_symbols
@@ -499,7 +539,9 @@ class FinScrapePipeline:
         shaped like a call_ai result. Returns None when no tickers resolve (can't place it).
         Tagged key_metrics.prompt_variant='heuristic' so it's distinguishable + enrichable."""
         full_text = article.title + " " + article.text
-        symbols = sorted(set(resolve_tickers(full_text) + list(article.raw_tickers or [])))
+        symbols = sorted(
+            set(resolve_tickers(full_text) + resolve_company_tickers(full_text) + list(article.raw_tickers or []))
+        )
         tickers = [t for t in symbols if isinstance(t, str) and 1 < len(t) <= 5 and t.isupper()]
         if not tickers:
             return None
@@ -546,7 +588,7 @@ class FinScrapePipeline:
         """
         metadata = {"source": source_name, "age_hours": f"{article.age_hours:.1f}"}
         full_text = article.title + " " + article.text
-        tickers = resolve_tickers(full_text)
+        tickers = sorted(set(resolve_tickers(full_text) + resolve_company_tickers(full_text)))
         market_facts = get_indicators(tickers) if tickers else {}
 
         # Grounded past performance for the judge only — debators stay naive.
@@ -611,9 +653,15 @@ class FinScrapePipeline:
         return s.strip()
 
     def _find_duplicate(self, new_event: FinEvent) -> dict | None:
-        """Check if this event already exists in recent history."""
-        for e in self.state.events[-100:]:
-            # Ticker overlap
+        """Check if this event already exists in recent history.
+
+        Gate 1: ticker overlap + same event type. Gate 2: subject similarity —
+        first by character ratio, then (Phase 13) by embedding cosine, which
+        catches paraphrased coverage of the same story across sources.
+        """
+        recent = self.state.events[-100:]
+        candidates: list[tuple[int, str]] = []
+        for idx, e in enumerate(recent):
             existing_tickers = e.get("tickers", [])
             if not existing_tickers or not new_event.tickers:
                 continue
@@ -622,10 +670,26 @@ class FinScrapePipeline:
             ratio = overlap / min(len(set(new_event.tickers)), len(set(existing_tickers)))
 
             if ratio >= 0.5 and e.get("event_type") == new_event.event_type:
-                similarity = SequenceMatcher(
-                    None, e.get("subject", ""), new_event.subject
-                ).ratio()
-                if similarity >= 0.85:
-                    return e
+                candidates.append((idx, e.get("subject", "")))
+
+        for idx, existing_subject in candidates:
+            if SequenceMatcher(None, existing_subject, new_event.subject).ratio() >= 0.85:
+                return recent[idx]
+
+        # Embedding fallback: paraphrased duplicates the character ratio misses.
+        # 0.62 is calibrated for nomic-embed-text (same-story paraphrases ~0.70,
+        # unrelated ~0.44); the structural gate above keeps false merges away.
+        # No-ops (returns None) whenever Ollama is unavailable.
+        if candidates:
+            match = most_similar(
+                new_event.subject,
+                [(subject, subject) for _, subject in candidates],
+                threshold=0.62,
+            )
+            if match:
+                matched_subject, _score = match
+                for idx, subject in candidates:
+                    if subject == matched_subject:
+                        return recent[idx]
 
         return None
