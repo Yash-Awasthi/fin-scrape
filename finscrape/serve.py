@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import re
 import sqlite3
+from datetime import UTC
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
@@ -178,7 +179,7 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
     conn = _require_db()
     rows = conn.execute(
         """
-        SELECT e.tickers, e.signal_score, e.confidence, e.verdict, e.subject, e.timestamp
+        SELECT e.tickers, e.signal_score, e.confidence, e.verdict, e.subject, e.timestamp, e.created_at
         FROM events e WHERE e.id > (
             SELECT COALESCE(MAX(id), 0) - 300 FROM events
         ) ORDER BY e.id DESC
@@ -186,6 +187,9 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
     ).fetchall()
 
     stats: dict[str, dict] = {}
+    import time as _time
+
+    now = _time.time()
     for r in rows:
         try:
             tickers = json.loads(r["tickers"]) if isinstance(r["tickers"], str) else (r["tickers"] or [])
@@ -193,13 +197,29 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
             continue
         weight = 0.5 + 0.5 * float(r["confidence"] or 0)
         directional = 1.0 if r["verdict"] in ("INVEST", "PULL_OUT") else 0.4
+        # age bucket from created_at (iso strings): <12h = recent, 12-48h = baseline
+        try:
+            from datetime import datetime
+
+            ts = datetime.fromisoformat(str(r["created_at"]))
+            if ts.tzinfo is None:
+                ts = ts.replace(tzinfo=UTC)
+            age_h = (datetime.now(UTC) - ts).total_seconds() / 3600
+        except ValueError:
+            age_h = 999.0
+        bucket = "recent" if age_h <= 12 else "baseline" if age_h <= 48 else "old"
         for t in tickers:
             s = stats.setdefault(
-                t, {"mentions": 0, "score_sum": 0.0, "trust_sum": 0.0, "latest": None, "verdict": None}
+                t, {"mentions": 0, "score_sum": 0.0, "trust_sum": 0.0, "latest": None,
+                    "verdict": None, "recent": 0.0, "baseline": 0.0}
             )
             s["mentions"] += 1
             s["score_sum"] += float(r["signal_score"] or 0) * weight
             s["trust_sum"] += directional * weight
+            if bucket == "recent":
+                s["recent"] += 1
+            elif bucket == "baseline":
+                s["baseline"] += 1
             if s["latest"] is None:
                 s["latest"], s["verdict"] = r["subject"], r["verdict"]
 
@@ -208,13 +228,20 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
         trust = s["trust_sum"] / s["mentions"]
         return round(s["mentions"] * (0.5 + abs(avg) / 10) * (0.5 + trust) * 10, 2)
 
-    ranked = sorted(stats.items(), key=lambda kv: -score(kv[1]))[:limit]
+    for s in stats.values():
+        s["momentum"] = round(s["recent"] / max(1.0, s["baseline"]), 2)
+
+    ranked = sorted(
+        stats.items(),
+        key=lambda kv: -(score(kv[1]) * (1 + min(2.0, kv[1]["momentum"]))),
+    )[:limit]
     return {
         "suggestions": [
             {
                 "ticker": t,
                 "score": score(s),
                 "mentions": s["mentions"],
+                "momentum": s["momentum"],
                 "avg_score": round(s["score_sum"] / s["mentions"], 2),
                 "trust": round(s["trust_sum"] / s["mentions"], 2),
                 "latest_subject": s["latest"],
@@ -425,6 +452,135 @@ async def portfolio() -> dict:
     }
 
 
+@app.get("/api/candles")
+async def candles(
+    symbol: str = Query(...),
+    period: str = Query("1mo", pattern="^(1d|5d|1mo|3mo|6mo|1y|2y)$"),
+    interval: str = Query("1d", pattern="^(5m|15m|1h|1d|1wk)$"),
+) -> dict:
+    """OHLCV candles for the chart panel. View-only market data."""
+    try:
+        import yfinance as yf
+
+        hist = yf.Ticker(symbol.strip().upper()).history(period=period, interval=interval)
+        if hist.empty:
+            raise HTTPException(status_code=404, detail=f"no data for {symbol}")
+        return {
+            "symbol": symbol.strip().upper(),
+            "candles": [
+                {
+                    "t": ts.isoformat(),
+                    "o": round(float(row["Open"]), 4),
+                    "h": round(float(row["High"]), 4),
+                    "l": round(float(row["Low"]), 4),
+                    "c": round(float(row["Close"]), 4),
+                    "v": int(row["Volume"]),
+                }
+                for ts, row in hist.iterrows()
+            ],
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"candle fetch failed: {e}") from e
+
+
+@app.get("/api/agents/analyze")
+async def agents_analyze(
+    ticker: str = Query(...),
+    analysts: str = Query("market,news", description="comma-separated analyst set"),
+    debate_rounds: int = Query(1, ge=1, le=3),
+) -> dict:
+    """Multi-agent ANALYSIS for a ticker — view-based intelligence only.
+
+    Analyst personas debate using live market facts; the result is commentary
+    (decision + reasoning). Nothing is executed: no orders, no accounts.
+    Runs on the configured AI provider (local Ollama in dev mode).
+    """
+    from finscrape.trading.pipeline import run_analysis
+
+    result = run_analysis(
+        ticker=ticker.strip().upper(),
+        debate_rounds=debate_rounds,
+        selected_analysts=tuple(a.strip() for a in analysts.split(",") if a.strip()),
+        save_reports=False,
+    )
+    return {
+        "ticker": result["ticker"],
+        "trade_date": result["trade_date"],
+        "signal": result["signal"],
+        "decision": result["decision"],
+        "duration_seconds": result["duration_seconds"],
+        "errors": result.get("errors", []),
+    }
+
+
+@app.get("/api/predict/{event_id}")
+async def predict_event(event_id: int) -> dict:
+    """Calibrated Event-Impact Probability for one stored event — the reliability
+    evidence (per verdict/source/type hit-rates, sample sizes) is attached."""
+    conn = _require_db()
+    row = conn.execute("SELECT * FROM events WHERE id = ?", (event_id,)).fetchone()
+    if row is None:
+        raise HTTPException(status_code=404, detail="event not found")
+    event = _event_row(row)
+
+    from finscrape import prediction
+
+    outcomes = prediction.load_outcomes(_DB)
+    verdict = event.get("verdict") or "OBSERVE"
+    source = (event.get("sources") or ["local"])[0] if event.get("sources") else "local"
+    result = prediction.predict(
+        text=f"{event['subject']}. {event.get('reasoning', '')}",
+        verdict=verdict,
+        confidence=float(event.get("confidence") or 0.5),
+        source=source,
+        event_type=event.get("event_type") or "other",
+        outcomes=outcomes,
+    )
+    result["event"] = {"id": event["id"], "subject": event["subject"],
+                       "verdict": verdict, "signal_score": event.get("signal_score"),
+                       "ticker": (event.get("tickers") or [""])[0] if isinstance(event.get("tickers"), list) else ""}
+    return result
+
+
+@app.get("/api/reliability")
+async def reliability() -> dict:
+    """Reliability tables + Brier score — the audit view of prediction quality."""
+    from finscrape import prediction
+
+    outcomes = prediction.load_outcomes(_DB)
+    tables = prediction.reliability_tables(outcomes)
+    return {"reliability": tables, "brier": prediction.brier_summary(outcomes)}
+
+
+@app.get("/api/alerts")
+async def alerts(limit: int = Query(30, ge=1, le=200)) -> dict:
+    """Fired alerts (pipeline correlation + rule triggers), newest first."""
+    conn = _require_db()
+    has = conn.execute("SELECT name FROM sqlite_master WHERE name='alert_history'").fetchone()
+    if not has:
+        return {"alerts": []}
+    rows = conn.execute(
+        "SELECT id, action_type, event_subject, event_tickers, fired_at FROM alert_history "
+        "WHERE event_subject != 'test event' ORDER BY id DESC LIMIT ?",
+        (limit,),
+    ).fetchall()
+    import json as _json
+
+    out = []
+    for r in rows:
+        try:
+            tickers = _json.loads(r["event_tickers"]) if isinstance(r["event_tickers"], str) else []
+        except ValueError:
+            tickers = []
+        out.append({
+            "id": r["id"], "action_type": r["action_type"],
+            "subject": r["event_subject"], "tickers": tickers, "fired_at": r["fired_at"],
+        })
+    return {"alerts": out}
+
+
 @app.get("/api/health")
 async def health() -> dict:
     return {
@@ -444,7 +600,7 @@ async def ai_analyze(id: int = Query(...)) -> dict:
     """LLM reasoning for one event — runs the local model (dev-mode provider,
     e.g. Ollama qwen) over the event's subject, verdict and tickers."""
     conn = _require_db()
-    row = conn.execute("SELECT * FROM events WHERE id = ?", (id,)).fetchone()
+    row = conn.execute("SELECT * FROM events WHERE id = ?", (event_id,)).fetchone()
     if row is None:
         raise HTTPException(status_code=404, detail="event not found")
     event = _event_row(row)

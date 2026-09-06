@@ -65,20 +65,64 @@ export class Shell {
     setInterval(tick, 1000);
   }
 
-  // ⌘K / Ctrl+K opens a stub command palette (wired to actions in a later phase).
+  // ⌘K / Ctrl+K palette: chart any symbol, run agent analysis on it.
   private installPalette(): void {
     const overlay = document.createElement("div");
     overlay.className = "palette hidden";
     const input = document.createElement("input");
-    input.placeholder = "Command palette (coming soon)…";
-    overlay.append(input);
-    this.root.append(overlay);
+    input.placeholder = "chart AAPL · analyze NVDA · goto 600519.SS …";
+    const results = document.createElement("div");
+    results.className = "palette-results";
+    overlay.append(input, results);
 
+    const run = (raw: string): void => {
+      const cmd = raw.trim();
+      if (!cmd) return;
+      overlay.classList.add("hidden");
+      input.value = "";
+      const [verb, ...rest] = cmd.split(/\s+/);
+      const arg = rest.join(" ").toUpperCase();
+      const lower = verb.toLowerCase();
+      if (lower === "chart" && arg) {
+        window.dispatchEvent(new CustomEvent("worldfin:select-symbol", { detail: arg }));
+        document.querySelector<HTMLElement>('.panel[data-id="candles"]')?.scrollIntoView({ behavior: "smooth" });
+      } else if (lower === "analyze" && arg) {
+        window.dispatchEvent(new CustomEvent("worldfin:analyze-symbol", { detail: arg }));
+        document.querySelector<HTMLElement>('.panel[data-id="agents"]')?.scrollIntoView({ behavior: "smooth" });
+      } else if (lower === "goto" && arg) {
+        // jump to first event mentioning the term
+        window.dispatchEvent(new CustomEvent("worldfin:search-events", { detail: rest.join(" ").toLowerCase() }));
+      } else {
+        window.dispatchEvent(new CustomEvent("worldfin:search-events", { detail: cmd.toLowerCase() }));
+      }
+    };
+
+    // live suggestions from the events store
+    const suggest = (): void => {
+      const q = input.value.toLowerCase().trim();
+      const events = (window as unknown as { __wfEvents?: Array<{ subject: string; tickers: string[] }> }).__wfEvents ?? [];
+      const hits = events
+        .filter((e) => !q || e.subject.toLowerCase().includes(q))
+        .slice(0, 6)
+        .map((e) => `<div class="palette-item">▸ ${e.subject.slice(0, 70)}</div>`)
+        .join("");
+      results.innerHTML = hits;
+    };
+    input.addEventListener("input", suggest);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") run(input.value);
+    });
+
+    this.root.append(overlay);
     window.addEventListener("keydown", (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
         e.preventDefault();
         overlay.classList.toggle("hidden");
-        if (!overlay.classList.contains("hidden")) input.focus();
+        if (!overlay.classList.contains("hidden")) {
+          input.focus();
+          input.select();
+          suggest();
+        }
       } else if (e.key === "Escape") {
         overlay.classList.add("hidden");
       }

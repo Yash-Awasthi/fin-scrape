@@ -129,6 +129,7 @@ export interface Suggestion {
   ticker: string;
   score: number;
   mentions: number;
+  momentum?: number | null;
   avg_score: number;
   avg_confidence: number;
   trust: number;
@@ -147,6 +148,55 @@ export interface Quote {
   source: string;
 }
 
+export interface Candle {
+  t: string;
+  o: number;
+  h: number;
+  l: number;
+  c: number;
+  v: number;
+}
+
+export interface AgentAnalysis {
+  ticker: string;
+  trade_date: string;
+  signal: string;
+  decision: string;
+  duration_seconds: number;
+  errors: string[];
+}
+
+export interface Prediction {
+  p_positive_move: number;
+  p_verdict_correct: number;
+  expected_direction: string;
+  confidence_band: number;
+  structural_prior: number;
+  empirical_share: number;
+  data_tier: string;
+  factors: Record<string, number | null>;
+  reliability_tables: {
+    global_hit_rate: number | null;
+    total_weight: number;
+    sample_size: number;
+    by_verdict: Record<string, { hit_rate: number | null; weight: number }>;
+    by_source: Record<string, { hit_rate: number | null; weight: number }>;
+  };
+  event: { id: number; subject: string; verdict: string; signal_score: number; ticker?: string };
+}
+
+export interface Reliability {
+  reliability: {
+    global_hit_rate: number | null;
+    total_weight: number;
+    sample_size: number;
+    by_verdict: Record<string, { hit_rate: number | null; weight: number }>;
+    by_source: Record<string, { hit_rate: number | null; weight: number }>;
+    by_confidence: Record<string, { hit_rate: number | null; weight: number }>;
+  };
+  brier: { brier: number | null; n: number };
+}
+
 export interface Position {
   ticker: string;
   shares: number;
@@ -163,7 +213,7 @@ export interface Portfolio {
 // Empty = same-origin (dev proxy / nginx). Set VITE_API_BASE for split hosting.
 export const API_BASE = (import.meta.env.VITE_API_BASE ?? "").replace(/\/$/, "");
 
-async function getJSON<T>(path: string): Promise<T> {
+export async function getJSON<T>(path: string): Promise<T> {
   const res = await fetch(API_BASE + path, { headers: { Accept: "application/json" } });
   if (!res.ok) throw new Error(`GET ${path} → ${res.status}`);
   return res.json() as Promise<T>;
@@ -208,7 +258,17 @@ export const api = {
     ),
   accuracy: () => getJSON<Accuracy>("/api/accuracy"),
   sentiment: (ticker: string) => getJSON<Sentiment>(`/api/sentiment${qs({ ticker })}`),
+  candles: (symbol: string, period = "1mo", interval = "1d") =>
+    getJSON<{ symbol: string; candles: Candle[] }>(
+      `/api/candles${qs({ symbol, period, interval })}`,
+    ),
+  agentAnalyze: (ticker: string, analysts = "market,news", debate_rounds = 1) =>
+    getJSON<AgentAnalysis>(
+      `/api/agents/analyze${qs({ ticker, analysts, debate_rounds })}`,
+    ),
   portfolio: () => getJSON<Portfolio>("/api/portfolio"),
+  predict: (id: number) => getJSON<Prediction>(`/api/predict/${id}`),
+  reliability: () => getJSON<Reliability>("/api/reliability"),
 };
 
 export const VERDICT_COLOR: Record<string, string> = {

@@ -70,7 +70,7 @@ async def rss_proxy(
                 lambda: _rss_cb.call(lambda: _fetch_rss(f.url, limit)),
             )
         )
-    except Exception:
+    except Exception:  # noqa: BLE001 — feed failures degrade to empty
         items = []
     return {"feed": feed, "name": f.name, "tier": f.tier, "items": items}
 
@@ -127,6 +127,10 @@ WITH recent AS (
 ticker_stats AS (
     SELECT t.ticker,
            COUNT(*)::float AS mentions,
+           -- velocity: mentions in the last 12h vs the previous 36h (surge = accelerating coverage)
+           COUNT(*) FILTER (WHERE r.timestamp >= now() - interval '12 hours')::float AS recent_mentions,
+           GREATEST(COUNT(*) FILTER (WHERE r.timestamp < now() - interval '12 hours'
+                                          AND r.timestamp >= now() - interval '48 hours')::float, 1) AS baseline_mentions,
            AVG(r.confidence)::float AS avg_confidence,
            AVG(r.signal_score)::float AS avg_score,
            MAX(r.timestamp) AS last_seen,
@@ -148,13 +152,16 @@ source_accuracy AS (
 SELECT r.ticker, r.mentions, r.avg_confidence, r.avg_score, r.last_seen,
        COALESCE(sa.trust, 0.5) AS trust,
        (r.mentions * r.avg_confidence * (0.5 + ABS(r.avg_score) / 10.0)
-        * (0.5 + COALESCE(sa.trust, 0.5)))::float AS suggestion_score,
+        * (0.5 + COALESCE(sa.trust, 0.5))
+        * (1 + LEAST(2.0, r.recent_mentions / r.baseline_mentions)))::float AS suggestion_score,
+       r.recent_mentions / r.baseline_mentions::float AS momentum,
        (ARRAY_AGG(r.subject ORDER BY r.timestamp DESC))[1] AS latest_subject,
        (ARRAY_AGG(r.verdict ORDER BY r.timestamp DESC))[1] AS latest_verdict,
        (ARRAY_AGG(r.sector_impact ORDER BY r.timestamp DESC))[1] AS sector
 FROM ticker_stats r
 LEFT JOIN source_accuracy sa ON sa.ticker = r.ticker
-GROUP BY r.ticker, r.mentions, r.avg_confidence, r.avg_score, r.last_seen, sa.trust
+GROUP BY r.ticker, r.mentions, r.avg_confidence, r.avg_score, r.last_seen,
+         r.recent_mentions, r.baseline_mentions, sa.trust
 ORDER BY suggestion_score DESC
 LIMIT $1
 """
@@ -170,6 +177,7 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
             {
                 "ticker": r["ticker"],
                 "score": round(r["suggestion_score"], 3),
+                "momentum": round(r["momentum"], 2) if r["momentum"] is not None else None,
                 "mentions": int(r["mentions"]),
                 "avg_score": round(r["avg_score"], 2),
                 "avg_confidence": round(r["avg_confidence"], 2),

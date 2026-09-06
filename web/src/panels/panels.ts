@@ -15,7 +15,8 @@ import {
 } from "../api";
 import { CHANNELS, countries, embedUrl } from "../data/channels";
 import { escapeHtml } from "../util";
-import type { Quote } from "../api";
+import { type Candle, type Prediction, type Quote } from "../api";
+import { getJSON } from "../api";
 import { verdictColor } from "../api";
 import { Panel } from "./panel";
 
@@ -105,11 +106,12 @@ export class SuggestionsPanel extends Panel {
       .map((s) => {
         const color = s.latest_verdict ? verdictColor(s.latest_verdict) : "#8a8f98";
         return (
-          `<div class="sug-row">` +
+          `<div class="sug-row sug-click" data-sym="${escapeHtml(s.ticker)}">` +
           `<span class="sug-dot" style="background:${color}"></span>` +
           `<b>${escapeHtml(s.ticker)}</b>` +
           `<span class="muted">${s.mentions} events · avg ${s.avg_score >= 0 ? "+" : ""}${s.avg_score}` +
-          ` · trust ${Math.round(s.trust * 100)}%</span>` +
+          ` · trust ${Math.round(s.trust * 100)}%` +
+          `${(s.momentum ?? 1) >= 1.5 ? ` · 🔥 ${Number(s.momentum).toFixed(1)}× surge` : ""}</span>` +
           `<span class="sug-score">+${s.score.toFixed(1)}</span>` +
           (s.latest_subject ? `<div class="muted sug-sub">${escapeHtml(s.latest_subject.slice(0, 80))}</div>` : "") +
           `</div>`
@@ -239,7 +241,7 @@ function quoteCard(q: Quote): string {
   const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
   const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
   return (
-    `<div class="ml-card"><div class="ml-sym">${escapeHtml(q.symbol)}</div>` +
+    `<div class="ml-card ml-click" data-sym="${escapeHtml(q.symbol)}"><div class="ml-sym">${escapeHtml(q.symbol)}</div>` +
     `<div class="ml-price">${price}</div>` +
     `<div class="ml-change ${cls}">${arrow} ${change}</div>` +
     `<div class="ml-src">${escapeHtml(q.source)}</div></div>`
@@ -302,7 +304,7 @@ export class WatchlistPanel extends Panel {
         const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
         const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
         return (
-          `<tr><td>${escapeHtml(q.symbol)}</td><td>${price}</td>` +
+          `<tr class="wl-click" data-sym="${escapeHtml(q.symbol)}"><td>${escapeHtml(q.symbol)}</td><td>${price}</td>` +
           `<td class="${cls}">${change}</td>` +
           `<td><button class="wl-remove" data-sym="${escapeHtml(q.symbol)}" title="remove">×</button></td></tr>`
         );
@@ -325,15 +327,270 @@ export class WatchlistPanel extends Panel {
       void this.refresh();
     });
     wrap.addEventListener("click", (e) => {
-      const sym = (e.target as HTMLElement).closest<HTMLElement>(".wl-remove")?.dataset.sym;
-      if (sym) {
-        this.symbols = this.symbols.filter((s) => s !== sym);
+      const target = e.target as HTMLElement;
+      const rem = target.closest<HTMLElement>(".wl-remove")?.dataset.sym;
+      if (rem) {
+        this.symbols = this.symbols.filter((s) => s !== rem);
         this.persist();
         void this.refresh();
+        return;
       }
+      const sym = target.closest<HTMLElement>(".wl-click")?.dataset.sym;
+      if (sym) window.dispatchEvent(new CustomEvent("worldfin:select-symbol", { detail: sym }));
     });
     this.setContent(wrap);
   }
+}
+
+export class CandlesPanel extends Panel {
+  private symbol = "AAPL";
+  private period = "1mo";
+
+  constructor() {
+    super({ id: "candles", title: "Chart", w: 8, h: 6 });
+    // any panel can point the chart at a symbol
+    window.addEventListener("worldfin:select-symbol", (e) => {
+      const sym = (e as CustomEvent<string>).detail?.toUpperCase();
+      if (sym) {
+        this.symbol = sym;
+        void this.load();
+      }
+    });
+  }
+
+  async load(): Promise<void> {
+    this.renderShell();
+    await this.refresh();
+  }
+
+  private renderShell(): void {
+    const wrap = document.createElement("div");
+    wrap.className = "candles";
+    wrap.innerHTML =
+      `<form class="candles-form">` +
+      `<input class="candles-symbol" value="${escapeHtml(this.symbol)}" maxlength="16" />` +
+      `<select class="candles-period">` +
+      ["1d", "5d", "1mo", "3mo", "6mo", "1y"]
+        .map((p) => `<option${p === this.period ? " selected" : ""}>${p}</option>`)
+        .join("") +
+      `</select><button type="submit">Load</button></form>` +
+      `<div class="candles-body"><p class="muted">Loading…</p></div>`;
+    wrap.querySelector("form")!.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = wrap.querySelector<HTMLInputElement>(".candles-symbol")!;
+      this.symbol = input.value.toUpperCase().trim() || this.symbol;
+      this.period = (wrap.querySelector<HTMLSelectElement>(".candles-period")!).value;
+      void this.refresh();
+    });
+    this.setContent(wrap);
+  }
+
+  private async refresh(): Promise<void> {
+    const body = this.el.querySelector<HTMLElement>(".candles-body");
+    const title = this.el.querySelector<HTMLElement>(".panel-head");
+    if (title) title.textContent = `Chart — ${this.symbol} (${this.period})`;
+    if (!body) return;
+    body.innerHTML = '<p class="muted">Loading…</p>';
+    try {
+      const data = await api.candles(this.symbol, this.period);
+      body.innerHTML = this.renderCandles(data.candles);
+    } catch {
+      body.innerHTML = '<p class="empty">No candle data for this symbol/period.</p>';
+    }
+  }
+
+  private renderCandles(candles: Candle[]): string {
+    if (candles.length < 2) return '<p class="empty">Not enough data.</p>';
+    const w = 860;
+    const h = 320;
+    const volH = 56; // bottom band for volume
+    const pad = 8;
+    const highs = candles.map((c) => c.h);
+    const lows = candles.map((c) => c.l);
+    const max = Math.max(...highs);
+    const min = Math.min(...lows);
+    const span = max - min || 1;
+    const priceH = h - volH - pad * 2;
+    const step = (w - pad * 2) / candles.length;
+    const bw = Math.max(2, step * 0.62);
+    const y = (v: number): number => pad + (1 - (v - min) / span) * priceH;
+
+    // SMA20 overlay
+    const sma: Array<{ x: number; v: number }> = [];
+    for (let i = 19; i < candles.length; i++) {
+      const avg = candles.slice(i - 19, i + 1).reduce((s, c) => s + c.c, 0) / 20;
+      sma.push({ x: pad + i * step + step / 2, v: avg });
+    }
+    const smaPath = sma.map((s, i) => `${i === 0 ? "M" : "L"}${s.x.toFixed(1)},${y(s.v).toFixed(1)}`).join(" ");
+
+    const maxVol = Math.max(...candles.map((c) => c.v), 1);
+    const volY = h - pad;
+
+    const bars = candles
+      .map((c, i) => {
+        const x = pad + i * step + step / 2;
+        const up = c.c >= c.o;
+        const color = up ? "#16c784" : "#ea3943";
+        const yH = y(c.h);
+        const yL = y(c.l);
+        const yO = y(c.o);
+        const yC = y(c.c);
+        const top = Math.min(yO, yC);
+        const bodyH = Math.max(1.5, Math.abs(yC - yO));
+        const vh = Math.max(1, (c.v / maxVol) * (volH - 6));
+        return (
+          `<line x1="${x.toFixed(1)}" y1="${yH.toFixed(1)}" x2="${x.toFixed(1)}" y2="${yL.toFixed(1)}" stroke="${color}" stroke-width="1"/>` +
+          `<rect x="${(x - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"/>` +
+          `<rect x="${(x - bw / 2).toFixed(1)}" y="${(volY - vh).toFixed(1)}" width="${bw.toFixed(1)}" height="${vh.toFixed(1)}" fill="${color}" opacity="0.35"/>`
+        );
+      })
+      .join("");
+
+    const smaLine = sma.length > 1 ? `<path d="${smaPath}" fill="none" stroke="#f5a623" stroke-width="1.4"/>` : "";
+
+    const last = candles[candles.length - 1];
+    const first = candles[0];
+    const chg = (((last.c - first.c) / first.c) * 100).toFixed(2);
+    const cls = last.c >= first.c ? "up" : "down";
+    return (
+      `<div class="candles-head"><b>${escapeHtml(String(last.c))}</b>` +
+      `<span class="${cls}"> ${Number(chg) >= 0 ? "+" : ""}${chg}% over period</span>` +
+      `<span class="muted"> · SMA20 <span style="color:#f5a623">─</span> · volume ▄</span></div>` +
+      `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" class="candles-svg">${bars}${smaLine}</svg>` +
+      `<div class="muted candles-foot">${candles.length} candles</div>`
+    );
+  }
+}
+
+export class AgentPanel extends Panel {
+  private ticker = "NVDA";
+
+  constructor() {
+    super({ id: "agents", title: "Agent Analysis — multi-agent research (view-only)", w: 4, h: 6 });
+    window.addEventListener("worldfin:select-symbol", (e) => {
+      const sym = (e as CustomEvent<string>).detail?.toUpperCase();
+      if (sym) {
+        this.ticker = sym;
+        const input = this.el.querySelector<HTMLInputElement>(".agents-ticker");
+        if (input) input.value = sym;
+      }
+    });
+  }
+
+  async load(): Promise<void> {
+    const wrap = document.createElement("div");
+    wrap.className = "agents";
+    wrap.innerHTML =
+      `<form class="agents-form"><input class="agents-ticker" value="${escapeHtml(this.ticker)}" maxlength="16" />` +
+      `<button type="submit">Run council</button></form>` +
+      `<div class="agents-body"><p class="muted">Enter a ticker and run the analyst council — commentary only, nothing is executed.</p></div>`;
+    const body = wrap.querySelector<HTMLElement>(".agents-body")!;
+    wrap.querySelector("form")!.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = wrap.querySelector<HTMLInputElement>(".agents-ticker")!;
+      this.ticker = input.value.toUpperCase().trim() || this.ticker;
+      void this.run(body);
+    });
+    this.setContent(wrap);
+  }
+
+  private async run(body: HTMLElement): Promise<void> {
+    body.innerHTML = '<p class="muted">Council deliberating… analysts debate with live market facts. Local models can take 1–3 minutes.</p>';
+    try {
+      const a = await api.agentAnalyze(this.ticker);
+      body.innerHTML =
+        `<div class="agents-signal">Signal: <b>${escapeHtml(String(a.signal))}</b>` +
+        ` <span class="muted">· ${a.duration_seconds}s${a.errors.length ? ` · ${a.errors.length} errors` : ""}</span></div>` +
+        `<pre class="agents-decision">${escapeHtml(a.decision.slice(0, 4000))}</pre>`;
+    } catch {
+      body.innerHTML = '<p class="empty">Analysis failed — is the AI provider running?</p>';
+    }
+  }
+}
+
+export class PredictionPanel extends Panel {
+  constructor() {
+    super({ id: "prediction", title: "Prediction — calibrated event impact", w: 6, h: 5 });
+  }
+  async load(): Promise<void> {
+    this.el.addEventListener("click", (e) => {
+      const sym = (e.target as HTMLElement).closest<HTMLElement>(".sug-click")?.dataset.sym;
+      if (sym) window.dispatchEvent(new CustomEvent("worldfin:select-symbol", { detail: sym }));
+    });
+    try {
+      const rel = await api.reliability();
+      const events = (await api.events({ limit: 30 })).filter((e) => e.verdict !== "OBSERVE").slice(0, 5);
+      const predictions = await Promise.allSettled(events.map((e) => api.predict(e.id)));
+
+      const relTable = rel.reliability;
+      const brier = rel.brier.brier == null ? "—" : rel.brier.brier.toFixed(3);
+      const n = relTable.sample_size;
+
+      const verds = Object.entries(relTable.by_verdict)
+        .map(([v, s]) => {
+          const rate = s.hit_rate == null ? "—" : `${Math.round(s.hit_rate * 100)}%`;
+          return `<div class="pred-row"><span>${escapeHtml(v)}</span><span class="muted">w ${s.weight}</span><b>${rate}</b></div>`;
+        })
+        .join("");
+
+      const cards = predictions
+        .filter((p) => p.status === "fulfilled")
+        .map((p) => {
+          const pr = (p as PromiseFulfilledResult<Prediction>).value;
+          const pct = Math.round(pr.p_verdict_correct * 100);
+          return (
+            `<div class="pred-card">` +
+            `<div class="pred-top"><b>${escapeHtml(pr.event.ticker || pr.event.subject.slice(0, 30))}</b>` +
+            `<span class="pred-p">${pct}%</span></div>` +
+            `<div class="pred-bar"><i style="width:${pct}%;background:${pct >= 55 ? "#16c784" : pct <= 45 ? "#ea3943" : "#f5a623"}"></i></div>` +
+            `<div class="muted pred-note">P(verdict correct) · ${pr.data_tier} · emp.share ${Math.round(pr.empirical_share * 100)}%</div>` +
+            `</div>`
+          );
+        })
+        .join("");
+
+      this.setContent(
+        `<div class="pred-summary">` +
+          `<span>Global base rate: <b>${relTable.global_hit_rate == null ? "—" : Math.round(relTable.global_hit_rate * 100)}%</b></span>` +
+          `<span class="muted"> · ${n} outcomes · Brier ${brier} · recency-decayed</span></div>` +
+        `<div class="pred-grid">${cards || '<p class="empty">No directional signals yet.</p>'}</div>` +
+        `<div class="pred-table">${verds}</div>`,
+      );
+    } catch {
+      this.setContent('<p class="empty">Prediction engine unavailable.</p>');
+    }
+  }
+}
+
+export class AlertsPanel extends Panel {
+  constructor() {
+    super({ id: "alerts", title: "Alerts — fired by the pipeline", w: 6, h: 5 });
+  }
+  async load(): Promise<void> {
+    try {
+      const { alerts } = await getJSON<{ alerts: AlertRow[] }>("/api/alerts?limit=40");
+      if (!alerts.length) return this.setContent('<p class="empty">No alerts fired yet.</p>');
+      const rows = alerts
+        .map(
+          (a) =>
+            `<div class="alert-row"><span class="alert-type">${escapeHtml(a.action_type)}</span>` +
+            `<span class="alert-subject">${escapeHtml(a.subject.slice(0, 70))}</span>` +
+            `<span class="muted">${escapeHtml((a.tickers || []).slice(0, 3).join(", "))} · ${escapeHtml((a.fired_at || "").slice(5, 16))}</span></div>`,
+        )
+        .join("");
+      this.setContent(`<div class="alert-list">${rows}</div>`);
+    } catch {
+      this.setContent('<p class="empty">Alerts unavailable.</p>');
+    }
+  }
+}
+
+interface AlertRow {
+  id: number;
+  action_type: string;
+  subject: string;
+  tickers: string[];
+  fired_at: string;
 }
 
 export class CalendarPanel extends Panel {
@@ -437,7 +694,17 @@ function sparkline(curve: number[]): string {
 export class SentimentPanel extends Panel {
   private ticker = "AAPL";
   constructor() {
-    super({ id: "sentiment", title: "Social Sentiment", w: 4, h: 3 });
+    super({ id: "sentiment", title: "Sentiment", w: 4, h: 3 });
+    window.addEventListener("worldfin:select-symbol", (e) => {
+      const sym = (e as CustomEvent<string>).detail?.toUpperCase();
+      if (sym) {
+        this.ticker = sym;
+        const input = this.el.querySelector<HTMLInputElement>(".senti-tk");
+        if (input) input.value = sym;
+        const body = this.el.querySelector<HTMLElement>(".senti-body");
+        if (body) void this.fetch(body, sym);
+      }
+    });
   }
   async load(): Promise<void> {
     const wrap = document.createElement("div");

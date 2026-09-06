@@ -49,3 +49,7 @@ finscrape/absorbed/quant/machine-learning-for-trading/**/*.pkl
 *.db
 *.h5
 *.parquet
+
+# sqlite sidecars
+data/*.db-wal
+data/*.db-shm

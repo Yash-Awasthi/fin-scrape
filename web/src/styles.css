@@ -248,3 +248,45 @@ body {
 .feed.compact tbody tr:hover { background: #141824; }
 .tv-scroll { overscroll-behavior: contain; scrollbar-width: thin; }
 .lobby-body { overscroll-behavior: contain; scrollbar-width: thin; }
+
+/* ── Chart ── */
+.candles-form { display: flex; gap: 6px; margin-bottom: 8px; }
+.candles-symbol { flex: 1; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 5px 9px; font-size: 13px; }
+.candles-period { background: #161a23; color: #e6e9ee; border: 1px solid #232a37; border-radius: 6px; padding: 4px 8px; font-size: 12.5px; }
+.candles-head { font-size: 15px; margin-bottom: 6px; }
+.candles-head .up { color: #16c784; } .candles-head .down { color: #ea3943; }
+.candles-svg { width: 100%; height: auto; }
+.candles-foot { margin-top: 4px; font-size: 11px; }
+.ml-click { cursor: pointer; }
+.ml-click:hover { border-color: #2f81f7; }
+
+/* ── Agent analysis ── */
+.agents-form { display: flex; gap: 6px; margin-bottom: 8px; }
+.agents-ticker { flex: 1; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 5px 9px; font-size: 13px; }
+.agents-signal { font-size: 14px; margin-bottom: 6px; }
+.agents-decision { white-space: pre-wrap; font-size: 12.5px; line-height: 1.5; color: #c9ced6; background: #0d1017; border: 1px solid #1e2430; border-radius: 6px; padding: 10px; max-height: 320px; overflow-y: auto; }
+
+/* ── Prediction (CEIP) ── */
+.pred-summary { font-size: 13px; margin-bottom: 8px; }
+.pred-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; margin-bottom: 10px; }
+.pred-card { background: #11141b; border: 1px solid #1e2430; border-radius: 6px; padding: 7px 9px; }
+.pred-top { display: flex; justify-content: space-between; align-items: baseline; }
+.pred-p { font-size: 17px; font-weight: 800; font-family: ui-monospace, monospace; }
+.pred-bar { height: 6px; background: #161a23; border-radius: 3px; overflow: hidden; margin: 4px 0; }
+.pred-bar i { display: block; height: 100%; border-radius: 3px; }
+.pred-note { font-size: 10.5px; }
+.pred-row { display: flex; justify-content: space-between; padding: 2px 0; font-size: 12.5px; }
+.pred-table { border-top: 1px solid #1e2430; padding-top: 6px; }
+
+/* ── command palette ── */
+.palette { position: fixed; top: 70px; left: 50%; transform: translateX(-50%); width: min(560px, 90vw); background: #11141b; border: 1px solid #2f81f7; border-radius: 10px; padding: 10px; z-index: 300; box-shadow: 0 12px 40px rgba(0,0,0,.6); }
+.palette.hidden { display: none; }
+.palette input { width: 100%; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 8px 12px; font-size: 14px; }
+.palette-results { margin-top: 6px; font-size: 12.5px; color: #8a8f98; }
+.palette-item { padding: 4px 6px; border-bottom: 1px solid #1a1f2a; }
+
+/* ── Alerts ── */
+.alert-list { max-height: 380px; overflow-y: auto; scrollbar-width: thin; overscroll-behavior: contain; }
+.alert-row { display: grid; grid-template-columns: 70px 1fr auto; gap: 8px; padding: 5px 4px; border-bottom: 1px solid #1a1f2a; font-size: 12.5px; align-items: baseline; }
+.alert-type { color: #f5a623; font-family: ui-monospace, monospace; font-size: 11px; }
+.alert-subject { color: #e6e9ee; }

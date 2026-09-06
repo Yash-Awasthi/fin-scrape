@@ -41,7 +41,7 @@ from finscrape.portfolio import PortfolioManager
 from finscrape.scrapers.benzinga import BenzingaScraper
 from finscrape.scrapers.bloomberg import BloombergScraper
 from finscrape.scrapers.cnbc import CNBCScraper
-from finscrape.scrapers.dev_tools import FirecrawlNewsScraper, SerpNewsScraper
+from finscrape.scrapers.dev_tools import FirecrawlNewsScraper, RSSHubScraper, SerpNewsScraper
 from finscrape.scrapers.edgar import EdgarScraper
 from finscrape.scrapers.ft import FTScraper
 from finscrape.scrapers.google_news import GoogleNewsScraper
@@ -149,6 +149,7 @@ class FinScrapePipeline:
         # until an API key is configured via `main.py devtools set`.
         "firecrawl": FirecrawlNewsScraper,
         "serp": SerpNewsScraper,
+        "rsshub": RSSHubScraper,
     }
 
     def __init__(

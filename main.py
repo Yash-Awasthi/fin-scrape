@@ -256,7 +256,7 @@ def main():
         "--sources", nargs="+", default=["yahoo"],
         choices=["yahoo", "bloomberg", "reuters", "cnbc", "rss",
                  "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft", "google_news", "edgar",
-                 "firecrawl", "serp"],
+                 "firecrawl", "serp", "rsshub"],
     )
     scrape_parser.add_argument("--max-articles", type=int, default=30)
     scrape_parser.add_argument("--age-hours", type=float, default=2.0,
@@ -276,7 +276,7 @@ def main():
         "--sources", nargs="+", default=["yahoo"],
         choices=["yahoo", "bloomberg", "reuters", "cnbc", "rss",
                  "marketwatch", "seekingalpha", "benzinga", "investingcom", "ft", "google_news", "edgar",
-                 "firecrawl", "serp"],
+                 "firecrawl", "serp", "rsshub"],
     )
     monitor_parser.add_argument("--max-articles", type=int, default=30)
     monitor_parser.add_argument("--age-hours", type=float, default=2.0,

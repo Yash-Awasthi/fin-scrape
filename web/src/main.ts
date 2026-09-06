@@ -12,13 +12,17 @@ import { PanelLayoutManager } from "./panels/layout";
 import { Panel } from "./panels/panel";
 import {
   AccuracyPanel,
+  AgentPanel,
+  AlertsPanel,
   CalendarPanel,
+  CandlesPanel,
   CorrelationPanel,
   LiveTVPanel,
   MarketsLivePanel,
   MarketsPanel,
   NewsLobbyPanel,
   PortfolioPanel,
+  PredictionPanel,
   SentimentPanel,
   StatsPanel,
   SuggestionsPanel,
@@ -37,6 +41,8 @@ const shell = new Shell(() => void loadAll());
 const layout = new PanelLayoutManager();
 
 // Panels — one page, in the order the layout declares.
+const candlesPanel = new CandlesPanel();
+const agentPanel = new AgentPanel();
 const marketsLivePanel = new MarketsLivePanel();
 const watchlistPanel = new WatchlistPanel();
 const feedPanel = new SignalFeedPanel((e) => store.select(e));
@@ -49,11 +55,15 @@ const worldNewsPanel = new WorldNewsPanel();
 const liveTVPanel = new LiveTVPanel();
 const correlationPanel = new CorrelationPanel();
 const accuracyPanel = new AccuracyPanel();
+const alertsPanel = new AlertsPanel();
 const sentimentPanel = new SentimentPanel();
 const portfolioPanel = new PortfolioPanel();
+const predictionPanel = new PredictionPanel();
 const marketsPanel = new MarketsPanel();
 
 for (const p of [
+  candlesPanel,
+  agentPanel,
   marketsLivePanel,
   watchlistPanel,
   feedPanel,
@@ -65,9 +75,11 @@ for (const p of [
   worldNewsPanel,
   liveTVPanel,
   correlationPanel,
+  alertsPanel,
   accuracyPanel,
   sentimentPanel,
   portfolioPanel,
+  predictionPanel,
   marketsPanel,
 ]) {
   layout.add(p);
@@ -147,11 +159,15 @@ async function loadPanelsData(): Promise<void> {
   const shown = pagePanelIds();
   const jobs: Promise<unknown>[] = [];
   if (shown.has("markets-live")) jobs.push(marketsLivePanel.load());
+  if (shown.has("candles")) jobs.push(candlesPanel.load());
+  if (shown.has("agents")) jobs.push(agentPanel.load());
   if (shown.has("watchlist")) jobs.push(watchlistPanel.load());
   if (shown.has("suggestions")) jobs.push(suggestionsPanel.load());
+  if (shown.has("prediction")) jobs.push(predictionPanel.load());
   if (shown.has("lobby")) jobs.push(newsLobbyPanel.load());
   if (shown.has("worldnews")) jobs.push(worldNewsPanel.load());
   if (shown.has("accuracy")) jobs.push(accuracyPanel.load());
+  if (shown.has("alerts")) jobs.push(alertsPanel.load());
   if (shown.has("sentiment")) jobs.push(sentimentPanel.load());
   if (shown.has("portfolio")) jobs.push(portfolioPanel.load());
   if (shown.has("markets")) jobs.push(marketsPanel.load());
@@ -174,6 +190,27 @@ function onMessage(msg: WSMessage): void {
   if (msg.stats) store.setStats(msg.stats);
 }
 
+(window as unknown as { __wfEvents?: EventOut[] }).__wfEvents = [];
+store.subscribe((s) => {
+  (window as unknown as { __wfEvents?: EventOut[] }).__wfEvents = s.events;
+});
+window.addEventListener("worldfin:analyze-symbol", (e) => {
+  const sym = (e as CustomEvent<string>).detail;
+  if (sym) {
+    const input = document.querySelector<HTMLInputElement>(".agents-ticker");
+    if (input) {
+      input.value = sym;
+      input.closest("form")?.dispatchEvent(new Event("submit"));
+    }
+  }
+});
+window.addEventListener("worldfin:search-events", (e) => {
+  const q = (e as CustomEvent<string>).detail;
+  const hit = store
+    .get()
+    .events.find((ev) => ev.subject.toLowerCase().includes(q) || ev.tickers.some((t) => t.toLowerCase().includes(q)));
+  if (hit) store.select(hit);
+});
 const rt = new RealtimeClient(wsUrl(), onMessage, (status) => store.setConnection(status));
 
 layout.applyVariant(PAGE_LAYOUT);
