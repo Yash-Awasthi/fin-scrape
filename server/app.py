@@ -15,20 +15,23 @@ from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect
 from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
 
+from finscrape.api.geopolitical_api import router as geopolitical_router
+from finscrape.api.intelligence_api import router as intelligence_router
 from server import db, pubsub, queries
 from server.middleware import configure_hardening
 from server.obs import install_observability
 from server.routes import accuracy as accuracy_routes
+from server.routes import agents as agents_routes
 from server.routes import ai as ai_routes
 from server.routes import correlations as correlations_routes
 from server.routes import data as data_routes
 from server.routes import events as events_routes
 from server.routes import health as health_routes
+from server.routes import insight as insight_routes
+from server.routes import market as market_routes
 from server.routes import portfolio as portfolio_routes
 from server.routes import sentiment as sentiment_routes
 from server.routes import telegram as telegram_routes
-from finscrape.api.geopolitical_api import router as geopolitical_router
-from finscrape.api.intelligence_api import router as intelligence_router
 from server.schemas import HealthResponse
 from server.settings import get_settings
 from server.ws import hub
@@ -102,6 +105,9 @@ def create_app() -> FastAPI:
     app.include_router(health_routes.router)
     app.include_router(correlations_routes.router)
     app.include_router(data_routes.router)
+    app.include_router(market_routes.router)
+    app.include_router(insight_routes.router)
+    app.include_router(agents_routes.router)
     app.include_router(accuracy_routes.router)
     app.include_router(sentiment_routes.router)
     app.include_router(portfolio_routes.router)
