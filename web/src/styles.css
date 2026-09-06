@@ -265,3 +265,15 @@ body {
 .agents-ticker { flex: 1; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 5px 9px; font-size: 13px; }
 .agents-signal { font-size: 14px; margin-bottom: 6px; }
 .agents-decision { white-space: pre-wrap; font-size: 12.5px; line-height: 1.5; color: #c9ced6; background: #0d1017; border: 1px solid #1e2430; border-radius: 6px; padding: 10px; max-height: 320px; overflow-y: auto; }
+
+/* ── Prediction (CEIP) ── */
+.pred-summary { font-size: 13px; margin-bottom: 8px; }
+.pred-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; margin-bottom: 10px; }
+.pred-card { background: #11141b; border: 1px solid #1e2430; border-radius: 6px; padding: 7px 9px; }
+.pred-top { display: flex; justify-content: space-between; align-items: baseline; }
+.pred-p { font-size: 17px; font-weight: 800; font-family: ui-monospace, monospace; }
+.pred-bar { height: 6px; background: #161a23; border-radius: 3px; overflow: hidden; margin: 4px 0; }
+.pred-bar i { display: block; height: 100%; border-radius: 3px; }
+.pred-note { font-size: 10.5px; }
+.pred-row { display: flex; justify-content: space-between; padding: 2px 0; font-size: 12.5px; }
+.pred-table { border-top: 1px solid #1e2430; padding-top: 6px; }

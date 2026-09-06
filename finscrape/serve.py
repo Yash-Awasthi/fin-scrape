@@ -512,7 +512,8 @@ async def predict_event(event_id: int) -> dict:
         outcomes=outcomes,
     )
     result["event"] = {"id": event["id"], "subject": event["subject"],
-                       "verdict": verdict, "signal_score": event.get("signal_score")}
+                       "verdict": verdict, "signal_score": event.get("signal_score"),
+                       "ticker": (event.get("tickers") or [""])[0] if isinstance(event.get("tickers"), list) else ""}
     return result
 
 

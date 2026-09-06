@@ -165,6 +165,37 @@ export interface AgentAnalysis {
   errors: string[];
 }
 
+export interface Prediction {
+  p_positive_move: number;
+  p_verdict_correct: number;
+  expected_direction: string;
+  confidence_band: number;
+  structural_prior: number;
+  empirical_share: number;
+  data_tier: string;
+  factors: Record<string, number | null>;
+  reliability_tables: {
+    global_hit_rate: number | null;
+    total_weight: number;
+    sample_size: number;
+    by_verdict: Record<string, { hit_rate: number | null; weight: number }>;
+    by_source: Record<string, { hit_rate: number | null; weight: number }>;
+  };
+  event: { id: number; subject: string; verdict: string; signal_score: number; ticker?: string };
+}
+
+export interface Reliability {
+  reliability: {
+    global_hit_rate: number | null;
+    total_weight: number;
+    sample_size: number;
+    by_verdict: Record<string, { hit_rate: number | null; weight: number }>;
+    by_source: Record<string, { hit_rate: number | null; weight: number }>;
+    by_confidence: Record<string, { hit_rate: number | null; weight: number }>;
+  };
+  brier: { brier: number | null; n: number };
+}
+
 export interface Position {
   ticker: string;
   shares: number;
@@ -235,6 +266,8 @@ export const api = {
       `/api/agents/analyze${qs({ ticker, analysts, debate_rounds })}`,
     ),
   portfolio: () => getJSON<Portfolio>("/api/portfolio"),
+  predict: (id: number) => getJSON<Prediction>(`/api/predict/${id}`),
+  reliability: () => getJSON<Reliability>("/api/reliability"),
 };
 
 export const VERDICT_COLOR: Record<string, string> = {

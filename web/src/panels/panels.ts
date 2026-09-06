@@ -15,7 +15,7 @@ import {
 } from "../api";
 import { CHANNELS, countries, embedUrl } from "../data/channels";
 import { escapeHtml } from "../util";
-import { type Candle, type Quote } from "../api";
+import { type Candle, type Prediction, type Quote } from "../api";
 import { verdictColor } from "../api";
 import { Panel } from "./panel";
 
@@ -472,6 +472,56 @@ export class AgentPanel extends Panel {
         `<pre class="agents-decision">${escapeHtml(a.decision.slice(0, 4000))}</pre>`;
     } catch {
       body.innerHTML = '<p class="empty">Analysis failed — is the AI provider running?</p>';
+    }
+  }
+}
+
+export class PredictionPanel extends Panel {
+  constructor() {
+    super({ id: "prediction", title: "Prediction — calibrated event impact", w: 6, h: 5 });
+  }
+  async load(): Promise<void> {
+    try {
+      const rel = await api.reliability();
+      const events = (await api.events({ limit: 30 })).filter((e) => e.verdict !== "OBSERVE").slice(0, 5);
+      const predictions = await Promise.allSettled(events.map((e) => api.predict(e.id)));
+
+      const relTable = rel.reliability;
+      const brier = rel.brier.brier == null ? "—" : rel.brier.brier.toFixed(3);
+      const n = relTable.sample_size;
+
+      const verds = Object.entries(relTable.by_verdict)
+        .map(([v, s]) => {
+          const rate = s.hit_rate == null ? "—" : `${Math.round(s.hit_rate * 100)}%`;
+          return `<div class="pred-row"><span>${escapeHtml(v)}</span><span class="muted">w ${s.weight}</span><b>${rate}</b></div>`;
+        })
+        .join("");
+
+      const cards = predictions
+        .filter((p) => p.status === "fulfilled")
+        .map((p) => {
+          const pr = (p as PromiseFulfilledResult<Prediction>).value;
+          const pct = Math.round(pr.p_verdict_correct * 100);
+          return (
+            `<div class="pred-card">` +
+            `<div class="pred-top"><b>${escapeHtml(pr.event.ticker || pr.event.subject.slice(0, 30))}</b>` +
+            `<span class="pred-p">${pct}%</span></div>` +
+            `<div class="pred-bar"><i style="width:${pct}%;background:${pct >= 55 ? "#16c784" : pct <= 45 ? "#ea3943" : "#f5a623"}"></i></div>` +
+            `<div class="muted pred-note">P(verdict correct) · ${pr.data_tier} · emp.share ${Math.round(pr.empirical_share * 100)}%</div>` +
+            `</div>`
+          );
+        })
+        .join("");
+
+      this.setContent(
+        `<div class="pred-summary">` +
+          `<span>Global base rate: <b>${relTable.global_hit_rate == null ? "—" : Math.round(relTable.global_hit_rate * 100)}%</b></span>` +
+          `<span class="muted"> · ${n} outcomes · Brier ${brier} · recency-decayed</span></div>` +
+        `<div class="pred-grid">${cards || '<p class="empty">No directional signals yet.</p>'}</div>` +
+        `<div class="pred-table">${verds}</div>`,
+      );
+    } catch {
+      this.setContent('<p class="empty">Prediction engine unavailable.</p>');
     }
   }
 }
