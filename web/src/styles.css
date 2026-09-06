@@ -277,3 +277,10 @@ body {
 .pred-note { font-size: 10.5px; }
 .pred-row { display: flex; justify-content: space-between; padding: 2px 0; font-size: 12.5px; }
 .pred-table { border-top: 1px solid #1e2430; padding-top: 6px; }
+
+/* ── command palette ── */
+.palette { position: fixed; top: 70px; left: 50%; transform: translateX(-50%); width: min(560px, 90vw); background: #11141b; border: 1px solid #2f81f7; border-radius: 10px; padding: 10px; z-index: 300; box-shadow: 0 12px 40px rgba(0,0,0,.6); }
+.palette.hidden { display: none; }
+.palette input { width: 100%; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 8px 12px; font-size: 14px; }
+.palette-results { margin-top: 6px; font-size: 12.5px; color: #8a8f98; }
+.palette-item { padding: 4px 6px; border-bottom: 1px solid #1a1f2a; }

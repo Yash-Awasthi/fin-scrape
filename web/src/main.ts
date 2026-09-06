@@ -186,6 +186,27 @@ function onMessage(msg: WSMessage): void {
   if (msg.stats) store.setStats(msg.stats);
 }
 
+(window as unknown as { __wfEvents?: EventOut[] }).__wfEvents = [];
+store.subscribe((s) => {
+  (window as unknown as { __wfEvents?: EventOut[] }).__wfEvents = s.events;
+});
+window.addEventListener("worldfin:analyze-symbol", (e) => {
+  const sym = (e as CustomEvent<string>).detail;
+  if (sym) {
+    const input = document.querySelector<HTMLInputElement>(".agents-ticker");
+    if (input) {
+      input.value = sym;
+      input.closest("form")?.dispatchEvent(new Event("submit"));
+    }
+  }
+});
+window.addEventListener("worldfin:search-events", (e) => {
+  const q = (e as CustomEvent<string>).detail;
+  const hit = store
+    .get()
+    .events.find((ev) => ev.subject.toLowerCase().includes(q) || ev.tickers.some((t) => t.toLowerCase().includes(q)));
+  if (hit) store.select(hit);
+});
 const rt = new RealtimeClient(wsUrl(), onMessage, (status) => store.setConnection(status));
 
 layout.applyVariant(PAGE_LAYOUT);

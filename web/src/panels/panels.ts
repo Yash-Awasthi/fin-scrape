@@ -397,15 +397,28 @@ export class CandlesPanel extends Panel {
     if (candles.length < 2) return '<p class="empty">Not enough data.</p>';
     const w = 860;
     const h = 320;
+    const volH = 56; // bottom band for volume
     const pad = 8;
     const highs = candles.map((c) => c.h);
     const lows = candles.map((c) => c.l);
     const max = Math.max(...highs);
     const min = Math.min(...lows);
     const span = max - min || 1;
+    const priceH = h - volH - pad * 2;
     const step = (w - pad * 2) / candles.length;
     const bw = Math.max(2, step * 0.62);
-    const y = (v: number): number => pad + (1 - (v - min) / span) * (h - pad * 2);
+    const y = (v: number): number => pad + (1 - (v - min) / span) * priceH;
+
+    // SMA20 overlay
+    const sma: Array<{ x: number; v: number }> = [];
+    for (let i = 19; i < candles.length; i++) {
+      const avg = candles.slice(i - 19, i + 1).reduce((s, c) => s + c.c, 0) / 20;
+      sma.push({ x: pad + i * step + step / 2, v: avg });
+    }
+    const smaPath = sma.map((s, i) => `${i === 0 ? "M" : "L"}${s.x.toFixed(1)},${y(s.v).toFixed(1)}`).join(" ");
+
+    const maxVol = Math.max(...candles.map((c) => c.v), 1);
+    const volY = h - pad;
 
     const bars = candles
       .map((c, i) => {
@@ -418,21 +431,26 @@ export class CandlesPanel extends Panel {
         const yC = y(c.c);
         const top = Math.min(yO, yC);
         const bodyH = Math.max(1.5, Math.abs(yC - yO));
+        const vh = Math.max(1, (c.v / maxVol) * (volH - 6));
         return (
           `<line x1="${x.toFixed(1)}" y1="${yH.toFixed(1)}" x2="${x.toFixed(1)}" y2="${yL.toFixed(1)}" stroke="${color}" stroke-width="1"/>` +
-          `<rect x="${(x - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"/>`
+          `<rect x="${(x - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"/>` +
+          `<rect x="${(x - bw / 2).toFixed(1)}" y="${(volY - vh).toFixed(1)}" width="${bw.toFixed(1)}" height="${vh.toFixed(1)}" fill="${color}" opacity="0.35"/>`
         );
       })
       .join("");
+
+    const smaLine = sma.length > 1 ? `<path d="${smaPath}" fill="none" stroke="#f5a623" stroke-width="1.4"/>` : "";
 
     const last = candles[candles.length - 1];
     const first = candles[0];
     const chg = (((last.c - first.c) / first.c) * 100).toFixed(2);
     const cls = last.c >= first.c ? "up" : "down";
     return (
-      `<div class="candles-head"><b>${escapeHtml(last ? String(last.c) : "")}</b>` +
-      `<span class="${cls}"> ${Number(chg) >= 0 ? "+" : ""}${chg}% over period</span></div>` +
-      `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" class="candles-svg">${bars}</svg>` +
+      `<div class="candles-head"><b>${escapeHtml(String(last.c))}</b>` +
+      `<span class="${cls}"> ${Number(chg) >= 0 ? "+" : ""}${chg}% over period</span>` +
+      `<span class="muted"> · SMA20 <span style="color:#f5a623">─</span> · volume ▄</span></div>` +
+      `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" class="candles-svg">${bars}${smaLine}</svg>` +
       `<div class="muted candles-foot">${candles.length} candles</div>`
     );
   }
