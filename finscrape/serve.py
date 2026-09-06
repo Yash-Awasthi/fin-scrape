@@ -425,6 +425,69 @@ async def portfolio() -> dict:
     }
 
 
+@app.get("/api/candles")
+async def candles(
+    symbol: str = Query(...),
+    period: str = Query("1mo", pattern="^(1d|5d|1mo|3mo|6mo|1y|2y)$"),
+    interval: str = Query("1d", pattern="^(5m|15m|1h|1d|1wk)$"),
+) -> dict:
+    """OHLCV candles for the chart panel. View-only market data."""
+    try:
+        import yfinance as yf
+
+        hist = yf.Ticker(symbol.strip().upper()).history(period=period, interval=interval)
+        if hist.empty:
+            raise HTTPException(status_code=404, detail=f"no data for {symbol}")
+        return {
+            "symbol": symbol.strip().upper(),
+            "candles": [
+                {
+                    "t": ts.isoformat(),
+                    "o": round(float(row["Open"]), 4),
+                    "h": round(float(row["High"]), 4),
+                    "l": round(float(row["Low"]), 4),
+                    "c": round(float(row["Close"]), 4),
+                    "v": int(row["Volume"]),
+                }
+                for ts, row in hist.iterrows()
+            ],
+        }
+    except HTTPException:
+        raise
+    except Exception as e:  # noqa: BLE001 — data errors degrade to 502
+        raise HTTPException(status_code=502, detail=f"candle fetch failed: {e}") from e
+
+
+@app.get("/api/agents/analyze")
+async def agents_analyze(
+    ticker: str = Query(...),
+    analysts: str = Query("market,news", description="comma-separated analyst set"),
+    debate_rounds: int = Query(1, ge=1, le=3),
+) -> dict:
+    """Multi-agent ANALYSIS for a ticker — view-based intelligence only.
+
+    Analyst personas debate using live market facts; the result is commentary
+    (decision + reasoning). Nothing is executed: no orders, no accounts.
+    Runs on the configured AI provider (local Ollama in dev mode).
+    """
+    from finscrape.trading.pipeline import run_analysis
+
+    result = run_analysis(
+        ticker=ticker.strip().upper(),
+        debate_rounds=debate_rounds,
+        selected_analysts=tuple(a.strip() for a in analysts.split(",") if a.strip()),
+        save_reports=False,
+    )
+    return {
+        "ticker": result["ticker"],
+        "trade_date": result["trade_date"],
+        "signal": result["signal"],
+        "decision": result["decision"],
+        "duration_seconds": result["duration_seconds"],
+        "errors": result.get("errors", []),
+    }
+
+
 @app.get("/api/health")
 async def health() -> dict:
     return {
