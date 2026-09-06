@@ -488,6 +488,44 @@ async def agents_analyze(
     }
 
 
+@app.get("/api/predict/{event_id}")
+async def predict_event(event_id: int) -> dict:
+    """Calibrated Event-Impact Probability for one stored event — the reliability
+    evidence (per verdict/source/type hit-rates, sample sizes) is attached."""
+    conn = _require_db()
+    row = conn.execute("SELECT * FROM events WHERE id = ?", (event_id,)).fetchone()
+    if row is None:
+        raise HTTPException(status_code=404, detail="event not found")
+    event = _event_row(row)
+
+    from finscrape import prediction
+
+    outcomes = prediction.load_outcomes(_DB)
+    verdict = event.get("verdict") or "OBSERVE"
+    source = (event.get("sources") or ["local"])[0] if event.get("sources") else "local"
+    result = prediction.predict(
+        text=f"{event['subject']}. {event.get('reasoning', '')}",
+        verdict=verdict,
+        confidence=float(event.get("confidence") or 0.5),
+        source=source,
+        event_type=event.get("event_type") or "other",
+        outcomes=outcomes,
+    )
+    result["event"] = {"id": event["id"], "subject": event["subject"],
+                       "verdict": verdict, "signal_score": event.get("signal_score")}
+    return result
+
+
+@app.get("/api/reliability")
+async def reliability() -> dict:
+    """Reliability tables + Brier score — the audit view of prediction quality."""
+    from finscrape import prediction
+
+    outcomes = prediction.load_outcomes(_DB)
+    tables = prediction.reliability_tables(outcomes)
+    return {"reliability": tables, "brier": prediction.brier_summary(outcomes)}
+
+
 @app.get("/api/health")
 async def health() -> dict:
     return {
@@ -507,7 +545,7 @@ async def ai_analyze(id: int = Query(...)) -> dict:
     """LLM reasoning for one event — runs the local model (dev-mode provider,
     e.g. Ollama qwen) over the event's subject, verdict and tickers."""
     conn = _require_db()
-    row = conn.execute("SELECT * FROM events WHERE id = ?", (id,)).fetchone()
+    row = conn.execute("SELECT * FROM events WHERE id = ?", (event_id,)).fetchone()
     if row is None:
         raise HTTPException(status_code=404, detail="event not found")
     event = _event_row(row)
