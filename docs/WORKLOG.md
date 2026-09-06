@@ -40,6 +40,16 @@ A stash (`multi_model` removal WIP) belongs to another session — leave it.*
 - Deps: trafilatura (RSS enrichment), scipy (empyrical).
 - Pushed through 57bbbd62. Monitor loop running in background (15-min cycles).
 
+## Done — night run 3 (momentum + RSSHub)
+
+- `/api/suggestions` now scores **momentum**: 12h mention velocity vs the prior
+  36h, surge-capped at 2× — accelerating coverage outranks stale volume.
+- **RSSHub provider** (`finscrape/scrapers/dev_tools.py::RSSHubScraper`): any
+  RSSHub instance becomes a source (`main.py scrape --sources rsshub`, configure
+  via `devtools set news_fetch rsshub --field base_url=...`) — thousands of
+  feeds without new scrapers. Registered in AVAILABLE_SCRAPERS + CLI choices.
+- Frontend suggestions show 🔥 surge badges (≥1.5× velocity).
+
 ## In progress / next (pick up here)
 
 1. **Calibrated Event-Impact Probability (CEIP)** — `finscrape/prediction.py`:
