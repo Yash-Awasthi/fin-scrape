@@ -179,7 +179,7 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
     conn = _require_db()
     rows = conn.execute(
         """
-        SELECT e.tickers, e.signal_score, e.confidence, e.verdict, e.subject, e.timestamp
+        SELECT e.tickers, e.signal_score, e.confidence, e.verdict, e.subject, e.timestamp, e.created_at
         FROM events e WHERE e.id > (
             SELECT COALESCE(MAX(id), 0) - 300 FROM events
         ) ORDER BY e.id DESC
