@@ -22,6 +22,7 @@ from datetime import UTC, datetime
 
 from finscrape.devmode import get_provider
 from finscrape.models import ScrapedArticle
+from finscrape.scrapers.fastfetch import fast_get
 
 logger = logging.getLogger(__name__)
 
@@ -137,4 +138,54 @@ class SerpNewsScraper:
                 published_at=item.get("date"),
                 age_hours=_age_hours(item.get("date")),
             ))
+        return articles
+
+
+class RSSHubScraper:
+    """Any RSSHub instance route (dev-mode class: news_fetch / rsshub).
+
+    RSSHub turns thousands of sites into RSS — one provider, thousands of feeds.
+    Configure: main.py devtools set news_fetch rsshub --field base_url=http://host:1200
+    then pass route paths like 'reuters/world' via feeds mapping.
+    """
+
+    name = "rsshub"
+
+    def __init__(self, feeds: dict[str, str] | None = None, max_articles: int = 20):
+        self.feeds = feeds or {"rsshub_top": "reuters/world"}
+        self.max_articles = max_articles
+
+    def _base_url(self) -> str:
+        fields = get_provider("news_fetch", "rsshub") or {}
+        return str(fields.get("base_url") or os.getenv("RSSHUB_BASE_URL", "")).rstrip("/")
+
+    def scrape_news(self) -> list[ScrapedArticle]:
+        base = self._base_url()
+        if not base:
+            logger.warning(
+                "[rsshub] no instance configured — run: "
+                "main.py devtools set news_fetch rsshub --field base_url=http://host:1200"
+            )
+            return []
+
+        import feedparser
+
+        articles: list[ScrapedArticle] = []
+        for feed_name, route in self.feeds.items():
+            raw = fast_get(f"{base}/{route}")
+            if not raw:
+                continue
+            parsed = feedparser.parse(raw)
+            for entry in parsed.entries[: self.max_articles]:
+                title = (entry.get("title") or "").strip()
+                link = (entry.get("link") or "").strip()
+                if not title or not link:
+                    continue
+                articles.append(ScrapedArticle(
+                    url=link,
+                    title=title,
+                    text=(entry.get("summary") or "").strip(),
+                    source=f"rsshub/{feed_name}",
+                    published_at=entry.get("published"),
+                ))
         return articles

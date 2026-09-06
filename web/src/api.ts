@@ -129,6 +129,7 @@ export interface Suggestion {
   ticker: string;
   score: number;
   mentions: number;
+  momentum?: number | null;
   avg_score: number;
   avg_confidence: number;
   trust: number;

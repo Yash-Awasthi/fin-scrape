@@ -110,7 +110,8 @@ export class SuggestionsPanel extends Panel {
           `<span class="sug-dot" style="background:${color}"></span>` +
           `<b>${escapeHtml(s.ticker)}</b>` +
           `<span class="muted">${s.mentions} events · avg ${s.avg_score >= 0 ? "+" : ""}${s.avg_score}` +
-          ` · trust ${Math.round(s.trust * 100)}%</span>` +
+          ` · trust ${Math.round(s.trust * 100)}%` +
+          `${(s.momentum ?? 1) >= 1.5 ? ` · 🔥 ${Number(s.momentum).toFixed(1)}× surge` : ""}</span>` +
           `<span class="sug-score">+${s.score.toFixed(1)}</span>` +
           (s.latest_subject ? `<div class="muted sug-sub">${escapeHtml(s.latest_subject.slice(0, 80))}</div>` : "") +
           `</div>`
