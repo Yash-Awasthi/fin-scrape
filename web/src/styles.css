@@ -248,3 +248,20 @@ body {
 .feed.compact tbody tr:hover { background: #141824; }
 .tv-scroll { overscroll-behavior: contain; scrollbar-width: thin; }
 .lobby-body { overscroll-behavior: contain; scrollbar-width: thin; }
+
+/* ── Chart ── */
+.candles-form { display: flex; gap: 6px; margin-bottom: 8px; }
+.candles-symbol { flex: 1; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 5px 9px; font-size: 13px; }
+.candles-period { background: #161a23; color: #e6e9ee; border: 1px solid #232a37; border-radius: 6px; padding: 4px 8px; font-size: 12.5px; }
+.candles-head { font-size: 15px; margin-bottom: 6px; }
+.candles-head .up { color: #16c784; } .candles-head .down { color: #ea3943; }
+.candles-svg { width: 100%; height: auto; }
+.candles-foot { margin-top: 4px; font-size: 11px; }
+.ml-click { cursor: pointer; }
+.ml-click:hover { border-color: #2f81f7; }
+
+/* ── Agent analysis ── */
+.agents-form { display: flex; gap: 6px; margin-bottom: 8px; }
+.agents-ticker { flex: 1; background: #0d1017; border: 1px solid #232a37; color: #e6e9ee; border-radius: 6px; padding: 5px 9px; font-size: 13px; }
+.agents-signal { font-size: 14px; margin-bottom: 6px; }
+.agents-decision { white-space: pre-wrap; font-size: 12.5px; line-height: 1.5; color: #c9ced6; background: #0d1017; border: 1px solid #1e2430; border-radius: 6px; padding: 10px; max-height: 320px; overflow-y: auto; }

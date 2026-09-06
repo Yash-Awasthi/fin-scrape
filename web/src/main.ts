@@ -12,7 +12,9 @@ import { PanelLayoutManager } from "./panels/layout";
 import { Panel } from "./panels/panel";
 import {
   AccuracyPanel,
+  AgentPanel,
   CalendarPanel,
+  CandlesPanel,
   CorrelationPanel,
   LiveTVPanel,
   MarketsLivePanel,
@@ -37,6 +39,8 @@ const shell = new Shell(() => void loadAll());
 const layout = new PanelLayoutManager();
 
 // Panels — one page, in the order the layout declares.
+const candlesPanel = new CandlesPanel();
+const agentPanel = new AgentPanel();
 const marketsLivePanel = new MarketsLivePanel();
 const watchlistPanel = new WatchlistPanel();
 const feedPanel = new SignalFeedPanel((e) => store.select(e));
@@ -54,6 +58,8 @@ const portfolioPanel = new PortfolioPanel();
 const marketsPanel = new MarketsPanel();
 
 for (const p of [
+  candlesPanel,
+  agentPanel,
   marketsLivePanel,
   watchlistPanel,
   feedPanel,
@@ -147,6 +153,8 @@ async function loadPanelsData(): Promise<void> {
   const shown = pagePanelIds();
   const jobs: Promise<unknown>[] = [];
   if (shown.has("markets-live")) jobs.push(marketsLivePanel.load());
+  if (shown.has("candles")) jobs.push(candlesPanel.load());
+  if (shown.has("agents")) jobs.push(agentPanel.load());
   if (shown.has("watchlist")) jobs.push(watchlistPanel.load());
   if (shown.has("suggestions")) jobs.push(suggestionsPanel.load());
   if (shown.has("lobby")) jobs.push(newsLobbyPanel.load());

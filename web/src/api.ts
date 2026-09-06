@@ -147,6 +147,24 @@ export interface Quote {
   source: string;
 }
 
+export interface Candle {
+  t: string;
+  o: number;
+  h: number;
+  l: number;
+  c: number;
+  v: number;
+}
+
+export interface AgentAnalysis {
+  ticker: string;
+  trade_date: string;
+  signal: string;
+  decision: string;
+  duration_seconds: number;
+  errors: string[];
+}
+
 export interface Position {
   ticker: string;
   shares: number;
@@ -208,6 +226,14 @@ export const api = {
     ),
   accuracy: () => getJSON<Accuracy>("/api/accuracy"),
   sentiment: (ticker: string) => getJSON<Sentiment>(`/api/sentiment${qs({ ticker })}`),
+  candles: (symbol: string, period = "1mo", interval = "1d") =>
+    getJSON<{ symbol: string; candles: Candle[] }>(
+      `/api/candles${qs({ symbol, period, interval })}`,
+    ),
+  agentAnalyze: (ticker: string, analysts = "market,news", debate_rounds = 1) =>
+    getJSON<AgentAnalysis>(
+      `/api/agents/analyze${qs({ ticker, analysts, debate_rounds })}`,
+    ),
   portfolio: () => getJSON<Portfolio>("/api/portfolio"),
 };
 

@@ -15,7 +15,7 @@ import {
 } from "../api";
 import { CHANNELS, countries, embedUrl } from "../data/channels";
 import { escapeHtml } from "../util";
-import type { Quote } from "../api";
+import { type Candle, type Quote } from "../api";
 import { verdictColor } from "../api";
 import { Panel } from "./panel";
 
@@ -239,7 +239,7 @@ function quoteCard(q: Quote): string {
   const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
   const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
   return (
-    `<div class="ml-card"><div class="ml-sym">${escapeHtml(q.symbol)}</div>` +
+    `<div class="ml-card ml-click" data-sym="${escapeHtml(q.symbol)}"><div class="ml-sym">${escapeHtml(q.symbol)}</div>` +
     `<div class="ml-price">${price}</div>` +
     `<div class="ml-change ${cls}">${arrow} ${change}</div>` +
     `<div class="ml-src">${escapeHtml(q.source)}</div></div>`
@@ -333,6 +333,146 @@ export class WatchlistPanel extends Panel {
       }
     });
     this.setContent(wrap);
+  }
+}
+
+export class CandlesPanel extends Panel {
+  private symbol = "AAPL";
+  private period = "1mo";
+
+  constructor() {
+    super({ id: "candles", title: "Chart", w: 8, h: 6 });
+    // any panel can point the chart at a symbol
+    window.addEventListener("worldfin:select-symbol", (e) => {
+      const sym = (e as CustomEvent<string>).detail?.toUpperCase();
+      if (sym) {
+        this.symbol = sym;
+        void this.load();
+      }
+    });
+  }
+
+  async load(): Promise<void> {
+    this.renderShell();
+    await this.refresh();
+  }
+
+  private renderShell(): void {
+    const wrap = document.createElement("div");
+    wrap.className = "candles";
+    wrap.innerHTML =
+      `<form class="candles-form">` +
+      `<input class="candles-symbol" value="${escapeHtml(this.symbol)}" maxlength="16" />` +
+      `<select class="candles-period">` +
+      ["1d", "5d", "1mo", "3mo", "6mo", "1y"]
+        .map((p) => `<option${p === this.period ? " selected" : ""}>${p}</option>`)
+        .join("") +
+      `</select><button type="submit">Load</button></form>` +
+      `<div class="candles-body"><p class="muted">Loading…</p></div>`;
+    wrap.querySelector("form")!.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = wrap.querySelector<HTMLInputElement>(".candles-symbol")!;
+      this.symbol = input.value.toUpperCase().trim() || this.symbol;
+      this.period = (wrap.querySelector<HTMLSelectElement>(".candles-period")!).value;
+      void this.refresh();
+    });
+    this.setContent(wrap);
+  }
+
+  private async refresh(): Promise<void> {
+    const body = this.el.querySelector<HTMLElement>(".candles-body");
+    const title = this.el.querySelector<HTMLElement>(".panel-head");
+    if (title) title.textContent = `Chart — ${this.symbol} (${this.period})`;
+    if (!body) return;
+    body.innerHTML = '<p class="muted">Loading…</p>';
+    try {
+      const data = await api.candles(this.symbol, this.period);
+      body.innerHTML = this.renderCandles(data.candles);
+    } catch {
+      body.innerHTML = '<p class="empty">No candle data for this symbol/period.</p>';
+    }
+  }
+
+  private renderCandles(candles: Candle[]): string {
+    if (candles.length < 2) return '<p class="empty">Not enough data.</p>';
+    const w = 860;
+    const h = 320;
+    const pad = 8;
+    const highs = candles.map((c) => c.h);
+    const lows = candles.map((c) => c.l);
+    const max = Math.max(...highs);
+    const min = Math.min(...lows);
+    const span = max - min || 1;
+    const step = (w - pad * 2) / candles.length;
+    const bw = Math.max(2, step * 0.62);
+    const y = (v: number): number => pad + (1 - (v - min) / span) * (h - pad * 2);
+
+    const bars = candles
+      .map((c, i) => {
+        const x = pad + i * step + step / 2;
+        const up = c.c >= c.o;
+        const color = up ? "#16c784" : "#ea3943";
+        const yH = y(c.h);
+        const yL = y(c.l);
+        const yO = y(c.o);
+        const yC = y(c.c);
+        const top = Math.min(yO, yC);
+        const bodyH = Math.max(1.5, Math.abs(yC - yO));
+        return (
+          `<line x1="${x.toFixed(1)}" y1="${yH.toFixed(1)}" x2="${x.toFixed(1)}" y2="${yL.toFixed(1)}" stroke="${color}" stroke-width="1"/>` +
+          `<rect x="${(x - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${bodyH.toFixed(1)}" fill="${color}"/>`
+        );
+      })
+      .join("");
+
+    const last = candles[candles.length - 1];
+    const first = candles[0];
+    const chg = (((last.c - first.c) / first.c) * 100).toFixed(2);
+    const cls = last.c >= first.c ? "up" : "down";
+    return (
+      `<div class="candles-head"><b>${escapeHtml(last ? String(last.c) : "")}</b>` +
+      `<span class="${cls}"> ${Number(chg) >= 0 ? "+" : ""}${chg}% over period</span></div>` +
+      `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" class="candles-svg">${bars}</svg>` +
+      `<div class="muted candles-foot">${candles.length} candles</div>`
+    );
+  }
+}
+
+export class AgentPanel extends Panel {
+  private ticker = "NVDA";
+
+  constructor() {
+    super({ id: "agents", title: "Agent Analysis — multi-agent research (view-only)", w: 4, h: 6 });
+  }
+
+  async load(): Promise<void> {
+    const wrap = document.createElement("div");
+    wrap.className = "agents";
+    wrap.innerHTML =
+      `<form class="agents-form"><input class="agents-ticker" value="${escapeHtml(this.ticker)}" maxlength="16" />` +
+      `<button type="submit">Run council</button></form>` +
+      `<div class="agents-body"><p class="muted">Enter a ticker and run the analyst council — commentary only, nothing is executed.</p></div>`;
+    const body = wrap.querySelector<HTMLElement>(".agents-body")!;
+    wrap.querySelector("form")!.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const input = wrap.querySelector<HTMLInputElement>(".agents-ticker")!;
+      this.ticker = input.value.toUpperCase().trim() || this.ticker;
+      void this.run(body);
+    });
+    this.setContent(wrap);
+  }
+
+  private async run(body: HTMLElement): Promise<void> {
+    body.innerHTML = '<p class="muted">Council deliberating… analysts debate with live market facts. Local models can take 1–3 minutes.</p>';
+    try {
+      const a = await api.agentAnalyze(this.ticker);
+      body.innerHTML =
+        `<div class="agents-signal">Signal: <b>${escapeHtml(String(a.signal))}</b>` +
+        ` <span class="muted">· ${a.duration_seconds}s${a.errors.length ? ` · ${a.errors.length} errors` : ""}</span></div>` +
+        `<pre class="agents-decision">${escapeHtml(a.decision.slice(0, 4000))}</pre>`;
+    } catch {
+      body.innerHTML = '<p class="empty">Analysis failed — is the AI provider running?</p>';
+    }
   }
 }
 
