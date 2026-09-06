@@ -41,15 +41,24 @@ docker run -p 8080:8080 \
 
 ## API surface (view-only — the platform renders intelligence, it never trades)
 
-| Endpoint | Purpose |
-|---|---|
-| `GET /api/quotes?symbols=` | live quotes, all markets |
-| `GET /api/candles?symbol=&period=&interval=` | OHLCV chart data |
-| `GET /api/events` · `/api/stats` · `/api/dates` | stored intelligence |
-| `GET /api/suggestions` | ranked tickers to look at |
-| `GET /api/agents/analyze?ticker=` | multi-agent research commentary (no execution) |
-| `GET /api/ai/analyze?id=` | per-event LLM reasoning |
-| `GET /api/feeds` · `/api/rss-proxy` | world news feeds |
-| `GET /api/accuracy` · `/api/sentiment` · `/api/portfolio` | tracking panels |
-| `GET /api/correlations` | cross-source signals |
-| `WS /ws` | realtime event push |
+**Feature parity between local (`main.py serve`) and production (`server/`) —
+the SPA is one build for both.**
+
+| Endpoint | Purpose | Local | Production |
+|---|---|---|---|
+| `GET /api/quotes?symbols=` | live quotes, all markets | ✅ | ✅ `routes/market.py` |
+| `GET /api/candles?symbol=&period=&interval=` | OHLCV chart data | ✅ | ✅ `routes/market.py` |
+| `GET /api/events` · `/api/stats` · `/api/dates` | stored intelligence | ✅ | ✅ |
+| `GET /api/suggestions` | momentum-ranked tickers | ✅ | ✅ (surge multiplier in SQL) |
+| `GET /api/predict/{id}` · `/api/reliability` | calibrated probabilities + evidence | ✅ | ✅ `routes/insight.py` |
+| `GET /api/agents/analyze?ticker=` | multi-agent research commentary | ✅ | ✅ `routes/agents.py` |
+| `GET /api/ai/analyze?id=` | per-event LLM reasoning | ✅ | ✅ |
+| `GET /api/feeds` · `/api/rss-proxy` | world news feeds | ✅ | ✅ |
+| `GET /api/accuracy` · `/api/sentiment` · `/api/portfolio` | tracking panels | ✅ | ✅ |
+| `GET /api/correlations` | cross-source signals | ✅ (local heuristic) | ✅ (pipeline tables) |
+| `GET /api/alerts` | fired pipeline alerts | ✅ | via worker tables |
+| `WS /ws` | realtime event push | ✅ | ✅ |
+
+Production deploy = Render (API from `server/`) + Cloudflare Pages (`web/dist`)
++ Neon Postgres + GitHub Actions worker — see README. The new routes ship
+automatically with the `server/` deploy; no SPA rebuild needed beyond `npm run build`.

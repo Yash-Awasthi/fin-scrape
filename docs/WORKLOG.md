@@ -50,6 +50,17 @@ A stash (`multi_model` removal WIP) belongs to another session — leave it.*
   feeds without new scrapers. Registered in AVAILABLE_SCRAPERS + CLI choices.
 - Frontend suggestions show 🔥 surge badges (≥1.5× velocity).
 
+## Done — production parity push
+
+- **Production routes** (server/): market (quotes/candles via threadpool),
+  insight (predict/reliability from accuracy_outcomes ⋈ events), agents
+  (view-only council analysis in a thread). All registered in app.py.
+- 3 new server tests with a fake asyncpg pool (no DB needed).
+- **Cross-panel selection** in the SPA: click a ticker in Markets Live,
+  watchlist, or suggestions → chart + sentiment + agent panels re-aim.
+- DEPLOYMENT.md: endpoint parity matrix local vs production.
+- CI already runs the full suite; production modules import-verified.
+
 ## In progress / next (pick up here)
 
 1. **Calibrated Event-Impact Probability (CEIP)** — `finscrape/prediction.py`:
