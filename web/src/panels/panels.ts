@@ -106,7 +106,7 @@ export class SuggestionsPanel extends Panel {
       .map((s) => {
         const color = s.latest_verdict ? verdictColor(s.latest_verdict) : "#8a8f98";
         return (
-          `<div class="sug-row">` +
+          `<div class="sug-row sug-click" data-sym="${escapeHtml(s.ticker)}">` +
           `<span class="sug-dot" style="background:${color}"></span>` +
           `<b>${escapeHtml(s.ticker)}</b>` +
           `<span class="muted">${s.mentions} events · avg ${s.avg_score >= 0 ? "+" : ""}${s.avg_score}` +
@@ -304,7 +304,7 @@ export class WatchlistPanel extends Panel {
         const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
         const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
         return (
-          `<tr><td>${escapeHtml(q.symbol)}</td><td>${price}</td>` +
+          `<tr class="wl-click" data-sym="${escapeHtml(q.symbol)}"><td>${escapeHtml(q.symbol)}</td><td>${price}</td>` +
           `<td class="${cls}">${change}</td>` +
           `<td><button class="wl-remove" data-sym="${escapeHtml(q.symbol)}" title="remove">×</button></td></tr>`
         );
@@ -327,12 +327,16 @@ export class WatchlistPanel extends Panel {
       void this.refresh();
     });
     wrap.addEventListener("click", (e) => {
-      const sym = (e.target as HTMLElement).closest<HTMLElement>(".wl-remove")?.dataset.sym;
-      if (sym) {
-        this.symbols = this.symbols.filter((s) => s !== sym);
+      const target = e.target as HTMLElement;
+      const rem = target.closest<HTMLElement>(".wl-remove")?.dataset.sym;
+      if (rem) {
+        this.symbols = this.symbols.filter((s) => s !== rem);
         this.persist();
         void this.refresh();
+        return;
       }
+      const sym = target.closest<HTMLElement>(".wl-click")?.dataset.sym;
+      if (sym) window.dispatchEvent(new CustomEvent("worldfin:select-symbol", { detail: sym }));
     });
     this.setContent(wrap);
   }
@@ -463,6 +467,14 @@ export class AgentPanel extends Panel {
 
   constructor() {
     super({ id: "agents", title: "Agent Analysis — multi-agent research (view-only)", w: 4, h: 6 });
+    window.addEventListener("worldfin:select-symbol", (e) => {
+      const sym = (e as CustomEvent<string>).detail?.toUpperCase();
+      if (sym) {
+        this.ticker = sym;
+        const input = this.el.querySelector<HTMLInputElement>(".agents-ticker");
+        if (input) input.value = sym;
+      }
+    });
   }
 
   async load(): Promise<void> {
@@ -501,6 +513,10 @@ export class PredictionPanel extends Panel {
     super({ id: "prediction", title: "Prediction — calibrated event impact", w: 6, h: 5 });
   }
   async load(): Promise<void> {
+    this.el.addEventListener("click", (e) => {
+      const sym = (e.target as HTMLElement).closest<HTMLElement>(".sug-click")?.dataset.sym;
+      if (sym) window.dispatchEvent(new CustomEvent("worldfin:select-symbol", { detail: sym }));
+    });
     try {
       const rel = await api.reliability();
       const events = (await api.events({ limit: 30 })).filter((e) => e.verdict !== "OBSERVE").slice(0, 5);
@@ -678,7 +694,17 @@ function sparkline(curve: number[]): string {
 export class SentimentPanel extends Panel {
   private ticker = "AAPL";
   constructor() {
-    super({ id: "sentiment", title: "Social Sentiment", w: 4, h: 3 });
+    super({ id: "sentiment", title: "Sentiment", w: 4, h: 3 });
+    window.addEventListener("worldfin:select-symbol", (e) => {
+      const sym = (e as CustomEvent<string>).detail?.toUpperCase();
+      if (sym) {
+        this.ticker = sym;
+        const input = this.el.querySelector<HTMLInputElement>(".senti-tk");
+        if (input) input.value = sym;
+        const body = this.el.querySelector<HTMLElement>(".senti-body");
+        if (body) void this.fetch(body, sym);
+      }
+    });
   }
   async load(): Promise<void> {
     const wrap = document.createElement("div");
