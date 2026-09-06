@@ -13,6 +13,7 @@ import { Panel } from "./panels/panel";
 import {
   AccuracyPanel,
   AgentPanel,
+  AlertsPanel,
   CalendarPanel,
   CandlesPanel,
   CorrelationPanel,
@@ -54,6 +55,7 @@ const worldNewsPanel = new WorldNewsPanel();
 const liveTVPanel = new LiveTVPanel();
 const correlationPanel = new CorrelationPanel();
 const accuracyPanel = new AccuracyPanel();
+const alertsPanel = new AlertsPanel();
 const sentimentPanel = new SentimentPanel();
 const portfolioPanel = new PortfolioPanel();
 const predictionPanel = new PredictionPanel();
@@ -73,6 +75,7 @@ for (const p of [
   worldNewsPanel,
   liveTVPanel,
   correlationPanel,
+  alertsPanel,
   accuracyPanel,
   sentimentPanel,
   portfolioPanel,
@@ -164,6 +167,7 @@ async function loadPanelsData(): Promise<void> {
   if (shown.has("lobby")) jobs.push(newsLobbyPanel.load());
   if (shown.has("worldnews")) jobs.push(worldNewsPanel.load());
   if (shown.has("accuracy")) jobs.push(accuracyPanel.load());
+  if (shown.has("alerts")) jobs.push(alertsPanel.load());
   if (shown.has("sentiment")) jobs.push(sentimentPanel.load());
   if (shown.has("portfolio")) jobs.push(portfolioPanel.load());
   if (shown.has("markets")) jobs.push(marketsPanel.load());

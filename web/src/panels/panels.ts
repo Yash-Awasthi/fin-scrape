@@ -16,6 +16,7 @@ import {
 import { CHANNELS, countries, embedUrl } from "../data/channels";
 import { escapeHtml } from "../util";
 import { type Candle, type Prediction, type Quote } from "../api";
+import { getJSON } from "../api";
 import { verdictColor } from "../api";
 import { Panel } from "./panel";
 
@@ -542,6 +543,37 @@ export class PredictionPanel extends Panel {
       this.setContent('<p class="empty">Prediction engine unavailable.</p>');
     }
   }
+}
+
+export class AlertsPanel extends Panel {
+  constructor() {
+    super({ id: "alerts", title: "Alerts — fired by the pipeline", w: 6, h: 5 });
+  }
+  async load(): Promise<void> {
+    try {
+      const { alerts } = await getJSON<{ alerts: AlertRow[] }>("/api/alerts?limit=40");
+      if (!alerts.length) return this.setContent('<p class="empty">No alerts fired yet.</p>');
+      const rows = alerts
+        .map(
+          (a) =>
+            `<div class="alert-row"><span class="alert-type">${escapeHtml(a.action_type)}</span>` +
+            `<span class="alert-subject">${escapeHtml(a.subject.slice(0, 70))}</span>` +
+            `<span class="muted">${escapeHtml((a.tickers || []).slice(0, 3).join(", "))} · ${escapeHtml((a.fired_at || "").slice(5, 16))}</span></div>`,
+        )
+        .join("");
+      this.setContent(`<div class="alert-list">${rows}</div>`);
+    } catch {
+      this.setContent('<p class="empty">Alerts unavailable.</p>');
+    }
+  }
+}
+
+interface AlertRow {
+  id: number;
+  action_type: string;
+  subject: string;
+  tickers: string[];
+  fired_at: string;
 }
 
 export class CalendarPanel extends Panel {

@@ -527,6 +527,33 @@ async def reliability() -> dict:
     return {"reliability": tables, "brier": prediction.brier_summary(outcomes)}
 
 
+@app.get("/api/alerts")
+async def alerts(limit: int = Query(30, ge=1, le=200)) -> dict:
+    """Fired alerts (pipeline correlation + rule triggers), newest first."""
+    conn = _require_db()
+    has = conn.execute("SELECT name FROM sqlite_master WHERE name='alert_history'").fetchone()
+    if not has:
+        return {"alerts": []}
+    rows = conn.execute(
+        "SELECT id, action_type, event_subject, event_tickers, fired_at FROM alert_history "
+        "WHERE event_subject != 'test event' ORDER BY id DESC LIMIT ?",
+        (limit,),
+    ).fetchall()
+    import json as _json
+
+    out = []
+    for r in rows:
+        try:
+            tickers = _json.loads(r["event_tickers"]) if isinstance(r["event_tickers"], str) else []
+        except ValueError:
+            tickers = []
+        out.append({
+            "id": r["id"], "action_type": r["action_type"],
+            "subject": r["event_subject"], "tickers": tickers, "fired_at": r["fired_at"],
+        })
+    return {"alerts": out}
+
+
 @app.get("/api/health")
 async def health() -> dict:
     return {
