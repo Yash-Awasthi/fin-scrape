@@ -454,7 +454,7 @@ async def candles(
         }
     except HTTPException:
         raise
-    except Exception as e:  # noqa: BLE001 — data errors degrade to 502
+    except Exception as e:
         raise HTTPException(status_code=502, detail=f"candle fetch failed: {e}") from e
 
 
