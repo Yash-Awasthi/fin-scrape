@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import re
 import sqlite3
+from datetime import UTC
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
@@ -186,6 +187,9 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
     ).fetchall()
 
     stats: dict[str, dict] = {}
+    import time as _time
+
+    now = _time.time()
     for r in rows:
         try:
             tickers = json.loads(r["tickers"]) if isinstance(r["tickers"], str) else (r["tickers"] or [])
@@ -193,13 +197,29 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
             continue
         weight = 0.5 + 0.5 * float(r["confidence"] or 0)
         directional = 1.0 if r["verdict"] in ("INVEST", "PULL_OUT") else 0.4
+        # age bucket from created_at (iso strings): <12h = recent, 12-48h = baseline
+        try:
+            from datetime import datetime
+
+            ts = datetime.fromisoformat(str(r["created_at"]))
+            if ts.tzinfo is None:
+                ts = ts.replace(tzinfo=UTC)
+            age_h = (datetime.now(UTC) - ts).total_seconds() / 3600
+        except ValueError:
+            age_h = 999.0
+        bucket = "recent" if age_h <= 12 else "baseline" if age_h <= 48 else "old"
         for t in tickers:
             s = stats.setdefault(
-                t, {"mentions": 0, "score_sum": 0.0, "trust_sum": 0.0, "latest": None, "verdict": None}
+                t, {"mentions": 0, "score_sum": 0.0, "trust_sum": 0.0, "latest": None,
+                    "verdict": None, "recent": 0.0, "baseline": 0.0}
             )
             s["mentions"] += 1
             s["score_sum"] += float(r["signal_score"] or 0) * weight
             s["trust_sum"] += directional * weight
+            if bucket == "recent":
+                s["recent"] += 1
+            elif bucket == "baseline":
+                s["baseline"] += 1
             if s["latest"] is None:
                 s["latest"], s["verdict"] = r["subject"], r["verdict"]
 
@@ -208,13 +228,20 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
         trust = s["trust_sum"] / s["mentions"]
         return round(s["mentions"] * (0.5 + abs(avg) / 10) * (0.5 + trust) * 10, 2)
 
-    ranked = sorted(stats.items(), key=lambda kv: -score(kv[1]))[:limit]
+    for s in stats.values():
+        s["momentum"] = round(s["recent"] / max(1.0, s["baseline"]), 2)
+
+    ranked = sorted(
+        stats.items(),
+        key=lambda kv: -(score(kv[1]) * (1 + min(2.0, kv[1]["momentum"]))),
+    )[:limit]
     return {
         "suggestions": [
             {
                 "ticker": t,
                 "score": score(s),
                 "mentions": s["mentions"],
+                "momentum": s["momentum"],
                 "avg_score": round(s["score_sum"] / s["mentions"], 2),
                 "trust": round(s["trust_sum"] / s["mentions"], 2),
                 "latest_subject": s["latest"],
