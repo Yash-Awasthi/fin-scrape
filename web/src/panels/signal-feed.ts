@@ -1,11 +1,13 @@
 // SignalFeedPanel: analyzed intelligence — verdicts, scores, reasoning preview,
-// and the source article link. Compact rows.
+// and the source article link. Compact rows with verdict filters.
 // (World News shows raw RSS; this panel shows what the pipeline *concluded*.)
 
 import { type EventOut, verdictColor } from "../api";
 import { Panel } from "./panel";
 
 export class SignalFeedPanel extends Panel {
+  private verdictFilter = "ALL";
+
   constructor(private readonly onSelect: (e: EventOut) => void) {
     super({ id: "feed", title: "Signal Feed — analyzed events", w: 4, h: 8 });
   }
@@ -15,13 +17,39 @@ export class SignalFeedPanel extends Panel {
       this.setContent('<p class="empty">No signals yet.</p>');
       return;
     }
+    const verdicts = ["ALL", ...new Set(events.map((e) => e.verdict))];
+    const wrap = document.createElement("div");
+    wrap.innerHTML =
+      `<div class="feed-filters">` +
+      verdicts
+        .map(
+          (v) =>
+            `<button class="ffilter${v === this.verdictFilter ? " active" : ""}" data-v="${v}">${v}</button>`,
+        )
+        .join("") +
+      `</div>`;
+    wrap.addEventListener("click", (e) => {
+      const v = (e.target as HTMLElement).closest<HTMLElement>(".ffilter")?.dataset.v;
+      if (v) {
+        this.verdictFilter = v;
+        this.update(events);
+      }
+    });
+    wrap.append(this.buildTable(events));
+    this.setContent(wrap);
+  }
+
+  private buildTable(events: EventOut[]): HTMLTableElement {
     const table = document.createElement("table");
-    table.className = "feed";
     table.className = "feed compact";
     table.innerHTML = "<thead><tr><th>Signal</th></tr></thead>";
     const tbody = document.createElement("tbody");
+    const filtered =
+      this.verdictFilter === "ALL"
+        ? events
+        : events.filter((e) => e.verdict === this.verdictFilter);
 
-    for (const e of events.slice(0, 60)) {
+    for (const e of filtered.slice(0, 60)) {
       const tr = document.createElement("tr");
       tr.tabIndex = 0;
       const link = e.articles?.[0];
@@ -44,7 +72,7 @@ export class SignalFeedPanel extends Panel {
       tbody.append(tr);
     }
     table.append(tbody);
-    this.setContent(table);
+    return table;
   }
 }
 
