@@ -25,6 +25,21 @@ A stash (`multi_model` removal WIP) belongs to another session — leave it.*
 - Reasoning backfill: 28/28 events carry LLM reasoning.
 - All work pushed to origin/fresh.
 
+## Done — night run 2 (CEIP + terminal polish)
+
+- **Calibrated Event-Impact Probability (CEIP)** engine (`finscrape/prediction.py`):
+  reliability tables from 106 scored outcomes (per verdict/source/event_type/confidence,
+  recency-decayed), structural sentiment prior, evidence-weighted blend, Brier summary.
+  Endpoints `/api/predict/{id}` + `/api/reliability`; frontend Prediction panel with
+  probability bars + per-verdict reliability table; 6 offline tests.
+- Candles chart: volume bars + SMA20 overlay; click-to-chart from quote cards/watchlist.
+- Command palette (⌘K): `chart X`, `analyze X`, event search — wired to panels.
+- Alerts panel: 6.5k fired pipeline alerts viewable (test rows filtered).
+- Signal feed: verdict filters.
+- Secret audit of absorbed tree: no live secrets; expired 2022 STS citation URL scrubbed.
+- Deps: trafilatura (RSS enrichment), scipy (empyrical).
+- Pushed through 57bbbd62. Monitor loop running in background (15-min cycles).
+
 ## In progress / next (pick up here)
 
 1. **Calibrated Event-Impact Probability (CEIP)** — `finscrape/prediction.py`:
