@@ -113,14 +113,44 @@ _GEO_KEYWORDS: list[tuple[str, float, float]] = [
 ]
 
 
+# Ticker → HQ coordinates: company events plot at HQ (terminal convention).
+_TICKER_HQ: dict[str, tuple[float, float]] = {
+    "NVDA": (37.37, -121.92), "AAPL": (37.33, -122.03), "MSFT": (47.64, -122.13),
+    "GOOGL": (37.42, -122.08), "AMZN": (47.61, -122.33), "META": (37.48, -122.16),
+    "TSLA": (37.49, -121.94), "JPM": (40.71, -74.01), "GS": (40.71, -74.01),
+    "XOM": (32.78, -96.80), "CVX": (37.77, -122.42), "COP": (29.76, -95.37),
+    "RTX": (42.35, -71.06), "LMT": (39.05, -77.11), "NOC": (38.92, -77.02),
+    "BA": (41.88, -87.63), "GE": (42.36, -71.06), "CAT": (40.69, -89.59),
+    "IBM": (41.03, -73.76), "INTC": (45.54, -122.86), "AMD": (37.39, -121.91),
+    "QCOM": (32.90, -117.19), "ORCL": (37.53, -122.26), "CRM": (37.77, -122.41),
+    "NFLX": (37.25, -121.96), "DIS": (33.81, -117.92), "WMT": (36.37, -94.21),
+    "KO": (33.75, -84.39), "PEP": (41.06, -73.70), "MCD": (41.88, -87.63),
+    "NKE": (45.50, -122.68), "JNJ": (40.50, -74.41), "PFE": (40.75, -73.98),
+    "MRK": (40.51, -74.46), "ABBV": (42.10, -87.94), "LLY": (39.77, -86.16),
+    "UNH": (44.86, -93.46), "CSCO": (37.41, -121.93), "TXN": (32.78, -96.80),
+    "MU": (37.23, -121.68), "ARM": (37.36, -122.06), "SMCI": (37.38, -121.89),
+    "TSM": (24.79, 121.01), "BABA": (30.27, 120.16), "TCEHY": (22.54, 114.06),
+    "RELIANCE.NS": (19.08, 72.88), "TCS.NS": (19.02, 72.85), "INFY.NS": (12.97, 77.59),
+    "600519.SS": (27.83, 106.63), "0700.HK": (22.54, 114.06),
+    "SHEL.L": (51.51, -0.12), "BP.L": (51.51, -0.12), "SAP.DE": (49.29, 8.64),
+    "SIE.DE": (48.77, 11.43), "ASML.AS": (51.41, 5.46), "MC.PA": (48.87, 2.33),
+    "7203.T": (35.02, 137.01), "6758.T": (35.66, 139.70), "005930.KS": (37.26, 127.06),
+    "BHP.AX": (-37.81, 144.96), "SAN.MC": (40.42, -3.70),
+}
+
+
 def _derive_geo(row: dict) -> tuple[float | None, float | None]:
-    """Best-effort lat/lon from the event subject when the pipeline had none."""
+    """Best-effort lat/lon: stored coords → subject keywords → ticker HQ."""
     if row.get("lat") is not None and row.get("lon") is not None:
         return row["lat"], row["lon"]
     subject = (row.get("subject") or "").lower()
     for keyword, lat, lon in _GEO_KEYWORDS:
         if keyword in subject:
             return lat, lon
+    # company events plot at HQ — terminal convention for globe visualization
+    for ticker in row.get("tickers") or []:
+        if ticker in _TICKER_HQ:
+            return _TICKER_HQ[ticker]
     return None, None
 
 
