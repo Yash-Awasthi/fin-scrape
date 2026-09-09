@@ -177,6 +177,19 @@ body {
 .stat-bar i { display: block; height: 100%; border-radius: 6px; transition: width 0.4s ease; }
 .stat-n { font-size: 12px; text-align: right; color: #c9ced6; }
 
+/* ── Sector heat panel: chips sized by event_count, colored by avg score ── */
+.sector-grid { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
+.sector-chip {
+  display: flex; align-items: baseline; gap: 6px;
+  background: #11141b; border: 1px solid #232a37; border-radius: 8px;
+  padding: 5px 10px; cursor: pointer; color: var(--text);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.sector-chip:hover { border-color: var(--accent); transform: translateY(-1px); }
+.sector-name { font-weight: 600; }
+.sector-n { font-size: 0.72em; color: #8a8f98; }
+.sector-score { font-size: 0.8em; font-family: ui-monospace, monospace; font-weight: 700; }
+
 /* ── Suggestions panel ── */
 .sug-list { display: flex; flex-direction: column; gap: 6px; }
 .sug-row { display: grid; grid-template-columns: 10px 64px 1fr auto; grid-template-areas: "dot tk meta score" ". . sub sub"; align-items: center; column-gap: 8px; padding: 5px 6px; background: #11141b; border: 1px solid #1e2430; border-radius: 6px; }
@@ -240,7 +253,36 @@ body {
 .feed.compact .subj a { color: #e6e9ee; text-decoration: none; }
 .feed.compact .subj a:hover { color: #2f81f7; }
 .row-meta { display: inline-block; margin-left: 8px; font-size: 11px; color: #8a8f98; }
+.momentum-badge { cursor: default; margin-right: 3px; }
+.chain-badge {
+  cursor: default; margin-right: 4px; padding: 0 5px;
+  border-radius: 8px; font-size: 10px; font-weight: 700;
+  color: #9db8ff; background: #1b2740; border: 1px solid #2f3a5e;
+}
+.modal-chain { list-style: none; margin: 4px 0 10px; padding: 0; }
+.modal-chain-head { margin: 12px 0 4px; font-size: 13px; color: var(--muted); }
+.modal-chain li {
+  padding: 5px 8px; margin-bottom: 4px; font-size: 12.5px;
+  background: #11141b; border-left: 2px solid #f5a623; border-radius: 0 6px 6px 0;
+}
 .row-reasoning { font-size: 12px; color: #8a8f98; margin-top: 3px; line-height: 1.35; }
+
+/* ── A5 storyline collapse: duplicate rows grouped under their lead row ── */
+.story-expand td { padding: 1px 4px 3px 10px !important; }
+.feed.compact tbody tr.story-expand { cursor: default; }
+.feed.compact tbody tr.story-expand:hover { background: transparent; }
+.story-toggle {
+  background: none; border: none; cursor: pointer; color: #9db8ff;
+  font-size: 11px; font-weight: 600; font-family: inherit;
+  padding: 1px 6px; border-radius: 9px;
+}
+.story-toggle:hover { background: #1b2740; }
+tr.story-member td { position: relative; padding-left: 26px; }
+tr.story-member.hidden { display: none; }
+tr.story-member td::before {
+  content: ""; position: absolute; left: 12px; top: 9px; bottom: 9px;
+  width: 2px; border-radius: 2px; background: #2f3a5e;
+}
 
 /* ── interaction polish ── */
 .panel-body { overscroll-behavior: contain; scrollbar-gutter: stable; scrollbar-width: thin; }

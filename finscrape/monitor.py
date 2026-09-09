@@ -14,7 +14,6 @@ import time
 from collections import defaultdict
 from datetime import datetime, timezone
 from typing import Optional
-from urllib.parse import urlparse
 
 from finscrape.pipeline import FinScrapePipeline
 from finscrape.dashboard import DashboardClient
@@ -108,12 +107,14 @@ class Monitor:
         data_dir: Optional[str] = None,
         min_domain_delay: float = MIN_DOMAIN_DELAY,
         use_council: bool = False,
+        outcome_check_interval: int = 900,
     ):
         self._sources = sources
         self._max_articles = max_articles_per_source
         self._data_dir = data_dir
         self._min_domain_delay = min_domain_delay
         self._use_council = use_council
+        self._outcome_check_interval = outcome_check_interval
 
         # Merge caller overrides with defaults.
         merged_intervals = dict(DEFAULT_INTERVALS)
@@ -175,6 +176,16 @@ class Monitor:
             self._threads.append(t)
             t.start()
 
+        # A3: score matured signals continuously (WINDOW_DAYS horizon), so the
+        # reliability tables grow every night without manual `accuracy check` runs.
+        t = threading.Thread(
+            target=self._outcome_loop,
+            name="monitor-outcomes",
+            daemon=True,
+        )
+        self._threads.append(t)
+        t.start()
+
         # Main thread waits for shutdown.
         try:
             while not self._shutdown_event.is_set():
@@ -187,6 +198,29 @@ class Monitor:
     def stop(self) -> None:
         """Request a graceful shutdown from any thread."""
         self._shutdown_event.set()
+
+    def _outcome_loop(self) -> None:
+        """Score pending signal outcomes on a slow cadence (idempotent)."""
+        while not self._shutdown_event.is_set():
+            try:
+                from finscrape.accuracy import AccuracyTracker
+
+                tracker = AccuracyTracker(data_dir=self._data_dir)
+                results = tracker.check_outcomes()  # WINDOW_DAYS default
+                if results:
+                    tracker.update_accuracy_stats()
+                    logger.info(
+                        "Outcome check scored %d signals: %s",
+                        len(results),
+                        {r["outcome"] for r in results},
+                    )
+                    print(
+                        f"[OUTCOMES] scored {len(results)} signals "
+                        f"({sum(1 for r in results if r['outcome'] == 'correct')} correct)"
+                    )
+            except Exception as exc:  # noqa: BLE001 — never kill the monitor for a scoring hiccup
+                logger.warning("Outcome check failed: %s", exc)
+            self._shutdown_event.wait(timeout=self._outcome_check_interval)
 
     # ------------------------------------------------------------------
     # Signal handling

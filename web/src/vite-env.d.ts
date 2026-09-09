@@ -9,3 +9,10 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+// Module-level caches shared across panels (populated by main.ts loadAll).
+interface Window {
+  __wfSuggestions?: import("./api").Suggestion[];
+  __wfStorylines?: import("./api").Storyline[];
+  __wfEvents?: import("./api").EventOut[];
+}

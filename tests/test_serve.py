@@ -36,3 +36,31 @@ def test_suggestions_shape():
     assert r.status_code == 200
     for s in r.json()["suggestions"]:
         assert {"ticker", "score", "mentions"} <= set(s)
+
+
+def test_sectors_shape():
+    r = client.get("/api/sectors")
+    assert r.status_code == 200
+    sectors = r.json()["sectors"]
+    # current local DB has events, so the sector heat must not be empty
+    assert sectors
+    for s in sectors:
+        assert {
+            "sector",
+            "event_count",
+            "avg_score",
+            "bull_bear_ratio",
+            "top_tickers",
+            "last_event",
+        } <= set(s)
+        assert s["event_count"] >= 1
+        assert isinstance(s["top_tickers"], list)
+        assert isinstance(s["sector"], str) and s["sector"]
+
+
+def test_events_carry_detected_sector():
+    r = client.get("/api/events", params={"limit": 20})
+    assert r.status_code == 200
+    for e in r.json()["events"]:
+        assert "sector" in e
+        assert isinstance(e["sector"], str)

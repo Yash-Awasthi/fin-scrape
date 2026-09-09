@@ -114,6 +114,12 @@ class AccuracyTracker:
     # Price change thresholds for determining correctness
     CORRECT_THRESHOLD_PCT = 1.0  # >= 1% move in predicted direction = correct
 
+    # Fixed forward window: a verdict is scored against the close WINDOW_DAYS
+    # calendar days after the signal (yfinance 1d closes), not "the price whenever
+    # the cron runs" — so every signal has the same horizon and the calibration
+    # tables stay comparable. A signal is only checked once its window elapsed.
+    WINDOW_DAYS = 5
+
     def __init__(self, data_dir: str | None = None):
         if data_dir:
             self.data_dir = Path(data_dir)
@@ -209,36 +215,86 @@ class AccuracyTracker:
                 "verdict", "price_at_signal", "source", "event_type"]
         return [dict(zip(cols, row)) for row in rows]
 
-    def check_outcomes(self, hours_after: float = 24, price_fetcher=None) -> list[dict]:
-        """Check outcomes for signals from `hours_after` hours ago.
+    def _fetch_window_close(self, pending: list[dict]) -> dict[int, float]:
+        """Close price WINDOW_DAYS after each pending signal (yfinance 1d closes).
 
-        Uses `price_fetcher` to get current prices. If not provided, uses
-        `finscrape.market_data.get_market_data`.
+        One download per ticker covers all its signals; each signal's score price
+        is the last close on/before its own window end. Signals whose window has
+        not elapsed (or with no history at all) are left pending.
+        """
+        import pandas as pd
+        import yfinance as yf
+
+        by_ticker: dict[str, list[dict]] = {}
+        for s in pending:
+            by_ticker.setdefault(s["ticker"], []).append(s)
+
+        out: dict[int, float] = {}
+        for ticker, signals in by_ticker.items():
+            ends = [
+                datetime.fromisoformat(s["verdict_at"]).replace(tzinfo=None)
+                + timedelta(days=self.WINDOW_DAYS)
+                for s in signals
+            ]
+            start = (min(ends) - timedelta(days=3)).date().isoformat()
+            end = (max(ends) + timedelta(days=2)).date().isoformat()
+            try:
+                df = yf.download(
+                    ticker, start=start, end=end, interval="1d",
+                    progress=False, auto_adjust=True,
+                )
+            except Exception as exc:  # noqa: BLE001 — one bad ticker never blocks the batch
+                logger.warning("window fetch failed for %s: %s", ticker, exc)
+                continue
+            if df is None or df.empty:
+                logger.warning("no history for %s — staying pending", ticker)
+                continue
+            closes = df["Close"].dropna()
+            if closes.empty:
+                continue
+            closes.index = pd.to_datetime(closes.index).tz_localize(None)
+            for s, end_dt in zip(signals, ends):
+                within = closes[closes.index <= end_dt]
+                if len(within):
+                    out[s["id"]] = float(within.iloc[-1])
+        return out
+
+    def check_outcomes(self, hours_after: float | None = None, price_fetcher=None) -> list[dict]:
+        """Check outcomes for signals whose WINDOW_DAYS forward window has elapsed.
+
+        Default price source: yfinance close WINDOW_DAYS after the signal (see
+        `_fetch_window_close`). A custom `price_fetcher(tickers) ->
+        [{"ticker", "price"}]` (tests, offline runs) uses current prices instead.
+
+        Idempotent: only rows still `pending` are ever touched, so backfills and
+        repeated monitor cycles never double-score.
 
         Returns list of checked signal dicts with outcomes.
         """
-        if price_fetcher is None:
-            from finscrape.market_data import get_market_data
-            price_fetcher = get_market_data
+        if hours_after is None:
+            hours_after = float(self.WINDOW_DAYS * 24)
 
         pending = self.get_pending_signals(older_than_hours=hours_after)
         if not pending:
             logger.info("No pending signals older than %s hours to check.", hours_after)
             return []
 
-        # Collect unique tickers
-        tickers = list({s["ticker"] for s in pending})
-        market_data = price_fetcher(tickers)
-        price_map = {md["ticker"]: md["price"] for md in market_data}
+        if price_fetcher is None:
+            window_price_map = self._fetch_window_close(pending)
+        else:
+            tickers = list({s["ticker"] for s in pending})
+            market_data = price_fetcher(tickers)
+            current_map = {md["ticker"]: md["price"] for md in market_data}
+            window_price_map = {s["id"]: current_map.get(s["ticker"]) for s in pending}
 
         now = datetime.now(UTC).isoformat()
         results = []
 
         for signal in pending:
             ticker = signal["ticker"]
-            current_price = price_map.get(ticker)
+            check_price = window_price_map.get(signal["id"])
 
-            if current_price is None:
+            if check_price is None:
                 logger.warning("No price data for %s, skipping signal %d", ticker, signal["id"])
                 continue
 
@@ -246,7 +302,7 @@ class AccuracyTracker:
             if price_at_signal <= 0:
                 continue
 
-            change_pct = ((current_price - price_at_signal) / price_at_signal) * 100
+            change_pct = ((check_price - price_at_signal) / price_at_signal) * 100
             outcome = self._determine_outcome(signal["verdict"], change_pct)
 
             self._conn.execute(
@@ -254,11 +310,11 @@ class AccuracyTracker:
                    SET check_price_at = ?, price_at_check = ?, price_change_pct = ?,
                        outcome = ?, checked_at = ?
                    WHERE id = ?""",
-                (now, current_price, round(change_pct, 4), outcome, now, signal["id"]),
+                (now, check_price, round(change_pct, 4), outcome, now, signal["id"]),
             )
 
             signal.update({
-                "price_at_check": current_price,
+                "price_at_check": check_price,
                 "price_change_pct": round(change_pct, 4),
                 "outcome": outcome,
                 "checked_at": now,

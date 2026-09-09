@@ -10,6 +10,7 @@ import {
   type MarketTicker,
   type Portfolio,
   type RssItem,
+  type Sector,
   type Sentiment,
   type Suggestion,
 } from "../api";
@@ -61,6 +62,48 @@ export class MarketsPanel extends Panel {
     this.setContent(
       `<table class="feed"><thead><tr><th>Ticker</th><th>Mentions</th><th>Avg</th></tr></thead><tbody>${rows}</tbody></table>`,
     );
+  }
+}
+
+export class SectorPanel extends Panel {
+  constructor() {
+    super({ id: "sectors", title: "Sector Heat", w: 4, h: 4 });
+  }
+  async load(): Promise<void> {
+    try {
+      this.render(await api.sectors());
+    } catch {
+      this.setContent('<p class="empty">Sector data unavailable.</p>');
+    }
+  }
+  private render(sectors: Sector[]): void {
+    if (!sectors.length) return this.setContent('<p class="empty">No sector signals yet.</p>');
+    const maxCount = Math.max(...sectors.map((s) => s.event_count));
+    const wrap = document.createElement("div");
+    wrap.className = "sector-grid";
+    wrap.innerHTML = sectors
+      .map((s) => {
+        // chip size scales with event_count; color runs green→red by avg score
+        const em = (0.95 + (s.event_count / maxCount) * 0.6).toFixed(2);
+        const score = s.avg_score;
+        const color = score <= -2 ? "#ea3943" : score < 0 ? "#f58d3f" : score <= 2 ? "#3b82f6" : "#16c784";
+        const tickers = s.top_tickers.length ? s.top_tickers.join(", ") : "—";
+        const ratio = s.bull_bear_ratio == null ? "—" : `${s.bull_bear_ratio.toFixed(1)}:1`;
+        return (
+          `<button class="sector-chip" data-sector="${escapeHtml(s.sector)}" style="font-size:${em}em;--sector-color:${color}" ` +
+          `title="${escapeHtml(s.sector)} · ${s.event_count} events · avg ${score >= 0 ? "+" : ""}${score} · bull:bear ${ratio}\nTop: ${escapeHtml(tickers)}">` +
+          `<span class="sector-name">${escapeHtml(s.sector)}</span>` +
+          `<span class="sector-n">${s.event_count}</span>` +
+          `<span class="sector-score" style="color:${color}">${score >= 0 ? "+" : ""}${score}</span>` +
+          `</button>`
+        );
+      })
+      .join("");
+    wrap.addEventListener("click", (e) => {
+      const sector = (e.target as HTMLElement).closest<HTMLElement>(".sector-chip")?.dataset.sector;
+      if (sector) window.dispatchEvent(new CustomEvent("worldfin:select-sector", { detail: sector }));
+    });
+    this.setContent(wrap);
   }
 }
 

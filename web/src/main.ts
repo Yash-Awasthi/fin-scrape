@@ -23,6 +23,7 @@ import {
   NewsLobbyPanel,
   PortfolioPanel,
   PredictionPanel,
+  SectorPanel,
   SentimentPanel,
   StatsPanel,
   SuggestionsPanel,
@@ -48,6 +49,7 @@ const watchlistPanel = new WatchlistPanel();
 const feedPanel = new SignalFeedPanel((e) => store.select(e));
 const globePanel = new Panel({ id: "globe", title: "Globe", w: 8, h: 8 });
 const statsPanel = new StatsPanel();
+const sectorPanel = new SectorPanel();
 const suggestionsPanel = new SuggestionsPanel();
 const datesPanel = new CalendarPanel((day) => void loadDay(day));
 const newsLobbyPanel = new NewsLobbyPanel();
@@ -69,6 +71,7 @@ for (const p of [
   feedPanel,
   globePanel,
   statsPanel,
+  sectorPanel,
   suggestionsPanel,
   datesPanel,
   newsLobbyPanel,
@@ -151,6 +154,20 @@ async function loadAll(): Promise<void> {
   if (stats.status === "fulfilled") store.setStats(stats.value);
   if (correlations.status === "fulfilled") store.setCorrelations(correlations.value);
   if (dates.status === "fulfilled") datesPanel.update(dates.value);
+  // A2/A5 caches resolve before the pull-once panels below (some hit slow remote
+  // RSS): the feed's final re-render gets momentum 🔥 badges + storyline
+  // collapse the moment they're ready, never gated on external fetches.
+  try {
+    window.__wfSuggestions = await api.suggestions(10);
+  } catch {
+    window.__wfSuggestions = [];
+  }
+  try {
+    window.__wfStorylines = await api.storylines();
+  } catch {
+    window.__wfStorylines = [];
+  }
+  feedPanel.update(store.get().events); // re-render rows with badges + collapse
   await loadPanelsData();
 }
 
@@ -163,7 +180,13 @@ async function loadPanelsData(): Promise<void> {
   if (shown.has("agents")) jobs.push(agentPanel.load());
   if (shown.has("watchlist")) jobs.push(watchlistPanel.load());
   if (shown.has("suggestions")) jobs.push(suggestionsPanel.load());
+  if (shown.has("sectors")) jobs.push(sectorPanel.load());
   if (shown.has("prediction")) jobs.push(predictionPanel.load());
+  // A3: the reliability tables grow as outcomes score themselves — refresh the
+  // prediction panel every minute so calibration reflects new evidence.
+  window.setInterval(() => {
+    if (predictionPanel.el.offsetParent) void predictionPanel.load();
+  }, 60_000);
   if (shown.has("lobby")) jobs.push(newsLobbyPanel.load());
   if (shown.has("worldnews")) jobs.push(worldNewsPanel.load());
   if (shown.has("accuracy")) jobs.push(accuracyPanel.load());

@@ -22,11 +22,12 @@ export interface EventOut {
   novelty: string;
   actionability: string;
   sector_impact: string;
+  sector?: string;
   tickers: string[];
   sources: string[];
   articles: string[];
   affected_entities: AffectedEntity[];
-  second_order_effects: unknown[];
+  second_order_effects: string[];
   key_metrics: Record<string, unknown>;
   lat: number | null;
   lon: number | null;
@@ -43,6 +44,26 @@ export interface DashboardStats {
 export interface DateCount {
   day: string;
   count: number;
+}
+
+export interface Sector {
+  sector: string;
+  event_count: number;
+  avg_score: number;
+  bull_bear_ratio: number;
+  top_tickers: string[];
+  last_event: { subject: string; created_at: string | null } | null;
+}
+
+export interface Storyline {
+  member_ids: number[];
+  size: number;
+  tickers: string[];
+  sources: string[];
+  avg_score: number;
+  first_seen: string | null;
+  top_subject: string;
+  members: EventOut[];
 }
 
 export interface SourceHealth {
@@ -235,6 +256,9 @@ export const api = {
     ),
   stats: () => getJSON<DashboardStats>("/api/stats"),
   dates: () => getJSON<{ dates: DateCount[] }>("/api/dates").then((r) => r.dates),
+  sectors: () => getJSON<{ sectors: Sector[] }>("/api/sectors").then((r) => r.sectors),
+  storylines: () =>
+    getJSON<{ storylines: Storyline[] }>("/api/storylines").then((r) => r.storylines),
   correlations: (date?: string) =>
     getJSON<{ correlations: Correlation[] }>(`/api/correlations${qs({ date })}`).then(
       (r) => r.correlations,

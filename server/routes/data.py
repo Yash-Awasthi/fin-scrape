@@ -8,6 +8,7 @@ fetches URLs from the world feed registry (no arbitrary user URLs).
 from __future__ import annotations
 
 import asyncio
+import re
 
 import requests
 from fastapi import APIRouter, HTTPException, Query
@@ -190,3 +191,154 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
             for r in rows
         ]
     }
+
+
+# --- sector heat (production parity for /api/sectors) ---
+
+_SECTOR_ALIASES = {"finance": "financials", "industrial": "industrials"}
+
+
+def _normalize_sector(s: str) -> list[str]:
+    """Split multi-sector strings and alias NLP names to the product taxonomy."""
+    parts = [p.strip() for p in re.split(r"[/,]", s) if p.strip()]
+    return [_SECTOR_ALIASES.get(p, p) for p in parts]
+
+
+@router.get("/api/sectors")
+async def sectors() -> dict:
+    """Sector heat: Postgres GROUP BY on sector_impact, plus an NLP fallback for
+    unlabeled events so the panel never shows an empty half. Same contract as the
+    local route: {sector, event_count, avg_score, bull_bear_ratio, top_tickers, last_event}."""
+    pool = db.pool()
+    labeled = await pool.fetch(
+        """
+        SELECT e.sector_impact AS sector, COUNT(*)::int AS event_count,
+               AVG(e.signal_score)::float AS avg_score,
+               COUNT(*) FILTER (WHERE e.verdict IN ('INVEST', 'OBSERVE'))::float AS bulls,
+               COUNT(*) FILTER (WHERE e.verdict IN ('PULL_OUT', 'CAUTIOUS'))::float AS bears
+        FROM events e
+        WHERE e.sector_impact <> ''
+        GROUP BY e.sector_impact
+        """
+    )
+    last_rows = await pool.fetch(
+        """
+        SELECT DISTINCT ON (e.sector_impact) e.sector_impact AS sector,
+               e.subject, e.created_at
+        FROM events e
+        WHERE e.sector_impact <> ''
+        ORDER BY e.sector_impact, e.id DESC
+        """
+    )
+    last_by_sector = {r["sector"]: r for r in last_rows}
+    ticker_rows = await pool.fetch(
+        """
+        SELECT e.sector_impact AS sector, t.ticker, COUNT(*)::int AS n
+        FROM events e
+        CROSS JOIN LATERAL jsonb_array_elements_text(e.tickers) AS t(ticker)
+        WHERE e.sector_impact <> ''
+        GROUP BY e.sector_impact, t.ticker
+        ORDER BY e.sector_impact, n DESC
+        """
+    )
+    top_by_sector: dict[str, list[str]] = {}
+    for r in ticker_rows:
+        top = top_by_sector.setdefault(r["sector"], [])
+        if len(top) < 5:
+            top.append(r["ticker"])
+
+    # Unlabeled events → NLP sector from subject (keyword-only, no spaCy model load).
+    from finscrape.analysis.nlp import FinancialNLP
+
+    nlp = FinancialNLP()
+    unlabeled = await pool.fetch(
+        """
+        SELECT subject, tickers, signal_score, verdict, created_at
+        FROM events
+        WHERE sector_impact IS NULL OR sector_impact = ''
+        ORDER BY id DESC LIMIT 500
+        """
+    )
+    fallback: dict[str, dict] = {}
+    for r in unlabeled:
+        sector = nlp._detect_sector(r["subject"] or "", r["tickers"] or [])
+        parts = _normalize_sector(sector)
+        if not parts:
+            continue
+        for sec in parts:
+            a = fallback.setdefault(
+                sec,
+                {"event_count": 0, "scores": [], "bulls": 0, "bears": 0, "last_event": None},
+            )
+            a["event_count"] += 1
+            a["scores"].append(float(r["signal_score"] or 0))
+            if r["verdict"] in ("INVEST", "OBSERVE"):
+                a["bulls"] += 1
+            elif r["verdict"] in ("PULL_OUT", "CAUTIOUS"):
+                a["bears"] += 1
+            if a["last_event"] is None:
+                a["last_event"] = {"subject": r["subject"], "created_at": r["created_at"]}
+
+    merged: dict[str, dict] = {}
+    for r in labeled:
+        for sec in _normalize_sector(r["sector"]):
+            lr = last_by_sector.get(r["sector"])
+            merged[sec] = {
+                "sector": sec,
+                "event_count": int(r["event_count"]),
+                "avg_score": round(r["avg_score"] or 0, 2),
+                "bull_bear_ratio": round((r["bulls"] + 1) / (r["bears"] + 1), 2),
+                "top_tickers": top_by_sector.get(r["sector"], []),
+                "last_event": (
+                    {"subject": lr["subject"], "created_at": lr["created_at"]}
+                    if lr
+                    else None
+                ),
+            }
+    for sec, a in fallback.items():
+        if sec in merged:
+            m = merged[sec]
+            m["event_count"] += a["event_count"]
+            m["avg_score"] = round(
+                (m["avg_score"] * (m["event_count"] - a["event_count"]) + sum(a["scores"]))
+                / m["event_count"],
+                2,
+            )
+            continue
+        merged[sec] = {
+            "sector": sec,
+            "event_count": a["event_count"],
+            "avg_score": round(sum(a["scores"]) / len(a["scores"]), 2) if a["scores"] else 0.0,
+            "bull_bear_ratio": round((a["bulls"] + 1) / (a["bears"] + 1), 2),
+            "top_tickers": [],
+            "last_event": a["last_event"],
+        }
+    out = sorted(merged.values(), key=lambda s: s["event_count"], reverse=True)
+    return {"sectors": out}
+
+
+@router.get("/api/storylines")
+async def storylines(limit: int = Query(10, ge=1, le=50)) -> dict:
+    """Storylines (production parity): greedy embedding clusters of recent events.
+    Same contract as the local route; Ollama down → singleton clusters."""
+    from finscrape.analysis.clusters import build_storylines
+
+    rows = await db.pool().fetch(
+        """
+        SELECT id, subject, tickers, sources, signal_score, created_at
+        FROM events ORDER BY id DESC LIMIT 200
+        """
+    )  # newest 200: the feed's own universe (/api/events limit) — duplicates
+    # beyond that window can never render, so don't spend Ollama calls on them.
+    events = [
+        {
+            "id": r["id"],
+            "subject": r["subject"],
+            "tickers": r["tickers"] or [],
+            "sources": r["sources"] or [],
+            "signal_score": r["signal_score"],
+            "created_at": r["created_at"].isoformat() if r["created_at"] else None,
+        }
+        for r in rows
+    ]
+    return {"storylines": build_storylines(events)[:limit]}

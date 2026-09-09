@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import re
 import sqlite3
+from collections import Counter
 from datetime import UTC
 from pathlib import Path
 
@@ -87,6 +88,56 @@ async def events(limit: int = Query(200, ge=1, le=500)) -> dict:
 
 # Coarse keyword → coordinates for globe bars (city/region-level precision is a
 # production-geocoder concern; this makes the local globe meaningful).
+# ── sector taxonomy ───────────────────────────────────────────────────────────
+# NLP `_detect_sector` returns its own names; alias them to the product taxonomy
+# (the one the LLM prompt emits: financials/industrials …) so sector chips and
+# per-event sector match when the frontend filters the feed.
+_SECTOR_ALIASES = {"finance": "financials", "industrial": "industrials"}
+
+_nlp = None
+
+
+def _get_nlp():
+    """Cached FinancialNLP — spaCy is lazy-loaded, `_detect_sector` is keyword-only."""
+    global _nlp
+    if _nlp is None:
+        from finscrape.analysis.nlp import FinancialNLP
+
+        _nlp = FinancialNLP()
+    return _nlp
+
+
+def _normalize_sector(s: str) -> list[str]:
+    """Split multi-sector strings ('technology/energy') and alias NLP names."""
+    parts = [p.strip() for p in re.split(r"[/,]", s) if p.strip()]
+    return [_SECTOR_ALIASES.get(p, p) for p in parts]
+
+
+def _event_sector(row: dict) -> str:
+    """Primary sector for an event: explicit `sector_impact`, else NLP from subject."""
+    explicit = (row.get("sector_impact") or "").strip()
+    if explicit:
+        parts = _normalize_sector(explicit)
+        return parts[0] if parts else ""
+    try:
+        detected = _get_nlp()._detect_sector(
+            row.get("subject") or "", row.get("tickers") or []
+        )
+    except Exception:
+        return ""
+    parts = _normalize_sector(detected)
+    return parts[0] if parts else ""
+
+
+def _sector_parts(row: dict) -> list[str]:
+    """All sectors an event belongs to (multi-sector strings expand)."""
+    explicit = (row.get("sector_impact") or "").strip()
+    if explicit:
+        return _normalize_sector(explicit)
+    detected = _event_sector(row)
+    return [detected] if detected else []
+
+
 _GEO_KEYWORDS: list[tuple[str, float, float]] = [
     ("ukraine", 48.4, 31.2), ("russia", 55.8, 37.6), ("moscow", 55.8, 37.6),
     ("kyiv", 50.5, 30.5), ("israel", 31.8, 35.2), ("gaza", 31.5, 34.5),
@@ -113,14 +164,44 @@ _GEO_KEYWORDS: list[tuple[str, float, float]] = [
 ]
 
 
+# Ticker → HQ coordinates: company events plot at HQ (terminal convention).
+_TICKER_HQ: dict[str, tuple[float, float]] = {
+    "NVDA": (37.37, -121.92), "AAPL": (37.33, -122.03), "MSFT": (47.64, -122.13),
+    "GOOGL": (37.42, -122.08), "AMZN": (47.61, -122.33), "META": (37.48, -122.16),
+    "TSLA": (37.49, -121.94), "JPM": (40.71, -74.01), "GS": (40.71, -74.01),
+    "XOM": (32.78, -96.80), "CVX": (37.77, -122.42), "COP": (29.76, -95.37),
+    "RTX": (42.35, -71.06), "LMT": (39.05, -77.11), "NOC": (38.92, -77.02),
+    "BA": (41.88, -87.63), "GE": (42.36, -71.06), "CAT": (40.69, -89.59),
+    "IBM": (41.03, -73.76), "INTC": (45.54, -122.86), "AMD": (37.39, -121.91),
+    "QCOM": (32.90, -117.19), "ORCL": (37.53, -122.26), "CRM": (37.77, -122.41),
+    "NFLX": (37.25, -121.96), "DIS": (33.81, -117.92), "WMT": (36.37, -94.21),
+    "KO": (33.75, -84.39), "PEP": (41.06, -73.70), "MCD": (41.88, -87.63),
+    "NKE": (45.50, -122.68), "JNJ": (40.50, -74.41), "PFE": (40.75, -73.98),
+    "MRK": (40.51, -74.46), "ABBV": (42.10, -87.94), "LLY": (39.77, -86.16),
+    "UNH": (44.86, -93.46), "CSCO": (37.41, -121.93), "TXN": (32.78, -96.80),
+    "MU": (37.23, -121.68), "ARM": (37.36, -122.06), "SMCI": (37.38, -121.89),
+    "TSM": (24.79, 121.01), "BABA": (30.27, 120.16), "TCEHY": (22.54, 114.06),
+    "RELIANCE.NS": (19.08, 72.88), "TCS.NS": (19.02, 72.85), "INFY.NS": (12.97, 77.59),
+    "600519.SS": (27.83, 106.63), "0700.HK": (22.54, 114.06),
+    "SHEL.L": (51.51, -0.12), "BP.L": (51.51, -0.12), "SAP.DE": (49.29, 8.64),
+    "SIE.DE": (48.77, 11.43), "ASML.AS": (51.41, 5.46), "MC.PA": (48.87, 2.33),
+    "7203.T": (35.02, 137.01), "6758.T": (35.66, 139.70), "005930.KS": (37.26, 127.06),
+    "BHP.AX": (-37.81, 144.96), "SAN.MC": (40.42, -3.70),
+}
+
+
 def _derive_geo(row: dict) -> tuple[float | None, float | None]:
-    """Best-effort lat/lon from the event subject when the pipeline had none."""
+    """Best-effort lat/lon: stored coords → subject keywords → ticker HQ."""
     if row.get("lat") is not None and row.get("lon") is not None:
         return row["lat"], row["lon"]
     subject = (row.get("subject") or "").lower()
     for keyword, lat, lon in _GEO_KEYWORDS:
         if keyword in subject:
             return lat, lon
+    # company events plot at HQ — terminal convention for globe visualization
+    for ticker in row.get("tickers") or []:
+        if ticker in _TICKER_HQ:
+            return _TICKER_HQ[ticker]
     return None, None
 
 
@@ -139,6 +220,7 @@ def _event_row(r: sqlite3.Row) -> dict:
     d.setdefault("actionability", "low")
     d.setdefault("key_metrics", {})
     d.setdefault("sector_impact", "")
+    d["sector"] = _event_sector(d)
     lat, lon = _derive_geo(d)
     d["lat"], d["lon"] = lat, lon
     return d
@@ -153,6 +235,92 @@ async def stats() -> dict:
     )
     last = conn.execute("SELECT MAX(created_at) FROM events").fetchone()[0]
     return {"total_events": total, "by_verdict": verdicts, "last_update": last}
+
+
+@app.get("/api/sectors")
+async def sectors() -> dict:
+    """Sector heat: events grouped by sector_impact (NLP fallback from subject).
+
+    Each sector carries event_count, avg signal_score, smoothed bull/bear ratio,
+    top tickers and the latest event — the Sector Heat panel's chip grid.
+    """
+    conn = _require_db()
+    rows = conn.execute(
+        "SELECT subject, tickers, sector_impact, signal_score, verdict, created_at "
+        "FROM events ORDER BY id DESC LIMIT 500"
+    ).fetchall()
+    agg: dict[str, dict] = {}
+    for r in rows:
+        d = dict(r)
+        try:
+            tickers = (
+                json.loads(d["tickers"])
+                if isinstance(d["tickers"], str)
+                else (d["tickers"] or [])
+            )
+        except ValueError:
+            tickers = []
+        for sec in _sector_parts(d):
+            a = agg.setdefault(
+                sec,
+                {
+                    "event_count": 0,
+                    "scores": [],
+                    "bulls": 0,
+                    "bears": 0,
+                    "ticker_counts": Counter(),
+                    "last_event": None,
+                },
+            )
+            a["event_count"] += 1
+            a["scores"].append(float(d.get("signal_score") or 0))
+            if d.get("verdict") in ("INVEST", "OBSERVE"):
+                a["bulls"] += 1
+            elif d.get("verdict") in ("PULL_OUT", "CAUTIOUS"):
+                a["bears"] += 1
+            for t in tickers:
+                a["ticker_counts"][t] += 1
+            le = a["last_event"]
+            if le is None or (d.get("created_at") or "") > (le.get("created_at") or ""):
+                a["last_event"] = {
+                    "subject": d.get("subject", ""),
+                    "created_at": d.get("created_at"),
+                }
+    out = []
+    for sec, a in agg.items():
+        avg = sum(a["scores"]) / len(a["scores"]) if a["scores"] else 0.0
+        ratio = (a["bulls"] + 1) / (a["bears"] + 1)
+        out.append(
+            {
+                "sector": sec,
+                "event_count": a["event_count"],
+                "avg_score": round(avg, 2),
+                "bull_bear_ratio": round(ratio, 2),
+                "top_tickers": [t for t, _ in a["ticker_counts"].most_common(5)],
+                "last_event": a["last_event"],
+            }
+        )
+    out.sort(key=lambda s: s["event_count"], reverse=True)
+    return {"sectors": out}
+
+
+@app.get("/api/storylines")
+async def storylines(limit: int = Query(10, ge=1, le=50)) -> dict:
+    """Storylines: greedy clusters of similar recent events (embedding cosine ≥
+    0.75 within a 48h window). Members are full event rows, newest first, so the
+    feed collapses duplicates under the top row. Ollama down → singletons."""
+    conn = _require_db()
+    # The feed collapses rows it can display — /api/events serves the newest 200,
+    # so scanning a wider universe only spends Ollama calls on clusters the UI
+    # could never render. 200 keeps duplicates-in-view grouped.
+    rows = conn.execute(
+        "SELECT * FROM events ORDER BY id DESC LIMIT 200"
+    ).fetchall()
+    events = [_event_row(r) for r in rows]
+    from finscrape.analysis.clusters import build_storylines
+
+    clusters = build_storylines(events)[:limit]
+    return {"storylines": clusters}
 
 
 @app.get("/api/dates")
@@ -187,9 +355,6 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
     ).fetchall()
 
     stats: dict[str, dict] = {}
-    import time as _time
-
-    now = _time.time()
     for r in rows:
         try:
             tickers = json.loads(r["tickers"]) if isinstance(r["tickers"], str) else (r["tickers"] or [])
@@ -600,7 +765,7 @@ async def ai_analyze(id: int = Query(...)) -> dict:
     """LLM reasoning for one event — runs the local model (dev-mode provider,
     e.g. Ollama qwen) over the event's subject, verdict and tickers."""
     conn = _require_db()
-    row = conn.execute("SELECT * FROM events WHERE id = ?", (event_id,)).fetchone()
+    row = conn.execute("SELECT * FROM events WHERE id = ?", (id,)).fetchone()
     if row is None:
         raise HTTPException(status_code=404, detail="event not found")
     event = _event_row(row)

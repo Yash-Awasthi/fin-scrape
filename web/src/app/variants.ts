@@ -16,6 +16,7 @@ export const PAGE_LAYOUT: PanelSlot[] = [
   { id: "globe", w: 8, h: 8 },
   // band 3 — state of the world
   { id: "stats", w: 4, h: 4 },
+  { id: "sectors", w: 4, h: 4 },
   { id: "suggestions", w: 4, h: 4 },
   { id: "dates", w: 4, h: 4 },
   // band 4 — the news room (raw feeds)

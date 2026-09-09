@@ -54,6 +54,23 @@ export class SignalModal {
       entities.append(li);
     }
 
+    // A4: second-order chain — the knock-on effects the pipeline judged, one ⚡ per hop.
+    const chain = document.createElement("div");
+    const effects = (ev.second_order_effects ?? []).filter(Boolean);
+    if (effects.length) {
+      const chainHead = document.createElement("h3");
+      chainHead.className = "modal-chain-head";
+      chainHead.textContent = `Second-order chain (${effects.length})`;
+      const chainList = document.createElement("ul");
+      chainList.className = "modal-chain";
+      for (const fx of effects) {
+        const li = document.createElement("li");
+        li.textContent = `⚡ ${fx}`;
+        chainList.append(li);
+      }
+      chain.append(chainHead, chainList);
+    }
+
     const aiOut = document.createElement("div");
     aiOut.className = "ai-out";
     const aiBtn = document.createElement("button");
@@ -82,7 +99,7 @@ export class SignalModal {
     };
     aiBtn.addEventListener("click", () => void runAnalysis());
 
-    this.box.append(close, badge, h, meta, reasoning, entities, aiBtn, aiOut);
+    this.box.append(close, badge, h, meta, reasoning, entities, chain, aiBtn, aiOut);
     this.el.classList.remove("hidden");
 
     // Reasoning must never sit blank: events created without the LLM are

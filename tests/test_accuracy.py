@@ -1,7 +1,6 @@
 """Tests for finscrape.accuracy.AccuracyTracker."""
 
 import pytest
-import sqlite3
 from datetime import datetime, timezone, timedelta
 
 from finscrape.accuracy import AccuracyTracker
@@ -191,6 +190,18 @@ class TestCheckOutcomes:
         )
         assert len(results) == 1
         assert results[0]["outcome"] == "neutral"
+
+    def test_default_horizon_is_window_days(self, tracker):
+        """Without hours_after, signals younger than WINDOW_DAYS stay pending."""
+        hours = tracker.WINDOW_DAYS * 24 - 20  # 100h with WINDOW_DAYS=5 → still pending
+        self._insert_old_signal(tracker, 1, "AAPL", "INVEST", 150.0, hours_ago=hours)
+        results = tracker.check_outcomes(price_fetcher=_make_mock_price_fetcher({"AAPL": 155.0}))
+        assert results == []
+        # same signal, now past the window → scored
+        self._insert_old_signal(tracker, 2, "AAPL", "INVEST", 150.0, hours_ago=hours + 30)
+        results = tracker.check_outcomes(price_fetcher=_make_mock_price_fetcher({"AAPL": 155.0}))
+        assert len(results) == 1
+        assert results[0]["outcome"] == "correct"
 
     def test_no_pending_signals(self, tracker):
         results = tracker.check_outcomes(
