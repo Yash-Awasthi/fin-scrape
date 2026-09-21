@@ -25,3 +25,7 @@ def test_schemas_accept_finevent():
     if not selfcheck.check_settings():
         pytest.skip("server deps not installed")
     selfcheck.check_schemas()
+
+
+def test_migration_series_is_contiguous_and_keys_outcomes_uniquely():
+    selfcheck.check_migration_series()

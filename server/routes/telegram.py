@@ -10,12 +10,13 @@ Subscribers (chat_ids) persist to `<data_dir>/telegram_subs.json` — no schema,
 
 from __future__ import annotations
 
+import hmac
 import json
 import logging
 from pathlib import Path
 
 import requests
-from fastapi import APIRouter, BackgroundTasks, Body
+from fastapi import APIRouter, BackgroundTasks, Body, Header
 
 from server import queries
 from server import db
@@ -131,9 +132,34 @@ async def _handle_command(chat_id: str, text: str) -> None:
         send_message(chat_id, "Latest signals:\n" + "\n".join(lines))
 
 
+def _webhook_authentic(supplied: str | None) -> bool:
+    """True only when Telegram's secret header matches the configured secret.
+
+    Commands write the subscriber file and make the bot send messages to whatever
+    chat id the body names, so an unauthenticated webhook is a spam relay. No secret
+    configured means no request can be authenticated — the endpoint stays inert.
+    """
+    expected = get_settings().telegram_webhook_secret
+    if not expected:
+        log.warning(
+            "TELEGRAM_WEBHOOK_SECRET is unset — /api/telegram/webhook ignores every "
+            "update. Set it and pass the same value to setWebhook(secret_token=...)."
+        )
+        return False
+    return bool(supplied) and hmac.compare_digest(
+        supplied.encode("utf-8"), expected.encode("utf-8")
+    )
+
+
 @router.post("/api/telegram/webhook")
-async def webhook(background: BackgroundTasks, update: dict = Body(default={})) -> dict:
+async def webhook(
+    background: BackgroundTasks,
+    update: dict = Body(default={}),
+    x_telegram_bot_api_secret_token: str | None = Header(default=None),
+) -> dict:
     """Always 200. Command handling runs in the background so Telegram never retries."""
+    if not _webhook_authentic(x_telegram_bot_api_secret_token):
+        return {"ok": True}  # 200 regardless, so a bad sender learns nothing
     msg = (update or {}).get("message") or {}
     chat_id = str((msg.get("chat") or {}).get("id") or "")
     text = msg.get("text") or ""

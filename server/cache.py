@@ -18,6 +18,10 @@ FAST = 30  # volatile (crypto/markets quotes)
 MEDIUM = 120  # semi-static (RSS feeds)
 SLOW = 600  # rarely-changing (registries, rollups)
 
+# Ceiling on live entries: some keys carry a caller-supplied ticker, so the key space
+# is open-ended and the store is dropped wholesale at the limit instead of growing.
+_MAX_ENTRIES = 4096
+
 _store: dict[str, tuple[float, object]] = {}
 
 
@@ -27,6 +31,11 @@ def get_or_set(key: str, ttl: float, produce: Callable[[], object]) -> object:
     hit = _store.get(key)
     if hit and hit[0] > now:
         return hit[1]
+    if len(_store) >= _MAX_ENTRIES:
+        for stale in [k for k, (expires, _) in _store.items() if expires <= now]:
+            del _store[stale]
+        if len(_store) >= _MAX_ENTRIES:
+            _store.clear()
     value = produce()
     _store[key] = (now + ttl, value)
     return value

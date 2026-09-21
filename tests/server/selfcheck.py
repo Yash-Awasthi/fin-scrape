@@ -15,9 +15,8 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-MIGRATION = (
-    Path(__file__).resolve().parents[2] / "server" / "migrations" / "0001_init.sql"
-)
+MIGRATIONS_DIR = Path(__file__).resolve().parents[2] / "server" / "migrations"
+MIGRATION = MIGRATIONS_DIR / "0001_init.sql"
 
 REQUIRED_TABLES = [
     "events",
@@ -54,17 +53,69 @@ def check_migration_sql() -> None:
     )
 
 
+def check_migration_series() -> None:
+    """Every migration is applied once, in numeric order, so the series must be a clean
+    sequence — a gap or a repeated prefix means a file silently never runs in order."""
+    files = sorted(MIGRATIONS_DIR.glob("[0-9]*.sql"))
+    assert files, "no migration files found"
+    prefixes = []
+    for path in files:
+        head = path.name.split("_", 1)[0]
+        assert head.isdigit() and len(head) == 4, f"bad migration name: {path.name}"
+        prefixes.append(int(head))
+    assert prefixes == list(range(1, len(prefixes) + 1)), (
+        f"migration numbering is not contiguous from 0001: {prefixes}"
+    )
+
+    for path in files:
+        # Comments carry prose parentheses; balance only the code.
+        code = "\n".join(
+            line.split("--", 1)[0] for line in path.read_text().splitlines()
+        )
+        assert code.count("(") == code.count(")"), f"unbalanced parens in {path.name}"
+
+    combined = "\n".join(p.read_text() for p in files).lower()
+    # One outcome per event, or /api/accuracy's denominator can be double-counted.
+    assert "unique index if not exists idx_accuracy_event_unique" in combined, (
+        "accuracy_outcomes (event_id) is not uniquely indexed"
+    )
+    print(f"  ok  migration series: {len(files)} files, contiguous, outcome key unique")
+
+
+# Every env prefix Settings reads. A defaults check that leaves these in place
+# reports the developer's shell, not the shipped defaults.
+_SETTINGS_ENV_PREFIXES = (
+    "WORLDFIN_",
+    "FINSCRAPE_",
+    "OPENAI_",
+    "OPENROUTER_",
+    "TELEGRAM_",
+    "PORT",
+)
+
+
 def check_settings() -> bool:
     try:
         from server.settings import Settings
     except ImportError as exc:
         print(f"  skip settings/schema checks — server deps not installed ({exc})")
         return False
-    s = Settings(_env_file=None)  # ignore any local .env for a clean default check
-    assert s.database_url.startswith("postgresql://"), "default DATABASE_URL malformed"
-    assert s.db_pool_max >= s.db_pool_min, "pool max < min"
-    assert s.has_llm is False, "has_llm should be False with no LLM env set"
-    assert s.redis_enabled is False, "redis_enabled should be False by default"
+    import os
+    from unittest.mock import patch
+
+    clean = {
+        k: v
+        for k, v in os.environ.items()
+        if not k.upper().startswith(_SETTINGS_ENV_PREFIXES)
+    }
+    with patch.dict(os.environ, clean, clear=True):
+        s = Settings(_env_file=None)  # no .env, no ambient overrides
+        assert s.database_url.startswith("postgresql://"), (
+            "default DATABASE_URL malformed"
+        )
+        assert s.db_pool_max >= s.db_pool_min, "pool max < min"
+        assert s.has_llm is False, "has_llm should be False with no LLM env set"
+        assert s.redis_enabled is False, "redis_enabled should be False by default"
     print("  ok  settings load with sane defaults")
     return True
 
@@ -99,6 +150,7 @@ def check_schemas() -> None:
 def main() -> int:
     print("WorldFin Phase 0 self-check:")
     check_migration_sql()
+    check_migration_series()
     if check_settings():
         check_schemas()
     print("self-check PASSED")

@@ -38,8 +38,22 @@ export class PanelLayoutManager {
       panel.el.style.gridColumn = `span ${Math.min(slot.w, 12)}`;
       panel.el.style.gridRow = `span ${slot.h}`;
     }
+    const hidden: string[] = [];
     for (const [id, panel] of this.panels) {
-      if (!want.has(id)) panel.el.style.display = "none";
+      if (!want.has(id)) {
+        panel.el.style.display = "none";
+        hidden.push(id);
+      }
+    }
+    // A panel registered but left out of the layout is built and wired to its events,
+    // then never shown — the chart and agent panels sat like that while ⌘K still
+    // scrolled to them. Say so rather than hiding it silently.
+    if (hidden.length) {
+      console.warn(`[layout] registered panels missing from PAGE_LAYOUT: ${hidden.join(", ")}`);
+    }
+    const phantom = slots.map((s) => s.id).filter((id) => !this.panels.has(id));
+    if (phantom.length) {
+      console.warn(`[layout] PAGE_LAYOUT names panels that do not exist: ${phantom.join(", ")}`);
     }
   }
 

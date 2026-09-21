@@ -15,12 +15,13 @@ JS `Math.round(x*10)/10` rounds half-up; Python's round() is banker's, so we use
 
 from __future__ import annotations
 
+import functools
 import math
 import re
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass, field
 
-from finscrape.entity_map import keywords_for_ticker
+from finscrape.entity_map import keywords_for_ticker, tickers_for_keyword
 
 # --- constants (Appendix A) ---
 SIMILARITY_THRESHOLD = 0.5
@@ -355,9 +356,9 @@ def detect_market(
 def detect_flow_price_divergence(
     market: Market, mentions: int, pipeline_signal_count: int
 ) -> Signal | None:
-    """Energy symbol moves ≥1.5 with <2 mentions and no flow_drop signal yet."""
+    """Energy symbol moves ≥1.5 either way with <2 mentions and no flow_drop signal yet."""
     chg = abs(market.change)
-    if market.change >= FLOW_PRICE and mentions < 2 and pipeline_signal_count == 0:
+    if chg >= FLOW_PRICE and mentions < 2 and pipeline_signal_count == 0:
         return Signal(
             "flow_price_divergence",
             market.symbol,
@@ -413,12 +414,39 @@ def extract_topics(items: list[NewsItem]) -> dict[str, dict]:
     return topics
 
 
+@functools.lru_cache(maxsize=1)
+def _topics_by_ticker() -> dict[str, frozenset[str]]:
+    """ticker -> the topics it trades on, bridged through the keywords both sides share.
+
+    TOPIC_KEYWORDS and the entity index are independent vocabularies that overlap on
+    concrete words ('oil', 'missile', 'freight'), so intersecting them maps a symbol to
+    its topics without a second hand-maintained table.
+    """
+    out: dict[str, set[str]] = {}
+    for topic, keywords in TOPIC_KEYWORDS.items():
+        for keyword in keywords:
+            for symbol in tickers_for_keyword(keyword):
+                out.setdefault(symbol, set()).add(topic)
+    return {symbol: frozenset(names) for symbol, names in out.items()}
+
+
 def _topic_mentions_for_symbol(symbol: str, topics: dict[str, dict]) -> int:
-    """How many topic mentions plausibly relate to a market symbol. Energy syms map to
-    the energy topic; otherwise 0 (entity index is stubbed in v1)."""
-    if symbol in ENERGY_SYMS:
-        return topics.get("energy", {}).get("velocity", 0)
-    return 0
+    """Coverage volume plausibly related to a market symbol, as the busiest single topic
+    it belongs to.
+
+    Busiest rather than summed: a symbol can sit in several topics (XOM is energy,
+    conflict and sanctions) and one headline can feed all of them, so adding the
+    velocities would count that headline repeatedly and over-suppress the divergence
+    detectors. Distinct from `find_news_for_market_symbol`, which asks whether a
+    *specific* story names the symbol — this asks whether the theme is being covered
+    at all, which is what separates a silent move from an unattributed one.
+    """
+    sym = (symbol or "").upper()
+    names = _topics_by_ticker().get(sym)
+    if not names:
+        # Futures carry no entity-index keywords of their own.
+        names = frozenset({"energy"}) if sym in ENERGY_SYMS else frozenset()
+    return max((topics.get(n, {}).get("velocity", 0) for n in names), default=0)
 
 
 def find_news_for_market_symbol(symbol: str, items: list[NewsItem]) -> list[NewsItem]:
@@ -467,7 +495,9 @@ def analyze_correlations(
 
     # 1. prediction_leads_news
     for pred in predictions:
-        related = topics.get(pred.symbol.lower(), {}).get("velocity", 0)
+        # Topics are keyed by topic name, never by symbol — looking one up by ticker
+        # always missed, so every prediction read as zero related activity.
+        related = _topic_mentions_for_symbol(pred.symbol, topics)
         consider(detect_prediction_leads_news(pred, related))
 
     # 2. velocity_spike
@@ -481,7 +511,16 @@ def analyze_correlations(
         mentions = _topic_mentions_for_symbol(market.symbol, topics)
         consider(detect_market(market, mentions, find_news(market.symbol, items)))
 
-    # 4. flow_price_divergence (energy syms)
+    # 4. cluster-based
+    for cluster in clusters:
+        consider(detect_convergence(cluster))
+    for cluster in clusters:
+        consider(detect_triangulation(cluster))
+    for cluster in clusters:
+        consider(detect_flow_drop(cluster))
+
+    # 5. flow_price_divergence (energy syms) — runs last because its gate reads the
+    # flow_drop count: a detected supply story already explains the price move.
     pipeline_signals = sum(1 for s in candidates if s.type == "flow_drop")
     by_symbol = {m.symbol: m for m in markets}
     for sym in ENERGY_SYMS:
@@ -489,14 +528,6 @@ def analyze_correlations(
         if m:
             mentions = _topic_mentions_for_symbol(sym, topics)
             consider(detect_flow_price_divergence(m, mentions, pipeline_signals))
-
-    # 5/6/7. cluster-based
-    for cluster in clusters:
-        consider(detect_convergence(cluster))
-    for cluster in clusters:
-        consider(detect_triangulation(cluster))
-    for cluster in clusters:
-        consider(detect_flow_drop(cluster))
 
     # keep the FIRST signal per type (insertion order), then drop < floor
     first_per_type: dict[str, Signal] = {}

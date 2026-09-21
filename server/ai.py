@@ -89,7 +89,12 @@ def _chat(prompt: str) -> str | None:
     """One OpenAI-compatible chat call to whichever backend is configured."""
     s = get_settings()
     if s.openai_base_url:
-        base, key, backend = s.openai_base_url.rstrip("/"), "ollama", "ollama"
+        # "ollama" only as the last resort: a local Ollama ignores the bearer entirely,
+        # but sending that literal to an endpoint that checks it is a silent 401 and a
+        # heuristic answer the caller cannot tell from a real one.
+        base = s.openai_base_url.rstrip("/")
+        key = s.openai_api_key or "ollama"
+        backend = "openai-compatible"
     elif s.openrouter_api_key:
         base, key, backend = (
             "https://openrouter.ai/api/v1",

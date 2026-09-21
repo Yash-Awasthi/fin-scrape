@@ -88,6 +88,15 @@ def keywords_for_ticker(symbol: str) -> list[str]:
     return list(_reverse().get((symbol or "").upper(), ()))
 
 
+def tickers_for_keyword(keyword: str) -> list[str]:
+    """Tickers mapped to one exact keyword (no text scanning — `resolve_tickers` does that).
+
+    Lets a caller holding its own keyword vocabulary bridge into this index, e.g.
+    `server.correlate` mapping its topic keywords onto the tickers they imply.
+    """
+    return list(_forward().get((keyword or "").lower(), ()))
+
+
 # ── Company-name resolution (SEC company_tickers.json) ────────────────────────
 
 @functools.lru_cache(maxsize=1)

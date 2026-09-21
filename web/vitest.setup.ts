@@ -13,3 +13,9 @@ if (typeof globalThis.localStorage === "undefined") {
     },
   } as Storage;
 }
+
+// jsdom has no layout, so Element.scrollIntoView is undefined; the feed calls it to
+// keep the j/k selection on screen.
+if (typeof Element !== "undefined" && !Element.prototype.scrollIntoView) {
+  Element.prototype.scrollIntoView = () => {};
+}

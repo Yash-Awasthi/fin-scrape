@@ -178,7 +178,9 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
             {
                 "ticker": r["ticker"],
                 "score": round(r["suggestion_score"], 3),
-                "momentum": round(r["momentum"], 2) if r["momentum"] is not None else None,
+                "momentum": round(r["momentum"], 2)
+                if r["momentum"] is not None
+                else None,
                 "mentions": int(r["mentions"]),
                 "avg_score": round(r["avg_score"], 2),
                 "avg_confidence": round(r["avg_confidence"], 2),
@@ -241,11 +243,13 @@ async def sectors() -> dict:
         ORDER BY e.sector_impact, n DESC
         """
     )
-    top_by_sector: dict[str, list[str]] = {}
+    # Counts are summed per NORMALIZED sector: two raw labels that alias to the same
+    # sector ("finance"/"financials") contribute to one ranking, not two.
+    ticker_counts: dict[str, dict[str, int]] = {}
     for r in ticker_rows:
-        top = top_by_sector.setdefault(r["sector"], [])
-        if len(top) < 5:
-            top.append(r["ticker"])
+        for sec in _normalize_sector(r["sector"]):
+            counts = ticker_counts.setdefault(sec, {})
+            counts[r["ticker"]] = counts.get(r["ticker"], 0) + int(r["n"])
 
     # Unlabeled events → NLP sector from subject (keyword-only, no spaCy model load).
     from finscrape.analysis.nlp import FinancialNLP
@@ -268,7 +272,13 @@ async def sectors() -> dict:
         for sec in parts:
             a = fallback.setdefault(
                 sec,
-                {"event_count": 0, "scores": [], "bulls": 0, "bears": 0, "last_event": None},
+                {
+                    "event_count": 0,
+                    "scores": [],
+                    "bulls": 0,
+                    "bears": 0,
+                    "last_event": None,
+                },
             )
             a["event_count"] += 1
             a["scores"].append(float(r["signal_score"] or 0))
@@ -277,42 +287,76 @@ async def sectors() -> dict:
             elif r["verdict"] in ("PULL_OUT", "CAUTIOUS"):
                 a["bears"] += 1
             if a["last_event"] is None:
-                a["last_event"] = {"subject": r["subject"], "created_at": r["created_at"]}
+                a["last_event"] = {
+                    "subject": r["subject"],
+                    "created_at": r["created_at"],
+                }
 
-    merged: dict[str, dict] = {}
+    # One accumulator per normalized sector. Labeled and NLP-fallback events both add
+    # into it, so aliased labels merge instead of overwriting and every rendered field
+    # (score, bull/bear, tickers, last event) reflects the full set.
+    acc: dict[str, dict] = {}
+
+    def _bucket(sec: str) -> dict:
+        return acc.setdefault(
+            sec,
+            {
+                "event_count": 0,
+                "score_sum": 0.0,
+                "bulls": 0,
+                "bears": 0,
+                "last_event": None,
+            },
+        )
+
+    def _keep_latest(bucket: dict, subject: str, created_at) -> None:
+        current = bucket["last_event"]
+        if current is None or (
+            created_at is not None
+            and current["created_at"] is not None
+            and created_at > current["created_at"]
+        ):
+            bucket["last_event"] = {"subject": subject, "created_at": created_at}
+
     for r in labeled:
+        count = int(r["event_count"])
         for sec in _normalize_sector(r["sector"]):
+            b = _bucket(sec)
+            b["event_count"] += count
+            b["score_sum"] += float(r["avg_score"] or 0.0) * count
+            b["bulls"] += int(r["bulls"])
+            b["bears"] += int(r["bears"])
             lr = last_by_sector.get(r["sector"])
-            merged[sec] = {
-                "sector": sec,
-                "event_count": int(r["event_count"]),
-                "avg_score": round(r["avg_score"] or 0, 2),
-                "bull_bear_ratio": round((r["bulls"] + 1) / (r["bears"] + 1), 2),
-                "top_tickers": top_by_sector.get(r["sector"], []),
-                "last_event": (
-                    {"subject": lr["subject"], "created_at": lr["created_at"]}
-                    if lr
-                    else None
-                ),
-            }
+            if lr is not None:
+                _keep_latest(b, lr["subject"], lr["created_at"])
+
     for sec, a in fallback.items():
-        if sec in merged:
-            m = merged[sec]
-            m["event_count"] += a["event_count"]
-            m["avg_score"] = round(
-                (m["avg_score"] * (m["event_count"] - a["event_count"]) + sum(a["scores"]))
-                / m["event_count"],
-                2,
-            )
-            continue
-        merged[sec] = {
+        b = _bucket(sec)
+        b["event_count"] += a["event_count"]
+        b["score_sum"] += sum(a["scores"])
+        b["bulls"] += a["bulls"]
+        b["bears"] += a["bears"]
+        if a["last_event"]:
+            _keep_latest(b, a["last_event"]["subject"], a["last_event"]["created_at"])
+
+    merged = {
+        sec: {
             "sector": sec,
-            "event_count": a["event_count"],
-            "avg_score": round(sum(a["scores"]) / len(a["scores"]), 2) if a["scores"] else 0.0,
-            "bull_bear_ratio": round((a["bulls"] + 1) / (a["bears"] + 1), 2),
-            "top_tickers": [],
-            "last_event": a["last_event"],
+            "event_count": b["event_count"],
+            "avg_score": round(b["score_sum"] / b["event_count"], 2)
+            if b["event_count"]
+            else 0.0,
+            "bull_bear_ratio": round((b["bulls"] + 1) / (b["bears"] + 1), 2),
+            "top_tickers": [
+                t
+                for t, _ in sorted(
+                    ticker_counts.get(sec, {}).items(), key=lambda kv: (-kv[1], kv[0])
+                )[:5]
+            ],
+            "last_event": b["last_event"],
         }
+        for sec, b in acc.items()
+    }
     out = sorted(merged.values(), key=lambda s: s["event_count"], reverse=True)
     return {"sectors": out}
 

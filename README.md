@@ -195,6 +195,7 @@ All via env (`.env.example`). Key ones:
 | `WORLDFIN_ENABLE_COUNCIL` | Multi-agent explainability |
 | `FINSCRAPE_COUNCIL_ROUNDS` | Council debate rounds (default: 1) |
 | `TELEGRAM_BOT_TOKEN` | Outbound alerts |
+| `TELEGRAM_WEBHOOK_SECRET` | Required for inbound bot commands; pass the same value to `setWebhook(secret_token=…)`. Unset means `/api/telegram/webhook` ignores every update. |
 
 ---
 

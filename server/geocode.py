@@ -75,7 +75,8 @@ _SORTED = sorted(COUNTRY_CENTROID, key=len, reverse=True)
 
 
 def geocode_text(text: str) -> tuple[float | None, float | None]:
-    """Find the first country mentioned (word-boundary) and return its centroid."""
+    """Return the centroid of the longest country name present (word-boundary match),
+    so 'south korea' wins over 'korea' rather than whichever appears first."""
     low = (text or "").lower()
     for name in _SORTED:
         if re.search(rf"(?<![a-z]){re.escape(name)}(?![a-z])", low):

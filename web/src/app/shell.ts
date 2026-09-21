@@ -5,6 +5,8 @@ import type { WSStatus } from "../ws";
 export class Shell {
   readonly root: HTMLElement;
   readonly content: HTMLElement;
+  readonly grid: HTMLElement;
+  readonly railSlot: HTMLElement;
   readonly bannerSlot: HTMLElement;
   private dot: HTMLElement;
   private clock: HTMLElement;
@@ -47,6 +49,12 @@ export class Shell {
 
     this.content = document.createElement("main");
     this.content.className = "app-main";
+    // Panels scroll; the inspector rail sticks beside them.
+    this.grid = document.createElement("div");
+    this.grid.className = "app-grid";
+    this.railSlot = document.createElement("div");
+    this.railSlot.className = "app-rail";
+    this.content.append(this.grid, this.railSlot);
 
     this.root.append(header, this.bannerSlot, this.content);
     this.startClock();

@@ -4,7 +4,7 @@ import { api } from "./api";
 import { PAGE_LAYOUT, pagePanelIds } from "./app/variants";
 import { Shell } from "./app/shell";
 import { BreakingNewsBanner } from "./components/banner";
-import { SignalModal } from "./components/modal";
+import { Inspector } from "./components/inspector";
 import { TickerTape } from "./components/ticker-tape";
 import type { GlobeView } from "./globe/globe";
 import type { EventOut } from "./api";
@@ -25,6 +25,7 @@ import {
   PredictionPanel,
   SectorPanel,
   SentimentPanel,
+  SourceHealthPanel,
   StatsPanel,
   SuggestionsPanel,
   WatchlistPanel,
@@ -35,7 +36,7 @@ import { Store } from "./state";
 import { RealtimeClient, wsUrl, type WSMessage } from "./ws";
 
 const store = new Store();
-const modal = new SignalModal();
+const inspector = new Inspector(() => store.select(null));
 const banner = new BreakingNewsBanner();
 
 const shell = new Shell(() => void loadAll());
@@ -62,6 +63,7 @@ const sentimentPanel = new SentimentPanel();
 const portfolioPanel = new PortfolioPanel();
 const predictionPanel = new PredictionPanel();
 const marketsPanel = new MarketsPanel();
+const sourceHealthPanel = new SourceHealthPanel();
 
 for (const p of [
   candlesPanel,
@@ -84,6 +86,7 @@ for (const p of [
   portfolioPanel,
   predictionPanel,
   marketsPanel,
+  sourceHealthPanel,
 ]) {
   layout.add(p);
 }
@@ -91,12 +94,12 @@ for (const p of [
 const app = document.getElementById("app")!;
 shell.mount(app);
 shell.bannerSlot.append(banner.el);
-layout.mount(shell.content);
+layout.mount(shell.grid);
+shell.railSlot.append(inspector.el);
 
 // Live market tape (always on) + 15s quote polling.
 const tape = new TickerTape();
 shell.content.before(tape.el);
-app.append(modal.el);
 const quotesTimer = window.setInterval(() => {
   void tape.refresh();
   void marketsLivePanel.refresh();
@@ -137,10 +140,31 @@ store.subscribe((s) => {
   banner.update(s.correlations);
   if (s.selected && s.selected.id !== lastSelectedId) {
     lastSelectedId = s.selected.id;
-    modal.show(s.selected);
+    inspector.show(s.selected);
+  } else if (!s.selected && lastSelectedId !== null) {
+    lastSelectedId = null;
+    inspector.reset();
+    feedPanel.clearActive();
   }
 });
 requestAnimationFrame(sizeGlobe);
+
+// j/k walks the feed, Esc clears. Ignored while typing or while the palette is open,
+// so the command bar and the watchlist/ticker inputs keep their keys.
+window.addEventListener("keydown", (e) => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if ((e.target as HTMLElement | null)?.closest("input, textarea, select")) return;
+  if (!document.querySelector(".palette.hidden")) return;
+  if (e.key === "j") {
+    e.preventDefault();
+    feedPanel.moveSelection(1);
+  } else if (e.key === "k") {
+    e.preventDefault();
+    feedPanel.moveSelection(-1);
+  } else if (e.key === "Escape") {
+    store.select(null);
+  }
+});
 
 async function loadAll(): Promise<void> {
   // allSettled: one missing backend endpoint must never blank the whole load.
@@ -194,6 +218,7 @@ async function loadPanelsData(): Promise<void> {
   if (shown.has("sentiment")) jobs.push(sentimentPanel.load());
   if (shown.has("portfolio")) jobs.push(portfolioPanel.load());
   if (shown.has("markets")) jobs.push(marketsPanel.load());
+  if (shown.has("sources")) jobs.push(sourceHealthPanel.load());
   if (shown.has("livetv")) liveTVPanel.render();
   await Promise.allSettled(jobs);
 }

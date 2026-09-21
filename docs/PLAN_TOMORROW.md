@@ -78,20 +78,20 @@ sector view is table stakes and we have the data already.
 
 ### B1. Right-rail inspector — ~1.5h
 **Why:** clicking a signal opens a modal (jarring). Terminals use an inspector rail.
-- [ ] Replace `SignalModal` with a persistent right rail (`#inspector`, 320px,
+- [x] Replace `SignalModal` with a persistent right rail (`#inspector`, 320px,
   grid-template-columns: 1fr 320px on `.app-main`)
-- [ ] Selected event renders in the rail: verdict badge, score, reasoning full,
+- [x] Selected event renders in the rail: verdict badge, score, reasoning full,
   prediction (P bar), affected entities, second-order chain, article link,
   `↻ Re-run AI analysis` (reuse modal logic, relocated)
-- [ ] Mobile/narrow: rail overlays (fixed right, shadow)
-- [ ] Keep modal code deleted or behind flag — no dead exports (tsc noEmit gate)
+- [x] Mobile/narrow: rail overlays (fixed right, shadow)
+- [x] Keep modal code deleted or behind flag — no dead exports (tsc noEmit gate)
 
 ### B2. Keyboard navigation — ~1h
-- [ ] `j/k` → next/prev signal in feed; `Enter` → select into inspector;
+- [x] `j/k` → next/prev signal in feed; `Enter` → select into inspector;
   `Esc` → clear; `1-9` → switch panel scroll targets
-- [ ] Wire in `main.ts` via one keydown listener; respects input focus
+- [x] Wire in `main.ts` via one keydown listener; respects input focus
   (`if ((e.target as HTMLElement).matches('input,select,textarea')) return`)
-- [ ] Show hints in footer strip (`j/k navigate · ⌘K commands`)
+- [x] Show hints in footer strip (`j/k navigate · ⌘K commands`)
 
 ### B3. Feed virtualization — ~45m
 **Why:** 60 DOM rows × re-render on every WS push = jank as events grow.
@@ -234,24 +234,47 @@ history + calibration curve.** Highest visible value per hour.
 
 ---
 
-## STATUS UPDATE (start of 09-07 session 2)
+## STATUS UPDATE (2026-09-22)
 
-**Done & pushed (dec9c8eb):**
-- ✅ A3 — `scripts/score_outcomes.py` + accuracy window integration + monitor cycle
-- ✅ A5 — `finscrape/analysis/clusters.py` (greedy embedding clusters) +
-  `/api/storylines` (live: 3 storylines incl. Hormuz×3-sources) + frontend
-  `window.__wfStorylines` wiring; 15 tests. 1179 pytest green.
+Verified against the code, not carried forward from the previous note — the
+earlier status block listed A1/A2/A4 as open when all three were already shipped.
 
-**In progress / NOT done yet (pick up here):**
-- ⬜ A1 sector heat panel — endpoint + SectorPanel (highest value first)
-- ⬜ A2 feed momentum badges
-- ⬜ A4 second-order chain in inspector
-- ⬜ B1 right-rail inspector (replaces modal) — biggest UX leap
-- ⬜ B2-B5 keyboard nav, virtualization, tape click, density toggle
-- ⬜ C1-C4, D1-D3, E1-E3, F1-F4 — untouched
+**Shipped:**
+- A1 sector heat — `/api/sectors` (Postgres + local) and `SectorPanel`
+- A2 feed momentum badges — suggestions cached into `window.__wfSuggestions`
+- A3 outcome scorer — `scripts/score_outcomes.py`, monitor integration
+- A4 second-order chains — rendered in the modal and as a `→n` badge on feed rows
+- A5 event clustering — `finscrape/analysis/clusters.py`, `/api/storylines`, feed
+  collapse. The old "member_count shows None" note is stale: `cluster_meta` emits
+  `size` and the frontend reads `size`.
+- C3 source health — `SourceHealthPanel` renders `/api/health`, worst status first;
+  clicking a row filters the feed by that source.
+- B1 inspector rail — the modal is gone. Detail renders in a persistent right rail
+  beside the feed, with the calibrated probability bar attached.
+- B2 keyboard navigation — j/k walk the feed and select as they go, Esc clears.
+  The selection survives a live WS push, and clicking anywhere on a row selects it
+  (the headline link used to swallow the click).
 
-**Environment:** server auto-started on :8080; news monitor may have died with
-the overnight session — restart with
-`FINSCRAPE_HEURISTIC_FALLBACK=1 .venv/Scripts/python.exe main.py monitor --sources rss google_news --interval 900` (background).
-Storyline member_count field shows None — check `cluster_meta` key naming vs
-frontend expectations when wiring A2/B1.
+**Correlation engine — three detectors were shipped but unreachable, now wired:**
+- `velocity_spike` needed a baseline > 0 and the worker never kept per-topic
+  history. The worker now holds a rolling 7-day window sized from the scrape
+  interval; a topic that goes quiet records 0 so its baseline decays, and a new
+  topic is not back-filled so it cannot spike against history it never had.
+- `prediction_leads_news` was fed `topics.get(symbol.lower())` against a
+  topic-keyed dict, so related activity always read 0 — and nothing ever supplied
+  a prediction. Predictions now come from cached AI `ticker_impacts`
+  (`queries.get_recent_predictions`), signed by `direction` rather than by parsing
+  the '-' in a range.
+- `_topic_mentions_for_symbol` returned 0 for every non-energy symbol. It now
+  bridges `TOPIC_KEYWORDS` to the entity index through the keywords both
+  vocabularies share, taking the busiest single topic rather than the sum so one
+  headline in several topics is not counted repeatedly.
+
+**Still open:** B3 feed virtualization, B4 tape click, B5 density/theme, C1 RSSHub,
+C2 earnings calendar, C4 geo-ingestors in the local loop, D1–D3, E1–E3, F1–F4.
+
+**Deployment note:** the live worker is the scheduled `worker.main --once` GitHub
+Action (`.github/workflows/ingest.yml`, :13 and :43) against Neon; the compose
+worker is the self-hosted path. Both now share `_bootstrap` and `_score_outcomes`
+in `worker/main.py`, so setup can no longer reach one and miss the other — which
+is how the backtest came to run in only one of them.

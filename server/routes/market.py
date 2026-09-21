@@ -8,14 +8,20 @@ never block the event loop; failures degrade to empty/502, never crash.
 from __future__ import annotations
 
 import asyncio
+from typing import TYPE_CHECKING, cast
 
 from fastapi import APIRouter, HTTPException, Query
+
+if TYPE_CHECKING:
+    import pandas as pd
 
 router = APIRouter()
 
 
 @router.get("/api/quotes")
-async def quotes(symbols: str = Query(..., description="comma-separated Yahoo symbols")) -> dict:
+async def quotes(
+    symbols: str = Query(..., description="comma-separated Yahoo symbols"),
+) -> dict:
     """Live quotes across all markets. Symbols carry their Yahoo suffix
     ('RELIANCE.NS', '600519.SS'); bare 6-digit codes infer China; bare = US."""
     from finscrape.exchanges import get_global_quotes
@@ -49,8 +55,10 @@ async def candles(
     try:
         import yfinance as yf
 
-        def _fetch() -> object:
-            return yf.Ticker(symbol.strip().upper()).history(period=period, interval=interval)
+        def _fetch() -> pd.DataFrame:
+            return yf.Ticker(symbol.strip().upper()).history(
+                period=period, interval=interval
+            )
 
         hist = await asyncio.to_thread(_fetch)
     except Exception as e:
@@ -58,17 +66,18 @@ async def candles(
 
     if hist is None or hist.empty:
         raise HTTPException(status_code=404, detail=f"no data for {symbol}")
-    return {
-        "symbol": symbol.strip().upper(),
-        "candles": [
-            {
-                "t": ts.isoformat(),
-                "o": round(float(row["Open"]), 4),
-                "h": round(float(row["High"]), 4),
-                "l": round(float(row["Low"]), 4),
-                "c": round(float(row["Close"]), 4),
-                "v": int(row["Volume"]),
-            }
-            for ts, row in hist.iterrows()
-        ],
-    }
+
+    # Each row is read as a plain dict: pandas' `DataFrame.__getitem__` is typed
+    # as a union that may be a Series, which rejects per-cell float()/int().
+    candles = [
+        {
+            "t": cast("pd.Timestamp", ts).isoformat(),
+            "o": round(float(cells["Open"]), 4),
+            "h": round(float(cells["High"]), 4),
+            "l": round(float(cells["Low"]), 4),
+            "c": round(float(cells["Close"]), 4),
+            "v": int(cells["Volume"]),
+        }
+        for ts, cells in ((ts, row.to_dict()) for ts, row in hist.iterrows())
+    ]
+    return {"symbol": symbol.strip().upper(), "candles": candles}

@@ -26,7 +26,9 @@ async def agents_analyze(
         return run_analysis(
             ticker=ticker.strip().upper(),
             debate_rounds=debate_rounds,
-            selected_analysts=tuple(a.strip() for a in analysts.split(",") if a.strip()),
+            selected_analysts=tuple(
+                a.strip() for a in analysts.split(",") if a.strip()
+            ),
             save_reports=False,
         )
 

@@ -116,14 +116,17 @@ async def backtest(
             continue
         outcome = verdict_outcome(ev["verdict"], change)
         correct = None if outcome == "neutral" else (outcome == "correct")
-        await pool.execute(
+        # The SELECT above already skips scored events; this makes the skip authoritative
+        # when two worker runs overlap, and keeps `written` a count of real writes.
+        inserted = await pool.fetchval(
             "INSERT INTO accuracy_outcomes (event_id, ticker, verdict, price_move_pct, correct) "
-            "VALUES ($1, $2, $3, $4, $5)",
+            "VALUES ($1, $2, $3, $4, $5) ON CONFLICT (event_id) DO NOTHING RETURNING id",
             ev["id"],
             tickers[0],
             ev["verdict"],
             change,
             correct,
         )
-        written += 1
+        if inserted is not None:
+            written += 1
     return written

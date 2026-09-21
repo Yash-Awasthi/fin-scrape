@@ -4,6 +4,8 @@ bounds (server.ingest.day_bounds) so feed / dates / stats counts can't disagree.
 
 from __future__ import annotations
 
+import re
+
 import asyncpg
 
 from server.ingest import day_bounds
@@ -126,3 +128,57 @@ async def save_ai_cache(
                     "UPDATE events SET tickers = $1 WHERE id = $2", merged, event_id
                 )
             return merged
+
+
+# --- AI-derived predictions (feeds correlate.detect_prediction_leads_news) ---
+
+_PCT_NUMBER = re.compile(r"\d+(?:\.\d+)?")
+
+
+def impact_shift(impact: dict) -> float | None:
+    """Signed % move one AI ticker-impact predicts, or None when it names none.
+
+    Magnitude is the mean of the numbers in `estimated_pct` ("+3-5%" -> 4). The sign
+    comes from `direction`, never from the string: the '-' in a range is a separator,
+    not a minus. A neutral or unlabelled direction is not a directional call.
+    """
+    if not isinstance(impact, dict):
+        return None
+    numbers = [
+        float(n) for n in _PCT_NUMBER.findall(str(impact.get("estimated_pct", "")))
+    ]
+    if not numbers:
+        return None
+    magnitude = sum(numbers) / len(numbers)
+    direction = str(impact.get("direction", "")).strip().lower()
+    if direction == "up":
+        return magnitude
+    if direction == "down":
+        return -magnitude
+    return None
+
+
+async def get_recent_predictions(
+    pool: asyncpg.Pool, hours: float = 24
+) -> dict[str, float]:
+    """ticker -> strongest predicted % move across cached AI analyses of recent events.
+
+    Best-effort: the cache only holds events someone (or the ingest path) analyzed,
+    so an empty result just means no predictions this window.
+    """
+    rows = await pool.fetch(
+        "SELECT c.result FROM ai_analysis_cache c JOIN events e ON e.id = c.event_id "
+        "WHERE e.timestamp >= now() - ($1 || ' hours')::interval",
+        str(hours),
+    )
+    strongest: dict[str, float] = {}
+    for row in rows:
+        result = row["result"] or {}
+        for impact in result.get("ticker_impacts") or []:
+            shift = impact_shift(impact)
+            if shift is None:
+                continue
+            ticker = str(impact.get("ticker", "")).upper().strip()
+            if ticker and abs(shift) > abs(strongest.get(ticker, 0.0)):
+                strongest[ticker] = shift
+    return strongest

@@ -26,21 +26,40 @@ from finscrape.entity_map import _matches, resolve_company_tickers
 
 logger = logging.getLogger(__name__)
 
-# Lazy-load spaCy to avoid import overhead when not needed
+# Lazy-load spaCy to avoid import overhead when not needed.
 _nlp = None
+# Latches a missing model. Returning None without recording the failure meant every
+# single article re-attempted spacy.load() and re-logged the warning — 200 failed
+# package lookups and 200 log lines for one batch.
+_nlp_unavailable = False
 
 
 def _get_nlp():
-    global _nlp
-    if _nlp is None:
+    global _nlp, _nlp_unavailable
+    if _nlp is None and not _nlp_unavailable:
         try:
             import spacy
             _nlp = spacy.load("en_core_web_sm")
             logger.info("Loaded spaCy model: en_core_web_sm")
         except OSError:
+            _nlp_unavailable = True
             logger.warning("spaCy model not found. Run: python -m spacy download en_core_web_sm")
-            return None
     return _nlp
+
+
+def _merge_entities(
+    keyword: list[ExtractedEntity], ner: list[ExtractedEntity]
+) -> list[ExtractedEntity]:
+    """Keyword hits first (they carry resolved tickers), then NER entities not already
+    present. Deduplicated on (name, type) so one company is never listed twice."""
+    merged = list(keyword)
+    seen = {(e.name.lower(), e.entity_type) for e in merged}
+    for ent in ner:
+        key = (ent.name.lower(), ent.entity_type)
+        if key not in seen:
+            seen.add(key)
+            merged.append(ent)
+    return merged
 
 
 # --- Well-known financial entity mappings ---
@@ -108,14 +127,20 @@ class FinancialNLP:
         full_text = f"{title}. {text}" if title else text
         result = NLPResult()
 
-        # Step 1: spaCy NER — parse once, reuse the doc for temporal extraction below
+        # Step 1: keyword sweep first, then spaCy NER on top — union, not either/or.
+        #
+        # en_core_web_sm is weak on headline text: it tags "GDPR" as ORG in "Google hit
+        # with a fine by the Irish data watchdog" and misses Google entirely. Running NER
+        # *instead of* the keyword sweep therefore lost real tickers (GOOGL, PLTR) and
+        # added none — measured across 221 live feed items. NER now supplements.
+        result.entities = self._keyword_entities(full_text)
         nlp = _get_nlp()
         doc = None
         if nlp:
             doc = nlp(full_text[:10000])  # Cap to avoid memory issues
-            result.entities = self._extract_entities(doc, full_text)
-        else:
-            result.entities = self._fallback_entity_extraction(full_text)
+            result.entities = _merge_entities(
+                result.entities, self._extract_entities(doc, full_text)
+            )
 
         # Step 2: Financial metric extraction (regex-based, doesn't need spaCy)
         result.metrics = self._extract_metrics(full_text)
@@ -174,8 +199,12 @@ class FinancialNLP:
 
         return entities
 
-    def _fallback_entity_extraction(self, text: str) -> list[ExtractedEntity]:
-        """Fallback entity extraction when spaCy is not available."""
+    def _keyword_entities(self, text: str) -> list[ExtractedEntity]:
+        """Company names matched against the curated map, scanned over the whole text.
+
+        Runs always: it is the only path that reliably catches a company named in a
+        headline, since the small spaCy model frequently does not label it at all.
+        """
         entities = []
         text_lower = text.lower()
 
@@ -188,6 +217,10 @@ class FinancialNLP:
                 ))
 
         return entities
+
+    @staticmethod
+    def _entity_key(ent: ExtractedEntity) -> tuple[str, str]:
+        return (ent.name.lower(), ent.entity_type)
 
     def _resolve_ticker(self, entity_name: str, context: str) -> str:
         """Resolve an entity name to a ticker symbol with disambiguation."""

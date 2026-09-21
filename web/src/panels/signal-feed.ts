@@ -12,6 +12,9 @@ import { Panel } from "./panel";
 export class SignalFeedPanel extends Panel {
   private verdictFilter = "ALL";
   private sectorFilter = "";
+  private sourceFilter = "";
+  // Survives re-renders: a live WS push must not silently drop your selection.
+  private activeId: number | null = null;
   private lastEvents: EventOut[] = [];
   // Storylines the user opened stay open across re-renders (WS pushes, filters).
   private readonly expanded = new Set<number>();
@@ -25,6 +28,47 @@ export class SignalFeedPanel extends Panel {
       this.sectorFilter = this.sectorFilter === sector ? "" : sector;
       this.update(this.lastEvents);
     });
+    // Source Health rows do the same, so a failing or noisy feed can be isolated.
+    window.addEventListener("worldfin:select-source", (e) => {
+      const source = (e as CustomEvent<string>).detail;
+      if (!source) return;
+      this.sourceFilter = this.sourceFilter === source ? "" : source;
+      this.update(this.lastEvents);
+    });
+  }
+
+  /** Rows currently rendered and visible, in feed order — what j/k walks. */
+  private navigableRows(): HTMLTableRowElement[] {
+    return [...this.body.querySelectorAll<HTMLTableRowElement>("table.feed tbody tr")].filter(
+      (tr) => !tr.classList.contains("story-expand") && !tr.classList.contains("hidden"),
+    );
+  }
+
+  clearActive(): void {
+    this.activeId = null;
+    for (const tr of this.navigableRows()) tr.classList.remove("active");
+  }
+
+  private markActive(tr: HTMLTableRowElement, id: number): void {
+    for (const row of this.navigableRows()) row.classList.remove("active");
+    tr.classList.add("active");
+    this.activeId = id;
+  }
+
+  /** Move the selection by `delta` rows and select it — the row IS the selection, so
+   *  reading down the feed needs one key, not a key plus Enter. */
+  moveSelection(delta: number): void {
+    const rows = this.navigableRows();
+    if (!rows.length) return;
+    const at = rows.findIndex((tr) => tr.classList.contains("active"));
+    // First press enters at the top going down, at the bottom going up.
+    const next = at === -1 ? (delta > 0 ? 0 : rows.length - 1) : at + delta;
+    const target = rows[Math.max(0, Math.min(rows.length - 1, next))];
+    const id = Number(target.dataset.eventId);
+    this.markActive(target, id);
+    target.scrollIntoView({ block: "nearest" });
+    const event = this.lastEvents.find((e) => e.id === id);
+    if (event) this.onSelect(event);
   }
 
   update(events: EventOut[]): void {
@@ -40,6 +84,9 @@ export class SignalFeedPanel extends Panel {
       (this.sectorFilter
         ? `<button class="ffilter sector active" data-sector="${escapeHtml(this.sectorFilter)}" title="clear sector filter">⚡ ${escapeHtml(this.sectorFilter)} ✕</button>`
         : "") +
+      (this.sourceFilter
+        ? `<button class="ffilter sector active" data-source="${escapeHtml(this.sourceFilter)}" title="clear source filter">📡 ${escapeHtml(this.sourceFilter)} ✕</button>`
+        : "") +
       verdicts
         .map(
           (v) =>
@@ -51,6 +98,12 @@ export class SignalFeedPanel extends Panel {
       const sectorBtn = (e.target as HTMLElement).closest<HTMLElement>("[data-sector]");
       if (sectorBtn) {
         this.sectorFilter = "";
+        this.update(this.lastEvents);
+        return;
+      }
+      const sourceBtn = (e.target as HTMLElement).closest<HTMLElement>("[data-source]");
+      if (sourceBtn) {
+        this.sourceFilter = "";
         this.update(this.lastEvents);
         return;
       }
@@ -76,10 +129,14 @@ export class SignalFeedPanel extends Panel {
       this.verdictFilter === "ALL"
         ? events
         : events.filter((e) => e.verdict === this.verdictFilter);
-    const shown = this.sectorFilter ? filtered.filter(matchesSector) : filtered;
+    const bySector = this.sectorFilter ? filtered.filter(matchesSector) : filtered;
+    const shown = this.sourceFilter
+      ? bySector.filter((e) => (e.sources ?? []).includes(this.sourceFilter))
+      : bySector;
 
     if (!shown.length) {
-      tbody.innerHTML = `<tr><td class="empty">No signals in ${escapeHtml(this.sectorFilter || this.verdictFilter)}.</td></tr>`;
+      const lens = this.sourceFilter || this.sectorFilter || this.verdictFilter;
+      tbody.innerHTML = `<tr><td class="empty">No signals in ${escapeHtml(lens)}.</td></tr>`;
       table.append(tbody);
       return table;
     }
@@ -91,7 +148,7 @@ export class SignalFeedPanel extends Panel {
     // the lead row and hide the rest behind its expander — never hide a row
     // whose lead isn't in this view (stale cache or day-scoped load).
     const storylines = window.__wfStorylines ?? [];
-    const collapse = this.verdictFilter === "ALL" && !this.sectorFilter;
+    const collapse = this.verdictFilter === "ALL" && !this.sectorFilter && !this.sourceFilter;
     const leadOf = new Map<number, Storyline>(); // lead event id → cluster
     const hideIds = new Set<number>(); // member ids rendered under their lead
     if (collapse) {
@@ -141,6 +198,8 @@ export class SignalFeedPanel extends Panel {
   private rowFor(e: EventOut): HTMLTableRowElement {
     const tr = document.createElement("tr");
     tr.tabIndex = 0;
+    tr.dataset.eventId = String(e.id); // j/k resolves the row back to its event
+    if (e.id === this.activeId) tr.classList.add("active");
     const link = e.articles?.[0];
     const subject = link
       ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener" title="open source article">${escapeHtml(e.subject)}</a>`
@@ -161,10 +220,13 @@ export class SignalFeedPanel extends Panel {
       `${e.verdict} <b>${e.signal_score >= 0 ? "+" : ""}${e.signal_score}</b>` +
       `<span class="row-meta">${badge}${chainBadge}${Math.round(e.confidence * 100)}% · ${escapeHtml(e.tickers.slice(0, 4).join(", ")) || "—"}</span>` +
       `<div class="subj">${subject}</div>${reasoning}</td>`;
-    tr.addEventListener("click", (ev) => {
-      // links open the source; text selection means the user is copying, not clicking
+    tr.addEventListener("click", () => {
+      // Text selection means the user is copying, not clicking. Otherwise the whole
+      // row selects — including the headline link, which still opens the article in
+      // its own tab, so a click can never land on a row and select nothing.
       if (window.getSelection()?.toString()) return;
-      if (!(ev.target as HTMLElement).closest("a")) this.onSelect(e);
+      this.markActive(tr, e.id); // j/k continues from wherever the click landed
+      this.onSelect(e);
     });
     return tr;
   }

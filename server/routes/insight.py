@@ -32,17 +32,23 @@ async def _outcomes_from_pool() -> list[dict[str, Any]]:
     for r in rows:
         sources = []
         try:
-            sources = json.loads(r["sources"]) if isinstance(r["sources"], str) else (r["sources"] or [])
+            sources = (
+                json.loads(r["sources"])
+                if isinstance(r["sources"], str)
+                else (r["sources"] or [])
+            )
         except (ValueError, TypeError):
             sources = []
-        outcomes.append({
-            "verdict": r["verdict"],
-            "outcome": "correct" if r["correct"] else "incorrect",
-            "confidence": r["confidence"],
-            "source": (sources[0].split("/")[-1] if sources else "unknown"),
-            "event_type": r["event_type"] or "other",
-            "checked_at": r["checked_at"].isoformat() if r["checked_at"] else None,
-        })
+        outcomes.append(
+            {
+                "verdict": r["verdict"],
+                "outcome": "correct" if r["correct"] else "incorrect",
+                "confidence": r["confidence"],
+                "source": (sources[0].split("/")[-1] if sources else "unknown"),
+                "event_type": r["event_type"] or "other",
+                "checked_at": r["checked_at"].isoformat() if r["checked_at"] else None,
+            }
+        )
     return outcomes
 
 
@@ -66,8 +72,8 @@ async def predict_event(event_id: int) -> dict:
 
     ev = await db.pool().fetchrow(
         """
-        SELECT id, subject, verdict, signal_score, confidence, event_type,
-               sources, tickers
+        SELECT id, subject, reasoning, verdict, signal_score, confidence,
+               event_type, sources, tickers
         FROM events WHERE id = $1
         """,
         event_id,
@@ -78,20 +84,30 @@ async def predict_event(event_id: int) -> dict:
     sources: list[str] = []
     try:
         raw_sources = ev["sources"]
-        sources = json.loads(raw_sources) if isinstance(raw_sources, str) else (raw_sources or [])
+        sources = (
+            json.loads(raw_sources)
+            if isinstance(raw_sources, str)
+            else (raw_sources or [])
+        )
     except (ValueError, TypeError):
         sources = []
-    source = (sources[0].split("/")[-1] if sources else "local")
+    source = sources[0].split("/")[-1] if sources else "local"
     tickers: list[str] = []
     try:
         raw_tickers = ev["tickers"]
-        tickers = json.loads(raw_tickers) if isinstance(raw_tickers, str) else (raw_tickers or [])
+        tickers = (
+            json.loads(raw_tickers)
+            if isinstance(raw_tickers, str)
+            else (raw_tickers or [])
+        )
     except (ValueError, TypeError):
         tickers = []
 
     outcomes = await _outcomes_from_pool()
     result = predict(
-        text=f"{ev['subject']}. {ev['reasoning']}" if ev["reasoning"] else ev["subject"],
+        text=f"{ev['subject']}. {ev['reasoning']}"
+        if ev["reasoning"]
+        else ev["subject"],
         verdict=ev["verdict"],
         confidence=float(ev["confidence"] or 0.5),
         source=source,

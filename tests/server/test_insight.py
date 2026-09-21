@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from datetime import datetime, timezone
 
 import pytest
@@ -16,8 +17,20 @@ from fastapi.testclient import TestClient  # noqa: E402
 from server.routes import insight  # noqa: E402
 
 
+def _selected_columns(query: str) -> set[str]:
+    """Column names between SELECT and FROM, stripped of table prefixes and aliases."""
+    body = re.split(r"\bFROM\b", query, flags=re.IGNORECASE)[0]
+    body = re.sub(r"^\s*SELECT\s+", "", body, flags=re.IGNORECASE)
+    names = set()
+    for part in body.split(","):
+        token = part.strip().split()[-1] if part.strip() else ""
+        if token:
+            names.add(token.rsplit(".", 1)[-1].lower())
+    return names
+
+
 class FakeRow(dict):
-    """asyncpg Record stand-in: dict with key access."""
+    """asyncpg Record stand-in: reading a column the query did not select is a KeyError."""
 
     def __getitem__(self, key):
         return dict.__getitem__(self, key)
@@ -25,33 +38,58 @@ class FakeRow(dict):
 
 class FakePool:
     def __init__(self, rows: list[dict], outcome_rows: list[dict]):
-        self._rows = [FakeRow(r) for r in rows]
-        self._outcomes = [FakeRow(r) for r in outcome_rows]
+        self._rows = rows
+        self._outcomes = outcome_rows
 
-    async def fetchrow(self, _query, *args):
+    @staticmethod
+    def _project(row: dict, query: str) -> FakeRow:
+        """Only the selected columns come back — a Record has no others to read."""
+        cols = _selected_columns(query)
+        return FakeRow({k: v for k, v in row.items() if k.lower() in cols})
+
+    async def fetchrow(self, query, *args):
         for row in self._rows:
             if row["id"] == args[0]:
-                return row
+                return self._project(row, query)
         return None
 
-    async def fetch(self, _query, *args):
-        return self._outcomes
+    async def fetch(self, query, *args):
+        return [self._project(r, query) for r in self._outcomes]
 
 
 @pytest.fixture()
 def client(monkeypatch):
     now = datetime.now(timezone.utc)
-    event_rows = [{
-        "id": 7, "subject": "nvda earnings beat", "verdict": "INVEST",
-        "signal_score": 4, "confidence": 0.8, "event_type": "earnings",
-        "sources": json.dumps(["cnbc", "rss"]), "tickers": json.dumps(["NVDA"]),
-        "reasoning": "strong data center demand",
-    }]
+    event_rows = [
+        {
+            "id": 7,
+            "subject": "nvda earnings beat",
+            "verdict": "INVEST",
+            "signal_score": 4,
+            "confidence": 0.8,
+            "event_type": "earnings",
+            "sources": json.dumps(["cnbc", "rss"]),
+            "tickers": json.dumps(["NVDA"]),
+            "reasoning": "strong data center demand",
+        }
+    ]
     outcome_rows = [
-        {"verdict": "INVEST", "correct": True, "checked_at": now,
-         "confidence": 0.8, "event_type": "earnings", "sources": json.dumps(["cnbc"])},
-        {"verdict": "INVEST", "correct": True, "checked_at": now,
-         "confidence": 0.7, "event_type": "earnings", "sources": json.dumps(["rss"])},
+        {
+            "verdict": "INVEST",
+            "correct": True,
+            "checked_at": now,
+            "confidence": 0.8,
+            "event_type": "earnings",
+            "sources": json.dumps(["cnbc"]),
+        },
+        {
+            "verdict": "INVEST",
+            "correct": True,
+            "checked_at": now,
+            "confidence": 0.7,
+            "event_type": "earnings",
+            "sources": json.dumps(["rss"]),
+        },
     ]
     fake = FakePool(event_rows, outcome_rows)
     monkeypatch.setattr(insight.db, "pool", lambda: fake)

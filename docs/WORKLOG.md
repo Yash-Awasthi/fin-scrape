@@ -3,6 +3,44 @@
 *Concurrent sessions work this repo. Commit small, commit often, never reset.
 A stash (`multi_model` removal WIP) belongs to another session — leave it.*
 
+## State (2026-09-22, audit + detector revival)
+
+Working tree only — nothing committed. All gates green: ruff clean, pyright 0
+errors, selfcheck PASSED, 1210 pytest passed / 5 skipped, web typecheck + 15
+vitest + build + 3 Playwright e2e.
+
+**Bugs fixed.** `/api/predict/{id}` 500'd on every call — the route read
+`ev["reasoning"]` but the SELECT never fetched it, and the test's fake Record was
+a plain dict carrying every key. The fake now projects rows to the query's SELECT
+list, so an unselected column raises like real asyncpg. `/api/sectors` overwrote
+instead of merging when two labels normalized to one sector (`_SECTOR_ALIASES`
+maps finance→financials), and merged only counts from the NLP fallback, leaving
+bull/bear ratios and top tickers stale. `detect_flow_price_divergence` gated on
+the signed change while computing `abs()` one line above, so every downward move
+was ignored; its `pipeline_signal_count` gate read a counter summed before
+`detect_flow_drop` ran, so it was always 0. The always-on worker never scheduled
+`run_backtest`, so `accuracy_outcomes` stayed empty and the whole trust layer had
+nothing to report under compose. `selfcheck`'s "sane defaults" assertion read the
+developer's shell (`OPENAI_BASE_URL` set → `has_llm` true) — those were the two
+committed-tree test failures.
+
+**Security.** The Telegram webhook took any body from a public URL: anyone could
+write the subscriber file and make the bot message arbitrary chats. It now
+requires `TELEGRAM_WEBHOOK_SECRET` via `X-Telegram-Bot-Api-Secret-Token`
+(constant-time), always answering 200 so a bad sender learns nothing. **An
+existing Telegram deployment must set the secret and re-register with
+`setWebhook(secret_token=...)` or commands stop.** The two vendored `/api/v1`
+signal-ingest POSTs mutated shared analyser state with no key; `_guard_mutating_routes`
+now applies the ingest key to write methods only, leaving reads open.
+
+**Correctness.** Migration `0002` collapses duplicate `accuracy_outcomes` rows and
+adds a unique index on `event_id`, so the backtest's `NOT EXISTS` skip is backed
+by the database instead of a read-then-write race across the two worker paths;
+`ai_analysis_cache(event_id)` gets the index its new join needs. The Redis pubsub
+subscriber reconnects instead of dying permanently on one blip.
+
+See PLAN_TOMORROW.md for the corrected feature status and what remains.
+
 ## State (2026-09-06, night run)
 
 - Branch `fresh`, everything pushed through `7d0ad042`.

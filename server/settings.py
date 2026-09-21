@@ -12,6 +12,10 @@ from functools import lru_cache
 from pydantic import AliasChoices, Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+# Repository-published value, present verbatim in .env.example and as the docker-compose
+# fallback; startup warns during any deployment that leaves FINSCRAPE_API_KEY unset.
+DEFAULT_API_KEY = "local-dev-key"
+
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(
@@ -30,11 +34,16 @@ class Settings(BaseSettings):
         default=True, validation_alias="WORLDFIN_RUN_MIGRATIONS"
     )
 
-    # --- Ingest auth (the 4 mutating routes) ---
-    api_key: str = Field(default="local-dev-key", validation_alias="FINSCRAPE_API_KEY")
+    # --- Ingest auth (every mutating route: POST /api/events, the portfolio
+    # routes, and the vendored /api/v1 signal-ingest routes) ---
+    api_key: str = Field(default=DEFAULT_API_KEY, validation_alias="FINSCRAPE_API_KEY")
 
     # --- LLM (shared with finscrape: BYOK or local Ollama) ---
     openai_base_url: str = Field(default="", validation_alias="OPENAI_BASE_URL")
+    # Bearer token for that base URL. Local Ollama ignores it, but any hosted
+    # OpenAI-compatible endpoint (LiteLLM, vLLM behind auth, a proxy) rejects the
+    # request without it — finscrape.analysis.ai_client has always read this.
+    openai_api_key: str = Field(default="", validation_alias="OPENAI_API_KEY")
     openrouter_api_key: str = Field(default="", validation_alias="OPENROUTER_API_KEY")
     ai_model: str = Field(default="auto", validation_alias="FINSCRAPE_MODEL")
 
@@ -44,6 +53,12 @@ class Settings(BaseSettings):
     data_dir: str = Field(default="data", validation_alias="WORLDFIN_DATA_DIR")
     # Telegram bot token for outbound alerts + the inbound webhook (Phase 13).
     telegram_bot_token: str = Field(default="", validation_alias="TELEGRAM_BOT_TOKEN")
+    # Shared secret echoed by Telegram in X-Telegram-Bot-Api-Secret-Token. The webhook
+    # URL is public and its body is attacker-controllable, so commands are only acted
+    # on when this is set and matches — register it with setWebhook(secret_token=...).
+    telegram_webhook_secret: str = Field(
+        default="", validation_alias="TELEGRAM_WEBHOOK_SECRET"
+    )
 
     # --- Feature flags (default off; flip on as phases land) ---
     enable_council: bool = Field(
@@ -90,6 +105,21 @@ class Settings(BaseSettings):
     # Port the worker exposes its Prometheus /metrics on (the API serves /metrics on
     # its own HTTP port). 0 disables the worker metrics server.
     metrics_port: int = Field(default=9100, validation_alias="WORLDFIN_METRICS_PORT")
+
+    @property
+    def uses_default_api_key(self) -> bool:
+        """True while the mutating routes still accept the published default key."""
+        return self.api_key == DEFAULT_API_KEY
+
+    @property
+    def llm_model_unset(self) -> bool:
+        """True when an OpenAI-compatible backend is configured but no model is named.
+
+        "auto" is a placeholder, not a model id — no backend resolves it, so every call
+        404s and `analyze_event` quietly returns its heuristic instead. Set
+        FINSCRAPE_MODEL to a real id from the backend's /models list.
+        """
+        return bool(self.openai_base_url) and self.ai_model in ("", "auto")
 
     @property
     def has_llm(self) -> bool:

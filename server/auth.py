@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import hmac
+
 from fastapi import Header, HTTPException
 
 from server.settings import get_settings
@@ -15,5 +17,10 @@ async def require_api_key(
     supplied = x_api_key
     if not supplied and authorization and authorization.lower().startswith("bearer "):
         supplied = authorization[7:].strip()
-    if not supplied or supplied != get_settings().api_key:
+    # Constant-time compare: a plain `!=` leaks the matching prefix length through
+    # response timing. Encoded first so a non-ASCII key cannot raise out of compare.
+    expected = get_settings().api_key
+    if not supplied or not hmac.compare_digest(
+        supplied.encode("utf-8"), expected.encode("utf-8")
+    ):
         raise HTTPException(status_code=401, detail="Unauthorized")

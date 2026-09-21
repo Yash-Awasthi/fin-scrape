@@ -213,3 +213,88 @@ def test_dedupe_via_seen_set():
     # second run with the same seen set suppresses the already-emitted signals
     sigs2, _ = analyze_correlations(items, prev_snapshot={"topics": {}}, seen=seen)
     assert sigs2 == []
+
+
+def test_flow_price_divergence_fires_on_a_drop():
+    """A crash with no matching coverage is the divergence the detector exists for —
+    gating on the signed change silently ignored every downward move."""
+    sig = detect_flow_price_divergence(
+        Market("CL=F", -2.0), mentions=0, pipeline_signal_count=0
+    )
+    assert sig and sig.type == "flow_price_divergence"
+    assert sig.value == -2.0
+    assert sig.confidence == pytest.approx(0.65)  # 0.4 + |−2|/8
+
+
+def test_flow_drop_suppresses_flow_price_divergence_end_to_end():
+    """The pipeline_signal_count gate is only real if flow_drop has already run.
+
+    Only the seed title carries an energy keyword, so the topic-mention gate stays
+    open (1 < 2) and flow_drop is the one thing that can suppress the divergence.
+    """
+    base = 9000.0
+    items = [
+        _item("pipeline supply halt reported", "wire", base, source="w"),
+        _item("supply halt reported today", "gov", base - 10, source="g"),
+    ]
+    sigs, _ = analyze_correlations(
+        items, markets=[Market("CL=F", 4.0)], prev_snapshot={"topics": {}}
+    )
+    types = {s.type for s in sigs}
+    assert "flow_drop" in types
+    assert "flow_price_divergence" not in types
+
+    # Same market move, no supply story in the news -> the divergence does fire.
+    quiet = [_item("Local council approves new bike lane", "mainstream", base)]
+    sigs2, _ = analyze_correlations(
+        quiet, markets=[Market("CL=F", 4.0)], prev_snapshot={"topics": {}}
+    )
+    assert "flow_price_divergence" in {s.type for s in sigs2}
+
+
+# --- symbol → topic bridge (replaces the v1 stub that returned 0 off-energy) ---
+def test_topic_mentions_uses_the_entity_index_beyond_energy():
+    from server.correlate import _topic_mentions_for_symbol
+
+    topics = {"energy": {"velocity": 5}, "conflict": {"velocity": 3}}
+    assert _topic_mentions_for_symbol("LMT", topics) == 3  # defense → conflict
+    assert _topic_mentions_for_symbol("FDX", {"shipping": {"velocity": 4}}) == 4
+    assert _topic_mentions_for_symbol("AAPL", topics) == 0  # no mapped topic
+
+
+def test_topic_mentions_takes_the_busiest_topic_not_the_sum():
+    """XOM sits in several topics and one headline can feed all of them; summing would
+    count it repeatedly and over-suppress the divergence detectors."""
+    from server.correlate import _topic_mentions_for_symbol, _topics_by_ticker
+
+    assert {"energy", "conflict"} <= _topics_by_ticker()["XOM"]
+    topics = {"energy": {"velocity": 5}, "conflict": {"velocity": 3}}
+    assert _topic_mentions_for_symbol("XOM", topics) == 5
+
+
+def test_energy_futures_keep_their_topic_without_an_entity_entry():
+    from server.correlate import _topic_mentions_for_symbol, _topics_by_ticker
+
+    assert "CL=F" not in _topics_by_ticker()  # futures carry no keywords of their own
+    assert _topic_mentions_for_symbol("CL=F", {"energy": {"velocity": 7}}) == 7
+
+
+def test_prediction_leads_news_is_reachable_through_the_orchestrator():
+    """`related` was looked up by ticker in a topic-keyed dict, so it was always 0 and
+    the detector could never be suppressed — nor was it ever fed a prediction."""
+    quiet = [_item("Local council approves new bike lane", "mainstream", 9000.0)]
+    sigs, _ = analyze_correlations(
+        quiet, predictions=[Prediction("LMT", 10.0)], prev_snapshot={"topics": {}}
+    )
+    assert "prediction_leads_news" in {s.type for s in sigs}
+
+    # Heavy conflict coverage means the prediction is not leading the story.
+    busy = [
+        _item("missile strike reported in region", "wire", 9000.0, source="w"),
+        _item("military attack escalates overnight", "gov", 8990.0, source="g"),
+        _item("troops invasion widens war front", "intel", 8980.0, source="i"),
+    ]
+    sigs2, _ = analyze_correlations(
+        busy, predictions=[Prediction("LMT", 10.0)], prev_snapshot={"topics": {}}
+    )
+    assert "prediction_leads_news" not in {s.type for s in sigs2}

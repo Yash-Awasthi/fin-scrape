@@ -1,7 +1,7 @@
 # WorldFin ingestion worker — multi-stage, non-root (Phase 10).
-# Heavier than the api image: it needs the full finscrape brain (scrapling engine,
-# feedparser, yfinance, spacy). The build stage carries the compilers + dev headers;
-# the runtime stage keeps only the venv + the spacy model, so build tools don't ship.
+# Heavier than the api image: it needs the finscrape brain (scrapling engine,
+# feedparser, yfinance). The build stage carries the compilers + dev headers; the
+# runtime stage keeps only the venv, so build tools don't ship.
 FROM python:3.13-slim AS build
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential libxml2-dev libxslt1-dev \
@@ -12,8 +12,10 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt \
     && pip install --no-cache-dir asyncpg "pydantic>=2.6" "pydantic-settings>=2.2" \
        "apscheduler>=3.10" "prometheus-client>=0.20"
-# Optional but recommended for full NER; the worker degrades gracefully without it.
-RUN python -m spacy download en_core_web_sm || true
+# No spacy here on purpose: the image installs only what the worker imports at module
+# level, and FinancialNLP loads its model lazily, falling back to keyword extraction.
+# The `spacy download` this line used to run could never succeed — spacy is not
+# installed — so it burned a layer to swallow its own failure.
 
 FROM python:3.13-slim
 ENV PATH="/opt/venv/bin:$PATH" \

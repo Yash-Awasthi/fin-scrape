@@ -57,14 +57,17 @@ gov + intel agree on the Red Sea disruption) and a **convergence** signal (Hormu
 differentiator: one event surfacing across independent sources inside a tight time window.
 
 **3. Click an event → the judgment chain (≈90s).** Click the **Hormuz closure** row in the
-SignalFeed (or its globe point) to open the **SignalModal**. This is the core thesis on one
-screen:
+SignalFeed (or its globe point) and read it in the **Inspector** rail on the right — or press
+`j` / `k` to walk the feed, which fills the rail as you go. The feed stays visible beside it.
+This is the core thesis on one screen:
 - **Verdict + signal score** (PULL_OUT, −4) with the reasoning.
 - **Affected entities, role-tagged:** Oil majors *(primary)*, Shipping lines *(supplier)*,
   Defense contractors *(competitor)*, Marine insurers *(regulator)* — each with a
   directional impact. A geopolitics headline resolved into **who it moves**.
 - **Second-order effects:** war-risk premiums, refiner scramble, LNG spillover.
-- Click **Analyze** for on-demand AI expansion (uses your LLM backend if configured).
+- **Calibrated probability** that the verdict's direction realizes, with its data tier and
+  sample size — the number is auditable, not asserted.
+- Click **↻ Re-run AI analysis** for on-demand expansion (uses your LLM backend if configured).
 
 **4. The trust layer — AccuracyPanel (≈60s).** This is what convinces a company. The
 **AccuracyPanel** shows the historical **hit-rate** (~87% on the seeded window), a

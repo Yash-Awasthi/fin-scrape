@@ -16,11 +16,18 @@ import asyncpg
 from finscrape.logging_config import correlation_id
 from finscrape.market_data import get_market_data
 from finscrape.pipeline import FinScrapePipeline
-from server.correlate import Market, NewsItem, analyze_correlations
+from server.correlate import (
+    VELOCITY_WINDOW_DAYS,
+    Market,
+    NewsItem,
+    Prediction,
+    analyze_correlations,
+)
 from server.geocode import geocode_event
 from server.ingest import ingest_events
 from server.obs import record_ingest
 from server.pubsub import publish
+from server.queries import get_recent_predictions
 from server.settings import get_settings
 from worker.health import (
     finish_scrape_run,
@@ -68,6 +75,9 @@ class Worker:
         # Correlation state persists across cycles (first cycle emits nothing).
         self._corr_snapshot: dict | None = None
         self._corr_seen: set[str] = set()
+        # Per-topic mention counts from previous cycles. detect_velocity_spike needs a
+        # non-zero baseline to fire at all, so without this it can never emit.
+        self._corr_velocity: dict[str, list[int]] = {}
 
     def _analyze_blocking(self, source_name: str, items: list[Item]) -> list[dict]:
         """Thread body: articles -> ingest dicts (FinEvent.to_dict() + geo)."""
@@ -204,11 +214,37 @@ class Worker:
         signals, snapshot = analyze_correlations(
             items,
             markets=markets,
+            predictions=await self._recent_predictions(lookback_hours),
             prev_snapshot=self._corr_snapshot,
             seen=self._corr_seen,
+            velocity_history=self._corr_velocity,
         )
         self._corr_snapshot = snapshot
+        self._record_velocity(snapshot)
         await persist_correlations(self.pool, signals)
         if signals:
             log.info("correlations: emitted %d signals", len(signals))
         return len(signals)
+
+    async def _recent_predictions(self, lookback_hours: int) -> list[Prediction]:
+        """AI-estimated moves for recently analysed events → detect_prediction_leads_news.
+
+        Best-effort: only events that were actually analysed have a cached estimate, so
+        a quiet window simply yields no predictions.
+        """
+        strongest = await get_recent_predictions(self.pool, lookback_hours)
+        return [Prediction(symbol=sym, shift=shift) for sym, shift in strongest.items()]
+
+    def _record_velocity(self, snapshot: dict) -> None:
+        """Append this cycle's topic velocities to the rolling baseline window.
+
+        A topic absent this cycle records 0 so a story that goes quiet decays out of
+        its own baseline instead of holding the spike threshold high forever.
+        """
+        interval = max(1, get_settings().worker_interval_minutes)
+        window = max(2, int(VELOCITY_WINDOW_DAYS * 24 * 60 / interval))
+        topics = snapshot.get("topics", {})
+        for topic in set(self._corr_velocity) | set(topics):
+            hist = self._corr_velocity.setdefault(topic, [])
+            hist.append(int(topics.get(topic, 0)))
+            del hist[:-window]

@@ -190,11 +190,15 @@ implemented in `finscrape/analysis/nlp.py` despite earlier documentation claimin
   flagging), `tests/test_lessons.py` (`get_lessons` read-back, its prompt wiring into the judge only).
 - DB-dependent paths are **skip-ready** integration tests (`tests/server/test_*integration.py`)
   that auto-skip without Postgres and run under `make up` / CI (postgres service).
-- `make lint` / `make fmt-check` / `make selfcheck` / `make test` — 737 tests, 5 skip without Postgres.
+- `make lint` / `make fmt-check` / `make selfcheck` / `make test` — 1212 tests, 5 skip without Postgres.
 
 ## Known gaps / deferred
 
 - Live `make up` verify (DB+LLM) pending docker; integration tests are ready.
 - Worker `get_market_data` (`yf.download`) per-article cost → Phase 8 cache/stub.
-- `find_news_for_market_symbol` stubbed → `[]` (port WM entity index for `explained_market_move`).
-- Worker→client WS fan-out needs Redis (Phase 8). Portfolio + telegram routes: Phase 1 tail.
+- Worker→client WS fan-out needs Redis: `server/pubsub.py` publishes and subscribes when
+  `WORLDFIN_REDIS_URL` is set and no-ops otherwise, so single-process runs need nothing.
+- `detect_prediction_leads_news` reads AI ticker impacts, so it only sees events that were
+  actually analysed; the worker ingest path does not analyse on insert.
+- `_topic_mentions_for_symbol` covers the 25 tickers the entity index and the topic keyword
+  sets share. A symbol outside that overlap still reads zero related coverage.

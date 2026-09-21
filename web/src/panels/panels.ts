@@ -7,6 +7,7 @@ import {
   type DashboardStats,
   type DateCount,
   type FeedInfo,
+  type HealthResponse,
   type MarketTicker,
   type Portfolio,
   type RssItem,
@@ -15,7 +16,7 @@ import {
   type Suggestion,
 } from "../api";
 import { CHANNELS, countries, embedUrl } from "../data/channels";
-import { escapeHtml } from "../util";
+import { escapeHtml, timeAgo } from "../util";
 import { type Candle, type Prediction, type Quote } from "../api";
 import { getJSON } from "../api";
 import { verdictColor } from "../api";
@@ -622,8 +623,16 @@ export class AlertsPanel extends Panel {
         )
         .join("");
       this.setContent(`<div class="alert-list">${rows}</div>`);
-    } catch {
-      this.setContent('<p class="empty">Alerts unavailable.</p>');
+    } catch (err) {
+      // The worker builds its pipeline with enable_alerts=False and Postgres has no
+      // alerts table, so /api/alerts exists only on the local SQLite server. Say which
+      // it is, rather than showing the same "unavailable" for a real failure.
+      const missing = err instanceof Error && err.message.includes("404");
+      this.setContent(
+        missing
+          ? '<p class="empty">Fired alerts are a local-run view. In the hosted deployment alerts go out over Telegram instead.</p>'
+          : '<p class="empty">Alerts unavailable.</p>',
+      );
     }
   }
 }
@@ -865,5 +874,64 @@ export class LiveTVPanel extends Panel {
     });
     fill();
     this.setContent(wrap);
+  }
+}
+
+// Per-source freshness. The worker has always recorded it and /api/health has always
+// served it; without this panel a feed could go dark and nothing in the UI would say so.
+const SOURCE_STATE: Record<string, { dot: string; label: string }> = {
+  OK: { dot: "ok", label: "live" },
+  STALE: { dot: "warn", label: "stale" },
+  EMPTY: { dot: "warn", label: "empty" },
+  WARN: { dot: "bad", label: "failing" },
+  UNKNOWN: { dot: "idle", label: "unknown" },
+};
+
+export class SourceHealthPanel extends Panel {
+  constructor() {
+    super({ id: "sources", title: "Source Health", w: 4, h: 5 });
+  }
+
+  async load(): Promise<void> {
+    try {
+      this.render(await api.health());
+    } catch {
+      this.setContent('<p class="empty">Health unavailable.</p>');
+    }
+  }
+
+  private render(health: HealthResponse): void {
+    const sources = [...health.sources].sort((a, b) => {
+      const rank = (s: string) => (s === "WARN" ? 0 : s === "STALE" || s === "EMPTY" ? 1 : 2);
+      return rank(a.status) - rank(b.status) || a.source.localeCompare(b.source);
+    });
+    const db = health.db ? "" : '<li class="src-row"><span class="src-dot bad"></span><b>database</b><span class="muted">unreachable</span></li>';
+    if (!sources.length && !db) {
+      this.setContent('<p class="empty">No sources have reported yet.</p>');
+      return;
+    }
+    const rows = sources
+      .map((s) => {
+        const state = SOURCE_STATE[s.status] ?? SOURCE_STATE.UNKNOWN;
+        return (
+          `<li class="src-row" data-source="${escapeHtml(s.source)}" title="${escapeHtml(s.status)} — click to filter the feed">` +
+          `<span class="src-dot ${state.dot}"></span>` +
+          `<b>${escapeHtml(s.source)}</b>` +
+          `<span class="muted">${escapeHtml(state.label)} · ${s.record_count} · ${timeAgo(s.fetched_at)}</span>` +
+          `</li>`
+        );
+      })
+      .join("");
+    const list = document.createElement("ul");
+    list.className = "src-list";
+    list.innerHTML = `${db}${rows}`;
+    list.addEventListener("click", (e) => {
+      const source = (e.target as HTMLElement).closest<HTMLElement>("[data-source]")?.dataset.source;
+      if (source) {
+        window.dispatchEvent(new CustomEvent("worldfin:select-source", { detail: source }));
+        document.querySelector<HTMLElement>('.panel[data-id="feed"]')?.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+    this.setContent(list);
   }
 }

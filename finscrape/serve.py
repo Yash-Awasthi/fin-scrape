@@ -12,10 +12,11 @@ Run:
 from __future__ import annotations
 
 import json
+import os
 import re
 import sqlite3
 from collections import Counter
-from datetime import UTC
+from datetime import UTC, datetime
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
@@ -746,14 +747,75 @@ async def alerts(limit: int = Query(30, ge=1, le=200)) -> dict:
     return {"alerts": out}
 
 
+# Mirrors worker.health.derive_status: freshness is read from the data, never stored,
+# so a source that simply stopped reporting goes STALE without anyone writing a row.
+_LOCAL_STALE_AFTER_S = 60 * 60
+
+
+def _local_source_health(conn: sqlite3.Connection) -> list[dict]:
+    """Per-source freshness derived from stored events — the local half of /api/health.
+
+    The local pipeline keeps no source_health table, so counts and last-seen come from
+    the events themselves. Returned empty rather than raising if the column is absent.
+    """
+    try:
+        rows = conn.execute(
+            "SELECT sources, created_at FROM events "
+            "WHERE created_at >= datetime('now', '-7 days')"
+        ).fetchall()
+    except sqlite3.Error:
+        return []
+
+    seen: dict[str, dict] = {}
+    for row in rows:
+        raw = row["sources"]
+        try:
+            names = json.loads(raw) if isinstance(raw, str) else (raw or [])
+        except ValueError:
+            continue
+        for name in names:
+            if not name:
+                continue
+            entry = seen.setdefault(str(name), {"record_count": 0, "fetched_at": ""})
+            entry["record_count"] += 1
+            if (row["created_at"] or "") > entry["fetched_at"]:
+                entry["fetched_at"] = row["created_at"] or ""
+
+    now = datetime.now(UTC)
+    out = []
+    for name, entry in sorted(seen.items()):
+        age = None
+        try:
+            last = datetime.fromisoformat(entry["fetched_at"])
+            if last.tzinfo is None:
+                last = last.replace(tzinfo=UTC)
+            age = (now - last).total_seconds()
+        except ValueError:
+            pass
+        status = "STALE" if age is not None and age > _LOCAL_STALE_AFTER_S else "OK"
+        out.append(
+            {
+                "source": name,
+                "status": status,
+                "fetched_at": entry["fetched_at"] or None,
+                "record_count": entry["record_count"],
+            }
+        )
+    return out
+
+
 @app.get("/api/health")
 async def health() -> dict:
+    """Same shape as the production /api/health, including per-source freshness."""
+    sources = _local_source_health(_db()) if _DB.exists() else []
     return {
-        "status": "ok",
+        "status": "ok" if _DB.exists() else "degraded",
         "mode": "local",
         "db": _DB.exists(),
-        "llm": True,
-        "sources": [],
+        # An LLM backend is whatever finscrape itself would reach for; claiming True
+        # unconditionally told the UI a model was available when none was configured.
+        "llm": bool(os.getenv("OPENAI_BASE_URL") or os.getenv("OPENROUTER_API_KEY")),
+        "sources": sources,
     }
 
 

@@ -18,6 +18,7 @@ from server import cache  # noqa: E402
 from server.routes import portfolio as portfolio_routes  # noqa: E402
 from server.routes import sentiment as sentiment_routes  # noqa: E402
 from server.routes import telegram as tg  # noqa: E402
+from server.settings import get_settings  # noqa: E402
 
 AUTH = {"X-API-Key": "local-dev-key"}
 
@@ -106,18 +107,59 @@ def test_portfolio_crud(tmp_path):
 
 
 # --- telegram webhook -------------------------------------------------------
-def test_telegram_webhook_always_200_and_subscribes(tmp_path, monkeypatch):
+WEBHOOK_SECRET = "s3cr3t-webhook-token"
+
+
+@pytest.fixture()
+def telegram_client(tmp_path, monkeypatch):
+    """Webhook router with a configured secret and a throwaway subscriber file."""
     monkeypatch.setattr(tg, "_subs_path", lambda: tmp_path / "subs.json")
+    monkeypatch.setenv("TELEGRAM_WEBHOOK_SECRET", WEBHOOK_SECRET)
+    get_settings.cache_clear()
     app = FastAPI()
     app.include_router(tg.router)
-    c = TestClient(app)
+    yield TestClient(app), tmp_path / "subs.json"
+    get_settings.cache_clear()
+
+
+def test_telegram_webhook_subscribes_with_the_secret_header(telegram_client):
+    c, subs = telegram_client
     r = c.post(
         "/api/telegram/webhook",
         json={"message": {"chat": {"id": 42}, "text": "/subscribe"}},
+        headers={"X-Telegram-Bot-Api-Secret-Token": WEBHOOK_SECRET},
     )
     assert r.status_code == 200 and r.json() == {"ok": True}
     # background task ran during the client call → chat id recorded
-    assert "42" in (tmp_path / "subs.json").read_text()
+    assert "42" in subs.read_text()
+
+
+def test_telegram_webhook_ignores_updates_without_the_secret(telegram_client):
+    """The URL is public and the body is attacker-written: no header, no command."""
+    c, subs = telegram_client
+    for headers in ({}, {"X-Telegram-Bot-Api-Secret-Token": "wrong"}):
+        r = c.post(
+            "/api/telegram/webhook",
+            json={"message": {"chat": {"id": 42}, "text": "/subscribe"}},
+            headers=headers,
+        )
+        assert r.status_code == 200 and r.json() == {"ok": True}  # never leaks
+        assert not subs.exists()
+
+
+def test_telegram_webhook_inert_when_no_secret_configured(tmp_path, monkeypatch):
+    monkeypatch.setattr(tg, "_subs_path", lambda: tmp_path / "subs.json")
+    monkeypatch.delenv("TELEGRAM_WEBHOOK_SECRET", raising=False)
+    get_settings.cache_clear()
+    app = FastAPI()
+    app.include_router(tg.router)
+    r = TestClient(app).post(
+        "/api/telegram/webhook",
+        json={"message": {"chat": {"id": 42}, "text": "/subscribe"}},
+    )
+    get_settings.cache_clear()
+    assert r.status_code == 200
+    assert not (tmp_path / "subs.json").exists()
 
 
 def test_telegram_notify_noop_without_token():

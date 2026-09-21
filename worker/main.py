@@ -1,8 +1,14 @@
-"""Worker entrypoint: `python -m worker.main`.
+"""Worker entrypoint: `python -m worker.main [--once]`.
 
-AsyncIOScheduler runs one interval job per source (staggered + jittered so they don't
-all hammer the network at once). max_instances=1 + coalesce so a slow cycle never
-stacks. Runs every source once at startup so the dashboard fills immediately.
+Two deployments share one body of work. `--once` runs a single cycle and exits —
+that is the live path, a scheduled GitHub Action against Neon
+(`.github/workflows/ingest.yml`). Without it an AsyncIOScheduler keeps the same
+work running on intervals, for compose and self-hosted runs.
+
+Both go through `_bootstrap`, so a change to logging, pool sizing or migrations
+cannot reach one path and miss the other. Jobs are staggered + jittered so they
+don't all hammer the network at once; max_instances=1 + coalesce so a slow cycle
+never stacks.
 """
 
 from __future__ import annotations
@@ -15,26 +21,37 @@ from prometheus_client import start_http_server
 
 from finscrape.logging_config import setup_logging
 from server import db
-from server.settings import get_settings
+from server.settings import Settings, get_settings
 from worker.runner import Worker
 
 log = logging.getLogger("worldfin.worker.main")
 
 
-async def main() -> None:
+async def _bootstrap() -> tuple[Worker, Settings]:
+    """Logging, pool and migrations — identical for both entrypoints."""
     s = get_settings()
     setup_logging(level=s.log_level, json_format=s.log_json)
-    if s.metrics_port:
-        start_http_server(s.metrics_port)
-        log.info("worker metrics on :%d/metrics", s.metrics_port)
     pool = await db.connect(
         s.database_url, min_size=s.db_pool_min, max_size=s.db_pool_max
     )
     await db.run_migrations(pool)
+    return Worker(pool, max_articles=s.worker_max_articles), s
 
-    worker = Worker(pool, max_articles=s.worker_max_articles)
+
+async def _score_outcomes(worker: Worker) -> int:
+    """Backtest matured verdicts. Market data is flaky and scoring is resumable, so a
+    failure is logged and the cycle continues rather than taking the worker down."""
+    try:
+        wrote = await worker.run_backtest()
+        log.info("backtest scored %d outcomes", wrote)
+        return wrote
+    except Exception as exc:  # pragma: no cover - market data flaky
+        log.warning("backtest skipped: %s", exc)
+        return 0
+
+
+def _schedule(worker: Worker, s: Settings) -> AsyncIOScheduler:
     scheduler = AsyncIOScheduler()
-
     for name in worker.sources:
         scheduler.add_job(
             worker.run_source,
@@ -57,14 +74,36 @@ async def main() -> None:
             max_instances=1,
             coalesce=True,
         )
+    # Outcomes mature against a price window, not a scrape window, so this keeps its
+    # own hourly cadence instead of riding the ingest interval.
+    scheduler.add_job(
+        _score_outcomes,
+        "interval",
+        hours=1,
+        args=[worker],
+        id="backtest",
+        jitter=120,
+        max_instances=1,
+        coalesce=True,
+    )
+    return scheduler
+
+
+async def main() -> None:
+    """Long-running worker: every source on an interval, plus correlate and backtest."""
+    worker, s = await _bootstrap()
+    if s.metrics_port:
+        start_http_server(s.metrics_port)
+        log.info("worker metrics on :%d/metrics", s.metrics_port)
+
+    scheduler = _schedule(worker, s)
     scheduler.start()
     log.info(
         "worker started: %d sources every %d min",
         len(worker.sources),
         s.worker_interval_minutes,
     )
-
-    await worker.run_all_once()  # warm-up
+    await worker.run_all_once()  # warm-up so the dashboard fills immediately
 
     try:
         await asyncio.Event().wait()  # run forever
@@ -74,22 +113,10 @@ async def main() -> None:
 
 
 async def run_once() -> None:
-    """One ingestion cycle (every source + correlate + backtest) then exit. Drives the
-    free no-host deploy: a scheduled GitHub Action calls `python -m worker.main --once`
-    against Neon instead of an always-on worker process."""
-    s = get_settings()
-    setup_logging(level=s.log_level, json_format=s.log_json)
-    pool = await db.connect(
-        s.database_url, min_size=s.db_pool_min, max_size=s.db_pool_max
-    )
-    await db.run_migrations(pool)
-    worker = Worker(pool, max_articles=s.worker_max_articles)
+    """One cycle (every source + correlate + backtest) then exit — the live deploy."""
+    worker, _ = await _bootstrap()
     await worker.run_all_once()  # all sources once + correlate
-    try:
-        wrote = await worker.run_backtest()
-        log.info("one-shot backtest scored %d outcomes", wrote)
-    except Exception as exc:  # pragma: no cover - market data flaky
-        log.warning("one-shot backtest skipped: %s", exc)
+    await _score_outcomes(worker)
     await db.disconnect()
 
 

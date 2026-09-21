@@ -183,3 +183,31 @@ def test_prompt_widened_to_world():
     assert "geopolitical" in SYSTEM_PROMPT.lower()
     assert "macro" in SYSTEM_PROMPT.lower()
     assert "geopolitical" in ANALYSIS_PROMPT.lower()
+
+
+# --- feed registry invariants (offline; liveness is a network check, not a test) ---
+def test_feed_registry_invariants():
+    from finscrape.scrapers.world.feeds import FEEDS, VALID_RISK, VALID_TIERS
+
+    keys = [f.key for f in FEEDS]
+    assert len(keys) == len(set(keys)), "duplicate feed key — the key is the source tag"
+    urls = [f.url for f in FEEDS]
+    assert len(urls) == len(set(urls)), "same URL registered twice"
+    for f in FEEDS:
+        assert f.tier in VALID_TIERS, f"{f.key}: bad tier"
+        assert f.propaganda_risk in VALID_RISK, f"{f.key}: bad propaganda_risk"
+        assert f.url.startswith("https://"), f"{f.key}: not https"
+        assert f.name and f.region, f"{f.key}: missing name/region"
+
+
+def test_every_tier_the_correlation_engine_scores_is_represented():
+    """detect_convergence needs >=3 distinct source types in one cluster; a registry
+    that only spans two tiers can never produce a convergence signal."""
+    from server.correlate import _TIER_WEIGHT
+    from finscrape.scrapers.world.feeds import FEEDS
+
+    tiers = {f.tier for f in FEEDS}
+    assert len(tiers) >= 3, f"only {tiers} — convergence needs 3+ distinct source types"
+    assert tiers <= set(_TIER_WEIGHT), (
+        f"unscored tier in registry: {tiers - set(_TIER_WEIGHT)}"
+    )
