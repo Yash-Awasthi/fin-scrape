@@ -7,14 +7,47 @@ confidence) and return the audited prediction payload.
 
 from __future__ import annotations
 
+import asyncio
 import json
 from typing import Any
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 
-from server import db
+from server import cache, db
 
 router = APIRouter()
+
+# Columns the scenario engine grades on. `/api/storylines` needs far fewer, so
+# this query is its own rather than a widened share.
+_SCENARIO_COLUMNS = """
+    SELECT id, subject, reasoning, verdict, signal_score, confidence, event_type,
+           magnitude, actionability, sector_impact, divergence_flag,
+           tickers, sources, articles, affected_entities, second_order_effects,
+           created_at
+    FROM events ORDER BY id DESC LIMIT $1
+"""
+
+# Newest id keys the cache — a new event is the only thing that can change the
+# answer inside the TTL — and the row count tells the key which window it is.
+_SCENARIO_HEAD = """
+    SELECT max(id) AS newest, count(*) AS considered
+    FROM (SELECT id FROM events ORDER BY id DESC LIMIT $1) w
+"""
+
+# Clustering embeds every distinct subject through Ollama, so an uncached
+# /api/scenarios would spend seconds per caller for an answer that changes only
+# as fast as new events land.
+_SCENARIO_TTL = cache.MEDIUM
+
+
+def _jsonish(value: Any, fallback: Any) -> Any:
+    """asyncpg hands JSONB back as str on some drivers and as the value on others."""
+    if isinstance(value, str):
+        try:
+            return json.loads(value)
+        except (ValueError, TypeError):
+            return fallback
+    return value if value is not None else fallback
 
 
 async def _outcomes_from_pool() -> list[dict[str, Any]]:
@@ -122,3 +155,62 @@ async def predict_event(event_id: int) -> dict:
         "ticker": (tickers[0] if tickers else ""),
     }
     return result
+
+
+@router.get("/api/scenarios")
+async def scenarios(
+    limit: int = Query(6, ge=1, le=20),
+    window: int = Query(200, ge=20, le=500),
+) -> dict:
+    """Geopolitical scenarios: recent events clustered, scored and turned into
+    one instruction each.
+
+    A scenario carries the same calibrated probability the per-event
+    `/api/predict` would give its members, plus the net sector and ticker tilt
+    that probability implies — the advice, rather than the evidence.
+    """
+    from finscrape.analysis.clusters import build_storylines
+    from finscrape.scenarios import build_scenarios
+
+    # The cache key needs only the newest id and how many rows the window holds,
+    # so settle a hit before paying for 200 event rows and every scored outcome.
+    head = await db.pool().fetchrow(_SCENARIO_HEAD, window)
+    newest, considered = (head["newest"] or 0), (head["considered"] or 0)
+    key = f"scenarios:{newest}:{considered}:{limit}"
+    hit = cache.peek(key)
+    if hit is not cache.MISSING:
+        return {"scenarios": hit, "events_considered": considered}
+
+    rows = await db.pool().fetch(_SCENARIO_COLUMNS, window)
+    events = [
+        {
+            "id": r["id"],
+            "subject": r["subject"],
+            "reasoning": r["reasoning"] or "",
+            "verdict": r["verdict"],
+            "signal_score": r["signal_score"],
+            "confidence": r["confidence"],
+            "event_type": r["event_type"],
+            "magnitude": r["magnitude"],
+            "actionability": r["actionability"],
+            "sector_impact": r["sector_impact"] or "",
+            "divergence_flag": bool(r["divergence_flag"]),
+            "tickers": _jsonish(r["tickers"], []),
+            "sources": _jsonish(r["sources"], []),
+            "articles": _jsonish(r["articles"], []),
+            "affected_entities": _jsonish(r["affected_entities"], []),
+            "second_order_effects": _jsonish(r["second_order_effects"], []),
+            "created_at": r["created_at"].isoformat() if r["created_at"] else None,
+        }
+        for r in rows
+    ]
+    outcomes = await _outcomes_from_pool()
+
+    built = await asyncio.to_thread(
+        lambda: cache.get_or_set(
+            key,
+            _SCENARIO_TTL,
+            lambda: build_scenarios(build_storylines(events), outcomes, limit=limit),
+        )
+    )
+    return {"scenarios": built, "events_considered": len(events)}

@@ -54,6 +54,28 @@ def _guard_mutating_routes(router) -> None:
             route.dependencies.append(guard)
 
 
+async def _warm_scenarios(s) -> None:
+    """Pay /api/scenarios' cold cost in the background instead of charging it to
+    whichever request lands first.
+
+    Clustering embeds every distinct subject through Ollama — ~73s for a 200-event
+    window on a local box — and `embeddings.embed`'s LRU makes that a once-per-
+    process cost, so a warm-up here means the first caller waits milliseconds.
+    Best effort: a failure (no Ollama, empty DB) just leaves the cache cold.
+    """
+    if not s.warm_scenarios_on_startup:
+        return
+    try:
+        from server.routes.insight import scenarios
+
+        await scenarios()
+        log.info("scenario cache warmed")
+    except asyncio.CancelledError:
+        raise
+    except Exception as exc:
+        log.warning("scenario warm-up skipped: %s", exc)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     s = get_settings()
@@ -76,9 +98,11 @@ async def lifespan(app: FastAPI):
         await db.run_migrations(p)
     # Forward worker-published new_events to this process's WS clients (no-op without Redis).
     sub_task = asyncio.create_task(pubsub.subscribe_forever(hub.broadcast))
+    warm_task = asyncio.create_task(_warm_scenarios(s))
     try:
         yield
     finally:
+        warm_task.cancel()
         sub_task.cancel()
         await db.disconnect()
 

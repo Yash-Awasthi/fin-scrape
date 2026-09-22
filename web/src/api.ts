@@ -66,6 +66,36 @@ export interface Storyline {
   members: EventOut[];
 }
 
+/** One leg of a scenario's net exposure: a sector or a ticker, and which way. */
+export interface ScenarioLeg {
+  name: string;
+  direction: "up" | "down";
+  strength: number; // 0..1, relative to the strongest leg
+  tilt: number;
+}
+
+export interface Scenario {
+  id: string;
+  title: string;
+  size: number;
+  /** Distinct reports behind it — corroboration, which `size` cannot show. */
+  reports: number;
+  /** Probability the scenario's own call lands — never below 0.5. */
+  probability: number;
+  direction: "up" | "down" | "flat";
+  stance: "risk-on" | "risk-off" | "mixed";
+  tilt: number;
+  data_tier: string;
+  divergent_members: number;
+  sectors: ScenarioLeg[];
+  exposure: ScenarioLeg[];
+  chain: string[];
+  advice: string;
+  member_ids: number[];
+  sources: string[];
+  first_seen: string | null;
+}
+
 export interface SourceHealth {
   source: string;
   status: string;
@@ -259,6 +289,10 @@ export const api = {
   sectors: () => getJSON<{ sectors: Sector[] }>("/api/sectors").then((r) => r.sectors),
   storylines: () =>
     getJSON<{ storylines: Storyline[] }>("/api/storylines").then((r) => r.storylines),
+  scenarios: (limit = 6) =>
+    getJSON<{ scenarios: Scenario[] }>(`/api/scenarios${qs({ limit })}`).then(
+      (r) => r.scenarios,
+    ),
   correlations: (date?: string) =>
     getJSON<{ correlations: Correlation[] }>(`/api/correlations${qs({ date })}`).then(
       (r) => r.correlations,

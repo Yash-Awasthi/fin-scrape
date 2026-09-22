@@ -8,8 +8,9 @@ COMPOSE := docker compose
 # New (WorldFin) code only — pre-existing finscrape source isn't ruff-format clean,
 # so formatting is scoped to avoid a noisy whole-repo reformat.
 NEW_DIRS := server worker finscrape/scrapers/world finscrape/ingestors \
+	finscrape/scenarios.py \
 	tests/server tests/test_world_phase2.py tests/test_worker_phase3.py \
-	tests/test_correlate_phase4.py
+	tests/test_correlate_phase4.py tests/test_scenarios.py
 
 .PHONY: help up down logs seed demo test lint fmt fmt-check typecheck selfcheck ci web-ci e2e
 

@@ -1,6 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
 
-import * as apiModule from "../api";
 import { api, type HealthResponse } from "../api";
 import { timeAgo } from "../util";
 import { SourceHealthPanel } from "./panels";
@@ -64,25 +63,5 @@ describe("SourceHealthPanel", () => {
     await panel.load();
     await painted();
     expect(panel.body.textContent).toContain("Health unavailable");
-  });
-});
-
-describe("AlertsPanel", () => {
-  it("names the deployment gap on 404 rather than reporting a failure", async () => {
-    const { AlertsPanel } = await import("./panels");
-    vi.spyOn(apiModule, "getJSON").mockRejectedValue(new Error("GET /api/alerts → 404"));
-    const panel = new AlertsPanel();
-    await panel.load();
-    await painted();
-    expect(panel.body.textContent).toContain("Telegram");
-  });
-
-  it("still reports a real failure as a failure", async () => {
-    const { AlertsPanel } = await import("./panels");
-    vi.spyOn(apiModule, "getJSON").mockRejectedValue(new Error("GET /api/alerts → 500"));
-    const panel = new AlertsPanel();
-    await panel.load();
-    await painted();
-    expect(panel.body.textContent).toContain("Alerts unavailable");
   });
 });

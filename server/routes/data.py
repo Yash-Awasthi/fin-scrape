@@ -8,7 +8,6 @@ fetches URLs from the world feed registry (no arbitrary user URLs).
 from __future__ import annotations
 
 import asyncio
-import re
 
 import requests
 from fastapi import APIRouter, HTTPException, Query
@@ -135,7 +134,12 @@ ticker_stats AS (
            AVG(r.confidence)::float AS avg_confidence,
            AVG(r.signal_score)::float AS avg_score,
            MAX(r.timestamp) AS last_seen,
-           SUM(CASE WHEN r.verdict IN ('INVEST', 'PULL_OUT') THEN 1 ELSE 0 END)::float AS directional
+           SUM(CASE WHEN r.verdict IN ('INVEST', 'PULL_OUT') THEN 1 ELSE 0 END)::float AS directional,
+           -- The newest event per ticker. These read `recent`, so they belong here:
+           -- the outer query's alias is ticker_stats, which has no event columns.
+           (ARRAY_AGG(r.subject ORDER BY r.timestamp DESC))[1] AS latest_subject,
+           (ARRAY_AGG(r.verdict ORDER BY r.timestamp DESC))[1] AS latest_verdict,
+           (ARRAY_AGG(r.sector_impact ORDER BY r.timestamp DESC))[1] AS sector
     FROM recent r, jsonb_array_elements_text(r.tickers) AS t(ticker)
     GROUP BY t.ticker
 ),
@@ -156,13 +160,9 @@ SELECT r.ticker, r.mentions, r.avg_confidence, r.avg_score, r.last_seen,
         * (0.5 + COALESCE(sa.trust, 0.5))
         * (1 + LEAST(2.0, r.recent_mentions / r.baseline_mentions)))::float AS suggestion_score,
        r.recent_mentions / r.baseline_mentions::float AS momentum,
-       (ARRAY_AGG(r.subject ORDER BY r.timestamp DESC))[1] AS latest_subject,
-       (ARRAY_AGG(r.verdict ORDER BY r.timestamp DESC))[1] AS latest_verdict,
-       (ARRAY_AGG(r.sector_impact ORDER BY r.timestamp DESC))[1] AS sector
+       r.latest_subject, r.latest_verdict, r.sector
 FROM ticker_stats r
 LEFT JOIN source_accuracy sa ON sa.ticker = r.ticker
-GROUP BY r.ticker, r.mentions, r.avg_confidence, r.avg_score, r.last_seen,
-         r.recent_mentions, r.baseline_mentions, sa.trust
 ORDER BY suggestion_score DESC
 LIMIT $1
 """
@@ -197,13 +197,7 @@ async def suggestions(limit: int = Query(10, ge=1, le=50)) -> dict:
 
 # --- sector heat (production parity for /api/sectors) ---
 
-_SECTOR_ALIASES = {"finance": "financials", "industrial": "industrials"}
-
-
-def _normalize_sector(s: str) -> list[str]:
-    """Split multi-sector strings and alias NLP names to the product taxonomy."""
-    parts = [p.strip() for p in re.split(r"[/,]", s) if p.strip()]
-    return [_SECTOR_ALIASES.get(p, p) for p in parts]
+from finscrape.analysis.sectors import normalize as _normalize_sector  # noqa: E402
 
 
 @router.get("/api/sectors")

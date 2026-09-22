@@ -51,6 +51,7 @@ the SPA is one build for both.**
 | `GET /api/events` · `/api/stats` · `/api/dates` | stored intelligence | ✅ | ✅ |
 | `GET /api/suggestions` | momentum-ranked tickers | ✅ | ✅ (surge multiplier in SQL) |
 | `GET /api/predict/{id}` · `/api/reliability` | calibrated probabilities + evidence | ✅ | ✅ `routes/insight.py` |
+| `GET /api/scenarios` | clustered events scored into advice (stance, net exposure, instruction) | ✅ | ✅ `routes/insight.py` |
 | `GET /api/agents/analyze?ticker=` | multi-agent research commentary | ✅ | ✅ `routes/agents.py` |
 | `GET /api/ai/analyze?id=` | per-event LLM reasoning | ✅ | ✅ |
 | `GET /api/feeds` · `/api/rss-proxy` | world news feeds | ✅ | ✅ |

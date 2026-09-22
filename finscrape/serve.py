@@ -11,6 +11,7 @@ Run:
 
 from __future__ import annotations
 
+import asyncio
 import json
 import os
 import re
@@ -93,7 +94,7 @@ async def events(limit: int = Query(200, ge=1, le=500)) -> dict:
 # NLP `_detect_sector` returns its own names; alias them to the product taxonomy
 # (the one the LLM prompt emits: financials/industrials …) so sector chips and
 # per-event sector match when the frontend filters the feed.
-_SECTOR_ALIASES = {"finance": "financials", "industrial": "industrials"}
+from finscrape.analysis.sectors import normalize as _normalize_sector  # noqa: E402
 
 _nlp = None
 
@@ -106,12 +107,6 @@ def _get_nlp():
 
         _nlp = FinancialNLP()
     return _nlp
-
-
-def _normalize_sector(s: str) -> list[str]:
-    """Split multi-sector strings ('technology/energy') and alias NLP names."""
-    parts = [p.strip() for p in re.split(r"[/,]", s) if p.strip()]
-    return [_SECTOR_ALIASES.get(p, p) for p in parts]
 
 
 def _event_sector(row: dict) -> str:
@@ -720,6 +715,25 @@ async def reliability() -> dict:
     return {"reliability": tables, "brier": prediction.brier_summary(outcomes)}
 
 
+@app.get("/api/scenarios")
+async def scenarios(limit: int = Query(6, ge=1, le=20)) -> dict:
+    """Geopolitical scenarios: recent events clustered, then scored into one
+    instruction each — net sector/ticker tilt plus the calibrated probability
+    the call lands. Same contract as the production route in server/routes."""
+    conn = _require_db()
+    rows = conn.execute("SELECT * FROM events ORDER BY id DESC LIMIT 200").fetchall()
+    events = [_event_row(r) for r in rows]
+
+    from finscrape import prediction
+    from finscrape.analysis.clusters import build_storylines
+    from finscrape.scenarios import build_scenarios
+
+    built = build_scenarios(
+        build_storylines(events), prediction.load_outcomes(_DB), limit=limit
+    )
+    return {"scenarios": built, "events_considered": len(events)}
+
+
 @app.get("/api/alerts")
 async def alerts(limit: int = Query(30, ge=1, le=200)) -> dict:
     """Fired alerts (pipeline correlation + rule triggers), newest first."""
@@ -856,24 +870,78 @@ async def ai_analyze(id: int = Query(...)) -> dict:
     }
 
 
-@app.websocket("/ws")
+# How often a connected client is checked for newly stored events. The scraper runs
+# in a separate process (`main.py scrape`/`monitor`), so there is no in-process hub to
+# broadcast from the way server/ws.py does — the database is the channel.
+_WS_POLL_S = 3.0
+
+
+def _latest_event_id(conn: sqlite3.Connection) -> int:
+    row = conn.execute("SELECT COALESCE(MAX(id), 0) AS m FROM events").fetchone()
+    return int(row["m"]) if row else 0
+
+
+async def _push_new_events(websocket: WebSocket, after_id: int) -> None:
+    """Poll for rows the client has not seen and push them as `new_events`.
+
+    Cheap: one indexed `id > ?` per interval, and nothing is sent when nothing landed.
+    """
+    last_id = after_id
+    while True:
+        await asyncio.sleep(_WS_POLL_S)
+        if not _DB.exists():
+            continue
+        conn = _db()
+        rows = conn.execute(
+            "SELECT * FROM events WHERE id > ? ORDER BY id ASC LIMIT 100", (last_id,)
+        ).fetchall()
+        conn.close()
+        if not rows:
+            continue
+        events = [_event_row(r) for r in rows]
+        last_id = max(int(r["id"]) for r in rows)
+        await websocket.send_json(
+            {"type": "new_events", "count": len(events), "events": events}
+        )
+
+
+@app.websocket("/api/ws")
 async def ws(websocket: WebSocket) -> None:
-    """Realtime hub: pushes the recent-event snapshot on connect, then echoes
-    pings; new-event broadcast arrives when the local pipeline runs."""
+    """Realtime feed: snapshot on connect, then new events as the scraper stores them.
+
+    Mounted at /api/ws to match the path the SPA builds (`wsUrl`) and the production
+    server — at /ws it answered 403 and the live feed never connected at all.
+    """
     await websocket.accept()
+    last_id = 0
+    if _DB.exists():
+        conn = _db()
+        rows = conn.execute("SELECT * FROM events ORDER BY id DESC LIMIT 200").fetchall()
+        last_id = _latest_event_id(conn)
+        conn.close()
+        await websocket.send_json(
+            {"type": "init", "events": [_event_row(r) for r in rows]}
+        )
+
+    pusher = asyncio.create_task(_push_new_events(websocket, last_id))
     try:
-        if _DB.exists():
-            conn = _db()
-            rows = conn.execute(
-                "SELECT * FROM events ORDER BY id DESC LIMIT 200"
-            ).fetchall()
-            await websocket.send_json({"type": "init", "events": [_event_row(r) for r in rows]})
         while True:
             msg = await websocket.receive_text()
-            if msg == "ping":
+            # The client sends JSON ({"type":"ping"}); a bare "ping" is accepted too,
+            # since comparing against the raw string alone never matched and the
+            # keep-alive silently did nothing.
+            kind = msg.strip()
+            if kind.startswith("{"):
+                try:
+                    kind = str(json.loads(msg).get("type", ""))
+                except ValueError:
+                    kind = ""
+            if kind == "ping":
                 await websocket.send_json({"type": "pong"})
     except WebSocketDisconnect:
         return
+    finally:
+        pusher.cancel()
 
 
 # ── static SPA ───────────────────────────────────────────────────────────────

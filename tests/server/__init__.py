@@ -29,7 +29,12 @@ def pg_reachable() -> bool:
 
 
 async def fresh_pool(*truncate):
-    """Connect, apply migrations, and TRUNCATE the named tables for a clean slate."""
+    """Connect, apply migrations, and TRUNCATE the named tables for a clean slate.
+
+    Destructive, and it targets whatever WORLDFIN_DATABASE_URL points at —
+    which defaults to the same DSN a local `make up` stack uses. Point it at a
+    database whose contents you want and the suite will delete them.
+    """
     from server import db
 
     await db.disconnect()

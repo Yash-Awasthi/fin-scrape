@@ -129,7 +129,7 @@ SCHEMA (follow exactly):
   "actionability": "low/medium/high",
   "reasoning": "2-3 sentence explanation of WHY this matters and what the market signal is",
   "key_metrics": {{"metric_name": numeric_value}},
-  "sector_impact": "technology/healthcare/financials/energy/consumer/industrials/materials/utilities/real_estate/communications/other",
+  "sector_impact": "EXACTLY ONE of: technology | healthcare | financials | energy | consumer | industrials | materials | utilities | real_estate | communications | other. Pick the sector whose revenues or costs this event actually moves; use 'other' when none does. Do NOT invent a name outside this list, do not return several, and never default to 'technology' for a story that is merely political or military.",
   "second_order_effects": ["Brief description of each knock-on effect"],
   "temporal_context": "breaking/confirmation/escalation/resolution/rehash"
 }}

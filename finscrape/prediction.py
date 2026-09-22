@@ -135,14 +135,19 @@ def _empirical_p(hit_rate: float | None, weight: float, prior: float = 0.5) -> f
 
 
 def predict(text: str, verdict: str, confidence: float, source: str,
-            event_type: str, outcomes: list[dict[str, Any]]) -> dict[str, Any]:
+            event_type: str, outcomes: list[dict[str, Any]],
+            tables: dict[str, Any] | None = None) -> dict[str, Any]:
     """Calibrated probability the signal's direction realizes in price.
 
     Blends the empirical reliability of *this kind of signal* (shrunk toward
     the global base rate by sample size) with the structural sentiment prior,
     weighted by how much empirical evidence exists at all.
+
+    `tables` lets a caller scoring many signals against one outcome set build
+    the reliability tables once; it must be `reliability_tables(outcomes)`.
     """
-    tables = reliability_tables(outcomes)
+    if tables is None:
+        tables = reliability_tables(outcomes)
     empirical_total = tables["total_weight"]
 
     global_rate = tables["global_hit_rate"] or 0.5

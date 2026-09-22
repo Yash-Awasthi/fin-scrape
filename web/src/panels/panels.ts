@@ -8,7 +8,6 @@ import {
   type DateCount,
   type FeedInfo,
   type HealthResponse,
-  type MarketTicker,
   type Portfolio,
   type RssItem,
   type Sector,
@@ -17,8 +16,9 @@ import {
 } from "../api";
 import { CHANNELS, countries, embedUrl } from "../data/channels";
 import { escapeHtml, timeAgo } from "../util";
-import { type Candle, type Prediction, type Quote } from "../api";
-import { getJSON } from "../api";
+import { VIZ_COLORS, barChart, calibration, columns, signColor, sparkline, stackedBar } from "./viz";
+import { history, record } from "./series";
+import { type Candle, type Prediction, type Quote, type Scenario, type ScenarioLeg } from "../api";
 import { verdictColor } from "../api";
 import { Panel } from "./panel";
 
@@ -38,31 +38,6 @@ export class CorrelationPanel extends Panel {
       })
       .join("");
     this.setContent(`<ul class="corr-list">${rows}</ul>`);
-  }
-}
-
-export class MarketsPanel extends Panel {
-  constructor() {
-    super({ id: "markets", title: "Most-mentioned tickers", w: 4, h: 3 });
-  }
-  async load(): Promise<void> {
-    try {
-      this.render(await api.markets(25));
-    } catch {
-      this.setContent('<p class="empty">Markets unavailable.</p>');
-    }
-  }
-  private render(tickers: MarketTicker[]): void {
-    if (!tickers.length) return this.setContent('<p class="empty">No tickers yet.</p>');
-    const rows = tickers
-      .map(
-        (t) =>
-          `<tr><td>${escapeHtml(t.ticker)}</td><td>${t.mentions}</td><td>${t.avg_score >= 0 ? "+" : ""}${t.avg_score}</td></tr>`,
-      )
-      .join("");
-    this.setContent(
-      `<table class="feed"><thead><tr><th>Ticker</th><th>Mentions</th><th>Avg</th></tr></thead><tbody>${rows}</tbody></table>`,
-    );
   }
 }
 
@@ -104,7 +79,19 @@ export class SectorPanel extends Panel {
       const sector = (e.target as HTMLElement).closest<HTMLElement>(".sector-chip")?.dataset.sector;
       if (sector) window.dispatchEvent(new CustomEvent("worldfin:select-sector", { detail: sector }));
     });
-    this.setContent(wrap);
+    const chart = document.createElement("div");
+    chart.innerHTML = barChart(
+      sectors.slice(0, 8).map((s) => ({
+        label: s.sector,
+        value: s.event_count,
+        color: signColor(s.avg_score),
+        note: `${s.event_count} · ${s.avg_score >= 0 ? "+" : ""}${s.avg_score}`,
+      })),
+      "events per sector",
+    );
+    const box = document.createElement("div");
+    box.append(wrap, chart);
+    this.setContent(box);
   }
 }
 
@@ -250,7 +237,9 @@ export class MarketsLivePanel extends Panel {
 
   async refresh(): Promise<void> {
     try {
-      this.render(await api.quotes(this.symbols));
+      const quotes = await api.quotes(this.symbols);
+      for (const q of quotes) record(q.symbol, q.price);
+      this.render(quotes);
     } catch {
       // keep last known prices on the screen
     }
@@ -284,10 +273,13 @@ function quoteCard(q: Quote): string {
   const arrow = up ? "▲" : down ? "▼" : "·";
   const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
   const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
+  // Prices sit in a narrow band far from zero, so the spark scales to its own range.
+  const spark = sparkline(history(q.symbol), `${q.symbol} session prices`, signColor(q.change_pct ?? 0), false);
   return (
     `<div class="ml-card ml-click" data-sym="${escapeHtml(q.symbol)}"><div class="ml-sym">${escapeHtml(q.symbol)}</div>` +
     `<div class="ml-price">${price}</div>` +
     `<div class="ml-change ${cls}">${arrow} ${change}</div>` +
+    `<div class="ml-spark">${spark}</div>` +
     `<div class="ml-src">${escapeHtml(q.source)}</div></div>`
   );
 }
@@ -333,6 +325,7 @@ export class WatchlistPanel extends Panel {
     }
     try {
       const quotes = await api.quotes(this.symbols);
+      for (const q of quotes) record(q.symbol, q.price);
       this.render(quotes);
     } catch {
       // keep last known prices
@@ -347,9 +340,11 @@ export class WatchlistPanel extends Panel {
         const cls = up ? "up" : down ? "down" : "flat";
         const change = q.change_pct == null ? "—" : `${q.change_pct >= 0 ? "+" : ""}${q.change_pct.toFixed(2)}%`;
         const price = q.price == null ? "—" : q.price >= 1000 ? q.price.toFixed(0) : q.price.toFixed(2);
+        const spark = sparkline(history(q.symbol), `${q.symbol} session prices`, signColor(q.change_pct ?? 0), false);
         return (
           `<tr class="wl-click" data-sym="${escapeHtml(q.symbol)}"><td>${escapeHtml(q.symbol)}</td><td>${price}</td>` +
           `<td class="${cls}">${change}</td>` +
+          `<td class="wl-spark">${spark}</td>` +
           `<td><button class="wl-remove" data-sym="${escapeHtml(q.symbol)}" title="remove">×</button></td></tr>`
         );
       })
@@ -359,7 +354,7 @@ export class WatchlistPanel extends Panel {
     wrap.innerHTML =
       `<form class="wl-form"><input class="wl-input" placeholder="add symbol…" maxlength="16" />` +
       `<button type="submit">+</button></form>` +
-      `<table class="feed"><thead><tr><th>Symbol</th><th>Price</th><th>Chg</th><th></th></tr></thead>` +
+      `<table class="feed"><thead><tr><th>Symbol</th><th>Price</th><th>Chg</th><th>Trend</th><th></th></tr></thead>` +
       `<tbody>${rows}</tbody></table>`;
     wrap.querySelector("form")!.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -552,6 +547,13 @@ export class AgentPanel extends Panel {
   }
 }
 
+/** ".25-.5" and friends collapse to the midpoint the bucket stands for. */
+function bucketMidpoint(bucket: string): number {
+  const [lo, hi] = bucket.split("-").map(Number.parseFloat);
+  if (!Number.isFinite(lo)) return 0.5;
+  return Number.isFinite(hi) ? (lo + hi) / 2 : lo;
+}
+
 export class PredictionPanel extends Panel {
   constructor() {
     super({ id: "prediction", title: "Prediction — calibrated event impact", w: 6, h: 5 });
@@ -570,12 +572,30 @@ export class PredictionPanel extends Panel {
       const brier = rel.brier.brier == null ? "—" : rel.brier.brier.toFixed(3);
       const n = relTable.sample_size;
 
-      const verds = Object.entries(relTable.by_verdict)
-        .map(([v, s]) => {
-          const rate = s.hit_rate == null ? "—" : `${Math.round(s.hit_rate * 100)}%`;
-          return `<div class="pred-row"><span>${escapeHtml(v)}</span><span class="muted">w ${s.weight}</span><b>${rate}</b></div>`;
-        })
-        .join("");
+      const verds = barChart(
+        Object.entries(relTable.by_verdict)
+          .filter(([, s]) => s.hit_rate != null)
+          .sort((a, b) => (b[1].hit_rate ?? 0) - (a[1].hit_rate ?? 0))
+          .map(([v, s]) => ({
+            label: v,
+            value: Math.round((s.hit_rate ?? 0) * 100),
+            color: verdictColor(v),
+            note: `${Math.round((s.hit_rate ?? 0) * 100)}% · w ${s.weight}`,
+          })),
+        "hit rate by verdict",
+      );
+
+      const curve = calibration(
+        Object.entries(relTable.by_confidence)
+          .filter(([, s]) => s.hit_rate != null)
+          .map(([bucket, s]) => ({
+            predicted: bucketMidpoint(bucket),
+            observed: s.hit_rate ?? 0,
+            weight: s.weight,
+            label: bucket,
+          })),
+        "observed hit rate against stated confidence",
+      );
 
       const cards = predictions
         .filter((p) => p.status === "fulfilled")
@@ -598,51 +618,19 @@ export class PredictionPanel extends Panel {
           `<span>Global base rate: <b>${relTable.global_hit_rate == null ? "—" : Math.round(relTable.global_hit_rate * 100)}%</b></span>` +
           `<span class="muted"> · ${n} outcomes · Brier ${brier} · recency-decayed</span></div>` +
         `<div class="pred-grid">${cards || '<p class="empty">No directional signals yet.</p>'}</div>` +
-        `<div class="pred-table">${verds}</div>`,
+        `<div class="pred-charts">` +
+          `<div class="pred-table">${verds || '<p class="empty">No scored verdicts yet.</p>'}</div>` +
+          (curve
+            ? `<figure class="pred-cal">${curve}` +
+              `<figcaption class="muted">Confidence vs outcome · dashed line is perfect ` +
+              `calibration; above it is underconfident, below it overconfident.</figcaption></figure>`
+            : "") +
+        `</div>`,
       );
     } catch {
       this.setContent('<p class="empty">Prediction engine unavailable.</p>');
     }
   }
-}
-
-export class AlertsPanel extends Panel {
-  constructor() {
-    super({ id: "alerts", title: "Alerts — fired by the pipeline", w: 6, h: 5 });
-  }
-  async load(): Promise<void> {
-    try {
-      const { alerts } = await getJSON<{ alerts: AlertRow[] }>("/api/alerts?limit=40");
-      if (!alerts.length) return this.setContent('<p class="empty">No alerts fired yet.</p>');
-      const rows = alerts
-        .map(
-          (a) =>
-            `<div class="alert-row"><span class="alert-type">${escapeHtml(a.action_type)}</span>` +
-            `<span class="alert-subject">${escapeHtml(a.subject.slice(0, 70))}</span>` +
-            `<span class="muted">${escapeHtml((a.tickers || []).slice(0, 3).join(", "))} · ${escapeHtml((a.fired_at || "").slice(5, 16))}</span></div>`,
-        )
-        .join("");
-      this.setContent(`<div class="alert-list">${rows}</div>`);
-    } catch (err) {
-      // The worker builds its pipeline with enable_alerts=False and Postgres has no
-      // alerts table, so /api/alerts exists only on the local SQLite server. Say which
-      // it is, rather than showing the same "unavailable" for a real failure.
-      const missing = err instanceof Error && err.message.includes("404");
-      this.setContent(
-        missing
-          ? '<p class="empty">Fired alerts are a local-run view. In the hosted deployment alerts go out over Telegram instead.</p>'
-          : '<p class="empty">Alerts unavailable.</p>',
-      );
-    }
-  }
-}
-
-interface AlertRow {
-  id: number;
-  action_type: string;
-  subject: string;
-  tickers: string[];
-  fired_at: string;
 }
 
 export class CalendarPanel extends Panel {
@@ -651,44 +639,29 @@ export class CalendarPanel extends Panel {
   }
   update(dates: DateCount[]): void {
     if (!dates.length) return this.setContent('<p class="empty">No dates.</p>');
+    // Oldest-first so the volume histogram reads left to right like every other chart.
+    const series = [...dates].reverse();
     const items = dates
       .map(
         (d) =>
           `<button class="day" data-day="${d.day}">${d.day} <span class="muted">(${d.count})</span></button>`,
       )
       .join("");
+    const total = series.reduce((a, d) => a + d.count, 0);
+    const peak = series.reduce((a, d) => (d.count > a.count ? d : a), series[0]);
     const wrap = document.createElement("div");
     wrap.className = "cal";
-    wrap.innerHTML = items;
+    wrap.innerHTML =
+      columns(series.map((d) => d.count), "events per day") +
+      `<div class="muted cal-meta">${total} events over ${series.length} days · ` +
+      `peak ${peak.count} on ${escapeHtml(peak.day)}</div>` +
+      items;
     wrap.addEventListener("click", (e) => {
       const t = e.target as HTMLElement;
       const day = t.closest<HTMLElement>(".day")?.dataset.day;
       if (day) this.onPick(day);
     });
     this.setContent(wrap);
-  }
-}
-
-export class WorldNewsPanel extends Panel {
-  private feedKey = "reuters_world_gnews";
-  constructor() {
-    super({ id: "worldnews", title: "World News", w: 4, h: 2 });
-  }
-  async load(): Promise<void> {
-    try {
-      const res = await api.rss(this.feedKey, 15);
-      const rows = res.items
-        .map(
-          (i) =>
-            `<li><a href="${escapeHtml(i.link)}" target="_blank" rel="noopener">${escapeHtml(i.title)}</a></li>`,
-        )
-        .join("");
-      this.setContent(
-        rows ? `<ul class="news">${rows}</ul>` : '<p class="empty">No items.</p>',
-      );
-    } catch {
-      this.setContent('<p class="empty">News unavailable.</p>');
-    }
   }
 }
 
@@ -726,22 +699,6 @@ export class AccuracyPanel extends Panel {
 }
 
 /** Tiny inline-SVG equity curve. */
-function sparkline(curve: number[]): string {
-  if (curve.length < 2) return "";
-  const w = 240;
-  const h = 48;
-  const min = Math.min(...curve, 0);
-  const max = Math.max(...curve, 0);
-  const span = max - min || 1;
-  const pts = curve
-    .map((y, i) => {
-      const x = (i / (curve.length - 1)) * w;
-      const yy = h - ((y - min) / span) * h;
-      return `${x.toFixed(1)},${yy.toFixed(1)}`;
-    })
-    .join(" ");
-  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="#16c784" stroke-width="2"/></svg>`;
-}
 
 export class SentimentPanel extends Panel {
   private ticker = "AAPL";
@@ -798,6 +755,11 @@ export class SentimentPanel extends Panel {
     body.innerHTML =
       `<div class="senti-score ${cls}">${s.sentiment_score >= 0 ? "+" : ""}${s.sentiment_score.toFixed(2)}` +
       ` <span class="muted">${Math.round(s.bullish_pct * 100)}% bullish · ${s.total_posts} posts${s.volume_spike ? " · 🔥 spike" : ""}</span></div>` +
+      stackedBar([
+        { value: s.bullish_count, color: VIZ_COLORS.up, label: "bullish" },
+        { value: s.neutral_count, color: VIZ_COLORS.muted, label: "neutral" },
+        { value: s.bearish_count, color: VIZ_COLORS.down, label: "bearish" },
+      ]) +
       `<div class="muted">bull ${s.bullish_count} · bear ${s.bearish_count} · neut ${s.neutral_count} · ${escapeHtml(s.platforms.join(", ") || "—")}</div>` +
       `<ul class="news">${posts}</ul>`;
   }
@@ -840,39 +802,57 @@ export class PortfolioPanel extends Panel {
 
 export class LiveTVPanel extends Panel {
   private country = "All";
+  private playing = CHANNELS[0];
 
   constructor() {
-    super({ id: "livetv", title: "Live TV — world news channels", w: 8, h: 6 });
+    super({ id: "livetv", title: "Live TV — world news channels", w: 12, h: 6 });
   }
+
   render(): void {
-    // Two channels visible side by side; scroll for more. Country filter narrows.
+    // One player, not one per channel. Selecting "All countries" used to mount 26
+    // live YouTube iframes at once, which is the most expensive thing the page can do.
     const wrap = document.createElement("div");
     wrap.className = "tv";
     wrap.innerHTML =
-      `<div class="tv-controls"><select class="tv-filter">` +
+      `<div class="tv-stage"><iframe class="tv-frame" allowfullscreen ` +
+      `title="${escapeHtml(this.playing.name)} live" src="${embedUrl(this.playing.channelId)}"></iframe>` +
+      `<div class="tv-now">${escapeHtml(this.playing.name)} · ${escapeHtml(this.playing.country)}</div></div>` +
+      `<div class="tv-side"><select class="tv-filter" aria-label="filter channels by country">` +
       `<option value="All">All countries</option>` +
-      countries().map((c) => `<option${c === this.country ? " selected" : ""}>${escapeHtml(c)}</option>`).join("") +
-      `</select><span class="muted tv-count"></span></div>` +
-      `<div class="tv-scroll"></div>`;
+      countries()
+        .map((c) => `<option${c === this.country ? " selected" : ""}>${escapeHtml(c)}</option>`)
+        .join("") +
+      `</select><div class="tv-rail" role="listbox"></div></div>`;
 
-    const scroll = wrap.querySelector<HTMLElement>(".tv-scroll")!;
-    const count = wrap.querySelector<HTMLElement>(".tv-count")!;
-    const fill = (): void => {
-      const list = this.country === "All" ? CHANNELS : CHANNELS.filter((c) => c.country === this.country);
-      count.textContent = `${list.length} channel${list.length === 1 ? "" : "s"}`;
-      scroll.innerHTML = list
+    const rail = wrap.querySelector<HTMLElement>(".tv-rail")!;
+    const fillRail = (): void => {
+      const list =
+        this.country === "All" ? CHANNELS : CHANNELS.filter((c) => c.country === this.country);
+      rail.innerHTML = list
         .map(
           (c) =>
-            `<div class="tv-card"><div class="tv-name">${escapeHtml(c.name)} · ${escapeHtml(c.country)}</div>` +
-            `<iframe class="tv-frame" loading="lazy" allowfullscreen src="${embedUrl(c.channelId)}"></iframe></div>`,
+            `<button class="tv-pick${c.channelId === this.playing.channelId ? " active" : ""}" ` +
+            `role="option" aria-selected="${c.channelId === this.playing.channelId}" ` +
+            `data-ch="${escapeHtml(c.channelId)}">${escapeHtml(c.name)}` +
+            `<span class="muted">${escapeHtml(c.country)}</span></button>`,
         )
         .join("");
     };
+
     wrap.querySelector(".tv-filter")!.addEventListener("change", (e) => {
       this.country = (e.target as HTMLSelectElement).value;
-      fill();
+      fillRail();
     });
-    fill();
+    rail.addEventListener("click", (e) => {
+      const id = (e.target as HTMLElement).closest<HTMLElement>(".tv-pick")?.dataset.ch;
+      const picked = CHANNELS.find((c) => c.channelId === id);
+      if (picked && picked.channelId !== this.playing.channelId) {
+        this.playing = picked;
+        this.render(); // swap the single player rather than adding another
+      }
+    });
+
+    fillRail();
     this.setContent(wrap);
   }
 }
@@ -933,5 +913,111 @@ export class SourceHealthPanel extends Panel {
       }
     });
     this.setContent(list);
+  }
+}
+
+
+const STANCE_COLOR: Record<string, string> = {
+  "risk-on": VIZ_COLORS.up,
+  "risk-off": VIZ_COLORS.down,
+  mixed: "#f5a623",
+};
+
+function plural(n: number, noun: string): string {
+  return `${n} ${noun}${n === 1 ? "" : "s"}`;
+}
+
+/** Legs are already ranked and signed by the engine — colour is the only translation. */
+function legBars(legs: ScenarioLeg[], label: string): string {
+  return barChart(
+    legs.map((leg) => ({
+      label: leg.name,
+      value: Math.round(leg.strength * 100),
+      color: leg.direction === "up" ? VIZ_COLORS.up : VIZ_COLORS.down,
+      note: `${leg.direction === "up" ? "▲" : "▼"} ${leg.tilt >= 0 ? "+" : ""}${leg.tilt.toFixed(2)}`,
+    })),
+    label,
+  );
+}
+
+export class ScenarioPanel extends Panel {
+  private held = new Set<string>();
+
+  constructor() {
+    super({ id: "scenarios", title: "Scenarios — what to do about it", w: 12, h: 7 });
+    this.el.addEventListener("click", (e) => {
+      const sym = (e.target as HTMLElement).closest<HTMLElement>(".sc-tk")?.dataset.sym;
+      if (sym) window.dispatchEvent(new CustomEvent("worldfin:select-symbol", { detail: sym }));
+    });
+  }
+
+  async load(): Promise<void> {
+    // Positions only decorate the exposure chips, so a missing portfolio must
+    // not cost the advice.
+    try {
+      const portfolio = await api.portfolio();
+      this.held = new Set(
+        portfolio.positions.map((p) => String(p.ticker || "").toUpperCase()),
+      );
+    } catch {
+      this.held = new Set();
+    }
+    try {
+      this.render(await api.scenarios());
+    } catch {
+      this.setContent('<p class="empty">Scenario engine unavailable.</p>');
+    }
+  }
+
+  private render(scenarios: Scenario[]): void {
+    if (!scenarios.length) {
+      this.setContent(
+        '<p class="empty">No scenario has formed yet — events cluster into one once ' +
+          "two or more corroborate.</p>",
+      );
+      return;
+    }
+    this.setContent(
+      `<div class="sc-grid">${scenarios.map((s) => this.card(s)).join("")}</div>`,
+    );
+  }
+
+  private card(scenario: Scenario): string {
+    const color = STANCE_COLOR[scenario.stance] ?? VIZ_COLORS.muted;
+    const pct = Math.round(scenario.probability * 100);
+    const chips = scenario.exposure
+      .map((leg) => {
+        const owned = this.held.has(leg.name);
+        return (
+          `<button class="sc-tk${owned ? " sc-held" : ""}" data-sym="${escapeHtml(leg.name)}" ` +
+          `title="${owned ? "in your portfolio · " : ""}net tilt ${leg.tilt.toFixed(2)}">` +
+          `${escapeHtml(leg.name)} ${leg.direction === "up" ? "▲" : "▼"}</button>`
+        );
+      })
+      .join("");
+    const chain = scenario.chain
+      .map((fx) => `<li>${escapeHtml(fx)}</li>`)
+      .join("");
+    // Divergence means the sources disagreed — the one caveat worth the space.
+    const caveat =
+      scenario.divergent_members > 0
+        ? ` · <span class="sc-warn">${scenario.divergent_members} divergent</span>`
+        : "";
+
+    return (
+      `<article class="sc-card" data-id="${escapeHtml(scenario.id)}">` +
+      `<header class="sc-head">` +
+      `<span class="sc-stance" style="background:${color}">${escapeHtml(scenario.stance)}</span>` +
+      `<h4 class="sc-title">${escapeHtml(scenario.title)}</h4>` +
+      `<span class="sc-prob" style="color:${color}">${pct}%</span></header>` +
+      `<div class="sc-bar"><i style="width:${pct}%;background:${color}"></i></div>` +
+      `<p class="sc-advice">${escapeHtml(scenario.advice)}</p>` +
+      (scenario.sectors.length ? legBars(scenario.sectors, "sector tilt") : "") +
+      (chips ? `<div class="sc-chips">${chips}</div>` : "") +
+      (chain ? `<ul class="sc-chain">${chain}</ul>` : "") +
+      `<footer class="muted sc-meta">${plural(scenario.reports ?? scenario.size, "report")} · ` +
+      `${escapeHtml(scenario.sources.slice(0, 3).join(", ") || "no sources")} · ` +
+      `${escapeHtml(scenario.data_tier)}${caveat}</footer></article>`
+    );
   }
 }

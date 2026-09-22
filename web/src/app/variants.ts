@@ -16,34 +16,35 @@ export const PAGE_LAYOUT: PanelSlot[] = [
   // band 1 — live markets + watchlist
   { id: "markets-live", w: 8, h: 6 },
   { id: "watchlist", w: 4, h: 6 },
-  // band 2 — intelligence: signals + globe
+  // band 2 — the advice itself: clustered scenarios and what each one implies.
+  // Above the evidence panels on purpose; the rest of the page is why it says so.
+  { id: "scenarios", w: 12, h: 7 },
+  // band 3 — intelligence: signals + globe
   { id: "feed", w: 4, h: 8 },
   { id: "globe", w: 8, h: 8 },
-  // band 3 — chart + research (both re-aim on worldfin:select-symbol)
+  // band 4 — chart + research (both re-aim on worldfin:select-symbol)
   { id: "candles", w: 8, h: 6 },
   { id: "agents", w: 4, h: 6 },
-  // band 4 — state of the world
+  // band 5 — state of the world. `suggestions` reports per-ticker mention counts,
+  // which is all the old `markets` panel showed.
   { id: "stats", w: 4, h: 4 },
   { id: "sectors", w: 4, h: 4 },
   { id: "suggestions", w: 4, h: 4 },
-  // band 5 — the news room (raw feeds)
+  // band 6 — the news room. The lobby tabs every registry feed, so a panel pinned
+  // to one of them (`worldnews`) was showing a subset of this.
   { id: "lobby", w: 12, h: 8 },
-  // band 6 — broadcast + curated world news
-  { id: "worldnews", w: 4, h: 6 },
-  { id: "livetv", w: 8, h: 6 },
-  // band 7 — proof: corroboration, realized accuracy, ingest health
+  // band 7 — broadcast, full width: one player and a channel rail
+  { id: "livetv", w: 12, h: 6 },
+  // band 8 — proof: corroboration, realized accuracy, ingest health
   { id: "correlations", w: 4, h: 4 },
   { id: "accuracy", w: 4, h: 4 },
   { id: "sources", w: 4, h: 4 },
-  // band 8 — forward-looking + what already fired
+  // band 9 — forward-looking + social
   { id: "prediction", w: 6, h: 5 },
-  { id: "alerts", w: 6, h: 5 },
-  // band 9 — personal
-  { id: "sentiment", w: 4, h: 5 },
-  { id: "portfolio", w: 4, h: 5 },
-  { id: "markets", w: 4, h: 5 },
-  // band 10 — date strip
-  { id: "calendar", w: 12, h: 2 },
+  { id: "sentiment", w: 6, h: 5 },
+  // band 10 — personal + date strip
+  { id: "portfolio", w: 6, h: 5 },
+  { id: "calendar", w: 6, h: 5 },
 ];
 
 export function pagePanelIds(): Set<string> {

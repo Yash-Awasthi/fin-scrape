@@ -13,23 +13,21 @@ import { Panel } from "./panels/panel";
 import {
   AccuracyPanel,
   AgentPanel,
-  AlertsPanel,
   CalendarPanel,
   CandlesPanel,
   CorrelationPanel,
   LiveTVPanel,
   MarketsLivePanel,
-  MarketsPanel,
   NewsLobbyPanel,
   PortfolioPanel,
   PredictionPanel,
+  ScenarioPanel,
   SectorPanel,
   SentimentPanel,
   SourceHealthPanel,
   StatsPanel,
   SuggestionsPanel,
   WatchlistPanel,
-  WorldNewsPanel,
 } from "./panels/panels";
 import { SignalFeedPanel } from "./panels/signal-feed";
 import { Store } from "./state";
@@ -54,15 +52,13 @@ const sectorPanel = new SectorPanel();
 const suggestionsPanel = new SuggestionsPanel();
 const datesPanel = new CalendarPanel((day) => void loadDay(day));
 const newsLobbyPanel = new NewsLobbyPanel();
-const worldNewsPanel = new WorldNewsPanel();
 const liveTVPanel = new LiveTVPanel();
 const correlationPanel = new CorrelationPanel();
 const accuracyPanel = new AccuracyPanel();
-const alertsPanel = new AlertsPanel();
 const sentimentPanel = new SentimentPanel();
 const portfolioPanel = new PortfolioPanel();
 const predictionPanel = new PredictionPanel();
-const marketsPanel = new MarketsPanel();
+const scenarioPanel = new ScenarioPanel();
 const sourceHealthPanel = new SourceHealthPanel();
 
 for (const p of [
@@ -77,15 +73,13 @@ for (const p of [
   suggestionsPanel,
   datesPanel,
   newsLobbyPanel,
-  worldNewsPanel,
   liveTVPanel,
   correlationPanel,
-  alertsPanel,
   accuracyPanel,
   sentimentPanel,
   portfolioPanel,
   predictionPanel,
-  marketsPanel,
+  scenarioPanel,
   sourceHealthPanel,
 ]) {
   layout.add(p);
@@ -206,18 +200,16 @@ async function loadPanelsData(): Promise<void> {
   if (shown.has("suggestions")) jobs.push(suggestionsPanel.load());
   if (shown.has("sectors")) jobs.push(sectorPanel.load());
   if (shown.has("prediction")) jobs.push(predictionPanel.load());
+  if (shown.has("scenarios")) jobs.push(scenarioPanel.load());
   // A3: the reliability tables grow as outcomes score themselves — refresh the
   // prediction panel every minute so calibration reflects new evidence.
   window.setInterval(() => {
     if (predictionPanel.el.offsetParent) void predictionPanel.load();
   }, 60_000);
   if (shown.has("lobby")) jobs.push(newsLobbyPanel.load());
-  if (shown.has("worldnews")) jobs.push(worldNewsPanel.load());
   if (shown.has("accuracy")) jobs.push(accuracyPanel.load());
-  if (shown.has("alerts")) jobs.push(alertsPanel.load());
   if (shown.has("sentiment")) jobs.push(sentimentPanel.load());
   if (shown.has("portfolio")) jobs.push(portfolioPanel.load());
-  if (shown.has("markets")) jobs.push(marketsPanel.load());
   if (shown.has("sources")) jobs.push(sourceHealthPanel.load());
   if (shown.has("livetv")) liveTVPanel.render();
   await Promise.allSettled(jobs);

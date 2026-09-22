@@ -10,6 +10,7 @@ shared store. Upgrade path: swap `_store` get/set for Redis GET/SETEX keyed the 
 
 from __future__ import annotations
 
+import threading
 import time
 from typing import Callable
 
@@ -24,21 +25,53 @@ _MAX_ENTRIES = 4096
 
 _store: dict[str, tuple[float, object]] = {}
 
+# One lock per in-flight key. Without it every concurrent miss runs `produce()`,
+# which for /api/scenarios is a full Ollama embedding pass per caller.
+_locks: dict[str, threading.Lock] = {}
+_locks_guard = threading.Lock()
+
+
+def _lock_for(key: str) -> threading.Lock:
+    with _locks_guard:
+        return _locks.setdefault(key, threading.Lock())
+
+
+MISSING = object()  # distinguishes "no live entry" from a cached None
+
+
+def peek(key: str) -> object:
+    """Live value for `key`, or `MISSING`. Lets a caller skip the work that
+    builds `produce`'s inputs, not just `produce` itself."""
+    hit = _store.get(key)
+    return hit[1] if hit and hit[0] > time.monotonic() else MISSING
+
 
 def get_or_set(key: str, ttl: float, produce: Callable[[], object]) -> object:
-    """Return cached value for `key`, or call `produce()` and cache it for `ttl`s."""
-    now = time.monotonic()
-    hit = _store.get(key)
-    if hit and hit[0] > now:
-        return hit[1]
-    if len(_store) >= _MAX_ENTRIES:
-        for stale in [k for k, (expires, _) in _store.items() if expires <= now]:
-            del _store[stale]
-        if len(_store) >= _MAX_ENTRIES:
-            _store.clear()
-    value = produce()
-    _store[key] = (now + ttl, value)
-    return value
+    """Return cached value for `key`, or call `produce()` and cache it for `ttl`s.
+
+    Concurrent misses on one key collapse to a single `produce()` call; the
+    others wait and read the stored result.
+    """
+    cached = peek(key)
+    if cached is not MISSING:
+        return cached
+    try:
+        with _lock_for(key):
+            cached = peek(key)  # another caller may have produced it while we waited
+            if cached is not MISSING:
+                return cached
+            now = time.monotonic()
+            if len(_store) >= _MAX_ENTRIES:
+                for stale in [k for k, (exp, _) in _store.items() if exp <= now]:
+                    del _store[stale]
+                if len(_store) >= _MAX_ENTRIES:
+                    _store.clear()
+            value = produce()
+            _store[key] = (now + ttl, value)
+            return value
+    finally:
+        with _locks_guard:
+            _locks.pop(key, None)  # a later miss makes a fresh lock
 
 
 def clear() -> None:

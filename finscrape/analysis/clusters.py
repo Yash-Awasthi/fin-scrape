@@ -45,13 +45,14 @@ def _within_window(a: str | None, b: str | None, window_hours: int) -> bool:
 
 
 def cluster_meta(members: list[dict]) -> dict:
-    """Aggregate one cluster's metadata: member ids, ticker/source unions,
+    """Aggregate one cluster's metadata: member ids, ticker/source/article unions,
     avg score, first-seen time and the newest subject (the feed's top row)."""
     ordered = sorted(members, key=lambda e: e.get("created_at") or "")
     tickers: list[str] = []
     seen_t: set[str] = set()
     sources: list[str] = []
     seen_s: set[str] = set()
+    articles: set[str] = set()
     for m in ordered:
         for t in m.get("tickers") or []:
             if t not in seen_t:
@@ -61,12 +62,17 @@ def cluster_meta(members: list[dict]) -> dict:
             if s not in seen_s:
                 seen_s.add(s)
                 sources.append(s)
+        articles.update(str(a) for a in m.get("articles") or [])
     scores = [float(m.get("signal_score") or 0) for m in ordered]
     return {
         "member_ids": [m.get("id") for m in ordered],
         "size": len(ordered),
         "tickers": tickers[:10],
         "sources": sources,
+        # Distinct reports behind the cluster. The pipeline merges same-story
+        # coverage into one event before storage, so member count is ~always 1
+        # and this is the only place corroboration survives.
+        "reports": max(len(articles), len(ordered)),
         "avg_score": round(sum(scores) / len(scores), 2) if scores else 0.0,
         "first_seen": ordered[0].get("created_at"),
         "top_subject": ordered[-1].get("subject") or "",
@@ -124,7 +130,9 @@ def cluster_events(
 _PREFETCH_WORKERS = 6
 
 
-def build_storylines(events: list[dict], threshold: float = DEFAULT_THRESHOLD) -> list[dict]:
+def build_storylines(
+    events: list[dict], threshold: float = DEFAULT_THRESHOLD
+) -> list[dict]:
     """Production wiring: cluster full event rows with the local embeddings.
 
     Each returned cluster carries `members` (the full event dicts, newest
@@ -154,7 +162,9 @@ def build_storylines(events: list[dict], threshold: float = DEFAULT_THRESHOLD) -
     member_by_id = {e.get("id"): e for e in events}
     out = []
     for meta in metas:
-        members = [member_by_id[mid] for mid in meta["member_ids"] if mid in member_by_id]
+        members = [
+            member_by_id[mid] for mid in meta["member_ids"] if mid in member_by_id
+        ]
         members.sort(key=lambda e: e.get("created_at") or "")
         cluster = dict(meta)
         cluster["members"] = list(reversed(members))  # newest first for the feed

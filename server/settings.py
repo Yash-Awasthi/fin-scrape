@@ -78,6 +78,11 @@ class Settings(BaseSettings):
     source_stale_after_minutes: int = Field(
         default=60, validation_alias="WORLDFIN_SOURCE_STALE_MIN"
     )
+    # Build the scenario cache at boot so the first caller doesn't pay the full
+    # Ollama embedding pass. Off in tests, which have neither Ollama nor a DB.
+    warm_scenarios_on_startup: bool = Field(
+        default=True, validation_alias="WORLDFIN_WARM_SCENARIOS"
+    )
 
     # --- Server ---
     host: str = Field(default="0.0.0.0", validation_alias="WORLDFIN_HOST")
