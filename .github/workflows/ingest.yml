@@ -19,12 +19,12 @@ jobs:
     timeout-minutes: 20
     env:
       WORLDFIN_DATABASE_URL: ${{ secrets.WORLDFIN_DATABASE_URL }}
-      # Free GPT-5.x via freemodel.dev (OpenAI Responses API). Heuristic fallback (below)
-      # still covers any LLM outage so events always land.
-      OPENAI_BASE_URL: https://api.freemodel.dev
+      # Free models via TokenHarbor (OpenAI chat API). Heuristic fallback (below) still
+      # covers any LLM outage so events always land.
+      OPENAI_BASE_URL: https://tokenharbor.ai/v1
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      FINSCRAPE_WIRE_API: responses
-      FINSCRAPE_MODEL: gpt-5.4-mini
+      FINSCRAPE_WIRE_API: chat
+      FINSCRAPE_MODEL: qwen3.8-flash:free
       FINSCRAPE_HEURISTIC_FALLBACK: "true"
       WORLDFIN_WORKER_MAX_ARTICLES: "6"
       WORLDFIN_ENABLE_CORRELATION: "true"
