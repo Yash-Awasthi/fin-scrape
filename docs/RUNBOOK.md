@@ -3,7 +3,7 @@
 How to operate, observe, restore, and rotate secrets for the WorldFin stack. Pairs with
 [`SECURITY.md`](SECURITY.md) (threat model) and [`DATA_SOURCES.md`](DATA_SOURCES.md) (feeds).
 
-Stack = **postgres** + **api** (FastAPI :8000) + **worker** (APScheduler) + **web** (nginx :8080).
+Stack = **postgres** + **api** (FastAPI :8010 on the host) + **worker** (APScheduler) + **web** (nginx :8080).
 Optional observability overlay = **prometheus** + **grafana** + **loki** + **promtail**.
 
 ---

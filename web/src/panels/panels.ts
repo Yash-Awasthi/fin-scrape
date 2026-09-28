@@ -1009,7 +1009,7 @@ export class ScenarioPanel extends Panel {
       `<header class="sc-head">` +
       `<span class="sc-stance" style="background:${color}">${escapeHtml(scenario.stance)}</span>` +
       `<h4 class="sc-title">${escapeHtml(scenario.title)}</h4>` +
-      `<span class="sc-prob" style="color:${color}">${pct}%</span></header>` +
+      `<span class="sc-prob" style="color:${color}" title="probability the ${escapeHtml(scenario.stance)} call plays out · ${escapeHtml(scenario.data_tier)}">${pct}%</span></header>` +
       `<div class="sc-bar"><i style="width:${pct}%;background:${color}"></i></div>` +
       `<p class="sc-advice">${escapeHtml(scenario.advice)}</p>` +
       (scenario.sectors.length ? legBars(scenario.sectors, "sector tilt") : "") +

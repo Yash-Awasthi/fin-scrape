@@ -55,7 +55,8 @@ def event_weight(event: dict[str, Any]) -> float:
 
 
 def _sectors_of(event: dict[str, Any]) -> list[str]:
-    return normalize_sectors(event.get("sector_impact"))
+    # "other" means no sector is moved; as a leg it produced "reduce other".
+    return [s for s in normalize_sectors(event.get("sector_impact")) if s != "other"]
 
 
 def _tickers_of(event: dict[str, Any]) -> list[str]:
@@ -77,23 +78,51 @@ def _tickers_of(event: dict[str, Any]) -> list[str]:
     return out
 
 
+def _analyzed_p(event: dict[str, Any]) -> float | None:
+    """P(up) implied by the event's own analyzed signal_score (-5..5), or None."""
+    try:
+        score = max(-5.0, min(5.0, float(event.get("signal_score") or 0)))
+    except (TypeError, ValueError):
+        return None
+    return 0.5 + 0.08 * score if score else None
+
+
+def _member_p(event: dict[str, Any], prediction: dict[str, Any]) -> float:
+    """Direction for one member.
+
+    Without outcome data predict() falls back to lexicon sentiment over the prose,
+    which ignores the analysis's own call and let related events advise opposite
+    ways. Until outcomes exist, the analyzed signal_score leads.
+    """
+    predicted = float(prediction.get("p_positive_move", 0.5))
+    analyzed = _analyzed_p(event)
+    tier = str(prediction.get("data_tier") or "no-outcomes")
+    if analyzed is None or tier == "empirical":
+        return predicted
+    return analyzed if tier == "no-outcomes" else (predicted + analyzed) / 2
+
+
 def _tilt(p_positive: float) -> float:
     """Probability onto a signed -1..1 axis: 0.5 is no opinion."""
     return (p_positive - 0.5) * 2.0
 
 
-def _rank(totals: dict[str, float], limit: int) -> list[dict[str, Any]]:
+def _rank(totals: dict[str, float], limit: int, scale: float) -> list[dict[str, Any]]:
     """Strongest legs first. Legs that net to zero carry no instruction and are
     dropped — the caller reports the cancellation, which is not the same thing
-    as never having been exposed."""
+    as never having been exposed.
+
+    Strength is tilt per unit of member weight, not share of the strongest leg:
+    relative to the peak, a lone weak leg always drew a full bar.
+    """
     live = {k: v for k, v in totals.items() if abs(v) > 1e-9}
     ranked = sorted(live.items(), key=lambda kv: abs(kv[1]), reverse=True)[:limit]
-    peak = max((abs(v) for _, v in ranked), default=0.0) or 1.0
+    peak = scale if scale > 0 else 1.0
     return [
         {
             "name": name,
             "direction": "up" if value > 0 else "down",
-            "strength": round(abs(value) / peak, 3),
+            "strength": round(min(1.0, abs(value) / peak), 3),
             "tilt": round(value, 3),
         }
         for name, value in ranked
@@ -167,7 +196,7 @@ def score_scenario(
             event_type=str(member.get("event_type") or "other"),
             outcomes=outcomes,
         )
-        p_positive = float(prediction.get("p_positive_move", 0.5))
+        p_positive = _member_p(member, prediction)
         tiers.append(str(prediction.get("data_tier") or "no-outcomes"))
         weighted_p += p_positive * weight
         total_weight += weight
@@ -200,8 +229,8 @@ def score_scenario(
     probability = p_positive if p_positive >= 0.5 else 1.0 - p_positive
 
     member_ids = [m.get("id") for m in members if m.get("id") is not None]
-    sectors = _rank(sector_tilt, _MAX_SECTORS)
-    exposure = _rank(ticker_tilt, _MAX_EXPOSURE)
+    sectors = _rank(sector_tilt, _MAX_SECTORS, total_weight)
+    exposure = _rank(ticker_tilt, _MAX_EXPOSURE, total_weight)
 
     return {
         "id": f"s{min(member_ids)}" if member_ids else "s0",

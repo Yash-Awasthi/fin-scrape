@@ -574,4 +574,9 @@ def clean_tickers(tickers: list[str], text: str = "") -> list[str]:
     """
     protected = set(re.findall(r"\$([A-Z]{1,5})\b", text))
     protected.update(re.findall(r"\(([A-Z]{1,5})\)", text))
-    return [t for t in tickers if t.upper() in protected or t.upper() not in TICKER_STOPWORDS]
+    # Indices (^GSPC) are benchmarks, not positions anyone can take.
+    return [
+        t for t in tickers
+        if not t.startswith("^")
+        and (t.upper() in protected or t.upper() not in TICKER_STOPWORDS)
+    ]

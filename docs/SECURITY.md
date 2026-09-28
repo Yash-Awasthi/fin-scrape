@@ -89,5 +89,5 @@ uv run -p 3.13 --group server --group dev pytest tests/server/test_hardening.py 
 Quick manual load check (confirms cache/304 + rate limit under concurrency):
 ```bash
 # 200 requests, 20 concurrent — expect a burst of 200s then 429s once the window fills
-seq 200 | xargs -P20 -I{} curl -s -o /dev/null -w "%{http_code}\n" localhost:8000/api/feeds | sort | uniq -c
+seq 200 | xargs -P20 -I{} curl -s -o /dev/null -w "%{http_code}\n" localhost:8010/api/feeds | sort | uniq -c
 ```

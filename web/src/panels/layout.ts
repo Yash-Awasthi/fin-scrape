@@ -37,6 +37,7 @@ export class PanelLayoutManager {
       panel.el.style.order = String(order++);
       panel.el.style.gridColumn = `span ${Math.min(slot.w, 12)}`;
       panel.el.style.gridRow = `span ${slot.h}`;
+      panel.el.dataset.w = String(slot.w);
     }
     const hidden: string[] = [];
     for (const [id, panel] of this.panels) {

@@ -1,7 +1,7 @@
 """Shared helpers for server/worker DB integration tests.
 
-Integration tests skip cleanly when no Postgres is reachable at WORLDFIN_DATABASE_URL,
-so the suite stays green without docker and runs automatically under `make up` / CI.
+Integration tests skip cleanly when no Postgres is reachable at
+WORLDFIN_TEST_DATABASE_URL, so the suite stays green without a database.
 """
 
 from __future__ import annotations
@@ -9,9 +9,19 @@ from __future__ import annotations
 import asyncio
 import os
 
+from urllib.parse import urlparse
+
+# Deliberately not WORLDFIN_DATABASE_URL: these tests TRUNCATE, and sharing the
+# app's variable is how a local corpus got wiped.
 PG_DSN = os.getenv(
-    "WORLDFIN_DATABASE_URL", "postgresql://worldfin:worldfin@localhost:5432/worldfin"
+    "WORLDFIN_TEST_DATABASE_URL",
+    "postgresql://worldfin:worldfin@localhost:5432/worldfin_test",
 )
+if not urlparse(PG_DSN).path.lstrip("/").endswith("_test"):
+    raise RuntimeError(
+        f"refusing to run destructive DB tests against {PG_DSN!r}: "
+        "the database name must end in _test"
+    )
 
 
 def pg_reachable() -> bool:
@@ -31,9 +41,7 @@ def pg_reachable() -> bool:
 async def fresh_pool(*truncate):
     """Connect, apply migrations, and TRUNCATE the named tables for a clean slate.
 
-    Destructive, and it targets whatever WORLDFIN_DATABASE_URL points at —
-    which defaults to the same DSN a local `make up` stack uses. Point it at a
-    database whose contents you want and the suite will delete them.
+    Destructive; PG_DSN is guarded above to a database named *_test.
     """
     from server import db
 

@@ -58,6 +58,10 @@ TICKER_STOPWORDS = frozenset({
     "CEO", "ANY", "FEE", "MAP", "OIL", "GAS", "TAX", "ERA",
     "BREAK", "CHINA", "JAPAN", "INDIA", "KOREA", "TRUMP",
     "BIDEN", "WHITE", "BLACK", "NORTH", "SOUTH", "EAST", "WEST",
+    # Agencies, alliances and blocs seen rendering as tradeable chips
+    "NATO", "CIA", "FBI", "NSA", "IOM", "WHO", "WTO", "OPEC", "IAEA", "ICC", "ICJ",
+    "UNHCR", "UNSC", "NGO", "OECD", "BRICS", "ASEAN", "G7", "G20", "IDF", "IRGC",
+    "EPA", "FAA", "FDA", "DOJ", "DOD", "DHS", "NHS", "RBI", "BOJ", "BOE", "PBOC",
 })
 
 # ---------------------------------------------------------------------------

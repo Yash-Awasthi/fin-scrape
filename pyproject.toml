@@ -30,11 +30,20 @@ dependencies = [
     "scipy>=1.17.1",
 ]
 
+[project.optional-dependencies]
+# Sector/direction classifier. `laya` runs on PyTorch anywhere; `laya-mlx` only on Apple Silicon.
+laya = [
+    "laya>=0.3.20; sys_platform != 'darwin' or platform_machine != 'arm64'",
+    "laya-mlx>=0.2.0; sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+
 [dependency-groups]
 dev = [
     "pytest>=9.0.3",
-    "ruff>=0.4.0",
-    "pyright>=1.1.390",
+    # Pinned: uv.lock is not committed, so an open range let CI pick up new default
+    # lint rules between runs. Upgrade deliberately and fix findings in the same change.
+    "ruff==0.15.20",
+    "pyright==1.1.411",
 ]
 # WorldFin backend (server/). Kept out of core deps so the finscrape CLI install
 # stays lean; `uv sync --group server` to work on the API.

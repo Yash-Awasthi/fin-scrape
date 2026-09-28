@@ -10,7 +10,7 @@ the impact → show it on a live globe → and **prove the calls were right** ov
 ## Prerequisites
 
 - **Docker + Docker Compose** (or Podman with the `docker compose` shim).
-- ~4 GB free RAM, ports **8080** (web), **8000** (api), **5432** (postgres) free.
+- ~4 GB free RAM, ports **8080** (web), **8010** (api), **5433** (postgres) free.
 - **No API key required** — the dashboard runs on the seeded dataset out of the box.
   For live ingestion, supply an LLM backend (local Ollama *or* a BYOK OpenRouter key) in
   `.env`; see [`.env.example`](../.env.example).
@@ -29,7 +29,7 @@ make demo                     # builds + starts the stack, then seeds it
 the curated historical window). When it finishes:
 
 - **Dashboard:** http://localhost:8080
-- **API docs:** http://localhost:8000/docs
+- **API docs:** http://localhost:8010/docs
 
 To reseed at any time (idempotent — same-day re-runs insert nothing new):
 
@@ -90,11 +90,11 @@ receipts to prove the calls were right.*
 Every panel is backed by an endpoint you can curl:
 
 ```bash
-curl -s localhost:8000/api/stats        # totals + by-verdict
-curl -s localhost:8000/api/dates        # calendar day counts
-curl -s localhost:8000/api/accuracy     # hit-rate + equity curve
-curl -s localhost:8000/api/correlations # breaking-correlation signals
-curl -s localhost:8000/api/markets      # most-mentioned tickers
+curl -s localhost:8010/api/stats        # totals + by-verdict
+curl -s localhost:8010/api/dates        # calendar day counts
+curl -s localhost:8010/api/accuracy     # hit-rate + equity curve
+curl -s localhost:8010/api/correlations # breaking-correlation signals
+curl -s localhost:8010/api/markets      # most-mentioned tickers
 ```
 
 ---

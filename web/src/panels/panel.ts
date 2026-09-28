@@ -28,6 +28,8 @@ export class Panel {
 
     this.body = document.createElement("div");
     this.body.className = "panel-body";
+    // Replaced by the first setContent; a panel whose load never lands still says so.
+    this.body.innerHTML = '<p class="empty" aria-busy="true">Loading…</p>';
 
     this.el.append(header, this.body);
     this.applyGrid();

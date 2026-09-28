@@ -113,6 +113,7 @@ function sizeGlobe(): void {
 }
 window.addEventListener("resize", sizeGlobe);
 void import("./globe/globe").then(({ GlobeView }) => {
+  globePanel.body.replaceChildren();
   globe = new GlobeView(globePanel.body, (e) => store.select(e));
   sizeGlobe();
   globe.setEvents(store.get().events);

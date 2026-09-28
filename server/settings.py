@@ -75,6 +75,8 @@ class Settings(BaseSettings):
     worker_max_articles: int = Field(
         default=20, validation_alias="WORLDFIN_WORKER_MAX_ARTICLES"
     )
+    # Days kept in correlations / scrape_runs / ai_analysis_cache; 0 keeps forever.
+    retention_days: int = Field(default=90, validation_alias="WORLDFIN_RETENTION_DAYS")
     source_stale_after_minutes: int = Field(
         default=60, validation_alias="WORLDFIN_SOURCE_STALE_MIN"
     )
@@ -88,7 +90,7 @@ class Settings(BaseSettings):
     host: str = Field(default="0.0.0.0", validation_alias="WORLDFIN_HOST")
     # PaaS hosts (Render/Koyeb/Fly) inject $PORT — bind whatever they assign.
     port: int = Field(
-        default=8000, validation_alias=AliasChoices("WORLDFIN_PORT", "PORT")
+        default=8010, validation_alias=AliasChoices("WORLDFIN_PORT", "PORT")
     )
     cors_origins: str = Field(default="*", validation_alias="WORLDFIN_CORS_ORIGINS")
 

@@ -1,7 +1,13 @@
-"""ReliefWeb (UN OCHA) disasters — keyless JSON. Humanitarian/disaster signals."""
+"""ReliefWeb (UN OCHA) disasters — JSON API v2. Humanitarian/disaster signals.
+
+v1 is decommissioned (410) and v2 rejects any appname ReliefWeb has not approved
+(403), so the source only runs once RELIEFWEB_APPNAME holds an approved name:
+https://apidoc.reliefweb.int/parameters#appname
+"""
 
 from __future__ import annotations
 
+import os
 from typing import Any
 
 from finscrape.ingestors.base import BaseIngestor, RawGeoEvent
@@ -9,7 +15,11 @@ from finscrape.ingestors.base import BaseIngestor, RawGeoEvent
 
 class ReliefWebIngestor(BaseIngestor):
     name = "reliefweb"
-    base_url = "https://api.reliefweb.int/v1/disasters"
+    base_url = "https://api.reliefweb.int/v2/disasters"
+
+    @staticmethod
+    def enabled() -> bool:
+        return bool(os.getenv("RELIEFWEB_APPNAME"))
 
     def __init__(self, limit: int = 20):
         self.limit = limit
@@ -18,7 +28,7 @@ class ReliefWebIngestor(BaseIngestor):
         # appname is required by ReliefWeb's terms; fields[] keeps the payload small.
         return super().fetch_raw(
             params={
-                "appname": "finscrape-worldfin",
+                "appname": os.getenv("RELIEFWEB_APPNAME", ""),
                 "limit": self.limit,
                 "sort[]": "date:desc",
                 "fields[include][]": ["name", "status", "date", "country"],

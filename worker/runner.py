@@ -24,7 +24,7 @@ from server.correlate import (
     analyze_correlations,
 )
 from server.geocode import geocode_event
-from server.ingest import ingest_events
+from server.ingest import canonical_url, ingest_events
 from server.obs import record_ingest
 from server.pubsub import publish
 from server.queries import get_recent_predictions
@@ -34,7 +34,7 @@ from worker.health import (
     record_source_health,
     start_scrape_run,
 )
-from worker.sources import Item, build_sources
+from worker.sources import Item, build_enrichers, build_sources
 
 log = logging.getLogger("worldfin.worker")
 
@@ -46,11 +46,82 @@ async def persist_correlations(pool: asyncpg.Pool, signals: list) -> None:
     for sig in signals:
         await pool.execute(
             "INSERT INTO correlations (dedupe_key, signal_type, confidence, payload) "
-            "VALUES ($1, $2, $3, $4)",
+            "VALUES ($1, $2, $3, $4) ON CONFLICT (dedupe_key) DO UPDATE SET "
+            "confidence = EXCLUDED.confidence, payload = EXCLUDED.payload, "
+            "detected_at = now()",
             sig.dedupe_key,
             sig.type,
             sig.confidence,
             {"id": sig.id, "value": sig.value, **sig.payload},
+        )
+
+
+def _visit_key(url: str) -> str:
+    """Canonical URL, or "" for placeholders like `ingestor://usgs` that every
+    URL-less item from a source shares — marking one would silence the source."""
+    return canonical_url(url) if url.startswith(("http://", "https://")) else ""
+
+
+async def unvisited(pool: asyncpg.Pool, items: list[Item]) -> list[Item]:
+    """Drop items whose URL an earlier cycle already judged."""
+    urls = [_visit_key(a.url) for a, _ in items]
+    seen = {
+        r["url"]
+        for r in await pool.fetch(
+            "SELECT url FROM visited_urls WHERE url = ANY($1::text[])", urls
+        )
+    }
+    return [item for item, url in zip(items, urls) if not url or url not in seen]
+
+
+async def mark_visited(pool: asyncpg.Pool, source: str, urls: list[str]) -> None:
+    canon = [u for u in (_visit_key(x) for x in urls) if u]
+    if canon:
+        await pool.execute(
+            "INSERT INTO visited_urls (url, source) SELECT u, $2 FROM unnest($1::text[]) u "
+            "ON CONFLICT (url) DO NOTHING",
+            canon,
+            source,
+        )
+
+
+async def merge_coverage(
+    pool: asyncpg.Pool, merges: list[tuple[str, str, str]]
+) -> None:
+    """Apply the pipeline's same-story merges (subject, url, source) to Postgres.
+
+    The pipeline stores subjects normalized, so the subject it matched is the exact
+    string the Postgres row carries.
+    """
+    for subject, url, source in merges:
+        await pool.execute(
+            """
+            UPDATE events SET
+              articles = CASE WHEN articles ? $2 THEN articles
+                              ELSE articles || to_jsonb($2::text) END,
+              sources  = CASE WHEN sources ? $3 THEN sources
+                              ELSE sources || to_jsonb($3::text) END
+            WHERE id = (SELECT id FROM events WHERE subject = $1 ORDER BY id DESC LIMIT 1)
+            """,
+            subject,
+            url,
+            source,
+        )
+
+
+async def prune_old_rows(pool: asyncpg.Pool, days: int) -> None:
+    """Age out operational tables. Events are the product and are never pruned."""
+    if days <= 0:
+        return
+    for table, column in (
+        ("correlations", "detected_at"),
+        ("scrape_runs", "started_at"),
+        ("ai_analysis_cache", "created_at"),
+        ("visited_urls", "visited_at"),
+    ):
+        await pool.execute(
+            f"DELETE FROM {table} WHERE {column} < now() - make_interval(days => $1)",
+            days,
         )
 
 
@@ -64,7 +135,9 @@ def _source_type(source: str) -> str:
 class Worker:
     def __init__(self, pool: asyncpg.Pool, max_articles: int = 20):
         self.pool = pool
+        self.max_articles = max_articles
         self.sources = build_sources(max_articles)
+        self.enrichers = build_enrichers()
         # Reuse the fusion brain; disable side-effects the worker doesn't own.
         self.pipeline = FinScrapePipeline(
             sources=[],
@@ -79,16 +152,32 @@ class Worker:
         # non-zero baseline to fire at all, so without this it can never emit.
         self._corr_velocity: dict[str, list[int]] = {}
 
-    def _analyze_blocking(self, source_name: str, items: list[Item]) -> list[dict]:
-        """Thread body: articles -> ingest dicts (FinEvent.to_dict() + geo)."""
+    def _analyze_blocking(
+        self, source_name: str, items: list[Item]
+    ) -> tuple[list[dict], list[tuple[str, str, str]], list[str]]:
+        """Thread body: articles -> (ingest dicts, same-story merges, judged URLs).
+
+        An article the LLM never answered for is left out of the judged URLs so the
+        next cycle retries it instead of losing it.
+        """
         dicts: list[dict] = []
+        merges: list[tuple[str, str, str]] = []
+        judged: list[str] = []
+        enrich = self.enrichers.get(source_name)
         for article, geo in items:
             try:
+                if enrich:
+                    article = enrich(article)
                 fe = self.pipeline._analyze_article(source_name, article)
             except Exception as exc:
                 log.warning("[%s] analyze failed: %s", source_name, exc)
                 continue
+            if not self.pipeline.ai_failed():
+                judged.append(article.url)
             if fe is None:
+                matched = self.pipeline.merged_into()
+                if matched and matched.get("subject"):
+                    merges.append((matched["subject"], article.url, source_name))
                 continue
             d = fe.to_dict()
             lat, lon = geocode_event(
@@ -96,7 +185,7 @@ class Worker:
             )
             d["lat"], d["lon"] = lat, lon
             dicts.append(d)
-        return dicts
+        return dicts, merges, judged
 
     async def run_source(self, name: str) -> dict:
         """Run one source end to end. Returns the ingest result (or zeros on failure)."""
@@ -104,8 +193,13 @@ class Worker:
         run_id = await start_scrape_run(self.pool, name)
         try:
             items = await asyncio.to_thread(self.sources[name])
-            dicts = await asyncio.to_thread(self._analyze_blocking, name, items)
+            fresh = (await unvisited(self.pool, items))[: self.max_articles]
+            dicts, merges, judged = await asyncio.to_thread(
+                self._analyze_blocking, name, fresh
+            )
             result = await ingest_events(self.pool, dicts)
+            await merge_coverage(self.pool, merges)
+            await mark_visited(self.pool, name, judged)
             status = "OK" if items else "EMPTY"
             await record_source_health(self.pool, name, len(items), status)
             await finish_scrape_run(self.pool, run_id, "ok", result["inserted"])

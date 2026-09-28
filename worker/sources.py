@@ -3,6 +3,9 @@
 Each source is a name -> producer() returning a list of (ScrapedArticle, (lat, lon)).
 World RSS has no per-item geo (server.geocode derives it from text); structured
 ingestors carry exact coords. Producers do network I/O and are called inside a thread.
+
+World RSS returns every fresh entry un-enriched; the worker drops already-seen URLs,
+caps the rest, and only then pays for full-text enrichment (`build_enrichers`).
 """
 
 from __future__ import annotations
@@ -19,7 +22,7 @@ Producer = Callable[[], list[Item]]
 
 def _world_rss_producer(max_articles: int) -> Producer:
     def produce() -> list[Item]:
-        articles = WorldRSSScraper(max_articles=max_articles).scrape_news()
+        articles = WorldRSSScraper(max_articles=max_articles).collect()
         return [(a, (None, None)) for a in articles]
 
     return produce
@@ -27,16 +30,25 @@ def _world_rss_producer(max_articles: int) -> Producer:
 
 def _ingestor_producer(cls) -> Producer:
     def produce() -> list[Item]:
-        out: list[Item] = []
-        for e in cls().fetch():
-            out.append((e.to_article(), (e.lat, e.lon)))
-        return out
+        ingestor = cls()
+        data = ingestor.fetch_raw()
+        # fetch() maps a failed request to [], which source health would report as
+        # EMPTY; raising lets the worker record WARN with the reason.
+        if data is None:
+            raise RuntimeError(f"{cls.name} fetch failed")
+        return [(e.to_article(), (e.lat, e.lon)) for e in ingestor.parse(data)]
 
     return produce
+
+
+def build_enrichers() -> dict[str, Callable[[ScrapedArticle], ScrapedArticle]]:
+    """Per-source full-text enrichment, applied only to articles about to be analyzed."""
+    return {"world_rss": WorldRSSScraper().enrich}
 
 
 def build_sources(max_articles: int = 20) -> dict[str, Producer]:
     sources: dict[str, Producer] = {"world_rss": _world_rss_producer(max_articles)}
     for cls in EVENT_INGESTORS:
-        sources[cls.name] = _ingestor_producer(cls)
+        if getattr(cls, "enabled", lambda: True)():
+            sources[cls.name] = _ingestor_producer(cls)
     return sources

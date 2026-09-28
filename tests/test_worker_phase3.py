@@ -10,7 +10,8 @@ from worker.health import derive_status
 from worker.sources import build_sources
 
 
-def test_build_sources_has_world_rss_and_event_ingestors():
+def test_build_sources_has_world_rss_and_event_ingestors(monkeypatch):
+    monkeypatch.setenv("RELIEFWEB_APPNAME", "test-app")
     sources = build_sources(max_articles=5)
     assert "world_rss" in sources
     for name in ("usgs_quakes", "gdelt", "reliefweb"):
@@ -80,7 +81,7 @@ def test_scheduler_covers_every_source_plus_correlate_and_backtest():
     worker = _fake_worker()
     scheduler = _schedule(worker, Settings(_env_file=None))
     ids = {job.id for job in scheduler.get_jobs()}
-    assert ids == {"world_rss", "gdelt", "correlations", "backtest"}
+    assert ids == {"world_rss", "gdelt", "correlations", "backtest", "retention"}
 
 
 def test_backtest_failure_does_not_take_the_worker_down():

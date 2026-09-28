@@ -66,6 +66,32 @@ def _merge_entities(
 # Company name -> ticker lives in finscrape.analysis.ticker_map (the one map,
 # shared with the scrapers' regex extractor). Imported above as COMPANY_TO_TICKER.
 
+# Keys are the `finscrape.analysis.sectors.TAXONOMY` names, so the fallback never
+# writes a sector the panels would have to alias. Geopolitical vocabulary is here
+# because most ingested stories are political and name no company.
+SECTOR_KEYWORDS = {
+    "technology": ["nvidia", "amd", "micron", "sandisk", "intel", "tsmc", "memory chips", "software", "semiconductor", "chip", "chips", "ai", "cloud computing",
+                   "saas", "data center", "artificial intelligence", "cyberattack", "hacker"],
+    "healthcare": ["pharma", "biotech", "drug", "fda", "clinical trial", "healthcare",
+                   "hospital", "vaccine", "outbreak", "pandemic", "epidemic"],
+    "financials": ["fed", "federal reserve", "ecb", "hike rates", "rate hikes", "bitcoins", "etf", "hedge fund", "asset manager", "bank", "banks", "interest rate", "rate cut", "rate hike", "central bank",
+                   "insurance", "insurer", "bond yields", "sovereign debt", "default",
+                   "currency", "bitcoin", "crypto", "sanctions"],
+    "energy": ["oil", "crude", "natural gas", "lng", "pipeline", "refinery", "opec",
+               "petroleum", "renewable", "solar", "nuclear power", "strait of hormuz"],
+    "consumer": ["luxury", "apparel", "retail", "retailer", "consumer spending", "e-commerce", "food prices",
+                 "restaurant", "automaker", "tourism"],
+    "industrials": ["manufacturing", "aerospace", "defense contractor", "defence",
+                    "missile", "fighter jet", "helicopter", "drone", "warship", "arms deal", "shipping", "freight",
+                    "airline", "railway", "port strike", "supply chain", "tariff", "tariffs"],
+    "materials": ["wheat", "grain", "fertilizer", "copper", "lithium", "rare earth",
+                  "steel", "aluminium", "aluminum", "iron ore", "gold", "mining", "drought"],
+    "utilities": ["power grid", "blackout", "electricity prices", "power outage", "water supply"],
+    "real_estate": ["real estate", "reit", "property market", "housing", "mortgage rates"],
+    "communications": ["telecom", "broadband", "satellite", "undersea cable", "social media",
+                       "streaming", "5g"],
+}
+
 # Words that indicate "Apple" is the company, not the fruit
 APPLE_COMPANY_CONTEXT = frozenset({
     "iphone", "ipad", "mac", "macbook", "ios", "app store", "tim cook",
@@ -385,28 +411,12 @@ class FinancialNLP:
     def _detect_sector(self, text: str, tickers: list[str]) -> str:
         """Detect the primary sector from text content and tickers."""
         text_lower = text.lower()
-
-        sector_keywords = {
-            "technology": ["tech", "software", "semiconductor", "chip", "ai", "cloud", "saas", "data center"],
-            "healthcare": ["pharma", "biotech", "drug", "fda", "clinical trial", "healthcare", "hospital"],
-            "finance": ["bank", "financial", "interest rate", "mortgage", "insurance", "trading"],
-            "energy": ["oil", "gas", "renewable", "solar", "wind", "energy", "petroleum", "opec"],
-            "consumer": ["retail", "consumer", "e-commerce", "shopping", "brand"],
-            "industrial": ["manufacturing", "aerospace", "defense", "construction", "transport"],
-            "real_estate": ["real estate", "reit", "property", "housing", "mortgage rates"],
-            "crypto": ["bitcoin", "crypto", "blockchain", "ethereum", "defi"],
+        scores = {
+            sector: sum(1 for kw in keywords if _matches(kw, text_lower))
+            for sector, keywords in SECTOR_KEYWORDS.items()
         }
-
-        scores: dict[str, int] = {}
-        for sector, keywords in sector_keywords.items():
-            scores[sector] = sum(1 for kw in keywords if _matches(kw, text_lower))
-
-        if scores:
-            best = max(scores, key=scores.get)  # type: ignore
-            if scores[best] > 0:
-                return best
-
-        return ""
+        best = max(scores, key=lambda s: scores[s])
+        return best if scores[best] > 0 else ""
 
     def _check_breaking_indicators(self, text: str) -> bool:
         """Check if text contains indicators of breaking/urgent news."""

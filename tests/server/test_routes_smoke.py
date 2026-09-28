@@ -21,7 +21,7 @@ pytest.importorskip("asyncpg")
 from tests.server import PG_DSN, pg_reachable  # noqa: E402
 
 pytestmark = pytest.mark.skipif(
-    not pg_reachable(), reason="no Postgres at WORLDFIN_DATABASE_URL (start `make up`)"
+    not pg_reachable(), reason="no Postgres at WORLDFIN_TEST_DATABASE_URL"
 )
 
 # Reach outside the process, so a failure here is not a SQL defect.
@@ -63,8 +63,12 @@ def _db_backed_paths(app) -> list[str]:
 def client(monkeypatch_module=None):
     import os
 
-    os.environ.setdefault("WORLDFIN_DATABASE_URL", PG_DSN)
+    os.environ["WORLDFIN_DATABASE_URL"] = PG_DSN
     from server.main import app
+    from server.settings import get_settings
+
+    # An earlier test may have cached settings built before the DSN was set.
+    get_settings.cache_clear()
 
     with TestClient(app) as c:
         yield c

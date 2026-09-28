@@ -97,7 +97,7 @@ class TestSectorDetection:
 
     def test_finance_sector(self, nlp):
         result = nlp.analyze("Banks", "JPMorgan reports strong trading revenue amid interest rate changes.")
-        assert result.sector == "finance"
+        assert result.sector == "financials"
 
     def test_energy_sector(self, nlp):
         result = nlp.analyze("Oil", "OPEC cuts oil production amid global demand concerns.")

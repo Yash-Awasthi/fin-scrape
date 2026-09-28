@@ -17,7 +17,7 @@ body {
   font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-.app { display: flex; flex-direction: column; height: 100vh; }
+.app { display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
 
 .app-head {
   display: flex;
@@ -80,14 +80,6 @@ body {
   background: var(--panel-head);
 }
 .panel-body { flex: 1; overflow: auto; min-height: 0; }
-.panel-resize {
-  position: absolute;
-  right: 2px; bottom: 2px;
-  width: 14px; height: 14px;
-  cursor: nwse-resize;
-  background: linear-gradient(135deg, transparent 50%, var(--muted) 50%);
-  opacity: 0.5;
-}
 
 .feed { width: 100%; border-collapse: collapse; font-size: 12.5px; }
 .feed th { text-align: left; color: var(--muted); font-weight: 500; padding: 6px 10px; position: sticky; top: 0; background: var(--panel); }
@@ -427,6 +419,28 @@ tr.story-member td::before {
   .app-main { grid-template-columns: minmax(0, 1fr); }
   .app-rail { position: static; }
   .inspector { max-height: none; }
+  /* Layout spans are inline styles sized for 12 columns, so only !important can
+     re-flow them: wide panels go full width, the rest pair up. */
+  .panel-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .panel-grid > .panel { grid-column: span 6 !important; }
+  .panel-grid > .panel:is([data-w="3"], [data-w="4"], [data-w="5"], [data-w="6"]) {
+    grid-column: span 3 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-head { flex-wrap: wrap; gap: 6px; padding: 8px 12px; }
+  .head-right { flex-wrap: wrap; gap: 8px; }
+  .refresh { min-height: 32px; padding: 4px 12px; }
+  .app-main { padding: 8px; gap: 8px; }
+  .panel-grid { grid-template-columns: minmax(0, 1fr); gap: 8px; grid-auto-rows: 80px; }
+  .panel-grid > .panel,
+  .panel-grid > .panel:is([data-w="3"], [data-w="4"], [data-w="5"], [data-w="6"]) {
+    grid-column: 1 / -1 !important;
+  }
+  .feed .subj { max-width: 58vw; }
+  .feed th, .feed td { padding: 6px; }
+  .tv-side { flex: 0 0 auto; }
 }
 
 /* ── viz primitives (panels/viz.ts) ── */
@@ -531,7 +545,7 @@ tr.story-member td::before {
 
 /* Scenarios — the advisory band. Cards are wide enough for a sector chart plus
    the exposure chips beside it, and stack to one column on a narrow screen. */
-.sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 10px; }
+.sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr)); gap: 10px; }
 .sc-card {
   background: #11141b; border: 1px solid #1e2430; border-radius: 8px;
   padding: 10px 12px; display: flex; flex-direction: column; gap: 6px;

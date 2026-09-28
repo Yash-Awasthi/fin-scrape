@@ -1,6 +1,6 @@
 """DB-backed Phase 1 verify (the root-cause bug fixes), against a real Postgres.
 
-Auto-skips when no Postgres is reachable at WORLDFIN_DATABASE_URL, so the suite stays
+Auto-skips when no Postgres is reachable at WORLDFIN_TEST_DATABASE_URL, so the suite stays
 green without docker and this runs automatically under `make up` / CI. Tests are sync
 and drive asyncpg via asyncio.run() — no pytest-asyncio needed.
 
@@ -21,9 +21,8 @@ asyncpg = pytest.importorskip("asyncpg")
 from server import db, queries  # noqa: E402
 from server.ingest import ingest_events  # noqa: E402
 
-DSN = __import__("os").getenv(
-    "WORLDFIN_DATABASE_URL", "postgresql://worldfin:worldfin@localhost:5432/worldfin"
-)
+from tests.server import PG_DSN as DSN  # noqa: E402
+
 TEST_EVENT = Path(__file__).resolve().parents[2] / "test_event.json"
 
 
@@ -40,7 +39,7 @@ def _pg_reachable() -> bool:
 
 
 pytestmark = pytest.mark.skipif(
-    not _pg_reachable(), reason="no Postgres at WORLDFIN_DATABASE_URL (start `make up`)"
+    not _pg_reachable(), reason="no Postgres at WORLDFIN_TEST_DATABASE_URL"
 )
 
 

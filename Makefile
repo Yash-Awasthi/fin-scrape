@@ -12,7 +12,7 @@ NEW_DIRS := server worker finscrape/scrapers/world finscrape/ingestors \
 	tests/server tests/test_world_phase2.py tests/test_worker_phase3.py \
 	tests/test_correlate_phase4.py tests/test_scenarios.py
 
-.PHONY: help up down logs seed demo test lint fmt fmt-check typecheck selfcheck ci web-ci e2e
+.PHONY: help up down logs seed backup restore demo test lint fmt fmt-check typecheck selfcheck ci web-ci e2e
 
 help: ## Show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | sort | \
@@ -20,7 +20,7 @@ help: ## Show this help
 
 up: ## Start the stack (postgres + api) and wait for health
 	$(COMPOSE) up -d --build
-	@echo "API → http://localhost:8000   docs → http://localhost:8000/docs"
+	@echo "API → http://localhost:8010   docs → http://localhost:8010/docs"
 
 down: ## Stop the stack (keep volumes)
 	$(COMPOSE) down
@@ -31,8 +31,14 @@ logs: ## Tail api + postgres logs
 seed: ## Load the curated demo dataset (events + accuracy + correlations)
 	$(PY) python -m server.seed
 
+backup: ## Dump the database to backups/ (keeps the newest 14)
+	$(PY) python scripts/db_backup.py backup
+
+restore: ## Restore a dump: make restore FILE=backups/worldfin-....dump
+	$(PY) python scripts/db_backup.py restore $(FILE)
+
 demo: up seed ## Bring up the stack, then seed it — a populated dashboard in one command
-	@echo "demo ready → web http://localhost:8080  ·  api http://localhost:8000/docs"
+	@echo "demo ready → web http://localhost:8080  ·  api http://localhost:8010/docs"
 	@echo "walkthrough: docs/DEMO.md"
 
 test: ## Run the test suite (pytest)

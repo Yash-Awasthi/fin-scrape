@@ -53,7 +53,7 @@ cp .env.example .env          # defaults work; no key needed for the seeded demo
 
 # One command: full dashboard with sample data
 make demo                     # docker compose up + seed → populated dashboard
-#   web → http://localhost:8080   ·   api → http://localhost:8000/docs
+#   web → http://localhost:8080   ·   api → http://localhost:8010/docs
 ```
 
 ### No Docker?
@@ -62,7 +62,7 @@ make demo                     # docker compose up + seed → populated dashboard
 # Run pieces directly
 pip install -r requirements.txt
 # Start Postgres, then:
-python -m server.main          # API at :8000
+python -m server.main          # API at :8010
 python -m worker.main --once   # Ingest cycle
 ```
 

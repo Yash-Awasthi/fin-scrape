@@ -9,6 +9,7 @@ from __future__ import annotations
 import logging
 import os
 import re
+import threading
 import time
 from datetime import datetime
 from difflib import SequenceMatcher
@@ -16,6 +17,7 @@ from difflib import SequenceMatcher
 from finscrape.accuracy import AccuracyTracker
 from finscrape.agents import DEFAULT_AGENTS, AgentCouncil
 from finscrape.alerts import AlertEngine
+from finscrape.analysis import laya
 from finscrape.analysis.ai_client import call_ai
 from finscrape.analysis.nlp import FinancialNLP
 from finscrape.analysis.prompts import render_prompt
@@ -163,6 +165,8 @@ class FinScrapePipeline:
         enable_portfolio: bool = True,
     ):
         self.state = StateManager(data_dir=data_dir)
+        # Per-thread: the worker analyzes several sources concurrently on one pipeline.
+        self._tls = threading.local()
         self.dashboard = DashboardClient()
         self.nlp = FinancialNLP()
         self.use_council = use_council
@@ -387,6 +391,8 @@ class FinScrapePipeline:
 
     def _analyze_article(self, source_name: str, article: ScrapedArticle) -> FinEvent | None:
         """Run AI analysis + heuristic validation on a single article."""
+        self._tls.merged_into = None
+        self._tls.ai_failed = False
 
         # Pre-LLM relevance gate: junk lifestyle pieces and transient event
         # briefs (minor quakes, forming storms) never reach the AI or the DB.
@@ -407,6 +413,7 @@ class FinScrapePipeline:
             if os.getenv("FINSCRAPE_HEURISTIC_FALLBACK", "").lower() in ("1", "true", "yes"):
                 result = self._heuristic_only(article)
             if not result:
+                self._tls.ai_failed = True
                 print("    [ERROR] AI analysis failed")
                 return None
 
@@ -454,13 +461,17 @@ class FinScrapePipeline:
             print("    [SKIP] No valid tickers found")
             return None
 
+        laya_view = laya.classify(article.title, article.text)
+
         # Market data
         market_data = get_market_data(valid_tickers)
         market_boost = calculate_market_boost(market_data)
 
         # Heuristic validation
         h_sentiment, h_impact = calculate_heuristic_score(full_text, result.get("event_type", ""))
-        divergence = check_divergence(result.get("impact_direction", "neutral"), h_sentiment)
+        divergence = check_divergence(
+            result.get("impact_direction", "neutral"), h_sentiment
+        ) or laya.disagrees(result.get("impact_direction", "neutral"), laya_view)
 
         # Final scoring
         base_score = result.get("signal_score", 0)
@@ -473,8 +484,9 @@ class FinScrapePipeline:
             nlp_result.has_breaking_indicators,
         )
 
-        # Use NLP sector as fallback if AI didn't provide one
-        sector = result.get("sector_impact", "") or nlp_result.sector
+        sector = laya.choose_sector(
+            result.get("sector_impact", ""), laya_view, nlp_result.sector
+        )
 
         # Merge NLP-extracted metrics into key_metrics
         nlp_metrics = {}
@@ -527,6 +539,7 @@ class FinScrapePipeline:
                 updated["sources"] = sources_list
             if updated and matched.get("id"):
                 self.state.update_event(matched["id"], **updated)
+            self._tls.merged_into = matched
             return None
         else:
             print(f"    [{event.verdict:8s}] {event.subject}")
@@ -534,6 +547,19 @@ class FinScrapePipeline:
                 print(f"           Reasoning: {event.reasoning[:80]}...")
             self.state.add_event(event.to_dict())
             return event
+
+    def merged_into(self) -> dict | None:
+        """The stored event this thread's last `_analyze_article` merged into, if any.
+
+        Merges only update local state; a caller with its own store (the worker's
+        Postgres) reads this to apply the same merge there.
+        """
+        return getattr(self._tls, "merged_into", None)
+
+    def ai_failed(self) -> bool:
+        """True when this thread's last `_analyze_article` got no answer from the LLM,
+        so the article was never judged and is worth retrying."""
+        return getattr(self._tls, "ai_failed", False)
 
     def _heuristic_only(self, article: ScrapedArticle) -> dict | None:
         """LLM-free analysis (zero-cost mode): heuristic verdict + entity-map/regex tickers,

@@ -22,7 +22,7 @@ from prometheus_client import start_http_server
 from finscrape.logging_config import setup_logging
 from server import db
 from server.settings import Settings, get_settings
-from worker.runner import Worker
+from worker.runner import Worker, prune_old_rows
 
 log = logging.getLogger("worldfin.worker.main")
 
@@ -48,6 +48,14 @@ async def _score_outcomes(worker: Worker) -> int:
     except Exception as exc:  # pragma: no cover - market data flaky
         log.warning("backtest skipped: %s", exc)
         return 0
+
+
+async def _prune(worker: Worker, days: int) -> None:
+    """Retention sweep; logged and skipped on failure like the backtest."""
+    try:
+        await prune_old_rows(worker.pool, days)
+    except Exception as exc:  # pragma: no cover - DB hiccup
+        log.warning("retention skipped: %s", exc)
 
 
 def _schedule(worker: Worker, s: Settings) -> AsyncIOScheduler:
@@ -86,6 +94,15 @@ def _schedule(worker: Worker, s: Settings) -> AsyncIOScheduler:
         max_instances=1,
         coalesce=True,
     )
+    scheduler.add_job(
+        _prune,
+        "interval",
+        hours=24,
+        args=[worker, s.retention_days],
+        id="retention",
+        max_instances=1,
+        coalesce=True,
+    )
     return scheduler
 
 
@@ -114,9 +131,10 @@ async def main() -> None:
 
 async def run_once() -> None:
     """One cycle (every source + correlate + backtest) then exit — the live deploy."""
-    worker, _ = await _bootstrap()
+    worker, s = await _bootstrap()
     await worker.run_all_once()  # all sources once + correlate
     await _score_outcomes(worker)
+    await _prune(worker, s.retention_days)
     await db.disconnect()
 
 

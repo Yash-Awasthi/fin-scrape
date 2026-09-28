@@ -11,6 +11,8 @@ from __future__ import annotations
 import calendar
 import datetime as _dt
 import logging
+from concurrent.futures import ThreadPoolExecutor
+from itertools import zip_longest
 
 from finscrape.models import ScrapedArticle
 from finscrape.scrapers.rss import RSSScraperSource
@@ -25,6 +27,31 @@ class WorldRSSScraper(RSSScraperSource):
     def __init__(self, max_articles: int = 20, max_age_hours: float = 24.0):
         super().__init__(feeds=feed_urls(), max_articles=max_articles)
         self.max_age_hours = max_age_hours
+
+    def collect(self) -> list[ScrapedArticle]:
+        """Every fresh entry from every feed, un-enriched, interleaved across feeds.
+
+        Interleaving matters because callers cap the list: concatenated, the first
+        feeds to answer filled the whole budget and the rest never contributed.
+        """
+        with ThreadPoolExecutor(max_workers=min(8, len(self.feeds))) as pool:
+            per_feed = list(
+                pool.map(lambda kv: self._fetch_feed(*kv), self.feeds.items())
+            )
+        out: list[ScrapedArticle] = []
+        seen: set[str] = set()
+        for row in zip_longest(*per_feed):
+            for article in row:
+                if article and article.url not in seen:
+                    seen.add(article.url)
+                    out.append(article)
+        return out
+
+    def enrich(self, article: ScrapedArticle) -> ScrapedArticle:
+        return self._enrich_with_full_text(article)
+
+    def scrape_news(self) -> list[ScrapedArticle]:
+        return [self.enrich(a) for a in self.collect()[: self.max_articles]]
 
     def _process_entry(self, entry: dict, feed_name: str) -> ScrapedArticle | None:
         """Like the base, but uses an instance freshness window (not the env gate) and
