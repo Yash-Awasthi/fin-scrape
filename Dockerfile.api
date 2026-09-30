@@ -1,4 +1,4 @@
-# WorldFin API image — multi-stage, non-root, slim (Phase 10).
+# WorldFin API image — multi-stage, non-root, slim.
 # Builder installs deps into a venv; the runtime stage copies only the venv + app,
 # so build tools never ship. Server deps only (not the full finscrape extras) keep
 # the image lean.
@@ -18,9 +18,11 @@ RUN pip install --no-cache-dir \
     "curl-cffi>=0.7" \
     "python-dotenv>=1.0" \
     "orjson>=3.9" \
-    "yfinance>=0.2.30"
+    "yfinance>=0.2.30"     "msgpack>=1.2.1"     "setuptools>=78.1.1"
 
 FROM python:3.13-slim
+# Patched OpenSSL and setuptools; the base image lags Debian's and PyPI's fixes.
+RUN apt-get update && apt-get upgrade -y --no-install-recommends     && rm -rf /var/lib/apt/lists/*     && pip install --no-cache-dir --upgrade "setuptools>=78.1.1"
 ENV PATH="/opt/venv/bin:$PATH" \
     PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
