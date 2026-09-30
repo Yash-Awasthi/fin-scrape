@@ -93,9 +93,8 @@ Claude is the teacher: it writes and reviews the labels; the owner does not revi
 2. Done, on 243 gold: no Laya 155 (63.8%), stock Laya 155 (63.8%), promoted LoRA 185
    (76.1%). Stock Laya gains energy and financials but pulls 26 `other` stories into a
    sector; the LoRA keeps most `other` right and lifts materials 5/16 to 15/16.
-3. Not run: stage 1 started by hand at 10:21 on 30 Sep, and at the owner's request to finish
-   the session it was stopped at 11:20, still in its first epoch, so the teacher-round LoRA
-   could have the GPU. Nothing was kept; `data\pretrain.json` (37,384 cases) is built, so a
+3. Running: relaunched detached at 16:18 on 30 Sep on mains power (the 10:21 start was
+   stopped at 11:20 so the teacher-round LoRA could have the GPU). Nothing was kept; `data\pretrain.json` (37,384 cases) is built, so a
    rerun goes straight to training. Rerun with `Desktop\Laya stage 1.cmd` on mains power,
    overnight (5-7 hours); it logs the verdict to `history.jsonl` (`"stage1": true`).
 4. Automatic after step 3: the daily LoRA trains from `stage1` when it was kept, and
@@ -184,12 +183,5 @@ task "WorldFin Laya daily" runs it at 03:30; state, logs and `history.jsonl` liv
   labels arrive, were promotions real gains. Spot-check Claude's labels.
 
 ## Gated
-
-### G1. ReliefWeb source
-v1 is retired (410) and v2 rejects unapproved app names (403). Needs the owner to
-request an app name at https://apidoc.reliefweb.int/parameters#appname and set
-`RELIEFWEB_APPNAME` in `.env`; the source turns itself on after that.
-Checked 28 Sep 2026: `.env` has no `RELIEFWEB_APPNAME`, and the worker built no reliefweb source.
-Requested 28 Sep 2026 with the owner's NIT Raipur address; waiting on ReliefWeb's reply.
 
 G2–G5 were decided by the owner on 28 Sep 2026 and became items 9–11.

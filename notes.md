@@ -10,7 +10,7 @@ Pages + Render + Supabase with ingest dispatched by a Cloudflare cron Worker (it
 lists what the owner still has to do). `docs/DEMO.md` is the walkthrough. Gates
 green: ruff, pyright, selfcheck, 1193 pytest with the test database, 69 vitest,
 build, 5 Playwright, 1 real-API Playwright (`e2e-live`). The portfolio feature is gone (WorldFin tracks
-every event, not holdings). Laya (item 11) is parked; ReliefWeb (G1) is gated.
+every event, not holdings). Laya runs in the ingest Action (item 11); ReliefWeb is live.
 
 ## Measured, worth not re-deriving
 
@@ -107,6 +107,7 @@ every event, not holdings). Laya (item 11) is parked; ReliefWeb (G1) is gated.
 - Clean clone, 30 Sep: `make demo` failed twice. Host `node_modules` overwrote the image's (web `.dockerignore`, 82b7e92d), and API startup raced `make seed` on migrations (advisory lock, f43dd0de). nginx's CSP blocked fonts, YouTube and the landing's `/app/` frame (a5ddbdb0). The landing hero was squeezed by the globe canvas; textures loaded over http failed CORS locally (d7a8794c, c2c9837d). Check: `make demo` and the no-Docker path both serve 16 seeded events, zero console errors at 1440x900 and 390x844.
 - LLM entity tickers were kept whenever the name appeared in the text, so unlisted companies got invented or borrowed symbols (flydubai FZ, Vanguard VGI, OpenAI MSFT). The curated map or the SEC title must now agree (e87da694); 284 of 1,264 recent entity tickers would drop, country ETFs for politicians included. Stored events keep their tickers.
 - Ingest watched 30 Sep (36689858687 scheduled, 36691543848 cron-dispatched) after the 3000-token fix: zero 429s, zero JSON parse errors, 3m36s and 3m35s, "Laya classifier loaded", 8 and 7 new events all with sectors.
+- ReliefWeb (G1) approved the app name on 30 Sep; it is in `.env` and the repo variable `RELIEFWEB_APPNAME`, which the ingest Action passes on. Check: the v2 API answered 200 and the ingestor parsed 20 disasters.
 
 ## Local hazards
 
