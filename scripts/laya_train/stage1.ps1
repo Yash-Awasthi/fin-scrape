@@ -26,7 +26,8 @@ Add-Type -AssemblyName System.Windows.Forms
 if ([System.Windows.Forms.SystemInformation]::PowerStatus.PowerLineStatus -ne "Online") { Stop-Early "the laptop is on battery; plug it in" }
 if ((Get-PSDrive C).Free -lt 10GB) { Stop-Early "less than 10 GB free on C:" }
 if (-not (Test-Path $Py)) { Stop-Early "CUDA venv missing at $Py" }
-& $Py -c "import torch, bitsandbytes; assert torch.cuda.is_available()" 2>$null
+# cmd swallows torch's stderr warnings, which PowerShell 5.1 would turn into errors.
+cmd /c "`"$Py`" -c `"import torch, bitsandbytes; assert torch.cuda.is_available()`" >nul 2>&1"
 if ($LASTEXITCODE -ne 0) { Stop-Early "torch cannot see the GPU or bitsandbytes is missing" }
 
 # Stay awake until this process exits; children inherit the lower priority.
