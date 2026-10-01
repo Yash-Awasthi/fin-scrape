@@ -15,6 +15,7 @@ Headlines already in the gold or holdout sets are dropped.
 from __future__ import annotations
 
 import argparse
+import contextlib
 import csv
 import io
 import json
@@ -97,6 +98,24 @@ def excluded() -> set[str]:
     return out
 
 
+@contextlib.contextmanager
+def open_fnspid():
+    """The CSV from data/fnspid.csv when downloaded (curl -C - resumes it), else a live
+    stream: the server drops the 5.7 GB stream often enough to lose a long build."""
+    local = (
+        Path(os.environ.get("LAYA_FT_HOME", Path.home() / "laya-ft"))
+        / "data"
+        / "fnspid.csv"
+    )
+    if local.exists():
+        with local.open(encoding="utf-8", errors="replace", newline="") as fh:
+            yield fh
+        return
+    with requests.get(FNSPID, stream=True, timeout=60) as resp:
+        resp.raise_for_status()
+        yield io.TextIOWrapper(resp.raw, encoding="utf-8", errors="replace")
+
+
 def fnspid(per_sector: int, max_rows: int, skip: set[str]) -> list[dict]:
     sp = pd.read_csv(SP500)
     sector_of = {r.Symbol: GICS[r._3] for r in sp.itertuples() if r._3 in GICS}
@@ -104,11 +123,8 @@ def fnspid(per_sector: int, max_rows: int, skip: set[str]) -> list[dict]:
     counts: Counter[str] = Counter()
     cases, seen = [], set()
     csv.field_size_limit(2**31 - 1)
-    with requests.get(FNSPID, stream=True, timeout=60) as resp:
-        resp.raise_for_status()
-        rows = csv.DictReader(
-            io.TextIOWrapper(resp.raw, encoding="utf-8", errors="replace")
-        )
+    with open_fnspid() as fh:
+        rows = csv.DictReader(fh)
         for i, row in enumerate(rows):
             if i % 50000 == 0:
                 print(f"  fnspid row {i}: {dict(counts)}", flush=True)
