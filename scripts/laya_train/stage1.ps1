@@ -54,7 +54,7 @@ try {
   $Smoke = $LASTEXITCODE
   Remove-Item -Recurse -Force "$Home2\stage1-smoke" -ErrorAction SilentlyContinue
   if ($Smoke -ne 0) { throw "smoke test failed; see the lines above" }
-  & $Py -W ignore -u scripts\laya_train\train.py $Next --data "$Home2\data\pretrain.json" --mode full --epochs 1 --micro-batch 8 --grad-accum 4 --no-grad-ckpt --balance-direction --no-distill
+  & $Py -W ignore -u scripts\laya_train\train.py $Next --data "$Home2\data\pretrain.json" --mode full --epochs 2 --micro-batch 8 --grad-accum 4 --no-grad-ckpt --balance-direction --no-distill
   if ($LASTEXITCODE -ne 0) { throw "training failed" }
   Get-ChildItem $Next -Directory -Filter "epoch*" | Remove-Item -Recurse -Force
   "$(Get-Date -Format 'dd MMM HH:mm')  scoring stage1-next against the incumbent on CPU (about 25 min)" |
