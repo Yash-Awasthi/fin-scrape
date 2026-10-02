@@ -77,9 +77,9 @@ def sample() -> None:
     nc = (
         pd.concat(none).sample(N_NONE, random_state=SEED).assign(split="none", truth="")
     )
-    rows = pd.concat([test, nc, fit], ignore_index=True).drop(
-        columns=["tickers", "n_companies"]
-    )
+    rows = pd.concat([test, nc, fit], ignore_index=True)
+    rows["ticker"] = rows["tickers"].str[0].fillna("")
+    rows = rows.drop(columns=["tickers", "n_companies"])
     OUT.mkdir(parents=True, exist_ok=True)
     rows.to_parquet(ROWS, index=False)
     cases = [
@@ -314,6 +314,27 @@ def report(
     return "\n".join(lines)
 
 
+def by_familiarity(frame: pd.DataFrame, seen: pd.Series, entries: list[str]) -> str:
+    """Test accuracy by how often the named company appears in the LoRA cases: a high
+    score on familiar names is lookup, not reading the headline."""
+    test = frame[frame["split"] == "test"]
+    n = test["ticker"].map(seen).fillna(0)
+    lines = [
+        "| company in LoRA cases | n | " + " | ".join(entries) + " |",
+        "|---" * (len(entries) + 2) + "|",
+    ]
+    for label, lo, hi in (
+        ("never", 0, 0),
+        ("1-9", 1, 9),
+        ("10-99", 10, 99),
+        ("100+", 100, np.inf),
+    ):
+        g = test[(n >= lo) & (n <= hi)]
+        accs = " | ".join(f"{100 * (g[e] == g['truth']).mean():.1f}" for e in entries)
+        lines.append(f"| {label} | {len(g)} | {accs} |")
+    return "\n".join(lines)
+
+
 def score() -> None:
     rows = pd.read_parquet(ROWS)
     inputs = no_model_inputs(rows[rows["split"] != "fit"])
@@ -332,6 +353,11 @@ def score() -> None:
         frame[f"{name} alone"], frame[name] = alone, chain(inputs, view)
         entries += [name, f"{name} alone"]
     text = report(frame, entries)
+    if "ticker" in rows:
+        seen = rows[rows["split"] == "fit"]["ticker"][:N_LORA].value_counts()
+        text += "\n\n" + by_familiarity(
+            frame, seen, [e for e in entries if e != "no-model"]
+        )
     (OUT / "report.md").write_text(text, "utf-8")
     print(text)
 

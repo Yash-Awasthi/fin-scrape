@@ -159,7 +159,7 @@ def test_outcomes_drop_windows_across_an_unadjusted_spin_off(monkeypatch):
 
 
 def test_contest_report_applies_keep_rule():
-    from scripts.backfill.sector_contest import report
+    from scripts.backfill.sector_contest import by_familiarity, report
 
     truth = ["energy"] * 6 + ["technology"] * 4
     frame = pd.DataFrame(
@@ -177,3 +177,8 @@ def test_contest_report_applies_keep_rule():
     assert "| energy | 6 | 83.3 | 100.0 | 100.0 |" in text
     assert "`model` leads `base` by +40.0 points; kept" in text
     assert "not kept" in report(frame, ["base", "model"], min_n=11)
+
+    frame["ticker"] = ["XOM"] * 6 + ["NEW"] * 4 + ["", ""]
+    table = by_familiarity(frame, pd.Series({"XOM": 120}), ["model"])
+    assert "| never | 4 | 75.0 |" in table
+    assert "| 100+ | 6 | 100.0 |" in table
