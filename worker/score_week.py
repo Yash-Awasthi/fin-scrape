@@ -50,7 +50,8 @@ async def main() -> int:
         )
     finally:
         await pool.close()
-    print(f"new outcomes {wrote}, vs-SPY scores filled {updated}")
+    # Rows whose +4 window is still open are re-updated every run, so this is not new scores.
+    print(f"new outcomes {wrote}, vs-SPY rows updated {updated}")
     print(report([dict(r) for r in rows]))
     return 0
 
