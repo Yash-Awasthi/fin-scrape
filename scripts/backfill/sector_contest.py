@@ -1,6 +1,7 @@
 """Sector contest (docs/LAYA_PLAN.md step 5), all on CPU.
 
     python -m scripts.backfill.sector_contest sample
+    python -m scripts.backfill.sector_contest lora-other
     python -m scripts.backfill.sector_contest laya NAME MODEL_DIR [--part I/K]
     python -m scripts.backfill.sector_contest embed [--part I/K]
     python -m scripts.backfill.sector_contest score
@@ -8,6 +9,8 @@
 Truth is the taxonomy sector of the one S&P 500 company a headline names. `sample` draws
 fixed-seed uniform samples: test (single-company, 2025-10-01 on), none (no company, same
 weeks) and fit (single-company, 2023-10-01 to 2025-09-30), plus the LoRA training cases.
+`lora-other` adds fit-period no-company headlines as `other`, which train.py turns into a
+flat target, so a LoRA also learns to stay unsure when no company is named.
 Each entry feeds `laya.choose_sector` as `laya.classify` would; `score` prints the report.
 """
 
@@ -15,6 +18,7 @@ from __future__ import annotations
 
 import json
 import os
+import random
 import sys
 import time
 import urllib.request
@@ -30,7 +34,7 @@ FIT_FROM, TEST_FROM = (
     pd.Timestamp("2023-10-01", tz="UTC"),
     pd.Timestamp("2025-10-01", tz="UTC"),
 )
-N_TEST, N_NONE, N_FIT, N_LORA = 3000, 1000, 30000, 20000
+N_TEST, N_NONE, N_FIT, N_LORA, N_OTHER = 3000, 1000, 30000, 20000, 5000
 SEED = 20261002
 SECTORS = (
     "technology",
@@ -89,6 +93,26 @@ def sample() -> None:
     print(
         f"{len(test)} test, {len(nc)} none, {len(fit)} fit, {len(cases)} LoRA cases ({pools})"
     )
+
+
+def lora_other() -> None:
+    cols = ["added_utc", "title", "n_companies"]
+    pool = []
+    for f in sorted((DATA / "events").glob("*.parquet")):
+        d = pd.read_parquet(f, columns=cols)
+        z = d[
+            (d["n_companies"] == 0)
+            & (d["added_utc"] >= FIT_FROM)
+            & (d["added_utc"] < TEST_FROM)
+            & (d["title"].str.len() > 0)
+        ]
+        pool.append(z.sample(frac=0.0004, random_state=SEED))
+    titles = pd.concat(pool).sample(N_OTHER, random_state=SEED)["title"]
+    cases = json.loads((OUT / "lora_fit.json").read_text("utf-8"))["cases"]
+    cases += [{"subject": t, "sector": "other"} for t in titles]
+    random.Random(SEED).shuffle(cases)
+    (OUT / "lora_fit_other.json").write_text(json.dumps({"cases": cases}), "utf-8")
+    print(f"{len(cases)} cases, {len(titles)} of them no-company as other")
 
 
 def _part(rows: pd.DataFrame, part: str) -> tuple[pd.DataFrame, str]:
@@ -318,6 +342,8 @@ if __name__ == "__main__":
     cmd = args[0] if args else ""
     if cmd == "sample":
         sample()
+    elif cmd == "lora-other":
+        lora_other()
     elif cmd == "laya":
         run_laya(args[1], args[2], part)
     elif cmd == "embed":
