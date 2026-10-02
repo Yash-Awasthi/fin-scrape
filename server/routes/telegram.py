@@ -25,7 +25,7 @@ router = APIRouter()
 
 _HELP = (
     "WorldFin bot commands:\n"
-    "/subscribe — get INVEST/PULL_OUT alerts\n"
+    "/subscribe — get INVEST/PULL\\_OUT alerts\n"
     "/unsubscribe — stop alerts\n"
     "/status — subscription + alert status\n"
     "/latest — most recent signals"
@@ -106,7 +106,7 @@ async def _handle_command(chat_id: str, text: str) -> None:
             "INSERT INTO telegram_subscribers (chat_id) VALUES ($1) ON CONFLICT DO NOTHING",
             str(chat_id),
         )
-        send_message(chat_id, "✅ Subscribed to INVEST/PULL_OUT alerts.")
+        send_message(chat_id, "✅ Subscribed to INVEST/PULL\\_OUT alerts.")
     elif cmd == "unsubscribe":
         await db.pool().execute(
             "DELETE FROM telegram_subscribers WHERE chat_id = $1", str(chat_id)
@@ -117,7 +117,7 @@ async def _handle_command(chat_id: str, text: str) -> None:
         send_message(chat_id, f"Alerts: {'on' if subbed else 'off'}.")
     elif cmd == "latest":
         rows = await queries.get_events(db.pool(), limit=5)
-        lines = [f"• {r['verdict']} {r['subject']}" for r in rows] or [
+        lines = ["• " + escape_md(f"{r['verdict']} {r['subject']}") for r in rows] or [
             "No signals yet."
         ]
         send_message(chat_id, "Latest signals:\n" + "\n".join(lines))
