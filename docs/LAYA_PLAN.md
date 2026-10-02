@@ -116,6 +116,17 @@ Each step ends with a check that can be rerun.
    Trained on the backfill train split, checked on the test split, then logs its own call
    beside every live call. It takes over only when it beats the tuned rules on the same
    test weeks and clears the calls keep rule.
+   Offline result (3 Oct 2026, `python -m scripts.backfill.bandit`): 335,236 train and
+   127,101 test single-company events (1 Oct 2025 to 28 Sep 2026, 249 trading days). One ridge
+   regression on ex4 (the per-action linear models collapse to it, since every action's
+   reward is known offline), 355 features, strength and call rate picked on Jul to Sep 2025.
+   It fits train (correlation 0.11) and finds nothing on test (0.0002): its 61,969 calls hit
+   48.7% at +2 and 48.9% at +4, -3.2 bp a call. Always PULL_OUT hit 51.8% and 52.9% (+8.9 bp,
+   Wilson above 50%), always INVEST 47.1% at +4, the best tone rule (tone >= 1 or <= -1)
+   50.3% and 49.8%. Per ticker and day the bandit is 50.2% of 15,018. Always PULL_OUT wins
+   because news-named S&P 500 stocks lagged SPY in the test year, not because of the news.
+   Calls land on every test day (busiest 589), so event-level intervals are far too narrow.
+   The bandit fails the keep rule and loses to a baseline; shadow logging was not wired.
 8. **Weekly job.** Every Saturday, score live events whose +2 and +4 day windows have
    closed, and append the week's GDELT events and outcomes to the backfill.
 
@@ -124,4 +135,4 @@ direction no longer marks an event as divergent.
 
 ## Next session
 
-Step 7, the bandit shadow on the backfill.
+Owner decision on step 7 (shadow or drop the bandit), then step 8, the weekly job.
