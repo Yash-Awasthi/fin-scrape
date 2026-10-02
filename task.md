@@ -74,7 +74,7 @@ published (result in the plan). Step 6 is done: tuning on live events did not be
 current +/-3 thresholds, which stay (result in the plan). Step 7 offline: the bandit
 (`scripts/backfill/bandit.py`) has no edge on test and loses to always PULL_OUT, so it was
 dropped. Step 8 is done: the `score-week` Action and the `WorldFin backfill weekly` Windows
-task run on Saturdays. Left: confirm both first scheduled runs (10 Oct), then close this item.
+task run on Saturdays. Left: confirm both first scheduled runs (Sat 3 Oct: Action 06:00 UTC, task 10:00 IST), then close this item.
 The nightly LoRA loop is stopped (`WorldFin Laya daily` is disabled) and production stays
 on `laya-20261001-1041`. The loop's runs and measurements are in this file's git history
 before the plan landed (27a668c8).
