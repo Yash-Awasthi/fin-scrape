@@ -99,6 +99,16 @@ Each step ends with a check that can be rerun.
 6. **Call tuning.** On live events, fit INVEST and PULL_OUT score thresholds and weights
    per source and event type on the older half, test on the newer half. Kept only under the
    calls keep rule.
+   Result (3 Oct 2026, `python -m scripts.backfill.call_tuning report`): 2,949 scored live
+   events, older half 23 Jun to 9 Jul (6-day purge before the 15 Jul cut), newer half 15 Jul
+   to 30 Sep; no live data from 2 Aug to 21 Sep. The fit chose +/-2 thresholds and muted
+   `regulatory_decision`; all source weights stayed 1. On the newer half the current +/-3
+   rule hit 50.6% of 243 at +2 days and 68.3% of 186 at +4 (Wilson 61.3% to 74.5%); the
+   tuned rule 50.8% of 620 and 62.9% of 399. Neither clears the keep rule at +2, both do at
+   +4, and tuning doubles the calls for 5.4 fewer points, so production keeps +/-3 and
+   weight 1 (owner decision). Calls cluster on the same days (busiest test day 42 current
+   calls, 130 tuned), so the intervals are too narrow, and the current rule swung from
+   46.7% at +4 on the older half to 68.3% on the newer.
 7. **Bandit shadow.** Contextual bandit, actions INVEST / PULL_OUT / OBSERVE, reward the
    +4 day excess return over SPY (OBSERVE earns 0). Features: CAMEO code, QuadClass,
    Goldstein scale, mentions, average tone; sector and country; the ticker's excess return
@@ -114,4 +124,4 @@ direction no longer marks an event as divergent.
 
 ## Next session
 
-Step 6, call tuning on the live events.
+Step 7, the bandit shadow on the backfill.
