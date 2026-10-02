@@ -54,7 +54,7 @@ def send_message(chat_id: str | int, text: str) -> bool:
         return False
 
 
-def _md(text: str) -> str:
+def escape_md(text: str) -> str:
     """Escape Telegram legacy-Markdown markers; an unescaped one makes the send fail."""
     for ch in ("\\", "_", "*", "`", "["):
         text = text.replace(ch, "\\" + ch)
@@ -68,11 +68,11 @@ def format_alert(event: dict) -> str:
     text = (
         f"🚨 *{event.get('verdict', '?')}* ({arrow}{score}) — "
         f"{event.get('confidence', 0):.0%} confidence\n"
-        f"Tickers: {_md(', '.join(event.get('tickers') or []))}\n"
-        f"{_md(event.get('subject') or 'Unknown event')}"
+        f"Tickers: {escape_md(', '.join(event.get('tickers') or []))}\n"
+        f"{escape_md(event.get('subject') or 'Unknown event')}"
     )
     reasoning = (event.get("reasoning") or "")[:200]
-    return text + (f"\n_{_md(reasoning)}_" if reasoning else "")
+    return text + (f"\n_{escape_md(reasoning)}_" if reasoning else "")
 
 
 async def notify_new_events(events: list[dict]) -> int:
