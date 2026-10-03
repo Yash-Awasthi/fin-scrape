@@ -315,8 +315,8 @@ def _validate_response(data: dict) -> dict | None:
 # Backend implementations
 # ---------------------------------------------------------------------------
 
-# ponytail: a 429 retires the key for the process (one ingest run); a long-lived
-# process would need per-key reset times read from the 429 body.
+# ponytail: a 429 retires the key for the process (one ingest run); per-key reset
+# times from the 429 body would let a long-lived process bring keys back.
 _spent_keys: set[str] = set()
 
 
@@ -335,7 +335,8 @@ def _call_openai_proxy(prompt: str, system_prompt: str, model: str | None = None
     the extra field.
     """
     try:
-        for key in _proxy_keys():
+        keys = _proxy_keys()
+        for key in keys:
             response = requests.post(
                 f"{os.getenv('OPENAI_BASE_URL', '')}/chat/completions",
                 headers={
@@ -356,13 +357,12 @@ def _call_openai_proxy(prompt: str, system_prompt: str, model: str | None = None
                 },
                 timeout=int(os.getenv("FINSCRAPE_AI_TIMEOUT", "60")),
             )
-            if response.status_code != 429:
+            # The last key is never retired: OpenRouter 429s are per-minute limits, and
+            # Render's long-lived API holds a single key.
+            if response.status_code != 429 or key == keys[-1]:
                 break
             _spent_keys.add(key)
             logger.warning("AI proxy key ...%s spent (429), rotating", key[-4:])
-        else:
-            logger.error("AI proxy: every key is spent")
-            return None
 
         if response.status_code != 200:
             logger.error("AI proxy HTTP %d: %s", response.status_code, response.text[:200])
