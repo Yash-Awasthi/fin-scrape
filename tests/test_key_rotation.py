@@ -31,8 +31,16 @@ def test_429_rotates_and_remembers(monkeypatch):
     assert used == ["a", "b", "c", "c"]
 
 
-def test_all_spent_gives_none(monkeypatch):
+def test_last_key_is_never_retired(monkeypatch):
     used = _proxy(monkeypatch, spent={"a", "b", "c"})
     assert ai_client._call_openai_proxy("p", "s") is None
     assert ai_client._call_openai_proxy("p", "s") is None
-    assert used == ["a", "b", "c"]
+    assert used == ["a", "b", "c", "c"]
+
+
+def test_single_key_survives_429(monkeypatch):
+    used = _proxy(monkeypatch, spent={"a"})
+    monkeypatch.delenv("OPENAI_API_KEYS")
+    assert ai_client._call_openai_proxy("p", "s") is None
+    assert ai_client._call_openai_proxy("p", "s") is None
+    assert used == ["a", "a"]
