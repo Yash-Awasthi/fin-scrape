@@ -15,6 +15,9 @@ As of 3 Oct 2026: live and demo-ready. A fresh clone starts with `make demo`
   from Render (403 `request_forbidden`), so the API analyses only on click with OpenRouter
   free models (`FINSCRAPE_MODEL`, `FINSCRAPE_MODEL_FALLBACK`) and, when all fail, dispatches
   the `analyze` workflow, at most 20 times an hour.
+  The LLM reads each page's main text (trafilatura, capped at 6,000 characters), not the
+  feed summary or the GDELT slug title: on 3 Oct that took GDELT from ~60 characters to
+  4,000-6,000 and world RSS from a median ~200 to ~2,600.
 - Sectors: a named S&P 500 company sets the sector; frozen Laya `laya-20261001-1041` labels
   stories that name none. Calls: INVEST at score +3, PULL_OUT at -3.
 - Scoring: every call is scored next-day raw and +2 / +4 trading days against SPY, and the
