@@ -50,7 +50,4 @@ Facts about the owner's setup that the items below rely on (as of 2 Oct 2026):
 
 ## Open
 
-Owner only; nothing else is open.
-
-- Mark the local-only compose password (`worldfin`, Postgres on 127.0.0.1) a false
-  positive in GitGuardian.
+Nothing is open.
