@@ -25,11 +25,11 @@ As of 3 Oct 2026: live and demo-ready. A fresh clone starts with `make demo`
 
 ## Measured, worth not re-deriving
 
-- Track record on 2 Oct: next-day raw 58.5% of 342 decisive calls; +2 days vs SPY 53.8%
-  of 874; +4 days 59.2% of 816. By first source at +4: gdelt 71% of 291, world_rss 54% of
-  423, coingecko 34% of 53.
-- The 76 calls from 22 to 30 Sep hit 42% at +2 days (Wilson 32% to 53%) and 39% of 18 at
-  +4. 42 of them came on 29 Sep, so this is one bad market week, not a trend: defence and
+- Track record on 3 Oct: +2 days vs SPY 53.8% of 874 (Wilson 50% to 57%); +4 days 59.0%
+  of 846 (56% to 62%). On 2 Oct: next-day raw 58.5% of 342 decisive calls; by first source
+  at +4, gdelt 71% of 291, world_rss 54% of 423, coingecko 34% of 53.
+- The 76 calls from 22 to 30 Sep hit 42% at +2 days (Wilson 32% to 53%); at +4 they rose
+  from 39% of 18 to 48% of 48 (34% to 62%) by 3 Oct, recovering but still below the record. 42 of them came on 29 Sep, so this is one bad market week, not a trend: defence and
   oil PULL_OUT calls, which lost most there, hit 65% of 182 and 70% of 145 at +4 over the
   whole record. The rest were 7 crypto price alerts and 3 tickers from before grounding
   (World Bank as WB, a Hong Kong IPO story as GEM, SpaceX as SPCX). No threshold change.
