@@ -315,6 +315,17 @@ def _validate_response(data: dict) -> dict | None:
 # Backend implementations
 # ---------------------------------------------------------------------------
 
+# ponytail: a 429 retires the key for the process (one ingest run); a long-lived
+# process would need per-key reset times read from the 429 body.
+_spent_keys: set[str] = set()
+
+
+def _proxy_keys() -> list[str]:
+    """OPENAI_API_KEY then the comma-separated OPENAI_API_KEYS, minus spent ones."""
+    keys = [os.getenv("OPENAI_API_KEY", "proxy"), *os.getenv("OPENAI_API_KEYS", "").split(",")]
+    return [k for k in dict.fromkeys(k.strip() for k in keys) if k and k not in _spent_keys]
+
+
 def _call_openai_proxy(prompt: str, system_prompt: str, model: str | None = None) -> dict | None:
     """
     Call local OpenAI-compatible proxy (Ollama or any other).
@@ -324,26 +335,34 @@ def _call_openai_proxy(prompt: str, system_prompt: str, model: str | None = None
     the extra field.
     """
     try:
-        response = requests.post(
-            f"{os.getenv('OPENAI_BASE_URL', '')}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {os.getenv('OPENAI_API_KEY', 'proxy')}",
-                "Content-Type":  "application/json",
-            },
-            json={
-                "model":    model or os.getenv("FINSCRAPE_MODEL", DEFAULT_MODEL),
-                "messages": [
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user",   "content": prompt},
-                ],
-                "temperature":     float(os.getenv("FINSCRAPE_AI_TEMP", "0.1")),
-                # Reasoning models (mimo) spend 800 tokens thinking and return no JSON.
-                "max_tokens":      int(os.getenv("FINSCRAPE_AI_MAX_TOKENS", "3000")),
-                "response_format": {"type": "json_object"},
-                "format":          "json",  # Ollama-native; ignored by other providers
-            },
-            timeout=int(os.getenv("FINSCRAPE_AI_TIMEOUT", "60")),
-        )
+        for key in _proxy_keys():
+            response = requests.post(
+                f"{os.getenv('OPENAI_BASE_URL', '')}/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {key}",
+                    "Content-Type":  "application/json",
+                },
+                json={
+                    "model":    model or os.getenv("FINSCRAPE_MODEL", DEFAULT_MODEL),
+                    "messages": [
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user",   "content": prompt},
+                    ],
+                    "temperature":     float(os.getenv("FINSCRAPE_AI_TEMP", "0.1")),
+                    # Reasoning models (mimo) spend 800 tokens thinking and return no JSON.
+                    "max_tokens":      int(os.getenv("FINSCRAPE_AI_MAX_TOKENS", "3000")),
+                    "response_format": {"type": "json_object"},
+                    "format":          "json",  # Ollama-native; ignored by other providers
+                },
+                timeout=int(os.getenv("FINSCRAPE_AI_TIMEOUT", "60")),
+            )
+            if response.status_code != 429:
+                break
+            _spent_keys.add(key)
+            logger.warning("AI proxy key ...%s spent (429), rotating", key[-4:])
+        else:
+            logger.error("AI proxy: every key is spent")
+            return None
 
         if response.status_code != 200:
             logger.error("AI proxy HTTP %d: %s", response.status_code, response.text[:200])
