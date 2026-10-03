@@ -9,7 +9,7 @@ As of 3 Oct 2026: live and demo-ready. A fresh clone starts with `make demo`
 (`docs/DEMO.md` is the walkthrough).
 
 - Production: SPA on Cloudflare Pages, API on Render, Postgres on Supabase. The Cloudflare
-  cron Worker `winfin-ingest-cron` dispatches the `ingest` Action every 30 minutes and pings
+  cron Worker `winfin-ingest-cron` dispatches the `ingest` Action every hour and pings
   `/health` every 10; `backup.yml` stores an encrypted nightly dump for 14 days.
 - Analysis: ingest calls TokenHarbor (deepseek, then mimo) through a queue of
   `OPENAI_API_KEY` and the eight `OPENAI_API_KEYS`: a key that answers 429 (its free 7-day
