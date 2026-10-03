@@ -27,7 +27,7 @@ As of 3 Oct 2026: live and demo-ready. A fresh clone starts with `make demo`
   landing page shows both. `docs/BACKFILL.md` holds the backfill, the weekly jobs and the
   studies behind these choices.
 - Telegram: ingest sends INVEST / PULL_OUT alerts through @YashAwasthiBot, and the
-  `telegram-summary` Action sends a daily summary at 02:30 UTC.
+  `telegram-summary` Action, dispatched by the cron Worker at 02:30 UTC, sends a daily summary.
 
 ## Measured, worth not re-deriving
 
